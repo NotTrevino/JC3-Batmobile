@@ -1,0 +1,433 @@
+{
+ "schema": 1,
+ "generated_by": "grab_slots.py",
+ "mesh": "Batmobile_V2",
+ "sources": {
+  "props": "Working\\Appearance\\grab\\Playable_Batmobile_SF\\SkeletalMesh3\\Batmobile_V2.props.txt",
+  "pskx": "Working\\Appearance\\grab\\Playable_Batmobile_SF\\SkeletalMesh3\\Batmobile_V2.pskx",
+  "materials": "Research\\BatmobileGrab\\MATERIALS.md",
+  "assembly": "Working\\Assembled\\assembly.json"
+ },
+ "slots": [
+  {
+   "index": 0,
+   "material": "BatmobileV3_Wheel_V2_MIC",
+   "object_path": "BatmobileV3_Materials.Material_Worn.BatmobileV3_Wheel_V2_MIC",
+   "kind": "MaterialInstanceConstant",
+   "package": "Playable_Batmobile_SF",
+   "parent": "Material_MASTERS.Batmobile_V3_Wheel_V2_MAT",
+   "textures": {},
+   "lod0_faces": 62668,
+   "assembly_parts": [
+    "body",
+    "wheel_f_l",
+    "wheel_f_r",
+    "wheel_r_l",
+    "wheel_r_r"
+   ],
+   "assembly_block": "CarPaintMM"
+  },
+  {
+   "index": 1,
+   "material": "Batmobile_V3_Glass_INST",
+   "object_path": "BatmobileV3_Materials.Material.Batmobile_V3_Glass_INST",
+   "kind": "MaterialInstanceConstant",
+   "package": "Playable_Batmobile_SF",
+   "parent": "Batmobile_V2_Textures_NEW.Batmobile_Glass",
+   "textures": {
+    "Mask (R=Reflect / G=Rough / B=Normal map compression artifacts fix)": "Textures.Batmobile_V3_Glass_S",
+    "Normal": "Textures.Batmobile_V3_Glass_N",
+    "OpacityMap": "Textures.Batmobile_V3_Glass_A"
+   },
+   "lod0_faces": 3532,
+   "assembly_parts": [
+    "body",
+    "wheel_f_l",
+    "wheel_f_r",
+    "wheel_r_l",
+    "wheel_r_r"
+   ],
+   "assembly_block": "Window"
+  },
+  {
+   "index": 2,
+   "material": "Batmobile_V3_Mainbody_NEW_MIC",
+   "object_path": "BatmobileV3_Materials.Material_Worn.Batmobile_V3_Mainbody_NEW_MIC",
+   "kind": "MaterialInstanceConstant",
+   "package": "Playable_Batmobile_SF",
+   "parent": "Material_Worn.Batmobile_V3_WheelArchs_NEW_MIC",
+   "textures": {
+    "Damage_Chapter_Mask": "Textures.Batmobile_V3_TEXTURES_Body_Damage_ChapterMask",
+    "Normal_Map": "Textures.Batmobile_V3_Body_N"
+   },
+   "lod0_faces": 37819,
+   "assembly_parts": [
+    "body"
+   ],
+   "assembly_block": "CarPaintMM"
+  },
+  {
+   "index": 3,
+   "material": "Batmobile_V3_WheelArchs_NEW_MIC",
+   "object_path": "BatmobileV3_Materials.Material_Worn.Batmobile_V3_WheelArchs_NEW_MIC",
+   "kind": "MaterialInstanceConstant",
+   "package": "Playable_Batmobile_SF",
+   "parent": "Material_MASTERS.Batmobile_Worn",
+   "textures": {
+    "Anisotropic Ramp": "Engine.Aniso_ramp_Lacquered",
+    "Colour_Ramp_Map": "Engine.Batman_BM3_V2_Lacquered_Underlayer_Ramp",
+    "Damage_Chapter_Mask": "Textures.Batmobile_V3_TEXTURES_WheelArch_Damage_ChapterMask",
+    "Material3_Microdetail_N": "Engine.Batmobile_Micropattern_A_Normal",
+    "Material_Microdetail": "Textures.Batmobile_Microdetail",
+    "Normal_Map": "Textures.Batmobile_V3_WheelArch_N"
+   },
+   "lod0_faces": 42999,
+   "assembly_parts": [
+    "body"
+   ],
+   "assembly_block": "CarPaintMM"
+  },
+  {
+   "index": 4,
+   "material": "Batmobile_V3_Undercarriage_NEW_MIC",
+   "object_path": "BatmobileV3_Materials.Material_Worn.Batmobile_V3_Undercarriage_NEW_MIC",
+   "kind": "MaterialInstanceConstant",
+   "package": "Playable_Batmobile_SF",
+   "parent": "Material_Worn.Batmobile_V3_WheelArchs_NEW_MIC",
+   "textures": {
+    "Damage_Chapter_Mask": "Textures.Batmobile_V3_Undercarriage_Damage_ChapterMask",
+    "Normal_Map": "Textures.Batmobile_V3_Undercarriage_N"
+   },
+   "lod0_faces": 26150,
+   "assembly_parts": [
+    "body"
+   ],
+   "assembly_block": "CarPaintMM"
+  },
+  {
+   "index": 5,
+   "material": "Batmobile_V3_Emissive",
+   "object_path": "BatmobileV3_Materials.Material.Batmobile_V3_Emissive",
+   "kind": "MaterialInstanceConstant",
+   "package": "Playable_Batmobile_SF",
+   "parent": "Engine.Batmobile_V3_Body_MAT",
+   "textures": {
+    "Anisotropic Ramp": "Engine.Aniso_ramp_Lacquered",
+    "BaseMaterial_Microdetail": "Engine.Batmobile_Micropattern_B",
+    "Colour_Ramp_Map": "Engine.Batmobile_V3_Body_ColourRamp",
+    "Emissive_Map": "Engine.Batmobile_V3_Wheel_E",
+    "Material1_Microdetail": "Engine.Batmobile_Micropattern_A",
+    "Material1_Microdetail_N": "Engine.Batmobile_Micropattern_A_Normal",
+    "Material2_Microdetail": "Engine.Batmobile_Micropattern_C",
+    "Material2_Microdetail_N": "Engine.neutral_normal",
+    "Material3_Microdetail": "Engine.Batmobile_Micropattern_C",
+    "Material3_Microdetail_N": "Engine.neutral_normal",
+    "Material_Separation_Mask": "Textures.Batmobile_V3_Wheel_Lights_M",
+    "Normal_Map": "Textures.Batmobile_V3_Wheel_Lights_N"
+   },
+   "lod0_faces": 4576,
+   "assembly_parts": [
+    "body",
+    "wheel_f_l",
+    "wheel_f_r",
+    "wheel_r_l",
+    "wheel_r_r"
+   ],
+   "assembly_block": "CarPaintMM"
+  },
+  {
+   "index": 6,
+   "material": "Batmobile_V3_Undercarriage",
+   "object_path": "BatmobileV3_Materials.Material.Batmobile_V3_Undercarriage",
+   "kind": "Material/master",
+   "package": "Playable_Batmobile_SF",
+   "parent": null,
+   "textures": {},
+   "lod0_faces": 684,
+   "assembly_parts": [
+    "body"
+   ],
+   "assembly_block": "CarPaintMM"
+  },
+  {
+   "index": 7,
+   "material": "Batmobile_V3_Turret_NEW_MIC",
+   "object_path": "BatmobileV3_Materials.Material_Worn.Batmobile_V3_Turret_NEW_MIC",
+   "kind": "MaterialInstanceConstant",
+   "package": "Playable_Batmobile_SF",
+   "parent": "Material_Worn.Batmobile_V3_WheelArchs_NEW_MIC",
+   "textures": {
+    "Damage_Chapter_Mask": "Textures.Batmobile_V3_TEXTURES_Weaponry_Damage_ChapterMask",
+    "Normal_Map": "Textures.Batmobile_V3_Weaponry_Turret_V2_N"
+   },
+   "lod0_faces": 47912,
+   "assembly_parts": [
+    "body"
+   ],
+   "assembly_block": "CarPaintMM"
+  },
+  {
+   "index": 8,
+   "material": "Batmobile_V3_TEXTURES_Body_Decals",
+   "object_path": "BatmobileV3_Materials.Material.Batmobile_V3_TEXTURES_Body_Decals",
+   "kind": "Material/master",
+   "package": "Playable_Batmobile_SF",
+   "parent": null,
+   "textures": {},
+   "lod0_faces": 58,
+   "assembly_parts": [
+    "body"
+   ],
+   "assembly_block": "CarPaintMM"
+  },
+  {
+   "index": 9,
+   "material": "Batmobile_V3_Tyre_V2_MIC",
+   "object_path": "BatmobileV3_Materials.Material_Worn.Batmobile_V3_Tyre_V2_MIC",
+   "kind": "MaterialInstanceConstant",
+   "package": "Playable_Batmobile_SF",
+   "parent": "Material_MASTERS.Batmobile_V3_Tyre_V2_MAT",
+   "textures": {},
+   "lod0_faces": 18720,
+   "assembly_parts": [
+    "wheel_f_l",
+    "wheel_f_r",
+    "wheel_r_l",
+    "wheel_r_r"
+   ],
+   "assembly_block": "CarPaintMM"
+  },
+  {
+   "index": 10,
+   "material": "Batmobile_V3_Cockpit_MIC",
+   "object_path": "BatmobileV3_Materials.Material.Batmobile_V3_Cockpit_MIC",
+   "kind": "MaterialInstanceConstant",
+   "package": "Playable_Batmobile_SF",
+   "parent": "Material_MASTERS.Batmobile_V3_Body_NoRain_MAT",
+   "textures": {
+    "Anisotropic Ramp": "Engine.Aniso_ramp_Lacquered",
+    "Colour_Ramp_Map": "Engine.Batman_BM3_V2_Lacquered_Underlayer_Ramp",
+    "Material1_Microdetail_N": "Engine.neutral_normal",
+    "Material2_Microdetail": "Engine.Batmobile_Micropattern_C",
+    "Material2_Microdetail_N": "Engine.neutral_normal",
+    "Material3_Microdetail": "Engine.Batmobile_Micropattern_C",
+    "Material3_Microdetail_N": "Engine.neutral_normal",
+    "Material_Separation_Mask": "Textures.Batmobile_V3_Int_Cockpit_M",
+    "Normal_Map": "Textures.Batmobile_V3_Int_Cockpit_N"
+   },
+   "lod0_faces": 27334,
+   "assembly_parts": [
+    "body"
+   ],
+   "assembly_block": "CarPaintMM"
+  },
+  {
+   "index": 11,
+   "material": "BatmobileV3_Cockpit_Seat",
+   "object_path": "BatmobileV3_Materials.Material.BatmobileV3_Cockpit_Seat",
+   "kind": "MaterialInstanceConstant",
+   "package": "Playable_Batmobile_SF",
+   "parent": "Engine.Batmobile_Hardleather_Master_MAT",
+   "textures": {
+    "Colour_Map": "Textures.Batmobile_V3_Int_Cockpit_D",
+    "Colour_Ramp_Map": "Maps.Batman_BM3_V2_Leather_Ramp",
+    "Emissive": "Textures.Batmobile_V3_Int_Cockpit_E",
+    "Normal_Map_Lacquer": "Textures.Batmobile_V3_Int_Cockpit_N",
+    "Ref_n_Rough_Map": "Textures.Batmobile_V3_Int_Cockpit_S"
+   },
+   "lod0_faces": 13014,
+   "assembly_parts": [
+    "body"
+   ],
+   "assembly_block": "CarPaintMM"
+  },
+  {
+   "index": 12,
+   "material": "Cockpit_Master_Flip_Data",
+   "object_path": "BatmobileV3_Materials.Material.Cockpit_Master_Flip_Data",
+   "kind": "Material/master",
+   "package": "Playable_Batmobile_SF",
+   "parent": null,
+   "textures": {},
+   "lod0_faces": 100,
+   "assembly_parts": [
+    "body"
+   ],
+   "assembly_block": "CarPaintMM"
+  },
+  {
+   "index": 13,
+   "material": "Batmobile_V3_Discbreak_MIC",
+   "object_path": "BatmobileV3_Materials.Material.Batmobile_V3_Discbreak_MIC",
+   "kind": "MaterialInstanceConstant",
+   "package": "Playable_Batmobile_SF",
+   "parent": "Material_MASTERS.Batmobile_V3_Discbreak",
+   "textures": {
+    "Anisotropic Ramp": "Engine.Aniso_ramp_Lacquered",
+    "Colour_Map": "Textures.Batmobile_V3_BRAKE_DISC_D",
+    "Colour_Ramp_Map": "Engine.Batman_BM3_V2_Lacquered_Underlayer_Ramp",
+    "Normal_Map": "Textures.Batmobile_V3_BRAKE_DISC_N",
+    "Ref_n_Rough_Map": "Textures.Batmobile_V3_BRAKE_DISC_R"
+   },
+   "lod0_faces": 3712,
+   "assembly_parts": [
+    "wheel_f_l",
+    "wheel_f_r",
+    "wheel_r_l",
+    "wheel_r_r"
+   ],
+   "assembly_block": "CarPaintMM"
+  },
+  {
+   "index": 14,
+   "material": "Stagg_Battery_01_MAT",
+   "object_path": "Batmobile_Power_Cell.Materials.Stagg_Battery_01_MAT",
+   "kind": "Material/master",
+   "package": "Playable_Batmobile_SF",
+   "parent": null,
+   "textures": {},
+   "lod0_faces": 2949,
+   "assembly_parts": [
+    "body"
+   ],
+   "assembly_block": "CarPaintMM"
+  },
+  {
+   "index": 15,
+   "material": "Stagg_Battery_Energy_01_MAT",
+   "object_path": "Batmobile_Power_Cell.Materials.Stagg_Battery_Energy_01_MAT",
+   "kind": "Material/master",
+   "package": "Playable_Batmobile_SF",
+   "parent": null,
+   "textures": {},
+   "lod0_faces": 18,
+   "assembly_parts": [
+    "body"
+   ],
+   "assembly_block": "CarPaintMM"
+  },
+  {
+   "index": 16,
+   "material": "Nimbus_Power_Cell_Mat",
+   "object_path": "Batmobile_Power_Cell.Materials.Nimbus_Power_Cell_Mat",
+   "kind": "MaterialInstanceConstant",
+   "package": "Playable_Batmobile_SF",
+   "parent": "Engine.Stagg_Quarantine_Panel_Window_MAT",
+   "textures": {
+    "Texture_Diffuse": "Textures.Batmobile_V3_Power_Cell_INT_D",
+    "Texture_Normal": "Stagg_Obj.Nimbus_Power_Cell_N",
+    "Texture_Ref_Rough": "Stagg_Obj.Nimbus_Power_Cell_S"
+   },
+   "lod0_faces": 788,
+   "assembly_parts": [
+    "body"
+   ],
+   "assembly_block": "CarPaintMM"
+  },
+  {
+   "index": 17,
+   "material": "BatmobileV3_Upgrades_MAT_INST",
+   "object_path": "BatmobileV3_Upgrades.BatmobileV3_Upgrades_MAT_INST",
+   "kind": "MaterialInstanceConstant",
+   "package": "Playable_Batmobile_SF",
+   "parent": "Engine.Gadgets_Master_MAT",
+   "textures": {
+    "Colour_Map": "BatmobileV3_Upgrades.Batmobile_V3_Missile_Upgrade_D",
+    "Normal_Map_Lacquer": "BatmobileV3_Upgrades.Batmobile_V3_Missile_Upgrade_N",
+    "Ref_n_Rough_Map": "BatmobileV3_Upgrades.Batmobile_V3_Missile_Upgrade_S"
+   },
+   "lod0_faces": 6280,
+   "assembly_parts": [
+    "body"
+   ],
+   "assembly_block": "CarPaintMM"
+  },
+  {
+   "index": 18,
+   "material": "Batmobile_Worn_NoRain",
+   "object_path": "BatmobileV3_Materials.Material_MASTERS.Batmobile_Worn_NoRain",
+   "kind": "Material/master",
+   "package": "Playable_Batmobile_SF",
+   "parent": null,
+   "textures": {},
+   "lod0_faces": 524,
+   "assembly_parts": [
+    "body"
+   ],
+   "assembly_block": "CarPaintMM"
+  }
+ ],
+ "lods": [
+  {
+   "lod": 3,
+   "material_map": [],
+   "map_len": 0,
+   "identity": true,
+   "covers_slots": 19
+  },
+  {
+   "lod": 1,
+   "material_map": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+   ],
+   "map_len": 18,
+   "identity": true,
+   "covers_slots": 18
+  },
+  {
+   "lod": 2,
+   "material_map": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+   ],
+   "map_len": 18,
+   "identity": true,
+   "covers_slots": 18
+  }
+ ],
+ "summary": {
+  "mesh": "Batmobile_V2",
+  "slots": 19,
+  "lod0_faces": 299837,
+  "slots_with_geometry": 19,
+  "slots_without_geometry": 0,
+  "instances": 13,
+  "textures": 38,
+  "lods": 3,
+  "lod_maps_identity": 3
+ },
+ "problems": []
+}

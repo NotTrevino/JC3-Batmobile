@@ -1,0 +1,152 @@
+# JC3-Batmobile - never commit game files, extracted assets, or other people's software.
+# Only our own code, notes, configs and build scripts belong in this repo.
+#
+# Verified with:  git status --porcelain -uall | Measure-Object -Line
+# Anything listed there that is not ours is a hole in this file.
+
+# --- Avalanche / JC3 engine formats -----------------------------------------
+# These are extension patterns rather than path rules so that a stray copy dropped
+# anywhere in the tree is still caught, not just one inside a known folder.
+*.ee
+*.ee.toc         # entity container table of contents, shipped beside the .ee
+*.epe
+*.rbm
+*.lod
+*.vmodc
+*.physicsc
+*.wtunec
+*.cmtunec
+*.ftunec
+*.etunec
+*.pfxc
+*.efcc
+*.bikc
+*.fraglib
+*.frag
+*.stringlookup
+*.fmod_guids
+*.ddsc
+*.hmddsc
+*.adf
+*.rtpc
+*.pskx
+*.psk
+*.btc            # Bink video, JC3 and most other Source-derived engines
+*.ban            # animation container
+*.asb            # animation state machine (aaf/animations)
+*.afsmb          # animation state machine body
+*.bsk            # skeleton (aaf/animations/jc_skeletons)
+*.trim           # extracted texture trim data
+*.wem
+*.atlas
+*.filelist
+@files.xml
+*.filelist.txt
+_filelist.txt
+
+# --- meshes and textures extracted from the game -----------------------------
+*.tga
+*.dds
+*.ddsx
+*.obj
+*.fbx
+*.abc
+
+# .max / .maxcompound are deliberately NOT ignored here. The 3ds Max install tree is
+# covered by its own directory rule below, and the planned ApexMax/HavokMax round-trip
+# workflow will want its scene files version-controlled. Any .max that is really a
+# byproduct of the game goes in Working/ or Builds/, which are ignored by path.
+
+# --- installed software and installers ---------------------------------------
+# The 3ds Max tree is ~11 GB across ~71,000 files and the service packs another
+# 3.8 GB. Neither belongs in a mod repo. Better still: move them off this disk's
+# project folder entirely (e.g. C:\Tools\3dsMax2017) and delete these lines.
+Autodesk 3ds Max/
+Autodesk 3ds Max*/
+*.iso
+*.msi
+*.exe
+*.msp
+*.cab
+
+# --- third-party mods and tools ----------------------------------------------
+1497004460_BATMAN-mod/
+1497004460_BATMAN-mod.7z
+1784361515768-Just_Cause_3_Unlimited_Edition_-_Addon_Modpack/
+Batman Vs Rico/
+No-Intro/
+Tools/Gibbed/
+Tools/Gibbed-patched/
+Tools/GibbedSrc/
+Tools/Deca/
+Tools/Blender/
+Tools/JCMR/
+Tools/JCMR-src/
+Tools/Universal-Modder/
+Tools/vgmstream-win64/
+Tools/jc3-console-thingy-src/
+jc3-console-thingy-steam/
+Research/Arkham Knight SFX/
+Research/AbdAshes' Batman Arkham Series Audio Modding Guide-2230-1-1-1735387299/
+Research/1456340180_Rebel-Drop-Mod-V5.3/
+Research/1695578740_meme-pack/
+dxgi.dll
+d3d11.dll
+winmm.dll
+version.dll
+xinput1_1.dll
+xinput9_1_0.dll
+
+# --- donors, extracted trees and build output --------------------------------
+# Every one of these is either game content or a build artifact. None is ours to ship.
+Original/
+Working/
+Builds/
+Backups/
+Logs/
+Tests/
+SerpenteR-EE/
+Serpente-ArchiveScan/
+SerpenteR-Test/
+Playable_Batmobile_SF/
+BmGame/
+Startup/
+game0-unpack/
+JC3-Test/
+Research/MemePack/
+Research/Vehicle/
+Research/Epe/
+Research/blender/
+# aaf/ is the game's own effect, camera, animation and skeleton tree, extracted per donor.
+Research/*/aaf/
+# ConvertProperty / ConvertAdf output of the game's entity and tuning files, and patched
+# .bin slices: extracted content or game data, not notes.
+Research/PartsForensics/
+Research/SerpenteParts/
+Research/SerpenteModules/
+Research/SerpenteToc/
+Research/Budgets/
+Research/DaBaby/xml/
+# ConvertAdf / ConvertProperty output of .vmodc and the entity property tree. These are
+# the game's own tunable data in XML form -- effectively a data table -- so they are
+# extracted content, not notes. Research/RBM/*.json and INVENTORY.* stay tracked: those
+# are measurements and structural summaries we authored, and they cannot reconstruct
+# anything.
+Research/Physics/
+
+# --- savegames and downloaded profiles ---------------------------------------
+# A Nexus download of someone else's 100% save: save data, not ours to ship.
+Just Cause 3 - 100 Percent*/
+
+# --- our own working output ---------------------------------------------------
+*.log
+*.bak*
+fal_manifest.jsonl
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# --- local agent scratch -----------------------------------------------------
+AGENTS.local.md

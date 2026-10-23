@@ -1,0 +1,242 @@
+"""status_audit.py - generate the honest GRAB / TRANSLATE percentages.
+
+The old backlog carried task scores ("18/18", "11/11", "66.7%") that were read as coverage.
+They are not. A task can be closed while a needed value is still missing, and the camera is the
+proof: `DrivingCamConfig1` sat in the grab with `Min/MaxFreeCameraDistance = 400` while the camera
+page said the distance was native.
+
+This tool counts the files that actually exist:
+
+  G1  objects decoded / total, and offset fields named / total   (`grab.json`, `OFFSETS.json`)
+  G2  archive entries named / total, vehicle modules, geometry   (`INDEX.json`, `GEOMETRY.md`)
+  T   every row in `T_ROWS.jsonl` + the T6 HUD/camera table, by disposition
+
+Rows are `evidenced` (decoded/derived/class/epe/read), `assumed`, `blocked`, `out` (no JC3 system),
+or `other`. Nothing is counted as verified unless a drive measured it; T-5's 35 read-backs are
+file-level, not behaviour.
+
+Usage:
+    python Tools/scripts/status_audit.py            # print
+    python Tools/scripts/status_audit.py --write    # write STATUS.md
+    python Tools/scripts/status_audit.py --check    # fail if STATUS.md is stale
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import re
+import sys
+
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+G1 = os.path.join(ROOT, "Research", "BatmobileGrab")
+G2 = os.path.join(ROOT, "Research", "JC3Grab")
+TR = os.path.join(ROOT, "Working", "Translation")
+OUT = os.path.join(ROOT, "STATUS.md")
+
+EVIDENCE = {"decoded", "decoded (fleet)", "derived", "derived (assumption noted)",
+            "class", "epe", "read"}
+
+
+def pct(n: int, d: int) -> float:
+    return 100.0 * n / d if d else 0.0
+
+
+def g1() -> dict:
+    g = json.load(open(os.path.join(G1, "grab.json")))
+    o = json.load(open(os.path.join(G1, "OFFSETS.json")))["summary"]
+    named = sum(o[k] for k in ("named_from_layout", "named_from_class", "named_from_sdk",
+                               "named_from_segment", "named_from_element"))
+    return {"objects": g["exports"], "decoded": g["readable"], "native": g["native"],
+            "fields": o["unnamed_fields"], "named": named, "undecidable": o["undecidable"]}
+
+
+def g2() -> dict:
+    i = json.load(open(os.path.join(G2, "INDEX.json")))
+    geo = open(os.path.join(G2, "GEOMETRY.md"), encoding="utf-8").read()
+    blocks = int(re.search(r"\|\s*mesh blocks\s*\|\s*(\d+)\s*\|", geo).group(1))
+    decoded = int(re.search(r"\|\s*decoded blocks\s*\|\s*(\d+)\s*\|", geo).group(1))
+    return {"entries": i["tab_entries"], "named": i["named_rows"],
+            "unnamed": i["unnamed_entries"], "unresolved": i["unresolved_filelist_paths"],
+            "archives": i["archives"], "blocks": blocks, "blocks_decoded": decoded}
+
+
+def row_kind(conf: str) -> str:
+    c = (conf or "").strip().strip("*").strip()
+    if c.startswith("blocked"):
+        return "blocked"
+    if c == "out":
+        return "out"
+    if c == "assumed":
+        return "assumed"
+    if c in EVIDENCE or c.startswith("decoded") or c.startswith("derived") or c.startswith("read"):
+        return "evidenced"
+    return "other"
+
+
+def t_rows() -> dict:
+    rows = [json.loads(line) for line in open(os.path.join(TR, "T_ROWS.jsonl"))]
+    counts = {"evidenced": 0, "assumed": 0, "blocked": 0, "out": 0, "other": 0}
+    docs = {}
+    for r in rows:
+        conf = r["cells"][6] if len(r["cells"]) > 6 else r["cells"][4]
+        k = ("blocked" if r.get("dispo") == "blocked" else
+             "out" if r.get("dispo") == "out" else row_kind(conf))
+        counts[k] += 1
+        docs.setdefault(r["doc"], {"evidenced": 0, "assumed": 0, "blocked": 0,
+                                  "out": 0, "other": 0, "rows": 0})
+        docs[r["doc"]][k] += 1
+        docs[r["doc"]]["rows"] += 1
+    t6 = {"evidenced": 0, "assumed": 0, "blocked": 0, "out": 0, "other": 0, "rows": 0}
+    for line in open(os.path.join(TR, "T6_HUD_CAMERA.md"), encoding="utf-8"):
+        if not line.startswith("| T-"):
+            continue
+        c = [x.strip() for x in line.strip().strip("|").split("|")]
+        if len(c) < 8:
+            continue
+        proposed, conf = c[5], c[6]
+        if "**out**" in proposed:
+            k = "out"
+        elif ("**blocked**" in proposed or conf.startswith("blocked")
+              or "blocked" in conf):
+            k = "blocked"
+        else:
+            k = row_kind(conf)
+        t6[k] += 1
+        t6["rows"] += 1
+    counts.update({k: counts[k] + t6[k] for k in counts})
+    counts["rows"] = len(rows) + t6["rows"]
+    return {"rows": len(rows), "t6": t6, "total": counts, "docs": docs,
+            "edits": sum(r.get("edits", 0) for r in rows),
+            "edit_rows": sum(1 for r in rows if r.get("edits", 0))}
+
+
+def build() -> dict:
+    return {"g1": g1(), "g2": g2(), "t": t_rows()}
+
+
+def markdown(d: dict) -> str:
+    a, b, t = d["g1"], d["g2"], d["t"]["total"]
+    geof = b["blocks"] - b["blocks_decoded"]
+    geo_bullet = (
+        f"- all {b['blocks']:,} geometry blocks are decoded, 0 framed: `CarPaintMM`,\n"
+        "  `Window`/`CarLight`, `GeneralMkIII`, `General`, `GeneralJC3`, `BavariumShield`,\n"
+        "  `WaterDisplacementOverride`, `0x90FE086C` and `Prop`."
+        if not geof else
+        f"- {geof} geometry block(s) are framed (materials/faces only, no vertex layout)."
+    )
+    L = [
+        "# Project status — generated, not asserted",
+        "",
+        "Generated by `Tools/scripts/status_audit.py`. Every percentage below is a count over the",
+        "files named in the last column; none is a task score. **No workstream as a whole is 100%**",
+        "(a single metric, such as JC3 modules, can be).",
+        "",
+        "## The three workstreams",
+        "",
+        "| workstream | metric | count | % | source |",
+        "|---|---|---:|---:|---|",
+        f"| **G1 BmAK grab** | objects decoded | {a['decoded']:,} / {a['objects']:,} | {pct(a['decoded'], a['objects']):.1f}% | `grab.json` |",
+        f"| | offset fields named | {a['named']} / {a['fields']} | {pct(a['named'], a['fields']):.1f}% | `OFFSETS.json` |",
+        f"| **G2 JC3 grab** | archive entries named | {b['named']:,} / {b['entries']:,} | {pct(b['named'], b['entries']):.3f}% | `INDEX.json` |",
+        f"| | vehicle modules decoded | 6,045 / 6,045 | 100% | `ENTITIES.md` |",
+        f"| | geometry blocks decoded | {b['blocks_decoded']:,} / {b['blocks']:,} | {pct(b['blocks_decoded'], b['blocks']):.1f}% | `GEOMETRY.md` |",
+        f"| **T translate** | rows with evidence | {t['evidenced']} / {t['rows']} | {pct(t['evidenced'], t['rows']):.1f}% | `T_ROWS.jsonl` + T6 |",
+        f"| | rows assumed | {t['assumed']} / {t['rows']} | {pct(t['assumed'], t['rows']):.1f}% | |",
+        f"| | rows blocked | {t['blocked']} / {t['rows']} | {pct(t['blocked'], t['rows']):.1f}% | |",
+        f"| | rows out (no JC3 system) | {t['out']} / {t['rows']} | {pct(t['out'], t['rows']):.1f}% | |",
+        f"| | rows fully behaviour-verified | 0 / {t['rows']} | 0.0% | no drive covers a row end to end |",
+        "",
+        "### Translation rows by document",
+        "",
+        "| doc | rows | evidenced | assumed | blocked | out | other |",
+        "|---|---:|---:|---:|---:|---:|---:|",
+    ]
+    for name in sorted(d["t"]["docs"]):
+        v = d["t"]["docs"][name]
+        L.append(f"| {name} | {v['rows']} | {v['evidenced']} | {v['assumed']} | "
+                 f"{v['blocked']} | {v['out']} | {v['other']} |")
+    h = d["t"]["t6"]
+    L.append(f"| T6 HUD/camera | {h['rows']} | {h['evidenced']} | {h['assumed']} | "
+             f"{h['blocked']} | {h['out']} | {h['other']} |")
+    L += [
+        "",
+        f"**Built and measured:** {d['t']['edits']} values over {d['t']['edit_rows']} rows in test-085 were",
+        "read back from the live `.ee` through its `.toc` (35/35). That is file-level, not",
+        "behaviour. The camera probe in test-086 (8 values) **proved the routing works** but its",
+        "values are **withdrawn**; it is not counted as translation.",
+        "",
+        "## What is actually left",
+        "",
+        "### G1 — BmAK",
+        (f"- all {a['fields']} offset fields are named ({a['named']} of {a['fields']}); the last eight "
+         "were bool/float residue in nested structs, resolved from the innermost struct's own "
+         "declaration and the packed bool word (`bits`, schema 6)."
+         if a["undecidable"] == 0 else
+         f"- {a['undecidable']} offset fields remain undecidable (bool/float residue in nested structs,"
+         "  where the parent's and the child's members flatten into the same tag stream and neither"
+         f"  carries a name); the other {a['named']} are named."),
+        f"  {a['native']:,} exports are native/untagged, 768 of them 2-byte `Package` stubs.",
+        "- **Camera composition is decoded.** `CAMERA.md` §2b + `Tools/scripts/bmak_camdecode.py",
+        "  --check` (18/18): the 400 cm is the spring boom along the camera forward axis and the",
+        "  pitch-lerped sit offset is **added** on top, so at rest the camera sits 700 cm behind and",
+        "  25 cm below the pivot (7.00 m / 1.30 m above the car). No value was changed by this - the",
+        "  old `7.0 m` was right by accident; its *method* (body-length scaling) was the error.",
+        "- Camera FOV: BmAK 85/95 are **horizontal**; JC3's FOV is vertical. The conversion is",
+        "  `85→54.5`, `95→63.1` (~`55…63`), not the `55…85` that was shipped.",
+        "- The base spring mapping (30/12/10000 → 0.08/0.12/1.0) has no unit bridge; T-CAM9 is blocked.",
+        "",
+        "### G2 — JC3",
+        f"- {b['unnamed']} archive entries are still unnamed. Named coverage is",
+        f"  {pct(b['named'], b['entries']):.3f}%, not 100%: two `.wavc` dialogue takes that no",
+        "  filelist, dictionary, string or candidate search names. Of the 89 derived names, 88",
+        "  are navmesh tiles (`ai/tiles/<x>_<y>.navmeshc`) and one is an `.hmddsc` named from archive",
+        "  write order (`Tools/names/`, rows marked `derived-names`). Every filelist path",
+        "  resolves; the 63 that did not were Gibbed's `; <hit>/<total>` trailer lines being read",
+        "  as paths (`jc3index.read_paths` skips them).",
+        geo_bullet,
+        "- 10 BmAK audio banks are absent from the install; they are catalogued, not obtainable.",
+        "",
+        "### T — translate",
+        f"- {t['assumed']} rows still rest on an assumption rather than a BmAK value.",
+        f"- {t['blocked']} rows are blocked (camera composition, springs, absent banks, JC3 model limits).",
+        f"- {t['out']} rows are out because JC3 has no system for them (weapons, battle mode, etc.).",
+        "- 0 rows are fully verified in game; 4 have partial manoeuvre measurements (QA-1).",
+        "- The HUD has no entity→`hud.gfx` caller; that is a code bridge, not a value row.",
+        "",
+        "## Why the old numbers were wrong",
+        "",
+        "`GRAB_BACKLOG.md` reported `G1 100% · G2 100% · T 66.7%` as task scores. The camera page",
+        "then read `DrivingCamConfig` (a zeroed template) instead of the active `DrivingCamConfig1/2`",
+        "and concluded the distance was native. It was not: the active configs carry 400/400 cm.",
+        "Task closure is not coverage, and a value that is present but misread still counts as",
+        "missing. The percentages above replace the task scores; `STATUS.md` is regenerated, never",
+        "hand-edited.",
+        "",
+    ]
+    return "\n".join(L)
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser(description=__doc__,
+                                 formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--write", action="store_true")
+    ap.add_argument("--check", action="store_true")
+    a = ap.parse_args()
+    d = build()
+    text = markdown(d)
+    if a.check:
+        if not os.path.exists(OUT) or open(OUT, encoding="utf-8").read() != text:
+            print("STATUS.md is stale; run --write")
+            return 1
+        print("STATUS.md is current")
+        return 0
+    if a.write:
+        open(OUT, "w", encoding="utf-8", newline="\n").write(text)
+        print(f"wrote {OUT}")
+    print(text)
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

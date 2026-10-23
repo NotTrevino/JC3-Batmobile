@@ -1,0 +1,352 @@
+{
+ "jp_exs": "JPEXS Free Flash Decompiler (ffdec), CFX 0x0f",
+ "bmak": {
+  "scripts": 99,
+  "external_images": [
+   "Image_I1.tga",
+   "Image_I1B.tga",
+   "Image_I1C6.tga",
+   "Image_I28B.tga"
+  ],
+  "frame_labels": [
+   "Normal",
+   "Warning",
+   "Intro",
+   "In",
+   "Outro",
+   "Out",
+   "Initial",
+   "ShowDamage",
+   "Pause",
+   "Resume",
+   "Expired",
+   "ExpiredOutro",
+   "PreReady",
+   "Ready",
+   "PreReadyLevel1",
+   "PreReadyLevel2",
+   "Blank",
+   "machinegun",
+   "riot",
+   "emp",
+   "None",
+   "Effective",
+   "Ineffective",
+   "Show1",
+   "Hide1",
+   "Show2",
+   "Hide2",
+   "Empty",
+   "BecomeFull",
+   "Full",
+   "Use",
+   "LoseToHit",
+   "LoseToInaccuracy",
+   "Show",
+   "Done",
+   "Charges2",
+   "Charges3",
+   "Charges4",
+   "Unavailable",
+   "Available",
+   "Used",
+   "Lost",
+   "Prototype",
+   "FirstBootUp",
+   "DRIVE",
+   "DRIVETOBATTLE",
+   "BATTLE",
+   "BATTLETODRIVE",
+   "BATTLETOZOOMED",
+   "ZOOMED",
+   "ZOOMEDTOBATTLE",
+   "ZOOMEDTODRIVE",
+   "loop",
+   "Idle",
+   "intro",
+   "idle",
+   "Loop",
+   "Tyre",
+   "Uploading",
+   "UploadIdle",
+   "Failure",
+   "Success",
+   "Null",
+   "Gordon",
+   "Penguin",
+   "Thug",
+   "Azrael",
+   "Blackfire",
+   "Firecrew",
+   "Firefly",
+   "Hush",
+   "Ivy",
+   "Hatter",
+   "ManBat",
+   "Oracle",
+   "Pyg",
+   "Stagg",
+   "Twoface",
+   "Cheung",
+   "Brewer",
+   "DeathStroke",
+   "Fireman_Chief",
+   "Riddler",
+   "Nora",
+   "Update",
+   "Charging",
+   "Extra4",
+   "Extra3",
+   "Extra2",
+   "Extra1",
+   "Basic",
+   "Decrease",
+   "Shake",
+   "Armour0",
+   "Armour1",
+   "Armour2",
+   "Armour3",
+   "Armour4",
+   "BM",
+   "BW",
+   "RB",
+   "NW",
+   "CW",
+   "BV",
+   "Pulse",
+   "IntroDelayed",
+   "XPFill",
+   "IncreasePulse",
+   "DecreaseToZero",
+   "Zero",
+   "Increase",
+   "OutroSlow"
+  ],
+  "uc_setters": [
+   {
+    "name": "UC_SetEnergySystemParams",
+    "args": "param1:int, param2:int, param3:Number, param4:Boolean, param5:int"
+   },
+   {
+    "name": "UC_SetTurnAround",
+    "args": "param1:int"
+   },
+   {
+    "name": "UC_DoIntro",
+    "args": ""
+   },
+   {
+    "name": "UC_DoOutro",
+    "args": ""
+   },
+   {
+    "name": "UC_SetOccupant",
+    "args": "param1:Boolean, param2:String, param3:String, param4:String, param5:Boolean"
+   },
+   {
+    "name": "UC_SetWinchMeterVisible",
+    "args": "param1:Boolean"
+   },
+   {
+    "name": "UC_SetWinchMeter",
+    "args": "param1:Number, param2:Number, param3:Boolean"
+   },
+   {
+    "name": "UC_SetRemoteInterfaceVisible",
+    "args": "param1:Boolean"
+   },
+   {
+    "name": "UC_SetBoostLevel",
+    "args": "param1:int, param2:int"
+   },
+   {
+    "name": "UC_HideBoostGauge",
+    "args": ""
+   },
+   {
+    "name": "UC_SetEnemyCount",
+    "args": "param1:int"
+   },
+   {
+    "name": "UC_SetMedalProportion",
+    "args": "param1:Number"
+   },
+   {
+    "name": "UC_SetMachineGunAccuracyFrame",
+    "args": "param1:int"
+   },
+   {
+    "name": "UC_SetMedalAccruing",
+    "args": "param1:Boolean"
+   },
+   {
+    "name": "UC_SetMedalType",
+    "args": "param1:int"
+   },
+   {
+    "name": "UC_SetPrimaryWeapon",
+    "args": "param1:String"
+   },
+   {
+    "name": "UC_SetSecondaryWeapon",
+    "args": "param1:String, param2:Boolean, param3:Boolean"
+   },
+   {
+    "name": "UC_SetCannonCoolDown",
+    "args": "param1:int"
+   },
+   {
+    "name": "UC_SetSpecialWeapons",
+    "args": "param1:int, param2:int, param3:int"
+   },
+   {
+    "name": "UC_SetBattleAndZoomMode",
+    "args": "param1:Boolean, param2:Boolean"
+   },
+   {
+    "name": "UC_SetWeaponFeedback",
+    "args": "param1:Boolean, param2:Boolean"
+   },
+   {
+    "name": "UC_SetForensicTracking",
+    "args": "param1:String"
+   },
+   {
+    "name": "UC_SetHealthBarVisible",
+    "args": "param1:Boolean, param2:String = \"\""
+   },
+   {
+    "name": "UC_SetHealth",
+    "args": "param1:Number, param2:Number"
+   },
+   {
+    "name": "UC_SetXpLevel",
+    "args": "param1:Number, param2:Boolean"
+   },
+   {
+    "name": "UC_SetBatmobileCombo",
+    "args": "param1:Number, param2:int, param3:Number"
+   },
+   {
+    "name": "UC_SetImpactDamageFlash",
+    "args": "param1:String, param2:Number, param3:Number, param4:int"
+   },
+   {
+    "name": "UC_ShowBoostUpgrade",
+    "args": "param1:String, param2:String"
+   },
+   {
+    "name": "UC_SetVirusUploadState",
+    "args": "param1:String, param2:Boolean"
+   },
+   {
+    "name": "UC_SetBattleModeOpacity",
+    "args": "param1:Number"
+   },
+   {
+    "name": "UC_SetEnergyTutorialLevel",
+    "args": "param1:int"
+   }
+  ],
+  "constants": {
+   "TickDeltaTime": 0.033,
+   "StageWidth": 1024.0,
+   "StageHeight": 720.0,
+   "MaxHealthChangePerFrame": 0.05,
+   "PerspectiveFOV": 56.0,
+   "MovieWidth": 1024,
+   "MovieHeight": 768
+  },
+  "mode_strings": [
+   "BATTLE",
+   "DRIVE",
+   "ZOOMED"
+  ],
+  "has_battle_mode": true,
+  "has_boost_gauge": true,
+  "has_energy_system": true,
+  "has_winch": true
+ },
+ "jc3": {
+  "scripts": 260,
+  "external_images": [
+   "hud_i126.dds",
+   "hud_i1bf.dds",
+   "hud_i32.dds",
+   "hud_i46.dds",
+   "hud_i5a.dds",
+   "hud_i60.dds",
+   "hud_i6b7.dds",
+   "hud_i6ba.dds",
+   "hud_iee.dds"
+  ],
+  "constants": {
+   "SPEEDO_SMOOTHING_TIME": 0.05,
+   "SPEEDO_DEGREES": 250.0,
+   "VEHICLE_FADE_IN_TIME": 0.5,
+   "VEHICLE_FADE_OUT_TIME": 0.5,
+   "MovieWidth": 1280,
+   "MovieHeight": 720
+  },
+  "vehicle_api": [
+   {
+    "name": "SetVehicleInfo",
+    "args": "vehicle_name:String"
+   },
+   {
+    "name": "SetVehicleType",
+    "args": "type:int"
+   },
+   {
+    "name": "InitPrimaryMeter",
+    "args": "type:int, big_tick:Number, max_value:Number"
+   },
+   {
+    "name": "SetPrimaryMeterValue",
+    "args": "value:Number"
+   },
+   {
+    "name": "InitVehicleNitrous",
+    "args": "recharge:Number"
+   },
+   {
+    "name": "UpdateVehicleNitrous",
+    "args": "recharge:Number"
+   },
+   {
+    "name": "HideVehicleNitrous",
+    "args": ""
+   },
+   {
+    "name": "InitVehicleWeapons",
+    "args": "slot_index:int, weapon_id:int, weapon_name:String, infiniteAmmo:Boolean = true, magazine_ammo:int = -1, magazine_size:int = -1, inventory_ammo:int = -1, weapon_cooldown:Number = -1, is_overcharged:Boolean = false"
+   },
+   {
+    "name": "UpdateVehicleWeapons",
+    "args": "slot_index:int, new_magazine_ammo_amount:int, total_ammo:int, is_low_ammo:Boolean, weapon_cooldown:Number = -1, is_overcharged:Boolean = false"
+   },
+   {
+    "name": "ShowVehicleUi",
+    "args": ""
+   },
+   {
+    "name": "HideVehicleUi",
+    "args": ""
+   },
+   {
+    "name": "UpdateMechSpeedometer",
+    "args": "current_speed:Number"
+   }
+  ],
+  "has_speedometer": true,
+  "has_nitrous": true,
+  "has_vehicle_weapons": true,
+  "has_vehicle_health": true,
+  "vehicle_types": [
+   "VEHICLE_TYPE_AIRPLANE",
+   "VEHICLE_TYPE_HELICOPTER",
+   "VEHICLE_TYPE_LAND",
+   "VEHICLE_TYPE_SEA"
+  ]
+ }
+}

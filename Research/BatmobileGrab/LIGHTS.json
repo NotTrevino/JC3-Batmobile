@@ -1,0 +1,4882 @@
+{
+ "schema": 1,
+ "generated_by": "grab_lights.py",
+ "skeleton": "Working\\Appearance\\grab\\Playable_Batmobile_SF\\SkeletalMesh3\\Batmobile_V2.pskx",
+ "vanilla": "21 entries in Working\\Lights\\serpente_lights.xml",
+ "jc3_fields": [
+  "behavior",
+  "part",
+  "part_index",
+  "diffuse",
+  "range",
+  "falloff_start",
+  "near_cap",
+  "multiplier",
+  "min_luminosity",
+  "light_type",
+  "blinking",
+  "angle",
+  "cast_shadows",
+  "projected_texture_index",
+  "volumetric_mode",
+  "volume_intensity",
+  "uvscale",
+  "deformable_transform",
+  "preset_id"
+ ],
+ "vanilla_by_behavior": {
+  "TailLight": {
+   "diffuse": [
+    1.0,
+    0.247850001,
+    0.0789999962
+   ],
+   "range": 2.0,
+   "falloff_start": 0.0,
+   "near_cap": 1.0,
+   "multiplier": 2.0,
+   "min_luminosity": 0.0,
+   "light_type": 0,
+   "blinking": 0,
+   "angle": 10.0,
+   "cast_shadows": 0,
+   "projected_texture_index": -1,
+   "volumetric_mode": 0,
+   "volume_intensity": 1.0,
+   "preset_id": 1435191809
+  },
+  "LeftSignal": {
+   "diffuse": [
+    1.0,
+    0.267999977,
+    0.0849999785
+   ],
+   "range": 2.0,
+   "falloff_start": 0.0,
+   "near_cap": 1.0,
+   "multiplier": 2.0,
+   "min_luminosity": 0.0,
+   "light_type": 0,
+   "blinking": 1,
+   "angle": 10.0,
+   "cast_shadows": 0,
+   "projected_texture_index": -1,
+   "volumetric_mode": 0,
+   "volume_intensity": 1.0,
+   "preset_id": 1358616627
+  },
+  "HeadLight": {
+   "diffuse": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "range": 2.0,
+   "falloff_start": 0.0,
+   "near_cap": 1.0,
+   "multiplier": 1.0,
+   "min_luminosity": 0.0,
+   "light_type": 0,
+   "blinking": 0,
+   "angle": 10.0,
+   "cast_shadows": 0,
+   "projected_texture_index": -1,
+   "volumetric_mode": 0,
+   "volume_intensity": 1.0,
+   "preset_id": 2763198432
+  },
+  "RightSignal": {
+   "diffuse": [
+    1.0,
+    0.714999974,
+    0.185000002
+   ],
+   "range": 2.0,
+   "falloff_start": 0.0,
+   "near_cap": 1.0,
+   "multiplier": 1.0,
+   "min_luminosity": 0.0,
+   "light_type": 0,
+   "blinking": 1,
+   "angle": 10.0,
+   "cast_shadows": 0,
+   "projected_texture_index": -1,
+   "volumetric_mode": 0,
+   "volume_intensity": 1.0,
+   "preset_id": 521093305
+  },
+  "Reverse": {
+   "diffuse": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "range": 2.0,
+   "falloff_start": 0.0,
+   "near_cap": 1.0,
+   "multiplier": 1.0,
+   "min_luminosity": 0.0,
+   "light_type": 0,
+   "blinking": 0,
+   "angle": 10.0,
+   "cast_shadows": 0,
+   "projected_texture_index": -1,
+   "volumetric_mode": 0,
+   "volume_intensity": 1.0,
+   "preset_id": 3815211005
+  }
+ },
+ "vehicles": [
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "owner": "Batmobile_Funhouse_Archetypes.Vehicle",
+   "entries": [
+    {
+     "socket": "HeadLight1",
+     "socket_location": [
+      320.680481,
+      38.577576,
+      51.0
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": "VEHLTMAT_HeadLightRight",
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "BatmobileFunhouse.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      },
+      {
+       "class": "LensFlareComponent",
+       "path": "BatmobileFunhouse.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      },
+      {
+       "class": "SpotLightComponent",
+       "path": "BatmobileFunhouse.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight2",
+     "socket_location": [
+      319.194489,
+      -38.495255,
+      51.0
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": "VEHLTMAT_HeadLightLeft",
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "BatmobileFunhouse.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      },
+      {
+       "class": "LensFlareComponent",
+       "path": "BatmobileFunhouse.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "ChainGunMuzzle",
+     "socket_location": [
+      97.662842,
+      0.0,
+      -6.74938
+     ],
+     "bone": "Batmobile_Rig_Weapons_Machine_Gun_01",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": null,
+     "material_type": null,
+     "behavior": null,
+     "behavior_disposition": "no-jc3-equivalent: type stripped and socket name carries no behavior",
+     "behavior_source": "inferred from socket (type stripped)",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Rig_Weapons_Machine_Gun_01|Batmobile_Rig_Weapons_Machine_Gun_01_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": null,
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "BatmobileFunhouse.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight1",
+     "socket_location": [
+      320.680481,
+      38.577576,
+      51.0
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": null,
+     "material_type": "VEHLTMAT_HeadLightRight",
+     "behavior": "HeadLight",
+     "behavior_disposition": "inferred from socket name (type stripped by the cooker)",
+     "behavior_source": "inferred from socket (type stripped)",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "BatmobileFunhouse.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight2",
+     "socket_location": [
+      319.194489,
+      -38.495255,
+      51.0
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": null,
+     "material_type": "VEHLTMAT_HeadLightLeft",
+     "behavior": "HeadLight",
+     "behavior_disposition": "inferred from socket name (type stripped by the cooker)",
+     "behavior_source": "inferred from socket (type stripped)",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "BatmobileFunhouse.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "LWheelLight",
+     "socket_location": [
+      -0.349729,
+      50.689182,
+      26.0
+     ],
+     "bone": "Wheel_Frnt_Left_Disc",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": "VEHLTMAT_Special3",
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_wheel_f_l",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|wheel_f_l|Wheel_Frnt_Left_Disc|Wheel_Frnt_Left_Disc_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "BatmobileFunhouse.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      },
+      {
+       "class": "LensFlareComponent",
+       "path": "BatmobileFunhouse.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "RWheelLight",
+     "socket_location": [
+      0.380923,
+      46.332195,
+      25.7519
+     ],
+     "bone": "Wheel_Frnt_Right_Disc",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": "VEHLTMAT_Special1",
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_wheel_f_r",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|wheel_f_r|Wheel_Frnt_Right_Disc|Wheel_Frnt_Right_Disc_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "BatmobileFunhouse.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      },
+      {
+       "class": "LensFlareComponent",
+       "path": "BatmobileFunhouse.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "BrakeLightL",
+     "socket_location": [
+      -273.688568,
+      -40.901966,
+      -15.193807
+     ],
+     "bone": "SUSP2_Wheel_Rear_Left",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_TailLight",
+     "material_type": "VEHLTMAT_TailLightLeft",
+     "behavior": "TailLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_TailLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|SUSP2_Wheel_Rear_Left|SUSP2_Wheel_Rear_Left_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       0.247850001,
+       0.0789999962
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 2.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 1435191809
+     },
+     "components": [
+      {
+       "class": "PointLightComponent",
+       "path": "BatmobileFunhouse.PointLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      },
+      {
+       "class": "LensFlareComponent",
+       "path": "BatmobileFunhouse.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "BrakeLightR",
+     "socket_location": [
+      272.574463,
+      -40.842842,
+      -14.440631
+     ],
+     "bone": "SUSP2_Wheel_Rear_Right",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_TailLight",
+     "material_type": "VEHLTMAT_TailLightRight",
+     "behavior": "TailLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_TailLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|SUSP2_Wheel_Rear_Right|SUSP2_Wheel_Rear_Right_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       0.247850001,
+       0.0789999962
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 2.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 1435191809
+     },
+     "components": [
+      {
+       "class": "PointLightComponent",
+       "path": "BatmobileFunhouse.PointLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      },
+      {
+       "class": "LensFlareComponent",
+       "path": "BatmobileFunhouse.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "BattleModeSpotLight",
+     "socket_location": [
+      14.650226,
+      0.0,
+      2.499828
+     ],
+     "bone": "Batmobile_Rig_Weapons_Drone_Decoder",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_BattleModeLight",
+     "material_type": null,
+     "behavior": "HeadLight",
+     "behavior_disposition": "approximated: battle-mode spotlight has no JC3 behavior",
+     "behavior_source": "enum VEHLT_BattleModeLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Rig_Weapons_Drone_Decoder|Batmobile_Rig_Weapons_Drone_Decoder_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "BatmobileFunhouse.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight1",
+     "socket_location": [
+      320.680481,
+      38.577576,
+      51.0
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_BattleModeLight",
+     "material_type": "VEHLTMAT_HeadLightRight",
+     "behavior": "HeadLight",
+     "behavior_disposition": "approximated: battle-mode spotlight has no JC3 behavior",
+     "behavior_source": "enum VEHLT_BattleModeLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "BatmobileFunhouse.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight2",
+     "socket_location": [
+      319.194489,
+      -38.495255,
+      51.0
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_BattleModeLight",
+     "material_type": "VEHLTMAT_HeadLightLeft",
+     "behavior": "HeadLight",
+     "behavior_disposition": "approximated: battle-mode spotlight has no JC3 behavior",
+     "behavior_source": "enum VEHLT_BattleModeLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "BatmobileFunhouse.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "LWheelLight",
+     "socket_location": [
+      -0.349729,
+      50.689182,
+      26.0
+     ],
+     "bone": "Wheel_Frnt_Left_Disc",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_BattleModeLight",
+     "material_type": "VEHLTMAT_Special3",
+     "behavior": "HeadLight",
+     "behavior_disposition": "approximated: battle-mode spotlight has no JC3 behavior",
+     "behavior_source": "enum VEHLT_BattleModeLight",
+     "jc3_part": "sportsmuscle_wheel_f_l",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|wheel_f_l|Wheel_Frnt_Left_Disc|Wheel_Frnt_Left_Disc_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "BatmobileFunhouse.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "BattleModeSpotLight",
+     "socket_location": [
+      14.650226,
+      0.0,
+      2.499828
+     ],
+     "bone": "Batmobile_Rig_Weapons_Drone_Decoder",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_ForensicsLight",
+     "material_type": null,
+     "behavior": null,
+     "behavior_disposition": "no-jc3-equivalent: crime-scene scan light",
+     "behavior_source": "enum VEHLT_ForensicsLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Rig_Weapons_Drone_Decoder|Batmobile_Rig_Weapons_Drone_Decoder_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": null,
+     "components": [
+      {
+       "class": "RHelicopterSpotLightComponent",
+       "path": "BatmobileFunhouse.RHelicopterSpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "approximated: spotlight, no helicopter mode"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight1",
+     "socket_location": [
+      320.680481,
+      38.577576,
+      51.0
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_ForensicsLight",
+     "material_type": "VEHLTMAT_HeadLightRight",
+     "behavior": null,
+     "behavior_disposition": "no-jc3-equivalent: crime-scene scan light",
+     "behavior_source": "enum VEHLT_ForensicsLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": null,
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "BatmobileFunhouse.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight2",
+     "socket_location": [
+      319.194489,
+      -38.495255,
+      51.0
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_ForensicsLight",
+     "material_type": "VEHLTMAT_HeadLightLeft",
+     "behavior": null,
+     "behavior_disposition": "no-jc3-equivalent: crime-scene scan light",
+     "behavior_source": "enum VEHLT_ForensicsLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": null,
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "BatmobileFunhouse.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "Dashboard_Light",
+     "socket_location": [
+      182.950577,
+      0.0,
+      144.249832
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_Interior",
+     "material_type": "VEHLTMAT_Interior",
+     "behavior": "TailLight",
+     "behavior_disposition": "approximated: interior accent, no JC3 behavior",
+     "behavior_source": "enum VEHLT_Interior",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       0.247850001,
+       0.0789999962
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 2.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 1435191809
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "BatmobileFunhouse.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight1a",
+     "socket_location": [
+      311.264343,
+      45.2658,
+      67.0
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": null,
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "LensFlareComponent",
+       "path": "BatmobileFunhouse.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight2a",
+     "socket_location": [
+      311.418518,
+      -44.789246,
+      67.0
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": null,
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "LensFlareComponent",
+       "path": "BatmobileFunhouse.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight1b",
+     "socket_location": [
+      316.322937,
+      41.71352,
+      58.75
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": null,
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "LensFlareComponent",
+       "path": "BatmobileFunhouse.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight1c",
+     "socket_location": null,
+     "bone": null,
+     "bone_in_rig": null,
+     "orphan_socket": true,
+     "type": "VEHLT_HeadLight",
+     "material_type": null,
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": null,
+     "anchor_state": "orphan-socket: no bone, cannot place",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "LensFlareComponent",
+       "path": "BatmobileFunhouse.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight2b",
+     "socket_location": [
+      314.919037,
+      -41.464466,
+      58.75
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": null,
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "LensFlareComponent",
+       "path": "BatmobileFunhouse.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight2c",
+     "socket_location": null,
+     "bone": null,
+     "bone_in_rig": null,
+     "orphan_socket": true,
+     "type": "VEHLT_HeadLight",
+     "material_type": null,
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": null,
+     "anchor_state": "orphan-socket: no bone, cannot place",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "LensFlareComponent",
+       "path": "BatmobileFunhouse.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "RWheelLight_top",
+     "socket_location": [
+      0.380923,
+      40.638508,
+      40.000805
+     ],
+     "bone": "Wheel_Frnt_Right_Disc",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": "VEHLTMAT_Special1",
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_wheel_f_r",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|wheel_f_r|Wheel_Frnt_Right_Disc|Wheel_Frnt_Right_Disc_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "LensFlareComponent",
+       "path": "BatmobileFunhouse.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "RWheelLight_bottom",
+     "socket_location": [
+      0.347289,
+      53.81432,
+      10.002043
+     ],
+     "bone": "Wheel_Frnt_Right_Disc",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": "VEHLTMAT_Special1",
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_wheel_f_r",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|wheel_f_r|Wheel_Frnt_Right_Disc|Wheel_Frnt_Right_Disc_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "LensFlareComponent",
+       "path": "BatmobileFunhouse.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "LWheelLight_top",
+     "socket_location": [
+      -0.118559,
+      40.599998,
+      40.0
+     ],
+     "bone": "Wheel_Frnt_Left_Disc",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": "VEHLTMAT_Special3",
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_wheel_f_l",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|wheel_f_l|Wheel_Frnt_Left_Disc|Wheel_Frnt_Left_Disc_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "LensFlareComponent",
+       "path": "BatmobileFunhouse.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "LWheelLight_bottom",
+     "socket_location": [
+      -0.292692,
+      56.499176,
+      10.5
+     ],
+     "bone": "Wheel_Frnt_Left_Disc",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": "VEHLTMAT_Special3",
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_wheel_f_l",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|wheel_f_l|Wheel_Frnt_Left_Disc|Wheel_Frnt_Left_Disc_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "LensFlareComponent",
+       "path": "BatmobileFunhouse.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "BootLight",
+     "socket_location": [
+      -174.496429,
+      2.009974,
+      197.75
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_BootLight",
+     "material_type": null,
+     "behavior": "TailLight",
+     "behavior_disposition": "approximated: boot light, no JC3 behavior",
+     "behavior_source": "enum VEHLT_BootLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       0.247850001,
+       0.0789999962
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 2.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 1435191809
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "BatmobileFunhouse.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      },
+      {
+       "class": "LensFlareComponent",
+       "path": "BatmobileFunhouse.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "owner": "Batmobile_Joker_Archetypes.Vehicle",
+   "entries": [
+    {
+     "socket": "HeadLight1",
+     "socket_location": [
+      320.680481,
+      38.577576,
+      51.0
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": null,
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "JokersBatmobile.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      },
+      {
+       "class": "LensFlareComponent",
+       "path": "JokersBatmobile.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight2",
+     "socket_location": [
+      319.194489,
+      -38.495255,
+      51.0
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": null,
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "JokersBatmobile.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      },
+      {
+       "class": "LensFlareComponent",
+       "path": "JokersBatmobile.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "ChainGunMuzzle",
+     "socket_location": [
+      97.662842,
+      0.0,
+      -6.74938
+     ],
+     "bone": "Batmobile_Rig_Weapons_Machine_Gun_01",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": null,
+     "material_type": null,
+     "behavior": null,
+     "behavior_disposition": "no-jc3-equivalent: type stripped and socket name carries no behavior",
+     "behavior_source": "inferred from socket (type stripped)",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Rig_Weapons_Machine_Gun_01|Batmobile_Rig_Weapons_Machine_Gun_01_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": null,
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "JokersBatmobile.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight1",
+     "socket_location": [
+      320.680481,
+      38.577576,
+      51.0
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": null,
+     "material_type": null,
+     "behavior": "HeadLight",
+     "behavior_disposition": "inferred from socket name (type stripped by the cooker)",
+     "behavior_source": "inferred from socket (type stripped)",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "JokersBatmobile.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight2",
+     "socket_location": [
+      319.194489,
+      -38.495255,
+      51.0
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": null,
+     "material_type": null,
+     "behavior": "HeadLight",
+     "behavior_disposition": "inferred from socket name (type stripped by the cooker)",
+     "behavior_source": "inferred from socket (type stripped)",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "JokersBatmobile.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "LWheelLight",
+     "socket_location": [
+      -0.349729,
+      50.689182,
+      26.0
+     ],
+     "bone": "Wheel_Frnt_Left_Disc",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": null,
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_wheel_f_l",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|wheel_f_l|Wheel_Frnt_Left_Disc|Wheel_Frnt_Left_Disc_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "JokersBatmobile.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      },
+      {
+       "class": "LensFlareComponent",
+       "path": "JokersBatmobile.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "RWheelLight",
+     "socket_location": [
+      0.380923,
+      46.332195,
+      25.7519
+     ],
+     "bone": "Wheel_Frnt_Right_Disc",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": null,
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_wheel_f_r",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|wheel_f_r|Wheel_Frnt_Right_Disc|Wheel_Frnt_Right_Disc_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "JokersBatmobile.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      },
+      {
+       "class": "LensFlareComponent",
+       "path": "JokersBatmobile.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "BrakeLightL",
+     "socket_location": [
+      -273.688568,
+      -40.901966,
+      -15.193807
+     ],
+     "bone": "SUSP2_Wheel_Rear_Left",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_TailLight",
+     "material_type": null,
+     "behavior": "TailLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_TailLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|SUSP2_Wheel_Rear_Left|SUSP2_Wheel_Rear_Left_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       0.247850001,
+       0.0789999962
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 2.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 1435191809
+     },
+     "components": [
+      {
+       "class": "PointLightComponent",
+       "path": "JokersBatmobile.PointLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "BrakeLightR",
+     "socket_location": [
+      272.574463,
+      -40.842842,
+      -14.440631
+     ],
+     "bone": "SUSP2_Wheel_Rear_Right",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_TailLight",
+     "material_type": null,
+     "behavior": "TailLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_TailLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|SUSP2_Wheel_Rear_Right|SUSP2_Wheel_Rear_Right_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       0.247850001,
+       0.0789999962
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 2.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 1435191809
+     },
+     "components": [
+      {
+       "class": "PointLightComponent",
+       "path": "JokersBatmobile.PointLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "BattleModeSpotLight",
+     "socket_location": [
+      14.650226,
+      0.0,
+      2.499828
+     ],
+     "bone": "Batmobile_Rig_Weapons_Drone_Decoder",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_BattleModeLight",
+     "material_type": null,
+     "behavior": "HeadLight",
+     "behavior_disposition": "approximated: battle-mode spotlight has no JC3 behavior",
+     "behavior_source": "enum VEHLT_BattleModeLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Rig_Weapons_Drone_Decoder|Batmobile_Rig_Weapons_Drone_Decoder_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "JokersBatmobile.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight1",
+     "socket_location": [
+      320.680481,
+      38.577576,
+      51.0
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_BattleModeLight",
+     "material_type": null,
+     "behavior": "HeadLight",
+     "behavior_disposition": "approximated: battle-mode spotlight has no JC3 behavior",
+     "behavior_source": "enum VEHLT_BattleModeLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "JokersBatmobile.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight2",
+     "socket_location": [
+      319.194489,
+      -38.495255,
+      51.0
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_BattleModeLight",
+     "material_type": null,
+     "behavior": "HeadLight",
+     "behavior_disposition": "approximated: battle-mode spotlight has no JC3 behavior",
+     "behavior_source": "enum VEHLT_BattleModeLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "JokersBatmobile.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "LWheelLight",
+     "socket_location": [
+      -0.349729,
+      50.689182,
+      26.0
+     ],
+     "bone": "Wheel_Frnt_Left_Disc",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_BattleModeLight",
+     "material_type": null,
+     "behavior": "HeadLight",
+     "behavior_disposition": "approximated: battle-mode spotlight has no JC3 behavior",
+     "behavior_source": "enum VEHLT_BattleModeLight",
+     "jc3_part": "sportsmuscle_wheel_f_l",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|wheel_f_l|Wheel_Frnt_Left_Disc|Wheel_Frnt_Left_Disc_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "JokersBatmobile.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "BattleModeSpotLight",
+     "socket_location": [
+      14.650226,
+      0.0,
+      2.499828
+     ],
+     "bone": "Batmobile_Rig_Weapons_Drone_Decoder",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_ForensicsLight",
+     "material_type": null,
+     "behavior": null,
+     "behavior_disposition": "no-jc3-equivalent: crime-scene scan light",
+     "behavior_source": "enum VEHLT_ForensicsLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Rig_Weapons_Drone_Decoder|Batmobile_Rig_Weapons_Drone_Decoder_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": null,
+     "components": [
+      {
+       "class": "RHelicopterSpotLightComponent",
+       "path": "JokersBatmobile.RHelicopterSpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "approximated: spotlight, no helicopter mode"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight1",
+     "socket_location": [
+      320.680481,
+      38.577576,
+      51.0
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_ForensicsLight",
+     "material_type": null,
+     "behavior": null,
+     "behavior_disposition": "no-jc3-equivalent: crime-scene scan light",
+     "behavior_source": "enum VEHLT_ForensicsLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": null,
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "JokersBatmobile.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight2",
+     "socket_location": [
+      319.194489,
+      -38.495255,
+      51.0
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_ForensicsLight",
+     "material_type": null,
+     "behavior": null,
+     "behavior_disposition": "no-jc3-equivalent: crime-scene scan light",
+     "behavior_source": "enum VEHLT_ForensicsLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": null,
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "JokersBatmobile.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "Dashboard",
+     "socket_location": [
+      189.167694,
+      0.0,
+      145.749985
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_Interior",
+     "material_type": null,
+     "behavior": "TailLight",
+     "behavior_disposition": "approximated: interior accent, no JC3 behavior",
+     "behavior_source": "enum VEHLT_Interior",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       0.247850001,
+       0.0789999962
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 2.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 1435191809
+     },
+     "components": [
+      {
+       "class": "PointLightComponent",
+       "path": "JokersBatmobile.PointLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "owner": "Batmobile_Mk2_Archetypes.Vehicle",
+   "entries": [
+    {
+     "socket": "HeadLight1",
+     "socket_location": [
+      320.680481,
+      38.577576,
+      51.0
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": "VEHLTMAT_HeadLightRight",
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "Batmobile_MK2.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      },
+      {
+       "class": "LensFlareComponent",
+       "path": "Batmobile_MK2.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      },
+      {
+       "class": "SpotLightComponent",
+       "path": "Batmobile_MK2.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight2",
+     "socket_location": [
+      319.194489,
+      -38.495255,
+      51.0
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": "VEHLTMAT_HeadLightLeft",
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "Batmobile_MK2.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      },
+      {
+       "class": "LensFlareComponent",
+       "path": "Batmobile_MK2.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "ChainGunMuzzle",
+     "socket_location": [
+      97.662842,
+      0.0,
+      -6.74938
+     ],
+     "bone": "Batmobile_Rig_Weapons_Machine_Gun_01",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": null,
+     "material_type": null,
+     "behavior": null,
+     "behavior_disposition": "no-jc3-equivalent: type stripped and socket name carries no behavior",
+     "behavior_source": "inferred from socket (type stripped)",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Rig_Weapons_Machine_Gun_01|Batmobile_Rig_Weapons_Machine_Gun_01_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": null,
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "Batmobile_MK2.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight1",
+     "socket_location": [
+      320.680481,
+      38.577576,
+      51.0
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": null,
+     "material_type": "VEHLTMAT_HeadLightRight",
+     "behavior": "HeadLight",
+     "behavior_disposition": "inferred from socket name (type stripped by the cooker)",
+     "behavior_source": "inferred from socket (type stripped)",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "Batmobile_MK2.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight2",
+     "socket_location": [
+      319.194489,
+      -38.495255,
+      51.0
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": null,
+     "material_type": "VEHLTMAT_HeadLightLeft",
+     "behavior": "HeadLight",
+     "behavior_disposition": "inferred from socket name (type stripped by the cooker)",
+     "behavior_source": "inferred from socket (type stripped)",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "Batmobile_MK2.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "LWheelLight",
+     "socket_location": [
+      -0.349729,
+      50.689182,
+      26.0
+     ],
+     "bone": "Wheel_Frnt_Left_Disc",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": "VEHLTMAT_Special3",
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_wheel_f_l",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|wheel_f_l|Wheel_Frnt_Left_Disc|Wheel_Frnt_Left_Disc_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "Batmobile_MK2.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      },
+      {
+       "class": "LensFlareComponent",
+       "path": "Batmobile_MK2.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "RWheelLight",
+     "socket_location": [
+      0.380923,
+      46.332195,
+      25.7519
+     ],
+     "bone": "Wheel_Frnt_Right_Disc",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": "VEHLTMAT_Special1",
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_wheel_f_r",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|wheel_f_r|Wheel_Frnt_Right_Disc|Wheel_Frnt_Right_Disc_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "Batmobile_MK2.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      },
+      {
+       "class": "LensFlareComponent",
+       "path": "Batmobile_MK2.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "BrakeLightL",
+     "socket_location": [
+      -273.688568,
+      -40.901966,
+      -15.193807
+     ],
+     "bone": "SUSP2_Wheel_Rear_Left",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_TailLight",
+     "material_type": "VEHLTMAT_TailLightLeft",
+     "behavior": "TailLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_TailLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|SUSP2_Wheel_Rear_Left|SUSP2_Wheel_Rear_Left_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       0.247850001,
+       0.0789999962
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 2.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 1435191809
+     },
+     "components": [
+      {
+       "class": "PointLightComponent",
+       "path": "Batmobile_MK2.PointLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      },
+      {
+       "class": "LensFlareComponent",
+       "path": "Batmobile_MK2.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "BrakeLightR",
+     "socket_location": [
+      272.574463,
+      -40.842842,
+      -14.440631
+     ],
+     "bone": "SUSP2_Wheel_Rear_Right",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_TailLight",
+     "material_type": "VEHLTMAT_TailLightRight",
+     "behavior": "TailLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_TailLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|SUSP2_Wheel_Rear_Right|SUSP2_Wheel_Rear_Right_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       0.247850001,
+       0.0789999962
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 2.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 1435191809
+     },
+     "components": [
+      {
+       "class": "PointLightComponent",
+       "path": "Batmobile_MK2.PointLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      },
+      {
+       "class": "LensFlareComponent",
+       "path": "Batmobile_MK2.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "BattleModeSpotLight",
+     "socket_location": [
+      14.650226,
+      0.0,
+      2.499828
+     ],
+     "bone": "Batmobile_Rig_Weapons_Drone_Decoder",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_BattleModeLight",
+     "material_type": null,
+     "behavior": "HeadLight",
+     "behavior_disposition": "approximated: battle-mode spotlight has no JC3 behavior",
+     "behavior_source": "enum VEHLT_BattleModeLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Rig_Weapons_Drone_Decoder|Batmobile_Rig_Weapons_Drone_Decoder_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "Batmobile_MK2.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight1",
+     "socket_location": [
+      320.680481,
+      38.577576,
+      51.0
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_BattleModeLight",
+     "material_type": "VEHLTMAT_HeadLightRight",
+     "behavior": "HeadLight",
+     "behavior_disposition": "approximated: battle-mode spotlight has no JC3 behavior",
+     "behavior_source": "enum VEHLT_BattleModeLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "Batmobile_MK2.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight2",
+     "socket_location": [
+      319.194489,
+      -38.495255,
+      51.0
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_BattleModeLight",
+     "material_type": "VEHLTMAT_HeadLightLeft",
+     "behavior": "HeadLight",
+     "behavior_disposition": "approximated: battle-mode spotlight has no JC3 behavior",
+     "behavior_source": "enum VEHLT_BattleModeLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "Batmobile_MK2.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "LWheelLight",
+     "socket_location": [
+      -0.349729,
+      50.689182,
+      26.0
+     ],
+     "bone": "Wheel_Frnt_Left_Disc",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_BattleModeLight",
+     "material_type": "VEHLTMAT_Special3",
+     "behavior": "HeadLight",
+     "behavior_disposition": "approximated: battle-mode spotlight has no JC3 behavior",
+     "behavior_source": "enum VEHLT_BattleModeLight",
+     "jc3_part": "sportsmuscle_wheel_f_l",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|wheel_f_l|Wheel_Frnt_Left_Disc|Wheel_Frnt_Left_Disc_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "Batmobile_MK2.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "BattleModeSpotLight",
+     "socket_location": [
+      14.650226,
+      0.0,
+      2.499828
+     ],
+     "bone": "Batmobile_Rig_Weapons_Drone_Decoder",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_ForensicsLight",
+     "material_type": null,
+     "behavior": null,
+     "behavior_disposition": "no-jc3-equivalent: crime-scene scan light",
+     "behavior_source": "enum VEHLT_ForensicsLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Rig_Weapons_Drone_Decoder|Batmobile_Rig_Weapons_Drone_Decoder_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": null,
+     "components": [
+      {
+       "class": "RHelicopterSpotLightComponent",
+       "path": "Batmobile_MK2.RHelicopterSpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "approximated: spotlight, no helicopter mode"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight1",
+     "socket_location": [
+      320.680481,
+      38.577576,
+      51.0
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_ForensicsLight",
+     "material_type": "VEHLTMAT_HeadLightRight",
+     "behavior": null,
+     "behavior_disposition": "no-jc3-equivalent: crime-scene scan light",
+     "behavior_source": "enum VEHLT_ForensicsLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": null,
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "Batmobile_MK2.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight2",
+     "socket_location": [
+      319.194489,
+      -38.495255,
+      51.0
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_ForensicsLight",
+     "material_type": "VEHLTMAT_HeadLightLeft",
+     "behavior": null,
+     "behavior_disposition": "no-jc3-equivalent: crime-scene scan light",
+     "behavior_source": "enum VEHLT_ForensicsLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": null,
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "Batmobile_MK2.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "Dashboard_Light",
+     "socket_location": [
+      182.950577,
+      0.0,
+      144.249832
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_Interior",
+     "material_type": "VEHLTMAT_Interior",
+     "behavior": "TailLight",
+     "behavior_disposition": "approximated: interior accent, no JC3 behavior",
+     "behavior_source": "enum VEHLT_Interior",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       0.247850001,
+       0.0789999962
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 2.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 1435191809
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "Batmobile_MK2.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight1a",
+     "socket_location": [
+      311.264343,
+      45.2658,
+      67.0
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": null,
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "LensFlareComponent",
+       "path": "Batmobile_MK2.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight2a",
+     "socket_location": [
+      311.418518,
+      -44.789246,
+      67.0
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": null,
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "LensFlareComponent",
+       "path": "Batmobile_MK2.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight1b",
+     "socket_location": [
+      316.322937,
+      41.71352,
+      58.75
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": null,
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "LensFlareComponent",
+       "path": "Batmobile_MK2.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight1c",
+     "socket_location": null,
+     "bone": null,
+     "bone_in_rig": null,
+     "orphan_socket": true,
+     "type": "VEHLT_HeadLight",
+     "material_type": null,
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": null,
+     "anchor_state": "orphan-socket: no bone, cannot place",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "LensFlareComponent",
+       "path": "Batmobile_MK2.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight2b",
+     "socket_location": [
+      314.919037,
+      -41.464466,
+      58.75
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": null,
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "LensFlareComponent",
+       "path": "Batmobile_MK2.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight2c",
+     "socket_location": null,
+     "bone": null,
+     "bone_in_rig": null,
+     "orphan_socket": true,
+     "type": "VEHLT_HeadLight",
+     "material_type": null,
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": null,
+     "anchor_state": "orphan-socket: no bone, cannot place",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "LensFlareComponent",
+       "path": "Batmobile_MK2.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "RWheelLight_top",
+     "socket_location": [
+      0.380923,
+      40.638508,
+      40.000805
+     ],
+     "bone": "Wheel_Frnt_Right_Disc",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": "VEHLTMAT_Special1",
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_wheel_f_r",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|wheel_f_r|Wheel_Frnt_Right_Disc|Wheel_Frnt_Right_Disc_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "LensFlareComponent",
+       "path": "Batmobile_MK2.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "RWheelLight_bottom",
+     "socket_location": [
+      0.347289,
+      53.81432,
+      10.002043
+     ],
+     "bone": "Wheel_Frnt_Right_Disc",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": "VEHLTMAT_Special1",
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_wheel_f_r",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|wheel_f_r|Wheel_Frnt_Right_Disc|Wheel_Frnt_Right_Disc_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "LensFlareComponent",
+       "path": "Batmobile_MK2.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "LWheelLight_top",
+     "socket_location": [
+      -0.118559,
+      40.599998,
+      40.0
+     ],
+     "bone": "Wheel_Frnt_Left_Disc",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": "VEHLTMAT_Special3",
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_wheel_f_l",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|wheel_f_l|Wheel_Frnt_Left_Disc|Wheel_Frnt_Left_Disc_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "LensFlareComponent",
+       "path": "Batmobile_MK2.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "LWheelLight_bottom",
+     "socket_location": [
+      -0.292692,
+      56.499176,
+      10.5
+     ],
+     "bone": "Wheel_Frnt_Left_Disc",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": "VEHLTMAT_Special3",
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_wheel_f_l",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|wheel_f_l|Wheel_Frnt_Left_Disc|Wheel_Frnt_Left_Disc_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "LensFlareComponent",
+       "path": "Batmobile_MK2.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "BootLight",
+     "socket_location": [
+      -174.496429,
+      2.009974,
+      197.75
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_BootLight",
+     "material_type": null,
+     "behavior": "TailLight",
+     "behavior_disposition": "approximated: boot light, no JC3 behavior",
+     "behavior_source": "enum VEHLT_BootLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       0.247850001,
+       0.0789999962
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 2.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 1435191809
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "Batmobile_MK2.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      },
+      {
+       "class": "LensFlareComponent",
+       "path": "Batmobile_MK2.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "package": "Playable_Batmobile_SF",
+   "owner": "Batmobile_Archetypes.Vehicle",
+   "entries": [
+    {
+     "socket": "HeadLight1",
+     "socket_location": [
+      21.286633,
+      45.192657,
+      -44.25
+     ],
+     "bone": "Winch_DOOR_Mesh",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": "VEHLTMAT_HeadLightRight",
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Winch_DOOR_Mesh|Winch_DOOR_Mesh_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "Batmobile.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      },
+      {
+       "class": "LensFlareComponent",
+       "path": "Batmobile.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      },
+      {
+       "class": "SpotLightComponent",
+       "path": "Batmobile.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight2",
+     "socket_location": [
+      28.216906,
+      -38.593201,
+      -61.0
+     ],
+     "bone": "Winch_DOOR_Mesh",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": "VEHLTMAT_HeadLightLeft",
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Winch_DOOR_Mesh|Winch_DOOR_Mesh_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "Batmobile.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      },
+      {
+       "class": "LensFlareComponent",
+       "path": "Batmobile.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "ChainGunMuzzle",
+     "socket_location": [
+      97.662842,
+      0.0,
+      -6.74938
+     ],
+     "bone": "Batmobile_Rig_Weapons_Machine_Gun_01",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": null,
+     "material_type": null,
+     "behavior": null,
+     "behavior_disposition": "no-jc3-equivalent: type stripped and socket name carries no behavior",
+     "behavior_source": "inferred from socket (type stripped)",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Rig_Weapons_Machine_Gun_01|Batmobile_Rig_Weapons_Machine_Gun_01_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": null,
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "Batmobile.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight1",
+     "socket_location": [
+      21.286633,
+      45.192657,
+      -44.25
+     ],
+     "bone": "Winch_DOOR_Mesh",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": null,
+     "material_type": "VEHLTMAT_HeadLightRight",
+     "behavior": "HeadLight",
+     "behavior_disposition": "inferred from socket name (type stripped by the cooker)",
+     "behavior_source": "inferred from socket (type stripped)",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Winch_DOOR_Mesh|Winch_DOOR_Mesh_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "Batmobile.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight2",
+     "socket_location": [
+      28.216906,
+      -38.593201,
+      -61.0
+     ],
+     "bone": "Winch_DOOR_Mesh",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": null,
+     "material_type": "VEHLTMAT_HeadLightLeft",
+     "behavior": "HeadLight",
+     "behavior_disposition": "inferred from socket name (type stripped by the cooker)",
+     "behavior_source": "inferred from socket (type stripped)",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Winch_DOOR_Mesh|Winch_DOOR_Mesh_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "Batmobile.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "LWheelLight",
+     "socket_location": [
+      -0.349729,
+      50.689182,
+      26.0
+     ],
+     "bone": "Wheel_Frnt_Left_Disc",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": "VEHLTMAT_Special3",
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_wheel_f_l",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|wheel_f_l|Wheel_Frnt_Left_Disc|Wheel_Frnt_Left_Disc_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "Batmobile.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      },
+      {
+       "class": "LensFlareComponent",
+       "path": "Batmobile.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "RWheelLight",
+     "socket_location": [
+      0.380923,
+      46.332195,
+      25.7519
+     ],
+     "bone": "Wheel_Frnt_Right_Disc",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": "VEHLTMAT_Special1",
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_wheel_f_r",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|wheel_f_r|Wheel_Frnt_Right_Disc|Wheel_Frnt_Right_Disc_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "Batmobile.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      },
+      {
+       "class": "LensFlareComponent",
+       "path": "Batmobile.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "BrakeLightL",
+     "socket_location": [
+      -273.688568,
+      -40.901966,
+      -15.193807
+     ],
+     "bone": "SUSP2_Wheel_Rear_Left",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_TailLight",
+     "material_type": "VEHLTMAT_TailLightLeft",
+     "behavior": "TailLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_TailLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|SUSP2_Wheel_Rear_Left|SUSP2_Wheel_Rear_Left_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       0.247850001,
+       0.0789999962
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 2.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 1435191809
+     },
+     "components": [
+      {
+       "class": "PointLightComponent",
+       "path": "Batmobile.PointLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      },
+      {
+       "class": "LensFlareComponent",
+       "path": "Batmobile.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "BrakeLightR",
+     "socket_location": [
+      272.574463,
+      -40.842842,
+      -14.440631
+     ],
+     "bone": "SUSP2_Wheel_Rear_Right",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_TailLight",
+     "material_type": "VEHLTMAT_TailLightRight",
+     "behavior": "TailLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_TailLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|SUSP2_Wheel_Rear_Right|SUSP2_Wheel_Rear_Right_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       0.247850001,
+       0.0789999962
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 2.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 1435191809
+     },
+     "components": [
+      {
+       "class": "PointLightComponent",
+       "path": "Batmobile.PointLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      },
+      {
+       "class": "LensFlareComponent",
+       "path": "Batmobile.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "BattleModeSpotLight",
+     "socket_location": [
+      14.650226,
+      0.0,
+      2.499828
+     ],
+     "bone": "Batmobile_Rig_Weapons_Drone_Decoder",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_BattleModeLight",
+     "material_type": null,
+     "behavior": "HeadLight",
+     "behavior_disposition": "approximated: battle-mode spotlight has no JC3 behavior",
+     "behavior_source": "enum VEHLT_BattleModeLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Rig_Weapons_Drone_Decoder|Batmobile_Rig_Weapons_Drone_Decoder_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "Batmobile.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight1",
+     "socket_location": [
+      21.286633,
+      45.192657,
+      -44.25
+     ],
+     "bone": "Winch_DOOR_Mesh",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_BattleModeLight",
+     "material_type": "VEHLTMAT_HeadLightRight",
+     "behavior": "HeadLight",
+     "behavior_disposition": "approximated: battle-mode spotlight has no JC3 behavior",
+     "behavior_source": "enum VEHLT_BattleModeLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Winch_DOOR_Mesh|Winch_DOOR_Mesh_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "Batmobile.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight2",
+     "socket_location": [
+      28.216906,
+      -38.593201,
+      -61.0
+     ],
+     "bone": "Winch_DOOR_Mesh",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_BattleModeLight",
+     "material_type": "VEHLTMAT_HeadLightLeft",
+     "behavior": "HeadLight",
+     "behavior_disposition": "approximated: battle-mode spotlight has no JC3 behavior",
+     "behavior_source": "enum VEHLT_BattleModeLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Winch_DOOR_Mesh|Winch_DOOR_Mesh_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "Batmobile.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "LWheelLight",
+     "socket_location": [
+      -0.349729,
+      50.689182,
+      26.0
+     ],
+     "bone": "Wheel_Frnt_Left_Disc",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_BattleModeLight",
+     "material_type": "VEHLTMAT_Special3",
+     "behavior": "HeadLight",
+     "behavior_disposition": "approximated: battle-mode spotlight has no JC3 behavior",
+     "behavior_source": "enum VEHLT_BattleModeLight",
+     "jc3_part": "sportsmuscle_wheel_f_l",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|wheel_f_l|Wheel_Frnt_Left_Disc|Wheel_Frnt_Left_Disc_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "Batmobile.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "BattleModeSpotLight",
+     "socket_location": [
+      14.650226,
+      0.0,
+      2.499828
+     ],
+     "bone": "Batmobile_Rig_Weapons_Drone_Decoder",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_ForensicsLight",
+     "material_type": null,
+     "behavior": null,
+     "behavior_disposition": "no-jc3-equivalent: crime-scene scan light",
+     "behavior_source": "enum VEHLT_ForensicsLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Rig_Weapons_Drone_Decoder|Batmobile_Rig_Weapons_Drone_Decoder_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": null,
+     "components": [
+      {
+       "class": "RHelicopterSpotLightComponent",
+       "path": "Batmobile.RHelicopterSpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "approximated: spotlight, no helicopter mode"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight1",
+     "socket_location": [
+      21.286633,
+      45.192657,
+      -44.25
+     ],
+     "bone": "Winch_DOOR_Mesh",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_ForensicsLight",
+     "material_type": "VEHLTMAT_HeadLightRight",
+     "behavior": null,
+     "behavior_disposition": "no-jc3-equivalent: crime-scene scan light",
+     "behavior_source": "enum VEHLT_ForensicsLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Winch_DOOR_Mesh|Winch_DOOR_Mesh_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": null,
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "Batmobile.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight2",
+     "socket_location": [
+      28.216906,
+      -38.593201,
+      -61.0
+     ],
+     "bone": "Winch_DOOR_Mesh",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_ForensicsLight",
+     "material_type": "VEHLTMAT_HeadLightLeft",
+     "behavior": null,
+     "behavior_disposition": "no-jc3-equivalent: crime-scene scan light",
+     "behavior_source": "enum VEHLT_ForensicsLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Winch_DOOR_Mesh|Winch_DOOR_Mesh_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": null,
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "Batmobile.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "Dashboard_Light",
+     "socket_location": [
+      182.950577,
+      0.0,
+      144.249832
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_Interior",
+     "material_type": "VEHLTMAT_Interior",
+     "behavior": "TailLight",
+     "behavior_disposition": "approximated: interior accent, no JC3 behavior",
+     "behavior_source": "enum VEHLT_Interior",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       0.247850001,
+       0.0789999962
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 2.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 1435191809
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "Batmobile.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight1a",
+     "socket_location": [
+      24.295439,
+      42.017044,
+      -52.5
+     ],
+     "bone": "Winch_DOOR_Mesh",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": null,
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Winch_DOOR_Mesh|Winch_DOOR_Mesh_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "LensFlareComponent",
+       "path": "Batmobile.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight2a",
+     "socket_location": [
+      21.286633,
+      -44.76918,
+      -44.25
+     ],
+     "bone": "Winch_DOOR_Mesh",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": null,
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Winch_DOOR_Mesh|Winch_DOOR_Mesh_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "LensFlareComponent",
+       "path": "Batmobile.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight1b",
+     "socket_location": [
+      28.216906,
+      38.295086,
+      -61.0
+     ],
+     "bone": "Winch_DOOR_Mesh",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": null,
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Winch_DOOR_Mesh|Winch_DOOR_Mesh_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "LensFlareComponent",
+       "path": "Batmobile.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight1c",
+     "socket_location": null,
+     "bone": null,
+     "bone_in_rig": null,
+     "orphan_socket": true,
+     "type": "VEHLT_HeadLight",
+     "material_type": null,
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": null,
+     "anchor_state": "orphan-socket: no bone, cannot place",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "LensFlareComponent",
+       "path": "Batmobile.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight2b",
+     "socket_location": [
+      24.295439,
+      -41.631226,
+      -52.5
+     ],
+     "bone": "Winch_DOOR_Mesh",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": null,
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Winch_DOOR_Mesh|Winch_DOOR_Mesh_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "LensFlareComponent",
+       "path": "Batmobile.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "HeadLight2c",
+     "socket_location": null,
+     "bone": null,
+     "bone_in_rig": null,
+     "orphan_socket": true,
+     "type": "VEHLT_HeadLight",
+     "material_type": null,
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": null,
+     "anchor_state": "orphan-socket: no bone, cannot place",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "LensFlareComponent",
+       "path": "Batmobile.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "RWheelLight_top",
+     "socket_location": [
+      0.380923,
+      40.638508,
+      40.000805
+     ],
+     "bone": "Wheel_Frnt_Right_Disc",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": "VEHLTMAT_Special1",
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_wheel_f_r",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|wheel_f_r|Wheel_Frnt_Right_Disc|Wheel_Frnt_Right_Disc_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "LensFlareComponent",
+       "path": "Batmobile.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "RWheelLight_bottom",
+     "socket_location": [
+      0.347289,
+      53.81432,
+      10.002043
+     ],
+     "bone": "Wheel_Frnt_Right_Disc",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": "VEHLTMAT_Special1",
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_wheel_f_r",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|wheel_f_r|Wheel_Frnt_Right_Disc|Wheel_Frnt_Right_Disc_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "LensFlareComponent",
+       "path": "Batmobile.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "LWheelLight_top",
+     "socket_location": [
+      -0.118559,
+      40.599998,
+      40.0
+     ],
+     "bone": "Wheel_Frnt_Left_Disc",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": "VEHLTMAT_Special3",
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_wheel_f_l",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|wheel_f_l|Wheel_Frnt_Left_Disc|Wheel_Frnt_Left_Disc_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "LensFlareComponent",
+       "path": "Batmobile.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "LWheelLight_bottom",
+     "socket_location": [
+      -0.292692,
+      56.499176,
+      10.5
+     ],
+     "bone": "Wheel_Frnt_Left_Disc",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_HeadLight",
+     "material_type": "VEHLTMAT_Special3",
+     "behavior": "HeadLight",
+     "behavior_disposition": "mapped",
+     "behavior_source": "enum VEHLT_HeadLight",
+     "jc3_part": "sportsmuscle_wheel_f_l",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|wheel_f_l|Wheel_Frnt_Left_Disc|Wheel_Frnt_Left_Disc_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       1.0,
+       1.0
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 2763198432
+     },
+     "components": [
+      {
+       "class": "LensFlareComponent",
+       "path": "Batmobile.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    },
+    {
+     "socket": "BootLight",
+     "socket_location": [
+      -174.496429,
+      2.009974,
+      197.75
+     ],
+     "bone": "Batmobile_Chassis",
+     "bone_in_rig": true,
+     "orphan_socket": false,
+     "type": "VEHLT_BootLight",
+     "material_type": null,
+     "behavior": "TailLight",
+     "behavior_disposition": "approximated: boot light, no JC3 behavior",
+     "behavior_source": "enum VEHLT_BootLight",
+     "jc3_part": "sportsmuscle_body",
+     "part_exists": true,
+     "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+     "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+     "vanilla_reference": {
+      "diffuse": [
+       1.0,
+       0.247850001,
+       0.0789999962
+      ],
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 2.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "preset_id": 1435191809
+     },
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "path": "Batmobile.SpotLightComponent",
+       "jc3": "VehicleDynamicLight",
+       "disposition": "mapped"
+      },
+      {
+       "class": "LensFlareComponent",
+       "path": "Batmobile.LensFlareComponent",
+       "jc3": "none",
+       "disposition": "no-jc3-equivalent: JC3 light module has no flare"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "summary": {
+  "entries": 101,
+  "vehicles": 4,
+  "orphan_sockets": 6,
+  "missing_bones": 0,
+  "by_type": {
+   "VEHLT_HeadLight": 46,
+   "(stripped)": 12,
+   "VEHLT_TailLight": 8,
+   "VEHLT_BattleModeLight": 16,
+   "VEHLT_ForensicsLight": 12,
+   "VEHLT_Interior": 4,
+   "VEHLT_BootLight": 3
+  },
+  "by_behavior": {
+   "HeadLight": 70,
+   "(none)": 16,
+   "TailLight": 15
+  },
+  "by_disposition": {
+   "mapped": 54,
+   "no-jc3-equivalent": 16,
+   "inferred from socket name (type stripped by the cooker)": 8,
+   "approximated": 23
+  },
+  "by_part": {
+   "sportsmuscle_body": 77,
+   "sportsmuscle_wheel_f_l": 14,
+   "sportsmuscle_wheel_f_r": 10
+  }
+ },
+ "problems": [
+  "Playable_BatmobileFunhouse_SF/Batmobile_Funhouse_Archetypes.Vehicle: socket HeadLight1c does not exist in the shipped mesh",
+  "Playable_BatmobileFunhouse_SF/Batmobile_Funhouse_Archetypes.Vehicle: socket HeadLight2c does not exist in the shipped mesh",
+  "Playable_BatmobileMK2_SF/Batmobile_Mk2_Archetypes.Vehicle: socket HeadLight1c does not exist in the shipped mesh",
+  "Playable_BatmobileMK2_SF/Batmobile_Mk2_Archetypes.Vehicle: socket HeadLight2c does not exist in the shipped mesh",
+  "Playable_Batmobile_SF/Batmobile_Archetypes.Vehicle: socket HeadLight1c does not exist in the shipped mesh",
+  "Playable_Batmobile_SF/Batmobile_Archetypes.Vehicle: socket HeadLight2c does not exist in the shipped mesh"
+ ]
+}
