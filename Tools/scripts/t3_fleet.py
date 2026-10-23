@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""t3_fleet.py - what the JC3 heavy class actually ships, for the T-3 rows.
+"""t3_fleet.py - what the JC3 heavy class actually ships, for the translation rows.
 
-T-3 closes the factors the first table did not name (afterburner, drift, handbrake,
-suspension travel, impact damage, tyre effects). None of them has a decoded BmAK
-counterpart with compatible units, so each row is evidence by *class*: the median
-and interquartile band of the same member across the JC3 land fleet, in the same
-mass class as the built Batmobile (6,000 kg).
+The T-1, T-2b and T-3 rows cite class evidence wherever BmAK has no value with
+compatible units. This tool prints the median and interquartile band of the
+members the row audit re-decided in this pass and the T-3 factors, across the
+JC3 land fleet, in the same mass class as the built Batmobile (6,000 kg), so the
+"6 t median" claims are reproducible.
 
     python t3_fleet.py            # -> Working/Translation/T3_FLEET.md
     python t3_fleet.py --check    # fails if a member is missing from the fleet
@@ -27,27 +27,56 @@ OUT = os.path.join(ROOT, "Working", "Translation", "T3_FLEET.md")
 
 # label -> (module type, member path)
 MEMBERS: dict[str, tuple[str, str]] = {
+    # body
+    "rigid body mass": ("RigidBody", "mass"),
+    "rigid body inertia yaw": ("RigidBody", "unit_inertia_yaw"),
+    "rigid body inertia pitch": ("RigidBody", "unit_inertia_pitch"),
+    "rigid body inertia roll": ("RigidBody", "unit_inertia_roll"),
+    "rigid body centre of mass bias": ("RigidBody", "center_of_mass_bias"),
+    # damage
+    "damage max health": ("VehicleDamage", "max_health"),
+    "damage deform scale": ("VehicleDamage", "deform_scale"),
+    "damage impact_damage_factor": ("VehicleDamage", "impact_damage_factor"),
+    "damage impact_armor": ("VehicleDamage", "impact_armor"),
+    "damage explosion_threshold": ("VehicleDamage", "explosion_threshold"),
+    # suspension and wheels
     "suspension front length": ("Suspension", "front.length"),
     "suspension front min_length": ("Suspension", "front.min_length"),
     "suspension front max_length_offset": ("Suspension", "front.max_length_offset"),
     "suspension front damp clamp (m/s)": ("Suspension", "front.max_velocity_for_damp_clamp"),
+    "suspension front lateral tyre offset": ("Suspension", "front.lateral_tire_force_offset"),
+    "wheel front mass": ("LandGlobal", "front_wheels.mass"),
+    "wheel rear mass": ("LandGlobal", "rear_wheels.mass"),
+    "wheel front shape cast": ("LandGlobal", "front_wheels.use_shape_cast"),
+    # brakes
     "brakes handbrake friction factor": ("Brakes", "handbrake_friction_factor"),
     "brakes front min_time_to_block": ("Brakes", "front.min_time_to_block"),
+    # steering
+    "steering max speed t to full (s)": ("LandSteering", "max_speed_t_to_full_steer_s"),
+    "steering input power pc": ("LandSteering", "steer_input_power_pc"),
+    "steering input power durango": ("LandSteering", "steer_input_power_durango"),
+    "steering input power orbis": ("LandSteering", "steer_input_power_orbis"),
+    "steering countersteer factor": ("LandSteering", "countersteer_speed_factor"),
+    "steering in speed factor": ("LandSteering", "steer_in_speed_factor"),
+    "steering drift aligning": ("LandSteering", "wheel_drift_aligning_strength"),
+    # drift
     "drift max angle (deg)": ("CustomLandGlobal", "drift.max_drift_angle_deg"),
     "drift entry slip (deg)": ("CustomLandGlobal", "drift.drift_entry_slip_angle"),
     "drift min speed (km/h)": ("CustomLandGlobal", "drift.min_speed_to_drift_kmph"),
     "drift steering sensitivity": ("CustomLandGlobal", "drift.steering_sensitivity"),
+    # nitro
     "nitro torque multiplier": ("CustomLandGlobal", "arcade.nitro_boost.torque_multiplier"),
     "nitro extra top speed (km/h)": ("CustomLandGlobal", "arcade.nitro_boost.extra_top_speed"),
     "nitro grip multiplier": ("CustomLandGlobal", "arcade.nitro_boost.grip_multiplier"),
     "nitro push force": ("CustomLandGlobal", "arcade.nitro_boost.push_force"),
     "nitro blend time (s)": ("CustomLandGlobal", "arcade.nitro_boost.boost_blend_time"),
+    # aero and misc
+    "aero frontal area": ("LandAerodynamics", "frontal_area"),
+    "misc official top speed (km/h)": ("VehicleMisc", "official_top_speed"),
+    # tire effects
     "tire effects skid velocity (m/s)": ("VehicleCommon", "tire_effects.min_skid_velocity_for_skid_ms"),
     "tire effects slip to skid": ("VehicleCommon", "tire_effects.slip_angle_to_peak_to_skid"),
     "tire effects skid velocity scale": ("VehicleCommon", "tire_effects.skid_velocity_scale"),
-    "damage impact_damage_factor": ("VehicleDamage", "impact_damage_factor"),
-    "damage impact_armor": ("VehicleDamage", "impact_armor"),
-    "damage explosion_threshold": ("VehicleDamage", "explosion_threshold"),
 }
 
 BUCKETS = {"3-8 t": (3000.0, 8000.0), "6 t+": (6000.0, 1e9)}
@@ -98,11 +127,13 @@ def main() -> None:
         sys.exit(f"no land entities under {RAW}")
     problems = []
     lines = [
-        "# T-3 fleet evidence (heavy class)",
+        "# Translation fleet evidence (heavy class)",
         "",
         f"Computed over **{len(rows)} land vehicles** that carry `rigid_body.mass`. Each cell is",
-        "*n*, the **median**, and the interquartile band (p25 … p75). These are the numbers the T-3",
-        "rows use where BmAK has no value with compatible units, exactly as T-1 uses `FITS.md`.",
+        "*n*, the **median**, and the interquartile band (p25 … p75). These are the numbers behind",
+        "the class claims re-decided in this pass and the T-3 factors, where BmAK has no value with",
+        "compatible units. `-1` in a steering or brake member is the game's sentinel, not a measured",
+        "time.",
         "",
         "| member | all land | 3-8 t | 6 t+ |",
         "|---|---|---|---|",

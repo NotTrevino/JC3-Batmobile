@@ -11,12 +11,14 @@ That was the eyedropper. This is the hose:
 2. **G2 — JC3 grab**: 11 task units done; **99.998%** of archive entries named (81,951 / 81,953) and
    **77,611 / 77,611** geometry blocks decoded. Not 100%: 2 unnamed `.wavc` dialogue takes that
    nothing in the install names or references.
-3. **T — translate**: **61.9%** of rows carry evidence (78 / 126), **0 / 126** fully verified in game.
-   The old 66.7% was a six-unit task score, not row coverage. Full table: [STATUS.md](STATUS.md).
+3. **T — translate**: **76.8%** of in-scope rows resolved from evidence (86 / 112; the 14 rows JC3
+   cannot express are excluded from the denominator), **0 / 112** fully verified in game. 12 assumed,
+   14 blocked, and 4 of the resolved rows queued for the next build. The old 66.7% was a six-unit
+   task score, not row coverage. Full table: [STATUS.md](STATUS.md).
 
-**Rule now that the table exists:** no handling/appearance tuning build until T-5 has run against
-T-1/T-2 (`t1_edits.json`, 35 edits). Until then anything built must be a probe answering an
-architectural question (test-083 qualifies; HP-1 does not).
+**Build rule:** T-5 has run against T-1/T-2 (test-085, 35 values over 16 rows). The next handling
+build is the four-row / six-value batch in `T3_COVERAGE.md` §4; anything else built must be a probe
+answering an architectural question (test-083 qualifies; HP-1 does not).
 
 Game files stay outside the repo, per the project rule: extracted JC3 data lives in
 `E:\Modding\_JC3grab\` (index, decoded entity JSON, temp ADF conversions).
@@ -33,7 +35,9 @@ Mario's house, so every test launch is instant. It is a **spawn convenience, not
 constraint** — G2-5/T-1 are free to pick a different donor if the distributor-matrix says another
 vehicle matches BmAK's curves better.
 
----## Progress — real coverage, regenerated
+---
+
+## Progress — real coverage, regenerated
 
 **No workstream is 100%.** The old headline (100 / 100 / 66.7) was a *task-unit* score, and a closed
 task can still miss a value: the camera page declared the distance native because it read the zeroed
@@ -48,11 +52,12 @@ from the grabs and the row tables; `STATUS.md` is the canonical copy.
 | **G2 JC3 grab** | archive entries named | 81,951 / 81,953 | **99.998%** |
 | | vehicle modules decoded | 6,045 / 6,045 | 100% |
 | | geometry blocks decoded | 77,611 / 77,611 | **100.0%** |
-| **T translate** | rows with evidence | 78 / 126 | **61.9%** |
-| | rows assumed | 20 / 126 | 15.9% |
-| | rows blocked | 14 / 126 | 11.1% |
-| | rows out (no JC3 system) | 14 / 126 | 11.1% |
-| | rows fully verified in game | 0 / 126 | **0%** |
+| **T translate** | rows resolved from evidence (in scope) | 86 / 112 | **76.8%** |
+| | rows assumed | 12 / 112 | 10.7% |
+| | rows blocked | 14 / 112 | 12.5% |
+| | rows out (no JC3 system; excluded) | 14 | — |
+| | rows queued for the next build | 4 | — |
+| | rows fully verified in game | 0 / 112 | **0%** |
 
 **What the task ledger still means:** G1's 18 units and G2's 11 units are real deliverables and the
 evidence in the sections below is real. What they do **not** mean is that every value the mod needs
@@ -155,7 +160,7 @@ Entry-level: **81,951 / 81,953 = 99.998%** of archive entries are named (base 10
 patch 99.99%, DLC **20,682 / 20,682**). The 2 that remain are addressed by hash and censused by magic byte; the
 vehicle space was never the blocker.
 
-### T — translate, 6 task units (60.3% of rows evidenced, 0% verified)
+### T — translate, 6 task units (76.8% of in-scope rows resolved, 0% verified)
 
 | unit | weight | why |
 |---|---|---|
@@ -166,10 +171,13 @@ vehicle space was never the blocker.
 | T-2b appearance/assembly/audio/effects/damage/collision | 0.5 | draft 1, 39 rows |
 | T-5 build + verify | **0.5** | `test-085` installed: 35/35 values read back through the `.toc`, `verify_install` 9/9; the handling rows still need a driver (`T5_BUILD.md` §3) |
 
-Row-level, which is where the real uncertainty is: **88 rows** across T-1 (49) and T-2b (39) —
-**decoded 32 (36.4%)**, derived 14 (15.9%), class 11 (12.5%), **assumed 22 (25.0%)**, blocked 6 (6.8%),
-read-only 2, out of scope 1. Rows carrying an evidenced JC3 value: **57 / 88 = 64.8%**. Rows with a
-machine-readable edit for the next build: **33 / 88 = 37.5%**. Rows verified in game: **0 / 88**.
+Row-level, which is where the real uncertainty is: **126 rows** across T-1 (49), T-2b (39), T-3 (15)
+and T6 HUD/camera (23). **14 are out** because JC3 has no system for them; they are excluded from
+the denominator. Of the **112 in scope**, **86 are resolved from evidence (76.8%)** — decoded 45,
+derived 17, class 21, read/EPE 3 — **12 are assumed (10.7%)** and **14 are blocked (12.5%)**.
+**4 resolved rows** are queued for the next build (6 values: T-DM6, T-DM7, T-B3, T-ST5). Rows
+verified in game: **0 / 112**. The old 88-row / 64.8% figures counted only T-1 and T-2b and used
+evidence as if it were completion; they are superseded by the row ledger and `STATUS.md`.
 
 ## Data coverage (secondary — what is inside each workstream)
 
@@ -178,7 +186,7 @@ machine-readable edit for the next build: **33 / 88 = 37.5%**. Rows verified in 
 | BmAK | 15 packages, 20,128 objects | 19,203 decoded tag streams (925 native) | **95.4% of objects, ~99% of decodable** (768 of the 925 are 2-byte `Package` stubs) |
 | BmAK semantics | 423 offset-only fields, 10 audio banks, 28 LODs, 206 particle systems | all values; all 423 named | **423 / 423 named = 100%**, every field decided (G1-1, `OFFSETS.md`) |
 | JC3 | 81,953 archive entries in 88 archives (base + patch + owned DLC), 233 vehicle entities | index of every nameable entry (`INDEX.jsonl`), all 233 vehicle `.ee` decoded to named values, all 56,136 meshes and 57,187 effect/camera/trim files decoded | **6,045 / 6,045 modules = 100%**; entries named **99.9%** overall, DLC 100% |
-| Translation | 88 rows, 1,421 JC3 members with fleet ranges (the vocabulary) | T-1 (49 rows) and T-2b (39 rows) drafted | **57 / 88 rows evidenced = 64.8%**, 0 verified in game |
+| Translation | 126 rows, 1,421 JC3 members with fleet ranges (the vocabulary) | T-1 (49), T-2b (39), T-3 (15) and T6 (23) drafted | **86 / 112 in-scope rows resolved = 76.8%**, 0 verified in game |
 
 ---
 
@@ -344,16 +352,18 @@ The two things the table makes possible that guessing cannot:
    back through the installed `.toc` (35/35) and `verify_install` is 9/9 (`T5_BUILD.md`). What remains
    is the behaviour half — 0–100 km/h, braking distance, understeer, ride height, shift points,
    lights/audio — which needs QA-1 and a driver.
-3. **T-3 / T-2b — the remaining translate rows.** 20 assumed and 16 blocked rows across the 126-row
-   set. G2 can still fill the 2 unnamed entries, but none of them block the
-   current vehicle rows; the camera composition and the spring mapping do.
-4. **T-1 rows → build.** Only 16 of 126 rows carry a machine-readable edit; the rest are `keep`,
-   `out`, `blocked` or assumed. Each assumed row needs a BmAK value or a written class decision.
+3. **T-3 / T-2b / T-1 — the remaining translate rows.** 12 assumed and 14 blocked rows across the
+   112 in-scope rows, with 4 resolved rows queued for the next build. G2 can still fill the 2 unnamed
+   entries, but none of them block the current vehicle rows; the camera composition and the spring
+   mapping do.
+4. **T-1 rows → build.** 16 rows carry the 35 test-085 edits; 4 more rows / 6 values are queued
+   (T-DM6, T-DM7, T-B3, T-ST5). The rest are `keep`, `out`, `blocked` or assumed. Each assumed row
+   needs a BmAK value or a written class decision.
 5. **RD-1 — Rebel Drop entry; QA-1 — telemetry.** Destination and instrument, neither a substitute
    for the rows above.
 
 Done as task lists: G1 18 / 18 and G2 11 / 11. By count: 19,203 / 20,128 BmAK objects, 423 / 423
 fields, 81,951 / 81,953 archive entries, 6,045 / 6,045 modules, 11,643 parts, 56,136 meshes, 57,187
 effect/camera/trim files, 234 packfiles with 18,865 hulls and 35,499 compound instances. Position:
-**G1 95.4–100% · G2 99.998% · T 61.9% evidenced, 0% verified**. Every remaining item is counted in
+**G1 95.4–100% · G2 99.998% · T 76.8% of in-scope rows resolved, 0% verified**. Every remaining item is counted in
 `STATUS.md`; none is a choice between discoveries.

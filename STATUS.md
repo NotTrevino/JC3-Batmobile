@@ -13,20 +13,25 @@ files named in the last column; none is a task score. **No workstream as a whole
 | **G2 JC3 grab** | archive entries named | 81,951 / 81,953 | 99.998% | `INDEX.json` |
 | | vehicle modules decoded | 6,045 / 6,045 | 100% | `ENTITIES.md` |
 | | geometry blocks decoded | 77,611 / 77,611 | 100.0% | `GEOMETRY.md` |
-| **T translate** | rows with evidence | 78 / 126 | 61.9% | `T_ROWS.jsonl` + T6 |
-| | rows assumed | 20 / 126 | 15.9% | |
-| | rows blocked | 14 / 126 | 11.1% | |
-| | rows out (no JC3 system) | 14 / 126 | 11.1% | |
-| | rows fully behaviour-verified | 0 / 126 | 0.0% | no drive covers a row end to end |
+| **T translate** | rows resolved from evidence (in scope) | 86 / 112 | 76.8% | `T_ROWS.jsonl` + T6 |
+| | rows assumed | 12 / 112 | 10.7% | |
+| | rows blocked | 14 / 112 | 12.5% | |
+| | rows out (no JC3 system; excluded) | 14 | — | |
+| | rows queued for the next build | 4 | — | `next` disposition |
+| | rows fully behaviour-verified | 0 / 112 | 0.0% | no drive covers a row end to end |
 
 ### Translation rows by document
 
-| doc | rows | evidenced | assumed | blocked | out | other |
-|---|---:|---:|---:|---:|---:|---:|
-| T-1 | 49 | 31 | 16 | 2 | 0 | 0 |
-| T-2b | 39 | 28 | 4 | 5 | 2 | 0 |
-| T-3 | 15 | 7 | 0 | 3 | 5 | 0 |
-| T6 HUD/camera | 23 | 12 | 0 | 4 | 7 | 0 |
+| doc | rows | resolved | assumed | blocked | out | queued | other |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| T-1 | 49 | 38 | 9 | 2 | 0 | 2 | 0 |
+| T-2b | 39 | 30 | 2 | 5 | 2 | 1 | 0 |
+| T-3 | 15 | 6 | 1 | 3 | 5 | 1 | 0 |
+| T6 HUD/camera | 23 | 12 | 0 | 4 | 7 | 0 | 0 |
+
+`queued` is the subset of `resolved` whose value is not in test-085 yet; it is not a
+separate outcome. `out` rows are excluded from every completion denominator: the
+game has no system to carry them, so they can never be translated or verified.
 
 **Built and measured:** 35 values over 16 rows in test-085 were
 read back from the live `.ee` through its `.toc` (35/35). That is file-level, not
@@ -61,9 +66,12 @@ values are **withdrawn**; it is not counted as translation.
 - 10 BmAK audio banks are absent from the install; they are catalogued, not obtainable.
 
 ### T — translate
-- 20 rows still rest on an assumption rather than a BmAK value.
+- 12 in-scope rows still rest on an assumption rather than a value with evidence.
 - 14 rows are blocked (camera composition, springs, absent banks, JC3 model limits).
-- 14 rows are out because JC3 has no system for them (weapons, battle mode, etc.).
+- 14 rows are out because JC3 has no system for them (weapons, battle mode, etc.);
+  they are excluded from the completion denominator rather than counted as unfinished.
+- 4 resolved rows are queued for the next build; test-085 carries 35
+  values over 16 rows, read back 35/35.
 - 0 rows are fully verified in game; 4 have partial manoeuvre measurements (QA-1).
 - The HUD has no entity→`hud.gfx` caller; that is a code bridge, not a value row.
 
@@ -75,3 +83,10 @@ and concluded the distance was native. It was not: the active configs carry 400/
 Task closure is not coverage, and a value that is present but misread still counts as
 missing. The percentages above replace the task scores; `STATUS.md` is regenerated, never
 hand-edited.
+
+The first row-level version of this table made two further mistakes. It divided by all 126
+rows, including the 14 that JC3 cannot express, so completion could never reach 100% by
+design; and it counted rows whose own transform said `class` as `assumed`, and rows whose
+build value was simply wrong (`deform_scale`, nitro grip) as `keep`. The denominator is now
+the 112 in-scope rows, and the mislabelled rows were re-decided against the generated fleet
+table (`T3_FLEET.md`) rather than relabelled by hand.

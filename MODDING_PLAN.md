@@ -8,10 +8,12 @@ documented as "what does what". The last four builds (078–081) were manual con
 is lifted: GRB-1…GRB-11 are closed (§0.6), so appearance builds may resume from the grab-derived values.
 **Gate, second half (2026-10-22):** GRB-1…GRB-11 closed BmAK's *inventory*, but the **JC3 side was
 never grabbed** — 1 of 232 vehicle entities is decoded in depth, and 14 of vanilla v0300's 31 modules
-have never been opened. Handling and appearance work has therefore been guessing at targets. The order
-is now **G1 (finish BmAK) → G2 (grab JC3) → T (translate) → build once**, with the full picture in
-[GRAB_BACKLOG.md](GRAB_BACKLOG.md). **No tuning builds while the translation table does not exist**;
-probes that answer architectural questions are still allowed (test-083 is one).
+have never been opened. Handling and appearance work was therefore guessing at targets. The order
+was **G1 (finish BmAK) → G2 (grab JC3) → T (translate) → build once**, with the full picture in
+[GRAB_BACKLOG.md](GRAB_BACKLOG.md). **That gate is now closed (2026-10-23):** G1 is 423/423 fields,
+G2 is 99.998% of entries, the translation ledger is 86/112 in-scope rows resolved (76.8%), and
+test-085 carries 35 values. The next handling build is the four-row / six-value batch in
+`T3_COVERAGE.md` §4; probes that answer architectural questions are still allowed (test-083 is one).
 **Scope:** a lore-accurate Arkham Knight Batmobile, drivable in Just Cause 3 single-player, spawned
 from a **new Rebel Drop entry called "Batmobile"** (RD-1; reference implementation in
 `Research/1456340180_Rebel-Drop-Mod-V5.3`). The Kerner Serpente R

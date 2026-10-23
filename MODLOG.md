@@ -7148,3 +7148,38 @@ Green: `grab_offsets.py --check` (423/423/0), `grab_model.py check` (schema 6, 1
 `bmak_coverage.py --check` (423 fields -> 19 rows), `bmsdk_offsets.py --check` (35 classes, 3,133
 properties, 48 structs), `bmak_bind.py --all --segments`, `status_audit.py --write`.
 `OFFSETS.md`/`.json`, `STATUS.md` and `GRAB_BACKLOG.md` regenerated/updated.
+
+## T-audit - In-scope completion, first translation batch (no build, 2026-10-23)
+
+The headline translation percentage was measuring the wrong denominator. `STATUS.md` divided
+evidenced rows by all 126, including the 14 rows where JC3 has no system to carry them, so 100%
+was unreachable by design; it also counted rows whose own transform column said `class` as
+`assumed`, and two rows whose build value was simply wrong as `keep`.
+
+Changes:
+
+- `status_audit.py` now reports completion as `resolved / (rows - out)`, keeps the raw `out` count
+  outside the denominator, and reports `next` (queued) separately. The per-document table carries
+  `queued`.
+- `t3_fleet.py` grew from 21 to 41 members so the class claims re-decided in this pass are
+  reproducible: mass, inertia, COG bias, health, deform/impact, wheel mass/shape cast, steering,
+  drift, nitro, frontal area and top speed.
+- Re-decided against that table: T-M1, T-M3, T-S3, T-R3, T-K3, T-B3, T-ST5 (T-1), T-DM1, T-DM6
+  (T-2b) moved from `assumed` to class/decoded evidence; T-DR1 moved the other way (the drift
+  block is a JC3-native choice, not the 6 t median).
+- Wrong "now" values corrected: T-B3 is 5.68, not 2.0 (fleet maximum 2.0); T-DM6 is 0, not 1
+  (fleet invariant 1); T-DR1's sensitivity is 4 vs the claimed 2, entry 20 vs 180.
+- T-DM1 now cites the newly named `RVehicleBatmobile.Health = 1,200`; 2,000 is kept as the 6 t p75
+  and land maximum, because the donor health has no unit bridge.
+- Next build queued: **4 rows / 6 values** - T-DM6 `deform_scale` 0 -> 1, T-DM7
+  `impact_damage_factor` 0 -> 1 and `impact_armor` 5000 -> 5, T-B3 nitro grip 5.68 -> 2.0, T-ST5
+  countersteer 2.0 -> 3.0 and steer_in 1.5 -> 2.0.
+- `GRAB_BACKLOG.md`, `MODDING_PLAN.md` and the T-1/T-2b/T-3/T-5 docs reconciled to the generated
+  numbers; the old 61.9%, 60.3%, 64.8% (57/88), 37.5% and 88-row figures are superseded.
+
+Numbers: **86 / 112 in-scope rows resolved = 76.8%**, 12 assumed (10.7%), 14 blocked (12.5%),
+14 out (excluded), 4 queued, **0 / 112 behaviour-verified**.
+
+Green: `t_rows.py check` (103 rows, 35 edits over 16, 4 next), `t3_fleet.py --check` (41 members
+over 156 vehicles), `status_audit.py --check`, `bmak_coverage.py --check` (423 fields -> 19 rows).
+`T_ROWS.jsonl`, `T3_FLEET.md` and `STATUS.md` regenerated. No build, no game files.

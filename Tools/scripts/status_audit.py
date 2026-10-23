@@ -12,8 +12,10 @@ This tool counts the files that actually exist:
   T   every row in `T_ROWS.jsonl` + the T6 HUD/camera table, by disposition
 
 Rows are `evidenced` (decoded/derived/class/epe/read), `assumed`, `blocked`, `out` (no JC3 system),
-or `other`. Nothing is counted as verified unless a drive measured it; T-5's 35 read-backs are
-file-level, not behaviour.
+or `other`. Completion is `evidenced / (rows - out)`: a row the game cannot express is not an
+unfinished translation. `next` is a subset of `evidenced` whose value is queued for the next build.
+Nothing is counted as verified unless a drive measured it; T-5's 35 read-backs are file-level, not
+behaviour.
 
 Usage:
     python Tools/scripts/status_audit.py            # print
@@ -84,10 +86,12 @@ def t_rows() -> dict:
              "out" if r.get("dispo") == "out" else row_kind(conf))
         counts[k] += 1
         docs.setdefault(r["doc"], {"evidenced": 0, "assumed": 0, "blocked": 0,
-                                  "out": 0, "other": 0, "rows": 0})
+                                  "out": 0, "other": 0, "next": 0, "rows": 0})
         docs[r["doc"]][k] += 1
+        docs[r["doc"]]["next"] += 1 if r.get("dispo") == "next" else 0
         docs[r["doc"]]["rows"] += 1
-    t6 = {"evidenced": 0, "assumed": 0, "blocked": 0, "out": 0, "other": 0, "rows": 0}
+    t6 = {"evidenced": 0, "assumed": 0, "blocked": 0, "out": 0, "other": 0,
+          "next": 0, "rows": 0}
     for line in open(os.path.join(TR, "T6_HUD_CAMERA.md"), encoding="utf-8"):
         if not line.startswith("| T-"):
             continue
@@ -106,7 +110,11 @@ def t_rows() -> dict:
         t6["rows"] += 1
     counts.update({k: counts[k] + t6[k] for k in counts})
     counts["rows"] = len(rows) + t6["rows"]
+    next_rows = (sum(1 for r in rows if r.get("dispo") == "next")
+                 + sum(1 for line in open(os.path.join(TR, "T6_HUD_CAMERA.md"), encoding="utf-8")
+                       if line.startswith("| T-") and "| next |" in line))
     return {"rows": len(rows), "t6": t6, "total": counts, "docs": docs,
+            "in_scope": counts["rows"] - counts["out"], "next_rows": next_rows,
             "edits": sum(r.get("edits", 0) for r in rows),
             "edit_rows": sum(1 for r in rows if r.get("edits", 0))}
 
@@ -116,7 +124,8 @@ def build() -> dict:
 
 
 def markdown(d: dict) -> str:
-    a, b, t = d["g1"], d["g2"], d["t"]["total"]
+    a, b, td = d["g1"], d["g2"], d["t"]
+    t = td["total"]
     geof = b["blocks"] - b["blocks_decoded"]
     geo_bullet = (
         f"- all {b['blocks']:,} geometry blocks are decoded, 0 framed: `CarPaintMM`,\n"
@@ -141,25 +150,30 @@ def markdown(d: dict) -> str:
         f"| **G2 JC3 grab** | archive entries named | {b['named']:,} / {b['entries']:,} | {pct(b['named'], b['entries']):.3f}% | `INDEX.json` |",
         f"| | vehicle modules decoded | 6,045 / 6,045 | 100% | `ENTITIES.md` |",
         f"| | geometry blocks decoded | {b['blocks_decoded']:,} / {b['blocks']:,} | {pct(b['blocks_decoded'], b['blocks']):.1f}% | `GEOMETRY.md` |",
-        f"| **T translate** | rows with evidence | {t['evidenced']} / {t['rows']} | {pct(t['evidenced'], t['rows']):.1f}% | `T_ROWS.jsonl` + T6 |",
-        f"| | rows assumed | {t['assumed']} / {t['rows']} | {pct(t['assumed'], t['rows']):.1f}% | |",
-        f"| | rows blocked | {t['blocked']} / {t['rows']} | {pct(t['blocked'], t['rows']):.1f}% | |",
-        f"| | rows out (no JC3 system) | {t['out']} / {t['rows']} | {pct(t['out'], t['rows']):.1f}% | |",
-        f"| | rows fully behaviour-verified | 0 / {t['rows']} | 0.0% | no drive covers a row end to end |",
+        f"| **T translate** | rows resolved from evidence (in scope) | {t['evidenced']} / {td['in_scope']} | {pct(t['evidenced'], td['in_scope']):.1f}% | `T_ROWS.jsonl` + T6 |",
+        f"| | rows assumed | {t['assumed']} / {td['in_scope']} | {pct(t['assumed'], td['in_scope']):.1f}% | |",
+        f"| | rows blocked | {t['blocked']} / {td['in_scope']} | {pct(t['blocked'], td['in_scope']):.1f}% | |",
+        f"| | rows out (no JC3 system; excluded) | {t['out']} | — | |",
+        f"| | rows queued for the next build | {td['next_rows']} | — | `next` disposition |",
+        f"| | rows fully behaviour-verified | 0 / {td['in_scope']} | 0.0% | no drive covers a row end to end |",
         "",
         "### Translation rows by document",
         "",
-        "| doc | rows | evidenced | assumed | blocked | out | other |",
-        "|---|---:|---:|---:|---:|---:|---:|",
+        "| doc | rows | resolved | assumed | blocked | out | queued | other |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|",
     ]
     for name in sorted(d["t"]["docs"]):
         v = d["t"]["docs"][name]
         L.append(f"| {name} | {v['rows']} | {v['evidenced']} | {v['assumed']} | "
-                 f"{v['blocked']} | {v['out']} | {v['other']} |")
+                 f"{v['blocked']} | {v['out']} | {v['next']} | {v['other']} |")
     h = d["t"]["t6"]
     L.append(f"| T6 HUD/camera | {h['rows']} | {h['evidenced']} | {h['assumed']} | "
-             f"{h['blocked']} | {h['out']} | {h['other']} |")
+             f"{h['blocked']} | {h['out']} | {h['next']} | {h['other']} |")
     L += [
+        "",
+        "`queued` is the subset of `resolved` whose value is not in test-085 yet; it is not a",
+        "separate outcome. `out` rows are excluded from every completion denominator: the",
+        "game has no system to carry them, so they can never be translated or verified.",
         "",
         f"**Built and measured:** {d['t']['edits']} values over {d['t']['edit_rows']} rows in test-085 were",
         "read back from the live `.ee` through its `.toc` (35/35). That is file-level, not",
@@ -198,9 +212,12 @@ def markdown(d: dict) -> str:
         "- 10 BmAK audio banks are absent from the install; they are catalogued, not obtainable.",
         "",
         "### T — translate",
-        f"- {t['assumed']} rows still rest on an assumption rather than a BmAK value.",
+        f"- {t['assumed']} in-scope rows still rest on an assumption rather than a value with evidence.",
         f"- {t['blocked']} rows are blocked (camera composition, springs, absent banks, JC3 model limits).",
-        f"- {t['out']} rows are out because JC3 has no system for them (weapons, battle mode, etc.).",
+        f"- {t['out']} rows are out because JC3 has no system for them (weapons, battle mode, etc.);",
+        "  they are excluded from the completion denominator rather than counted as unfinished.",
+        f"- {td['next_rows']} resolved rows are queued for the next build; test-085 carries {d['t']['edits']}",
+        f"  values over {d['t']['edit_rows']} rows, read back 35/35.",
         "- 0 rows are fully verified in game; 4 have partial manoeuvre measurements (QA-1).",
         "- The HUD has no entity→`hud.gfx` caller; that is a code bridge, not a value row.",
         "",
@@ -212,6 +229,13 @@ def markdown(d: dict) -> str:
         "Task closure is not coverage, and a value that is present but misread still counts as",
         "missing. The percentages above replace the task scores; `STATUS.md` is regenerated, never",
         "hand-edited.",
+        "",
+        "The first row-level version of this table made two further mistakes. It divided by all 126",
+        "rows, including the 14 that JC3 cannot express, so completion could never reach 100% by",
+        "design; and it counted rows whose own transform said `class` as `assumed`, and rows whose",
+        "build value was simply wrong (`deform_scale`, nitro grip) as `keep`. The denominator is now",
+        "the 112 in-scope rows, and the mislabelled rows were re-decided against the generated fleet",
+        "table (`T3_FLEET.md`) rather than relabelled by hand.",
         "",
     ]
     return "\n".join(L)
