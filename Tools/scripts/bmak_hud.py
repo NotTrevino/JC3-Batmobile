@@ -39,7 +39,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from upk_read import Package  # noqa: E402
 
 GAME = Path(os.environ.get("BMAK_GAME", r"E:/Games/Batman - Arkham Knight"))
-OUT = Path(os.environ.get("BMAK_HUD_OUT", r"E:/Modding/_gamedata/BmAKgrab_early/hud"))
+OUT = Path(os.environ.get("BMAK_HUD_OUT", r"E:/Modding/_shared/gamedata/BmAKgrab_early/hud"))
 HERE = Path(__file__).resolve().parents[2]
 TABLE = HERE / "Research" / "BatmobileGrab" / "HUD.json"
 

@@ -5,7 +5,7 @@ import json
 import os
 import re
 
-RAW = r"E:/Modding/_JC3grab"
+RAW = r"E:/Modding/JustCause3/_grab"
 PAT = re.compile(r"grappl|tether|rope|winch|hook|cargobay|cargo_bay|tow", re.I)
 
 classes = collections.Counter()

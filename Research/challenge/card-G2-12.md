@@ -9,11 +9,11 @@ the artifacts `Research/JC3Grab/SIGNATURE_DIFF.md` + `SIGNATURE_DIFF.json`, the 
 
 Constraints honoured: no game launched, nothing written into `D:/Games`, no capture copied, nothing
 committed, no `--write`. The one command that writes anything is the card's own `--check`, which
-re-converts the two inner `.epe`s into its scratch cache `E:/Modding/_JC3grab/sigdiff/`. That cache
+re-converts the two inner `.epe`s into its scratch cache `E:/Modding/JustCause3/_grab/sigdiff/`. That cache
 was hashed before and after and is **byte-identical** (only mtimes move):
 
 ```
-$ sha1sum /e/Modding/_JC3grab/sigdiff/*   (before)  … (after)   → diff: no differences
+$ sha1sum /e/Modding/JustCause3/_grab/sigdiff/*   (before)  … (after)   → diff: no differences
 CACHE BYTES UNCHANGED
 $ python Tools/scripts/jc3sigdiff.py --check
 PASS: 566 -> 601 members, graph 450 -> 464 objects, 4 added / 1 removed, 19 part rows changed,
@@ -230,7 +230,7 @@ changed: root/CInteractionContext:context/CInteractionGraph:graph/
 The record says two root scalars "have no Jenkins name" and no candidate in the shipped vocabulary
 matched. Tested independently: the id form is `Jenkins(name)` (proven on known names), and the
 vocabulary below — 21,447 tokens harvested from both containers' own string tables and graph blobs,
-plus 1,322 names from 300 converted `.epe`/XML files under `E:/Modding/_JC3grab` — gives no preimage
+plus 1,322 names from 300 converted `.epe`/XML files under `E:/Modding/JustCause3/_grab` — gives no preimage
 for either id:
 
 ```

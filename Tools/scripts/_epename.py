@@ -1,6 +1,6 @@
 import re
 
-x = open(r"E:\Modding\JC3-Batmobile\Working\Audio\serpente_epe.xml", encoding="utf-8").read()
+x = open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\serpente_epe.xml", encoding="utf-8").read()
 pat = re.compile(r'<value name="Sound" type="vec_byte">([0-9A-F,]+)</value>')
 for nm in ["engine_running_sound", "damage_fire_right", "exhaust_upgrade_nitrous2",
            "exhaust_upgrade_tjump", "speedwind_sound_player", "sportsmuscle_engine",

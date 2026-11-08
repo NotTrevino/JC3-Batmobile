@@ -13,7 +13,7 @@ Inputs, all read-only:
 
   * `profile/item.onlinec` and `profile/task.onlinec` from every archive layer that ships
     them (the patch layer is the effective one), extracted to
-    `E:\\Modding\\_gamedata\\JC3grab\\rebeldrop\\` - game bytes stay outside the repo (R10);
+    `E:\\Modding\\_shared\\gamedata\\JC3grab\\rebeldrop\\` - game bytes stay outside the repo (R10);
   * the three variants of the Rebel Drop mod V5.3 in
     `Research/1456340180_Rebel-Drop-Mod-V5.3/`;
   * `Research/JC3Grab/INDEX.jsonl` to resolve an entry's name hash to an `.ee` path.
@@ -61,7 +61,7 @@ from rbmhdr import hash_jenkins  # noqa: E402
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
 OUT = os.path.join(ROOT, "Research", "JC3Grab")
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/_shared/gamedata/JC3grab")
 GAME = os.environ.get("JC3_GAME", jc3index.DEFAULT_GAME)
 CACHE = os.path.join(RAW, "rebeldrop")
 MOD_ROOT = os.path.join(ROOT, "Research", "1456340180_Rebel-Drop-Mod-V5.3")

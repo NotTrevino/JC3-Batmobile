@@ -40,11 +40,11 @@ disagrees with this table is a `--check` failure, not a footnote.
 | T-SR1 | T-3 | out | **next** | — | - | `Research/JC3Grab/VOCABULARY.md` | HDL-6 |
 | T-LG5 | T-2b | out | **superseded** | T-18 | D-2 | `Research/JC3Grab/LIGHT_SYSTEM.md` | LGT-2 |
 | T-HUD4 | T-6 | out | **out** | — | - | `Research/JC3Grab/JC3_HUD_WEAPONS.md` | ARM-1, HUD-1 |
-| T-HUD6 | T-6 | out | **out** | — | - | `E:/Modding/_gamedata/JC3grab/hud/dec` | MOD-2, CAM-2 |
+| T-HUD6 | T-6 | out | **out** | — | - | `E:/Modding/_shared/gamedata/JC3grab/hud/dec` | MOD-2, CAM-2 |
 | T-HUD7 | T-6 | out | **out** | — | - | `Research/JC3Grab/TETHER.md` | WPN-6 |
-| T-HUD8 | T-6 | out | **out** | — | - | `E:/Modding/_gamedata/JC3grab/hud/dec` | WPN-8 |
-| T-HUD9 | T-6 | out | **out** | — | - | `E:/Modding/_gamedata/JC3grab/hud/dec` | HUD-2 |
-| T-HUD10 | T-6 | out | **out** | — | - | `E:/Modding/_gamedata/JC3grab/hud/dec` | HUD-2 |
+| T-HUD8 | T-6 | out | **out** | — | - | `E:/Modding/_shared/gamedata/JC3grab/hud/dec` | WPN-8 |
+| T-HUD9 | T-6 | out | **out** | — | - | `E:/Modding/_shared/gamedata/JC3grab/hud/dec` | HUD-2 |
+| T-HUD10 | T-6 | out | **out** | — | - | `E:/Modding/_shared/gamedata/JC3grab/hud/dec` | HUD-2 |
 | T-CAM10 | T-6 | out | **superseded** | T-15 | D-2 | `Builds/test-091/aaf/editor/entities/jc_cameras/vehicle_cameras/bat_base.ctunec` | CAM-2 |
 | T-HUD5 | T-6 | blocked | **blocked** | T-11, B-05 | D-7 | `Research/JC3Grab/JC3_HUD_WEAPONS.md` | HUD-2, WPN-12 |
 
@@ -156,7 +156,7 @@ own row).
 - `needle` `InitVehicleWeapons` — the whole vehicle-HUD interface a JC3 entity can feed (G2-25)
   - ok: Research/JC3Grab/JC3_HUD_WEAPONS.md: `InitVehicleWeapons` takes **9 arguments** and `UpdateVehicleWeapons` **6**; between them they carry weapon id, name, infinite-ammo flag, magazine ammo, magazine size, inventory am
 - `hud` must not name `armour`, `armor`; allow-list `armor` ← chaos_reward_armory, "armory" — no armour field anywhere in `ui/hud.gfx`, US spelling too - the only `armor` hits are the `CHAOS_REWARD_ARMORY` icon
-  - ok: E:/Modding/_gamedata/JC3grab/hud/dec: 260 scripts read, 0 unexplained hits of armour, armor; explained: armor 9 all in the allow-list
+  - ok: E:/Modding/_shared/gamedata/JC3grab/hud/dec: 260 scripts read, 0 unexplained hits of armour, armor; explained: armor 9 all in the allow-list
 - `needle` `explosion_armor` — JC3's armour is a per-channel number, not a second bar (G2-28)
   - ok: Research/JC3Grab/DAMAGE_MODEL.md: | `explosion_armor` @ strength | 0 @ 0 | 250 @ 50 | 250 @ 50 |
 
@@ -165,7 +165,7 @@ own row).
 **Why:** stays `out`: no battle-mode or zoom overlay exists in the in-game HUD movie - `ui/hud.gfx` carries neither `zoom` nor `BattleMode`, and the mode's pivot is a named omission (`Research/JC3Grab/TANKTURN.md`)
 
 - `hud` must not name `zoom`, `battlemode`, `battle_mode` — no battle/zoom overlay in `ui/hud.gfx`
-  - ok: E:/Modding/_gamedata/JC3grab/hud/dec: 260 scripts read, 0 unexplained hits of zoom, battlemode, battle_mode
+  - ok: E:/Modding/_shared/gamedata/JC3grab/hud/dec: 260 scripts read, 0 unexplained hits of zoom, battlemode, battle_mode
 - `needle` `named omission` — and the mode itself has no turn-on-the-spot carrier (G2-21)
   - ok: Research/JC3Grab/TANKTURN.md: data: **MOD-2's turn-on-the-spot is a named omission**, carried by native code keyed to
 
@@ -176,14 +176,14 @@ own row).
 - `needle` `Functional winch classes anywhere in the fleet: **0**` — no winch exists at all, so no meter can be fed (G2-34)
   - ok: Research/JC3Grab/TETHER.md: - Functional winch classes anywhere in the fleet: **0**.
 - `hud` must not name `winch` — and no winch widget in `ui/hud.gfx`
-  - ok: E:/Modding/_gamedata/JC3grab/hud/dec: 260 scripts read, 0 unexplained hits of winch
+  - ok: E:/Modding/_shared/gamedata/JC3grab/hud/dec: 260 scripts read, 0 unexplained hits of winch
 
 ### T-HUD8 — out → out
 
 **Why:** stays `out`: no energy-system widget in `ui/hud.gfx` and no sonar class in the fleet census (`Research/JC3Grab/ENTITIES.md`), so there is nothing to display
 
 - `hud` must not name `energysystem`, `energy_charge`, `energycharge`, `energy`; allow-list `energy` ← such energy — no energy-system widget in `ui/hud.gfx` - `energy`'s only hit is the `such energy` joke string
-  - ok: E:/Modding/_gamedata/JC3grab/hud/dec: 260 scripts read, 0 unexplained hits of energysystem, energy_charge, energycharge, energy; explained: energy 1 all in the allow-list
+  - ok: E:/Modding/_shared/gamedata/JC3grab/hud/dec: 260 scripts read, 0 unexplained hits of energysystem, energy_charge, energycharge, energy; explained: energy 1 all in the allow-list
 - `absent` anchor `CMusicTrack`, must not name `sonar` — and no sonar class to drive one (WPN-8 absence)
   - ok: Research/JC3Grab/ENTITIES.md: anchor 'CMusicTrack' present, 0 hits of sonar
 
@@ -192,14 +192,14 @@ own row).
 **Why:** stays `out`: `ui/hud.gfx` carries no combo, medal or enemy-count widget, and the vehicle HUD interface (`Research/JC3Grab/JC3_HUD_WEAPONS.md`) has no entry point for one
 
 - `hud` must not name `combo`, `medal`, `enemy_count`, `enemycount` — no combo/medal/enemy-count widget in `ui/hud.gfx`, camel-case spelling too
-  - ok: E:/Modding/_gamedata/JC3grab/hud/dec: 260 scripts read, 0 unexplained hits of combo, medal, enemy_count, enemycount
+  - ok: E:/Modding/_shared/gamedata/JC3grab/hud/dec: 260 scripts read, 0 unexplained hits of combo, medal, enemy_count, enemycount
 
 ### T-HUD10 — out → out
 
 **Why:** stays `out`: no occupant, virus-upload or forensic-tracking widget in `ui/hud.gfx`, and no vehicle-HUD entry point for one (`Research/JC3Grab/JC3_HUD_WEAPONS.md`)
 
 - `hud` must not name `occupant`, `virus`, `forensic` — no occupant/virus/forensic widget in `ui/hud.gfx`
-  - ok: E:/Modding/_gamedata/JC3grab/hud/dec: 260 scripts read, 0 unexplained hits of occupant, virus, forensic
+  - ok: E:/Modding/_shared/gamedata/JC3grab/hud/dec: 260 scripts read, 0 unexplained hits of occupant, virus, forensic
 
 ### T-CAM10 — out → superseded
 
@@ -222,11 +222,11 @@ own row).
 | row | requirement | proof file | what it shows |
 |---|---|---|---|
 | T-HUD4 | ARM-1, HUD-1 | `Research/JC3Grab/JC3_HUD_WEAPONS.md` | the whole vehicle-HUD interface a JC3 entity can feed (G2-25) |
-| T-HUD6 | MOD-2, CAM-2 | `E:/Modding/_gamedata/JC3grab/hud/dec` | no battle/zoom overlay in `ui/hud.gfx` |
+| T-HUD6 | MOD-2, CAM-2 | `E:/Modding/_shared/gamedata/JC3grab/hud/dec` | no battle/zoom overlay in `ui/hud.gfx` |
 | T-HUD7 | WPN-6 | `Research/JC3Grab/TETHER.md` | no winch exists at all, so no meter can be fed (G2-34) |
-| T-HUD8 | WPN-8 | `E:/Modding/_gamedata/JC3grab/hud/dec` | no energy-system widget in `ui/hud.gfx` - `energy`'s only hit is the `such energy` joke string |
-| T-HUD9 | HUD-2 | `E:/Modding/_gamedata/JC3grab/hud/dec` | no combo/medal/enemy-count widget in `ui/hud.gfx`, camel-case spelling too |
-| T-HUD10 | HUD-2 | `E:/Modding/_gamedata/JC3grab/hud/dec` | no occupant/virus/forensic widget in `ui/hud.gfx` |
+| T-HUD8 | WPN-8 | `E:/Modding/_shared/gamedata/JC3grab/hud/dec` | no energy-system widget in `ui/hud.gfx` - `energy`'s only hit is the `such energy` joke string |
+| T-HUD9 | HUD-2 | `E:/Modding/_shared/gamedata/JC3grab/hud/dec` | no combo/medal/enemy-count widget in `ui/hud.gfx`, camel-case spelling too |
+| T-HUD10 | HUD-2 | `E:/Modding/_shared/gamedata/JC3grab/hud/dec` | no occupant/virus/forensic widget in `ui/hud.gfx` |
 
 ## 4. What this cannot prove
 

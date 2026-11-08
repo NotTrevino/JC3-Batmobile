@@ -33,7 +33,7 @@ RES = ROOT / "Research" / "BatmobileGrab"
 RUNTIME = RES / "runtime"
 MD = RES / "SAMPLER_UNKNOWNS2.md"
 
-BMSDK = Path("E:/Modding/_tools/BmSDK-AK/src/BmSDK")
+BMSDK = Path("E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK")
 GEN = BMSDK / "Generated" / "BmGame"
 PROP_RE = re.compile(r"///\s*(\w+)Property:\s*(\w+)")
 PTR_RE = re.compile(r"Ptr \+ (\d+)")
@@ -306,7 +306,7 @@ def build(a: dict) -> str:
     w("|---|---|")
     w("| `Research/BatmobileGrab/CONTROLS_CONSUMERS.json` | the decoded walks (export, script bytes, refs, calls) and `property_consumers` |")
     w("| `Research/BatmobileGrab/SAMPLER_UNKNOWNS.md` | the three missing-input statements |")
-    w("| `E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated/BmGame/RVehicleBatmobileBase.g.cs` | `BoostingOut` offset/type |")
+    w("| `E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Generated/BmGame/RVehicleBatmobileBase.g.cs` | `BoostingOut` offset/type |")
     w("| `.../Generated/BmGame/RPlayerInput.g.cs` | 783 and 774 field names |")
     w("| `.../Generated/BmGame/RPlayerController.g.cs` | `QuickGadgetX` function line |")
     w(f"| `Research/BatmobileGrab/runtime/{', '.join(a['logs']['files'])}` | {a['logs']['records']} records: 774 taps, 783 edges, meter-key census |")

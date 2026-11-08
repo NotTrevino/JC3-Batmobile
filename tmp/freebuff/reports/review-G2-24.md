@@ -37,7 +37,7 @@ guesses as fact (R4) instead of UNKNOWN.
 
 ## Check output (verbatim)
 
-Command (project root `E:/Modding/JC3-Batmobile`):
+Command (project root `E:/Modding/JustCause3/JC3-Batmobile`):
 
 ```
 python Tools/scripts/jc3audio.py --check
@@ -186,7 +186,7 @@ shipped file is 434 B with **26** bank names (`master`, `master_strings`, `vehic
 `JC3_AUDIO.md:204` (AUD-2) cites `exhaust_upgrade_nitrous2`; `:208` (AUD-6) cites
 `combined_wheel_default_sfx`. Neither is among the donor's 45 events (§3); both names exist on other
 fleet vehicles (e.g. `v0008_car_autostraad_modernsportssaloon…`, `v0000_car_autostraad_oldjeep…` in
-`E:/Modding/_JC3grab/detail`). So they are real names, but the table's "JC3 carrier" column mixes
+`E:/Modding/JustCause3/_grab/detail`). So they are real names, but the table's "JC3 carrier" column mixes
 donor carriers with fleet members without saying which — provenance is missing for a decision table.
 
 ### 8. MODLOG done-section numbers that disagree with a fresh measure
@@ -220,7 +220,7 @@ archive entry or assert the two are equal.
 |---|---|---|---|
 | 1 | `JC3_AUDIO.md:154` sample 10 `jc3_vehicle_horn_truck_06_loop`, 48000 Hz, 1 ch, 50,140 frames, loop 17,341..50,137 | `vgmstream-cli -s 10 -m Working/Audio/jc3bank/sound/fmod_banks/vehicles.bank` → "sample rate: 48000 Hz / channels: 1 / loop start: 17341 / loop end: 50137 / stream total samples: 50140 / 16-bit Little Endian PCM / stream count: 649 / stream name: jc3_vehicle_horn_truck_06_loop"; identical in `JC3_AUDIO_EVENTS.json` `samples.list[9]` | **match** |
 | 2 | `JC3_AUDIO.md:55` (row 12) `100cbd8f-9b9f-8749-b853-632b33d167e9` at `vehicles/15`; row 1 `249a34b0…` at vehicles/43; row 3 `fd69c63c…` vehicles/255; row 19 `905be2e5…` vehicles/146 | parsed `EVTS`→`LIST EVNT`→`EVTB` ordinals directly with the script's `fev`/`section_entries`: ordinal 15 = `100cbd8f…`, 43 = `249a34b0…`, 255 = `fd69c63c…`, 146 = `905be2e5…` | **match** (4/4) |
-| 3 | `JC3_AUDIO.md:189-191` horn **178** objects in 178 vehicles, 19 GUIDs; radio **0**; 6,659 `Sound` objects / 232 | independent recount over all 232 `E:/Modding/_JC3grab/detail/*.ee.json` (own code, not `jc3audio.py`): entities 232, `Sound` objects 6,659, horn 178 in 178 entities, radio 0; JSON `horn_guids` = 19 | **match** |
+| 3 | `JC3_AUDIO.md:189-191` horn **178** objects in 178 vehicles, 19 GUIDs; radio **0**; 6,659 `Sound` objects / 232 | independent recount over all 232 `E:/Modding/JustCause3/_grab/detail/*.ee.json` (own code, not `jc3audio.py`): entities 232, `Sound` objects 6,659, horn 178 in 178 entities, radio 0; JSON `horn_guids` = 19 | **match** |
 | 4 | `JC3_AUDIO.md:30-34` bank table: vehicles 210,781,376 / 257 / 1,674 / 649 / 969; character 90,442,272 / 193 / 976 / 262; effects 391,390,496 / 579 / 1,524 / 417 | re-parsed all three banks from the archives (`jc3grab.read_entry` + `fev`/`fev_events`/`fev_params`/`fev_waves`/`fev_sounds`/`fsb`): vehicles 56/50, 257 events, 257 tunes, 1,674 instances, 649 waves, 969 params, 649 samples; character 193/193/1,938/976/262/976; effects 579/579/5,310/1,524/417/1,524 | **match** |
 | 5 | `JC3_AUDIO.md:132-135` FSB5 header 22,100 B header, 23,792 B name table (21,196 B of names), 153,439,744 B data | `fsb()` on the archive entry: `{samples: 649, sample_header_bytes: 22100, name_table_bytes: 23792, name_table_string_bytes: 21196, data_bytes: 153439744}` | **match** |
 

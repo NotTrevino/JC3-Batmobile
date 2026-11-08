@@ -48,8 +48,8 @@ import bmak_hud  # noqa: E402
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "Research" / "BatmobileGrab" / "HUD_INVENTORY.json"
 IFACE = ROOT / "Research" / "BatmobileGrab" / "HUD_INTERFACES.json"
-DEC = Path(os.environ.get("BMAK_HUD_OUT", r"E:/Modding/_gamedata/BmAKgrab_early/hud")) / "modules"
-FFDEC = Path(os.environ.get("FFDEC", r"E:/Modding/_tools/ffdec/ffdec.jar"))
+DEC = Path(os.environ.get("BMAK_HUD_OUT", r"E:/Modding/_shared/gamedata/BmAKgrab_early/hud")) / "modules"
+FFDEC = Path(os.environ.get("FFDEC", r"E:/Modding/_shared/tools/ffdec/ffdec.jar"))
 PACKAGES = ("BmGame.upk", "Startup.upk")
 HUD_CLASS = "RHudModule"
 # Movies that are HUD even without a module naming them: the container document, the shared

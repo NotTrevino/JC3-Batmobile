@@ -4,7 +4,7 @@
 nothing was launched.
 
 **Provenance / revert.** New file `tmp/freebuff/reports/afterburner-gauges-spec.md`
-(= `E:/Modding/JC3-Batmobile/tmp/freebuff/reports/afterburner-gauges-spec.md`). **Revert = delete this file.**
+(= `E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/afterburner-gauges-spec.md`). **Revert = delete this file.**
 
 Labels: **decoded** (file:line / field / clip), **derived** (rule + inputs), **operator-stated**, **UNKNOWN**.
 

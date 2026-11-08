@@ -410,7 +410,7 @@ unconstrained rather than known-unlooped.
 **Test 1 — can the same CLI report loops for FSB5-family files?** Yes:
 
 ```
-> vgmstream-cli -m E:/Modding/_BmAKgrab/audio/wem/0267FF16.wem
+> vgmstream-cli -m E:/Modding/ArkhamKnight/_grab/audio/wem/0267FF16.wem
 loop start: 8456 samples (0:00.176 seconds)
 loop end: 178312 samples (0:03.715 seconds)
 stream total samples: 181362 (0:03.778 seconds)
@@ -479,7 +479,7 @@ need an audition` or §12 records the re-reading.
 ```
 
 No `.ee`, no `.fmod_guids`, no sound role, 171 tune members and 0 audio members. There is also no
-`w602*` file in `E:/Modding/_JC3grab/entities/` or `detail/`.
+`w602*` file in `E:/Modding/JustCause3/_grab/entities/` or `detail/`.
 
 **Verdict: HOLDS.** (The doc spells the entity `w602_mediumtank_cannon` once; the module is
 `w602_mediumtank_canon`. Cosmetic, but it is the string B-11 will grep for.)

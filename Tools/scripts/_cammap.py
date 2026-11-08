@@ -1,7 +1,7 @@
 """CAMMAP: JC3 camera members x BmAK equivalents, evidence-tagged."""
 import json, os
 
-A = r"E:\Modding\JC3-Batmobile\Working\Audio"
+A = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio"
 cam = json.load(open(os.path.join(A, "jc3_cam.json")))
 
 def val(name, occ=0):

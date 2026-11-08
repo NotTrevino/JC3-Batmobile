@@ -92,7 +92,7 @@ LIGHTS.md's own note that the assembled part has no bone hierarchy yet (LGT-1).
 ## 4. Commands (verbatim)
 
 ```
-$ cd E:/Modding/JC3-Batmobile && python Tools/scripts/v_lights_rc2.py --write; echo "write_exit=$?"; python Tools/scripts/v_lights_rc2.py --check; echo "check_exit=$?"
+$ cd E:/Modding/JustCause3/JC3-Batmobile && python Tools/scripts/v_lights_rc2.py --write; echo "write_exit=$?"; python Tools/scripts/v_lights_rc2.py --check; echo "check_exit=$?"
 wrote Builds/bm-RC2/verify/lights_vs_bmak.md (9768 chars)
 entries 18, lamp entries 18, colour equal 17, intensity equal 2, needs-lig 18
 write_exit=0

@@ -42,7 +42,7 @@ RVehicleBatmobileBase    BmGame.upk export 10923
 SVehicle                 Engine.upk export 11160
 SVehicleWheel            Engine.upk export 29506
 
-$ python Tools/scripts/chase/chase09_cdo.py --class SVehicle --dump --json E:/Modding/_BmAKgrab/chase/svehicle_cdo.json
+$ python Tools/scripts/chase/chase09_cdo.py --class SVehicle --dump --json E:/Modding/ArkhamKnight/_grab/chase/svehicle_cdo.json
 === Default__SVehicle (Engine.upk, export 11160, class SVehicle, 408 B)  tags 32, stop=eof
     -- card offsets on SVehicle:
        StayUprightRollResistAngle         @0x06d4  absent
@@ -229,4 +229,4 @@ has a file value or has no visible quantity at all (R4: a file value always beat
 
 Scripts: `Tools/scripts/chase/chase09_cdo.py` (`--find`, `--class … --dump`, `--json`) and
 `Tools/scripts/chase/chase09_native.py` (Capstone window around a store site). Decodes:
-`E:/Modding/_BmAKgrab/chase/svehicle_cdo.json`, `…/wheel_cdo.json`.
+`E:/Modding/ArkhamKnight/_grab/chase/svehicle_cdo.json`, `…/wheel_cdo.json`.

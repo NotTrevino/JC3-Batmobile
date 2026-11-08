@@ -10,7 +10,7 @@
 #
 # LOCAL TEST ONLY: the tree carries Luke JC's dababy_head / convertible files.
 $ErrorActionPreference = 'Stop'
-$root    = 'E:\Modding\JC3-Batmobile'
+$root    = 'E:\Modding\JustCause3\JC3-Batmobile'
 $g       = "$root\Tools\Gibbed"
 $patched = "$root\Research\SerpenteParts\parts_patch_win64_game4_24012.bin"
 $rel     = 'models\jc_vehicles\01_land\v0300_car_kensington_sportsmuscle\sportsmuscle_vehicle_parts.vmodc'

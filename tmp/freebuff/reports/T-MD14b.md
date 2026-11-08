@@ -57,8 +57,8 @@ Not edited: `DRIVE_MODES.md`, `T_ROWS.jsonl`, any build tree, any game file.
 
 ```
 $ python Tools/scripts/t_md14b.py --write
-wrote E:\Modding\JC3-Batmobile\Working\Translation\T_MD14B_STATES.json
-wrote E:\Modding\JC3-Batmobile\Working\Translation\T_MD14B_STATES.md
+wrote E:\Modding\JustCause3\JC3-Batmobile\Working\Translation\T_MD14B_STATES.json
+wrote E:\Modding\JustCause3\JC3-Batmobile\Working\Translation\T_MD14B_STATES.md
 hits 1 air modules 13 blocks 9
 ```
 

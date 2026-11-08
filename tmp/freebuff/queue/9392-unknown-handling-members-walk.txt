@@ -1,7 +1,7 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/unknown-handling-members-walk.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/unknown-handling-members-walk.md
 ONLY: freebuff
 EST: 40
 BRIEF: hand-written 2026-11-08
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/side-boosters-flip.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/side-boosters-flip.md
 After brief 7964 reports which stuck timer is read, settle the remaining handling members the plans still call UNKNOWN. Take three members: BattleModeSteerBiasRate (who consumes it), the four AirControl* members (where the airborne window of 1.211 s comes from), and the leftover Batmobile stuck/flip pair if 7964 left either open. Inputs: Research/BatmobileGrab/BMSDK_OFFSETS.json, the cooked class defaults under Research/BatmobileGrab/, Research/BatmobileGrab/DRIVE_MODES.md and MECHANICS.md. For each member classify it as serialised (a value sits in a cooked file, cite file and byte), declared (class default only) or exe-only (read by native code, no data evidence), and write a one-line 5-minute experiment that would settle each exe-only one. Output tmp/freebuff/reports/hdl-unknown-members-walk.md as a table with columns member, offset, class, evidence path, experiment. Done check: no row has an empty evidence cell, and the count of members walked is printed. Do not infer any value from memory of the real game.
-Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.
+Shared rules: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

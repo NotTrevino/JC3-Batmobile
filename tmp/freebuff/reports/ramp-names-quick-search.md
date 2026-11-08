@@ -8,19 +8,19 @@ file offset (a printed line in a generated table), not a game address.
 | root | files | what it is |
 |---|---|---|
 | `Research/BatmobileGrab` | 230 files | the generated material / texture / skin / slot dumps (`*.md`, `*.json`, `*.jsonl`, `list_*.txt`) |
-| `E:/Modding/_gamedata/BmAKgrab` | 2,363 files, 862 of them text-ish | a mesh / animation / audio working area: top-level `chase2_09_packages.json`, `motion.txt`, and `anims/ audio/ bones/ chase/ gltf/ gltf_test/ lodtest/ lodtest2/ meshes/ umodelcfg/` |
+| `E:/Modding/_shared/gamedata/BmAKgrab` | 2,363 files, 862 of them text-ish | a mesh / animation / audio working area: top-level `chase2_09_packages.json`, `motion.txt`, and `anims/ audio/ bones/ chase/ gltf/ gltf_test/ lodtest/ lodtest2/ meshes/ umodelcfg/` |
 
 Method: fixed-string (`grep -F`, so `_` and case are literal), case-sensitive,
 recursive over both roots, `--binary-files=without-match`. Command form:
 
 ```
-grep -rnoF "<name>" Research/BatmobileGrab E:/Modding/_gamedata/BmAKgrab
+grep -rnoF "<name>" Research/BatmobileGrab E:/Modding/_shared/gamedata/BmAKgrab
 ```
 
 ## 0. Headline
 
 All three names were found. **138 hits total — 87 / 33 / 18 — and every one of them is
-in `Research/BatmobileGrab`. `E:/Modding/_gamedata/BmAKgrab` returned 0 hits for all
+in `Research/BatmobileGrab`. `E:/Modding/_shared/gamedata/BmAKgrab` returned 0 hits for all
 three**, which is expected: that tree holds no material, texture or name index (see §4).
 
 | name | hits | files | in BmAKgrab |
@@ -74,7 +74,7 @@ three**, which is expected: that tree holds no material, texture or name index (
 | `Research/BatmobileGrab/SLOTS.md` | 30 | slot 5, `Batmobile_V3_Emissive`, base `Engine.Batmobile_V3_Body_MAT` |
 | `Research/BatmobileGrab/objects.jsonl` | 852, 6617, 9786, 15282 | `Batmobile_V3_Emissive` MIC records, one per package |
 
-## 4. Names with no hit — `E:/Modding/_gamedata/BmAKgrab`
+## 4. Names with no hit — `E:/Modding/_shared/gamedata/BmAKgrab`
 
 Zero hits for all three names. Files searched there: all 2,363 files under the root
 (non-binary content read), including the two top-level files

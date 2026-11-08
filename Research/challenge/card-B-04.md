@@ -135,7 +135,7 @@ declared in the parts module at all — the part's `constraint_index` points int
 **that is the whole link**".
 
 **Test — census every `Turret`/`Cannon`/`AirBrake`/`GatlingGun` part in the 80 locally cached parts
-modules (`E:/Modding/_JC3grab/tmp|probe/*_vehicle_parts.vmodc`, decoded with `jc3adf`), then read
+modules (`E:/Modding/JustCause3/_grab/tmp|probe/*_vehicle_parts.vmodc`, decoded with `jc3adf`), then read
 the same fields out of bm-002.**
 
 ```
@@ -263,7 +263,7 @@ though B4-05 gives them damage types.
 `.epe` `damage` reference points at) and look up each type.**
 
 ```
-$ python (E:/Modding/_JC3grab/entities/*sportsmuscle_civilian_01.ee.json, module VehicleDamage)
+$ python (E:/Modding/JustCause3/_grab/entities/*sportsmuscle_civilian_01.ee.json, module VehicleDamage)
 n part damage types: 24
 type                      initial_health  damaged_health   loosen_health  instantly_damaged
 Default                               50              30              20                0
@@ -798,11 +798,11 @@ Every number above comes from a command run against the tree; the long ones were
 python Tools/scripts/bm_parts.py --check
 python Tools/scripts/jc3parts.py check
 python - (jc3adf.Adf / walk over Builds/bm-002/…/*.vmodc, tmp/b05/base.xml, tmp/b04/*.vmodc)
-python - (jc3adf over E:/Modding/_JC3grab/tmp|probe/*_vehicle_parts.vmodc — 80 files, 47 rotating rows,
+python - (jc3adf over E:/Modding/JustCause3/_grab/tmp|probe/*_vehicle_parts.vmodc — 80 files, 47 rotating rows,
           85 aim rows, 148 hinged rows, 227 door rows, 31 turret/cannon/brake/gatling parts)
 python - (rbmhdr.read_header over the 19 new + donor parts for AABB centres; hash_jenkins over 59 model paths)
 python - (struct header diff base.vmodc vs rt.vmodc; printable-string census)
-python - (E:/Modding/_JC3grab/entities/*sportsmuscle_civilian_01.ee.json — VehicleDamage 24 types)
+python - (E:/Modding/JustCause3/_grab/entities/*sportsmuscle_civilian_01.ee.json — VehicleDamage 24 types)
 ```
 
 Read-only discipline: this file is the only write. No launch, no `D:/Games` write, no commit, and no

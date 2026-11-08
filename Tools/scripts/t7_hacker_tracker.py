@@ -16,7 +16,7 @@ Inputs (all on disk, no archive opened):
   * `Research/JC3Grab/WEAPONS.jsonl`      every weapon tune's member paths
   * `Research/JC3Grab/FX_TABLE.jsonl`     every `.effc` path (beam / hack / marker lookups)
   * `Research/JC3Grab/JC3_HUD_WEAPONS.md` the POI system (`POI_TYPE_LOCK_ON_TARGET = 21`)
-  * `E:/Modding/_gamedata/JC3grab/wiring/epe/w501_turret_sam_v2.ee.xml`  the SAM turret
+  * `E:/Modding/_shared/gamedata/JC3grab/wiring/epe/w501_turret_sam_v2.ee.xml`  the SAM turret
 
 Writes:
   * `Research/JC3Grab/GADGETS_HACK_TRACK.json` / `.md`
@@ -37,7 +37,7 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/_shared/gamedata/JC3grab")
 HACK = os.path.join(ROOT, "Research", "JC3Grab", "HACKABLES.json")
 DROP = os.path.join(ROOT, "Research", "JC3Grab", "REBELDROP.json")
 WEAPONS = os.path.join(ROOT, "Research", "JC3Grab", "WEAPONS.jsonl")

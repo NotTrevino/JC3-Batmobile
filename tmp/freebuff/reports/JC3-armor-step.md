@@ -51,14 +51,14 @@ Scratch (not outputs): `tmp/freebuff/scratch/rt2.py` (RTTI -> vtable resolver),
 three sweeps), `a5.py`/`a6.py`/`a7.py` (earlier RTTI probes).
 
 Inputs, all read-only: `D:/Games/Just Cause 3/JustCause3.exe`,
-`E:/Modding/_gamedata/JC3grab/b13b/unpacked/editor/entities/jc_vehicles/00_shared/
+`E:/Modding/_shared/gamedata/JC3grab/b13b/unpacked/editor/entities/jc_vehicles/00_shared/
 modules/health/lave_health_medium.vmodc`, and the project's own
 `Research/JC3Grab/DAMAGE_MODEL.md`. The game was never run, attached to or
 injected into.
 
 Commands and output
 -------------------
-All paths relative to `E:/Modding/JC3-Batmobile`. Deps come from `uv run --with`.
+All paths relative to `E:/Modding/JustCause3/JC3-Batmobile`. Deps come from `uv run --with`.
 Heredoc bodies are summarised in parentheses; everything outside the parentheses
 is the captured output, verbatim. Standalone commands are quoted as run.
 `[junk]`-style abbreviations are marked with an ellipsis and never used to carry

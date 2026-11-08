@@ -17,7 +17,7 @@
     "decisions_open": [],
     "evidence_files": [
       "Builds/test-091/aaf/editor/entities/jc_cameras/vehicle_cameras/bat_base.ctunec",
-      "E:/Modding/_gamedata/JC3grab/hud/dec",
+      "E:/Modding/_shared/gamedata/JC3grab/hud/dec",
       "Research/JC3Grab/DAMAGE_MODEL.md",
       "Research/JC3Grab/EMP.md",
       "Research/JC3Grab/ENTITIES.md",
@@ -479,7 +479,7 @@
         },
         {
           "kind": "hud",
-          "file": "E:/Modding/_gamedata/JC3grab/hud/dec",
+          "file": "E:/Modding/_shared/gamedata/JC3grab/hud/dec",
           "need": "",
           "anchor": "",
           "must_not": [
@@ -494,7 +494,7 @@
           },
           "why": "no armour field anywhere in `ui/hud.gfx`, US spelling too - the only `armor` hits are the `CHAOS_REWARD_ARMORY` icon",
           "ok": true,
-          "detail": "E:/Modding/_gamedata/JC3grab/hud/dec: 260 scripts read, 0 unexplained hits of armour, armor; explained: armor 9 all in the allow-list"
+          "detail": "E:/Modding/_shared/gamedata/JC3grab/hud/dec: 260 scripts read, 0 unexplained hits of armour, armor; explained: armor 9 all in the allow-list"
         },
         {
           "kind": "needle",
@@ -524,7 +524,7 @@
       "evidence": [
         {
           "kind": "hud",
-          "file": "E:/Modding/_gamedata/JC3grab/hud/dec",
+          "file": "E:/Modding/_shared/gamedata/JC3grab/hud/dec",
           "need": "",
           "anchor": "",
           "must_not": [
@@ -535,7 +535,7 @@
           "allow": {},
           "why": "no battle/zoom overlay in `ui/hud.gfx`",
           "ok": true,
-          "detail": "E:/Modding/_gamedata/JC3grab/hud/dec: 260 scripts read, 0 unexplained hits of zoom, battlemode, battle_mode"
+          "detail": "E:/Modding/_shared/gamedata/JC3grab/hud/dec: 260 scripts read, 0 unexplained hits of zoom, battlemode, battle_mode"
         },
         {
           "kind": "needle",
@@ -576,7 +576,7 @@
         },
         {
           "kind": "hud",
-          "file": "E:/Modding/_gamedata/JC3grab/hud/dec",
+          "file": "E:/Modding/_shared/gamedata/JC3grab/hud/dec",
           "need": "",
           "anchor": "",
           "must_not": [
@@ -585,7 +585,7 @@
           "allow": {},
           "why": "and no winch widget in `ui/hud.gfx`",
           "ok": true,
-          "detail": "E:/Modding/_gamedata/JC3grab/hud/dec: 260 scripts read, 0 unexplained hits of winch"
+          "detail": "E:/Modding/_shared/gamedata/JC3grab/hud/dec: 260 scripts read, 0 unexplained hits of winch"
         }
       ],
       "why": "stays `out`: WPN-6 has no carrier - `Functional winch classes anywhere in the fleet: **0**` (`Research/JC3Grab/TETHER.md`), and `ui/hud.gfx` has no winch widget either",
@@ -604,7 +604,7 @@
       "evidence": [
         {
           "kind": "hud",
-          "file": "E:/Modding/_gamedata/JC3grab/hud/dec",
+          "file": "E:/Modding/_shared/gamedata/JC3grab/hud/dec",
           "need": "",
           "anchor": "",
           "must_not": [
@@ -620,7 +620,7 @@
           },
           "why": "no energy-system widget in `ui/hud.gfx` - `energy`'s only hit is the `such energy` joke string",
           "ok": true,
-          "detail": "E:/Modding/_gamedata/JC3grab/hud/dec: 260 scripts read, 0 unexplained hits of energysystem, energy_charge, energycharge, energy; explained: energy 1 all in the allow-list"
+          "detail": "E:/Modding/_shared/gamedata/JC3grab/hud/dec: 260 scripts read, 0 unexplained hits of energysystem, energy_charge, energycharge, energy; explained: energy 1 all in the allow-list"
         },
         {
           "kind": "absent",
@@ -652,7 +652,7 @@
       "evidence": [
         {
           "kind": "hud",
-          "file": "E:/Modding/_gamedata/JC3grab/hud/dec",
+          "file": "E:/Modding/_shared/gamedata/JC3grab/hud/dec",
           "need": "",
           "anchor": "",
           "must_not": [
@@ -664,7 +664,7 @@
           "allow": {},
           "why": "no combo/medal/enemy-count widget in `ui/hud.gfx`, camel-case spelling too",
           "ok": true,
-          "detail": "E:/Modding/_gamedata/JC3grab/hud/dec: 260 scripts read, 0 unexplained hits of combo, medal, enemy_count, enemycount"
+          "detail": "E:/Modding/_shared/gamedata/JC3grab/hud/dec: 260 scripts read, 0 unexplained hits of combo, medal, enemy_count, enemycount"
         }
       ],
       "why": "stays `out`: `ui/hud.gfx` carries no combo, medal or enemy-count widget, and the vehicle HUD interface (`Research/JC3Grab/JC3_HUD_WEAPONS.md`) has no entry point for one",
@@ -683,7 +683,7 @@
       "evidence": [
         {
           "kind": "hud",
-          "file": "E:/Modding/_gamedata/JC3grab/hud/dec",
+          "file": "E:/Modding/_shared/gamedata/JC3grab/hud/dec",
           "need": "",
           "anchor": "",
           "must_not": [
@@ -694,7 +694,7 @@
           "allow": {},
           "why": "no occupant/virus/forensic widget in `ui/hud.gfx`",
           "ok": true,
-          "detail": "E:/Modding/_gamedata/JC3grab/hud/dec: 260 scripts read, 0 unexplained hits of occupant, virus, forensic"
+          "detail": "E:/Modding/_shared/gamedata/JC3grab/hud/dec: 260 scripts read, 0 unexplained hits of occupant, virus, forensic"
         }
       ],
       "why": "stays `out`: no occupant, virus-upload or forensic-tracking widget in `ui/hud.gfx`, and no vehicle-HUD entry point for one (`Research/JC3Grab/JC3_HUD_WEAPONS.md`)",

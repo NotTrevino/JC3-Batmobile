@@ -1,6 +1,6 @@
 """jc3_hackables.py - G3-08d: does JC3 carry a remote 'turn it to our side' mechanic?
 
-Read-only scan of everything extracted under E:/Modding/_gamedata/JC3grab plus the
+Read-only scan of everything extracted under E:/Modding/_shared/gamedata/JC3grab plus the
 project indexes, for hack / hijack / override / takeover / allegiance vocabulary,
 the faction-like members, the drone fleet, the Rebel Drop drone assets and the eDEN
 drone entities.
@@ -20,7 +20,7 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.abspath(os.path.join(HERE, "..", ".."))
-GRAB = r"E:\Modding\_gamedata\JC3grab"
+GRAB = r"E:\Modding\_shared\gamedata\JC3grab"
 WIRE = os.path.join(GRAB, "wiring", "epe")
 INDEX = os.path.join(REPO, "Research", "JC3Grab", "INDEX.jsonl")
 DROP = os.path.join(REPO, "Research", "JC3Grab", "REBELDROP.json")

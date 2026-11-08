@@ -2,7 +2,7 @@
 
 Reviewer: independent (did not write the card). Read-only pass: `GRAB_BACKLOG.md`, `MODLOG.md`,
 `Research/` and `Tools/` were only read; nothing outside this file was written, no game launched,
-no git. The game blobs under `E:/Modding/_JC3grab/rebeldrop/` and the mod's own `profile/*.onlinec`
+no git. The game blobs under `E:/Modding/JustCause3/_grab/rebeldrop/` and the mod's own `profile/*.onlinec`
 under `Research/1456340180_Rebel-Drop-Mod-V5.3/` were read only.
 
 Scope: `GRAB_BACKLOG.md` §0.5 (R1–R14), the G2-26 card (§7, line 740) and its §12 row (line 1309);
@@ -35,7 +35,7 @@ values and the hash stand — the serialisation guidance around them does not.
 
 ## Check output (verbatim)
 
-Command run from `E:/Modding/JC3-Batmobile`:
+Command run from `E:/Modding/JustCause3/JC3-Batmobile`:
 
 ```
 $ python Tools/scripts/jc3rebeldrop.py --check

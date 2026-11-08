@@ -11,7 +11,7 @@ I wrote no research output; `grab_collision_geom.py --write` was not run.
 ## Check output (verbatim)
 
 ```
-$ cd "E:/Modding/JC3-Batmobile" && PYTHONIOENCODING=utf-8 uv run --with numpy --with pillow python Tools/scripts/grab_collision_geom.py --check
+$ cd "E:/Modding/JustCause3/JC3-Batmobile" && PYTHONIOENCODING=utf-8 uv run --with numpy --with pillow python Tools/scripts/grab_collision_geom.py --check
 COLLISION_GEOM.md/json current
 CHECK_EXIT=0
 ```

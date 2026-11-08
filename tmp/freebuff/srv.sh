@@ -2,8 +2,8 @@
 # srv.sh - start/stop the two llama-server judges, one at a time (GTX 1070 cannot hold both).
 # Flags are the ones in E:/AI/agent_jebadiah-9b-q5.bat and E:/AI/agent_qwen3.5-4b-q6-32k.bat.
 LLAMA=E:/AI/llama/llama-server.exe
-LOGJ=E:/Modding/JC3-Batmobile/tmp/freebuff/srv-jeb.log
-LOGQ=E:/Modding/JC3-Batmobile/tmp/freebuff/srv-qwen.log
+LOGJ=E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/srv-jeb.log
+LOGQ=E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/srv-qwen.log
 
 pid_on() {  # pid listening on the given port, or empty
   netstat -ano 2>/dev/null | grep -E "LISTENING" | grep -E "127\.0\.0\.1:$1\b" | awk '{print $NF}' | head -1

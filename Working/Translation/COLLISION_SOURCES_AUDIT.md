@@ -295,7 +295,7 @@ part-table values, not BmAK geometry.
 ## 6. Reproduce
 
 ```
-cd E:/Modding/JC3-Batmobile
+cd E:/Modding/JustCause3/JC3-Batmobile
 uv run python Tools/scripts/t_collision_sources.py --write   # writes this file
 uv run python Tools/scripts/t_collision_sources.py --check   # re-derives and byte-compares
 ```

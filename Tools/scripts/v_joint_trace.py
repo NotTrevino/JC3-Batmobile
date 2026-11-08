@@ -38,7 +38,7 @@ sys.path.insert(0, os.path.join(ROOT, "Tools", "scripts"))
 import jc3adf  # noqa: E402
 import jc3hkx  # noqa: E402
 
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/_shared/gamedata/JC3grab")
 BAT = os.path.join("Builds", "bm-RC2", "aaf", "models", "jc_vehicles", "01_land",
                    "v0300_car_kensington_sportsmuscle", "batmobile")
 PARTS = os.path.join(BAT, "sportsmuscle_vehicle_parts.vmodc")

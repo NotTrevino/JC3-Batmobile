@@ -112,7 +112,7 @@ weapon slot". The ledger `why` in `t_rows.py` was updated to the same text (the 
 ### 5. HUD searches are spelling-brittle — **CONFIRMED**
 
 ```
-$ (walk E:/Modding/_JC3grab/hud/dec, *.as)
+$ (walk E:/Modding/JustCause3/_grab/hud/dec, *.as)
 as count 260
 'armour': 0 files      'armor': 7 files  (9 occurrences, all `chaos_reward_armory` / "armory")
 'enemy': 0             'enemycount': 0    'energy': 1 file  (`such energy`, a joke string)

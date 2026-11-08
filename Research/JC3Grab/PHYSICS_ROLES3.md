@@ -77,7 +77,7 @@ records the six raw words so a layout pass can test them against the hull moment
 
 ## 4. Fleet
 
-`E:/Modding/_gamedata/JC3grab/hkx/all`: 41 files, 40 decoded, 1 error(s).
+`E:/Modding/_shared/gamedata/JC3grab/hkx/all`: 41 files, 40 decoded, 1 error(s).
 
 - cinfo_field_0c_is_0x7FFFFFFF_all: **True**
 - cinfo_tail_zero_all: **True**

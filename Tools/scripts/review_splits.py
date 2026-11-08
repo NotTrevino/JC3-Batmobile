@@ -18,7 +18,7 @@ reported as ties.  The review also gives every tie a part-level vertex vote (2 w
 body or 3 weapons) so B-02 has a deterministic fallback instead of an arbitrary `max()`.
 
 This is a review, not an assembly: no mesh, RBM, face list or part manifest is written.  The
-canonical split list is `E:\\Modding\\_gamedata\\BmAKgrab\\bones\\_split.npy`, read and checked against
+canonical split list is `E:\\Modding\\_shared\\gamedata\\BmAKgrab\\bones\\_split.npy`, read and checked against
 a fresh ownership pass.
 
 Outputs:

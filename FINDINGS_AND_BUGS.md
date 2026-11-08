@@ -30,7 +30,7 @@ MODLOG §14 chose Mugello as a donor and why tests 002/005 pulled Mugello assets
 Reshaping the Serpente is not a stylistic preference, it is the only available route.
 
 ```
-Get-ChildItem 'E:\Modding\JC3-Batmobile\Research\Vehicle\batmobile_mod' -Recurse -File |
+Get-ChildItem 'E:\Modding\JustCause3\JC3-Batmobile\Research\Vehicle\batmobile_mod' -Recurse -File |
   Where-Object { $_.Name -match 'bat|bike|night|tumbler' } | Measure-Object
 ```
 
@@ -107,7 +107,7 @@ JC3 puts a vehicle's front at −Z and the prow is at high PSK X, hence the sign
 
 ```
 python Tools\scripts\psk_geom.py grid ^
-    "E:\Modding\JC3-Batmobile\Playable_Batmobile_SF\SkeletalMesh3\Batmobile_V2.pskx" `
+    "E:\Modding\JustCause3\JC3-Batmobile\Playable_Batmobile_SF\SkeletalMesh3\Batmobile_V2.pskx" `
     -o Working\Tumbler\psk_axisgrid.png
 ```
 
@@ -384,7 +384,7 @@ narrows the gap around the wheels but cannot close it. The result reads as a wid
 armoured coupe, not as the Arkham Knight Tumbler. Getting fins needs either the count check
 patched or a Havok-authored `.physicsc` (the ApexMax/HavokMax route, still unexplored).
 
-**6. Nothing has been committed.** `E:\Modding\JC3-Batmobile` has no commits; staging is
+**6. Nothing has been committed.** `E:\Modding\JustCause3\JC3-Batmobile` has no commits; staging is
 entirely the user's call.
 
 ---
@@ -392,9 +392,9 @@ entirely the user's call.
 ## Reproduction
 
 ```powershell
-cd E:\Modding\JC3-Batmobile\Tools\scripts
-$w = 'E:\Modding\JC3-Batmobile\Working\Tumbler'
-$psk = 'E:\Modding\JC3-Batmobile\Playable_Batmobile_SF\SkeletalMesh3\Batmobile_V2.pskx'
+cd E:\Modding\JustCause3\JC3-Batmobile\Tools\scripts
+$w = 'E:\Modding\JustCause3\JC3-Batmobile\Working\Tumbler'
+$psk = 'E:\Modding\JustCause3\JC3-Batmobile\Playable_Batmobile_SF\SkeletalMesh3\Batmobile_V2.pskx'
 
 # F1  no Batmobile geometry in the shipped mod
 # F4/F5/F6  container, no triangles, axis proof
@@ -405,7 +405,7 @@ python _dump_profile.py --cloud $psk --parts "$w\parts.txt" --slices 20
 # F14  rebuild and re-verify
 powershell -ExecutionPolicy Bypass -File .\_build_tumbler.ps1
 # B14  confirm the commit set
-cd E:\Modding\JC3-Batmobile; git add -A --dry-run
+cd E:\Modding\JustCause3\JC3-Batmobile; git add -A --dry-run
 ```
 
 Sweep a variant (see B4 for why the parameters are one `;`-separated string):

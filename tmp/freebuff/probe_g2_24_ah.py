@@ -16,7 +16,7 @@ for wid in ("w602_mediumtank_canon", "w603_mediumtank_mgun"):
     print("   ", names[:40])
 
 # medium tank epe sound names
-p = glob.glob(r"E:/Modding/_JC3grab/detail/v0201_car_capstone_mediumtank*military_01.ee.json")[0]
+p = glob.glob(r"E:/Modding/JustCause3/_grab/detail/v0201_car_capstone_mediumtank*military_01.ee.json")[0]
 d = json.load(open(p))
 snd = [(o.get("class"), o.get("name"), o.get("values", {}).get("Sound")) for o in d["epe"]["objects"] if "Sound" in (o.get("values") or {})]
 print("medium tank sound objects", len(snd))

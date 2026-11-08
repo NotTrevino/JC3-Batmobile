@@ -40,7 +40,7 @@ ROOT = os.path.dirname(os.path.dirname(HERE))
 OUT = os.path.join(ROOT, "Working", "Translation")
 JSON_NAME = "T_ST7B_FLOOR.json"
 MD_NAME = "T_ST7B_FLOOR.md"
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/_shared/gamedata/JC3grab")
 ENT = os.path.join(RAW, "entities")
 
 CLASSES = ("LandSteering", "MotorbikeSteering")

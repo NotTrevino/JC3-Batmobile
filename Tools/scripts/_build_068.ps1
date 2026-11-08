@@ -1,7 +1,7 @@
 # test-068: de-boat (circuit-racer suspension values). Base = test-067 aaf.
 # Suspension was EXTERNAL: internalize it in the .toc (else the edit won't load).
 $ErrorActionPreference = 'Stop'
-$root = 'E:\Modding\JC3-Batmobile'
+$root = 'E:\Modding\JustCause3\JC3-Batmobile'
 $py = 'uv'
 $g  = "$root\Tools\Gibbed"
 $ee = 'v0300_car_kensington_sportsmuscle_civilian_01.ee'
@@ -40,10 +40,10 @@ param([ValidateSet('Install','Rollback067','Status')][string]`$Action = 'Status'
 `$EeT = Join-Path `$GameDir 'dropzone\editor\entities\jc_vehicles\01_land\v0300_car_kensington_sportsmuscle\v0300_car_kensington_sportsmuscle_civilian_01.ee'
 `$EeSha = '$eeH'
 `$TocSha = '$tocH'
-`$B = 'E:\Modding\JC3-Batmobile\Builds\test-068'
+`$B = 'E:\Modding\JustCause3\JC3-Batmobile\Builds\test-068'
 switch (`$Action) {
     'Install' { Copy-Item -LiteralPath (Join-Path `$B 'v0300_car_kensington_sportsmuscle_civilian_01.ee') -Destination `$EeT -Force; Copy-Item -LiteralPath (Join-Path `$B 'v0300_car_kensington_sportsmuscle_civilian_01.ee.toc') -Destination (`$EeT + '.toc') -Force; Write-Host 'deployed test-068: de-boat suspension' }
-    'Rollback067' { powershell -NoProfile -ExecutionPolicy Bypass -File 'E:\Modding\JC3-Batmobile\Builds\test-067\install.ps1' -Action Install }
+    'Rollback067' { powershell -NoProfile -ExecutionPolicy Bypass -File 'E:\Modding\JustCause3\JC3-Batmobile\Builds\test-067\install.ps1' -Action Install }
     'Status' {
         `$e = if (Test-Path -LiteralPath `$EeT) { (Get-FileHash -LiteralPath `$EeT).Hash } else { 'none' }
         `$t = if (Test-Path -LiteralPath (`$EeT + '.toc')) { (Get-FileHash -LiteralPath (`$EeT + '.toc')).Hash } else { 'none' }

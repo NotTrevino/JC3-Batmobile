@@ -4,7 +4,7 @@ T-S6 says "no suspension bias/droop member or unit bridge for stiffness". This s
 claim against the files instead of repeating it:
 
     A. JC3 side - the `Suspension` module of every grabbed land/air vehicle
-       (`E:/Modding/_gamedata/JC3grab/entities/*.json`, 232 entities, 166 with a Suspension
+       (`E:/Modding/_shared/gamedata/JC3grab/entities/*.json`, 232 entities, 166 with a Suspension
        module), with each vehicle's `RigidBody.mass` from the same bundle.
     B. BmAK side - the field names and class offsets from `Research/BatmobileGrab/
        BMSDK_OFFSETS.json` + `OFFSETS.md` (RVehicleSimBatmobile, SVehicle).
@@ -32,7 +32,7 @@ sys.path.insert(0, HERE)
 
 OUT_JSON = os.path.join(ROOT, "Working", "Translation", "T_S6B.json")
 OUT_MD = os.path.join(ROOT, "Working", "Translation", "T_S6B.md")
-FLEET = os.environ.get("JC3_ENTITIES", r"E:/Modding/_gamedata/JC3grab/entities")
+FLEET = os.environ.get("JC3_ENTITIES", r"E:/Modding/_shared/gamedata/JC3grab/entities")
 BMSDK = os.path.join(ROOT, "Research", "BatmobileGrab", "BMSDK_OFFSETS.json")
 OFFSETS_MD = os.path.join(ROOT, "Research", "BatmobileGrab", "OFFSETS.md")
 DRIVE_MODES = os.path.join(ROOT, "Research", "BatmobileGrab", "DRIVE_MODES.json")

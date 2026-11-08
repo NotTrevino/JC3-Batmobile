@@ -36,7 +36,7 @@ import sys
 import capstone
 
 EXE = r"E:\Games\Batman - Arkham Knight\Binaries\Win64\BatmanAK.exe"
-DEFAULT_JSON = r"E:\Modding\_gamedata\BmAKgrab\chase\chase2_native2.json"
+DEFAULT_JSON = r"E:\Modding\_shared\gamedata\BmAKgrab\chase\chase2_native2.json"
 
 # struct base + relative member offset, for the three FFreeCameraConfig instances and the two FOVs
 FFCC_BASES = {"BattleModeCamConfig": 0x3DF4, "BattleModeWinchCamConfig": 0x3E9C,

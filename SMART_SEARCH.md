@@ -198,7 +198,7 @@ ways this corpus lies. None of them is generic; a port must write its own list f
 
 ### 2.5 Fixed paths and report
 
-`E:\Modding\_gamedata\BmAKgrab\chase\{cache, calib.jsonl, calib_runs}`; report
+`E:\Modding\_shared\gamedata\BmAKgrab\chase\{cache, calib.jsonl, calib_runs}`; report
 `tmp/freebuff/reports/smart-search.md` with the `CALIB-BEGIN/END` markers. The data lives outside the repo;
 only the generated block is inside it.
 

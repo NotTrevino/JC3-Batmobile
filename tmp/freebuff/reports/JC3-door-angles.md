@@ -87,7 +87,7 @@ CenterRightDoor 10, CenterLeftDoor 8, RearDoor 8, LeftWing 5, RightWing 5, Turre
 ### 1. Read the governing files (no stdout)
 
 ```
-E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md
+E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md
 Research/JC3Grab/DOORS.md
 Research/JC3Grab/PHYSICS_LIMITS.md
 Tools/scripts/jc3_physics_limits.py
@@ -98,7 +98,7 @@ Tools/scripts/jc3hkx.py
 ### 2. Environment check
 
 ```
-$ cd E:/Modding/JC3-Batmobile && ls Research/JC3Grab | head -80; echo ---; ls Tools/scripts | head -60; echo ---; ls tmp/freebuff
+$ cd E:/Modding/JustCause3/JC3-Batmobile && ls Research/JC3Grab | head -80; echo ---; ls Tools/scripts | head -60; echo ---; ls tmp/freebuff
 ```
 Output: the `Research/JC3Grab` listing (COLOUR*, CONSTRAINT_CODE*, DAMAGE_*, DECODE_DEPTH*,
 DOORS.json/DOORS.md, ... PHYSICS_LIMITS.*, PHYSICS_ROLES*, PARTS_TABLE.*, ...), the
@@ -115,7 +115,7 @@ Python 3.13.12
 ### 3. Probe 1 -- donor parts, door array, constraints and system-data arrays
 
 ```
-$ cd E:/Modding/JC3-Batmobile && python tmp/freebuff/scratch/probe_doorangles1.py 2>&1 | head -80
+$ cd E:/Modding/JustCause3/JC3-Batmobile && python tmp/freebuff/scratch/probe_doorangles1.py 2>&1 | head -80
 table entries 233 distinct modules 79
 module sportsmuscle_vehicle_parts.vmodc parts 42
 0 sportsmuscle_body beh= None body= 0 parent= -1
@@ -297,7 +297,7 @@ bundles two (the cargo-tank plane), which is why 88 unique `(module, sha1)` payl
 ### 10. Independent byte re-read (manual section parse, not `jc3hkx`)
 
 ```
-$ cd E:/Modding/JC3-Batmobile && timeout 300 python -c "..."   # manual packfile section table + struct.unpack of +0xFC/+0x100
+$ cd E:/Modding/JustCause3/JC3-Batmobile && timeout 300 python -c "..."   # manual packfile section table + struct.unpack of +0xFC/+0x100
 0 __classnames__ ['0x100', '0x210', '0x210', '0x210', '0x210', '0x210', '0x210']
 1 __types__ ['0x310', '0x0', '0x0', '0x0', '0x0', '0x0', '0x0']
 2 __data__ ['0x310', '0x9dce0', '0x9f0f0', '0xa3260', '0xa57a0', '0xa57a0', '0xa57a0']
@@ -317,14 +317,14 @@ identical to the JSON rows for `oldjeep_door_f_l/_f_r/_r_l/_r_r`, `oldjeep_trunk
 ### 11. Final runs
 
 ```
-$ cd E:/Modding/JC3-Batmobile && timeout 580 python Tools/scripts/jc3_door_angles.py --write
+$ cd E:/Modding/JustCause3/JC3-Batmobile && timeout 580 python Tools/scripts/jc3_door_angles.py --write
 wrote Research/JC3Grab/DOOR_ANGLES.md and Research/JC3Grab/DOOR_ANGLES.json
 cars 88 / door rows 338 (hinged 334) / entities 233 / records 1086
 oracles 21/21
 ```
 
 ```
-$ cd E:/Modding/JC3-Batmobile && timeout 580 python Tools/scripts/jc3_door_angles.py --check
+$ cd E:/Modding/JustCause3/JC3-Batmobile && timeout 580 python Tools/scripts/jc3_door_angles.py --check
 OK cars 88 / door rows 338 (hinged 334) / entities 233 / records 1086; md+json byte-identical to a fresh decode
 oracles: {"agrees_with_g2_15_samples": true, "body_id_mismatch_set_unchanged": true, "body_ids_match_mostly": true, "cars_have_physics": true, "constraint_index_in_range": true, "door_rows_resolve_to_a_part": true, "every_door_hinge_is_limited": true, "hinge_factor_is_one": true, "hinge_frame_orthonormal": true, "hinge_limits_on_half_degree_grid": true, "hinge_limits_within_pi": true, "hinge_min_le_max": true, "no_anomalies": true, "record_count_equals_constraint_objects": true, "record_pointers_are_constraint_objects": true, "record_sentinel_constant": true, "record_set_equals_constraint_objects": true, "record_stride_fits_array": true, "records_ascending_by_offset": true, "serpente_vanilla_limits": true, "vanilla_bundle_members_match": true}
 ```
@@ -360,7 +360,7 @@ oracles: {"agrees_with_g2_15_samples": true, "body_id_mismatch_set_unchanged": t
 ## Notes / scope
 
 - Inputs were read-only: `D:/Games/Just Cause 3` archives through `Research/JC3Grab/INDEX.json`,
-  `E:/Modding/_gamedata/JC3grab/vanilla_v0300.ee`, and existing `Research/Tools` files
+  `E:/Modding/_shared/gamedata/JC3grab/vanilla_v0300.ee`, and existing `Research/Tools` files
   (`DOORS.json` as a cross-check only). No game process was started, nothing was installed,
   no `Builds/` file was touched, nothing was committed.
 - Readings are data-section relative offsets, the convention G3-10e used

@@ -4,7 +4,7 @@
 edited; nothing was launched.
 
 **Provenance / revert.** New file `tmp/freebuff/reports/regen-reader-function.md`
-(= `E:/Modding/JC3-Batmobile/tmp/freebuff/reports/regen-reader-function.md`). **Revert = delete this file.**
+(= `E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/regen-reader-function.md`). **Revert = delete this file.**
 
 Labels: **decoded** (file:line / offset / byte), **derived** (rule + inputs), **UNKNOWN** (tried, where it
 would be).

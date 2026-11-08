@@ -21,7 +21,7 @@ Read-only inputs: `BmGame.upk` (177,031 exports / 84,813 names), `Startup.upk` (
 ## Commands and output (verbatim)
 
 ```
-cd "E:/Modding/JC3-Batmobile" && uv run python Tools/scripts/grab_collision_modes.py --write
+cd "E:/Modding/JustCause3/JC3-Batmobile" && uv run python Tools/scripts/grab_collision_modes.py --write
 ```
 
 ```
@@ -34,7 +34,7 @@ Startup.upk: 174890 exports, 67407 names, 0 state fns, 0 corpus hits
 ```
 
 ```
-cd "E:/Modding/JC3-Batmobile" && uv run python Tools/scripts/grab_collision_modes.py --check
+cd "E:/Modding/JustCause3/JC3-Batmobile" && uv run python Tools/scripts/grab_collision_modes.py --check
 ```
 
 ```

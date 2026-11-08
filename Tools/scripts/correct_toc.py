@@ -4,8 +4,8 @@ import struct
 import os
 
 # Paths
-ee_path = r'E:\Modding\JC3-Batmobile\Builds\test-024\v0300_car_kensington_sportsmuscle_civilian_01.ee'
-toc_path = r'E:\Modding\JC3-Batmobile\Builds\test-025\v0300_car_kensington_sportsmuscle_civilian_01.ee.toc'
+ee_path = r'E:\Modding\JustCause3\JC3-Batmobile\Builds\test-024\v0300_car_kensington_sportsmuscle_civilian_01.ee'
+toc_path = r'E:\Modding\JustCause3\JC3-Batmobile\Builds\test-025\v0300_car_kensington_sportsmuscle_civilian_01.ee.toc'
 
 # Read the .ee file
 with open(ee_path, 'rb') as f:

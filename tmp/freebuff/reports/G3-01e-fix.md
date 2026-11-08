@@ -42,7 +42,7 @@ should be read together with this report).
 ## Commands and output (verbatim)
 
 ```
-cd "E:/Modding/JC3-Batmobile" && PYTHONIOENCODING=utf-8 uv run python Tools/scripts/grab_collision_selector2.py --write; echo "WRITE_EXIT=$?"; echo "=== CHECK ==="; PYTHONIOENCODING=utf-8 uv run python Tools/scripts/grab_collision_selector2.py --check; echo "CHECK_EXIT=$?"
+cd "E:/Modding/JustCause3/JC3-Batmobile" && PYTHONIOENCODING=utf-8 uv run python Tools/scripts/grab_collision_selector2.py --write; echo "WRITE_EXIT=$?"; echo "=== CHECK ==="; PYTHONIOENCODING=utf-8 uv run python Tools/scripts/grab_collision_selector2.py --check; echo "CHECK_EXIT=$?"
 ```
 
 ```

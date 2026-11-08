@@ -1,7 +1,7 @@
 # test-069: flight fix (travel length 0.25 F+R). Base = test-068 aaf.
 # Suspension already internal. Same internal set as 068.
 $ErrorActionPreference = 'Stop'
-$root = 'E:\Modding\JC3-Batmobile'
+$root = 'E:\Modding\JustCause3\JC3-Batmobile'
 $py = 'uv'
 $g  = "$root\Tools\Gibbed"
 $ee = 'v0300_car_kensington_sportsmuscle_civilian_01.ee'

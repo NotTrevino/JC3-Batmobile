@@ -1,7 +1,7 @@
 # Recount: the pulse numbers in `force-pulse-as-boost-and-shove-carrier-plan.md`, against `FORCEPULSE.json`
 
 **Provenance / reversibility.** New file, `tmp/freebuff/reports/force-pulse-carrier-recount.md`
-= `E:/Modding/JC3-Batmobile/tmp/freebuff/reports/force-pulse-carrier-recount.md`. Intended change:
+= `E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/force-pulse-carrier-recount.md`. Intended change:
 add one recount; **the plan file is read and left unchanged** (not edited, not reformatted), and no
 other file is written. It is the correct file because it is the requested output path and the only
 job artefact. Revert = delete this file.

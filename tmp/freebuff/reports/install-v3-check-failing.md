@@ -5,7 +5,7 @@ Only `Tools/scripts/install_v3.py` and `Working/Installer/install_v3.ps1` were e
 
 ## The two failures, and the line that caused each
 
-### 1. `simulation copies left behind: E:\Modding\_dropzone_sim_rc2_v3`
+### 1. `simulation copies left behind: E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2_v3`
 
 `cleanup_own()` (`Tools/scripts/install_v3.py:448`) removed only the paths in `_OWN` — the
 pid-scoped case directories and the sibling prefix probe — and never `SIM_ROOT` itself.
@@ -13,12 +13,12 @@ pid-scoped case directories and the sibling prefix probe — and never `SIM_ROOT
 empty. Proof from the pre-fix run:
 
 ```
-$ ls -d /e/Modding/_dropzone_sim_rc2_v3*
-/e/Modding/_dropzone_sim_rc2_v3
+$ ls -d /e/Modding/JustCause3/_dropzone_sims/_dropzone_sim_rc2_v3*
+/e/Modding/JustCause3/_dropzone_sims/_dropzone_sim_rc2_v3
 ```
 
 (That is the same message the reviewer saw: with an empty root the leftover list is exactly
-`E:\Modding\_dropzone_sim_rc2_v3`.) A second order dependency made it worse: `prove()` only
+`E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2_v3`.) A second order dependency made it worse: `prove()` only
 reached its cleanup at the end, so a PowerShell throw or a harness exception (the manifest case
 below) skipped cleanup entirely and left the case directories *and* the root for the next run.
 
@@ -39,7 +39,7 @@ reproduced in this session at `tmp/freebuff/scratch/v3_run1.log`:
 ```
 FAIL: case c: Install exit 1: ... snapshotted 0 existing target(s)
 6 | Set-Content -LiteralPath $Manifest -Encoding utf8
-  | Could not find a part of the path 'E:\Modding\_dropzone_sim_rc2_v3\case_c\.install_v3_snapshot\manifest.json'.
+  | Could not find a part of the path 'E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2_v3\case_c\.install_v3_snapshot\manifest.json'.
 ```
 
 So the failure is not the path itself (the guard resolves it correctly); it is a missing parent at
@@ -50,7 +50,7 @@ and invite the next run into a half-deleted tree.
 
 `Tools/scripts/install_v3.py`:
 
-* `_ROOT_BEFORE` (line 400, set at line 474) records whether `E:\Modding\_dropzone_sim_rc2_v3`
+* `_ROOT_BEFORE` (line 400, set at line 474) records whether `E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2_v3`
   existed before the run.
 * `cleanup_own()` (448-470) deletes this run's case dirs, then `rmtree`s the root **only if this run
   created it**, else `rmdir`s it (which succeeds only when empty — it can never delete another
@@ -81,10 +81,10 @@ Deleted `.install_v3_snapshot` 0.2 s into a real `Install` on a copy:
 ```
 $ ( sleep 0.2; rm -rf "$R/.install_v3_snapshot" ) &
 $ pwsh -NoProfile -File Working/Installer/install_v3.ps1 -Action Install \
-    -GameDir "E:\Modding\_dropzone_sim_rc2_v3\case_race" -Source "...\Builds\bm-RC2\drop"
+    -GameDir "E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2_v3\case_race" -Source "...\Builds\bm-RC2\drop"
 installed 9/9; snapshotted 0 existing target(s)
 race_install_exit=0
-E:/Modding/_dropzone_sim_rc2_v3/case_race/.install_v3_snapshot
+E:/Modding/JustCause3/_dropzone_sims/_dropzone_sim_rc2_v3/case_race/.install_v3_snapshot
 ```
 
 The retry path recreated the snapshot and the manifest; Install completed 9/9.
@@ -92,29 +92,29 @@ The retry path recreated the snapshot and the manifest; Install completed 9/9.
 ## Three consecutive runs from a clean state (verbatim tails)
 
 ```
-$ rm -rf /e/Modding/_dropzone_sim_rc2_v3*
+$ rm -rf /e/Modding/JustCause3/_dropzone_sims/_dropzone_sim_rc2_v3*
 $ python Tools/scripts/install_v3.py --write
 wrote Working\Installer\install_v3.ps1 (14147 chars, 9 rows)
 
 $ python Tools/scripts/install_v3.py --check     # run 1
   attempts: [1]
-PASS: v2's two bypasses are refused on copies under E:\Modding\_dropzone_sim_rc2_v3* (prefix sibling Install exit 2, manifest decoy Rollback exit 2 with the decoy intact), the created_dirs and not-a-target gates also refuse, and in all three cases (differ/identical/absent) Install snapshots 9/9 and Rollback leaves the dropzone tree sha256-identical to the pre-Install tree
+PASS: v2's two bypasses are refused on copies under E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2_v3* (prefix sibling Install exit 2, manifest decoy Rollback exit 2 with the decoy intact), the created_dirs and not-a-target gates also refuse, and in all three cases (differ/identical/absent) Install snapshots 9/9 and Rollback leaves the dropzone tree sha256-identical to the pre-Install tree
 CHECK_EXIT=0
 run1 exit=0 | root: absent
 
 $ python Tools/scripts/install_v3.py --check     # run 2
   attempts: [1]
-PASS: v2's two bypasses are refused on copies under E:\Modding\_dropzone_sim_rc2_v3* (prefix sibling Install exit 2, manifest decoy Rollback exit 2 with the decoy intact), the created_dirs and not-a-target gates also refuse, and in all three cases (differ/identical/absent) Install snapshots 9/9 and Rollback leaves the dropzone tree sha256-identical to the pre-Install tree
+PASS: v2's two bypasses are refused on copies under E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2_v3* (prefix sibling Install exit 2, manifest decoy Rollback exit 2 with the decoy intact), the created_dirs and not-a-target gates also refuse, and in all three cases (differ/identical/absent) Install snapshots 9/9 and Rollback leaves the dropzone tree sha256-identical to the pre-Install tree
 CHECK_EXIT=0
 run2 exit=0 | root: absent
 
 $ python Tools/scripts/install_v3.py --check     # run 3
   attempts: [1]
-PASS: v2's two bypasses are refused on copies under E:\Modding\_dropzone_sim_rc2_v3* (prefix sibling Install exit 2, manifest decoy Rollback exit 2 with the decoy intact), the created_dirs and not-a-target gates also refuse, and in all three cases (differ/identical/absent) Install snapshots 9/9 and Rollback leaves the dropzone tree sha256-identical to the pre-Install tree
+PASS: v2's two bypasses are refused on copies under E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2_v3* (prefix sibling Install exit 2, manifest decoy Rollback exit 2 with the decoy intact), the created_dirs and not-a-target gates also refuse, and in all three cases (differ/identical/absent) Install snapshots 9/9 and Rollback leaves the dropzone tree sha256-identical to the pre-Install tree
 CHECK_EXIT=0
 run3 exit=0 | root: absent
 
-$ ls -d /e/Modding/_dropzone_sim_rc2_v3*
+$ ls -d /e/Modding/JustCause3/_dropzone_sims/_dropzone_sim_rc2_v3*
 no v3 copies left
 ```
 
@@ -154,7 +154,7 @@ Nothing else was edited. `--check` still greps `install_v2.ps1` for the reviewed
 
 1. **Two check runs at once** are safe only if both use this version: each owns pid-scoped case
    dirs, `cleanup_own` never removes the other's, and root removal is `rmdir`-only when empty. An
-   older copy of the script (started before this fix) still deletes `E:\Modding\_dropzone_sim_rc2_v3*`
+   older copy of the script (started before this fix) still deletes `E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2_v3*`
    wholesale; nothing inside a new run can prevent an external `rm -rf` of the tree it is writing.
    That is exactly what produced the reviewer's second failure.
 2. **Crash between snapshot copy and manifest write**: the case directory is removed by the next

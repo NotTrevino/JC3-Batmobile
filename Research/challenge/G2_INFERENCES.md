@@ -158,7 +158,7 @@ Routes tried:
    `sportsmuscle`, `v0300`, `sportsmuscle_01`, `.ddsc` → **0 hits each**. So the community-store
    movie does not reference it by name; the vehicle menu must build the path from a template.
 3. That template is inside a compiled Scaleform movie; `ffdec` is available in the toolset
-   (`E:/Modding/_tools/ffdec/`) but decompiling a 60 KB GFX to find a path template is a separate
+   (`E:/Modding/_shared/tools/ffdec/`) but decompiling a 60 KB GFX to find a path template is a separate
    card, not this challenge.
 Conclusion: the texture is loaded by a name built at runtime, not by a stored string; the doc's
 UNKNOWN stands.
@@ -253,7 +253,7 @@ reported as `wrote N .physicsc blobs`). So the blocked row in `T1_TRANSLATION.md
 ### G2-17-a — "The pointer's *name* is UNKNOWN (a Jenkins hash with no dictionary hit)"
 *Doc:* `FORCEPULSE.md:285`. **Verdict: STILL OPEN, route recorded.** The hash in question is a
 member *name* hash, and the project's name dictionary is `INDEX.jsonl` (81,952 path hashes) plus
-the decoded member paths under `E:/Modding/_JC3grab/entities/`. `g2_close.py index` searches the
+the decoded member paths under `E:/Modding/JustCause3/_grab/entities/`. `g2_close.py index` searches the
 index; the entity-side member names are already the same strings the card used, so if the name is
 not among them it is not in the shipped name space the grab holds. Cracking it would need the
 game's full name table, which is inside the (compressed) `.epe`/module name tables already
@@ -277,7 +277,7 @@ different grab, so they are recorded as STILL OPEN with the reason rather than g
 
 ## Method and limits
 
-* Every claim was checked against the decoded cache (`E:/Modding/_JC3grab/entities|detail`) and
+* Every claim was checked against the decoded cache (`E:/Modding/JustCause3/_grab/entities|detail`) and
   `Research/JC3Grab/INDEX.jsonl`; the two BmAK-side checks used `BatmanAK.exe` and `BmGame.upk`
   read-only, never written to.
 * Where a sentence is an inference rather than a value, the verdict judges whether the *negative*

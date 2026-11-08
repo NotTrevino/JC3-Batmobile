@@ -1,6 +1,6 @@
 # BmSDK offsets for the BmAK sampler - X (barrage), Y (boost), missiles, booster, A (eject)
 
-**Card:** G3-02f. **Source:** `E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated` (BmSDK-AK, MIT),
+**Card:** G3-02f. **Source:** `E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Generated` (BmSDK-AK, MIT),
 read from the `/// <Type>Property:` comment and the `Ptr + N` getter of each field.
 Every offset below is `decoded` at the `.g.cs` file and line in its row; the line number is the
 comment line. `Width` is `derived` (distance to the next field, last field to the class size).

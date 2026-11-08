@@ -21,7 +21,7 @@ operator writing short briefs from `NEXT_TASKS.md`.** Everything else in the eme
 | line | what it does |
 |---|---|
 | `317–322` | the design comment: in the last `EMERG_MIN` minutes before the daily reset, if hours are free and a slot is open, start sessions by itself; *"A project with no briefs gets emergency-need-tasks.txt and, once per 45 min, `claude -p` is asked to write briefs into its queue."* |
-| `325` | `EMERG_PRIORITY = {'E:/Modding/JC3-Batmobile'}` — this project is the emergency priority |
+| `325` | `EMERG_PRIORITY = {'E:/Modding/JustCause3/JC3-Batmobile'}` — this project is the emergency priority |
 | `346` | `next_reset()` — daily hours reset (local midnight, 05:00Z in CDT) |
 | `464` | `def emergency_loop():` — the loop itself |
 | `509` | writes `emergency-need-tasks.txt` when the queue is empty |
@@ -92,7 +92,7 @@ operator is at the keyboard. A queue of 4 briefs is about one hour of one lane (
 
 ## (c) The menu: `NEXT_TASKS.md`
 
-Written at `E:/Modding/JC3-Batmobile/NEXT_TASKS.md`: **32 tasks in dependency order**, none covered by a queued
+Written at `E:/Modding/JustCause3/JC3-Batmobile/NEXT_TASKS.md`: **32 tasks in dependency order**, none covered by a queued
 brief. Coverage was checked against all 53 files in `tmp/freebuff/queue/` (the 91xx RC5 chain, 798x hooks, 8600/8606/
 8607/8608, 8906, 7940/7942/7943, 7981–7987). Every entry gives: the card id, the task in one line, its inputs (files
 that exist today), and a done-check that a script or a byte count can settle — so "done" is not an opinion.

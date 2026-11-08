@@ -14,7 +14,7 @@ T-16 §12 row (`GRAB_BACKLOG.md:1325`); `MODLOG.md:12153-12293` (intended change
 (140,849 B), `Tools/scripts/t12_audio.py` (962 lines); the inputs the script reads
 (`Research/BatmobileGrab/AUDIO_FEATURES.json`, `Research/JC3Grab/JC3_AUDIO_EVENTS.json`) and the two
 banks it decodes (`Working/Audio/jc3bank/sound/fmod_banks/vehicles.bank`, and the documented
-`E:\Modding\_JC3grab\audio\weapons.bank` path only).
+`E:\Modding\JustCause3\_grab\audio\weapons.bank` path only).
 
 ---
 
@@ -47,7 +47,7 @@ as eight) that `--check` cannot see.
 
 ## Check output (verbatim)
 
-Command, from `E:/Modding/JC3-Batmobile`:
+Command, from `E:/Modding/JustCause3/JC3-Batmobile`:
 
 ```
 python Tools/scripts/t12_audio.py --check
@@ -285,7 +285,7 @@ doc.
   reproduced here.
 - No game launched, so every Q-1/Q-2/Q-3 audition listed in the verify cells is unverified by
   construction.
-- I opened `E:\Modding\_JC3grab\audio\weapons.bank` only because the doc names that exact path and
+- I opened `E:\Modding\JustCause3\_grab\audio\weapons.bank` only because the doc names that exact path and
   the script reads it; nothing there was modified.
 - LUFS arithmetic in issue 2 assumes the pad is silence. The doc does not say, which is itself the
   defect: if the pad is a repeat instead, the doc should say so and the ±1 LU claim changes shape.

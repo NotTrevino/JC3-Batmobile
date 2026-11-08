@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """G2-26 probe: get the vanilla `profile/*.onlinec` out of the archives and see what they are.
 
-Read-only. Writes the extracted (game) bytes to `E:/Modding/_JC3grab/rebeldrop/` (outside the
+Read-only. Writes the extracted (game) bytes to `E:/Modding/JustCause3/_grab/rebeldrop/` (outside the
 repo, R10) and prints the header + whether the bytes are an ADF v4 file or a packfile with
 inner files.
 """
@@ -17,7 +17,7 @@ import jc3detail  # noqa: E402
 import jc3grab  # noqa: E402
 import jc3index  # noqa: E402
 
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/JustCause3/_grab")
 GAME = os.environ.get("JC3_GAME", jc3index.DEFAULT_GAME)
 OUT = os.path.join(RAW, "rebeldrop")
 

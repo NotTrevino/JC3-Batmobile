@@ -68,7 +68,7 @@ no network.
 ### 1. Fleet shape — which entities can carry a turret
 
 ```
-cd E:/Modding/JC3-Batmobile && uv run python -c "
+cd E:/Modding/JustCause3/JC3-Batmobile && uv run python -c "
 import json,collections
 cats=collections.Counter(); tur=collections.Counter(); can=collections.Counter()
 n=0
@@ -94,7 +94,7 @@ with Cannon {'jc_vehicles/01_land': 19, 'jc_vehicles/02_air': 9, 'jc_vehicles/03
 ### 2. Candidate scan — 40 entities, 11 models, hinge limits spot-checked (probe output, tail)
 
 ```
-cd E:/Modding/JC3-Batmobile && uv run python tmp/freebuff/scratch/probe_turrets.py 2>&1 | tail -70
+cd E:/Modding/JustCause3/JC3-Batmobile && uv run python tmp/freebuff/scratch/probe_turrets.py 2>&1 | tail -70
 index rows 81952
 candidate entities 40
 [1/40] v0200_car_capstone_apc_debug.ee                            parts= 45 phys=1 cons=16 [(30, 'apc_turret_base', 'Turret', 15, 0), (44, 'apc_weapon_mount_vertical', 'Cannon', 14, 30)] (0.2s)
@@ -108,7 +108,7 @@ total 7.6s
 ### 3. Limits per turret part (probe, de-duplicated by model)
 
 ```
-cd E:/Modding/JC3-Batmobile && uv run python tmp/freebuff/scratch/probe_limits.py 2>&1 | tail -80
+cd E:/Modding/JustCause3/JC3-Batmobile && uv run python tmp/freebuff/scratch/probe_limits.py 2>&1 | tail -80
 == v0201_car_capstone_mediumtank_debug.ee parts 42 cons 3
    mediumtank_turret                              Turret  ci=2   parent=0   hkpLimitedHing -179.0..179.0 axis=[-0.0, 1.0, 0.0] pivot=[0.0, 2.2812, 1.1382] t14=14
    mediumtank_cannon                              Cannon  ci=0   parent=26  hkpLimitedHing -5.0..20.0 axis=[1.0, 0.0, 0.0] pivot=[0.0, 2.5347, 0.0] t14=14
@@ -126,11 +126,11 @@ cd E:/Modding/JC3-Batmobile && uv run python tmp/freebuff/scratch/probe_limits.p
 ### 4. Fleet-wide unlimited / full-360 hinge census and its owners
 
 ```
-cd E:/Modding/JC3-Batmobile && uv run python -c "
+cd E:/Modding/JustCause3/JC3-Batmobile && uv run python -c "
 import glob,os,math,struct,sys
 sys.path.insert(0,'Tools/scripts')
 import jc3hkx
-for path in sorted(glob.glob(r'E:/Modding/_gamedata/JC3grab/**/*.physicsc',recursive=True)):
+for path in sorted(glob.glob(r'E:/Modding/_shared/gamedata/JC3grab/**/*.physicsc',recursive=True)):
     pf=jc3hkx.Packfile(open(path,'rb').read())
     objs=sorted((o for o in pf.objects if 'Constraint' in o.cls),key=lambda o:o.offset)
     hits=[]
@@ -159,7 +159,7 @@ trials.physicsc 1 [(0, 'hkpLimitedHingeConstraintData', (-180.0, 180.0))]
 Which part owns each — the same walk, resolving `constraint_index` to the owning part:
 
 ```
-cd E:/Modding/JC3-Batmobile && uv run python -c "
+cd E:/Modding/JustCause3/JC3-Batmobile && uv run python -c "
 import glob,json,math,os,struct,sys
 sys.path.insert(0,'Tools/scripts')
 import jc3adf,jc3detail,jc3grab,jc3hkx,jc3index
@@ -177,7 +177,7 @@ for mod in ['atv','combatdirt','modernmoped','modernroad','modernsport','oldmope
     ents=sorted(e for e in tab if tab[e]['module'].startswith(mod+'_'))
     if not ents: print('no entity',mod); continue
     ee=ents[0]; ps=parts_of(ee); by={p['part_index']:p for p in ps}
-    pf=jc3hkx.Packfile(open('E:/Modding/_gamedata/JC3grab/hkx/all/%s.physicsc'%mod,'rb').read())
+    pf=jc3hkx.Packfile(open('E:/Modding/_shared/gamedata/JC3grab/hkx/all/%s.physicsc'%mod,'rb').read())
     objs=sorted((o for o in pf.objects if 'Constraint' in o.cls),key=lambda o:o.offset)
     for i,o in enumerate(objs):
         cls=o.cls; d=None
@@ -211,7 +211,7 @@ all 233 entity bundles instead of the cache. The script's own census (`fleet_ful
 ### 5. Axis cross-check (frame A row 0 vs frame B row 0), 5 models
 
 ```
-cd E:/Modding/JC3-Batmobile && uv run python -c "
+cd E:/Modding/JustCause3/JC3-Batmobile && uv run python -c "
 import math,os,struct,sys
 sys.path.insert(0,'Tools/scripts')
 import jc3adf,jc3detail,jc3grab,jc3hkx,jc3index
@@ -264,13 +264,13 @@ for ee,tag in [('editor/entities/jc_vehicles/01_land/v0201_car_capstone_mediumta
 ### 6. The deliverables
 
 ```
-cd E:/Modding/JC3-Batmobile && uv run python Tools/scripts/jc3_turret_limits.py --write
+cd E:/Modding/JustCause3/JC3-Batmobile && uv run python Tools/scripts/jc3_turret_limits.py --write
 TURRET_LIMITS.json: 14 units on 11 models, 10 yaw / 14 pitch hinges, 15 full-rotation hinges in the fleet
 TURRET_LIMITS.md: 236 lines; oracles 13/13
 ```
 
 ```
-cd E:/Modding/JC3-Batmobile && uv run python Tools/scripts/jc3_turret_limits.py --check
+cd E:/Modding/JustCause3/JC3-Batmobile && uv run python Tools/scripts/jc3_turret_limits.py --check
 PASS: 233 entities, 14 turret units on 11 models, yaw spans [150.0, 300.0, 358.0], pitch spans [25.0, 30.0, 55.0, 65.0, 75.0, 80.0, 100.0]
 oracles: {"TURRET_md_samples_reproduce": true, "boat_pitch_spans_exceed_tank_pitch_spans": true, "every_Turret_part_on_a_limited_hinge_type_14": true, "every_entity_scanned": true, "every_pitch_axis_is_horizontal": true, "every_yaw_axis_is_vertical": true, "frame_A_and_frame_B_share_the_axis": true, "full_rotation_hinges_are_variant_stable": true, "limits_ordered_and_within_pi": true, "no_turret_part_on_a_full_rotation_hinge": true, "turret_parts_identity_parent_offset": true, "turret_yaw_all_round_two_cannon_yaw_not": true, "variants_of_a_model_agree": true}
 ```

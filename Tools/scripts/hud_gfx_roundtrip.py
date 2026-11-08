@@ -21,7 +21,7 @@ import struct
 import sys
 import zlib
 
-SCRATCH = "E:/Modding/_JC3grab/hud_roundtrip"
+SCRATCH = "E:/Modding/JustCause3/_grab/hud_roundtrip"
 OUT = "Working/HUD_GFX_ROUNDTRIP.json"
 # The payload edits this DefineEditText (chid 2241 'VEHICLE', TXT_label in MCI_life_bar_with_text).
 EXPECT_TEXT_CHID = 2241

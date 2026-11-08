@@ -1,7 +1,7 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-live-tune-hook.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/verify-live-tune-hook.md
 ONLY: freebuff
 EST: 35
 BRIEF: hand-written 2026-11-08
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-live-tune-hook.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/build-live-tune-hook.md
 Review Builds/hook-0003 as a skeptic without running the game. Check: (1) every writable member's offset against the evidence cited in hdl-29's report and the field list of 7987; (2) that no code path writes memory outside the vehicle struct or when the player is not in the Batmobile; (3) the clamp table covers each member and the revert-all key restores the values read at attach time; (4) tune.json parsing rejects unknown keys, NaN and out-of-clamp numbers; (5) the receipt hashes match the staged files; (6) a game-version guard exists. Run the dry-run script with five hostile tune.json files (unknown member, NaN, 10x value, empty file, malformed JSON) and show the outputs. Write tmp/freebuff/reports/hdl-verify-tune-hook.md with a verdict per item and list the offsets that still need a live confirmation. Done check: all six items listed with PASS, FAIL or UNCONFIRMED; the hostile cases are shown with their results.
-Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.
+Shared rules: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

@@ -58,7 +58,7 @@ MD = os.path.join(OUT, "CAMERA_HELPER.md")
 JS = os.path.join(OUT, "CAMERA_HELPER.json")
 CAMERA_MD = os.path.join(OUT, "CAMERA.md")
 OFFS = os.path.join(OUT, "BMSDK_OFFSETS.json")
-SDK = "E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated"
+SDK = "E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Generated"
 
 HELPER = 0x14004CD00
 CAMERA_NATIVES = {"SetFreeCameraConfig": 0x140113480,

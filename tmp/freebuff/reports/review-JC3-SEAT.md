@@ -22,7 +22,7 @@ one string on the graph does.
 ## 1. The card's own check
 
 ```
-cd E:/Modding/JC3-Batmobile && ( time timeout 580 python Tools/scripts/jc3seat.py --check ) 2>&1 | tail -30; echo "EXIT=${PIPESTATUS[0]}"
+cd E:/Modding/JustCause3/JC3-Batmobile && ( time timeout 580 python Tools/scripts/jc3seat.py --check ) 2>&1 | tail -30; echo "EXIT=${PIPESTATUS[0]}"
 PASS: 34 driver points | 40 pose classes (382 clip names) | 36 MOD selectors | seat boxes 4 | candidate v0300_car_kensington_sportsmuscle (10 mm from the hip), json match True, md match True
 
 real    0m1.262s
@@ -39,7 +39,7 @@ Read twice: once through the project's `.ee.xml` decode, once out of the raw coo
 `bm_rc.vfs()` pulls from the game archive. Both are the vanilla donor, untouched.
 
 ```
-cd E:/Modding/JC3-Batmobile && timeout 200 python - <<'EOF'   # nesting-aware parse of the .ee.xml
+cd E:/Modding/JustCause3/JC3-Batmobile && timeout 200 python - <<'EOF'   # nesting-aware parse of the .ee.xml
 ...
 EOF
 parsed 62 objects from v0300_car_kensington_sportsmuscle_civilian_01.ee.xml
@@ -83,7 +83,7 @@ JSON and its own §1 table (which lists `point.driver` with a transform and the 
 The same numbers in the game's bytes, independent of the XML converter:
 
 ```
-cd E:/Modding/JC3-Batmobile && timeout 200 python - <<'EOF'   # bm_rc.vfs() on the cooked archive path
+cd E:/Modding/JustCause3/JC3-Batmobile && timeout 200 python - <<'EOF'   # bm_rc.vfs() on the cooked archive path
 ...
 EOF
 raw cooked .epe from the archive: 109766 bytes
@@ -156,7 +156,7 @@ v0001_car_autostraad_armoredtruck_commercial_01    modifier=MOD_HIGH       set-n
 folder in that path is `<x>` lowercased:
 
 ```
-cd E:/Modding/JC3-Batmobile && timeout 300 python - <<'EOF'
+cd E:/Modding/JustCause3/JC3-Batmobile && timeout 300 python - <<'EOF'
 ...
 EOF
 ### ANIM_*_VEHICLE_MOD_LOW in the .asb
@@ -303,7 +303,7 @@ tmp/freebuff/scratch/seat_afsmb.txt            # .afsmb MOD_ token count, graphs
 tmp/freebuff/scratch/seat_rawbytes.txt         # float32 / string offsets in the cooked .epe
 ```
 
-Commands, all run from `E:/Modding/JC3-Batmobile` (full output quoted in the sections above):
+Commands, all run from `E:/Modding/JustCause3/JC3-Batmobile` (full output quoted in the sections above):
 
 ```
 python Tools/scripts/jc3seat.py --check                     -> PASS, exit 0

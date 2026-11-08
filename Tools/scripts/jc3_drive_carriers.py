@@ -13,10 +13,10 @@ Plus the four other driving moves BmAK's own controls menu names
 Slide, Afterburner.
 
 Sources (read-only):
-  * `E:/Modding/_gamedata/JC3grab/entities/*.ee.json` - 232 decoded vehicle builds, modules
+  * `E:/Modding/_shared/gamedata/JC3grab/entities/*.ee.json` - 232 decoded vehicle builds, modules
     as rows (the project's evidence base; player copy only, `_ai` twins excluded, same rule
     as `jc3tankturn.py`).
-  * `E:/Modding/_gamedata/JC3grab/detail/*.ee.json` - the 232 `.epe` graphs, for the object
+  * `E:/Modding/_shared/gamedata/JC3grab/detail/*.ee.json` - the 232 `.epe` graphs, for the object
     class census.
   * `D:/Games/Just Cause 3/*.arc` through `Research/JC3Grab/INDEX.jsonl` - the **bytes** of
     the 54 patch-layer `*_land_global.vmodc` modules, decoded with `jc3adf.Adf` /
@@ -57,7 +57,7 @@ OUT = os.path.join(ROOT, "Research", "JC3Grab")
 JSON_NAME = "DRIVE_CARRIERS.json"
 MD_NAME = "DRIVE_CARRIERS.md"
 INDEX = os.path.join(OUT, "INDEX.jsonl")
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/_shared/gamedata/JC3grab")
 ENT = os.path.join(RAW, "entities")
 DET = os.path.join(RAW, "detail")
 

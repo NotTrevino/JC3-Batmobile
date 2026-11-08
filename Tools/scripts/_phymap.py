@@ -1,7 +1,7 @@
 """PHYSMAP: JC3 physics members x BmAK equivalents, evidence-tagged."""
 import json, os
 
-A = r"E:\Modding\JC3-Batmobile\Working\Audio"
+A = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio"
 inv = json.load(open(os.path.join(A, "jc3_phys.json")))
 
 def val(mod, name, occ=0):

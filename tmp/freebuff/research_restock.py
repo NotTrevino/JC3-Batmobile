@@ -16,12 +16,12 @@ import os
 import re
 import sys
 
-FB = "E:/Modding/JC3-Batmobile/tmp/freebuff"
+FB = "E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff"
 REP = FB + "/reports"
 MIN = int(sys.argv[1]) if len(sys.argv) > 1 else 6
 RULES = (
-    "PROJECT: E:/Modding/JC3-Batmobile (Just Cause 3 Batmobile mod), RESEARCH RESET: no building, no installing, no "
-    "translation into game files. Read E:/Modding/JC3-Batmobile/RESET_FINDINGS.md and GRAB_BACKLOG.md section 6b. "
+    "PROJECT: E:/Modding/JustCause3/JC3-Batmobile (Just Cause 3 Batmobile mod), RESEARCH RESET: no building, no installing, no "
+    "translation into game files. Read E:/Modding/JustCause3/JC3-Batmobile/RESET_FINDINGS.md and GRAB_BACKLOG.md section 6b. "
     "THE ONE RULE: never guess. Every value is labelled decoded (file + offset/line, or package + export + offset), "
     "derived (rule + inputs) or UNKNOWN (what you tried, where it would be). Never fill a gap from general knowledge of "
     "Batman: Arkham Knight, Unreal Engine 3 or Just Cause 3; a hypothesis only counts if proven against the bytes with "
@@ -29,7 +29,7 @@ RULES = (
     "GRAB_BACKLOG.md, MODLOG.md, STATUS.md or any existing Research/Tools file; never launch, attach to or read the "
     "memory of any game; never write under E:/Games or D:/Games; never commit or push; no secrets. BmAK packages: "
     "E:/Games/Batman - Arkham Knight/BmGame/CookedPCConsole (reader Tools/scripts/upk_read.py); BmSDK layouts: "
-    "E:/Modding/_tools/BmSDK-AK (MIT); JC3 data: E:/Modding/_gamedata/JC3grab. Python: 'uv run --with numpy --with "
+    "E:/Modding/_shared/tools/BmSDK-AK (MIT); JC3 data: E:/Modding/_shared/gamedata/JC3grab. Python: 'uv run --with numpy --with "
     "pillow --with pefile --with capstone python ...'. RESUME: if outputs or a partial report exist, continue. ")
 
 

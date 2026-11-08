@@ -44,7 +44,7 @@ stores) must equal `016DE9D1`.
 | every distinct `.wavc` basename in the index (14,849) x every dialogue language directory (11) | 163,339 | **0** |
 | numeric takes 0..9999, widths 1..4, of both bracketing basenames | 80,002 | **0** |
 | FSB5 token `1606523576` -> cross-language sibling basename | 0 candidates | **0** |
-| `.ee` / `.toc` / `.adf` under `E:/Modding/_gamedata/JC3grab` (39 files, 70.1 MB, depth <= 3, complete) | 39 files | **0** references |
+| `.ee` / `.toc` / `.adf` under `E:/Modding/_shared/gamedata/JC3grab` (39 files, 70.1 MB, depth <= 3, complete) | 39 files | **0** references |
 | **total name candidates** | **243,341** | **0** |
 
 The token route is closed for a reason that is decodable: the token is FMOD's *original source

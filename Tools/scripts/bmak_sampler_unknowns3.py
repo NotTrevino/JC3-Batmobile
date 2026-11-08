@@ -52,7 +52,7 @@ FIELDS_MD = RES / "SAMPLER_FIELDS2.md"
 GAME = Path("E:/Games/Batman - Arkham Knight")
 COOKED = GAME / "BmGame" / "CookedPCConsole"
 DLC = GAME / "DLC"
-BMSDK = Path("E:/Modding/_tools/BmSDK-AK/src/BmSDK")
+BMSDK = Path("E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK")
 GEN = BMSDK / "Generated"
 
 sys.path.insert(0, str(ROOT / "Tools" / "scripts"))
@@ -810,7 +810,7 @@ def build(fl: list[dict], rec: dict, forms: dict, sdk: dict) -> str:
     w("|---|---|")
     w(f"| `Research/BatmobileGrab/SAMPLER_FIELDS2.md` | the {len(fl)} field rows (class, field, offset, kind) searched here |")
     w(f"| `E:/Games/Batman - Arkham Knight/BmGame/CookedPCConsole/*.upk` + `DLC/**/*.upk` | {rec['parsed']} name/import/export tables; the class-default payloads and Function bodies above |")
-    w(f"| `E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated/**/*.cs` | {sdk['files']} generated files, every occurrence of the two names |")
+    w(f"| `E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Generated/**/*.cs` | {sdk['files']} generated files, every occurrence of the two names |")
     w("| `Research/BatmobileGrab/SAMPLER_UNKNOWNS2.md` | the routes excluded from this card |")
     w("| `Tools/scripts/upk_read.py`, `grab_packages_g305.PartialPackage` | package tables, payload access, `walk_tags` |")
     w("")

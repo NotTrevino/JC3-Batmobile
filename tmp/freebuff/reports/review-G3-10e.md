@@ -77,7 +77,7 @@ at +16 and are 24 B of fields (32 B with the atom alignment) — the sizes G3-10
 ### 2.1 The exe's own `AtomType` enum
 
 ```
-$ cd E:/Modding/JC3-Batmobile && python - <<'EOF'
+$ cd E:/Modding/JustCause3/JC3-Batmobile && python - <<'EOF'
 import re
 p = r"D:/Games/Just Cause 3/JustCause3.exe"
 b = open(p,'rb').read()
@@ -124,12 +124,12 @@ header's order (oracle `exe_enum_matches_header_1_20`).
 ### 2.2 The fleet, re-read (atoms, flags, tau)
 
 ```
-$ cd E:/Modding/JC3-Batmobile && python - <<'EOF'
+$ cd E:/Modding/JustCause3/JC3-Batmobile && python - <<'EOF'
 import sys, glob, struct, json, math
 sys.path.insert(0,'Tools/scripts')
 import jc3hkx
 HINGE="hkpLimitedHingeConstraintData"; RAG="hkpRagdollConstraintData"
-files=sorted(glob.glob(r"E:/Modding/_gamedata/JC3grab/**/*.physicsc", recursive=True))
+files=sorted(glob.glob(r"E:/Modding/_shared/gamedata/JC3grab/**/*.physicsc", recursive=True))
 rows=[]; classes={}
 for f in files:
     b=open(f,'rb').read(); pf=jc3hkx.Packfile(b)
@@ -191,7 +191,7 @@ declared default, and it is the only one of the three floats that could be 1.0 e
 ### 2.3 The plain hinges and the rest pose
 
 ```
-$ cd E:/Modding/JC3-Batmobile && python - <<'EOF'
+$ cd E:/Modding/JustCause3/JC3-Batmobile && python - <<'EOF'
 ... (corrected probe: o.cls == "hkpHingeConstraintData" collected separately) ...
 print("plain hkpHingeConstraintData:", len(plain))
 for f,off,ext,codes in plain[:4]:
@@ -217,7 +217,7 @@ was discarded and the corrected probe above is the one used.)
 ### 2.4 The donor: constraint index → named part → range
 
 ```
-$ cd E:/Modding/JC3-Batmobile && python - <<'EOF'
+$ cd E:/Modding/JustCause3/JC3-Batmobile && python - <<'EOF'
 import sys, os
 sys.path.insert(0,'Tools/scripts')
 import jc3adf, jc3_door_angles as DA
@@ -252,16 +252,16 @@ i  data      class                          body  min..max  part (behaviour)
 ### 2.5 The review script
 
 ```
-$ cd E:/Modding/JC3-Batmobile && python Tools/scripts/jc3_physics_limits2.py --write
+$ cd E:/Modding/JustCause3/JC3-Batmobile && python Tools/scripts/jc3_physics_limits2.py --write
 wrote Research/JC3Grab/PHYSICS_LIMITS_REVIEW.md and Research/JC3Grab/PHYSICS_LIMITS_REVIEW.json
 hinges 419 / plain 4 / ragdolls 71 / panels 9 / files 51
 oracles 18/18
 
-$ cd E:/Modding/JC3-Batmobile && python Tools/scripts/jc3_physics_limits2.py --check
+$ cd E:/Modding/JustCause3/JC3-Batmobile && python Tools/scripts/jc3_physics_limits2.py --check
 OK hinges 419 / plain 4 / ragdolls 71 / panels 9 / files 51; md+json identical
 oracles: {"ang_limit_is_14": true, "donor_map_is_complete": true, "every_fleet_atom_code_has_a_name": true, "exe_enum_matches_header_1_20": true, "hinge_is_enabled_is_bool": true, "hinge_limit_atom_16B": true, "hinge_limit_axis_valid": true, "hinge_min_cannot_be_tau": true, "hinge_min_le_max": true, "hinge_tau_in_unit_interval": true, "limit_atom_sizes_match_header": true, "no_unexpected_size_mismatch": true, "panel_sign_and_units": true, "plain_hinge_has_no_limit_atom": true, "plain_hinge_is_80B_shorter": true, "ragdoll_pairs_ordered": true, "ragdoll_tau_in_unit_interval": true, "ragdoll_twist_then_two_cones": true}
 
-$ cd E:/Modding/JC3-Batmobile && python Tools/scripts/jc3_physics_limits.py --check
+$ cd E:/Modding/JustCause3/JC3-Batmobile && python Tools/scripts/jc3_physics_limits.py --check
 OK hinges 419 / ragdolls 71 / files 51; md+json byte-identical
 oracles: {"hinge_atom_codes_constant": true, "hinge_extent_uniform": true, "hinge_factor_is_one": true, "hinge_limits_on_grid": true, "hinge_limits_vary_per_car": true, "hinge_limits_within_pi": true, "hinge_min_le_max_all": true, "non_limit_not_claimed": true, "ragdoll_atom_codes_constant": true, "ragdoll_extent_uniform": true, "ragdoll_factor_constant": true, "ragdoll_pairs_ordered": true, "transform_w_slots_zero": true, "transforms_decode": true}
 ```
@@ -271,7 +271,7 @@ oracles: {"hinge_atom_codes_constant": true, "hinge_extent_uniform": true, "hing
 ### 2.6 Fleet door rows, by behaviour / axis / range
 
 ```
-$ cd E:/Modding/JC3-Batmobile && python - <<'EOF'
+$ cd E:/Modding/JustCause3/JC3-Batmobile && python - <<'EOF'
 import json, collections
 doc=json.load(open("Research/JC3Grab/DOOR_ANGLES.json",encoding="utf-8"))
 row=[d for c in doc["cars"] for d in c["doors"]]
@@ -367,7 +367,7 @@ python Tools/scripts/jc3_physics_limits2.py --check
 ```
 
 Inputs (read-only): `D:/Games/Just Cause 3/JustCause3.exe`,
-`E:/Modding/_gamedata/JC3grab/**/*.physicsc` (51 files), the donor
+`E:/Modding/_shared/gamedata/JC3grab/**/*.physicsc` (51 files), the donor
 `Builds/test-091/aaf/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle.physicsc`
 and its `sportsmuscle_vehicle_parts.vmodc`, `Research/JC3Grab/DOOR_ANGLES.json`. No game process was
 run, nothing was written outside `Research/JC3Grab/PHYSICS_LIMITS_REVIEW.*`, the new script, and

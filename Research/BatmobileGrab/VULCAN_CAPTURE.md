@@ -232,7 +232,7 @@ The decoded `FiringInterval` 0.138 s = 7.25 rounds/s therefore stays the value o
 | 465 | 17.421 | 41.0 | 48.5 | 4 |
 | 466 | 17.483 | 41.0 | 43.9 | 4 |
 
-## Key frames (E:/Modding/_BmAKgrab/footage/vulcan/)
+## Key frames (E:/Modding/ArkhamKnight/_grab/footage/vulcan/)
 
 - `vulcan_narrow_last_f0305_t11.697s.png` (frame 305, 11.697 s), reticle crop `vulcan_narrow_last_f0305_reticle.png`
 - `vulcan_spread_on_f0306_t11.732s.png` (frame 306, 11.732 s), reticle crop `vulcan_spread_on_f0306_reticle.png`

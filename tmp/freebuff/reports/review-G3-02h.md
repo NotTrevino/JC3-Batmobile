@@ -111,13 +111,13 @@ and hand the arrays to the controls card.
 ## 6. Commands run (verbatim)
 
 ```
-cd /e/Modding/JC3-Batmobile && uv run python Tools/scripts/grab_keyboard_bindings.py --check
+cd /e/Modding/JustCause3/JC3-Batmobile && uv run python Tools/scripts/grab_keyboard_bindings.py --check
 OK 7/7 oracles, 367 live bindings, 21 keyboard/mouse vehicle rows (1 specific), 14 gamepad rows, md+json byte-identical
 CHECK_EXIT=0
 ```
 
 ```
-cd /e/Modding/JC3-Batmobile && sed -n '4000,4030p' "E:/Games/Batman - Arkham Knight/BmGame/Config/BmGame.ini"
+cd /e/Modding/JustCause3/JC3-Batmobile && sed -n '4000,4030p' "E:/Games/Batman - Arkham Knight/BmGame/Config/BmGame.ini"
 DefaultBatmanKeyMap=(Ability="$GFxUI.KeyboardControls.QuickfireExplosiveGel",PrimaryKeyName="$PC.Keys.UNASSIGNED",...)
 ... (three Quickfire lines, all UNASSIGNED) ...
 DefaultPursuitKeyMap=(Ability="$GFxUI.KeyboardControls.Accelerate",PrimaryKeyName="$PC.Keys.W",SecondaryKeyName="$PC.Keys.Up",Command="DebugMenuUpPressed | OnRelease DebugMenuUpReleased | Axis aThrottleAxis Speed=1.0 DeadZone=0.0 | Axis aRightTrigger Speed=1.0 DeadZone=0.2 | Axis aUp Speed=1.0 DeadZone=0.1", Icon="CI_BatmobileThrottle")
@@ -147,7 +147,7 @@ DefaultBattleKeyMap=(Ability="$GFxUI.KeyboardControls.ForensicScanner",PrimaryKe
 ```
 
 ```
-cd /e/Modding/JC3-Batmobile && sed -n '130,160p' "E:/Games/Batman - Arkham Knight/BmGame/Config/PC/PCGame.ini"
+cd /e/Modding/JustCause3/JC3-Batmobile && sed -n '130,160p' "E:/Games/Batman - Arkham Knight/BmGame/Config/PC/PCGame.ini"
 [Engine.PlayerInput] ... [BmGame.RGameInfo]
 .DefaultPursuitKeyMap=(... "Accelerate",PrimaryKeyName="$PC.Keys.W" ... Axis aThrottleAxis ...)
 ... the same 11 Pursuit + 13 Battle entries, with a leading dot:
@@ -156,7 +156,7 @@ cd /e/Modding/JC3-Batmobile && sed -n '130,160p' "E:/Games/Batman - Arkham Knigh
 ```
 
 ```
-cd /e/Modding/JC3-Batmobile && PYTHONIOENCODING=utf-8 uv run python tmp/freebuff/scratch/g02h_review.py
+cd /e/Modding/JustCause3/JC3-Batmobile && PYTHONIOENCODING=utf-8 uv run python tmp/freebuff/scratch/g02h_review.py
 
 === BmGame/Config/PC/PCInput.ini (30 lines) ===
 
@@ -208,7 +208,7 @@ EXIT=0
 ```
 
 ```
-cd /e/Modding/JC3-Batmobile && ls -l Research/BatmobileGrab/BINDINGS_MERGED.*
+cd /e/Modding/JustCause3/JC3-Batmobile && ls -l Research/BatmobileGrab/BINDINGS_MERGED.*
 -rw-r--r-- 1 User 197121 87270 Nov  3 08:15 Research/BatmobileGrab/BINDINGS_MERGED.json
 -rw-r--r-- 1 User 197121  9111 Nov  3 08:15 Research/BatmobileGrab/BINDINGS_MERGED.md
 === merged mentions of KeyMap ===
@@ -217,7 +217,7 @@ Research/BatmobileGrab/BINDINGS_MERGED.json:0
 ```
 
 ```
-cd /e/Modding/JC3-Batmobile && grep -n "ToggleBattleMode\|BatmobileSonar\|bLookBehindVehicle\|bHandBrakeButton\|BatmobileFireButton\|ExitVehicle" <each chain file>
+cd /e/Modding/JustCause3/JC3-Batmobile && grep -n "ToggleBattleMode\|BatmobileSonar\|bLookBehindVehicle\|bHandBrakeButton\|BatmobileFireButton\|ExitVehicle" <each chain file>
 --- BmGame/Config/PC/PCInput.ini        (no match)
 --- BmGame/Config/DefaultInput.ini      178 ExitVehicle (alias) / 184 BatmobileSonar (alias) / 252 XboxTypeS_RightTrigger / 255,256 gamepad
 --- Engine/Config/BaseInput.ini         (no match)

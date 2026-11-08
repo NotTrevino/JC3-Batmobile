@@ -39,7 +39,7 @@ output read today:
 | `um win ps` / `kill <pid>` / `shot --exe` / `drive --proc` / `record` / `launch` | `um win --help` and each subcommand's `--help`, read this session; flags `--scale`, `--pid`, `--seconds`, `--out`, `--crop`, `--offset` confirmed there |
 | `size 1600 900` | `um win drive` accepts WinDrive commands; `size <w> <h>` sets the client size (pilot-study report §1) |
 | VFS launch line | `JC3_Launcher.bat`: `start "" "JustCause3.exe" --vfs-fs dropzone --vfs-archive patch_win64 --vfs-archive archives_win64 --vfs-archive dlc_win64 --vfs-fs .` — reproduced through `um win launch` instead of `start` so the card gets an exit code |
-| `pwsh Working/Installer/install_v3.ps1 -Action Verify -GameDir 'E:\Modding\_dropzone_sim_rc2_v3'` | `Tools/scripts/install_v3.py` header + body: `Verify` prints `ok <rel>` / `BAD <rel>` then `verified <n>/<N>`, exits 1 on any `BAD`; `-GameDir` must be the sim root or below, and real game roots (`D:\Games`, `E:\Games`) are refused |
+| `pwsh Working/Installer/install_v3.ps1 -Action Verify -GameDir 'E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2_v3'` | `Tools/scripts/install_v3.py` header + body: `Verify` prints `ok <rel>` / `BAD <rel>` then `verified <n>/<N>`, exits 1 on any `BAD`; `-GameDir` must be the sim root or below, and real game roots (`D:\Games`, `E:\Games`) are refused |
 | `python Tools/scripts/install_v3.py --check` → `CHECK_EXIT=0` | `install_v3.py:730-737` prints `FAIL: <name>` + `CHECK_EXIT=1`, else `PASS: ...` + `CHECK_EXIT=0` |
 | `pwsh -File Builds/bm-RC2/install.ps1 -Action Verify -GameDir 'D:\Games\Just Cause 3'` | `Builds/bm-RC2/install.ps1` param block (default `-GameDir 'D:\Games\Just Cause 3'`) and its `Verify` branch: same `ok`/`BAD` + `verified n/9` output |
 | `Esc` = `0x1B` for the liveness check | `CONTROLS.md` row 23, JC3 `GUI_PAUSE = START / ESCAPE`, labelled `decoded` |
@@ -84,11 +84,11 @@ Read-only / offline, run this session:
 `um --help`, `um win --help`, `um win drive|shot|record|kill|launch --help`,
 `um backup --help`, `um scan --help`, `um backup list` (three snapshots listed; `jc3-saves`
 confirmed against the real save folder), `um win ps` (game absent), `pwsh -v` → 7.5.5,
-`ls -d E:/Modding/_dropzone_sim_rc2_v3*` → the sim root and `..._v3_prefix_4020` exist.
+`ls -d E:/Modding/JustCause3/_dropzone_sims/_dropzone_sim_rc2_v3*` → the sim root and `..._v3_prefix_4020` exist.
 
 **Not completed:** `python Tools/scripts/install_v3.py --check` was started and **timed out at
-240 s** without reaching its final line. It did create `E:\Modding\_dropzone_sim_rc2_v3` and
-`E:\Modding\_dropzone_sim_rc2_v3_prefix_4020` before being cut off, so that state is partial. This
+240 s** without reaching its final line. It did create `E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2_v3` and
+`E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2_v3_prefix_4020` before being cut off, so that state is partial. This
 is why `LAUNCH.md` step 3 says "allow up to 10 minutes" and requires the literal `CHECK_EXIT=0`
 rather than reporting the check as green: **the installer self-check has not been observed passing
 in this session.** The `SEE` strings in steps 3–5 are quoted from the scripts' source, not from a

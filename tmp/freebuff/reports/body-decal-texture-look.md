@@ -35,7 +35,7 @@ at luma ≥ 250. So the shapes are mask-white, not pure 255 — consistent with 
 |---|---|
 | `SLOTS.md:33` / `SLOTS.json` index 8 | `Batmobile_V3_TEXTURES_Body_Decals`, Material/master, **`textures: {}`**, **58 LOD0 faces**, part `body` — no UV field |
 | `MESHES.md` | per-slot **face counts** per LOD; `grep -i uv` → **0 hits**; the string `decal` → 0 hits |
-| `E:/Modding/_BmAKgrab/meshes` | **absent (0 entries)** — the umodel export `MESHES.md` names as its geometry source is not on this machine's disk |
+| `E:/Modding/ArkhamKnight/_grab/meshes` | **absent (0 entries)** — the umodel export `MESHES.md` names as its geometry source is not on this machine's disk |
 
 So the UV box of those 58 faces is not derivable from the repo. The closing command (recorded in
 `DECAL_FINDING.md`): export the mesh with `umodel -lods`, take every LOD0 face with material index 8, and compare
@@ -122,7 +122,7 @@ Both PNGs were opened for visual inspection: the sheet reads as two large chevro
 
 | # | unknown | what was tried | settler |
 |---|---|---|---|
-| U1 | UV bbox of the 58 slot-8 faces, and whether it lands on the chevrons | `SLOTS.md`, `SLOTS.json`, `MESHES.md` (no UV field anywhere), `E:/Modding/_BmAKgrab/meshes` (absent) | `umodel -lods` export, then per-face UV bbox for material index 8 |
+| U1 | UV bbox of the 58 slot-8 faces, and whether it lands on the chevrons | `SLOTS.md`, `SLOTS.json`, `MESHES.md` (no UV field anywhere), `E:/Modding/ArkhamKnight/_grab/meshes` (absent) | `umodel -lods` export, then per-face UV bbox for material index 8 |
 | U2 | whether the shipped 1024² DXT1 differs from this 256² export in content (the export is a quarter-size copy) | the TGA header says 256×256; `TEXTURES.md` says 1024×1024 | the `.dds`/`.ddsc` inside the package, or a 1024 export |
 | U3 | which of the 26 shapes the 58 faces are actually meant to draw (all chevrons, or one arrow per flank) | not answerable without U1 | U1 |
 | U4 | whether the decal route (`SupportDecals` / `Decal1..4Color`) or the `s0` route is the right carrier in JC3 | both are named in the plan §3.2/§5; neither was built (build nothing) | a build card for C4 |

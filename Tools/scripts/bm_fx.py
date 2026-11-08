@@ -411,7 +411,7 @@ def installer_text() -> str:
         "    'Rollback091' {",
         "        Remove-Item -LiteralPath (Join-Path $D '" + EPE + "') -Force -ErrorAction SilentlyContinue",
         "        if ($GameDir -eq 'D:\\Games\\Just Cause 3') {",
-        "            & (Join-Path 'E:\\Modding\\JC3-Batmobile\\Builds\\test-091' 'install.ps1') "
+        "            & (Join-Path 'E:\\Modding\\JustCause3\\JC3-Batmobile\\Builds\\test-091' 'install.ps1') "
         "-Action Install",
         "        } else { Write-Host ('rehearsal on ' + $GameDir + ': test-091 re-install skipped') }",
         "    }",

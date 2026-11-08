@@ -35,7 +35,7 @@ pkg = sys.argv[1]
 d = open(os.path.join(CK, pkg), "rb").read()
 payloads = dechunk(d)
 stream = b"".join(payloads)
-out = os.path.join(r"E:\Modding\JC3-Batmobile\Working\Audio", os.path.splitext(pkg)[0] + ".bin")
+out = os.path.join(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio", os.path.splitext(pkg)[0] + ".bin")
 open(out, "wb").write(stream)
 print(pkg, "file=%d stream=%d chunks=%d" % (len(d), len(stream), len(payloads)))
 for t in [b"BML_Battlemode", b"BML_Batmobile", b"Play_Batmobile_Turbo", b"BKHD", b"STID", b"AkBank"]:

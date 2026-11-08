@@ -45,7 +45,7 @@ re-carved here through `bmak_hud.carve()`), its ffdec AS3 export, and `Working/H
 for the *Batmobile* module, not the radar one.
 
 JC3 evidence for the right-hand column is the decompiled HUD movie itself
-(`E:/Modding/_gamedata/JC3grab/hud/dec/scripts`): `hud.as` line 15
+(`E:/Modding/_shared/gamedata/JC3grab/hud/dec/scripts`): `hud.as` line 15
 `[SWF(width="1280", height="720", backgroundColor="#666666", frameRate="30")]`, `hud.as`
 3768/3812 `CreatePoi`/`UpdatePoi`, the demo POI placements `poi.x = 600 / 200 / ...`, and
 `hud_code/poi.as` `UpdateIconScale` (764) + `UpdateArrow` (818) with 8 `ARROW_*` states drawn at

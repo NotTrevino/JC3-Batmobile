@@ -2,7 +2,7 @@
 import json, os
 import xml.etree.ElementTree as ET
 
-A = r"E:\Modding\JC3-Batmobile\Working\Audio"
+A = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio"
 t = ET.parse(os.path.join(A, "serpente_epe.xml"))
 rows = []
 

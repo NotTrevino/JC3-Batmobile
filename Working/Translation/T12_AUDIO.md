@@ -336,4 +336,4 @@ python Tools/scripts/t12_audio.py dump rows|slots|curves
 ```
 
 The first run extracts `sound/fmod_banks/weapons.bank` (177,586,080 B) to
-`E:\Modding\_JC3grab\audio\` — game data stays outside the repo (R10).
+`E:\Modding\JustCause3\_grab\audio\` — game data stays outside the repo (R10).

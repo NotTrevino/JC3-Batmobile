@@ -1,7 +1,7 @@
 """Full TMLN record for engine_running_sound + track GUID extraction."""
 import struct
 
-P = r"E:\Modding\JC3-Batmobile\Working\Audio\jc3bank\sound\fmod_banks\vehicles.bank"
+P = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\jc3bank\sound\fmod_banks\vehicles.bank"
 d = open(P, "rb").read()
 want = bytes.fromhex("905be2e525448045a10b6034fd27ff11")
 # find TMLN LIST containing it

@@ -1,7 +1,7 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-no-crash-damage-branch.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/verify-no-crash-damage-branch.md
 ONLY: freebuff
 EST: 30
 BRIEF: hand-written 2026-11-08
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-no-crash-damage-branch.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/build-no-crash-damage-branch.md
 Verify Builds/bm-RC5-damage without using rc5_damage.py. Read the changed module through the .toc, diff against its donor, list every changed byte range, and confirm that only the cells named in the plan differ. Then search every entity in the shipped fleet for the module path and print the entities that would inherit the change; the expected answer is only the Batmobile entity, anything else is a fail that must be turned into a private-module card. Confirm that the damage values interact correctly with ram assist of brief 9123 (Builds/bm-RC5-movement): the ram damage written there must target other vehicles and must not be zeroed by this branch. Write tmp/freebuff/reports/hdl-verify-damage.md with PASS or FAIL for cells, leakage and ram interplay. Done check: leakage list is printed even when empty; revert is deleting the tree and branch record.
-Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.
+Shared rules: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

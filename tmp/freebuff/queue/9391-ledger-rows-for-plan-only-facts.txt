@@ -1,7 +1,7 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/ledger-rows-for-plan-only-facts.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/ledger-rows-for-plan-only-facts.md
 ONLY: freebuff
 EST: 35
 BRIEF: hand-written 2026-11-08
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-handling-values.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/rc5-handling-values.md
 Five handling facts live only inside plan reports and have no row in Working/Translation/T_ROWS.jsonl: the flip idle timer, four-wheel drive, the spin-in-place gate (21.6 km/h), the battle yaw-toward-aim members (BattleModeSteerAngleFactor, BattleModeMaxSteering 80, BattleModeStopAndTurnAngleMoving 90, YawOffset 0), and the water and remote entries. Read tmp/freebuff/reports/bm-moving-yaw-toward-aim.md, four-wheel-drive-and-spin-in-place-build-plan.md, stuck-flip-build-plan-merge.md and flip-recovery-idle-timer-and-thruster-plan.md. For each fact write one proposed ledger row in the exact field layout of the existing rows: id, BmAK value with its offset in Research/BatmobileGrab/BMSDK_OFFSETS.json, JC3 carrier, class (decoded, derived or assumed), verify cell, pursuit or battle. Write the proposals to Working/Translation/HDL_ROW_PROPOSALS.jsonl and do NOT edit T_ROWS.jsonl, since the apply chain owns it. Done check: every proposed row parses as JSON and every cited offset is found in the offsets file by a script you run and quote. Mark anything not found as UNKNOWN. Battle-mode rows are tagged for the modes landmark.
-Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.
+Shared rules: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

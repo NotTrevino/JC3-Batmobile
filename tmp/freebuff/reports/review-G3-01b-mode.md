@@ -31,7 +31,7 @@ criterion for "which collision mesh is active per mode".
 Command run (the card's own, with exit status not piped away):
 
 ```
-cd "E:/Modding/JC3-Batmobile" && uv run python Tools/scripts/grab_collision_modes.py --check; echo "EXIT=$?"
+cd "E:/Modding/JustCause3/JC3-Batmobile" && uv run python Tools/scripts/grab_collision_modes.py --check; echo "EXIT=$?"
 ```
 
 ```

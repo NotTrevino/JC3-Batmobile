@@ -9,7 +9,7 @@ import hashlib
 import os
 import sys
 
-ROOT = r"E:\Modding\JC3-Batmobile"
+ROOT = r"E:\Modding\JustCause3\JC3-Batmobile"
 EE = "v0300_car_kensington_sportsmuscle_civilian_01.ee"
 TARGET = (r"D:\Games\Just Cause 3\dropzone\editor\entities\jc_vehicles\01_land"
           r"\v0300_car_kensington_sportsmuscle\v0300_car_kensington_sportsmuscle_civilian_01.ee")

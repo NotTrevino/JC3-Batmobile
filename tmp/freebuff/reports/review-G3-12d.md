@@ -106,7 +106,7 @@ was the honest UNKNOWN at the time, and this pass closes it.
 ## 5. The 4 `.pfxc`
 
 They are not in `CookedPCConsole` (0 found there); they live in the donor tree at
-`E:/Modding/_gamedata/JC3grab/b13b/unpacked/.../vehicle_debris/`. Re-read there:
+`E:/Modding/_shared/gamedata/JC3grab/b13b/unpacked/.../vehicle_debris/`. Re-read there:
 
 ```
 4 files, each 2500 B, 'PFX\0' at 0, packfile magic 0x57E0E057 at 0x44,

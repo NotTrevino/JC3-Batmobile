@@ -5,7 +5,7 @@ edited. Every claim below is a mapping of an existing record to an existing brie
 none exists.
 
 **Provenance / reversibility.** New file, `tmp/freebuff/reports/rc4-not-done-owner-check.md`
-= `E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc4-not-done-owner-check.md`. It is the output path the
+= `E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/rc4-not-done-owner-check.md`. It is the output path the
 brief names. **Revert = delete this file.**
 
 ## 0. Counts, and one correction to the brief's premise

@@ -80,7 +80,7 @@ CONV = os.path.join(ROOT, "Tools", "Gibbed", "Gibbed.JustCause3.ConvertProperty.
 # Comparison physics files: the raw donor extract the project has used since G2-8, and the
 # B-10c input. A claim is only called REFUTED when the built bytes differ from BOTH.
 DONORS = {
-    "grab_extract": os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
+    "grab_extract": os.environ.get("JC3_RAW", r"E:/Modding/_shared/gamedata/JC3grab")
                     + "/hkx/sportsmuscle.physicsc",
     "test-091": os.path.join(ROOT, "Builds", "test-091", "aaf", MDL, "sportsmuscle.physicsc"),
 }

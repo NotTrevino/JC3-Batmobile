@@ -1,8 +1,8 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/apply-suspension-rows.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/apply-suspension-rows.md
 ONLY: freebuff
 EST: 40
 BRIEF: hand-written 2026-11-06
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/apply-mode-switch-rows.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/suspension-unit-bridge.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/keep-audit-suspension-and-mass.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/apply-mode-switch-rows.md, E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/suspension-unit-bridge.md, E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/keep-audit-suspension-and-mass.md
 Take reports/suspension-unit-bridge.md and keep-audit-suspension-and-mass and update rows T-S6, T-S4, T-S5, T-M3 and T-R2/T-R3 in the ledger with the derived bridge, the BmAK number, the JC3 value and the fit error. Where the audit marked COMPROMISE, write the replacement value and its evidence; where a member is missing, write the card. Re-pin and re-run t_rows.py check and status_audit.py --check.
 
 Pin upkeep: if your edits change which rows are blocked or the in-scope row count, update WAITS and the in_scope == value in Tools/scripts/t_blocked.py (back it up first), run t_blocked.py --write then --check, and keep both passing before you finish.

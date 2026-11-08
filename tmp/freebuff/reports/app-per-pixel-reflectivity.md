@@ -487,7 +487,7 @@ values; texture budget ≤ 4,648 KB; model ≤ 4,424 KB; `@files.xml` registers 
 ## 10. Reproduce
 
 ```bash
-cd "E:/Modding/JC3-Batmobile"
+cd "E:/Modding/JustCause3/JC3-Batmobile"
 # 1. the block interfaces (decoded headers, on disk)
 grep -n "sampler\|float4 m_\|cbuffer" Tools/JCMR-src/assets/jc3/shaders/carpaintmm.fb.txt
 grep -n "sampler\|SpecGloss\|SpecFresnel\|DiffuseRougness" Tools/JCMR-src/assets/jc3/shaders/window.fb.txt

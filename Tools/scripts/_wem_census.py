@@ -84,5 +84,5 @@ for r in sorted(rows, key=lambda r: -r[2])[:60]:
 import json
 json.dump([{"wad": r[0], "hash": "%08X" % r[1], "size": r[2], "codec": r[3], "ch": r[4],
             "rate": r[5], "dur_s": r[6], "extra_waves": r[7], "markers": r[8]} for r in rows],
-          open(r"E:\Modding\JC3-Batmobile\Working\Audio\sfx_census.json", "w"), indent=1)
+          open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\sfx_census.json", "w"), indent=1)
 print("wrote Working/Audio/sfx_census.json")

@@ -3,7 +3,7 @@ import json
 import os
 import shutil
 
-ROOT = r"E:/Modding/JC3-Batmobile"
+ROOT = r"E:/Modding/JustCause3/JC3-Batmobile"
 
 
 def p(*a):

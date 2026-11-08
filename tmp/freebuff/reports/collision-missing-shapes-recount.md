@@ -1,7 +1,7 @@
 # Recount: the shape and body numbers in `collision-missing-shapes-closest-system-plan.md`
 
 **Provenance / reversibility.** New file, `tmp/freebuff/reports/collision-missing-shapes-recount.md`
-= `E:/Modding/JC3-Batmobile/tmp/freebuff/reports/collision-missing-shapes-recount.md`. Intended
+= `E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/collision-missing-shapes-recount.md`. Intended
 change: add one recount; no source, record, package or game file is modified. It is the correct file
 because it is the requested output path and the only job artefact. Revert = delete this file.
 

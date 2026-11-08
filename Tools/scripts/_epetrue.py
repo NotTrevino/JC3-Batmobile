@@ -1,7 +1,7 @@
 """TRUE per-object name->Sound map (same <object> element only)."""
 import json, os, re
 
-x = open(r"E:\Modding\JC3-Batmobile\Working\Audio\serpente_epe.xml", encoding="utf-8").read()
+x = open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\serpente_epe.xml", encoding="utf-8").read()
 objs = re.findall(r"<object id=\"[0-9A-F]+\">(.*?)</object>", x, re.S)
 print("objects:", len(objs))
 rows = []
@@ -15,4 +15,4 @@ for o in objs:
 print("objects with Sound:", len(rows))
 for nm, cl, g in rows:
     print("  %-32s %-18s %s" % (nm, cl, g[:16] + "..."))
-json.dump(rows, open(r"E:\Modding\JC3-Batmobile\Working\Audio\epe_true.json", "w"), indent=1)
+json.dump(rows, open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\epe_true.json", "w"), indent=1)

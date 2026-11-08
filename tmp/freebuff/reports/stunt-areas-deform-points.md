@@ -31,7 +31,7 @@ points to the shell is only 0.025 m.)
 
 | item | path | value |
 |---|---|---|
-| donor entity (decoded) | `E:/Modding/_gamedata/JC3grab/entities/v0300_car_kensington_sportsmuscle__v0300_car_kensington_sportsmuscle_civilian_01.ee.json` | 31 modules, 450 objects |
+| donor entity (decoded) | `E:/Modding/_shared/gamedata/JC3grab/entities/v0300_car_kensington_sportsmuscle__v0300_car_kensington_sportsmuscle_civilian_01.ee.json` | 31 modules, 450 objects |
 | donor entity (text) | `Research/Epe/serpente_civilian.xml` | hierarchy authority |
 | stunt module, shipped | `Builds/bm-RC2/aaf/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_stunt_areas.vmodc` | 26,645 B, sha256 `6351f34a...a2a7` |
 | deform module, shipped | `Builds/bm-RC2/aaf/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_vehicle_deform.vmodc` | 67,214 B, sha256 `d15f9df5...99b` |

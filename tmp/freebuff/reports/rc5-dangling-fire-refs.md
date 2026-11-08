@@ -39,7 +39,7 @@ zero `F30CCB1C` members; the string `FFFF05DA` does not occur anywhere in its 7,
 The value therefore cannot be a donor reference, cloned or otherwise.
 
 **The object it names is defined by the APC's own entity file**
-`E:/Modding/_gamedata/JC3grab/epe_schema/apc_debug.epe`: `4DAE31AE=FFFF05DA` is that file's `CCar`
+`E:/Modding/_shared/gamedata/JC3grab/epe_schema/apc_debug.epe`: `4DAE31AE=FFFF05DA` is that file's `CCar`
 root (`_class CCar`), first raw byte `0x5d0` of a 100,278-byte blob. That file contains exactly one
 `F30CCB1C` name-hash and two occurrences of the id — its own definition plus its mounted weapon's
 owner link. The reference is a foreign entity's root, carried into a graph that does not define it.

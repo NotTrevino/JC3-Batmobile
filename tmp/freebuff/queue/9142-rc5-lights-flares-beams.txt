@@ -1,6 +1,6 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-lights-flares-beams.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/rc5-lights-flares-beams.md
 ONLY: freebuff
 EST: 55
 BRIEF: hand-written 2026-11-08
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-scaffold-and-merge-script.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/rc5-scaffold-and-merge-script.md
 The lights branch. RC4's 24-row lamp module writes range 60 and angle 70 (outside the shipped maximum of 50 and 50), a fleet-mode multiplier of 1.0, a wrong-quantity falloff_start and a donor row 11; the 17 lens-flare entries have no payload; T-L28 and T-L30 are blocked with a null socket and bone (reports/correction-8394-light-units-domain.md). Work from reports/headlight-beam-plan.md, reports/taillight-brake-reverse-plan.md, reports/t25-lamp-state-carrier.md, reports/underglow-and-accent-lights-plan.md, reports/lens-flare-carriers.md and the B-25 card of GRAB_BACKLOG.md lines 1587 to 1607. Produce in Builds/bm-RC5-lights: lamp rows whose units are bridged by a derived rule with the error shown (not fleet-mode stand-ins), flare entries carried as part-side emitters on a CarLight block or has_lights part, the brake and reverse states from the lamp-state carrier, and the underglow handled as BmAK has it, an emissive wheel material. Script Tools/scripts/rc5_lights.py (--write, --check). Done line: 17 of 17 flare entries have a named part and socket, no lamp row outside the shipped domain without a stated reason, and the module reads back. Register the tree with a branch record under Working/RC5/branches/ (format in reports/rc5-scaffold-and-merge-script.md); never edit a bm-RC4 tree.

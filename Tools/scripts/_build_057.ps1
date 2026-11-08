@@ -4,7 +4,7 @@
 # whole texture story); vanilla-near persists -> highs come from elsewhere
 # (.hmddsc preferred) and full-chain shadowing does not apply.
 $ErrorActionPreference = 'Stop'
-$root = 'E:\Modding\JC3-Batmobile'
+$root = 'E:\Modding\JustCause3\JC3-Batmobile'
 $py = 'uv'
 $g  = "$root\Tools\Gibbed"
 $ee = 'v0300_car_kensington_sportsmuscle_civilian_01.ee'

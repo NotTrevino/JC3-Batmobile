@@ -142,7 +142,7 @@ H2 answer". The doc now says 36000 is the H0 answer and gives H2 35750 / H1 1800
 
 `STATUS.md` needed no regeneration (`status_audit.py --check` says it is current: the per-doc
 totals did not move, only dispositions). `damage_switches.json` is unchanged in content (the
-`_t14` note's date is regenerated). No game file, `Builds/`, `D:/Games`, `E:/Modding/_JC3grab`
+`_t14` note's date is regenerated). No game file, `Builds/`, `D:/Games`, `E:/Modding/JustCause3/_grab`
 or `_BmAKgrab` was touched, and nothing was committed.
 
 ## Check output (verbatim)

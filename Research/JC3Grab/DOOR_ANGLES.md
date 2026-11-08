@@ -491,7 +491,7 @@ The donor's parts module is `models/jc_vehicles/01_land/v0300_car_kensington_spo
 | `sportsmuscle_door_f_r` | FrontRightDoor | 2 | 4 | 2 | 0x4DCE0 | (0, 1, 0) | 0 | 80 | 80 | (1.018, 0.622, -0.771) |
 | `sportsmuscle_hood_signature` | Hood | 25 | 20 | 8 | 0x4E4E0 | (1, 0, 0) | 0 | 70 | 70 | (0, 1.057, -0.848) |
 
-**Vanilla bundle cross-check.** `E:/Modding/_gamedata/JC3grab/vanilla_v0300.ee` is an extracted vanilla Serpente bundle (566 members). Its members are byte-identical to the archive members this page decoded:
+**Vanilla bundle cross-check.** `E:/Modding/_shared/gamedata/JC3grab/vanilla_v0300.ee` is an extracted vanilla Serpente bundle (566 members). Its members are byte-identical to the archive members this page decoded:
 
 | member | sha1 | matches this decode |
 |---|---|---|

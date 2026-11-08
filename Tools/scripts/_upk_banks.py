@@ -1,8 +1,8 @@
 """Find AkBank exports, carve embedded banks, map events->media."""
 import json, os, struct
 
-stream = open(r"E:\Modding\JC3-Batmobile\Working\Audio\bm_stream.bin", "rb").read()
-names = open(r"E:\Modding\JC3-Batmobile\Working\Audio\bm_names.txt").read().splitlines()
+stream = open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\bm_stream.bin", "rb").read()
+names = open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\bm_names.txt").read().splitlines()
 NC = len(names)
 eoff, ecount, ST = 0x1C9F9 - 0x369, 5490, 72
 
@@ -33,4 +33,4 @@ for nm, size, off in banks:
     print("  %-40s size=%d off=0x%X" % (nm, size, off))
     so = off - 0x369
     print("    serial head:", stream[so:so+32])
-    open(os.path.join(r"E:\Modding\JC3-Batmobile\Working\Audio", "bank_%s.bnk" % nm), "wb").write(stream[so:so+size])
+    open(os.path.join(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio", "bank_%s.bnk" % nm), "wb").write(stream[so:so+size])

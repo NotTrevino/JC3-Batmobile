@@ -34,7 +34,7 @@ STEPS
     IF NOT  a line starting `FAIL:` — copy that whole line onto the RESULT line and STOP
 
 ### 4. Verify the simulated dropzone against the receipt
-    DO   pwsh Working/Installer/install_v3.ps1 -Action Verify -GameDir 'E:\Modding\_dropzone_sim_rc2_v3'
+    DO   pwsh Working/Installer/install_v3.ps1 -Action Verify -GameDir 'E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2_v3'
     SEE  `verified 9/9` and exit 0
     IF NOT  `REFUSED:` or "no dropzone" — re-run step 3 (it rebuilds the sims), then this step once; a `BAD` line -> STOP
 

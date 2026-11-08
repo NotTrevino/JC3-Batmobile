@@ -364,7 +364,7 @@ lifts, and must not describe an in-game result as measured (ORACLES §"Be honest
 ## 19. Reproduce
 
 ```bash
-cd E:/Modding/JC3-Batmobile
+cd E:/Modding/JustCause3/JC3-Batmobile
 python Tools/scripts/eetoc.py compare <build.ee> <build.ee.toc>
 python Tools/scripts/dropzone_sim.py --snapshot <dir> out.json
 python Tools/scripts/t5_apply.py --aaf <tree> --check-only

@@ -1,7 +1,7 @@
 # V-06 - install dry run on bm-RC4, simulated dropzone only
 
 **STATUS: done.** All six required cases ran the real `Builds/bm-RC4/install.ps1` against
-`E:/Modding/_dropzone_sim_rc4` and matched their expected exit code: Status 0, WhatIf 0, Install on
+`E:/Modding/JustCause3/_dropzone_sims/_dropzone_sim_rc4` and matched their expected exit code: Status 0, WhatIf 0, Install on
 an empty root 0, Install over an installed root 0, decoy Install 0 with Rollback restoring it, and the
 guard negative **2**. The generated record is `Builds/bm-RC4/verify/dropzone_sim.md`, and its
 `--check` re-runs all eight probes and compares the document byte for byte (exit 0). No game folder
@@ -46,7 +46,7 @@ False
 * **`Get-Parts()` splits with the IO API, not a regex**:
   `[IO.Path]::GetFullPath($p).Replace([char]'/', [IO.Path]::DirectorySeparatorChar)
   .Split([IO.Path]::DirectorySeparatorChar)`. The forward-slash probe
-  (`-GameDir E:/Modding/_dropzone_sim_rc4`) is accepted, exit 0 - a regex would have split on the
+  (`-GameDir E:/Modding/JustCause3/_dropzone_sims/_dropzone_sim_rc4`) is accepted, exit 0 - a regex would have split on the
   wrong separator or on the drive colon.
 
 ## 3. Cases and exit codes
@@ -60,7 +60,7 @@ False
 | 5 | Decoy `profile/item.onlinec` | `Install` -> `Verify` -> `Rollback` | 0 | **0 / 0 / 0** | PASS - `backed up profile\item.onlinec`, Verify `verified 9/9`, Rollback restores the decoy byte-for-byte and removes only the **8** files that did not exist |
 | 6 | Guard negative `E:/Modding/not_the_sim` | `Status` | 2 | **2** | PASS - prints `REFUSED: ...`, creates nothing |
 | 6b | forward-slash form (probe) | `WhatIf` | - | **0** | accepted (normalisation) |
-| 6b | case variant `E:/MODDING/_DROPZONE_SIM_RC4` (probe) | `WhatIf` | - | **0** | accepted (Windows path identity) |
+| 6b | case variant `E:/MODDING/JustCause3/_dropzone_sims/_dropzone_sim_rc4` (probe) | `WhatIf` | - | **0** | accepted (Windows path identity) |
 
 ### Case 4 - measured, and narrower than the brief's wording
 
@@ -105,7 +105,7 @@ python Tools/scripts/dropzone_sim2.py --check
 ```
 
 The harness's own guard (`guard()` in `Tools/scripts/dropzone_sim2.py`) runs before every action and
-refuses any root whose normalised path is not `E:/Modding/_dropzone_sim_rc4`, so an accidental
+refuses any root whose normalised path is not `E:/Modding/JustCause3/_dropzone_sims/_dropzone_sim_rc4`, so an accidental
 `D:/Games` or `E:/Games` value cannot reach PowerShell. Case 6 is the only place a non-sim path is
 passed through, and it is, by design, a REFUSED assertion that creates nothing.
 
@@ -115,7 +115,7 @@ passed through, and it is, by design, a REFUSED assertion that creates nothing.
 |---|---|---|
 | `Tools/scripts/dropzone_sim2.py` | new RC4 harness (the RC2 `dropzone_sim.py` is untouched) | delete the file |
 | `Builds/bm-RC4/verify/dropzone_sim.md` | generated record, every case's exit code and raw output | delete the file |
-| `E:/Modding/_dropzone_sim_rc4/` | disposable sim root, left holding the last case's tree | delete the folder |
+| `E:/Modding/JustCause3/_dropzone_sims/_dropzone_sim_rc4/` | disposable sim root, left holding the last case's tree | delete the folder |
 | `tmp/freebuff/scratch/decoy_item.onlinec` | the synthetic decoy bytes | delete the file |
 
 No `Builds/bm-*` tree other than the disposable sim root was written; `install.ps1`, the receipt,

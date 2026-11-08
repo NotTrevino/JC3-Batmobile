@@ -1,5 +1,5 @@
 import struct
-stream = open(r"E:\Modding\JC3-Batmobile\Working\Audio\bm_stream.bin", "rb").read()
+stream = open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\bm_stream.bin", "rb").read()
 for img_off, tag in ((8454056, "BattlemodeEngine"), (8454510, "Transition_In")):
     o = img_off - 0x369
     print(tag, "serial@stream+0x%X (26B):" % o, stream[o:o+26].hex(" "))

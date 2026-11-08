@@ -120,7 +120,7 @@ off-chain collisions by name, so a reader can check the filter rather than trust
 ### 1. Probe 1 - launcher pointers, tracker, both projectiles
 
 ```
-$ cd E:/Modding/JC3-Batmobile && PYTHONIOENCODING=utf-8 uv run python tmp/freebuff/scratch/wp4d_check.py
+$ cd E:/Modding/JustCause3/JC3-Batmobile && PYTHONIOENCODING=utf-8 uv run python tmp/freebuff/scratch/wp4d_check.py
 root E:/Games\Batman - Arkham Knight\BmGame\CookedPCConsole
 ====================================================================================================
 Playable_Batmobile_SF.upk 5490 exports
@@ -176,7 +176,7 @@ by re-reading them.)
 ### 2. Probe 2 - class defaults, 2464 carriers, reverse references
 
 ```
-$ cd E:/Modding/JC3-Batmobile && PYTHONIOENCODING=utf-8 uv run python tmp/freebuff/scratch/wp4d_probe2.py > tmp/freebuff/scratch/wp4d_probe2.out 2>&1; echo "EXIT=$?"; sed -n '1,80p' tmp/freebuff/scratch/wp4d_probe2.out
+$ cd E:/Modding/JustCause3/JC3-Batmobile && PYTHONIOENCODING=utf-8 uv run python tmp/freebuff/scratch/wp4d_probe2.py > tmp/freebuff/scratch/wp4d_probe2.out 2>&1; echo "EXIT=$?"; sed -n '1,80p' tmp/freebuff/scratch/wp4d_probe2.out
 EXIT=0
 root E:/Games\Batman - Arkham Knight\BmGame\CookedPCConsole
 ====================================================================================================
@@ -245,7 +245,7 @@ export indices: {'Batmobile_EMPMissile_Projectile': 16, 'Batmobile_EMPMissile_Pr
 ### 3. The SDK facts the lineage filter and the witnesses need
 
 ```
-$ cd E:/Modding/JC3-Batmobile && grep -n "partial class RBatmobileEMPMissile\|partial class RBatmobileVehicleTracker\|partial class RBatmobileMissile\b\|partial class RPursuitModeMissileLauncher" Working/vendor/BmSDK/*.g.cs
+$ cd E:/Modding/JustCause3/JC3-Batmobile && grep -n "partial class RBatmobileEMPMissile\|partial class RBatmobileVehicleTracker\|partial class RBatmobileMissile\b\|partial class RPursuitModeMissileLauncher" Working/vendor/BmSDK/*.g.cs
 Working/vendor/BmSDK/RBatmobileEMPMissile.g.cs:11:public partial class RBatmobileEMPMissile : BmSDK.BmGame.RPursuitModeMissileLauncher, BmSDK.IGameObject
 Working/vendor/BmSDK/RBatmobileVehicleTracker.g.cs:11:public partial class RBatmobileVehicleTracker : BmSDK.BmGame.RPursuitModeMissileLauncher, BmSDK.IGameObject
 Working/vendor/BmSDK/RBatmobileMissile.g.cs:11:public partial class RBatmobileMissile : BmSDK.BmGame.RBasicProjectile, BmSDK.IGameObject
@@ -259,7 +259,7 @@ $ grep -n "MyDamageType" Working/vendor/BmSDK/Projectile.g.cs
 ### 4. First `--write` (the version I rejected)
 
 ```
-$ cd E:/Modding/JC3-Batmobile && PYTHONIOENCODING=utf-8 uv run python Tools/scripts/t_wp4d.py --write
+$ cd E:/Modding/JustCause3/JC3-Batmobile && PYTHONIOENCODING=utf-8 uv run python Tools/scripts/t_wp4d.py --write
 wrote Working/Translation/T_WP4D_TRACKER_EMP.md (27855 chars)
 wrote Working/Translation/T_WP4D_TRACKER_EMP.json (34702 chars)
 ```
@@ -271,7 +271,7 @@ the counts in that file were never reported as a result.
 ### 5. Final write and check
 
 ```
-$ cd E:/Modding/JC3-Batmobile && PYTHONIOENCODING=utf-8 uv run python Tools/scripts/t_wp4d.py --write && PYTHONIOENCODING=utf-8 uv run python Tools/scripts/t_wp4d.py --check; echo "CHECK_EXIT=$?"
+$ cd E:/Modding/JustCause3/JC3-Batmobile && PYTHONIOENCODING=utf-8 uv run python Tools/scripts/t_wp4d.py --write && PYTHONIOENCODING=utf-8 uv run python Tools/scripts/t_wp4d.py --check; echo "CHECK_EXIT=$?"
 wrote Working/Translation/T_WP4D_TRACKER_EMP.md (29956 chars)
 wrote Working/Translation/T_WP4D_TRACKER_EMP.json (35603 chars)
 OK Working/Translation/T_WP4D_TRACKER_EMP.md (29956 chars)
@@ -283,7 +283,7 @@ CHECK_EXIT=0
 ### 6. The carried appendix really is T-WP4c verbatim
 
 ```
-$ cd E:/Modding/JC3-Batmobile && uv run python - <<'PY'
+$ cd E:/Modding/JustCause3/JC3-Batmobile && uv run python - <<'PY'
 import hashlib, re
 md = open("Working/Translation/T_WP4D_TRACKER_EMP.md", encoding="utf-8").read()
 src = open("Working/Translation/T_WP4C_TRACKER_EMP.md", encoding="utf-8").read()

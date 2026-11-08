@@ -30,7 +30,7 @@ import tempfile
 import numpy as np
 from PIL import Image
 
-GIBBED = r"E:\Modding\JC3-Batmobile\Tools\Gibbed\Gibbed.JustCause3.ConvertTexture.exe"
+GIBBED = r"E:\Modding\JustCause3\JC3-Batmobile\Tools\Gibbed\Gibbed.JustCause3.ConvertTexture.exe"
 FMT = {"colour": 71, "mask": 71, "normal": 83, "glass": 77}
 # mask = linear BC1 (vanilla msk/mpm: flags 1, no sRGB bit 8). glass = BC3/DXT5, the format the
 # vanilla Window dif uses (v0300..._glass_alpha_dif: header format 77, DDS 'DXT5', 8-bit alpha).

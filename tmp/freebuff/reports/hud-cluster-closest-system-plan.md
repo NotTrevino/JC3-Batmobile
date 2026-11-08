@@ -194,7 +194,7 @@ map — the correct disposition is **suppress** (this is the reopen of `T-HUD1`,
 
 **Evidence level**: members **decoded**; the guard **derived**; whether the private copy loads and
 whether type 4 can be delivered **UNKNOWN**.
-**Settler**: a live session (above); offline, `E:/Modding/_gamedata/JC3grab/hud/dec` for the loader path
+**Settler**: a live session (above); offline, `E:/Modding/_shared/gamedata/JC3grab/hud/dec` for the loader path
 and the receipt from the copy experiment.
 
 **Pilot card**: "In the Batmobile at 120 km/h there is no circular speedometer anywhere on screen; in a

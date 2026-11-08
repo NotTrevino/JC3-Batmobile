@@ -14,8 +14,8 @@ Not touched: `Working/Translation/T_ROWS.jsonl` (sha256 `8996b60a…e5f4` before
 ## Verbatim commands
 
 ```
-cd "E:/Modding/JC3-Batmobile" && PYTHONIOENCODING=utf-8 python Tools/scripts/t_vnf_six.py --write
-cd "E:/Modding/JC3-Batmobile" && PYTHONIOENCODING=utf-8 python Tools/scripts/t_vnf_six.py --check
+cd "E:/Modding/JustCause3/JC3-Batmobile" && PYTHONIOENCODING=utf-8 python Tools/scripts/t_vnf_six.py --write
+cd "E:/Modding/JustCause3/JC3-Batmobile" && PYTHONIOENCODING=utf-8 python Tools/scripts/t_vnf_six.py --check
 ```
 
 `--write` -> exit 0, "78/78 oracles pass", wrote the doc. `--check` -> exit 0, doc byte-identical,

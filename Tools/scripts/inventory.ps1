@@ -3,7 +3,7 @@
   inventory.ps1 - build a machine-readable inventory of the JC3-Batmobile project.
 
   Usage:
-    powershell -File inventory.ps1 -Root E:\Modding\JC3-Batmobile -Out E:\Modding\JC3-Batmobile\Research
+    powershell -File inventory.ps1 -Root E:\Modding\JustCause3\JC3-Batmobile -Out E:\Modding\JustCause3\JC3-Batmobile\Research
 
   Writes:
     <Out>\INVENTORY.json   full file list + per-directory rollups
@@ -13,8 +13,8 @@
 #>
 [CmdletBinding()]
 param(
-    [string]$Root = 'E:\Modding\JC3-Batmobile',
-    [string]$Out  = 'E:\Modding\JC3-Batmobile\Research'
+    [string]$Root = 'E:\Modding\JustCause3\JC3-Batmobile',
+    [string]$Out  = 'E:\Modding\JustCause3\JC3-Batmobile\Research'
 )
 
 $ErrorActionPreference = 'Stop'

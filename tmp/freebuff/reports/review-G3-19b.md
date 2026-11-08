@@ -214,7 +214,7 @@ of it. Given the card lists that variant under UNKNOWN #3, this is a wording fix
 ```
 $ python tmp/freebuff/scratch/g319b_review.py       # first run, wrong ROOT depth
 Traceback (most recent call last):
-  File "E:\Modding\JC3-Batmobile\tmp\freebuff\scratch\g319b_review.py", line 16, in <module>
+  File "E:\Modding\JustCause3\JC3-Batmobile\tmp\freebuff\scratch\g319b_review.py", line 16, in <module>
     import jc3geom  # noqa: E402
 ModuleNotFoundError: No module named 'jc3geom'
 EXIT=1

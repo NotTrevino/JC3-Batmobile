@@ -3,7 +3,7 @@
 Read-only pass over the finished card: `GRAB_BACKLOG.md` §0.5 (R1–R14), the G2-17 card (§6, line 663),
 its §12 row (line 1300), the MODLOG `G2-17 · CForcePulse — intended change` and `— done` sections,
 and the outputs `Research/JC3Grab/FORCEPULSE.md` + `FORCEPULSE.json` + the generator
-`Tools/scripts/jc3forcepulse.py`, plus the population it reads (`E:/Modding/_JC3grab/detail/*.ee.json`,
+`Tools/scripts/jc3forcepulse.py`, plus the population it reads (`E:/Modding/JustCause3/_grab/detail/*.ee.json`,
 the archive index, and `FEATURE_CENSUS.json`).
 
 Constraints honoured: no game launched, nothing written into `D:/Games`, nothing committed, no

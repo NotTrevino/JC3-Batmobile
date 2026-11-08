@@ -1,6 +1,6 @@
 import json, glob, collections, os, re
 
-ps = glob.glob('E:/Modding/_JC3grab/entities/*.ee.json')
+ps = glob.glob('E:/Modding/JustCause3/_grab/entities/*.ee.json')
 paths = collections.Counter()
 vals = []
 ea_paths = collections.Counter()

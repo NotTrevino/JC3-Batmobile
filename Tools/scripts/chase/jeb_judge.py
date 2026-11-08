@@ -189,7 +189,7 @@ def class_state(c: dict) -> dict:
 def member_question(c: dict, cands: list[dict]) -> dict:
     crit = {}
     for i, cand in enumerate(cands):
-        src = str(cand.get("source", "?")).replace("E:/Modding/_gamedata/BmAKgrab/chase/", "")
+        src = str(cand.get("source", "?")).replace("E:/Modding/_shared/gamedata/BmAKgrab/chase/", "")
         crit[chr(65 + i)] = f"snippet {chr(65 + i)} from {src}"
     crit[MEMBER_NONE] = "no snippet stores a literal default for the member"
     return {"type": "choice",
@@ -253,8 +253,8 @@ def judge_member(jeb, c: dict, cands: list[dict]) -> dict:
 
 
 # ------------------------------------------------------------------------- choice calibration run
-CALIB = r"E:/Modding/_gamedata/BmAKgrab/chase/calib.jsonl"
-RUNS = r"E:/Modding/_gamedata/BmAKgrab/chase/calib_runs"
+CALIB = r"E:/Modding/_shared/gamedata/BmAKgrab/chase/calib.jsonl"
+RUNS = r"E:/Modding/_shared/gamedata/BmAKgrab/chase/calib_runs"
 
 
 def _calib_cases() -> list[dict]:

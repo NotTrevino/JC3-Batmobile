@@ -52,7 +52,7 @@ MD_NAME = "ARMOR_STEP.md"
 JSON_NAME = "ARMOR_STEP.json"
 
 EXE = r"D:/Games/Just Cause 3/JustCause3.exe"
-MODULE = (r"E:/Modding/_gamedata/JC3grab/b13b/unpacked/editor/entities/"
+MODULE = (r"E:/Modding/_shared/gamedata/JC3grab/b13b/unpacked/editor/entities/"
           r"jc_vehicles/00_shared/modules/health/lave_health_medium.vmodc")
 DAMAGE_MECH = os.path.join(OUT, "DAMAGE_MECHANISMS.md")
 

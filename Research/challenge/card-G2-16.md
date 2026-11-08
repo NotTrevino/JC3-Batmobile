@@ -19,7 +19,7 @@ the truck's 454 objects, a class-name census over all 236 cached `.epe` graphs (
 entities, not the card's 53-entity sample), byte-level comparison of the nine parts modules,
 resolution of the trigger/entry pointers in three unrelated entities, Jenkins-hash checks of the
 effect ids, and a parse of the `.stringlookup` member that the card never opened. Cached decoded
-XMLs under `E:\Modding\_JC3grab\wiring\epe\` were used where possible so that no extra archive read
+XMLs under `E:\Modding\JustCause3\_grab\wiring\epe\` were used where possible so that no extra archive read
 was needed.
 
 ---
@@ -520,7 +520,7 @@ three EMP-only ints are unnamed. "Not in any decoded member" is the accurate for
 ---
 
 **Reproduce.** All probes read `Research/JC3Grab/{INDEX.jsonl,EMP.json,FORCEPULSE.json,
-WEAPON_WIRING.jsonl,WEAPONS.md}` and `E:\Modding\_JC3grab\wiring\epe\*.xml`; the three archive reads
+WEAPON_WIRING.jsonl,WEAPONS.md}` and `E:\Modding\JustCause3\_grab\wiring\epe\*.xml`; the three archive reads
 (the two `.ftunec`/`.stringlookup` extractions, one vehicle weapon tune on each side) used
 `jc3grab.read_entry` + `jc3detail.inner_files` read-only against `D:\Games`. Nothing was written
 outside this file.

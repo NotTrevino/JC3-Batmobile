@@ -1,7 +1,7 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-grip-branch.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/build-grip-branch.md
 ONLY: freebuff
 EST: 50
 BRIEF: hand-written 2026-11-08
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-handling-values.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/wheel-grip-fleet-census.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/rc5-handling-values.md, E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/wheel-grip-fleet-census.md
 Create the tyre grip branch as its own tree so tyre retunes never touch the handling merge. From Builds/bm-RC5-handling's scaffold pattern (see tmp/freebuff/reports/rc5-handling-values.md) write Tools/scripts/rc5_grip.py (--write, --check) producing Builds/bm-RC5-grip with exactly these cells: arcade friction (T-R1, target 3.0), wheel friction_type (T-G5, target 2) and the slip pair 0.1 and 0.05 (T-S5), after comparing each against the census range of Research/JC3Grab/GRIP_CENSUS.md from hdl-04. Include a tuning table at the top of the script mapping each cell to the takes it moves (A3 radius, A4 lock time, A5 braking, A7 drift) so that later fix iterations change one number from one place. Register the branch under Working/RC5/branches/ using the format of reports/rc5-scaffold-and-merge-script.md. Never edit any bm-RC4 tree or the game folder. Done check: --check reads every cell back through the built .toc slice and prints the three values; any clamp is recorded.
-Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.
+Shared rules: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

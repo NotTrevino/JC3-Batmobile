@@ -23,7 +23,7 @@ import jc3index  # noqa: E402
 import jc3detail  # noqa: E402
 import jc3wiring  # noqa: E402
 
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/JustCause3/_grab")
 GAME = os.environ.get("JC3_GAME", jc3index.DEFAULT_GAME)
 CACHE = os.path.join(RAW, "wiring", "epe")
 OUT = os.path.join(ROOT, "tmp", "freebuff", "G2-17_probe.json")

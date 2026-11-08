@@ -96,7 +96,7 @@ and in card order (`| B-24 | M | T-1 | T-ST2, T-ST3 … T-G4 |`).
 
 ```
 $ python Tools/scripts/t_rows.py build
-E:\Modding\JC3-Batmobile\Working\Translation\T_ROWS.jsonl: 199 rows, 35 edits over 16 rows
+E:\Modding\JustCause3\JC3-Batmobile\Working\Translation\T_ROWS.jsonl: 199 rows, 35 edits over 16 rows
 
 $ python Tools/scripts/t_rows.py check
 ledger 199 rows | edit 16 next 99 keep 39 epe 26 re-read 0 blocked 11 out 1 superseded 7 | edits 35 over 16 rows
@@ -187,7 +187,7 @@ hidden:
 ## 9. Reproduce
 
 ```bash
-cd "E:/Modding/JC3-Batmobile"
+cd "E:/Modding/JustCause3/JC3-Batmobile"
 python Tools/scripts/t_rows.py build
 python Tools/scripts/status_audit.py --write
 python Tools/scripts/audit_compromises_t.py --write

@@ -74,7 +74,7 @@ out["constants"] = {k: vc.get(k) for k in (
     "plane_common.engine_shut_down_delay_s")}
 
 cache = [json.load(open(p, encoding="utf-8"))
-         for p in sorted(glob.glob("E:/Modding/_JC3grab/entities/*.ee.json"))]
+         for p in sorted(glob.glob("E:/Modding/JustCause3/_grab/entities/*.ee.json"))]
 groups = collections.Counter()
 common_files = set()
 for d in cache:

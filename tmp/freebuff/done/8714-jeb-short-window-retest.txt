@@ -1,6 +1,6 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/jeb-short-window-retest.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/jeb-short-window-retest.md
 ONLY: freebuff
 EST: 50
 BRIEF: hand-written 2026-11-06
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/jeb-vs-qwen-calibration.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/jeb-vs-qwen-calibration.md
 The report found Jeb's training limit (2,048 prompt tokens) cut 118 of 190 snippets. Re-test Jeb on windows that FIT: in Tools/scripts/chase/jeb_judge.py build the state from a trimmed window (about 12 disassembly lines or 600 tokens centred on the matching store, keeping the annotate comment) instead of the whole snippet, re-run the 38 calibration cases (one judge server at a time; Jeb is E:/AI/agent_jebadiah-9b-q5.bat on port 8081), sweep thresholds on the stored P(true) and report recall and false positives next to Qwen. Back up jeb_judge.py first. State plainly whether Jeb beats Qwen with short windows; if it does not, say so and keep Qwen the default.

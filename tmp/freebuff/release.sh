@@ -1,6 +1,6 @@
 #!/bin/bash
 # Releases gated work: G2X once G2-20 and G2-27 are done; T cards once G2X is done (per the tracker).
-B=E:/Modding/JC3-Batmobile/tmp/freebuff; BL=E:/Modding/JC3-Batmobile/GRAB_BACKLOG.md
+B=E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff; BL=E:/Modding/JustCause3/JC3-Batmobile/GRAB_BACKLOG.md
 log(){ echo "$(date -Is) release: $*" >> $B/keeper.log; }
 done_row(){ grep -qE "^\| $1 \| done" $BL; }
 put(){ # move task file $1 (basename) into queue from wherever it is; drop its stale report

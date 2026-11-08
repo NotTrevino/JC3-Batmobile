@@ -10,7 +10,7 @@ Inputs (read-only):
 |---|---:|
 | shader reflection headers `Tools/JCMR-src/assets/jc3/shaders/*.fb.txt` | 961 |
 | headers declaring `CarPaintStaticMaterialParams` (the paint family) | 12 |
-| `CarPaintMM` blocks in `E:/Modding/_gamedata/JC3grab/b13b/unpacked/**/*.rbm` | 399 in 163 files |
+| `CarPaintMM` blocks in `E:/Modding/_shared/gamedata/JC3grab/b13b/unpacked/**/*.rbm` | 399 in 163 files |
 | uniform records (`Research/BatmobileGrab/UNIFORM_RECORDS.json`) | 6943 |
 
 Skipped `.rbm` files (the shared codec stops at `GeneralMkIII`; reported, not guessed): 

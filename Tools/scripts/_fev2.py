@@ -1,9 +1,9 @@
 """Locate the FSB-ref field: compare trailing layouts across found event records."""
 import struct
 
-p = r"E:\Modding\JC3-Batmobile\Working\Audio\jc3bank\sound\fmod_banks\vehicles.bank"
+p = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\jc3bank\sound\fmod_banks\vehicles.bank"
 d = open(p, "rb").read()
-evs = [l.strip() for l in open(r"E:\Modding\JC3-Batmobile\Working\Audio\serpente_fmod_events.txt")]
+evs = [l.strip() for l in open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\serpente_fmod_events.txt")]
 targets = {bytes.fromhex(g.strip("{}").replace("-", "")) for g in evs}
 recs = []
 o = 0

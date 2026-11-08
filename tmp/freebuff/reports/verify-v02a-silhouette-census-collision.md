@@ -217,7 +217,7 @@ Direct evidence for the shipped y floor, from the collision gate: `body0_hull.mi
 ## 7. Reproduce
 
 ```bash
-cd /e/Modding/JC3-Batmobile
+cd /e/Modding/JustCause3/JC3-Batmobile
 python Tools/scripts/v02a_rc4.py --gate silhouette    # §1 (also reads RC2's geometry.json)
 python Tools/scripts/v02a_rc4.py --gate census        # §2
 python Tools/scripts/v02a_rc4.py --gate interaction   # §3

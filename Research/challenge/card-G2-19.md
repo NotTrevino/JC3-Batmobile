@@ -3,7 +3,7 @@
 Written 2026-10-30. Read-only review: nothing in `GRAB_BACKLOG.md`, `MODLOG.md`, `Research/`,
 `Tools/` or any game file was modified; the only file written is this one. No game was launched,
 nothing was written to `D:\Games`, nothing was committed, no secrets read or echoed. The reader's
-own cache under `E:\Modding\_JC3grab\wiring\epe\` gained decoded `.xml` files as a side effect of
+own cache under `E:\Modding\JustCause3\_grab\wiring\epe\` gained decoded `.xml` files as a side effect of
 `jc3wiring.decode_epe` / `jc3hkx` — that is the documented cache location (R10), not a project file.
 
 **In scope:** `GRAB_BACKLOG.md` §0.5 (R1–R14), the G2-19 card (line 682), the §12 row (line 1302),
@@ -378,6 +378,6 @@ pose", "`entry.driver` places Rico", "hull centre is the comparison quantity", "
 
 **Reproduce.** Probes read `Research/JC3Grab/{INDEX.jsonl,SEAT.json,INTERACTION.json,PARTS_TABLE.jsonl}`,
 `Research/BatmobileGrab/SOCKETS_JC3.json` + `COCKPIT.md`, the cached graphs in
-`E:\Modding\_JC3grab\wiring\epe\*.xml`, the 232 JSONs in `E:\Modding\_JC3grab\entities\`, and — through
+`E:\Modding\JustCause3\_grab\wiring\epe\*.xml`, the 232 JSONs in `E:\Modding\JustCause3\_grab\entities\`, and — through
 `jc3grab.read_entry` only — `rico_base.afsmb`, `rico_base.asb` and seven `.physicsc` bundles from
 `D:\Games`. Nothing was written outside this file.

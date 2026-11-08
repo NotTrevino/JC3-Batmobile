@@ -3,7 +3,7 @@
 Scope: `Research/BatmobileGrab/FOOTAGE.md` §6 rows **F-57 … F-64**, all `UNKNOWN` with reason
 `VALUE-NATIVE`. Read-only chasing: no existing document edited, no game launched, nothing
 committed. Only new files: `Tools/scripts/chase/chase08_cdo.py` and
-`E:/Modding/_BmAKgrab/chase/value_cdo_08.json`.
+`E:/Modding/ArkhamKnight/_grab/chase/value_cdo_08.json`.
 
 **Result: 4 of 8 FOUND, 4 STILL UNKNOWN.** Four values are serialised — not in any vehicle
 archetype (which is what G1-21 read) but in the **class default object**
@@ -32,7 +32,7 @@ The reader is `Tools/scripts/chase/chase08_cdo.py`. It opens the shipped package
 `Default__<Class>` export's property-tag stream and matches the card's BmSDK offsets:
 
 ```
-$ python Tools/scripts/chase/chase08_cdo.py --dump --json E:/Modding/_BmAKgrab/chase/value_cdo_08.json
+$ python Tools/scripts/chase/chase08_cdo.py --dump --json E:/Modding/ArkhamKnight/_grab/chase/value_cdo_08.json
 package BmGame.upk: version 863, licensee 32995, 84813 names, 3268 imports, 177031 exports
 
 === RVehicleSimBatmobile (export 129778, class None, 176 B)
@@ -56,7 +56,7 @@ package BmGame.upk: version 863, licensee 32995, 84813 names, 3268 imports, 1770
        AirControlTurnTorque               @0x017c  absent
 
 no export named SVehicle or Default__SVehicle
-wrote E:/Modding/_BmAKgrab/chase/value_cdo_08.json
+wrote E:/Modding/ArkhamKnight/_grab/chase/value_cdo_08.json
 ```
 
 Offset identity is not invented: `Research/BatmobileGrab/BMSDK_OFFSETS.json` →
@@ -180,7 +180,7 @@ zero-init) and cannot be decoded from the shipped packages.
 ## 7. Reproduction
 
 ```
-python Tools/scripts/chase/chase08_cdo.py --dump --json E:/Modding/_BmAKgrab/chase/value_cdo_08.json
+python Tools/scripts/chase/chase08_cdo.py --dump --json E:/Modding/ArkhamKnight/_grab/chase/value_cdo_08.json
 python Tools/scripts/chase/chase08_cdo.py --package "E:/Games/Batman - Arkham Knight/BmGame/CookedPCConsole/Engine.upk" --dump
 python Tools/scripts/chase/chase08_cdo.py --scan
 ```

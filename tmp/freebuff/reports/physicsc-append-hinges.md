@@ -41,7 +41,7 @@ ok: appended objects re-read clean
 
 ```
 python Tools/scripts/jc3hkx.py check --entity __no_entity__ --file Working/Collision/batmobile_hinged.physicsc
-file E:/Modding/JC3-Batmobile/Working/Collision/batmobile_hinged.physicsc: 340,992 B, 432 objects, 54 hulls (convex 54), 18 mesh shapes, 22 compounds (112 instances, 22 AABB unions exact), station sets 0, sha256 6eef93c6b2f747e6...
+file E:/Modding/JustCause3/JC3-Batmobile/Working/Collision/batmobile_hinged.physicsc: 340,992 B, 432 objects, 54 hulls (convex 54), 18 mesh shapes, 22 compounds (112 instances, 22 AABB unions exact), station sets 0, sha256 6eef93c6b2f747e6...
 entities 0 | files 0 | objects 0 | hulls 0 (convex 0) | mesh shapes 0 | geometries 0 | compounds 0 (0 instances, 0 with a part index, 0 AABB unions exact) | station sets 0 (land_global agree 0, disagree 0)
 check ok
 ```

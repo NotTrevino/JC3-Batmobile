@@ -3,7 +3,7 @@
 # (11 edits, 4 files) via _apply_move.py, then internalizes the 4 edited
 # modules in the .toc (they were external). MODLOG sect 69.
 $ErrorActionPreference = 'Stop'
-$root = 'E:\Modding\JC3-Batmobile'
+$root = 'E:\Modding\JustCause3\JC3-Batmobile'
 $py = 'uv'
 $g  = "$root\Tools\Gibbed"
 $ee = 'v0300_car_kensington_sportsmuscle_civilian_01.ee'

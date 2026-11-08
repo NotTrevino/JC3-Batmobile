@@ -8,7 +8,7 @@ def fnv1(s):
     return h
 
 pairs = [(l.split("\t")[0].strip().upper(), l.split("\t")[1].strip())
-         for l in open(r"E:\Modding\JC3-Batmobile\Research\Arkham Knight SFX\Arkham Knight SFX\batman_bnk\bnk\hashlist.txt",
+         for l in open(r"E:\Modding\JustCause3\JC3-Batmobile\Research\Arkham Knight SFX\Arkham Knight SFX\batman_bnk\bnk\hashlist.txt",
                        encoding="utf-8", errors="replace").read().splitlines() if "\t" in l]
 print("pairs:", len(pairs))
 ok = tot = 0
@@ -19,7 +19,7 @@ for h, n in pairs:
 print("FNV-1(lower) reproduces hashlist: %d/%d" % (ok, tot))
 
 # which hashlist names are SFX WAD entries vs bank-only?
-census = {r["hash"]: r for r in json.load(open(r"E:\Modding\JC3-Batmobile\Working\Audio\sfx_census.json"))}
+census = {r["hash"]: r for r in json.load(open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\sfx_census.json"))}
 bml = [(h, n) for h, n in pairs if n.startswith("BML_") or n.startswith("VEH_") or "Batmobile" in n]
 print("== BML/VEH/Batmobile names: in-SFX-WAD vs bank-only")
 for h, n in sorted(bml, key=lambda x: x[1]):
@@ -28,9 +28,9 @@ for h, n in sorted(bml, key=lambda x: x[1]):
 
 # extract Turbo + Batmobile WEMs
 CK = r"E:\Games\Batman - Arkham Knight\BmGame\CookedPCConsole\SFX"
-outd = r"E:\Modding\JC3-Batmobile\Working\Audio\hashid"
+outd = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\hashid"
 os.makedirs(outd, exist_ok=True)
-CLI = r"E:\Modding\JC3-Batmobile\Tools\vgmstream-win64\vgmstream-cli.exe"
+CLI = r"E:\Modding\JustCause3\JC3-Batmobile\Tools\vgmstream-win64\vgmstream-cli.exe"
 for h, wad in [("EC2FD42B", "SFX_1.wad"), ("E7BD5AD0", "SFX_1.wad")]:
     f = open(os.path.join(CK, wad), "rb")
     assert f.read(4) == b"WWAD"

@@ -34,7 +34,7 @@ Usage:
   python jc3wiring.py --check     # re-read the archives, compare rows and the md
   python jc3wiring.py dump <substring>   # one entity, weapons + seats + parts
 
-Raw `.epe` XML stays outside the repo in `E:/Modding/_gamedata/JC3grab/wiring/epe/`.
+Raw `.epe` XML stays outside the repo in `E:/Modding/_shared/gamedata/JC3grab/wiring/epe/`.
 """
 from __future__ import annotations
 
@@ -55,7 +55,7 @@ from rbmhdr import hash_jenkins  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(HERE))
 OUT = os.path.join(ROOT, "Research", "JC3Grab")
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/_shared/gamedata/JC3grab")
 GAME = os.environ.get("JC3_GAME", jc3index.DEFAULT_GAME)
 TABLE = "WEAPON_WIRING.jsonl"
 DOC = "WEAPON_WIRING.md"

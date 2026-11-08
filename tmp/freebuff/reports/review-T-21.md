@@ -40,7 +40,7 @@ support yet, and a hedge in the bake target.
 
 ## Check output (verbatim)
 
-Command, from `E:/Modding/JC3-Batmobile`:
+Command, from `E:/Modding/JustCause3/JC3-Batmobile`:
 
 ```
 python Tools/scripts/appearance_plan.py --check
@@ -213,7 +213,7 @@ copy that can only be right when the equality holds — nothing renders the reas
 - No game launched (R6); every build step the plan proposes (POL-2 bake, the routed carriers) is
   unbuilt and therefore unverified.
 - "The ramp files are missing on disk" (rule D10's reason) was not checked: it lives in the
-  `E:\Modding\_BmAKgrab` export, outside this repo, and is taken from the recorded reason.
+  `E:\Modding\ArkhamKnight\_grab` export, outside this repo, and is taken from the recorded reason.
 
 ## Files touched by this review
 

@@ -16,9 +16,9 @@ stage has to close (STAGES.md: compose / clone / author / repack).
 
 Inputs (decoded tables and caches already on disk; no archive is opened):
   * `Research/BatmobileGrab/LIGHTS.json`      the 101 BmAK light entries, 4 packages
-  * `E:/Modding/_gamedata/JC3grab/entities/*.ee.json`  the `VehicleDynamicLights`
+  * `E:/Modding/_shared/gamedata/JC3grab/entities/*.ee.json`  the `VehicleDynamicLights`
     module of every vehicle: `lights[i].<member>` rows, 25 members each
-  * `E:/Modding/_gamedata/JC3grab/detail/*.ee.json`    the `.epe` `SVehicleLight`
+  * `E:/Modding/_shared/gamedata/JC3grab/detail/*.ee.json`    the `.epe` `SVehicleLight`
     presets, the only side that carries `spot_angle` **and** `spot_inner_angle`
   * `Research/JC3Grab/WEAPONS.jsonl`          every weapon tune's member paths
   * `Research/JC3Grab/FX_TABLE.jsonl` / `FX_VOCAB.json`  every `.effc`, its root
@@ -51,7 +51,7 @@ import rbmhdr  # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/_shared/gamedata/JC3grab")
 BMAK = os.path.join(ROOT, "Research", "BatmobileGrab", "LIGHTS.json")
 BMSDK = os.path.join(ROOT, "Research", "BatmobileGrab", "BMSDK_OFFSETS.json")
 WEAPONS = os.path.join(ROOT, "Research", "JC3Grab", "WEAPONS.jsonl")

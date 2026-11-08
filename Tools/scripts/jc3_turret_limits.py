@@ -37,7 +37,7 @@ Usage:
 `--check` re-reads the game archives, rebuilds the document and compares the json
 field-for-field and the md byte-for-byte, then re-runs every oracle in `oracles`.
 
-Read-only: the game install and `E:/Modding/_gamedata/` are only read. Nothing here
+Read-only: the game install and `E:/Modding/_shared/gamedata/` are only read. Nothing here
 touches `Builds/`.
 """
 from __future__ import annotations

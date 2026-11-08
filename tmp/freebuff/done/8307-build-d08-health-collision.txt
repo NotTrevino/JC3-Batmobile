@@ -1,8 +1,8 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-d08-health-collision.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/build-d08-health-collision.md
 ONLY: freebuff
 EST: 55
 BRIEF: hand-written 2026-11-06
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-d05-entity-graph.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/apply-keep-audit-fixes-systems.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/apply-collision-and-audio-leads.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/build-d05-entity-graph.md, E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/apply-keep-audit-fixes-systems.md, E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/apply-collision-and-audio-leads.md
 Build steps B-09 and B-10: the private health module with the updated damage values from the keep audit, and the collision for the body (use the BmAK driving collision if collision-where and apply-collision-and-audio-leads found it, otherwise the existing convex hull plan). Use bm_health.py, bm_collision.py, bm_colhull.py into Builds/bm-RC4-damage-collision. Run damage_audit.py --build, damage_predict.py table, jc3hkx.py check; report hits-to-kill and hull union deviation versus the body bounding box.
 
 Updated by review 8299: the drivable collision is decoded — Physics.Batmobile_V3_Physics = 2 bodies / 3 boxes / 1 constraint (chassis 690.305x374.536x207.5 @ (9,0,106.75) and 679.585x345.688x103.5 @ (0,0,79); pod 166.177x189.365x39.8 @ (-30.5,0,93.25) at 4.000 deg). Use T22_REOPEN.md + t22_reopen.py --check, not the old convex-hull plan and not the '3 boxes + 56 convex' premise still in t16_collision_keepaudit.json. The 5 cm gate is against the chassis boxes and the pod; 62 donor bodies stay, 2 shapes are missing, 0 of 54 hull slots are free, the 1 constraint is a named omission. Health: max_health 36000 licensed for bm-009 and bm-RC2; thresholds 4000/4000/1050/250; 61 parts / 19 types with 4 fallbacks.

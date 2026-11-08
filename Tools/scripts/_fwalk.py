@@ -1,7 +1,7 @@
 """Walk nested LISTs: TRAN->instrument->WAIT->sound->FSB."""
 import struct
 
-P = r"E:\Modding\JC3-Batmobile\Working\Audio\jc3bank\sound\fmod_banks\vehicles.bank"
+P = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\jc3bank\sound\fmod_banks\vehicles.bank"
 d = open(P, "rb").read()
 
 def walk(o, depth=0, maxdepth=6):

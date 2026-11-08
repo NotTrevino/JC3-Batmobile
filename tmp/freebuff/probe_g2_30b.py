@@ -1,10 +1,10 @@
 """G2-30 probe 2: is the data section fully partitioned by typed objects?  Which hull is which part?"""
 import sys
 
-sys.path.insert(0, r"E:/Modding/JC3-Batmobile/Tools/scripts")
+sys.path.insert(0, r"E:/Modding/JustCause3/JC3-Batmobile/Tools/scripts")
 import jc3hkx  # noqa: E402
 
-PATH = (r"E:/Modding/JC3-Batmobile/Builds/test-091/aaf/models/jc_vehicles/01_land/"
+PATH = (r"E:/Modding/JustCause3/JC3-Batmobile/Builds/test-091/aaf/models/jc_vehicles/01_land/"
         r"v0300_car_kensington_sportsmuscle/sportsmuscle.physicsc")
 blob = open(PATH, "rb").read()
 pf = jc3hkx.Packfile(blob)

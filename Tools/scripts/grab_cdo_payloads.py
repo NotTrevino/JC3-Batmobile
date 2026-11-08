@@ -41,7 +41,7 @@ import upk_read as U  # noqa: E402
 
 COOKED = r"E:\Games\Batman - Arkham Knight\BmGame\CookedPCConsole"
 STARTUP = os.path.join(COOKED, "Startup.upk")
-SDK = r"E:\Modding\_tools\BmSDK-AK"
+SDK = r"E:\Modding\_shared\tools\BmSDK-AK"
 SDK_GENERATED = os.path.join(SDK, "src", "BmSDK", "Generated")
 OUT_MD = os.path.join(ROOT, "Research", "BatmobileGrab", "CDO_PAYLOADS.md")
 

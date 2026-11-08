@@ -29,7 +29,7 @@ None of these change an address. All of them change what a reader believes is st
 Command:
 
 ```
-cd /e/Modding/JC3-Batmobile && uv run --with pefile --with capstone --with numpy python Tools/scripts/grab_controls_native.py --check 2>&1 | tee /tmp/g302c_check.txt; echo "EXIT=${PIPESTATUS[0]}"
+cd /e/Modding/JustCause3/JC3-Batmobile && uv run --with pefile --with capstone --with numpy python Tools/scripts/grab_controls_native.py --check 2>&1 | tee /tmp/g302c_check.txt; echo "EXIT=${PIPESTATUS[0]}"
 ```
 
 Output (verbatim):

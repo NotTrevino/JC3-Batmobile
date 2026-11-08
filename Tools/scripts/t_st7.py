@@ -37,7 +37,7 @@ import jc3adf  # noqa: E402
 from upk_read import Package, best_walk  # noqa: E402
 
 GAME = r"E:\Games\Batman - Arkham Knight\BmGame\CookedPCConsole"
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/_shared/gamedata/JC3grab")
 OUT_MD = os.path.join(ROOT, "Working", "Translation", "T_ST7_FLOOR.md")
 OUT_JSON = os.path.join(ROOT, "Working", "Translation", "T_ST7_FLOOR.json")
 
@@ -465,7 +465,7 @@ def render(doc: dict) -> str:
         "- Batman packages: `E:/Games/Batman - Arkham Knight/BmGame/CookedPCConsole/Playable_Batmobile*.upk`,",
         "  export `SimulationModel` (class `RVehicleSimBatmobile`), read with `Tools/scripts/upk_read.py`.",
         "- Offset name: `Research/BatmobileGrab/BMSDK_OFFSETS.json` (`SVehicleSimCar.SteerSpeed`, offset 220).",
-        "- JC3 entities: `E:/Modding/_gamedata/JC3grab/entities/*.json` (grab decode) and the unpacked",
+        "- JC3 entities: `E:/Modding/_shared/gamedata/JC3grab/entities/*.json` (grab decode) and the unpacked",
         "  `*_land_steering.vmodc` module bytes, read with `Tools/scripts/jc3adf.py`.",
         "",
     ]

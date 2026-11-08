@@ -84,7 +84,7 @@ possible.
 
 `--write` extracted **197 files** (21,487,435 B)`, "**197 files**" and the byte total are correct for
 the record (`WEAPONS.jsonl` `extracted` = 197 entries, 197 unique paths, all present, all sha1-match).
-But `E:/Modding/_JC3grab/weapons` holds **226 files**: 29 extra ones left behind by the 17:04 run
+But `E:/Modding/JustCause3/_grab/weapons` holds **226 files**: 29 extra ones left behind by the 17:04 run
 (mtime `2026-10-26 17:04`; the recorded set is 17:31/17:32). They are re-attributed copies of the
 same bytes under the wrong id, e.g.
 

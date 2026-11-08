@@ -2,7 +2,7 @@
 the JC3 vehicle sample slots a same-length swap can fill.
 
 Read-only: reads Research/BatmobileGrab/AUDIO_FEATURES.json (event -> WEM, media measurements,
-vgmstream loop lines) and the 48 kHz WAVs under E:\\Modding\\_gamedata\\BmAKgrab\\audio\\wav,
+vgmstream loop lines) and the 48 kHz WAVs under E:\\Modding\\_shared\\gamedata\\BmAKgrab\\audio\\wav,
 then measures brightness and narrowband tonality with numpy. No bank, no game file, no
 install is written.
 
@@ -33,7 +33,7 @@ from scipy.io import wavfile
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 FEATURES = os.path.join(ROOT, "Research", "BatmobileGrab", "AUDIO_FEATURES.json")
 OUT_JSON = os.path.join(ROOT, "Research", "BatmobileGrab", "ENGINE_TURBINE_SCAN.json")
-WAV_DIR = r"E:\Modding\_gamedata\BmAKgrab\audio\wav"
+WAV_DIR = r"E:\Modding\_shared\gamedata\BmAKgrab\audio\wav"
 
 GROUPS = ("engine", "battle-mode")
 BANDS = ((20, 300), (300, 1200), (1200, 2000), (2000, 10000), (10000, 16000))

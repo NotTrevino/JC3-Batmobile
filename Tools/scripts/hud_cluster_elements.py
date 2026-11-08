@@ -14,7 +14,7 @@ cluster element with name, position and size. This tool answers mechanically:
 
 Output: Working/Translation/HUD_CLUSTER_ELEMENTS.md   (--write, --check)
 
-Read-only. The game install, `E:/Modding/_gamedata` and every other task's files are opened for
+Read-only. The game install, `E:/Modding/_shared/gamedata` and every other task's files are opened for
 reading only; nothing is launched or written outside this tool's own output.
 """
 from __future__ import annotations
@@ -31,7 +31,7 @@ SPEC = "Research/BatmobileGrab/HUD_SPEC.json"
 REPORT = "tmp/freebuff/reports/G3-HUD-CLUSTER.md"
 CLUSTER = "Working/HUD/CLUSTER.json"
 OUT_MD = "Working/Translation/HUD_CLUSTER_ELEMENTS.md"
-AS3_GLOB = ("E:/Modding/_gamedata/BmAKgrab_early/hud/modules/HudModuleBatmobile/dec/scripts/"
+AS3_GLOB = ("E:/Modding/_shared/gamedata/BmAKgrab_early/hud/modules/HudModuleBatmobile/dec/scripts/"
             "HudModuleBatmobile_fla/*.as")
 
 # every cluster element the report names, with the words it uses for it
@@ -537,13 +537,13 @@ def render(d: dict) -> str:
     w("## 7. Reproduce")
     w("")
     w("```")
-    w("cd E:/Modding/JC3-Batmobile")
+    w("cd E:/Modding/JustCause3/JC3-Batmobile")
     w("uv run python Tools/scripts/hud_cluster_elements.py --write   # writes this file")
     w("uv run python Tools/scripts/hud_cluster_elements.py --check   # re-derives, byte-compares")
     w("```")
     w("")
     w(f"Inputs, read-only: `{SPEC}`, `{REPORT}`, `{CLUSTER}`, and the decompiled")
-    w("`HudModuleBatmobile` AS3 under `E:/Modding/_gamedata` (the same movie `Tools/scripts/bmak_hud.py`")
+    w("`HudModuleBatmobile` AS3 under `E:/Modding/_shared/gamedata` (the same movie `Tools/scripts/bmak_hud.py`")
     w("carves from `BmGame.upk`). No game launched or attached (INSTRUCTIONS.md §3).")
     w("")
     return "\n".join(L)

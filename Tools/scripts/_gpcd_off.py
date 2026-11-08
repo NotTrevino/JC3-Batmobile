@@ -16,7 +16,7 @@ for k in ["BattleModeThrottleSpeed", "VehicleTransmission.DifferentialRatio",
           "BoostTorqueVSpeedCurve", "StandardTorqueVSpeedCurve", "BattleModeVSpeedCurve"]:
     print("%-42s %s" % (k, props.get(k, "ABSENT")))
 
-A = r"E:\Modding\JC3-Batmobile\Working\Audio"
+A = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio"
 CK = r"E:\Games\Batman - Arkham Knight\BmGame\CookedPCConsole"
 d = open(os.path.join(CK, "Playable_Batmobile_SF.upk"), "rb").read()
 s = open(os.path.join(A, "bm_stream.bin"), "rb").read()

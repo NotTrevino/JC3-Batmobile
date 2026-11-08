@@ -77,7 +77,7 @@ adds "Whether a class default supplies it is not claimed" — which is precisely
   editor/entities/jc_explosions/gen_explosion_5m_nodamage.ftune not in the build or the index".
   `Research/JC3Grab/FORCEPULSE.md:131` documents the same tune's `0 / 5` numbers, but it is a pulse,
   not a bullet, so it cannot settle a bullet's impulse behaviour.
-- `UV-4` — the only settling path is `E:/Modding/_JC3grab/weapons/w603_mediumtank_mgun/…`, **outside
+- `UV-4` — the only settling path is `E:/Modding/JustCause3/_grab/weapons/w603_mediumtank_mgun/…`, **outside
   the project** and outside this brief's `Research/` + `Working/` scope, so it is `NOT_CHECKED`, not
   `ABSENT`. `UR-1` names the same directory for its first half but is recorded `ABSENT` because its
   other settling file (`gen_explosion_5m_nodamage.ftune`) is missing from the repository; the

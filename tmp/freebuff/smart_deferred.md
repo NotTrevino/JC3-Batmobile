@@ -5,7 +5,7 @@
 `STATUS: done`. It does not exist (`ls` says so, `ls tmp/freebuff/reports/ | grep -i chase` is empty,
 and no MODLOG line names it), so the single-member mode, `smart_search.py`, the calibration set and the
 scores were **not** attempted. `Tools/scripts/chase/chase_candidates.py` (443 lines) and
-`chase_judge.py` (100 lines) are on disk and `E:\Modding\_BmAKgrab\chase\` holds the earlier chase
+`chase_judge.py` (100 lines) are on disk and `E:\Modding\ArkhamKnight\_grab\chase\` holds the earlier chase
 outputs, so the missing piece is the chase-candidates report, not the code.
 
 **What was written instead:** `tmp/freebuff/reports/smart-search.md` with

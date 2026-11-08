@@ -16,7 +16,7 @@ ban); installing it is an **operator pre-step**, done once, through this receipt
 | target | `D:\Games\Just Cause 3\xinput9_1_0.dll` | the operator's install |
 
 Address check: every address in the cloned source (`C:\Users\...` source at
-`E:/Modding/_tools/jc3-console-thingy`) was checked against the operator's 2025-12-17 `JustCause3.exe`
+`E:/Modding/_shared/tools/jc3-console-thingy`) was checked against the operator's 2025-12-17 `JustCause3.exe`
 with `Tools/scripts/exe_addr_check.py` — function starts and call sites match (operator relay,
 2026-11-08).
 

@@ -64,7 +64,7 @@ MD_NAME = "T12_AUDIO.md"
 GAME = os.environ.get("JC3_GAME", jc3index.DEFAULT_GAME)
 CLI = os.path.join(ROOT, "Tools", "vgmstream-win64", "vgmstream-cli.exe")
 VEH_BANK = os.path.join(ROOT, "Working", "Audio", "jc3bank", "sound", "fmod_banks", "vehicles.bank")
-WPN_BANK = os.path.join("E:/Modding/_gamedata/JC3grab/audio", "weapons.bank")
+WPN_BANK = os.path.join("E:/Modding/_shared/gamedata/JC3grab/audio", "weapons.bank")
 BANKS = {"vehicles": (VEH_BANK, "sound/fmod_banks/vehicles.bank"),
          "weapons": (WPN_BANK, "sound/fmod_banks/weapons.bank")}
 AUDIO_DEV = {"vehicles": 5}
@@ -1038,7 +1038,7 @@ def render_md(d: dict) -> str:
           "python Tools/scripts/t12_audio.py dump rows|slots|curves",
           "```", "",
           "The first run extracts `sound/fmod_banks/weapons.bank` (177,586,080 B) to",
-          "`E:\\Modding\\_gamedata\\JC3grab\\audio\\` — game data stays outside the repo (R10).", ""]
+          "`E:\\Modding\\_shared\\gamedata\\JC3grab\\audio\\` — game data stays outside the repo (R10).", ""]
     return "\n".join(L)
 
 

@@ -1,8 +1,8 @@
 """All 45 Serpente GUIDs: bank, epe name, TMLN markers, nested track GUIDs."""
 import json, os, re, struct
 
-A = r"E:\Modding\JC3-Batmobile\Working\Audio"
-J = r"E:\Modding\JC3-Batmobile\Working\Audio\jc3bank\sound\fmod_banks"
+A = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio"
+J = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\jc3bank\sound\fmod_banks"
 evs = [l.strip() for l in open(os.path.join(A, "serpente_fmod_events.txt"))]
 
 # epe name -> guid

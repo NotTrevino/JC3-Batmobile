@@ -18,7 +18,7 @@ The JC3 side does hold a tensor, and this pass decodes it end to end, but the bo
 - `Research/BatmobileGrab/INERTIA.json` — generated data (all 56 donor blocks, 107 fleet box rows, bias ladder, oracles, verdict, UNKNOWNs).
 - `tmp/freebuff/scratch/inertia_bmak_probe1.py`, `tmp/freebuff/scratch/inertia_g3_10c_log.txt` — scratch probe and raw command log (both in `scratch/`).
 
-Read-only inputs touched: `E:/Games/Batman - Arkham Knight/BmGame/CookedPCConsole/BmGame.upk`, `Builds/test-091/.../sportsmuscle.physicsc`, `E:/Modding/_gamedata/JC3grab/hkx/all` (41 files). No game process, no install folder write, no existing `Research/` or `Tools/` file edited.
+Read-only inputs touched: `E:/Games/Batman - Arkham Knight/BmGame/CookedPCConsole/BmGame.upk`, `Builds/test-091/.../sportsmuscle.physicsc`, `E:/Modding/_shared/gamedata/JC3grab/hkx/all` (41 files). No game process, no install folder write, no existing `Research/` or `Tools/` file edited.
 
 ## Values, labelled
 
@@ -48,7 +48,7 @@ Read-only inputs touched: `E:/Games/Batman - Arkham Knight/BmGame/CookedPCConsol
 ### 1) BmAK property tags of the four `RB_BodySetup` exports and the PhysicsAsset
 
 ```
-$ cd "E:/Modding/JC3-Batmobile" && uv run python tmp/freebuff/scratch/inertia_bmak_probe1.py
+$ cd "E:/Modding/JustCause3/JC3-Batmobile" && uv run python tmp/freebuff/scratch/inertia_bmak_probe1.py
 ======================================================================
 export 169750  Batmobile_V3_Physics.RB_BodySetup  class RB_BodySetup  size 2698  offset 0xc1ddb82
 tags 4 end 0x71c reason end
@@ -115,7 +115,7 @@ export 169751 agg 143 first words ['0x0', '0x1', '0xa', '0x1333f']
 ### 3) Write the outputs
 
 ```
-$ cd "E:/Modding/JC3-Batmobile" && uv run --with numpy --with scipy python Tools/scripts/grab_inertia.py --write
+$ cd "E:/Modding/JustCause3/JC3-Batmobile" && uv run --with numpy --with scipy python Tools/scripts/grab_inertia.py --write
 wrote INERTIA.md and INERTIA.json
 bmak: exports 4, mass/inertia properties True, tensor-shaped triples 0
 jc3: blocks 56, bodies 1651, boxes 107, box-oracle 0/107, hull-oracle 0/107

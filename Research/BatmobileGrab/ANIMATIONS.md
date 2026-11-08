@@ -31,19 +31,19 @@ The old `MECHANICS.md` animation table shows `AnimSequence` in the name column b
 
 | label | package | object | export | track bones | sequences | PSA / node | keyframes / controls |
 |---|---|---|---|---|---|---|---|
-| Batmobile | Playable_Batmobile_SF | AnimSet `BM_Batmobile_Chassis` | 242 | 139 | 5 | `E:/Modding/_BmAKgrab/anims/Playable_Batmobile_SF/AnimSet/BM_Batmobile_Chassis.psa` | `Playable_Batmobile_SF__BM_Batmobile_Chassis.json` |
-| Batmobile | Playable_Batmobile_SF | AnimSet `Batmobile_V2_Pose_States` | 243 | 173 | 32 | `E:/Modding/_BmAKgrab/anims/Playable_Batmobile_SF/AnimSet/Batmobile_V2_Pose_States.psa` | `Playable_Batmobile_SF__Batmobile_V2_Pose_States.json` |
-| MK2 | Playable_BatmobileMK2_SF | AnimSet `BM_Batmobile_Chassis` | 241 | 139 | 5 | `E:/Modding/_BmAKgrab/anims/Playable_BatmobileMK2_SF/AnimSet/BM_Batmobile_Chassis.psa` | `Playable_BatmobileMK2_SF__BM_Batmobile_Chassis.json` |
-| MK2 | Playable_BatmobileMK2_SF | AnimSet `Batmobile_V2_Pose_States` | 242 | 173 | 32 | `E:/Modding/_BmAKgrab/anims/Playable_BatmobileMK2_SF/AnimSet/Batmobile_V2_Pose_States.psa` | `Playable_BatmobileMK2_SF__Batmobile_V2_Pose_States.json` |
-| Funhouse | Playable_BatmobileFunhouse_SF | AnimSet `BM_Batmobile_Chassis` | 239 | 139 | 5 | `E:/Modding/_BmAKgrab/anims/Playable_BatmobileFunhouse_SF/AnimSet/BM_Batmobile_Chassis.psa` | `Playable_BatmobileFunhouse_SF__BM_Batmobile_Chassis.json` |
-| Funhouse | Playable_BatmobileFunhouse_SF | AnimSet `Batmobile_V2_Pose_States` | 240 | 173 | 32 | `E:/Modding/_BmAKgrab/anims/Playable_BatmobileFunhouse_SF/AnimSet/Batmobile_V2_Pose_States.psa` | `Playable_BatmobileFunhouse_SF__Batmobile_V2_Pose_States.json` |
-| Joker | Playable_BatmobileJoker_SF | AnimSet `BM_Batmobile_Chassis` | 478 | 139 | 5 | `E:/Modding/_BmAKgrab/anims/Playable_BatmobileJoker_SF/AnimSet/BM_Batmobile_Chassis.psa` | `Playable_BatmobileJoker_SF__BM_Batmobile_Chassis.json` |
-| Joker | Playable_BatmobileJoker_SF | AnimSet `Camera` | 479 | 1 | 70 | `E:/Modding/_BmAKgrab/anims/Playable_BatmobileJoker_SF/AnimSet/Camera.psa` | `Playable_BatmobileJoker_SF__Camera.json` |
-| Joker | Playable_BatmobileJoker_SF | AnimSet `Phase2_JK` | 480 | 131 | 14 | `E:/Modding/_BmAKgrab/anims/Playable_BatmobileJoker_SF/AnimSet/Phase2_JK.psa` | `Playable_BatmobileJoker_SF__Phase2_JK.json` |
-| Joker | Playable_BatmobileJoker_SF | AnimSet `Phase2_JK_FACE` | 481 | 143 | 3 | `E:/Modding/_BmAKgrab/anims/Playable_BatmobileJoker_SF/AnimSet/Phase2_JK_FACE.psa` | `Playable_BatmobileJoker_SF__Phase2_JK_FACE.json` |
-| Joker | Playable_BatmobileJoker_SF | AnimSet `Phase2_TG` | 482 | 89 | 14 | `E:/Modding/_BmAKgrab/anims/Playable_BatmobileJoker_SF/AnimSet/Phase2_TG.psa` | `Playable_BatmobileJoker_SF__Phase2_TG.json` |
-| Joker | Playable_BatmobileJoker_SF | AnimSet `Batmobile_V2_Pose_States` | 483 | 173 | 32 | `E:/Modding/_BmAKgrab/anims/Playable_BatmobileJoker_SF/AnimSet/Batmobile_V2_Pose_States.psa` | `Playable_BatmobileJoker_SF__Batmobile_V2_Pose_States.json` |
-| Joker | Playable_BatmobileJoker_SF | AnimSet `Batwing_Rescue` | 484 | 25 | 4 | `E:/Modding/_BmAKgrab/anims/Playable_BatmobileJoker_SF/AnimSet/Batwing_Rescue.psa` | `Playable_BatmobileJoker_SF__Batwing_Rescue.json` |
+| Batmobile | Playable_Batmobile_SF | AnimSet `BM_Batmobile_Chassis` | 242 | 139 | 5 | `E:/Modding/ArkhamKnight/_grab/anims/Playable_Batmobile_SF/AnimSet/BM_Batmobile_Chassis.psa` | `Playable_Batmobile_SF__BM_Batmobile_Chassis.json` |
+| Batmobile | Playable_Batmobile_SF | AnimSet `Batmobile_V2_Pose_States` | 243 | 173 | 32 | `E:/Modding/ArkhamKnight/_grab/anims/Playable_Batmobile_SF/AnimSet/Batmobile_V2_Pose_States.psa` | `Playable_Batmobile_SF__Batmobile_V2_Pose_States.json` |
+| MK2 | Playable_BatmobileMK2_SF | AnimSet `BM_Batmobile_Chassis` | 241 | 139 | 5 | `E:/Modding/ArkhamKnight/_grab/anims/Playable_BatmobileMK2_SF/AnimSet/BM_Batmobile_Chassis.psa` | `Playable_BatmobileMK2_SF__BM_Batmobile_Chassis.json` |
+| MK2 | Playable_BatmobileMK2_SF | AnimSet `Batmobile_V2_Pose_States` | 242 | 173 | 32 | `E:/Modding/ArkhamKnight/_grab/anims/Playable_BatmobileMK2_SF/AnimSet/Batmobile_V2_Pose_States.psa` | `Playable_BatmobileMK2_SF__Batmobile_V2_Pose_States.json` |
+| Funhouse | Playable_BatmobileFunhouse_SF | AnimSet `BM_Batmobile_Chassis` | 239 | 139 | 5 | `E:/Modding/ArkhamKnight/_grab/anims/Playable_BatmobileFunhouse_SF/AnimSet/BM_Batmobile_Chassis.psa` | `Playable_BatmobileFunhouse_SF__BM_Batmobile_Chassis.json` |
+| Funhouse | Playable_BatmobileFunhouse_SF | AnimSet `Batmobile_V2_Pose_States` | 240 | 173 | 32 | `E:/Modding/ArkhamKnight/_grab/anims/Playable_BatmobileFunhouse_SF/AnimSet/Batmobile_V2_Pose_States.psa` | `Playable_BatmobileFunhouse_SF__Batmobile_V2_Pose_States.json` |
+| Joker | Playable_BatmobileJoker_SF | AnimSet `BM_Batmobile_Chassis` | 478 | 139 | 5 | `E:/Modding/ArkhamKnight/_grab/anims/Playable_BatmobileJoker_SF/AnimSet/BM_Batmobile_Chassis.psa` | `Playable_BatmobileJoker_SF__BM_Batmobile_Chassis.json` |
+| Joker | Playable_BatmobileJoker_SF | AnimSet `Camera` | 479 | 1 | 70 | `E:/Modding/ArkhamKnight/_grab/anims/Playable_BatmobileJoker_SF/AnimSet/Camera.psa` | `Playable_BatmobileJoker_SF__Camera.json` |
+| Joker | Playable_BatmobileJoker_SF | AnimSet `Phase2_JK` | 480 | 131 | 14 | `E:/Modding/ArkhamKnight/_grab/anims/Playable_BatmobileJoker_SF/AnimSet/Phase2_JK.psa` | `Playable_BatmobileJoker_SF__Phase2_JK.json` |
+| Joker | Playable_BatmobileJoker_SF | AnimSet `Phase2_JK_FACE` | 481 | 143 | 3 | `E:/Modding/ArkhamKnight/_grab/anims/Playable_BatmobileJoker_SF/AnimSet/Phase2_JK_FACE.psa` | `Playable_BatmobileJoker_SF__Phase2_JK_FACE.json` |
+| Joker | Playable_BatmobileJoker_SF | AnimSet `Phase2_TG` | 482 | 89 | 14 | `E:/Modding/ArkhamKnight/_grab/anims/Playable_BatmobileJoker_SF/AnimSet/Phase2_TG.psa` | `Playable_BatmobileJoker_SF__Phase2_TG.json` |
+| Joker | Playable_BatmobileJoker_SF | AnimSet `Batmobile_V2_Pose_States` | 483 | 173 | 32 | `E:/Modding/ArkhamKnight/_grab/anims/Playable_BatmobileJoker_SF/AnimSet/Batmobile_V2_Pose_States.psa` | `Playable_BatmobileJoker_SF__Batmobile_V2_Pose_States.json` |
+| Joker | Playable_BatmobileJoker_SF | AnimSet `Batwing_Rescue` | 484 | 25 | 4 | `E:/Modding/ArkhamKnight/_grab/anims/Playable_BatmobileJoker_SF/AnimSet/Batwing_Rescue.psa` | `Playable_BatmobileJoker_SF__Batwing_Rescue.json` |
 | Batmobile | Playable_Batmobile_SF | AnimTree `Batmobile_Skel_Ctrl_Door` | 244 | - | - | children: Child | skel controls: 3 |
 | MK2 | Playable_BatmobileMK2_SF | AnimTree `Batmobile_Skel_Ctrl_Door` | 243 | - | - | children: Child | skel controls: 3 |
 | Joker | Playable_BatmobileJoker_SF | AnimTree `Batwing_Vehicle_AnimTree` | 485 | - | - | children: Child | skel controls: 0 |
@@ -1344,26 +1344,26 @@ PSA `ANIMINFO` is sorted by name and truncates `Name[64]` to 63 characters. `gra
 `--write` exports one PSA per AnimSet with umodel and writes a compact JSON per set to:
 
 ```text
-E:/Modding/_BmAKgrab/anims/keys
+E:/Modding/ArkhamKnight/_grab/anims/keys
 ```
 
 Format: `position_m` is metres in the PSK/UE3 frame (PSA centimetres / 100), `rotation_quat` is `(x, y, z, w)`, `rotation_euler_xyz_rad` is Euler XYZ in radians (`R = Rz * Ry * Rx`). `null` means the set's `RemoveTracks` config says that component was not exported - it is not a zero. `frame_times_s` is `i / PSA rate`; no resampling or root-motion interpretation is applied.
 
 | label | AnimSet | sequences | keyframe file | config |
 |---|---|---|---|---|
-| Batmobile | `BM_Batmobile_Chassis` | 5 | `Playable_Batmobile_SF__BM_Batmobile_Chassis.json` | `E:/Modding/_BmAKgrab/anims/Playable_Batmobile_SF/AnimSet/BM_Batmobile_Chassis.config` |
-| Batmobile | `Batmobile_V2_Pose_States` | 32 | `Playable_Batmobile_SF__Batmobile_V2_Pose_States.json` | `E:/Modding/_BmAKgrab/anims/Playable_Batmobile_SF/AnimSet/Batmobile_V2_Pose_States.config` |
-| MK2 | `BM_Batmobile_Chassis` | 5 | `Playable_BatmobileMK2_SF__BM_Batmobile_Chassis.json` | `E:/Modding/_BmAKgrab/anims/Playable_BatmobileMK2_SF/AnimSet/BM_Batmobile_Chassis.config` |
-| MK2 | `Batmobile_V2_Pose_States` | 32 | `Playable_BatmobileMK2_SF__Batmobile_V2_Pose_States.json` | `E:/Modding/_BmAKgrab/anims/Playable_BatmobileMK2_SF/AnimSet/Batmobile_V2_Pose_States.config` |
-| Funhouse | `BM_Batmobile_Chassis` | 5 | `Playable_BatmobileFunhouse_SF__BM_Batmobile_Chassis.json` | `E:/Modding/_BmAKgrab/anims/Playable_BatmobileFunhouse_SF/AnimSet/BM_Batmobile_Chassis.config` |
-| Funhouse | `Batmobile_V2_Pose_States` | 32 | `Playable_BatmobileFunhouse_SF__Batmobile_V2_Pose_States.json` | `E:/Modding/_BmAKgrab/anims/Playable_BatmobileFunhouse_SF/AnimSet/Batmobile_V2_Pose_States.config` |
-| Joker | `BM_Batmobile_Chassis` | 5 | `Playable_BatmobileJoker_SF__BM_Batmobile_Chassis.json` | `E:/Modding/_BmAKgrab/anims/Playable_BatmobileJoker_SF/AnimSet/BM_Batmobile_Chassis.config` |
-| Joker | `Camera` | 70 | `Playable_BatmobileJoker_SF__Camera.json` | `E:/Modding/_BmAKgrab/anims/Playable_BatmobileJoker_SF/AnimSet/Camera.config` |
-| Joker | `Phase2_JK` | 14 | `Playable_BatmobileJoker_SF__Phase2_JK.json` | `E:/Modding/_BmAKgrab/anims/Playable_BatmobileJoker_SF/AnimSet/Phase2_JK.config` |
-| Joker | `Phase2_JK_FACE` | 3 | `Playable_BatmobileJoker_SF__Phase2_JK_FACE.json` | `E:/Modding/_BmAKgrab/anims/Playable_BatmobileJoker_SF/AnimSet/Phase2_JK_FACE.config` |
-| Joker | `Phase2_TG` | 14 | `Playable_BatmobileJoker_SF__Phase2_TG.json` | `E:/Modding/_BmAKgrab/anims/Playable_BatmobileJoker_SF/AnimSet/Phase2_TG.config` |
-| Joker | `Batmobile_V2_Pose_States` | 32 | `Playable_BatmobileJoker_SF__Batmobile_V2_Pose_States.json` | `E:/Modding/_BmAKgrab/anims/Playable_BatmobileJoker_SF/AnimSet/Batmobile_V2_Pose_States.config` |
-| Joker | `Batwing_Rescue` | 4 | `Playable_BatmobileJoker_SF__Batwing_Rescue.json` | `E:/Modding/_BmAKgrab/anims/Playable_BatmobileJoker_SF/AnimSet/Batwing_Rescue.config` |
+| Batmobile | `BM_Batmobile_Chassis` | 5 | `Playable_Batmobile_SF__BM_Batmobile_Chassis.json` | `E:/Modding/ArkhamKnight/_grab/anims/Playable_Batmobile_SF/AnimSet/BM_Batmobile_Chassis.config` |
+| Batmobile | `Batmobile_V2_Pose_States` | 32 | `Playable_Batmobile_SF__Batmobile_V2_Pose_States.json` | `E:/Modding/ArkhamKnight/_grab/anims/Playable_Batmobile_SF/AnimSet/Batmobile_V2_Pose_States.config` |
+| MK2 | `BM_Batmobile_Chassis` | 5 | `Playable_BatmobileMK2_SF__BM_Batmobile_Chassis.json` | `E:/Modding/ArkhamKnight/_grab/anims/Playable_BatmobileMK2_SF/AnimSet/BM_Batmobile_Chassis.config` |
+| MK2 | `Batmobile_V2_Pose_States` | 32 | `Playable_BatmobileMK2_SF__Batmobile_V2_Pose_States.json` | `E:/Modding/ArkhamKnight/_grab/anims/Playable_BatmobileMK2_SF/AnimSet/Batmobile_V2_Pose_States.config` |
+| Funhouse | `BM_Batmobile_Chassis` | 5 | `Playable_BatmobileFunhouse_SF__BM_Batmobile_Chassis.json` | `E:/Modding/ArkhamKnight/_grab/anims/Playable_BatmobileFunhouse_SF/AnimSet/BM_Batmobile_Chassis.config` |
+| Funhouse | `Batmobile_V2_Pose_States` | 32 | `Playable_BatmobileFunhouse_SF__Batmobile_V2_Pose_States.json` | `E:/Modding/ArkhamKnight/_grab/anims/Playable_BatmobileFunhouse_SF/AnimSet/Batmobile_V2_Pose_States.config` |
+| Joker | `BM_Batmobile_Chassis` | 5 | `Playable_BatmobileJoker_SF__BM_Batmobile_Chassis.json` | `E:/Modding/ArkhamKnight/_grab/anims/Playable_BatmobileJoker_SF/AnimSet/BM_Batmobile_Chassis.config` |
+| Joker | `Camera` | 70 | `Playable_BatmobileJoker_SF__Camera.json` | `E:/Modding/ArkhamKnight/_grab/anims/Playable_BatmobileJoker_SF/AnimSet/Camera.config` |
+| Joker | `Phase2_JK` | 14 | `Playable_BatmobileJoker_SF__Phase2_JK.json` | `E:/Modding/ArkhamKnight/_grab/anims/Playable_BatmobileJoker_SF/AnimSet/Phase2_JK.config` |
+| Joker | `Phase2_JK_FACE` | 3 | `Playable_BatmobileJoker_SF__Phase2_JK_FACE.json` | `E:/Modding/ArkhamKnight/_grab/anims/Playable_BatmobileJoker_SF/AnimSet/Phase2_JK_FACE.config` |
+| Joker | `Phase2_TG` | 14 | `Playable_BatmobileJoker_SF__Phase2_TG.json` | `E:/Modding/ArkhamKnight/_grab/anims/Playable_BatmobileJoker_SF/AnimSet/Phase2_TG.config` |
+| Joker | `Batmobile_V2_Pose_States` | 32 | `Playable_BatmobileJoker_SF__Batmobile_V2_Pose_States.json` | `E:/Modding/ArkhamKnight/_grab/anims/Playable_BatmobileJoker_SF/AnimSet/Batmobile_V2_Pose_States.config` |
+| Joker | `Batwing_Rescue` | 4 | `Playable_BatmobileJoker_SF__Batwing_Rescue.json` | `E:/Modding/ArkhamKnight/_grab/anims/Playable_BatmobileJoker_SF/AnimSet/Batwing_Rescue.config` |
 
 The keyframe files are deliberately outside `Research/` (they are large and derived); `--check` compares the two committed records and reports whether the 13 files are present, but does not re-serialize the keyframes.
 

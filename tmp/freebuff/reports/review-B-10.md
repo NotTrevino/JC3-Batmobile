@@ -47,7 +47,7 @@ Fix the two wrong numbers and record the door/gap item, and the card stands.
 
 ## Check output (verbatim)
 
-The card's `--check` command, re-run in `E:/Modding/JC3-Batmobile`:
+The card's `--check` command, re-run in `E:/Modding/JustCause3/JC3-Batmobile`:
 
 ```
 $ python Tools/scripts/bm_collision.py --check

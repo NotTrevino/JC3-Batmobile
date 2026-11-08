@@ -13,8 +13,8 @@ Not edited: `LIGHTS.md`, `T_ROWS.jsonl`, `bm_lightrig.json`, `t14_lights.json`, 
 ## Verbatim commands
 
 ```
-cd "E:/Modding/JC3-Batmobile" && PYTHONIOENCODING=utf-8 python Tools/scripts/t_light_entry11.py --write
-cd "E:/Modding/JC3-Batmobile" && PYTHONIOENCODING=utf-8 python Tools/scripts/t_light_entry11.py --check
+cd "E:/Modding/JustCause3/JC3-Batmobile" && PYTHONIOENCODING=utf-8 python Tools/scripts/t_light_entry11.py --write
+cd "E:/Modding/JustCause3/JC3-Batmobile" && PYTHONIOENCODING=utf-8 python Tools/scripts/t_light_entry11.py --check
 ```
 
 `--write` -> exit 0, 26/26 oracles, doc written. `--check` -> exit 0, doc byte-identical.

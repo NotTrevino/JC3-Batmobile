@@ -45,11 +45,11 @@ report is the journal entry. No other task's file was edited.
 
 ```text
 $ python Tools/scripts/t17_fx.py --write
-E:\Modding\JC3-Batmobile\Working\Translation\t17_fx.json: 17 rows (17 chosen, 0 named omissions), FX codes 4/4
-E:\Modding\JC3-Batmobile\Working\Translation\T13_FX.md: 189 lines
+E:\Modding\JustCause3\JC3-Batmobile\Working\Translation\t17_fx.json: 17 rows (17 chosen, 0 named omissions), FX codes 4/4
+E:\Modding\JustCause3\JC3-Batmobile\Working\Translation\T13_FX.md: 189 lines
 
 $ python Tools/scripts/t_rows.py build
-E:\Modding\JC3-Batmobile\Working\Translation\T_ROWS.jsonl: 198 rows, 35 edits over 16 rows
+E:\Modding\JustCause3\JC3-Batmobile\Working\Translation\T_ROWS.jsonl: 198 rows, 35 edits over 16 rows
 
 $ python Tools/scripts/status_audit.py --write
 UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 3630   # cp1252 console, after the file was written
@@ -99,7 +99,7 @@ check ok                                                                    jc3h
 $ python Tools/scripts/jc3fx.py check
 checked 57187 files | problems 0                                            jc3fx=0
 $ python Tools/scripts/t3_fleet.py --check
-E:\Modding\JC3-Batmobile\Working\Translation\T3_FLEET.md: 41 members over 156 vehicles
+E:\Modding\JustCause3\JC3-Batmobile\Working\Translation\T3_FLEET.md: 41 members over 156 vehicles
 check ok                                                                    t3_fleet=0
 $ python Tools/scripts/status_audit.py --check
 STATUS.md is current                                                        status_check=0

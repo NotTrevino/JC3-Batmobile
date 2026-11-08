@@ -2,7 +2,7 @@
 import struct
 import numpy as np
 
-P = r"E:\Modding\JC3-Batmobile\Working\Audio\jc3bank\sound\fmod_banks\vehicles.bank"
+P = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\jc3bank\sound\fmod_banks\vehicles.bank"
 d = open(P, "rb").read()
 f5 = d.find(b"FSB5")
 ver, n, shdr, ntl = struct.unpack_from("<IIII", d, f5 + 4)

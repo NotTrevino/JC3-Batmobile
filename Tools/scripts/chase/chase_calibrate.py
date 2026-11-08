@@ -12,9 +12,9 @@ precision). Every case is therefore one of three kinds:
             package (`FOOTAGE.md`/`MODES.json`, "not serialised") or a multi-point curve / config
             struct whose value is not a scalar. Every found=true on a negative is a false positive.
 
-`--build` writes E:/Modding/_gamedata/BmAKgrab/chase/calib.jsonl (game-derived, outside the repo) from those
+`--build` writes E:/Modding/_shared/gamedata/BmAKgrab/chase/calib.jsonl (game-derived, outside the repo) from those
 records; it is not hand-edited. `--run` calls `smart_search.py` once per case and stores its JSON
-under E:/Modding/_gamedata/BmAKgrab/chase/calib_runs/<judge>/<prompt-version>/<case>.json; `--score` reads those
+under E:/Modding/_shared/gamedata/BmAKgrab/chase/calib_runs/<judge>/<prompt-version>/<case>.json; `--score` reads those
 files; `--render` writes the generated block of the report; `--check` re-scores, re-renders and
 compares against the report on disk *and* re-verifies every known value against its provenance, so
 no number in the report is typed (R11).
@@ -59,7 +59,7 @@ import smart_search as ss      # noqa: E402
 BAT = os.path.join(ROOT, "Research", "BatmobileGrab")
 CHASE = os.path.join(BAT, "chase")
 MODES = os.path.join(BAT, "MODES.json")
-OUT_DIR = os.path.join(r"E:\Modding\_gamedata\BmAKgrab", "chase")
+OUT_DIR = os.path.join(r"E:\Modding\_shared\gamedata\BmAKgrab", "chase")
 CALIB = os.path.join(OUT_DIR, "calib.jsonl")
 RUNS = os.path.join(OUT_DIR, "calib_runs")
 REPORT = os.path.join(ROOT, "tmp", "freebuff", "reports", "smart-search.md")

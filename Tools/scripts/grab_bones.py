@@ -27,14 +27,14 @@ What is measured
   bone.  This is the cut list B-02 needs.
 * Per-bone owned faces per global material slot, per LOD; split faces per slot and the split
   faces touching each bone.  Face indices are written outside the repository:
-  `E:\\Modding\\_gamedata\\BmAKgrab\\bones\\<bone>.npy` as int32 rows `(lod, face, slot, kind)`, kind
+  `E:\\Modding\\_shared\\gamedata\\BmAKgrab\\bones\\<bone>.npy` as int32 rows `(lod, face, slot, kind)`, kind
   0 = owned, 1 = split-touching.  A split face can appear in more than one bone file; the
   `_split.npy` file lists every split face once.
 
 Outputs:
   Research/BatmobileGrab/BONES.json
   Research/BatmobileGrab/BONES.md
-  E:\\Modding\\_gamedata\\BmAKgrab\\bones\\*.npy
+  E:\\Modding\\_shared\\gamedata\\BmAKgrab\\bones\\*.npy
 
 Usage:
   python Tools/scripts/grab_bones.py --write
@@ -71,8 +71,8 @@ PACKAGE = "Playable_Batmobile_SF"
 MESH = "Batmobile_V2"
 GAME = Path(os.environ.get(
     "BMAK_GAME_DIR", r"E:\Games\Batman - Arkham Knight\BmGame\CookedPCConsole"))
-MESH_ROOT = Path(os.environ.get("BMAK_MESH_DIR", r"E:\Modding\_gamedata\BmAKgrab\meshes"))
-BONE_ROOT = Path(os.environ.get("BMAK_BONE_DIR", r"E:\Modding\_gamedata\BmAKgrab\bones"))
+MESH_ROOT = Path(os.environ.get("BMAK_MESH_DIR", r"E:\Modding\_shared\gamedata\BmAKgrab\meshes"))
+BONE_ROOT = Path(os.environ.get("BMAK_BONE_DIR", r"E:\Modding\_shared\gamedata\BmAKgrab\bones"))
 MESH_DIR = MESH_ROOT / PACKAGE / PACKAGE / "SkeletalMesh3"
 LOD_FILES = (
     ("Batmobile_V2.pskx", 0),
@@ -979,7 +979,7 @@ def render_md(doc: dict) -> str:
     add("")
     add("## 7. Face index files (outside the repository)")
     add("")
-    add("`E:\\Modding\\_gamedata\\BmAKgrab\\bones\\<bone>.npy`; 180 files, int32, one row per face:")
+    add("`E:\\Modding\\_shared\\gamedata\\BmAKgrab\\bones\\<bone>.npy`; 180 files, int32, one row per face:")
     add("")
     add("```text")
     add("(lod, face_index, slot, kind)   kind 0 = owned, 1 = split-touching")
@@ -1040,7 +1040,7 @@ def render_md(doc: dict) -> str:
     add("To recreate the missing LODs, run `umodel.exe -export -psk -lods -notex` from a "
         "temporary directory containing an `umodel.cfg` with `ExportMeshLods = true`, then copy "
         "`Batmobile_V2_Lod1.pskx` and `Batmobile_V2_Lod2.psk` beside `Batmobile_V2.pskx` in "
-        "`E:\\Modding\\_gamedata\\BmAKgrab\\meshes\\Playable_Batmobile_SF\\Playable_Batmobile_SF\\SkeletalMesh3\\`.")
+        "`E:\\Modding\\_shared\\gamedata\\BmAKgrab\\meshes\\Playable_Batmobile_SF\\Playable_Batmobile_SF\\SkeletalMesh3\\`.")
     add("")
     add("* The optional glTF cross-check reads `...SkeletalMesh3/gltf/Batmobile_V2.gltf` and "
         "`.bin`; it is evidence only, not a pivot source. If those files are removed, re-run "

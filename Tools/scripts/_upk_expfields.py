@@ -1,8 +1,8 @@
 """Dump AKEvent export serials: FObjectExport field map + property stream."""
 import struct
 
-stream = open(r"E:\Modding\JC3-Batmobile\Working\Audio\bm_stream.bin", "rb").read()
-names = open(r"E:\Modding\JC3-Batmobile\Working\Audio\bm_names.txt").read().splitlines()
+stream = open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\bm_stream.bin", "rb").read()
+names = open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\bm_names.txt").read().splitlines()
 eoff = 0x1C9F9 - 0x369
 ST = 72
 

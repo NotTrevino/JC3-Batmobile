@@ -5,7 +5,7 @@ import json
 import os
 import re
 
-RAW = r"E:/Modding/_JC3grab"
+RAW = r"E:/Modding/JustCause3/_grab"
 files = sorted(glob.glob(os.path.join(RAW, "entities", "*.ee.json")))
 print("cache files", len(files))
 mods = 0

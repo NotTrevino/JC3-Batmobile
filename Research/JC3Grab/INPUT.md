@@ -226,7 +226,7 @@ Entity-class census from the decoded `.ee` dumps (derived: the second token of t
 
 ## What the vehicle side names (decoded byte census)
 
-All **232** decoded vehicle `.ee` dumps in `E:/Modding/_gamedata/JC3grab\entities` were searched for the literals below.
+All **232** decoded vehicle `.ee` dumps in `E:/Modding/_shared/gamedata/JC3grab\entities` were searched for the literals below.
 
 | literal | entity files containing it | example |
 |---|---|---|

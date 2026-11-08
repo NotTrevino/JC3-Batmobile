@@ -4,7 +4,7 @@
 The live runs are over (operator: no more in-game testing), so every remaining question is answered
 from one of three read-only sources, or recorded as UNKNOWN with the missing input named:
 
-  * the BmSDK-AK generated layouts  (E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated/**)
+  * the BmSDK-AK generated layouts  (E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Generated/**)
     -> field names, offsets, bit masks, element types, class sizes, the marshalling size rule
   * the decoded bind tables         (Research/BatmobileGrab/CONTROLS.md, CONTROLS_CONSUMERS.json,
                                      BINDINGS_MERGED.json)
@@ -37,7 +37,7 @@ RUNTIME = RES / "runtime"
 MD_OUT = RES / "SAMPLER_UNKNOWNS.md"
 PREV = RES / "SAMPLER_UNKNOWNS_G3-02f.md"
 
-BMSDK = Path("E:/Modding/_tools/BmSDK-AK/src/BmSDK")
+BMSDK = Path("E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK")
 GEN = BMSDK / "Generated"
 # sha256 of the previous SAMPLER_UNKNOWNS.md (the G3-02f-offline card), preserved verbatim as
 # SAMPLER_UNKNOWNS_G3-02f.md so this card never destroys another card's generated file.
@@ -708,7 +708,7 @@ def build(a: dict) -> str:
     w("")
     w("| source | what it gave |")
     w("|---|---|")
-    w("| `E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated/BmGame/RPlayerInput.g.cs` | byte names 768-799 and offsets |")
+    w("| `E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Generated/BmGame/RPlayerInput.g.cs` | byte names 768-799 and offsets |")
     w("| `.../Generated/BmGame/RVehicleBatmobileBase.g.cs` | the 31 masked bools at +4568, `BoostingOut`, `CurrentThrottle` |")
     w("| `.../Generated/BmGame/RBatmobileMissileLauncher.g.cs` | array offsets and element types |")
     w("| `.../Generated/BmGame/RPlayerController.g.cs` | eject / quick-gadget fields |")

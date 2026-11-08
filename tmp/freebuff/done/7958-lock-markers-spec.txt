@@ -1,8 +1,8 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/lock-markers-spec.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/lock-markers-spec.md
 ONLY: freebuff
 EST: 35
 BRIEF: hand-written 2026-11-08
 Lock markers, per the operator:
 - Battle mode: an orange diamond that appears instantly.
 - Pursuit mode: a diamond with the centres of its edges missing, plus a circle that appears large and shrinks as the lock completes, so pursuit has a visible lock time. MissileLockOnDuration 2.0 s may govern that circle.
-From the BmAK HUD movies (HUD.md, HUD_INTERFACES.json; FFDec in E:/Modding/_tools/ffdec), export both markers' shapes, colours and animation frames (the circle-shrink timeline, in frames and fps) to E:/Modding/_BmAKgrab/hud/lock/. Then write the drawing spec for the hook overlay (brief 7985): shape, colour, the start and end circle radius, the timing, and how a target's screen position is projected. Report only. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.
+From the BmAK HUD movies (HUD.md, HUD_INTERFACES.json; FFDec in E:/Modding/_shared/tools/ffdec), export both markers' shapes, colours and animation frames (the circle-shrink timeline, in frames and fps) to E:/Modding/ArkhamKnight/_grab/hud/lock/. Then write the drawing spec for the hook overlay (brief 7985): shape, colour, the start and end circle radius, the timing, and how a target's screen position is projected. Report only. Shared rules: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

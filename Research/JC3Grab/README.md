@@ -949,11 +949,11 @@ looped, 1 rate), wave refs 0, LandAudio 2 members, weapons 4, horn 178 / radio 0
 | `TRAFFIC.md` / `TRAFFIC.json` | **traffic, AI and spawning of `v0300`** (G2-29): the 11,751-file / 7.7 GB donor-name scan and its 17 hits, the 86-record ground spawn table and every other spawn table, the 31 traffic rules / 41 selector match, the Rebel Drop / chop-shop / level-rule spawn sites, the tag census and the traffic verdict for D-6, with `--check` rebuilding both |
 | `JC3_AUDIO.md` / `JC3_AUDIO_EVENTS.json` | **the vehicle audio system** (G2-24): the FEV v56 container and its sections, the 45 donor events with bank, ordinal and `.epe` role, the three banks' event/tune/sound/wave/parameter census, the event -> tune -> sample chain (event -> tune stored on both sides, tune -> wave not stored), the 649-sample census (codec, rate, channels, loop points) through vgmstream, the four weapon ids' sound wiring, the fleet horn/radio census, `LandAudio`'s two members, and the three ship routes, with `--check` rebuilding both |
 | `FX_TABLE.jsonl` (22 MB) | one row per effect/camera/trim file: container, source archive path, path, size, root class, row count, array census digest, row digest |
-| `E:\Modding\_JC3grab\entities\*.json` | raw module decodes, 233 files / 266 MB — **outside the repo** |
-| `E:\Modding\_JC3grab\detail\*.json` | raw `.epe` graphs + `.rbm` headers, 233 files / 48 MB |
-| `E:\Modding\_JC3grab\geom\*.json + .bin` | **440 MB** of decoded positions (float32 ×3) and indices (u16), one pair per entity |
-| `E:\Modding\_JC3grab\phys\*.json` | raw station extraction, 233 files |
-| `E:\Modding\_JC3grab\hkx\out\*.json` | decoded packfiles, 233 files / 141 MB: every hull vertex, plane and index, mesh AABBs, geometries — **outside the repo** |
+| `E:\Modding\JustCause3\_grab\entities\*.json` | raw module decodes, 233 files / 266 MB — **outside the repo** |
+| `E:\Modding\JustCause3\_grab\detail\*.json` | raw `.epe` graphs + `.rbm` headers, 233 files / 48 MB |
+| `E:\Modding\JustCause3\_grab\geom\*.json + .bin` | **440 MB** of decoded positions (float32 ×3) and indices (u16), one pair per entity |
+| `E:\Modding\JustCause3\_grab\phys\*.json` | raw station extraction, 233 files |
+| `E:\Modding\JustCause3\_grab\hkx\out\*.json` | decoded packfiles, 233 files / 141 MB: every hull vertex, plane and index, mesh AABBs, geometries — **outside the repo** |
 | `G2X.md` / `G2X.json` | **the G2 exit gate** (G2X): all 75 feature codes of backlog §1 with the file that carries each one and a needle that must still be in it (67 carriers) or the census surface and must-not-exist words that prove the absence (8), the 24 G2 readers and the P0-2 census re-run as subprocesses with their verdict lines, and the §11 decisions each row's *value* waits on, with `--check` re-deriving every row and re-running every reader |
 
 Game bytes never enter the repo; only derived tables and paths do.

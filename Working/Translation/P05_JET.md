@@ -76,7 +76,7 @@ exports, 5,490 exports; `MK2`, `Funhouse`, `Joker` — 28, 28, 26 jet names, 0 j
 | largest jet-bone rotation | **20.014°** (`Batmobile_Rig_Jet_Nozzle_003`, `Batmobile_V2_Back_Door_Close`) | decoded | same |
 | boost-time nozzle rotation | 15.553°–16.725° in `Batmobile_V2_Jet_Boost` (export 214) | decoded | same |
 | jet nodes in the 3 AnimTrees | **none** — controls are `RSkelControl_FeedConstraint` on `Flappy_Rear_Door_Btm_Rot` and the two `*_Power_Cell` bones | decoded | `ANIMATIONS.json` `trees[]`, `P02_CANNON.md` §3 |
-| jet skeletal-control class in BmAK | **none** — the vehicle controls are `RSkelControlBatmobileWheel`, `RSkelControlDeformVehicle`, `RSkelControlTankTrack` (plus constraint controls) | decoded | `E:/Modding/_tools/BmSDK-AK/.../RBatmobileBooster` family listing |
+| jet skeletal-control class in BmAK | **none** — the vehicle controls are `RSkelControlBatmobileWheel`, `RSkelControlDeformVehicle`, `RSkelControlTankTrack` (plus constraint controls) | decoded | `E:/Modding/_shared/tools/BmSDK-AK/.../RBatmobileBooster` family listing |
 | spin animation for the jet | **none** — every jet motion is bounded (≤20.014°) or translational | decoded | census above |
 | "spin driven by `engine_rpm`" | donor inference, no BmAK driver found | **derived** | `PARTS_ANIM_COVERAGE.md:44` |
 
@@ -90,7 +90,7 @@ sequences), not a turbine spin: it is bounded, returns, and no control node or R
 | BmAK sim RPM member | `SVehicle.EngineRPM`, `FloatProperty`, offset **1840** | decoded | `Research/BatmobileGrab/BMSDK_OFFSETS.json` (class `SVehicle`, file `SVehicle.g.cs`) |
 | BmAK RPM curve | `RVehicleSimCar.EngineRPMCurve`, `FInterpCurveFloat`, offset **280** | decoded | same (class `RVehicleSimCar`) |
 | member naming the jet | **none** — no `BMSDK_OFFSETS.json` member contains "jet" | decoded | grep of the 41-class dump |
-| `engine_rpm` / `EngineRotatingPart` in the BmAK SDK | **absent** — neither string exists in `BmSDK-AK` | decoded | `grep -rn "engine_rpm\|EngineRotatingPart" E:/Modding/_tools/BmSDK-AK` (0 hits) |
+| `engine_rpm` / `EngineRotatingPart` in the BmAK SDK | **absent** — neither string exists in `BmSDK-AK` | decoded | `grep -rn "engine_rpm\|EngineRotatingPart" E:/Modding/_shared/tools/BmSDK-AK` (0 hits) |
 | RPM consumers in BmAK | audio only (`AudioGetAlternateRPM`, `AudioGetAlternateRPMVector`, `NormalRPMParamArray`) plus the sim curves | decoded | `RBatmobileBooster.g.cs`, `RVehicleBatmobileBase.g.cs` |
 | what would spin a jet bone | nothing in the cooked tables or the SDK dump | **UNKNOWN** (native code not in these files) | see §7 |
 

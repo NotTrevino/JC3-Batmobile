@@ -1,7 +1,7 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-top-speed-branch.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/build-top-speed-branch.md
 ONLY: freebuff
 EST: 50
 BRIEF: hand-written 2026-11-08
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/top-speed-lever-set.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/top-speed-lever-set.md
 Build the top-speed lever set chosen by brief hdl-16 (Working/Translation/HDL_TOPSPEED_SET.json) as a private branch: Builds/bm-RC5-topspeed with Tools/scripts/rc5_topspeed.py (--write, --check). Write the final-drive or gear ratio cells (T-E4, five gears with the first shift at 67 km/h as measured in QA-1), the rpm band cells (T-E1: 800, 2800, 4500) as needed, the speed cap member and any torque change the set chooses. Each cell carries its class from the JSON (lore, derived, tune) into the branch record so release notes can list them. Do not edit drag away from the class fit unless the JSON says so. Include a tuning table at the head of the script mapping every cell to takes A1 and A2. Register under Working/RC5/branches/. Done check: --check reads every cell back through the .toc and recomputes the terminal-speed prediction from the built numbers, matching the JSON to within 1 km/h.
-Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.
+Shared rules: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

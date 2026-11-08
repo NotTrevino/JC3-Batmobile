@@ -612,7 +612,7 @@ def render(d: dict) -> str:
     w("## 6. Reproduce")
     w("")
     w("```")
-    w("cd E:/Modding/JC3-Batmobile")
+    w("cd E:/Modding/JustCause3/JC3-Batmobile")
     w("uv run python Tools/scripts/t_collision_sources.py --write   # writes this file")
     w("uv run python Tools/scripts/t_collision_sources.py --check   # re-derives and byte-compares")
     w("```")

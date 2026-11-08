@@ -42,7 +42,7 @@ exit=0
 
 The per-entity lines are all of the form `[n/53] <entity>: <weapons> weapons, <driver> driver,
 <gunner> gunner`, 53 of them, and the run ends in `PASS` with exit 0. It re-decodes from the
-archives, not from the cached `E:/Modding/_JC3grab/wiring/epe/` XML.
+archives, not from the cached `E:/Modding/JustCause3/_grab/wiring/epe/` XML.
 
 ## Issues
 
@@ -133,7 +133,7 @@ which is exactly where the slot bindings live) — that is a good, honest depart
 | 3 | "the heavy patrol's `mounted_weapon` joins `gunner2`/`point.gunner.right` (1.05 m) and `mounted_weapon_2` to `gunner1`/`point.gunner.left` (1.05 m); the slot order is not the seat order" | `nearest_gunner_seat` in the jsonl for `v1200_boat_capstone_heavypatrol_debug` | **matches**: 1.052 m → `gunner2` index 7, 1.054 m → `gunner1` index 6 |
 | 4 | "the gunner strings match `PARTS_TABLE.jsonl` names … `Turret`/`Cannon` chains" | joined `mount_parts` against `PARTS_TABLE.jsonl` `parts[].n` / `parts[].b` | **matches with one nuance**: `apc_turret_base`=Turret + `apc_weapon_mount_vertical`=Cannon, `technicaljeep_rebel_turret`=Turret + `…_vertical`=Cannon, `armoredjeep_*` the same, `corvette_turret`=Turret + `corvette_gun`=Cannon — but the heavy patrol's **two** parts (`heavypatrol_weapon_mount_l_horizontal` / `_vertical`) are both `Cannon`, so the MODLOG's "those are all `Turret` -> `Cannon` chains" is loose for 2 of the 12 names. The doc itself does not repeat the generalisation, only the per-entity rows, so the doc is fine |
 | 5 | 112 moving-part rows, 300 weapon points, 54 root objects, 21 chassis, primary roots CCar 17 / CAirPlane 9 / CBoat 12 / CHelicopter 14 / CTrain 1 | counted from the jsonl | **all match** (17+9+12+14+1 = 53) |
-| 6 | "`action_1`/`action_2` are `1`/`2` on armed and unarmed cars alike"; `id:D04059E6` is the class-name hash | `E:/Modding/_JC3grab/wiring/epe/v0201_car_capstone_mediumtank_debug.ee.xml` carries `<value name="action_1" type="int">1</value>` and `action_2 … 2`; class-hash property re-check is inside `--check` | **matches**, but note the action numbers are *not* in `WEAPON_WIRING.jsonl` — that claim is prose-only and `--check` cannot re-derive it |
+| 6 | "`action_1`/`action_2` are `1`/`2` on armed and unarmed cars alike"; `id:D04059E6` is the class-name hash | `E:/Modding/JustCause3/_grab/wiring/epe/v0201_car_capstone_mediumtank_debug.ee.xml` carries `<value name="action_1" type="int">1</value>` and `action_2 … 2`; class-hash property re-check is inside `--check` | **matches**, but note the action numbers are *not* in `WEAPON_WIRING.jsonl` — that claim is prose-only and `--check` cannot re-derive it |
 | 7 | "`CLightWeaponComponent` … colour/radius/spot data (30 components on 9 entities)" | the jsonl subcomponents: 30 entries, all named `warning_light`, with `Color` `1,1,1,1`, `Radius` `0.5`, `SpotLight` `1`, `FalloffStart` 1 | **matches** — the colour/radius/spot claim is data-backed, not just a class name |
 
 Corroborating structural check for the card's Done items: no entity in the 53 mixes a driver slot

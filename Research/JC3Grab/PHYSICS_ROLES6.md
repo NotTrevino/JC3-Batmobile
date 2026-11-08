@@ -5,7 +5,7 @@ number from the install and compares.
 Labels: **decoded** = read from bytes at a stated offset; **derived** = arithmetic on
 decoded values with the rule given; **UNKNOWN** = not decoded, with what was tried.
 
-Scope: all 50 `.physicsc` files under `E:/Modding/_gamedata/JC3grab` (50 decoded, 0 skipped),
+Scope: all 50 `.physicsc` files under `E:/Modding/_shared/gamedata/JC3grab` (50 decoded, 0 skipped),
 **494 constraint records** over 3556 bodies (2011 of them with a decoded convex hull, 291 with a
 non-identity transform), and the 45 files that have a `.epe` parts row.
 

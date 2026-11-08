@@ -248,7 +248,7 @@ the two gaps.
 **Claim** (`AUDIO_FEATURES.md` line 3–4):
 
 > "every one of the 447 media ids is decoded to a 48 kHz WAV under
-> `E:\Modding\_BmAKgrab\audio\wav` (outside the repo) and measured."
+> `E:\Modding\ArkhamKnight\_grab\audio\wav` (outside the repo) and measured."
 
 **Test.** The same file's Summary table says `decoded 423`, `decode_errors 24`, and the JSON has
 24 `decode_errors` entries. The two statements cannot both be true.

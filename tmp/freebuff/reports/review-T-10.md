@@ -7,7 +7,7 @@ Sources read: `GRAB_BACKLOG.md` §0.5 (R1–R14, lines 59–79), §7 card T-10 (
 decision register, §12 row `| T-10 | done | …` (line 1319); `MODLOG.md` §"T-10 · Re-open the `out`
 rows with the G2 evidence — done" (lines 12454–12563); outputs `Working/Translation/T10_OPEN_ROWS.md`
 (229 lines), `Working/Translation/T10_OPEN_ROWS.json`, `Tools/scripts/t10_reopen.py`; evidence files
-under `Research/JC3Grab/` and `E:/Modding/_JC3grab/hud/dec`.
+under `Research/JC3Grab/` and `E:/Modding/JustCause3/_grab/hud/dec`.
 
 ## VERDICT: minor issues
 
@@ -130,7 +130,7 @@ the sentence should say "the effect, not the weapon".
 
 **5. The HUD searches are spelling-brittle (`T10_OPEN_ROWS.md:140-141` and the `hud` notes).** The
 must-not word for armour is British `armour`; the data is American. Independently, over
-`E:/Modding/_JC3grab/hud/dec` (260 `.as`, count confirmed): `armour` → 0 files, `armor` → **7 files**
+`E:/Modding/JustCause3/_grab/hud/dec` (260 `.as`, count confirmed): `armour` → 0 files, `armor` → **7 files**
 (all `CHAOS_REWARD_ARMORY` / `gotoAndStop("ARMORY")` in `hud.as` and the settlement-list scripts). The
 conclusion therefore survives — those hits are a chaos-reward icon, not vehicle armour — but the check
 as written could not have caught a field named `armor`. Same class of gap for `enemy_count`
@@ -183,7 +183,7 @@ count rather than a disposition.
 | T-BM1 "`179`" / "-179 .. +179 deg" | `Research/JC3Grab/TURRET.md:10` "constraint 2, pivot (0, 2.2812, 1.1382), axis +Y, **-179 .. +179 deg**", and the per-entity rows `:33,:70,:109,:146,:187,:223` — matches |
 | T-W1 "25 vehicle weapon ids" | `Research/JC3Grab/WEAPONS.md:17` "22 of the 25 ids have their own directory"; no line says 25 elsewhere, so the 25 is that count — matches |
 | "103-class fleet census" and "no sonar class" | `Research/JC3Grab/ENTITIES.md` class inventory: 103 table rows counted programmatically, and 0 rows containing `sonar` — matches |
-| "260 scripts read, 0 hits of `armour`" | `E:/Modding/_JC3grab/hud/dec`: 260 `.as` files found, `armour` 0 files — matches; but `armor` 7 files (all `CHAOS_REWARD_ARMORY`), see issue 5 |
+| "260 scripts read, 0 hits of `armour`" | `E:/Modding/JustCause3/_grab/hud/dec`: 260 `.as` files found, `armour` 0 files — matches; but `armor` 7 files (all `CHAOS_REWARD_ARMORY`), see issue 5 |
 | "9 arguments / 6 arguments, 2 slots" | `Research/JC3Grab/JC3_HUD_WEAPONS.md:5`, `:14`, `:34`, `:53` — matches |
 
 ## Limits of this review

@@ -1,6 +1,6 @@
 """Dump members of a .vmodc: python _members.py <vmodc> [regex-filter]"""
 import re, subprocess, sys, os, tempfile
-GIBBED = r'E:\Modding\JC3-Batmobile\Tools\Gibbed\Gibbed.JustCause3.ConvertAdf.exe'
+GIBBED = r'E:\Modding\JustCause3\JC3-Batmobile\Tools\Gibbed\Gibbed.JustCause3.ConvertAdf.exe'
 vm = sys.argv[1]
 flt = re.compile(sys.argv[2], re.I) if len(sys.argv) > 2 else None
 with tempfile.TemporaryDirectory() as td:

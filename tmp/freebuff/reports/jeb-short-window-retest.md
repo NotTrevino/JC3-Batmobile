@@ -77,7 +77,7 @@ columns did not move. Qwen still finds F35 = 3.0 and Jeb still does not.
 `python Tools/scripts/chase/chase_calibrate.py --sweep 0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9`
 
 ```
-sweep of stored P(true) in E:\Modding\_gamedata\BmAKgrab\chase\calib_runs\jeb_9440028e_v1search (no model call)
+sweep of stored P(true) in E:\Modding\_shared\gamedata\BmAKgrab\chase\calib_runs\jeb_9440028e_v1search (no model call)
 
 | threshold | positive recall | found recall | negatives with a false positive | false-positive verdicts | found=true total |
 |---:|---:|---:|---:|---:|---:|
@@ -96,7 +96,7 @@ best at zero false positives: threshold 0.5 -> positive recall 0/20, found recal
 stored verdicts 190; with warnings 0, of them snippet cut to Jeb's 2,048-token limit 0
 - positive: 106 verdicts, max P(true) 0.781 (P07 exe 0x14016b9d8), verdicts at or above 0.5: 2
 - found: 35 verdicts, max P(true) 0.682 (F7 exe 0x140c93074), verdicts at or above 0.5: 2
-- negative: 49 verdicts, max P(true) 0.407 (N05 E:/Modding/_gamedata/BmAKgrab/chase/sim_cdo_07.json:494), verdicts at or above 0.5: 0
+- negative: 49 verdicts, max P(true) 0.407 (N05 E:/Modding/_shared/gamedata/BmAKgrab/chase/sim_cdo_07.json:494), verdicts at or above 0.5: 0
 ```
 
 There is no threshold that both finds something and stays clean:
@@ -144,7 +144,7 @@ up on the cases Jeb should fire on, flat on the ones it should not — and still
 | P07 | positive | 0.333333 | - | exe 0x14016b9d8 p=0.7806 = '50.0' | neither right (known 0.333333) |
 | F7 | found | 0.05 | - | exe 0x140c93074 p=0.6821 = '89.0' | neither right (known 0.05) |
 | F18 | found | 0.0 | - | exe 0x1403ffc53 p=0.6653 = '2.0' | neither right (known 0.0) |
-| F35 | found | 3.0 | E:/Modding/_BmAKgrab/chase/chase2_defaults.json:151 = '3.0' | - | qwen right (3.0) |
+| F35 | found | 3.0 | E:/Modding/ArkhamKnight/_grab/chase/chase2_defaults.json:151 = '3.0' | - | qwen right (3.0) |
 
 5 case(s) where the two judges disagree
 ```

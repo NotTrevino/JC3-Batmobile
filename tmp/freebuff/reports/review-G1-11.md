@@ -19,7 +19,7 @@ confusion, and no claim contradicted by the data was found.
 
 ## Check output (verbatim)
 
-Command re-run in `E:/Modding/JC3-Batmobile`:
+Command re-run in `E:/Modding/JustCause3/JC3-Batmobile`:
 
 ```
 python Tools/scripts/grab_bones.py --check
@@ -38,7 +38,7 @@ PASS: 180 bones, 1 root, 3 LODs: 299,837 / 144,857 / 21,720 faces; 298,136 / 143
 |---|---|
 | `Research/BatmobileGrab/BONES.json` | exists, 431,273 B; 180 `bones` records with name, parent, `pivot_jc3_m`, `owned_faces`, `owned_faces_by_slot`, `split_touching`, `split_touching_by_slot`, `face_file` |
 | `Research/BatmobileGrab/BONES.md` | exists, 102,117 B, 1,012 lines; sections 1–9 |
-| `E:\Modding\_BmAKgrab\bones\<bone>.npy` | 180 bone files + `_split.npy` = 181 `.npy` files present |
+| `E:\Modding\ArkhamKnight\_grab\bones\<bone>.npy` | 180 bone files + `_split.npy` = 181 `.npy` files present |
 | card extras (LOD1/LOD2 exports) | `Batmobile_V2_Lod1.pskx`, `Batmobile_V2_Lod2.psk` present beside LOD0 |
 
 The tracker row (line 1279) points at `BONES.md` + the MODLOG "G1-11 · Bone ownership — done"
@@ -72,7 +72,7 @@ The check also adds LOD1/LOD2 coverage beyond the card's LOD0 requirement.
    in the same run. Evidence: after re-running the card's check, the files' mtimes moved to
    `2026-10-29 02:28:45 / 02:28:46` (my run), not their Oct 24 creation dates.
    Why it matters: (a) `--check` mutates outputs on a command the MODLOG presents as verification;
-   (b) a tampered `E:\Modding\_BmAKgrab\bones\*.npy` is silently overwritten before it is looked
+   (b) a tampered `E:\Modding\ArkhamKnight\_grab\bones\*.npy` is silently overwritten before it is looked
    at, so the check can never fail on tampered face lists; (c) even without the rewrite,
    `check_files()` only checks dtype `(N,4)`, face-index bounds, slot bounds, `kind ∈ {0,1}`, no
    duplicate rows and the owned/split row *counts* — never that the face indices are the right
@@ -139,7 +139,7 @@ counts, dtype and the 181 files present).
 
 - No game launch, no edit to `GRAB_BACKLOG.md`, `MODLOG.md`, `Research/`, `Tools/` or game files.
   The only side effect was the card's own `--check`, which rewrote the external
-  `E:\Modding\_BmAKgrab\bones\*.npy` files (issue 1); the repo outputs were not modified.
+  `E:\Modding\ArkhamKnight\_grab\bones\*.npy` files (issue 1); the repo outputs were not modified.
 - I did not re-export LOD1/LOD2 with umodel, so the two extra exports are taken as present with
   the recorded sha256 (their face counts match `MESHES.json`/`MESHES.md`, which is the strongest
   available evidence without a re-export).

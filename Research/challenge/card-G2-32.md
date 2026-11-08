@@ -8,7 +8,7 @@ Everything below was run read-only. Nothing was launched, no archive was written
 `D:\Games` was touched, nothing committed. Two of the checks need a file the card never opened:
 the Scaleform movies are `CFX` + zlib at offset 8, so every "no `.gfx` contains …" statement in the
 card was a search over *compressed* bytes; I inflated them **in memory only**. Where a read
-reached outside the repo it is the project's own declared grab directory `E:\Modding\_JC3grab`
+reached outside the repo it is the project's own declared grab directory `E:\Modding\JustCause3\_grab`
 (`JC3_GRAB` in `Tools/scripts/jc3hudwpn.py`), which already holds the decompiled HUD export
 G2-25 used.
 
@@ -280,7 +280,7 @@ movie for this car (hud.gfx has no reference)".
 **Test.** Inflate `ui/hud.gfx` and read the decompiled AS3 (the export G2-25 already uses).
 
 ```
-$ grep -n "SetVehicleInfo" E:/Modding/_JC3grab/hud/dec/scripts/hud.as
+$ grep -n "SetVehicleInfo" E:/Modding/JustCause3/_grab/hud/dec/scripts/hud.as
 5228:      public function SetVehicleInfo(vehicle_name:String) : void
 5230:         this.MCI_safe_area_bottom_left.MCI_vehicle.TXT_name.text = vehicle_name;
 

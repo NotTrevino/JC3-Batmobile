@@ -57,7 +57,7 @@ import jc3hkx  # noqa: E402
 import jc3_physics_roles2 as R2  # noqa: E402  (rot3x4, DONOR)
 
 DONOR = R2.DONOR
-FLEET_GLOB = r"E:/Modding/_gamedata/JC3grab/**/*.physicsc"
+FLEET_GLOB = r"E:/Modding/_shared/gamedata/JC3grab/**/*.physicsc"
 OUT_MD = os.path.join(ROOT, "Research", "JC3Grab", "PHYSICS_ROLES4.md")
 OUT_JSON = os.path.join(ROOT, "Research", "JC3Grab", "PHYSICS_ROLES4.json")
 

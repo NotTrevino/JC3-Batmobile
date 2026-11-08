@@ -69,7 +69,7 @@ def receipt_file() -> str:
     if TAG == "bm-013b":
         return os.path.join(OUT, "receipt.json")
     return os.path.join(OUT, "receipt-leaf.json")
-WORK = os.environ.get("JC3_RAW", "E:/Modding/_gamedata/JC3grab") + "/b13b"   # scratch XML, outside the repo
+WORK = os.environ.get("JC3_RAW", "E:/Modding/_shared/gamedata/JC3grab") + "/b13b"   # scratch XML, outside the repo
 
 
 def s32(v: int) -> int:

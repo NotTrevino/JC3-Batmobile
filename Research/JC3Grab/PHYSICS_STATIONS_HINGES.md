@@ -8,7 +8,7 @@ Read `PHYSICS.md`'s 17/17 agreement as what it is: the four quads equal the four
 
 | input | what |
 |---|---|
-| `E:/Modding/_gamedata/JC3grab\phys` | the 232 per-entity `.physicsc` grabs, of which **17** have one station set |
+| `E:/Modding/_shared/gamedata/JC3grab\phys` | the 232 per-entity `.physicsc` grabs, of which **17** have one station set |
 | `Research/JC3Grab/PHYSICS_LIMITS.json` | G3-10e's hinge decode: 419 `hkpLimitedHingeConstraintData`, frames A/B |
 | `Research/JC3Grab/PHYSICS_LIMITS.md` | the station method being checked |
 

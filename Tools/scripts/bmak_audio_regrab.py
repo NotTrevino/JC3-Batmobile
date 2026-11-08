@@ -14,7 +14,7 @@ Background (all quoted from repo files):
     join the result to event ids (and to the event name where `fnv1(lower(name))` reproduces the id).
 
 No install or ledger file is written. Output lives OUTSIDE the repo, at
-`E:/Modding/_BmAKgrab/audio_regrab/{wem,wav}`; the machine-readable map is
+`E:/Modding/ArkhamKnight/_grab/audio_regrab/{wem,wav}`; the machine-readable map is
 `Research/BatmobileGrab/AUDIO_REGRAB.json`.
 
 Oracles (`--check` fails on any of them):
@@ -46,7 +46,7 @@ import grab_audio as GA          # noqa: E402  (parse_bank / resolve / sections)
 import grab_audio_banks as G14   # noqa: E402  (probe_package)
 import grab_audio_banks2 as G2   # noqa: E402  (bank_list, Image)
 
-OUT = r"E:\Modding\_BmAKgrab\audio_regrab"
+OUT = r"E:\Modding\ArkhamKnight\_grab\audio_regrab"
 JSON_OUT = os.path.join(ROOT, "Research", "BatmobileGrab", "AUDIO_REGRAB.json")
 BANKS_JSON = os.path.join(ROOT, "Research", "BatmobileGrab", "AUDIO_BANKS.json")
 AUDIO_MAP = os.path.join(ROOT, "Research", "BatmobileGrab", "AUDIO_MAP.json")

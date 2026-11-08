@@ -1,7 +1,7 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/fix-iter1-card-and-values.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/fix-iter1-card-and-values.md
 ONLY: freebuff
 EST: 45
 BRIEF: hand-written 2026-11-08
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/review-first-take-results.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/review-first-take-results.md
 Fix iteration 1, value faults only. From the failure table in tmp/freebuff/reports/hdl-review-takes.md take every failure where a single cell is outside its band. For each, write a fix card in Working/Q/FIXES_ITER1.md: ledger row, current value, new value computed from the measured error (for example, if braking distance read 118 m against the 101.5-110.2 band, brake torque is scaled by measured over target deceleration), the branch tree that owns the cell, and the retake check. Lore accuracy wins: if the target value comes from BmAK (decoded) the cell moves toward it and the card says so; if the target is an assumed label, the card moves the tune lever only, and does not weaken the target. Do not touch cells that passed. Change only the tuning tables at the head of the rc5_*.py scripts, one number per cell, and show the diff of each script. Done check: each card has a retake bound and an expected sign of change for every other take it can disturb; python rc5_*.py --check still passes for each edited branch.
-Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.
+Shared rules: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

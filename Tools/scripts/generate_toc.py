@@ -3,9 +3,9 @@
 import struct
 
 # Paths to the .ee file and desired .toc file
-nee_path = r'E:\Modding\JC3-Batmobile\Builds\test-024\v0300_car_kensington_sportsmuscle_civilian_01.ee'  # Using test-024's .ee to ensure correct structure
+nee_path = r'E:\Modding\JustCause3\JC3-Batmobile\Builds\test-024\v0300_car_kensington_sportsmuscle_civilian_01.ee'  # Using test-024's .ee to ensure correct structure
 
-toc_path = r'E:\Modding\JC3-Batmobile\Builds\test-025\v0300_car_kensington_sportsmuscle_civilian_01.ee.toc'
+toc_path = r'E:\Modding\JustCause3\JC3-Batmobile\Builds\test-025\v0300_car_kensington_sportsmuscle_civilian_01.ee.toc'
 
 # Define the entries for the .toc file
 entries = {

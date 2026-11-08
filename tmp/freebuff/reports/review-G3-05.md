@@ -12,7 +12,7 @@ I did not write this card and changed nothing outside this report.
 ## 1. `--check` output (verbatim)
 
 ```
-$ cd /e/Modding/JC3-Batmobile && uv run --with numpy --with pillow --with pefile --with capstone python Tools/scripts/grab_packages_g305.py --check; echo "CHECK_EXIT=$?"
+$ cd /e/Modding/JustCause3/JC3-Batmobile && uv run --with numpy --with pillow --with pefile --with capstone python Tools/scripts/grab_packages_g305.py --check; echo "CHECK_EXIT=$?"
 OK: 20 packages, 320,415 exports, 3,099 relevant, 646 undecoded; 22/22 checks; md byte-identical
 CHECK_EXIT=0
 ```

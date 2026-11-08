@@ -20,7 +20,7 @@ tags at all.
 | `Research/BatmobileGrab/CDO_PAYLOADS.md` | generated note: misparse test, method, per-component tags, leftovers, UNKNOWNs |
 | `tmp/freebuff/reports/CDO-payloads.md` | this report |
 
-Read-only inputs: `Startup.upk` (opened for reading only), `E:/Modding/_tools/BmSDK-AK`
+Read-only inputs: `Startup.upk` (opened for reading only), `E:/Modding/_shared/tools/BmSDK-AK`
 (read only). No game process was started or attached to, nothing was installed or built, and
 no existing Research/ or Tools/ file was modified.
 

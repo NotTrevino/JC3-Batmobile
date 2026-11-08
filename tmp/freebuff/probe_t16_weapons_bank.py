@@ -1,7 +1,7 @@
 """T-16 probe: what samples does weapons.bank hold, and are the ones I need decodable?
 
 Extracts sound/fmod_banks/weapons.bank from the game archives to
-E:\Modding\_JC3grab\audio\weapons.bank (outside the repo, R10) on first run, then
+E:\Modding\JustCause3\_grab\audio\weapons.bank (outside the repo, R10) on first run, then
 prints the FSB5 name table entries that match the four weapon candidates.
 """
 import os
@@ -15,7 +15,7 @@ import jc3grab  # noqa: E402
 import jc3index  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-DEST = os.path.join("E:/Modding/_JC3grab/audio", "weapons.bank")
+DEST = os.path.join("E:/Modding/JustCause3/_grab/audio", "weapons.bank")
 rows = jc3index.load_index(os.path.join(ROOT, "Research", "JC3Grab"))
 
 

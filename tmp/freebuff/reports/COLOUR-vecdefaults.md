@@ -27,7 +27,7 @@ Read-only inputs: `E:/Games/Batman - Arkham Knight/BmGame/CookedPCConsole/Playab
 ## Commands run, with their output
 
 ```
-$ cd /e/Modding/JC3-Batmobile && PYTHONIOENCODING=utf-8 python Tools/scripts/grab_vecdefaults.py --write
+$ cd /e/Modding/JustCause3/JC3-Batmobile && PYTHONIOENCODING=utf-8 python Tools/scripts/grab_vecdefaults.py --write
 wrote Research\BatmobileGrab\VEC_DEFAULTS.md (22,863 chars, 22,871 B)
 
 $ PYTHONIOENCODING=utf-8 python Tools/scripts/grab_vecdefaults.py --check

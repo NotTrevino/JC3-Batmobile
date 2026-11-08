@@ -3,7 +3,7 @@ import json, glob, collections
 by_class = collections.Counter()
 vals = collections.Counter()
 samples = []
-for p in glob.glob('E:/Modding/_JC3grab/detail/*.ee.json'):
+for p in glob.glob('E:/Modding/JustCause3/_grab/detail/*.ee.json'):
     d = json.load(open(p, encoding='utf-8'))
     epe = d.get('epe') or {}
     for o in (epe.get('objects') or []):

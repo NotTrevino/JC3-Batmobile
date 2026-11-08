@@ -13,8 +13,8 @@ Not edited: `T11_MODES.md`, `T6_HUD_CAMERA.md`, `T_ROWS.jsonl`, any JSON input.
 ## Verbatim commands
 
 ```
-cd "E:/Modding/JC3-Batmobile" && PYTHONIOENCODING=utf-8 python Tools/scripts/t_modes_hud_evidence.py --write
-cd "E:/Modding/JC3-Batmobile" && PYTHONIOENCODING=utf-8 python Tools/scripts/t_modes_hud_evidence.py --check
+cd "E:/Modding/JustCause3/JC3-Batmobile" && PYTHONIOENCODING=utf-8 python Tools/scripts/t_modes_hud_evidence.py --write
+cd "E:/Modding/JustCause3/JC3-Batmobile" && PYTHONIOENCODING=utf-8 python Tools/scripts/t_modes_hud_evidence.py --check
 ```
 
 `--write` -> exit 0, 35/35 oracles, doc written. `--check` -> exit 0, doc byte-identical. (First run failed one oracle on float equality `3000*0.036 == 108.0`; the check now uses a tolerance, the value was never in doubt.)

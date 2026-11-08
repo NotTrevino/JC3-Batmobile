@@ -5,11 +5,11 @@ from collections import Counter
 
 import numpy as np
 
-ROOT = r"E:/Modding/JC3-Batmobile"
+ROOT = r"E:/Modding/JustCause3/JC3-Batmobile"
 sys.path.insert(0, os.path.join(ROOT, "Tools", "scripts"))
 import psk2rbm as P  # noqa
 
-MESH = r"E:/Modding/_BmAKgrab/meshes/Playable_Batmobile_SF/Playable_Batmobile_SF/SkeletalMesh3"
+MESH = r"E:/Modding/ArkhamKnight/_grab/meshes/Playable_Batmobile_SF/Playable_Batmobile_SF/SkeletalMesh3"
 
 for name in ("Batmobile_V2.pskx", "Batmobile_V2_Lod1.pskx"):
     path = os.path.join(MESH, name)

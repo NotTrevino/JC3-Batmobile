@@ -105,7 +105,7 @@ produces). Verdicts: CONFIRMED / REFUTED / UNVERIFIABLE.
   extras being `hood_signature` and `missile_base_signature`.
 - **Class:** decoded.
 - **Verdict:** **CONFIRMED.**
-- **Evidence:** `E:/Modding/_JC3grab/detail/v0300_car_kensington_sportsmuscle__…_civilian_01.ee.json`
+- **Evidence:** `E:/Modding/JustCause3/_grab/detail/v0300_car_kensington_sportsmuscle__…_civilian_01.ee.json`
   → `epe.objects`, class counts: **`CPartProp` 40**, `SVehicleLight` 22, `SAttachedEffect` 27.
   `Research/JC3Grab/PARTS_TABLE.jsonl` (donor row, `parts`): 42 rows. Name sets: intersection **40**,
   graph-only **0**, table-only **{`sportsmuscle_hood_signature`, `sportsmuscle_missile_base_signature`}**
@@ -233,7 +233,7 @@ produces). Verdicts: CONFIRMED / REFUTED / UNVERIFIABLE.
 - **Evidence:** the size is the **archive entry**:
   `Research/JC3Grab/INDEX.jsonl` → `{"path":"sound/fmod_banks/vehicles.bank","archive":"patch_win64/game5","size":210781376}`,
   repeated in `Research/JC3Grab/JC3_AUDIO.md:32` and `JC3_AUDIO_EVENTS.json:910`. No `vehicles.bank`
-  exists under `E:/Modding/_JC3grab` (`find` → only `audio/weapons.bank`), and the dropzone
+  exists under `E:/Modding/JustCause3/_grab` (`find` → only `audio/weapons.bank`), and the dropzone
   (`D:/Games`) was not read in this challenge. `MODDING_PLAN.md:54` records the swap as a dropzone
   extra file of that size, which is the only support for "installed".
 - **Fix:** cite the dropzone path or `verify_install`-style read; otherwise "vanilla bank is

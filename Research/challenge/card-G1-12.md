@@ -9,7 +9,7 @@ Inputs read: `GRAB_BACKLOG.md` §0.5 (R1–R14, lines 71–91), the G1-12 card (
 §12 row, `MODLOG.md` §"G1-12 · Pose deltas — done" (line 8117), the outputs
 `Research/BatmobileGrab/POSES.{json,md}`, the script `Tools/scripts/grab_poses.py`, and the data
 it reads (`BONES.json`, the LOD0 `.pskx`, `Playable_Batmobile_SF__Batmobile_V2_Pose_States.json`
-and `Playable_Batmobile_SF__BM_Batmobile_Chassis.json` under `E:\Modding\_BmAKgrab\anims\keys\`).
+and `Playable_Batmobile_SF__BM_Batmobile_Chassis.json` under `E:\Modding\ArkhamKnight\_grab\anims\keys\`).
 
 ## VERDICT
 

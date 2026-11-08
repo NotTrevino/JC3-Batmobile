@@ -48,7 +48,7 @@ ok: donor table has 42 parts, names 42/42 with DeformPoints, lights 12 parts mat
   note: ['Boat_Antenna'] not in this vehicle's VehicleDamage table (24 types) - the part falls back to Default damage
 EXIT=0
 === 5 T3_FLEET.md: t3_fleet.py --check ===
-E:\Modding\JC3-Batmobile\Working\Translation\T3_FLEET.md: 41 members over 156 vehicles
+E:\Modding\JustCause3\JC3-Batmobile\Working\Translation\T3_FLEET.md: 41 members over 156 vehicles
 check ok
 EXIT=0
 === 6 FITS.md: t1_fits.py -o scratch/FITS_recheck.md ===
@@ -224,7 +224,7 @@ and it checks: `2.153 * 6000^0.719 = 1120.8`, and `1393.5 / 1120.8 = 1.243` = th
 "×1.24". Arithmetic holds (derived, 1 dp).
 
 But the terminal is not bytes: `t1_fits.py` reads `RAW = os.environ.get("JC3_RAW",
-r"E:/Modding/_gamedata/JC3grab")` and globs `entities/*.json` - the **decoded extraction**,
+r"E:/Modding/_shared/gamedata/JC3grab")` and globs `entities/*.json` - the **decoded extraction**,
 not the shipped archives. `jc3grab.py` writes that extraction (`RAW ... Raw decodes stay
 OUTSIDE the repo`) and its `check` re-scans it ("566 inner files, 30 modules decoded"). So
 the chain is ledger -> FITS.md -> `_gamedata` JSON -> (game archive, one hop not re-run

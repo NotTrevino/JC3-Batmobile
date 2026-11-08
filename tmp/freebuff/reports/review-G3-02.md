@@ -11,9 +11,9 @@ I wrote no research output; `grab_controls.py --write` was not run.
 ## Check output (verbatim)
 
 ```
-$ cd "E:/Modding/JC3-Batmobile" && PYTHONIOENCODING=utf-8 uv run --with numpy --with pillow python Tools/scripts/grab_controls.py --check
-same    E:\Modding\JC3-Batmobile\Research\BatmobileGrab\CONTROLS.md
-same    E:\Modding\JC3-Batmobile\Research\BatmobileGrab\CONTROLS.json
+$ cd "E:/Modding/JustCause3/JC3-Batmobile" && PYTHONIOENCODING=utf-8 uv run --with numpy --with pillow python Tools/scripts/grab_controls.py --check
+same    E:\Modding\JustCause3\JC3-Batmobile\Research\BatmobileGrab\CONTROLS.md
+same    E:\Modding\JustCause3\JC3-Batmobile\Research\BatmobileGrab\CONTROLS.json
 check ok
 CHECK_EXIT=0
 ```

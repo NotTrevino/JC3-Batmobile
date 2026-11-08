@@ -55,7 +55,7 @@ Method: the keymaps are parsed with G3-08's own reader (`jc3_input.read_entries`
 
 | | |
 |---|---|
-| root | `E:/Modding/_gamedata/JC3grab` |
+| root | `E:/Modding/_shared/gamedata/JC3grab` |
 | `.epe` / `.vmodc` on disk | 207 |
 | distinct contents searched | 134 |
 | byte-identical duplicates | 73 |

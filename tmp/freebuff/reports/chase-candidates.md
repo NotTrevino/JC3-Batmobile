@@ -5,7 +5,7 @@ deterministic JSONL of **235 candidates over 35 live F-rows**, and `--check` re-
 it byte-identically with all ids unique. Nothing was judged — the judging half is `chase_judge.py`.
 
 - Script: `Tools/scripts/chase/chase_candidates.py` (477 lines)
-- Output (outside the repo, game-derived): `E:/Modding/_BmAKgrab/chase/candidates.jsonl`
+- Output (outside the repo, game-derived): `E:/Modding/ArkhamKnight/_grab/chase/candidates.jsonl`
 - Output size: **1,076,332 B** / 235 lines; 160 exe + 75 text candidates
 - Judge kit: `Tools/scripts/chase/chase_judge.py` reads these lines as-is (`id, row, member, owner, offset, type, source, snippet`; extra `route` key is ignored)
 
@@ -13,7 +13,7 @@ it byte-identically with all ids unique. Nothing was judged — the judging half
 
 - `E:/Games/Batman - Arkham Knight/Binaries/Win64/BatmanAK.exe` — 55,101,440 B, opened `rb`, never written.
 - Config/INI under `E:/Games/Batman - Arkham Knight/**` plus the decoded packages/script text under
-  `E:/Modding/_BmAKgrab/**` — 102 files matched by the text route (the walk skips this tool's own
+  `E:/Modding/ArkhamKnight/_grab/**` — 102 files matched by the text route (the walk skips this tool's own
   output and any `verdicts*` file so a judge run cannot feed back into the search).
 
 ## Row plan
@@ -152,7 +152,7 @@ source: exe 0x140058f81
 
 ```
 F-62#0035  AirControlTurnTorque @ RVehicleSimCar 0x17c (float)
-source: E:/Modding/_BmAKgrab/chase/value_cdo_08.json:636
+source: E:/Modding/ArkhamKnight/_grab/chase/value_cdo_08.json:636
  "package": "E:\\Games\\Batman - Arkham Knight\\BmGame\\CookedPCConsole\\BmGame.upk",
  "rows": {
   "RVehicleSimBatmobile": {
@@ -210,7 +210,7 @@ rows chased 35 | excluded 33 | no member 1 | candidates 235 | text files 102 | e
 | **total** | **235** | **0** |
 
 **rows with 0 candidates:** F-4, F-68, F-69, F-70, F-71
-wrote E:\Modding\_BmAKgrab\chase\candidates.jsonl (1076332 B)
+wrote E:\Modding\ArkhamKnight\_grab\chase\candidates.jsonl (1076332 B)
 [exit 0]
 
 $ python Tools/scripts/chase/chase_candidates.py --check
@@ -262,7 +262,7 @@ check ok: 235 candidates, 235 unique ids, 1076332 B, byte-identical
 ## Method notes / limits
 
 - `--check` proves determinism *for a fixed corpus*: it re-scans and compares bytes plus id uniqueness.
-  `E:/Modding/_BmAKgrab` is still being written by the judging side, so a `--check` run after new decode
+  `E:/Modding/ArkhamKnight/_grab` is still being written by the judging side, so a `--check` run after new decode
   files appear will legitimately report a diff; re-run `--write` in that case. The JSONL carries no
   corpus fingerprint, by design — the diff message names the first differing character.
 - Text hits are *name* hits, not value hits: e.g. `F-17`'s `StrafeRight` occurrences are key-binding
@@ -280,6 +280,6 @@ check ok: 235 candidates, 235 unique ids, 1076332 B, byte-identical
 python Tools/scripts/chase/chase_candidates.py --list-rows   # the row plan only
 python Tools/scripts/chase/chase_candidates.py --write       # scan + write candidates.jsonl
 python Tools/scripts/chase/chase_candidates.py --check       # re-scan, compare, verify unique ids
-python Tools/scripts/chase/chase_judge.py --in E:/Modding/_BmAKgrab/chase/candidates.jsonl \
-       --out E:/Modding/_BmAKgrab/chase/verdicts.jsonl      # the judging half, not run here
+python Tools/scripts/chase/chase_judge.py --in E:/Modding/ArkhamKnight/_grab/chase/candidates.jsonl \
+       --out E:/Modding/ArkhamKnight/_grab/chase/verdicts.jsonl      # the judging half, not run here
 ```

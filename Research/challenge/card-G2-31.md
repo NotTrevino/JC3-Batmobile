@@ -7,9 +7,9 @@ MODLOG §"G2-31 · Water behaviour — done" (line 10816).
 R4, R11.
 
 **Method.** Everything below was re-derived from what is on disk: the 232 entity caches in
-`E:/Modding/_JC3grab/entities/`, the 232 object graphs in `E:/Modding/_JC3grab/detail/`,
+`E:/Modding/JustCause3/_grab/entities/`, the 232 object graphs in `E:/Modding/JustCause3/_grab/detail/`,
 `Builds/test-091/…civilian_01.ee` (decoded with `jc3detail` + `jc3adf`), the decoded script tree
-`E:/Modding/_JC3grab/hud/dec/scripts/`, and `Research/JC3Grab/INDEX.jsonl`. No game was launched,
+`E:/Modding/JustCause3/_grab/hud/dec/scripts/`, and `Research/JC3Grab/INDEX.jsonl`. No game was launched,
 nothing was written under `D:/Games`, nothing committed, no archive edited. This report is the only
 file written.
 
@@ -285,7 +285,7 @@ distinct water-ish object property names: 2
 
 So no root-level amphibious/drown flag — the negative survives the wider search.
 
-**Test C — the script layer.** `E:/Modding/_JC3grab/hud/dec/scripts/` (260 `.as` files) has a
+**Test C — the script layer.** `E:/Modding/JustCause3/_grab/hud/dec/scripts/` (260 `.as` files) has a
 drowning UI:
 
 ```
@@ -566,6 +566,6 @@ alone.
 python Tools/scripts/jc3water.py --check
 # census / groups / hulls / part reference: jc3water.load() over the 232 .ee.json caches
 # build modules: jc3detail.inner_files + jc3adf.walk on Builds/test-091/…civilian_01.ee
-# object graphs: E:/Modding/_JC3grab/detail/*.ee.json (epe.objects[].values keys)
-# scripts: E:/Modding/_JC3grab/hud/dec/scripts/hud.as (OXYGEN_DROWNING_THRESHOLD)
+# object graphs: E:/Modding/JustCause3/_grab/detail/*.ee.json (epe.objects[].values keys)
+# scripts: E:/Modding/JustCause3/_grab/hud/dec/scripts/hud.as (OXYGEN_DROWNING_THRESHOLD)
 ```

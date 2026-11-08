@@ -69,7 +69,7 @@ check PASS
 
 ```text
 $ python Tools/scripts/effc_writer.py write
-wrote E:\Modding\JC3-Batmobile\Working\Effects\EFFC_WRITER.json and E:\Modding\JC3-Batmobile\Working\Effects\EFFC_WRITER.md
+wrote E:\Modding\JustCause3\JC3-Batmobile\Working\Effects\EFFC_WRITER.json and E:\Modding\JustCause3\JC3-Batmobile\Working\Effects\EFFC_WRITER.md
 88/95 strict identical, 95/95 carry identical, 91.49% bytes from fields
 ```
 
@@ -133,7 +133,7 @@ Decoded values above are from `Research/JC3Grab/FX9_HAZE.{md,json}` and the exis
 
 ```text
 $ python Tools/scripts/effc_writer.py write
-wrote E:\Modding\JC3-Batmobile\Working\Effects\EFFC_WRITER.json and E:\Modding\JC3-Batmobile\Working\Effects\EFFC_WRITER.md
+wrote E:\Modding\JustCause3\JC3-Batmobile\Working\Effects\EFFC_WRITER.json and E:\Modding\JustCause3\JC3-Batmobile\Working\Effects\EFFC_WRITER.md
 88/95 strict identical, 95/95 carry identical, 91.49% bytes from fields
 
 $ python Tools/scripts/effc_writer.py check

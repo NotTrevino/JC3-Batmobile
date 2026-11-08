@@ -17,7 +17,7 @@ for name, typ, val in jc3adf.walk(jc3adf.Adf(stream[off:off+size])):
     print("   %-40s %-8s %s" % (name, typ, val))
 
 # fleet scan
-files = glob.glob(r"E:/Modding/_JC3grab/detail/*.ee.json")
+files = glob.glob(r"E:/Modding/JustCause3/_grab/detail/*.ee.json")
 print("detail files", len(files))
 sound_objs = 0
 names = collections.Counter()

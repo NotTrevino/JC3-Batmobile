@@ -255,7 +255,7 @@ No game process was started, attached to or injected into; static read only.
 python - <<'EOF'
 import sys,glob,struct,os
 sys.path.insert(0,'Tools/scripts'); import rbm_geom as R
-for f in sorted(glob.glob('E:/Modding/_gamedata/JC3grab/b13b/unpacked/models/jc_vehicles/01_land/*/sportsmuscle_window_f_lod1.rbm'))[:1]:
+for f in sorted(glob.glob('E:/Modding/_shared/gamedata/JC3grab/b13b/unpacked/models/jc_vehicles/01_land/*/sportsmuscle_window_f_lod1.rbm'))[:1]:
     m=R.decode(open(f,'rb').read())
     for b in m.blocks:
         if R.BLOCK_NAMES.get(b.type_hash)!='Window': continue

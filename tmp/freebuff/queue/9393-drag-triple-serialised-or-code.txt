@@ -1,6 +1,6 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/drag-triple-serialised-or-code.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/drag-triple-serialised-or-code.md
 ONLY: freebuff
 EST: 45
 BRIEF: hand-written 2026-11-08
 Settle task T-26: the three drag members of the Arkham Knight Batmobile sim, Drag at offset 16, DragNoLoad at offset 20 and DriftDrag at offset 712 (Research/BatmobileGrab/BMSDK_OFFSETS.json). Question: are their values stored in the cooked class default or sub-object bytes, or only set by native code? Method: locate the cooked Batmobile vehicle sim default object using Tools/scripts/upk_read.py and Research/BatmobileGrab/CLASS_DEFAULTS.md, then walk its tagged property list for those three names and for every float property in the aerodynamic or speed-limit family. Print each hit with file, byte offset and value; print an explicit not-serialised line for each miss. The ledger rows T-R2 and T-A2 currently keep drag at the class fit because this is unsettled. Write tmp/freebuff/reports/hdl-drag-triple.md with a verdict per member (serialised value, declared only, exe-only) and what that does to the 267 km/h terminal-speed prediction in Working/Q/PREDICTIONS.md D-2. Read-only. Done check: re-run the walk script twice and show identical output.
-Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.
+Shared rules: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

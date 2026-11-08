@@ -5,7 +5,7 @@
 # starts the driver (lanes already running exit 2). Backs off until the 05:05 UTC daily reset when the driver reports
 # no free hours / the wallet guard. Logs to research_keeper.log; prints LOW-FILLER when filler/ < 4 so the operator
 # restocks with research fillers.
-B=E:/Modding/JC3-Batmobile/tmp/freebuff
+B=E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff
 DRV=C:/Users/User/.claude/skills/freebuff/scripts/driver.cjs
 LOG=$B/research_keeper.log
 log() { echo "$(date -u +%Y-%m-%dT%H:%M:%SZ) $*" >> $LOG; }
@@ -38,7 +38,7 @@ while true; do
   now=$(date +%s)
   if [ "$cli" -lt 3 ] && [ "$down" -gt 0 ] && [ $((now - last_start)) -gt 150 ]; then
     log "SLOT FREE (freebuff.exe=$cli, lanes down=$down, queue=$q filler=$f) -> starting driver"
-    node $DRV --project E:/Modding/JC3-Batmobile --parallel 3 --model "DeepSeek V4.1 Flash 10/17" >> $B/research_keeper.out 2>&1
+    node $DRV --project E:/Modding/JustCause3/JC3-Batmobile --parallel 3 --model "DeepSeek V4.1 Flash 10/17" >> $B/research_keeper.out 2>&1
     last_start=$(date +%s)
   fi
   sleep 30

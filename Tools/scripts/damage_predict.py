@@ -7,7 +7,7 @@ out what values would give ARM-1 and ARM-2 at the BmAK ratio from G1-14.
 
 Where each number comes from (nothing is typed in):
 
-  * `VehicleDamage` + `PartDamageType` rows   - `E:\\Modding\\_gamedata\\JC3grab\\entities\\*.ee.json` (donor,
+  * `VehicleDamage` + `PartDamageType` rows   - `E:\\Modding\\_shared\\gamedata\\JC3grab\\entities\\*.ee.json` (donor,
     medium tank) and `Builds/test-091` decoded with `t1_current.dump` (the build)
   * root `health` / `invulnerable`            - `jc3_damage_search.epe_fields` on the build's `.epe`;
     the fleet census for the other two is `DAMAGE_MECHANISMS.json`
@@ -56,7 +56,7 @@ INDEX = os.path.join(OUT, "INDEX.jsonl")
 MECH = os.path.join(OUT, "DAMAGE_MECHANISMS.json")
 BM_RULES = os.path.join(ROOT, "Research", "BatmobileGrab", "DAMAGE_RULES.json")
 BUILD = os.path.join(ROOT, "Builds", "test-091")
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/_shared/gamedata/JC3grab")
 ENT = os.path.join(RAW, "entities")
 
 DONOR = "v0300_car_kensington_sportsmuscle__v0300_car_kensington_sportsmuscle_civilian_01.ee.json"

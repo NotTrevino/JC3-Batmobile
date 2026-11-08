@@ -13,7 +13,7 @@ oracle `jc3index.py` uses (`rbmhdr.hash_jenkins`, a port of StringHelpers.HashJe
 Nothing is written outside `Research/JC3Grab/LAST_ENTRY.{md,json}`.
 
 Inputs (read-only): the game install's `.tab`/`.arc` pairs, `Research/JC3Grab/INDEX.json`
-and `INDEX.jsonl`, and `E:/Modding/_gamedata/JC3grab` for hash references.
+and `INDEX.jsonl`, and `E:/Modding/_shared/gamedata/JC3grab` for hash references.
 
 Usage:
     uv run python Tools/scripts/jc3_last_entry.py --write
@@ -39,7 +39,7 @@ IDX = os.path.join(ROOT, "Research", "JC3Grab", "INDEX.json")
 JL = os.path.join(ROOT, "Research", "JC3Grab", "INDEX.jsonl")
 OUT_MD = os.path.join(ROOT, "Research", "JC3Grab", "LAST_ENTRY.md")
 OUT_JSON = os.path.join(ROOT, "Research", "JC3Grab", "LAST_ENTRY.json")
-GDATA = "E:/Modding/_gamedata/JC3grab"
+GDATA = "E:/Modding/_shared/gamedata/JC3grab"
 SCAN_EXT = (".ee", ".toc", ".adf")
 SCAN_MAX_DEPTH = 3
 SCAN_MAX_BYTES = 400 * 1024 * 1024

@@ -46,7 +46,7 @@ ROOT = os.path.dirname(os.path.dirname(HERE))
 OUT = os.path.join(ROOT, "Research", "JC3Grab")
 OUT_MD = os.path.join(OUT, "INPUT.md")
 OUT_JSON = os.path.join(OUT, "INPUT.json")
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/_shared/gamedata/JC3grab")
 ENTITIES = os.path.join(RAW, "entities")
 
 SCHEMA = "g3-08-input/1"

@@ -15,7 +15,7 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
-$root = 'E:\Modding\JC3-Batmobile'
+$root = 'E:\Modding\JustCause3\JC3-Batmobile'
 $g    = "$root\Tools\Gibbed"
 $w    = "$root\Working\Tumbler"
 $psk  = "$root\Playable_Batmobile_SF\SkeletalMesh3\Batmobile_V2.pskx"

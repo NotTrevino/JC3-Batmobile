@@ -68,7 +68,7 @@ that is UNKNOWN and unchanged by this card.
 1. Locating the appearance plan (the brief's paths were wrong):
 
 ```
-$ cd "E:/Modding/JC3-Batmobile"; find . -iname "*appearance*plan*" -not -path "./.git/*" 2>/dev/null | head -20
+$ cd "E:/Modding/JustCause3/JC3-Batmobile"; find . -iname "*appearance*plan*" -not -path "./.git/*" 2>/dev/null | head -20
 ./Tools/scripts/appearance_plan.py
 ./Tools/scripts/__pycache__/appearance_plan.cpython-313.pyc
 ./Working/Appearance/appearance_plan.json

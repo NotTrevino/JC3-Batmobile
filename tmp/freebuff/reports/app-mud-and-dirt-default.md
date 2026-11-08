@@ -75,7 +75,7 @@ block as the car drives — the vehicle-level side is only which blocks carry th
 
 ## 3. Corpus scan of the JC3 dirt members (decoded this session)
 
-All `.rbm` under `E:/Modding/_gamedata/JC3grab/b13b/unpacked` (277 files), decoded with
+All `.rbm` under `E:/Modding/_shared/gamedata/JC3grab/b13b/unpacked` (277 files), decoded with
 `rbm_geom.decode`, `CarPaintMM` blocks only:
 
 | fact | value |

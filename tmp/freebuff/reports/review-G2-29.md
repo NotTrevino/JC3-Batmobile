@@ -31,7 +31,7 @@ conclusion flatly while the qualifier sits two sections later.
 
 ## Check output (verbatim)
 
-Command run from `E:/Modding/JC3-Batmobile`:
+Command run from `E:/Modding/JustCause3/JC3-Batmobile`:
 
 ```
 $ python Tools/scripts/jc3traffic.py --check

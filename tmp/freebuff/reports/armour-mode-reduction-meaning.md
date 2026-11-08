@@ -4,7 +4,7 @@
 edited; nothing was launched.
 
 **Provenance / revert.** New file `tmp/freebuff/reports/armour-mode-reduction-meaning.md`
-(= `E:/Modding/JC3-Batmobile/tmp/freebuff/reports/armour-mode-reduction-meaning.md`), the output path the
+(= `E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/armour-mode-reduction-meaning.md`), the output path the
 brief names. **Revert = delete this file.**
 
 Labels: **decoded** (file:line / offset), **derived** (rule + inputs), **UNKNOWN** (tried, where it would be).

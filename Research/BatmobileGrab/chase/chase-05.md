@@ -2,7 +2,7 @@
 
 Rows: `Research/BatmobileGrab/FOOTAGE.md` §6, F-33…F-40, all eight `UNKNOWN` with reason
 `VALUE-NATIVE`. Read-only: no existing doc, package or game file was modified. The writes are two
-scripts under `Tools/scripts/chase/`, the extracted evidence under `E:\Modding\_BmAKgrab\chase\`,
+scripts under `Tools/scripts/chase/`, the extracted evidence under `E:\Modding\ArkhamKnight\_grab\chase\`,
 and this file. No game was launched, nothing was committed.
 
 **Result: 0 of 8 found.** All eight stay `UNKNOWN`, and the reason is now measured three ways:
@@ -19,8 +19,8 @@ Tools used (both already in the repo from chase-03, reused as-is):
 | `Tools/scripts/chase/chase_g1_values.py dump <rva> <len>` | hex+ASCII of a code window with the offset stores it contains |
 | `Tools/scripts/chase/chase_namescan_b.py` (new) | one pass over all **3,266** `.upk` in `BmGame\CookedPCConsole` (11.71 GB) for the eleven names below |
 
-Evidence files: `E:\Modding\_BmAKgrab\chase\namescan_b.json` (package scan),
-`E:\Modding\_BmAKgrab\chase\g1_chase_native.json` (the displacement scan of chase-03, same reader).
+Evidence files: `E:\Modding\ArkhamKnight\_grab\chase\namescan_b.json` (package scan),
+`E:\Modding\ArkhamKnight\_grab\chase\g1_chase_native.json` (the displacement scan of chase-03, same reader).
 
 ---
 
@@ -238,5 +238,5 @@ information at all.
 python Tools/scripts/chase/chase_g1_values.py scan          # all offsets, one pass, 3 s
 python Tools/scripts/chase/chase_g1_values.py dump 0x1A17F5 0x40
 python Tools/scripts/chase/chase_namescan_b.py              # 3,266 packages, 11.71 GB, ~5 min
-python -c "import json;d=json.load(open(r'E:\\Modding\\_BmAKgrab\\chase\\namescan_b.json'));print(d['hit_count'],d['packages_with_a_hit'])"
+python -c "import json;d=json.load(open(r'E:\\Modding\\ArkhamKnight\\_grab\\chase\\namescan_b.json'));print(d['hit_count'],d['packages_with_a_hit'])"
 ```

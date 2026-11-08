@@ -119,7 +119,7 @@ input path in `BatmanAK.exe` - none of which exists in the files read here.
 |---|---|
 | `Research/BatmobileGrab/CONTROLS_CONSUMERS.json` | the decoded walks (export, script bytes, refs, calls) and `property_consumers` |
 | `Research/BatmobileGrab/SAMPLER_UNKNOWNS.md` | the three missing-input statements |
-| `E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated/BmGame/RVehicleBatmobileBase.g.cs` | `BoostingOut` offset/type |
+| `E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Generated/BmGame/RVehicleBatmobileBase.g.cs` | `BoostingOut` offset/type |
 | `.../Generated/BmGame/RPlayerInput.g.cs` | 783 and 774 field names |
 | `.../Generated/BmGame/RPlayerController.g.cs` | `QuickGadgetX` function line |
 | `Research/BatmobileGrab/runtime/samples2-20261105T073917Z.jsonl, samples2-20261105T075011Z.jsonl` | 67 records: 774 taps, 783 edges, meter-key census |

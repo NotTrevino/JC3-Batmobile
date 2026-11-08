@@ -1,6 +1,6 @@
 # Landmark map: WEAPONS & GADGETS (as of 2026-11-08)
 
-Read-only survey of `E:\Modding\JC3-Batmobile`. Nothing was edited, installed or launched. Rule applied: no pretrained JC3 knowledge; every claim cites a repo path; absent = UNKNOWN.
+Read-only survey of `E:\Modding\JustCause3\JC3-Batmobile`. Nothing was edited, installed or launched. Rule applied: no pretrained JC3 knowledge; every claim cites a repo path; absent = UNKNOWN.
 
 ## 0. Where the landmark stands in one paragraph
 

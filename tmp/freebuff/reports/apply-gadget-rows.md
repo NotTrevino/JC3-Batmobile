@@ -76,7 +76,7 @@ wrote ...\COMPROMISES_T.json / COMPROMISES_T.md
 72 audited, 1 approved, 71 unapproved
 auditwrite=0
 $ python Tools/scripts/status_audit.py --write      # the re-pin
-wrote E:\Modding\JC3-Batmobile\STATUS.md
+wrote E:\Modding\JustCause3\JC3-Batmobile\STATUS.md
 statuswrite=0
 
 $ python Tools/scripts/t7_weapons.py --check

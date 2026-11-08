@@ -138,7 +138,7 @@ Decoded: each static compound is the shape pointer (entry+0x00) of a body entry 
 
 ## 6. Fleet
 
-Deep decode over the raw files on disk: `E:/Modding/_gamedata/JC3grab/hkx/all` - 41 files, 40 decoded, 1 error(s): [{'file': 'town_01_ai_junction.physicsc', 'error': '0 system datas'}]
+Deep decode over the raw files on disk: `E:/Modding/_shared/gamedata/JC3grab/hkx/all` - 41 files, 40 decoded, 1 error(s): [{'file': 'town_01_ai_junction.physicsc', 'error': '0 system datas'}]
 
 - cinfo_bijection_all: **True**
 - body_ids_in_range_all: **True**
@@ -147,7 +147,7 @@ Deep decode over the raw files on disk: `E:/Modding/_gamedata/JC3grab/hkx/all` -
 - every_static_compound_has_a_body_entry_ref: **True**
 - mass total per file (kg if the field is a mass): min **194.629**, median **1538.362**, max **221619.837**, over 40 files. All are positive; the largest totals belong to the non-vehicle physicsc files in the same folder (the folder is not only vehicles), so this is evidence for "positive mass" only - it does not prove the unit.
 
-Class-count census over the JSON corpus `E:/Modding/_gamedata/JC3grab/hkx/out`: 232 files, 233 vehicle physics entries.
+Class-count census over the JSON corpus `E:/Modding/_shared/gamedata/JC3grab/hkx/out`: 232 files, 233 vehicle physics entries.
 
 | quantity | min | median | max | n |
 |---|---|---|---|---|

@@ -31,7 +31,7 @@ inverse rotation applied to the child offset reproduces all 180 stored world pos
 What does not survive:
 
 - **BROKEN (A10): `--check` is not read-only and its `.npy` validation is vacuous.**
-  `collect()` creates `E:\Modding\_BmAKgrab\bones` and `np.save`s all 180 face files plus
+  `collect()` creates `E:\Modding\ArkhamKnight\_grab\bones` and `np.save`s all 180 face files plus
   `_split.npy` (grab_bones.py 638–656) *before* `main()` branches to `check()`, which then calls
   `check_files()` on the files the same run just wrote. The MODLOG's "validating all 180 `.npy`
   files and `_split.npy`" cannot detect a damaged or hand-edited face file.
@@ -324,7 +324,7 @@ the two agree to rounding; they do not, and the record's own JSON is a far bette
 (`c80752e2…bae844`), `Batmobile_V2_Lod1.pskx` (`32edb21f…a7669e`), `Batmobile_V2_Lod2.psk`
 (`759ddf74…e447a3`), the glTF (`37f20e81…`) and its `.bin`, and `stations.json`
 (`deb01833…`). All of them live outside the repository (R10), and the 181 `.npy` files on
-`E:\Modding\_BmAKgrab\bones` are not in the repo either.
+`E:\Modding\ArkhamKnight\_grab\bones` are not in the repo either.
 
 **Verdict: WEAK as evidence, HOLDS as disclosure.** The hashes are recorded and the `.md` says the
 files are external; but a challenger working from the repository cannot verify any of them, and

@@ -14,7 +14,7 @@ Scope checked: `GRAB_BACKLOG.md` §0.5 (R1–R14), the G2-20 card (§6, line 691
 **Minor issues.**
 
 The extraction is sound and the numbers are real. I re-derived the headline fleet figures
-independently from `E:/Modding/_JC3grab/detail` and every one matched exactly (4,832 exits in
+independently from `E:/Modding/JustCause3/_grab/detail` and every one matched exactly (4,832 exits in
 232 graphs, 61 names, the 9-key member set, `enabled` 1 and `interaction` `00000000` on all
 4,832, 4,057 `CInteractionGraphParentVelocityCondition`, 104 graph classes, 221
 `exit.driver.moving.parachute` with the 125/35/23/19/19 class split), and the donor's
@@ -33,7 +33,7 @@ wording, not the work.
 
 ## Check output (verbatim)
 
-Command run from `E:/Modding/JC3-Batmobile`:
+Command run from `E:/Modding/JustCause3/JC3-Batmobile`:
 
 ```
 $ python Tools/scripts/jc3eject.py --check
@@ -146,7 +146,7 @@ is native code / UNKNOWN. The body is careful; the first line of the document is
 
 ### 8. (R14) The "verbatim" `--write` block in MODLOG is not verbatim — `MODLOG.md:11886`–`11889`
 
-The pasted line is `wrote E:\Modding\JC3-Batmobile\Research\JC3Grab\EJECT.md (327 lines) +
+The pasted line is `wrote E:\Modding\JustCause3\JC3-Batmobile\Research\JC3Grab\EJECT.md (327 lines) +
 E:\Modding\JC3grab\EJECT.json` — the second path is missing `JC3-Batmobile\Research\`. The session
 noticed and appended a correction immediately below, so the record is honest, but a "verbatim"
 block that needed a correction is an R14 wrinkle (the summary line after it is accurate and
@@ -170,9 +170,9 @@ All three were re-derived with an independent script over the same raw inputs, n
 
 | # | value in `EJECT.md` | where verified |
 |---|---|---|
-| 1 | "`CInteractionGraphExit` objects: **4832** in 232 graphs, 61 distinct names, 26 in the donor" (line 19–20); "a set of **9** keys" listing `_object_id, disable_event, enable_event, enabled, interaction, modifier, name, name_hash, state` (line 21–25); `enabled` 1 and `interaction` `00000000` on all (lines 27–28) | Independent walk of all 232 `E:/Modding/_JC3grab/detail/*.ee.json`: **4832 / 232 / 61**, key union exactly those 9, `enabled {'1': 4832}`, `interaction {'00000000': 4832}`. Matches `EJECT.json` `counts` (`fleet_exits 4832`, `fleet_graphs 232`, `fleet_names 61`) and `fleet.exit_keys`. |
+| 1 | "`CInteractionGraphExit` objects: **4832** in 232 graphs, 61 distinct names, 26 in the donor" (line 19–20); "a set of **9** keys" listing `_object_id, disable_event, enable_event, enabled, interaction, modifier, name, name_hash, state` (line 21–25); `enabled` 1 and `interaction` `00000000` on all (lines 27–28) | Independent walk of all 232 `E:/Modding/JustCause3/_grab/detail/*.ee.json`: **4832 / 232 / 61**, key union exactly those 9, `enabled {'1': 4832}`, `interaction {'00000000': 4832}`. Matches `EJECT.json` `counts` (`fleet_exits 4832`, `fleet_graphs 232`, `fleet_names 61`) and `fleet.exit_keys`. |
 | 2 | "`CInteractionGraphParentVelocityCondition` has **4057** instances" (line 37–38), "graph vocabulary is **104** classes" (line 35), and "`exit.driver.moving.parachute` … on **221** of the 232 vehicles, 125 cars / 35 boats / 23 helis / 19 jets / 19 bikes" (lines 44–46, table row line 131) | Same independent walk: `ParentVelocityCondition 4057`, `classes 104`, `para 221` with roots `{CCar 125, CBoat 35, CHelicopter 23, CMotorBike 19, CAirPlane 19}` (sum 221). Matches `EJECT.json.fleet.names` and `counts.graph_classes_with_launch_name 2`. |
-| 3 | The donor jump table (lines 197–216): `punch_speed_kph` 50 / 80, `top_speed_kph` 200, `f_multiplier` 15 / `r_multiplier` 12, `top_speed_jump_multiplier` 2, upgraded 30 / 25, `punch_delay_time` 0.1, `turbo_jump_cooldown` 5 / `…_upgraded` 2, `high_up_in_air_height` 10, gravity multipliers 1 | Re-read from `E:/Modding/_JC3grab/entities/v0300_car_kensington_sportsmuscle__…_civilian_01.ee.json` module rows: every value identical (`punch_delay_time` raw `0.100000001`, printed as `0.1` by `:g` — correct). Also confirmed `TrainGlobal.crashing_impulse` ×12 and the "145 land vehicles / 232 cooldown" figures (145 files carry `CustomLandGlobal.arcade.turbo_jump.punch_speed_kph`; 232 carry `VehicleMisc.turbo_jump_cooldown`). |
+| 3 | The donor jump table (lines 197–216): `punch_speed_kph` 50 / 80, `top_speed_kph` 200, `f_multiplier` 15 / `r_multiplier` 12, `top_speed_jump_multiplier` 2, upgraded 30 / 25, `punch_delay_time` 0.1, `turbo_jump_cooldown` 5 / `…_upgraded` 2, `high_up_in_air_height` 10, gravity multipliers 1 | Re-read from `E:/Modding/JustCause3/_grab/entities/v0300_car_kensington_sportsmuscle__…_civilian_01.ee.json` module rows: every value identical (`punch_delay_time` raw `0.100000001`, printed as `0.1` by `:g` — correct). Also confirmed `TrainGlobal.crashing_impulse` ×12 and the "145 land vehicles / 232 cooldown" figures (145 files carry `CustomLandGlobal.arcade.turbo_jump.punch_speed_kph`; 232 carry `VehicleMisc.turbo_jump_cooldown`). |
 | 4 (bonus) | Donor gates: `default` 0..5, `to.fall` 0..5, `roll.out` 5..999, `moving.parachute` 5..999; `S_EXIT_VEHICLE_PARA` count 2 in the donor `.epe`; 19 BmAK eject properties at `0x0340 … 0x1790` | Parsed `Research/Epe/serpente_civilian.xml` directly (gates and condition children as tabled; the `id:A3CC001A` state appears exactly twice). Parsed `Research/BatmobileGrab/BMSDK_OFFSETS.json`: 19 members, offsets `832/1120/1124/1312/8384…8560/4576/5604/5902/6032` = `0x0340/0x0460/0x0464/0x0520/0x20c0…0x2170/0x11e0/0x15e4/0x170e/0x1790`, matching the §6 table exactly. |
 
 ## Tamper test

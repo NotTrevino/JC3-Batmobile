@@ -11,7 +11,7 @@ What it derives:
     event     -> reachable HIRC objects (Action -> Sound/RanSeq/Switch/ActorMixer/Blend)
                -> container types, RTPC bindings with curve points, loop evidence
     media id  -> bytes (embedded: DIDX/DATA in the bank; streamed: the SFX wad index)
-               -> 48 kHz WAV under E:\\Modding\\_gamedata\\BmAKgrab\\audio\\wav\\ (outside the repo)
+               -> 48 kHz WAV under E:\\Modding\\_shared\\gamedata\\BmAKgrab\\audio\\wav\\ (outside the repo)
                -> duration, peak dBFS, integrated loudness (ITU-R BS.1770-4)
 
 Wwise ids: every id in these banks is FNV-1 of the lower-case name (offset 0x811C9DC5, prime
@@ -57,8 +57,8 @@ AMAP = os.path.join(OUT, "AUDIO_MAP.json")
 AUDIO_MD = os.path.join(OUT, "AUDIO.md")
 JSON_OUT = os.path.join(OUT, "AUDIO_FEATURES.json")
 MD_OUT = os.path.join(OUT, "AUDIO_FEATURES.md")
-WEMDIR = r"E:\Modding\_gamedata\BmAKgrab\audio\wem"
-WAVDIR = r"E:\Modding\_gamedata\BmAKgrab\audio\wav"
+WEMDIR = r"E:\Modding\_shared\gamedata\BmAKgrab\audio\wem"
+WAVDIR = r"E:\Modding\_shared\gamedata\BmAKgrab\audio\wav"
 CLI = os.path.join(ROOT, "Tools", "vgmstream-win64", "vgmstream-cli.exe")
 CK = r"E:\Games\Batman - Arkham Knight\BmGame\CookedPCConsole"
 CENSUS = os.path.join(ROOT, "Working", "Audio", "sfx_census.json")

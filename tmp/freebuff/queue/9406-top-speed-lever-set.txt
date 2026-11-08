@@ -1,7 +1,7 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/top-speed-lever-set.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/top-speed-lever-set.md
 ONLY: freebuff
 EST: 45
 BRIEF: hand-written 2026-11-08
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-handling-values.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/drag-triple-serialised-or-code.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/rc5-handling-values.md, E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/drag-triple-serialised-or-code.md
 Re-derive a legitimate lever set for top speed. Known: the build's drag class fit Cd 0.55 predicts 267 km/h terminal (Working/Q/PREDICTIONS.md D-2), boost adds 32.4-43.2 km/h, and the 336.4 km/h (209 mph) label is assumed (tmp/freebuff/reports/correction-8391-top-speed-label.md); no back-solved drag may be used. Lore accuracy wins, so the target is to reach the label with levers that are individually justified. Using hdl-03 (what the drag triple really is) compute terminal speed for each lever alone and in combination: final drive and gear ratio (T-E4), rpm band top (T-E1), torque (T-E2), boost thrust (T-B1/B2) and the speed cap member, with the physics shown. Choose one set that reaches 300-336 km/h with boost and mark each value as lore (decoded), derived or tune. Output tmp/freebuff/reports/hdl-top-speed-levers.md plus the set as a JSON file Working/Translation/HDL_TOPSPEED_SET.json. Done check: a script recomputes the terminal speeds from the JSON and prints them to match the report; do not ask the operator a compromise question, record the choice and its class.
-Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.
+Shared rules: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

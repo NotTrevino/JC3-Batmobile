@@ -128,7 +128,7 @@ does not reproduce.
 ## 5. Commands (verbatim)
 
 ```
-$ cd E:/Modding/JC3-Batmobile && PYTHONIOENCODING=utf-8 python Tools/scripts/bm_extents_check.py --write; echo "write_exit=$?"; PYTHONIOENCODING=utf-8 python Tools/scripts/bm_extents_check.py --check; echo "check_exit=$?"
+$ cd E:/Modding/JustCause3/JC3-Batmobile && PYTHONIOENCODING=utf-8 python Tools/scripts/bm_extents_check.py --write; echo "write_exit=$?"; PYTHONIOENCODING=utf-8 python Tools/scripts/bm_extents_check.py --check; echo "check_exit=$?"
 wrote Working/Collision/BM_EXTENTS_CHECK.md (11008 chars), 9/9 checks pass
 write_exit=0
 CHECK PASS

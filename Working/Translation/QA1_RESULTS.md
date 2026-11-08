@@ -5,7 +5,7 @@ exists (`Tools/scripts/qa1_hud.py`) and produces a full speed trace from the HUD
 take is a re-run of four commands instead of a manual frame hunt.
 
 ```
-take        E:/Modding/_JC3grab/qa1/take1.mkv   (outside the repo: it is gameplay footage)
+take        E:/Modding/JustCause3/_grab/qa1/take1.mkv   (outside the repo: it is gameplay footage)
             3:42.13, 30 fps, 1920x1080 with the game at 1280x720 top-left
 recorded    2026-10-22 17:42:44 - 17:52:44
 build       test-085 (35 edits, installed and verified 9/9 before the run)
@@ -95,7 +95,7 @@ rows above.
 ## 6. Reproduce
 
 ```
-cd E:/Modding/_JC3grab/qa1
+cd E:/Modding/JustCause3/_grab/qa1
 python ../../JC3-Batmobile/Tools/scripts/qa1_hud.py crops --video take1.mkv --out work --fps 5
 python ../../JC3-Batmobile/Tools/scripts/qa1_hud.py build --crops work/hud \
        --known ../../JC3-Batmobile/Working/Translation/QA1/known.json

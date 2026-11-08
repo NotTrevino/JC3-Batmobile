@@ -21,9 +21,9 @@ What it does, in order:
      RIP-relative float constant the window reads resolved and printed inline;
   3. **route TEXT** - every whole-word, case-insensitive occurrence of the member name in the
      game's `*.ini` config files and in the decoded package/script text under
-     `E:\\Modding\\_gamedata\\BmAKgrab`, with 20 lines (or a 1 KB window for a minified/binary-ish line) of
+     `E:\\Modding\\_shared\\gamedata\\BmAKgrab`, with 20 lines (or a 1 KB window for a minified/binary-ish line) of
      context;
-  4. writes `E:\\Modding\\_gamedata\\BmAKgrab\\chase\\candidates.jsonl` (game-derived data stays outside the
+  4. writes `E:\\Modding\\_shared\\gamedata\\BmAKgrab\\chase\\candidates.jsonl` (game-derived data stays outside the
      repo), capped at 400 candidates per row - the ones whose window names the owning class or
      shows a constructor-like pattern first, with the overflow count printed;
   5. `--check` re-runs the whole scan and requires the file to be byte-identical and every id to be
@@ -56,10 +56,10 @@ import chase09_native as native  # noqa: E402  (the EXE scanner, reused not copi
 
 FOOTAGE = os.path.join(ROOT, "Research", "BatmobileGrab", "FOOTAGE.md")
 CHASE_DIR = os.path.join(ROOT, "Research", "BatmobileGrab", "chase")
-OUT = os.path.join(r"E:\Modding\_gamedata\BmAKgrab", "chase", "candidates.jsonl")
+OUT = os.path.join(r"E:\Modding\_shared\gamedata\BmAKgrab", "chase", "candidates.jsonl")
 GAME_CFG = os.path.join(r"E:\Games\Batman - Arkham Knight", "BmGame", "Config")
 GAME_BIN = os.path.join(r"E:\Games\Batman - Arkham Knight", "Binaries", "Win64")
-TEXT_ROOT = os.path.join(r"E:\Modding\_gamedata\BmAKgrab")
+TEXT_ROOT = os.path.join(r"E:\Modding\_shared\gamedata\BmAKgrab")
 
 MAX_PER_ROW = 400
 SNIPPET_CAP = 12 * 1024

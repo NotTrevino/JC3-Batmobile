@@ -128,7 +128,7 @@ No value here overrides a file value (R4): every footage number closes only what
 | `Tools/scripts/vulcan_capture_timing.py` | new; `--probe` prints the per-frame table, `--write` regenerates the two records below + the PNGs, `--check` re-decodes and recomputes every value |
 | `Research/BatmobileGrab/VULCAN_CAPTURE.json` | the machine record (1352 frames' measurements, events, audio, PNG list) |
 | `Research/BatmobileGrab/VULCAN_CAPTURE.md` | the same, readable, with the per-frame table 11.5–17.5 s |
-| `E:/Modding/_BmAKgrab/footage/vulcan/` | 15 PNGs, below |
+| `E:/Modding/ArkhamKnight/_grab/footage/vulcan/` | 15 PNGs, below |
 
 Key frames (full frame + 600×600 reticle crop, 2× nearest):
 

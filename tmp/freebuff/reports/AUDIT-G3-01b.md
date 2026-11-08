@@ -85,7 +85,7 @@ Two findings worth flagging:
 
 ## 3. Commands run (with output)
 
-All from `E:/Modding/JC3-Batmobile`.
+All from `E:/Modding/JustCause3/JC3-Batmobile`.
 
 **(a) File dates, to establish which card is "later"**
 

@@ -14,7 +14,7 @@ What the bytes say
   `w618_sportsmuscle_missile`, `w618_sportsmuscle_missile_emp`), i.e. the weapon's
   **owner link** to the vehicle root that owns it.
 * `4DAE31AE=FFFF05DA` is defined as the `CCar` root of the **APC's own** `.epe`
-  (`E:/Modding/_gamedata/JC3grab/epe_schema/apc_debug.epe`), whose weapon
+  (`E:/Modding/_shared/gamedata/JC3grab/epe_schema/apc_debug.epe`), whose weapon
   `w206_mounted_capstone_m2hm` carries that same self-reference.  B-05 cloned the APC
   weapon and copied the owner link into a graph where that object does not exist.
 * The vanilla donor graph has **no** `F30CCB1C` member at all.  The medium-tank
@@ -60,7 +60,7 @@ SOURCE = os.path.join(RC4, "aaf/editor/entities/jc_vehicles/01_land/"
 DONOR = ("Builds/bm-RC4-base/aaf/editor/entities/jc_vehicles/01_land/"
          "v0300_car_kensington_sportsmuscle/"
          "v0300_car_kensington_sportsmuscle_civilian_01.epe")
-APC = r"E:\Modding\_gamedata\JC3grab\epe_schema\apc_debug.epe"
+APC = r"E:\Modding\_shared\gamedata\JC3grab\epe_schema\apc_debug.epe"
 OUT_DIR = os.path.join(ROOT, "Builds", TAG)
 OUT = os.path.join(OUT_DIR, "fire_refs.json")
 

@@ -215,7 +215,7 @@ Probe 1 is the cheap one and it is the only one that can move 1/4/7/10 from `ope
 ## 8. Reproduce
 
 ```bash
-cd /e/Modding/JC3-Batmobile
+cd /e/Modding/JustCause3/JC3-Batmobile
 sed -n '1026,1041p' Research/BatmobileGrab/WEAPONS.md   # playable launcher: 16 fields, no MaxTargets
 sed -n '1081,1088p;1114,1119p' Research/BatmobileGrab/WEAPONS.md   # Joker 8 / 16, arrays
 sed -n '1720,1730p' Research/BatmobileGrab/WEAPONS.md   # §20: payloads not decoded

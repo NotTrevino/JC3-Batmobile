@@ -288,7 +288,7 @@ wants turbine *plus* a preserved V8 layer audible at the same rpm, it needs the 
 | check | result |
 |---|---|
 | `python Tools/scripts/engine_turbine_rank.py --write` | wrote `Research/BatmobileGrab/ENGINE_TURBINE_SCAN.json`, digest `f61f1286e2f548b6` |
-| `python Tools/scripts/engine_turbine_rank.py --check` | **PASS** — 197 rows, all `T_db`/`P_tone_db`/`peak_hz`/`low_share`/`class`/`duration_s` recompute identically from the 423 WAVs in `E:\Modding\_gamedata\BmAKgrab\audio\wav` |
+| `python Tools/scripts/engine_turbine_rank.py --check` | **PASS** — 197 rows, all `T_db`/`P_tone_db`/`peak_hz`/`low_share`/`class`/`duration_s` recompute identically from the 423 WAVs in `E:\Modding\_shared\gamedata\BmAKgrab\audio\wav` |
 | measured / distinct media | 517 rows / 197 media (561 event×media pairs, 44 with no WAV or no decode) |
 | loop points | 6 of 197, quoted verbatim from `AUDIO_FEATURES.json` `loop_lines` (vgmstream `-m`) |
 | slot arithmetic | `⌊slot_frames / loop_frames⌋` recomputed for all 6 slots × 18 sustained donors (`fill` block of the JSON) |

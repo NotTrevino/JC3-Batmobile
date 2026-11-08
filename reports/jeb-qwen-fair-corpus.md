@@ -32,7 +32,7 @@ Because 42 positives exist, the “fewer than 30 positives” fallback does not 
 | family | cases | ground truth | example evidence path |
 |---|---:|---|---|
 | `modes` | 39 | decoded tune: `MODES.json`, value on `Playable_Batmobile_SF` (four packages) | `Research/BatmobileGrab/MODES.json:BattleModeDrivingForceZOffset` |
-| `decoded` | 3 | decoded CDO record from `BmGame.upk` exported to `chase2_defaults.json` | `E:/Modding/_gamedata/BmAKgrab/chase/chase2_defaults.json` |
+| `decoded` | 3 | decoded CDO record from `BmGame.upk` exported to `chase2_defaults.json` | `E:/Modding/_shared/gamedata/BmAKgrab/chase/chase2_defaults.json` |
 
 Every one of the 42 rows carries an `evidence` string and every path named in it exists on disk (checked 42/42). The build requires a `true_record` whose class/offset/property match the case; the audit also confirms each true candidate's snippet shows the case's `known` value at the case's offset (42/42). No positive relies on a regex label or a model.
 
@@ -76,7 +76,7 @@ Seeds, fixed before any model call: `SPLIT_SEED_TUNE = 20261107`, `SPLIT_SEED_TE
 
 ## Decision rule (written before any model call)
 
-Verbatim from `E:/Modding/_gamedata/BmAKgrab/chase/fair/PREREGISTRATION.md` (sha256 prefix `fdcd803d8614`; the same text is `PREREG` in `fair_judge.py`):
+Verbatim from `E:/Modding/_shared/gamedata/BmAKgrab/chase/fair/PREREGISTRATION.md` (sha256 prefix `fdcd803d8614`; the same text is `PREREG` in `fair_judge.py`):
 
 ```
 ## Decision rule (written before any model call)
@@ -104,7 +104,7 @@ Scoring definitions fixed before the run:
 
 ## What was changed to make the build correct
 
-`fair_judge.py` already encoded the corpus rules, seeds and prereg. One builder defect surfaced in the audit: the three `decoded` positives cited `Research/BatmobileGrab/<file>`, which does not exist — the decoded records live outside the repo under `E:/Modding/_gamedata/BmAKgrab/chase/`. The evidence string now emits that real path with forward slashes. No judge, prompt, threshold or run was modified.
+`fair_judge.py` already encoded the corpus rules, seeds and prereg. One builder defect surfaced in the audit: the three `decoded` positives cited `Research/BatmobileGrab/<file>`, which does not exist — the decoded records live outside the repo under `E:/Modding/_shared/gamedata/BmAKgrab/chase/`. The evidence string now emits that real path with forward slashes. No judge, prompt, threshold or run was modified.
 
 ## Checks run
 
@@ -119,7 +119,7 @@ Scoring definitions fixed before the run:
 ## Files
 
 - `Tools/scripts/chase/fair_cases.jsonl` — the frozen corpus (84 lines), requested path.
-- `E:/Modding/_gamedata/BmAKgrab/chase/fair/cases.jsonl` — the builder's own copy, byte-identical.
-- `E:/Modding/_gamedata/BmAKgrab/chase/fair/PREREGISTRATION.md` — the decision rule, rewritten identically.
+- `E:/Modding/_shared/gamedata/BmAKgrab/chase/fair/cases.jsonl` — the builder's own copy, byte-identical.
+- `E:/Modding/_shared/gamedata/BmAKgrab/chase/fair/PREREGISTRATION.md` — the decision rule, rewritten identically.
 - `Tools/scripts/chase/fair_judge.py` — one evidence-path correction in the builder.
 - This report, mirrored at `tmp/freebuff/reports/jeb-qwen-fair-corpus.md`.

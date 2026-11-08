@@ -6,10 +6,10 @@ from collections import Counter, defaultdict
 
 import numpy as np
 
-sys.path.insert(0, r"E:/Modding/JC3-Batmobile/Tools/scripts")
+sys.path.insert(0, r"E:/Modding/JustCause3/JC3-Batmobile/Tools/scripts")
 import rbm_geom as R  # noqa
 
-D = r"E:/Modding/JC3-Batmobile/Builds/test-091/aaf/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle"
+D = r"E:/Modding/JustCause3/JC3-Batmobile/Builds/test-091/aaf/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle"
 files = sorted(glob.glob(D + "/*light*_lod*.rbm"))
 print(f"{len(files)} light meshes")
 rows = []

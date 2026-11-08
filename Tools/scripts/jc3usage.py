@@ -5,7 +5,7 @@ The card: "dump every `usage` name and hash across the fleet with the vehicles u
 exhaust / nitro / afterburner / boost flame usages (JC3 shows exhaust flames on nitro)."
 
 Inputs (decoded data only, nothing under D:\\Games is written):
-  * ``E:/Modding/_gamedata/JC3grab/entities/*.ee.json`` - the 232 entity caches (6,045 module rows in
+  * ``E:/Modding/_shared/gamedata/JC3grab/entities/*.ee.json`` - the 232 entity caches (6,045 module rows in
     total).  `EffectAttachments` carries `usage_effects[i].usage.string/.hash` (the named
     vocabulary) but stores the nested `usage_effects[i].effect_indices[]` elements without their
     prefix, so the usage -> effect link is ambiguous there.
@@ -14,7 +14,7 @@ Inputs (decoded data only, nothing under D:\\Games is written):
     elements stay attached to their usage (this is the real usage -> effect link).
   * `default_extended_effect_usages.vmodc` - the shared `ExtendedEffectUsages` module, decoded
     to prove whether `usages[]` carries anything anywhere.
-  * ``E:/Modding/_gamedata/JC3grab/detail/*.ee.json`` - the `.epe` graphs: every object with a `Usage`
+  * ``E:/Modding/_shared/gamedata/JC3grab/detail/*.ee.json`` - the `.epe` graphs: every object with a `Usage`
     int32 (SAttachedEffect / SDynamicAttachedEffect / *Table) and every
     `SValueDrivenEffectUsage` declaration (name + name_hash).
   * ``Research/JC3Grab/FX_TABLE.jsonl`` - the `.effc` census (exhaust/nitrous file families).

@@ -54,7 +54,7 @@ touched.
 Command:
 
 ```
-cd "E:/Modding/JC3-Batmobile" && PYTHONIOENCODING=utf-8 uv run --with numpy python Tools/scripts/grab_colour_functions.py --check; echo "EXIT=$?"
+cd "E:/Modding/JustCause3/JC3-Batmobile" && PYTHONIOENCODING=utf-8 uv run --with numpy python Tools/scripts/grab_colour_functions.py --check; echo "EXIT=$?"
 ```
 
 Output, verbatim:

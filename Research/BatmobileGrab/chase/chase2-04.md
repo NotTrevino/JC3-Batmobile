@@ -136,7 +136,7 @@ Command and output (trimmed to the parts that carry the claim):
 ```
 $ python Tools/scripts/chase/chase2_04_pkgscan.py
 done: 4145 files, 18,271,910,197 B, 2 with any name, 312s
-wrote E:\Modding\_BmAKgrab\chase\chase2_04_pkgscan.txt
+wrote E:\Modding\ArkhamKnight\_grab\chase\chase2_04_pkgscan.txt
 
 $ for f in $(find … -iname "*.upk" | grep -iE "batmobile|vehicle"); do
       python Tools/scripts/chase/chase02_cdo.py --scan --offsets 0x1758,0x175c,0x1760,0x176c,0x1774,0x1778 --package "$f"; done
@@ -222,5 +222,5 @@ for f in $(find "E:/Games/Batman - Arkham Knight" -iname "*.upk" | grep -iE "bat
 done
 ```
 
-Extracted data (outside the repo, R10): `E:/Modding/_BmAKgrab/chase/chase2_04_pkgscan.txt`,
-`E:/Modding/_BmAKgrab/chase/chase2_04_native.json`.
+Extracted data (outside the repo, R10): `E:/Modding/ArkhamKnight/_grab/chase/chase2_04_pkgscan.txt`,
+`E:/Modding/ArkhamKnight/_grab/chase/chase2_04_native.json`.

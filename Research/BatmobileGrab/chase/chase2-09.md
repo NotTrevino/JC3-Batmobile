@@ -5,7 +5,7 @@ Scope: every row of `Research/BatmobileGrab/chase/chase-09.md` that is STILL UNK
 try or did not finish are used here; `FOOTAGE.md`, `chase-09.md`, `GRAB_BACKLOG.md` and every other
 existing document are untouched. Read-only for the game: packages and ini files opened `rb`, the
 executable read-only, no game launched, nothing committed. Game-derived output:
-`E:/Modding/_BmAKgrab/chase2_09_packages.json`.
+`E:/Modding/ArkhamKnight/_grab/chase2_09_packages.json`.
 
 **Result: 0 of 7 rows closed. Three of them gained a stronger negative (the field is not touched by
 any shipped file or any static instruction at its displacement), and two got a first read-site.**

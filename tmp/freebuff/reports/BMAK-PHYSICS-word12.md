@@ -96,7 +96,7 @@ string does not move.
 Read-only probe first, to locate the field:
 
 ```
-$ cd E:/Modding/JC3-Batmobile && timeout 300 python tmp/freebuff/scratch/word12_probe.py
+$ cd E:/Modding/JustCause3/JC3-Batmobile && timeout 300 python tmp/freebuff/scratch/word12_probe.py
 ### Playable_Batmobile_SF / Root   128-byte AggGeom payload
   first 32 bytes: 00000000010000000a0000001e0b000000000000400000000000000000000000
    +0  u32=0          u16=(0, 0)
@@ -121,7 +121,7 @@ $ cd E:/Modding/JC3-Batmobile && timeout 300 python tmp/freebuff/scratch/word12_
 Then the tool (new, read-only, exits non-zero on any failed oracle):
 
 ```
-$ cd E:/Modding/JC3-Batmobile && timeout 500 python Tools/scripts/bmak_word12.py
+$ cd E:/Modding/JustCause3/JC3-Batmobile && timeout 500 python Tools/scripts/bmak_word12.py
   scanning BmGame         1081 bodies
     BmGame: 800/1081 bodies, 579 elements
   scanning Orphan          269 bodies

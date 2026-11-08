@@ -5,7 +5,7 @@ Inputs are the records already produced by the grab, not hand-copied numbers:
   * `Research/BatmobileGrab/BONES.json` supplies the 180-bone hierarchy, the bind pose,
     the one JC3 transform and the LOD0 mesh path/hash;
   * `Batmobile_V2_Pose_States` supplies the local track keys.  The key-frame export is
-    `E:\\Modding\\_gamedata\\BmAKgrab\\anims\\keys\\Playable_Batmobile_SF__Batmobile_V2_Pose_States.json`;
+    `E:\\Modding\\_shared\\gamedata\\BmAKgrab\\anims\\keys\\Playable_Batmobile_SF__Batmobile_V2_Pose_States.json`;
     positions are metres in the PSK frame, rotations are PSK/UE3 quaternions;
   * the LOD0 PSKX supplies the 201,338 points and their raw weights, so a pose bbox is the
     actual skinned mesh bbox rather than a box around bone pivots.
@@ -54,7 +54,7 @@ BONES_JSON = GRAB / "BONES.json"
 PACKAGE = "Playable_Batmobile_SF"
 ANIM_SET = "Batmobile_V2_Pose_States"
 KEY_DIR = Path(os.environ.get("BMAK_ANIM_KEY_DIR",
-                              r"E:\Modding\_gamedata\BmAKgrab\anims\keys"))
+                              r"E:\Modding\_shared\gamedata\BmAKgrab\anims\keys"))
 KEY_JSON = KEY_DIR / ("%s__%s.json" % (PACKAGE, ANIM_SET))
 
 CANON_OPEN = "Batmobile_V2_Tank_Spread_Open_Game"

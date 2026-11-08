@@ -3,7 +3,7 @@ import wave
 
 from fsb5 import FSB5
 
-bank = open(r"E:\Modding\JC3-Batmobile\Working\Audio\jc3bank\sound\fmod_banks\vehicles.bank", "rb").read()
+bank = open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\jc3bank\sound\fmod_banks\vehicles.bank", "rb").read()
 fsb = FSB5(bank[bank.find(b"FSB5"):])
 print("samples:", len(fsb.samples))
 for i in (56, 150, 355):

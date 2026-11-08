@@ -75,7 +75,7 @@ cook-time rename.
 ## 4. Commands (verbatim)
 
 ```
-$ cd E:/Modding/JC3-Batmobile && python Tools/scripts/t_au_retest.py --write; echo "write_exit=$?"; python Tools/scripts/t_au_retest.py --check; echo "check_exit=$?"
+$ cd E:/Modding/JustCause3/JC3-Batmobile && python Tools/scripts/t_au_retest.py --write; echo "write_exit=$?"; python Tools/scripts/t_au_retest.py --check; echo "check_exit=$?"
 wrote Working/Translation/AU_BLOCKED_RETEST.md (11644 chars) and Working/Translation/AU_BLOCKED_RETEST.json
 banks 10 FOUND 10 | rows 90 ids 26 carried 25 | not found ['0x6BB2C66E'] | T-AU5 hits 0
 write_exit=0

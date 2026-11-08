@@ -136,7 +136,7 @@ python Tools/scripts/chase/fair_judge.py --run --model qwen --arm native-qwen --
 python Tools/scripts/chase/fair_judge.py --report tmp/freebuff/reports/jeb-vs-qwen-fair-test.md
 ```
 
-Run folders: `E:/Modding/_gamedata/BmAKgrab/chase/fair/runs/<arm>_<variant>_<promptver>/<model>/`. The earlier runs under `chase/calib_runs/` and the three earlier reports are untouched.
+Run folders: `E:/Modding/_shared/gamedata/BmAKgrab/chase/fair/runs/<arm>_<variant>_<promptver>/<model>/`. The earlier runs under `chase/calib_runs/` and the three earlier reports are untouched.
 
 ## Limitations
 

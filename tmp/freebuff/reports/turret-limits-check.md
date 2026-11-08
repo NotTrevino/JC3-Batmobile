@@ -70,7 +70,7 @@ pitch range exists anywhere in the shipped tree. `jc3adf` resolves the link exac
 ## Commands and output (verbatim)
 
 ```
-cd "E:/Modding/JC3-Batmobile" && export PYTHONIOENCODING=utf-8 && set -o pipefail && python Tools/scripts/v_turret_ranges.py --write; echo "EXIT write=$?"; python Tools/scripts/v_turret_ranges.py --check; echo "EXIT check=$?"
+cd "E:/Modding/JustCause3/JC3-Batmobile" && export PYTHONIOENCODING=utf-8 && set -o pipefail && python Tools/scripts/v_turret_ranges.py --write; echo "EXIT write=$?"; python Tools/scripts/v_turret_ranges.py --check; echo "EXIT check=$?"
 wrote Builds/bm-RC2/verify/turret_ranges.md (7252 bytes)
 EXIT write=0
 PASS P-01 motion is -60.000…60.000

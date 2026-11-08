@@ -5,7 +5,7 @@ Inputs read: `tmp/freebuff/reports/G3-06.md`, `Tools/scripts/grab_remainder.py` 
 `Research/BatmobileGrab/REMAINDER.md` (1,926 lines) and `REMAINDER.json` (1.0 MB),
 `Research/BatmobileGrab/objects.jsonl`, `GRAB_BACKLOG.md` §6b, `Tools/scripts/grab_packages_g305.py`,
 `Tools/scripts/upk_read.py`, `Research/BatmobileGrab/BMSDK_OFFSETS.json`,
-`E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated/Engine/{CylinderComponent,PrimitiveComponent,
+`E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Generated/Engine/{CylinderComponent,PrimitiveComponent,
 ParticleSystemComponent}.g.cs`, and the cooked packages
 `E:/Games/Batman - Arkham Knight/BmGame/CookedPCConsole/{Playable_Batmobile_SF,Startup}.upk`
 (read-only). Nothing was written except this file; no card output was regenerated; no game was

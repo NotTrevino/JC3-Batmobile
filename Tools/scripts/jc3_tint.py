@@ -2,7 +2,7 @@
 
 The card asks where the dynamic paint tint is written for a Serpente-class car, using only
 files: the `.epe`/`.rbm`/material parameters in the extracted fleet
-(`E:/Modding/_gamedata/JC3grab/...`) and how the fleet's vehicle modules reference them.
+(`E:/Modding/_shared/gamedata/JC3grab/...`) and how the fleet's vehicle modules reference them.
 
 What this pass reads (all read-only, static):
 
@@ -41,7 +41,7 @@ sys.path.insert(0, HERE)
 import jc3adf        # noqa: E402  (ADF v4 reader, used only to test the loose palette)
 import rbm_geom      # noqa: E402
 
-GD = "E:/Modding/_gamedata/JC3grab"
+GD = "E:/Modding/_shared/gamedata/JC3grab"
 ENTITIES = os.path.join(GD, "entities")
 MODELS = os.path.join(GD, "b13b", "unpacked", "models", "jc_vehicles")
 DONOR = "v0300_car_kensington_sportsmuscle"

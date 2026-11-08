@@ -11,7 +11,7 @@ import re
 import subprocess
 import sys
 
-GIBBED = r"E:\Modding\JC3-Batmobile\Tools\Gibbed\Gibbed.JustCause3.ConvertAdf.exe"
+GIBBED = r"E:\Modding\JustCause3\JC3-Batmobile\Tools\Gibbed\Gibbed.JustCause3.ConvertAdf.exe"
 
 
 def decode(vm, xml):

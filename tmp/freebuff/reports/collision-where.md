@@ -140,8 +140,8 @@ by COLLISION_WHERE.md rather than rewritten.
 5) Final:
 
     $ python Tools/scripts/grab_collision_where.py --write
-    wrote E:\Modding\JC3-Batmobile\Research\BatmobileGrab\COLLISION_WHERE.md
-    wrote E:\Modding\JC3-Batmobile\Research\BatmobileGrab\COLLISION_WHERE.json
+    wrote E:\Modding\JustCause3\JC3-Batmobile\Research\BatmobileGrab\COLLISION_WHERE.md
+    wrote E:\Modding\JustCause3\JC3-Batmobile\Research\BatmobileGrab\COLLISION_WHERE.json
     $ python Tools/scripts/grab_collision_where.py --check
     check ok: 2 bodies, 4 wheels, selector absent
     exit=0

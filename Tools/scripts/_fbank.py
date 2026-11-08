@@ -1,7 +1,7 @@
 """FMOD bank recon: magic, version, GUID hits, FSB layout."""
 import os, struct
 
-p = r"E:\Modding\JC3-Batmobile\Working\Audio\jc3bank\sound\fmod_banks\vehicles.bank"
+p = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\jc3bank\sound\fmod_banks\vehicles.bank"
 d = open(p, "rb").read()
 print("size:", len(d))
 print("magic:", d[:8])
@@ -12,7 +12,7 @@ for tag in [b"FSB5", b"BANK", b"FMOD", b"GUID", b"LIST", b"STR"]:
     while i >= 0 and len(idxs) < 6:
         idxs.append("0x%X" % i); i = d.find(tag, i + 1)
     print("  %r: %d @ %s" % (tag, len(idxs), idxs))
-evs = [l.strip() for l in open(r"E:\Modding\JC3-Batmobile\Working\Audio\serpente_fmod_events.txt")]
+evs = [l.strip() for l in open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\serpente_fmod_events.txt")]
 print("serpente events:", len(evs))
 # GUIDs in file are binary LE mixed-endian; file stores {xxxxxxxx-...} -> bytes?
 import re

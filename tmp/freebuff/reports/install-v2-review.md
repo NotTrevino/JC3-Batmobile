@@ -115,7 +115,7 @@ junction is **UNKNOWN** (not tested).
 ```
 $ pwsh -NoProfile -File Working/Installer/install_v2.ps1 -Action Install \
     -GameDir "E:\Modding\_dropzone_sim_rc2_review_prefix" \
-    -Source "E:\Modding\JC3-Batmobile\Builds\bm-RC2\drop"
+    -Source "E:\Modding\JustCause3\JC3-Batmobile\Builds\bm-RC2\drop"
 installed textures\ui\vehicle_icons\v0300_car_kensington_sportsmuscle_debug.ddsc
 installed 9/9; snapshotted 9 existing target(s)
 install_exit=0

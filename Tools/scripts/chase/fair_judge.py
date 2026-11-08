@@ -43,7 +43,7 @@ This module fixes all five:
               the table, the disagreements and the exact rerun commands.
 
 Nothing here edits an existing judge.  The earlier runs under `calib_runs/` are untouched; this
-module writes only under `E:/Modding/_gamedata/BmAKgrab/chase/fair/`.
+module writes only under `E:/Modding/_shared/gamedata/BmAKgrab/chase/fair/`.
 
 Usage
   python Tools/scripts/chase/fair_judge.py --build            # corpus + split + prereg hash
@@ -70,7 +70,7 @@ sys.path.insert(0, HERE)
 
 BAT = os.path.join(ROOT, "Research", "BatmobileGrab")
 MODES = os.path.join(BAT, "MODES.json")
-CHASE = os.path.join(r"E:\Modding\_gamedata\BmAKgrab", "chase")
+CHASE = os.path.join(r"E:\Modding\_shared\gamedata\BmAKgrab", "chase")
 FAIR = os.path.join(CHASE, "fair")
 CORPUS = os.path.join(FAIR, "cases.jsonl")
 RUNS = os.path.join(FAIR, "runs")
@@ -153,7 +153,7 @@ def native_jeb_question(case: dict, cands: list[dict]) -> dict:
     crit = {}
     for i, cand in enumerate(cands):
         src = str(cand.get("source", "?")).replace(
-            "E:/Modding/_gamedata/BmAKgrab/chase/", "")
+            "E:/Modding/_shared/gamedata/BmAKgrab/chase/", "")
         crit[chr(65 + i)] = f"snippet {chr(65 + i)} from {src}"
     crit[NONE_LABEL] = NONE_CRIT
     return {"type": "choice",
@@ -345,7 +345,7 @@ def build() -> list[dict]:
     fields = modes["fields"]
     recs = bmgame_records()
     windows = exe_windows()
-    pkgscan = _jload(os.path.join(r"E:\Modding\_gamedata\BmAKgrab", "chase2_09_packages.json"))
+    pkgscan = _jload(os.path.join(r"E:\Modding\_shared\gamedata\BmAKgrab", "chase2_09_packages.json"))
     try:
         import chase_candidates as cc
         footage = {r["id"]: r for r in cc.parse_footage()}
@@ -1336,7 +1336,7 @@ def render_report() -> str:
     A("python Tools/scripts/chase/fair_judge.py --report tmp/freebuff/reports/jeb-vs-qwen-fair-test.md")
     A("```")
     A("")
-    A("Run folders: `E:/Modding/_gamedata/BmAKgrab/chase/fair/runs/<arm>_<variant>_<promptver>/<model>/`. "
+    A("Run folders: `E:/Modding/_shared/gamedata/BmAKgrab/chase/fair/runs/<arm>_<variant>_<promptver>/<model>/`. "
       "The earlier runs under `chase/calib_runs/` and the three earlier reports are untouched.")
     A("")
     A("## Limitations")

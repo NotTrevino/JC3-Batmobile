@@ -6,7 +6,7 @@
 `Tools/scripts/jc3wiring.py`. Rules read first: `GRAB_BACKLOG.md` §0.5 R1–R14.
 
 **Method.** Re-ran the card's check, then attacked each claim with the data on disk: the 53 cached
-`.epe` graphs (`E:\Modding\_JC3grab\wiring\epe\*.xml`), `FEATURE_CENSUS.json`,
+`.epe` graphs (`E:\Modding\JustCause3\_grab\wiring\epe\*.xml`), `FEATURE_CENSUS.json`,
 `INDEX.jsonl`, and — read-only — the shipped `.arc` files at `D:\Games\Just Cause 3` (the
 generator itself reads them; nothing was written there, no game launched, nothing committed).
 

@@ -6,7 +6,7 @@ What it does
      and for the vehicle-related ones records: type-descriptor VA, name, complete-object-locator VA,
      vtable VA and the first vtable slots.
   3. Takes every quoted string literal out of the 2017 handling editor's source
-     (E:/Modding/_tools/jc3-handling-editor/src) and reports which of those strings still exist in the
+     (E:/Modding/_shared/tools/jc3-handling-editor/src) and reports which of those strings still exist in the
      exe, at what VA, plus the code that references them (RIP-relative lea, disp32 scan in .text).
   4. Writes Working/RTTI/vehicle_rtti.json (+ .md) and a receipt of every number.
 
@@ -30,7 +30,7 @@ import pefile
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
 EXE = r"D:\Games\Just Cause 3\JustCause3.exe"
-HANDLING_SRC = r"E:\Modding\_tools\jc3-handling-editor\src"
+HANDLING_SRC = r"E:\Modding\_shared\tools\jc3-handling-editor\src"
 OUT_DIR = os.path.join(ROOT, "Working", "RTTI")
 OUT_JSON = os.path.join(OUT_DIR, "vehicle_rtti.json")
 OUT_MD = os.path.join(OUT_DIR, "vehicle_rtti.md")

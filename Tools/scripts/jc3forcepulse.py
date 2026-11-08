@@ -9,7 +9,7 @@ The card asks two things of the decoded graphs:
 
 Everything here is derived from three inputs:
 
-  * `E:\\Modding\\_gamedata\\JC3grab\\detail\\*.ee.json`  - the 232 vehicle graphs (the card's In
+  * `E:\\Modding\\_shared\\gamedata\\JC3grab\\detail\\*.ee.json`  - the 232 vehicle graphs (the card's In
     list), used to enumerate the entities and to agree with `FEATURE_CENSUS.json`;
   * the archives themselves, re-decoded per entity with `jc3wiring.decode_epe`, because
     `jc3detail.parse_epe` skips unnamed `<value id=...>` rows - and 35 of a pulse's ~40
@@ -57,7 +57,7 @@ import jc3wiring  # noqa: E402
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
 OUT = os.path.join(ROOT, "Research", "JC3Grab")
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/_shared/gamedata/JC3grab")
 GAME = os.environ.get("JC3_GAME", jc3index.DEFAULT_GAME)
 JSON_NAME = "FORCEPULSE.json"
 MD_NAME = "FORCEPULSE.md"

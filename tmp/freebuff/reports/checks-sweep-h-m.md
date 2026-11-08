@@ -24,15 +24,15 @@ Exit status **1**, which is the sweep's normal signal for "some row is red", not
 
 | script | exit | evidence from its own output | reason class |
 |---|---|---|---|
-| `jc3eject.py` | 1 | `FAIL EJECT.md stale` … `-232 vehicle .epe graphs in E:/Modding/_JC3grab\detail` / `+… in E:/Modding/_gamedata/JC3grab\detail` (also line 323) | stale document: the record still cites the old game-data root `_JC3grab`, the re-derivation cites `_gamedata/JC3grab` |
-| `jc3_feature_census.py` | 1 | `STALE …FEATURE_CENSUS.md` line 16: `detail_root` disk `E:/Modding/_JC3grab/detail` vs derived `E:/Modding/_gamedata/JC3grab/detail`; `FAIL: 1 file(s) differ` | stale document, same root rename |
+| `jc3eject.py` | 1 | `FAIL EJECT.md stale` … `-232 vehicle .epe graphs in E:/Modding/JustCause3/_grab\detail` / `+… in E:/Modding/_shared/gamedata/JC3grab\detail` (also line 323) | stale document: the record still cites the old game-data root `_JC3grab`, the re-derivation cites `_gamedata/JC3grab` |
+| `jc3_feature_census.py` | 1 | `STALE …FEATURE_CENSUS.md` line 16: `detail_root` disk `E:/Modding/JustCause3/_grab/detail` vs derived `E:/Modding/_shared/gamedata/JC3grab/detail`; `FAIL: 1 file(s) differ` | stale document, same root rename |
 | `jc3weapons.py` | 1 | `FAIL: 25 ids, 197 extracted files, 24 shared tunes, md 1223 lines`; diff at §11: `_JC3grab/weapons` → `_gamedata/JC3grab/weapons` | stale document, same root rename |
 | `jc3_last_entry.py` | 1 | `FAIL: Research/JC3Grab/LAST_ENTRY.json differs from the re-derived record` (single line, no path in it) | stored JSON differs from its re-derivation; **which field differs is UNKNOWN** from this run |
 | `jc3hudwpn.py` | 1 | `FAIL: JC3_HUD_WEAPONS.json stale` (single line) | stored JSON stale vs re-derivation; field-level cause UNKNOWN from this run |
 | `jc3lights.py` | 1 | `FAIL: LIGHT_SYSTEM.json stale` (single line) | stored JSON stale vs re-derivation; field-level cause UNKNOWN from this run |
 | `jc3_runtime_layout4.py` | 1 | `json identical False  md identical True` / `verdict UNKNOWN  hits 15  readers 33  callers 54` / `CHECK FAIL` | the JSON half of the record is out of step with the re-derivation while the MD still matches, and the script's own verdict line is UNKNOWN — it treats a non-proven claim as a failure |
 | `hud_spec.py` | 1 | last line `give --bmak and/or --jc3` (this run produced only that line; the a..g-era run showed it then dying in `int()` on that string) | no-argument invocation path: it asks for `--bmak`/`--jc3` and exits nonzero; no spec was re-derived |
-| `jc3wiring.py` | 1 | `FAIL: census 53 entities != rows 0` / `FAIL: 0 entities, 0 weapons, 0 bound, 0 unbound, 0 seats, md 148 lines`; its log also ends `GUARD blocked write: E:/Modding/_gamedata/JC3grab\wiring\epe\v5603_train_urga_monorailmissilecar_military_01.ee.epe` | **guard-truncated, not proven drift**: the tool classified exit 1 as a real failure, but the run's only written state is 0 rows because its intermediate `.epe` write was blocked. Classification is the tool's; the cause is the guard |
+| `jc3wiring.py` | 1 | `FAIL: census 53 entities != rows 0` / `FAIL: 0 entities, 0 weapons, 0 bound, 0 unbound, 0 seats, md 148 lines`; its log also ends `GUARD blocked write: E:/Modding/_shared/gamedata/JC3grab\wiring\epe\v5603_train_urga_monorailmissilecar_military_01.ee.epe` | **guard-truncated, not proven drift**: the tool classified exit 1 as a real failure, but the run's only written state is 0 rows because its intermediate `.epe` write was blocked. Classification is the tool's; the cause is the guard |
 
 ### timeout (1)
 
@@ -52,17 +52,17 @@ The guard refused the write; nothing on disk changed. The path is the script's o
 
 | script | blocked path |
 |---|---|
-| `install_v2.py` | `E:\Modding\_dropzone_sim_rc2_case_a` |
+| `install_v2.py` | `E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2_case_a` |
 | `install_v3.py` | `E:\Modding\_dropzone_sim_rc2_v3_prefix_14496` |
 | `jc3_tint_write.py` | `Builds\bm-005\aaf\…\modules\default\v0300_car_kensington_sportsmuscle_palette.vmodc` |
-| `jc3audio.py` | `E:/Modding/_gamedata/JC3grab\wiring\epe\v0300_car_kensington_sportsmuscle_civilian_01.ee.epe` |
-| `jc3doors.py` | `E:/Modding/_gamedata/JC3grab\wiring\epe\v5603_train_urga_monorailmissilecar_military_01.ee.epe` |
-| `jc3emp.py` | `E:/Modding/_gamedata/JC3grab\wiring\epe\v0505_car_solar_oldtruck_rebel_emp_01.ee.epe` |
-| `jc3forcepulse.py` | `E:/Modding/_gamedata/JC3grab\wiring\epe\v0000_car_autostraad_oldjeep_civilian_01.ee.epe` |
-| `jc3moving.py` | `E:/Modding/_gamedata/JC3grab\tmp\vehicle_common.vmodc` |
-| `jc3rebeldrop.py` | `E:/Modding/_gamedata/JC3grab\rebeldrop\archives_win64_game2__profile_item.onlinec` |
-| `jc3sigdiff.py` | `E:/Modding/_gamedata/JC3grab\sigdiff\civilian.epe` |
-| `jc3turret.py` | `E:/Modding/_gamedata/JC3grab\wiring\epe\v0201_car_capstone_mediumtank_military_01.ee.epe` |
+| `jc3audio.py` | `E:/Modding/_shared/gamedata/JC3grab\wiring\epe\v0300_car_kensington_sportsmuscle_civilian_01.ee.epe` |
+| `jc3doors.py` | `E:/Modding/_shared/gamedata/JC3grab\wiring\epe\v5603_train_urga_monorailmissilecar_military_01.ee.epe` |
+| `jc3emp.py` | `E:/Modding/_shared/gamedata/JC3grab\wiring\epe\v0505_car_solar_oldtruck_rebel_emp_01.ee.epe` |
+| `jc3forcepulse.py` | `E:/Modding/_shared/gamedata/JC3grab\wiring\epe\v0000_car_autostraad_oldjeep_civilian_01.ee.epe` |
+| `jc3moving.py` | `E:/Modding/_shared/gamedata/JC3grab\tmp\vehicle_common.vmodc` |
+| `jc3rebeldrop.py` | `E:/Modding/_shared/gamedata/JC3grab\rebeldrop\archives_win64_game2__profile_item.onlinec` |
+| `jc3sigdiff.py` | `E:/Modding/_shared/gamedata/JC3grab\sigdiff\civilian.epe` |
+| `jc3turret.py` | `E:/Modding/_shared/gamedata/JC3grab\wiring\epe\v0201_car_capstone_mediumtank_military_01.ee.epe` |
 
 These are **not** stale-record failures: their `--check` writes a scratch copy outside `tmp/` before comparing, so under this harness they cannot be judged either way.
 

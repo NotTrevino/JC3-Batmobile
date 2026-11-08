@@ -2,7 +2,7 @@
 import struct
 
 d = open(r"E:\Games\Batman - Arkham Knight\BmGame\CookedPCConsole\Playable_Batmobile_SF.upk", "rb").read()
-s = open(r"E:\Modding\JC3-Batmobile\Working\Audio\bm_stream.bin", "rb").read()
+s = open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\bm_stream.bin", "rb").read()
 img = d[:0x369] + s
 o = 0x1C9F9 + 5281 * 72
 arch, ef, lo, hi2, size, off = struct.unpack_from("<IIIIII", img, o + 20)

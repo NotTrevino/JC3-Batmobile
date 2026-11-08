@@ -1,7 +1,7 @@
 # EMP figures in `emp-effects-closest-system-plan.md`, checked number by number against the JC3 EMP grab
 
 **Provenance / reversibility.** New file, `tmp/freebuff/reports/audit-emp-effects-numbers.md`
-= `E:/Modding/JC3-Batmobile/tmp/freebuff/reports/audit-emp-effects-numbers.md`. Intended change:
+= `E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/audit-emp-effects-numbers.md`. Intended change:
 add one audit report; no source, record, package or game file is touched, and nothing was written
 outside `tmp/freebuff/`. It is the correct file because it is the requested output path and the
 only job artefact (`tmp/freebuff/running/L2__8812-audit-emp-effects-numbers.txt`, line 1). Revert =

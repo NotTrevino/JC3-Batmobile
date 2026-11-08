@@ -1,6 +1,6 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/summon-and-unranked-weapon-plans-v2.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/summon-and-unranked-weapon-plans-v2.md
 ONLY: freebuff
 EST: 50
 BRIEF: hand-written 2026-11-08
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/vulcan-capture-fire-and-overheat-timing.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/cannon-60mm-reload-circle-plan.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/vulcan-capture-fire-and-overheat-timing.md, E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/cannon-60mm-reload-circle-plan.md
 reports/audit-summon-and-unranked-weapon-plans.md found two mismatches, three overstated and five unsupported rows in summon-drive-in-closest-system.md and unranked-weapons-closest-system.md. The cannon muzzle (0.247, 0.485, minus 2.018) belongs to w603_mediumtank_mgun, while the cannon's own fire_position_0 is 0, 0.3739, minus 5.8174 at Research/JC3Grab/WEAPON_WIRING.md line 316. Fold in the two fresh operator-fact reports, vulcan-capture-fire-and-overheat-timing.md (crosshair spreads then turns red, no lockout) and cannon-60mm-reload-circle-plan.md (reload circle), plus cannon-recoil-and-muzzle-plan.md, vulcan-spinup-and-heat-plan.md, missile-pod-salvo-plan.md and summon-and-arrival-plan.md. Write summon-and-unranked-weapon-plans-v2.md with one section each for cannon, Vulcan, riot mode, missile pods and summon: corrected numbers with file and line, closest JC3 mechanism with members, gap, one single-session build step, and a pilot sentence with a band. Do not rank the unranked weapons; only record their build order dependencies on the ranked ones.

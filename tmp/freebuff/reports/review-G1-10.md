@@ -7,7 +7,7 @@ report is the only file written. No game was launched, nothing was committed.
 Card under review: `GRAB_BACKLOG.md` L416–437 (§G1-10), tracker row L1278, rules §0.5 L71–91.
 Journal entry: `MODLOG.md` L8000–8038 (intent + done).
 Outputs: `Research/BatmobileGrab/ANIMATIONS.md`, `Research/BatmobileGrab/ANIMATIONS.json`,
-`Tools/scripts/grab_anims.py`, keyframes under `E:\Modding\_BmAKgrab\anims\keys\`.
+`Tools/scripts/grab_anims.py`, keyframes under `E:\Modding\ArkhamKnight\_grab\anims\keys\`.
 
 ## VERDICT: minor issues
 
@@ -30,7 +30,7 @@ mislabels are visible and re-derivable. Fix list at the end.
 
 ## Check output (verbatim)
 
-Command, run from the project root `E:\Modding\JC3-Batmobile`:
+Command, run from the project root `E:\Modding\JustCause3\JC3-Batmobile`:
 
 ```
 python Tools/scripts/grab_anims.py --check
@@ -39,8 +39,8 @@ python Tools/scripts/grab_anims.py --check
 Output:
 
 ```
-ok E:\Modding\JC3-Batmobile\Research\BatmobileGrab\ANIMATIONS.json
-ok E:\Modding\JC3-Batmobile\Research\BatmobileGrab\ANIMATIONS.md
+ok E:\Modding\JustCause3\JC3-Batmobile\Research\BatmobileGrab\ANIMATIONS.json
+ok E:\Modding\JustCause3\JC3-Batmobile\Research\BatmobileGrab\ANIMATIONS.md
 PASS: 253 sequences, 13 sets, 3 trees, 253 PSA sequences, 3147888 keys, 309 notifies (204 sound, 35 script); 253/253 named, 253 bone lists, 253 mechanisms; 13/13 keyframe files present
 ```
 
@@ -53,7 +53,7 @@ complete stdout, no stderr).
 |---|---|
 | `Research/BatmobileGrab/ANIMATIONS.md` | present, 384,784 B, 1,387 lines |
 | `Research/BatmobileGrab/ANIMATIONS.json` | present, 2,358,421 B (valid JSON, keys `schema/generator/verdict/inputs/counts/mechanism_counts/notify_class_counts/sets/trees/sequences/duplicate_names/psa_name_differences/psa_missing`) |
-| key-frame JSON outside the repo | present: 13 files in `E:\Modding\_BmAKgrab\anims\keys\`, 88 MiB total, one per AnimSet, plus the 13 PSA/`.config`/`.props.txt` triples in `E:\Modding\_BmAKgrab\anims\<package>\AnimSet\` |
+| key-frame JSON outside the repo | present: 13 files in `E:\Modding\ArkhamKnight\_grab\anims\keys\`, 88 MiB total, one per AnimSet, plus the 13 PSA/`.config`/`.props.txt` triples in `E:\Modding\ArkhamKnight\_grab\anims\<package>\AnimSet\` |
 | `Tools/scripts/grab_anims.py` (`--check` entry point named by the Done line) | present, 1,310 lines |
 
 Card `In:` says "253 `AnimSequence`, 2 `AnimSet`, 1 `AnimTree`"; `objects.jsonl` actually holds
@@ -160,7 +160,7 @@ record".
 * `grab_anims.py` never invokes umodel: no `subprocess` import, no umodel call (only the strings at
   L9, L25, L974, L1163, L1215). `--write` reads whatever `.psa` already exists and, if one is
   absent, records it in `psa_missing`, writes fewer keyframe files and exits 0. The
-  `E:\Modding\_BmAKgrab\anims\` tree (13 PSAs, their `.config` with the hand-editable
+  `E:\Modding\ArkhamKnight\_grab\anims\` tree (13 PSAs, their `.config` with the hand-editable
   `[RemoveTracks]` sections, `.props.txt`) is an unreproducible prerequisite: neither the umodel
   command that produced it nor the origin of the removal choices appears in `MODLOG.md` or the
   scripts.
@@ -245,7 +245,7 @@ Extra checks done while reviewing (no doc numbers involved):
 4. Relabel L22 (and the MODLOG sentence) to "names occurring more than once", and rename the JSON
    `bone` field for notify classes where it is not a bone (L1117 is the visible case).
 5. Correct L1344: `--write` consumes existing PSAs; record the umodel command that produced
-   `E:\Modding\_BmAKgrab\anims\` (and the origin of the `RemoveTracks` config) in `MODLOG.md`.
+   `E:\Modding\ArkhamKnight\_grab\anims\` (and the origin of the `RemoveTracks` config) in `MODLOG.md`.
 6. Reword L1372 (door `AnimNodeSequence`: no `AnimSeqName` property rather than "no sequence";
    drop the "do not own sequences" clause or exclude the Batwing tree from it), and either assert
    the notify-length property in `check()` or attribute it to the author's verification. Add the

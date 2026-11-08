@@ -5,7 +5,7 @@ MODLOG blocks `G2-34 … intended change` / `… done` (lines 10885–10972) and
 `Research/JC3Grab/TETHER.md` (+ `TETHER.json`, `Tools/scripts/jc3tether.py`).
 
 All tests below were run read-only. Nothing was launched, no archive was written, nothing under
-`D:\Games` was touched, nothing committed. Inputs are the decoded grab (`E:\Modding\_JC3grab`,
+`D:\Games` was touched, nothing committed. Inputs are the decoded grab (`E:\Modding\JustCause3\_grab`,
 the project's own `JC3_RAW`), `Research/JC3Grab/PARTS_TABLE.jsonl`, `INDEX.jsonl` and the archives
 through the project's readers.
 

@@ -16,7 +16,7 @@ Inputs (read-only):
                                                  `TARGETS` are only HudModuleBatmobile + HUD)
   Working/HUD/radar/_ffdec2/scripts/ModuleStruct_Bespoke_LocalRadar.as   the ffdec AS3 export
   Research/BatmobileGrab/HUD.json, HUD_SPEC.json                          the BmAK HUD data
-  E:/Modding/_gamedata/JC3grab/hud/dec/scripts/hud.as, hud_code/poi.as    the JC3 HUD scripts
+  E:/Modding/_shared/gamedata/JC3grab/hud/dec/scripts/hud.as, hud_code/poi.as    the JC3 HUD scripts
 
 Outputs:
   Working/Translation/HUD_RADAR_RECHECK.md    the short table
@@ -48,7 +48,7 @@ AS3 = ROOT / "Working" / "HUD" / "radar" / "_ffdec2" / "scripts" / "ModuleStruct
 RADAR_JSON = ROOT / "Working" / "HUD" / "RADAR.json"
 HUD_JSON = ROOT / "Research" / "BatmobileGrab" / "HUD.json"
 HUD_SPEC = ROOT / "Research" / "BatmobileGrab" / "HUD_SPEC.json"
-JC3 = Path(os.environ.get("JC3_GRAB", r"E:/Modding/_gamedata/JC3grab")) / "hud" / "dec" / "scripts"
+JC3 = Path(os.environ.get("JC3_GRAB", r"E:/Modding/_shared/gamedata/JC3grab")) / "hud" / "dec" / "scripts"
 JC3_HUD = JC3 / "hud.as"
 JC3_POI = JC3 / "hud_code" / "poi.as"
 OUT_MD = ROOT / "Working" / "Translation" / "HUD_RADAR_RECHECK.md"

@@ -5,7 +5,7 @@ mask, line and bit from the BmSDK sources.  `WEAPONS.md` is not edited.
 
 A `BoolProperty` tag does not carry a bit index: it carries the whole packed word (`bits`).
 The word's offset is the tag's offset; each member's bit is the mask its getter reads in
-`E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated/**/*.g.cs`:
+`E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Generated/**/*.g.cs`:
 
     get { return (...ToManaged<int>(Ptr + 2396) & 8) != 0; }
 

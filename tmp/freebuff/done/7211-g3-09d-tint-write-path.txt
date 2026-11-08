@@ -1,6 +1,6 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/7211-g3-09d-tint-write-path.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/7211-g3-09d-tint-write-path.md
 ONLY: freebuff
 EST: 45
 BRIEF: hand-written 2026-11-05
 G3-09d (Research/JC3Grab/TINT.md): the paint tint is the entity graph Palette.tints[i].tint_r but the write path is open. Determine from the repo tools (jc3adf.py, bm_entity.py, Working/Entity/bm_epe_edits.json, Builds/bm-005) how an edit to tint_r in the .epe would be serialised, and whether the current build writes it. Confirm with a round trip (ConvertProperty style) that changing one tint float changes only that float. Output Research/JC3Grab/TINT_WRITE.md + Tools/scripts/jc3_tint_write.py --check. No install, no game.
-Rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md section 3 (test ban stays; never guess; label decoded/derived/UNKNOWN). Write the report at the DONE path: STATUS line first, files written, every command with verbatim output, UNKNOWNs with what you tried.
+Rules: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md section 3 (test ban stays; never guess; label decoded/derived/UNKNOWN). Write the report at the DONE path: STATUS line first, files written, every command with verbatim output, UNKNOWNs with what you tried.

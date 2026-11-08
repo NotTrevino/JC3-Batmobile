@@ -3,7 +3,7 @@
 
 The RC2 harness (`dropzone_sim.py`) is hardcoded to `Builds/bm-RC2` and reads the live
 `D:\\Games\\Just Cause 3\\dropzone`. This is a NEW script for RC4 with a hard guard: the only root it
-will ever write to or point the installer at is `E:/Modding/_dropzone_sim_rc4`. Any other root,
+will ever write to or point the installer at is `E:/Modding/JustCause3/_dropzone_sims/_dropzone_sim_rc4`. Any other root,
 including a case variant, prints `REFUSED` and exits 2 before anything is created.
 
 It runs the artifact under test, `Builds/bm-RC4/install.ps1`, under the host's PowerShell 5.1 and
@@ -41,7 +41,7 @@ RC = os.path.join(ROOT, "Builds", "bm-RC4")
 INSTALLER = os.path.join(RC, "install.ps1")
 RECEIPT = os.path.join(RC, "receipt.json")
 DROP = os.path.join(RC, "drop")
-SIM = "E:/Modding/_dropzone_sim_rc4"
+SIM = "E:/Modding/JustCause3/_dropzone_sims/_dropzone_sim_rc4"
 MD = os.path.join(RC, "verify", "dropzone_sim.md")
 
 SIM_NORM = os.path.normcase(os.path.normpath(SIM))
@@ -232,8 +232,8 @@ def cases() -> list[dict]:
     # Not required by the brief; measured because the brief says the root must NORMALISE. A
     # forward-slash form is the same path; a case variant is the same path on Windows.
     fresh_root(SIM)
-    for label, value in (("forward slashes", "E:/Modding/_dropzone_sim_rc4"),
-                         ("case variant", "E:/MODDING/_DROPZONE_SIM_RC4")):
+    for label, value in (("forward slashes", "E:/Modding/JustCause3/_dropzone_sims/_dropzone_sim_rc4"),
+                         ("case variant", "E:/MODDING/JustCause3/_dropzone_sims/_dropzone_sim_rc4")):
         rc, text = run("WhatIf", value)
         out.append({"case": "6b " + label, "action": "WhatIf", "gamedir": value, "rc": rc,
                     "expect_rc": 0, "pass": rc == 0, "out": text,
@@ -250,7 +250,7 @@ def build_doc(results: list[dict]) -> str:
     a("")
     npass = sum(1 for r in results if r.get("required") and r["pass"])
     a(f"**Verdict: {npass} of 6 required cases match their expected exit code.** Every case ran the")
-    a("real artifact, `Builds/bm-RC4/install.ps1`, against `E:/Modding/_dropzone_sim_rc4` and nothing")
+    a("real artifact, `Builds/bm-RC4/install.ps1`, against `E:/Modding/JustCause3/_dropzone_sims/_dropzone_sim_rc4` and nothing")
     a("else. No game folder (`D:/Games`, `E:/Games`) was read, written or launched; no process was")
     a("attached to.")
     a("")
@@ -295,7 +295,7 @@ def build_doc(results: list[dict]) -> str:
     a("| path parts come from the IO API, not a regex | `Get-Parts()` = "
       "`[IO.Path]::GetFullPath($p).Replace([char]'/', [IO.Path]::DirectorySeparatorChar)"
       ".Split([IO.Path]::DirectorySeparatorChar)`; the forward-slash probe below passes it |")
-    a("| the sim root normalises | `E:/Modding/_dropzone_sim_rc4` (forward slashes) is accepted, case "
+    a("| the sim root normalises | `E:/Modding/JustCause3/_dropzone_sims/_dropzone_sim_rc4` (forward slashes) is accepted, case "
       "probe measured below |")
     a("")
     a("```")

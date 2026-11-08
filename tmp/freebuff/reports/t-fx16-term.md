@@ -15,8 +15,8 @@ writing either.
 ## Verbatim commands
 
 ```
-cd "E:/Modding/JC3-Batmobile" && PYTHONIOENCODING=utf-8 python Tools/scripts/t_fx16_term.py --write
-cd "E:/Modding/JC3-Batmobile" && PYTHONIOENCODING=utf-8 python Tools/scripts/t_fx16_term.py --check
+cd "E:/Modding/JustCause3/JC3-Batmobile" && PYTHONIOENCODING=utf-8 python Tools/scripts/t_fx16_term.py --write
+cd "E:/Modding/JustCause3/JC3-Batmobile" && PYTHONIOENCODING=utf-8 python Tools/scripts/t_fx16_term.py --check
 ```
 
 `--write` and `--check` both exit 0; `--check` reports the doc byte-identical to the re-derivation.

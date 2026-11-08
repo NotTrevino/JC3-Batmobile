@@ -1,5 +1,5 @@
 import glob, json, os, collections, re
-ENT = "E:/Modding/_JC3grab/entities"
+ENT = "E:/Modding/JustCause3/_grab/entities"
 paths = sorted(glob.glob(os.path.join(ENT, "*.ee.json")))
 print("entity caches:", len(paths))
 mods = collections.Counter()

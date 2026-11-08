@@ -290,6 +290,6 @@ python Tools/scripts/t12_parts.py --check   # Done-when gate
 python Tools/scripts/t12_parts.py dump rows|parts
 ```
 
-Key frames are read from `E:/Modding/_BmAKgrab/anims/keys/` (game data, outside the
+Key frames are read from `E:/Modding/ArkhamKnight/_grab/anims/keys/` (game data, outside the
 repo, R10). `T8_PARTS.json` stays a valid `bat_assemble.py --parts` spec: `parts` is
 unchanged, the behaviour rows are added beside it.

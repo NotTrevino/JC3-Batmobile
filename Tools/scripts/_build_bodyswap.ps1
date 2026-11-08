@@ -14,7 +14,7 @@ param(
     [string]$RbmVfs = ''                             # or: an rbm already in the tree
 )
 $ErrorActionPreference = 'Stop'
-$root = 'E:\Modding\JC3-Batmobile'
+$root = 'E:\Modding\JustCause3\JC3-Batmobile'
 $g    = "$root\Tools\Gibbed"
 $ee   = 'v0300_car_kensington_sportsmuscle_civilian_01.ee'
 $dir  = 'models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle'

@@ -42,7 +42,7 @@ sys.path.insert(0, HERE)
 import rbm_geom  # noqa: E402  (decoded .rbm reader; its own round trip is the oracle)
 
 SHADERS = os.path.join(ROOT, "Tools", "JCMR-src", "assets", "jc3", "shaders")
-RBM_GLOB = r"E:/Modding/_gamedata/JC3grab/b13b/unpacked/**/*.rbm"
+RBM_GLOB = r"E:/Modding/_shared/gamedata/JC3grab/b13b/unpacked/**/*.rbm"
 ARKHAM = os.path.join(ROOT, "Research", "BatmobileGrab", "UNIFORM_RECORDS.json")
 OUT = os.path.join(ROOT, "Research", "JC3Grab")
 MD = os.path.join(OUT, "CB0_SLOTS.md")

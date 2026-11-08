@@ -1,7 +1,7 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/v05-a9-boost-row.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/v05-a9-boost-row.md
 ONLY: freebuff
 EST: 30
 BRIEF: hand-written 2026-11-08
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-handling-values.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/rc5-handling-values.md
 Tools/scripts/v05_driving.py has six predicted checks D-1 to D-6 and none for take A9 (0-100 with boost, a pilot band of 6.00 m/s^2 plus or minus 25 percent from tmp/freebuff/reports/pilot-card-driving-takes.md section 5.5). Add a D-7 row. Derive the boost prediction from the ledger rows T-B1 (torque multiplier 6.3), T-B2 (extra top speed 43.2 km/h), T-B3 (grip 1.0) and T-E2, reading every number from Working/Translation/T_ROWS.jsonl rather than typing it. Regenerate Working/Q/PREDICTIONS.md with the script's --write and confirm --check is byte-identical on a second run. Also change the heading count text so it says seven checks. Record in the report which row classes are measured, derived or assumed for D-7. Output tmp/freebuff/reports/hdl-v05-a9-row.md. Done check: python Tools/scripts/v05_driving.py --check exits 0 and prints a D-7 line; revert is a git checkout of the two files.
-Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.
+Shared rules: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

@@ -15,7 +15,7 @@ import os
 import re
 import sys
 
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/JustCause3/_grab")
 DETAIL = os.path.join(RAW, "detail")
 ROOTS = ("CCar", "CBoat", "CHelicopter", "CMotorBike", "CAirPlane", "CTrain")
 KEY = re.compile(r"eject|launch|parachute|wingsuit|glide|bail|jump", re.I)

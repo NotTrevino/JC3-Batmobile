@@ -36,7 +36,7 @@ sys.path.insert(0, os.path.join(ROOT, "Tools", "scripts"))
 import jc3adf  # noqa: E402
 from rbmhdr import hash_jenkins  # noqa: E402
 
-GAMEDATA = os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
+GAMEDATA = os.environ.get("JC3_RAW", r"E:/Modding/_shared/gamedata/JC3grab")
 VAN = os.path.join(GAMEDATA, "strings_rt", "online.stringlookup")
 BUILT = os.path.join(ROOT, "Builds", "bm-RC2", "drop", "profile", "online.stringlookup")
 ITEM = os.path.join(ROOT, "Builds", "bm-RC2", "drop", "profile", "item.onlinec")

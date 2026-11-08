@@ -102,7 +102,7 @@ chapter-M".
 ## 4. What the shipped data actually measures
 
 [decoded: this pass, `python` + `rbm_geom.decode` on
-`E:/Modding/_gamedata/JC3grab/b13b/unpacked/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_body_lod1.rbm`.]
+`E:/Modding/_shared/gamedata/JC3grab/b13b/unpacked/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_body_lod1.rbm`.]
 
 | quantity | measured | note |
 |---|---|---|
@@ -276,7 +276,7 @@ No game process was started, attached to or injected into; static read only.
 python - <<'EOF'
 import sys, struct
 sys.path.insert(0,'Tools/scripts'); import rbm_geom
-f='E:/Modding/_gamedata/JC3grab/b13b/unpacked/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_body_lod1.rbm'
+f='E:/Modding/_shared/gamedata/JC3grab/b13b/unpacked/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_body_lod1.rbm'
 r=rbm_geom.decode(open(f,'rb').read())
 for i,b in enumerate(r.blocks):
     if type(b).__name__!='CarPaintMM': continue

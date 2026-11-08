@@ -5,7 +5,7 @@ Reviewer: independent (did not write the card). Reviewed: `tmp/freebuff/reports/
 `Tools/scripts/ledger_audit2.py` (1,199 lines). Re-read from the raw sources with my own code:
 the built `sportsmuscle.physicsc`, the built `.epe` export, the built parts and lights modules,
 `T_ROWS.jsonl`, `LEDGER_AUDIT.json`, and the unpacked donor tree under
-`E:/Modding/_gamedata/JC3grab/b13b/`. Nothing was written except this file; no game launched or
+`E:/Modding/_shared/gamedata/JC3grab/b13b/`. Nothing was written except this file; no game launched or
 attached; no git operations.
 
 ## VERDICT: **minor issues**
@@ -73,7 +73,7 @@ The card's headline for the lights rows is "**Light counts the ledger states are
 build**: 18 module rows (not 21), 28 `SVehicleLight` (22 in `_Default` + 6 in `Sport_Muscle`), …".
 But the row's own text is a statement about the **donor** module, and the donor module is on disk:
 
-`E:/Modding/_gamedata/JC3grab/b13b/unpacked/…/modules/generated/v0300_car_kensington_sportsmuscle_lights.vmodc`
+`E:/Modding/_shared/gamedata/JC3grab/b13b/unpacked/…/modules/generated/v0300_car_kensington_sportsmuscle_lights.vmodc`
 
 read with `jc3adf.walk`:
 

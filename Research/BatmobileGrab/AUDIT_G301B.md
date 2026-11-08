@@ -271,7 +271,7 @@ Every statement of `COLLISION_GEOM.md` (G ids) and every review point (M/B/C/D i
 ## 8. Reproduce
 
 ```bash
-cd "E:/Modding/JC3-Batmobile"
+cd "E:/Modding/JustCause3/JC3-Batmobile"
 python Tools/scripts/audit_g301b.py --write   # writes this file
 python Tools/scripts/audit_g301b.py --check   # re-derives, byte-compares, re-runs checks
 ```

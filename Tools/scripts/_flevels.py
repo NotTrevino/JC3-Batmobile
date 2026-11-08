@@ -1,7 +1,7 @@
 """Bank level walk: EVNT/TMLN/TRAN/WAIT structures; link Serpente events to FSB."""
 import struct
 
-p = r"E:\Modding\JC3-Batmobile\Working\Audio\jc3bank\sound\fmod_banks\vehicles.bank"
+p = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\jc3bank\sound\fmod_banks\vehicles.bank"
 d = open(p, "rb").read()
 
 def chunks(tag, n=3):

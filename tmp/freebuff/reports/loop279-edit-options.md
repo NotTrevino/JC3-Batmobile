@@ -1,7 +1,7 @@
 # `vehicles#279` — wrap-edit options on the source WAV
 
 Slot: `vehicles#279` `jc3_veh_lave_chassis_spin_creaks_loop_fast`, source
-`E:/Modding/_gamedata/BmAKgrab/audio/wav/0C69336B.wav`.
+`E:/Modding/_shared/gamedata/BmAKgrab/audio/wav/0C69336B.wav`.
 Limit: **-40 dBFS** at the wrap. Bank `Builds/bm-004c/banks/vehicles.bank` was **not** touched.
 
 State being fixed (`tmp/freebuff/reports/audio-fix-tree.md:1` and `:32`): the slot measures
@@ -120,7 +120,7 @@ tolerance is only at risk for the trims, and trims 2 and 3 exceed it while still
 Edit specification for the smallest clean option (not applied):
 
 ```
-file   : E:/Modding/_gamedata/BmAKgrab/audio/wav/0C69336B.wav
+file   : E:/Modding/_shared/gamedata/BmAKgrab/audio/wav/0C69336B.wav
 format : PCM 16-bit, 2 ch, 48000 Hz, 186497 frames (length unchanged)
 edit   : for k in 1..2:  x[186497-k] *= (1 - k/2)      # last two frames, both channels
 result : source-alone wrap -58.49 dBFS; worst adjacent step -40.93 dBFS

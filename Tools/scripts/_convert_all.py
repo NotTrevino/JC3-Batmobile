@@ -3,8 +3,8 @@ Usage: python _convert_all.py
 """
 import json, os, subprocess, wave
 
-A = r"E:\Modding\JC3-Batmobile\Working\Audio"
-CLI = r"E:\Modding\JC3-Batmobile\Tools\vgmstream-win64\vgmstream-cli.exe"
+A = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio"
+CLI = r"E:\Modding\JustCause3\JC3-Batmobile\Tools\vgmstream-win64\vgmstream-cli.exe"
 
 mf = os.path.join(A, "grab_manifest.json")
 manifest = json.load(open(mf))

@@ -7,7 +7,7 @@
 what it is called), R4 (no guess sold as fact), R11 (a table comes from a script with a check).
 
 **Method.** Every check below was run against files already on disk: the 232 decoded entity caches
-in `E:/Modding/_JC3grab/entities/`, the exploded tune corpus in `E:/Modding/_JC3grab/weapons/`,
+in `E:/Modding/JustCause3/_grab/entities/`, the exploded tune corpus in `E:/Modding/JustCause3/_grab/weapons/`,
 `Builds/test-077` and `Builds/test-091`, `Research/BatmobileGrab/DAMAGE_RULES.md`, and `MODLOG.md`.
 No game was launched, nothing was written under `D:/Games`, nothing was committed. One scratch
 directory (`tmp/g228chk/`) was created for a `ConvertAdf` test and deleted again; the only file
@@ -57,7 +57,7 @@ on all 233 **roots**".
 with the root census in `DAMAGE_MECHANISMS.md` §1, re-run through its own generator.
 
 ```
-$ python - <<'EOF'  # glob E:/Modding/_JC3grab/entities/*.ee.json
+$ python - <<'EOF'  # glob E:/Modding/JustCause3/_grab/entities/*.ee.json
 cache files 232
 distinct entity strings 232
 VehicleDamage modules 233
@@ -561,7 +561,7 @@ containers,containers_rigidobject,empty}`). No module type containing "Part" oth
 file and three others:
 
 ```
-Tools/Gibbed/…ConvertAdf.exe E:/Modding/_JC3grab/probe/sportsmuscle_vehicle_parts.vmodc out.xml
+Tools/Gibbed/…ConvertAdf.exe E:/Modding/JustCause3/_grab/probe/sportsmuscle_vehicle_parts.vmodc out.xml
   at …AdfFile.InstanceMemberInfo.PrepareForWritting …
   at …AdfFile.InstanceInfo.GuessInlineArrayCopyPosition …   → no file produced
 apc: exceptions=1 produced=0   armoredjeep: exceptions=1 produced=0   assault: exceptions=1 produced=0
@@ -644,5 +644,5 @@ python Tools/scripts/damage_predict.py --check
 python Tools/scripts/jc3_damage_search.py --check
 python Tools/scripts/damage_audit.py
 # census / diff / part-table comparisons: Tools/scripts/t1_current.py dump + the 232 .ee.json caches
-# tune scan: jc3weapons.decode_tune over E:/Modding/_JC3grab/weapons/*/*.wtunec,*.ftunec
+# tune scan: jc3weapons.decode_tune over E:/Modding/JustCause3/_grab/weapons/*/*.wtunec,*.ftunec
 ```

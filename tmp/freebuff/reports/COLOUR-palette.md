@@ -20,7 +20,7 @@ refuted claims are listed in §3 below and in the deliverable's §7.
 | `tmp/freebuff/reports/COLOUR-palette.md` | this report |
 
 Not touched: `Research/JC3Grab/COLOUR.md`, `COLOUR.json`, any other task's files, `Builds/`,
-`D:/Games`, `E:/Modding/_gamedata` (read only), git.
+`D:/Games`, `E:/Modding/_shared/gamedata` (read only), git.
 
 ## Commands run, with output
 
@@ -90,7 +90,7 @@ BUNDLE editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v03
 
 ```
 $ uv run --with pefile python Tools/scripts/jc3_palette_hash.py --write
-wrote E:\Modding\JC3-Batmobile\Research\JC3Grab\PALETTE_HASH.md
+wrote E:\Modding\JustCause3\JC3-Batmobile\Research\JC3Grab\PALETTE_HASH.md
   name word 0x6187A56B at 0x266
   value word 0xC023BA54 -> editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/v0300_car_kensington_sportsmuscle_palette.vmodc
   palette 1897 B, 10 tints

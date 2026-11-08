@@ -1,7 +1,7 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/pilot-cards-cornering-landing-drift.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/pilot-cards-cornering-landing-drift.md
 ONLY: freebuff
 EST: 50
 BRIEF: hand-written 2026-11-08
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-telemetry-take-analyser.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-merged-handling-cells.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-pilot-cards-refresh.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/verify-telemetry-take-analyser.md, E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/verify-merged-handling-cells.md, E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/rc5-pilot-cards-refresh.md
 Write the remaining pursuit driving cards in Working/Q/PILOT/ in CARD_FORMAT.md shape: A3_CORNER.md (constant-radius circle at 60 and 100 km/h, radii 3.52 m and 13.82 m within plus or minus 10 percent, read as speed over yaw rate from telemetry), A4_LOCK.md (full stick at under 20 km/h and over 72 km/h, lock time goals 0.25 s and 0.091 s), A6_LANDING.md (kerb, pothole and ramp landing at three speeds, at most one rebound, height from the telemetry z channel), A7_HANDBRAKE.md (drift, hold and release; recover inside about 2 s, no spin past 60 degrees, friction 4, release ramp 0.3 s). Source the take procedures from sections 5.3, 5.4, 5.7 and 5.8 of tmp/freebuff/reports/pilot-card-driving-takes.md, but replace every screenshot instrument by Tools/scripts/telemetry_takes.py sub-commands. Where the analyser can only give a coarse answer (lock time below the log period), the card records UNKNOWN and says so. Every card names the one observation, the pass rule and the fix-card line to add to Working/Q/FIXES.md. Done check: four files exist, each cites its band source; the lint script lists no missing command.
-Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.
+Shared rules: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

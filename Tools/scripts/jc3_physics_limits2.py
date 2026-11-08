@@ -52,7 +52,7 @@ import jc3_physics_roles2 as R2  # noqa: E402
 
 DONOR = R2.DONOR
 EXE = r"D:/Games/Just Cause 3/JustCause3.exe"
-FLEET_GLOB = r"E:/Modding/_gamedata/JC3grab/**/*.physicsc"
+FLEET_GLOB = r"E:/Modding/_shared/gamedata/JC3grab/**/*.physicsc"
 OUT_MD = os.path.join(ROOT, "Research", "JC3Grab", "PHYSICS_LIMITS_REVIEW.md")
 OUT_JSON = os.path.join(ROOT, "Research", "JC3Grab", "PHYSICS_LIMITS_REVIEW.json")
 DOOR_ANGLES = os.path.join(ROOT, "Research", "JC3Grab", "DOOR_ANGLES.json")

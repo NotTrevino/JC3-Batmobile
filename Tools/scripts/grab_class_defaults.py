@@ -59,7 +59,7 @@ import upk_read as U                       # noqa: E402
 from grab_packages_g305 import PartialPackage, full_path, export_name_index  # noqa: E402
 
 COOKED = r"E:\Games\Batman - Arkham Knight\BmGame\CookedPCConsole"
-BMSDK = r"E:\Modding\_tools\BmSDK-AK\src\BmSDK\Generated"
+BMSDK = r"E:\Modding\_shared\tools\BmSDK-AK\src\BmSDK\Generated"
 OFFSETS = os.path.join(OUT, "BMSDK_OFFSETS.json")
 OUT_MD = os.path.join(OUT, "CLASS_DEFAULTS.md")
 OUT_JSON = os.path.join(OUT, "CLASS_DEFAULTS.json")

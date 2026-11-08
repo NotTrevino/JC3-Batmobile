@@ -29,7 +29,7 @@ The brief reports `--check` failing on "wiring.md does not match the regenerated
 mismatches)". Run on arrival, the documents already matched; the live red one was **G4**:
 
 ```
-$ cd E:/Modding/JC3-Batmobile && PYTHONIOENCODING=utf-8 python Tools/scripts/v03_wiring_rc2.py --check; echo "check_exit=$?"
+$ cd E:/Modding/JustCause3/JC3-Batmobile && PYTHONIOENCODING=utf-8 python Tools/scripts/v03_wiring_rc2.py --check; echo "check_exit=$?"
 PASS G1: 9 SWeaponPoint, part refs dangling 0
 PASS G2: 63 objectid references -> 442 objects; 10 cross-file refs the vanilla .epe also makes (3 distinct); dangling 0
 PASS G3: 99 asset paths (ctune 17/17, etune 3/3, ftune 1/1, lod 73/73, wtune 5/5) from the .epe + 15 edited modules, dangling 0

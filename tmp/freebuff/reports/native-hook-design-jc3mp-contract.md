@@ -11,9 +11,9 @@ Context, per the operator ruling of 2026-11-08 and the JC3MP result:
 
 * the JC3MP **client** refused to install (`Failed to install app '619910' (No subscription)`), because this JC3
   is a repack of Steam build 20206564, not a Steam-owned copy; the **dedicated server** did install at
-  `E:/Modding/_tools/jc3mp-server` (its JS runtime is in `data/js/scripting-runtime`).
+  `E:/Modding/_shared/tools/jc3mp-server` (its JS runtime is in `data/js/scripting-runtime`).
 * so the JC3MP **API contract** survives as the specification, and the runtime has to be built natively.
-* `E:/Modding/_tools/jc3-console-thingy` (MIT, v1.1, 2026-01-11) is the loader + address map to build on.
+* `E:/Modding/_shared/tools/jc3-console-thingy` (MIT, v1.1, 2026-01-11) is the loader + address map to build on.
 
 ---
 
@@ -42,7 +42,7 @@ change is C++ compiled into the DLL, and a mistake crashes the game rather than 
 
 ## 2. Address check (read-only, this exe)
 
-`python Tools/scripts/exe_addr_check.py "E:/Modding/_tools/jc3-console-thingy"` — reads
+`python Tools/scripts/exe_addr_check.py "E:/Modding/_shared/tools/jc3-console-thingy"` — reads
 `D:/Games/Just Cause 3/JustCause3.exe`, maps every `0x14…` literal in console-thingy's `src/` into its PE
 sections, prints the 8 bytes at the site:
 

@@ -34,7 +34,7 @@ One-line result: **the measurement is right, the conclusion is not.**
 | `tmp/freebuff/reports/review-G3-10d.md` | this file | |
 
 Read-only everywhere else: `jc3_physics_roles4.py`, `PHYSICS_ROLES4.md/.json`, `jc3hkx.py`,
-`jc3_physics_roles2.py`, everything under `E:/Modding/_gamedata/` and `Builds/` untouched; no
+`jc3_physics_roles2.py`, everything under `E:/Modding/_shared/gamedata/` and `Builds/` untouched; no
 game touched, no build, no commit. Scratch probes lived in `tmp/freebuff/scratch/`.
 
 ## Commands and outputs (verbatim)

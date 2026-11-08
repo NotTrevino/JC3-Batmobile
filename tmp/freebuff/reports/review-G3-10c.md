@@ -136,7 +136,7 @@ measured one; the docstring reads like a decode.
 ## 4. Commands run (verbatim)
 
 ```
-cd /e/Modding/JC3-Batmobile && PYTHONIOENCODING=utf-8 uv run python tmp/freebuff/scratch/g10c_review.py
+cd /e/Modding/JustCause3/JC3-Batmobile && PYTHONIOENCODING=utf-8 uv run python tmp/freebuff/scratch/g10c_review.py
 donor bytes=340368 objects=430 bodies=62 polytopes=54 mass_blocks=56 cinfos=11
 block masses: [800.0, 40.0, 5.0, 1.0, 40.0, 5.0, 1.0, 275.0, 29.999998, 1.0, 1.0, 1.0, 29.999998, 1.0, 1.0, 1.0, 25.0, 0.002738, 0.001947, 0.005841, 0.009266, 0.001947, 0.005841, 0.009269, 1.0, 25.0, 40.0, 40.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 0.00517, 0.011661, 0.004465, 0.00517, 0.011661, 0.017723, 0.00446, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 35.0, 25.0, 25.0, 1.0, 5.0, 5.0, 5.0]
 G3-10b count=56 sum=1627.097155 equal_to_scan=True
@@ -189,7 +189,7 @@ EXIT=0
 ```
 
 ```
-cd /e/Modding/JC3-Batmobile && PYTHONIOENCODING=utf-8 uv run python tmp/freebuff/scratch/g10c_review2.py
+cd /e/Modding/JustCause3/JC3-Batmobile && PYTHONIOENCODING=utf-8 uv run python tmp/freebuff/scratch/g10c_review2.py
 bodies=62 bodies_with_mass_block=42 distinct_blocks=42 total_blocks=56 bodies_without=[(42, 68480, 'hknpExternMeshShape'), (43, 145392, 'hknpExternMeshShape'), (44, 157008, 'hknpExternMeshShape'), (45, 158816, 'hknpExternMeshShape'), (46, 170432, 'hknpExternMeshShape'), (47, 172240, 'hknpExternMeshShape'), (48, 212816, 'hknpExternMeshShape'), (49, 221664, 'hknpExternMeshShape'), (50, 230512, 'hknpExternMeshShape'), (51, 235760, 'hknpExternMeshShape'), (52, 239088, 'hknpExternMeshShape'), (53, 251296, 'hknpExternMeshShape'), (54, 263504, 'hknpExternMeshShape'), (55, 273792, 'hknpExternMeshShape'), (56, 284864, 'hknpExternMeshShape'), (57, 287184, 'hknpExternMeshShape'), (58, 289504, 'hknpExternMeshShape'), (59, 290768, 'hknpExternMeshShape'), (60, 292032, 'hknpDynamicCompoundShape'), (61, 305440, 'hknpDynamicCompoundShape')]
 blocks no body entry reaches: ['0x95a0', '0x9780', '0x9a00', '0x9c20', '0x9e00', '0xa030', '0xa250', '0xcc90', '0xcf50', '0xd170', '0xd3f0', '0xd6b0', '0xd980', '0xdba0']
 blocks shared by >1 body: []
@@ -219,14 +219,14 @@ EXIT2=0
 ```
 
 ```
-cd /e/Modding/JC3-Batmobile && PYTHONIOENCODING=utf-8 uv run python Tools/scripts/jc3_physics_roles3.py --check
+cd /e/Modding/JustCause3/JC3-Batmobile && PYTHONIOENCODING=utf-8 uv run python Tools/scripts/jc3_physics_roles3.py --check
 OK cinfos 11 / constraints 11 / mass links 54; fleet 40 files; md+json byte-identical
 oracles: {"body_id_rule": true, "cinfo_no_second_body": true, "constraint_type_tags": true, "fleet_invariants": true, "mass_link": true, "mass_word_correlation": true, "quaternion_w": true}
 CHECK3_EXIT=0
 ```
 
 ```
-cd /e/Modding/JC3-Batmobile && PYTHONIOENCODING=utf-8 uv run --with pefile --with capstone --with numpy python Tools/scripts/jc3_constraint_code.py --check
+cd /e/Modding/JustCause3/JC3-Batmobile && PYTHONIOENCODING=utf-8 uv run --with pefile --with capstone --with numpy python Tools/scripts/jc3_constraint_code.py --check
 PASS  the hknpConstraintCinfo registry record resolves by name
 PASS  its objectSize is the file record stride (0x18 = 24)
 PASS  its member table is constraintData, bodyA, bodyB, flags
@@ -252,7 +252,7 @@ CHECK10H_EXIT=0
 ```
 
 ```
-cd /e/Modding/JC3-Batmobile && PYTHONIOENCODING=utf-8 uv run python - <<'PY'
+cd /e/Modding/JustCause3/JC3-Batmobile && PYTHONIOENCODING=utf-8 uv run python - <<'PY'
 for mb in (0x5970, 0x5DB0, 0x5FC0, 0x93A0, 0xC9F0):
     ws=[struct.unpack_from("<I",blob,b+mb+0x10+4*k)[0] for k in range(6)]
     fs=[struct.unpack_from("<f",blob,b+mb+0x10+4*k)[0] for k in range(6)]
@@ -293,7 +293,7 @@ EXIT=0
 ```
 
 ```
-cd /e/Modding/JC3-Batmobile && PYTHONIOENCODING=utf-8 uv run python - <<'PY'
+cd /e/Modding/JustCause3/JC3-Batmobile && PYTHONIOENCODING=utf-8 uv run python - <<'PY'
 +0x3c != 1.0: [(42, '00000000', 'hknpExternMeshShape'), (43, '00000000', 'hknpExternMeshShape'), (44, '00000000', 'hknpExternMeshShape'), (45, '00000000', 'hknpExternMeshShape'), (46, '00000000', 'hknpExternMeshShape'), (47, '00000000', 'hknpExternMeshShape'), (48, '00000000', 'hknpExternMeshShape'), (49, '00000000', 'hknpExternMeshShape'), (50, '00000000', 'hknpExternMeshShape'), (51, '00000000', 'hknpExternMeshShape'), (52, '00000000', 'hknpExternMeshShape'), (53, '00000000', 'hknpExternMeshShape'), (54, '00000000', 'hknpExternMeshShape'), (55, '00000000', 'hknpExternMeshShape'), (56, '00000000', 'hknpExternMeshShape'), (57, '00000000', 'hknpExternMeshShape'), (58, '00000000', 'hknpExternMeshShape'), (59, '00000000', 'hknpExternMeshShape'), (60, '00000000', 'hknpDynamicCompoundShape'), (61, '00000000', 'hknpDynamicCompoundShape')]
 body 22: +0x0c=00000016 +0x10=001600ff shape=hknpConvexPolytopeShape
 body 23: +0x0c=00000017 +0x10=001700ff shape=hknpConvexPolytopeShape

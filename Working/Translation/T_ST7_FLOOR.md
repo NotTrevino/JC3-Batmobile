@@ -77,7 +77,7 @@ minimum (0.5 s) and an AI minimum of 0.2 s.
 
 ## 5. The exact member and offset
 
-Target: `E:/Modding/_gamedata/JC3grab/rc_merge/stage/editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_steering.vmodc`
+Target: `E:/Modding/_shared/gamedata/JC3grab/rc_merge/stage/editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_steering.vmodc`
 
 | quantity | value |
 |---|---|
@@ -117,7 +117,7 @@ Neither is available in this task: the operator banned installs, game launches a
 | `fleet_aux_min` | True | `{"player": 0.5, "ai": 0.200000003, "player_below_0_5": []}` |
 | `raw_member_offset_8` | True | `[{"file": "v0300_car_kensington_sportsmuscle_land_steering_ai.vmodc", "member_offset": 8, "file_offset": 88, "hex": "00000040"}, {"file": "v0300_car_kensington_sportsmuscle_land_steering.vmodc", "member_offset": 8, "f...` |
 | `raw_decode_agrees` | True | `[{"file": "v0300_car_kensington_sportsmuscle_land_steering_ai.vmodc", "bytes": 2.0, "json": 2, "kind": "ai", "agrees": true}, {"file": "v0300_car_kensington_sportsmuscle_land_steering.vmodc", "bytes": 0.80000001192092...` |
-| `target_module` | True | `{"file": "E:/Modding/_gamedata/JC3grab\\rc_merge/stage\\editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_steering.vmodc", "type": "...` |
+| `target_module` | True | `{"file": "E:/Modding/_shared/gamedata/JC3grab\\rc_merge/stage\\editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_steering.vmodc", "type": "...` |
 | `write_bytes_025` | True | `{"float": 0.25, "hex": "0000803e"}` |
 
 ## 8. Sources
@@ -125,5 +125,5 @@ Neither is available in this task: the operator banned installs, game launches a
 - Batman packages: `E:/Games/Batman - Arkham Knight/BmGame/CookedPCConsole/Playable_Batmobile*.upk`,
   export `SimulationModel` (class `RVehicleSimBatmobile`), read with `Tools/scripts/upk_read.py`.
 - Offset name: `Research/BatmobileGrab/BMSDK_OFFSETS.json` (`SVehicleSimCar.SteerSpeed`, offset 220).
-- JC3 entities: `E:/Modding/_gamedata/JC3grab/entities/*.json` (grab decode) and the unpacked
+- JC3 entities: `E:/Modding/_shared/gamedata/JC3grab/entities/*.json` (grab decode) and the unpacked
   `*_land_steering.vmodc` module bytes, read with `Tools/scripts/jc3adf.py`.

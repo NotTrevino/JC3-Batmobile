@@ -1,9 +1,9 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/water-detection-static.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/water-detection-static.md
 ONLY: freebuff
 EST: 35
 BRIEF: hand-written 2026-11-08
 The water teleport (operator: the Batmobile never swims; entering water teleports it to land, and the engine does not fail) needs a water signal. Static research on the JC3 side:
-- the vehicle modules that react to water (buoyancy, water_interaction and similar names in Research/JC3Grab/VOCABULARY.md and the module dumps in E:/Modding/_JC3grab/entities);
+- the vehicle modules that react to water (buoyancy, water_interaction and similar names in Research/JC3Grab/VOCABULARY.md and the module dumps in E:/Modding/JustCause3/_grab/entities);
 - which members flag submersion, and their values on land cars;
 - the RTTI names in Working/RTTI/vehicle_rtti.json that sound water-related (search Water, Buoyancy, Submerge, Swim).
-Report the candidates, ranked by how directly a hook could read "this vehicle is in water", and the one 5-minute live check for each. Read-only. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.
+Report the candidates, ranked by how directly a hook could read "this vehicle is in water", and the one 5-minute live check for each. Read-only. Shared rules: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

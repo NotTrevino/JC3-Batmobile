@@ -282,8 +282,8 @@ EXIT_BINDINGS=0
 
 ```
 $ uv run --with numpy python Tools/scripts/grab_controls.py --check
-same    E:\Modding\JC3-Batmobile\Research\BatmobileGrab\CONTROLS.md
-same    E:\Modding\JC3-Batmobile\Research\BatmobileGrab\CONTROLS.json
+same    E:\Modding\JustCause3\JC3-Batmobile\Research\BatmobileGrab\CONTROLS.md
+same    E:\Modding\JustCause3\JC3-Batmobile\Research\BatmobileGrab\CONTROLS.json
 check ok
 EXIT=0
 ```
@@ -292,8 +292,8 @@ EXIT=0
 
 ```
 $ uv run --with numpy python Tools/scripts/grab_config2.py --write
-wrote E:\Modding\JC3-Batmobile\Research\BatmobileGrab\CONFIG2.md (122549 bytes)
-wrote E:\Modding\JC3-Batmobile\Research\BatmobileGrab\CONFIG2.json (877957 bytes)
+wrote E:\Modding\JustCause3\JC3-Batmobile\Research\BatmobileGrab\CONFIG2.md (122549 bytes)
+wrote E:\Modding\JustCause3\JC3-Batmobile\Research\BatmobileGrab\CONFIG2.json (877957 bytes)
 files=37 rows=20960 basedon_file_chain=18 basedon_profile=51 malformed=17 categories={'batmobile': 768, 'vehicle': 164, 'physics': 143, 'postprocess': 155, 'camera': 664} uncategorised=19184
 EXIT=0
 

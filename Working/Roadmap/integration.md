@@ -1,6 +1,6 @@
 # INTEGRATION / VERIFY / PILOT / TEST / RELEASE + PIPELINE HEALTH - landmark map
 
-Date of map: 2026-11-08. READ-ONLY survey of E:\Modding\JC3-Batmobile. No project file edited, no game launched, no installer run.
+Date of map: 2026-11-08. READ-ONLY survey of E:\Modding\JustCause3\JC3-Batmobile. No project file edited, no game launched, no installer run.
 Labels: evidence = file path read; UNKNOWN = not in any file read. Pretrained JC3/BmAK knowledge not used as evidence.
 
 ## 0. Read-only checks I ran (this session)
@@ -107,7 +107,7 @@ Size: S <=1 session, M 1-3, L 1-2 wk. "Session" = one Freebuff brief (~7-15 min 
 | 9192 | V-02 + V-05 + V-06 on RC5 (checkers read ledger length, not pinned counts); install dry run, 6 cases, simulated dropzone only | VERIFY | queued | 9190 | 9193 | M | queue/9192-... |
 | V-05 | predictions sheet; RC4: 27 of 28 predicted, 1 excluded (battle variant by D-2); v05_driving 34/34 | VERIFY | done on RC4 but **T-ST7 miss RED** (built 0.80/0.60 s vs goal 0.250/0.091 s). Operator ruled 0.25 s; T-ST7 evidence for operator: a player module ships 0.3 s full lock (MotorbikeSteering) | handling branch 9120 must move it; if RC5 still prints it, name the number | 9192 | S | Working/Q/PREDICTIONS.md D-4/D-5; Working/Translation/T_ST7_EVIDENCE.md; GRAB_BACKLOG.md T-ST7-evidence row |
 | NEW-INT-16 | Regenerate PREDICTIONS.md / PREDICTIONS_COMBAT.md / PREDICTIONS_LOOKS.md / predictions.json for RC5 values only via generator scripts; A9 band (4.5-7.5 m/s^2) is "declared, not sourced"; looks thresholds 2.0-3.0 m, 60/255, <=12, 8/255, 6 s are pilot-declared | VERIFY | todo (partly 9194) | 9192 | Q judging | M | Working/Q/PREDICTIONS*.md; operator-digest-pilot-cards-status.md §2 |
-| V-06 | install dry run | VERIFY | PASS on RC4 (6 cases, sim root `E:/Modding/_dropzone_sim_rc4`); RC2's Rollback091 FAIL is resolved by the RC4 installer design (no Rollback091; snapshot by diff). Caveat: Rollback after install-over-install removes targets as if uninstalling | needs RC5 repeat | 9193 | S | reports/verify-v06-install-dry-run-rc4.md; Builds/bm-RC4/verify/dropzone_sim.md |
+| V-06 | install dry run | VERIFY | PASS on RC4 (6 cases, sim root `E:/Modding/JustCause3/_dropzone_sims/_dropzone_sim_rc4`); RC2's Rollback091 FAIL is resolved by the RC4 installer design (no Rollback091; snapshot by diff). Caveat: Rollback after install-over-install removes targets as if uninstalling | needs RC5 repeat | 9193 | S | reports/verify-v06-install-dry-run-rc4.md; Builds/bm-RC4/verify/dropzone_sim.md |
 | V-04 other | RC4 audio: loudness 5/5, events 24/45 resolved, 21 donor, length/decode/tail green | VERIFY | PASS-with-compromise | 9150 (override build) | - | M | reports/verify-v04-audio-rc4.md |
 | 9193 | Gate VX for RC5: STATUS + BUILD_BATCHES regen, MODLOG VX, `Working/Q/APPROVAL_REQUEST_RC5.md`, recommendation to repoint 8600-8605 | VERIFY | queued | 9191, 9192 | 9194, 9199, approval | S | queue/9193-... |
 | V-07 (RC4) | VX + approval request | VERIFY | done on RC4 (superseded by RC5) | - | - | S | reports/verify-v07-gate-vx.md; Working/Q/APPROVAL_REQUEST.md |

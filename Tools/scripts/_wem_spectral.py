@@ -2,8 +2,8 @@
 import json, os, wave
 import numpy as np
 
-rank = json.load(open(r"E:\Modding\JC3-Batmobile\Working\Audio\ranking.json"))
-WAVD = r"E:\Modding\JC3-Batmobile\Working\Audio\wav"
+rank = json.load(open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\ranking.json"))
+WAVD = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\wav"
 
 def autocorr_peak(a, fr):
     a = a - a.mean()

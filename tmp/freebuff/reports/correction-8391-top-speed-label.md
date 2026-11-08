@@ -58,7 +58,7 @@ BmAK**.
 | `Tools/scripts/t23_closeout_inventory.py` + `T23_INVENTORY.{json,md}` | T-E5's inherit comment and closeout row no longer say "Cd 0.1213 / 260 km/h"; the row is the corrected ledger text |
 | `MODLOG.md` | entry "Correction 8391 — T-E5 top speed is a label, not a measurement" |
 
-Not touched: any game install, `E:/Modding/_gamedata/`, `Builds/` bytes, the RC4 lineage. No value
+Not touched: any game install, `E:/Modding/_shared/gamedata/`, `Builds/` bytes, the RC4 lineage. No value
 was written, so no build changed.
 
 ## 4. Checks actually run

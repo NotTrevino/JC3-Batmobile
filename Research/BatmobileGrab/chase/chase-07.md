@@ -65,7 +65,7 @@ parse:
 Command and output (verbatim summary lines):
 
 ```
-$ python Tools/scripts/chase/chase07_cdo.py --dump --json E:/Modding/_BmAKgrab/chase/sim_cdo_07.json
+$ python Tools/scripts/chase/chase07_cdo.py --dump --json E:/Modding/ArkhamKnight/_grab/chase/sim_cdo_07.json
 package BmGame.upk: version 863, licensee 32995, 84813 names, 3268 imports, 177031 exports
 === Default__RVehicleSimBatmobile (export 129779, class RVehicleSimBatmobile, 724 B)
     walked 58 tags, stop=eof
@@ -78,7 +78,7 @@ package BmGame.upk: version 863, licensee 32995, 84813 names, 3268 imports, 1770
        TransformationTurnFactor           @0x039c  SERIALISED 45.0 (FloatProperty)
        BattleModeSteerBiasRate            @0x03c4  SERIALISED 3.0 (FloatProperty)
        AirControlPitchTorqueFactorMax     @0x04ac  SERIALISED 5000.0 (FloatProperty)
-wrote E:/Modding/_BmAKgrab/chase/sim_cdo_07.json
+wrote E:/Modding/ArkhamKnight/_grab/chase/sim_cdo_07.json
 ```
 
 (Version/licensee/name counts are the package header; the exact numbers are in the json.)
@@ -210,6 +210,6 @@ unchanged).
 4. **The exe scan is not evidence** for any row: offsets 0x354/0x370/0x384 are small, shared by
    many classes, the exe is stripped and contains no property-name strings (9 / 9 / 5 store-form
    hits respectively, unattributable).
-5. Extracted decode: `E:/Modding/_BmAKgrab/chase/sim_cdo_07.json`. Script:
+5. Extracted decode: `E:/Modding/ArkhamKnight/_grab/chase/sim_cdo_07.json`. Script:
    `Tools/scripts/chase/chase07_cdo.py --dump | --scan`. Nothing was written under the game
    folder, the game was not launched, and no existing document was edited.

@@ -14,7 +14,7 @@ two runs quoted below. The game install was read only: nothing launched, injecte
 ## 0. What was measured today
 
 ```
-$ cd E:/Modding/JC3-Batmobile && PYTHONIOENCODING=utf-8 python Tools/scripts/wp4_emp_payload_check.py
+$ cd E:/Modding/JustCause3/JC3-Batmobile && PYTHONIOENCODING=utf-8 python Tools/scripts/wp4_emp_payload_check.py
 root E:/Games\Batman - Arkham Knight\BmGame\CookedPCConsole
 
 Playable_Batmobile_SF.upk  exports=5490  launcher=5114 fired=5116 orphan=16
@@ -88,7 +88,7 @@ field name, not a transcription error here.
 **The splice is proved, in memory, without writing a package**
 
 ```
-$ cd E:/Modding/JC3-Batmobile && python - <<'PY'   (scratch, quoted in full in the transcript)
+$ cd E:/Modding/JustCause3/JC3-Batmobile && python - <<'PY'   (scratch, quoted in full in the transcript)
 ForCars tag property order in the blob: [960, 1040, 1048, 840, 848, 808, 816, 704, 124, 180]
 prefix 1 bytes: 00
 walk end 81 blob 83 tail 0000

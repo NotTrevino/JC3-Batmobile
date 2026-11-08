@@ -168,7 +168,7 @@ ramp — but it can be sampled once and written as the tint, which is all the fl
 ## 7. Reproduce
 
 ```bash
-cd "E:/Modding/JC3-Batmobile"
+cd "E:/Modding/JustCause3/JC3-Batmobile"
 python -c "import sys;sys.path.insert(0,'Tools/scripts');import upk_read as u; \
 p=u.Package(r'E:\Games\Batman - Arkham Knight\BmGame\CookedPCConsole\BmGame.upk'); \
 [print(n, p.find(n), p.object_class(p.find(n)), p.exports[p.find(n)-1]['size']) for n in \

@@ -1,6 +1,6 @@
 # Project inventory
 
-- Root: `E:\Modding\JC3-Batmobile`
+- Root: `E:\Modding\JustCause3\JC3-Batmobile`
 - Generated: `2026-10-07T17:21:09Z`
 - Files: **1157** (1861.3 MB) across 151 directories
 

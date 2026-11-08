@@ -1,8 +1,8 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-d09-audio.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/build-d09-audio.md
 ONLY: freebuff
 EST: 55
 BRIEF: hand-written 2026-11-06
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-d01-scaffold-rc4.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/apply-keep-audit-fixes-systems.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/battle-audio-switch-event.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/build-d01-scaffold-rc4.md, E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/apply-keep-audit-fixes-systems.md, E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/battle-audio-switch-event.md
 Build step B-11 against the bank manifest with every found bank (10 banks were never absent) and the event list in the audio keep audit: private bank copies with the mapped samples, .fmod_guids re-emitted from the .ee. Use bm_audio.py and the v04 checks into Builds/bm-RC4-audio. Fix the two known defects first: vehicles#279 at -39.68 payload against -40 and the loop-point click on weapons#408; Builds/bm-004c has the derived fixes from task 7221. Report loudness and loop gates per sample.
 
 Updated by review 8299: 24 of 45 GUIDs are ours and 21 still donor (19 effects + 2 character) — that gap is B-26, not this step; T-AU1's event->parameter edge is UNKNOWN. All 10 banks are present (G3-14: 10 found / 0 absent). vehicles#279 is still RED after bm-004c — wrap -28.27 dBFS on the record / -39.68 on the payload against the -40 dBFS rule, 5.7 dB worse than its own p99 interior step of -46.01 — while weapons#408 is fixed (+0.00 LU, wrap -61.21 dBFS); the 408-frame trim gained 22.18 dB and did not clear it, so a further trim is a new derivation. V-04 compares length within 1 frame, loudness within 1 LU, loop clicks above -40 dBFS, and bm-004c passes 5/5 loudness, 2/3 loop-wrap.

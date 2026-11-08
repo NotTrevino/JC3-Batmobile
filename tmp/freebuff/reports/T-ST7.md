@@ -35,7 +35,7 @@ Nothing else was touched. No game process, no install, no build, no git.
 ## The exact member and offset
 
 Target (staged donor module found on disk):
-`E:/Modding/_gamedata/JC3grab/rc_merge/stage/editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_steering.vmodc`
+`E:/Modding/_shared/gamedata/JC3grab/rc_merge/stage/editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_steering.vmodc`
 
 | quantity | value |
 |---|---|
@@ -111,8 +111,8 @@ ok   raw_member_offset_8
 ok   raw_decode_agrees
 ok   target_module
 ok   write_bytes_025
-wrote E:\Modding\JC3-Batmobile\Working\Translation\T_ST7_FLOOR.md
-wrote E:\Modding\JC3-Batmobile\Working\Translation\T_ST7_FLOOR.json
+wrote E:\Modding\JustCause3\JC3-Batmobile\Working\Translation\T_ST7_FLOOR.md
+wrote E:\Modding\JustCause3\JC3-Batmobile\Working\Translation\T_ST7_FLOOR.json
 write_exit=0
 === check ===
 ... same 11 lines ...

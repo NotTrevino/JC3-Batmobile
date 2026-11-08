@@ -1,7 +1,7 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-iter3-mechanism-branches.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/build-iter3-mechanism-branches.md
 ONLY: freebuff
 EST: 55
 BRIEF: hand-written 2026-11-08
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/fix-iter3-mechanism-cards.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/fix-iter3-mechanism-cards.md
 Build what Working/Q/FIXES_ITER3.md specifies. Create the branch tree(s) it names under Builds/ with a script per tree (rc5_<name>.py --write and --check) and a branch record under Working/RC5/branches/; edit hook code in Tools/hook/ only if a card routes through the hook, and then stage it as Builds/hook-0004 with a receipt. Write the smallest set of cells or graph rows that closes each card, each with its source and class. Then merge via Tools/scripts/bm_rc5.py --write into Builds/bm-RC5, archive the previous receipt, and run bm_rc5.py --check, v05_driving.py --check and the read-back script of hdl-33. Note any module overlap with earlier branches and the rule used. Write tmp/freebuff/reports/hdl-iter3-build.md with the cells added, the receipt hashes before and after, and the install and rollback commands. Done check: every iter 3 card has a built artifact or a written reason it cannot be built, with the exact missing capability; all checkers exit zero.
-Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.
+Shared rules: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

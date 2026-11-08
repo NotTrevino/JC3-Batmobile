@@ -4,7 +4,7 @@
 written or edited; nothing was launched.
 
 **Provenance / revert.** New file `tmp/freebuff/reports/eject-levels-decoded.md`
-(= `E:/Modding/JC3-Batmobile/tmp/freebuff/reports/eject-levels-decoded.md`), the output path the brief names;
+(= `E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/eject-levels-decoded.md`), the output path the brief names;
 every comparable plan lives in `tmp/freebuff/reports/`. **Revert = delete this file.**
 
 Labels: **decoded** (file:line / offset), **derived** (rule + inputs), **UNKNOWN** (tried, where it would be).

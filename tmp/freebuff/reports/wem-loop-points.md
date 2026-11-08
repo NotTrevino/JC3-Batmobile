@@ -74,7 +74,7 @@ changed. No install, no launch, no game.
 ## Commands run (verbatim)
 
 ```
-cd /e/Modding/JC3-Batmobile && set -o pipefail && echo "=== write ===" && python Tools/scripts/v04_loops.py --write; echo "write exit=$?"; echo "=== check ===" && python Tools/scripts/v04_loops.py --check | grep -E "FAIL|check:" ; echo "check exit=${PIPESTATUS[0]}"
+cd /e/Modding/JustCause3/JC3-Batmobile && set -o pipefail && echo "=== write ===" && python Tools/scripts/v04_loops.py --write; echo "write exit=$?"; echo "=== check ===" && python Tools/scripts/v04_loops.py --check | grep -E "FAIL|check:" ; echo "check exit=${PIPESTATUS[0]}"
 ```
 ```
 === write ===

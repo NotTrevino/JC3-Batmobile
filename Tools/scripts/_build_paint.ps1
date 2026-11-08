@@ -6,7 +6,7 @@ param(
     [Parameter(Mandatory = $true)][string]$Base
 )
 $ErrorActionPreference = 'Stop'
-$root = 'E:\Modding\JC3-Batmobile'
+$root = 'E:\Modding\JustCause3\JC3-Batmobile'
 $g    = "$root\Tools\Gibbed"
 $ee   = 'v0300_car_kensington_sportsmuscle_civilian_01.ee'
 $pal  = 'editor\entities\jc_vehicles\01_land\v0300_car_kensington_sportsmuscle\modules\default\v0300_car_kensington_sportsmuscle_palette.vmodc'

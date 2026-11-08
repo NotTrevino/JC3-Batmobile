@@ -6,7 +6,7 @@ and the outputs it names: `Research/JC3Grab/INTERACTION.md` (312 lines), `INTERA
 `Tools/scripts/jc3interact.py` (846 lines). Rules read first: `GRAB_BACKLOG.md` §0.5 R1–R14.
 
 **Method.** Re-ran the card's check, then attacked each claim with the data on disk: the donor
-entity cache (`E:\Modding\_JC3grab\entities\…sportsmuscle_civilian_01.ee.json`), the decoded
+entity cache (`E:\Modding\JustCause3\_grab\entities\…sportsmuscle_civilian_01.ee.json`), the decoded
 `.epe` JSON, `Research/Epe/serpente_civilian.xml`, `Working/TrueScale/stations.json` and
 `Working/TrueScale/body_lod1.rbm` (via `rbm_geom`). No archive was opened, nothing was written
 outside this file, no game launched, nothing committed.

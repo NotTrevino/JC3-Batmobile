@@ -302,7 +302,7 @@ These came out of the same check and are named so the fixes are not mistaken for
 ## 8. Reproduce
 
 ```bash
-cd /e/Modding/JC3-Batmobile
+cd /e/Modding/JustCause3/JC3-Batmobile
 python -c "import json;[print(json.loads(l)['id'],json.loads(l)['dispo']) for l in open('Working/Translation/T_ROWS.jsonl') if json.loads(l)['id'] in ('T-DM7','T-CT3','T-W1')]"
 grep -rn "81,95[23]" GRAB_BACKLOG.md
 grep -rn "198/199\|216/221" --include=*.md --include=*.py .      # only ROADMAP.md:167

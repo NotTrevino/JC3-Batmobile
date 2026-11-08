@@ -115,7 +115,7 @@ like the build did nothing. Recommended: quote the command with `--hash`.
 
 ### 6. Machine-absolute path inside the generated spec (hygiene)
 
-`Working/Effects/bm_fx_edits.json:274` — `"expected_xml": "E:\\Modding\\JC3-Batmobile\\tmp\\b08\\built.xml"`.
+`Working/Effects/bm_fx_edits.json:274` — `"expected_xml": "E:\\Modding\\JustCause3\\JC3-Batmobile\\tmp\\b08\\built.xml"`.
 Every other path in the spec is repo-relative through `E.rel`, so this one is inconsistent and
 non-portable (it also makes the R-1 pipeline set carry a machine path). No functional effect; the
 check regenerates it every run.

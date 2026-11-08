@@ -6,9 +6,9 @@ The card: "one document: `SVehicleLight` member list and presets, how a light bi
 a recipe for one custom light (the wheel-arch light) and every member value sourced.
 
 Inputs (all already-decoded tables; no archive is opened, `D:\\Games` is never read):
-  * ``E:/Modding/_gamedata/JC3grab/entities/*.ee.json`` - the `VehicleDynamicLights` module of every
+  * ``E:/Modding/_shared/gamedata/JC3grab/entities/*.ee.json`` - the `VehicleDynamicLights` module of every
     vehicle: the real light entries (`lights[i].*`, 25 members incl. the part binding).
-  * ``E:/Modding/_gamedata/JC3grab/detail/*.ee.json`` - the `.epe` graph's `SVehicleLight` /
+  * ``E:/Modding/_shared/gamedata/JC3grab/detail/*.ee.json`` - the `.epe` graph's `SVehicleLight` /
     `SVehicleLights` / `SVehicleLightList` objects (the named preset side, no part binding).
   * ``Research/JC3Grab/PARTS_TABLE.jsonl`` - `has_lights`, `part_index`, damage type, model.
   * ``Research/JC3Grab/GEOMETRY.jsonl`` - every `CarLight` block's payload census.
@@ -45,7 +45,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
 OUT = os.path.join(ROOT, "Research", "JC3Grab")
 BMAK = os.path.join(ROOT, "Research", "BatmobileGrab", "LIGHTS.json")
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/_shared/gamedata/JC3grab")
 JSON_NAME = "LIGHT_SYSTEM.json"
 MD_NAME = "LIGHT_SYSTEM.md"
 DONOR = ("editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/"

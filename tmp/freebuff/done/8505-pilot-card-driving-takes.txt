@@ -1,8 +1,8 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/pilot-card-driving-takes.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/pilot-card-driving-takes.md
 ONLY: freebuff
 EST: 60
 BRIEF: hand-written 2026-11-06
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/pilot-card-world-and-vehicle.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-v05-predictions-rc4.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/pilot-card-world-and-vehicle.md, E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/verify-v05-predictions-rc4.md
 Q-PILOT step 6: the driving take cards for phase Q-2, one card each with the instrument and the pass band from Working/Q/PREDICTIONS.md: 0 to 100 km/h, top speed with and without afterburner, braking 100 to 0, turning circle, drift hold, landing without bounce, steering lock time (0.25 s). Each card states how to read the number (HUD speed? recorded telemetry? the QA-1 instrument and how it logs), how many repeats, and how to write the result line in Working/Q/RESULTS.md. If a measurement needs a tool that is not in the repo, write UNKNOWN and the exact tool needed.
 
 Updated by review 8299: the steering-lock card uses 0.25 s (T-ST7 ruling) and must be paired with the re-derived turning circle from V-05 (v05_driving.py is red until then); T-ST3's 0.091 s is out-of-domain (below the 0.2 s fleet minimum), so its card must expect a possible engine filter. The first five rows to move are A2, A5, A6, A7, A9.

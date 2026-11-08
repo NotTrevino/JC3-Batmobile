@@ -4,7 +4,7 @@
 
 ## What was applied
 
-`Builds/bm-RC1/verify/audio_diag.md` derived two WAV-level fixes. They were applied to the build's **inputs in memory** (the source WAVs under `E:/Modding/_gamedata/BmAKgrab/audio/wav/` were not edited), then both payloads were rebuilt through `bm_audio.payload()` with the manifest's own loop-fill gain and the build's own re-level loop, and spliced into copies of `bm-RC1`'s two banks.
+`Builds/bm-RC1/verify/audio_diag.md` derived two WAV-level fixes. They were applied to the build's **inputs in memory** (the source WAVs under `E:/Modding/_shared/gamedata/BmAKgrab/audio/wav/` were not edited), then both payloads were rebuilt through `bm_audio.payload()` with the manifest's own loop-fill gain and the build's own re-level loop, and spliced into copies of `bm-RC1`'s two banks.
 
 | slot | derived fix | source WAV |
 |---|---|---|

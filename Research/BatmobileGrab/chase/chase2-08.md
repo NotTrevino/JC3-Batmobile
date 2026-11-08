@@ -8,7 +8,7 @@ nothing committed. New files only:
 
 * `Tools/scripts/chase/chase2_08_pkg.py` (package sweep/scan, route a)
 * `Tools/scripts/chase/chase2_08_native.py` (PE/xref/disasm/displacement helper, route b)
-* `E:/Modding/_BmAKgrab/chase/pkg_sweep_08.json` + `.log`, `value_cdo_08_engine.json` (route a data)
+* `E:/Modding/ArkhamKnight/_grab/chase/pkg_sweep_08.json` + `.log`, `value_cdo_08_engine.json` (route a data)
 
 **Result: 0 of 4 FOUND as shipped values; 3 rows gain hard new evidence, 1 row is re-scoped.**
 
@@ -89,7 +89,7 @@ The first pass read `BmGame.upk` and `Engine.upk` default objects only, for `Def
 This pass swept the install and parsed every package that names the three classes.
 
 ```
-$ python Tools/scripts/chase/chase2_08_pkg.py sweep --json E:/Modding/_BmAKgrab/chase/pkg_sweep_08.json
+$ python Tools/scripts/chase/chase2_08_pkg.py sweep --json E:/Modding/ArkhamKnight/_grab/chase/pkg_sweep_08.json
   HIT ...\BmGame\CookedPCConsole\GlobalPersistentCookerData.upk -> ['Default__RVehicleSimBatmobile',
       'Default__RVehicleSimCar', 'Default__SVehicle', 'RVehicleSimBatmobile', 'RVehicleSimCar',
       'AirControlTimeInAir', 'StayUprightRollResistAngle', 'StayUprightPitchResistAngle',
@@ -263,10 +263,10 @@ verify.
 ## 7. Reproduction
 
 ```
-python Tools/scripts/chase/chase2_08_pkg.py sweep --json E:/Modding/_BmAKgrab/chase/pkg_sweep_08.json
+python Tools/scripts/chase/chase2_08_pkg.py sweep --json E:/Modding/ArkhamKnight/_grab/chase/pkg_sweep_08.json
 python Tools/scripts/chase/chase2_08_pkg.py scan --packages <files named by the sweep>
 python Tools/scripts/chase/chase08_cdo.py --package ".../BmGame/CookedPCConsole/Engine.upk" --dump \
-        --json E:/Modding/_BmAKgrab/chase/value_cdo_08_engine.json
+        --json E:/Modding/ArkhamKnight/_grab/chase/value_cdo_08_engine.json
 python Tools/scripts/chase/chase2_08_native.py scan 0x6d4          # 0 store-form hits
 python Tools/scripts/chase/chase2_08_native.py scan 0x6d8          # 0 store-form hits
 python Tools/scripts/chase/chase2_08_native.py dispwindow 0x1400668f0 --lo 0x300 --hi 0x520

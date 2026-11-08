@@ -4,16 +4,16 @@ file' from 'the engine rejects well-formed new geometry'."""
 import struct
 import sys
 
-sys.path.insert(0, r"E:\Modding\JC3-Batmobile\Tools\scripts")
+sys.path.insert(0, r"E:\Modding\JustCause3\JC3-Batmobile\Tools\scripts")
 import rbm_geom as R  # noqa: E402
 
 CASES = [
     ("test-013 body+fin",
-     "E:/Modding/JC3-Batmobile/Builds/test-013/body_lod1_finned.rbm",
-     "E:/Modding/JC3-Batmobile/Builds/test-003/aaf/models/jc_vehicles/01_land/"
+     "E:/Modding/JustCause3/JC3-Batmobile/Builds/test-013/body_lod1_finned.rbm",
+     "E:/Modding/JustCause3/JC3-Batmobile/Builds/test-003/aaf/models/jc_vehicles/01_land/"
      "v0300_car_kensington_sportsmuscle/sportsmuscle_body_lod1.rbm"),
     ("test-014 plate_r+fin",
-     "E:/Modding/JC3-Batmobile/Builds/test-014/plate_r_finned.rbm", None),
+     "E:/Modding/JustCause3/JC3-Batmobile/Builds/test-014/plate_r_finned.rbm", None),
 ]
 
 for tag, path, orig in CASES:

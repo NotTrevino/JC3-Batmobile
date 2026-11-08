@@ -326,7 +326,7 @@ geometry/textures/banks, **compose several systems where the closest one is shor
 
 | # | path | what it proves |
 |---|---|---|
-| 1 | `E:/Modding/_gamedata/JC3grab/weapons/w602_mediumtank_canon/w602_mediumtank_canon.wtunec` (patch @441,880,576) | tank cannon tune, all §4.1 values at their offsets |
+| 1 | `E:/Modding/_shared/gamedata/JC3grab/weapons/w602_mediumtank_canon/w602_mediumtank_canon.wtunec` (patch @441,880,576) | tank cannon tune, all §4.1 values at their offsets |
 | 2 | `…/w603_mediumtank_mgun/w603_mediumtank_mgun.wtunec` (patch @441,894,912) | minigun tune, §4.2 |
 | 3 | `…/v0200_car_capstone_apc_debug.ee` inner `w206_mounted_capstone_m2hm.wtunec` (stream 14,517,720) | APC tune, §4.3 |
 | 4 | `Research/JC3Grab/WEAPONS.md` §6, §10, §12 | fleet tracer table, player/AI block naming, member vocabulary (colour absent) |

@@ -16,8 +16,8 @@ Nothing in the ledger, the cards or any earlier generated file was edited. The i
 |---|---|
 | `Tools/scripts/bmak_audio_regrab.py` | the tool: `--write` (extract + decode + JSON) and `--check` (re-derive, compare, verify every WAV) |
 | `Research/BatmobileGrab/AUDIO_REGRAB.json` | machine-readable map: 15 bank payloads, 350 events, 10,249 media entries, per-media WEM/WAV path + sha1 + duration |
-| `E:/Modding/_BmAKgrab/audio_regrab/wem/*.wem` | 516 extracted Wwise media files (outside the repo, as the brief asked) |
-| `E:/Modding/_BmAKgrab/audio_regrab/wav/*.wav` | 516 decoded WAVs (vgmstream-cli, same decoder `_wem_decode.py` used for G1-15) |
+| `E:/Modding/ArkhamKnight/_grab/audio_regrab/wem/*.wem` | 516 extracted Wwise media files (outside the repo, as the brief asked) |
+| `E:/Modding/ArkhamKnight/_grab/audio_regrab/wav/*.wav` | 516 decoded WAVs (vgmstream-cli, same decoder `_wem_decode.py` used for G1-15) |
 | `tmp/freebuff/reports/bmak-banks-media-regrab.md` | this report |
 
 ## 2. Method (reuses this repo's tools, no new decoder, no external download)
@@ -69,7 +69,7 @@ recorded as `no-didx-entry`, not as missing from the install.
 ## 4. Event → WAV (the 26 ledger ids, 33 bank/event pairs)
 
 `wav=…` counts distinct WAVs the event resolves to; the filename shown is the first one. Every path is
-`E:/Modding/_BmAKgrab/audio_regrab/wav/<bank>__<event id>__<media id>.wav`; a `duplicate_of` row points at the
+`E:/Modding/ArkhamKnight/_grab/audio_regrab/wav/<bank>__<event id>__<media id>.wav`; a `duplicate_of` row points at the
 twin's WAV, so no event is left without a file.
 
 | bank | event id | event name | media | wav | first WAV |
@@ -144,7 +144,7 @@ $ python Tools/scripts/bmak_audio_regrab.py --write
   O-6-twin: PASS
 missing twin {'id': '0x6BB2C66E', 'carried_by': []}
 cooked twin  {'id': '0x8EA6FCA0', 'carried_by': ['CHR_BatmanDisruptor'], 'media': [18 ids]}
-wrote E:\Modding\JC3-Batmobile\Research\BatmobileGrab\AUDIO_REGRAB.json
+wrote E:\Modding\JustCause3\JC3-Batmobile\Research\BatmobileGrab\AUDIO_REGRAB.json
 WRITE_EXIT=0
 
 $ python Tools/scripts/bmak_audio_regrab.py --check

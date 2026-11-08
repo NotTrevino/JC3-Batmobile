@@ -19,7 +19,7 @@ This tool tests that reading against the bytes and against every name space the 
   4. the value is then searched as a raw `u32` and as a hash in every name space that could
      have a reverse table: the 78,907-row VFS index, the 181,740-key JCMR dictionary, all 88
      archive `.tab` files, and every `.epe`/`.ee`/`.vmodc`/`.blo`/`.tab` file under
-     `E:/Modding/_gamedata/JC3grab`;
+     `E:/Modding/_shared/gamedata/JC3grab`;
   5. the asset the pair resolves to is decoded (`jc3adf`), and each tint is re-read from its
      own file bytes at `0x94 + 0x50*k` so the table and the bytes are two independent reads.
 
@@ -54,7 +54,7 @@ OUT = os.path.join(ROOT, "Research", "JC3Grab")
 MD = os.path.join(OUT, "PALETTE_HASH.md")
 INDEX = os.path.join(OUT, "INDEX.jsonl")
 DICTIONARY = os.path.join(ROOT, "Tools", "JCMR-src", "assets", "jc3", "dictionary.json")
-GAMEDATA = r"E:/Modding/_gamedata/JC3grab"
+GAMEDATA = r"E:/Modding/_shared/gamedata/JC3grab"
 GAME = jc3index.DEFAULT_GAME
 BUNDLE = bm_rc.DIR + bm_rc.OLD + ".ee"
 LOOSE_EPE = os.path.join(

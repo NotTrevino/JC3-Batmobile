@@ -6,8 +6,8 @@ inputs; `UNKNOWN` = no decoder reads it, blocker named. Rates are reported as ra
 no oracle in this file turns a fleet rate into an invariant.
 
 Donor `Builds/test-091/aaf/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle.physicsc` - 340,368 B, 430 objects, **62 body entries**.
-Fleet `E:/Modding/_gamedata/JC3grab/hkx/out` - 232 entity decodes, 233 physics entries (233 with a system); 121 name a `.physicsc` that is present in
-`E:/Modding/_gamedata/JC3grab/hkx/all` (40 distinct files, decoded once each).
+Fleet `E:/Modding/_shared/gamedata/JC3grab/hkx/out` - 232 entity decodes, 233 physics entries (233 with a system); 121 name a `.physicsc` that is present in
+`E:/Modding/_shared/gamedata/JC3grab/hkx/all` (40 distinct files, decoded once each).
 
 ## 1. The two questions, answered
 

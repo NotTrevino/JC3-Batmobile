@@ -70,7 +70,7 @@ cells[7] (verify): boost: flame at the jet nozzle, loops while nitro is held; 32
 
 ```
 $ python Tools/scripts/t_rows.py build
-E:\Modding\JC3-Batmobile\Working\Translation\T_ROWS.jsonl: 198 rows, 35 edits over 16 rows
+E:\Modding\JustCause3\JC3-Batmobile\Working\Translation\T_ROWS.jsonl: 198 rows, 35 edits over 16 rows
 
 $ python Tools/scripts/t_blocked.py --write
 wrote Working/Translation/BLOCKED_PROPOSALS.{json,md}: 15 blocked rows (11 ledger + 4 T6) of 180 in scope; 4 tested, 2 resolved: T-AU3=still-blocked, T-S6=still-blocked, T-AU5=still-blocked, T-WP4=partially-unblocked

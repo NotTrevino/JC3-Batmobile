@@ -6,7 +6,7 @@ Card: `GRAB_BACKLOG.md` §G2-22 (l. 707), tracker row §12 (l. 1305), MODLOG
 `Tools/scripts/jc3usage.py` (59,074 B).
 
 Mode: read-only. Nothing under `D:/Games` was written or read by me; no game launch; no commit.
-Every number below was re-derived from `E:/Modding/_JC3grab/` (decoded caches, `.epe` XML,
+Every number below was re-derived from `E:/Modding/JustCause3/_grab/` (decoded caches, `.epe` XML,
 `entities/*.ee.json`) plus `Research/JC3Grab/{INDEX,FX_TABLE}.jsonl` and
 `Tools/scripts/rbmhdr.py`. I did **not** run `python Tools/scripts/jc3usage.py --check`: its
 `redecode()` calls `jc3grab.read_entry(..., GAME)` with `GAME = jc3index.DEFAULT_GAME`
@@ -207,7 +207,7 @@ donor v0300_car_kensington_sportsmuscle_civilian_01.ee.xml
 ```
 (from the XML: `<value name="name" type="string">exhaust_upgrade_nitrous</value>`,
 `<value name="Effect" type="int">-776668445</value>`, `<value name="Usage" type="int">-97082140</value>`).
-There is no decoded `.effc` body anywhere on disk except `E:/Modding/_JC3grab/tmp/sample.effc`
+There is no decoded `.effc` body anywhere on disk except `E:/Modding/JustCause3/_grab/tmp/sample.effc`
 (`find … -iname '*.effc*'`), so the emitter/particle content of
 `car_cycle_base_dual_nitrous.effc` cannot be inspected: "flame" rests on three names
 (`EngineNitro`, `dynamic_nitrous`, `…_nitrous.effc`) plus one sound event.

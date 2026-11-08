@@ -86,7 +86,7 @@ VGMPATH = os.path.join(ROOT, "Tools", "vgmstream-win64", "vgmstream-cli.exe")
 BANK_SRC = {
     "vehicles": os.path.join(ROOT, "Working", "Audio", "jc3bank", "sound", "fmod_banks",
                              "vehicles.bank"),
-    "weapons": r"E:\Modding\_gamedata\JC3grab\audio\weapons.bank",
+    "weapons": r"E:\Modding\_shared\gamedata\JC3grab\audio\weapons.bank",
 }
 LUFS_TOL = 0.05          # LU: the rebuilt payload must be the payload T-16 measured
 RATE = 48000
@@ -628,7 +628,7 @@ def installer_text(doc: dict) -> str:
         lines.append(f"        UnBank '{b['name']}'")
     lines += [
         f"        if ($GameDir -eq '{doc['installer']['game_dir']}') {{",
-        "            & (Join-Path 'E:\\Modding\\JC3-Batmobile\\Builds\\test-091' 'install.ps1') "
+        "            & (Join-Path 'E:\\Modding\\JustCause3\\JC3-Batmobile\\Builds\\test-091' 'install.ps1') "
         "-Action Install",
         "        } else {",
         "            Write-Host ('rehearsal on ' + $GameDir + ': test-091 re-install skipped')",

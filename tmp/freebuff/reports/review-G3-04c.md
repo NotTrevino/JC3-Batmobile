@@ -29,7 +29,7 @@ match the file, and one engine-semantic sentence (MIC inheritance) that carries 
 Command:
 
 ```
-cd "E:/Modding/JC3-Batmobile" && PYTHONIOENCODING=utf-8 uv run --with numpy python Tools/scripts/grab_colour_params.py --check; echo "CHECK_EXIT=$?"
+cd "E:/Modding/JustCause3/JC3-Batmobile" && PYTHONIOENCODING=utf-8 uv run --with numpy python Tools/scripts/grab_colour_params.py --check; echo "CHECK_EXIT=$?"
 ```
 
 Output:

@@ -64,7 +64,7 @@ GEOM = os.path.join(ROOT, "Research", "BatmobileGrab", "COLLISION_GEOM.json")
 FRAME = os.path.join(ROOT, "Research", "BatmobileGrab", "COLLISION_FRAME.json")
 SELECTOR = os.path.join(ROOT, "Research", "BatmobileGrab", "COLLISION_SELECTOR.json")
 ROLES = os.path.join(ROOT, "Research", "JC3Grab", "PHYSICS_ROLES.json")
-VANILLA = (r"E:/Modding/_gamedata/JC3grab/b13b/unpacked/models/jc_vehicles/01_land/"
+VANILLA = (r"E:/Modding/_shared/gamedata/JC3grab/b13b/unpacked/models/jc_vehicles/01_land/"
            r"v0300_car_kensington_sportsmuscle/sportsmuscle.physicsc")
 B10 = os.path.join(ROOT, "Working", "Collision", "batmobile.physicsc")
 TREE_GLOBS = (

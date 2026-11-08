@@ -28,7 +28,7 @@ per-vehicle tint float4s are read from **block object `+0x168`, `+0x178`, `+0x18
 | `tmp/freebuff/scratch/strs.py`, `strs2.py`, `xref.py`, `rtti.py`, `rtti2.py`, `sites.py`, `sites2.py`, `tint1.py`…`tint7.py` | scratch exploration (nothing depends on them) |
 | `tmp/freebuff/reports/COLOUR-tint.md` | this report |
 
-Not touched: `D:/Games`, `E:/Games`, `E:/Modding/_gamedata`, `Research/JC3Grab/COLOUR*.md`,
+Not touched: `D:/Games`, `E:/Games`, `E:/Modding/_shared/gamedata`, `Research/JC3Grab/COLOUR*.md`,
 `Research/JC3Grab/RUNTIME_LAYOUT.*`, `Tools/scripts/jc3_colour*.py`, `Builds/`, git.
 
 ## Every command run for the result, and its output

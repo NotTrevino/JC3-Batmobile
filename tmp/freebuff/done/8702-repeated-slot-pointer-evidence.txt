@@ -1,6 +1,6 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/repeated-slot-pointer-evidence.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/repeated-slot-pointer-evidence.md
 ONLY: freebuff
 EST: 45
 BRIEF: hand-written 2026-11-06
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/wp13-slots-force.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/wp13-slots-force.md
 Report wp13-slots-force.md designs 8 weapon slot members by repeating the four root slot pointers, because no shipped graph has more than two non-null slots. A forced design needs evidence that the engine accepts it. Examine every armed entity in Research/JC3Grab/WEAPON_WIRING.jsonl (53 entities) for repeated or shared slot pointers, several weapon points sharing one component, aircraft with more than two guns on different points, and the Bavarium Tank and Urga Mstitel graphs again. For each case state whether the slot objects are distinct or shared, how the weapon-selection UI would treat them, and list which designs are shown to exist in a shipped graph and which are not. UNKNOWN stays UNKNOWN; add the exact in-game check that would settle each unknown, written as a pilot-card sentence.

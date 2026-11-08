@@ -1,8 +1,8 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-d11-rebel-drop-text.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/build-d11-rebel-drop-text.md
 ONLY: freebuff
 EST: 40
 BRIEF: hand-written 2026-11-06
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-d01-scaffold-rc4.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/apply-world-text-rows.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/build-d01-scaffold-rc4.md, E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/apply-world-text-rows.md
 Build step B-13 refresh: the Rebel Drop item, task and string files with the computed name/description key (apply-world-text-rows), the vehicle icon, standalone leaf and traffic exclusion. Use bm_rebel.py and bm_leaf.py into Builds/bm-RC4-rebel; run bm_rebel.py --check and report the strings that now resolve to Batmobile text and not the Serpente's.
 
 Updated by review 8299: T-WLD4/T-WLD6/T-WLD11 closed as 'next' on computed keys — HashJenkins(leaf) 443190071 belongs to a leaf that never ships, the shipped _debug pair 1621485476 is present 11/11 with text BATMOBILE, and _desc key 4081821928 is present 11/11. Carry the drop (T-WLD4) and the 18,688 B icon copy (T-WLD5); bm_rebel.py --check must show the blurb resolving to Batmobile text, not the Serpente's.

@@ -7,7 +7,7 @@ so the bracket rule is verified in place, not assumed.
 
 **Provenance / reversibility.** New file,
 `tmp/freebuff/reports/unnamed-wavc-016de9d1.md`
-= `E:/Modding/JC3-Batmobile/tmp/freebuff/reports/unnamed-wavc-016de9d1.md`. Intended change: record
+= `E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/unnamed-wavc-016de9d1.md`. Intended change: record
 the last bounded naming attempt on the one archive entry `INDEX.json` could not name. It is the
 correct file because it is the requested output path and the only job artefact besides the name
 itself. **Revert:** delete this file, `Tools/names/derived_016de9d1.json`,

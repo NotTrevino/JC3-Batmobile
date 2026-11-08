@@ -6,8 +6,8 @@ import rbm_geom
 
 P = ('v0300_car_kensington_sportsmuscle',
      'v0300_car_kensington_sportsmuscle_civilian_01')
-ent = json.load(open(f'E:/Modding/_JC3grab/entities/{P[0]}__{P[1]}.ee.json', encoding='utf-8'))
-det = json.load(open(f'E:/Modding/_JC3grab/detail/{P[0]}__{P[1]}.ee.json', encoding='utf-8'))
+ent = json.load(open(f'E:/Modding/JustCause3/_grab/entities/{P[0]}__{P[1]}.ee.json', encoding='utf-8'))
+det = json.load(open(f'E:/Modding/JustCause3/_grab/detail/{P[0]}__{P[1]}.ee.json', encoding='utf-8'))
 
 # 1. stunt areas straight from the module rows
 sa = [m for m in ent['modules'] if m.get('type') == 'StuntAreas'][0]

@@ -6,7 +6,7 @@ Static only: no game, no build. Two halves:
    the `hknpPhysicsSystemData` arrays, the body ids that the vanilla parts module assigns
    (`world_collision_body_id` / `raycast_body_id` per part), the two static compounds and
    their instance counts, the 11 constraints, and the 56 `hknpShapeMassProperties` blobs.
-2. **A fleet census** over `E:/Modding/_gamedata/JC3grab/hkx/out/*.json` (the project's own
+2. **A fleet census** over `E:/Modding/_shared/gamedata/JC3grab/hkx/out/*.json` (the project's own
    `jc3hkx.summary()` per vehicle): objects, class counts, and the invariants that hold
    across vehicles.
 
@@ -47,7 +47,7 @@ import jc3hkx  # noqa: E402
 DONOR = os.path.join(ROOT, "Builds", "test-091", "aaf", "models", "jc_vehicles", "01_land",
                      "v0300_car_kensington_sportsmuscle", "sportsmuscle.physicsc")
 PARTS = os.path.join(ROOT, "Research", "JC3Grab", "PARTS_TABLE.jsonl")
-FLEET = r"E:/Modding/_gamedata/JC3grab/hkx/out"
+FLEET = r"E:/Modding/_shared/gamedata/JC3grab/hkx/out"
 OUT_MD = os.path.join(ROOT, "Research", "JC3Grab", "PHYSICS_ROLES.md")
 OUT_JSON = os.path.join(ROOT, "Research", "JC3Grab", "PHYSICS_ROLES.json")
 

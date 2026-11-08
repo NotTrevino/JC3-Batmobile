@@ -1,6 +1,6 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/jeb-qwen-fair-test.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/jeb-qwen-fair-test.md
 ONLY: freebuff
 EST: 35
 BRIEF: hand-written 2026-11-08 (stage 3 of 3 of the old fair-test brief, which used two full sessions without finishing)
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/jeb-qwen-fair-runs.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/jeb-qwen-fair-runs.md
 Score the saved runs in tmp/freebuff/smartsearch/fair_runs/ and write the verdict. Per model and arm report correct pick on positives, correct none on negatives, false pick on negatives, macro accuracy with 95 percent Wilson intervals, accuracy per candidate order and consistency across orders, seconds per case, and whether the top option probability separates right from wrong. Run an exact paired test between the two models on the same cases. Apply the decision rule written in jeb-qwen-fair-corpus.md exactly as written: choose a model only if its lower interval bound beats the other's point estimate or the paired test gives p below 0.05, otherwise write NO DIFFERENCE and keep the cheaper, faster model. List the cases where the models disagreed with the evidence path for each and the exact commands to rerun.

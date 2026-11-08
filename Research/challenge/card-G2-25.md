@@ -6,7 +6,7 @@ Card: `GRAB_BACKLOG.md` §G2-25 (l. 732), tracker row §12 (l. 1308), MODLOG
 `Research/JC3Grab/JC3_HUD_WEAPONS.json`, `Tools/scripts/jc3hudwpn.py` (1,117 lines).
 
 Mode: read-only. No game launch, no write under `D:/Games`, no commit. Every number below was
-re-read from `E:/Modding/_JC3grab/hud/dec/` (the G2-19 decompile: `scripts/` + `movie.xml`) and
+re-read from `E:/Modding/JustCause3/_grab/hud/dec/` (the G2-19 decompile: `scripts/` + `movie.xml`) and
 from the repo tables `INDEX.jsonl`, `WEAPON_WIRING.jsonl`, `WEAPONS.jsonl`,
 `Research/BatmobileGrab/HUD_INTERFACES.json`, `Research/BatmobileGrab/MECHANICS.md`. I did not run
 `jc3hudwpn.py --check` (it only reads decoded text and repo files, but its result is derivable and
@@ -499,7 +499,7 @@ units as stage units.
 ## 18. "No archive is opened; only decoded text"
 
 **Test.** `jc3hudwpn.py` reads `HUD = os.path.join(GRAB, "hud", "dec", "scripts")` with
-`GRAB = E:\Modding\_JC3grab`, plus `Research/JC3Grab/{INDEX,WEAPONS,WEAPON_WIRING}` and
+`GRAB = E:\Modding\JustCause3\_grab`, plus `Research/JC3Grab/{INDEX,WEAPONS,WEAPON_WIRING}` and
 `Research/BatmobileGrab/HUD_INTERFACES.json` / `HUD.md`. Nothing in the script opens
 `D:/Games` or an `.arc` (contrast G2-22's `--check`, which does).
 

@@ -99,7 +99,7 @@ payload is blamed.
 
 ## `native-hook-design-jc3mp-contract.md`
 **Not present** in `tmp/freebuff/reports/` (the directory listing shows no such file). The spawn
-semantics used by the cards therefore rest on the cloned source at `E:/Modding/_tools/jc3-console-thingy`
+semantics used by the cards therefore rest on the cloned source at `E:/Modding/_shared/tools/jc3-console-thingy`
 plus `exe_addr_check.py` (operator relay), as recorded in `tmp/freebuff/reports/l0-probe-payloads-offline.md`.
 
 ## Verification run

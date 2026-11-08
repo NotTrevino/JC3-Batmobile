@@ -58,7 +58,7 @@ byte (`cmd_check`, md rebuilt through `render_md`). So the Done check does coinc
    The pulse/component rows store the pointer as `None` both when the member is absent and when it
    is `00000000`, so `FORCEPULSE.json` cannot distinguish the two and nothing in `--check` guards
    the sentence. I verified it in the raw graph instead:
-   `E:/Modding/_JC3grab/tmp/epe_cache/v0201_car_capstone_mediumtank_military_01.ee.xml` contains
+   `E:/Modding/JustCause3/_grab/tmp/epe_cache/v0201_car_capstone_mediumtank_military_01.ee.xml` contains
    `<value id="B5AE7986" type="objectid">00000000</value>` on the `w603_mediumtank_mgun`
    component, and `7EE245DC=FFFFB14B` on the `w602` cannon — so the claim is **true**, but its
    provenance is the cache, not the deliverable (R11/R4: mark it or keep the raw value in the json).

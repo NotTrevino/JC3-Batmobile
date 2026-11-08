@@ -1,8 +1,8 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-d01-scaffold-rc4.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/build-d01-scaffold-rc4.md
 ONLY: freebuff
 EST: 45
 BRIEF: hand-written 2026-11-06
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/translation-closeout-t23.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/review-translation-wave.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/translation-closeout-t23.md, E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/review-translation-wave.md
 Build step B-01 for the new release candidate line. Using Tools/scripts/bm_build.py, create the scaffold tree Builds/bm-RC4-base as a NEW private tree (never an existing Builds folder, never the game folder), an identity copy of the live test-091 files, with its receipt. Re-run the identity control: .ee and .toc byte-identical to test-091. Record in the receipt which BUILD_BATCHES.md batches the later steps will apply, so every later step can verify it consumed its batch. No game launch.
 
 Updated by review 8299: BUILD_BATCHES.md carries 19 artefacts (17 payloads + 2 records) over 24 B steps and B-17…B-20 are declared no-payload gates (t23_closeout.py --check is green at decisions 11/11). The live ledger is 199 rows / 35 edits over 16 rows; test-091 stays the identity base. Do not gate on t_boost_rows.py or t_vnf_six.py — both still fail on a hard-coded 198-row pin.

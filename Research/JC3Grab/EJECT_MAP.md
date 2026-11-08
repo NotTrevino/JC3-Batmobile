@@ -17,7 +17,7 @@ Labels: **decoded** = read from a file (path + offset/line); **derived** = compu
 | `kepmap.txt` | the player's own export | 249 rows, fields `action, key` |
 | `serpente_civilian.xml` | donor graph: exits, states, gates | 26 exits |
 | `rico_base.asb`, `rico_base.afsmb` | Rico's clip + state machine | `rico_base.asb` 2678768 B @ 367054848, `rico_base.afsmb` 327108 B @ 366727168 |
-| `E:/Modding/_gamedata/JC3grab\entities` | module byte census | 232 dumps |
+| `E:/Modding/_shared/gamedata/JC3grab\entities` | module byte census | 232 dumps |
 | `DefaultInput.ini` | BmAK A binding | line 267 |
 | `DRIVINGMODE.json` | decoded `BmGame.upk` export 104931 | 1297 script bytes, 385 unattributed |
 | `EJECT_VELOCITY.json` | eject velocity call + receiver | `BmGame.upk` sha1 `36b5903579b80e7e` |

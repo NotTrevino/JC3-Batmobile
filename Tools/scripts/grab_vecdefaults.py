@@ -41,7 +41,7 @@ import upk_read as U  # noqa: E402  (project reader, read-only)
 UPK = r"E:/Games/Batman - Arkham Knight/BmGame/CookedPCConsole/Playable_Batmobile_SF.upk"
 FUNCS_MD = os.path.join(ROOT, "Research", "BatmobileGrab", "COLOUR_FUNCTIONS.md")
 PARAMS_MD = os.path.join(ROOT, "Research", "BatmobileGrab", "COLOUR_PARAMS.md")
-BMSDK = r"E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated/Engine/MaterialExpressionVectorParameter.g.cs"
+BMSDK = r"E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Generated/Engine/MaterialExpressionVectorParameter.g.cs"
 OUT_MD = os.path.join(ROOT, "Research", "BatmobileGrab", "VEC_DEFAULTS.md")
 
 CLASS = "MaterialExpressionVectorParameter"

@@ -1,8 +1,8 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-batmobile-hud-overlay.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/hook-batmobile-hud-overlay.md
 ONLY: freebuff
 EST: 60
 BRIEF: hand-written 2026-11-08
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-live-vehicle-readout.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hud-gfx-ffdec-roundtrip.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/hook-live-vehicle-readout.md, E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/hud-gfx-ffdec-roundtrip.md
 The Batmobile HUD. The operator's leads (OPERATOR_PRIORITIES.md):
 - the health bar top-left in battle mode;
 - the afterburner gauge on the left in pursuit, with its quick-recharge cooldown gauge to its left;
@@ -16,4 +16,4 @@ Compare two routes and pick by evidence:
 - (a) draw from the hook, through console-thingy's debug renderer at 0x142D39DE8 or a D3D11 Present hook with Dear ImGui (MIT);
 - (b) the edited hud.gfx path from reports/hud-gfx-ffdec-roundtrip.md.
 
-Also find how to hide JC3's own speedometer only while the player is in the Batmobile. Build the health bar and the afterburner gauge first. Feed them from the 7982 telemetry, and take the art from the decoded BmAK HUD movies (Research/BatmobileGrab/HUD*.md). Stage Builds/hook-0005/ with a receipt and screenshot expectations. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.
+Also find how to hide JC3's own speedometer only while the player is in the Batmobile. Build the health bar and the afterburner gauge first. Feed them from the 7982 telemetry, and take the art from the decoded BmAK HUD movies (Research/BatmobileGrab/HUD*.md). Stage Builds/hook-0005/ with a receipt and screenshot expectations. Shared rules: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

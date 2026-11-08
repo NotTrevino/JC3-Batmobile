@@ -67,8 +67,8 @@ Not edited: `NAMES.md`, `jc3strings.py`, `T_ROWS.jsonl`, any build tree, any gam
 
 ```
 $ python Tools/scripts/t_wld4b.py --write
-wrote E:\Modding\JC3-Batmobile\Working\Translation\T_WLD4B_STRINGS.json
-wrote E:\Modding\JC3-Batmobile\Working\Translation\T_WLD4B_STRINGS.md
+wrote E:\Modding\JustCause3\JC3-Batmobile\Working\Translation\T_WLD4B_STRINGS.json
+wrote E:\Modding\JustCause3\JC3-Batmobile\Working\Translation\T_WLD4B_STRINGS.md
 languages 11 pairs 14712 O1 45 / 45 O3 25 /25
 ```
 

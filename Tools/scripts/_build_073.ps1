@@ -6,7 +6,7 @@
 #      tonnes range) applied JOINTLY as 85 prescribes.
 # health/land_global already internal; rigid_body patched in place (no round trip).
 $ErrorActionPreference = 'Stop'
-$root = 'E:\Modding\JC3-Batmobile'
+$root = 'E:\Modding\JustCause3\JC3-Batmobile'
 $py = 'uv'
 $g  = "$root\Tools\Gibbed"
 $ee = 'v0300_car_kensington_sportsmuscle_civilian_01.ee'
@@ -49,10 +49,10 @@ param([ValidateSet('Install','Rollback072','Status')][string]`$Action = 'Status'
 `$EeT = Join-Path `$GameDir 'dropzone\editor\entities\jc_vehicles\01_land\v0300_car_kensington_sportsmuscle\v0300_car_kensington_sportsmuscle_civilian_01.ee'
 `$EeSha = '$eeH'
 `$TocSha = '$tocH'
-`$B = 'E:\Modding\JC3-Batmobile\Builds\test-073'
+`$B = 'E:\Modding\JustCause3\JC3-Batmobile\Builds\test-073'
 switch (`$Action) {
     'Install' { Copy-Item -LiteralPath (Join-Path `$B 'v0300_car_kensington_sportsmuscle_civilian_01.ee') -Destination `$EeT -Force; Copy-Item -LiteralPath (Join-Path `$B 'v0300_car_kensington_sportsmuscle_civilian_01.ee.toc') -Destination (`$EeT + '.toc') -Force; Write-Host 'deployed test-073: BmAK damage model + joint handling' }
-    'Rollback072' { powershell -NoProfile -ExecutionPolicy Bypass -File 'E:\Modding\JC3-Batmobile\Builds\test-072\install.ps1' -Action Install }
+    'Rollback072' { powershell -NoProfile -ExecutionPolicy Bypass -File 'E:\Modding\JustCause3\JC3-Batmobile\Builds\test-072\install.ps1' -Action Install }
     'Status' {
         `$e = if (Test-Path -LiteralPath `$EeT) { (Get-FileHash -LiteralPath `$EeT).Hash } else { 'none' }
         `$t = if (Test-Path -LiteralPath (`$EeT + '.toc')) { (Get-FileHash -LiteralPath (`$EeT + '.toc')).Hash } else { 'none' }

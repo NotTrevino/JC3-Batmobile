@@ -57,7 +57,7 @@ claim.
 
 ## Check output (verbatim)
 
-The card's `--check` command, re-run in `E:/Modding/JC3-Batmobile` (`--check` writes nothing: the
+The card's `--check` command, re-run in `E:/Modding/JustCause3/JC3-Batmobile` (`--check` writes nothing: the
 spec's mtime stayed 00:44):
 
 ```
@@ -111,7 +111,7 @@ sportsmuscle_vehicle_parts.vmodc`, 39,278 B `4FA283FC…`), plus `Builds/bm-002/
 
 `Tools/scripts/jc3parts.py:117` (`epe_parts()`) reads `Research/JC3Grab/ENTITIES.md` §"Donor parts";
 `deform_values()` reads `Working/Translation/current.json`, whose own `build` field is
-`E:\Modding\JC3-Batmobile\Builds\test-091`; `check_parts_table()` reads
+`E:\Modding\JustCause3\JC3-Batmobile\Builds\test-091`; `check_parts_table()` reads
 `Research/JC3Grab/PARTS_TABLE.jsonl`. Nothing in the command touches `Builds/bm-002`. Its output says
 so out loud: **"donor table has 42 parts"** while the build the card made has 59.
 

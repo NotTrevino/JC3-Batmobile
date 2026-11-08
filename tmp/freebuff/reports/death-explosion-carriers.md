@@ -266,7 +266,7 @@ behaviour (smoke → burn → delayed explosion). Nothing here edits a game inst
 ## 9. Reproduce
 
 ```bash
-cd /e/Modding/JC3-Batmobile
+cd /e/Modding/JustCause3/JC3-Batmobile
 sed -n '10,16p' Research/BatmobileGrab/MECHANICS.md            # DeathExplosionSoundArray 2 items @0x1D08
 sed -n '570,575p' Research/BatmobileGrab/DAMAGE_RULES.md        # the array is stream-only, per archetype
 sed -n '150,154p;728,733p' Research/BatmobileGrab/AUDIO_FEATURES.md   # Play_Batmobile_Destroyed: missing-bank

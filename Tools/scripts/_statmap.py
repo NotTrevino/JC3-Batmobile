@@ -1,7 +1,7 @@
 """STATMAP v1: JC3 members x BmAK values. Tags: scraped/exact/magnitude/infer/none."""
 import json, os
 
-A = r"E:\Modding\JC3-Batmobile\Working\Audio"
+A = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio"
 
 # BmAK side: [scraped] GPCD schema classes (names+types certain; values unattributed)
 # Values below: [exact] wiki-exact or [magnitude] range+pattern (offsets from serials).

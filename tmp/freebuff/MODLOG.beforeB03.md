@@ -1,6 +1,6 @@
 # MODLOG — Just Cause 3 Batmobile
 
-Journal for `E:\Modding\JC3-Batmobile`. Every claim is backed by a file, a tool run or a URL
+Journal for `E:\Modding\JustCause3\JC3-Batmobile`. Every claim is backed by a file, a tool run or a URL
 actually inspected. Missing evidence is **UNKNOWN**, per `AGENTS.md`.
 
 ---
@@ -5962,7 +5962,7 @@ meshes unexported, particle semantics — is real but does not gate the mapping.
   6 × `*_ai`, `default_extended_effect_usages.vmodc`.
 
 Extracted game data was moved straight out of the repo per the project rule:
-`E:\Modding\_JC3grab\vanilla_v0300.ee`.
+`E:\Modding\JustCause3\_grab\vanilla_v0300.ee`.
 
 ### What this changes in the plan
 
@@ -5999,7 +5999,7 @@ reads its `AAF\0` header straight out of `game35.arc`.
 The important discovery of this pass: **Gibbed's `ConvertAdf` decodes `.vmodc` to XML**, so JC3
 modules arrive with the game's *own* member names, not offsets. `jc3grab.py` reads the `.ee` through
 the index, un-AAFs it, lists the SARC and converts every `.vmodc`; raw decodes stay outside the repo
-(`E:\Modding\_JC3grab\entities\`, 232 files, 266 MB).
+(`E:\Modding\JustCause3\_grab\entities\`, 232 files, 266 MB).
 
 | | |
 |---|---|
@@ -6052,7 +6052,7 @@ last geometry task. Nothing built, nothing deployed; test-083 untouched.
 - **`.rbm`** headers via `rbmhdr.parse_header`, which now takes **bytes** instead of a path
   (`read_header` still works for files on disk): these meshes only ever exist inside a `.ee`.
 
-Raw output 48 MB, outside the repo: `E:/Modding/_JC3grab/detail/`.
+Raw output 48 MB, outside the repo: `E:/Modding/JustCause3/_grab/detail/`.
 
 ### Numbers (all 232 entities)
 
@@ -6415,7 +6415,7 @@ makes T-5 a measurement instead of a one-off.
 **The four open G1 units.** G1 is now 18 / 18 (100%).
 
 * **G1-5 — geometry, 12 / 12.** `grab_meshes.py` drives `umodel -lods` once per mesh into
-  `E:\Modding\_BmAKgrab\meshes\` (outside the repo) and reads the chunked ActorX header. The 12
+  `E:\Modding\ArkhamKnight\_grab\meshes\` (outside the repo) and reads the chunked ActorX header. The 12
   exports are 6 distinct meshes duplicated across packages; the flat-PSK read fails at
   `numVertex = 20100422` because the file is chunked (FINDINGS F4), so the reader walks
   `id[8] + version[16] + stride + count + payload`. Counts: `Batmobile_V2` 201,338 v / 299,837 f,
@@ -8004,7 +8004,7 @@ projectile hunk and resolver hunk), and this log entry; no game file, save or dr
 offset-84 `NameProperty` (`SequenceName`), which `objects.jsonl` does not promote to the export
 name, (2) take `SequenceLength` / `NumFrames` / `RateScale` and the `Notifies` array from the same
 record, (3) read each `AnimSet`'s `TrackBoneNames` from the raw `.upk` through `upk_read.py`, and
-(4) use one umodel export per AnimSet (`umodel -export -out E:\Modding\_BmAKgrab\anims ...`) for
+(4) use one umodel export per AnimSet (`umodel -export -out E:\Modding\ArkhamKnight\_grab\anims ...`) for
 the per-sequence key-frame tables and track-removal config; the key-frames stay outside the repo.
 Mechanism classes will be assigned only from the animated bone names, with the evidence recorded.
 
@@ -8014,14 +8014,14 @@ dump that several tasks already read. `grab_anims.py` is the joined, checkable r
 asks for, and leaves `MECHANICS.md` as history.
 
 **Revert:** delete `ANIMATIONS.json`, `ANIMATIONS.md` and `Tools/scripts/grab_anims.py`; the
-`E:\Modding\_BmAKgrab\anims\` exports are outside the repo and can be removed without touching the
+`E:\Modding\ArkhamKnight\_grab\anims\` exports are outside the repo and can be removed without touching the
 game. No game file, install, save or dropzone is modified.
 
 ## G1-10 · Animation sequences — done (2026-10-24)
 
 **Delivered:** `Tools/scripts/grab_anims.py` (new), `Research/BatmobileGrab/ANIMATIONS.json`,
 `Research/BatmobileGrab/ANIMATIONS.md`, and 13 per-AnimSet key-frame JSON files under
-`E:\Modding\_BmAKgrab\anims\keys\` (92 MB / 88 MiB, deliberately outside the repository). The tool joins
+`E:\Modding\ArkhamKnight\_grab\anims\keys\` (92 MB / 88 MiB, deliberately outside the repository). The tool joins
 each `AnimSequence` to its owning `AnimSet`, raises the offset-84 `SequenceName` over the export
 name (which is the class name `AnimSequence` for all 253), applies the umodel `RemoveTracks`
 config, and reads the PSA keys through the pure-Python reader. It classifies each sequence from
@@ -8048,14 +8048,14 @@ keyframe files exist but does not re-serialize their 92 MB of tables; a separate
 counts equal `ANIMATIONS.json`.
 
 **Revert:** delete `Tools/scripts/grab_anims.py`, `ANIMATIONS.json`, `ANIMATIONS.md`, the two
-README rows and this entry; `E:\Modding\_BmAKgrab\anims\` is outside the repo and can be removed
+README rows and this entry; `E:\Modding\ArkhamKnight\_grab\anims\` is outside the repo and can be removed
 without touching the game. No game file, install, save or dropzone was modified.
 
 ## G1-11 · Bone ownership — intent (2026-10-24)
 
 **Intended change:** new `Tools/scripts/grab_bones.py`, producing
 `Research/BatmobileGrab/BONES.json` + `.md` and per-bone face-index `.npy` files under
-`E:\Modding\_BmAKgrab\bones\`. It will read `Batmobile_V2` LOD0 and the two LODs umodel does not
+`E:\Modding\ArkhamKnight\_grab\bones\`. It will read `Batmobile_V2` LOD0 and the two LODs umodel does not
 currently have on disk (LOD1/LOD2), recover every `REFSKELT` record (name, parent, local bind
 pose), accumulate the bind-pose world pivots through `bat_assemble`'s one transform, and count
 each face by its owning bone and material slot at every LOD.
@@ -8072,14 +8072,14 @@ config that enables LOD export, then keep the two new PSKX/PSK files beside LOD0
 UEViewer config is not edited.
 
 **Revert:** delete `BONES.json`, `BONES.md`, `Tools/scripts/grab_bones.py` and
-`E:\Modding\_BmAKgrab\bones\`; the LOD1/LOD2 exports are outside the repo and can be removed
+`E:\Modding\ArkhamKnight\_grab\bones\`; the LOD1/LOD2 exports are outside the repo and can be removed
 independently. No game file, install, save or dropzone is modified.
 
 ## G1-11 · Bone ownership — done (2026-10-24)
 
 **Delivered:** `Tools/scripts/grab_bones.py`, `Research/BatmobileGrab/BONES.json`,
 `Research/BatmobileGrab/BONES.md`, 180 per-bone face-index `.npy` files plus `_split.npy` under
-`E:\Modding\_BmAKgrab\bones`, and the missing LOD1/LOD2 exports beside LOD0. The 3 LODs now cover
+`E:\Modding\ArkhamKnight\_grab\bones`, and the missing LOD1/LOD2 exports beside LOD0. The 3 LODs now cover
 299,837 / 144,857 / 21,720 faces, exactly `MESHES.md`; every face is owned or explicitly split.
 
 **Counts:** 180 bones, one root (`Batmobile_Chassis`), 298,136 / 143,315 / 21,243 owned faces and
@@ -8111,7 +8111,7 @@ per-slot count; the full 470,166-row set from the `.npy` files equals the indepe
 face sets exactly. Face totals and per-slot totals match `MESHES.md`/the cooked sections.
 
 **Revert:** delete `Tools/scripts/grab_bones.py`, `BONES.json`, `BONES.md`, the two README rows, the
-LOD1/LOD2 exports and `E:\Modding\_BmAKgrab\bones\`; none of those is a game file. No game file,
+LOD1/LOD2 exports and `E:\Modding\ArkhamKnight\_grab\bones\`; none of those is a game file. No game file,
 install, save or dropzone was modified.
 
 ## G1-12 · Pose deltas — done (2026-10-24)
@@ -8314,7 +8314,7 @@ file, install, save or dropzone was modified.
 weapon fire/loop/stop/tail/impact, winch, EMP, sonar, tracker, lock-on UI, impacts, death,
 horn, voice, `other`), with WEM ids, loop flags, container type (random/sequence/blend) and the
 RTPC bindings + curve points each sound carries (`RPM`, `BML_Speed_Global`, `RevLimiter`, …).
-Decode all 447 WEMs to 48 kHz WAV under `E:\Modding\_BmAKgrab\audio\wav\` (outside the repo) and
+Decode all 447 WEMs to 48 kHz WAV under `E:\Modding\ArkhamKnight\_grab\audio\wav\` (outside the repo) and
 measure duration, peak and integrated loudness (LUFS) of each.
 
 **Out:** `Research/BatmobileGrab/AUDIO_FEATURES.json` + `.md`, one new script in
@@ -8328,7 +8328,7 @@ found in the HIRC objects. Curve geometry is read from the bank; nothing is assu
 until an anchor holds.
 
 **Revert:** delete `Tools/scripts/<new script>`, `AUDIO_FEATURES.md|.json`, the README rows, the
-tracker row and this entry. `E:\Modding\_BmAKgrab\audio\wav\` is outside the repo; no game file,
+tracker row and this entry. `E:\Modding\ArkhamKnight\_grab\audio\wav\` is outside the repo; no game file,
 install, save or dropzone is touched.
 
 ---
@@ -8339,7 +8339,7 @@ install, save or dropzone is touched.
 `Tools/scripts/bmak_audio_features.py` (`--write` regenerates both and decodes every WEM; `--check`
 prints **OK: 361 rows / 118 ids -> 14 groups, 423/447 WEMs decoded (24 errors), 90 missing rows,
 27 banks, 506 RTPC entries over 261 objects (22 named params)**; `py_compile` clean). The 423 WAVs
-(971.4 s of audio) live outside the repo under `E:\Modding\_BmAKgrab\audio\wav\`, 48 kHz, with
+(971.4 s of audio) live outside the repo under `E:\Modding\ArkhamKnight\_grab\audio\wav\`, 48 kHz, with
 duration, peak dBFS and BS.1770 integrated loudness per file.
 
 **Two recoveries made the note possible.**
@@ -8379,7 +8379,7 @@ spec was available to name them.
 
 **Record.** README gained two rows plus the `bmak_audio_features.py --check` line, the tracker row is
 `G1-15 | done`, and this entry is the journal. **Revert:** delete `bmak_audio_features.py`,
-`AUDIO_FEATURES.md|.json`, the two README rows, the tracker row and this entry; `E:\Modding\_BmAKgrab\`
+`AUDIO_FEATURES.md|.json`, the two README rows, the tracker row and this entry; `E:\Modding\ArkhamKnight\_grab\`
 holds only decoded copies — no game file, install, save or dropzone was modified.
 
 ---
@@ -9140,7 +9140,7 @@ was committed.
 ## G2-10 · Vehicle weapon catalogue — intended change (2026-10-26)
 
 **Card:** G2-10 (phase G2, first card). Out: `Research/JC3Grab/WEAPONS.md` + `WEAPONS.jsonl`,
-`Tools/scripts/jc3weapons.py --write/--check`; raw tunes extracted to `E:\Modding\_JC3grab\weapons\`.
+`Tools/scripts/jc3weapons.py --write/--check`; raw tunes extracted to `E:\Modding\JustCause3\_grab\weapons\`.
 
 **Intended change (written before editing, per §0.2 rule 4).**
 
@@ -9149,7 +9149,7 @@ was committed.
 | `Tools/scripts/jc3weapons.py` | new. Decodes every `WeaponTuning` / `AutoAim` / `ForcePulseSettings` reachable from the 25 weapon ids, with `--write`/`--check`/`dump` | the card names this path; it reuses `jc3adf.py` (ADF v4 reader), `eetoc.py` (SARC) and `jc3index.py` (archive index) - the pattern `jc3fx.py`/`jc3parts.py` set |
 | `Research/JC3Grab/WEAPONS.jsonl` | new. One row per weapon id: every decoded member, with source paths, sizes and sha1 | the card's Out; same shape as `PARTS_TABLE.jsonl` (values in-repo, evidence) |
 | `Research/JC3Grab/WEAPONS.md` | new, generated by the same `--write` | the card's Out |
-| `E:\Modding\_JC3grab\weapons\` | new (outside the repo, R10): the weapon `.ee` bundles and their inner tune files | the card's step 2 |
+| `E:\Modding\JustCause3\_grab\weapons\` | new (outside the repo, R10): the weapon `.ee` bundles and their inner tune files | the card's step 2 |
 | `Research/JC3Grab/README.md` | two rows (build/check) | every G2 tool is listed there |
 | `GRAB_BACKLOG.md` §12 | `G2-10 | todo` -> `done` + evidence path | the session loop step 7 |
 
@@ -9167,7 +9167,7 @@ inside the carrier vehicle `.ee` (confirmed: `v2200 ...assault*.ee` embeds
 `v2601` and `v2602`/`v2604` helicopters), i.e. the impact blast of a bullet weapon.
 
 **Revert:** delete `Tools/scripts/jc3weapons.py`, `Research/JC3Grab/WEAPONS.md`,
-`Research/JC3Grab/WEAPONS.jsonl`, `E:\Modding\_JC3grab\weapons\`, the two README rows, restore the
+`Research/JC3Grab/WEAPONS.jsonl`, `E:\Modding\JustCause3\_grab\weapons\`, the two README rows, restore the
 tracker row to `todo`, remove this entry and the result entry that follows. No game file, install,
 save or dropzone is touched; nothing is committed.
 
@@ -9179,7 +9179,7 @@ archives and compares; the tunes are extracted outside the repo.
 **Record:** `Research/JC3Grab/WEAPONS.md` (17 sections, generated) + `WEAPONS.jsonl` (one row per id,
 every decoded member of every authoritative tune) + `WEAPONS_SHARED.json` (the shared tunes, decoded)
 + `Tools/scripts/jc3weapons.py` (`--write` / `--check` / `dump`). Raw copies in
-`E:\Modding\_JC3grab\weapons\<id>\`.
+`E:\Modding\JustCause3\_grab\weapons\<id>\`.
 
 ### The shape of the data
 
@@ -9285,7 +9285,7 @@ entities / 130,513 objects / 34,999 compound instances), `jc3fx` 57,187 files 0 
 (the 26 from G1-21 plus `jc3weapons --check`).
 
 **Revert:** delete `Tools/scripts/jc3weapons.py`, `Research/JC3Grab/WEAPONS.md`, `WEAPONS
-`.jsonl`, `WEAPONS_SHARED.json` and `E:\Modding\_JC3grab\weapons\`, restore the README rows and the
+`.jsonl`, `WEAPONS_SHARED.json` and `E:\Modding\JustCause3\_grab\weapons\`, restore the README rows and the
 tracker row to `todo`, remove this entry and the intended-change entry above it. No game file,
 install, save or dropzone was modified; nothing was committed.
 
@@ -9302,7 +9302,7 @@ the file layout.
 | `Tools/scripts/jc3wiring.py` | new. Decodes the `.epe` of every armed entity, resolves the root weapon slots, collects weapon components, fire points, aim components, seats and chassis moving parts; `--write`, `--check`, `dump` | the card's Out; it reuses `jc3index.py`, `jc3detail.py` (`.ee`/`.epe` extraction and `ConvertProperty`) and the G2 conventions, adding no new archive or ADF reader |
 | `Research/JC3Grab/WEAPON_WIRING.jsonl` | new. One row per entity: roots, slots, every weapon property, every point, every component, seats, parts, counts, digest | the card's Out; same values-first shape as `PARTS_TABLE.jsonl`/`WEAPONS.jsonl` |
 | `Research/JC3Grab/WEAPON_WIRING.md` | new, generated by the same `--write` | the card's Out |
-| `E:\Modding\_JC3grab\wiring\epe\*.xml` | new (outside the repo): the converted `.epe` of each armed entity | raw decode stays out of the repo; `--check` re-reads the archives, not this cache |
+| `E:\Modding\JustCause3\_grab\wiring\epe\*.xml` | new (outside the repo): the converted `.epe` of each armed entity | raw decode stays out of the repo; `--check` re-reads the archives, not this cache |
 | `Research/JC3Grab/README.md` | three `jc3wiring` command rows + a G2-11 section + two Files rows | every G2 tool and table is listed there |
 | `GRAB_BACKLOG.md` §12 | `G2-11 | todo` -> `done` + evidence | the session loop step 7 |
 
@@ -9322,7 +9322,7 @@ were not in the card:
   states that limit instead of inventing a link.
 
 **Revert:** delete `Tools/scripts/jc3wiring.py`, `Research/JC3Grab/WEAPON_WIRING.md`,
-`Research/JC3Grab/WEAPON_WIRING.jsonl`, `E:\Modding\_JC3grab\wiring\`, the README rows and section,
+`Research/JC3Grab/WEAPON_WIRING.jsonl`, `E:\Modding\JustCause3\_grab\wiring\`, the README rows and section,
 and this entry plus the result entry below; restore the tracker row to `todo`. No game file, install,
 save or dropzone is touched; nothing is committed.
 
@@ -9451,7 +9451,7 @@ B-05/B-06 (importing the missile onto the Batmobile), so the record has to separ
 | `Tools/scripts/jc3sigdiff.py` | new. Reads both `.ee` containers, their `.epe` graphs, the parts modules, every `.rbm` header and the w618 `.wtunec`/`.ftunec`; `--write`, `--check`, `dump` | the card's Out; reuses `jc3detail`/`eetoc` (container), `jc3wiring.parse_epe` (full graph incl. unnamed `id:` props), `jc3adf` (parts and tunes), `rbmhdr` (mesh headers), adding no new reader |
 | `Research/JC3Grab/SIGNATURE_DIFF.md` | new, generated | the card's Out |
 | `Research/JC3Grab/SIGNATURE_DIFF.json` | new, generated. Machine form of every diff section, compared by `--check` | matches the phase's values-plus-table convention (G2-10/11) |
-| `E:\Modding\_JC3grab\sigdiff\*.xml`, `*.vmodc`, `*.epe` | new (outside the repo): converted graphs, the two parts modules, the inner `.epe`s | decompiles stay out of the repo |
+| `E:\Modding\JustCause3\_grab\sigdiff\*.xml`, `*.vmodc`, `*.epe` | new (outside the repo): converted graphs, the two parts modules, the inner `.epe`s | decompiles stay out of the repo |
 | `Research/JC3Grab/README.md` | `jc3sigdiff` command rows, a G2-12 section and a Files row | every G2 tool/table is listed there |
 | `GRAB_BACKLOG.md` §12 | `G2-12 | todo` -> `done` + evidence | session loop step 7 |
 
@@ -9473,7 +9473,7 @@ be additions at all:
   `vec_events`, and reports how many of each it discarded, so the remaining list is real changes.
 
 **Revert:** delete `Tools/scripts/jc3sigdiff.py`, `Research/JC3Grab/SIGNATURE_DIFF.md`,
-`SIGNATURE_DIFF.json`, `E:\Modding\_JC3grab\sigdiff\`, the README rows/section, and this entry plus
+`SIGNATURE_DIFF.json`, `E:\Modding\JustCause3\_grab\sigdiff\`, the README rows/section, and this entry plus
 the result entry below; restore the tracker row to `todo`. No game file, install, save or dropzone is
 touched; nothing is committed.
 
@@ -9964,7 +9964,7 @@ makes a tracked vehicle pivot. Out: `Research/JC3Grab/TANKTURN.md`. Serves MOD-2
 
 | file | change | why this file |
 |---|---|---|
-| `Tools/scripts/jc3tankturn.py` | new. Reads the decoded cache only (`E:\Modding\_JC3grab\entities\*.ee.json`, `E:\Modding\_JC3grab\detail\*.ee.json`) plus `Research/JC3Grab/VOCABULARY.md`; builds the tank-vs-fleet comparison of the four card modules, the refutation of each candidate member the card names, the tank-unique-member census over all module types, the member-name scan for track/pivot/skid-steer vocabulary and the container file-type census; `--write` / `--check` / `dump` | the card's Do step; reuses the existing decoded data instead of a parallel reader (G2 rules), reads no archive so `D:\Games` is never opened |
+| `Tools/scripts/jc3tankturn.py` | new. Reads the decoded cache only (`E:\Modding\JustCause3\_grab\entities\*.ee.json`, `E:\Modding\JustCause3\_grab\detail\*.ee.json`) plus `Research/JC3Grab/VOCABULARY.md`; builds the tank-vs-fleet comparison of the four card modules, the refutation of each candidate member the card names, the tank-unique-member census over all module types, the member-name scan for track/pivot/skid-steer vocabulary and the container file-type census; `--write` / `--check` / `dump` | the card's Do step; reuses the existing decoded data instead of a parallel reader (G2 rules), reads no archive so `D:\Games` is never opened |
 | `Research/JC3Grab/TANKTURN.md` | new, generated | the card's Out |
 | `Research/JC3Grab/TANKTURN.json` | new, generated: input digests + every number the md shows | `--check` needs a machine form; same shape as `EMP.json` / `DOORS.json` / `TURRET.json` |
 | `Research/JC3Grab/README.md` | one `Files` row + one short section | every G2 table is listed there (G2-13/15/16 precedent) |
@@ -10028,7 +10028,7 @@ afterburner / boost flame usages. Out: `Research/JC3Grab/USAGES.md`, `Tools/scri
 
 | file | change | why this file |
 |---|---|---|
-| `Tools/scripts/jc3usage.py` | new. Scans every module row in `E:\Modding\_JC3grab\entities\*.ee.json`, re-decodes the `_effect_attachments.vmodc` / `*extended_effect_usages.vmodc` inner files of all 232 entity `.ee`s with `jc3adf` (the entity cache drops `effect_indices[]` elements), scans the `.epe` graphs' `SEffects` objects for their `Usage` int32 (same key space: the values equal the module usage hashes), and reads `FX_TABLE.jsonl` for the exhaust `.effc` census; `--write` / `--check` / `dump` | the card's Do step; reuses `jc3detail` / `jc3grab` / `jc3adf` / `jc3index` like the sibling G2 scripts |
+| `Tools/scripts/jc3usage.py` | new. Scans every module row in `E:\Modding\JustCause3\_grab\entities\*.ee.json`, re-decodes the `_effect_attachments.vmodc` / `*extended_effect_usages.vmodc` inner files of all 232 entity `.ee`s with `jc3adf` (the entity cache drops `effect_indices[]` elements), scans the `.epe` graphs' `SEffects` objects for their `Usage` int32 (same key space: the values equal the module usage hashes), and reads `FX_TABLE.jsonl` for the exhaust `.effc` census; `--write` / `--check` / `dump` | the card's Do step; reuses `jc3detail` / `jc3grab` / `jc3adf` / `jc3index` like the sibling G2 scripts |
 | `Research/JC3Grab/USAGES.md` | new, generated | the card's Out |
 | `Research/JC3Grab/USAGES.json` | new, generated machine half (sibling convention: `EMP.json`, `DOORS.json`) | makes `--check` a byte compare |
 | `GRAB_BACKLOG.md` §12 | `G2-22 \| todo` -> `done` + evidence, one line only | session loop step 7 |
@@ -10116,7 +10116,7 @@ or a stated absence. Serves HUD-2, WPN-12.
 
 | file | change | why this file |
 |---|---|---|
-| `Tools/scripts/jc3hudwpn.py` | new. Reads the decompiled JC3 HUD scripts (`E:\Modding\_JC3grab\hud\dec\scripts\**\*.as`, main `hud.as`), `Research/JC3Grab/INDEX.jsonl` (weapon-icon census), `Research/BatmobileGrab/HUD_INTERFACES.json` + `HUD.md` (the BmAK side of WPN-12), `Working/Translation/T6_HUD_CAMERA.md` (T-HUD5) and the WPN-12 row of `GRAB_BACKLOG.md`; extracts both function signatures, slot array, data fields, cooldown/overcharge/reticle/lock/icon code, the caller census, and the 5-element WPN-12 disposition with `--write` / `--check` / `dump` | the card's Do step; reads only decoded/decompiled text (no archive, so `D:\Games` never opens) and the repo's own tables |
+| `Tools/scripts/jc3hudwpn.py` | new. Reads the decompiled JC3 HUD scripts (`E:\Modding\JustCause3\_grab\hud\dec\scripts\**\*.as`, main `hud.as`), `Research/JC3Grab/INDEX.jsonl` (weapon-icon census), `Research/BatmobileGrab/HUD_INTERFACES.json` + `HUD.md` (the BmAK side of WPN-12), `Working/Translation/T6_HUD_CAMERA.md` (T-HUD5) and the WPN-12 row of `GRAB_BACKLOG.md`; extracts both function signatures, slot array, data fields, cooldown/overcharge/reticle/lock/icon code, the caller census, and the 5-element WPN-12 disposition with `--write` / `--check` / `dump` | the card's Do step; reads only decoded/decompiled text (no archive, so `D:\Games` never opens) and the repo's own tables |
 | `Research/JC3Grab/JC3_HUD_WEAPONS.md` | new, generated | the card's Out |
 | `Research/JC3Grab/JC3_HUD_WEAPONS.json` | new, generated: input digests + every number the md shows | `--check` needs a machine half; same convention as `EMP.json` / `TANKTURN.json` |
 | `Research/JC3Grab/README.md` | one `Files` row + one short section | every G2 table is listed there (G2-13…G2-21 precedent) |
@@ -10237,7 +10237,7 @@ field-by-field recipe for an entry named "Batmobile" that spawns a given `.ee`.
 
 | file | change | why this file |
 |---|---|---|
-| `Tools/scripts/jc3rebeldrop.py` | new. Extracts `profile/item.onlinec` + `task.onlinec` from every archive layer that ships them (patch is effective) to `E:\Modding\_JC3grab\rebeldrop\`, decodes vanilla and the three mod variants with `jc3adf`, lends the vanilla type dictionary to the mod tables (they carry none), masks 4-byte `StringHash` values and checks each against a raw 32-bit read, resolves every item name hash to an `.ee` through `INDEX.jsonl`, diffs mod vs vanilla, and builds the recipe; `--write`/`--check`/`dump` | the card's Do step; reuses `jc3adf`/`jc3grab`/`jc3index`/`rbmhdr` instead of a parallel reader |
+| `Tools/scripts/jc3rebeldrop.py` | new. Extracts `profile/item.onlinec` + `task.onlinec` from every archive layer that ships them (patch is effective) to `E:\Modding\JustCause3\_grab\rebeldrop\`, decodes vanilla and the three mod variants with `jc3adf`, lends the vanilla type dictionary to the mod tables (they carry none), masks 4-byte `StringHash` values and checks each against a raw 32-bit read, resolves every item name hash to an `.ee` through `INDEX.jsonl`, diffs mod vs vanilla, and builds the recipe; `--write`/`--check`/`dump` | the card's Do step; reuses `jc3adf`/`jc3grab`/`jc3index`/`rbmhdr` instead of a parallel reader |
 | `Research/JC3Grab/REBELDROP.md` | new, generated | the card's only Out path |
 | `Research/JC3Grab/REBELDROP.json` | new, generated: schema, per-source decodes, diffs, recipe, verification counts | G2-13…G2-17 convention; `--check` compares it |
 | `Research/JC3Grab/README.md` | one G2-26 section + one Files row | every G2 table is listed there |
@@ -10258,7 +10258,7 @@ asserted by `--check` rather than assumed.
 
 **Revert:** delete `Tools/scripts/jc3rebeldrop.py`, `Research/JC3Grab/REBELDROP.md`,
 `REBELDROP.json`, the README section and Files row, put §12 back to `| G2-26 | todo | |`,
-and truncate this log at this heading. Only `E:\Modding\_JC3grab\rebeldrop\` (game bytes,
+and truncate this log at this heading. Only `E:\Modding\JustCause3\_grab\rebeldrop\` (game bytes,
 outside the repo) is written besides those files; `D:\Games` is only read; nothing is
 committed.
 
@@ -10441,12 +10441,12 @@ menu, pricing and delivery behaviour are code. The `.ee` resolved from a hash is
 **Files changed.** `Tools/scripts/jc3rebeldrop.py` (new), `Research/JC3Grab/REBELDROP.md` +
 `REBELDROP.json` (generated, 334 md lines), `Research/JC3Grab/README.md` (one section + one
 Files row), `GRAB_BACKLOG.md` §12 (one line), this log (append-only). Game bytes extracted
-only to `E:\Modding\_JC3grab\rebeldrop\` (outside the repo, R10). Probe left at
+only to `E:\Modding\JustCause3\_grab\rebeldrop\` (outside the repo, R10). Probe left at
 `tmp/freebuff/probe_g2_26.py`.
 
 **Revert:** delete `Tools/scripts/jc3rebeldrop.py`, `Research/JC3Grab/REBELDROP.md`,
 `REBELDROP.json`, `tmp/freebuff/probe_g2_26.py`, the README section and Files row, and
-`E:\Modding\_JC3grab\rebeldrop\`; put §12 back to `| G2-26 | todo | |`; truncate this log at
+`E:\Modding\JustCause3\_grab\rebeldrop\`; put §12 back to `| G2-26 | todo | |`; truncate this log at
 the `G2-26 · … — intended change` heading. `D:\Games` was only read, no install/save/dropzone
 touched, nothing committed.
 
@@ -11145,7 +11145,7 @@ they close as named omissions with the failure recorded.
 | `GRAB_BACKLOG.md` §12 | `\| G2-30 \| todo \| \|` -> `done` + evidence, one line only | session loop step 7 |
 | this log | this intended change + a `— done` section | R14 |
 
-Written test artefacts (`.physicsc` blobs) go to **`E:\Modding\_JC3grab\hkx\write\`**, outside
+Written test artefacts (`.physicsc` blobs) go to **`E:\Modding\JustCause3\_grab\hkx\write\`**, outside
 the repo (R10). Nothing is packed, installed, or launched; `D:\Games` is only ever read.
 
 **What the data already says (probed before any file changed — read-only, `tmp/freebuff/`).**
@@ -11179,7 +11179,7 @@ the repo (R10). Nothing is packed, installed, or launched; `D:\Games` is only ev
 
 **Revert:** delete the writer functions and the `write` subcommand from `Tools/scripts/jc3hkx.py`,
 delete `Research/JC3Grab/PHYSICS_WRITE.md` + `PHYSICS_WRITE.json` + `tmp/freebuff/probe_g2_30*.py`
-+ `E:\Modding\_JC3grab\hkx\write\`, remove the README section and Files row, put §12 back to
++ `E:\Modding\JustCause3\_grab\hkx\write\`, remove the README section and Files row, put §12 back to
 `| G2-30 | todo | |`, and truncate this log at the `G2-30 · `.physicsc` write spike` heading. No
 game file, install, save, dropzone, `.ee` or archive is touched by any of it; nothing committed.
 
@@ -11389,12 +11389,12 @@ is phase Q.
 `decode_polytope` without changing any existing key), `Research/JC3Grab/PHYSICS_WRITE.md` (195
 lines, generated) + `PHYSICS_WRITE.json` (generated), `Research/JC3Grab/README.md` (one subsection
 under §5 + one Files row), `GRAB_BACKLOG.md` §12 (one line), this log (append-only). Test blobs:
-`E:\Modding\_JC3grab\hkx\write\` (5 files, game data, outside the repo). Probes:
+`E:\Modding\JustCause3\_grab\hkx\write\` (5 files, game data, outside the repo). Probes:
 `tmp/freebuff/probe_g2_30{,b,c,d,e,f,g}.py`, `tmp/freebuff/probe_g2_30_verify.py`.
 
 **Revert:** delete the writer block and the `write` subcommand from `Tools/scripts/jc3hkx.py`, delete
 `Research/JC3Grab/PHYSICS_WRITE.md` + `PHYSICS_WRITE.json`, the README subsection and Files row, the
-probes and `E:\Modding\_JC3grab\hkx\write\`; put §12 back to `| G2-30 | todo | |`; truncate this log
+probes and `E:\Modding\JustCause3\_grab\hkx\write\`; put §12 back to `| G2-30 | todo | |`; truncate this log
 at the `G2-30 · `.physicsc` write spike (old Batch D route) — intended change` heading.
 
 **G2-30 correction (same session, append-only).** The done block above says the face table's
@@ -11588,7 +11588,7 @@ real `Land_Seat` centres span 39 mm (0.855/0.855/0.894).
 
 ```
 > python Tools/scripts/jc3seat.py --write
-wrote E:\Modding\JC3-Batmobile\Research\JC3Grab\SEAT.md (205 lines) + Research\JC3Grab\SEAT.json
+wrote E:\Modding\JustCause3\JC3-Batmobile\Research\JC3Grab\SEAT.md (205 lines) + Research\JC3Grab\SEAT.json
 OK: 34 driver points | 40 pose classes (382 clip names) | 36 MOD selectors | seat boxes 4 | candidate v0300_car_kensington_sportsmuscle (10 mm from the hip)
 
 > python Tools/scripts/jc3seat.py --check
@@ -11686,10 +11686,10 @@ upward." **Out:** `Research/JC3Grab/EJECT.md`.
 that derives the report from four on-disk sources and writes `Research/JC3Grab/EJECT.md` +
 `EJECT.json`: (1) `Research/Epe/serpente_civilian.xml` — the only `.epe` kept as nested XML, so the
 only place an exit's *child* condition objects can be attributed to that exit (the G2-18 detail
-JSON sorts objects by id, and ids repeat, so order carries no nesting); (2) `E:/Modding/_JC3grab/
+JSON sorts objects by id, and ids repeat, so order carries no nesting); (2) `E:/Modding/JustCause3/_grab/
 detail/*.ee.json` ×232 for the fleet census of exit names/states/enabled/modifier and for the
 graph-class vocabulary (proof that no graph class carries a launch/impulse member); (3)
-`E:/Modding/_JC3grab/entities/*.ee.json` ×232 for a member-name sweep of the *module* side (eject/
+`E:/Modding/JustCause3/_grab/entities/*.ee.json` ×232 for a member-name sweep of the *module* side (eject/
 launch/impulse/parachute/wingsuit + jump/vertical) — the only upward impulse there is the vehicle's
 `turbo_jump`; (4) `Research/BatmobileGrab/BMSDK_OFFSETS.json` for the BmAK eject properties. Geometry
 is **not** recomputed: the Serpente/Batmobile positions and parents come from `INTERACTION.json`
@@ -11718,7 +11718,7 @@ written down.
 **Intended change.** Extend the existing generator `Tools/scripts/jc3usage.py` with a G2-23 pass and
 a new `## 6. The nitro chain` section in `USAGES.md` (+ a `nitro` object in `USAGES.json`), so the
 chain is script-derived and re-checkable by the same `--check` (R11). Sources, all already on disk:
-(1) the donor `.epe` graph (`E:/Modding/_JC3grab/detail/…civilian_01.ee.json`) for the objects that
+(1) the donor `.epe` graph (`E:/Modding/JustCause3/_grab/detail/…civilian_01.ee.json`) for the objects that
 carry `Usage` = `EngineNitro` (4197885156) and their `Effect` / `Sound` fields; (2) the fleet-wide
 carrier counts for that `Sound` GUID and for the object `Effect` hash, from the same 232 graphs;
 (3) the donor `.ee.fmod_guids` plus the `EVTS`/`FSB5` structure of
@@ -11762,7 +11762,7 @@ and the list of files a standalone entity needs. Feeds D-6.
 | `Research/JC3Grab/STANDALONE.json` | new, generated machine half | sibling convention; `--check` compares it |
 | `Research/JC3Grab/README.md` | one `### Standalone entity` section + one `Files` row | every G2 table is registered there |
 | `GRAB_BACKLOG.md` §12 | `\| G2-27 \| todo \| \|` -> `done` + evidence, one line only | session loop step 7 |
-| `E:\Modding\_JC3grab\standalone\` | the two `.entityregc` blobs (33.0 MB + 39.2 MB), extracted from the archives | R10: game bytes stay outside the repo |
+| `E:\Modding\JustCause3\_grab\standalone\` | the two `.entityregc` blobs (33.0 MB + 39.2 MB), extracted from the archives | R10: game bytes stay outside the repo |
 
 Order, stated plainly: the tool file was written first (so the probe code could run), this entry
 second, and **no output file** (`STANDALONE.md`, `STANDALONE.json`, README, tracker) is touched
@@ -11793,7 +11793,7 @@ so its early creation changes no existing behaviour; deleting it reverts it full
 Nothing is packed, installed or launched; `D:\Games` is only read through `jc3grab.read_entry`.
 
 **Revert:** delete `Tools/scripts/jc3standalone.py`, `Research/JC3Grab/STANDALONE.md`,
-`STANDALONE.json`, `tmp/freebuff/probe_g2_27.py` and `E:\Modding\_JC3grab\standalone\`; drop the
+`STANDALONE.json`, `tmp/freebuff/probe_g2_27.py` and `E:\Modding\JustCause3\_grab\standalone\`; drop the
 README section and Files row; put §12 back to `| G2-27 | todo | |`; truncate this log at this
 heading.
 
@@ -11886,7 +11886,7 @@ states, roots and `modifier`s, and no per-vehicle gates.
 
 ```
 > python Tools/scripts/jc3eject.py --write
-wrote E:\Modding\JC3-Batmobile\Research\JC3Grab\EJECT.md (327 lines) + E:\Modding\JC3Grab\EJECT.json
+wrote E:\Modding\JustCause3\JC3-Batmobile\Research\JC3Grab\EJECT.md (327 lines) + E:\Modding\JC3Grab\EJECT.json
 OK: 4832 exits in 232 graphs (61 names) | donor 26 exits, 7 speed-gated, 5 unconditional | launch members: exits 0, graph classes 2, vehicle modules 1 | BmAK eject props 19
 
 > python Tools/scripts/jc3eject.py --check
@@ -11906,15 +11906,15 @@ row, restore the tracker row, remove this entry and the intended-change entry ab
 Q1-EJ-A/B/C is ready to batch with the other phase-Q probes.
 
 *(Correction to the block above, same session: the `--write` line lost the middle of the path. The
-real output is `E:\Modding\JC3-Batmobile\Research\JC3Grab\EJECT.md` and
-`E:\Modding\JC3-Batmobile\Research\JC3Grab\EJECT.json`; the summary line after it is verbatim.)*
+real output is `E:\Modding\JustCause3\JC3-Batmobile\Research\JC3Grab\EJECT.md` and
+`E:\Modding\JustCause3\JC3-Batmobile\Research\JC3Grab\EJECT.json`; the summary line after it is verbatim.)*
 
 ## G2-27 · Standalone entity — done (2026-10-28)
 
 **Record:** `Research/JC3Grab/STANDALONE.md` (new, 244 lines) + `STANDALONE.json` (new) from
 `Tools/scripts/jc3standalone.py` (new); README gained one `### Standalone entity` section and one
 `Files` row. Game bytes (the two `.entityregc` blobs) extracted to
-`E:\Modding\_JC3grab\standalone\` only. Nothing packed, installed, launched or committed.
+`E:\Modding\JustCause3\_grab\standalone\` only. Nothing packed, installed, launched or committed.
 
 **The card's Done clause — "a yes/no with evidence and the list of files a standalone entity
 needs":**
@@ -11957,7 +11957,7 @@ needs":**
 
 ```
 > python Tools/scripts/jc3standalone.py --write
-wrote E:\Modding\JC3-Batmobile\Research\JC3Grab\STANDALONE.md (244 lines) + E:\Modding\JC3-Batmobile\Research\JC3Grab\STANDALONE.json
+wrote E:\Modding\JustCause3\JC3-Batmobile\Research\JC3Grab\STANDALONE.md (244 lines) + E:\Modding\JustCause3\JC3-Batmobile\Research\JC3Grab\STANDALONE.json
 OK: 17 registration rows | registry records 251/922 index leaves (158/233 vehicles) | 101 spawned-by-path leaves unregistered | mod 20 .ee / 0 .toc, 20 vanilla paths | donor .ee 604 inner files
 
 > python Tools/scripts/jc3standalone.py --check
@@ -11988,7 +11988,7 @@ game ever prefers a `.ee.toc` when one is present (eetoc's hypothesis) is not se
 `GRAB_BACKLOG.md` §12 (one line), `tmp/freebuff/probe_g2_27.py`, this log (append-only).
 
 **Revert:** delete `jc3standalone.py`, `STANDALONE.md`, `STANDALONE.json`, `probe_g2_27.py` and
-`E:\Modding\_JC3grab\standalone\`; drop the README section and Files row; put §12 back to
+`E:\Modding\JustCause3\_grab\standalone\`; drop the README section and Files row; put §12 back to
 `| G2-27 | todo | |`; truncate this log at the intended-change heading.
 
 ## G2X · G2 exit gate — intended change (2026-10-28)
@@ -12147,7 +12147,7 @@ the G2X precedent), so the card starts.
 | `GRAB_BACKLOG.md` §12 | flip **only** the `T-10` row | session loop step 7 | put the row back to `| T-10 | todo | |` |
 
 **What is not touched:** no game file, no `Builds/`, no dropzone, no save, no git. The only game
-data read is the already-extracted `E:\Modding\_JC3grab\hud\dec` (the decompiled `ui/hud.gfx`,
+data read is the already-extracted `E:\Modding\JustCause3\_grab\hud\dec` (the decompiled `ui/hud.gfx`,
 260 `.as`) as the HUD absence surface; nothing is written there.
 
 ## T-16 · Audio translation — intended change (2026-10-28)
@@ -12183,7 +12183,7 @@ JC3 side: `JC3_AUDIO_EVENTS.json` (the donor's 45 pinned event GUIDs, their bank
 `.epe` role names, `LandAudio.min_rpm` 1000 / `max_rpm` 10000, the 649-sample census and the four
 weapon sources). Sample loudness for the vanilla slots is decoded fresh from
 `Working/Audio/jc3bank/sound/fmod_banks/vehicles.bank` (already on disk) and from
-`sound/fmod_banks/weapons.bank` (extracted by this script to `E:\Modding\_JC3grab\audio\`, R10) —
+`sound/fmod_banks/weapons.bank` (extracted by this script to `E:\Modding\JustCause3\_grab\audio\`, R10) —
 the same vgmstream-cli the G2-24 reader used. `integrated_lufs` is imported from
 `bmak_audio_features.py`, never re-implemented.
 
@@ -12289,7 +12289,7 @@ A-10, A-23), D-10 (A-03).
 (append-only, plus the intended-change entry above).
 
 **Revert:** delete `t12_audio.py`, `T12_AUDIO.md`, `t12_audio_map.json` and
-`E:\Modding\_JC3grab\audio\weapons.bank` (177,586,080 B, extracted by the tool for the weapon-slot
+`E:\Modding\JustCause3\_grab\audio\weapons.bank` (177,586,080 B, extracted by the tool for the weapon-slot
 measurements); put §12 back to `| T-16 | todo | |`; truncate this log at the intended-change heading.
 
 ## T-17 · Effects translation — intended change (2026-10-28)
@@ -12513,7 +12513,7 @@ reason instead), resolved 93/113. Standing gates re-run and green: `grab_model.p
    `FAIL T-AC1: ledger says 'superseded', the T-10 table says 'out'` +
    `FAIL T-AC1: the table keeps it `out` but the files do not` + both stale-file lines, exit 1.
 2. `t10_reopen.py` `T-HUD9` `must_not` gains `cooldown` (a word that **is** in `ui/hud.gfx`) →
-   `FAIL T-HUD9: E:/Modding/_JC3grab/hud/dec: ui/hud.gfx names cooldown` — the proven-absence
+   `FAIL T-HUD9: E:/Modding/JustCause3/_grab/hud/dec: ui/hud.gfx names cooldown` — the proven-absence
    half has its own negative test, as at G2X.
 3. `T10_OPEN_ROWS.json` `summary.superseded` 5 → 4 → `FAIL T10_OPEN_ROWS.json stale: the payload
    differs`, exit 1.
@@ -12632,7 +12632,7 @@ than silently passed; the `T-10` row is **not** flipped by this session (one row
 
 | file | change | why this file | revert |
 |---|---|---|---|
-| `Tools/scripts/t12_parts.py` | new. Reads `ANIMATIONS.json` + `BONES.json` + `POSES.json` + the exported key frames (`E:\Modding\_BmAKgrab\anims\keys`) + `MOVING_PARTS.json` / `TURRET.json` / `PARTS_TABLE.jsonl`, re-derives every pivot through `bat_assemble.pivot_point` (R2), measures each joint's axis/limits/rate from the key frames, joins the shipped hinge and damage type per behaviour, and regenerates the doc + JSON. `--write` / `--check` / `dump rows|parts` | §0.2 step 5 ("scripts, not hand edits"); no existing tool covers part behaviour, and `bat_assemble.py` must not be forked | delete the file |
+| `Tools/scripts/t12_parts.py` | new. Reads `ANIMATIONS.json` + `BONES.json` + `POSES.json` + the exported key frames (`E:\Modding\ArkhamKnight\_grab\anims\keys`) + `MOVING_PARTS.json` / `TURRET.json` / `PARTS_TABLE.jsonl`, re-derives every pivot through `bat_assemble.pivot_point` (R2), measures each joint's axis/limits/rate from the key frames, joins the shipped hinge and damage type per behaviour, and regenerates the doc + JSON. `--write` / `--check` / `dump rows|parts` | §0.2 step 5 ("scripts, not hand edits"); no existing tool covers part behaviour, and `bat_assemble.py` must not be forked | delete the file |
 | `Working/Translation/T8_PARTS.md` | regenerated: the geometry table (from `parts_manifest.json`) **plus** the 15 behaviour rows and per-part detail | the card's `Out` line names this file; the B-02 session left the behaviour half to T-12 | `git`-free restore from the pre-session copies taken in `/tmp/t12bak/`, or re-run the T-8 cut |
 | `Working/Translation/T8_PARTS.json` | same file, `parts` unchanged, `schema` 1→2 with the behaviour rows beside it | it is both the B-02 spec and the doc's data file; keeping one file avoids a second source of truth | as above |
 | `GRAB_BACKLOG.md` §12 | flip **only** the `T-12` row | session loop step 7 | put the row back to `| T-12 | todo | |` |
@@ -12986,8 +12986,8 @@ decision is now resolved, and the card names none of them.
 | `Working/Translation/damage_switches.json` | **removes** the `bullet_armor_strength: 100` declaration; adds a `_t14` note | `damage_audit.py` fails today with *"declared as a switch but 99 is inside the shipped 0..99"* — T-DM2 moved the value 100 → 99 in test-091, so the declaration is stale; the switch file is the only place the audit reads | restore the six-line `bullet_armor_strength` block (copied to `/tmp/damage_switches.beforeT14.json`) |
 
 **Not touched.** `DAMAGE_MODEL.md`/`.json` and `damage_predict.py` (G2-28 owns them), `FOOTAGE.md`,
-`T_ROWS.jsonl`, `T2_TRANSLATION.md` (the card allows the new doc instead), `Builds/`, `E:/Modding/_JC3grab`,
-`E:/Modding/_BmAKgrab`. No game launched, no git.
+`T_ROWS.jsonl`, `T2_TRANSLATION.md` (the card allows the new doc instead), `Builds/`, `E:/Modding/JustCause3/_grab`,
+`E:/Modding/ArkhamKnight/_grab`. No game launched, no git.
 
 **Rule note, stated rather than hidden.** This entry was appended *after* the first `--write` run,
 not before it. The ordering breach is T-14's own (session loop step 4), it changed no input to the
@@ -13108,8 +13108,8 @@ stall, Rico swims out**.
 | `Working/Translation/T_ROWS.jsonl`, `STATUS.md` | **regenerated** by `t_rows.py build` and `status_audit.py --write` | generated files, never hand-edited | re-run both after restoring the literals |
 | `GRAB_BACKLOG.md` §12 | the `T-20` line only, `todo` → `done` + evidence | session loop step 7 | restore that one line |
 
-**Not touched.** `Research/JC3Grab/*` (G2 owns them), `Builds/`, `E:/Modding/_JC3grab`,
-`E:/Modding/_BmAKgrab`, any game file, any dropzone, saves or git. No game launched (R6).
+**Not touched.** `Research/JC3Grab/*` (G2 owns them), `Builds/`, `E:/Modding/JustCause3/_grab`,
+`E:/Modding/ArkhamKnight/_grab`, any game file, any dropzone, saves or git. No game launched (R6).
 
 **Rule note on scope.** Rows carry `next` when the value is a build step B-13/B-05 already owns,
 `keep` when the shipped data already satisfies the requirement, `epe` when the value lives in the
@@ -13147,7 +13147,7 @@ G1-20 (`VARIANTS.md`), G2X (`MODLOG §"G2X · G2 exit gate — passed"`). The ca
 
 **Not touched.** `T_ROWS.jsonl` / `STATUS.md` (T-21 writes no ledger rows, so `status_audit.py` is
 not triggered), `Research/BatmobileGrab/*`, `Builds/`, `Working/Appearance/build_bud1/*`,
-`E:/Modding/_JC3grab`, `E:/Modding/_BmAKgrab`, any game file, dropzone, save. No game launched (R6),
+`E:/Modding/JustCause3/_grab`, `E:/Modding/ArkhamKnight/_grab`, any game file, dropzone, save. No game launched (R6),
 no git.
 
 **Scope note.** This card classifies; it does not bake, recolour or rebuild anything. Where a value's
@@ -13456,8 +13456,8 @@ its **hybrid** branch: one row set with the compromise declared per row.
 | `Working/Translation/T_ROWS.jsonl`, `STATUS.md` | **regenerated** by `t_rows.py build` and `status_audit.py --write` | generated files, never hand-edited | re-run both after restoring the literals |
 | `GRAB_BACKLOG.md` §12 | the `T-15` line only | session loop step 7 | restore that one line |
 
-**Not touched.** `Research/*` (G1/G2 own those files), `Builds/`, `E:/Modding/_JC3grab`,
-`E:/Modding/_BmAKgrab`, any game file, dropzone or save, and git. No game launched (R6).
+**Not touched.** `Research/*` (G1/G2 own those files), `Builds/`, `E:/Modding/JustCause3/_grab`,
+`E:/Modding/ArkhamKnight/_grab`, any game file, dropzone or save, and git. No game launched (R6).
 
 **Ordering note, stated rather than hidden.** `Tools/scripts/t11_modes.py` was written one step
 before this entry, because the row set could not be sized without knowing which fields

@@ -24,7 +24,7 @@ import time
 
 NAMES = [b"ImpactRoadAssist", b"RVehicleBatmobileBase", b"Default__RVehicleBatmobile"]
 ROOT = r"E:\Games\Batman - Arkham Knight"
-OUT = r"E:\Modding\_gamedata\BmAKgrab\chase\chase2_04_pkgscan.txt"
+OUT = r"E:\Modding\_shared\gamedata\BmAKgrab\chase\chase2_04_pkgscan.txt"
 CHUNK = 8 << 20
 OVERLAP = 64  # a name cannot straddle a chunk boundary further than its own length
 

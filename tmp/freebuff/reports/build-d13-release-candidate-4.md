@@ -108,7 +108,7 @@ to vanilla or a size-only `@files.xml` stub (R8 gate, §4).
 Leaf: `v0300_car_kensington_sportsmuscle_debug` (`name_hash` 1621485476); 3 inner files renamed.
 
 `install.ps1` is rendered from **`Working/Installer/install_v3.ps1`** with its guard semantics
-adopted: `-GameDir` must normalise to `E:\Modding\_dropzone_sim_rc4` or sit below it, real game
+adopted: `-GameDir` must normalise to `E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc4` or sit below it, real game
 roots (`D:\Games`, `E:\Games`) are refused, every receipt target must resolve strictly inside
 `<GameDir>\dropzone`, failure prints `REFUSED` and exits **2**. Actions: `Status | WhatIf |
 Install | Verify | Rollback`; Install snapshots every existing target to `<GameDir>\snapshot\…`

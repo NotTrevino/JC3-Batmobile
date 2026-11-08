@@ -4,7 +4,7 @@
 queue brief was written or edited; nothing was launched.
 
 **Provenance / revert.** New file `tmp/freebuff/reports/skins-entity-plan.md`
-(= `E:/Modding/JC3-Batmobile/tmp/freebuff/reports/skins-entity-plan.md`). **Revert = delete this file.**
+(= `E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/skins-entity-plan.md`). **Revert = delete this file.**
 
 Labels: **decoded** (file:line / field), **derived** (rule + inputs), **UNKNOWN** (tried, where it would be).
 

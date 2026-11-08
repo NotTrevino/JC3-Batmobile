@@ -47,7 +47,7 @@ T6 = os.path.join(WORK, "T6_HUD_CAMERA.md")
 BACKLOG = os.path.join(ROOT, "GRAB_BACKLOG.md")
 OUT_JSON = os.path.join(WORK, "T10_OPEN_ROWS.json")
 OUT_MD = os.path.join(WORK, "T10_OPEN_ROWS.md")
-HUD_DEC = os.path.join(os.environ.get("JC3_GRAB", r"E:\Modding\_gamedata\JC3grab"), "hud", "dec")
+HUD_DEC = os.path.join(os.environ.get("JC3_GRAB", r"E:\Modding\_shared\gamedata\JC3grab"), "hud", "dec")
 
 G2 = "Research/JC3Grab"
 BAT = os.path.join(ROOT, "Research", "BatmobileGrab")

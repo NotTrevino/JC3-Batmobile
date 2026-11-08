@@ -57,7 +57,7 @@ INDEXS = os.path.join(ROOT, "Research", "JC3Grab", "INDEX.json")
 DONOR = os.path.join(ROOT, "Builds", "bm-RC4-base", "aaf",
                      bm_leaf.DIR + bm_leaf.OLD + ".epe")
 # The stock entity the four weapons were cloned from (read only; optional).
-STOCK = os.path.join(r"E:\Modding\_gamedata\JC3grab\epe_schema", "apc_debug.epe")
+STOCK = os.path.join(r"E:\Modding\_shared\gamedata\JC3grab\epe_schema", "apc_debug.epe")
 
 # The same path pattern as the gate's G3.
 PATH_RE = re.compile(r'type="string">([a-z0-9_]+(?:/[a-z0-9_.\-]+)+\.[a-z_]+)<')

@@ -55,7 +55,7 @@ EXE = r"D:/Games/Just Cause 3/JustCause3.exe"
 OUT = os.path.join(ROOT, "Research", "JC3Grab")
 MD = os.path.join(OUT, "CONSTRAINT_CODE2_REVIEW.md")
 JS = os.path.join(OUT, "CONSTRAINT_CODE2_REVIEW.json")
-FLEET = r"E:/Modding/_gamedata/JC3grab/**/*.physicsc"
+FLEET = r"E:/Modding/_shared/gamedata/JC3grab/**/*.physicsc"
 
 SENT = 0x7FFFFFFF
 WALKER = 0x141569D00

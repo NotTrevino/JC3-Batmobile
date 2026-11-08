@@ -160,7 +160,7 @@ same-day entry `MODLOG.md:7623` (86 objects / 8,595 bindings) and later drift is
 ```
 $ python - <<'PY'
 import glob,os,re
-fs=[os.path.basename(p) for p in glob.glob('E:/Modding/_JC3grab/detail/*.ee.json')]
+fs=[os.path.basename(p) for p in glob.glob('E:/Modding/JustCause3/_grab/detail/*.ee.json')]
 ch={re.match(r'(v\d{4}_[a-z]+_[a-z0-9]+)',f).group(1) for f in fs}
 print(len(fs), len(ch))
 PY

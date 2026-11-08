@@ -27,7 +27,7 @@ exit=0
 ```
 
 No progress chatter, one verdict line, exit 0. It re-read both containers (it does not read the
-`E:\Modding\_JC3grab\sigdiff\` cache), so the PASS is a live decode, not a comparison against
+`E:\Modding\JustCause3\_grab\sigdiff\` cache), so the PASS is a live decode, not a comparison against
 already-written files.
 
 ## Issues

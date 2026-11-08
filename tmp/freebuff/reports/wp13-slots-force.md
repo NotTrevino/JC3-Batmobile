@@ -29,15 +29,15 @@ Read-only inputs, no build file written.
 
 | input | identity | use |
 |---|---|---|
-| `E:/Modding/_gamedata/JC3grab/wiring/epe/v0202_car_capstone_bavariumtank_military_01.ee.xml` | sha256 `1c52a09e29d0818df46831573ed4985c24db9bbe4100b89304e28d63a5f4d86f` | graph A (Imperator Bavarium Tank) |
-| `E:/Modding/_gamedata/JC3grab/wiring/epe/v2601_helicopter_urga_heavyassault_military_01.ee.xml` | sha256 `94094d48d23884d4290e1c2556e03c3807a9c6e2792a7be74df02c951a58ee30` | graph B (Urga Mstitel) |
+| `E:/Modding/_shared/gamedata/JC3grab/wiring/epe/v0202_car_capstone_bavariumtank_military_01.ee.xml` | sha256 `1c52a09e29d0818df46831573ed4985c24db9bbe4100b89304e28d63a5f4d86f` | graph A (Imperator Bavarium Tank) |
+| `E:/Modding/_shared/gamedata/JC3grab/wiring/epe/v2601_helicopter_urga_heavyassault_military_01.ee.xml` | sha256 `94094d48d23884d4290e1c2556e03c3807a9c6e2792a7be74df02c951a58ee30` | graph B (Urga Mstitel) |
 | `Builds/bm-RC2/aaf/editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe` | sha256 `2db78866360b960dfb30183740bf14b80fafa048828610a06ab2dd0d91432b8b` | the current Batmobile build graph |
 | `Research/JC3Grab/WEAPON_WIRING.jsonl` / `.md` | decoded rows for all 53 armed entities | slot model, per-entity slots and points |
 | `Research/JC3Grab/PARTS_TABLE.jsonl` | decoded part behaviour | `BavariumShield` parts |
 | `Research/BatmobileGrab/WEAPONS.md` | G1-08 record | the BmAK weapon object list |
 | `Research/BatmobileGrab/SOCKETS_JC3.md` | G1-13 record | the 65 BmAK sockets / muzzle anchors |
 | `Builds/bm-RC2/verify/weapon_points_vs_bmak.md` | B-05/G2 record | the build's 9 `SWeaponPoint`s |
-| `E:/Modding/_gamedata/JC3grab/strings_rt/rt.xml` | shipped `.stringlookup` (decoded text) | display-name → graph mapping |
+| `E:/Modding/_shared/gamedata/JC3grab/strings_rt/rt.xml` | shipped `.stringlookup` (decoded text) | display-name → graph mapping |
 
 ### Name → graph mapping (read, then matched)
 
@@ -280,7 +280,7 @@ Joker launcher, `MissileLaunchSockets` 2 items × 8 B on the EMP launcher).
 cd Tools/scripts && python - <<'PY'
 import sys, os; sys.path.insert(0, '.')
 import jc3wiring as W
-CACHE = r"E:/Modding/_gamedata/JC3grab/wiring/epe"
+CACHE = r"E:/Modding/_shared/gamedata/JC3grab/wiring/epe"
 for f in ("v0202_car_capstone_bavariumtank_military_01.ee.xml",
           "v2601_helicopter_urga_heavyassault_military_01.ee.xml"):
     objs = W.parse_epe(os.path.join(CACHE, f))
@@ -305,4 +305,4 @@ PY
 | BmAK sockets and muzzle anchors | `Research/BatmobileGrab/SOCKETS_JC3.md` |
 | build's 9 points | `Builds/bm-RC2/verify/weapon_points_vs_bmak.md` |
 | T-WP13 blocked row and the operator's decision | `Working/Translation/T7_WEAPONS.md` §2; `Working/Translation/DECISIONS_NEEDED.md:205` |
-| vehicle names and armament text | `E:/Modding/_gamedata/JC3grab/strings_rt/rt.xml:82882, 82934` |
+| vehicle names and armament text | `E:/Modding/_shared/gamedata/JC3grab/strings_rt/rt.xml:82882, 82934` |

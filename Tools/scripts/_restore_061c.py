@@ -2,7 +2,7 @@
 import os
 import shutil
 
-R = r"E:\Modding\JC3-Batmobile"
+R = r"E:\Modding\JustCause3\JC3-Batmobile"
 src59 = os.path.join(R, "Builds", "test-059", "aaf")
 dst = os.path.join(R, "Builds", "test-061")
 m = os.path.join("models", "jc_vehicles", "01_land", "v0300_car_kensington_sportsmuscle")

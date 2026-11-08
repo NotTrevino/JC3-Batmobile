@@ -43,7 +43,7 @@ def extract(wad, want, outdir):
     print("done:", got)
 
 def shortlist():
-    census = json.load(open(r"E:\Modding\JC3-Batmobile\Working\Audio\sfx_census.json"))
+    census = json.load(open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\sfx_census.json"))
     # engine-loop heuristic: multichannel, >=10 s, not a wave compilation
     cands = [r for r in census if isinstance(r["ch"], int) and r["ch"] >= 2
              and (r["dur_s"] or 0) >= 10 and r["extra_waves"] <= 3]

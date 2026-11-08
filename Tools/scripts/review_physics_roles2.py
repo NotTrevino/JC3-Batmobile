@@ -43,7 +43,7 @@ import jc3hkx  # noqa: E402  (shared packfile reader, unmodified)
 DONOR = os.path.join(ROOT, "Builds", "test-091", "aaf", "models", "jc_vehicles", "01_land",
                      "v0300_car_kensington_sportsmuscle", "sportsmuscle.physicsc")
 CARD_JSON = os.path.join(ROOT, "Research", "JC3Grab", "PHYSICS_ROLES2.json")
-FLEET_RAW = r"E:/Modding/_gamedata/JC3grab/hkx/all"
+FLEET_RAW = r"E:/Modding/_shared/gamedata/JC3grab/hkx/all"
 OUT_MD = os.path.join(ROOT, "Research", "JC3Grab", "PHYSICS_ROLES2_REVIEW.md")
 OUT_JSON = os.path.join(ROOT, "Research", "JC3Grab", "PHYSICS_ROLES2_REVIEW.json")
 CONSTRAINTS = ("hkpLimitedHingeConstraintData", "hkpRagdollConstraintData",

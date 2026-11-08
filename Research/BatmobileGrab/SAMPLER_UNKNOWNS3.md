@@ -299,7 +299,7 @@ has no proven direction outside the direct-Let form.
 |---|---|
 | `Research/BatmobileGrab/SAMPLER_FIELDS2.md` | the 47 field rows (class, field, offset, kind) searched here |
 | `E:/Games/Batman - Arkham Knight/BmGame/CookedPCConsole/*.upk` + `DLC/**/*.upk` | 4145 name/import/export tables; the class-default payloads and Function bodies above |
-| `E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated/**/*.cs` | 5468 generated files, every occurrence of the two names |
+| `E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Generated/**/*.cs` | 5468 generated files, every occurrence of the two names |
 | `Research/BatmobileGrab/SAMPLER_UNKNOWNS2.md` | the routes excluded from this card |
 | `Tools/scripts/upk_read.py`, `grab_packages_g305.PartialPackage` | package tables, payload access, `walk_tags` |
 

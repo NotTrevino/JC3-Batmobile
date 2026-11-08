@@ -7,7 +7,7 @@
 # .toc: vanilla + base-ee test-003 + --internal epe (parts external, palette
 # internal via vanilla).
 $ErrorActionPreference = 'Stop'
-$root = 'E:\Modding\JC3-Batmobile'
+$root = 'E:\Modding\JustCause3\JC3-Batmobile'
 $py = 'uv'
 $g  = "$root\Tools\Gibbed"
 $ee = 'v0300_car_kensington_sportsmuscle_civilian_01.ee'

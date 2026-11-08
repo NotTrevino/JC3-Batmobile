@@ -154,7 +154,7 @@ unaffected, because the second consumer rejects the sentinel rather than repairi
 
 ## Claim 5 — the `0x7fffffff` tested is the value stored in 494/494 records
 
-**Holds.**  Independent re-sweep of `E:/Modding/_gamedata/JC3grab/**/*.physicsc`: 50 files with
+**Holds.**  Independent re-sweep of `E:/Modding/_shared/gamedata/JC3grab/**/*.physicsc`: 50 files with
 records, 494 records, `bodyB == 0x7fffffff` in 494, `bodyA == 0x7fffffff` in 0, no out-of-range
 `bodyA`, no other non-sentinel `bodyB` value.  Stored `+0xc` dword bytes: `ff ff ff 7f`; the loop's
 immediate: `ff ff ff 7f`.  Identical 32-bit value, so G3-10h's sentinel and the loop's are the
@@ -194,7 +194,7 @@ addresses: `0x140201058`, `0x140202828`, `0x14026c568`, `0x14027bcce`, `0x140280
 
 ```
 $ uv run --with pefile --with capstone python Tools/scripts/jc3_constraint_code2_review.py --write
-wrote E:\Modding\JC3-Batmobile\Research\JC3Grab\CONSTRAINT_CODE2_REVIEW.md (270 lines) and E:\Modding\JC3-Batmobile\Research\JC3Grab\CONSTRAINT_CODE2_REVIEW.json
+wrote E:\Modding\JustCause3\JC3-Batmobile\Research\JC3Grab\CONSTRAINT_CODE2_REVIEW.md (270 lines) and E:\Modding\JustCause3\JC3-Batmobile\Research\JC3Grab\CONSTRAINT_CODE2_REVIEW.json
 branches to skip 6, calls in loop body 1, sentinel imms ['0x141569f6f', '0x141569f9a']
 both-offset functions ['0x141569d00-0x141569ff0', '0x1415e6030-0x1415e6651']
 citations ok 39/39

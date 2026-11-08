@@ -70,7 +70,7 @@ DROP_SRC = {"profile/item.onlinec": "bm-RC4-rebel", "profile/task.onlinec": "bm-
             "profile/online.stringlookup": "bm-RC4-rebel",
             "settings/spawn_vehicle_defs.bin": "bm-RC4-rebel",
             "textures/ui/vehicle_icons/" + NEW + ".ddsc": "bm-RC4-rebel"}
-SIM = r"E:\Modding\_dropzone_sim_rc4"   # install_v3.ps1's guard only accepts this root
+SIM = r"E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc4"   # install_v3.ps1's guard only accepts this root
 INSTALL_V3 = os.path.join(ROOT, "Working", "Installer", "install_v3.ps1")
 
 # Two branches write one binary module. They are member-disjoint: measured, the two branch

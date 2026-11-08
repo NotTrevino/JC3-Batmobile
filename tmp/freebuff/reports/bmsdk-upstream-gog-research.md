@@ -1,6 +1,6 @@
 # BmSDK-AK: GOG / Epic port status and offset provenance
 
-Research date: 2026-11-07. Local source: `E:/Modding/_tools/BmSDK-AK` (read-only inspection; nothing written to game folders).
+Research date: 2026-11-07. Local source: `E:/Modding/_shared/tools/BmSDK-AK` (read-only inspection; nothing written to game folders).
 
 **Rule applied:** every claim below carries a URL or a file path. Where no evidence exists, the row says **UNKNOWN**.
 
@@ -13,7 +13,7 @@ Research date: 2026-11-07. Local source: `E:/Modding/_tools/BmSDK-AK` (read-only
 | Has anyone ported BmSDK-AK to the **GOG** build? | **No.** No public port, fork, PR, release or issue containing GOG offsets was found. Upstream explicitly says GOG is unsupported. | https://github.com/Team-BmSDK/BmSDK-AK (README), https://github.com/Team-BmSDK/BmSDK-AK/issues/14, https://github.com/Team-BmSDK/BmSDK-AK/forks |
 | Has anyone ported it to the **Epic (EGS)** build? | **Yes** — unofficial fork `cberdejo/BmSDK-AK-Epic-Games`, release v0.22.0 (2026-10-12), with a complete hand-written Epic offset table. | https://github.com/cberdejo/BmSDK-AK-Epic-Games , https://github.com/cberdejo/BmSDK-AK-Epic-Games/releases , https://github.com/cberdejo/BmSDK-AK-Epic-Games/commit/c51321f |
 | Has anyone **documented how the offsets are found**? | **No.** No doc, script, signature database or write-up exists in either repo. The Epic values are bare constants in a commit. How they were derived is **UNKNOWN**. | https://github.com/cberdejo/BmSDK-AK-Epic-Games/commit/c51321f (diff shows only literals), https://bmsdk.dev/docs/contributing/building (no offset methodology) |
-| Is there any **signature scanning** in upstream BmSDK-AK? | **No.** Not a single pattern scan exists; all targets are `module base + const offset`. | `E:/Modding/_tools/BmSDK-AK/src/BmSDK.Host/Framework/offsets.h`, `E:/Modding/_tools/BmSDK-AK/src/BmSDK.Host/Framework/detour_manager.cpp`, `E:/Modding/_tools/BmSDK-AK/src/BmSDK/FrameworkInternal/GameDefine.cs` |
+| Is there any **signature scanning** in upstream BmSDK-AK? | **No.** Not a single pattern scan exists; all targets are `module base + const offset`. | `E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK.Host/Framework/offsets.h`, `E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK.Host/Framework/detour_manager.cpp`, `E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/FrameworkInternal/GameDefine.cs` |
 
 ### The single most important find
 
@@ -34,9 +34,9 @@ URL: https://github.com/Team-BmSDK/BmSDK-AK (also https://github.com/Team-BmSDK/
 
 - Verbatim: *"⚠️ Notice for Epic or GOG users: Only Steam copies of Arkham Knight are supported currently. EGS/GOG support is being considered, but BmSDK unfortunately does not work on these platforms for the time being."*
 - Install path documented is the Steam path only: `C:\Program Files (x86)\Steam\steamapps\common\Batman Arkham Knight`.
-- Local copy agrees: `E:/Modding/_tools/BmSDK-AK/README.md` lines 100–101 carry the same notice.
+- Local copy agrees: `E:/Modding/_shared/tools/BmSDK-AK/README.md` lines 100–101 carry the same notice.
 
-A local grep for `gog|epic|egs` over the whole checkout returned **only** those two README lines as meaningful hits — there is no build-conditional code anywhere in `src/`. (Command run: `code_search` for `(?i)gog|epic|egs` in `E:/Modding/_tools/BmSDK-AK`; all other 125 hits were generated UnrealScript names such as `GoggleBlinded`, `HandlePickup`, `Epicenter`.)
+A local grep for `gog|epic|egs` over the whole checkout returned **only** those two README lines as meaningful hits — there is no build-conditional code anywhere in `src/`. (Command run: `code_search` for `(?i)gog|epic|egs` in `E:/Modding/_shared/tools/BmSDK-AK`; all other 125 hits were generated UnrealScript names such as `GoggleBlinded`, `HandlePickup`, `Epicenter`.)
 
 ## 2. Wiki, especially "Building-BmSDK"
 
@@ -172,7 +172,7 @@ Searched for GOG + BmSDK + offsets + timestamp combinations. Nothing exists outs
 
 ---
 
-## 11. How the addresses are declared in the local source (E:/Modding/_tools/BmSDK-AK)
+## 11. How the addresses are declared in the local source (E:/Modding/_shared/tools/BmSDK-AK)
 
 There is no C/C++ SDK header table for gameplay functions and no C struct dump — the design is **three separate hard-coded tables**, one per binary that needs to touch the process.
 
@@ -182,7 +182,7 @@ Declares one abstract `IntPtr` property per target and pins the build-invariant 
 ```csharp
 public static GameDefine Current { get; } = new GameDefineSteam();
 ```
-`E:/Modding/_tools/BmSDK-AK/src/BmSDK/FrameworkInternal/GameDefine.cs`
+`E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/FrameworkInternal/GameDefine.cs`
 
 ### (b) `src/BmSDK/FrameworkInternal/GameDefine.Steam.cs` — the actual table
 24 concrete addresses, grouped `Globals` / `app` / `UObject (static)` / `UObject (local)` / `UClass` / `UWorld` / `FWindowsViewport` / `FName` / `FString`:
@@ -198,7 +198,7 @@ ConditionalPostLoad 0xF430F0   AddToRoot 0xF2D440   RemoveFromRoot 0xF2D460
 GetDefaultObject 0xF92870   SpawnActor 0xACBC70
 ProcessDeferredMessage 0x105D400   NameInit 0xF37BF0   StringCtor 0x41D0
 ```
-`E:/Modding/_tools/BmSDK-AK/src/BmSDK/FrameworkInternal/GameDefine.Steam.cs`
+`E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/FrameworkInternal/GameDefine.Steam.cs`
 
 Also build-invariant and *not* per-define (`GameDefine.MemberOffsets`): `Object__ObjectInternalInteger 48`, `Object__Outer 52`, `Object__Name 60`, `Object__Class 68`, `Struct__SuperStruct 92`, `Class__ClassFlags 244`.
 
@@ -209,21 +209,21 @@ namespace offsets {
     inline constexpr uintptr_t EngineLoopPreInit = 0x5B7220;
 }
 ```
-`E:/Modding/_tools/BmSDK-AK/src/BmSDK.Host/Framework/offsets.h` — consumed in `detour_manager.cpp` as `offsets::BaseAddress + offsets::EngineLoopPreInit`:
-`E:/Modding/_tools/BmSDK-AK/src/BmSDK.Host/Framework/detour_manager.cpp`
-`BaseAddress` is set once in `E:/Modding/_tools/BmSDK-AK/src/BmSDK.Host/dllmain.cpp` from `GetModuleHandle(NULL)`.
+`E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK.Host/Framework/offsets.h` — consumed in `detour_manager.cpp` as `offsets::BaseAddress + offsets::EngineLoopPreInit`:
+`E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK.Host/Framework/detour_manager.cpp`
+`BaseAddress` is set once in `E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK.Host/dllmain.cpp` from `GetModuleHandle(NULL)`.
 
 ### (d) `src/BmSDK.Generator/Engine/GameOffsets.h` — 8 addresses for the SDK generator
 `GObjects 0x340CBE4`, `GNames 0x3A208B8`, `StaticFindObject 0xF3B7F0`, `LoadPackage 0xF46DA0`, `BeginLoad 0xF2D410`, `EndLoad 0xF43BF0`, `CollectGarbage 0xF2C280`, `ProcessEvent 0xF90CD0`.
-`E:/Modding/_tools/BmSDK-AK/src/BmSDK.Generator/Engine/GameOffsets.h`, used by `Runtime::OnAttach()` in `E:/Modding/_tools/BmSDK-AK/src/BmSDK.Generator/Runtime.cpp`.
+`E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK.Generator/Engine/GameOffsets.h`, used by `Runtime::OnAttach()` in `E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK.Generator/Runtime.cpp`.
 
 ### Count check vs. the brief's "22 hard-coded addresses"
-The real numbers are **24** in `GameDefine.Steam.cs`, **+1** in `BmSDK.Host/Framework/offsets.h`, and **+8** in `BmSDK.Generator/Engine/GameOffsets.h` (of which `BeginLoad`/`EndLoad` are generator-only and absent from the runtime table). The closest thing to "22" is the set of **21** detour delegate types in `E:/Modding/_tools/BmSDK-AK/src/BmSDK/FrameworkInternal/GameFunctions.cs` plus `EngineTick`/`ConditionalPostLoad` bookkeeping — that is not a clean 22 either. **Exact figure: 24 per-build runtime addresses (+1 host +8 generator). Plan the GOG hunt around 24, not 22.** The abstract declarations live in `GameDefine.cs`; the values live only in the per-build subclass — so adding a build means **one new `GameDefine.<Build>.cs` plus a switch arm**, which is precisely what the Epic fork did.
+The real numbers are **24** in `GameDefine.Steam.cs`, **+1** in `BmSDK.Host/Framework/offsets.h`, and **+8** in `BmSDK.Generator/Engine/GameOffsets.h` (of which `BeginLoad`/`EndLoad` are generator-only and absent from the runtime table). The closest thing to "22" is the set of **21** detour delegate types in `E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/FrameworkInternal/GameFunctions.cs` plus `EngineTick`/`ConditionalPostLoad` bookkeeping — that is not a clean 22 either. **Exact figure: 24 per-build runtime addresses (+1 host +8 generator). Plan the GOG hunt around 24, not 22.** The abstract declarations live in `GameDefine.cs`; the values live only in the per-build subclass — so adding a build means **one new `GameDefine.<Build>.cs` plus a switch arm**, which is precisely what the Epic fork did.
 
 ### Signature scanning: definitively absent
 - No `PatternScan` / `SigScan` / `FindPattern` / `memmem` / module-scan helper exists in `src/BmSDK.Host` (search returned 0 matches for `(?i)scan|memmem|VirtualProtect.*Search|ModuleBase \+`).
 - A search for `(?i)signature|sigscan|find_pattern|patternscan|scan_pattern` under `src/BmSDK` returned only two **doc comments** about C# method signatures (`Framework/Attributes/RedirectAttribute.cs`, `Framework/Attributes/ComponentRedirectAttribute.cs`) — unrelated to byte patterns.
-- Everything resolves through `DetourUtil.NewDetour(GameDefine.Current.<X>, …)` in `E:/Modding/_tools/BmSDK-AK/src/BmSDK/Loader.cs` and `Marshal.GetDelegateForFunctionPointer(MemUtil.GetIntPointer(GameDefine.Current.<X>))` in `GameFunctions.cs`. **Address = image base + constant, nothing else.**
+- Everything resolves through `DetourUtil.NewDetour(GameDefine.Current.<X>, …)` in `E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Loader.cs` and `Marshal.GetDelegateForFunctionPointer(MemUtil.GetIntPointer(GameDefine.Current.<X>))` in `GameFunctions.cs`. **Address = image base + constant, nothing else.**
 
 ---
 
@@ -231,9 +231,9 @@ The real numbers are **24** in `GameDefine.Steam.cs`, **+1** in `BmSDK.Host/Fram
 
 **Usable directly (with a hash check first):**
 1. **The Epic offset table as a GOG starting hypothesis.** It is keyed on `TimeDateStamp 0x6508B1CE`, identical to the GOG exe's timestamp. First action: hash and `cmp` the GOG `Binaries/Win64/BatmanAK.exe` against the Epic/Steam exes and compare `.text` size. Identical → adopt the 24 Epic values unchanged; different → they are landmarks, not values. Source: https://github.com/cberdejo/BmSDK-AK-Epic-Games/commit/c51321f
-2. **The two-build plumbing**, already debugged: lazy `GameDefine.Current`, `Detect()` reading `*(uint*)(base + *(int*)(base + 0x3C) + 8)`, `offsets::init()` in the host, `GameOffsets::Init()` in the generator. Copy shape, add a `GameDefine.Gog.cs`. Sources: same commit; `E:/Modding/_tools/BmSDK-AK/src/BmSDK/FrameworkInternal/GameDefine.cs`.
+2. **The two-build plumbing**, already debugged: lazy `GameDefine.Current`, `Detect()` reading `*(uint*)(base + *(int*)(base + 0x3C) + 8)`, `offsets::init()` in the host, `GameOffsets::Init()` in the generator. Copy shape, add a `GameDefine.Gog.cs`. Sources: same commit; `E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/FrameworkInternal/GameDefine.cs`.
 3. **AC's fail-fast `Detect()`** instead of the fork's silent Steam fallback — refuse to run on an unknown `TimeDateStamp` with the value printed. https://raw.githubusercontent.com/Team-BmSDK/BmSDK-AC/main/src/BmSDK/FrameworkInternal/GameDefine.cs
-4. **The 24-name hit list** (Source: `E:/Modding/_tools/BmSDK-AK/src/BmSDK/FrameworkInternal/GameDefine.Steam.cs`) — this is the work queue for a GOG dump: 3 globals, 3 `app`, 4 `UObject` statics, 9 `UObject` locals, `GetDefaultObject`, `SpawnActor`, `ProcessDeferredMessage`, `NameInit`, `StringCtor`, plus `EngineLoopPreInit` for the host.
+4. **The 24-name hit list** (Source: `E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/FrameworkInternal/GameDefine.Steam.cs`) — this is the work queue for a GOG dump: 3 globals, 3 `app`, 4 `UObject` statics, 9 `UObject` locals, `GetDefaultObject`, `SpawnActor`, `ProcessDeferredMessage`, `NameInit`, `StringCtor`, plus `EngineLoopPreInit` for the host.
 5. **The build-invariant `MemberOffsets`** (48/52/60/68, 92, 244) — likely reusable unchanged on GOG, so don't spend dump time there; verify with one pointer chase.
 6. **`GameDetector.cs`'s installer pattern** — `EpicAppName = "Cowbird"` + `%PROGRAMDATA%\Epic\...\Manifests\*.item`. A GOG arm would read the Galaxy registry/`goggame-*.info` equivalent instead. Source: https://github.com/cberdejo/BmSDK-AK-Epic-Games/commit/c51321f
 

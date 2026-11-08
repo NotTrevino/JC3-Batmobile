@@ -16,8 +16,8 @@ A 24-row table does not exist in the report, and the five `Research/BatmobileGra
 
 | field_name | shader_or_cb | report_line | cited_path | path exists |
 |---|---|---:|---|---|
-| `BoostingOut` | none | 56 | `E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated/BmGame/RVehicleBatmobileBase.g.cs` 5901 (offset), class file no line given | yes |
-| `RPlayerController.QuickGadgetX` | none | 57 | `E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated/BmGame/RPlayerController.g.cs` :489 | yes |
+| `BoostingOut` | none | 56 | `E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Generated/BmGame/RVehicleBatmobileBase.g.cs` 5901 (offset), class file no line given | yes |
+| `RPlayerController.QuickGadgetX` | none | 57 | `E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Generated/BmGame/RPlayerController.g.cs` :489 | yes |
 | `bCancelButton` | none | 61 | `DefaultInput.ini` :268 | **MISSING_PATH** |
 
 reason_unknown, verbatim from the report:
@@ -30,9 +30,9 @@ reason_unknown, verbatim from the report:
 
 ## 2. MISSING_PATH
 
-* `DefaultInput.ini` — the report gives a bare file name with no directory; no DefaultInput.ini exists under the repo or E:/Modding/_gamedata (depth 3)
+* `DefaultInput.ini` — the report gives a bare file name with no directory; no DefaultInput.ini exists under the repo or E:/Modding/_shared/gamedata (depth 3)
 
-The other paths a field cites were checked and exist: `E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated/BmGame` (class tree), `Research/BatmobileGrab/EJECT_VELOCITY.md`, `Research/BatmobileGrab/EJECT_MOVE.md`, `Research/BatmobileGrab/PHYSICS.md`, `Research/BatmobileGrab/COLLISION_GEOM.md`, `Research/BatmobileGrab/CONTROLS.md`.
+The other paths a field cites were checked and exist: `E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Generated/BmGame` (class tree), `Research/BatmobileGrab/EJECT_VELOCITY.md`, `Research/BatmobileGrab/EJECT_MOVE.md`, `Research/BatmobileGrab/PHYSICS.md`, `Research/BatmobileGrab/COLLISION_GEOM.md`, `Research/BatmobileGrab/CONTROLS.md`.
 
 ## 3. What a build lane can take from this
 

@@ -16,13 +16,13 @@ source list, and the verdicts come from the producers' fresh output.
 | producer | command | exit | last printed line |
 |---|---|---:|---|
 | `CHAIN.json` | `python Tools/scripts/bmak_chain.py --check` | 0 | `PASS: chain record current (105 objects, 9225 named bindings, 336 cross-checked, 0 conflicts, 0 bool words left unnamed)` |
-| `VALUES.json` | `python Tools/scripts/grab_values.py --out E:\Modding\JC3-Batmobile\tmp\freebuff\scratch\g3e_values.json` | 0 | `}` |
+| `VALUES.json` | `python Tools/scripts/grab_values.py --out E:\Modding\JustCause3\JC3-Batmobile\tmp\freebuff\scratch\g3e_values.json` | 0 | `}` |
 | `VOCABULARY.md` | `python Tools/scripts/jc3grab.py check` | 0 | `check ok` |
 | `PARTS_TABLE.jsonl` | `python Tools/scripts/jc3parts.py check` | 0 | `  note: ['Boat_Antenna'] not in this vehicle's VehicleDamage table (24 types) - the part falls back to Default damage` |
 | `PARTS_WIRING` | `python Tools/scripts/jc3parts.py wiring` | 0 | `  point 121  sportsmuscle_signal_f_l            \|sportsmuscle_LOD1\|body\|engine\|fender_l\|signal_f_l` |
 | `FX_TABLE.jsonl` | `python Tools/scripts/jc3fx.py report` | 0 | `FX.md: 57187 files, 62,504,473 rows, 0 failures` |
 | `T3_FLEET.md` | `python Tools/scripts/t3_fleet.py --check` | 0 | `check ok` |
-| `FITS.md` | `python Tools/scripts/t1_fits.py -o E:\Modding\JC3-Batmobile\tmp\freebuff\scratch\g3e_fits.md` | 0 | `FITS.md: 156 land vehicles, 19 members fitted, 5 usable (R2 >= 0.5) -> E:\Modding\JC3-Batmobile\tmp\freebuff\scratch\g3e` |
+| `FITS.md` | `python Tools/scripts/t1_fits.py -o E:\Modding\JustCause3\JC3-Batmobile\tmp\freebuff\scratch\g3e_fits.md` | 0 | `FITS.md: 156 land vehicles, 19 members fitted, 5 usable (R2 >= 0.5) -> E:\Modding\JustCause3\JC3-Batmobile\tmp\freebuff\scratch\g3e` |
 
 ## 3. Verdicts
 

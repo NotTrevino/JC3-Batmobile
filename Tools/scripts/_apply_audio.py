@@ -7,8 +7,8 @@ import os, struct, subprocess, wave
 import numpy as np
 from fsb5 import FSB5
 
-CLI = r"E:\Modding\JC3-Batmobile\Tools\vgmstream-win64\vgmstream-cli.exe"
-A = r"E:\Modding\JC3-Batmobile\Working\Audio"
+CLI = r"E:\Modding\JustCause3\JC3-Batmobile\Tools\vgmstream-win64\vgmstream-cli.exe"
+A = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio"
 
 JOBS = [
     # (fsb index, source wav, use seconds or full, fade-out ms at end)

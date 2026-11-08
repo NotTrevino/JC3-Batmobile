@@ -21,7 +21,7 @@ Neither defect changes the row table or any JC3 route, which is why this is "min
 ## The command I ran, and its output
 
 ```
-$ cd E:/Modding/JC3-Batmobile && python Tools/scripts/t_wp4c.py --check; echo "EXIT=$?"
+$ cd E:/Modding/JustCause3/JC3-Batmobile && python Tools/scripts/t_wp4c.py --check; echo "EXIT=$?"
 OK Working/Translation/T_WP4C_TRACKER_EMP.md (21373 chars)
 OK Working/Translation/T_WP4C_TRACKER_EMP.json (36266 chars)
 CHECK PASS
@@ -213,7 +213,7 @@ reference-only (10 fields, no damage, no damage type, no AkEvent) and any damage
 ## What I could not check
 
 - **The raw export bytes of `Playable_Batmobile_SF.upk`.** There is no `objects.jsonl` under
-  `E:/Modding/_gamedata` and `WEAPONS.json` records the property offset but not the export's absolute file
+  `E:/Modding/_shared/gamedata` and `WEAPONS.json` records the property offset but not the export's absolute file
   offset, so I could not myself walk the package header and read the 12 bytes at export+2452. I therefore
   confirmed `[5461,0,0]` and `[-3640,0,0]` as *recorded-at-offset-2452* values whose offsets agree with an
   independent layout, not by opening the .upk. A byte-level confirmation needs a package walk (or the

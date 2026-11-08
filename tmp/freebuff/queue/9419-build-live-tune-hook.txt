@@ -1,7 +1,7 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-live-tune-hook.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/build-live-tune-hook.md
 ONLY: freebuff
 EST: 55
 BRIEF: hand-written 2026-11-08
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-runtime-handling-switch.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-live-vehicle-readout.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/hook-runtime-handling-switch.md, E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/hook-live-vehicle-readout.md
 A game reinstall of the 383 MiB drop for every tuning step caps the loop at a few rounds a day. Use the hook to apply handling numbers at runtime instead. From the access path found by brief 7987 (tmp/freebuff/reports/hook-runtime-handling-switch.md) and the scaffold of 7982, write the code in Tools/hook/ that reads %LOCALAPPDATA%/jc3-batmobile-hook/tune.json once per second and writes the named members of the player's Batmobile handling struct: torque, steering lock times, brake torque, handbrake friction, grip, drag, speed cap. The JSON maps member name to value; only members that 7987 marked decoded may be writable, every other name is refused and logged. Add safety from brief 7967 (version guard) and a hard clamp per member, plus a revert-all key. Stage as Builds/hook-0003 with a receipt, and add a Tools/scripts/tune_apply.py that edits tune.json from a cell table so a fix iteration is one command. Done check: compile if a toolchain exists, otherwise a dry-run script that applies a sample tune.json to a fake struct buffer and prints the byte changes. Mark every offset decoded, derived or UNKNOWN.
-Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.
+Shared rules: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

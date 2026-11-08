@@ -1,7 +1,7 @@
 """Track GUID -> TRAN record -> WAIT refs -> FSB index."""
 import struct
 
-P = r"E:\Modding\JC3-Batmobile\Working\Audio\jc3bank\sound\fmod_banks\vehicles.bank"
+P = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\jc3bank\sound\fmod_banks\vehicles.bank"
 d = open(P, "rb").read()
 track = bytes.fromhex("8092227e611a0e4b915ed4b7c2c8f9e0")
 o = 0

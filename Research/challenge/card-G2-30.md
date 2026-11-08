@@ -7,7 +7,7 @@ and the same-session correction, line 11403).
 **Rules read:** `GRAB_BACKLOG.md` §0.5 R1–R14.
 **Mode:** read-only. No game, no `D:/Games` write, no commit, no secret. The only file written is
 this one. Test blobs are the ones the card already left in
-`E:/Modding/_JC3grab/hkx/write/` (5 files) and were only read.
+`E:/Modding/JustCause3/_grab/hkx/write/` (5 files) and were only read.
 **Method:** every claim was re-derived with inline Python against `Tools/scripts/jc3hkx.py`
 (the reader/writer itself) plus direct byte reads of
 `Builds/test-091/aaf/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle.physicsc`
@@ -620,7 +620,7 @@ python Tools/scripts/jc3hkx.py check --all       # the standing gate, as quoted 
 
 The remaining measurements are one-liners against the same module (`K.Packfile`,
 `decode_polytope`, `shape_checks`, `packfile_bytes`, `compound_aabb_edits`, `face_table`) plus
-direct `struct` reads of the five blobs in `E:/Modding/_JC3grab/hkx/write/`; the exact calls and
+direct `struct` reads of the five blobs in `E:/Modding/JustCause3/_grab/hkx/write/`; the exact calls and
 outputs are quoted in each section. Nothing was written outside this report.
 
 **Revert this report:** delete `Research/challenge/card-G2-30.md`. Nothing else was changed.

@@ -16,7 +16,7 @@ Files written:
 - `Tools/scripts/install_v2.py` (`--write` / `--check`; the generator and proof harness)
 - `tmp/freebuff/reports/installer-rollback-fix.md` (this card)
 
-Simulation copies (scratch, under the sim root prefix): `E:\Modding\_dropzone_sim_rc2_case_a`,
+Simulation copies (scratch, under the sim root prefix): `E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2_case_a`,
 `..._case_b`, `..._case_c`. No real game or live dropzone path was written; no game launched
 (INSTRUCTIONS §3).
 
@@ -38,7 +38,7 @@ already holds the build, nothing is backed up and Rollback091 deletes all nine p
 2. **Rollback restores** `existed = true` targets from the snapshot (and re-hashes the restored
    file against the manifest); it deletes only `existed = false` targets, then removes the
    snapshot and any directories it created that are now empty.
-3. **Guard**: `-GameDir` must be under `E:\Modding\_dropzone_sim_rc2` (the same simulation root
+3. **Guard**: `-GameDir` must be under `E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2` (the same simulation root
    task 7231 used) and must not be under `D:\Games` or `E:\Games`; otherwise `REFUSED: …`, exit 2,
    before any read or write of the target tree.
 
@@ -61,8 +61,8 @@ Rollback in all three.
 Guard probes (no write, no directory created):
 
 ```
-REFUSED: -GameDir E:\Modding\_not_a_sim_case is not under the simulation root E:\Modding\_dropzone_sim_rc2
-REFUSED: -GameDir D:\Games\Fake Just Cause 3 is not under the simulation root E:\Modding\_dropzone_sim_rc2
+REFUSED: -GameDir E:\Modding\_not_a_sim_case is not under the simulation root E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2
+REFUSED: -GameDir D:\Games\Fake Just Cause 3 is not under the simulation root E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2
 ```
 
 Both exit 2. The second probe is a **non-existent fake** path shaped like a game folder: no real
@@ -71,7 +71,7 @@ game directory was passed or touched.
 ## 3. Commands (verbatim)
 
 ```
-$ cd E:/Modding/JC3-Batmobile && python Tools/scripts/install_v2.py --write; echo "write_exit=$?"
+$ cd E:/Modding/JustCause3/JC3-Batmobile && python Tools/scripts/install_v2.py --write; echo "write_exit=$?"
 wrote Working\Installer\install_v2.ps1 (8846 chars, 9 rows)
 write_exit=0
 ```
@@ -79,8 +79,8 @@ write_exit=0
 ```
 $ python Tools/scripts/install_v2.py --check; echo "check_exit=$?"
 rows 9 | cases case_a, case_b, case_c
-  guard_outside-sim: {"created": false, "exit": 2, "out": "REFUSED: -GameDir E:\\Modding\\_not_a_sim_case is not under the simulation root E:\\Modding\\_dropzone_sim_rc2", "refused": true}
-  guard_fake-game-root: {"created": false, "exit": 2, "out": "REFUSED: -GameDir D:\\Games\\Fake Just Cause 3 is not under the simulation root E:\\Modding\\_dropzone_sim_rc2", "refused": true}
+  guard_outside-sim: {"created": false, "exit": 2, "out": "REFUSED: -GameDir E:\\Modding\\_not_a_sim_case is not under the simulation root E:\\Modding\\JustCause3\\_dropzone_sims\\_dropzone_sim_rc2", "refused": true}
+  guard_fake-game-root: {"created": false, "exit": 2, "out": "REFUSED: -GameDir D:\\Games\\Fake Just Cause 3 is not under the simulation root E:\\Modding\\JustCause3\\_dropzone_sims\\_dropzone_sim_rc2", "refused": true}
   case_a: {"identical_after_rollback": true, "installed": 9, "mode": "differ", "post_files": 11, "pre_files": 11, "pre_matching_receipt": 0, "removed": 0, "restored": 9, "snapshots": 9, "snapshotted": 9, "whatif_add": 0, "whatif_replace": 9, "whatif_same": 0}
   case_b: {"identical_after_rollback": true, "installed": 9, "mode": "same", "post_files": 11, "pre_files": 11, "pre_matching_receipt": 9, "removed": 0, "restored": 9, "snapshots": 9, "snapshotted": 9, "whatif_add": 0, "whatif_replace": 0, "whatif_same": 9}
   case_c: {"identical_after_rollback": true, "installed": 9, "mode": "absent", "post_files": 2, "pre_files": 2, "pre_matching_receipt": 0, "removed": 9, "restored": 0, "snapshots": 9, "snapshotted": 0, "whatif_add": 9, "whatif_replace": 0, "whatif_same": 0}
@@ -94,7 +94,7 @@ lines and `snapshotted 0`). Earlier runs, kept so the final pass is not the only
 
 ```
 FAIL: embedded row missing: editor/entities/.../…_debug.ee      (rows emitted with '/' while the checker looked for '\')
-case a: Install exit 2: REFUSED: -GameDir E:\Modding\_dropzone_sim_rc2_case_a is not under the simulation root …
+case a: Install exit 2: REFUSED: -GameDir E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2_case_a is not under the simulation root …
 ```
 (the guard used a `\` boundary, which rejected the `_dropzone_sim_rc2_case_*` siblings; it now
 accepts the same prefix task 7231 used, and still refuses both game roots)

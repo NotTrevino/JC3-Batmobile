@@ -273,7 +273,7 @@ Totals: `next 75 keep 60 epe 26 blocked 14 out 0 superseded 7`; **in scope 211 â
 
 ## 8. Verification actually run
 
-All commands in `E:/Modding/JC3-Batmobile` with `PYTHONIOENCODING=utf-8` (plain `--write` on
+All commands in `E:/Modding/JustCause3/JC3-Batmobile` with `PYTHONIOENCODING=utf-8` (plain `--write` on
 `status_audit.py` exits 1 printing `â†’` to cp1252).
 
 | check | result |

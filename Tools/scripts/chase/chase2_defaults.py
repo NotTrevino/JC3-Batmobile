@@ -32,7 +32,7 @@ sys.path.insert(0, os.path.dirname(HERE))
 from upk_read import Package, best_walk  # noqa: E402
 
 PKG = r"E:\Games\Batman - Arkham Knight\BmGame\CookedPCConsole\BmGame.upk"
-DEFAULT_JSON = r"E:\Modding\_gamedata\BmAKgrab\chase\chase2_defaults.json"
+DEFAULT_JSON = r"E:\Modding\_shared\gamedata\BmAKgrab\chase\chase2_defaults.json"
 
 # F-33 .. F-40, plus the two serialised class-mates that make the positive control.
 ROWS = {

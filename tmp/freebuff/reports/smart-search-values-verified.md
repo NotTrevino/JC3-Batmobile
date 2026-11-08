@@ -16,7 +16,7 @@ Two things the first pass got wrong, both now fixed:
 ## 0. What was re-checked, and how
 
 The four hits are all **text-route** candidates in one derived dump,
-`E:/Modding/_gamedata/BmAKgrab/chase/chase2_defaults.json` (a `default_objects` array of 30 records,
+`E:/Modding/_shared/gamedata/BmAKgrab/chase/chase2_defaults.json` (a `default_objects` array of 30 records,
 each `{bits, class, export, field, object, offset, owner_expected, type, value}`). For each claim I:
 
 1. opened the record itself at its offset (not the judge's summary) and quoted `class`, `object`,
@@ -144,7 +144,7 @@ Only VERIFIED rows belong here.
 
 | member | owner | offset | value | source |
 |---|---|---:|---:|---|
-| `BattleModeHeight` (F-33) | `RVehicleBatmobileBase` (`Default__RVehicleBatmobileBase`, export 10923) | 0x199c (6556) | **250.0** | `E:/Modding/_gamedata/BmAKgrab/chase/chase2_defaults.json:129`, record offset 6556, `FloatProperty` |
+| `BattleModeHeight` (F-33) | `RVehicleBatmobileBase` (`Default__RVehicleBatmobileBase`, export 10923) | 0x199c (6556) | **250.0** | `E:/Modding/_shared/gamedata/BmAKgrab/chase/chase2_defaults.json:129`, record offset 6556, `FloatProperty` |
 | `ImpactShakeAbandonedVehicleFactor` (F-35) | `RVehicleBatmobileBase` (`Default__RVehicleBatmobileBase`, export 10923) | 0x1ccc (7372) | **3.0** | `chase2_defaults.json:151`, record offset 7372, `FloatProperty` |
 | `BattleModeLength` (F-32) | `RVehicleBatmobileBase` (`Default__RVehicleBatmobileBase`, export 10923) | 0x1998 (6552) | **430.0** | `chase2_defaults.json`, record offset 6552, `FloatProperty` — **found by this re-check, not by the judge**; replaces the rejected 265.0 |
 

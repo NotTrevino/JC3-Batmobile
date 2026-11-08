@@ -2,7 +2,7 @@
 import struct
 from collections import Counter
 
-p = r"E:\Modding\JC3-Batmobile\Working\Audio\jc3bank\sound\fmod_banks\vehicles.bank"
+p = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\jc3bank\sound\fmod_banks\vehicles.bank"
 d = open(p, "rb").read()
 
 def find_all(tag):

@@ -41,7 +41,7 @@ restored check rc=0
 
 ## `weapons#408` - loudness +2.33 LU
 
-- WAV source: `E:\Modding\_gamedata\BmAKgrab\audio\wav\098BBFE1.wav`, 2 ch, 16-bit, 48 kHz, 80,124 frames. Map row `W-03`, `source_rule: first` on `Play_Batmobile_MShot`.
+- WAV source: `E:\Modding\_shared\gamedata\BmAKgrab\audio\wav\098BBFE1.wav`, 2 ch, 16-bit, 48 kHz, 80,124 frames. Map row `W-03`, `source_rule: first` on `Play_Batmobile_MShot`.
 - The event it replaces: **UNKNOWN as an identity**. W-03 has `guid: null` and `slot_confidence: candidate` (name match only), so the comparison is against the vanilla payload at the same bank+index (`weapons#408`, -5.30 LUFS as stored), which is the only oracle the data carries.
 - Recompute both ways: BS.1770 as stored **+2.33 LU** (RED); BS.1770 mono +2.53; plain RMS as stored -0.68 dB (would pass).
 - Cause (derived): the slot is `mono-replicated` to 2 channels; two identical channels add **+3.01 LU** (`10 log10 2`) under BS.1770. `bm_audio.payload()` measures the mono `q`, and the loop-fill path (`bm_audio.py:294-299`) re-levels only *down* (`if corr >= 0: break`) and then sets `want = meas['delivered_lufs']` - the fresh mono measurement becomes its own target. The map's stereo target `lufs` -5.30 / `delivered_lufs` -5.87 are never compared with the shipped channel layout. The +1.13 dB gain also clips 7.06 % of samples (the WAV already peaks at 0.00 dBFS).
@@ -49,7 +49,7 @@ restored check rc=0
 
 ## `vehicles#279` - loop click
 
-- WAV source: `E:\Modding\_gamedata\BmAKgrab\audio\wav\0C69336B.wav`, 2 ch, 16-bit, 48 kHz, 186,497 frames; slot 336,000 frames, mono, gain -6.95 dB.
+- WAV source: `E:\Modding\_shared\gamedata\BmAKgrab\audio\wav\0C69336B.wav`, 2 ch, 16-bit, 48 kHz, 186,497 frames; slot 336,000 frames, mono, gain -6.95 dB.
 - Loop point: no loop metadata (`loop_start`/`loop_end` null, vgmstream prints no loop line), so the file wrap is the only boundary the data carries.
 - Samples printed around the wrap in `audio_diag.md` (frames 335992-335999 and 0-7, decoded built / derived payload / vanilla). Decoded `built[k] == derived[k-16]` because the record's 32-byte codec header occupies the first 16 decoded frames (identical in vanilla, which is why frames 0-7 agree).
 - Steps: decoded wrap **-16.95 dBFS** (limit -40), derived payload alone -17.50, vanilla slot -41.24, source WAV's own end->start step -34.06, built interior p99 -46.01. Tile seam at frame 184449 = -68.03 dBFS.

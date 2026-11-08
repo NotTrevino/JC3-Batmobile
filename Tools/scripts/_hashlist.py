@@ -1,5 +1,5 @@
 import os
-base = r"E:\Modding\JC3-Batmobile\Research\Arkham Knight SFX\Arkham Knight SFX\batman_bnk"
+base = r"E:\Modding\JustCause3\JC3-Batmobile\Research\Arkham Knight SFX\Arkham Knight SFX\batman_bnk"
 for root, ds, fs in os.walk(base):
     for f in fs:
         print(os.path.getsize(os.path.join(root, f)), os.path.relpath(os.path.join(root, f), base))

@@ -8,10 +8,10 @@ def H(p):
         return None
 
 
-b059 = "E:/Modding/JC3-Batmobile/Builds/test-059/aaf/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/"
-b062 = "E:/Modding/JC3-Batmobile/Builds/test-062/aaf/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/"
-ts = "E:/Modding/JC3-Batmobile/Working/TrueScale/"
-am = "E:/Modding/JC3-Batmobile/Working/Assembled/"
+b059 = "E:/Modding/JustCause3/JC3-Batmobile/Builds/test-059/aaf/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/"
+b062 = "E:/Modding/JustCause3/JC3-Batmobile/Builds/test-062/aaf/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/"
+ts = "E:/Modding/JustCause3/JC3-Batmobile/Working/TrueScale/"
+am = "E:/Modding/JustCause3/JC3-Batmobile/Working/Assembled/"
 files = ["sportsmuscle_body_lod%d.rbm" % i for i in range(1, 6)]
 files += ["sportsmuscle_wheel_f_l_lod%d.rbm" % i for i in range(1, 6)]
 files += ["sportsmuscle_wheel_f_r_lod1.rbm", "sportsmuscle_engine_lod1.rbm",

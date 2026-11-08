@@ -159,5 +159,5 @@ plausible ranges for all 166 vehicles, with no mass term needed. Label: derived.
 |---|---|
 | `Research/BatmobileGrab/BMSDK_OFFSETS.json` | BmAK class layout: names, offsets, kinds |
 | `Research/BatmobileGrab/OFFSETS.md` | per-offset provenance lines quoted in section 2 |
-| `E:/Modding/_gamedata/JC3grab/entities` | JC3 grab: `Suspension` + `RigidBody` rows per entity |
+| `E:/Modding/_shared/gamedata/JC3grab/entities` | JC3 grab: `Suspension` + `RigidBody` rows per entity |
 

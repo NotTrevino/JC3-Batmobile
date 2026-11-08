@@ -2,7 +2,7 @@
 
 Rules applied (AGENTS.md): no pretrained JC3 knowledge used as evidence. Every claim cites a local file; absent = UNKNOWN. Nothing in the project was edited. No game launched.
 
-Path shorthand (root `E:\Modding\JC3-Batmobile\`):
+Path shorthand (root `E:\Modding\JustCause3\JC3-Batmobile\`):
 - GB = `GRAB_BACKLOG.md` (cards sections 5-9, tracker section 12 from line 1809)
 - RPT = `tmp\freebuff\reports\`   Q = `tmp\freebuff\queue\`   WT = `Working\Translation\`
 - RB = `Research\BatmobileGrab\`   RJ = `Research\JC3Grab\`   T6 = `WT\T6_HUD_CAMERA.md`

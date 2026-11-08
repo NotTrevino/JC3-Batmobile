@@ -651,5 +651,5 @@ python Tools/scripts/t_rows.py check             # A1/A16: 198 rows, check ok
 The heredocs above are read-only; the XML and hash probes parse the same donor files the generator
 reads and write nothing.
 
-Nothing in the repo, `Builds/`, `E:/Modding/_JC3grab`, `E:/Modding/_BmAKgrab` or `D:/Games` was
+Nothing in the repo, `Builds/`, `E:/Modding/JustCause3/_grab`, `E:/Modding/ArkhamKnight/_grab` or `D:/Games` was
 written, and no process was launched.

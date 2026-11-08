@@ -1,11 +1,11 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/pilot-card-lessons-from-q0.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/pilot-card-lessons-from-q0.md
 ONLY: freebuff
 EST: 35
 BRIEF: hand-written 2026-11-08
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/q0-prove-pilot-cards.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/q0-prove-pilot-cards.md
 Read reports/q0-prove-pilot-cards.md, the first agent-piloted run on a stock Serpente. The operator's intent (2026-11-08): piloting must remove in-game supervision. Agents run in-game tests unattended, and the operator only does sparse manual testing.
 1. Using the report's own timestamps, measure the time per card and per step. List every step that needed a human or would have needed one (also check tmp/freebuff/NEEDS_OPERATOR.md), and every failure.
 2. Per card, give the verdict: unattended-ready, needs a fix to run unattended (with the exact card diff, written in this report), or manual-only (with the reason).
 3. Estimate how many unattended in-game sessions per day the pipeline can run: lane session length, game launch and load time, install and undo time, and the need for one game instance at a time. Compare that with the supervised plan behind Working/Roadmap/landmarks.json game_days.
 4. Set "game_scale" in Working/Roadmap/landmarks.json to the measured ratio (unattended in-game days divided by supervised days; keep 1.0 if Q-0 failed). Before the edit, write the old and new values, the formula and the inputs in this report. This is the only file you may edit; the GUI completion estimate reads it.
-Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.
+Shared rules: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

@@ -4,7 +4,7 @@
 written or edited; nothing was launched.
 
 **Provenance / reversibility.** New file, `tmp/freebuff/reports/transform-anim-to-hinges.md`
-= `E:/Modding/JC3-Batmobile/tmp/freebuff/reports/transform-anim-to-hinges.md`. It is the output path the
+= `E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/transform-anim-to-hinges.md`. It is the output path the
 brief names, and every comparable plan in this project lives in `tmp/freebuff/reports/`.
 **Revert = delete this file.**
 

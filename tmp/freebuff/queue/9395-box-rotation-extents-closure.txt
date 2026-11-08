@@ -1,6 +1,6 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/box-rotation-extents-closure.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/box-rotation-extents-closure.md
 ONLY: freebuff
 EST: 40
 BRIEF: hand-written 2026-11-08
 Close the open items of GRAB task G3-01b on the Arkham Knight collision asset. Open: rotations of the three boxes of Physics.Batmobile_V3_Physics, what the packed byte at 0x4C of each FKBoxElem means (read tmp/freebuff/reports/box-flag-0x4c-witness.md, do not redo it), the extents convention (full length or half length), and which mesh is active per mode. Inputs: Research/BatmobileGrab/COLLISION_GEOM.md, COLLISION_WHERE.md, COLLISION_FRAME.md, COLLISION_SELECTOR2.md and the cooked physics file named there. Decode each box transform as centre, quaternion and extents, then convert to the JC3 frame already used in Working/Collision2/bm_vehicle_hull.json. State the convention as proven by comparing your decoded chassis box with the 690.305 x 374.536 x 207.5 cm figures already in Working/Translation/T22_REOPEN.md; if the two disagree by a factor two, that is the answer. Write Research/BatmobileGrab/COLLISION_GEOM2.md. Done check: all three boxes list centre, rotation and extents with the byte offset each came from; anything unproven is marked UNKNOWN.
-Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.
+Shared rules: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

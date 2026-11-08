@@ -1,7 +1,7 @@
 # Air control and ram assist — plans v2, every number rebuilt from its cited source
 
 **Provenance / reversibility.** New file, `tmp/freebuff/reports/air-control-and-ram-assist-plans-v2.md`
-= `E:/Modding/JC3-Batmobile/tmp/freebuff/reports/air-control-and-ram-assist-plans-v2.md`. Intended
+= `E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/air-control-and-ram-assist-plans-v2.md`. Intended
 change: rebuild the numbers of the two closest-system plans **row by row** after
 `tmp/freebuff/reports/audit-air-control-plan-numbers.md` (five MISMATCH rows) and
 `tmp/freebuff/reports/audit-ram-assist-plan-numbers.md` (the `KillFlipTorque` family). It is the
@@ -114,7 +114,7 @@ and the window sentence become single-sourced.
 | C4 | §1 | `DriverLean.righting_torque` 1500..4000, n=23 = 18 bikes + 5 boats, 0 aircraft | same | decoded | `VOCABULARY.md:566`; `Research/challenge/card-T-10.md:58` | MATCH |
 | C5 | §1 | `Fins.effective_in_air` 0 in 200/200 | same | decoded | `VOCABULARY.md:625` | MATCH |
 | **C6** | §1 (:26), §3 (:152) | "307 pulses, 31 members, **0 of 23 tune paths are collision**, 14 unowned" | "**307 pulses / 79 chassis / 31 members (5 named + 26 hashed) / 14 unowned**; trigger **explosion** (`FORCEPULSE.md:3`), **23 tunes** (`:59`)" — drop "0 of 23" | decoded | `FORCEPULSE.md:3, :10, :59`; `force-pulse-carrier-recount.md` §0 (recounted from `FORCEPULSE.json`) | **PARTIAL** — counts MATCH, the "0 of 23" phrase is nowhere in `FORCEPULSE.md` |
-| **C7** | §3 leg 2 | donor plane module `v4500_plane_solar_smallfloatprop_aerodynamics.vmodc` | **UNKNOWN path in this workspace** — `Builds/bm-RC2/aaf/editor/entities/jc_vehicles/` contains only `00_shared` and `01_land` | UNKNOWN | would be settled by the asset cache the carrier read (outside the workspace: `E:/Modding/_gamedata`, not read) | **UNSOURCED path** — leg 2 cannot be built from this tree as written |
+| **C7** | §3 leg 2 | donor plane module `v4500_plane_solar_smallfloatprop_aerodynamics.vmodc` | **UNKNOWN path in this workspace** — `Builds/bm-RC2/aaf/editor/entities/jc_vehicles/` contains only `00_shared` and `01_land` | UNKNOWN | would be settled by the asset cache the carrier read (outside the workspace: `E:/Modding/_shared/gamedata`, not read) | **UNSOURCED path** — leg 2 cannot be built from this tree as written |
 | **C8** | §4 (:189) | "±20 % — the project's ratio tolerance (`T10_DAMAGE.md` §0, ARM-2)" | "±20 % — **ARM-2's heavy-weapon hit band**, used here as a **declared** band, not a decoded tolerance" | declared band | `Working/Translation/T10_DAMAGE.md:20` (there is no "§0" and no general ratio tolerance) | **MISMATCH** (citation scope) |
 | **G2** | §3 leg 1 (:120) | "the ATV module's **0x48**" | `CustomLandGlobal.drift.max_drift_torque` **float 0x48** on **`v0012_car_autostraad_atv_custom_land_global.vmodc`** | decoded | `carrier-air-control.md` §2.1 / §3 | **UNSOURCED → partly fixed**: the module is now named; the file itself is not in `bm-RC2`, so the offset must still be resolved **by member name** at build time, never copied |
 | G1/G3/G5/G6/G7 | §3, §4 | B-05/B-07/B-09/B-18 ids, `jc3index`/`ENTITIES.md` resolver, test-060, minimap arrow, landing 30°/15° | keep the two tolerances **labelled** as pilot thresholds; `Research/specs/B-0N.md` exist for B-04…B-16 and B-22…B-25, so cite `Research/specs/B-0N.md` **and** the receipt, and drop "B-18" (no such spec) | declared | `Research/specs/` listing | PARTIAL — cosmetic for the build except "B-18" |
@@ -308,7 +308,7 @@ pass — and the −200 finding removes the "out-of-domain magnitude" excuse for
 * **`v4500_plane_solar_smallfloatprop_aerodynamics.vmodc` and `v0012_car_autostraad_atv_custom_land_global.vmodc`
   are not in this workspace** (`Builds/bm-RC2/.../jc_vehicles/` holds `00_shared` and `01_land` only).
   The aero leg's donor path is therefore UNKNOWN here, and the drift offset must be resolved by member
-  name — both stated in §1.5 and §2. The asset cache lives outside the project (`E:/Modding/_gamedata`)
+  name — both stated in §1.5 and §2. The asset cache lives outside the project (`E:/Modding/_shared/gamedata`)
   and was not read.
 * **Still UNKNOWN, unchanged:** whether `drift.*` torque applies airborne (U1, needs Q-AC-1); whether
   the `rotor_collision` consumer runs on a car and what `min_rpm` compares against (U1/U2, needs

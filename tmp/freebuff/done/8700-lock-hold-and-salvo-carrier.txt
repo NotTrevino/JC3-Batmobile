@@ -1,6 +1,6 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/lock-hold-and-salvo-carrier.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/lock-hold-and-salvo-carrier.md
 ONLY: freebuff
 EST: 55
 BRIEF: hand-written 2026-11-06
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/wp4-fire-leech.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/wp4-fire-leech.md
 Report wp4-fire-leech.md found that the Fire Leech (w143_rpg_fire_leach) carries guided flight and target acquisition, but that BmAK's 2.0 s lock hold and 8-target salvo have no member in the weapon data (T_WP3B_LOCKON.md section 4.1, missile_per_shot is 1). The goal is BmAK's behaviour, so do not stop at "no member". Search the places a hold time or a multi-target volley could live: the AutoAim tunes of every weapon (read autoaim_w143_rpg_fire_leach.wtunec byte by byte, including the members not yet named), the lock-on code path's data in the HUD movies, the entity-level weapon objects, the aircraft and anti-air launchers, the multi-rocket pods that fire several projectiles per trigger. For the salvo, test per-shot and burst members on multi-barrel weapons (the missile pods, gatlings, the Chaos rocket weapons) and say whether N shots toward N targets can be built from them. Report decoded members with offsets and what each still lacks.

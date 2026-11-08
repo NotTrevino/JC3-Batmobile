@@ -41,7 +41,7 @@ not consulted. The expected values are written down from `chase-02.md`'s table, 
 first pass reproduced the bytes and a DIFF cannot hide.
 
 ```
-$ python Tools/scripts/chase/chase2_verify.py --json E:/Modding/_BmAKgrab/chase/chase2_verify.json
+$ python Tools/scripts/chase/chase2_verify.py --json E:/Modding/ArkhamKnight/_grab/chase/chase2_verify.json
 package BmGame.upk: version 863, 177031 exports, image 356,085,334 B
   Default__R3rdPersonCamera: export 34970, image+0x12347c6, 34362 B, 447 tags, stop=eof
   Default__RVehicleBatmobileBase: export 10923, image+0x1022d59, 3186 B, 181 tags, stop=eof
@@ -288,7 +288,7 @@ decode script bytecode, and the install ships no `.u` script packages to read (t
   RIP-relative float resolution.
 - `Tools/scripts/chase/chase2_packages.py` — `sweep` (streaming name search) and `scan` (default
   objects carrying the card offsets).
-- `E:/Modding/_BmAKgrab/chase/chase2_verify.json`, `chase2_native2.json`, `chase2_sweep_dlc.json`.
+- `E:/Modding/ArkhamKnight/_grab/chase/chase2_verify.json`, `chase2_native2.json`, `chase2_sweep_dlc.json`.
 
 `FOOTAGE.md`, `chase-02.md`, `GRAB_BACKLOG.md`, `MODLOG.md` and every other existing document were
 **not edited** (card rule); nothing was launched, patched, committed, or written under `D:/Games` or

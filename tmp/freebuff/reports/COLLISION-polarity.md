@@ -238,8 +238,8 @@ Inline dump for the companion health-bar functions (`ShowHealthBarIfNotMax`, `Sh
 
 ```
 $ uv run --with numpy python Tools/scripts/grab_selector_polarity.py --write
-wrote E:\Modding\JC3-Batmobile\Research\BatmobileGrab\SELECTOR_POLARITY.md (8109 bytes)
-wrote E:\Modding\JC3-Batmobile\Research\BatmobileGrab\SELECTOR_POLARITY.json (10175 bytes)
+wrote E:\Modding\JustCause3\JC3-Batmobile\Research\BatmobileGrab\SELECTOR_POLARITY.md (8109 bytes)
+wrote E:\Modding\JustCause3\JC3-Batmobile\Research\BatmobileGrab\SELECTOR_POLARITY.json (10175 bytes)
 cases=6 agree=6 verdict=decided
 EXIT=0
 

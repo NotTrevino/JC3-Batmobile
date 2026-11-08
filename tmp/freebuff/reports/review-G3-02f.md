@@ -59,7 +59,7 @@ readers under `tmp/freebuff/scratch/`.
 
 ## The ten offsets, re-read
 
-`F` = `E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated/BmGame`. Paths in the card are relative to
+`F` = `E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Generated/BmGame`. Paths in the card are relative to
 `BmSDK/Generated/`.
 
 | # | field | card offset | card kind | card mask | card line | my read | match |
@@ -94,7 +94,7 @@ RPlayerController.g.cs:26203      .... & 1048576) != 0;    // QuickGadgetOnRT   
 
 ## The X search - what I ran, and what it found
 
-Searches (all against `E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated`, `--include=*.g.cs`):
+Searches (all against `E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Generated`, `--include=*.g.cs`):
 
 | # | pattern | result |
 |---|---|---|

@@ -19,7 +19,7 @@ section.
 Command:
 
 ```
-cd /e/Modding/JC3-Batmobile && python Tools/scripts/jc3turret.py --check
+cd /e/Modding/JustCause3/JC3-Batmobile && python Tools/scripts/jc3turret.py --check
 ```
 
 Output:
@@ -123,7 +123,7 @@ port must copy are all in the json and all correct.
 
 ## Notes / limits of this review
 
-- I did not re-decode any `.physicsc` or `.vmodc` from `E:/Modding/_JC3grab`; the raw-data checks
+- I did not re-decode any `.physicsc` or `.vmodc` from `E:/Modding/JustCause3/_grab`; the raw-data checks
   above re-read the card's own machine half (`TURRET.json`) and, for the point census, the upstream
   `WEAPON_WIRING.jsonl`/`PARTS_TABLE.jsonl` the script consumes. If `TURRET.json` itself were wrong
   relative to the packfiles, this review would not see it — but `--check` rebuilds that json from

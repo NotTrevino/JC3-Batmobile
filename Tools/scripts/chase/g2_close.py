@@ -26,7 +26,7 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(HERE)))
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/_shared/gamedata/JC3grab")
 sys.path.insert(0, os.path.join(ROOT, "Tools", "scripts"))
 
 TANKS = ("v0200_car_capstone_apc", "v0201_car_capstone_mediumtank",

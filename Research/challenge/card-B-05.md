@@ -7,7 +7,7 @@
 
 **Method.** Every claim below was re-derived from files on disk with the project's own reader
 (`jc3wiring.parse_epe`), the project's own hash (`rbmhdr.hash_jenkins`), `ConvertProperty`, and a
-census over the 295 cached fleet graphs in `E:/Modding/_JC3grab/wiring/epe` (named by
+census over the 295 cached fleet graphs in `E:/Modding/JustCause3/_grab/wiring/epe` (named by
 `GRAB_BACKLOG.md` §0.6). Scratch exports went to the OS temp dir only. No file in the repo was
 modified except this report; no game was launched, nothing was written under `D:/Games` or
 `E:/Games`, no build was touched, no git command ran. `bm_entity.py --check` was deliberately
@@ -62,7 +62,7 @@ behaviour)"*. Silent premise: `Builds/bm-009`'s `.epe` is a faithful copy of the
 **Test.** The same entity's shipped graph is in the fleet cache. Counted with the same reader:
 
 ```
-$ python -c "... jc3wiring.parse_epe('E:/Modding/_JC3grab/wiring/epe/v0300_..._civilian_01.ee.xml')"
+$ python -c "... jc3wiring.parse_epe('E:/Modding/JustCause3/_grab/wiring/epe/v0300_..._civilian_01.ee.xml')"
 fleet civilian objects 450  CPartProp 40
 base (bm-009, tmp/b05-spec/bm-009.xml) objects 416  CPartProp 6
 missing from base: 34

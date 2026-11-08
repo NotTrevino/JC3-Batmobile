@@ -5,7 +5,7 @@
 # 105,302 B) loads with the other 35 parts gone.
 #   test-042 = test-040 tree + test-030's 5-part .epe, read from the .ee (internal)
 $ErrorActionPreference = 'Stop'
-$root = 'E:\Modding\JC3-Batmobile'
+$root = 'E:\Modding\JustCause3\JC3-Batmobile'
 $g    = "$root\Tools\Gibbed"
 $ee   = 'v0300_car_kensington_sportsmuscle_civilian_01.ee'
 $epe  = 'editor\entities\jc_vehicles\01_land\v0300_car_kensington_sportsmuscle\v0300_car_kensington_sportsmuscle_civilian_01.epe'

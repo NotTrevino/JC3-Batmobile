@@ -59,7 +59,7 @@ and the game install were read only.
 1. Checking the helper names I relied on exist in the reader:
 
 ```
-$ cd "E:/Modding/JC3-Batmobile" && grep -n "BODY_ENTRY_SIZE\|^BODY\|def array\|def decode_polytope\|self.extents\|self._starts" Tools/scripts/jc3hkx.py | head -30
+$ cd "E:/Modding/JustCause3/JC3-Batmobile" && grep -n "BODY_ENTRY_SIZE\|^BODY\|def array\|def decode_polytope\|self.extents\|self._starts" Tools/scripts/jc3hkx.py | head -30
 94:BODY_ENTRY_SIZE = 96         # hknpPhysicsSystemData 4th array; hardpoint at +0x30
 159:        self._starts = {o.offset: o.cls for o in self.objects}
 160:        self._order = sorted(self._starts)
@@ -74,15 +74,15 @@ $ cd "E:/Modding/JC3-Batmobile" && grep -n "BODY_ENTRY_SIZE\|^BODY\|def array\|d
 2. First `--write` (crash: median over an empty list)
 
 ```
-$ cd "E:/Modding/JC3-Batmobile" && uv run --with numpy python Tools/scripts/jc3_inertia.py --write
+$ cd "E:/Modding/JustCause3/JC3-Batmobile" && uv run --with numpy python Tools/scripts/jc3_inertia.py --write
 Traceback (most recent call last):
-  File "E:\Modding\JC3-Batmobile\Tools\scripts\jc3_inertia.py", line 689, in <module>
+  File "E:\Modding\JustCause3\JC3-Batmobile\Tools\scripts\jc3_inertia.py", line 689, in <module>
     raise SystemExit(main())
-  File "E:\Modding\JC3-Batmobile\Tools\scripts\jc3_inertia.py", line 635, in main
+  File "E:\Modding\JustCause3\JC3-Batmobile\Tools\scripts\jc3_inertia.py", line 635, in main
     doc = build()
-  File "E:\Modding\JC3-Batmobile\Tools\scripts\jc3_inertia.py", line 340, in build
+  File "E:\Modding\JustCause3\JC3-Batmobile\Tools\scripts\jc3_inertia.py", line 340, in build
     results = [run_layout(n, f, blocks) for n, _d, f in LAYOUTS]
-  File "E:\Modding\JC3-Batmobile\Tools\scripts\jc3_inertia.py", line 329, in run_layout
+  File "E:\Modding\JustCause3\JC3-Batmobile\Tools\scripts\jc3_inertia.py", line 329, in run_layout
     "box_error_median": (round(sorted(r["box_error"] for r in tested
   IndexError: list index out of range
 ```
@@ -94,7 +94,7 @@ Traceback (most recent call last):
 3. Debug dump of the block structure (extents, zero fields, tail values, masses, mirror pairs):
 
 ```
-$ cd "E:/Modding/JC3-Batmobile" && uv run --with numpy python - <<'PY'
+$ cd "E:/Modding/JustCause3/JC3-Batmobile" && uv run --with numpy python - <<'PY'
 import sys, json, struct, collections
 sys.path.insert(0, "Tools/scripts")
 import jc3_inertia as J
@@ -134,7 +134,7 @@ pairs: 8
 4. Diagonal placement search over all ten int16 windows, before fixing the render:
 
 ```
-$ cd "E:/Modding/JC3-Batmobile" && uv run --with numpy python - <<'PY'
+$ cd "E:/Modding/JustCause3/JC3-Batmobile" && uv run --with numpy python - <<'PY'
 ... window scan, 10 windows, signed and abs ...
 PY
 win sgn pd tri e25 e50 median_err
@@ -156,7 +156,7 @@ win sgn pd tri e25 e50 median_err
 5. Mirror-pair debug after the geometry fix (this is the pair the note uses):
 
 ```
-$ cd "E:/Modding/JC3-Batmobile" && uv run --with numpy python - <<'PY'
+$ cd "E:/Modding/JustCause3/JC3-Batmobile" && uv run --with numpy python - <<'PY'
 ... J.mirror_pairs(c) ...
 PY
 pairs: 1 masks: {'0': 1} rejected: 3
@@ -171,7 +171,7 @@ pairs: 1 masks: {'0': 1} rejected: 3
 6. Final write and check:
 
 ```
-$ cd "E:/Modding/JC3-Batmobile" && uv run --with numpy python Tools/scripts/jc3_inertia.py --write; echo "write_exit=$?"; uv run --with numpy python Tools/scripts/jc3_inertia.py --check; echo "check_exit=$?"
+$ cd "E:/Modding/JustCause3/JC3-Batmobile" && uv run --with numpy python Tools/scripts/jc3_inertia.py --write; echo "write_exit=$?"; uv run --with numpy python Tools/scripts/jc3_inertia.py --check; echo "check_exit=$?"
 wrote INERTIA.md / INERTIA.json
 blocks: 56  polytope links: 54  with hull: 54  with body id: 40
 mirror pairs: 1 masks: {'0|9|10': 1}

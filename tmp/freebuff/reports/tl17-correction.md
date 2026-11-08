@@ -31,7 +31,7 @@ Not edited: `Working/Translation/T14_LIGHTS.md`, `Working/Translation/t14_lights
 ## Commands run (verbatim)
 
 ```
-cd /e/Modding/JC3-Batmobile && set -o pipefail && echo "=== write ===" && python Tools/scripts/tl17_proposal.py --write; echo "write exit=$?"; echo "=== check ===" && python Tools/scripts/tl17_proposal.py --check; echo "check exit=$?"
+cd /e/Modding/JustCause3/JC3-Batmobile && set -o pipefail && echo "=== write ===" && python Tools/scripts/tl17_proposal.py --write; echo "write exit=$?"; echo "=== check ===" && python Tools/scripts/tl17_proposal.py --check; echo "check exit=$?"
 ```
 ```
 === write ===
@@ -66,7 +66,7 @@ check exit=0
 The JSON block was also parsed independently out of the written file:
 
 ```
-cd /e/Modding/JC3-Batmobile && python - <<'PY'
+cd /e/Modding/JustCause3/JC3-Batmobile && python - <<'PY'
 import json, re
 body = open("Working/Translation/TL17_PROPOSAL.md", encoding="utf-8").read()
 blocks = re.findall(r"```json\n(.*?)\n```", body, re.S)

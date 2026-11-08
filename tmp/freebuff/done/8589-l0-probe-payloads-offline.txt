@@ -1,9 +1,9 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/l0-probe-payloads-offline.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/l0-probe-payloads-offline.md
 ONLY: freebuff
 EST: 55
 BRIEF: hand-written 2026-11-08
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/jc3-community-writers-check.md
-Desk only: build eight tiny probe payloads for the first supervised session on bm-RC4 (operator approved RC4 probes on 2026-11-08; see E:/Modding/JC3-Batmobile/ROADMAP.md section 5). Each payload changes exactly ONE thing on top of Builds/bm-RC4, so a single look in game answers a single question. Write each into its own folder Builds/probe-L0/P<n>-<slug>/ with a receipt (files, sha256, the expected in-game observation, how to undo). Use install_v3 (never Rollback091, which deletes files: tracker V-06-RC2).
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/jc3-community-writers-check.md
+Desk only: build eight tiny probe payloads for the first supervised session on bm-RC4 (operator approved RC4 probes on 2026-11-08; see E:/Modding/JustCause3/JC3-Batmobile/ROADMAP.md section 5). Each payload changes exactly ONE thing on top of Builds/bm-RC4, so a single look in game answers a single question. Write each into its own folder Builds/probe-L0/P<n>-<slug>/ with a receipt (files, sha256, the expected in-game observation, how to undo). Use install_v3 (never Rollback091, which deletes files: tracker V-06-RC2).
 P1 physicsc-read: move the Batmobile world hull forward by a visible amount (for example 1.0 m) in a private copy, so contact with a wall shows whether our .physicsc is read.
 P2 keymap: a dropzone keymap_gamepad.bin with one harmless extra binding (pick an action with an obvious effect); if no writer exists, record that and use the tool found by reports/jc3-community-writers-check.md.
 P3 hud-gfx: a private ui/hud.gfx with one visible text change; if no GFx writer exists, write UNKNOWN and skip.
@@ -12,4 +12,4 @@ P5 second-entity: a second Rebel Drop entry for a copy of the entity (U2: does a
 P6 use-vehicle-mod: nothing to build; write the button sequence for RPADRIGHT on the mod vehicle (U3).
 P7 damage-model: nothing to build; write the shot list (pistol, rifle, MG, rocket, tank shell; count hits and read the bar) for H0/H1/H2.
 P8 effc-growth: one extra emitter added to a private .effc on the afterburner socket.
-Do not install, launch, or create APPROVED_Q.txt. Report: per probe, folder, change, expected observation, pass/fail rule, undo, and anything UNKNOWN. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.
+Do not install, launch, or create APPROVED_Q.txt. Report: per probe, folder, change, expected observation, pass/fail rule, undo, and anything UNKNOWN. Shared rules: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

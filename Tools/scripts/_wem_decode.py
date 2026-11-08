@@ -6,12 +6,12 @@ import json, os, struct, subprocess, sys, wave
 import numpy as np
 
 CK = r"E:\Games\Batman - Arkham Knight\BmGame\CookedPCConsole"
-WEMD = r"E:\Modding\JC3-Batmobile\Working\Audio\wem"
-WAVD = r"E:\Modding\JC3-Batmobile\Working\Audio\wav"
-CLI = r"E:\Modding\JC3-Batmobile\Tools\vgmstream-win64\vgmstream-cli.exe"
+WEMD = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\wem"
+WAVD = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\wav"
+CLI = r"E:\Modding\JustCause3\JC3-Batmobile\Tools\vgmstream-win64\vgmstream-cli.exe"
 
 limit = int(sys.argv[sys.argv.index("--limit") + 1]) if "--limit" in sys.argv else 40
-census = json.load(open(r"E:\Modding\JC3-Batmobile\Working\Audio\sfx_census.json"))
+census = json.load(open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\sfx_census.json"))
 cands = [r for r in census if isinstance(r["ch"], int) and r["ch"] >= 2
          and (r["dur_s"] or 0) >= 10 and r["extra_waves"] <= 3]
 cands.sort(key=lambda r: -r["size"])
@@ -74,4 +74,4 @@ for s, tag, wad, h, sz, nch, dur, fl, cv in results:
 json.dump([{"tag": t, "stat": s, "wad": w, "hash": h, "size": sz, "ch": nch,
             "dur_s": d, "frac_loud": fl, "cv": cv}
            for s, t, w, h, sz, nch, d, fl, cv in results],
-          open(r"E:\Modding\JC3-Batmobile\Working\Audio\ranking.json", "w"), indent=1)
+          open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\ranking.json", "w"), indent=1)

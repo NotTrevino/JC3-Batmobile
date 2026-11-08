@@ -11,13 +11,13 @@ BmAK stores `SuspensionTravelUp 30` / `SuspensionTravelDown 40` (cm) and `BMRear
 
 | side | what | count | where |
 |---|---|---:|---|
-| JC3 | entity wiring JSONs with all modules decoded | 232 | `E:/Modding/_gamedata/JC3grab/entities/*.ee.json` |
+| JC3 | entity wiring JSONs with all modules decoded | 232 | `E:/Modding/_shared/gamedata/JC3grab/entities/*.ee.json` |
 | JC3 | files carrying a `Suspension` module | 166 | same |
 | JC3 | files with `Suspension` + `RigidBody.mass` + `LandGlobal.front_wheels.radius` | 126 | same |
 | JC3 | distinct suspension presets among those | 38 | same |
 | BmAK | vehicles with a decoded stiffness and travel | **1** (the Batmobile) | `Research/BatmobileGrab/MECHANICS_NAMES.md`, `TYRES_PACKAGE.md` |
 
-**Only one BmAK vehicle exists in the grab.** `E:/Modding/_gamedata/BmAKgrab/` holds `anims audio bones chase gltf lodtest meshes motion.txt umodelcfg` and no second vehicle, so a two-sided point cloud cannot be built; the fit is one-sided (the JC3 fleet's rule) plus one decoded pair (the Batmobile's 3000 against its decoded 210 kg default). That is why the error bars below are quoted per number.
+**Only one BmAK vehicle exists in the grab.** `E:/Modding/_shared/gamedata/BmAKgrab/` holds `anims audio bones chase gltf lodtest meshes motion.txt umodelcfg` and no second vehicle, so a two-sided point cloud cannot be built; the fit is one-sided (the JC3 fleet's rule) plus one decoded pair (the Batmobile's 3000 against its decoded 210 kg default). That is why the error bars below are quoted per number.
 
 ## 3. Member inventory, with the units the files force
 

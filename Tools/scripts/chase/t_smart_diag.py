@@ -15,7 +15,7 @@ import re
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
-CH = r"E:/Modding/_gamedata/BmAKgrab/chase"
+CH = r"E:/Modding/_shared/gamedata/BmAKgrab/chase"
 REPORT = os.path.join(ROOT, "tmp", "freebuff", "reports", "smart-search-recall-diagnosis.md")
 MODES = os.path.join(ROOT, "Research", "BatmobileGrab", "MODES.md")
 RUNS = {"qwen": "51c8dd3c_v1search", "jeb": "jeb_340c7b55_v1search"}

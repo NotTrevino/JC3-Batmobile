@@ -87,6 +87,6 @@ inside the native function and are **not claimed** here; the table is the input 
 ```bash
 python Tools/scripts/bmak_speedometer.py --write   # -> SPEEDOMETER.json
 python Tools/scripts/bmak_speedometer.py --check   # re-derive movies, config, refs, fields
-java -jar E:/Modding/_tools/ffdec/ffdec.jar -dumpSWF \
+java -jar E:/Modding/_shared/tools/ffdec/ffdec.jar -dumpSWF \
      E:/Modding/_BmAK_grab/hud/modules/HudModuleHealth/movie.gfx | grep -n Speed
 ```

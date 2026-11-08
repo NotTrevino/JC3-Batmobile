@@ -1,7 +1,7 @@
 """FSB5 census: all sample entries (name, rate, ch, codec, offset, size)."""
 import os, struct
 
-p = r"E:\Modding\JC3-Batmobile\Working\Audio\jc3bank\sound\fmod_banks\vehicles.bank"
+p = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\jc3bank\sound\fmod_banks\vehicles.bank"
 d = open(p, "rb").read()
 f5 = d.find(b"FSB5")
 print("FSB5 @0x%X" % f5)

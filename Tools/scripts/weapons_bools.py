@@ -3,7 +3,7 @@
 `Research/BatmobileGrab/WEAPONS.json` keeps 26 `BoolProperty` records with no name: a bool that
 shares its 32-bit word with another bool cannot be named from an offset, so the record keeps the
 raw word (`bits`).  This script names them from the BmSDK generated sources
-(`E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated/**/*.g.cs`), where each bool property's getter
+(`E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Generated/**/*.g.cs`), where each bool property's getter
 states both the field offset and its mask:
 
     get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2396) & 8) != 0; }
@@ -41,7 +41,7 @@ OUT = os.path.join(ROOT, "Research", "BatmobileGrab")
 MD = os.path.join(OUT, "WEAPONS_BOOLS.md")
 JS = os.path.join(OUT, "WEAPONS_BOOLS.json")
 WEAPONS = os.path.join(OUT, "WEAPONS.json")
-SDK = "E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated"
+SDK = "E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Generated"
 
 DECL_RE = re.compile(r"^\s*public\s+(?:unsafe\s+)?bool\s+(\w+)\s*$")
 # The mask is a C# int literal: bit 31 is written as -2147483648 in the generated getter, so the
@@ -297,7 +297,7 @@ def render(d: dict) -> str:
     A("A `BoolProperty` tag does not carry a bit index: it carries the whole packed word"
       " (`bits`).")
     A("The word's offset is the tag's offset; each member's bit is the mask its getter reads in")
-    A("`E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated/**/*.g.cs`:")
+    A("`E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Generated/**/*.g.cs`:")
     A("")
     A("    get { return (...ToManaged<int>(Ptr + 2396) & 8) != 0; }")
     A("")

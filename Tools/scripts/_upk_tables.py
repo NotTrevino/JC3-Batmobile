@@ -2,8 +2,8 @@
 import struct
 
 IMG_BASE = 0x369  # file[0:0x369] + stream
-stream = open(r"E:\Modding\JC3-Batmobile\Working\Audio\bm_stream.bin", "rb").read()
-names = open(r"E:\Modding\JC3-Batmobile\Working\Audio\bm_names.txt").read().splitlines()
+stream = open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\bm_stream.bin", "rb").read()
+names = open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\bm_names.txt").read().splitlines()
 NC = len(names)
 
 def img(off):
@@ -37,4 +37,4 @@ if bad == 0:
         print("  BK:", n)
     json = __import__("json")
     json.dump({"events": akev, "banks": akbk},
-              open(r"E:\Modding\JC3-Batmobile\Working\Audio\batmobile_wwise_refs.json", "w"), indent=1)
+              open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\batmobile_wwise_refs.json", "w"), indent=1)

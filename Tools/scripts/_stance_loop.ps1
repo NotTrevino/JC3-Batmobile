@@ -3,7 +3,7 @@
 # land_global keeps its size, so every variant reuses 047's .toc byte-identically
 # (asserted). Install sequentially, stop at the first that sits right and report it.
 $ErrorActionPreference = 'Stop'
-$root = 'E:\Modding\JC3-Batmobile'
+$root = 'E:\Modding\JustCause3\JC3-Batmobile'
 $py = 'uv'
 $g  = "$root\Tools\Gibbed"
 $ee = 'v0300_car_kensington_sportsmuscle_civilian_01.ee'

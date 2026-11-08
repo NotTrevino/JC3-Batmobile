@@ -65,7 +65,7 @@ pivot the JC3 row uses.
 
 | fact | value | label |
 |---|---|---|
-| `EngineRotatingPart` / `engine_rpm` strings in `E:/Modding/_tools/BmSDK-AK` | **0 hits** (grep of `src`, all `.cs`) | decoded |
+| `EngineRotatingPart` / `engine_rpm` strings in `E:/Modding/_shared/tools/BmSDK-AK` | **0 hits** (grep of `src`, all `.cs`) | decoded |
 | BmAK RPM member | `SVehicle.EngineRPM`, FloatProperty, offset **1840** | decoded (`BMSDK_OFFSETS.json`) |
 | BmAK RPM curve | `RVehicleSimCar.EngineRPMCurve`, FInterpCurveFloat, offset **280** | decoded (same) |
 | member naming the jet | **none**; no member in the 41-class dump contains "jet" | decoded |
@@ -87,7 +87,7 @@ one, so P-05's mechanism stays donor-sourced.
 `Playable_Batmobile_SF`, `Playable_BatmobileMK2_SF`, `Playable_BatmobileFunhouse_SF`,
 `Playable_BatmobileJoker_SF`, `BmGame.upk`, `Engine.upk` (all under
 `E:/Games/Batman - Arkham Knight/BmGame/CookedPCConsole`), plus the SDK dump at
-`E:/Modding/_tools/BmSDK-AK` and `Research/BatmobileGrab/{BONES,ANIMATIONS,BMSDK_OFFSETS}.json`.
+`E:/Modding/_shared/tools/BmSDK-AK` and `Research/BatmobileGrab/{BONES,ANIMATIONS,BMSDK_OFFSETS}.json`.
 Not searched: DLC trees and other gameplay packages; an object named `batmobile_jet` there is
 possible, not observed.
 

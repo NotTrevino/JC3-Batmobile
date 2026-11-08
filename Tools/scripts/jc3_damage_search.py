@@ -16,8 +16,8 @@ The graphs are decoded by `jc3detail.py` into `_JC3grab/detail/*.ee.json`; this 
 reads them. `--check` re-scans and compares against `DAMAGE_MECHANISMS.json`.
 
 Usage:
-  python jc3_damage_search.py --detail E:/Modding/_gamedata/JC3grab/detail --write
-  python jc3_damage_search.py --detail E:/Modding/_gamedata/JC3grab/detail --check
+  python jc3_damage_search.py --detail E:/Modding/_shared/gamedata/JC3grab/detail --write
+  python jc3_damage_search.py --detail E:/Modding/_shared/gamedata/JC3grab/detail --check
 """
 from __future__ import annotations
 
@@ -33,7 +33,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
 OUT = os.path.join(ROOT, "Research", "JC3Grab", "DAMAGE_MECHANISMS.json")
 
-DEFAULT_DETAIL = os.path.join(os.path.dirname(ROOT), "_gamedata", "JC3grab", "detail")   # moved 2026-11-02
+DEFAULT_DETAIL = os.path.join(os.path.dirname(os.path.dirname(ROOT)), "_shared", "gamedata", "JC3grab", "detail")   # moved 2026-11-02
 
 TOKEN = re.compile(r"invuln|indestruct|immune|godmode|killable|damageable|destruct|breakable|"
                    r"wreck|health|damage|shield|armou?r|protect", re.I)

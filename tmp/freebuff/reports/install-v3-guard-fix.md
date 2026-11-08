@@ -1,5 +1,5 @@
 STATUS: done — v3 installer written and proven; both reviewer bypasses now refuse on copies under
-`E:\Modding\_dropzone_sim_rc2_v3*`, and all three rollback scenarios end sha256-identical.
+`E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2_v3*`, and all three rollback scenarios end sha256-identical.
 No real game or dropzone path was read, written or passed to any command.
 
 ## What was wrong in v2 (from `tmp/freebuff/reports/install-v2-review.md`)
@@ -67,19 +67,19 @@ wrote Working\Installer\install_v3.ps1 (13635 chars, 9 rows)
 
 ```
 $ python Tools/scripts/install_v3.py --check
-rows 9 | sim copies under E:\Modding\_dropzone_sim_rc2_v3*
-  bypass_1_prefix_sibling: {"case_root_after": ["dropzone"], "dropzone_after": [], "exit": 2, "out": "REFUSED: -GameDir E:\\Modding\\_dropzone_sim_rc2_v3_prefix is not the simulation root E:\\Modding\\_dropzone_sim_rc2_v3 or a directory under it (path components compared)", "refused": true}
-  guard_outside_sim: {"created": false, "exit": 2, "out": "REFUSED: -GameDir E:\\Modding\\_not_a_sim_v3_case is not the simulation root E:\\Modding\\_dropzone_sim_rc2_v3 or a directory under it (path components compared)", "refused": true}
-  guard_traversal: {"created": false, "exit": 2, "out": "REFUSED: -GameDir E:\\Modding\\_dropzone_sim_rc2_v3_x is not the simulation root E:\\Modding\\_dropzone_sim_rc2_v3 or a directory under it (path components compared)", "refused": true}
-  guard_fake_game_root: {"created": false, "exit": 2, "out": "REFUSED: -GameDir D:\\Games\\Fake Just Cause 3 is not the simulation root E:\\Modding\\_dropzone_sim_rc2_v3 or a directory under it (path components compared)", "refused": true}
-  bypass_2_manifest_outside: {"decoy_intact": true, "dropzone_unchanged": true, "exit": 2, "manifest_entries": 10, "out": "REFUSED: manifest path ..\\decoy_outside_dropzone.txt resolves outside the dropzone root E:\\Modding\\_dropzone_sim_rc2_v3\\case_manifest\\dropzone: E:\\Modding\\_dropzone_sim_rc2_v3\\case_manifest\\decoy_outside_dropzone.txt", "refused": true, "snapshot_still_present": true}
-  gate_3_created_dir_outside: {"dropzone_unchanged": true, "escape_dir_intact": true, "exit": 2, "out": "REFUSED: manifest created_dir E:\\Modding\\_dropzone_sim_rc2_v3\\case_dirs\\escape_dir resolves outside the dropzone root E:\\Modding\\_dropzone_sim_rc2_v3\\case_dirs\\dropzone: E:\\Modding\\_dropzone_sim_rc2_v3\\case_dirs\\escape_dir", "refused": true}
+rows 9 | sim copies under E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2_v3*
+  bypass_1_prefix_sibling: {"case_root_after": ["dropzone"], "dropzone_after": [], "exit": 2, "out": "REFUSED: -GameDir E:\\Modding\\_dropzone_sim_rc2_v3_prefix is not the simulation root E:\\Modding\\JustCause3\\_dropzone_sims\\_dropzone_sim_rc2_v3 or a directory under it (path components compared)", "refused": true}
+  guard_outside_sim: {"created": false, "exit": 2, "out": "REFUSED: -GameDir E:\\Modding\\_not_a_sim_v3_case is not the simulation root E:\\Modding\\JustCause3\\_dropzone_sims\\_dropzone_sim_rc2_v3 or a directory under it (path components compared)", "refused": true}
+  guard_traversal: {"created": false, "exit": 2, "out": "REFUSED: -GameDir E:\\Modding\\_dropzone_sim_rc2_v3_x is not the simulation root E:\\Modding\\JustCause3\\_dropzone_sims\\_dropzone_sim_rc2_v3 or a directory under it (path components compared)", "refused": true}
+  guard_fake_game_root: {"created": false, "exit": 2, "out": "REFUSED: -GameDir D:\\Games\\Fake Just Cause 3 is not the simulation root E:\\Modding\\JustCause3\\_dropzone_sims\\_dropzone_sim_rc2_v3 or a directory under it (path components compared)", "refused": true}
+  bypass_2_manifest_outside: {"decoy_intact": true, "dropzone_unchanged": true, "exit": 2, "manifest_entries": 10, "out": "REFUSED: manifest path ..\\decoy_outside_dropzone.txt resolves outside the dropzone root E:\\Modding\\JustCause3\\_dropzone_sims\\_dropzone_sim_rc2_v3\\case_manifest\\dropzone: E:\\Modding\\JustCause3\\_dropzone_sims\\_dropzone_sim_rc2_v3\\case_manifest\\decoy_outside_dropzone.txt", "refused": true, "snapshot_still_present": true}
+  gate_3_created_dir_outside: {"dropzone_unchanged": true, "escape_dir_intact": true, "exit": 2, "out": "REFUSED: manifest created_dir E:\\Modding\\JustCause3\\_dropzone_sims\\_dropzone_sim_rc2_v3\\case_dirs\\escape_dir resolves outside the dropzone root E:\\Modding\\JustCause3\\_dropzone_sims\\_dropzone_sim_rc2_v3\\case_dirs\\dropzone: E:\\Modding\\JustCause3\\_dropzone_sims\\_dropzone_sim_rc2_v3\\case_dirs\\escape_dir", "refused": true}
   gate_4_not_a_target: {"dropzone_unchanged": true, "exit": 2, "out": "REFUSED: manifest path is not one of the receipt targets: keep.txt", "refused": true}
   case_a: {"identical_after_rollback": true, "installed": 9, "mode": "differ", "post_tree_sha256": "b2298994188786c0a4f45a33a04cc67a2e30a49bd21571e6b8c5e16ff8b208d8", "pre_files": 11, "pre_matching_receipt": 0, "pre_tree_sha256": "b2298994188786c0a4f45a33a04cc67a2e30a49bd21571e6b8c5e16ff8b208d8", "removed": 0, "restored": 9, "snapshots": 9, "snapshotted": 9, "whatif_add": 0, "whatif_replace": 9, "whatif_same": 0}
   case_b: {"identical_after_rollback": true, "installed": 9, "mode": "same", "post_tree_sha256": "deb5fff3698929afa291ab111ae66fe7d234f56fc51736293ab1665648fd66bb", "pre_files": 11, "pre_matching_receipt": 9, "pre_tree_sha256": "deb5fff3698929afa291ab111ae66fe7d234f56fc51736293ab1665648fd66bb", "removed": 0, "restored": 9, "snapshots": 9, "snapshotted": 9, "whatif_add": 0, "whatif_replace": 0, "whatif_same": 9}
   case_c: {"identical_after_rollback": true, "installed": 9, "mode": "absent", "post_tree_sha256": "5ac1d9c7a6b78f17ce9ca8124ce61cacb87caed278468728c294401f2f441290", "pre_files": 2, "pre_matching_receipt": 0, "pre_tree_sha256": "5ac1d9c7a6b78f17ce9ca8124ce61cacb87caed278468728c294401f2f441290", "removed": 9, "restored": 0, "snapshots": 9, "snapshotted": 0, "whatif_add": 9, "whatif_replace": 0, "whatif_same": 0}
   cleanup: {"remaining_v3_dirs": []}
-PASS: v2's two bypasses are refused on copies under E:\Modding\_dropzone_sim_rc2_v3* (prefix sibling Install exit 2, manifest decoy Rollback exit 2 with the decoy intact), the created_dirs and not-a-target gates also refuse, and in all three cases (differ/identical/absent) Install snapshots 9/9 and Rollback leaves the dropzone tree sha256-identical to the pre-Install tree
+PASS: v2's two bypasses are refused on copies under E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2_v3* (prefix sibling Install exit 2, manifest decoy Rollback exit 2 with the decoy intact), the created_dirs and not-a-target gates also refuse, and in all three cases (differ/identical/absent) Install snapshots 9/9 and Rollback leaves the dropzone tree sha256-identical to the pre-Install tree
 CHECK_EXIT=0
 ```
 
@@ -121,8 +121,8 @@ three scenarios cannot run in sibling folders any more (an early harness draft t
 $ P="E:/Modding/_dropzone_sim_rc2_v3_prefix"; rm -rf "$P"; mkdir -p "$P/dropzone"
 $ pwsh -NoProfile -File Working/Installer/install_v3.ps1 -Action Install \
     -GameDir "E:\Modding\_dropzone_sim_rc2_v3_prefix" \
-    -Source "E:\Modding\JC3-Batmobile\Builds\bm-RC2\drop"
-REFUSED: -GameDir E:\Modding\_dropzone_sim_rc2_v3_prefix is not the simulation root E:\Modding\_dropzone_sim_rc2_v3 or a directory under it (path components compared)
+    -Source "E:\Modding\JustCause3\JC3-Batmobile\Builds\bm-RC2\drop"
+REFUSED: -GameDir E:\Modding\_dropzone_sim_rc2_v3_prefix is not the simulation root E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2_v3 or a directory under it (path components compared)
 prefix_install_exit=2
 case root after:
 .
@@ -139,9 +139,9 @@ accepted it); v3 wrote nothing: no payload, no `.install_v3_snapshot`.
 ### 4. Reviewer bypass 2, manual transcript (v2 F2)
 
 ```
-$ M="E:/Modding/_dropzone_sim_rc2_v3/case_manifest_manual"; rm -rf "$M"; mkdir -p "$M/dropzone"
+$ M="E:/Modding/JustCause3/_dropzone_sims/_dropzone_sim_rc2_v3/case_manifest_manual"; rm -rf "$M"; mkdir -p "$M/dropzone"
 $ printf 'keep-me\n' > "$M/dropzone/keep.txt"
-$ pwsh ... -Action Install -GameDir "E:\Modding\_dropzone_sim_rc2_v3\case_manifest_manual" ...
+$ pwsh ... -Action Install -GameDir "E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2_v3\case_manifest_manual" ...
 installed textures\ui\vehicle_icons\v0300_car_kensington_sportsmuscle_debug.ddsc
 installed 9/9; snapshotted 0 existing target(s)
 install_exit=0
@@ -149,14 +149,14 @@ $ python  # append {"path":"..\\decoy_outside_dropzone.txt","existed":false,...}
 entries now 10 last ..\decoy_outside_dropzone.txt
 $ printf 'decoy outside the dropzone\n' > "$M/decoy_outside_dropzone.txt"
 $ sha256sum "$M/decoy_outside_dropzone.txt"
-19cd4ffa327578ac1e218cc4bd122348686f1cfae4f06aed48ea44eabfa5414a *E:/Modding/_dropzone_sim_rc2_v3/case_manifest_manual/decoy_outside_dropzone.txt
-$ pwsh ... -Action Rollback -GameDir "E:\Modding\_dropzone_sim_rc2_v3\case_manifest_manual" ...
-REFUSED: manifest path ..\decoy_outside_dropzone.txt resolves outside the dropzone root E:\Modding\_dropzone_sim_rc2_v3\case_manifest_manual\dropzone: E:\Modding\_dropzone_sim_rc2_v3\case_manifest_manual\decoy_outside_dropzone.txt
+19cd4ffa327578ac1e218cc4bd122348686f1cfae4f06aed48ea44eabfa5414a *E:/Modding/JustCause3/_dropzone_sims/_dropzone_sim_rc2_v3/case_manifest_manual/decoy_outside_dropzone.txt
+$ pwsh ... -Action Rollback -GameDir "E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2_v3\case_manifest_manual" ...
+REFUSED: manifest path ..\decoy_outside_dropzone.txt resolves outside the dropzone root E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2_v3\case_manifest_manual\dropzone: E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2_v3\case_manifest_manual\decoy_outside_dropzone.txt
 rollback_exit=2
 decoy still there:
-19cd4ffa327578ac1e218cc4bd122348686f1cfae4f06aed48ea44eabfa5414a *E:/Modding/_dropzone_sim_rc2_v3/case_manifest_manual/decoy_outside_dropzone.txt
+19cd4ffa327578ac1e218cc4bd122348686f1cfae4f06aed48ea44eabfa5414a *E:/Modding/JustCause3/_dropzone_sims/_dropzone_sim_rc2_v3/case_manifest_manual/decoy_outside_dropzone.txt
 snapshot still there:
-E:/Modding/_dropzone_sim_rc2_v3/case_manifest_manual/.install_v3_snapshot
+E:/Modding/JustCause3/_dropzone_sims/_dropzone_sim_rc2_v3/case_manifest_manual/.install_v3_snapshot
 installed target untouched:
 5096fb74d8fcce49b26fad8dd269d48fea7be3859ca1c5dd692a0532fae5058f *E:/Modding/.../v0300_car_kensington_sportsmuscle_debug.ddsc
 ```
@@ -172,7 +172,7 @@ $ grep -n -F -e 'function Get-Parts' -e 'function Test-Under' -e 'function Test-
     -e 'function Get-Target' -e 'Test-SameOrUnder $simFull $full' \
     -e 'resolves outside the dropzone root' -e 'is not one of the receipt targets' \
     -e 'manifest lists' -e 'appears twice' -e 'GetFullPath' Working/Installer/install_v3.ps1
-15:      1. -GameDir is resolved with [IO.Path]::GetFullPath, then compared with E:\Modding\_dropzone_sim_rc2_v3 component
+15:      1. -GameDir is resolved with [IO.Path]::GetFullPath, then compared with E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2_v3 component
 27:    Resolution uses [IO.Path]::GetFullPath, which normalises `.`, `..` and separators but does not
 58:    try { return [IO.Path]::GetFullPath($p) }
 61:function Get-Parts([string]$p) {
@@ -193,7 +193,7 @@ $ grep -n -F -e 'function Get-Parts' -e 'function Test-Under' -e 'function Test-
 1. First `--check` run: `CHECK_EXIT=1`, `FileNotFoundError` on
    `_dropzone_sim_rc2_v3_manifest\.install_v3_snapshot\manifest.json`. Cause: the harness had put the
    scenario copies in **sibling** folders, which the new component guard refuses (v2 accepted them by
-   prefix). Fix: scenarios moved inside `E:\Modding\_dropzone_sim_rc2_v3\`, bypass probe kept as a
+   prefix). Fix: scenarios moved inside `E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2_v3\`, bypass probe kept as a
    sibling.
 2. Second `--check` run: `CHECK_EXIT=1`, `FAIL: case b: pre-Install is not identical to the receipt
    (0/9)` — harness compared tree keys (forward slashes) against receipt rows (backslashes). Fix:
@@ -235,12 +235,12 @@ Both were harness defects; the final `--check` above is green and repeated clean
 
 ## Test ban / scope
 
-Every live command used copies under `E:\Modding\_dropzone_sim_rc2_v3*` (the two bypass probes, the
+Every live command used copies under `E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2_v3*` (the two bypass probes, the
 four gates, the three scenarios, the manual transcripts). Two refusal probes name paths that were
 never created — `E:\Modding\_not_a_sim_v3_case` and the fake `D:\Games\Fake Just Cause 3` — and
 `D:\Games`, `E:\Games` appear only as deny-root strings. No game install, no real `dropzone`, no
 `Builds/` tree was read, written or executed against. All simulation copies were removed; the final
-`--check` reports `cleanup: {"remaining_v3_dirs": []}` and `ls -d /e/Modding/_dropzone_sim_rc2_v3*`
+`--check` reports `cleanup: {"remaining_v3_dirs": []}` and `ls -d /e/Modding/JustCause3/_dropzone_sims/_dropzone_sim_rc2_v3*`
 prints `no v3 copies left`.
 
 COMPROMISES: none — this card touches no lore, BmAK or gameplay data.

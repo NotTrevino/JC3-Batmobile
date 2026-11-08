@@ -59,7 +59,7 @@ OUT = os.path.join(ROOT, "Research", "JC3Grab")
 OUT_MD = os.path.join(OUT, "DOOR_ANGLES.md")
 OUT_JSON = os.path.join(OUT, "DOOR_ANGLES.json")
 G2_15 = os.path.join(OUT, "DOORS.json")
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/_shared/gamedata/JC3grab")
 GAME = os.environ.get("JC3_GAME", jc3index.DEFAULT_GAME)
 VANILLA_EE = os.path.join(RAW, "vanilla_v0300.ee")
 VEHICLE_PREFIX = "editor/entities/jc_vehicles/"
@@ -806,7 +806,7 @@ def render(doc: dict) -> str:
     A("")
     bc = van.get("bundle_check")
     if bc:
-        A("**Vanilla bundle cross-check.** `E:/Modding/_gamedata/JC3grab/vanilla_v0300.ee` is "
+        A("**Vanilla bundle cross-check.** `E:/Modding/_shared/gamedata/JC3grab/vanilla_v0300.ee` is "
           "an extracted vanilla Serpente bundle (566 members). Its members are byte-identical "
           "to the archive members this page decoded:")
         A("")

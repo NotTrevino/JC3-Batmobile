@@ -239,7 +239,7 @@ lore, and the palette stops contradicting the blocks.
 ## 12. Reproduce
 
 ```bash
-cd "E:/Modding/JC3-Batmobile"
+cd "E:/Modding/JustCause3/JC3-Batmobile"
 # 1. rows
 grep -E '"id":"T-MA[1-7]"' Working/Translation/T_ROWS.jsonl
 # 2. what the build wrote

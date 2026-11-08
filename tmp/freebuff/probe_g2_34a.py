@@ -4,7 +4,7 @@ import glob
 import json
 import os
 
-RAW = r"E:/Modding/_JC3grab"
+RAW = r"E:/Modding/JustCause3/_grab"
 OUT = r"Research/JC3Grab"
 PAT = ("tether", "grapple", "grapp", "rope", "winch", "airlift", "cargo_rope", "hook")
 

@@ -1,5 +1,0 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/decode-vehicle-audio-objects.md
-ONLY: freebuff
-EST: 30
-BRIEF: hand-written 2026-11-08
-Ledger row G3-06e is still todo: the Batmobile blueprint holds four AkVehicleSound objects and one AkDialogueComponent that nothing has decoded. Locate them in the BmAK dump (Research/BatmobileGrab/objects.jsonl and the per-class notes in BMSDK_OFFSETS.json), read every property: referenced AkEvents, RTPC names, attenuation, trigger conditions, which socket or component owns each. Resolve each event reference to the id used in AUDIO_MAP.json so the object becomes a table of when the sound fires. Output Research/BatmobileGrab/VEHICLE_AUDIO_OBJECTS.json plus a markdown table. Note anything that answers the open question of how the RPM parameter reaches the engine event. Done check: the five objects listed with all property values, zero unresolved event references without an UNKNOWN label, and the ledger line G3-06e text ready for a hand-edit but not applied. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

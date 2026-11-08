@@ -1,8 +1,8 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-d05-entity-graph.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/build-d05-entity-graph.md
 ONLY: freebuff
 EST: 50
 BRIEF: hand-written 2026-11-06
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-d02-parts-split.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/apply-weapon-slot-rows.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/apply-gadget-rows.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/apply-winch-tether-rows.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/apply-mode-switch-rows.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/build-d02-parts-split.md, E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/apply-weapon-slot-rows.md, E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/apply-gadget-rows.md, E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/apply-winch-tether-rows.md, E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/apply-mode-switch-rows.md
 Build step B-05: the entity graph (.epe) with the forced weapon slots, the Fire Leech based missile split, the winch, gadget and mode-switch objects as decided in the apply-* reports. Use bm_entity.py into Builds/bm-RC4-entity. Verify with ConvertProperty round trip identical, bm_entity.py --check and name-hash mismatches 0; state the object and class counts before and after and every object that is a plan stand-in (unbound, UNKNOWN).
 
 Updated by review 8299: the .epe consumes 8 forced slots (4 CCar roots x main_weapon + id:00568A74) with 5 gadgets outside the slot space, the T-WP4 split (w618 clone + CForcePulse + w143 guidance + a new lock-on AutoAim), the winch anchor objects, and B-12's precondition 3 (runtime swap UNKNOWN, mode-switch-carriers.md §7 U1). B-26 (per-entity audio override, 21 of 45 GUIDs) is entity-side too — name it in the object count if it lands here.

@@ -34,7 +34,7 @@ No decoded geometric value needs rework.
 Command:
 
 ```
-cd /e/Modding/JC3-Batmobile && uv run --with numpy python Tools/scripts/grab_collision_convex.py --check 2>&1 | tee /tmp/g301c_check.txt; echo "EXIT=${PIPESTATUS[0]}"
+cd /e/Modding/JustCause3/JC3-Batmobile && uv run --with numpy python Tools/scripts/grab_collision_convex.py --check 2>&1 | tee /tmp/g301c_check.txt; echo "EXIT=${PIPESTATUS[0]}"
 ```
 
 Output (verbatim):

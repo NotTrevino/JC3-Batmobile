@@ -1,6 +1,6 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-v02-geometry-poses-rc4.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/verify-v02-geometry-poses-rc4.md
 ONLY: freebuff
 EST: 15
 BRIEF: hand-written 2026-11-08 (final step of the geometry verification; measuring is finished)
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-v02a-silhouette-census-collision.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-v02b-pose-renders-lights.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/verify-v02a-silhouette-census-collision.md, E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/verify-v02b-pose-renders-lights.md
 Combine the two finished geometry reports into the single verdict that the prediction check (verify-v05) reads. Open verify-v02a-silhouette-census-collision.md and verify-v02b-pose-renders-lights.md; copy their figures without measuring anything again. Write Builds/bm-RC4/verify/geometry.md and this brief's report with one line per gate in this order: silhouette against the 99.9 % limit, parts census against 59 parts and 19 types, interaction points, collision against the 5 cm placement gate, pose renders, lights. Each line gets the figure, its source report, and PASS, FAIL or UNKNOWN. The collision line stays FAIL unless report A measured the placement within 5 cm; the battle pose line reads "not in this tree"; the lights line carries the out-of-domain angle 70 / range 60 note. Close with one sentence naming what verify-v05 must take from this file.

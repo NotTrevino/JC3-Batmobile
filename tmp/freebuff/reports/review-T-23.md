@@ -38,7 +38,7 @@ The other three checks the card names are green now:
 
 ```
 $ python Tools/scripts/bmak_coverage.py --check
-423 fields -> 19 rows; E:\Modding\JC3-Batmobile\Research\BatmobileGrab\COVERAGE.md
+423 fields -> 19 rows; E:\Modding\JustCause3\JC3-Batmobile\Research\BatmobileGrab\COVERAGE.md
   … (17 rows)
 777 feature rows -> 34 rows (0 unassigned)
   animation   253 rows ->  9 T rows, 0 unassigned

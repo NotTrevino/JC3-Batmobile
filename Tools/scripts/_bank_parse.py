@@ -1,7 +1,7 @@
 """Parse carved banks: HIRC event->media, STID names, DIDX media index."""
 import os, struct
 
-A = r"E:\Modding\JC3-Batmobile\Working\Audio"
+A = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio"
 
 def parse_hirc(d, label):
     hi = d.find(b"HIRC")
@@ -44,7 +44,7 @@ for fn in ["bank_BML_Burnout.bank", "bank_AUX_InBatmobile.bank"]:
 stream = open(os.path.join(A, "..", "..", "Working", "Audio", "bm_stream.bin"), "rb").read() \
     if False else None
 import glob
-src = open(r"E:\Modding\JC3-Batmobile\Working\Audio\bm_stream.bin", "rb").read()
+src = open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\bm_stream.bin", "rb").read()
 so = 0x107DF6 - 0x369
 seg = src[so:so+7278764]
 i = seg.find(b"BKHD")

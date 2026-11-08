@@ -47,7 +47,7 @@ import upk_read as U  # noqa: E402
 from grab_class_defaults import Layout, same_kind, f  # noqa: E402  (read-only reuse)
 
 GAME = r"E:/Games/Batman - Arkham Knight/BmGame/CookedPCConsole"
-BMSDK = r"E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated"
+BMSDK = r"E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Generated"
 G305_MD = os.path.join(ROOT, "Research", "BatmobileGrab", "PACKAGES_G305.md")
 OUT_MD = os.path.join(ROOT, "Research", "BatmobileGrab", "GADGET_PARAMS.md")
 

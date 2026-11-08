@@ -1,8 +1,8 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/apply-collision-and-audio-leads.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/apply-collision-and-audio-leads.md
 ONLY: freebuff
 EST: 45
 BRIEF: hand-written 2026-11-06
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/apply-keep-audit-fixes-systems.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/collision-where.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/audio-t-au3-unblock.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/apply-keep-audit-fixes-systems.md, E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/collision-where.md, E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/audio-t-au3-unblock.md
 Reports collision-where and audio-t-au3-unblock found candidate sources for the drivable collision and for the unlocated audio banks. Use them: if collision-where located BmAK's driving collision, reopen T-22 (collision translation) and B-10 with that source, with a plan for how the real body collision replaces the donor chassis (T-CO1 was "donor chassis by decision"). Update rows T-AU3 and T-AU5 in the ledger to unblocked with the evidence. Re-pin t_blocked.py and re-run status_audit.py.
 
 Pin upkeep: if your edits change which rows are blocked or the in-scope row count, update WAITS and the in_scope == value in Tools/scripts/t_blocked.py (back it up first), run t_blocked.py --write then --check, and keep both passing before you finish.

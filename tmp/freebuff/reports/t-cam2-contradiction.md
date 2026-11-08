@@ -45,7 +45,7 @@ Not edited: `T6_HUD_CAMERA.md`, `Research/BatmobileGrab/CAMERA.md`, `CAM_TUNE.js
 ## Commands run (verbatim)
 
 ```
-cd /e/Modding/JC3-Batmobile && set -o pipefail && echo "=== write ===" && python Tools/scripts/t_cam2_proposal.py --write; echo "write exit=$?"; echo "=== check ===" && python Tools/scripts/t_cam2_proposal.py --check; echo "check exit=$?"
+cd /e/Modding/JustCause3/JC3-Batmobile && set -o pipefail && echo "=== write ===" && python Tools/scripts/t_cam2_proposal.py --write; echo "write exit=$?"; echo "=== check ===" && python Tools/scripts/t_cam2_proposal.py --check; echo "check exit=$?"
 ```
 ```
 === write ===
@@ -86,7 +86,7 @@ check exit=0
 Upstream oracles re-run (unchanged tools, read-only):
 
 ```
-cd /e/Modding/JC3-Batmobile && set -o pipefail && echo "=== bmak_camera --check ===" && python Tools/scripts/bmak_camera.py --check 2>&1 | tail -6; echo "camera exit=${PIPESTATUS[0]}"; echo "=== bmak_camfile check ===" && python Tools/scripts/bmak_camfile.py check 2>&1 | tail -8; echo "camfile exit=${PIPESTATUS[0]}"
+cd /e/Modding/JustCause3/JC3-Batmobile && set -o pipefail && echo "=== bmak_camera --check ===" && python Tools/scripts/bmak_camera.py --check 2>&1 | tail -6; echo "camera exit=${PIPESTATUS[0]}"; echo "=== bmak_camfile check ===" && python Tools/scripts/bmak_camfile.py check 2>&1 | tail -8; echo "camfile exit=${PIPESTATUS[0]}"
 ```
 ```
 === bmak_camera --check ===
@@ -105,7 +105,7 @@ camfile exit=0
 And the raw byte probe that fixed the ADF offsets (before the tool existed):
 
 ```
-cd /e/Modding/JC3-Batmobile && ls Builds/test-091/aaf/editor/entities/jc_cameras/vehicle_cameras/ 2>&1 | head; echo "---adf bytes"; python - <<'PY'
+cd /e/Modding/JustCause3/JC3-Batmobile && ls Builds/test-091/aaf/editor/entities/jc_cameras/vehicle_cameras/ 2>&1 | head; echo "---adf bytes"; python - <<'PY'
 import struct
 for p in ["Working/Audio/jc3cam/editor/entities/jc_cameras/vehicle_cameras/car_base.ctunec",
           "Builds/test-091/aaf/editor/entities/jc_cameras/vehicle_cameras/bat_base.ctunec"]:

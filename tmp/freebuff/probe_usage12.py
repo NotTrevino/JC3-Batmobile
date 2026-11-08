@@ -13,7 +13,7 @@ targets = {4197885156: 'EngineNitro', 2819629913: 'EngineRunning',
            3877802965: 'EngineTurboJump', 3551535361: 'HeadLights'}
 hits = collections.defaultdict(list)
 allusage = collections.Counter()
-for p in glob.glob('E:/Modding/_JC3grab/detail/*.ee.json'):
+for p in glob.glob('E:/Modding/JustCause3/_grab/detail/*.ee.json'):
     d = json.load(open(p, encoding='utf-8'))
     ent = d.get('entity', '')
     epe = d.get('epe') or {}

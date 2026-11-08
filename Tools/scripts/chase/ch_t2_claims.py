@@ -12,7 +12,7 @@ computed from files on disk. Nothing is written; no archive is opened; `D:/Games
     python Tools/scripts/chase/ch_t2_claims.py index
     python Tools/scripts/chase/ch_t2_claims.py all
 
-Inputs: E:/Modding/_gamedata/JC3grab/entities/*.json (module rows), Research/JC3Grab/PARTS_TABLE.jsonl,
+Inputs: E:/Modding/_shared/gamedata/JC3grab/entities/*.json (module rows), Research/JC3Grab/PARTS_TABLE.jsonl,
 Research/BatmobileGrab/{LIGHTS,PHYSICS,SLOTS,VALUES,grab}.json, Working/Translation/current.json.
 """
 import collections
@@ -24,7 +24,7 @@ import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(
     os.path.abspath(__file__)))))
-GRAB = "E:/Modding/_gamedata/JC3grab"
+GRAB = "E:/Modding/_shared/gamedata/JC3grab"
 ENTS = os.path.join(GRAB, "entities")
 DONOR = "sportsmuscle_civilian_01"
 

@@ -35,7 +35,7 @@ sentence calls a nitrous clip.
 
 ## Check output (verbatim)
 
-Command run from `E:/Modding/JC3-Batmobile`:
+Command run from `E:/Modding/JustCause3/JC3-Batmobile`:
 
 ```
 $ python Tools/scripts/jc3usage.py --check
@@ -143,7 +143,7 @@ Each number was re-derived from the raw inputs by an independent script, not by 
 
 | # | value in `USAGES.md` §6 | where verified |
 |---|---|---|
-| 1 | sound GUID `f74ea43b-a8ac-4548-ad27-b92fd40a516d` "carried by **202 objects on 172 of the 232** decoded vehicles", names `exhaust_upgrade_nitrous` 154 / `dynamic_exhaust_upgrade_nitrous` 14 / `…_r` 13 / `…_left` 5 / `…_right` 5 / `…_b` 3 (lines 580–581) | Walked all 232 `E:/Modding/_JC3grab/detail/*.ee.json` and matched the GUID hex-normalised: **202 objects, 172 files**, names 154/14/13/5/5/3 plus four more (2/2/2/2) = 202; classes `SAttachedEffect` 188 + `SDynamicAttachedEffect` 14. Matches `USAGES.json` `nitro.sound.carriers`. |
+| 1 | sound GUID `f74ea43b-a8ac-4548-ad27-b92fd40a516d` "carried by **202 objects on 172 of the 232** decoded vehicles", names `exhaust_upgrade_nitrous` 154 / `dynamic_exhaust_upgrade_nitrous` 14 / `…_r` 13 / `…_left` 5 / `…_right` 5 / `…_b` 3 (lines 580–581) | Walked all 232 `E:/Modding/JustCause3/_grab/detail/*.ee.json` and matched the GUID hex-normalised: **202 objects, 172 files**, names 154/14/13/5/5/3 plus four more (2/2/2/2) = 202; classes `SAttachedEffect` 188 + `SDynamicAttachedEffect` 14. Matches `USAGES.json` `nitro.sound.carriers`. |
 | 2 | object `Effect` 3518298851 (0xD1B4FAE3) "carried by **28 objects on 17 vehicles**", names 12/6/5/5, "in **none** of the `all_effects[]`" (lines 569–577) | Same walk with the signed value masked to 32 bits (`-776668445 & 0xFFFFFFFF`): **28 objects, 17 files**, `exhaust_upgrade_nitrous` 12, `…nitrous2` 6, `exhaust_left_upgrade_nitrous` 5, `exhaust_right_upgrade_nitrous` 5. `USAGES.json` `nitro.effect.named_in_module_space` = `false`. |
 | 3 | input row: `arcade.nitro_boost` torque x2, grip x2, `push_force` 15000, `boost_blend_time` 0.2 s, `extra_top_speed` +40 km/h; `_upgraded` push 20000, +80 km/h; five blocks on **145 of 232** (lines 552, 562) | Read the donor's module rows directly from `…/_JC3grab/entities/v0300_…_civilian_01.ee.json`: `arcade.nitro_boost.{torque_multiplier=2, grip_multiplier=2, push_force=15000, boost_blend_time=0.200000003, extra_top_speed=40}`, `nitro_boost_upgraded.{push_force=20000, extra_top_speed=80}`; `heat_boost.push_force = 0`, `+80`. Fleet sweep: all five blocks 145 files, `turbo_jump`/`_upgraded` 870 rows each. |
 | 4 (bonus) | "`EngineEVents` 249 / 195 B" — i.e. `vehicles` `EVTS` ordinal 249, 195 B (line 558); "the 9 `*nitrous*.effc`" (line 575); "`EngineTurboJump` usage (11 vehicles)" (line 566) | 249/195 is produced by `jc3audio.fev_events` inside the run (same reader, so not independent) and is recorded identically in `Research/JC3Grab/JC3_AUDIO.md:52` (`… | vehicles/249 | exhaust_upgrade_nitrous (S)`) — cross-document agreement, two documents, one reader. The `.effc` count I counted independently from `FX_TABLE.jsonl`: exactly **9** distinct `*nitrous*.effc` paths. `EngineTurboJump` = 11 vehicles in `USAGES.json` (`usages` row, hash 3877802965). |

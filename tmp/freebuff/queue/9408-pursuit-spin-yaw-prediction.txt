@@ -1,7 +1,7 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/pursuit-spin-yaw-prediction.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/pursuit-spin-yaw-prediction.md
 ONLY: freebuff
 EST: 30
 BRIEF: hand-written 2026-11-08
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-drive-modes-and-yaw.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/four-wheel-drive-closest-system.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/rc5-drive-modes-and-yaw.md, E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/four-wheel-drive-closest-system.md
 Pursuit mode rule from the plans: with the car slow, the left stick spins it in place, and above a gate of 21.6 km/h normal steering takes over; JC3 gives a drift yaw block instead. Compute the predicted behaviour so a pilot take has a band. From tmp/freebuff/reports/four-wheel-drive-and-spin-in-place-build-plan.md milestone M1 and the cells built by 9122 (tmp/freebuff/reports/rc5-drive-modes-and-yaw.md) derive: yaw rate at standstill in deg/s, speed at which spin hands over to steering, and the stopping time of the spin after the stick is released. Store them in Working/Q/HDL_SPIN_PREDICTION.json with formula, inputs and a plus or minus band, plus one pilot-card sentence. Where an input is UNKNOWN, say which, and write the single measurement that would fix it. Done check: a script recomputes every value from the JSON inputs and prints identical numbers; the file passes a JSON parse; the operator-unknown parts are labelled and not guessed.
-Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.
+Shared rules: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

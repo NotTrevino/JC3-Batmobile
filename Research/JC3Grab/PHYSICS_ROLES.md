@@ -124,7 +124,7 @@ Counts: {"hkpLimitedHingeConstraintData": 9, "hkpRagdollConstraintData": 2}; the
 
 ## 6. Fleet census
 
-`E:/Modding/_gamedata/JC3grab/hkx/out` - 232 decode files, 233 vehicle physics entries.
+`E:/Modding/_shared/gamedata/JC3grab/hkx/out` - 232 decode files, 233 vehicle physics entries.
 
 | quantity | min | median | max | vehicles with it |
 |---|---|---|---|---|

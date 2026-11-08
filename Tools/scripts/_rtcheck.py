@@ -1,6 +1,6 @@
 """Round-trip cleanliness check: python _rtcheck.py <vmodc> [...]"""
 import os, shutil, subprocess, sys, tempfile
-GIBBED = r'E:\Modding\JC3-Batmobile\Tools\Gibbed\Gibbed.JustCause3.ConvertAdf.exe'
+GIBBED = r'E:\Modding\JustCause3\JC3-Batmobile\Tools\Gibbed\Gibbed.JustCause3.ConvertAdf.exe'
 for vm in sys.argv[1:]:
     if not os.path.exists(vm):
         print('MISSING', vm); continue

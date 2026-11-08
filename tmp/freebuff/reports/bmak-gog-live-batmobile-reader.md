@@ -102,7 +102,7 @@ selftest: PASS
    (exe present, 55,101,440 bytes, PE 0x6508b1ce; launching it for read-only scraping was approved 7993-7994)
 2. spawn the Batmobile and drive it (a still car never writes the steering curve / regen values)
 3. in another shell:
-     cd E:\Modding\JC3-Batmobile
+     cd E:\Modding\JustCause3\JC3-Batmobile
      uv run python Tools/scripts/bmak_live_read.py --selftest
      uv run python Tools/scripts/bmak_live_read.py --json Research/BatmobileGrab/live_batmobile.json
 4. read the six blocks V1..V6, then the UNKNOWN footer

@@ -101,4 +101,4 @@ python Tools/scripts/jc3_damage_search.py --epe \
 ```
 
 The graph dumps themselves are produced by `Tools/scripts/jc3detail.py` from the archives; they
-stay outside the repository (`E:/Modding/_JC3grab/detail/`), only the derived record is committed.
+stay outside the repository (`E:/Modding/JustCause3/_grab/detail/`), only the derived record is committed.

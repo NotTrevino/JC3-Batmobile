@@ -1,7 +1,7 @@
 STATUS: done — VERDICT: **the cooked mesh agrees with `BONES.md` on every bone name, every parent index, the bone count and all three LOD triangle counts.** The PSKX export is faithful for those quantities. It is *not* evidence about the PSKX vertex/wedge/weight data, which this export does not contain in a form decoded here.
 
 Task file: `tmp/freebuff/running/L1__3117-reverify-bones.txt`
-DONE path: `E:/Modding/JC3-Batmobile/tmp/freebuff/reports/reverify-BONES.md`
+DONE path: `E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/reverify-BONES.md`
 
 ## 1. Answer in one table
 
@@ -211,7 +211,7 @@ struct count: 0
 
 ## 8. UNKNOWNs
 
-1. **The member names of the four fields inside a record.** The layout is decoded (`quat@+0`, `position@+16` in cm, `FName@+28`, `parent@+36`, `0xFFFFFFFF@+40`) and each role is proven by an oracle, but no local layout names them: `BMSDK_OFFSETS.json` has 41 classes and **no `SkeletalMesh` class and no struct table**, and `E:/Modding/_tools/BmSDK-AK` would need an `FMeshBone`/`FReferenceSkeleton` dump that this repo does not carry. Would be resolved by G3-06's native-layout dump. Names are not needed for the verification.
+1. **The member names of the four fields inside a record.** The layout is decoded (`quat@+0`, `position@+16` in cm, `FName@+28`, `parent@+36`, `0xFFFFFFFF@+40`) and each role is proven by an oracle, but no local layout names them: `BMSDK_OFFSETS.json` has 41 classes and **no `SkeletalMesh` class and no struct table**, and `E:/Modding/_shared/tools/BmSDK-AK` would need an `FMeshBone`/`FReferenceSkeleton` dump that this repo does not carry. Would be resolved by G3-06's native-layout dump. Names are not needed for the verification.
 2. **What the `0xFFFFFFFF` word at +40 is.** Constant on all 180 records (a sentinel, or `NumChildren` written as −1); no witness anywhere in the decoded data distinguishes those readings.
 3. **Why the packaged pose is the Y-negated form of the PSKX bind pose.** Measured exactly (180/180, 1e-7 on quats, 1e-5 cm on positions) but the *reason* is an ActorX/umodel convention, not a fact in either file. It does not affect the name/parent/triangle comparison.
 4. **The 8 bytes between the last bone record (ends 16315) and LOD0's section array (starts 16323).** Left undecoded; they are not needed to fix the bone count, since no fifth-of-44 record fits there.

@@ -42,7 +42,7 @@ wrong effects.
 
 ## Check output (verbatim)
 
-Command, from `E:/Modding/JC3-Batmobile`:
+Command, from `E:/Modding/JustCause3/JC3-Batmobile`:
 
 ```
 python Tools/scripts/t17_fx.py --check

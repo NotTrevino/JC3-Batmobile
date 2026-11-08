@@ -20,7 +20,7 @@ Read-only everywhere else: the donor `sportsmuscle.physicsc`, the 51 fleet `.phy
 | claim | label | evidence |
 |---|---|---|
 | Hinge objects hold one frame atom at +0x020 (type 2, 144 B): two `hkTransform`s, rows at +0x30/+0x40/+0x50 and +0x70/+0x80/+0x90, translations at +0x60 and +0xA0 | decoded | re-read from the donor, matches `PHYSICS_LIMITS` atom table |
-| Fleet = 51 `.physicsc`, 419 `hkpLimitedHingeConstraintData` | decoded | `glob E:/Modding/_gamedata/JC3grab/**/*.physicsc` = 51 files, 419 objects — the same 419 PHYSICS_LIMITS counts |
+| Fleet = 51 `.physicsc`, 419 `hkpLimitedHingeConstraintData` | decoded | `glob E:/Modding/_shared/gamedata/JC3grab/**/*.physicsc` = 51 files, 419 objects — the same 419 PHYSICS_LIMITS counts |
 | Two atom frames byte-identical in 410/419 hinges; pivots coincide in 407/419 | decoded | per-hinge comparison, 1e-6 |
 | O1 (unit length): **419/419 for all six candidates** | decoded | `norm(row) == 1 ± 1e-3` |
 | O2 (perpendicular to pivot-to-pivot): input exists in only **12/419**; best `A1`/`B1` 9/12, `A0`/`B0` 0/12 | decoded | `pivotB − pivotA`, zero in 407 → oracle vacuous |
@@ -35,14 +35,14 @@ Read-only everywhere else: the donor `sportsmuscle.physicsc`, the 51 fleet `.phy
 ### 1. Where the Serpente donor is, and the fleet size
 
 ```
-$ find E:/Modding/_gamedata/JC3grab -iname "*serpente*"        # nothing
+$ find E:/Modding/_shared/gamedata/JC3grab -iname "*serpente*"        # nothing
 $ grep -o '"[^"]*serpente[^"]*"' Research/JC3Grab/DOOR_ANGLES.json | sort | uniq -c
       1 "serpente_vanilla_limits"
       1 "vanilla_serpente"
 $ grep -n -i "serpente" Research/JC3Grab/DOOR_ANGLES.md
 19: Worked example - the vanilla Serpente's left door. `sportsmuscle_vehicle_parts.vmodc` ...
 484:## 5. The vanilla Serpente (sportsmuscle)
-$ find E:/Modding/_gamedata/JC3grab -name "*.physicsc" | sed 's#.*/##' | sort | tr '\n' ' '
+$ find E:/Modding/_shared/gamedata/JC3grab -name "*.physicsc" | sed 's#.*/##' | sort | tr '\n' ' '
 apc ... sportsmuscle.physicsc (x5) ... vintagesports.physicsc      (51 files)
 ```
 
@@ -101,7 +101,7 @@ crashing.
 
 ```
 $ PYTHONIOENCODING=utf-8 python Tools/scripts/jc3_constraint_axes.py --write
-wrote E:\Modding\JC3-Batmobile\Research\JC3Grab\CONSTRAINT_AXES.md 10898 bytes
+wrote E:\Modding\JustCause3\JC3-Batmobile\Research\JC3Grab\CONSTRAINT_AXES.md 10898 bytes
 hinges 419 passing [] donor_pass {'A0': 5, 'A1': 1, 'A2': 1, 'B0': 5, 'B1': 1, 'B2': 1}
 A0 unit 419 o2 0/12 o3 perp 151/402 par 33/402
 A1 unit 419 o2 9/12 o3 perp  42/402 par 101/402

@@ -17,7 +17,7 @@ MODLOG: `## smart_search v2 — filters — done (2026-10-29)`.
 - Corpus is **game-derived text only**, 298 → **132 files**: the install's `BmGame/Config/**`
   (recursive, so `Config/PC/PCGame.ini` and friends are now in — they were not before),
   `BmGame/Localization/**`, `Binaries/Win64`, and the non-chase `.txt`/`.config` dumps under
-  `E:\Modding\_BmAKgrab`.
+  `E:\Modding\ArkhamKnight\_grab`.
 - Excluded by rule: every `.json`/`.jsonl`/`.md`/`.csv`/`.log` (all project-written records) and
   every path under `_BmAKgrab/chase` (candidates, verdicts, cache, calib runs, selftest). Ten of the
   22 old false positives lived there.
@@ -133,11 +133,11 @@ the case file itself, which is inside v1's scan root and carries every case's me
 `known` value:
 
 ```
-$ sed -n '4p' E:/Modding/_BmAKgrab/chase/calib.jsonl
+$ sed -n '4p' E:/Modding/ArkhamKnight/_grab/chase/calib.jsonl
 {"family": "a", "id": "P04", "kind": "positive", "known": "600", "member": "TurningModeMaxSpeed", ...}
 ```
 
-and v1's P04 verdict was `E:/Modding/_BmAKgrab/chase/calib.jsonl:4 -> 600`. The same holds for
+and v1's P04 verdict was `E:/Modding/ArkhamKnight/_grab/chase/calib.jsonl:4 -> 600`. The same holds for
 P05:5, P06:6, P07:7, P08:8, P09:9, P10:10 — each "found" hit cites the line of the case that asks
 the question. So v1's recall measured "the corpus contains the answer". Its four wrong values were
 exe hits, i.e. the nearest float in the window: `0.5` for a known `0.8` (P01), `0.0` for `2` (P03),

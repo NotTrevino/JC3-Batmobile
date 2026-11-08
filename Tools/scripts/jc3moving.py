@@ -40,7 +40,7 @@ import jc3index  # noqa: E402
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
 OUT = os.path.join(ROOT, "Research", "JC3Grab")
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/_shared/gamedata/JC3grab")
 GAME = os.environ.get("JC3_GAME", jc3index.DEFAULT_GAME)
 CENSUS = os.path.join(OUT, "FEATURE_CENSUS.json")
 JSON_NAME = "MOVING_PARTS.json"

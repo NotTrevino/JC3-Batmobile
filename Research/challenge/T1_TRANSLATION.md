@@ -3,7 +3,7 @@
 Read-only challenge of every claim in the T-1 translation table that is assumed, inferred, carried
 by a member name rather than a behaviour, or numerically unsourced. No existing document was
 edited; the only new files are `Tools/scripts/chase/challenge_t1.py` and
-`E:/Modding/_JC3grab/challenge/challenge_t1.json`.
+`E:/Modding/JustCause3/_grab/challenge/challenge_t1.json`.
 
 Rules applied: `GRAB_BACKLOG.md` §0.5 — R4 (no value without provenance; `assumed` is not
 buildable) and R5 (behaviour before member). `POSTMORTEM_DAMAGE.md` is the reference for why
@@ -33,7 +33,7 @@ The three findings that matter most:
 Reproduce everything below with:
 
 ```
-python Tools/scripts/chase/challenge_t1.py        # 61 checks -> E:/Modding/_JC3grab/challenge/challenge_t1.json
+python Tools/scripts/chase/challenge_t1.py        # 61 checks -> E:/Modding/JustCause3/_grab/challenge/challenge_t1.json
 ```
 
 ---
@@ -394,7 +394,7 @@ table whose job is to define them.
 friction 1.0; friction type 0; rpm 1000/5000/7300; drag 0.139; lift −1.95; brake 10,000;
 nitro grip 5.68; steering 35°→15°"
 *Class:* read (claimed `current.json`). **Verdict: REFUTED as "the build".**
-`Working/Translation/current.json` reports `build: E:\Modding\JC3-Batmobile\Builds\test-091` and its
+`Working/Translation/current.json` reports `build: E:\Modding\JustCause3\JC3-Batmobile\Builds\test-091` and its
 values are **mass 6,000; inertia 4 / 2.6 / 1.2; strength 45/45; wheel mass 75/150; friction 3.0;
 friction type 2; rpm 800–1000 / 2,800 / 4,500; suspension length 0.70; drag 0.55; lift −0.30;
 brake 5,000/5,000; min_time_to_block 1; nitro grip 1; extra top speed 43.2; steering 55°→20°;
@@ -501,5 +501,5 @@ unlike several other claims of the same kind in this document.
   the collision-slot mapping (C47), transmission gears (C32). Each is marked UNVERIFIABLE rather
   than guessed.
 * No game was launched; the JC3 install was not opened for this challenge (the decoded cache
-  sufficed); nothing outside `E:/Modding/_JC3grab/challenge/` and these two new repo files was
+  sufficed); nothing outside `E:/Modding/JustCause3/_grab/challenge/` and these two new repo files was
   written.

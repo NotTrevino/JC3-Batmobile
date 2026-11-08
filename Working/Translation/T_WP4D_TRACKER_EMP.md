@@ -334,7 +334,7 @@ noticed. Sources are listed at the top of the script.
 ## 9. Reproduce and the offset oracle
 
 ```
-cd E:/Modding/JC3-Batmobile
+cd E:/Modding/JustCause3/JC3-Batmobile
 uv run python Tools/scripts/t_wp4d.py --write    # writes this file and the JSON
 uv run python Tools/scripts/t_wp4d.py --check    # recomputes from the bytes, byte-compares
 ```

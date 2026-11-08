@@ -31,7 +31,7 @@ and with the JSON for two of the nine arms.
 
 ## Check output (verbatim)
 
-Command run from `E:/Modding/JC3-Batmobile`:
+Command run from `E:/Modding/JustCause3/JC3-Batmobile`:
 
 ```
 $ python Tools/scripts/damage_predict.py --check

@@ -4,7 +4,7 @@ import json
 import os
 import re
 
-RAW = r"E:/Modding/_JC3grab"
+RAW = r"E:/Modding/JustCause3/_grab"
 hits = []
 files = sorted(glob.glob(os.path.join(RAW, "detail", "*.ee.json")))
 strings = 0

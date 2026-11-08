@@ -82,7 +82,7 @@ Both are identical to the journal's quoted output, line for line.
 `Working/Damage/bm_health.json` → `private_copy.reason`, and the same string in
 `Builds/bm-009/receipt.json` → `edits.private_copy.reason`: "R7: `lave_health_medium.vmodc` is
 shared by **77** vehicles". It is a literal in the generator, `Tools/scripts/bm_health.py:194`.
-Counting the decoded fleet (`E:/Modding/_JC3grab/entities/*.ee.json`, `VehicleDamage` module path):
+Counting the decoded fleet (`E:/Modding/JustCause3/_grab/entities/*.ee.json`, `VehicleDamage` module path):
 
 ```
 entities sharing: 81  distinct vehicle folders: 29
@@ -243,6 +243,6 @@ sha256sum Working/Damage/bm_health.json
 python - (sha256 of .ee/.toc/module/land_global/.epe vs receipt; struct @80/@108/@120/@474;
           hash_jenkins recompute; byte diffs; aaf tree hash diff)
 python - (jc3adf over the built parts module and the private module: 59 parts, 19 types, 24 rows)
-python - (E:/Modding/_JC3grab/entities/*.ee.json: 81 entities / 29 folders share lave_health_medium;
+python - (E:/Modding/JustCause3/_grab/entities/*.ee.json: 81 entities / 29 folders share lave_health_medium;
           archived VehicleDamage values 700 / 1 / 1)
 ```

@@ -10,7 +10,7 @@
 # empty in 040, drawn 041 -> a per-block size limit
 # empty in both           -> something in our block content
 $ErrorActionPreference = 'Stop'
-$root = 'E:\Modding\JC3-Batmobile'
+$root = 'E:\Modding\JustCause3\JC3-Batmobile'
 $g    = "$root\Tools\Gibbed"
 $ee   = 'v0300_car_kensington_sportsmuscle_civilian_01.ee'
 $lod5 = 'models\jc_vehicles\01_land\v0300_car_kensington_sportsmuscle\sportsmuscle_body_lod5.rbm'

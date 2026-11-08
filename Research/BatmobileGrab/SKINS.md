@@ -70,7 +70,7 @@ stored name - its identity is the material object it points at.
 | 17 | `BatmobileV3_Upgrades_MAT_INST` | MaterialInstanceConstant | 769 |
 | 18 | `Batmobile_Worn_NoRain` | Material | 360 |
 
-- **Independent oracle**: the decoded order equals the umodel props dump's `Materials[19]` list, name for name (`E:\Modding\JC3-Batmobile\Working\Appearance\grab\Playable_Batmobile_SF\SkeletalMesh3\Batmobile_V2.props.txt`) - **True**
+- **Independent oracle**: the decoded order equals the umodel props dump's `Materials[19]` list, name for name (`E:\Modding\JustCause3\JC3-Batmobile\Working\Appearance\grab\Playable_Batmobile_SF\SkeletalMesh3\Batmobile_V2.props.txt`) - **True**
 
 ### `standard` - Showcase_Batmobiles_Standard: 19 slots (count at payload byte 8287, references from byte 8291)
 

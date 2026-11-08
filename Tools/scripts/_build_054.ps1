@@ -5,7 +5,7 @@
 # .epe — all proven). Only sportsmuscle_body_lod1..5 change content (full chain
 # from the importer matrix). No repoint, parts vmodc stays EXTERNAL.
 $ErrorActionPreference = 'Stop'
-$root = 'E:\Modding\JC3-Batmobile'
+$root = 'E:\Modding\JustCause3\JC3-Batmobile'
 $py = 'uv'
 $g  = "$root\Tools\Gibbed"
 $ee = 'v0300_car_kensington_sportsmuscle_civilian_01.ee'

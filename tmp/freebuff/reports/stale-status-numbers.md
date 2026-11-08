@@ -142,7 +142,7 @@ Recount from the decoded entities (the files `ENTITIES.md` was built from):
 ```
 $ python - <<'EOF'
 import json, glob, os
-fs=sorted(glob.glob("E:/Modding/_gamedata/JC3grab/entities/*.ee.json"))
+fs=sorted(glob.glob("E:/Modding/_shared/gamedata/JC3grab/entities/*.ee.json"))
 tot=sum(len(json.load(open(f,encoding="utf-8"))["modules"]) for f in fs)
 print("files:", len(fs), "sum modules:", tot, "per-file min/max:",
       min(len(json.load(open(f,encoding="utf-8"))["modules"]) for f in fs),
@@ -153,14 +153,14 @@ files: 232 sum modules: 6045 per-file min/max: 12 49
 
 **6,045 is correct** (232 entities, 12-49 modules each) — but the row is not stale in its value, it
 is stale in its provenance: a typed literal, in a column that names a document which never states
-it, and the decoded inputs live at `E:/Modding/_gamedata/JC3grab/entities/`, not the
-`E:\Modding\_JC3grab\` path GRAB_BACKLOG §0.6 gives:
+it, and the decoded inputs live at `E:/Modding/_shared/gamedata/JC3grab/entities/`, not the
+`E:\Modding\JustCause3\_grab\` path GRAB_BACKLOG §0.6 gives:
 
 ```
-$ ls -d "E:/Modding/_JC3grab" "E:/Modding/_JC3grab/entities" "E:/Modding/_gamedata/JC3grab/entities"
-ls: cannot access 'E:/Modding/_JC3grab': No such file or directory
-ls: cannot access 'E:/Modding/_JC3grab/entities': No such file or directory
-E:/Modding/_gamedata/JC3grab/entities
+$ ls -d "E:/Modding/JustCause3/_grab" "E:/Modding/JustCause3/_grab/entities" "E:/Modding/_shared/gamedata/JC3grab/entities"
+ls: cannot access 'E:/Modding/JustCause3/_grab': No such file or directory
+ls: cannot access 'E:/Modding/JustCause3/_grab/entities': No such file or directory
+E:/Modding/_shared/gamedata/JC3grab/entities
 ```
 
 ### 3.4 Other literals in the same page (not recounted here — flagged, not claimed stale)

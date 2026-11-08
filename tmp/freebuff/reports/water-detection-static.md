@@ -8,7 +8,7 @@ it answers that.
 
 Evidence base (all in-repo unless marked): `Research/JC3Grab/WATER.md` (module inventory over 232
 vehicle entities), `Research/JC3Grab/VOCABULARY.md` (member table), the cached module dumps at
-`E:/Modding/_gamedata/JC3grab/entities/*.ee.json` (232 files, re-probed here), `Working/RTTI/vehicle_rtti.json|.md`
+`E:/Modding/_shared/gamedata/JC3grab/entities/*.ee.json` (232 files, re-probed here), `Working/RTTI/vehicle_rtti.json|.md`
 (exe RTTI, 5,259 names), `Research/JC3Grab/USAGES.json|.md` (effect-usage names), and
 `tmp/freebuff/reports/immobiliser-and-emp-trigger.md` §6 (the exe's vehicle-variable name block).
 

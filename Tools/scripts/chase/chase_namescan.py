@@ -7,7 +7,7 @@ package), so one pass over every `.upk` in `BmGame/CookedPCConsole` answers the 
 the whole install: which packages mention `StrafeForce`, `StrafeDuration`, … at all.
 
 Read-only: opens each package, never writes to the install. Results go to
-`E:\\Modding\\_gamedata\\BmAKgrab\\chase\\namescan.json`.
+`E:\\Modding\\_shared\\gamedata\\BmAKgrab\\chase\\namescan.json`.
 
 Usage:
   python chase_namescan.py            # full pass over every .upk
@@ -28,7 +28,7 @@ NAMES = [b"StrafeForce", b"StrafeTorque", b"StrafeDuration", b"StrafeTime",
          b"TransformationAnimNode", b"StrafeCooldown"]
 RX = re.compile(b"|".join(NAMES))
 COOKED = r"E:\Games\Batman - Arkham Knight\BmGame\CookedPCConsole"
-OUT = os.path.join(r"E:\Modding\_gamedata\BmAKgrab", "chase", "namescan.json")
+OUT = os.path.join(r"E:\Modding\_shared\gamedata\BmAKgrab", "chase", "namescan.json")
 CHUNK = 16 * 1024 * 1024
 OVERLAP = 64
 

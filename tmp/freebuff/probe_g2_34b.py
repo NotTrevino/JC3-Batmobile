@@ -5,7 +5,7 @@ import json
 import os
 import re
 
-RAW = r"E:/Modding/_JC3grab"
+RAW = r"E:/Modding/JustCause3/_grab"
 OUT = r"Research/JC3Grab"
 TOK = re.compile(r"tether|rope|winch|grapp?nel|airlift|tow", re.I)
 BAD = re.compile(r"propeller|dialogue|bark_", re.I)

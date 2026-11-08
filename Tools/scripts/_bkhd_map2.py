@@ -1,7 +1,7 @@
 """Generic BKHD->export mapper: flag banks hiding in non-AkBank exports."""
 import os, struct, sys
 
-A = r"E:\Modding\JC3-Batmobile\Working\Audio"
+A = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio"
 CK = r"E:\Games\Batman - Arkham Knight\BmGame\CookedPCConsole"
 
 def image_of(pkg, streamfile, H):

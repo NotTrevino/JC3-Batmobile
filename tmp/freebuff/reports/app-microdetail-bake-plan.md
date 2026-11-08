@@ -305,7 +305,7 @@ camera distance and the test needs a closer frame.
 ## 8. Reproduce
 
 ```bash
-cd "E:/Modding/JC3-Batmobile"
+cd "E:/Modding/JustCause3/JC3-Batmobile"
 # what ships today
 ls Working/Appearance/build_bud1/ddsc | grep -i micro || echo "no micro-detail texture in the build"
 find Working/Appearance/bodytex -type f

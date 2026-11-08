@@ -2,7 +2,7 @@
 # Bank: patch game5 vehicles.bank with FSB #56/150/355 PCM swapped (same sizes)
 # to Batmobile Turbo/start content. Dropzone-loose bank overrides the archive.
 $ErrorActionPreference = 'Stop'
-$root = 'E:\Modding\JC3-Batmobile'
+$root = 'E:\Modding\JustCause3\JC3-Batmobile'
 $b = "$root\Builds\test-060"
 Write-Host '=== test-060 (Batmobile body + movement + nitro audio)'
 if (Test-Path $b) { Remove-Item $b -Recurse -Force }
@@ -32,7 +32,7 @@ param([ValidateSet('Install','Rollback059','Rollback053','Status')][string]`$Act
 `$EeSha = '$eeH'
 `$TocSha = '$tocH'
 `$BankSha = '$bankH'
-`$B = 'E:\Modding\JC3-Batmobile\Builds\test-060'
+`$B = 'E:\Modding\JustCause3\JC3-Batmobile\Builds\test-060'
 function Dep(`$ee,`$toc) {
     Copy-Item -LiteralPath (Join-Path `$B `$ee) -Destination `$EeT -Force
     Copy-Item -LiteralPath (Join-Path `$B `$toc) -Destination (`$EeT + '.toc') -Force
@@ -42,7 +42,7 @@ function UnBank { if (Test-Path -LiteralPath `$BankT) { Remove-Item -LiteralPath
 switch (`$Action) {
     'Install' { Dep 'v0300_car_kensington_sportsmuscle_civilian_01.ee' 'v0300_car_kensington_sportsmuscle_civilian_01.ee.toc'; DepBank; Write-Host 'deployed test-060: body+movement+Batmobile nitro' }
     'Rollback059' { Dep 'v0300_car_kensington_sportsmuscle_civilian_01.ee' 'v0300_car_kensington_sportsmuscle_civilian_01.ee.toc'; UnBank; Write-Host 'rolled back to 059 tree, bank removed' }
-    'Rollback053' { Copy-Item -LiteralPath 'E:\Modding\JC3-Batmobile\Builds\test-053\v0300_car_kensington_sportsmuscle_civilian_01.ee' -Destination `$EeT -Force; Copy-Item -LiteralPath 'E:\Modding\JC3-Batmobile\Builds\test-053\v0300_car_kensington_sportsmuscle_civilian_01.ee.toc' -Destination (`$EeT + '.toc') -Force; UnBank; Write-Host 'rolled back to 053, bank removed' }
+    'Rollback053' { Copy-Item -LiteralPath 'E:\Modding\JustCause3\JC3-Batmobile\Builds\test-053\v0300_car_kensington_sportsmuscle_civilian_01.ee' -Destination `$EeT -Force; Copy-Item -LiteralPath 'E:\Modding\JustCause3\JC3-Batmobile\Builds\test-053\v0300_car_kensington_sportsmuscle_civilian_01.ee.toc' -Destination (`$EeT + '.toc') -Force; UnBank; Write-Host 'rolled back to 053, bank removed' }
     'Status' {
         `$e = if (Test-Path -LiteralPath `$EeT) { (Get-FileHash -LiteralPath `$EeT).Hash } else { 'none' }
         `$t = if (Test-Path -LiteralPath (`$EeT + '.toc')) { (Get-FileHash -LiteralPath (`$EeT + '.toc')).Hash } else { 'none' }

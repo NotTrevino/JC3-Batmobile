@@ -7,7 +7,7 @@ and the outputs `Working/Translation/T8_PARTS.md` + `T8_PARTS.json` + the genera
 `Tools/scripts/t12_parts.py`, plus what it reads: `Research/BatmobileGrab/ANIMATIONS.json`,
 `BONES.json`, `POSES.json`, `Research/JC3Grab/MOVING_PARTS.json`, `TURRET.json`, `DOORS.json`,
 `PARTS_TABLE.jsonl`, `Working/Appearance/build_parts/parts_manifest.json`, `Tools/scripts/bat_assemble.py`,
-and the exported key frames in `E:/Modding/_BmAKgrab/anims/keys/` (13 files, 4.2 MB for the base
+and the exported key frames in `E:/Modding/ArkhamKnight/_grab/anims/keys/` (13 files, 4.2 MB for the base
 package, R10 game data read-only outside the repo).
 
 Constraints honoured: no game launched, nothing written into `D:/Games`, no archive opened, no game
@@ -482,7 +482,7 @@ python -c "… parts_manifest.json vs BONES.json …"   (part pivot vs bone pivo
 python -c "… bat_assemble.pivot_point with offset_used / offset_computed …"
 python -c "… TURRET.json samples; DOORS.json MissileHatch; MOVING_PARTS AirBrake …"
 python -c "… PARTS_TABLE.jsonl Train_Generic / MissileHatch / SteeringWheel dt …"
-python -c "… E:/Modding/_BmAKgrab/anims/keys/Playable_Batmobile_SF__Batmobile_V2_Pose_States.json …"
+python -c "… E:/Modding/ArkhamKnight/_grab/anims/keys/Playable_Batmobile_SF__Batmobile_V2_Pose_States.json …"
         (ChainGun_Spin 119 frames, travel/rate recomputed; flap L/R tracks; JetSMove spans)
 grep/sed over T8_PARTS.md, MODLOG.md, GRAB_BACKLOG.md §12, BUILD_BATCHES.md, COCKPIT.md
 ```

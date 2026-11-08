@@ -28,7 +28,7 @@ from pathlib import Path
 import numpy as np
 
 VIDEO = Path("C:/Users/User/Videos/Captures/Batman\u2122_ Arkham Knight VulcanFire_10s-15s.mp4")
-PNG_DIR = Path("E:/Modding/_BmAKgrab/footage/vulcan")
+PNG_DIR = Path("E:/Modding/ArkhamKnight/_grab/footage/vulcan")
 RES = Path("Research/BatmobileGrab")
 JNAME = "VULCAN_CAPTURE.json"
 MNAME = "VULCAN_CAPTURE.md"
@@ -403,7 +403,7 @@ def write() -> dict:
     ]
     for row in rec["table"]:
         lines.append(f"| {row['i']} | {row['pts']} | {row['arm_out']} | {row['red']} | {row['red_dirs']} |")
-    lines += ["", "## Key frames (E:/Modding/_BmAKgrab/footage/vulcan/)", ""]
+    lines += ["", "## Key frames (E:/Modding/ArkhamKnight/_grab/footage/vulcan/)", ""]
     for p in rec["pngs"]:
         crop = f", reticle crop `{p['reticle_crop']}`" if p["reticle_crop"] else ""
         idx = f"frame {p['frame_idx']}, " if p["frame_idx"] is not None else ""

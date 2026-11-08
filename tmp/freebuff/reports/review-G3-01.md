@@ -10,8 +10,8 @@ I wrote no research output; `grab_collision.py --write` was not run.
 ## Check output (verbatim)
 
 ```
-$ cd "E:/Modding/JC3-Batmobile" && PYTHONIOENCODING=utf-8 uv run --with numpy --with pillow python Tools/scripts/grab_collision.py --check
-check ok: E:\Modding\JC3-Batmobile\Research\BatmobileGrab\COLLISION.json E:\Modding\JC3-Batmobile\Research\BatmobileGrab\COLLISION.md
+$ cd "E:/Modding/JustCause3/JC3-Batmobile" && PYTHONIOENCODING=utf-8 uv run --with numpy --with pillow python Tools/scripts/grab_collision.py --check
+check ok: E:\Modding\JustCause3\JC3-Batmobile\Research\BatmobileGrab\COLLISION.json E:\Modding\JustCause3\JC3-Batmobile\Research\BatmobileGrab\COLLISION.md
 CHECK_EXIT=0
 ```
 

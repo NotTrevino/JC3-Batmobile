@@ -2,7 +2,7 @@
 # Hands-free smart-search chase: search (chase_candidates.py, built by a Freebuff card) -> local judge
 # (chase_judge.py on llama-server, Qwen3.5-4B, free) -> verify (a DeepSeek queue card for the found=true hits only).
 # Runs beside keeper.sh; every step is idempotent, so a restart just continues.
-P=E:/Modding/JC3-Batmobile; B=$P/tmp/freebuff; G=E:/Modding/_BmAKgrab/chase
+P=E:/Modding/JustCause3/JC3-Batmobile; B=$P/tmp/freebuff; G=E:/Modding/ArkhamKnight/_grab/chase
 CAND=$G/candidates.jsonl; VERD=$G/verdicts.jsonl; S=$P/Tools/scripts/chase
 LLAMA=E:/AI/llama/llama-server.exe; MODEL=E:/AI/models/Qwen3.5-4B-Q6_K.gguf
 log(){ echo "$(date -Is) $*" >> $B/chase_pipeline.log; }

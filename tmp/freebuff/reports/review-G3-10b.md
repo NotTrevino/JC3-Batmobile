@@ -19,7 +19,7 @@ UNKNOWN. Two smaller data defects (mass census truncation, a 2e-6 sum) go with i
 | `Research/JC3Grab/PHYSICS_ROLES2_REVIEW.json` | same, machine-readable |
 | `tmp/freebuff/reports/review-G3-10b.md` | this report |
 
-Read-only: `Builds/test-091/…/sportsmuscle.physicsc`, `E:/Modding/_gamedata/JC3grab/hkx/all`,
+Read-only: `Builds/test-091/…/sportsmuscle.physicsc`, `E:/Modding/_shared/gamedata/JC3grab/hkx/all`,
 `Research/JC3Grab/PHYSICS_ROLES2.json`/`.md`, `Tools/scripts/jc3_physics_roles2.py`. No game
 touched, no build, no git action.
 

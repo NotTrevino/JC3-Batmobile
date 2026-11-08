@@ -7,7 +7,7 @@ MODLOG §"G2-14 · Moving-part behaviours: who drives each variable — done" (`
 `GRAB_BACKLOG.md` §0.5 R1–R14.
 
 **Method.** Re-ran the card's check, then attacked each claim with the data on disk: the cached
-`vehicle_common.vmodc` (`E:\Modding\_JC3grab\tmp\vehicle_common.vmodc`), `FEATURE_CENSUS.json`,
+`vehicle_common.vmodc` (`E:\Modding\JustCause3\_grab\tmp\vehicle_common.vmodc`), `FEATURE_CENSUS.json`,
 `PARTS_TABLE.jsonl`, the 78 cached parts modules, `DOORS.md`, and — read-only — all 314 vehicle
 `.ee` containers at `D:\Games\Just Cause 3` (the generator itself reads them; nothing was written
 there, no game launched, nothing committed). Every number below is copied from a command output.
@@ -84,7 +84,7 @@ MODLOG:9750           "38 of them have a `vehicle_common` row, 29 do not (turret
 `all_*_part_properties` table with its rows and members:
 
 ```
-$ python - <<'EOF'   # walk E:/Modding/_JC3grab/tmp/vehicle_common.vmodc
+$ python - <<'EOF'   # walk E:/Modding/JustCause3/_grab/tmp/vehicle_common.vmodc
 top-level members: ['all_door_part_properties', 'all_fin_part_properties',
  'all_hinged_part_properties', 'all_propeller_part_properties',
  'all_rotating_part_properties', 'all_spring_part_properties',

@@ -45,7 +45,7 @@ from rbmhdr import hash_jenkins  # noqa: E402
 ROOT = os.path.dirname(os.path.dirname(HERE))
 OUT_MD = os.path.join(ROOT, "Research", "JC3Grab", "INPUT_D11.md")
 OUT_JSON = os.path.join(ROOT, "Research", "JC3Grab", "INPUT_D11.json")
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/_shared/gamedata/JC3grab")
 ENTITIES = os.path.join(RAW, "entities")
 
 # The three D-11 questions, with the regexes INPUT.md used for the same rows.

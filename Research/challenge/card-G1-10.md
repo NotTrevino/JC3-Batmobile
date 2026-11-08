@@ -10,7 +10,7 @@ Inputs read: `GRAB_BACKLOG.md` §0.5 (R1–R14, lines 71–91), the G1-10 card (
 Animation sequences — done" |`), `MODLOG.md` §"G1-10 · Animation sequences — intent" (line 8000)
 and §"G1-10 · Animation sequences — done" (line 8020), the outputs
 `Research/BatmobileGrab/ANIMATIONS.{json,md}`, the script `Tools/scripts/grab_anims.py`, the
-13 PSA/`.config` triples and the 13 keyframe files under `E:\Modding\_BmAKgrab\anims\`, and the
+13 PSA/`.config` triples and the 13 keyframe files under `E:\Modding\ArkhamKnight\_grab\anims\`, and the
 cooked packages under `E:\Games\Batman - Arkham Knight\BmGame\CookedPCConsole` (read only, through
 `upk_read.py`).
 
@@ -46,8 +46,8 @@ What breaks:
 
 ```
 $ python Tools/scripts/grab_anims.py --check
-ok E:\Modding\JC3-Batmobile\Research\BatmobileGrab\ANIMATIONS.json
-ok E:\Modding\JC3-Batmobile\Research\BatmobileGrab\ANIMATIONS.md
+ok E:\Modding\JustCause3\JC3-Batmobile\Research\BatmobileGrab\ANIMATIONS.json
+ok E:\Modding\JustCause3\JC3-Batmobile\Research\BatmobileGrab\ANIMATIONS.md
 PASS: 253 sequences, 13 sets, 3 trees, 253 PSA sequences, 3147888 keys, 309 notifies (204 sound, 35 script); 253/253 named, 253 bone lists, 253 mechanisms; 13/13 keyframe files present
 EXIT=0
 ```

@@ -29,8 +29,8 @@ Usage:
     python Tools/scripts/bmak_camfile.py check   # rebuild into a temp dir and verify
 
 Outputs (default):
-    E:/Modding/_gamedata/JC3cam_out/bat_base.ctunec
-    E:/Modding/_gamedata/JC3cam_out/v0300_..._civilian_01.epe
+    E:/Modding/_shared/gamedata/JC3cam_out/bat_base.ctunec
+    E:/Modding/_shared/gamedata/JC3cam_out/v0300_..._civilian_01.epe
 """
 from __future__ import annotations
 
@@ -56,7 +56,7 @@ DONOR_EPE = os.path.join(
     ROOT, "Builds/test-085/aaf/editor/entities/jc_vehicles/01_land/"
           "v0300_car_kensington_sportsmuscle/"
           "v0300_car_kensington_sportsmuscle_civilian_01.epe")
-OUT_DIR = r"E:/Modding/_gamedata/JC3cam_out"
+OUT_DIR = r"E:/Modding/_shared/gamedata/JC3cam_out"
 REPORT = os.path.join(ROOT, "Working/Camera/CAM_TUNE.json")
 
 OLD_REF = b"car_base.ctune"

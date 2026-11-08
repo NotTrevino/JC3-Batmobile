@@ -169,7 +169,7 @@ def spawn_record(blob: bytes) -> bytes:
     as did a new leaf with no record. Tags `vehicle,batmobile` so no traffic selector picks it (TRAFFIC.md);
     the two vecs are the donor's (UNKNOWN: drop clearance box; the Batmobile is larger)."""
     import subprocess, tempfile, xml.etree.ElementTree as ET
-    w = tempfile.mkdtemp(prefix="b13c_", dir=os.environ.get("JC3_RAW", "E:/Modding/_gamedata/JC3grab"))
+    w = tempfile.mkdtemp(prefix="b13c_", dir=os.environ.get("JC3_RAW", "E:/Modding/_shared/gamedata/JC3grab"))
     src, x, out = (os.path.join(w, n) for n in ("in.bin", "in.xml", "out.bin"))
     open(src, "wb").write(blob)
     if subprocess.run([CONV, "--e", src, x], capture_output=True).returncode:
@@ -324,7 +324,7 @@ def check() -> int:
        and diffs[0][1]["items"] == diffs[0][0]["items"] + [(H(LEAF), 1, 0, 1, 0)],
        f"only task {STARTER_TASK} repeatable changed: +1 ItemReward for the Batmobile")
     import subprocess, tempfile
-    w = tempfile.mkdtemp(prefix="b13c_chk_", dir=os.environ.get("JC3_RAW", "E:/Modding/_gamedata/JC3grab"))
+    w = tempfile.mkdtemp(prefix="b13c_chk_", dir=os.environ.get("JC3_RAW", "E:/Modding/_shared/gamedata/JC3grab"))
     xs = []
     for tag, data in (("in", read_vfs_any(SPAWN)), ("out", open(os.path.join(DROP, SPAWN), "rb").read())):
         open(os.path.join(w, tag + ".bin"), "wb").write(data)
@@ -353,7 +353,7 @@ def check() -> int:
     hits = [x["text"] for x in sels if jc3traffic.matches(x, set(SPAWN_TAGS.split(",")))["ok"]]
     ok(len(sels) == 41 and not hits, f"tags {SPAWN_TAGS!r} match 0 of {len(sels)} traffic selectors {hits}")
     r = subprocess.run([sys.executable, os.path.join(HERE, "stringlookup_compare.py"),
-                        os.path.join(os.environ.get("JC3_RAW", "E:/Modding/_gamedata/JC3grab"), "strings_rt", "online.stringlookup"),
+                        os.path.join(os.environ.get("JC3_RAW", "E:/Modding/_shared/gamedata/JC3grab"), "strings_rt", "online.stringlookup"),
                         os.path.join(DROP, "profile/online.stringlookup")], capture_output=True, text=True)
     print("     " + r.stdout.strip().replace("\n", "\n     "))
     ok(r.returncode == 0 and "pairs 14712 14734" in r.stdout, "online.stringlookup: 22 pairs added, nothing else changed")

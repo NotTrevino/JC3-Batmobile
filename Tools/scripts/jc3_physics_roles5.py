@@ -9,8 +9,8 @@ G3-10 (`PHYSICS_ROLES.md`) left two things open:
     *include* were never decoded.
 
 This pass decodes both from the shipped bytes and measures the mapping on the donor and over
-the fleet (`E:/Modding/_gamedata/JC3grab/hkx/out`, 233 physics entries, every raw `.physicsc`
-those decodes name that exists in `E:/Modding/_gamedata/JC3grab/hkx/all`).
+the fleet (`E:/Modding/_shared/gamedata/JC3grab/hkx/out`, 233 physics entries, every raw `.physicsc`
+those decodes name that exists in `E:/Modding/_shared/gamedata/JC3grab/hkx/all`).
 
 What is proved, and what is measured but not universal, is stated in the render: the module
 refuses to turn a rate into an invariant.
@@ -37,8 +37,8 @@ import jc3hkx  # noqa: E402
 DONOR = os.path.join(ROOT, "Builds", "test-091", "aaf", "models", "jc_vehicles", "01_land",
                      "v0300_car_kensington_sportsmuscle", "sportsmuscle.physicsc")
 PARTS = os.path.join(ROOT, "Research", "JC3Grab", "PARTS_TABLE.jsonl")
-OUT_DIR = r"E:/Modding/_gamedata/JC3grab/hkx/out"
-RAW_DIR = r"E:/Modding/_gamedata/JC3grab/hkx/all"
+OUT_DIR = r"E:/Modding/_shared/gamedata/JC3grab/hkx/out"
+RAW_DIR = r"E:/Modding/_shared/gamedata/JC3grab/hkx/all"
 OUT_MD = os.path.join(ROOT, "Research", "JC3Grab", "PHYSICS_ROLES5.md")
 OUT_JSON = os.path.join(ROOT, "Research", "JC3Grab", "PHYSICS_ROLES5.json")
 

@@ -8,10 +8,10 @@ import glob
 import struct
 import sys
 
-sys.path.insert(0, r"E:\Modding\JC3-Batmobile\Tools\scripts")
+sys.path.insert(0, r"E:\Modding\JustCause3\JC3-Batmobile\Tools\scripts")
 import rbm_geom as R  # noqa: E402
 
-root = ("E:/Modding/JC3-Batmobile/Builds/test-003/aaf/models/jc_vehicles/01_land/"
+root = ("E:/Modding/JustCause3/JC3-Batmobile/Builds/test-003/aaf/models/jc_vehicles/01_land/"
         "v0300_car_kensington_sportsmuscle")
 
 for name in ("sportsmuscle_plate_r_lod1.rbm", "sportsmuscle_body_lod1.rbm"):

@@ -57,7 +57,7 @@ sys.path.insert(0, HERE)
 ROOT = os.path.dirname(os.path.dirname(HERE))
 import rbm_geom  # noqa: E402
 
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/_shared/gamedata/JC3grab")
 DONOR = ("v0300_car_kensington_sportsmuscle",
          "v0300_car_kensington_sportsmuscle_civilian_01")
 DONOR_BASE = "__".join(DONOR)

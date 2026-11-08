@@ -20,7 +20,7 @@ for i in range(nc):
         names.append(d[oo:oo+(-ln)*2].decode("utf-16-le", "replace").rstrip("\x00")); oo += (-ln)*2
     oo += 8
 print("names:", len(names))
-open(r"E:\Modding\JC3-Batmobile\Working\Audio\gpcd_names.txt", "w").write("\n".join(names))
+open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\gpcd_names.txt", "w").write("\n".join(names))
 oo = ioff; impcls = []
 for i in range(ic):
     cnn, _ = struct.unpack_from("<ii", d, oo + 8)

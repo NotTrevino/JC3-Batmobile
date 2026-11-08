@@ -170,7 +170,7 @@ Undo: nothing installed; reload the save.
 
 STATUS: TEXT + staged DLL (see `payload/`). Run this FIRST.
 
-What the source says (decoded: `E:/Modding/_tools/jc3-console-thingy/src/commands/spawn.h`,
+What the source says (decoded: `E:/Modding/_shared/tools/jc3-console-thingy/src/commands/spawn.h`,
 `src/game/spawn_system.h`):
 * `spawn <arguments>` takes a **string model name**, not an `.ee` path and not a hash:
   `CSpawnSystem::Spawn(arguments, transform, ...)` forwards `model_name.c_str()` to the native at

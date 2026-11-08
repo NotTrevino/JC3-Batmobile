@@ -1,5 +1,5 @@
 import glob, json, collections, re
-files = sorted(glob.glob("E:/Modding/_JC3grab/detail/*.json"))
+files = sorted(glob.glob("E:/Modding/JustCause3/_grab/detail/*.json"))
 print("detail files:", len(files))
 tok = ["upright","righting","selfright","self_right","stabil","aircontrol","air_control",
        "yaw","torque","shov","dodge","flip","constraint","gravity"]

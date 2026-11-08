@@ -7,13 +7,13 @@ its §12 row (line 1309), the MODLOG `G2-26 · Rebel Drop data (RD-1 read half) 
 `Research/1456340180_Rebel-Drop-Mod-V5.3/{Regular v5.2,V5.2 Plus,V5.3 Plus}/profile/{item,task}.onlinec`,
 the two vanilla layers from `INDEX.jsonl` (`profile/item.onlinec` 52,165 / 52,204 B;
 `profile/task.onlinec` 167,286 / 167,470 B), the extracted copies in
-`E:/Modding/_JC3grab/rebeldrop/`, `INDEX.jsonl` (81,952 entries, 963 `.ee`), and — for the
+`E:/Modding/JustCause3/_grab/rebeldrop/`, `INDEX.jsonl` (81,952 entries, 963 `.ee`), and — for the
 "only searched some places" tests — the other `profile/*.onlinec` tables the card's **In** list never
 mentions (`offer`, `taskgroup`, `upgrade`).
 
 Constraints honoured: no game launched, nothing written into `D:/Games`, nothing committed, no secrets,
 no writes at all — **I did not run `--check`**, because `build()` calls `extract()`, which rewrites the
-`E:/Modding/_JC3grab/rebeldrop/` cache (`os.makedirs` + `open(..., "wb")`). Instead I imported the module
+`E:/Modding/JustCause3/_grab/rebeldrop/` cache (`os.makedirs` + `open(..., "wb")`). Instead I imported the module
 and re-derived every number in-process from those cached bytes and the mod files. The cache is the same
 data the report describes — its sha1s match REBELDROP.md §5 exactly:
 

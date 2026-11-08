@@ -33,7 +33,7 @@ Attribution is structural, not guessed:
     one weapon is wiring, and that is G2-11.
 
 `--write` decodes every tune, extracts the containers and their tune files to
-`E:\\Modding\\_gamedata\\JC3grab\\weapons\\<id>\\` (R10: game bytes stay outside the repo) and writes
+`E:\\Modding\\_shared\\gamedata\\JC3grab\\weapons\\<id>\\` (R10: game bytes stay outside the repo) and writes
 `Research/JC3Grab/WEAPONS.jsonl` + `WEAPONS.md`.  `--check` re-reads the archives, re-derives both
 files and compares them byte-for-byte, and re-hashes every extracted copy.
 
@@ -63,7 +63,7 @@ INDEX = os.path.join(OUT, "INDEX.jsonl")
 CENSUS = os.path.join(OUT, "FEATURE_CENSUS.json")
 TABLE = os.path.join(OUT, "WEAPONS.jsonl")
 DOC = os.path.join(OUT, "WEAPONS.md")
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/_shared/gamedata/JC3grab")
 WROOT = os.path.join(RAW, "weapons")
 WEP_DIR = "editor/entities/jc_weapons/06_vehicle/"
 TUNE_EXT = (".wtunec", ".ftunec")

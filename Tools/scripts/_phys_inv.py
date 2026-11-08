@@ -1,7 +1,7 @@
 """Full decode of JC3 physics modules (all members) -> phys inventory JSON."""
 import glob, os, re, subprocess, sys, tempfile
 
-GIBBED = r"E:\Modding\JC3-Batmobile\Tools\Gibbed\Gibbed.JustCause3.ConvertAdf.exe"
+GIBBED = r"E:\Modding\JustCause3\JC3-Batmobile\Tools\Gibbed\Gibbed.JustCause3.ConvertAdf.exe"
 
 def members(xml_path):
     x = open(xml_path, encoding="utf-8-sig").read()
@@ -40,7 +40,7 @@ def main():
             for rr in rows:
                 print("   @%s %-36s %-7s %s" % (rr["off"], rr["name"], rr["type"], rr["val"]))
     import json
-    json.dump(inv, open(r"E:\Modding\JC3-Batmobile\Working\Audio\jc3_phys.json", "w"), indent=1)
+    json.dump(inv, open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\jc3_phys.json", "w"), indent=1)
     print("wrote jc3_phys.json")
 
 main()

@@ -88,7 +88,7 @@ to account for every difference.
 ## Commands and output (verbatim)
 
 ```
-cd "E:/Modding/JC3-Batmobile" && export PYTHONIOENCODING=utf-8 && set -o pipefail && python Tools/scripts/v_entity_diff.py --write; echo "EXIT write=$?"; python Tools/scripts/v_entity_diff.py --check; echo "EXIT check=$?"
+cd "E:/Modding/JustCause3/JC3-Batmobile" && export PYTHONIOENCODING=utf-8 && set -o pipefail && python Tools/scripts/v_entity_diff.py --write; echo "EXIT write=$?"; python Tools/scripts/v_entity_diff.py --check; echo "EXIT check=$?"
 wrote Builds/bm-RC2/verify/entity_diff.md (25030 bytes)
 EXIT write=0
 PASS original parses as 450 objects

@@ -22,7 +22,7 @@ its mtime is 02:42, before this session.
 ## 2. Vanilla register (three blurbs, all 11 languages)
 
 Quoted in full in `BLURB_TRANSLATIONS.md` §2, decoded from
-`E:/Modding/_gamedata/JC3grab/strings_rt/online.stringlookup`:
+`E:/Modding/_shared/gamedata/JC3grab/strings_rt/online.stringlookup`:
 
 | sample | leaf | key | en chars |
 |---|---|---|---|

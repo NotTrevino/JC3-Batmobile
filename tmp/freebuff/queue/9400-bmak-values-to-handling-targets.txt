@@ -1,7 +1,7 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/bmak-values-to-handling-targets.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/bmak-values-to-handling-targets.md
 ONLY: freebuff
 EST: 40
 BRIEF: hand-written 2026-11-08
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/bmak-live-handling-capture-session.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/bmak-live-handling-capture-session.md
 Take the JSON files and the operator footage that hdl-09 saved under Working/Q/bmak_live/ and turn them into handling targets. Write a new file Working/Q/HDL_TARGETS.md with targets for: A1 0-100, A2 top speed with and without boost, A5 braking distance from 100 mph, A3 turn radius at 60 and 100 km/h, A4 lock time, A9 boost acceleration, and flip-recovery delay. Each target gets a value, the unit, how it was obtained (live memory read, footage frame count, or derived) and the class (measured, decoded, derived, assumed). Where hdl-09 measured something it replaces the old assumed value: list old value, new value and the ledger row it moves (T-E5, T-M1, T-K1, T-ST1, T-ST7, T-SR1 and others). Do not edit T_ROWS.jsonl; write proposed edits to Working/Translation/HDL_TARGET_ROW_EDITS.jsonl. Done check: every target row has class and source; the 336 km/h label stays assumed unless a measurement supersedes it. Anything still empty stays UNKNOWN, with the missing capture named.
-Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.
+Shared rules: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

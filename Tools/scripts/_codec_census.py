@@ -34,9 +34,9 @@ for p in glob.glob(os.path.join(CK, "*.upk")):
 zl = sorted(((s, p) for p, s, c in rows if c.startswith("zlib")), reverse=True)
 lz = sorted(((s, p) for p, s, c in rows if c.startswith("LZO")), reverse=True)
 print("zlib packs:", len(zl), " LZO packs:", len(lz))
-open(r"E:\Modding\JC3-Batmobile\Working\Audio\zlib_packs.txt", "w").write(
+open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\zlib_packs.txt", "w").write(
     "\n".join("%d %s" % (s, os.path.basename(p)) for s, p in zl))
-open(r"E:\Modding\JC3-Batmobile\Working\Audio\lzo_packs.txt", "w").write(
+open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\lzo_packs.txt", "w").write(
     "\n".join("%d %s" % (s, os.path.basename(p)) for s, p in lz))
 print("== biggest zlib packs:")
 for s, p in zl[:25]:

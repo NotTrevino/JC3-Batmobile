@@ -5,7 +5,7 @@ file was edited. `9033` applies this: §5 is the rewrite list, §4 is the replac
 the translation-record fallout.
 
 **Provenance / reversibility.** New file, `tmp/freebuff/reports/weapons-per-mode-redesign.md`
-= `E:/Modding/JC3-Batmobile/tmp/freebuff/reports/weapons-per-mode-redesign.md`. It is the output path
+= `E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/weapons-per-mode-redesign.md`. It is the output path
 the brief names, and it is the right file because every comparable redesign report in this project
 lives in `tmp/freebuff/reports/`. **Revert = delete this file.**
 

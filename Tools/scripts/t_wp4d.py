@@ -809,7 +809,7 @@ def render(d: dict) -> str:
     w("## 9. Reproduce and the offset oracle")
     w("")
     w("```")
-    w("cd E:/Modding/JC3-Batmobile")
+    w("cd E:/Modding/JustCause3/JC3-Batmobile")
     w("uv run python Tools/scripts/t_wp4d.py --write    # writes this file and the JSON")
     w("uv run python Tools/scripts/t_wp4d.py --check    # recomputes from the bytes, byte-compares")
     w("```")

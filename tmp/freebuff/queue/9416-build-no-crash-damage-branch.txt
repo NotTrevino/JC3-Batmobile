@@ -1,7 +1,7 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-no-crash-damage-branch.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/build-no-crash-damage-branch.md
 ONLY: freebuff
 EST: 45
 BRIEF: hand-written 2026-11-08
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/no-crash-damage-cells.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/no-crash-damage-cells.md
 Build the plan of tmp/freebuff/reports/hdl-no-crash-damage-plan.md as branch Builds/bm-RC5-damage with Tools/scripts/rc5_damage.py (--write, --check). Operator fact: the Batmobile takes no crash damage; ram assist must still harm other vehicles. Write only the cells the plan lists in the vehicle damage module, leaving traffic and AI cars on their own modules untouched (check how the entity references its module so a shared module does not leak the change to other cars; if it does leak, build a private copy and say so). Put a tuning table at the top mapping each cell to the collision take. Register under Working/RC5/branches/ in the standard format. Never edit bm-RC4 trees or the game folder. Done check: --check reads each cell back through the .toc, prints module path, old and new value, and a final line stating how many other entities reference the same module path (found by a search of the entity list).
-Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.
+Shared rules: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

@@ -817,5 +817,5 @@ python Tools/scripts/status_audit.py --check       # STATUS.md vs the ledger
 ```
 
 The heredocs above are all read-only; each prints what the section quotes. Nothing in the repo,
-`Builds/`, `E:/Modding/_JC3grab`, `E:/Modding/_BmAKgrab` or `D:/Games` was written, and no process
+`Builds/`, `E:/Modding/JustCause3/_grab`, `E:/Modding/ArkhamKnight/_grab` or `D:/Games` was written, and no process
 was launched.

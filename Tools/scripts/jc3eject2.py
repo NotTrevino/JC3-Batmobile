@@ -54,7 +54,7 @@ from rbmhdr import hash_jenkins  # noqa: E402
 import jc3eject  # noqa: E402  (the reviewed script, imported read-only)
 
 OUT = os.path.join(ROOT, "Research", "JC3Grab")
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/_shared/gamedata/JC3grab")
 DETAIL = os.path.join(RAW, "detail")
 ENTITIES = os.path.join(RAW, "entities")
 DETAIL_INDEX = os.path.join(RAW, "detail_index.json")
@@ -545,8 +545,8 @@ def report(doc: dict) -> str:
     a("")
     a(f"`jc3eject.py --check` **fails on this install** ({c['orig_md_changed_lines']} changed "
       "line(s) in `EJECT.md`). The cause is not a number: the report text was generated when "
-      "the raw decode lived at `E:/Modding/_JC3grab` (that path no longer exists); it now "
-      "lives at `E:/Modding/_gamedata/JC3grab`, and the path is printed into the header and "
+      "the raw decode lived at `E:/Modding/JustCause3/_grab` (that path no longer exists); it now "
+      "lives at `E:/Modding/_shared/gamedata/JC3grab`, and the path is printed into the header and "
       "the reproduce section. The JSON is byte-identical "
       f"(`json_equal={orig['json_equal']}`, digest `{orig['disk_digest']}`), so every number "
       "re-derives.")

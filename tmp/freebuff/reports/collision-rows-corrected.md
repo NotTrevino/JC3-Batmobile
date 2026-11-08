@@ -70,7 +70,7 @@ Two details worth naming:
 ## 3. Commands (verbatim)
 
 ```
-$ cd E:/Modding/JC3-Batmobile && python Tools/scripts/t_collision_corrected.py --write; echo "write_exit=$?"; python Tools/scripts/t_collision_corrected.py --check; echo "check_exit=$?"
+$ cd E:/Modding/JustCause3/JC3-Batmobile && python Tools/scripts/t_collision_corrected.py --write; echo "write_exit=$?"; python Tools/scripts/t_collision_corrected.py --check; echo "check_exit=$?"
 wrote Working/Translation/COLLISION_ROWS_CORRECTED.json (8100 chars)
 wrote Working/Translation/COLLISION_ROWS_CORRECTED.md (11694 chars)
 9/9 checks pass, 9 corrections

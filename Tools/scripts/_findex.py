@@ -1,8 +1,8 @@
 """Cross-bank GUID index: every EVTB record + all 16B GUIDs; locate missing 21."""
 import os, struct
 
-A = r"E:\Modding\JC3-Batmobile\Working\Audio\jc3bank\sound\fmod_banks"
-evs = [l.strip() for l in open(r"E:\Modding\JC3-Batmobile\Working\Audio\serpente_fmod_events.txt")]
+A = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\jc3bank\sound\fmod_banks"
+evs = [l.strip() for l in open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\serpente_fmod_events.txt")]
 targets = set()
 for g in evs:
     h = g.strip("{}").replace("-", "")

@@ -130,7 +130,7 @@ UNKNOWN for the rest, not established.
 
 ```
 $ python Tools/scripts/t_rows.py build
-E:\Modding\JC3-Batmobile\Working\Translation\T_ROWS.jsonl: 198 rows, 35 edits over 16 rows
+E:\Modding\JustCause3\JC3-Batmobile\Working\Translation\T_ROWS.jsonl: 198 rows, 35 edits over 16 rows
 exit=0
 
 $ python Tools/scripts/t_blocked.py --write

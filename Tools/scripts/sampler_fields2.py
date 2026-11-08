@@ -2,7 +2,7 @@
 Y (boost), missile-launcher state, booster state and A-button eject live.
 
 Source of every offset: the BmSDK-AK generated C# layouts (MIT),
-E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated/**/*.g.cs. Each field below is read out of its
+E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Generated/**/*.g.cs. Each field below is read out of its
 `/// <Type>Property: <name>` comment block and the `Ptr + N` in the getter; the line number reported
 is the comment line. Nothing here comes from general knowledge of UE3: a field that is not in these
 files is reported as UNKNOWN, with what was scanned.
@@ -28,7 +28,7 @@ import os
 import re
 import sys
 
-BMSDK = os.environ.get("BMSDK_DIR", r"E:/Modding/_tools/BmSDK-AK/src/BmSDK")
+BMSDK = os.environ.get("BMSDK_DIR", r"E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK")
 GEN = os.path.join(BMSDK, "Generated")
 OUT_MD = os.path.join("Research", "BatmobileGrab", "SAMPLER_FIELDS2.md")
 OUT_JSON = os.path.join("Research", "BatmobileGrab", "SAMPLER_FIELDS2.json")
@@ -276,7 +276,7 @@ def build() -> dict:
         "schema": 1,
         "card": "G3-02f - BmSDK offsets for the BmAK runtime sampler: X (barrage), Y (boost), "
                 "missile launcher, booster, A (eject)",
-        "source": "BmSDK-AK generated layouts (MIT), E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated",
+        "source": "BmSDK-AK generated layouts (MIT), E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Generated",
         "labels": {"decoded": "read from the named .g.cs comment line + the Ptr + N in its getter",
                    "derived": "computed from decoded facts (widths from the next field, offsets from TArray.cs)",
                    "UNKNOWN": "no such field exists in the layouts read; what was scanned is stated"},
@@ -397,7 +397,7 @@ def render(doc: dict) -> str:
     A = L.append
     A("# BmSDK offsets for the BmAK sampler - X (barrage), Y (boost), missiles, booster, A (eject)")
     A("")
-    A("**Card:** G3-02f. **Source:** `E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated` (BmSDK-AK, MIT),")
+    A("**Card:** G3-02f. **Source:** `E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Generated` (BmSDK-AK, MIT),")
     A("read from the `/// <Type>Property:` comment and the `Ptr + N` getter of each field.")
     A("Every offset below is `decoded` at the `.g.cs` file and line in its row; the line number is the")
     A("comment line. `Width` is `derived` (distance to the next field, last field to the class size).")

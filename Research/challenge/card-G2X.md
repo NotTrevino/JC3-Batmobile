@@ -417,7 +417,7 @@ and the gate's absence rows are all scanned against the 52-type file.
 
 **Verdict: BROKEN.** Not "the absences are wrong" — it is that the completeness claim is refuted by
 the project's own artefacts. The 53rd type is not identified here (that needs
-`E:\Modding\_JC3grab\entities\*.ee.json`, outside this review's read-only scope); its members are
+`E:\Modding\JustCause3\_grab\entities\*.ee.json`, outside this review's read-only scope); its members are
 unscanned by every absence row.
 
 ---
@@ -744,7 +744,7 @@ caught in `APP-1`.
   '-40 minutes'` returned nothing after the full gate run, and `G2X.md`/`G2X.json` still show their
   `00:27` mtime. `git status` already listed 187 modified paths before this review (the repo's
   pre-existing state); this review added only `Research/challenge/card-G2X.md`.
-* The raw decoded corpus `E:\Modding\_JC3grab\` (and the game archives) were **not** read for this
+* The raw decoded corpus `E:\Modding\JustCause3\_grab\` (and the game archives) were **not** read for this
   review; every test above uses in-repo artefacts, which is also the gate's own evidence base. That
   is why §10 cannot name the missing 53rd module type and §9 cannot name the 233rd entity.
 * No game was launched, nothing was written into `D:\Games`, no save, build or shared module was

@@ -308,7 +308,7 @@ bytes 1) — which is exactly the class of error that let "keep" stand for a yea
 ## 13. Reproduce
 
 ```bash
-cd "E:/Modding/JC3-Batmobile"
+cd "E:/Modding/JustCause3/JC3-Batmobile"
 
 # 1. the seven rows as the ledger states them
 grep -E '"id":"T-(ST2|ST3|ST4|ST6|K3|K4|DR1)"' Working/Translation/T_ROWS.jsonl

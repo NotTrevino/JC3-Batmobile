@@ -63,7 +63,7 @@ ledger 198 rows | edit 16 next 39 keep 61 epe 26 re-read 0 blocked 13 out 36 sup
 check ok
 
 $ python Tools/scripts/t3_fleet.py --check
-E:\Modding\JC3-Batmobile\Working\Translation\T3_FLEET.md: 41 members over 156 vehicles
+E:\Modding\JustCause3\JC3-Batmobile\Working\Translation\T3_FLEET.md: 41 members over 156 vehicles
 check ok
 
 $ python Tools/scripts/status_audit.py --check
@@ -111,7 +111,7 @@ future reader lacks is a per-row "as of" marker: the heading is dated, the table
 ### 3. `install.ps1 -Action Status` cannot be re-run in this shell
 
 ```
-$ powershell -NoProfile -Command "& 'E:\Modding\JC3-Batmobile\Builds\test-091\install.ps1' -Action Status"
+$ powershell -NoProfile -Command "& 'E:\Modding\JustCause3\JC3-Batmobile\Builds\test-091\install.ps1' -Action Status"
 + CategoryInfo : ObjectNotFound: (Get-FileHash:String) [install.ps1], CommandNotFoundException
 ```
 

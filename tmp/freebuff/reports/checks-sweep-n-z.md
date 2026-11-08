@@ -43,7 +43,7 @@ missing inputs — see the note under the table.
 | `review_splits.py` | 1 | `FAIL: SPLIT_FACES.json differs from the re-derived record` | stored JSON drifted |
 | `sampler_unknowns.py` | 1 | `FAIL: SAMPLER_UNKNOWNS.md differs from a fresh rebuild` | stale document |
 | `t10_reopen.py` | 1 | `FAIL T10_OPEN_ROWS.md stale: the text differs` / `1 problem(s)` | stale document |
-| `t12_audio.py` | 1 | md diff at `-E:\Modding\_JC3grab\audio\` / `+E:\Modding\_gamedata\JC3grab\audio\` | stale document: game-data root rename `_JC3grab` -> `_gamedata/JC3grab` |
+| `t12_audio.py` | 1 | md diff at `-E:\Modding\JustCause3\_grab\audio\` / `+E:\Modding\_shared\gamedata\JC3grab\audio\` | stale document: game-data root rename `_JC3grab` -> `_gamedata/JC3grab` |
 | `t12_parts.py` | 1 | md diff at `_BmAKgrab/anims/keys/` -> `_gamedata/BmAKgrab/anims/keys/` | stale document, same rename family (BmAKgrab) |
 | `t23_closeout.py` | 1 | `FAIL §11 has 11 decisions, expected D-1...D-10`; `FAIL BUILD_BATCHES.md differs…`; `FAIL build_batches.json differs…`; `3 problem(s)` | gate TX bookkeeping: the section it parses has one more decision than the D-1..D-10 it asserts, and both generated records are stale |
 | `t7_weapons.py` | 1 | md diff inside the T-WP6 (winch) row: the stored prose claims "no winch/rope/tow module type", the re-derivation states the measured 52-type / 1,421-path vocabulary and 103-class census | stale document whose *evidence wording* changed, not just a path |
@@ -72,12 +72,12 @@ missing inputs — see the note under the table.
 
 | script | blocked path |
 |---|---|
-| `t10_damage.py` | `E:/Modding/_gamedata/JC3grab\tmp_t1\default_extended_effect_usages.vmodc` |
-| `t3_fleet.py` | `E:\Modding\JC3-Batmobile\Working\Translation\T3_FLEET.md` |
-| `v01_gates.py` | `E:\Modding\JC3-Batmobile\Builds\bm-RC1\verify\v01` |
-| `v03_wiring.py` | `E:\Modding\JC3-Batmobile\Builds\bm-RC1\verify\_v03.epe` |
-| `v03_wiring2.py` | `E:\Modding\JC3-Batmobile\Working\RC\verify-bm-RC2\_v03.epe` |
-| `v05_combat.py` | `E:/Modding/_gamedata/JC3grab\tmp_t1\default_extended_effect_usages.vmodc` |
+| `t10_damage.py` | `E:/Modding/_shared/gamedata/JC3grab\tmp_t1\default_extended_effect_usages.vmodc` |
+| `t3_fleet.py` | `E:\Modding\JustCause3\JC3-Batmobile\Working\Translation\T3_FLEET.md` |
+| `v01_gates.py` | `E:\Modding\JustCause3\JC3-Batmobile\Builds\bm-RC1\verify\v01` |
+| `v03_wiring.py` | `E:\Modding\JustCause3\JC3-Batmobile\Builds\bm-RC1\verify\_v03.epe` |
+| `v03_wiring2.py` | `E:\Modding\JustCause3\JC3-Batmobile\Working\RC\verify-bm-RC2\_v03.epe` |
+| `v05_combat.py` | `E:/Modding/_shared/gamedata/JC3grab\tmp_t1\default_extended_effect_usages.vmodc` |
 
 A skip is **not** a pass: these checks scratch a copy outside `tmp/` before comparing, so under this
 harness their result is UNKNOWN. Note that three of them (`v01_gates.py`, `v03_wiring.py`,

@@ -8,7 +8,7 @@
 #   body LODs  = sportsmuscle_body_lod1..5.rbm := Batmobile 20k / 8k / 3k / 1.5k / 0.8k tris
 #   test-043: deform format (as drawn in 040/042)   test-044: plain, non-deform (0x001F)
 $ErrorActionPreference = 'Stop'
-$root = 'E:\Modding\JC3-Batmobile'
+$root = 'E:\Modding\JustCause3\JC3-Batmobile'
 $g    = "$root\Tools\Gibbed"
 $ee   = 'v0300_car_kensington_sportsmuscle_civilian_01.ee'
 $dir  = 'models\jc_vehicles\01_land\v0300_car_kensington_sportsmuscle'

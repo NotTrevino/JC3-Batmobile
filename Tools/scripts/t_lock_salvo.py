@@ -51,7 +51,7 @@ BMAK = os.path.join(ROOT, "Research", "BatmobileGrab", "WEAPONS.md")
 OUT = os.path.join(ROOT, "tmp", "freebuff", "reports")
 SCRATCH = os.path.join(ROOT, "tmp", "freebuff", "scratch", "epe")
 CONVERT = os.path.join(ROOT, "Tools", "Gibbed", "Gibbed.JustCause3.ConvertProperty.exe")
-HUD = os.environ.get("JC3_GRAB", r"E:\Modding\_gamedata\JC3grab") + r"\hud\dec\scripts"
+HUD = os.environ.get("JC3_GRAB", r"E:\Modding\_shared\gamedata\JC3grab") + r"\hud\dec\scripts"
 JSON_NAME = "lock-hold-and-salvo-carrier.json"
 MD_NAME = "lock-hold-and-salvo-carrier.md"
 

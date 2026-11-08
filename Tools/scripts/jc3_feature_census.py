@@ -4,9 +4,9 @@ Backlog §2 makes four claims about what the JC3 fleet carries.  They were found
 by ad-hoc scans of the decoded graphs, so until now nothing re-derived them.
 This script does, from three generated inputs only:
 
-  * `E:\\Modding\\_gamedata\\JC3grab\\detail\\*.ee.json`   - every vehicle `.epe` graph as
+  * `E:\\Modding\\_shared\\gamedata\\JC3grab\\detail\\*.ee.json`   - every vehicle `.epe` graph as
     rows (232 files; produced by `jc3detail.py`).
-  * `E:\\Modding\\_gamedata\\JC3grab\\entities\\*.ee.json` - the same entities as module
+  * `E:\\Modding\\_shared\\gamedata\\JC3grab\\entities\\*.ee.json` - the same entities as module
     rows (produced by `jc3grab.py`); the `VehicleCommon` module is where
     `vehicle_common.vmodc` exposes its behaviour tables.
   * `Research/JC3Grab/PARTS_TABLE.jsonl`        - one row per entity, one entry
@@ -56,7 +56,7 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/_shared/gamedata/JC3grab")
 OUT = os.path.join(ROOT, "Research", "JC3Grab")
 
 SCHEMA = 1

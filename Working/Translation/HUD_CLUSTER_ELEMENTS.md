@@ -186,11 +186,11 @@ formula are exactly the spec's own values, read the same way.
 ## 7. Reproduce
 
 ```
-cd E:/Modding/JC3-Batmobile
+cd E:/Modding/JustCause3/JC3-Batmobile
 uv run python Tools/scripts/hud_cluster_elements.py --write   # writes this file
 uv run python Tools/scripts/hud_cluster_elements.py --check   # re-derives, byte-compares
 ```
 
 Inputs, read-only: `Research/BatmobileGrab/HUD_SPEC.json`, `tmp/freebuff/reports/G3-HUD-CLUSTER.md`, `Working/HUD/CLUSTER.json`, and the decompiled
-`HudModuleBatmobile` AS3 under `E:/Modding/_gamedata` (the same movie `Tools/scripts/bmak_hud.py`
+`HudModuleBatmobile` AS3 under `E:/Modding/_shared/gamedata` (the same movie `Tools/scripts/bmak_hud.py`
 carves from `BmGame.upk`). No game launched or attached (INSTRUCTIONS.md §3).

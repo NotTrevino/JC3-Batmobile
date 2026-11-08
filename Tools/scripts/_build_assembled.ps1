@@ -10,7 +10,7 @@ param(
     [Parameter(Mandatory = $true)][string]$Tag
 )
 $ErrorActionPreference = 'Stop'
-$root = 'E:\Modding\JC3-Batmobile'
+$root = 'E:\Modding\JustCause3\JC3-Batmobile'
 $g    = "$root\Tools\Gibbed"
 $src  = Join-Path $root $Src
 $ee   = 'v0300_car_kensington_sportsmuscle_civilian_01.ee'

@@ -1,10 +1,10 @@
 """G2-30 probe 4: the donor's 54 hulls - part binding, extent, counts, box, centroid."""
 import sys
 
-sys.path.insert(0, r"E:/Modding/JC3-Batmobile/Tools/scripts")
+sys.path.insert(0, r"E:/Modding/JustCause3/JC3-Batmobile/Tools/scripts")
 import jc3hkx  # noqa: E402
 
-SRC = (r"E:/Modding/JC3-Batmobile/Builds/test-091/aaf/models/jc_vehicles/01_land/"
+SRC = (r"E:/Modding/JustCause3/JC3-Batmobile/Builds/test-091/aaf/models/jc_vehicles/01_land/"
        r"v0300_car_kensington_sportsmuscle/sportsmuscle.physicsc")
 EE = ("editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/"
       "v0300_car_kensington_sportsmuscle_civilian_01.ee")

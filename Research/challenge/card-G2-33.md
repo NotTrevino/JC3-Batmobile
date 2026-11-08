@@ -7,7 +7,7 @@
 it is called), R4, R11.
 
 **Method.** Every number below was re-derived from the inputs the card names: the 232 entity caches
-(`E:/Modding/_JC3grab/entities/`), the 232 `.epe` graphs (`E:/Modding/_JC3grab/detail/`),
+(`E:/Modding/JustCause3/_grab/entities/`), the 232 `.epe` graphs (`E:/Modding/JustCause3/_grab/detail/`),
 `Research/JC3Grab/PARTS_TABLE.jsonl` (233 rows), `GEOMETRY.jsonl` (56,136 rows),
 `INDEX.jsonl`, `Research/BatmobileGrab/LIGHTS.json`, and `rbmhdr.hash_jenkins`. No game was
 launched, nothing was written under `D:/Games`, no archive was opened, nothing committed. This
@@ -347,8 +347,8 @@ G1-17's translation of the BmAK socket chain". §6 and §7b call the same thing 
 ```
 LIGHTS.json vehicles[0].entries[5].anchor_state = "needs-lig-bone: the assembled part has no bone
                                                   hierarchy yet"
-grep -rl "Wheel_Frnt_Left_Disc" E:/Modding/_JC3grab   -> no hits
-grep -rl "Wheel_Frnt_Left_Disc" E:/Modding/JC3-Batmobile/Research/BatmobileGrab -> LIGHTS.json
+grep -rl "Wheel_Frnt_Left_Disc" E:/Modding/JustCause3/_grab   -> no hits
+grep -rl "Wheel_Frnt_Left_Disc" E:/Modding/JustCause3/JC3-Batmobile/Research/BatmobileGrab -> LIGHTS.json
 ```
 
 The bone name exists only on the BmAK side; the `_LIG` suffix follows the donor's anchor convention
@@ -505,8 +505,8 @@ three sentences and one class label.
 
 ```
 python Tools/scripts/jc3lights.py --check
-# census: lights[i].* over E:/Modding/_JC3grab/entities/*.ee.json
-# .epe side: epe.objects where class == SVehicleLight in E:/Modding/_JC3grab/detail/*.ee.json
+# census: lights[i].* over E:/Modding/JustCause3/_grab/entities/*.ee.json
+# .epe side: epe.objects where class == SVehicleLight in E:/Modding/JustCause3/_grab/detail/*.ee.json
 # join: rbmhdr.hash_jenkins(name) vs lights[i].preset_id
 # binding: PARTS_TABLE.jsonl rows keyed by entity basename
 # CarLight: GEOMETRY.jsonl blocks where type == "CarLight"

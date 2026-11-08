@@ -1,7 +1,7 @@
 """Sounds' fileID fields vs WAD hashes: streamed-media references in BML_Engine?"""
 import json, os, struct
 
-A = r"E:\Modding\JC3-Batmobile\Working\Audio"
+A = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio"
 d = open(os.path.join(A, "bank_BML_Engine.bank"), "rb").read()
 hi = d.find(b"HIRC"); o = hi + 8
 (n,) = struct.unpack_from("<I", d, o); o += 4
@@ -15,7 +15,7 @@ for _ in range(n):
 census = json.load(open(os.path.join(A, "sfx_census.json")))
 wadhashes = {"%08X" % int(r["hash"], 16) for r in census}
 pairs = {}
-for l in open(r"E:\Modding\JC3-Batmobile\Research\Arkham Knight SFX\Arkham Knight SFX\batman_bnk\bnk\hashlist.txt",
+for l in open(r"E:\Modding\JustCause3\JC3-Batmobile\Research\Arkham Knight SFX\Arkham Knight SFX\batman_bnk\bnk\hashlist.txt",
               encoding="utf-8", errors="replace").read().splitlines():
     if "\t" in l:
         h, nm = l.split("\t", 1)

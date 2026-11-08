@@ -105,7 +105,7 @@
    "producer": "Tools/scripts/jc3grab.py",
    "reads": [
     "every JC3 vehicle `.ee` in the archives, its inner `.vmodc` decoded with Gibbed ConvertAdf",
-    "the decoded instance.member.path = value rows in E:/Modding/_gamedata/JC3grab"
+    "the decoded instance.member.path = value rows in E:/Modding/_shared/gamedata/JC3grab"
    ],
    "value_label": "derived",
    "rule": "ranges/counts are aggregates (min..max, n) over the decoded member values; the member VALUES are grabbed from the game's own named XML rows, the aggregate is DERIVED",
@@ -215,7 +215,7 @@
    "sha1_16": "03787cb3005d25d3",
    "producer": "Tools/scripts/t3_fleet.py",
    "reads": [
-    "E:/Modding/_gamedata/JC3grab (the jc3grab.py decodes: RigidBody, VehicleDamage, Suspension, Brakes, LandGlobal, Engine members)"
+    "E:/Modding/_shared/gamedata/JC3grab (the jc3grab.py decodes: RigidBody, VehicleDamage, Suspension, Brakes, LandGlobal, Engine members)"
    ],
    "value_label": "derived",
    "rule": "each cell is n, the median and the p25..p75 band over the land fleet in a mass class (3-8 t, 6 t+); the member values are grabbed, the statistics are DERIVED",
@@ -235,7 +235,7 @@
     "exit": 0,
     "seconds": 9.4,
     "tail": [
-     "E:\\Modding\\JC3-Batmobile\\Working\\Translation\\T3_FLEET.md: 41 members over 156 vehicles",
+     "E:\\Modding\\JustCause3\\JC3-Batmobile\\Working\\Translation\\T3_FLEET.md: 41 members over 156 vehicles",
      "check ok"
     ]
    }
@@ -248,7 +248,7 @@
    "sha1_16": "7e637293cf63cbae",
    "producer": "Tools/scripts/t1_fits.py",
    "reads": [
-    "E:/Modding/_gamedata/JC3grab, one `<member>` and `rigid_body.mass` per land vehicle"
+    "E:/Modding/_shared/gamedata/JC3grab, one `<member>` and `rigid_body.mass` per land vehicle"
    ],
    "value_label": "derived",
    "rule": "log-log least squares value = a * mass^b over the vehicles carrying both members, with R^2, n and the fleet min..max printed; a fit is DERIVED, and an R^2 near 0 is the file's own statement that the relation is not usable",
@@ -269,7 +269,7 @@
     "exit": 0,
     "seconds": 4.1,
     "tail": [
-     "FITS.md: 156 land vehicles, 19 members fitted, 5 usable (R2 >= 0.5) -> E:\\Modding\\JC3-Batmobile\\tmp\\freebuff\\scratch\\FITS_recheck.md"
+     "FITS.md: 156 land vehicles, 19 members fitted, 5 usable (R2 >= 0.5) -> E:\\Modding\\JustCause3\\JC3-Batmobile\\tmp\\freebuff\\scratch\\FITS_recheck.md"
     ]
    }
   }
@@ -1747,7 +1747,7 @@
   "one composite is neither: values.json's effective_base_colour applies a grabbed multiplier whose operator COLOUR_PARAMS.md marks UNKNOWN, so it is labelled ASSUMED and oracle `assumed_rules_cited` fails if that citation disappears"
  ],
  "unknowns": [
-  "VOCABULARY.md's per-member ranges are aggregates whose raw value rows live outside the repo (E:/Modding/_gamedata/JC3grab); the aggregate is re-derivable only where that data is present (jc3grab.py check)",
+  "VOCABULARY.md's per-member ranges are aggregates whose raw value rows live outside the repo (E:/Modding/_shared/gamedata/JC3grab); the aggregate is re-derivable only where that data is present (jc3grab.py check)",
   "no row in the seven files records a per-value hash, so 'file unchanged since the grab' rests on the producer's check, not on a value-level fingerprint"
  ],
  "oracles": {

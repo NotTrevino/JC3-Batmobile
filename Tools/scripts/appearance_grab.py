@@ -27,7 +27,7 @@ UMODEL = r"C:\Users\User\source\repos\UEViewer\umodel.exe"
 PACKAGE = "Playable_Batmobile_SF"
 MESH = "Batmobile_V2"
 OUT = os.path.join(ROOT, "Working", "Appearance", "grab")
-REFERENCE = os.path.join(os.path.dirname(ROOT), "_gamedata", "bmak_early", "Playable_Batmobile_SF")   # moved 2026-11-02
+REFERENCE = os.path.join(os.path.dirname(os.path.dirname(ROOT)), "_shared", "gamedata", "bmak_early", "Playable_Batmobile_SF")   # moved 2026-11-02
 
 CLASS_DIRS = {
     "SkeletalMesh3": "SkeletalMesh",

@@ -32,7 +32,7 @@ G2 readers plus the P0-2 census re-run **25/25 green**.
 | `MODLOG.md` | intended-change entry + `## G2X · G2 exit gate — passed (2026-10-28)` (append-only) |
 | this file | `tmp/freebuff/reports/G2X.md` |
 
-Game data: none produced. The readers the gate calls read the existing `E:\Modding\_JC3grab\`
+Game data: none produced. The readers the gate calls read the existing `E:\Modding\JustCause3\_grab\`
 decodes; nothing was written under `_JC3grab` or `_BmAKgrab` by this item, and no game, install,
 dropzone, save or git operation was touched.
 

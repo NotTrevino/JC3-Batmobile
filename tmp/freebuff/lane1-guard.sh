@@ -6,7 +6,7 @@
 #   phase B (19:05:00Z): move EST >= 45 out of queue/  -> the old "longest first" can only pick short (EST 30) tasks
 #   phase C (19:23:50Z): move EVERYTHING out of queue/ and filler/ -> nothing can be sent into the deadline
 #   restore: when the driver exits (or at 19:34Z at the latest) every moved file goes back to queue/ (filler/ for fillers)
-B=/e/Modding/JC3-Batmobile/tmp/freebuff
+B=/e/Modding/JustCause3/JC3-Batmobile/tmp/freebuff
 H=$B/low/lane1-hold
 PID=6876
 LOG=$B/lane1-guard.log

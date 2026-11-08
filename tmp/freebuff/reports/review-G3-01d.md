@@ -36,7 +36,7 @@ outright. Those are in §4 — they strengthen the card rather than damage it.
 ## 1. Check output (verbatim)
 
 ```
-cd "E:/Modding/JC3-Batmobile" && uv run --with numpy --with pillow --with pefile --with capstone python Tools/scripts/grab_collision_frame.py --check; echo "CHECK_EXIT=$?"
+cd "E:/Modding/JustCause3/JC3-Batmobile" && uv run --with numpy --with pillow --with pefile --with capstone python Tools/scripts/grab_collision_frame.py --check; echo "CHECK_EXIT=$?"
 ```
 
 ```

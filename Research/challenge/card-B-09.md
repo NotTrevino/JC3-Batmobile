@@ -15,7 +15,7 @@ tree.
 
 **Not re-run, and why.** B-09's two Done checks (`damage_audit.py --build`, `damage_predict.py
 --root`) shell `Tools/Gibbed-patched/…ConvertAdf.exe` through `t1_current.dump()`, which writes an
-XML cache under `E:/Modding/_JC3grab/tmp_t1` — outside the repo, and outside this session's
+XML cache under `E:/Modding/JustCause3/_grab/tmp_t1` — outside the repo, and outside this session's
 read-only mandate. `Research/specs/B-09.md` skipped them for the same reason. Their recorded MODLOG
 output is quoted where it matters and labelled **[recorded]**; every other number below is fresh.
 
@@ -631,7 +631,7 @@ computed at 2000 → `2 / 3 / 2`, not `24 / 48 / 25`.
 and receipt are **00:54**, `bm_health.json` **00:54**, `damage_audit.py` **01:04** — the recorded
 Done check 2 was produced before the current source existed. Either the earlier version resolved the
 `.epe`, or the shared module failed to decode in that run; nothing on disk says which. (I did not run
-it: `t1_current.dump` shells `ConvertAdf` and writes `E:/Modding/_JC3grab/tmp_t1`, outside the
+it: `t1_current.dump` shells `ConvertAdf` and writes `E:/Modding/JustCause3/_grab/tmp_t1`, outside the
 repo.)
 
 **Result.** The number Done check 2 prints is an artefact of directory enumeration order, not of the

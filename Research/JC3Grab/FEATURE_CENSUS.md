@@ -13,7 +13,7 @@ python Tools/scripts/jc3_feature_census.py --check
 | input | value |
 |---|---|
 | `detail_graphs` | 232 |
-| `detail_root` | E:/Modding/_JC3grab/detail |
+| `detail_root` | E:/Modding/JustCause3/_grab/detail |
 | `parts_table_rows` | 233 |
 | `parts_table_parts` | 11643 |
 | `index_rows` | 81952 |

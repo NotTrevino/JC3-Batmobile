@@ -1,7 +1,7 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/telemetry-take-analyser.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/telemetry-take-analyser.md
 ONLY: freebuff
 EST: 50
 BRIEF: hand-written 2026-11-08
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-live-vehicle-readout.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-gamepad-scoping.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/hook-live-vehicle-readout.md, E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/hook-gamepad-scoping.md
 Brief 7982 writes a per-second JSON-lines telemetry file (%LOCALAPPDATA%/jc3-batmobile-hook/telemetry.jsonl: time, position, rotation, speed, health), and 7983 logs the gamepad stick state. Build the offline analyser that replaces screenshots for driving takes. Write Tools/scripts/telemetry_takes.py with one sub-command per take: launch (0-100 km/h time and distance, A1), topspeed (peak and plateau, A2), brake (100-0 distance and mean deceleration, A5), boost (0-100 with boost, m/s^2, A9), corner (radius = speed over yaw rate from successive headings, A3), lock (time from stick full deflection to yaw-rate onset, A4, flagged coarse if the log rate is below 10 Hz), drift (peak slip angle and recovery time, A7), landing (height channel from position z, rebound count, A6). Every output line carries the band from Working/Q/PREDICTIONS.md. If a channel is missing from the 7982 schema, print UNKNOWN with the field name; never interpolate. Done check: --help lists all eight; running with no file prints the expected path and exits 2.
-Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.
+Shared rules: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

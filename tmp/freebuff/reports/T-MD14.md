@@ -19,7 +19,7 @@ only: no game process started or attached, no install, no git.
 All three are `SAttachedEffect` objects the donor graph names (`roles` in
 `Research/JC3Grab/JC3_AUDIO_EVENTS.json`), so each *pairing* meets the brief's bar
 (hash + module).  The *trigger* does not: the built bank manifest has 0 battle-mode
-references, and no file under `E:/Modding/_gamedata/JC3grab/entities` contains the
+references, and no file under `E:/Modding/_shared/gamedata/JC3grab/entities` contains the
 string `Play_BattleMode` (0 files), so nothing is claimed to fire.
 
 Boost, horn and impact were deliberately not used: `exhaust_upgrade_nitrous` is a nitro
@@ -49,7 +49,7 @@ check exit=0
 ```
 
 ```
-$ grep -rl "Play_BattleMode" E:/Modding/_gamedata/JC3grab/entities | wc -l
+$ grep -rl "Play_BattleMode" E:/Modding/_shared/gamedata/JC3grab/entities | wc -l
 count=0
 ```
 

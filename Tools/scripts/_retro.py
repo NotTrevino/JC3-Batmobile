@@ -2,10 +2,10 @@
 import json, os, struct
 
 pairs = {l.split("\t")[0].strip().upper(): l.split("\t")[1].strip()
-         for l in open(r"E:\Modding\JC3-Batmobile\Research\Arkham Knight SFX\Arkham Knight SFX\batman_bnk\bnk\hashlist.txt",
+         for l in open(r"E:\Modding\JustCause3\JC3-Batmobile\Research\Arkham Knight SFX\Arkham Knight SFX\batman_bnk\bnk\hashlist.txt",
                        encoding="utf-8", errors="replace").read().splitlines() if "\t" in l}
-census = {r["hash"]: r for r in json.load(open(r"E:\Modding\JC3-Batmobile\Working\Audio\sfx_census.json"))}
-rank = json.load(open(r"E:\Modding\JC3-Batmobile\Working\Audio\ranking.json"))
+census = {r["hash"]: r for r in json.load(open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\sfx_census.json"))}
+rank = json.load(open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\ranking.json"))
 
 print("== shortlist retrospective (spectral rank + hashlist name)")
 for r in rank[:16]:
@@ -19,7 +19,7 @@ for h in ["EDF036D6", "07896F60", "07896F61", "07896F63", "E01EC5A5", "2043EABE"
     print("  %s = %s" % (h, pairs.get(h, "(unnamed)")))
 
 # WAD hashes vs BML_Engine DIDX/HIRC media IDs
-d = open(r"E:\Modding\JC3-Batmobile\Working\Audio\bank_BML_Engine.bank", "rb").read()
+d = open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\bank_BML_Engine.bank", "rb").read()
 di = d.find(b"DIDX")
 (dsz,) = struct.unpack_from("<I", d, di + 4)
 didx = set()

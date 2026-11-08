@@ -29,7 +29,7 @@ a decoded label that the bytes do not support has to be removed, not softened.
 Command:
 
 ```
-cd "E:/Modding/JC3-Batmobile" && PYTHONIOENCODING=utf-8 uv run python Tools/scripts/grab_collision_selector.py --check; echo "CHECK_EXIT=$?"
+cd "E:/Modding/JustCause3/JC3-Batmobile" && PYTHONIOENCODING=utf-8 uv run python Tools/scripts/grab_collision_selector.py --check; echo "CHECK_EXIT=$?"
 ```
 
 Output:

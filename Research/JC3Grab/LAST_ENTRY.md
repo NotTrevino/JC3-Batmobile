@@ -38,7 +38,7 @@ The record starts on a 0x800 boundary where the previous payload ends (pad 688 B
 
 | fact | value |
 |---|---|
-| root | `E:/Modding/_gamedata/JC3grab` |
+| root | `E:/Modding/_shared/gamedata/JC3grab` |
 | extensions searched | `.ee`, `.toc`, `.adf` |
 | files scanned / bytes | 39 / 70.1 MB (complete) |
 | hits | 0 |
@@ -62,7 +62,7 @@ The FSB5 token cannot rescue it: FMOD stores the *original source file name*, wh
 | `O4-bracket-is-exact` | PASS | the record starts where sound/dialogue/ara/mission_mm320_dial_gameplay_090.wavc ends (+618592256, 44368 B) rounded up to 0x800 (pad 688 B), and the next record starts where it ends (+618722032) rounded up too (pad 1296 B): the aligned slot before sound/dialogue/ara/mission_mm320_dial_gameplay_start05.wavc holds only this record |
 | `O5-no-name-reproduces-the-hash` | PASS | 243341 candidate paths tried (every known .wavc basename x every dialogue language: 163339; numeric takes 0..9999 (widths [1, 2, 3, 4]) of the bracket basenames: 80002) against 016DE9D1: 0 hit(s) |
 | `O6-token-is-an-orphan` | PASS | the FSB5 name table carries exactly the strings ['1606523576'] (token 1606523576); no named path in the index contains that take id, so there is no cross-language sibling to borrow a basename from |
-| `O7-references` | PASS | 39 .ee/.toc/.adf file(s), 70.1 MB scanned under E:/Modding/_gamedata/JC3grab (depth <= 3, complete): 0 hit(s) |
+| `O7-references` | PASS | 39 .ee/.toc/.adf file(s), 70.1 MB scanned under E:/Modding/_shared/gamedata/JC3grab (depth <= 3, complete): 0 hit(s) |
 
 ## 7. What would name it
 

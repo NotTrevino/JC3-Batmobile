@@ -1,7 +1,7 @@
 """EVENTMAP: every JC3 Serpente sound-component x BmAK equivalent (role rules stated)."""
 import json, os
 
-A = r"E:\Modding\JC3-Batmobile\Working\Audio"
+A = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio"
 epe = json.load(open(os.path.join(A, "epe_true.json")))  # [name, class, guidhex]
 grab = json.load(open(os.path.join(A, "grab_manifest.json")))
 

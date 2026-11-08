@@ -5,7 +5,7 @@ Re-walks the two Batmobile class-default streams with this script's own tag walk
 (not `grab_class_defaults.py`), re-reads five tags chosen by the review (one float,
 one bool word, one object reference, one struct, one int) plus the vector tag whose
 label is conflation-prone, and checks each name against the BmSDK `.g.cs` binding at
-`E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated`.
+`E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Generated`.
 
 Also audits the two pointer tags whose names rest on the layout alone
 (`RamDamageType` @5676, `InventoryManagerClass` @892): were their names unique at
@@ -34,7 +34,7 @@ sys.path.insert(0, HERE)
 import upk_read as U  # noqa: E402
 
 COOKED = r"E:\Games\Batman - Arkham Knight\BmGame\CookedPCConsole"
-BMSDK = r"E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated"
+BMSDK = r"E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Generated"
 CARD = os.path.join(ROOT, "Research", "BatmobileGrab", "CLASS_DEFAULTS.json")
 OUT_MD = os.path.join(ROOT, "Research", "BatmobileGrab", "CLASS_DEFAULTS_REVIEW.md")
 OUT_JSON = os.path.join(ROOT, "Research", "BatmobileGrab", "CLASS_DEFAULTS_REVIEW.json")

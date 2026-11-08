@@ -43,8 +43,8 @@ No other task's file was edited. Scratch went to `tmp/freebuff/scratch/` and
 ### 1. The reviewed report's own `--check` (as shipped)
 
 ```
-$ cd E:/Modding/JC3-Batmobile && uv run --with lxml python Tools/scripts/jc3eject.py --check
-FAIL EJECT.md stale: --- disk | +++ derived | @@ -5 +5 @@ | -232 vehicle `.epe` graphs in `E:/Modding/_JC3grab\detail`. | +232 vehicle `.epe` graphs in `E:/Modding/_gamedata/JC3grab\detail`. | @@ -323,2 +323,2 @@ | -`E:/Modding/_JC3grab\detail/*.ee.json` �232, | -`E:/Modding/_JC3grab\entities/*.ee.json` �232 (module rows), | +`E:/Modding/_gamedata/JC3grab\detail/*.ee.json` �232, | +`E:/Modding/_gamedata/JC3grab\entities/*.ee.json` �232 (module rows),
+$ cd E:/Modding/JustCause3/JC3-Batmobile && uv run --with lxml python Tools/scripts/jc3eject.py --check
+FAIL EJECT.md stale: --- disk | +++ derived | @@ -5 +5 @@ | -232 vehicle `.epe` graphs in `E:/Modding/JustCause3/_grab\detail`. | +232 vehicle `.epe` graphs in `E:/Modding/_shared/gamedata/JC3grab\detail`. | @@ -323,2 +323,2 @@ | -`E:/Modding/JustCause3/_grab\detail/*.ee.json` �232, | -`E:/Modding/JustCause3/_grab\entities/*.ee.json` �232 (module rows), | +`E:/Modding/_shared/gamedata/JC3grab\detail/*.ee.json` �232, | +`E:/Modding/_shared/gamedata/JC3grab\entities/*.ee.json` �232 (module rows),
 1 problem(s)
 EXIT=1
 ```
@@ -52,15 +52,15 @@ EXIT=1
 The old raw path no longer exists:
 
 ```
-$ ls -d /e/Modding/_JC3grab /e/Modding/_gamedata/JC3grab
-ls: cannot access '/e/Modding/_JC3grab': No such file or directory
-/e/Modding/_gamedata/JC3grab
-$ ls /e/Modding/_JC3grab/detail | wc -l
+$ ls -d /e/Modding/JustCause3/_grab /e/Modding/_shared/gamedata/JC3grab
+ls: cannot access '/e/Modding/JustCause3/_grab': No such file or directory
+/e/Modding/_shared/gamedata/JC3grab
+$ ls /e/Modding/JustCause3/_grab/detail | wc -l
 0
-$ ls /e/Modding/_gamedata/JC3grab/detail | wc -l
+$ ls /e/Modding/_shared/gamedata/JC3grab/detail | wc -l
 232
-$ JC3_RAW=E:/Modding/_JC3grab uv run --with lxml python Tools/scripts/jc3eject.py --check
-FileNotFoundError: [WinError 3] The system cannot find the path specified: 'E:/Modding/_JC3grab\\detail'
+$ JC3_RAW=E:/Modding/JustCause3/_grab uv run --with lxml python Tools/scripts/jc3eject.py --check
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'E:/Modding/JustCause3/_grab\\detail'
 EXIT=1
 ```
 
@@ -221,7 +221,7 @@ launch. Adding `bail` changes nothing.
 
 ```
 $ uv run --with lxml python Tools/scripts/jc3eject2.py --write
-wrote E:\Modding\JC3-Batmobile\Research\JC3Grab\EJECT_REVIEW.md (191 lines) + EJECT_REVIEW.json
+wrote E:\Modding\JustCause3\JC3-Batmobile\Research\JC3Grab\EJECT_REVIEW.md (191 lines) + EJECT_REVIEW.json
 OK: PARTLY CONTRADICTED | roster 4832 exits / 0 launch | off-roster 57 exits / 0 launch |
     engine eject names 6/6, data refs 0 | control ACT_EXIT_VEHICLE 3 | asb clip 1 | barks 8 |
     orig json_equal True md_equal False

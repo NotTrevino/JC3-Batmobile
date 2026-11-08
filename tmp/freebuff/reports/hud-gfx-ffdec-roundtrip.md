@@ -19,7 +19,7 @@ started or attached.
 | `Builds/probe-L0/P3-hud-gfx/receipt.json` | rewritten to match the shipped payload (schema 1, same keys as P1/P2 plus `source_sha256`, `tool`, `install_path`, `checks`) |
 | this report | — |
 
-Scratch (outside the repo, disposable): `E:/Modding/_JC3grab/hud_roundtrip/` — `orig.gfx`, `rt.gfx`,
+Scratch (outside the repo, disposable): `E:/Modding/JustCause3/_grab/hud_roundtrip/` — `orig.gfx`, `rt.gfx`,
 `p3_candidate.gfx`, `orig.xml`, `*_tags.txt`, `txt*/`, `sv_orig/`, `sv_rt/`.
 
 ## 1. The input, and why it is the right movie
@@ -31,7 +31,7 @@ Scratch (outside the repo, disposable): `E:/Modding/_JC3grab/hud_roundtrip/` —
 {"path":"ui/hud.gfx","hash":"DDD7F9D7","archive":"patch_win64/game6","mount":"patch","offset":288028672,"size":386281,"source":"gibbed-filelist"}
 ```
 
-The extracted copy already on disk, `E:/Modding/_gamedata/JC3grab/hud/hud.gfx`, is **386,281 B** — the patch
+The extracted copy already on disk, `E:/Modding/_shared/gamedata/JC3grab/hud/hud.gfx`, is **386,281 B** — the patch
 movie — and sha256 `c88af343186af1e150d89f7c77e48018185ded6e523c7e2cd37ba5d01e258ecd`. It was used read-only;
 no re-extraction was needed. Container: `CFX` (compressed GFx), version 15, ZLIB, `gfx=true`,
 display rect `[0,0,25600,14400]` = 1280×720 twips-scaled, frameRate 24 (`0x1800`), 1 frame, **2,405 tags**.
@@ -142,16 +142,16 @@ Tag census of `ui/hud.gfx` (decoded, `Working/HUD_GFX_ROUNDTRIP.json` `tag_censu
 ## 6. Commands run (verbatim, key ones)
 
 ```
-java -jar E:/Modding/_tools/ffdec/ffdec.jar -swf2xml orig.gfx orig.xml
-java -jar E:/Modding/_tools/ffdec/ffdec.jar -xml2swf orig.xml rt.gfx
-java -jar E:/Modding/_tools/ffdec/ffdec.jar -header orig.gfx          # CFX v15 ZLIB gfx=true 974225
-java -jar E:/Modding/_tools/ffdec/ffdec.jar -header rt.gfx            # CFX v15 ZLIB gfx=true 973538
-java -jar E:/Modding/_tools/ffdec/ffdec.jar -dumpSWF orig.gfx > orig_tags.txt
-java -jar E:/Modding/_tools/ffdec/ffdec.jar -dumpSWF p3_candidate.gfx > p3_tags.txt
-java -jar E:/Modding/_tools/ffdec/ffdec.jar -export text txt orig.gfx          # 401 -> "WREAK HAVOC"
-java -jar E:/Modding/_tools/ffdec/ffdec.jar -export shape sv_orig orig.gfx     # 839 files
-java -jar E:/Modding/_tools/ffdec/ffdec.jar -export shape sv_rt rt.gfx         # 839 files, 0 differ
-java -jar E:/Modding/_tools/ffdec/ffdec.jar -replace orig.gfx p3_candidate.gfx 2241 t2241.txt
+java -jar E:/Modding/_shared/tools/ffdec/ffdec.jar -swf2xml orig.gfx orig.xml
+java -jar E:/Modding/_shared/tools/ffdec/ffdec.jar -xml2swf orig.xml rt.gfx
+java -jar E:/Modding/_shared/tools/ffdec/ffdec.jar -header orig.gfx          # CFX v15 ZLIB gfx=true 974225
+java -jar E:/Modding/_shared/tools/ffdec/ffdec.jar -header rt.gfx            # CFX v15 ZLIB gfx=true 973538
+java -jar E:/Modding/_shared/tools/ffdec/ffdec.jar -dumpSWF orig.gfx > orig_tags.txt
+java -jar E:/Modding/_shared/tools/ffdec/ffdec.jar -dumpSWF p3_candidate.gfx > p3_tags.txt
+java -jar E:/Modding/_shared/tools/ffdec/ffdec.jar -export text txt orig.gfx          # 401 -> "WREAK HAVOC"
+java -jar E:/Modding/_shared/tools/ffdec/ffdec.jar -export shape sv_orig orig.gfx     # 839 files
+java -jar E:/Modding/_shared/tools/ffdec/ffdec.jar -export shape sv_rt rt.gfx         # 839 files, 0 differ
+java -jar E:/Modding/_shared/tools/ffdec/ffdec.jar -replace orig.gfx p3_candidate.gfx 2241 t2241.txt
 python Tools/scripts/hud_gfx_roundtrip.py --write
 python Tools/scripts/hud_gfx_roundtrip.py --check
 ```
@@ -178,4 +178,4 @@ Delete `Tools/scripts/hud_gfx_roundtrip.py`, `Working/HUD_GFX_ROUNDTRIP.json`,
 `Builds/probe-L0/P3-hud-gfx/payload/`, and this report; restore `Builds/probe-L0/P3-hud-gfx/PROBE.md` and
 `receipt.json` with `git checkout -- Builds/probe-L0/P3-hud-gfx/PROBE.md Builds/probe-L0/P3-hud-gfx/receipt.json`
 (prior PROBE.md sha256 `c37f64694af81429790b67b75a951946915a5d89538b33b2855b951815044c7a`). Nothing outside
-`E:/Modding/_JC3grab/hud_roundtrip/` (disposable scratch) and the repo was touched.
+`E:/Modding/JustCause3/_grab/hud_roundtrip/` (disposable scratch) and the repo was touched.

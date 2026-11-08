@@ -5,7 +5,7 @@
 #   (c) finished cards whose assumptions nobody has challenged yet.
 # So when the pool is low this generates from (a), then (b), then (c). If all three come up empty while the tracker
 # still has todo cards, that is a bug in this generator: it logs IMPOSSIBLE loudly (fix the generator, never accept it).
-P=E:/Modding/JC3-Batmobile; B=$P/tmp/freebuff; F=$B/filler; MIN=8
+P=E:/Modding/JustCause3/JC3-Batmobile; B=$P/tmp/freebuff; F=$B/filler; MIN=8
 log(){ echo "$(date -Is) $*" >> $B/restock.log; }
 have(){ local d; for d in $F $B/queue $B/running $B/done $B/low; do compgen -G "$d/*$1*" >/dev/null && return 0; done; return 1; }
 pool(){ ls $F/*.txt 2>/dev/null | wc -l; }
@@ -45,7 +45,7 @@ EOF
 DONE: $P/Research/BatmobileGrab/chase/chase$nk-$i.md
 ONLY: freebuff
 EST: 120
-G1 value chase, PASS $nk, in $P (Batman: Arkham Knight Batmobile -> Just Cause 3 mod, offline research). Read every earlier pass for batch $i ($P/Research/BatmobileGrab/chase/chase*-$i.md) and take only rows still STILL UNKNOWN in the latest one. If $B/reports/smart-search.md shows STATUS done, run python $P/Tools/scripts/chase/smart_search.py on each row first (leads, not evidence). Then try only routes no earlier pass tried (list them per row): other owning/parent/child classes, other packages (DLC, patches, localisation, shaders), cooked archetypes, kismet/sequence objects, config defaults, cross-references to the field offset in the executable (read only), frame-timed footage in C:/Users/User/Videos/Captures. Read GRAB_BACKLOG.md section 0.5 (R4: decoded/derived/read; never assumed). READ-ONLY for existing docs; scripts to $P/Tools/scripts/chase/, data under E:/Modding/_BmAKgrab. Never launch or patch a game, never write into D:/Games or E:/Games, never commit, no secrets. A value you cannot prove stays UNKNOWN with the reason and the routes exhausted. Write $P/Research/BatmobileGrab/chase/chase$nk-$i.md per row: STATUS FOUND | STILL UNKNOWN, value+units, provenance, evidence, routes tried this pass. Save after each row.
+G1 value chase, PASS $nk, in $P (Batman: Arkham Knight Batmobile -> Just Cause 3 mod, offline research). Read every earlier pass for batch $i ($P/Research/BatmobileGrab/chase/chase*-$i.md) and take only rows still STILL UNKNOWN in the latest one. If $B/reports/smart-search.md shows STATUS done, run python $P/Tools/scripts/chase/smart_search.py on each row first (leads, not evidence). Then try only routes no earlier pass tried (list them per row): other owning/parent/child classes, other packages (DLC, patches, localisation, shaders), cooked archetypes, kismet/sequence objects, config defaults, cross-references to the field offset in the executable (read only), frame-timed footage in C:/Users/User/Videos/Captures. Read GRAB_BACKLOG.md section 0.5 (R4: decoded/derived/read; never assumed). READ-ONLY for existing docs; scripts to $P/Tools/scripts/chase/, data under E:/Modding/ArkhamKnight/_grab. Never launch or patch a game, never write into D:/Games or E:/Games, never commit, no secrets. A value you cannot prove stays UNKNOWN with the reason and the routes exhausted. Write $P/Research/BatmobileGrab/chase/chase$nk-$i.md per row: STATUS FOUND | STILL UNKNOWN, value+units, provenance, evidence, routes tried this pass. Save after each row.
 EOF
       made=$((made + 1)); log "made chase$nk-$i"; done
     # (c) assumption challenges of finished cards
@@ -69,7 +69,7 @@ EOF
 DONE: $P/Research/specs/$id.md
 ONLY: freebuff
 EST: 60
-Build spec for backlog card $id in $P (Just Cause 3 Batmobile mod, offline). READ-ONLY except the output file. Read GRAB_BACKLOG.md section 0.5 (R1-R14) and the '#### $id' card. For every input it needs (dep outputs, Working/Translation/*.json, Tools/scripts, decoded game files under E:/Modding/_BmAKgrab or the project's extracts): check it exists and holds what the card needs (run commands, quote outputs); list gaps as BLOCKER (dep not done or value UNKNOWN) with the exact file/row. Then write the step-by-step build plan: files to create, scripts and their --check, each Done criterion mapped to the command that proves it. Never launch a game, never write into D:/Games or E:/Games, never commit, no secrets; UNKNOWN instead of guesses. Write $P/Research/specs/$id.md: READY or BLOCKED summary, inputs table, blockers, plan.
+Build spec for backlog card $id in $P (Just Cause 3 Batmobile mod, offline). READ-ONLY except the output file. Read GRAB_BACKLOG.md section 0.5 (R1-R14) and the '#### $id' card. For every input it needs (dep outputs, Working/Translation/*.json, Tools/scripts, decoded game files under E:/Modding/ArkhamKnight/_grab or the project's extracts): check it exists and holds what the card needs (run commands, quote outputs); list gaps as BLOCKER (dep not done or value UNKNOWN) with the exact file/row. Then write the step-by-step build plan: files to create, scripts and their --check, each Done criterion mapped to the command that proves it. Never launch a game, never write into D:/Games or E:/Games, never commit, no secrets; UNKNOWN instead of guesses. Write $P/Research/specs/$id.md: READY or BLOCKED summary, inputs table, blockers, plan.
 EOF
       made=$((made + 1)); log "made spec-$s"; done
     # (e) polish passes (2026-10-31: (a)-(d) were exhausted while B-13/B-14/V were todo): every 'minor issues' review

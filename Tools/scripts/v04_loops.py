@@ -56,7 +56,7 @@ CLICK_DBFS = -40.0
 VANILLA = {
     "vehicles": os.path.join(ROOT, "Working", "Audio", "jc3bank", "sound", "fmod_banks",
                              "vehicles.bank"),
-    "weapons": r"E:\Modding\_gamedata\JC3grab\audio\weapons.bank",
+    "weapons": r"E:\Modding\_shared\gamedata\JC3grab\audio\weapons.bank",
 }
 LOOP_TYPE = 3          # fsb5.MetadataChunkType.LOOP
 sha = lambda b: hashlib.sha256(b).hexdigest()        # noqa: E731

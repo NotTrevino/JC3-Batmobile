@@ -2,7 +2,7 @@
 import os
 import sys
 
-sys.path.insert(0, r"E:/Modding/JC3-Batmobile/Tools/scripts")
+sys.path.insert(0, r"E:/Modding/JustCause3/JC3-Batmobile/Tools/scripts")
 from upk_read import Package, best_walk  # noqa
 
 PKG = r"E:\Games\Batman - Arkham Knight\BmGame\CookedPCConsole\BmGame.upk"

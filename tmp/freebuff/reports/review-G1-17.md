@@ -25,7 +25,7 @@ and the card does not need redoing**.
 
 ## Check output (verbatim)
 
-Command (from `E:/Modding/JC3-Batmobile`):
+Command (from `E:/Modding/JustCause3/JC3-Batmobile`):
 
 ```
 python Tools/scripts/grab_lights.py --check

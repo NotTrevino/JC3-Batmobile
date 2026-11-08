@@ -28,7 +28,7 @@ Revert: restore the four files from `tmp/t16rework/` and re-run `t12_audio.py --
 
 ## Per-issue verdicts
 
-Evidence is quoted from commands run in `E:/Modding/JC3-Batmobile`; nothing here is from memory.
+Evidence is quoted from commands run in `E:/Modding/JustCause3/JC3-Batmobile`; nothing here is from memory.
 
 ### 1. "The premise *no event→tune edge* is false" — **CONFIRMED** (with a correction to the review's bytes)
 

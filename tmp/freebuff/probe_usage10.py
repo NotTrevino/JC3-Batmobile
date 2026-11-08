@@ -2,7 +2,7 @@ import json, glob, re, collections
 
 hits = collections.Counter()
 types = collections.Counter()
-for p in glob.glob('E:/Modding/_JC3grab/entities/*.ee.json'):
+for p in glob.glob('E:/Modding/JustCause3/_grab/entities/*.ee.json'):
     d = json.load(open(p, encoding='utf-8'))
     for m in d.get('modules', []):
         for r in m.get('rows', []):
@@ -17,7 +17,7 @@ print('module types with usage rows:', dict(types))
 # also check detail .epe object property keys containing 'usage'
 pk = collections.Counter()
 n = 0
-for p in glob.glob('E:/Modding/_JC3grab/detail/*.ee.json')[:60]:
+for p in glob.glob('E:/Modding/JustCause3/_grab/detail/*.ee.json')[:60]:
     d = json.load(open(p, encoding='utf-8'))
     epe = d.get('epe') or {}
     for o in (epe.get('objects') or []):

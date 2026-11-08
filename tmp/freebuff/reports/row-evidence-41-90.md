@@ -15,8 +15,8 @@ audit recorded, re-asserted by this script), `Working/Translation/ROW_EVIDENCE_A
 ## Verbatim commands
 
 ```
-cd "E:/Modding/JC3-Batmobile" && PYTHONIOENCODING=utf-8 python Tools/scripts/t_row_evidence2.py --write
-cd "E:/Modding/JC3-Batmobile" && PYTHONIOENCODING=utf-8 python Tools/scripts/t_row_evidence2.py --check
+cd "E:/Modding/JustCause3/JC3-Batmobile" && PYTHONIOENCODING=utf-8 python Tools/scripts/t_row_evidence2.py --write
+cd "E:/Modding/JustCause3/JC3-Batmobile" && PYTHONIOENCODING=utf-8 python Tools/scripts/t_row_evidence2.py --check
 ```
 
 `--write` -> exit 0; `--check` -> exit 0, "PASS document: ROW_EVIDENCE_AUDIT2.md matches the

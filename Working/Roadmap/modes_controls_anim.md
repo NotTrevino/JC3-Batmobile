@@ -3,7 +3,7 @@
 Read-only mapping. Nothing in the project was edited. Evidence labels: decoded = a project file says it;
 UNKNOWN = no file settles it (named settler given). Pretrained JC3 knowledge was not used as evidence.
 
-Path abbreviations: GB = `E:/Modding/JC3-Batmobile/GRAB_BACKLOG.md`; BG = `Research/BatmobileGrab/`; JG = `Research/JC3Grab/`;
+Path abbreviations: GB = `E:/Modding/JustCause3/JC3-Batmobile/GRAB_BACKLOG.md`; BG = `Research/BatmobileGrab/`; JG = `Research/JC3Grab/`;
 R = `tmp/freebuff/reports/`; Q = `tmp/freebuff/queue/`; WT = `Working/Translation/`; MEM = `C:/Users/User/.claude/projects/E--Modding-JC3-Batmobile/memory/`.
 
 ## 0. Where this landmark stands in one paragraph

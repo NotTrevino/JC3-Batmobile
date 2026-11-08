@@ -15,7 +15,7 @@ G1-15 §12 row (`GRAB_BACKLOG.md:1283`); `MODLOG.md:8310-8386` (intended + done)
 `Research/BatmobileGrab/AUDIO_FEATURES.json` (2,081,094 B),
 `Tools/scripts/bmak_audio_features.py` (815 lines); the inputs it reads
 (`Research/BatmobileGrab/AUDIO_MAP.json`, the `AkBank` exports, `Working/Audio/`) and the 423 WAVs it
-wrote outside the repo under `E:\Modding\_BmAKgrab\audio\wav\`.
+wrote outside the repo under `E:\Modding\ArkhamKnight\_grab\audio\wav\`.
 
 ---
 
@@ -37,7 +37,7 @@ sources.
 
 ## Check output (verbatim)
 
-Command, from `E:/Modding/JC3-Batmobile`, exit status `0`:
+Command, from `E:/Modding/JustCause3/JC3-Batmobile`, exit status `0`:
 
 ```
 $ python Tools/scripts/bmak_audio_features.py --check
@@ -68,7 +68,7 @@ command prints first, which is cosmetic.
 |---|---|---|
 | `Research/BatmobileGrab/AUDIO_FEATURES.md` | yes | 90,994 B, 776 lines |
 | `Research/BatmobileGrab/AUDIO_FEATURES.json` | yes | 2,081,094 B |
-| WAVs outside the repo (`E:\Modding\_BmAKgrab\audio\wav\`) | yes | 423 `.wav`, all 48 kHz (`--check` asserts rate + existence) |
+| WAVs outside the repo (`E:\Modding\ArkhamKnight\_grab\audio\wav\`) | yes | 423 `.wav`, all 48 kHz (`--check` asserts rate + existence) |
 | `Tools/scripts/bmak_audio_features.py` | yes | 815 lines (extra; §12 names it implicitly through `--check`) |
 
 Card `Done` (`GRAB_BACKLOG.md:495`): *"every one of the 361 events is in exactly one feature group (or
@@ -123,7 +123,7 @@ and `open(MD).read() == write_md(doc)` (the file is generated, so this is free).
 
 ```
 rows lands in exactly one feature group; every one of the 447 media ids is decoded to a
-48 kHz WAV under `E:\Modding\_BmAKgrab\audio\wav` (outside the repo) and measured.
+48 kHz WAV under `E:\Modding\ArkhamKnight\_grab\audio\wav` (outside the repo) and measured.
 ```
 
 Its own summary says `decoded 423`, `decode_errors 24`, and the file lists the 24 undecoded ids at
@@ -224,7 +224,7 @@ Each checked against the JSON and then against the raw data the script reads, no
 | 1 | `0F897F3B.wav`: 23.483 s, peak −3.71 dBFS, **LUFS −12.59**, 48 kHz, 2 ch (`AUDIO_FEATURES.md:270`) | re-read the WAV with `scipy.io.wavfile` (1,127,202 frames @ 48 kHz = 23.483 s) and re-ran `bmak_audio_features.integrated_lufs` / peak formula → **−12.59**, **−3.71** | match |
 | 2 | `BML_Steering: -1->200 0->-200 1->200` on `Play_Batmobile_CornerSqueal` (`AUDIO_FEATURES.md`, burnout section; quoted in `MODLOG.md:8345`) | JSON row `Play_Batmobile_CornerSqueal` → `rtpc[param=BML_Steering].points = [[-1.0, 200.0, 4], [0.0, -200.0, 4], [1.0, 200.0, 4]]`, `curve_id 0x044E2CE9` | match (and `Drift 0->0, 50000->-1` likewise, 6 rows) |
 | 3 | 361 rows / 118 unique ids / 447 media / 90 missing rows / 27 banks | `AUDIO_MAP.json` `summary`: `rows 361, unique_event_ids 118, media 447, missing_rows 90, banks 27, media_entries 508, streamed_rows 24` | match |
-| 4 | 423 WAVs, all 48 kHz, on disk | `os.listdir(E:\Modding\_BmAKgrab\audio\wav)` → 423 `.wav`; JSON `media` 423 rows, 423 distinct WEMs, all `sample_rate 48000`, all `source: embedded` | match |
+| 4 | 423 WAVs, all 48 kHz, on disk | `os.listdir(E:\Modding\ArkhamKnight\_grab\audio\wav)` → 423 `.wav`; JSON `media` 423 rows, 423 distinct WEMs, all `sample_rate 48000`, all `source: embedded` | match |
 | 5 | the 24 decode errors are listed with their error | `AUDIO_FEATURES.md:694-718` 24 rows, each `RuntimeError: streamed media: no DIDX entry …`; JSON `decode_errors` 24, all with a message | match on the listing — **but not "all voice"** (issue 3) |
 | 6 | `duration_total_s 971.4` | Σ `media[].duration_s` = 971.43 | match |
 | 7 | shipped MD == generator output | `write_md()` re-run with `MD_OUT` redirected to the temp dir → 776 lines, `identical: True` | match |

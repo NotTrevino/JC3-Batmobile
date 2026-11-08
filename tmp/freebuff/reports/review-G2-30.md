@@ -37,7 +37,7 @@ check ok
 Matches the MODLOG block exactly. Out paths exist: `Research/JC3Grab/PHYSICS_WRITE.md` (194 lines;
 the MODLOG says 195 — see issue 9), `PHYSICS_WRITE.json`, the writer in `Tools/scripts/jc3hkx.py`
 (block from line 1384, `write` subcommand at line 2270), and the five test blobs under
-`E:\Modding\_JC3grab\hkx\write\` (340,368 / 340,368 / 340,384 / 340,368 / 341,440 B).
+`E:\Modding\JustCause3\_grab\hkx\write\` (340,368 / 340,368 / 340,384 / 340,368 / 341,440 B).
 
 What `--check` verifies versus the card's Done: it re-derives the four cases, requires the round
 trip to be byte-identical on both files, requires the three problem lists to be empty, and

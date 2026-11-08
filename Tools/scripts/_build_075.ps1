@@ -12,7 +12,7 @@
 #  deficit, not a power deficit.
 #  All modules internal already; no .toc change expected.
 $ErrorActionPreference = 'Stop'
-$root = 'E:\Modding\JC3-Batmobile'
+$root = 'E:\Modding\JustCause3\JC3-Batmobile'
 $py = 'uv'
 $g  = "$root\Tools\Gibbed"
 $ee = 'v0300_car_kensington_sportsmuscle_civilian_01.ee'
@@ -51,10 +51,10 @@ param([ValidateSet('Install','Rollback074','Status')][string]`$Action = 'Status'
 `$EeT = Join-Path `$GameDir 'dropzone\editor\entities\jc_vehicles\01_land\v0300_car_kensington_sportsmuscle\v0300_car_kensington_sportsmuscle_civilian_01.ee'
 `$EeSha = '$eeH'
 `$TocSha = '$tocH'
-`$B = 'E:\Modding\JC3-Batmobile\Builds\test-075'
+`$B = 'E:\Modding\JustCause3\JC3-Batmobile\Builds\test-075'
 switch (`$Action) {
     'Install' { Copy-Item -LiteralPath (Join-Path `$B 'v0300_car_kensington_sportsmuscle_civilian_01.ee') -Destination `$EeT -Force; Copy-Item -LiteralPath (Join-Path `$B 'v0300_car_kensington_sportsmuscle_civilian_01.ee.toc') -Destination (`$EeT + '.toc') -Force; Write-Host 'deployed test-075: yaw authority -> JC3 shipped heavy band' }
-    'Rollback074' { powershell -NoProfile -ExecutionPolicy Bypass -File 'E:\Modding\JC3-Batmobile\Builds\test-074\install.ps1' -Action Install }
+    'Rollback074' { powershell -NoProfile -ExecutionPolicy Bypass -File 'E:\Modding\JustCause3\JC3-Batmobile\Builds\test-074\install.ps1' -Action Install }
     'Status' {
         `$e = if (Test-Path -LiteralPath `$EeT) { (Get-FileHash -LiteralPath `$EeT).Hash } else { 'none' }
         `$t = if (Test-Path -LiteralPath (`$EeT + '.toc')) { (Get-FileHash -LiteralPath (`$EeT + '.toc')).Hash } else { 'none' }

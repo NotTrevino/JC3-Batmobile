@@ -35,7 +35,7 @@ Braking arithmetic, printed in the sheet and recomputed by `--check`:
 * `GRAB_BACKLOG.md` §12 — one tracker row `| V-05-driving | done | … |`, next to the existing
   `V-05-looks` (7219) and `V-05-combat` (7232) rows.
 
-Not touched: the game installs, `E:/Modding/_gamedata/`, `Builds/`, `T_ROWS.jsonl`, any other
+Not touched: the game installs, `E:/Modding/_shared/gamedata/`, `Builds/`, `T_ROWS.jsonl`, any other
 task's script or generated file.
 
 ## Commands run, with output

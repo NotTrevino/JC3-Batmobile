@@ -3,7 +3,7 @@
 Stage 2 of 3 (corpus -> **runs** -> scoring). This file records what ran. No accuracy,
 no per-model score and no verdict is computed or implied here; scoring is the next stage.
 
-Date: 2026-11-08. Project: `E:/Modding/JC3-Batmobile` (JC3 Batmobile mod tree).
+Date: 2026-11-08. Project: `E:/Modding/JustCause3/JC3-Batmobile` (JC3 Batmobile mod tree).
 
 ## Corpus
 
@@ -74,7 +74,7 @@ Exact lines, also appended to `tmp/freebuff/smartsearch/fair_runs/commands.log`:
 ```bash
 # (above, if present: an earlier aborted attempt, not part of this run)
 # fair judge run (stage: raw answers only), 2026-11-08
-cd E:/Modding/JC3-Batmobile
+cd E:/Modding/JustCause3/JC3-Batmobile
 bash tmp/freebuff/srv.sh jeb   # E:/AI/llama/llama-server.exe -m E:/AI/models/jebadiah-9b-v2-1-Q5_K_M.gguf -t 4 -np 1 -c 4096 --host 127.0.0.1 --port 8081 --alias jebadiah-9b
 uv run --with jebadiah-decide python tmp/freebuff/smartsearch/run_fair_judges.py tune-jeb --orders 0
 bash tmp/freebuff/srv.sh stop-jeb

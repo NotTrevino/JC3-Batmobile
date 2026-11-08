@@ -22,7 +22,7 @@ and **no vehicle module references it** — not by its decoded binding id `C0EC1
   `settings/keymap_keyboard.bin` base+patch), parsed with G3-08's own
   `jc3_input.read_entries` + `parse_keymap` (read-only import). Result: **474 bindings, 154
   actions**, layer `patch` — identical to `INPUT.md`'s decoded counts, which is an oracle.
-- **Vehicle modules**: every `.epe`/`.vmodc` under `E:/Modding/_gamedata/JC3grab` —
+- **Vehicle modules**: every `.epe`/`.vmodc` under `E:/Modding/_shared/gamedata/JC3grab` —
   **207 files on disk, 134 distinct contents** (the rest are byte-identical copies under
   `rc_merge/` and `verify/`), covering **79 vehicles** (one per `*_vehicle_parts.vmodc`).
   Container census: 17 `RTPC` (`.epe`), 117 other (ADF `.vmodc`).

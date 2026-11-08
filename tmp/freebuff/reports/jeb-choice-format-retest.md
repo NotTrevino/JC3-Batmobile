@@ -234,7 +234,7 @@ strict label the class mode is 4/28 with 70 false `default` labels.
 `python Tools/scripts/chase/jeb_judge.py --rank <dir>` — per-case best `P(true)` (no model call):
 
 ```
-E:/Modding/_gamedata/BmAKgrab/chase/calib_runs/jeb_340c7b55_v1search   (whole snippet)
+E:/Modding/_shared/gamedata/BmAKgrab/chase/calib_runs/jeb_340c7b55_v1search   (whole snippet)
 AUC P(true) positive-vs-negative 0.665
 AUC P(true) (positive+found)-vs-negative 0.707
 | threshold | positive hit | found hit | negative FP |
@@ -251,7 +251,7 @@ AUC P(true) (positive+found)-vs-negative 0.707
 ```
 
 ```
-E:/Modding/_gamedata/BmAKgrab/chase/calib_runs/jeb_9440028e_v1search   (short window)
+E:/Modding/_shared/gamedata/BmAKgrab/chase/calib_runs/jeb_9440028e_v1search   (short window)
 AUC P(true) positive-vs-negative 0.675
 AUC P(true) (positive+found)-vs-negative 0.743
 | threshold | positive hit | found hit | negative FP |
@@ -304,8 +304,8 @@ python Tools/scripts/chase/jeb_judge.py --versions  # noul 9440028e, class 413d8
 python Tools/scripts/chase/jeb_judge.py --calib class  --max 6 --search v1   # 38/38, resumes on disk
 python Tools/scripts/chase/jeb_judge.py --calib member --max 6 --search v1   # 38/38, resumes on disk
 python Tools/scripts/chase/jeb_judge.py --summary   # both modes, both labels, per-case tables
-python Tools/scripts/chase/jeb_judge.py --rank E:/Modding/_gamedata/BmAKgrab/chase/calib_runs/jeb_340c7b55_v1search
-python Tools/scripts/chase/jeb_judge.py --rank E:/Modding/_gamedata/BmAKgrab/chase/calib_runs/jeb_9440028e_v1search
+python Tools/scripts/chase/jeb_judge.py --rank E:/Modding/_shared/gamedata/BmAKgrab/chase/calib_runs/jeb_340c7b55_v1search
+python Tools/scripts/chase/jeb_judge.py --rank E:/Modding/_shared/gamedata/BmAKgrab/chase/calib_runs/jeb_9440028e_v1search
 ```
 
 `--calib` skips a case whose `<id>.json` already exists, so a restart never re-asks the model.

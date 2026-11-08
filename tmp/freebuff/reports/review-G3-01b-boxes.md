@@ -5,7 +5,7 @@ Reviewer: independent (did not write the card). Reviewed: `tmp/freebuff/reports/
 138,630 B), `Tools/scripts/grab_collision_boxes.py` (1,278 lines). Sources re-read directly:
 `BmGame.upk` (exports 169750, 169751), `Playable_Batmobile_SF.upk`, `COLLISION_CONVEX.json`,
 `Research/BatmobileGrab/BMSDK_OFFSETS.json`, and the BmSDK-AK layout tree named in the task
-brief (`E:/Modding/_tools/BmSDK-AK`, MIT). Nothing was written except this file; no game was
+brief (`E:/Modding/_shared/tools/BmSDK-AK`, MIT). Nothing was written except this file; no game was
 launched or attached; no git operations.
 
 ## VERDICT: **minor issues**
@@ -74,7 +74,7 @@ no local layout names the member or the bit."*
 That is true of that file — I verified `BMSDK_OFFSETS.json` has **zero** occurrences of
 `FKBoxElem`, `FKSphylElem`, `FKAggregateGeom`, `AggGeom`, `BoxElem` or `Sphyl`, and exactly 41
 classes. But the task brief names BmSDK-AK itself as an evidence source, and that tree ships
-generated native layouts. `E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated/Engine/KMeshProps.g.cs`,
+generated native layouts. `E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Generated/Engine/KMeshProps.g.cs`,
 struct `FKBoxElem` (line 413):
 
 | offset | member | SDK evidence |

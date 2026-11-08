@@ -23,7 +23,7 @@ Read-only: opens the shipped package, writes only the `--json` path. No game lau
 
 Usage:
     python Tools/scripts/chase/chase2_verify.py
-    python Tools/scripts/chase/chase2_verify.py --json E:/Modding/_gamedata/BmAKgrab/chase/chase2_verify.json
+    python Tools/scripts/chase/chase2_verify.py --json E:/Modding/_shared/gamedata/BmAKgrab/chase/chase2_verify.json
     python Tools/scripts/chase/chase2_verify.py --check
 """
 import argparse
@@ -37,7 +37,7 @@ sys.path.insert(0, os.path.dirname(HERE))
 from upk_read import Package, best_walk, walk_tags, TYPE_NAMES  # noqa: E402
 
 PKG = r"E:\Games\Batman - Arkham Knight\BmGame\CookedPCConsole\BmGame.upk"
-DEFAULT_JSON = r"E:\Modding\_gamedata\BmAKgrab\chase\chase2_verify.json"
+DEFAULT_JSON = r"E:\Modding\_shared\gamedata\BmAKgrab\chase\chase2_verify.json"
 
 CDO_CAM = "Default__R3rdPersonCamera"
 CDO_VEH = "Default__RVehicleBatmobileBase"

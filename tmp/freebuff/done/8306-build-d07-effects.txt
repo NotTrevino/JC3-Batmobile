@@ -1,8 +1,8 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-d07-effects.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/build-d07-effects.md
 ONLY: freebuff
 EST: 55
 BRIEF: hand-written 2026-11-06
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-d05-entity-graph.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/apply-effects-rows.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/build-d05-entity-graph.md, E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/apply-effects-rows.md
 Build step B-08 with the effects decided in apply-effects-rows: the afterburner flame (T-FX3 approved by the operator), plus any private effect copies authored for heat haze, tracer, casings, projectile trail and brake trail. Use bm_fx.py into Builds/bm-RC4-effects; every Effect hash must resolve to an .effc path in the build tree; 0 usages outside the fleet vocabulary except the declared new ones. Report which BmAK effects are carried by a new private effect and which by a shipped one.
 
 Updated by review 8299: T13_FX.md is 17 rows, 17 chosen carriers, 0 named omissions; the private-effect work is B-17 (writer). Five rows still carry no BmAK number: T-FX20 brake-trail width/length/colour (no ParticleSystem template; float at @364 unnamed), T-FX12 tracer colour/material (enum 1, .ddsc unnamed); T-FX9/T-FX16 ride shipped effects. T-FX5's '23 unreferenced .effc' is UNKNOWN — the producer never states what it counted.

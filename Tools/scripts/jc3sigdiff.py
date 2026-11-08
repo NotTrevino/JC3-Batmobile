@@ -22,7 +22,7 @@ Usage:
   python jc3sigdiff.py dump graph  # one section (members, graph, weapon, parts, meshes, tunes, toc)
   python jc3sigdiff.py dump all
 
-Raw XML/ADF stays outside the repo in `E:/Modding/_gamedata/JC3grab/sigdiff/`.
+Raw XML/ADF stays outside the repo in `E:/Modding/_shared/gamedata/JC3grab/sigdiff/`.
 """
 from __future__ import annotations
 
@@ -46,7 +46,7 @@ from rbmhdr import hash_jenkins, parse_header  # noqa: E402
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
 OUT = os.path.join(ROOT, "Research", "JC3Grab")
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/_shared/gamedata/JC3grab")
 CACHE = os.path.join(RAW, "sigdiff")
 GAME = os.environ.get("JC3_GAME", jc3index.DEFAULT_GAME)
 

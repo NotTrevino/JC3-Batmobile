@@ -86,7 +86,7 @@ SOURCES = {
         "check_argv": ["check"],
         "reads": [
             "every JC3 vehicle `.ee` in the archives, its inner `.vmodc` decoded with Gibbed ConvertAdf",
-            "the decoded instance.member.path = value rows in E:/Modding/_gamedata/JC3grab",
+            "the decoded instance.member.path = value rows in E:/Modding/_shared/gamedata/JC3grab",
         ],
         "value_label": "derived",
         "rule": ("ranges/counts are aggregates (min..max, n) over the decoded member values; the member "
@@ -121,7 +121,7 @@ SOURCES = {
         "producer": "Tools/scripts/t3_fleet.py",
         "check_argv": ["--check"],
         "reads": [
-            "E:/Modding/_gamedata/JC3grab (the jc3grab.py decodes: RigidBody, VehicleDamage, Suspension, "
+            "E:/Modding/_shared/gamedata/JC3grab (the jc3grab.py decodes: RigidBody, VehicleDamage, Suspension, "
             "Brakes, LandGlobal, Engine members)",
         ],
         "value_label": "derived",
@@ -133,7 +133,7 @@ SOURCES = {
         "producer": "Tools/scripts/t1_fits.py",
         "check_argv": ["-o", os.path.join(SCRATCH, "FITS_recheck.md")],   # no --check: rebuild to scratch
         "reads": [
-            "E:/Modding/_gamedata/JC3grab, one `<member>` and `rigid_body.mass` per land vehicle",
+            "E:/Modding/_shared/gamedata/JC3grab, one `<member>` and `rigid_body.mass` per land vehicle",
         ],
         "value_label": "derived",
         "rule": ("log-log least squares value = a * mass^b over the vehicles carrying both members, with "
@@ -310,7 +310,7 @@ def build(run_checks=True):
         ],
         "unknowns": [
             "VOCABULARY.md's per-member ranges are aggregates whose raw value rows live outside the "
-            "repo (E:/Modding/_gamedata/JC3grab); the aggregate is re-derivable only where that data "
+            "repo (E:/Modding/_shared/gamedata/JC3grab); the aggregate is re-derivable only where that data "
             "is present (jc3grab.py check)",
             "no row in the seven files records a per-value hash, so 'file unchanged since the grab' "
             "rests on the producer's check, not on a value-level fingerprint",

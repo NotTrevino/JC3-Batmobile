@@ -21,12 +21,12 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
-$scripts = 'E:\Modding\JC3-Batmobile\Tools\scripts'
-$w       = 'E:\Modding\JC3-Batmobile\Working\Tumbler'
-$psk     = 'E:\Modding\_gamedata\bmak_early\Playable_Batmobile_SF\SkeletalMesh3\Batmobile_V2.pskx'
+$scripts = 'E:\Modding\JustCause3\JC3-Batmobile\Tools\scripts'
+$w       = 'E:\Modding\JustCause3\JC3-Batmobile\Working\Tumbler'
+$psk     = 'E:\Modding\_shared\gamedata\bmak_early\Playable_Batmobile_SF\SkeletalMesh3\Batmobile_V2.pskx'
 $files   = Get-Content "$w\parts.txt"
 $out     = "$w\$Name"
-$donor   = 'E:\Modding\_gamedata\jc3_early\SerpenteR-EE\models\jc_vehicles\01_land\v0300_car_kensington_sportsmuscle'
+$donor   = 'E:\Modding\_shared\gamedata\jc3_early\SerpenteR-EE\models\jc_vehicles\01_land\v0300_car_kensington_sportsmuscle'
 
 Set-Location $scripts
 $flag = @()

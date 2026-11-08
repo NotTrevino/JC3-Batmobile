@@ -10,7 +10,7 @@ Read-only: I ran `--check` only; I did **not** run `--write`. No game launched o
 under `E:/Games` or `D:/Games`, no git command.
 
 Method limitation: my spot-checks use the same decoder (`Tools/scripts/upk_read.py`). I compensated with
-(a) the project's local BmSDK tree (`E:/Modding/_tools/BmSDK-AK`, MIT, named as a layout source in the
+(a) the project's local BmSDK tree (`E:/Modding/_shared/tools/BmSDK-AK`, MIT, named as a layout source in the
 brief), which states the offsets independently, and (b) a package-side oracle the card did not use — the
 `SetCylinderSize` parameter chain (§2, spot-check 5).
 
@@ -30,7 +30,7 @@ of them changes a value.
 ## 1. Check output (verbatim)
 
 ```
-cd "E:/Modding/JC3-Batmobile" && uv run --with numpy --with pillow --with pefile --with capstone python Tools/scripts/grab_collision_cylinders.py --check; echo "CHECK_EXIT=$?"
+cd "E:/Modding/JustCause3/JC3-Batmobile" && uv run --with numpy --with pillow --with pefile --with capstone python Tools/scripts/grab_collision_cylinders.py --check; echo "CHECK_EXIT=$?"
 ```
 
 ```
@@ -99,7 +99,7 @@ Neither is needed by the card's Done criterion; both are cheap and would remove 
 
 The card is explicit that it derived everything from `Engine.upk` "never from general knowledge", which is
 the right instinct. But the project provides a local, MIT-generated layout tree
-(`E:/Modding/_tools/BmSDK-AK`), and its `Engine/CylinderComponent.g.cs` states the three offsets
+(`E:/Modding/_shared/tools/BmSDK-AK`), and its `Engine/CylinderComponent.g.cs` states the three offsets
 directly. A one-line cross-check would have upgraded "derived, with an ordering argument" to "derived and
 independently confirmed", and would have caught the I1 gap without the parameter-chain work. Not an error
 — a missed cheap oracle in a project that asks for oracles.

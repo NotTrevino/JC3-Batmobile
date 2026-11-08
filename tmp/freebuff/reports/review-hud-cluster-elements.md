@@ -146,7 +146,7 @@ All four are reflected in the final tool; the report under review was right on e
 ## 5. Commands (verbatim)
 
 ```
-$ cd E:/Modding/JC3-Batmobile && PYTHONIOENCODING=utf-8 python Tools/scripts/hud_cluster_elements.py --write; echo "write_exit=$?"; PYTHONIOENCODING=utf-8 python Tools/scripts/hud_cluster_elements.py --check; echo "check_exit=$?"
+$ cd E:/Modding/JustCause3/JC3-Batmobile && PYTHONIOENCODING=utf-8 python Tools/scripts/hud_cluster_elements.py --write; echo "write_exit=$?"; PYTHONIOENCODING=utf-8 python Tools/scripts/hud_cluster_elements.py --check; echo "check_exit=$?"
 wrote Working/Translation/HUD_CLUSTER_ELEMENTS.md (14065 chars), 13/13 checks pass
 write_exit=0
 CHECK PASS
@@ -175,7 +175,7 @@ check_exit=1
 ```
 
 ```
-$ D="E:/Modding/_gamedata/BmAKgrab_early/hud/modules/HudModuleBatmobile/dec/scripts/HudModuleBatmobile_fla"; grep -n "mat3DVec__\[1[234]\]" "$D/LeftSideParentMovie_311.as" | grep -Ei "motion_(Health|BoostMovie|Combo|RemoteInterface)af1"
+$ D="E:/Modding/_shared/gamedata/BmAKgrab_early/hud/modules/HudModuleBatmobile/dec/scripts/HudModuleBatmobile_fla"; grep -n "mat3DVec__\[1[234]\]" "$D/LeftSideParentMovie_311.as" | grep -Ei "motion_(Health|BoostMovie|Combo|RemoteInterface)af1"
 112:            this.____motion_RemoteInterfaceaf1_mat3DVec__[12] = -525.274841;
 113:            this.____motion_RemoteInterfaceaf1_mat3DVec__[13] = 225;
 114:            this.____motion_RemoteInterfaceaf1_mat3DVec__[14] = 51.171337;

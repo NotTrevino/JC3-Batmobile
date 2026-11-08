@@ -24,7 +24,7 @@ note, and the MODLOG says the markdown table carries columns it does not.
 
 ## Check output (verbatim)
 
-Command (project root `E:/Modding/JC3-Batmobile`):
+Command (project root `E:/Modding/JustCause3/JC3-Batmobile`):
 
 ```
 python Tools/scripts/grab_sockets.py --check

@@ -5,7 +5,7 @@ The card names three behaviours the data has to settle - "sinks and stalls", "fl
 "drives underwater" - and asks for the members and values behind each. Everything here is
 derived from the decoded cache plus the live build, never from memory:
 
-  * `E:\\Modding\\_gamedata\\JC3grab\\entities\\*.ee.json` - the 232 vehicle decodes (the card's In
+  * `E:\\Modding\\_shared\\gamedata\\JC3grab\\entities\\*.ee.json` - the 232 vehicle decodes (the card's In
     list): every `WaterInteraction`, `Buoyancy` and `BoatBuoyancy` module with all of its
     rows, plus the shared `VehicleCommon` module that carries the water-entry and
     engine-shut-down constants;
@@ -54,7 +54,7 @@ sys.path.insert(0, HERE)
 import jc3adf  # noqa: E402
 import jc3detail  # noqa: E402
 
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/_shared/gamedata/JC3grab")
 ENT = os.path.join(RAW, "entities")
 OUT = os.path.join(ROOT, "Research", "JC3Grab")
 JSON_NAME = "WATER.json"

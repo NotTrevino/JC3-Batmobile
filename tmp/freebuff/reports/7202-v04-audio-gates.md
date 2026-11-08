@@ -22,7 +22,7 @@ WAV source (length ±1 frame); loudness within ±1 LU of the vanilla event it re
 Inputs were read-only: `Builds/bm-RC1/drop/sound/fmod_banks/{vehicles,weapons}.bank`,
 `Working/Audio/bm_bank_manifest.json` (B-11), `Working/Translation/t12_audio_map.json` (T-16), the
 five WAV sources, and the two vanilla banks. All five WAV sources exist on disk (four under
-`E:\Modding\_gamedata\BmAKgrab\audio\wav\`, one in-repo) — none was skipped.
+`E:\Modding\_shared\gamedata\BmAKgrab\audio\wav\`, one in-repo) — none was skipped.
 
 ## Result
 
@@ -94,13 +94,13 @@ target-folder snapshot, **not** audio drift. It is recorded here because the pre
 
 **1 — the RC carries B-11's banks, and the vanilla banks are the ones B-11 copied**
 ```
-$ sha256sum Builds/bm-RC1/drop/sound/fmod_banks/*.bank Builds/bm-004/banks/*.bank Working/Audio/jc3bank/sound/fmod_banks/vehicles.bank "E:/Modding/_gamedata/JC3grab/audio/weapons.bank"
+$ sha256sum Builds/bm-RC1/drop/sound/fmod_banks/*.bank Builds/bm-004/banks/*.bank Working/Audio/jc3bank/sound/fmod_banks/vehicles.bank "E:/Modding/_shared/gamedata/JC3grab/audio/weapons.bank"
 76d67bcef81c8d297082b9cb026e9e995762fb2f72e3b2c2d7f5a1570e2f00a7 *Builds/bm-RC1/drop/sound/fmod_banks/vehicles.bank
 5b8a7605a8b70ca211defa3c8856a1ab26b4276e11ecc46a4147af245f7a7d78 *Builds/bm-RC1/drop/sound/fmod_banks/weapons.bank
 76d67bcef81c8d297082b9cb026e9e995762fb2f72e3b2c2d7f5a1570e2f00a7 *Builds/bm-004/banks/vehicles.bank
 5b8a7605a8b70ca211defa3c8856a1ab26b4276e11ecc46a4147af245f7a7d78 *Builds/bm-004/banks/weapons.bank
 6161104d8909b7b0b7dd1d1201dbaa993e141877348457a6c7b5c84da1ccd983 *Working/Audio/jc3bank/sound/fmod_banks/vehicles.bank
-ab537a7cfc4c4b258174978f3fc952ddeb731ca8a7fe5dd1b81b1f261c819c3e *E:/Modding/_gamedata/JC3grab/audio/weapons.bank
+ab537a7cfc4c4b258174978f3fc952ddeb731ca8a7fe5dd1b81b1f261c819c3e *E:/Modding/_shared/gamedata/JC3grab/audio/weapons.bank
 ```
 (the four RC/`bm-004` hashes equal the manifest's `written[].sha256`; the two vanilla hashes equal its
 `bank.*.source_sha256`)

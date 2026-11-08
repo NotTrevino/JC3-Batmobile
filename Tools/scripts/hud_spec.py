@@ -11,8 +11,8 @@ translation needs:
 It never writes game content.  Point it at the decompile directories:
 
     python Tools/scripts/hud_spec.py \
-        --bmak E:/Modding/_gamedata/BmAKgrab_early/hud/dec \
-        --jc3  E:/Modding/_gamedata/JC3grab/hud/dec \
+        --bmak E:/Modding/_shared/gamedata/BmAKgrab_early/hud/dec \
+        --jc3  E:/Modding/_shared/gamedata/JC3grab/hud/dec \
         --write
 
 Reproduce the decompile first:

@@ -14,7 +14,7 @@ Two questions, files only:
      that switch, labelled decoded / derived / UNKNOWN.
 
 Sources (read-only):
-  * 232 decoded vehicle builds under `E:/Modding/_gamedata/JC3grab/entities` (player copies; the
+  * 232 decoded vehicle builds under `E:/Modding/_shared/gamedata/JC3grab/entities` (player copies; the
     `_ai` twins are excluded, same rule as `jc3tankturn.py` / `jc3_drive_carriers.py`).
   * the patch-layer module **bytes** through `Research/JC3Grab/INDEX.jsonl` + `jc3adf`, for the
     struct offsets of `AirGlobal` (13 `*_air_global.vmodc` in the index) and any
@@ -46,7 +46,7 @@ OUT = os.path.join(ROOT, "Working", "Translation")
 JSON_NAME = "T_MD14B_STATES.json"
 MD_NAME = "T_MD14B_STATES.md"
 INDEX = os.path.join(ROOT, "Research", "JC3Grab", "INDEX.jsonl")
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/_shared/gamedata/JC3grab")
 ENT = os.path.join(RAW, "entities")
 MODES = os.path.join(ROOT, "Research", "BatmobileGrab", "DRIVE_MODES.md")
 

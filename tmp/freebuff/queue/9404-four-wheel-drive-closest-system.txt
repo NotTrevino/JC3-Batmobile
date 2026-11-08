@@ -1,7 +1,7 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/four-wheel-drive-closest-system.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/four-wheel-drive-closest-system.md
 ONLY: freebuff
 EST: 40
 BRIEF: hand-written 2026-11-08
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-drive-modes-and-yaw.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/rc5-drive-modes-and-yaw.md
 Write the explicit four-wheel-drive decision for the Batmobile. Facts: Research/JC3Grab/DRIVE_CARRIERS.md found steering_type with FrontSteered on 51 vehicles and absent on 3, no rear or all-wheel enum, one driveline. The project rule is that the answer is never that JC3 has no system; name the closest one and the gap. Read tmp/freebuff/reports/four-wheel-drive-and-spin-in-place-build-plan.md and the output of brief 9122 (tmp/freebuff/reports/rc5-drive-modes-and-yaw.md). Produce tmp/freebuff/reports/hdl-four-wheel-drive-decision.md: the composition chosen (for example per-axle grip and slip asymmetry plus the drift yaw block), each member with its value and class, the predicted behavioural difference from a front-steered car, the residual gap in one sentence, and the take that will test it (name the card and the one observation). Done check: the decision lists at least three members, each is looked up in Working/Translation/T1_TRANSLATION.md and found, and anything not found is marked UNKNOWN.
-Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.
+Shared rules: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

@@ -43,7 +43,7 @@ from pathlib import Path
 GAME = Path("E:/Games/Batman - Arkham Knight")
 BM = GAME / "BmGame"
 ROOTS = [BM / "Config", BM / "Config" / "PC", GAME / "Engine" / "Config"]
-OUT_DIR = Path("E:/Modding/JC3-Batmobile/Research/BatmobileGrab")
+OUT_DIR = Path("E:/Modding/JustCause3/JC3-Batmobile/Research/BatmobileGrab")
 OUT_MD = OUT_DIR / "CONFIG.md"
 OUT_JSON = OUT_DIR / "CONFIG.json"
 

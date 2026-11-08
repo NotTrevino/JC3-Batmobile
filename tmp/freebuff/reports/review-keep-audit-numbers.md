@@ -278,7 +278,7 @@ Each line replaces the failing cell; the source is the column above. Nothing in 
 ## 13. Reproduce
 
 ```bash
-cd "E:/Modding/JC3-Batmobile"
+cd "E:/Modding/JustCause3/JC3-Batmobile"
 python tmp/freebuff/scratch/verify_keep_audit3.py   # A/B/C + first pass at D..G
 python tmp/freebuff/scratch/verify_ka3b.py          # corrected shapes: hardpoints, boost blocks, audit table
 python tmp/freebuff/scratch/verify_ka3c.py          # audio/fx, lights, materials, thresholds

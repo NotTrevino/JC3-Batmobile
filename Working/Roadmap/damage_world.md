@@ -1,6 +1,6 @@
 # Landmark map: ARMOUR/DAMAGE and WORLD INTEGRATION (as of 2026-11-08)
 
-Read-only survey. Every claim cites a path under `E:\Modding\JC3-Batmobile`. UNKNOWN = no file read settles it.
+Read-only survey. Every claim cites a path under `E:\Modding\JustCause3\JC3-Batmobile`. UNKNOWN = no file read settles it.
 Abbreviations: GB = `GRAB_BACKLOG.md`; TF = `tmp/freebuff/reports/`; Q = `tmp/freebuff/queue/`; TR = `Working/Translation/`; RJ = `Research/JC3Grab/`; RB = `Research/BatmobileGrab/`.
 Status words: done / partial / queued / todo / blocked. "queued" = a brief exists in `tmp/freebuff/queue/` but produced no output yet (checked: `Working/RC5/` does not exist, `Builds/bm-RC5-damage|world|survival` do not exist; only `Builds/bm-RC5-audio` and `-entity` exist).
 

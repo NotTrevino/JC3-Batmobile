@@ -38,15 +38,15 @@ Nothing was fixed, and no script or generated artefact was edited by the sweep.
 | `bm_health.py` | 1 | decode failed: Builds/bm-009/aaf/editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile_health_medium.vmodc / b''b's access,... | real failure |
 | `bm_lightrig.py` | 1 | FAIL: 1 file(s) other than the lights module changed or vanished: ['editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_k... | real failure |
 | `bm_parts.py` | 1 |   FAIL the spec is not what build_plan()/spec_document() derive from its inputs (stale or hand-edited key(s): ['parts']) / FAIL: Builds/bm-002 re-rea... | real failure |
-| `bm_rebel.py` | 77 | PASS only task 1980624442 repeatable changed: +1 ItemReward for the Batmobile / GUARD blocked write: E:/Modding/_gamedata/JC3grab\b13c_chk_qrlrvjti | skipped - writes outside tmp/: `E:/Modding/_gamedata/JC3grab\b13c_chk_qrlrvjti` |
+| `bm_rebel.py` | 77 | PASS only task 1980624442 repeatable changed: +1 ItemReward for the Batmobile / GUARD blocked write: E:/Modding/_shared/gamedata/JC3grab\b13c_chk_qrlrvjti | skipped - writes outside tmp/: `E:/Modding/_shared/gamedata/JC3grab\b13c_chk_qrlrvjti` |
 | `bmak_cambuild.py` | 2 | usage: bmak_cambuild.py [-h] {pack,verify} ... / bmak_cambuild.py: error: the following arguments are required: cmd | usage error - --check not accepted: `the following arguments are required: cmd` |
 | `bmak_camfile.py` | 2 | usage: bmak_camfile.py [-h] {source,build,check} ... / bmak_camfile.py: error: the following arguments are required: cmd | usage error - --check not accepted: `the following arguments are required: cmd` |
-| `bmak_radar.py` | 77 | GUARD blocked write: E:\Modding\JC3-Batmobile\Working\HUD\radar.gfx | skipped - writes outside tmp/: `E:\Modding\JC3-Batmobile\Working\HUD\radar.gfx` |
+| `bmak_radar.py` | 77 | GUARD blocked write: E:\Modding\JustCause3\JC3-Batmobile\Working\HUD\radar.gfx | skipped - writes outside tmp/: `E:\Modding\JustCause3\JC3-Batmobile\Working\HUD\radar.gfx` |
 | `bmak_sampler_unknowns3.py` | TIMEOUT |   4000/4145 packages, 3999 parsed, 217s /   phase A: 4145/4145 in 233.8s; 47 names, 178 tag candidates | timeout: `>300s` |
-| `damage_predict.py` | 77 | GUARD blocked write: E:/Modding/_gamedata/JC3grab\tmp_t1\default_extended_effect_usages.vmodc | skipped - writes outside tmp/: `E:/Modding/_gamedata/JC3grab\tmp_t1\default_extended_effect_usages.vmodc` |
+| `damage_predict.py` | 77 | GUARD blocked write: E:/Modding/_shared/gamedata/JC3grab\tmp_t1\default_extended_effect_usages.vmodc | skipped - writes outside tmp/: `E:/Modding/_shared/gamedata/JC3grab\tmp_t1\default_extended_effect_usages.vmodc` |
 | `g2x_gate.py` | TIMEOUT | (no output before 300s) | timeout: `>300s` |
-| `grab_anims.py` | 1 |   derived: \| Batmobile \| Playable_Batmobile_SF \| AnimSet `BM_Batmobile_Chassis` \| 242 \| 139 \| 5 \| `E:/Modding/_gamedata/BmAKgrab/anims/Playabl... | real failure |
-| `grab_bones.py` | 77 | GUARD blocked write: E:\Modding\_gamedata\BmAKgrab\bones\Batmobile_Chassis.npy | skipped - writes outside tmp/: `E:\Modding\_gamedata\BmAKgrab\bones\Batmobile_Chassis.npy` |
+| `grab_anims.py` | 1 |   derived: \| Batmobile \| Playable_Batmobile_SF \| AnimSet `BM_Batmobile_Chassis` \| 242 \| 139 \| 5 \| `E:/Modding/_shared/gamedata/BmAKgrab/anims/Playabl... | real failure |
+| `grab_bones.py` | 77 | GUARD blocked write: E:\Modding\_shared\gamedata\BmAKgrab\bones\Batmobile_Chassis.npy | skipped - writes outside tmp/: `E:\Modding\_shared\gamedata\BmAKgrab\bones\Batmobile_Chassis.npy` |
 | `grab_box_flags.py` | TIMEOUT | (no output before 300s) | timeout: `>300s` |
 | `grab_collision_selector.py` | 1 |                                            ~~~~~~^^^^^^^^^^^^^^^^ / TypeError: '<' not supported between instances of 'NoneType' and 'int' | real failure |
 | `grab_collision_selector2.py` | 1 |             ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ / TypeError: %d format: a real number is required, not NoneType | real failure |
@@ -85,7 +85,7 @@ Nothing was fixed, and no script or generated artefact was edited by the sweep.
 | `bm_parts_v2.py` | 0 |   [51] batmobile_cannon: constraint_index -1 -> 12 (int16 at +0x3eac); axis [1.0, 0.0, 0.0], pivot [0.000358, 1.702446, 0.017586] m, limits -5.0..20.... | ok |
 | `bm_rc.py` | 0 | PASS rehearsal (b) Rollback091 restored the decoy byte-for-byte and removed the rest / PASS: bm-RC1 0 failure(s), 9 drop files, 691 tree files, .toc ... | ok |
 | `bm_rc2.py` | 0 | PASS rehearsal (b) Rollback091 restored the decoy byte-for-byte and removed the rest / PASS: bm-RC2 0 failure(s), 9 drop files, 691 tree files, .toc ... | ok |
-| `bm_rebel.py` | 77 | PASS only task 1980624442 repeatable changed: +1 ItemReward for the Batmobile / GUARD blocked write: E:/Modding/_gamedata/JC3grab\b13c_chk_qrlrvjti | skipped - writes outside tmp/: `E:/Modding/_gamedata/JC3grab\b13c_chk_qrlrvjti` |
+| `bm_rebel.py` | 77 | PASS only task 1980624442 repeatable changed: +1 ItemReward for the Batmobile / GUARD blocked write: E:/Modding/_shared/gamedata/JC3grab\b13c_chk_qrlrvjti | skipped - writes outside tmp/: `E:/Modding/_shared/gamedata/JC3grab\b13c_chk_qrlrvjti` |
 | `bm_vehicle_hull.py` | 0 | CHECK OK: 10 oracles, 90 lines, pskx [702.56, 349.53, 234.185] cm, chassis TM identity, rotation candidates accepted 0, bodies 62 | ok |
 | `bm_weapons.py` | 0 |   classes: base 46 (+1 classless root), built 46 (+1 classless root) /   Out     manifest: Working/Weapons/manifest.json matches (4 weapon(s), 2 priv... | ok |
 | `bmak_audio_features.py` | 0 | } / OK: 361 rows / 118 ids -> 14 groups, 423/447 WEMs decoded (24 errors), 90 missing rows, 27 banks, 506 RTPC entries over 261 objects (22 named par... | ok |
@@ -101,7 +101,7 @@ Nothing was fixed, and no script or generated artefact was edited by the sweep.
 | `bmak_hud_cluster.py` | 0 | PASS: cluster record current | ok |
 | `bmak_light_sockets.py` | 0 | 8/8 oracles pass / CHECK OK: the stored .md/.json are byte-identical to a fresh recompute | ok |
 | `bmak_particle_features.py` | 0 | } / OK: 206 systems (63 names) in 17 groups; facts: lifetime 203, spawn 206, size 174, materials 206, colours 183 (1290 boxes); coverage 49 reference... | ok |
-| `bmak_radar.py` | 77 | GUARD blocked write: E:\Modding\JC3-Batmobile\Working\HUD\radar.gfx | skipped - writes outside tmp/: `E:\Modding\JC3-Batmobile\Working\HUD\radar.gfx` |
+| `bmak_radar.py` | 77 | GUARD blocked write: E:\Modding\JustCause3\JC3-Batmobile\Working\HUD\radar.gfx | skipped - writes outside tmp/: `E:\Modding\JustCause3\JC3-Batmobile\Working\HUD\radar.gfx` |
 | `bmak_reg.py` | 0 |   watch 0x04a8: no native touches it / check: 3 arrays, 81 entries, 111 offsets touched - ok | ok |
 | `bmak_runtime_sampler2.py` | 0 | checked 32 fields against SAMPLER_FIELDS2.md; 0 mismatches | ok |
 | `bmak_sampler_results.py` | 0 | derive == stored JSON: True \| spot pulses missing: [] | ok |
@@ -114,8 +114,8 @@ Nothing was fixed, and no script or generated artefact was edited by the sweep.
 | `bmak_tyres_package.py` | 0 | OK: radius disagrees (mesh 0.6827 m vs package 0.640 m, -42.7 mm); width mesh-only; suspension package-only / OK: TYRES_PACKAGE.md and TYRES_PACKAGE.... | ok |
 | `bmak_word12.py` | 0 | ### result / ALL 9 ORACLES PASS ? the word at +12 is the FName index of the element tag's struct name, 'TM', which each package stores at its own ind... | ok |
 | `bmsdk_offsets.py` | 0 | ok: 41 classes, 3420 properties, 56 structs | ok |
-| `damage_predict.py` | 77 | GUARD blocked write: E:/Modding/_gamedata/JC3grab\tmp_t1\default_extended_effect_usages.vmodc | skipped - writes outside tmp/: `E:/Modding/_gamedata/JC3grab\tmp_t1\default_extended_effect_usages.vmodc` |
-| `decode_depth.py` | 0 | ok   E:\Modding\JC3-Batmobile\Research\JC3Grab\DECODE_DEPTH.json is byte-identical to a fresh census / OK: 14/14 checks, md identical, json identical | ok |
+| `damage_predict.py` | 77 | GUARD blocked write: E:/Modding/_shared/gamedata/JC3grab\tmp_t1\default_extended_effect_usages.vmodc | skipped - writes outside tmp/: `E:/Modding/_shared/gamedata/JC3grab\tmp_t1\default_extended_effect_usages.vmodc` |
+| `decode_depth.py` | 0 | ok   E:\Modding\JustCause3\JC3-Batmobile\Research\JC3Grab\DECODE_DEPTH.json is byte-identical to a fresh census / OK: 14/14 checks, md identical, json identical | ok |
 | `decode_depth2.py` | 0 | OK: 116 .ddsc (71 FULL / 45 PARTIAL), 4 .pfxc (4 PARTIAL), 8/8 checks, md+summary byte-identical=True | ok |
 | `decode_depth3.py` | 0 | OK   sportsmuscle_missile_base_signature_lod3.rbm   size  14590  sum==size True  mkiii  1214 B  idx   12  verts  12 / RESULT: PASS | ok |
 | `decode_depth4.py` | 0 |      sportsmuscle_missile_base_signature_lod3.rbm   size  14590  payload  1214 = 842 + 100 + 244 + 28 (exact True)  verts 12/12  idx 12 / RESULT: PASS | ok |
@@ -127,18 +127,18 @@ Nothing was fixed, and no script or generated artefact was edited by the sweep.
 | `g1x_gate.py` | 0 | codes 75: 56 from G1 files, 19 proven absences (no BmAK source); PASS | ok |
 | `g2x_gate.py` | TIMEOUT | (no output before 300s) | timeout: `>300s` |
 | `g3_11d_collision_recheck.py` | 0 | OK 8/8 oracles, 5 rows, 87 build trees, md+json identical | ok |
-| `grab_anims.py` | 1 |   derived: \| Batmobile \| Playable_Batmobile_SF \| AnimSet `BM_Batmobile_Chassis` \| 242 \| 139 \| 5 \| `E:/Modding/_gamedata/BmAKgrab/anims/Playabl... | real failure |
+| `grab_anims.py` | 1 |   derived: \| Batmobile \| Playable_Batmobile_SF \| AnimSet `BM_Batmobile_Chassis` \| 242 \| 139 \| 5 \| `E:/Modding/_shared/gamedata/BmAKgrab/anims/Playabl... | real failure |
 | `grab_audio.py` | 0 | } / OK: 361 rows / 118 ids -> 239 resolved (74 ids), 24 streamed, 8 no-media, 90 missing (26 ids), 447 WEMs, 27 banks | ok |
 | `grab_audio_banks.py` | 0 | oracles: banks_refound=True, hirc_mismatches=0, claim_verdicts={'BML_Batmobile_Subjective': 'FOUND', 'BML_Impacts': 'FOUND', 'BML_Sonar': 'FOUND', 'C... | ok |
 | `grab_audio_banks2.py` | 0 | answer UNKNOWN  searched 117 / CHECK PASS | ok |
 | `grab_bindings_merge.py` | 0 | OK: gamepad rows 22, with vehicle tokens 13 / OK: BINDINGS_MERGED.md and BINDINGS_MERGED.json match the re-derived render | ok |
-| `grab_bones.py` | 77 | GUARD blocked write: E:\Modding\_gamedata\BmAKgrab\bones\Batmobile_Chassis.npy | skipped - writes outside tmp/: `E:\Modding\_gamedata\BmAKgrab\bones\Batmobile_Chassis.npy` |
+| `grab_bones.py` | 77 | GUARD blocked write: E:\Modding\_shared\gamedata\BmAKgrab\bones\Batmobile_Chassis.npy | skipped - writes outside tmp/: `E:\Modding\_shared\gamedata\BmAKgrab\bones\Batmobile_Chassis.npy` |
 | `grab_box_flags.py` | TIMEOUT | (no output before 300s) | timeout: `>300s` |
 | `grab_box_union_frame.py` | 0 | OK: 15/15 checks, union FULL lengths | ok |
 | `grab_cdo_payloads.py` | 0 | OK 6/6 payloads decoded, 4 tags, 0 UNKNOWN / counts: {"children": 37, "past_budget": 6, "under_budget": 31, "tags": 4, "unknown_tags": 0, "leftover_b... | ok |
 | `grab_class_defaults.py` | 0 | OK BmScript.Default__RVehicleBatmobile 93 tags / BmGame.Default__RVehicleBatmobileBase 181 tags; layout RVehicleBatmobile -> RVehicleBatmobileBase ->... | ok |
 | `grab_cockpit.py` | 0 | OK: 65 sockets, Driver (-0.0025, 0.8647, -1.0654) on Batmobile_Chassis; seat 13,014 faces (cushion y 0.8407) / tub 27,334 / screen 100 faces 0.3188 x... | ok |
-| `grab_collision.py` | 0 | check ok: E:\Modding\JC3-Batmobile\Research\BatmobileGrab\COLLISION.json E:\Modding\JC3-Batmobile\Research\BatmobileGrab\COLLISION.md | ok |
+| `grab_collision.py` | 0 | check ok: E:\Modding\JustCause3\JC3-Batmobile\Research\BatmobileGrab\COLLISION.json E:\Modding\JustCause3\JC3-Batmobile\Research\BatmobileGrab\COLLISION.md | ok |
 | `grab_collision_boxes.py` | 0 | OK: 131 boxes (3 BmGame + 128 wreck), 2 byte-mapped payloads, rotations 3/131, extents FULL lengths, 14/14 checks, md byte-identical | ok |
 | `grab_collision_convex.py` | 0 | OK: 56 elements ({'169748': 43, '169749': 13}), 34182 B accounted, plane-clean 53/56, box-exact 56/56; 11/11 checks; md byte-identical | ok |
 | `grab_collision_cylinders.py` | 0 | OK: 540=CollisionHeight 544=CollisionRadius 548=AABBScale, 9/9 checks, md+pairing byte-identical=True | ok |
@@ -153,7 +153,7 @@ Nothing was fixed, and no script or generated artefact was edited by the sweep.
 | `grab_colour_params.py` | 0 | oracles: {"chain_ends_at_one_material": true, "chain_start_is_body_slot_mic": true, "every_override_pairs_by_guid": true, "no_derived_composite_value... | ok |
 | `grab_config.py` | 1 | row fidelity: 1894/1894 rows re-read from disk contain their key and value verbatim / CHECK FAILED | real failure |
 | `grab_config2.py` | 1 | row fidelity: 1894/1894 rows re-read from disk contain their key and value verbatim / CHECK FAILED | real failure |
-| `grab_controls.py` | 0 | same    E:\Modding\JC3-Batmobile\Research\BatmobileGrab\CONTROLS.json / check ok | ok |
+| `grab_controls.py` | 0 | same    E:\Modding\JustCause3\JC3-Batmobile\Research\BatmobileGrab\CONTROLS.json / check ok | ok |
 | `grab_controls_consumers.py` | 0 | ok: re-derived output matches Research/BatmobileGrab/CONTROLS_CONSUMERS.json Research/BatmobileGrab/CONTROLS_CONSUMERS.md | ok |
 | `grab_controls_native.py` | 0 | check: re-derived output matches the note - ok | ok |
 | `grab_controls_native2.py` | 0 | OK 31 flag masks, 15 write sites, 2 comparisons, 3 exit execs / oracles: {'flag_word_is_one_documented_bitfield': True, 'every_decoded_flag_reference... | ok |
@@ -189,7 +189,7 @@ Nothing was fixed, and no script or generated artefact was edited by the sweep.
 | `grab_uniform_records.py` | 0 |   bytecode cross-checks ... / PASS: 6943 records / 9553 entries decoded, Batmobile_Worn @0x8bc1f56 with 14 entries, oracles 17/17 | ok |
 | `grab_variants.py` | 0 | OK: sim 0 differing tags in all four; rigs 28/28/17 rows, MaterialType 18/18; gadgets 10/10/5/10; tag diffs vs V2 86/77/87 / OK: VARIANTS.md matches ... | ok |
 | `grab_vecdefaults.py` | 0 | OK rebuilt byte-identical from the package and the two colour documents | ok |
-| `grab_weapons.py` | 0 | ok E:\Modding\JC3-Batmobile\Research\BatmobileGrab\WEAPONS.md / PASS: 62 objects, 13 classes, 594 references (128 missing-object), 0 variant differen... | ok |
+| `grab_weapons.py` | 0 | ok E:\Modding\JustCause3\JC3-Batmobile\Research\BatmobileGrab\WEAPONS.md / PASS: 62 objects, 13 classes, 594 references (128 missing-object), 0 variant differen... | ok |
 
 ## Verdict key
 
@@ -249,10 +249,10 @@ Each of these would have written outside `tmp/`; the guard raised and nothing wa
 
 | script | blocked path |
 |---|---|
-| `bm_rebel.py` | `E:/Modding/_gamedata/JC3grab/b13c_chk_qrlrvjti` |
+| `bm_rebel.py` | `E:/Modding/_shared/gamedata/JC3grab/b13c_chk_qrlrvjti` |
 | `bmak_radar.py` | `Working/HUD/radar.gfx` |
-| `damage_predict.py` | `E:/Modding/_gamedata/JC3grab/tmp_t1/default_extended_effect_usages.vmodc` |
-| `grab_bones.py` | `E:/Modding/_gamedata/BmAKgrab/bones/Batmobile_Chassis.npy` |
+| `damage_predict.py` | `E:/Modding/_shared/gamedata/JC3grab/tmp_t1/default_extended_effect_usages.vmodc` |
+| `grab_bones.py` | `E:/Modding/_shared/gamedata/BmAKgrab/bones/Batmobile_Chassis.npy` |
 
 ### Timeouts >300 s (4)
 

@@ -5,9 +5,9 @@ Card G2-34 (serves WLD-7, WPN-6): "record tether strength vs vehicle mass, wheth
 be airlifted, and whether any vehicle-mounted winch/rope exists that a car could carry".
 
 Inputs (decoded tables only; no archive is opened, `D:\\Games` is never read):
-  * ``E:/Modding/_gamedata/JC3grab/entities/*.ee.json`` - every module row (incl. `RigidBody.mass`), the
+  * ``E:/Modding/_shared/gamedata/JC3grab/entities/*.ee.json`` - every module row (incl. `RigidBody.mass`), the
     module-type census and each entity's own inner file list.
-  * ``E:/Modding/_gamedata/JC3grab/detail/*.ee.json`` - the `.epe` object graphs: `CVehicleCargoBay`,
+  * ``E:/Modding/_shared/gamedata/JC3grab/detail/*.ee.json`` - the `.epe` object graphs: `CVehicleCargoBay`,
     `CGrapplingHookPropData`, the vehicle roots (a compound entity has two) and the cargo-bay
     interaction points.
   * ``Research/JC3Grab/PARTS_TABLE.jsonl`` - the parts module rows (the transport boat's
@@ -37,7 +37,7 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
 OUT = os.path.join(ROOT, "Research", "JC3Grab")
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/_shared/gamedata/JC3grab")
 JSON_NAME = "TETHER.json"
 MD_NAME = "TETHER.md"
 

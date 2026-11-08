@@ -5,7 +5,7 @@ Read-only pass over the finished card. What I read: `GRAB_BACKLOG.md` §0.5 (R1�
 change` (line 11713) and `— done` (line 11803) sections, the outputs `Research/JC3Grab/USAGES.md` §6
 ("The nitro chain: input -> effect -> sound event -> sample") + `USAGES.json` `nitro` block, the
 generator `Tools/scripts/jc3usage.py` (nitro pass + `assertions()`), and the evidence the card relied
-on: `E:/Modding/_JC3grab/entities/*.ee.json` (232), `E:/Modding/_JC3grab/detail/*.json` (232 `.epe`
+on: `E:/Modding/JustCause3/_grab/entities/*.ee.json` (232), `E:/Modding/JustCause3/_grab/detail/*.json` (232 `.epe`
 graphs), `Research/JC3Grab/FX_TABLE.jsonl`, `INDEX.jsonl`, `JC3_AUDIO_EVENTS.json`, the audio reader
 `Tools/scripts/jc3audio.py`, test-060's `Tools/scripts/_apply_audio.py`, and the local bank copy
 `Working/Audio/jc3bank/sound/fmod_banks/{vehicles,character,effects}.bank`.
@@ -548,8 +548,8 @@ complete from input block to a named `.effc` and a named bank event.
 
 ```
 python Tools/scripts/jc3usage.py --check                      # PASS, exit 0
-python - <<PY  # donor module rows        (E:/Modding/_JC3grab/entities/v0300_…_civilian_01.ee.json)
-python - <<PY  # donor .epe objects       (E:/Modding/_JC3grab/detail/v0300_…_civilian_01.ee.json)
+python - <<PY  # donor module rows        (E:/Modding/JustCause3/_grab/entities/v0300_…_civilian_01.ee.json)
+python - <<PY  # donor .epe objects       (E:/Modding/JustCause3/_grab/detail/v0300_…_civilian_01.ee.json)
 python - <<PY  # fleet arcade / air / boat / tank / nitrous_gears census over 232 caches
 python - <<PY  # object Effect → FX path: rbmhdr.hash_jenkins vs FX_TABLE paths (181/181)
 python - <<PY  # module all_effects name hashes (78) → 0 paths; name_hash 69,020/69,020 Jenkins

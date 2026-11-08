@@ -53,7 +53,7 @@ holds the pointers. The build renames the leaf to `v0300_car_kensington_sportsmu
 ## Commands and output (verbatim)
 
 ```
-cd "E:/Modding/JC3-Batmobile" && export PYTHONIOENCODING=utf-8 && set -o pipefail && python Tools/scripts/v_strings.py --write; echo "EXIT write=$?"; python Tools/scripts/v_strings.py --check; echo "EXIT check=$?"
+cd "E:/Modding/JustCause3/JC3-Batmobile" && export PYTHONIOENCODING=utf-8 && set -o pipefail && python Tools/scripts/v_strings.py --write; echo "EXIT write=$?"; python Tools/scripts/v_strings.py --check; echo "EXIT check=$?"
 wrote Builds/bm-RC2/verify/strings.md (6439 bytes)
 EXIT write=0
 PASS the vanilla store has 11 languages

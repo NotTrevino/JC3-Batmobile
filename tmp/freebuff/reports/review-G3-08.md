@@ -2,7 +2,7 @@
 
 Independent review. I did not write this card. Read-only: `INDEX.jsonl` → the `.arc` archives under
 `D:/Games/Just Cause 3` (read only, nothing written there), the 232 entity dumps under
-`E:/Modding/_gamedata/JC3grab/entities`, `jc3index.MOUNT_RANK`, `rbmhdr.hash_jenkins`, the card and its
+`E:/Modding/_shared/gamedata/JC3grab/entities`, `jc3index.MOUNT_RANK`, `rbmhdr.hash_jenkins`, the card and its
 script. I parsed the four keymap files with my own code, not `jc3_input.py`. Only this report was written
 (plus the two earlier reviews).
 
@@ -31,7 +31,7 @@ No decoded byte value needs rework; the verdict column needs re-labelling.
 Command:
 
 ```
-cd /e/Modding/JC3-Batmobile && uv run --with numpy python Tools/scripts/jc3_input.py --check 2>&1 | tee /tmp/g308_check.txt; echo "EXIT=${PIPESTATUS[0]}"
+cd /e/Modding/JustCause3/JC3-Batmobile && uv run --with numpy python Tools/scripts/jc3_input.py --check 2>&1 | tee /tmp/g308_check.txt; echo "EXIT=${PIPESTATUS[0]}"
 ```
 
 Output (verbatim):

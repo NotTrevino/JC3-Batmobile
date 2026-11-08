@@ -1,6 +1,6 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/v03-wiring-rc2.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/v03-wiring-rc2.md
 ONLY: freebuff
 EST: 40
 BRIEF: hand-written 2026-11-05
 V-03 was passed on bm-RC1 (python Tools/scripts/v03_wiring.py --check). Builds/bm-RC2 exists now. Run the wiring gate against bm-RC2: every SWeaponPoint resolves to an existing part/bone, every weapon id/path, effect, light, sound GUID and Rebel Drop entity path resolves inside the build or the shipped archives (Tools/scripts/jc3index.py). If v03_wiring.py takes a --root or build argument use it; otherwise write Tools/scripts/v03_wiring_rc2.py beside it (never edit the original). Output Builds/bm-RC2/verify/wiring.json and wiring.md, and list every dangling reference with file and offset.
-Rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md section 3 (test ban stays; never guess; label decoded/derived/UNKNOWN). Report at the DONE path: STATUS first, files, verbatim commands, UNKNOWNs with what you tried.
+Rules: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md section 3 (test ban stays; never guess; label decoded/derived/UNKNOWN). Report at the DONE path: STATUS first, files, verbatim commands, UNKNOWNs with what you tried.

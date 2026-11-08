@@ -1,4 +1,4 @@
-STATUS: partial — `WhatIf`, `Install` and `Verify` pass on a faithful copy of the live dropzone, but `Rollback091` does **not** restore the copy byte-for-byte: it removed the 9 files it had just overwritten (11 -> 2), because `Install` had backed none of them up. Everything was offline on copies under `E:\Modding\_dropzone_sim_rc2*`; no game folder was written and the game was not launched.
+STATUS: partial — `WhatIf`, `Install` and `Verify` pass on a faithful copy of the live dropzone, but `Rollback091` does **not** restore the copy byte-for-byte: it removed the 9 files it had just overwritten (11 -> 2), because `Install` had backed none of them up. Everything was offline on copies under `E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2*`; no game folder was written and the game was not launched.
 
 
 V-06 repeated for `Builds/bm-RC2`, per the brief. The copy was verified byte-identical to the live dropzone
@@ -33,8 +33,8 @@ pitched as revertible.
 - `Tools/scripts/dropzone_sim.py` — new harness: `--snapshot ROOT OUT`, `--compare A B`, `--check`.
 - `tmp/freebuff/reports/v06-dropzone-sim-rc2.md` — this report.
 - `tmp/freebuff/scratch/v06rc2/` — the captured logs and sha256 snapshots every block above is read from.
-- Sim folders (outside the project, deletable): `E:\Modding\_dropzone_sim_rc2` (post-rollback state, 2 files)
-  and `E:\Modding\_dropzone_sim_rc2_tamper` (post-rollback state, 9 tampered files restored).
+- Sim folders (outside the project, deletable): `E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2` (post-rollback state, 2 files)
+  and `E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2_tamper` (post-rollback state, 9 tampered files restored).
 
 No `Builds/bm-RC2` source file was edited; the tree was run exactly as shipped.
 
@@ -46,7 +46,7 @@ Guard (the same function guarded all seven runs):
 guard() {
   printf 'GameDir argument = %s\n' "$1"
   case "$1" in
-    'E:\Modding\_dropzone_sim_rc2'|'E:\Modding\_dropzone_sim_rc2_tamper') echo 'GUARD OK: approved sim folder under E:\Modding, not a game folder' ;;
+    'E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2'|'E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2_tamper') echo 'GUARD OK: approved sim folder under E:\Modding, not a game folder' ;;
     *) echo 'GUARD REFUSED: not an approved sim folder'; exit 9 ;;
   esac
   case "$1" in *[Gg]ames*) echo 'GUARD REFUSED: game path'; exit 9 ;; esac
@@ -58,13 +58,13 @@ guard() {
 ```
 S=tmp/freebuff/scratch/v06rc2
 LIVE='D:\Games\Just Cause 3\dropzone'
-SIM='E:\Modding\_dropzone_sim_rc2'
-rm -rf /e/Modding/_dropzone_sim_rc2
-mkdir -p /e/Modding/_dropzone_sim_rc2/dropzone
-cp -a "/d/Games/Just Cause 3/dropzone/." "/e/Modding/_dropzone_sim_rc2/dropzone/"; echo "cp exit=$?"
+SIM='E:\Modding\JustCause3\_dropzone_sims\_dropzone_sim_rc2'
+rm -rf /e/Modding/JustCause3/_dropzone_sims/_dropzone_sim_rc2
+mkdir -p /e/Modding/JustCause3/_dropzone_sims/_dropzone_sim_rc2/dropzone
+cp -a "/d/Games/Just Cause 3/dropzone/." "/e/Modding/JustCause3/_dropzone_sims/_dropzone_sim_rc2/dropzone/"; echo "cp exit=$?"
 python Tools/scripts/dropzone_sim.py --snapshot "$SIM\\dropzone" "$S/sim_before.json"
 python Tools/scripts/dropzone_sim.py --compare "$S/live.json" "$S/sim_before.json"
-( cd "/e/Modding/_dropzone_sim_rc2/dropzone" && find . -type f -exec sha256sum {} + | sort ) > "$S/sim_before.sha"
+( cd "/e/Modding/JustCause3/_dropzone_sims/_dropzone_sim_rc2/dropzone" && find . -type f -exec sha256sum {} + | sort ) > "$S/sim_before.sha"
 diff "$S/live.sha" "$S/sim_before.sha" && echo "sha256sum live vs copy: identical (11 files)"
 ```
 

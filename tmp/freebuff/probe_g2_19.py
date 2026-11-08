@@ -10,7 +10,7 @@ import json
 import re
 import sys
 
-sys.path.insert(0, r"E:/Modding/JC3-Batmobile/Tools/scripts")
+sys.path.insert(0, r"E:/Modding/JustCause3/JC3-Batmobile/Tools/scripts")
 import jc3grab  # noqa: E402
 import jc3index  # noqa: E402
 

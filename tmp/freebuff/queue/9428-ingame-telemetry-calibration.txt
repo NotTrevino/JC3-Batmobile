@@ -1,7 +1,7 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/ingame-telemetry-calibration.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/ingame-telemetry-calibration.md
 ONLY: freebuff
 EST: 45
 BRIEF: hand-written 2026-11-08
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-live-vehicle-readout.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-telemetry-take-analyser.md, E:/Modding/JC3-Batmobile/tmp/freebuff/APPROVED_Q_FULL.txt
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/hook-live-vehicle-readout.md, E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/verify-telemetry-take-analyser.md, E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/APPROVED_Q_FULL.txt
 Prove the telemetry channels before any tuning take. Pilot cards: LAUNCH, LOAD_SAVE, SPAWN_BATMOBILE, ENTER_EXIT, AIRFIELD, RECORD, KILL in Working/Q/PILOT/. Install the hook build from brief 7982 only. Drive a straight run on the airfield and read the in-game speedometer by screenshot at three steady speeds; compare with the telemetry speed column. Drive one slow full circle and compare heading change in telemetry with a compass turn. Park and read the z column; drive over a kerb and check z moves. Observation: for each of speed, heading, yaw rate, z, health, one line of the telemetry file next to the independent reading. Pass rule: speed agrees within 3 km/h, a full circle spans 360 plus or minus 15 degrees, z changes over the kerb. Fail route: record the failing channel in Working/Q/FIXES.md as a hook-offset card for brief 7982's owner and mark every take that needs it UNKNOWN. Save the telemetry to Working/Q/caps/calibration/. Do not change handling.
-Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.
+Shared rules: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

@@ -4,8 +4,8 @@ Challenger: Freebuff (did not write this card). Date: 2026-10-29.
 Card: `GRAB_BACKLOG.md` §3 `P0-2` (line 364), tracker row §12 line 1275, MODLOG
 §"P0-2 · Feature census written, and the four §2 claims reconciled" (line 7752).
 Outputs read: `Research/JC3Grab/FEATURE_CENSUS.md` + `.json`, `Tools/scripts/jc3_feature_census.py`,
-and the three inputs it reads (`E:/Modding/_JC3grab/detail/*.ee.json`,
-`E:/Modding/_JC3grab/entities/*.ee.json`, `Research/JC3Grab/PARTS_TABLE.jsonl`, `INDEX.jsonl`).
+and the three inputs it reads (`E:/Modding/JustCause3/_grab/detail/*.ee.json`,
+`E:/Modding/JustCause3/_grab/entities/*.ee.json`, `Research/JC3Grab/PARTS_TABLE.jsonl`, `INDEX.jsonl`).
 Read-only: nothing was written except this file; no game was launched; nothing was committed.
 
 The card's own gate is green:

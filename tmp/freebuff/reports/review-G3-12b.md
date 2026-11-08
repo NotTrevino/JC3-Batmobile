@@ -34,7 +34,7 @@ characterisation of the `.ddsc` tail as mip-derived is contradicted by the bytes
 ## 1. Check output (verbatim)
 
 ```
-cd "E:/Modding/JC3-Batmobile" && uv run --with numpy --with pillow --with pefile --with capstone python Tools/scripts/decode_depth2.py --check; echo "CHECK_EXIT=$?"
+cd "E:/Modding/JustCause3/JC3-Batmobile" && uv run --with numpy --with pillow --with pefile --with capstone python Tools/scripts/decode_depth2.py --check; echo "CHECK_EXIT=$?"
 ```
 
 ```

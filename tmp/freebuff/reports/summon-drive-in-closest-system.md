@@ -36,7 +36,7 @@ rear locked, engine running.** The only numbers BmAK gives are the ceiling (40 m
 
 Each land vehicle ships **five** AI modules beside the player-driven ones. For the donor `v0300` they are
 `DECODE_DEPTH.md:539-543` (all graded **FULL**), and their member rows are in the entity grab
-(`E:/Modding/_gamedata/JC3grab/entities/v0300_car_kensington_sportsmuscle__v0300_car_kensington_sportsmuscle_civilian_01.ee.json`):
+(`E:/Modding/_shared/gamedata/JC3grab/entities/v0300_car_kensington_sportsmuscle__v0300_car_kensington_sportsmuscle_civilian_01.ee.json`):
 
 | AI module | instance | rows | what it is |
 |---|---|---:|---|

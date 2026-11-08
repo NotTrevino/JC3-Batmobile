@@ -35,7 +35,7 @@ run or attached to; nothing was written under a game install (test ban respected
 |---|---|---:|---:|---:|---:|---:|
 | car | `Research/VanillaOldJeep/physics/models/jc_vehicles/01_land/v0000_car_autostraad_oldjeep/oldjeep.physicsc` | 678,576 | 794 | 90 | 45 | 40 |
 | truck | `Research/UrgaRef/aaf/models/jc_vehicles/01_land/v0602_car_urga_armoredtransport/armoredtransport.physicsc` | 492,736 | 847 | 112 | 34 | 46 |
-| boat | `E:/Modding/_gamedata/JC3grab/hkx/all/racingboat.physicsc` | 173,920 | 382 | 58 | 22 | 9 |
+| boat | `E:/Modding/_shared/gamedata/JC3grab/hkx/all/racingboat.physicsc` | 173,920 | 382 | 58 | 22 | 9 |
 | tank | `Research/TankRef/aaf/models/jc_vehicles/01_land/v0201_car_capstone_mediumtank/mediumtank.physicsc` | 206,976 | 376 | 70 | 17 | 3 |
 | motorbike | `Research/VanillaMoped/aaf/models/jc_vehicles/01_land/v3501_bike_solar_modernmoped/modernmoped.physicsc` | 207,328 | 241 | 37 | 8 | 10 |
 
@@ -86,7 +86,7 @@ The probe that chose the oracle (scratch, `tmp/freebuff/scratch/extents_probe.py
 section, the other four have the same shape:
 
 ```
-$ cd "E:/Modding/JC3-Batmobile" && PYTHONIOENCODING=utf-8 uv run python tmp/freebuff/scratch/extents_probe.py
+$ cd "E:/Modding/JustCause3/JC3-Batmobile" && PYTHONIOENCODING=utf-8 uv run python tmp/freebuff/scratch/extents_probe.py
 ```
 
 ```
@@ -103,7 +103,7 @@ car Research/VanillaOldJeep/physics/models/jc_vehicles/01_land/v0000_car_autostr
 Final run of the tool:
 
 ```
-$ cd "E:/Modding/JC3-Batmobile" && PYTHONIOENCODING=utf-8 uv run python Tools/scripts/jc3_physicsc_extents.py --write; echo "WRITE_EXIT=$?"; echo "=== CHECK ==="; PYTHONIOENCODING=utf-8 uv run python Tools/scripts/jc3_physicsc_extents.py --check; echo "CHECK_EXIT=$?"
+$ cd "E:/Modding/JustCause3/JC3-Batmobile" && PYTHONIOENCODING=utf-8 uv run python Tools/scripts/jc3_physicsc_extents.py --write; echo "WRITE_EXIT=$?"; echo "=== CHECK ==="; PYTHONIOENCODING=utf-8 uv run python Tools/scripts/jc3_physicsc_extents.py --check; echo "CHECK_EXIT=$?"
 ```
 
 ```

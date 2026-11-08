@@ -12,7 +12,7 @@ Base for every probe: `Builds/bm-RC4`. Install route: `install_v3.py` only (neve
 3. P2/P3/P4/P5/P8 only after their writer exists (see Gaps).
 
 ## P9 runtime-spawn (TEXT + staged DLL) - `Builds/probe-L0/P9-runtime-spawn/`
-Source: `E:/Modding/_tools/jc3-console-thingy/src/commands/spawn.h`, `src/game/spawn_system.h` (decoded).
+Source: `E:/Modding/_shared/tools/jc3-console-thingy/src/commands/spawn.h`, `src/game/spawn_system.h` (decoded).
 
 - **Spawn argument: a string model name.** `spawn <arguments>` passes the raw argument string to `jc::CSpawnSystem::Spawn(arguments, transform, cb)`; that forwards `model_name.c_str()` to the native at `0x140E97DA0` with flags `0x2013C`. It is **not** an `.ee` path and **not** a hash.
 - **Where:** the local player's transform with the translation replaced by `m_aimPos` and y + 1.0 m - the object appears at the crosshair, one metre up.

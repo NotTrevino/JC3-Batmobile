@@ -74,5 +74,5 @@ boxes 3 convex 43+13=56 per-mode totals (46, 16)
 largest Batmobile_Chassis box 0 [690.305, 374.536, 207.5] cm
 wreck bodies 32 largest SUSP1_Wheel_Rear_Right_Mesh 317.942 cm
 partition 11 / 21
-wrote E:\Modding\JC3-Batmobile\tmp\freebuff\reports\review-collision-corrected.md
+wrote E:\Modding\JustCause3\JC3-Batmobile\tmp\freebuff\reports\review-collision-corrected.md
 ```

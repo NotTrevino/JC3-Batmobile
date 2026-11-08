@@ -1,5 +1,5 @@
 import glob, json, collections, re
-ENT = "E:/Modding/_JC3grab/entities"
+ENT = "E:/Modding/JustCause3/_grab/entities"
 paths = sorted(glob.glob(ENT + "/*.ee.json"))
 norm = collections.defaultdict(set)     # normalised path -> entities
 where = {}                              # norm path -> (module type, example)

@@ -4,7 +4,7 @@ import os
 import re
 import sys
 
-HUD = r"E:\Modding\_JC3grab\hud\dec\scripts"
+HUD = r"E:\Modding\JustCause3\_grab\hud\dec\scripts"
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 hud = open(os.path.join(HUD, "hud.as"), encoding="utf-8", errors="replace").read()
 

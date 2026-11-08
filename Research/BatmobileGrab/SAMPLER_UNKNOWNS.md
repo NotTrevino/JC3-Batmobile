@@ -282,7 +282,7 @@ their byte is known; their producer is not in the files that exist.
 
 | source | what it gave |
 |---|---|
-| `E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated/BmGame/RPlayerInput.g.cs` | byte names 768-799 and offsets |
+| `E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Generated/BmGame/RPlayerInput.g.cs` | byte names 768-799 and offsets |
 | `.../Generated/BmGame/RVehicleBatmobileBase.g.cs` | the 31 masked bools at +4568, `BoostingOut`, `CurrentThrottle` |
 | `.../Generated/BmGame/RBatmobileMissileLauncher.g.cs` | array offsets and element types |
 | `.../Generated/BmGame/RPlayerController.g.cs` | eject / quick-gadget fields |

@@ -705,5 +705,5 @@ python Tools/scripts/status_audit.py --check       # A1: STATUS.md is current
 The heredocs above are read-only; the two probes that import `t11_modes` call only `sim_curves()`
 and read the same records the generator reads, and add no files.
 
-Nothing in the repo, `Builds/`, `E:/Modding/_JC3grab`, `E:/Modding/_BmAKgrab` or `D:/Games` was
+Nothing in the repo, `Builds/`, `E:/Modding/JustCause3/_grab`, `E:/Modding/ArkhamKnight/_grab` or `D:/Games` was
 written, and no process was launched.

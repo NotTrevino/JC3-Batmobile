@@ -7,7 +7,7 @@ def fnv1(s):
         h = ((h * 0x01000193) & 0xFFFFFFFF) ^ b
     return h
 
-A = r"E:\Modding\JC3-Batmobile\Working\Audio"
+A = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio"
 want = {0x2099606B: "?", 0x2479106C: "?", 0x388CE6FC: "?", 0x3C3F43C0: "?",
         0x9AF38C66: "?", 0xA88826DB: "?", 0xBD2FEE58: "?",
         0x388710DB: "Play_BattlemodeEngine?", 0xB1B5DD98: "Play_Batmobile_Turbo?"}

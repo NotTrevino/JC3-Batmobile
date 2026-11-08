@@ -1,6 +1,6 @@
 """chase_verify.py - re-derive every found=true hit of the local-LLM triage, and sample the rest.
 
-Verifies the 22 `found: true` verdicts in `E:\\Modding\\_gamedata\\BmAKgrab\\chase\\verdicts.jsonl` against
+Verifies the 22 `found: true` verdicts in `E:\\Modding\\_shared\\gamedata\\BmAKgrab\\chase\\verdicts.jsonl` against
 their named source: a text file line, or an executable VA.  Nothing is written to the game folder,
 nothing is launched, nothing is patched; the exe is opened read-only.
 
@@ -32,7 +32,7 @@ import sys
 
 EXE = r"E:\Games\Batman - Arkham Knight\Binaries\Win64\BatmanAK.exe"
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
-CHASE = r"E:\Modding\_gamedata\BmAKgrab\chase"
+CHASE = r"E:\Modding\_shared\gamedata\BmAKgrab\chase"
 OFFSETS = os.path.join(ROOT, "Research", "BatmobileGrab", "BMSDK_OFFSETS.json")
 
 

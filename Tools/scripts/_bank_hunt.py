@@ -2,7 +2,7 @@
 import os, struct, sys, zlib
 
 CK = r"E:\Games\Batman - Arkham Knight\BmGame\CookedPCConsole"
-A = r"E:\Modding\JC3-Batmobile\Working\Audio"
+A = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio"
 TAG = b"\xc1\x83\x2a\x9e"
 
 def partial(d, H, need, maxch=60):

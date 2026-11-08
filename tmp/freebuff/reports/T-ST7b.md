@@ -64,8 +64,8 @@ Not edited: `T_ST7_FLOOR.md`, `T_ROWS.jsonl`, `VOCABULARY.md`, any build, any ga
 
 ```
 $ python Tools/scripts/t_st7b.py --write
-wrote E:\Modding\JC3-Batmobile\Working\Translation\T_ST7B_FLOOR.json
-wrote E:\Modding\JC3-Batmobile\Working\Translation\T_ST7B_FLOOR.md
+wrote E:\Modding\JustCause3\JC3-Batmobile\Working\Translation\T_ST7B_FLOOR.json
+wrote E:\Modding\JustCause3\JC3-Batmobile\Working\Translation\T_ST7B_FLOOR.md
 modules 271 player car min 0.5 player bike min 0.300000012 ai car min 0.25
 ```
 

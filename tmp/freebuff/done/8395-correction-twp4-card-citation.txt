@@ -1,8 +1,8 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/correction-8395-twp4-card-citation.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/correction-8395-twp4-card-citation.md
 ONLY: freebuff
 EST: 35
 BRIEF: hand-written 2026-11-07 by review 8399
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/review-build-wave.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/review-build-wave.md
 Correction 6/9 — T-WP4's row cites the wrong cards.
 
 Evidence: Working/Translation/T_ROWS.jsonl, row T-WP4, cites cards B-24 / B-25. B-24 is the handling-values card and B-25 is the lens-flare / light-unit card; neither carries an EMP missile with lock-hold and salvo. The row's own content (COMPROMISES_T §1 weapons) is `RBatmobileEMPMissile` + `Batmobile_EMPMissile_Projectile_ForCars`, built as a w618 clone + entity CForcePulse with no disable. Lock-hold/salvo has no card at all, and T-WP3b is the open lock/cone row; T-WP4's citation sends a reader to two unrelated payloads.

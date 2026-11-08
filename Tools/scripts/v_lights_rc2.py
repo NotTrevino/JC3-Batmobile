@@ -351,7 +351,7 @@ def render(d: dict) -> str:
     a("## 6. Reproduce")
     a("")
     a("```")
-    a("cd E:/Modding/JC3-Batmobile")
+    a("cd E:/Modding/JustCause3/JC3-Batmobile")
     a("python Tools/scripts/v_lights_rc2.py --write")
     a("python Tools/scripts/v_lights_rc2.py --check")
     a("```")

@@ -15,10 +15,10 @@ import os
 import struct
 import sys
 
-sys.path.insert(0, r"E:\Modding\JC3-Batmobile\Tools\scripts")
+sys.path.insert(0, r"E:\Modding\JustCause3\JC3-Batmobile\Tools\scripts")
 import rbm_geom as R  # noqa: E402
 
-ROOT = "E:/Modding/JC3-Batmobile/Builds/test-003/aaf"
+ROOT = "E:/Modding/JustCause3/JC3-Batmobile/Builds/test-003/aaf"
 
 
 def mesh_points(path):

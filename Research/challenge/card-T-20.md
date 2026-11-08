@@ -506,7 +506,7 @@ so the hull itself is not built yet — the row says so).
 
 The provenance is thinner than the cell suggests: `research/JC3Grab/TETHER.json` carries only the
 **summary** (`families.car {n:125, min:50, max:550000, median:2000}`), not the 232 per-entity masses,
-so the median cannot be re-derived from repo evidence (the raw data is `E:/Modding/_JC3grab`). The
+so the median cannot be re-derived from repo evidence (the raw data is `E:/Modding/JustCause3/_grab`). The
 family also has a 550,000 outlier — 275× the median — quoted without comment, and the "car" family
 is the path token, not a behaviour.
 

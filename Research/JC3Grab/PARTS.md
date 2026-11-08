@@ -5,7 +5,7 @@
 0 failures — in 34 seconds. Gibbed's `ConvertAdf` refuses 229 of those same files; it is still used
 for everything else and nothing about the existing grab changed.
 
-Raw game bytes stay outside the repo (`E:\Modding\_JC3grab`); the derived table is
+Raw game bytes stay outside the repo (`E:\Modding\JustCause3\_grab`); the derived table is
 [PARTS_TABLE.jsonl](PARTS_TABLE.jsonl) (2.6 MB) and the human summary
 [PARTS_TABLE.md](PARTS_TABLE.md).
 

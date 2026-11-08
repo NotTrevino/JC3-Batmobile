@@ -1,7 +1,7 @@
 """FSB5 nametable: offset table + blob -> all 649 names; find Serpente streams."""
 import struct
 
-p = r"E:\Modding\JC3-Batmobile\Working\Audio\jc3bank\sound\fmod_banks\vehicles.bank"
+p = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\jc3bank\sound\fmod_banks\vehicles.bank"
 d = open(p, "rb").read()
 f5 = d.find(b"FSB5")
 ver, n, shdr, ntl = struct.unpack_from("<IIII", d, f5 + 4)
@@ -18,7 +18,7 @@ while len(names) < n and o < len(d):
         break
     o = e + 1
 print("names:", len(names))
-open(r"E:\Modding\JC3-Batmobile\Working\Audio\jc3bank\fsb_names.txt", "w").write("\n".join(names))
+open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\jc3bank\fsb_names.txt", "w").write("\n".join(names))
 for i, nm in enumerate(names):
     lo = nm.lower()
     if any(w in lo for w in ["kensington", "sportsmuscle", "serpente", "posh", "mu10", "batmobile", "nitro", "turbo"]):

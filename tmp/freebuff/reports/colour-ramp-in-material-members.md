@@ -175,7 +175,7 @@ why D10 cannot be carried yet.
 ## 6. Reproduce
 
 ```bash
-cd "E:/Modding/JC3-Batmobile"
+cd "E:/Modding/JustCause3/JC3-Batmobile"
 grep -n "Colour_Ramp_Map" Research/BatmobileGrab/COLOUR_PARAMS.md Research/BatmobileGrab/SLOTS.md
 grep -n "e9632f4f\|a48ac517" Research/BatmobileGrab/objects.jsonl | head
 grep -n "Ramp" Research/BatmobileGrab/TEXTURES.md

@@ -48,7 +48,7 @@ from rbmhdr import hash_jenkins  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(HERE))
 OUT_MD = os.path.join(ROOT, "Research", "JC3Grab", "EJECT_MAP.md")
-JC3_RAW = os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
+JC3_RAW = os.environ.get("JC3_RAW", r"E:/Modding/_shared/gamedata/JC3grab")
 ENTITIES = os.path.join(JC3_RAW, "entities")
 BMAK = os.environ.get("BMAK_GAME", r"E:/Games/Batman - Arkham Knight")
 DEFAULTINPUT = os.path.join(BMAK, "BmGame", "Config", "DefaultInput.ini")

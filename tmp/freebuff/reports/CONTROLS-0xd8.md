@@ -20,7 +20,7 @@ it is `< +0.707` (more than 45 deg from upright).
 - this report: `tmp/freebuff/reports/CONTROLS-0xd8.md`.
 
 Read-only inputs only (`E:/Games/Batman - Arkham Knight/Binaries/Win64/BatmanAK.exe`,
-`E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated`, `Research/BatmobileGrab/BMSDK_OFFSETS.json`,
+`E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Generated`, `Research/BatmobileGrab/BMSDK_OFFSETS.json`,
 `Research/BatmobileGrab/runtime/*.jsonl`). The game was never run or attached to.
 
 ## Labels
@@ -65,7 +65,7 @@ Read-only inputs only (`E:/Games/Batman - Arkham Knight/Binaries/Win64/BatmanAK.
 ## Commands and their output (verbatim)
 
 ```
-$ cd "E:/Modding/JC3-Batmobile/Research/BatmobileGrab" && python -c "
+$ cd "E:/Modding/JustCause3/JC3-Batmobile/Research/BatmobileGrab" && python -c "
 import json
 d=json.load(open('BMSDK_OFFSETS.json',encoding='utf-8'))
 v=d['classes'].get('RVehicleBatmobileBase')
@@ -87,7 +87,7 @@ super RVehicle size 8352 file RVehicleBatmobileBase.g.cs
 ```
 
 ```
-$ cd "E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated" && sed -n '2040,2100p' Engine/PrimitiveComponent.g.cs
+$ cd "E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Generated" && sed -n '2040,2100p' Engine/PrimitiveComponent.g.cs
     /// <summary>
     /// StructProperty: LocalToWorld
     /// </summary>
@@ -102,7 +102,7 @@ $ cd "E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated" && sed -n '2040,2100p' Eng
 ```
 
 ```
-$ cd "E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated" && grep -n "record struct FMatrix" -A 40 Core/GameObject.g.cs
+$ cd "E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Generated" && grep -n "record struct FMatrix" -A 40 Core/GameObject.g.cs
 4708:    public partial record struct FMatrix          (Size = 64)
       XPlane @0   YPlane @16   ZPlane @32   WPlane @48
 5402:    public partial record struct FPlane           (Size = 16)
@@ -165,7 +165,7 @@ $ uv run ... python -c "... every function that loads [x+0x38c] and then reads t
 ```
 
 ```
-$ cd "E:/Modding/JC3-Batmobile/Research/BatmobileGrab/runtime" && wc -l *.jsonl && head -c 120 samples-20261103T120003Z.jsonl
+$ cd "E:/Modding/JustCause3/JC3-Batmobile/Research/BatmobileGrab/runtime" && wc -l *.jsonl && head -c 120 samples-20261103T120003Z.jsonl
     17 samples-20261103T084831Z.jsonl
     17 samples-20261103T085330Z.jsonl
     26 samples-20261103T085631Z.jsonl

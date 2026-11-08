@@ -7,7 +7,7 @@ markers' shapes, colours and animation frames from the BmAK HUD movies, then wri
 the hook overlay (brief 7985) can implement directly.
 
 **Answer in one paragraph.** The markers are in `HudModuleTargets`, not in the `ui/hud.gfx`
-container: FFDec's export of the carved movie is in `E:/Modding/_BmAKgrab/hud/lock/` (movie, 520
+container: FFDec's export of the carved movie is in `E:/Modding/ArkhamKnight/_grab/hud/lock/` (movie, 520
 shapes, 520 sprite timelines, AS3), and the numbers are in `MEASUREMENTS.md` beside it. The diamond
 is `missile_lockon_square_anim_591`: stroke `#FF6600`, alpha 0.91, 57-58 px across a 81 px tile, a
 20-frame spin that stops on frame 20. The lock circle is `VehicleVariableTargetLockon_580`: a
@@ -30,13 +30,13 @@ Labels: **decoded** = read in the file cited; **derived** = arithmetic on decode
 
 | item | value | source |
 |---|---|---|
-| movie | `HudModuleTargets` HUD module (carved `HudModuleTargets.gfx`, 252,938 B) | `E:/Modding/_BmAKgrab/hud/lock/HudModuleTargets.gfx` |
+| movie | `HudModuleTargets` HUD module (carved `HudModuleTargets.gfx`, 252,938 B) | `E:/Modding/ArkhamKnight/_grab/hud/lock/HudModuleTargets.gfx` |
 | export | 520 vector shapes, 520 sprite timelines, 153 `HudModuleTargets_fla` classes | `export/shapes/`, `export/sprites/`, `scripts/`, same folder |
 | the two clashing paths | vehicle path `HudModuleTargets` (`batmobile_lockon`, `missile_lockon_square_anim`, `VehicleMissileTarget*`); radar path `HudModuleBespokeLocalRadar` (`LockonMeter`, `UC_SetLockonValue`) | `Research/BatmobileGrab/HUD.md` 248-255 |
 | frame rate | **30 fps** - `ModularHudBm3.TickDeltaTime` is `0.033`; the container is `1280x720, 30 fps` | `Research/BatmobileGrab/HUD.md` 125, 268 |
 | lock time member | `RBatmobileEMPMissile.MissileLockOnDuration` at `0x0A00`, FloatProperty, default **2.0**; civilian variant `0x0A04` = 1.0 | `Research/BatmobileGrab/WEAPONS.md` 839-840 |
 
-`decoded`. Clips measured (all in `E:/Modding/_BmAKgrab/hud/lock/export/sprites/`):
+`decoded`. Clips measured (all in `E:/Modding/ArkhamKnight/_grab/hud/lock/export/sprites/`):
 
 | clip | frames | tile | role in the operator's description |
 |---|---|---|---|
@@ -221,7 +221,7 @@ should work from the projected point plus a per-target size.
 
 ## 8. Files written
 
-- `E:/Modding/_BmAKgrab/hud/lock/` - export already present (`HudModuleTargets.gfx`,
+- `E:/Modding/ArkhamKnight/_grab/hud/lock/` - export already present (`HudModuleTargets.gfx`,
   `export/shapes` 520 SVGs, `export/sprites` 520 timelines, `scripts/` AS3); added by this task:
   `MEASUREMENTS.md` and `preview/` (15 upscaled crops of the frames cited).
 - This report.
@@ -229,7 +229,7 @@ should work from the projected point plus a per-target size.
 ## 9. Commands run (verbatim, key ones)
 
 ```
-cd /e/Modding/_BmAKgrab/hud/lock && ls scripts/scripts/ ; ls export/shapes | head -6 ;
+cd /e/Modding/ArkhamKnight/_grab/hud/lock && ls scripts/scripts/ ; ls export/shapes | head -6 ;
   grep -n "missile_lockon_square_anim\|VehicleVariableTargetLockon\|batmobile_lockon\|lockon" scripts/scripts/ModuleStruct_Targets.as
     -> only TestSetCursor(1,"vehicle_lockon",...) at 152 and the SetCursor call at 306
 

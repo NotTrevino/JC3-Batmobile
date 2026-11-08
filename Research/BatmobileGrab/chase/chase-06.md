@@ -42,7 +42,7 @@ Units are the ones `MODES.md` already assigns by field name; nothing is rescaled
 Command and output (verbatim):
 
 ```
-$ python Tools/scripts/chase/chase02_cdo.py --class RVehicleSimBatmobile --json E:/Modding/_BmAKgrab/chase/sim_cdo.json
+$ python Tools/scripts/chase/chase02_cdo.py --class RVehicleSimBatmobile --json E:/Modding/ArkhamKnight/_grab/chase/sim_cdo.json
 ...
     -- card offsets on RVehicleSimBatmobile:
        BattleModeMaxSteering              @0x02cc  SERIALISED 80.0
@@ -53,7 +53,7 @@ $ python Tools/scripts/chase/chase02_cdo.py --class RVehicleSimBatmobile --json 
        BattleModeMaxSpeed                 @0x02f0  SERIALISED 1200.0
        BattleModeStopAndTurnAngleMoving   @0x02fc  SERIALISED 90.0
        BattleModeTrailingSteerFactorTurnOnSpot @0x031c  SERIALISED 1.0
-wrote E:/Modding/_BmAKgrab/chase/sim_cdo.json
+wrote E:/Modding/ArkhamKnight/_grab/chase/sim_cdo.json
 ```
 
 Offset identities come from `BMSDK_OFFSETS.json` → `classes.RVehicleSimBatmobile.properties`:
@@ -185,7 +185,7 @@ default; runtime throttle factor, exe store unattributable".
    strings in the exe); it is recorded as attempted, not as evidence.
 4. Class-default values are the inherited defaults; the shipped archetypes do not override any of
    the six found fields, which was checked offset by offset with the neighbouring block as control.
-5. Extracted decodes: `E:/Modding/_BmAKgrab/chase/sim_cdo.json`. Script:
+5. Extracted decodes: `E:/Modding/ArkhamKnight/_grab/chase/sim_cdo.json`. Script:
    `Tools/scripts/chase/chase02_cdo.py --class RVehicleSimBatmobile` (and `--scan`), and
    `Tools/scripts/chase/chase04_native.py` for the exe scan. Nothing was written under the game
    folder; the game was not launched.

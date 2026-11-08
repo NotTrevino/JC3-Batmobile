@@ -1,7 +1,7 @@
 """Unmatched-event forensics: action types/targets + media profile -> functional labels."""
 import json, os, struct, wave
 
-A = r"E:\Modding\JC3-Batmobile\Working\Audio"
+A = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio"
 d = open(os.path.join(A, "bank_BML_Engine.bank"), "rb").read()
 hi = d.find(b"HIRC"); o = hi + 8
 (n,) = struct.unpack_from("<I", d, o); o += 4

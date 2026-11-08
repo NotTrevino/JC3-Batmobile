@@ -1,7 +1,7 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-top-speed-branch.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/verify-top-speed-branch.md
 ONLY: freebuff
 EST: 30
 BRIEF: hand-written 2026-11-08
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-top-speed-branch.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/build-top-speed-branch.md
 Verify the Builds/bm-RC5-topspeed tree independently. Read each changed cell through the .toc, diff the module against the donor, and ensure only the cells listed in Working/Translation/HDL_TOPSPEED_SET.json differ. Recompute terminal speed with a fresh script not reusing rc5_topspeed.py: P = torque x wash x omega, v = (2P over rho Cd A) to the one third, with the built numbers, and compare with the A2 bands 240-294 km/h boost off and the delta band 32.4-43.2 km/h; also report the first-shift speed from the gear table against the 67 km/h measurement. If the new set predicts a value outside those old bands, say that the bands need regenerating (v05_driving.py) and give the new values; do not edit them. Write tmp/freebuff/reports/hdl-verify-topspeed.md. Done check: PASS or FAIL per cell and per prediction; overlap with the handling and grip branch module paths is listed for the merge brief.
-Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.
+Shared rules: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

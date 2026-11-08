@@ -1,7 +1,7 @@
 # Landmark map: HANDLING, PHYSICS & COLLISION
 
 Date of map: 2026-11-08. Read-only survey; no project file edited, no game launched.
-Convention: paths are relative to `E:\Modding\JC3-Batmobile`. Statuses are copied from the project's own ledgers, not judged by me, except where I mark "(map)". UNKNOWN = not found in the files I read.
+Convention: paths are relative to `E:\Modding\JustCause3\JC3-Batmobile`. Statuses are copied from the project's own ledgers, not judged by me, except where I mark "(map)". UNKNOWN = not found in the files I read.
 
 ## 0. Ground truth in five lines (read first)
 

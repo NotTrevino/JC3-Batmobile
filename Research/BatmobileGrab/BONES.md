@@ -24,7 +24,7 @@ LOD0 was already exported. LOD1/LOD2 were made with an isolated `umodel.cfg` bec
 | offset recomputed (m) | 0.000000477, 0.022231445, 0.154284012 |
 | offset difference | 0.000013462 m |
 | max hub difference vs stations.json | 0.000093707 m |
-| stations.json | `E:\Modding\JC3-Batmobile\Working\TrueScale\stations.json` |
+| stations.json | `E:\Modding\JustCause3\JC3-Batmobile\Working\TrueScale\stations.json` |
 
 | corner | tyre bone | hub from geometry + T | stations.json hub | delta m |
 |---|---|---|---|---|
@@ -958,7 +958,7 @@ Cells are owned faces only; a split face is not owned and is counted in §6. The
 
 ## 7. Face index files (outside the repository)
 
-`E:\Modding\_BmAKgrab\bones\<bone>.npy`; 180 files, int32, one row per face:
+`E:\Modding\ArkhamKnight\_grab\bones\<bone>.npy`; 180 files, int32, one row per face:
 
 ```text
 (lod, face_index, slot, kind)   kind 0 = owned, 1 = split-touching
@@ -1004,7 +1004,7 @@ python Tools/scripts/grab_bones.py --write
 python Tools/scripts/grab_bones.py --check
 ```
 
-To recreate the missing LODs, run `umodel.exe -export -psk -lods -notex` from a temporary directory containing an `umodel.cfg` with `ExportMeshLods = true`, then copy `Batmobile_V2_Lod1.pskx` and `Batmobile_V2_Lod2.psk` beside `Batmobile_V2.pskx` in `E:\Modding\_BmAKgrab\meshes\Playable_Batmobile_SF\Playable_Batmobile_SF\SkeletalMesh3\`.
+To recreate the missing LODs, run `umodel.exe -export -psk -lods -notex` from a temporary directory containing an `umodel.cfg` with `ExportMeshLods = true`, then copy `Batmobile_V2_Lod1.pskx` and `Batmobile_V2_Lod2.psk` beside `Batmobile_V2.pskx` in `E:\Modding\ArkhamKnight\_grab\meshes\Playable_Batmobile_SF\Playable_Batmobile_SF\SkeletalMesh3\`.
 
 * The optional glTF cross-check reads `...SkeletalMesh3/gltf/Batmobile_V2.gltf` and `.bin`; it is evidence only, not a pivot source. If those files are removed, re-run `--write` so the record no longer expects them.
 

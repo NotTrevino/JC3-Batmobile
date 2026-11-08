@@ -455,7 +455,7 @@ Members that matched anyway, for the record: `burst_cooldown`.
 
 ## 11. Extraction and validation
 
-`--write` extracted **197 files** (21,487,435 B) to `E:/Modding/_JC3grab/weapons` - the weapon `.ee` bundles, the loose patch tunes and every
+`--write` extracted **197 files** (21,487,435 B) to `E:/Modding/JustCause3/_grab/weapons` - the weapon `.ee` bundles, the loose patch tunes and every
 base or bundle copy of a tune, named `<container-stem>__<inner-name>`. Game bytes stay
 outside the repo (R10); this file and `WEAPONS.jsonl` are the summary.
 

@@ -1,7 +1,7 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/pursuit-battle-value-table.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/pursuit-battle-value-table.md
 ONLY: freebuff
 EST: 35
 BRIEF: hand-written 2026-11-08
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-suspension-travel.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-drive-modes-and-yaw.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/rc5-suspension-travel.md, E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/rc5-drive-modes-and-yaw.md
 Generate one ledger of every per-mode handling value so the mode pair build has a single source. Inputs: Research/BatmobileGrab/MODES.md, DRIVE_MODES.md, the variant tables written by briefs 9121 (suspension stiffness 3000 and 750, damping 300 and 20, bias 50, 10, 5) and 9122 (drive and steering variants), and the handling cells of 9120. Write Tools/scripts/mode_value_table.py (--write, --check) that outputs Working/Translation/MODE_VALUE_TABLE.json and .md with one row per member: name, pursuit value, battle value, the JC3 member that carries it, class, owner brief, and status (built, planned, gap). Include the 600 cm/s turning-mode speed cap and BattleModeVSpeedCurve points. Rows whose battle value belongs to another landmark carry the tag modes and are listed, not decided. Done check: --check passes twice with identical hashes, and a count line gives rows by status; every gap row carries the card that closes it.
-Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.
+Shared rules: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

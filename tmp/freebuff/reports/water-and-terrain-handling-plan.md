@@ -105,7 +105,7 @@ UNKNOWN** — the decoded CDO delta table (`Research/BatmobileGrab/CLASS_DEFAULT
 ## 2. JC3: the members that exist, and the ones that do not
 
 All values below are the donor `v0300_car_kensington_sportsmuscle` entity, read out of
-`E:/Modding/_gamedata/JC3grab/entities/v0300_…_civilian_01.ee.json` this pass.
+`E:/Modding/_shared/gamedata/JC3grab/entities/v0300_…_civilian_01.ee.json` this pass.
 
 ### 2.1 Friction and grip
 

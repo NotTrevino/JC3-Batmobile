@@ -8,7 +8,7 @@ STATUS: blocked — the gate `tmp/freebuff/reports/B-RC2.md` does not exist, and
 
 V-RC2 verifies a candidate that has not been produced. Per the brief's gate:
 
-> Start only after `E:/Modding/JC3-Batmobile/tmp/freebuff/reports/B-RC2.md` exists (if not,
+> Start only after `E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/B-RC2.md` exists (if not,
 > write `STATUS: blocked` and stop).
 
 `B-RC2.md` is absent, and `Builds/` contains only `bm-001` … `bm-013b`, `bm-RC1` and the

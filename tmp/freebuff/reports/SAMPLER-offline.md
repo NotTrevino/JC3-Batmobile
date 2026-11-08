@@ -4,7 +4,7 @@ STATUS: **done** - and the answer is **no: all three stay UNKNOWN**, for reasons
 asserted. `Tools/scripts/sampler_unknowns.py` (--write/--check) reads only the seven
 `Research/BatmobileGrab/runtime/samples-*.jsonl` logs and `Research/BatmobileGrab/SAMPLER_FIELDS2.md`,
 recomputes every number, and `--check` exits 0 on a byte-identical rebuild. No game was run, attached to,
-injected into or read; nothing under `E:/Games`, `D:/Games` or `E:/Modding/_gamedata` was touched.
+injected into or read; nothing under `E:/Games`, `D:/Games` or `E:/Modding/_shared/gamedata` was touched.
 
 The brief's central premise is **wrong in a way that decides the task**: the logs do not carry the user's
 presses for X, Y or A. They carry exactly **five** input bytes (LT, B, LB, RT, THR). So the exact counts
@@ -48,7 +48,7 @@ log keys). No other file was read or written.
 Corpus and field census (excerpt - the command printed all 63 fields and all 1,122 record keys):
 
 ```
-cd "E:/Modding/JC3-Batmobile" && python -c "..."
+cd "E:/Modding/JustCause3/JC3-Batmobile" && python -c "..."
 top keys Counter({'t': 1122, 'changed': 1122})
 field count 63
 357 in0.aLeftTrigger
@@ -72,7 +72,7 @@ no X byte, no eject byte.
 Control diagnostic (the LT binding, to test whether the method has any power):
 
 ```
-cd "E:/Modding/JC3-Batmobile" && python - <<'EOF' ... EOF
+cd "E:/Modding/JustCause3/JC3-Batmobile" && python - <<'EOF' ... EOF
 LT presses 175 with a following flags/weapon change: 173
 lag median 13.936  p25 1.599  p75 33.152  max 106.380
 lag buckets Counter({'>5': 106, '<=0.5': 22, '<=5': 18, '<=2': 15, '<=1': 12})
@@ -83,7 +83,7 @@ baseline hit within 2s (random records): 158/300
 Final build and check (the values in the report are these numbers):
 
 ```
-cd "E:/Modding/JC3-Batmobile" && PYTHONIOENCODING=utf-8 python Tools/scripts/sampler_unknowns.py --write; echo "WRITE_EXIT=$?"; echo "=== CHECK ==="; PYTHONIOENCODING=utf-8 python Tools/scripts/sampler_unknowns.py --check; echo "CHECK_EXIT=$?"
+cd "E:/Modding/JustCause3/JC3-Batmobile" && PYTHONIOENCODING=utf-8 python Tools/scripts/sampler_unknowns.py --write; echo "WRITE_EXIT=$?"; echo "=== CHECK ==="; PYTHONIOENCODING=utf-8 python Tools/scripts/sampler_unknowns.py --check; echo "CHECK_EXIT=$?"
 ```
 
 ```
@@ -98,7 +98,7 @@ CHECK_EXIT=0
 Final `--check` after this report was written (no input or output changed between the two runs):
 
 ```
-cd "E:/Modding/JC3-Batmobile" && PYTHONIOENCODING=utf-8 python Tools/scripts/sampler_unknowns.py --check; echo "CHECK_EXIT=$?"
+cd "E:/Modding/JustCause3/JC3-Batmobile" && PYTHONIOENCODING=utf-8 python Tools/scripts/sampler_unknowns.py --check; echo "CHECK_EXIT=$?"
 ```
 
 ```

@@ -6,13 +6,13 @@ from collections import Counter, defaultdict
 
 import numpy as np
 
-ROOT = r"E:/Modding/JC3-Batmobile"
+ROOT = r"E:/Modding/JustCause3/JC3-Batmobile"
 sys.path.insert(0, os.path.join(ROOT, "Tools", "scripts"))
 import bat_assemble as BA  # noqa
 import psk2rbm as P  # noqa
 import pskx_parts as PX  # noqa
 
-MESH = r"E:/Modding/_BmAKgrab/meshes/Playable_Batmobile_SF/Playable_Batmobile_SF/SkeletalMesh3/Batmobile_V2.pskx"
+MESH = r"E:/Modding/ArkhamKnight/_grab/meshes/Playable_Batmobile_SF/Playable_Batmobile_SF/SkeletalMesh3/Batmobile_V2.pskx"
 st = json.load(open(os.path.join(ROOT, "Working/TrueScale/stations.json"), encoding="utf-8"))
 scale, offset = st["scale"], np.array(st["offset"], float)
 Pp, W, F, mats = P.read_pskx(MESH)

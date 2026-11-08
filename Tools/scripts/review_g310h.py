@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """review_g310h.py - re-count the G3-10h claims from the donor/fleet .physicsc bytes.
 
-Read-only on `E:/Modding/_gamedata/`; writes `tmp/freebuff/reports/review-G3-10h.md` (the DONE
+Read-only on `E:/Modding/_shared/gamedata/`; writes `tmp/freebuff/reports/review-G3-10h.md` (the DONE
 report) and `tmp/freebuff/reports/review-G3-10h.json`.
 
 What is checked, with `Tools/scripts/jc3hkx.py` only (no other task's reader):
@@ -29,7 +29,7 @@ ROOT = os.path.dirname(os.path.dirname(HERE))
 sys.path.insert(0, HERE)
 import jc3hkx  # noqa: E402
 
-FLEET = "E:/Modding/_gamedata/JC3grab/**/*.physicsc"
+FLEET = "E:/Modding/_shared/gamedata/JC3grab/**/*.physicsc"
 CARD = os.path.join(ROOT, "Research", "JC3Grab", "CONSTRAINT_CODE.json")
 CARD_MD = os.path.join(ROOT, "Research", "JC3Grab", "CONSTRAINT_CODE.md")
 ROLES3 = os.path.join(ROOT, "Research", "JC3Grab", "PHYSICS_ROLES3.md")
@@ -297,7 +297,7 @@ def render(doc):
         a("")
     a("## C1 — the record count, and whether 494 is the population")
     a("")
-    a("Every `.physicsc` under `E:/Modding/_gamedata/JC3grab` was parsed; nothing was filtered by "
+    a("Every `.physicsc` under `E:/Modding/_shared/gamedata/JC3grab` was parsed; nothing was filtered by "
       "result. Records are read from the `hknpPhysicsSystemData` object's array at `+0x50` "
       "(`ptr`, `size`, `capacity`), at a **24-byte** stride, taking `+0x08` and `+0x0c` of each record.")
     a("")

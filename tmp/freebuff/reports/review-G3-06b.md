@@ -18,7 +18,7 @@ correctly named `XrayMaterialsAssigned` from word `0x10` & mask `16`, but cites
 `RVehicleBatmobile.g.cs:980 ... mask 0x00000001`, which is `GlidingIn`.
 
 Worked from the two cooked packages read-only (`E:\Games\Batman - Arkham Knight\BmGame\
-CookedPCConsole\{Startup,BmGame}.upk`) and the BmSDK-AK bindings (`E:\Modding\_tools\BmSDK-AK\
+CookedPCConsole\{Startup,BmGame}.upk`) and the BmSDK-AK bindings (`E:\Modding\_shared\tools\BmSDK-AK\
 src\BmSDK\Generated`, MIT). Nothing was launched, attached to or written; **no file of the audited
 task was modified** — the only new files are this report and one scratch reader.
 

@@ -3,7 +3,7 @@ import os, struct
 
 def load(pkg, streamfile, H):
     CK = r"E:\Games\Batman - Arkham Knight\BmGame\CookedPCConsole"
-    A = r"E:\Modding\JC3-Batmobile\Working\Audio"
+    A = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio"
     d = open(os.path.join(CK, pkg), "rb").read()
     s = open(os.path.join(A, streamfile), "rb").read()
     return d[:H] + s

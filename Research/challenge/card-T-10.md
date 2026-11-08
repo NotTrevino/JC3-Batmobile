@@ -9,7 +9,7 @@ intended change` (12127), `— done` (12457), `T-10 rework · … — intended c
 the pre-edit snapshots in `tmp/freebuff/pre_t10/` and `tmp/t10rework/`, the successor cards' delivered
 outputs (`T7_WEAPONS.md`, `T8_PARTS.*`, `T11_MODES.md`, `T13_FX.md`, `T14_LIGHTS.md`,
 `BUILD_BATCHES.md`, `STATUS.md`), and — because the card's own gate reads them — the decoded JC3 data
-`E:/Modding/_JC3grab/entities/*.ee.json` (232) and `E:/Modding/_JC3grab/hud/dec` (260 `.as`).
+`E:/Modding/JustCause3/_grab/entities/*.ee.json` (232) and `E:/Modding/JustCause3/_grab/hud/dec` (260 `.as`).
 
 Constraints honoured: no game launched, nothing written into `D:/Games`, no archive opened, no game
 file touched, nothing committed, no secrets, no `--write` on any tool, no file in the project modified
@@ -161,7 +161,7 @@ Every `absent` triple in the card scans this one file. The card says it is *"der
 (`52`, `1,421`). Enumerating the same 232 caches independently:
 
 ```
-$ python (walk E:/Modding/_JC3grab/entities/*.ee.json; collect module types and errors)
+$ python (walk E:/Modding/JustCause3/_grab/entities/*.ee.json; collect module types and errors)
 distinct module types: 53          (52 named + 1 bucket whose rows failed to convert)
 entities with a failed module: 228 of 232
 [('oldtruck_vehicle_parts.vmodc', 9), ('monorailcargoengine_vehicle_parts.vmodc', 7), …]
@@ -342,7 +342,7 @@ editorial plus one UNKNOWN, not a new feature.
 The count is right and re-derived on every run (`hud_scripts: 260`), but the movie is one of many:
 
 ```
-$ find E:/Modding/_JC3grab/hud/dec -name "*.as" | wc -l        → 260
+$ find E:/Modding/JustCause3/_grab/hud/dec -name "*.as" | wc -l        → 260
 $ grep -o '"path": *"ui/[^"]*\.gfx"' Research/JC3Grab/INDEX.jsonl | sort -u | wc -l   → 32
 $ grep -c "^ui/font" (that list)                               → 7
    → 25 non-font movies, of which hud.gfx is 1; 24 not decompiled
@@ -584,9 +584,9 @@ python Tools/scripts/t10_reopen.py --check
 python -c "… T_ROWS.jsonl …"                 (198 rows; dispo census; superseded ids)
 python -c "… tmp/freebuff/pre_t10/T_ROWS.jsonl …"   (105 rows; the 8 pre-T-10 out rows)
 python -c "… tmp/freebuff/pre_t10/T6_HUD_CAMERA.md …" (the 7 pre-T-10 out rows)
-python -c "… E:/Modding/_JC3grab/entities/*.ee.json …"  (module types, errors, VehicleParts,
+python -c "… E:/Modding/JustCause3/_grab/entities/*.ee.json …"  (module types, errors, VehicleParts,
                                                           DriverLean, CustomLandGlobal, HelicopterSteering)
-grep/find over E:/Modding/_JC3grab/hud/dec           (260 .as; shield, tether, battle, energy, zoom …)
+grep/find over E:/Modding/JustCause3/_grab/hud/dec           (260 .as; shield, tether, battle, energy, zoom …)
 grep -o '"path": *"ui/[^"]*\.gfx"' Research/JC3Grab/INDEX.jsonl | sort -u
 grep over Research/JC3Grab/{VOCABULARY,ENTITIES,TETHER,DAMAGE_MODEL,FORCEPULSE,TURRET,EMP,LIGHT_SYSTEM}.md
 grep/sed over Working/Translation/{T7_WEAPONS,T11_MODES,T13_FX,T14_LIGHTS,BUILD_BATCHES}.md, STATUS.md

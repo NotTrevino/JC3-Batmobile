@@ -58,12 +58,12 @@ EDITS = {
          "is mode-invariant and is not a battle scalar; and the transform takes about 2 s with a "
          "near-instant speed loss, so the swap carries health and ammunition, never velocity, and "
          "the animation and the HUD must cover the 2 s window. RC4 ships the pursuit set only;"),
-        ("AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-drive-modes-and-yaw.md, "
-         "E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-suspension-travel.md, ",
-         "AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-drive-modes-and-yaw.md, "
-         "E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-suspension-travel.md, "
-         "E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-cannon-vulcan-riot-pods.md, "
-         "E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-lock-hold-salvo-reticle.md, "),
+        ("AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/rc5-drive-modes-and-yaw.md, "
+         "E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/rc5-suspension-travel.md, ",
+         "AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/rc5-drive-modes-and-yaw.md, "
+         "E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/rc5-suspension-travel.md, "
+         "E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/rc5-cannon-vulcan-riot-pods.md, "
+         "E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/rc5-lock-hold-salvo-reticle.md, "),
     ], "per-mode weapon sets, mode-invariant armour, 2 s transform with speed loss; AFTER gains the two weapon branches the per-mode decision depends on"),
 
     "9143-rc5-paint-channels.txt": ([
@@ -99,14 +99,14 @@ EDITS = {
     ], "out-of-combat regen and full health on re-summon added, burn/smoke stages dropped (T-FX22/23)"),
 
     "9194-rc5-pilot-cards-refresh.txt": ([
-        ("AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-gate-vx-approval-request.md",
-         "AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-gate-vx-approval-request.md, "
-         "E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-lock-hold-salvo-reticle.md, "
-         "E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-cannon-vulcan-riot-pods.md, "
-         "E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-mode-pair-and-swap.md, "
-         "E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-paint-channels.md, "
-         "E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-controls-entry-exit-eject.md, "
-         "E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-health-explosion-no-crash.md"),
+        ("AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/rc5-gate-vx-approval-request.md",
+         "AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/rc5-gate-vx-approval-request.md, "
+         "E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/rc5-lock-hold-salvo-reticle.md, "
+         "E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/rc5-cannon-vulcan-riot-pods.md, "
+         "E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/rc5-mode-pair-and-swap.md, "
+         "E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/rc5-paint-channels.md, "
+         "E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/rc5-controls-entry-exit-eject.md, "
+         "E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/rc5-health-explosion-no-crash.md"),
         ("Add cards for the new behaviours the branches predict",
          "Cards must also encode the operator facts of 2026-11-08 (reports/operator-facts-ledger-impact.md): "
          "pursuit fires only the EMP missile, the eject has three levels, the body is gunmetal satin "
@@ -116,11 +116,11 @@ EDITS = {
     ], "encodes the six operator facts into the cards and CONTROLS.md; AFTER gains the six branches whose bands it reads"),
 
     "9140-rc5-texture-rows.txt": ([
-        ("AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-scaffold-and-merge-script.md, "
-         "E:/Modding/JC3-Batmobile/tmp/freebuff/reports/locate-missing-pixel-sets.md, "
-         "E:/Modding/JC3-Batmobile/tmp/freebuff/reports/paint-plans-v2.md",
-         "AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-scaffold-and-merge-script.md, "
-         "E:/Modding/JC3-Batmobile/tmp/freebuff/reports/paint-plans-v2.md"),
+        ("AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/rc5-scaffold-and-merge-script.md, "
+         "E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/locate-missing-pixel-sets.md, "
+         "E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/paint-plans-v2.md",
+         "AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/rc5-scaffold-and-merge-script.md, "
+         "E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/paint-plans-v2.md"),
     ], "AFTER loses reports/locate-missing-pixel-sets.md, which does not exist; the pixel-set source is Working/Appearance/PIXEL_LOCATE.md, already cited in the body"),
 
     "9120-rc5-handling-values.txt": ([

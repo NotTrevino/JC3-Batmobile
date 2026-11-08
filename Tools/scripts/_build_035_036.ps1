@@ -10,7 +10,7 @@
 #
 # LOCAL TEST ONLY while the tree carries Luke JC's dababy_head.lod / convertible.ddsc.
 $ErrorActionPreference = 'Stop'
-$root = 'E:\Modding\JC3-Batmobile'
+$root = 'E:\Modding\JustCause3\JC3-Batmobile'
 $g    = "$root\Tools\Gibbed"
 $ee   = 'v0300_car_kensington_sportsmuscle_civilian_01.ee'
 $vtoc = "$root\Research\SerpenteToc\vanilla_civilian_01.ee.toc"

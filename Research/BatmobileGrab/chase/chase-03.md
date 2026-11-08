@@ -3,7 +3,7 @@
 Rows: `Research/BatmobileGrab/FOOTAGE.md` §6, F-17…F-24, all eight `UNKNOWN` with reason
 `VALUE-NATIVE`. Read-only chase: no existing doc, package or game file was modified; the only
 writes are the two scripts under `Tools/scripts/chase/`, the extracted evidence under
-`E:\Modding\_BmAKgrab\chase\`, and this file. No game was launched.
+`E:\Modding\ArkhamKnight\_grab\chase\`, and this file. No game was launched.
 
 **Result: 0 of 8 found. All eight stay `UNKNOWN`, but the reason is now measured rather than
 assumed**: the class has a cooked *schema* entry and **no CDO value** for any of the nine
@@ -20,8 +20,8 @@ Tools (new, in the repo):
 | `Tools/scripts/chase/chase_g1_values.py dump <rva> <len>` | hex+ASCII of a code window with the offset stores it contains |
 | `Tools/scripts/chase/chase_namescan.py` | route 1 global: one pass over all **3,266** `.upk` in `BmGame\CookedPCConsole` (11.71 GB) for the nine property names |
 
-Evidence files: `E:\Modding\_BmAKgrab\chase\g1_chase_native.json` (every hit, with RVA and bytes),
-`E:\Modding\_BmAKgrab\chase\namescan.json` (the package scan).
+Evidence files: `E:\Modding\ArkhamKnight\_grab\chase\g1_chase_native.json` (every hit, with RVA and bytes),
+`E:\Modding\ArkhamKnight\_grab\chase\namescan.json` (the package scan).
 
 ---
 

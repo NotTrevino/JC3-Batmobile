@@ -43,7 +43,7 @@ from a game; nothing was written under `E:/Games` or `D:/Games`.
 | `Research/BatmobileGrab/SAMPLER_UNKNOWNS_G3-02f.md` | 17,416 B | verbatim preservation of the previous `SAMPLER_UNKNOWNS.md` (sha256 `970e948a...c929085`), so this card destroys no other card's output |
 | `tmp/freebuff/reports/7207-g3-02f-sampler-unknowns.md` | this report | |
 
-Read-only inputs: `E:/Modding/_tools/BmSDK-AK/src/BmSDK/{Generated,Framework,Classes/Core}`,
+Read-only inputs: `E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/{Generated,Framework,Classes/Core}`,
 `Research/BatmobileGrab/{CONTROLS.md,CONTROLS_CONSUMERS.json,BINDINGS_MERGED.json,SAMPLER_RESULTS.md}`,
 `Research/BatmobileGrab/runtime/samples2-20261105T073917Z.jsonl`,
 `.../samples2-20261105T075011Z.jsonl`.
@@ -127,10 +127,10 @@ inside the four raw axis floats (`RawLeftY` +788, `RawLeftX` +792, `RawRightY` +
 Layout masks at +4568 and the marshalling size rule:
 
 ```
-cd "E:/Modding/JC3-Batmobile" && uv run python - <<'EOF'
+cd "E:/Modding/JustCause3/JC3-Batmobile" && uv run python - <<'EOF'
 ... parse RVehicleBatmobileBase.g.cs for Bool properties at 4568 ...
 EOF
-sed -n '250,300p' E:/Modding/_tools/BmSDK-AK/src/BmSDK/Framework/MarshalUtil.cs
+sed -n '250,300p' E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Framework/MarshalUtil.cs
 ```
 
 ```
@@ -169,7 +169,7 @@ sed -n '250,300p' E:/Modding/_tools/BmSDK-AK/src/BmSDK/Framework/MarshalUtil.cs
 Byte names 760-800 and the RT bind line:
 
 ```
-cd "E:/Modding/JC3-Batmobile" && uv run python - <<'EOF'
+cd "E:/Modding/JustCause3/JC3-Batmobile" && uv run python - <<'EOF'
 ... print RPlayerInput properties with 760<=offset<=800, then every RightTrigger bind string ...
 EOF
 ```
@@ -214,7 +214,7 @@ EOF
 Where the token -> field mapping is recorded, and the array element types:
 
 ```
-cd "E:/Modding/JC3-Batmobile" && grep -n "bRunButton\|bCrouchButton" Research/BatmobileGrab/CONTROLS.md | head -8
+cd "E:/Modding/JustCause3/JC3-Batmobile" && grep -n "bRunButton\|bCrouchButton" Research/BatmobileGrab/CONTROLS.md | head -8
 grep -rn "Button bCancelButton" Research/BatmobileGrab/*.json Research/BatmobileGrab/*.md | head -8
 grep -rn "aThrottleAxis\|RightTriggerAxis" Research/BatmobileGrab/*.json | head -6
 grep -rn "StealthOrGadget" Research/BatmobileGrab/BINDINGS_MERGED.json | head -3
@@ -242,15 +242,15 @@ Research/BatmobileGrab/BINDINGS_MERGED.json:768:    "body": "Name=\"StealthOrGad
 Engine/Actor.g.cs ['public partial class Actor : BmSDK.StateObject, BmSDK.IGameObject']
 Core/GameObject.g.cs ['public partial class GameObject : BmSDK.IGameObject']
 === FScriptInterface ===
-E:/Modding/_tools/BmSDK-AK/src/BmSDK/Framework/MarshalUtil.cs:12:    private struct FScriptInterface
-E:/Modding/_tools/BmSDK-AK/src/BmSDK/Framework/MarshalUtil.cs-14-        public IntPtr ObjectPointer;
-E:/Modding/_tools/BmSDK-AK/src/BmSDK/Framework/MarshalUtil.cs-15-        public IntPtr InterfacePointer;
+E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Framework/MarshalUtil.cs:12:    private struct FScriptInterface
+E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Framework/MarshalUtil.cs-14-        public IntPtr ObjectPointer;
+E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Framework/MarshalUtil.cs-15-        public IntPtr InterfacePointer;
 ```
 
 Preserving the previous document before overwriting the path the brief names:
 
 ```
-cd "E:/Modding/JC3-Batmobile" && cp Research/BatmobileGrab/SAMPLER_UNKNOWNS.md Research/BatmobileGrab/SAMPLER_UNKNOWNS_G3-02f.md && sha256sum Research/BatmobileGrab/SAMPLER_UNKNOWNS_G3-02f.md
+cd "E:/Modding/JustCause3/JC3-Batmobile" && cp Research/BatmobileGrab/SAMPLER_UNKNOWNS.md Research/BatmobileGrab/SAMPLER_UNKNOWNS_G3-02f.md && sha256sum Research/BatmobileGrab/SAMPLER_UNKNOWNS_G3-02f.md
 ```
 
 ```
@@ -260,7 +260,7 @@ cd "E:/Modding/JC3-Batmobile" && cp Research/BatmobileGrab/SAMPLER_UNKNOWNS.md R
 The generator, then its check (final run):
 
 ```
-cd "E:/Modding/JC3-Batmobile" && set -o pipefail && PYTHONIOENCODING=utf-8 uv run python Tools/scripts/bmak_sampler_unknowns.py --write; echo "WRITE_EXIT=$?"; echo "=== CHECK ==="; PYTHONIOENCODING=utf-8 uv run python Tools/scripts/bmak_sampler_unknowns.py --check; echo "CHECK_EXIT=$?"
+cd "E:/Modding/JustCause3/JC3-Batmobile" && set -o pipefail && PYTHONIOENCODING=utf-8 uv run python Tools/scripts/bmak_sampler_unknowns.py --write; echo "WRITE_EXIT=$?"; echo "=== CHECK ==="; PYTHONIOENCODING=utf-8 uv run python Tools/scripts/bmak_sampler_unknowns.py --check; echo "CHECK_EXIT=$?"
 ```
 
 ```
@@ -292,7 +292,7 @@ The earlier card still checks clean (this is the G3-10c regression run; my first
 `--with numpy` only and raised `ModuleNotFoundError: scipy`, a flag error on my side, not a drift):
 
 ```
-cd "E:/Modding/JC3-Batmobile" && PYTHONIOENCODING=utf-8 uv run --with numpy --with scipy python Tools/scripts/grab_inertia.py --check 2>&1 | tail -4; echo "INERTIA_CHECK_EXIT=${PIPESTATUS[0]}"
+cd "E:/Modding/JustCause3/JC3-Batmobile" && PYTHONIOENCODING=utf-8 uv run --with numpy --with scipy python Tools/scripts/grab_inertia.py --check 2>&1 | tail -4; echo "INERTIA_CHECK_EXIT=${PIPESTATUS[0]}"
 ```
 
 ```

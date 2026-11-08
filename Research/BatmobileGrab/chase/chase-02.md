@@ -52,7 +52,7 @@ The offsets are not inferred: `BMSDK_OFFSETS.json` → `classes.R3rdPersonCamera
 Command and output (verbatim, wrapped):
 
 ```
-$ python Tools/scripts/chase/chase02_cdo.py --class R3rdPersonCamera --json E:/Modding/_BmAKgrab/chase/camera_cdo.json
+$ python Tools/scripts/chase/chase02_cdo.py --class R3rdPersonCamera --json E:/Modding/ArkhamKnight/_grab/chase/camera_cdo.json
 package BmGame.upk: version 863, licensee 32995, 84813 names, 3268 imports, 177031 exports
 
 === R3rdPersonCamera (export 34969, class None, 1568 B)
@@ -72,15 +72,15 @@ package BmGame.upk: version 863, licensee 32995, 84813 names, 3268 imports, 1770
        BattleModeHeadOffset               @0x4fdc  SERIALISED [0.0, 0.0, 150.0]
        BattleModeWinchHeadOffset          @0x4ff8  SERIALISED [0.0, 0.0, 300.0]
        BattleModeAbseilingExtraCameraRot  @0x5034  SERIALISED [1500, 0, 0]
-wrote E:/Modding/_BmAKgrab/chase/camera_cdo.json
+wrote E:/Modding/ArkhamKnight/_grab/chase/camera_cdo.json
 ```
 
 ```
-$ python Tools/scripts/chase/chase02_cdo.py --class RVehicleBatmobileBase --json E:/Modding/_BmAKgrab/chase/vehiclebase_cdo.json
+$ python Tools/scripts/chase/chase02_cdo.py --class RVehicleBatmobileBase --json E:/Modding/ArkhamKnight/_grab/chase/vehiclebase_cdo.json
 ...
     -- card offsets on RVehicleBatmobileBase:
        StrafeCooldown                     @0x11e4  SERIALISED 0.75
-wrote E:/Modding/_BmAKgrab/chase/vehiclebase_cdo.json
+wrote E:/Modding/ArkhamKnight/_grab/chase/vehiclebase_cdo.json
 ```
 
 (The `SERIALISED None` on the three struct tags is the walker's placeholder for a struct's own
@@ -102,7 +102,7 @@ Scripts and extracted data (not in the workspace docs):
 
 - `Tools/scripts/chase/chase02_cdo.py` — `--list`, `--class <name> [--json OUT]`, `--scan`;
   reuses `Tools/scripts/upk_read.py` (`Package`, `best_walk`) and writes only the `--json` path.
-- `E:/Modding/_BmAKgrab/chase/camera_cdo.json`, `E:/Modding/_BmAKgrab/chase/vehiclebase_cdo.json` —
+- `E:/Modding/ArkhamKnight/_grab/chase/camera_cdo.json`, `E:/Modding/ArkhamKnight/_grab/chase/vehiclebase_cdo.json` —
   every tag of the two default objects.
 
 ---

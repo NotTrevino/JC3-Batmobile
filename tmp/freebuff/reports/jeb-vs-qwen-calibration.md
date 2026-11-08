@@ -48,7 +48,7 @@ re-decide the whole run from the stored `p` values with no model call.
 `python Tools/scripts/chase/chase_calibrate.py --sweep 0.3,0.4,0.5,0.6,0.7,0.8,0.9` (verbatim):
 
 ```
-sweep of stored P(true) in E:\Modding\_gamedata\BmAKgrab\chase\calib_runs\jeb_340c7b55_v1search (no model call)
+sweep of stored P(true) in E:\Modding\_shared\gamedata\BmAKgrab\chase\calib_runs\jeb_340c7b55_v1search (no model call)
 
 | threshold | positive recall | found recall | negatives with a false positive | false-positive verdicts | found=true total |
 |---:|---:|---:|---:|---:|---:|
@@ -64,8 +64,8 @@ best at zero false positives: threshold 0.5 -> positive recall 0/20, found recal
 
 stored verdicts 190; with warnings 118, of them snippet cut to Jeb's 2,048-token limit 118
 - positive: 106 verdicts, max P(true) 0.333 (P06 exe 0x140124b63), verdicts at or above 0.5: 0
-- found: 35 verdicts, max P(true) 0.472 (F22 E:/Modding/_gamedata/BmAKgrab/chase/g1_chase_native.json:372), verdicts at or above 0.5: 0
-- negative: 49 verdicts, max P(true) 0.407 (N05 E:/Modding/_gamedata/BmAKgrab/chase/sim_cdo_07.json:494), verdicts at or above 0.5: 0
+- found: 35 verdicts, max P(true) 0.472 (F22 E:/Modding/_shared/gamedata/BmAKgrab/chase/g1_chase_native.json:372), verdicts at or above 0.5: 0
+- negative: 49 verdicts, max P(true) 0.407 (N05 E:/Modding/_shared/gamedata/BmAKgrab/chase/sim_cdo_07.json:494), verdicts at or above 0.5: 0
 ```
 
 **Best recall at zero false positives: threshold 0.5 — positive recall 0/20, found recall 0/8.** Zero
@@ -84,7 +84,7 @@ record):
 ```
 | case | kind | known | qwen found=true (value) | jeb found=true (p, value) | provenance says |
 |---|---|---|---|---|---|
-| F35 | found | 3.0 | E:/Modding/_BmAKgrab/chase/chase2_defaults.json:151 = '3.0' | - | qwen right (3.0) |
+| F35 | found | 3.0 | E:/Modding/ArkhamKnight/_grab/chase/chase2_defaults.json:151 = '3.0' | - | qwen right (3.0) |
 
 1 case(s) where the two judges disagree
 ```
@@ -109,15 +109,15 @@ cases by best P(true) on any candidate, threshold 0.5 (found) and 0.4:
 - negative: 10 cases, best N05=0.407, p>=0.5 on 0 case(s) [], p>=0.4 on 1 case(s) ['N05']
 
 negatives Jeb calls true at a lower threshold (case, source, P(true)):
-- N01 TurnOnSpotSteeringSpeedCurve: p=0.3223 E:/Modding/_gamedata/BmAKgrab/chase/chase2_defaults.json:184 lit=''
-- N02 BattleModeMoving: p=0.3304 E:/Modding/_gamedata/BmAKgrab/chase/chase2_defaults.json:217 lit=''
-- N05 TransformationAnimNode: p=0.4066 E:/Modding/_gamedata/BmAKgrab/chase/sim_cdo_07.json:494 lit=''
+- N01 TurnOnSpotSteeringSpeedCurve: p=0.3223 E:/Modding/_shared/gamedata/BmAKgrab/chase/chase2_defaults.json:184 lit=''
+- N02 BattleModeMoving: p=0.3304 E:/Modding/_shared/gamedata/BmAKgrab/chase/chase2_defaults.json:217 lit=''
+- N05 TransformationAnimNode: p=0.4066 E:/Modding/_shared/gamedata/BmAKgrab/chase/sim_cdo_07.json:494 lit=''
 
 F35 (the one qwen hit) at Jeb:
-- p=0.1241 found=False lit='30000' cut=yes E:/Modding/_gamedata/BmAKgrab/chase/calib.jsonl:28
-- p=0.405 found=False lit='' cut=no E:/Modding/_gamedata/BmAKgrab/chase/chase2_defaults.json:151
-- p=0.0272 found=False lit='' cut=no E:/Modding/_gamedata/BmAKgrab/chase/namescan_b.json:8
-- p=0.2781 found=False lit='' cut=no E:/Modding/_gamedata/BmAKgrab/chase/namescan_b.json:22
+- p=0.1241 found=False lit='30000' cut=yes E:/Modding/_shared/gamedata/BmAKgrab/chase/calib.jsonl:28
+- p=0.405 found=False lit='' cut=no E:/Modding/_shared/gamedata/BmAKgrab/chase/chase2_defaults.json:151
+- p=0.0272 found=False lit='' cut=no E:/Modding/_shared/gamedata/BmAKgrab/chase/namescan_b.json:8
+- p=0.2781 found=False lit='' cut=no E:/Modding/_shared/gamedata/BmAKgrab/chase/namescan_b.json:22
 
 qwen (v1 search) per-case found=true count, same candidate list:
 - F35 ImpactShakeAbandonedVehicleFactor: 1 found=true of 4

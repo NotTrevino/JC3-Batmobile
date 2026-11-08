@@ -72,7 +72,7 @@ it is quoting an asset the game attaches to the destroyed car.
 ### 1. Scope and the location of the known bad number
 
 ```
-$ cd E:/Modding/JC3-Batmobile && ls -l Working/Translation/T_ROWS.jsonl Working/Translation/t16_collision.json Research/BatmobileGrab/COLLISION_GEOM.md Research/BatmobileGrab/COLLISION_CONVEX.md
+$ cd E:/Modding/JustCause3/JC3-Batmobile && ls -l Working/Translation/T_ROWS.jsonl Working/Translation/t16_collision.json Research/BatmobileGrab/COLLISION_GEOM.md Research/BatmobileGrab/COLLISION_CONVEX.md
 -rw-r--r-- 1 User 197121  13994 Nov  3 01:59 Research/BatmobileGrab/COLLISION_CONVEX.md
 -rw-r--r-- 1 User 197121   4937 Nov  3 01:16 Research/BatmobileGrab/COLLISION_GEOM.md
 -rw-r--r-- 1 User 197121 133520 Oct 31 08:35 Working/Translation/T_ROWS.jsonl
@@ -161,7 +161,7 @@ fails if any of the three regresses, because the verdicts are recomputed from th
 ### 4. Final write and check
 
 ```
-$ cd E:/Modding/JC3-Batmobile && PYTHONIOENCODING=utf-8 uv run python Tools/scripts/t_collision_sources.py --write && PYTHONIOENCODING=utf-8 uv run python Tools/scripts/t_collision_sources.py --check; echo "EXIT=$?"; ls -l Working/Translation/COLLISION_SOURCES_AUDIT.md Tools/scripts/t_collision_sources.py
+$ cd E:/Modding/JustCause3/JC3-Batmobile && PYTHONIOENCODING=utf-8 uv run python Tools/scripts/t_collision_sources.py --write && PYTHONIOENCODING=utf-8 uv run python Tools/scripts/t_collision_sources.py --check; echo "EXIT=$?"; ls -l Working/Translation/COLLISION_SOURCES_AUDIT.md Tools/scripts/t_collision_sources.py
 wrote Working/Translation/COLLISION_SOURCES_AUDIT.md (17978 chars)
 OK Working/Translation/COLLISION_SOURCES_AUDIT.md (17978 chars)
 CHECK PASS

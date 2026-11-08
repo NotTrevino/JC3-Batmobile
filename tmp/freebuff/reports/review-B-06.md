@@ -146,7 +146,7 @@ accepted as recorded, not independently reproduced.
 
 | # | Value in the card/doc | Where verified | Result |
 |---|---|---|---|
-| 1 | `w602 … fire_rate 1.75 -> 2` at `0xA0` | bytes of `Builds/bm-006/…/w602_batmobile_cannon.wtunec`; source `E:/Modding/_JC3grab/weapons/w602_mediumtank_canon/w602_mediumtank_canon.wtunec` | built `struct.unpack('<f', 0xA0) = 2.0`; source = `1.75` — matches |
+| 1 | `w602 … fire_rate 1.75 -> 2` at `0xA0` | bytes of `Builds/bm-006/…/w602_batmobile_cannon.wtunec`; source `E:/Modding/JustCause3/_grab/weapons/w602_mediumtank_canon/w602_mediumtank_canon.wtunec` | built `struct.unpack('<f', 0xA0) = 2.0`; source = `1.75` — matches |
 | 2 | `w602 … velocity 500 -> 400` at `0x9C` | same two files | built = `400.0`; source = `500.0` — matches |
 | 3 | `w603 … fire_rate 0.1 -> 0.138` at `0xA0` | `…/w603_batmobile_vulcan/w603_batmobile_vulcan.wtunec` vs source | built = `0.1379999965` (float32 0.138); source = `0.10000000149` — matches |
 | 4 | copy sizes `14,224` / `14,223` B, unchanged by the patch | `os.path.getsize` on both copies | 14,224 and 14,223; both equal their sources — matches |

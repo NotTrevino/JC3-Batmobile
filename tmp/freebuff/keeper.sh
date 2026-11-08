@@ -5,7 +5,7 @@
 #                             a task name in done/ (e.g. 030-chase-candidates) or an absolute file path that exists
 #                             and does not say 'STATUS: deferred'.
 # A deferred task without NEEDS is re-queued once any other task has finished since it was parked.
-P=E:/Modding/JC3-Batmobile; B=$P/tmp/freebuff; DRV=C:/Users/User/.claude/skills/freebuff/scripts/driver.cjs
+P=E:/Modding/JustCause3/JC3-Batmobile; B=$P/tmp/freebuff; DRV=C:/Users/User/.claude/skills/freebuff/scripts/driver.cjs
 log(){ echo "$(date -Is) $*" >> $B/keeper.log; }
 dep_ok(){ local d=$1
   if [[ $d == */* ]]; then [ -f "$d" ] && ! grep -q "STATUS: deferred" "$d"; return; fi

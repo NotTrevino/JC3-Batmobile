@@ -6,7 +6,7 @@ complete: no questions, no confirmations, no progress check-ins. Work autonomous
 ## 1. Find your task (claim exactly one) - ONLY if your message did not already give you a task
 If your message is a task brief (it names a DONE report path), that is your task: skip this section and section 2,
 and follow section 3 and the brief. Otherwise:
-1. List `E:/Modding/JC3-Batmobile/tmp/freebuff/manual/` (files ending `.txt`, not the subfolders).
+1. List `E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/manual/` (files ending `.txt`, not the subfolders).
 2. Take the **first file in name order** and claim it by **moving** it into `manual/claimed/`. If the move fails
    (someone else took it), take the next file. Never work on a file you did not move yourself.
 3. If no `.txt` file is left, reply exactly `NO TASK LEFT` and stop.
@@ -29,12 +29,12 @@ and follow section 3 and the brief. Otherwise:
   **derived** (rule + inputs) or **UNKNOWN** (what you tried, where it would be found). Never fill a gap from general
   knowledge of Batman: Arkham Knight, Unreal Engine 3 or Just Cause 3. A hypothesis counts only if it is proven
   against the files with an oracle (a check that would fail if it were wrong).
-- **Read-only inputs:** the game installs (`E:/Games/...`, `D:/Games/...`), `E:/Modding/_gamedata/` and every file
+- **Read-only inputs:** the game installs (`E:/Games/...`, `D:/Games/...`), `E:/Modding/_shared/gamedata/` and every file
   another task wrote. Never run, inject into or attach to a game process, except in an approved in-game brief (above).
 - **Your outputs:** a NEW script under `Tools/scripts/` with `--write` / `--check` (the check recomputes every number
   from the source bytes), its generated `.md`/`.json` under `Research/` or `Working/`, and the DONE report. Never edit
   another task's files; write a new version instead (`...2.py`).
-- Scratch files go in `E:/Modding/JC3-Batmobile/tmp/freebuff/scratch/`. Python: `uv run --with <deps> python ...`.
+- Scratch files go in `E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/scratch/`. Python: `uv run --with <deps> python ...`.
 - No secrets, no network uploads, no git commits, no PRs.
 
 ## 4. The DONE report

@@ -80,7 +80,7 @@ Exit status 0.
 
 | value in the doc | where verified | result |
 |---|---|---|
-| "232 entities" (`FEATURE_CENSUS.md:27`, `--check` line) | `ls E:/Modding/_JC3grab/detail/*.ee.json | wc -l` | 232 — exact |
+| "232 entities" (`FEATURE_CENSUS.md:27`, `--check` line) | `ls E:/Modding/JustCause3/_grab/detail/*.ee.json | wc -l` | 232 — exact |
 | "`CBulletWeaponBase` 57 objects / 45 `.ee` / 17 chassis" (`FEATURE_CENSUS.md:46`, reconciliation `:325`, §2.1 `:263`) | independent scan of the same 232 graphs: files containing the class = 45; occurrences of `"class": "CBulletWeaponBase"` = 57; distinct chassis prefixes = 17 | 45 / 57 / 17 — exact on all three |
 | "`EngineRotatingPart` on `v0506`: 1 chassis, 3 parts" (`FEATURE_CENSUS.md:332`, §2.3 `:305`) | `Research/JC3Grab/PARTS_TABLE.jsonl`: rows with a part whose `b` is `EngineRotatingPart` = 3, all under `v0506_car_solar_oldtractor` | 1 chassis / 3 parts — exact |
 | "53 armed / 21 chassis" (`FEATURE_CENSUS.md:28-29`, `:329`) | `FEATURE_CENSUS.json`: `len(armed_entities)` = 53, distinct `chassis` = 21; `totals.armed_chassis` = 21 computed from the armed list (`script:139-145`, `:456`) | consistent (the field is not a mislabelled all-chassis count: 79 chassis exist in the `.ee` set) |
@@ -92,5 +92,5 @@ All three Out paths exist and are generated (the `.md` is rendered from the same
 byte-compared by `--check`). The card's Done passes on its automatable half and the numbers it names
 are present in the `.md` and correct; the §2 prose it also requires was corrected and matches (issue
 4 for the durability gap). The script really is self-contained: it opens only
-`E:/Modding/_JC3grab/…` and `Research/JC3Grab/*.jsonl`, writes only the two census files, and does
+`E:/Modding/JustCause3/_grab/…` and `Research/JC3Grab/*.jsonl`, writes only the two census files, and does
 not decode a game file.

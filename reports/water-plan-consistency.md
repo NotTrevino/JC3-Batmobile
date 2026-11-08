@@ -193,7 +193,7 @@ eight (`WATER.md:130`) · the build already carries the donor's water modules by
 * Static reads only. Neither plan was modified; nothing was built, packed, installed or launched.
 * `WATER.md` is the sole grab for rows 1–22 because it is the grab both plans cite; where a plan cites an
   **entity grab instead** (B's rows 11, 14, and the 0.3568 flat-water point), that file lives outside
-  the repository at `E:/Modding/_gamedata/JC3grab/…` and was **not** read here. Those rows are `B only`,
+  the repository at `E:/Modding/_shared/gamedata/JC3grab/…` and was **not** read here. Those rows are `B only`,
   so no verdict depends on them.
 * B's BmAK-side numbers (`SquealThreshold` 0.2, `DefaultTyreUpdates` 16.5, `SlopeTorqueScale` offset 64)
   are not depth/speed/time thresholds in water and are out of scope by §1.

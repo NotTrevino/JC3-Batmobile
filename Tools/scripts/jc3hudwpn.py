@@ -2,7 +2,7 @@
 """jc3hudwpn.py - G2-25: the JC3 vehicle-weapon HUD API, and what WPN-12 asks of it.
 
 Reads the **decompiled** `ui/hud.gfx` scripts (260 AS3 files under
-`E:\\Modding\\_gamedata\\JC3grab\\hud\\dec\\scripts\\`, the G2-19 export - no archive is opened here), pulls the
+`E:\\Modding\\_shared\\gamedata\\JC3grab\\hud\\dec\\scripts\\`, the G2-19 export - no archive is opened here), pulls the
 two card functions `InitVehicleWeapons` / `UpdateVehicleWeapons` out of `hud.as` with their exact
 parameter lists, defaults and bodies, the two-slot array and its per-slot data object, the cooldown
 and overcharge code, the reticle shapes and crosshair-look enum used by `UpdateWeaponReticle`, the
@@ -39,7 +39,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
 OUT = os.path.join(ROOT, "Research", "JC3Grab")
 BMAK = os.path.join(ROOT, "Research", "BatmobileGrab")
-GRAB = os.environ.get("JC3_GRAB", r"E:\Modding\_gamedata\JC3grab")
+GRAB = os.environ.get("JC3_GRAB", r"E:\Modding\_shared\gamedata\JC3grab")
 HUD = os.path.join(GRAB, "hud", "dec", "scripts")
 JSON_NAME = "JC3_HUD_WEAPONS.json"
 MD_NAME = "JC3_HUD_WEAPONS.md"

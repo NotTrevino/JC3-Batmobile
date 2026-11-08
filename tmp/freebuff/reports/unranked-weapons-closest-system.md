@@ -139,7 +139,7 @@ C-3/C-5/C-6 are attach-side and HUD-side.
 | UC-1 | BmAK's `MaxSpeed` 480 m/s behaviour (is the shell capped, or is 480 only the initial ramp ceiling?) | `Research/BatmobileGrab/CLASS_DEFAULTS.md` (`Default__RBasicProjectile`) and `Working/vendor/BmAKgrab/scripts/` for the projectile tick | Q-3 #3: fire at a 200 m wall and at a 400 m wall; if the second impact is late by more than 400/480 s the cap is real, if both match 400 m/s it is not |
 | UC-2 | whether `TurretShotDamage` is the AI-paid damage or a tank-turret-only override | `Research/BatmobileGrab/CLASS_DEFAULTS.md` (`Default__RBatmobileHeavyCannon`) | Q-3 #3: let an NPC gunner fire the cannon at an APC; if the APC loses more health than a player shot does, the 75 is a separate side and C-4 is right |
 | UC-3 | the charge mechanic's gate (does holding the trigger change the round, or only its timing?) | `BmGame.upk` `Default__RBatmobileHeavyCannon` + the native function list in `Research/BatmobileGrab/REGISTRATION.md` | Q-3 #3: tap vs hold the trigger; if the held shot is identical in effect the 2.5 s is only a cadence, and C-1's second entity is unnecessary |
-| UC-4 | the `AutoAim` angle unit (is 15° = 0.26 in the tune's unit, or 15?) | `Research/JC3Grab/WEAPONS.md` §9 (three presets, six contexts) and `E:/Modding/_JC3grab/weapons/w602_mediumtank_canon/` | Q-3 #3: aim 10° off a tank at 50 m; if the reticle snaps, the written angle is larger than 10° and the unit is degrees, not fractions |
+| UC-4 | the `AutoAim` angle unit (is 15° = 0.26 in the tune's unit, or 15?) | `Research/JC3Grab/WEAPONS.md` §9 (three presets, six contexts) and `E:/Modding/JustCause3/_grab/weapons/w602_mediumtank_canon/` | Q-3 #3: aim 10° off a tank at 50 m; if the reticle snaps, the written angle is larger than 10° and the unit is degrees, not fractions |
 | UC-5 | what `LethalRadius` 175.0 gates (175 cm? 175 m? a HUD ring?) | `Research/BatmobileGrab/CLASS_DEFAULTS.md` and `HUD_SPEC.json` | Q-3 #3: fire at a target 170 m and 180 m away; if only the nearer one acquires, 175 is metres |
 
 ---
@@ -224,7 +224,7 @@ the Vulcan's JC3 `velocity` is the donor's number kept, not a translation (V-5 k
 | UV-1 | the chain gun's **projectile speed** (no `Projectile` archetype on the object) | `Research/BatmobileGrab/CLASS_DEFAULTS.md` (`Default__RBatmobileCannon`) | Q-3 #3: fire at a 100 m wall and time the impact — 0.13 s means 750 m/s, 0.25 s means 400 m/s |
 | UV-2 | whether `ChainGunDamage` 40 is per round or per burst tick | `Working/vendor/BmAKgrab/scripts/` (the native `ChainGun` fire loop) + `Research/BatmobileGrab/REGISTRATION.md` | Q-3 #3: hold the trigger 2 s on a stock car and count hits from the tracer stream; 40 × hits must match the health loss |
 | UV-3 | `weapon_rpm`'s unit (rpm, or a fraction of `rotoscope_rpm_per_cycle`) | `Research/JC3Grab/MOVING_PARTS.md:71` and `Research/BatmobileGrab/ANIMATIONS.md` for the barrel bone | Q-3 #3: count barrel revolutions in 1 s of video — 4 rev/s means rpm, 1 rev/s means the member is a fraction |
-| UV-4 | whether the engine honours `scatter_per_shot` as a per-round bloom | `E:/Modding/_JC3grab/weapons/w603_mediumtank_mgun/w603_mediumtank_mgun.wtunec` (decoded rows) | Q-3 #3: fire 18 rounds into a wall and measure the group; it must be ~3° wide, not 0.6° |
+| UV-4 | whether the engine honours `scatter_per_shot` as a per-round bloom | `E:/Modding/JustCause3/_grab/weapons/w603_mediumtank_mgun/w603_mediumtank_mgun.wtunec` (decoded rows) | Q-3 #3: fire 18 rounds into a wall and measure the group; it must be ~3° wide, not 0.6° |
 
 ---
 
@@ -292,7 +292,7 @@ class default = UNKNOWN value.
 
 | id | UNKNOWN | settling file | one-sentence pilot-card check |
 |---|---|---|---|
-| UR-1 | whether a 0-damage bullet still applies impulse and hit reactions | `E:/Modding/_JC3grab/weapons/w603_mediumtank_mgun/w603_mediumtank_mgun.wtunec` + `gen_explosion_5m_nodamage.ftune` (the only shipped 0) | Q-1: fire the 0-damage copy at a pedestrian and a car; note HP and displacement |
+| UR-1 | whether a 0-damage bullet still applies impulse and hit reactions | `E:/Modding/JustCause3/_grab/weapons/w603_mediumtank_mgun/w603_mediumtank_mgun.wtunec` + `gen_explosion_5m_nodamage.ftune` (the only shipped 0) | Q-1: fire the 0-damage copy at a pedestrian and a car; note HP and displacement |
 | UR-2 | which autoaim member is the 7.5° cone | `JC3Grab/WEAPONS.md` §9 (three presets, 22 members, six contexts) | Q-1: aim 10° off a target 20 m away; snapping = the member is the cone |
 | UR-3 | `RiotSuppressorRange`'s ship value (only the Joker serializes 8000) | `Research/BatmobileGrab/CLASS_DEFAULTS.md` (`Default__RBatmobileCannon`) | Q-1: fire at 70 m and 90 m; the range that still acquires is the default |
 | UR-4 | the impulse clamp above 100 once factors are 1.0 | `JC3Grab/WEAPONS.md` §3 (bullet impulse min/max per id) | Q-1: compare the push of the 100-impulse riot round with a stock 60-impulse MG round |
@@ -445,7 +445,7 @@ other vehicles use them).
 | UV-1 | Vulcan | projectile speed (no archetype) | `CLASS_DEFAULTS.md` (`Default__RBatmobileCannon`) | Q-3 #3: 100 m impact at 0.13 s ⇒ 750 m/s |
 | UV-2 | Vulcan | `ChainGunDamage` 40 per round or per tick | `Working/vendor/BmAKgrab/scripts/` + `REGISTRATION.md` | Q-3 #3: 2 s burst vs health loss, 40 × hits |
 | UV-3 | Vulcan | `weapon_rpm` unit | `JC3Grab/MOVING_PARTS.md:71` + `ANIMATIONS.md` | Q-3 #3: count revolutions in 1 s of video |
-| UV-4 | Vulcan | `scatter_per_shot` honoured as bloom | `E:/Modding/_JC3grab/weapons/w603_mediumtank_mgun/` | Q-3 #3: 18 rounds ⇒ ~3° group |
+| UV-4 | Vulcan | `scatter_per_shot` honoured as bloom | `E:/Modding/JustCause3/_grab/weapons/w603_mediumtank_mgun/` | Q-3 #3: 18 rounds ⇒ ~3° group |
 | UR-1 | riot | 0-damage bullet impulse/reaction | `w603` tune + `gen_explosion_5m_nodamage.ftune` | Q-1: pedestrian and car, HP + displacement |
 | UR-2 | riot | which autoaim member is the 7.5° cone | `JC3Grab/WEAPONS.md` §9 | Q-1: aim 10° off at 20 m |
 | UR-3 | riot | `RiotSuppressorRange` ship value | `CLASS_DEFAULTS.md` (`Default__RBatmobileCannon`) | Q-1: acquire at 70 m vs 90 m |

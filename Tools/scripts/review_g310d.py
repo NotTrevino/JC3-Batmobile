@@ -50,7 +50,7 @@ ROOT = os.path.dirname(os.path.dirname(HERE))
 import jc3hkx                                            # noqa: E402
 import jc3_physics_roles2 as R2                          # noqa: E402  (rot3x4, DONOR)
 
-FLEET_GLOB = "E:/Modding/_gamedata/JC3grab/**/*.physicsc"
+FLEET_GLOB = "E:/Modding/_shared/gamedata/JC3grab/**/*.physicsc"
 REVIEWED = os.path.join(ROOT, "Tools", "scripts", "jc3_physics_roles4.py")
 CARD_MD = os.path.join(ROOT, "Research", "JC3Grab", "PHYSICS_ROLES4.md")
 OUT_MD = os.path.join(ROOT, "Research", "JC3Grab", "PHYSICS_ROLES4_REVIEW.md")

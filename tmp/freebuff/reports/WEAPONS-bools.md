@@ -64,7 +64,7 @@ independently demonstrated.
 - this report
 
 `WEAPONS.md` was not edited. Read-only input outside the project: the BmSDK generated sources at
-`E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated` (the path the card gave).
+`E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Generated` (the path the card gave).
 
 ## Commands and output
 

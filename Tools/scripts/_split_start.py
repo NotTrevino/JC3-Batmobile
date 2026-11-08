@@ -2,7 +2,7 @@
 import os, wave
 import numpy as np
 
-A = r"E:\Modding\JC3-Batmobile\Working\Audio\bml"
+A = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\bml"
 
 def load(tag):
     w = wave.open(os.path.join(A, tag + ".wav"), "rb")

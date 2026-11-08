@@ -695,5 +695,5 @@ python Tools/scripts/t9_interaction.py --write       # regenerates md + json (no
 The heredocs above are read-only and each prints what its section quotes; the two geometry probes
 copy `t9_interaction._ray_hit` and `jc3interact.nearest_distance`'s math and add no files.
 
-Nothing in the repo, `Builds/`, `E:/Modding/_JC3grab`, `E:/Modding/_BmAKgrab` or `D:/Games` was
+Nothing in the repo, `Builds/`, `E:/Modding/JustCause3/_grab`, `E:/Modding/ArkhamKnight/_grab` or `D:/Games` was
 written, and no process was launched.

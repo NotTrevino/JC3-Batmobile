@@ -1,7 +1,7 @@
 # Lock hold and salvo — plan v2, with the two reticles separated
 
 **Provenance / reversibility.** New file, `tmp/freebuff/reports/lock-hold-salvo-reticle-plan-v2.md`
-= `E:/Modding/JC3-Batmobile/tmp/freebuff/reports/lock-hold-salvo-reticle-plan-v2.md`. Intended change:
+= `E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/lock-hold-salvo-reticle-plan-v2.md`. Intended change:
 rebuild every number of `lock-hold-salvo-closest-system-plan.md` against
 `audit-lock-hold-salvo-and-fire-leech.md`, split the operator's two reticle observations into two
 behaviours with the BmAK member that drives each, and restate the closest JC3 mechanism, the gap and a

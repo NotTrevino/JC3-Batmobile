@@ -7,7 +7,7 @@ done" (18343–18490), and the card's outputs: `Tools/scripts/bm_fx.py`,
 its inputs `Working/Translation/t17_fx.json` (T-17), `Research/BatmobileGrab/SOCKETS_JC3.json`
 (G1-13), `Research/JC3Grab/USAGES.json` (G2-22), `Research/JC3Grab/FX_TABLE.jsonl` (G2-9),
 `Research/BatmobileGrab/PARTICLES_FEATURES.json` (G1-16), `Builds/bm-005/` (B-05) and the decoded
-per-entity graphs in the documented grab `E:\Modding\_JC3grab\` (detail + entities; read-only, R10
+per-entity graphs in the documented grab `E:\Modding\JustCause3\_grab\` (detail + entities; read-only, R10
 location).
 
 **Read-only.** Nothing was modified except this file. No game launch, nothing written under
@@ -156,7 +156,7 @@ family, not for all 32.
 usage vocabulary"* as the proof that the usage hash is valid.
 
 **Test — what the vocabulary is.** `USAGES.json` `inputs.detail_files = 232`; the donor graph is one
-of those 232 files (`E:\Modding\_JC3grab\detail\v0300_…_civilian_01.ee.json` exists and its objects
+of those 232 files (`E:\Modding\JustCause3\_grab\detail\v0300_…_civilian_01.ee.json` exists and its objects
 carry these usages). The 155 values are the union over those graphs. So for any value already in the
 donor graph:
 
@@ -643,5 +643,5 @@ R7/R6: the 688 identical files and `receipt.json` `"installed": false` support t
   that reason, and only a game probe (Q-1) can settle it.
 - `bm_fx.py --check` was not executed (it writes `tmp/b08/built.xml`); §17 reproduces its one
   substantive comparison in memory with the same `bm_entity`/`jc3wiring` functions.
-- All external reads were the documented R10 grab under `E:\Modding\_JC3grab\` (detail + entities),
+- All external reads were the documented R10 grab under `E:\Modding\JustCause3\_grab\` (detail + entities),
   read-only; nothing there was written.

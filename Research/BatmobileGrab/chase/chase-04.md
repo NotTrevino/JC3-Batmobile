@@ -49,11 +49,11 @@ it stops at `eof` after 181 tags.
 Command and output (verbatim):
 
 ```
-$ python Tools/scripts/chase/chase02_cdo.py --class RVehicleBatmobileBase --json E:/Modding/_BmAKgrab/chase/vehiclebase_cdo.json
+$ python Tools/scripts/chase/chase02_cdo.py --class RVehicleBatmobileBase --json E:/Modding/ArkhamKnight/_grab/chase/vehiclebase_cdo.json
 ...
     -- card offsets on RVehicleBatmobileBase:
        StrafeCooldown                     @0x11e4  SERIALISED 0.75
-wrote E:/Modding/_BmAKgrab/chase/vehiclebase_cdo.json
+wrote E:/Modding/ArkhamKnight/_grab/chase/vehiclebase_cdo.json
 ```
 
 The F-25 … F-32 offsets queried from that dump:
@@ -203,4 +203,4 @@ the reason is now evidence rather than `VALUE-NATIVE`.
    [reg+disp], xmm` forms. It found zero immediate stores for any of the eight offsets, so no
    native constant is claimed for the seven found rows — their values are the serialised CDO tags.
 6. Nothing was written under the game folder; extracted decodes are under
-   `E:/Modding/_BmAKgrab/chase/`.
+   `E:/Modding/ArkhamKnight/_grab/chase/`.

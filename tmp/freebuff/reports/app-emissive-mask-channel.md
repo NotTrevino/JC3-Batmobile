@@ -361,7 +361,7 @@ internal in the `.toc`; model ≤ 4,424 KB, textures ≤ 4,648 KB.
 ## 10. Reproduce
 
 ```bash
-cd "E:/Modding/JC3-Batmobile"
+cd "E:/Modding/JustCause3/JC3-Batmobile"
 
 # 1. the interfaces (decoded headers, on disk)
 grep -n "sampler\|Emissive\|MaterialConsts" Tools/JCMR-src/assets/jc3/shaders/carlight.fb.txt

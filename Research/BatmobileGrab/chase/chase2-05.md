@@ -245,15 +245,15 @@ cook manifest contains these class names, and it is a name list, so no DLC packa
 ## Reproduce
 
 ```
-python Tools/scripts/chase/chase2_defaults.py --json E:/Modding/_BmAKgrab/chase/chase2_defaults.json
+python Tools/scripts/chase/chase2_defaults.py --json E:/Modding/ArkhamKnight/_grab/chase/chase2_defaults.json
 python Tools/scripts/chase/chase2_native2.py --disp \
   "F-34=0x1a60" "F-37=0x1cd4" "F-38=0x1eb4" "F-39=0x268" "F-40=0x294" \
-  --json E:/Modding/_BmAKgrab/chase/chase2_native2_05.json
+  --json E:/Modding/ArkhamKnight/_grab/chase/chase2_native2_05.json
 grep -rn -i -E "BattleModeHeight|JumpRampUpwardForce|ImpactShake|BattleModeSpeedDelta|TurnOnSpot|BattleModeMoving" \
   --include="*.ini" "E:/Games/Batman - Arkham Knight"
 ```
 
-Evidence files: `E:/Modding/_BmAKgrab/chase/chase2_defaults.json` (every card-offset tag in all 2,975
+Evidence files: `E:/Modding/ArkhamKnight/_grab/chase/chase2_defaults.json` (every card-offset tag in all 2,975
 default objects), `chase2_native2_05.json` (per-offset sites with disassembly context).
 
 `FOOTAGE.md`, `chase-05.md`, `GRAB_BACKLOG.md` and every other existing document were **not edited**

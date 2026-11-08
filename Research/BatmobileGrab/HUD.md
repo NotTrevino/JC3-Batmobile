@@ -346,5 +346,5 @@ python Tools/scripts/bmak_hud_inventory.py check       # roster + bytes + gaps
 python Tools/scripts/bmak_hud.py check                 # the two legacy movies
 python Tools/scripts/hud_spec.py --check \
     --bmak E:/Modding/_BmAK_grab/hud/dec \
-    --jc3 E:/Modding/_JC3grab/hud/dec     # needs movie.xml for the Armour0..4 labels
+    --jc3 E:/Modding/JustCause3/_grab/hud/dec     # needs movie.xml for the Armour0..4 labels
 ```

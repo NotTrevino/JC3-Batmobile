@@ -4,7 +4,7 @@
 # Oracle: pink everywhere -> the .ee shadows all mips (D13 confirmed, 256 cap);
 # pink only far -> highs come from game36 .hmddsc (author highs next).
 $ErrorActionPreference = 'Stop'
-$root = 'E:\Modding\JC3-Batmobile'
+$root = 'E:\Modding\JustCause3\JC3-Batmobile'
 $py = 'uv'
 $g  = "$root\Tools\Gibbed"
 $ee = 'v0300_car_kensington_sportsmuscle_civilian_01.ee'

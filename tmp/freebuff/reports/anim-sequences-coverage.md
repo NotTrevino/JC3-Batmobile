@@ -74,7 +74,7 @@ T-8's P-05 row declines because the jet's motion is translation plus code-driven
 ## 4. Commands (verbatim)
 
 ```
-$ cd E:/Modding/JC3-Batmobile && python Tools/scripts/parts_anim_coverage.py --write; echo "write_exit=$?"; python Tools/scripts/parts_anim_coverage.py --check; echo "check_exit=$?"
+$ cd E:/Modding/JustCause3/JC3-Batmobile && python Tools/scripts/parts_anim_coverage.py --write; echo "write_exit=$?"; python Tools/scripts/parts_anim_coverage.py --check; echo "check_exit=$?"
 wrote Working/Translation/PARTS_ANIM_COVERAGE.md (19167 chars) and Working/Translation/PARTS_ANIM_COVERAGE.json
 rows 15 | cited 60 | unrowed 193 | covered 12 | no-sequence ['P-02', 'P-05', 'P-13']
 write_exit=0

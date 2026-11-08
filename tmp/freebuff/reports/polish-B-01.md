@@ -1,6 +1,6 @@
 # Polish pass — B-01 · Build scaffold
 
-Date: 2026-11-01. Repo: `E:/Modding/JC3-Batmobile` (offline). Inputs read: `GRAB_BACKLOG.md` §0.5
+Date: 2026-11-01. Repo: `E:/Modding/JustCause3/JC3-Batmobile` (offline). Inputs read: `GRAB_BACKLOG.md` §0.5
 (R1–R14), the §8 B-01 card, B-01's own session report (`tmp/freebuff/reports/B-01_B-03.md`, B-01
 section — there is no `B-01.md`) and `tmp/freebuff/reports/review-B-01.md` (verdict: **minor issues**).
 No `polish-B-01.md` existed, so this is a fresh run, not a resume.

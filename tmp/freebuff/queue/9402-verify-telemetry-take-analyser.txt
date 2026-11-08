@@ -1,7 +1,7 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-telemetry-take-analyser.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/verify-telemetry-take-analyser.md
 ONLY: freebuff
 EST: 35
 BRIEF: hand-written 2026-11-08
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/telemetry-take-analyser.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/telemetry-take-analyser.md
 Prove Tools/scripts/telemetry_takes.py against data whose answers are known before it runs. Write Tools/scripts/telemetry_synth.py that generates eight synthetic telemetry.jsonl files in Working/Q/synth/ in the 7982 schema: constant-acceleration launch to 100 km/h in exactly 16.4 s, a plateau at 267 km/h, a braking run with deceleration 3.65 m/s^2, a circle of 13.82 m radius at 100 km/h, a step steer with lock at 0.25 s, a landing with two rebounds, and two files with a channel deliberately removed. Run each sub-command and compare to the known answer; the tolerance is one sample interval. Also feed it a file sampled at 1 Hz and confirm the lock sub-command refuses to give a number. Write the comparison table to tmp/freebuff/reports/hdl-verify-analyser.md. Done check: all eight cases pass, the two missing-channel cases print UNKNOWN, the coarse-rate case prints a refusal, and the script exits 0 only when all pass.
-Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.
+Shared rules: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

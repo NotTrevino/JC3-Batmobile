@@ -6,7 +6,7 @@ the `G2-24 rework — done` section (line 15321), and the outputs `Research/JC3G
 `JC3_AUDIO_EVENTS.json` + the generator `Tools/scripts/jc3audio.py`, plus what it reads:
 `sound/fmod_banks/{vehicles,character,effects,weapons,weapons_preorder}.bank`,
 `master.banklist`, `Research/JC3Grab/INDEX.jsonl` (81,952 entries),
-`E:/Modding/_JC3grab/{entities,detail}` (232 + 232 decoded `.ee`), `MODLOG.md` §70/§71 and
+`E:/Modding/JustCause3/_grab/{entities,detail}` (232 + 232 decoded `.ee`), `MODLOG.md` §70/§71 and
 `Tools/scripts/_apply_audio.py`.
 
 Constraints honoured: no game launched, nothing written into `D:/Games`, no archive written, no `--write`

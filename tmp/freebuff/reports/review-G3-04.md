@@ -13,7 +13,7 @@ I did not write this card and changed nothing outside this report.
 ## 1. `--check` output (verbatim)
 
 ```
-$ cd /e/Modding/JC3-Batmobile && uv run --with numpy --with pillow --with pefile --with capstone python Tools/scripts/grab_colour.py --check; echo "CHECK_EXIT=$?"
+$ cd /e/Modding/JustCause3/JC3-Batmobile && uv run --with numpy --with pillow --with pefile --with capstone python Tools/scripts/grab_colour.py --check; echo "CHECK_EXIT=$?"
 OK chain 3, slots 5, expressions 1, terms 31, unknowns 6
 oracle: 3 objects re-opened, 0 mismatches
 CHECK_EXIT=0

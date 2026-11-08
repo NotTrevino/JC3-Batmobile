@@ -199,7 +199,7 @@ block would lose the 32-body census that `T-CO2` and the debris work already cit
 ## 7. Reproduce
 
 ```
-cd E:/Modding/JC3-Batmobile
+cd E:/Modding/JustCause3/JC3-Batmobile
 python Tools/scripts/t_collision_corrected.py --write
 python Tools/scripts/t_collision_corrected.py --check
 ```

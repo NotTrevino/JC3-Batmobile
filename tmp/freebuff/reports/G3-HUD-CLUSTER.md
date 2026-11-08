@@ -21,9 +21,9 @@ No existing file was edited. Nothing was written under a game install, `Builds/`
 ## What was decoded
 
 Sources, all read-only: `BmGame.upk` (`HudModuleBatmobile.Image`, re-carved), the decompiled AS3
-of that movie (`E:/Modding/_gamedata/BmAKgrab_early/hud/modules/HudModuleBatmobile/dec`), the
+of that movie (`E:/Modding/_shared/gamedata/BmAKgrab_early/hud/modules/HudModuleBatmobile/dec`), the
 BmSDK headers in `Working/vendor/BmSDK/`, JC3's `ui/hud.gfx` decompile
-(`E:/Modding/_gamedata/JC3grab/hud/dec`), `Research/BatmobileGrab/{HUD.md,HUD_INTERFACES.json,
+(`E:/Modding/_shared/gamedata/JC3grab/hud/dec`), `Research/BatmobileGrab/{HUD.md,HUD_INTERFACES.json,
 SPEEDOMETER.md,SPEEDOMETER.json}` and `Working/Translation/T6_HUD_CAMERA.md`.
 
 ### 1. The cluster and its stage position
@@ -169,8 +169,8 @@ upgrade level.
 
 ```
 $ python Tools/scripts/bmak_hud_cluster.py --write
-wrote E:\Modding\JC3-Batmobile\Working\HUD\CLUSTER.json
-wrote E:\Modding\JC3-Batmobile\Working\HUD\CLUSTER.md
+wrote E:\Modding\JustCause3\JC3-Batmobile\Working\HUD\CLUSTER.json
+wrote E:\Modding\JustCause3\JC3-Batmobile\Working\HUD\CLUSTER.md
 {
  "leads": {
   "RemoteInterface": { "x": -13.3, "y": 609.0 },

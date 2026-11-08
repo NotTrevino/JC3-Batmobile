@@ -531,7 +531,7 @@ together; that is the intended coupling (the tool's header says so).
 ## 12. Reproduce
 
 ```bash
-cd E:/Modding/JC3-Batmobile
+cd E:/Modding/JustCause3/JC3-Batmobile
 python - <<'PY'
 import json
 p=json.load(open('Working/Appearance/appearance_plan.json'))

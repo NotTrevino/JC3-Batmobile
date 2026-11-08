@@ -1,7 +1,7 @@
 import glob, os, re, subprocess, tempfile
 
 mods = glob.glob("Builds/test-003/aaf/editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/*.vmodc")
-G = r"E:\Modding\JC3-Batmobile\Tools\Gibbed\Gibbed.JustCause3.ConvertAdf.exe"
+G = r"E:\Modding\JustCause3\JC3-Batmobile\Tools\Gibbed\Gibbed.JustCause3.ConvertAdf.exe"
 pat = re.compile(r'<member name="([^"]*(?:audio|sound|stream|fsb|bank|event|voice|exhaust|engine|nitro|turbo)[^"]*)"[^>]*>([^<]*)</member>', re.I)
 for vm in sorted(mods):
     with tempfile.NamedTemporaryFile(suffix=".xml", delete=False) as t:

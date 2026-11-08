@@ -245,7 +245,7 @@ keys at **different lines** after the rewrite:
 ## 7. Reproduce
 
 ```bash
-cd "E:/Modding/JC3-Batmobile"
+cd "E:/Modding/JustCause3/JC3-Batmobile"
 python Tools/scripts/audit_g302.py --write   # writes this file
 python Tools/scripts/audit_g302.py --check   # re-derives, byte-compares, re-runs checks
 ```

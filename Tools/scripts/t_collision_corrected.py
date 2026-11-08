@@ -435,7 +435,7 @@ def render_md(d: dict) -> str:
     w("## 7. Reproduce")
     w("")
     w("```")
-    w("cd E:/Modding/JC3-Batmobile")
+    w("cd E:/Modding/JustCause3/JC3-Batmobile")
     w("python Tools/scripts/t_collision_corrected.py --write")
     w("python Tools/scripts/t_collision_corrected.py --check")
     w("```")

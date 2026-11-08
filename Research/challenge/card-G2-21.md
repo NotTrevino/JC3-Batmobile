@@ -3,9 +3,9 @@
 Read-only pass over the finished card: `GRAB_BACKLOG.md` §0.5 (R1–R14), the G2-21 card (§6, line 698),
 its §12 row (line 1304), the MODLOG `G2-21 · Turn-on-the-spot (tank pivot) — intended change` and
 `— done` sections, and the outputs `Research/JC3Grab/TANKTURN.md` + `TANKTURN.json` + the generator
-`Tools/scripts/jc3tankturn.py`, plus what it reads: `E:/Modding/_JC3grab/entities/*.ee.json` (232),
+`Tools/scripts/jc3tankturn.py`, plus what it reads: `E:/Modding/JustCause3/_grab/entities/*.ee.json` (232),
 `VOCABULARY.md`, `WEAPON_WIRING.jsonl`, and — for the physics check below — the already-decoded Havok
-census in `E:/Modding/_JC3grab/hkx/out/`.
+census in `E:/Modding/JustCause3/_grab/hkx/out/`.
 
 Constraints honoured: no game launched, nothing written into `D:/Games`, no archive opened, nothing
 committed, no secrets, no `--write`. The card's gate:

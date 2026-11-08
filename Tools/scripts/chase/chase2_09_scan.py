@@ -5,7 +5,7 @@ DLC and patch layers, `.upk` and `.u`) and of **every** ini under the install fo
 then a store-site attribution pass in the executable for the two native fields.
 
 Read-only: every file is opened `rb` and never written. Game data written by this tool goes to
-`E:/Modding/_gamedata/BmAKgrab` only.
+`E:/Modding/_shared/gamedata/BmAKgrab` only.
 
 Usage
   python Tools/scripts/chase/chase2_09_scan.py --names            # every package, every member name
@@ -28,7 +28,7 @@ sys.path.insert(0, HERE)
 import chase09_native as native  # noqa: E402
 
 GAME = r"E:\Games\Batman - Arkham Knight"
-OUT = r"E:\Modding\_gamedata\BmAKgrab\chase2_09_packages.json"
+OUT = r"E:\Modding\_shared\gamedata\BmAKgrab\chase2_09_packages.json"
 NAMES = ["StayUprightStiffness", "StayUprightDamping", "StayUprightRollResistAngle",
          "StayUprightPitchResistAngle", "AirControl", "BattleModeYawOffset",
          "ArmourModeDamageReduction", "BattleModeThrottleSpeed", "BattleModeSteerBiasRate"]

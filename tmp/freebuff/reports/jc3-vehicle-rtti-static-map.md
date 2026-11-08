@@ -73,7 +73,7 @@ closures bound to `CVehicle` member functions, not polymorphic classes. They sti
 ## 3. Handling-editor structures re-found
 
 The 2017 tool's *own* literals are mostly not in the exe: 6 of 36 quoted literals from
-`E:/Modding/_tools/jc3-handling-editor/src` exist at all.
+`E:/Modding/_shared/tools/jc3-handling-editor/src` exist at all.
 
 | literal | VA | code refs (nearest 0xCC-padded start, derived) |
 |---|---|---|
@@ -164,7 +164,7 @@ Files: `Tools/scripts/jc3_rtti_map.py` (new), `Working/RTTI/vehicle_rtti.json` (
 
 Commands and output (verbatim, final run):
 ```
-wrote E:\Modding\JC3-Batmobile\Working\RTTI\vehicle_rtti.json
+wrote E:\Modding\JustCause3\JC3-Batmobile\Working\RTTI\vehicle_rtti.json
 690 vehicle rows, 6/36 literals found
 write exit=0
 PASS: 690 vehicle rows and 6 literal hits recompute identically from 51083264 bytes

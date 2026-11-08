@@ -7,8 +7,8 @@ def H(p):
     return hashlib.sha256(open(p, "rb").read()).hexdigest()[:12]
 
 
-b059 = "E:/Modding/JC3-Batmobile/Builds/test-059/aaf"
-b062 = "E:/Modding/JC3-Batmobile/Builds/test-062/aaf"
+b059 = "E:/Modding/JustCause3/JC3-Batmobile/Builds/test-059/aaf"
+b062 = "E:/Modding/JustCause3/JC3-Batmobile/Builds/test-062/aaf"
 x59 = open(b059 + "/@files.xml", encoding="utf-8").read()
 x62 = open(b062 + "/@files.xml", encoding="utf-8").read()
 pat = re.compile(r'name="([^"]+)"')
@@ -29,7 +29,7 @@ for t, r in [("059", b059), ("062", b062)]:
     print(t, "palette", os.path.getsize(p), H(p))
 m62 = b062 + "/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_body_lod1.rbm"
 print("062 body_lod1:", os.path.getsize(m62), H(m62))
-for q in ["E:/Modding/JC3-Batmobile/Working/Assembled/body_lod1.rbm",
-          "E:/Modding/JC3-Batmobile/Working/TrueScale/body_lod1.rbm",
-          "E:/Modding/JC3-Batmobile/Builds/test-059/aaf/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_body_lod1.rbm"]:
+for q in ["E:/Modding/JustCause3/JC3-Batmobile/Working/Assembled/body_lod1.rbm",
+          "E:/Modding/JustCause3/JC3-Batmobile/Working/TrueScale/body_lod1.rbm",
+          "E:/Modding/JustCause3/JC3-Batmobile/Builds/test-059/aaf/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_body_lod1.rbm"]:
     print("  ", q.split("/")[-2], os.path.getsize(q), H(q))

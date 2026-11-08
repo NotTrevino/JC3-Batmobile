@@ -17,7 +17,7 @@ find what makes a tracked vehicle pivot:
   * what the containers actually carry (inner-file type census - data only, no script file
     type) and which vehicle class each `.epe` declares.
 
-Reads only the decoded cache (`E:/Modding/_gamedata/JC3grab/{entities,detail}`) and repo files: no
+Reads only the decoded cache (`E:/Modding/_shared/gamedata/JC3grab/{entities,detail}`) and repo files: no
 archive, no `D:/Games`, no game launch.
 
 Writes Research/JC3Grab/TANKTURN.md + TANKTURN.json. `--check` rebuilds and asserts.
@@ -42,7 +42,7 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
 OUT = os.path.join(ROOT, "Research", "JC3Grab")
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/_shared/gamedata/JC3grab")
 ENT = os.path.join(RAW, "entities")
 DET = os.path.join(RAW, "detail")
 JSON_NAME = "TANKTURN.json"

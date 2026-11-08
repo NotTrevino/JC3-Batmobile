@@ -29,9 +29,9 @@ it did; `tmp/chase_candidates.before-sSmartSearch.py` is the pre-change copy.
 | `Tools/scripts/chase/chase_candidates.py` | `member_candidates(...)` + `--member/--owner/--offset/--type/--routes/--out`; row-plan output untouched |
 | `Tools/scripts/chase/chase_calibrate.py` | **new** — builds `calib.jsonl`, runs `smart_search` per case, scores, renders and `--check`s this report |
 | `Tools/scripts/chase/chase_candidates_v1.py` | frozen copy of the pre-rewrite search half, **calibration only** (`--search v1`) |
-| `E:/Modding/_BmAKgrab/chase/cache/<xx>/<sha256>.json` | verdict cache, keyed on the exact prompt text (snippet + question + model) |
-| `E:/Modding/_BmAKgrab/chase/calib.jsonl` | 38 generated cases (20 positive, 8 found, 10 negative) |
-| `E:/Modding/_BmAKgrab/chase/calib_runs/<prompt>/` | one JSON per case per prompt version |
+| `E:/Modding/ArkhamKnight/_grab/chase/cache/<xx>/<sha256>.json` | verdict cache, keyed on the exact prompt text (snippet + question + model) |
+| `E:/Modding/ArkhamKnight/_grab/chase/calib.jsonl` | 38 generated cases (20 positive, 8 found, 10 negative) |
+| `E:/Modding/ArkhamKnight/_grab/chase/calib_runs/<prompt>/` | one JSON per case per prompt version |
 
 ## Calibration design
 
@@ -124,7 +124,7 @@ qwen rows are unchanged; that report has the sweep, the disagreements and the ve
   member whose value is package-only needs the package reader (`ch1_dlo.py`), not this tool.
 - **The live search currently returns 0 candidates for these members** (see above). Until that
   filter is relaxed, `smart_search` will look empty on this corpus.
-- The corpus is shared and other sessions keep writing into `E:/Modding/_BmAKgrab/chase/`; the
+- The corpus is shared and other sessions keep writing into `E:/Modding/ArkhamKnight/_grab/chase/`; the
   single-member route excludes verdicts, selftests, the cache and `calib_runs`, but a newly written
   `.json` in that tree can still change text results.
 - `chase_candidates.py --check` (the row mode) has failed since 01:19 for a reason outside this

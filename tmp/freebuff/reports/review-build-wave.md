@@ -148,7 +148,7 @@ All seven were rewritten against the artifact rather than the pre-build plan and
 | **8402** V-03 | 8 slots (4 roots × 2), 2 pulses at origin, 69 skipped interaction objects, 30/30 `.effc`, 7 tunes, 15 weapon rows, keys 443190071/1621485476/4081821928, 24/45 audio |
 | **8403** V-04 | 2 banks with exact sizes, 45 GUIDs 24/45, 5/5 loudness, **2/3 loop** (vehicles#279 -39.68), `TMPDIR` on E: |
 | **8404** V-05 | the three reds with their exact failure, ledger 198→199, T-E5 label + Cd 0.1213, T-ST6/T-K3/T-K4 out-of-domain, Q-2 collision expectation |
-| **8405** V-06 | install.ps1 6,535 B / `df2348…`, 9 files, sim root `E:/Modding/_dropzone_sim_rc4`, 6 cases incl. decoy, REFUSED exit 2, SHA-256 via .NET, `IO.Path` split |
+| **8405** V-06 | install.ps1 6,535 B / `df2348…`, 9 files, sim root `E:/Modding/JustCause3/_dropzone_sims/_dropzone_sim_rc4`, 6 cases incl. decoy, REFUSED exit 2, SHA-256 via .NET, `IO.Path` split |
 | **8406** V-07 | STATUS 145/216 / 15 blocked / 109 queued, and disclosure of 8390-8394 + 8397-8398 |
 
 ---

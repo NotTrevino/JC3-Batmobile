@@ -13,7 +13,7 @@ Stage 2 (judge)   `chase_judge.PROMPT` / `ask` / `parse` - one request per candi
 Offline         if `GET <base>/health` does not answer in 3 s the tool prints `judge offline`,
                 lists the candidates **unjudged** and exits 3. Nothing is invented and no partial
                 verdict is written to the cache.
-Cache           every verdict is stored at E:/Modding/_gamedata/BmAKgrab/chase/cache/<xx>/<sha256>.json,
+Cache           every verdict is stored at E:/Modding/_shared/gamedata/BmAKgrab/chase/cache/<xx>/<sha256>.json,
                 sha256 = the exact prompt text (the snippet plus the question and the model name).
                 A repeated query costs nothing; a prompt revision changes the hash, so a stale
                 verdict can never be reused after the judge's prompt changes.
@@ -43,7 +43,7 @@ import chase_candidates as cc  # noqa: E402  (the search half - imported, never 
 import chase_judge as cj       # noqa: E402  (the judge kit - imported, never re-implemented)
 import jeb_judge as jj         # noqa: E402  (optional Jebadiah decision-model judge, --judge jeb)
 
-CACHE = os.path.join(r"E:\Modding\_gamedata\BmAKgrab", "chase", "cache")
+CACHE = os.path.join(r"E:\Modding\_shared\gamedata\BmAKgrab", "chase", "cache")
 DEFAULT_URL = "http://127.0.0.1:8080"
 PROMPT_VERSION = hashlib.sha256(cj.PROMPT.encode()).hexdigest()[:8]
 

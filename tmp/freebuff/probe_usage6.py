@@ -2,7 +2,7 @@ import json, glob, collections, re, os
 
 hits = collections.Counter()
 paths = []
-for p in glob.glob('E:/Modding/_JC3grab/entities/*.ee.json'):
+for p in glob.glob('E:/Modding/JustCause3/_grab/entities/*.ee.json'):
     d = json.load(open(p, encoding='utf-8'))
     for m in d['modules']:
         for r in m.get('rows', []):

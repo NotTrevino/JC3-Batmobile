@@ -8,7 +8,7 @@ width with what the game itself stores — the wheel defaults among the 274 tags
 `SuspensionTravel` value) and the cooked wheel components — and report each wheel number as
 **matches-the-package** / **mesh-only** / **disagrees**. Rules: `tmp/freebuff/INSTRUCTIONS.md` §3.
 
-Task-file note: `E:/Modding/JC3-Batmobile/tmp/freebuff/manual/` holds **no `.txt` files**
+Task-file note: `E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/manual/` holds **no `.txt` files**
 (`manual/`, `manual/claimed/`, `manual/done/` are all empty), so there was no task file to claim;
 this report answers the operator's task verbatim and is written at the `DONE` path given.
 
@@ -72,11 +72,11 @@ $ uv run --with numpy python Tools/scripts/bmak_tyres.py --check; echo "EXIT=$?"
 EXIT=1
 stderr:
 Traceback (most recent call last):
-  File "E:\Modding\JC3-Batmobile\Tools\scripts\bmak_tyres.py", line 41, in <module>
+  File "E:\Modding\JustCause3\JC3-Batmobile\Tools\scripts\bmak_tyres.py", line 41, in <module>
     import bat_assemble as BA   # noqa: E402  (the ONE transform)
-  File "E:\Modding\JC3-Batmobile\Tools\scripts\bat_assemble.py", line 48, in <module>
+  File "E:\Modding\JustCause3\JC3-Batmobile\Tools\scripts\bat_assemble.py", line 48, in <module>
     import tex2ddsc as TX  # noqa: E402
-  File "E:\Modding\JC3-Batmobile\Tools\scripts\tex2ddsc.py", line 31, in <module>
+  File "E:\Modding\JustCause3\JC3-Batmobile\Tools\scripts\tex2ddsc.py", line 31, in <module>
     from PIL import Image
 ModuleNotFoundError: No module named 'PIL'
 ```

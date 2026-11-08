@@ -71,7 +71,7 @@ Nothing else was written; no game process was started, attached to or read; noth
 ## Commands and outputs (verbatim)
 
 ```
-$ cd /e/Modding/JC3-Batmobile && uv run --with numpy --with pillow --with pefile --with capstone python Tools/scripts/grab_collision_cylinders.py --write; echo "WRITE_EXIT=$?"; uv run --with numpy --with pillow --with pefile --with capstone python Tools/scripts/grab_collision_cylinders.py --check; echo "CHECK_EXIT=$?"
+$ cd /e/Modding/JustCause3/JC3-Batmobile && uv run --with numpy --with pillow --with pefile --with capstone python Tools/scripts/grab_collision_cylinders.py --write; echo "WRITE_EXIT=$?"; uv run --with numpy --with pillow --with pefile --with capstone python Tools/scripts/grab_collision_cylinders.py --check; echo "CHECK_EXIT=$?"
 wrote COLLISION_CYLINDERS.json and COLLISION_CYLINDERS.md (10 members in the class chain, 9/9 checks, 540=CollisionHeight 544=CollisionRadius 548=AABBScale)
 WRITE_EXIT=0
 OK: 540=CollisionHeight 544=CollisionRadius 548=AABBScale, 9/9 checks, md+pairing byte-identical=True

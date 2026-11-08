@@ -7,11 +7,11 @@ Read-only. Two evidence bases:
     already joined offset -> SDK name (archetype and class default), so a claim such as
     "`FakeExtraSpeedMax` 3500" or "no friction member anywhere" is answered by the same
     artifact `bmak_chain.py` writes.
-  * JC3: the decoded land entities under `E:/Modding/_gamedata/JC3grab/entities/*.ee.json` (module rows),
+  * JC3: the decoded land entities under `E:/Modding/_shared/gamedata/JC3grab/entities/*.ee.json` (module rows),
     the same reader `t3_fleet.py` uses, so medians/bands can be recomputed.
 
 Every claim is printed as CLAIM / OBSERVED / CONFIRMED|REFUTED|UNVERIFIABLE and written to
-`E:/Modding/_gamedata/JC3grab/challenge/challenge_t1.json`.
+`E:/Modding/_shared/gamedata/JC3grab/challenge/challenge_t1.json`.
 
 Usage:
   python Tools/scripts/chase/challenge_t1.py            # print the table
@@ -29,7 +29,7 @@ import statistics as st
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(HERE)))
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/_shared/gamedata/JC3grab")
 CHAIN = os.path.join(ROOT, "Research", "BatmobileGrab", "CHAIN.json")
 OUT = os.path.join(RAW, "challenge", "challenge_t1.json")
 

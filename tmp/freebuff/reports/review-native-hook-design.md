@@ -9,7 +9,7 @@ design forgets four of the ROADMAP's named blockers. §6 is the short correction
 Tools run (nothing else executed; no game launch, no compile):
 
 ```
-$ python Tools/scripts/exe_addr_check.py "E:/Modding/_tools/jc3-console-thingy"      # 23 literals
+$ python Tools/scripts/exe_addr_check.py "E:/Modding/_shared/tools/jc3-console-thingy"      # 23 literals
 $ python Tools/scripts/jc3_rtti_map.py --check
 PASS: 690 vehicle rows and 6 literal hits recompute identically from 51083264 bytes
 $ python - <<'PY'  # PE import table + .pdata + RTTI strings of D:/Games/Just Cause 3/JustCause3.exe

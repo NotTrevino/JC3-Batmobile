@@ -9,8 +9,8 @@ report where it lands on the Batmobile body (inside / floating / on-surface) usi
 mesh.
 
 Inputs (all read-only):
-  * ``E:/Modding/_gamedata/JC3grab/entities/<donor>.ee.json`` - `StuntAreas`, `DeformPoints`, `LandGlobal`
-  * ``E:/Modding/_gamedata/JC3grab/detail/<donor>.ee.json``   - the `.epe` object graph
+  * ``E:/Modding/_shared/gamedata/JC3grab/entities/<donor>.ee.json`` - `StuntAreas`, `DeformPoints`, `LandGlobal`
+  * ``E:/Modding/_shared/gamedata/JC3grab/detail/<donor>.ee.json``   - the `.epe` object graph
   * ``Research/Epe/serpente_civilian.xml``           - the same `.epe` as XML (format cross-check)
   * ``Working/TrueScale/stations.json``              - Batmobile body bbox + wheel hardpoints
   * ``Working/TrueScale/body_lod1.rbm``              - Batmobile body mesh (via `rbm_geom`)
@@ -42,7 +42,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 ROOT = os.path.dirname(os.path.dirname(HERE))
 OUT = os.path.join(ROOT, "Research", "JC3Grab")
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/_shared/gamedata/JC3grab")
 DONOR = ("v0300_car_kensington_sportsmuscle", "v0300_car_kensington_sportsmuscle_civilian_01")
 XML = os.path.join(ROOT, "Research", "Epe", "serpente_civilian.xml")
 STATIONS = os.path.join(ROOT, "Working", "TrueScale", "stations.json")

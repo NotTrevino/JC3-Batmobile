@@ -1,8 +1,8 @@
 """FINAL engine-event -> media resolve + extract + decode."""
 import json, os, struct, subprocess
 
-A = r"E:\Modding\JC3-Batmobile\Working\Audio"
-CLI = r"E:\Modding\JC3-Batmobile\Tools\vgmstream-win64\vgmstream-cli.exe"
+A = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio"
+CLI = r"E:\Modding\JustCause3\JC3-Batmobile\Tools\vgmstream-win64\vgmstream-cli.exe"
 
 def fnv1(s):
     h = 0x811C9DC5

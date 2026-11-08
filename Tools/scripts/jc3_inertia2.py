@@ -66,7 +66,7 @@ import jc3hkx  # noqa: E402
 
 DONOR = ("Builds/test-091/aaf/models/jc_vehicles/01_land/"
          "v0300_car_kensington_sportsmuscle/sportsmuscle.physicsc")
-FLEET = "E:/Modding/_gamedata/JC3grab/hkx/all"
+FLEET = "E:/Modding/_shared/gamedata/JC3grab/hkx/all"
 CARS = [("Serpente (donor)", DONOR),
         ("apc", os.path.join(FLEET, "apc.physicsc")),
         ("armoredtransport", os.path.join(FLEET, "armoredtransport.physicsc"))]

@@ -1,6 +1,6 @@
 # Chase verify — audit of the local-LLM triage of the 235 G1 F-row hits
 
-Scope: the 22 hits a local LLM marked `found: true` in `E:\Modding\_BmAKgrab\chase\verdicts.jsonl`
+Scope: the 22 hits a local LLM marked `found: true` in `E:\Modding\ArkhamKnight\_grab\chase\verdicts.jsonl`
 (inputs in `candidates.jsonl`, same ids), plus a 20-hit sample of the 213 it rejected. Every hit was
 re-opened at the source it names: the cited text file line, or the cited `BatmanAK.exe` VA
 (read-only). This pass changes **no** value: `FOOTAGE.md`, the chase files and `GRAB_BACKLOG.md`
@@ -116,7 +116,7 @@ list (rejected) and once at the count (accepted) — which is how the error is v
 
 ### F-18#0014 — the searcher read its own fixture
 
-`source: E:/Modding/_BmAKgrab/chase/selftest.jsonl:1`, and the record itself says
+`source: E:/Modding/ArkhamKnight/_grab/chase/selftest.jsonl:1`, and the record itself says
 `"source":"exe 0x1406a2b10 (synthetic)"`. The bytes at that VA are the middle of a 143-byte
 hash-map lookup (`0x1406a2ad0 .. 0x1406a2b5f`):
 

@@ -39,11 +39,11 @@ $ python Tools/scripts/grab_model.py check
 OK: grab output matches schema 6 and its own summary.
 EXIT=0
 $ python Tools/scripts/grab_weapons.py --check
-ok E:\Modding\JC3-Batmobile\Research\BatmobileGrab\WEAPONS.md
+ok E:\Modding\JustCause3\JC3-Batmobile\Research\BatmobileGrab\WEAPONS.md
 PASS: 62 objects, 13 classes, 594 references (128 missing-object), 0 variant differences, 10 projectiles (9 launcher targets, 1 unfired), 30 FX rows, 12 AkEvent rows
 EXIT=0
 $ python Tools/scripts/grab_anims.py --check
-ok E:\Modding\JC3-Batmobile\Research\BatmobileGrab\ANIMATIONS.md
+ok E:\Modding\JustCause3\JC3-Batmobile\Research\BatmobileGrab\ANIMATIONS.md
 PASS: 253 sequences, 13 sets, 3 trees, 253 PSA sequences, 3147888 keys, 309 notifies (204 sound, 35 script); 253/253 named, 253 bone lists, 253 mechanisms; 13/13 keyframe files present
 EXIT=0
 $ python Tools/scripts/grab_lights.py --check

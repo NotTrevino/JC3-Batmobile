@@ -2,7 +2,7 @@
 
 VERDICT: **minor issues**
 
-Scope re-read here: `E:/Modding/_gamedata/JC3grab/**/*.physicsc` — **51 paths on disk, 48 distinct contents, 50 parsed**. The report under review (`tmp/freebuff/reports/G3-10h.md`) counts **494** records over **50** files. Re-counting every path independently gives **494** records over those 50 paths and **461** over the 48 distinct contents.
+Scope re-read here: `E:/Modding/_shared/gamedata/JC3grab/**/*.physicsc` — **51 paths on disk, 48 distinct contents, 50 parsed**. The report under review (`tmp/freebuff/reports/G3-10h.md`) counts **494** records over **50** files. Re-counting every path independently gives **494** records over those 50 paths and **461** over the 48 distinct contents.
 
 | claim in G3-10h | re-counted | verdict |
 |---|---|---|
@@ -20,7 +20,7 @@ Scope re-read here: `E:/Modding/_gamedata/JC3grab/**/*.physicsc` — **51 paths 
 
 ## C1 — the record count, and whether 494 is the population
 
-Every `.physicsc` under `E:/Modding/_gamedata/JC3grab` was parsed; nothing was filtered by result. Records are read from the `hknpPhysicsSystemData` object's array at `+0x50` (`ptr`, `size`, `capacity`), at a **24-byte** stride, taking `+0x08` and `+0x0c` of each record.
+Every `.physicsc` under `E:/Modding/_shared/gamedata/JC3grab` was parsed; nothing was filtered by result. Records are read from the `hknpPhysicsSystemData` object's array at `+0x50` (`ptr`, `size`, `capacity`), at a **24-byte** stride, taking `+0x08` and `+0x0c` of each record.
 
 - paths on disk: **51**; parsed: **50**; no `hknpPhysicsSystemData` at all: **1**; parse errors: **0**; parsed but zero records: **0**.
   - `town_01_ai_junction.physicsc`: no hknpPhysicsSystemData object - it holds no `hknpPhysicsSystemData` object and **no class whose name contains `Constraint`**, so it cannot contribute a cinfo record; its absence from the 494 costs nothing.
@@ -29,9 +29,9 @@ Every `.physicsc` under `E:/Modding/_gamedata/JC3grab` was parsed; nothing was f
 
 | sha256 | paths | records |
 |---|---|---:|
-| `1b90daefdc9660b4` | E:/Modding/_gamedata/JC3grab\b13b\unpacked\models\jc_vehicles\01_land\v0300_car_kensington_sportsmuscle\sportsmuscle.physicsc<br>E:/Modding/_gamedata/JC3grab\hkx\write\roundtrip_donor.physicsc | 11 |
-| `62163ea4496feb57` | E:/Modding/_gamedata/JC3grab\hkx\sportsmuscle.physicsc<br>E:/Modding/_gamedata/JC3grab\probe\sportsmuscle.physicsc | 11 |
-| `eda17906c1f81c7b` | E:/Modding/_gamedata/JC3grab\rc_merge\stage\models\jc_vehicles\01_land\v0300_car_kensington_sportsmuscle\batmobile\sportsmuscle.physicsc<br>E:/Modding/_gamedata/JC3grab\rc_merge\verify\models\jc_vehicles\01_land\v0300_car_kensington_sportsmuscle\batmobile\sportsmuscle.physicsc | 11 |
+| `1b90daefdc9660b4` | E:/Modding/_shared/gamedata/JC3grab\b13b\unpacked\models\jc_vehicles\01_land\v0300_car_kensington_sportsmuscle\sportsmuscle.physicsc<br>E:/Modding/_shared/gamedata/JC3grab\hkx\write\roundtrip_donor.physicsc | 11 |
+| `62163ea4496feb57` | E:/Modding/_shared/gamedata/JC3grab\hkx\sportsmuscle.physicsc<br>E:/Modding/_shared/gamedata/JC3grab\probe\sportsmuscle.physicsc | 11 |
+| `eda17906c1f81c7b` | E:/Modding/_shared/gamedata/JC3grab\rc_merge\stage\models\jc_vehicles\01_land\v0300_car_kensington_sportsmuscle\batmobile\sportsmuscle.physicsc<br>E:/Modding/_shared/gamedata/JC3grab\rc_merge\verify\models\jc_vehicles\01_land\v0300_car_kensington_sportsmuscle\batmobile\sportsmuscle.physicsc | 11 |
 
 Per file:
 

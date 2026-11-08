@@ -4,11 +4,11 @@ import json, os, re, sys
 from pathlib import Path
 
 S = Path(__file__).parent
-PROJ = Path('E:/Modding/JC3-Batmobile')
+PROJ = Path('E:/Modding/JustCause3/JC3-Batmobile')
 FB = PROJ / 'tmp' / 'freebuff'
-REP = 'E:/Modding/JC3-Batmobile/tmp/freebuff/reports'
-FULL = 'E:/Modding/JC3-Batmobile/tmp/freebuff/APPROVED_Q_FULL.txt'
-TAIL = 'Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.'
+REP = 'E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports'
+FULL = 'E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/APPROVED_Q_FULL.txt'
+TAIL = 'Shared rules: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.'
 ORDER = ['integration', 'appearance', 'weapons', 'handling', 'sound', 'modes_controls_anim', 'hud_cam_lights_fx', 'damage_world']
 LM_OF = {'appearance': 'L2', 'weapons': 'L4', 'handling': 'L3', 'sound': 'L5', 'modes_controls_anim': 'L8',
          'hud_cam_lights_fx': 'L7', 'damage_world': 'L6', 'integration': 'L1'}

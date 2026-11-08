@@ -22,7 +22,7 @@ import os
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-ENT = "E:/Modding/_gamedata/JC3grab/entities/*.json"
+ENT = "E:/Modding/_shared/gamedata/JC3grab/entities/*.json"
 OUT_MD = os.path.join(ROOT, "Research", "JC3Grab", "SUSPENSION_BRIDGE.md")
 OUT_JSON = os.path.join(ROOT, "Research", "JC3Grab", "SUSPENSION_BRIDGE.json")
 REPORT = os.path.join(ROOT, "tmp", "freebuff", "reports", "suspension-unit-bridge.md")
@@ -302,7 +302,7 @@ def render(c, full, files, n_susp, rows):
     A("| side | what | count | where |")
     A("|---|---|---:|---|")
     A(f"| JC3 | entity wiring JSONs with all modules decoded | {c['files']['entities']} | "
-      "`E:/Modding/_gamedata/JC3grab/entities/*.ee.json` |")
+      "`E:/Modding/_shared/gamedata/JC3grab/entities/*.ee.json` |")
     A(f"| JC3 | files carrying a `Suspension` module | {c['files']['with_suspension']} | same |")
     A(f"| JC3 | files with `Suspension` + `RigidBody.mass` + `LandGlobal.front_wheels.radius` | "
       f"{c['files']['with_mass_and_radius']} | same |")
@@ -310,7 +310,7 @@ def render(c, full, files, n_susp, rows):
     A("| BmAK | vehicles with a decoded stiffness and travel | **1** (the Batmobile) | "
       "`Research/BatmobileGrab/MECHANICS_NAMES.md`, `TYRES_PACKAGE.md` |")
     A("")
-    A("**Only one BmAK vehicle exists in the grab.** `E:/Modding/_gamedata/BmAKgrab/` holds "
+    A("**Only one BmAK vehicle exists in the grab.** `E:/Modding/_shared/gamedata/BmAKgrab/` holds "
       "`anims audio bones chase gltf lodtest meshes motion.txt umodelcfg` and no second vehicle, "
       "so a two-sided point cloud cannot be built; the fit is one-sided (the JC3 fleet's rule) plus "
       "one decoded pair (the Batmobile's 3000 against its decoded 210 kg default). That is why the "

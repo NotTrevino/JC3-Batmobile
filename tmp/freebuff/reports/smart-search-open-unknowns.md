@@ -140,7 +140,7 @@ before. `unparsable 0 (0.0 %)` on all 80 verdicts.
 | `ImpactShakeCoolDown` | `'20.0'` | `chase2_defaults.json:316` | "explicitly assigns the literal value 20.0 … on the RVehicleBatmobileBase object" |
 
 All four are **text-route** hits in the same derived dump
-(`E:/Modding/_gamedata/BmAKgrab/chase/chase2_defaults.json`), not the `.upk`. That dump is the CDO/tag
+(`E:/Modding/_shared/gamedata/BmAKgrab/chase/chase2_defaults.json`), not the `.upk`. That dump is the CDO/tag
 scan's own extraction, so a hit there is evidence *about that dump*; it becomes evidence about the
 game only when the record's offset and class agree with the declared member. That is what §4 checks.
 
@@ -223,7 +223,7 @@ sibling class is a coincidence until the Batmobile-base record is produced. **No
 
 | member | value | id | owner | offset | source record | check |
 |---|---:|---|---|---|---|---|
-| `BattleModeHeight` | **250.0** | F-33 | `RVehicleBatmobileBase` | 0x199c | `E:/Modding/_gamedata/BmAKgrab/chase/chase2_defaults.json:129` | offset, class, object, type and id prefix all agree; text-route literal re-read |
+| `BattleModeHeight` | **250.0** | F-33 | `RVehicleBatmobileBase` | 0x199c | `E:/Modding/_shared/gamedata/BmAKgrab/chase/chase2_defaults.json:129` | offset, class, object, type and id prefix all agree; text-route literal re-read |
 | `ImpactShakeAbandonedVehicleFactor` | **3.0** | F-35 | `RVehicleBatmobileBase` | 0x1ccc | `.../chase2_defaults.json:151` | as above, plus the calibration's independent F35 hit |
 
 Both are `FloatProperty` defaults on the class CDO `Default__RVehicleBatmobileBase` (export 10923).

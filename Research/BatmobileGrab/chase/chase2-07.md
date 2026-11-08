@@ -53,7 +53,7 @@ Filtering those 262 to the owning class:
 
 The 262 "other class" hits are the low-offset collision `MODES.md` warns about (0x354, 0x384, 0x398,
 0x39c, 0x3c4 are offsets dozens of unrelated classes use); **none is on `RVehicleSimBatmobile`**, and
-the full list is in `E:/Modding/_BmAKgrab/chase/chase2_defaults_07.json`.
+the full list is in `E:/Modding/ArkhamKnight/_grab/chase/chase2_defaults_07.json`.
 
 ### The archetypes still do not override anything — checked with a second reader
 
@@ -213,14 +213,14 @@ evidence and no unit — recorded, not used.
 
 ```
 python Tools/scripts/chase/chase2_defaults.py --offsets 0x354 0x370 0x374 0x384 0x398 0x39c 0x3c4 0x4ac 0x4a8 \
-  --json E:/Modding/_BmAKgrab/chase/chase2_defaults_07.json
+  --json E:/Modding/ArkhamKnight/_grab/chase/chase2_defaults_07.json
 python Tools/scripts/chase/chase2_native2.py --disp "F-50=0x370" "F-53=0x398" "F-55=0x3c4" \
-  --json E:/Modding/_BmAKgrab/chase/chase2_native2_07.json
+  --json E:/Modding/ArkhamKnight/_grab/chase/chase2_native2_07.json
 grep -rn -i -E "TransformationAnimNode|BattleModeUpright|TransformationRotation|BattleModeSteerBiasRate" \
   --include="*.ini" "E:/Games/Batman - Arkham Knight"
 ```
 
-Evidence files: `E:/Modding/_BmAKgrab/chase/chase2_defaults_07.json`,
+Evidence files: `E:/Modding/ArkhamKnight/_grab/chase/chase2_defaults_07.json`,
 `chase2_native2_07.json`.
 
 `FOOTAGE.md`, `chase-07.md`, `GRAB_BACKLOG.md` and every other existing document were **not edited**

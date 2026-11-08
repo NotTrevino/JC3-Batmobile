@@ -6,9 +6,9 @@ import subprocess
 import sys
 import tempfile
 
-GIBBED = r"E:\Modding\JC3-Batmobile\Tools\Gibbed\Gibbed.JustCause3.ConvertAdf.exe"
-REF = r"E:\Modding\JC3-Batmobile\Working\Movement\refcar\aaf\editor\entities\jc_vehicles\01_land\v0405_car_mugello_moderncircuitracer\modules\default"
-DONOR = r"E:\Modding\JC3-Batmobile\Builds\test-003\aaf\editor\entities\jc_vehicles\01_land\v0300_car_kensington_sportsmuscle\modules\default"
+GIBBED = r"E:\Modding\JustCause3\JC3-Batmobile\Tools\Gibbed\Gibbed.JustCause3.ConvertAdf.exe"
+REF = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Movement\refcar\aaf\editor\entities\jc_vehicles\01_land\v0405_car_mugello_moderncircuitracer\modules\default"
+DONOR = r"E:\Modding\JustCause3\JC3-Batmobile\Builds\test-003\aaf\editor\entities\jc_vehicles\01_land\v0300_car_kensington_sportsmuscle\modules\default"
 
 def members(vm):
     with tempfile.NamedTemporaryFile(suffix=".xml", delete=False) as t:

@@ -35,7 +35,7 @@ table and *substring* in the prose.
 ## 1. Check output (verbatim)
 
 ```
-cd "E:/Modding/JC3-Batmobile" && uv run --with pefile --with capstone --with numpy python Tools/scripts/jc3_colour_native.py --check; echo "CHECK_EXIT=$?"
+cd "E:/Modding/JustCause3/JC3-Batmobile" && uv run --with pefile --with capstone --with numpy python Tools/scripts/jc3_colour_native.py --check; echo "CHECK_EXIT=$?"
 ```
 
 ```
@@ -52,8 +52,8 @@ ok   no ToneMapping/Exposure occurrence is code-referenced (0 refs total)
 ok   every listed constant is a real 16-byte .rdata read with 4 finite floats
 ok   every reference site is inside a .pdata-bounded function
 ok   no on-screen or tint value is claimed: the measured set is counts only
-ok   E:\Modding\JC3-Batmobile\Research\JC3Grab\COLOUR_NATIVE.md is byte-identical to a fresh decode
-ok   E:\Modding\JC3-Batmobile\Research\JC3Grab\COLOUR_NATIVE.json is byte-identical to a fresh decode
+ok   E:\Modding\JustCause3\JC3-Batmobile\Research\JC3Grab\COLOUR_NATIVE.md is byte-identical to a fresh decode
+ok   E:\Modding\JustCause3\JC3-Batmobile\Research\JC3Grab\COLOUR_NATIVE.json is byte-identical to a fresh decode
 
 OK: 10/10 checks, md identical, json identical
 CHECK_EXIT=0
@@ -120,7 +120,7 @@ Together with "no on-screen or tint value is claimed", the 10/10 headline overst
 
 Two of the three `exposure` substrings are not debug text: `exposure.ddsc` is an **asset name**, and
 `exposure (new version): %.2f` is a format string. I searched the extracted JC3 data
-(`E:/Modding/_gamedata/JC3grab`) for any file matching `*exposure*`: **none**, and no index mentions it.
+(`E:/Modding/_shared/gamedata/JC3grab`) for any file matching `*exposure*`: **none**, and no index mentions it.
 So the useful statement is: the executable names an `exposure.ddsc` resource; that resource is not in the
 extracted grab, so its values are still not available statically from what is on disk. The report's
 "*the strings are dead data for this purpose*" is right for the bare `Exposure` triples and wrong for

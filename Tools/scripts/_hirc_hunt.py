@@ -8,7 +8,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from _lzo1x import lzo1x_decompress  # noqa: E402
 
 CK = r"E:\Games\Batman - Arkham Knight\BmGame\CookedPCConsole"
-A = r"E:\Modding\JC3-Batmobile\Working\Audio"
+A = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio"
 TAG = b"\xc1\x83\x2a\x9e"
 EV1 = struct.pack("<I", 0x388710DB)
 EV2 = struct.pack("<I", 0xB1B5DD98)

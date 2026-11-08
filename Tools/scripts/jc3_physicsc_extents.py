@@ -47,7 +47,7 @@ FILES = [
     ("truck", "01_land/v0602_car_urga_armoredtransport",
      "Research/UrgaRef/aaf/models/jc_vehicles/01_land/v0602_car_urga_armoredtransport/armoredtransport.physicsc"),
     ("boat", "boat (racingboat)",
-     "E:/Modding/_gamedata/JC3grab/hkx/all/racingboat.physicsc"),
+     "E:/Modding/_shared/gamedata/JC3grab/hkx/all/racingboat.physicsc"),
     ("tank", "01_land/v0201_car_capstone_mediumtank",
      "Research/TankRef/aaf/models/jc_vehicles/01_land/v0201_car_capstone_mediumtank/mediumtank.physicsc"),
     ("motorbike", "01_land/v3501_bike_solar_modernmoped",

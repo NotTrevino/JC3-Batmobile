@@ -17,7 +17,7 @@ the translation can use the table without another lookup. No JC3 mapping is deci
 | `Research/BatmobileGrab/GADGET_PARAMS.md` | generated report (25,936 chars) |
 | `tmp/freebuff/reports/GADGET-params.md` | this DONE report |
 
-Read-only: `Startup.upk`, `StartupPatch.upk`, `E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated/**`
+Read-only: `Startup.upk`, `StartupPatch.upk`, `E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Generated/**`
 (MIT), `Research/BatmobileGrab/PACKAGES_G305.md` (the 48-name list, cross-checked against the export
 table), `Tools/scripts/upk_read.py` and `Tools/scripts/grab_class_defaults.py` (imported unmodified —
 its `Layout`/`same_kind` helpers, the proven namer from G3-06b). No game ran, nothing under

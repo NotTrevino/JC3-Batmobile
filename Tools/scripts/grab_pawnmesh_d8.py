@@ -4,7 +4,7 @@
 Static only: the executable is read, the game is never run or attached to.
 
 THREE INDEPENDENT SOURCES, each one able to contradict the others
-  1. the layout (`E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated`, plus `BMSDK_OFFSETS.json`):
+  1. the layout (`E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Generated`, plus `BMSDK_OFFSETS.json`):
      `Pawn.Mesh` is at 0x38c and is declared `SkeletalMeshComponent`; the class chain of
      `RVehicleBatmobileBase` reaches `Pawn`, and 0x38c is declared once on that chain. In the
      `SkeletalMeshComponent` -> `MeshComponent` -> `PrimitiveComponent` -> `ActorComponent` ->
@@ -46,7 +46,7 @@ from grab_controls_native import EXE, Image, fmt_ins  # noqa: E402
 
 OUT = os.path.join(ROOT, "Research", "BatmobileGrab")
 SDK = os.path.join(OUT, "BMSDK_OFFSETS.json")
-GEN = r"E:\Modding\_tools\BmSDK-AK\src\BmSDK\Generated"
+GEN = r"E:\Modding\_shared\tools\BmSDK-AK\src\BmSDK\Generated"
 RUNTIME = os.path.join(OUT, "runtime")
 MD = os.path.join(OUT, "PAWNMESH_D8.md")
 JS = os.path.join(OUT, "PAWNMESH_D8.json")

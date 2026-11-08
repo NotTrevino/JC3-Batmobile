@@ -8,7 +8,7 @@
 **Method.** Every claim was re-derived from disk: the generator's own `--check`, SHA-1/SHA-256 of
 the shipped and private files, `ConvertAdf -e` / `ConvertProperty --e` exports to OS temp, byte-level
 float reads at the edited offsets, the project hash `rbmhdr.hash_jenkins`, the 295 cached fleet
-graphs in `E:/Modding/_JC3grab/wiring/epe`, `Research/JC3Grab/{INDEX.jsonl,WEAPONS.jsonl,WEAPON_WIRING.md,
+graphs in `E:/Modding/JustCause3/_grab/wiring/epe`, `Research/JC3Grab/{INDEX.jsonl,WEAPONS.jsonl,WEAPON_WIRING.md,
 CHAIN.json}`, and `Research/BatmobileGrab/CHAIN.json`.
 
 Read-only: no backlog, MODLOG, `Research/`, `Tools/` or game file was edited; the only file written is
@@ -148,7 +148,7 @@ problem.
 **Assumption.** The two private paths and `autoaim_vehicle_mgun.wtune` are what the weapon's own
 carrier graph names.
 
-**Test** (`E:/Modding/_JC3grab/wiring/epe/v0201_car_capstone_mediumtank_debug.ee.xml`):
+**Test** (`E:/Modding/JustCause3/_grab/wiring/epe/v0201_car_capstone_mediumtank_debug.ee.xml`):
 ```
 CBulletWeaponBase w603_mediumtank_mgun  type 2
    id:AA7096C9 = editor/entities/jc_weapons/06_vehicle/w603_mediumtank_mgun/w603_mediumtank_mgun.wtune

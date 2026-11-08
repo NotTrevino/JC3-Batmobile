@@ -4,7 +4,7 @@ Read-only pass over the finished card. What I read: `GRAB_BACKLOG.md` §0.5 (R1�
 (§7, line 757), its §12 row (line 1310), the MODLOG `G2-27 · Standalone entity — intended change`
 and `— done` sections, the outputs `Research/JC3Grab/STANDALONE.md` (244 lines) + `STANDALONE.json`,
 the generator `Tools/scripts/jc3standalone.py`, and what it reads: `INDEX.jsonl` (81,952 rows),
-`E:/Modding/_JC3grab/standalone/{base,patch}_entityregistry_gen.entityregc` (33,003,365 +
+`E:/Modding/JustCause3/_grab/standalone/{base,patch}_entityregistry_gen.entityregc` (33,003,365 +
 39,220,585 B), the 9 `spawn_*_defs.bin` tables, `PARTS_TABLE.jsonl`, `TRAFFIC.json`, `REBELDROP.json`,
 `Builds/test-091/v0300_car_kensington_sportsmuscle_civilian_01.ee`, and the shipped Rebel-Drop mod
 `Research/1456340180_Rebel-Drop-Mod-V5.3/`. Extra readers used for the tests below: `eetoc`

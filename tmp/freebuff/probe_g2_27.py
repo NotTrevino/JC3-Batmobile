@@ -7,10 +7,10 @@ import re
 import struct
 import sys
 
-sys.path.insert(0, r"E:/Modding/JC3-Batmobile/Tools/scripts")
+sys.path.insert(0, r"E:/Modding/JustCause3/JC3-Batmobile/Tools/scripts")
 import jc3index  # noqa: E402
 
-RAW = r"E:/Modding/_JC3grab/standalone"
+RAW = r"E:/Modding/JustCause3/_grab/standalone"
 REG = {"base": os.path.join(RAW, "base_entityregistry_gen.entityregc"),
        "patch": os.path.join(RAW, "patch_entityregistry_gen.entityregc")}
 

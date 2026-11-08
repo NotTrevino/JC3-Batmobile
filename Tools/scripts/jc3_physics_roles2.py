@@ -62,8 +62,8 @@ import jc3hkx  # noqa: E402
 DONOR = os.path.join(ROOT, "Builds", "test-091", "aaf", "models", "jc_vehicles", "01_land",
                      "v0300_car_kensington_sportsmuscle", "sportsmuscle.physicsc")
 PARTS = os.path.join(ROOT, "Research", "JC3Grab", "PARTS_TABLE.jsonl")
-FLEET_MD = r"E:/Modding/_gamedata/JC3grab/hkx/out"
-FLEET_RAW = r"E:/Modding/_gamedata/JC3grab/hkx/all"
+FLEET_MD = r"E:/Modding/_shared/gamedata/JC3grab/hkx/out"
+FLEET_RAW = r"E:/Modding/_shared/gamedata/JC3grab/hkx/all"
 OUT_MD = os.path.join(ROOT, "Research", "JC3Grab", "PHYSICS_ROLES2.md")
 OUT_JSON = os.path.join(ROOT, "Research", "JC3Grab", "PHYSICS_ROLES2.json")
 

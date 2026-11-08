@@ -68,7 +68,7 @@ BMAK_PHYSASSET = 158266
 
 DONOR = ("Builds/test-091/aaf/models/jc_vehicles/01_land/"
          "v0300_car_kensington_sportsmuscle/sportsmuscle.physicsc")
-FLEET = "E:/Modding/_gamedata/JC3grab/hkx/all"
+FLEET = "E:/Modding/_shared/gamedata/JC3grab/hkx/all"
 
 OUT_MD = os.path.join(REPO, "Research", "BatmobileGrab", "INERTIA.md")
 OUT_JSON = os.path.join(REPO, "Research", "BatmobileGrab", "INERTIA.json")

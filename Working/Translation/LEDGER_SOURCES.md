@@ -40,7 +40,7 @@ The producer mapping is not from memory: `--check` fails unless each script's ow
 
 ### `VOCABULARY.md` — Tools/scripts/jc3grab.py
 
-- **reads:** every JC3 vehicle `.ee` in the archives, its inner `.vmodc` decoded with Gibbed ConvertAdf; the decoded instance.member.path = value rows in E:/Modding/_gamedata/JC3grab
+- **reads:** every JC3 vehicle `.ee` in the archives, its inner `.vmodc` decoded with Gibbed ConvertAdf; the decoded instance.member.path = value rows in E:/Modding/_shared/gamedata/JC3grab
 - **rule:** ranges/counts are aggregates (min..max, n) over the decoded member values; the member VALUES are grabbed from the game's own named XML rows, the aggregate is DERIVED
 - **re-run:** `python Tools/scripts/jc3grab.py check` → exit **0**, 5.1 s
   - `probe: 566 inner files, 30 modules decoded, 1 refused, mass=975, official_top_speed=250`
@@ -69,19 +69,19 @@ The producer mapping is not from memory: `--check` fails unless each script's ow
 
 ### `T3_FLEET.md` — Tools/scripts/t3_fleet.py
 
-- **reads:** E:/Modding/_gamedata/JC3grab (the jc3grab.py decodes: RigidBody, VehicleDamage, Suspension, Brakes, LandGlobal, Engine members)
+- **reads:** E:/Modding/_shared/gamedata/JC3grab (the jc3grab.py decodes: RigidBody, VehicleDamage, Suspension, Brakes, LandGlobal, Engine members)
 - **rule:** each cell is n, the median and the p25..p75 band over the land fleet in a mass class (3-8 t, 6 t+); the member values are grabbed, the statistics are DERIVED
 - **re-run:** `python Tools/scripts/t3_fleet.py --check` → exit **0**, 9.4 s
-  - `E:\Modding\JC3-Batmobile\Working\Translation\T3_FLEET.md: 41 members over 156 vehicles`
+  - `E:\Modding\JustCause3\JC3-Batmobile\Working\Translation\T3_FLEET.md: 41 members over 156 vehicles`
   - `check ok`
 - **first line:** `# Translation fleet evidence (heavy class)`
 
 ### `FITS.md` — Tools/scripts/t1_fits.py
 
-- **reads:** E:/Modding/_gamedata/JC3grab, one `<member>` and `rigid_body.mass` per land vehicle
+- **reads:** E:/Modding/_shared/gamedata/JC3grab, one `<member>` and `rigid_body.mass` per land vehicle
 - **rule:** log-log least squares value = a * mass^b over the vehicles carrying both members, with R^2, n and the fleet min..max printed; a fit is DERIVED, and an R^2 near 0 is the file's own statement that the relation is not usable
 - **re-run:** `python Tools/scripts/t1_fits.py -o tmp/freebuff/scratch/FITS_recheck.md` → exit **0**, 4.1 s
-  - `FITS.md: 156 land vehicles, 19 members fitted, 5 usable (R2 >= 0.5) -> E:\Modding\JC3-Batmobile\tmp\freebuff\scratch\FITS_recheck.md`
+  - `FITS.md: 156 land vehicles, 19 members fitted, 5 usable (R2 >= 0.5) -> E:\Modding\JustCause3\JC3-Batmobile\tmp\freebuff\scratch\FITS_recheck.md`
 - **first line:** `# JC3 fleet relationships (T-1 evidence)`
 
 ## 2. The 96 OPEN rows, one by one
@@ -232,7 +232,7 @@ Each picks an input (a template block index, a target mass) rather than supplyin
 
 ## 5. UNKNOWNs
 
-- VOCABULARY.md's per-member ranges are aggregates whose raw value rows live outside the repo (E:/Modding/_gamedata/JC3grab); the aggregate is re-derivable only where that data is present (jc3grab.py check)
+- VOCABULARY.md's per-member ranges are aggregates whose raw value rows live outside the repo (E:/Modding/_shared/gamedata/JC3grab); the aggregate is re-derivable only where that data is present (jc3grab.py check)
 - no row in the seven files records a per-value hash, so 'file unchanged since the grab' rests on the producer's check, not on a value-level fingerprint
 
 ## 6. Files

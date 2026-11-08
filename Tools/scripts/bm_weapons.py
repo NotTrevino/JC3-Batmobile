@@ -65,7 +65,7 @@ WJSONL = os.path.join(ROOT, "Research", "JC3Grab", "WEAPONS.jsonl")
 WSHARED = os.path.join(ROOT, "Research", "JC3Grab", "WEAPONS_SHARED.json")
 INDEX = os.path.join(ROOT, "Research", "JC3Grab", "INDEX.jsonl")
 SIGDIFF = os.path.join(ROOT, "Research", "JC3Grab", "SIGNATURE_DIFF.json")
-APC = r"E:\Modding\_gamedata\JC3grab\epe_schema\apc_debug.xml"
+APC = r"E:\Modding\_shared\gamedata\JC3grab\epe_schema\apc_debug.xml"
 ADF = os.path.join(ROOT, "Tools", "Gibbed-patched", "Gibbed.JustCause3.ConvertAdf.exe")
 SCHEMA = 2
 WEP_DIR = "editor/entities/jc_weapons/06_vehicle/"
@@ -353,7 +353,7 @@ def tune_source(weapon: str) -> dict:
     path = os.path.join(W.WROOT, weapon, weapon + ".wtunec")
     if not os.path.exists(path):
         raise SystemExit(f"no decoded tune for {weapon} under {path} "
-                         f"(E:/Modding/_gamedata/JC3grab/weapons/, R10)")
+                         f"(E:/Modding/_shared/gamedata/JC3grab/weapons/, R10)")
     blob = open(path, "rb").read()
     h = sha1(blob)
     matches = [s for s in rec["sources"] if s["sha1"] == h]
@@ -717,7 +717,7 @@ def installer_text(doc: dict) -> str:
         "            Remove-Item -LiteralPath (Join-Path $D $f) -Force -ErrorAction SilentlyContinue",
         "        }",
         "        if ($GameDir -eq 'D:\\Games\\Just Cause 3') {",
-        "            & (Join-Path 'E:\\Modding\\JC3-Batmobile\\Builds\\test-091' 'install.ps1') "
+        "            & (Join-Path 'E:\\Modding\\JustCause3\\JC3-Batmobile\\Builds\\test-091' 'install.ps1') "
         "-Action Install",
         "        } else { Write-Host ('rehearsal on ' + $GameDir + ': test-091 re-install skipped') }",
         "    }",

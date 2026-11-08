@@ -6,7 +6,7 @@ sha256 `58352898e8aedabe48cd14843865dcf0e697a066ce52c9913df726aa955656ac`, PE ti
 recomputed on 2026-11-06 (`tmp/freebuff/bmsdk-port/pe_probe.py`).
 
 Installed SDK: BmSDK v0.21.0 (`Binaries\Win64\dinput8.dll`, `plugins\BmSDK.Host.asi`, `sdk\`,
-`BmGame\Scripts`), source at `E:\Modding\_tools\BmSDK-AK`.
+`BmGame\Scripts`), source at `E:\Modding\_shared\tools\BmSDK-AK`.
 
 **Verdict in one line:** the detour fails because `BaseAddress + 0x5B7220` is string data in *this*
 exe, not code — the installed image is a repacked build whose code lives in `.text1` and is
@@ -317,7 +317,7 @@ shipped-but-wrong `E9` stops being written into `.link` on every launch.
 
 ---
 
-## Evidence artifacts (all under `E:\Modding\JC3-Batmobile\tmp\freebuff\bmsdk-port\`)
+## Evidence artifacts (all under `E:\Modding\JustCause3\JC3-Batmobile\tmp\freebuff\bmsdk-port\`)
 
 | file | what it produced |
 |---|---|

@@ -50,9 +50,9 @@ sys.path.insert(0, HERE)
 import jc3hkx  # noqa: E402
 import jc3_physics_roles2 as R2  # noqa: E402
 
-FLEET = r"E:/Modding/_gamedata/JC3grab/**/*.physicsc"
+FLEET = r"E:/Modding/_shared/gamedata/JC3grab/**/*.physicsc"
 PARTS = os.path.join(ROOT, "Research", "JC3Grab", "PARTS_TABLE.jsonl")
-ENT_JSON = r"E:/Modding/_gamedata/JC3grab/hkx/out/*.json"
+ENT_JSON = r"E:/Modding/_shared/gamedata/JC3grab/hkx/out/*.json"
 MD = os.path.join(ROOT, "Research", "JC3Grab", "PHYSICS_ROLES6.md")
 JS = os.path.join(ROOT, "Research", "JC3Grab", "PHYSICS_ROLES6.json")
 
@@ -514,7 +514,7 @@ def render(d, s):
     A("Labels: **decoded** = read from bytes at a stated offset; **derived** = arithmetic on")
     A("decoded values with the rule given; **UNKNOWN** = not decoded, with what was tried.")
     A("")
-    A("Scope: all %d `.physicsc` files under `E:/Modding/_gamedata/JC3grab` (%d decoded, %d skipped),"
+    A("Scope: all %d `.physicsc` files under `E:/Modding/_shared/gamedata/JC3grab` (%d decoded, %d skipped),"
       % (s["fleet_files_matched"], s["fleet_files_decoded"], len(s["fleet_files_skipped"])))
     A("**%d constraint records** over %d bodies (%d of them with a decoded convex hull, %d with a"
       % (s["cinfos"], s["bodies"], s["hulls"], s["bodies_non_identity"]))

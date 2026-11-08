@@ -36,7 +36,7 @@ python Tools/scripts/remainder_sample_audit.py --write
 ```
 untagged 925 sampled 30 md_rows 925
 mismatches 0
-wrote E:\Modding\JC3-Batmobile\Research\BatmobileGrab\REMAINDER_SAMPLE_AUDIT.md (10028 bytes)
+wrote E:\Modding\JustCause3\JC3-Batmobile\Research\BatmobileGrab\REMAINDER_SAMPLE_AUDIT.md (10028 bytes)
 write exit=0
 ```
 

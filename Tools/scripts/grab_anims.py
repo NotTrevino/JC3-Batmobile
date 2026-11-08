@@ -18,7 +18,7 @@ promote to its `name` field.  This tool performs that join, then records:
 
 The key-frame tables are written outside the repository, as the card requires:
 
-  E:\\Modding\\_gamedata\\BmAKgrab\\anims\\keys\\<package>__<AnimSet>.json
+  E:\\Modding\\_shared\\gamedata\\BmAKgrab\\anims\\keys\\<package>__<AnimSet>.json
 
 Each track stores position (metres, PSK/UE3 frame) and rotation (quaternion and Euler XYZ
 in radians), or null where the PSA config says that component was not exported.  No value
@@ -28,7 +28,7 @@ read from the `.upk` or the PSA header.
 Outputs:
   Research/BatmobileGrab/ANIMATIONS.json   the machine source
   Research/BatmobileGrab/ANIMATIONS.md     the readable record
-  E:\\Modding\\_gamedata\\BmAKgrab\\anims\\keys\\*.json  per-bone keyframes (outside the repo)
+  E:\\Modding\\_shared\\gamedata\\BmAKgrab\\anims\\keys\\*.json  per-bone keyframes (outside the repo)
 
 Usage:
   python Tools/scripts/grab_anims.py --write
@@ -58,7 +58,7 @@ OUT_MD = GRAB / "ANIMATIONS.md"
 
 GAME = Path(os.environ.get("BMAK_GAME_DIR",
                            r"E:\Games\Batman - Arkham Knight\BmGame\CookedPCConsole"))
-ANIM_ROOT = Path(os.environ.get("BMAK_ANIM_DIR", r"E:\Modding\_gamedata\BmAKgrab\anims"))
+ANIM_ROOT = Path(os.environ.get("BMAK_ANIM_DIR", r"E:\Modding\_shared\gamedata\BmAKgrab\anims"))
 KEY_DIR = ANIM_ROOT / "keys"
 
 PACKAGES = (

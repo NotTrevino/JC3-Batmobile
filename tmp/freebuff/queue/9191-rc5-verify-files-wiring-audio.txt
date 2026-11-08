@@ -1,6 +1,6 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-verify-files-wiring-audio.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/rc5-verify-files-wiring-audio.md
 ONLY: freebuff
 EST: 55
 BRIEF: hand-written 2026-11-08
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-merge-release-candidate.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/rc5-merge-release-candidate.md
 Verification group A on Builds/bm-RC5, using copies of the RC4 gate scripts (v01_rc4.py, v03_wiring_rc5.py from 9002, v04_audio_rc4.py with a v04 loop check that now covers the repaired loop) so that the RC4 scripts stay frozen: V-01 the file gates (tree pins read from the bytes via rc4_pins.py, toc, internal offsets, budget, aafdiff, ledger, handling readback, spec, parts, adf, epe, readback), V-03 wiring (G1 to G5, with the fire refs and asset paths now resolved) and V-04 audio (loudness, loop wrap for all three loops, events resolved, length, decode, tail). Write one machine record under Builds/bm-RC5/verify and a report with a table gate by gate in the form of reports/operator-digest-verify-chain-rc4.md: figure, verdict, report path. Every red stays red and is named with its owning branch brief; do not edit a gate to make it pass. Say how each of the four RC4 reds (V-03 G2, V-03 G3, V-01 tree, V-04 loop wrap) fared.

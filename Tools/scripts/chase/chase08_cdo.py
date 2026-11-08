@@ -21,7 +21,7 @@ Read-only: opens the shipped package, writes nothing under the game folder.
 Usage:
   python Tools/scripts/chase/chase08_cdo.py --dump
   python Tools/scripts/chase/chase08_cdo.py --scan
-  python Tools/scripts/chase/chase08_cdo.py --dump --json E:/Modding/_gamedata/BmAKgrab/chase/value_cdo_08.json
+  python Tools/scripts/chase/chase08_cdo.py --dump --json E:/Modding/_shared/gamedata/BmAKgrab/chase/value_cdo_08.json
 """
 import argparse
 import json

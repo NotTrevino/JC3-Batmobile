@@ -118,7 +118,7 @@ Batmobile's tail falls away faster than the proportional length map allows.
 ## Commands run for the result, verbatim
 
 ```
-cd /e/Modding/JC3-Batmobile && uv run --with numpy python Tools/scripts/t_wld11b.py --check; echo "EXIT=$?"
+cd /e/Modding/JustCause3/JC3-Batmobile && uv run --with numpy python Tools/scripts/t_wld11b.py --check; echo "EXIT=$?"
 json identical False  md identical False
 areas 3  vertices 22  vertices pass O-1 16  areas pass all 0
 CHECK FAIL
@@ -129,7 +129,7 @@ indices refer to vertex order, so O-2/O-3 sampled the wrong points. Fixed by wri
 `j -> xyz` map and emitting them in vertex order; the numbers above are after the fix.)
 
 ```
-cd /e/Modding/JC3-Batmobile && uv run --with numpy python Tools/scripts/t_wld11b.py --write
+cd /e/Modding/JustCause3/JC3-Batmobile && uv run --with numpy python Tools/scripts/t_wld11b.py --write
 areas 3  vertices 22  indices exist 22/22
   front_area             O-1 6/6  O-2 fail  O-3 pass  -> candidate fails: O-2
   front_signature_area   O-1 6/6  O-2 fail  O-3 pass  -> candidate fails: O-2
@@ -141,9 +141,9 @@ EXIT=0
 Array-capacity probe against the donor entity (read-only):
 
 ```
-cd /e/Modding/JC3-Batmobile && uv run python - <<'PY'
+cd /e/Modding/JustCause3/JC3-Batmobile && uv run python - <<'PY'
 import json,re
-p=r"E:/Modding/_gamedata/JC3grab/entities/v0300_car_kensington_sportsmuscle__v0300_car_kensington_sportsmuscle_civilian_01.ee.json"
+p=r"E:/Modding/_shared/gamedata/JC3grab/entities/v0300_car_kensington_sportsmuscle__v0300_car_kensington_sportsmuscle_civilian_01.ee.json"
 d=json.load(open(p,encoding="utf-8"))
 sa=[m for m in d["modules"] if str(m.get("type"))=="StuntAreas"][0]
 paths=[r["path"] for r in sa["rows"]]
@@ -164,7 +164,7 @@ EXIT=0
 Final run (capacity wired into the tool so `--check` guards it):
 
 ```
-cd /e/Modding/JC3-Batmobile && uv run --with numpy python Tools/scripts/t_wld11b.py --write; echo "EXIT_WRITE=$?"; uv run --with numpy python Tools/scripts/t_wld11b.py --check; echo "EXIT_CHECK=$?"
+cd /e/Modding/JustCause3/JC3-Batmobile && uv run --with numpy python Tools/scripts/t_wld11b.py --write; echo "EXIT_WRITE=$?"; uv run --with numpy python Tools/scripts/t_wld11b.py --check; echo "EXIT_CHECK=$?"
 areas 3  vertices 22  indices exist 22/22
   front_area             O-1 6/6  O-2 fail  O-3 pass  -> candidate fails: O-2
   front_signature_area   O-1 6/6  O-2 fail  O-3 pass  -> candidate fails: O-2

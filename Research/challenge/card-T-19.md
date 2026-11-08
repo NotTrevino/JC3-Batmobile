@@ -6,7 +6,7 @@ HUD-1/2`, §12 line 1328, `MODLOG.md` §"T-19 · HUD translation — intended ch
 translation — done". Outputs examined: `Working/Translation/T6_HUD_CAMERA.md` §1a (lines 31–83, between
 `<!-- T19-HUD-BEGIN/END -->`), `Working/Translation/t19_hud.json`, `Tools/scripts/t19_hud.py`,
 `Research/JC3Grab/JC3_HUD_WEAPONS.json` / `.md` (G2-25), `Research/BatmobileGrab/HUD_INTERFACES.json`,
-and the decoded movie at `E:/Modding/_JC3grab/hud/dec/scripts` (260 scripts).
+and the decoded movie at `E:/Modding/JustCause3/_grab/hud/dec/scripts` (260 scripts).
 
 The card's gate, re-run today (exit 0):
 
@@ -74,7 +74,7 @@ should say.
 **Test 2 — search the rest of the movie for a weapon heat instrument.**
 
 ```
-> cd E:/Modding/_JC3grab/hud/dec/scripts && grep -n "thermometer|WeaponTemp|MCI_therm" \
+> cd E:/Modding/JustCause3/_grab/hud/dec/scripts && grep -n "thermometer|WeaponTemp|MCI_therm" \
       hud.as hud_code/mech/mech_weapon.as hud_code/mech/mech_weapons.as
 hud_code/mech/mech_weapon.as:16:      public var MCI_thermometer:MovieClip;
 hud_code/mech/mech_weapon.as:131:               this.MCI_thermometer.gotoAndPlay("WeaponTemp3");

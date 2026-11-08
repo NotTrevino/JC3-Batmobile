@@ -1,6 +1,6 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-booster-mesh.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/rc5-booster-mesh.md
 ONLY: freebuff
 EST: 55
 BRIEF: hand-written 2026-11-08
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-effect-writer-payloads.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/boost-selector-and-moving-parts-plans-v2.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/rc5-effect-writer-payloads.md, E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/boost-selector-and-moving-parts-plans-v2.md
 Rank two: the booster. BmAK has 18 nozzle bones on a ring at z 2.989 m with a radius of about 34 cm, a deploy pose Batmobile_V2_Jet_Boost of 0.600 s over 19 keys and a close of 0.833 s over 26 keys (reports/booster-mesh-and-flame-plan.md, reports/weapon-bay-animation-plan.md); JC3 has no nozzle part (zero hits for nozzle in the 17 MB archive index), so the ring mesh must be authored. Author it from the BmAK geometry through the render-mesh route used for Builds/bm-RC4-appearance (appearance_bake.py, assembly.json), bind it as a new movable part in a private parts module copy (Tools/scripts/bm_parts_v2.py is the model), drive the deploy from the nitro state with the nearest animation driver named in the v2 plan, and attach the plume from the effects branch. Script Tools/scripts/rc5_booster.py (--write, --check), tree Builds/bm-RC5-booster. Done line: 18 nozzle instances at the decoded positions within 1 cm, the part within the model budget of Tools/scripts/bm_budget.py (4,915 KB limit), and the deploy and close times stored exactly. Register the tree with a branch record under Working/RC5/branches/ (format in reports/rc5-scaffold-and-merge-script.md); never edit a bm-RC4 tree.

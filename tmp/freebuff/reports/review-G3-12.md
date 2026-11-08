@@ -13,7 +13,7 @@ I did not write this card and changed nothing outside this report.
 ## 1. `--check` output (verbatim)
 
 ```
-$ cd /e/Modding/JC3-Batmobile && uv run --with numpy --with pillow --with pefile --with capstone python Tools/scripts/decode_depth.py --check; echo "CHECK_EXIT=$?"
+$ cd /e/Modding/JustCause3/JC3-Batmobile && uv run --with numpy --with pillow --with pefile --with capstone python Tools/scripts/decode_depth.py --check; echo "CHECK_EXIT=$?"
 ok   the bundle's own directory gives the 566 census exactly (566 files, .ctunec 17, .ddsc 116, .effc 74, .epe 1, .etunec 2, .fmod_guids 1, .ftunec 1, .lod 59, .pfxc 4, .physicsc 1, .rbm 198, .stringlookup 1, .trim 60, .vmodc 31)
 ok   every file has a grade and a decoder, and each decoder/oracle pair is the one its extension gets
 ok   the grades sum to the file count (441 + 121 + 4 = 566)
@@ -28,8 +28,8 @@ ok   the 16 classes are all accounted for: every one has a grade, and the only F
 ok   every partial/named-only file is in the open-item list, tied to a requirement (125 open items, 5 requirements)
 ok   no FULL grade rests on a name alone: for every extension that has FULL files, the decoder and the oracle are both named (never `none`)
 ok   the 19 reference entries (offset 0) are read from the archives and are not graded as embedded bytes
-ok   E:\Modding\JC3-Batmobile\Research\JC3Grab\DECODE_DEPTH.md is byte-identical to a fresh census
-ok   E:\Modding\JC3-Batmobile\Research\JC3Grab\DECODE_DEPTH.json is byte-identical to a fresh census
+ok   E:\Modding\JustCause3\JC3-Batmobile\Research\JC3Grab\DECODE_DEPTH.md is byte-identical to a fresh census
+ok   E:\Modding\JustCause3\JC3-Batmobile\Research\JC3Grab\DECODE_DEPTH.json is byte-identical to a fresh census
 
 OK: 14/14 checks, md identical, json identical
 CHECK_EXIT=0

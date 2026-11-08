@@ -1,7 +1,7 @@
 """Walk 112 inline TRAN entries; find FSB indices / WAIT refs / names."""
 import struct
 
-P = r"E:\Modding\JC3-Batmobile\Working\Audio\jc3bank\sound\fmod_banks\vehicles.bank"
+P = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\jc3bank\sound\fmod_banks\vehicles.bank"
 d = open(P, "rb").read()
 o = 0x34A0A68
 (cnt,) = struct.unpack_from("<I", d, o)

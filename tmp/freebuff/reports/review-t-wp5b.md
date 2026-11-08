@@ -18,7 +18,7 @@ attached to, and no file under `E:/Games` was written (test ban).
 The check the report names, verbatim:
 
 ```
-$ cd "E:/Modding/JC3-Batmobile" && PYTHONIOENCODING=utf-8 uv run python Tools/scripts/t_wp5b.py --check; echo "CHECK_EXIT=$?"
+$ cd "E:/Modding/JustCause3/JC3-Batmobile" && PYTHONIOENCODING=utf-8 uv run python Tools/scripts/t_wp5b.py --check; echo "CHECK_EXIT=$?"
 ```
 
 ```
@@ -56,7 +56,7 @@ My own reader (`tmp/freebuff/scratch/twp5b_review.py`, written for this review, 
 `upk_read.py`):
 
 ```
-$ cd "E:/Modding/JC3-Batmobile" && PYTHONIOENCODING=utf-8 uv run python tmp/freebuff/scratch/twp5b_review.py
+$ cd "E:/Modding/JustCause3/JC3-Batmobile" && PYTHONIOENCODING=utf-8 uv run python tmp/freebuff/scratch/twp5b_review.py
 ```
 
 ```
@@ -119,7 +119,7 @@ Secondary source for the member *names* and the 16 count (the package stores sim
 offset-only, so the names cannot come from the package):
 
 ```
-$ F="E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated/BmGame/RBatmobileEMP.g.cs"; grep -c "Property:" "$F"
+$ F="E:/Modding/_shared/tools/BmSDK-AK/src/BmSDK/Generated/BmGame/RBatmobileEMP.g.cs"; grep -c "Property:" "$F"
 16
 215:    /// FloatProperty: Range
 219-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 2396); }

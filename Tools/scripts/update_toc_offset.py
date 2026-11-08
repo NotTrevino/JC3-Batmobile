@@ -5,7 +5,7 @@ import sys
 import os
 
 # Path to the .toc file
-file_path = r'E:\Modding\JC3-Batmobile\Builds\test-025\v0300_car_kensington_sportsmuscle_civilian_01.ee.toc'
+file_path = r'E:\Modding\JustCause3\JC3-Batmobile\Builds\test-025\v0300_car_kensington_sportsmuscle_civilian_01.ee.toc'
 
 # Open the .toc file in binary mode
 with open(file_path, 'rb') as f:

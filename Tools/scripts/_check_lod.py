@@ -14,7 +14,7 @@ import os
 import re
 import struct
 
-ROOT = ("E:/Modding/JC3-Batmobile/Builds/test-003/aaf")
+ROOT = ("E:/Modding/JustCause3/JC3-Batmobile/Builds/test-003/aaf")
 
 # ---------------------------------------------------------------- 1. version tag
 print("=== 1. Havok version tag across all .physicsc in the donor ===")

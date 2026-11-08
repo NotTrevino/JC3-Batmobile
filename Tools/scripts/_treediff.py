@@ -8,8 +8,8 @@ def snap(root):
             out[os.path.relpath(p, root).replace(os.sep, "/")] = os.path.getsize(p)
     return out
 
-a059 = snap(r"E:\Modding\JC3-Batmobile\Builds\test-059\aaf")
-a062 = snap(r"E:\Modding\JC3-Batmobile\Builds\test-062\aaf")
+a059 = snap(r"E:\Modding\JustCause3\JC3-Batmobile\Builds\test-059\aaf")
+a062 = snap(r"E:\Modding\JustCause3\JC3-Batmobile\Builds\test-062\aaf")
 k59, k62 = set(a059), set(a062)
 print("059 files:", len(k59), "bytes:", sum(a059.values()))
 print("062 files:", len(k62), "bytes:", sum(a062.values()))

@@ -1,7 +1,7 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/pilot-cards-straight-line-takes.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/pilot-cards-straight-line-takes.md
 ONLY: freebuff
 EST: 50
 BRIEF: hand-written 2026-11-08
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-telemetry-take-analyser.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-merged-handling-cells.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-pilot-cards-refresh.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/verify-telemetry-take-analyser.md, E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/verify-merged-handling-cells.md, E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/rc5-pilot-cards-refresh.md
 Convert the straight-line driving takes of tmp/freebuff/reports/pilot-card-driving-takes.md (sections 5.1, 5.2, 5.5, 5.6) into single-page cards in Working/Q/PILOT/ following CARD_FORMAT.md exactly: A2_TOPSPEED.md, A5_BRAKING.md, A9_BOOST.md, A1_LAUNCH.md. Each card must read its numbers from the telemetry file (path %LOCALAPPDATA%/jc3-batmobile-hook/telemetry.jsonl) via Tools/scripts/telemetry_takes.py instead of screenshots, copy the file to Working/Q/caps/<take>/ after every repeat, run three repeats, and print the pass band (A1 15.6-17.2 s, A2 240-294 km/h and +32.4 to 43.2 with boost, A5 101.5-110.2 m, A9 6.00 m/s^2 plus or minus 25 percent, all re-read from Working/Q/PREDICTIONS.md on the day). Each card states the one observation, the pass rule, and the fail route: write a fix-card line in Working/Q/FIXES.md naming the first suspect cell. Use the setup cards LAUNCH, LOAD_SAVE, SPAWN_BATMOBILE, ENTER_EXIT, AIRFIELD, RECORD and KILL by reference. Done check: each card fits one screen and every command cites its source file; a lint script lists none missing.
-Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.
+Shared rules: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

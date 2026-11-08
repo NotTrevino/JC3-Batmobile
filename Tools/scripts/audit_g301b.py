@@ -702,7 +702,7 @@ def build() -> str:
     a("## 8. Reproduce")
     a("")
     a("```bash")
-    a("cd \"E:/Modding/JC3-Batmobile\"")
+    a("cd \"E:/Modding/JustCause3/JC3-Batmobile\"")
     a("python Tools/scripts/audit_g301b.py --write   # writes this file")
     a("python Tools/scripts/audit_g301b.py --check   # re-derives, byte-compares, re-runs checks")
     a("```")

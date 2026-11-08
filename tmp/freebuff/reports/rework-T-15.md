@@ -208,7 +208,7 @@ card changed only `T-MD2`/`T-MD4`; the rebuild carried those rows as that sessio
 
 ## Untouched
 
-`Research/**` (G1/G2 own those records), `Builds/`, `E:/Modding/_JC3grab`, `E:/Modding/_BmAKgrab`,
+`Research/**` (G1/G2 own those records), `Builds/`, `E:/Modding/JustCause3/_grab`, `E:/Modding/ArkhamKnight/_grab`,
 `D:/Games`, every game file, dropzone and save, every shared game module, git (no commit, no push).
 
 ---

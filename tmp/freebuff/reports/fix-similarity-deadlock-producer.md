@@ -89,7 +89,7 @@ AFTER targets with no artifact and no producer: 7
   9559-hud-lock-markers-build.txt -> …/reports/lock-markers-spec.md
   9640-other-name-sites-hud-map-notifications.txt -> …/reports/radar-icon-set-extract.md
 
-8906 AFTER line      : E:/Modding/JC3-Batmobile/tmp/freebuff/reports/jeb-qwen-fair-score-verdict.md
+8906 AFTER line      : E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/jeb-qwen-fair-score-verdict.md
 producer of that path: ['8863-rewrite.txt']
 old path producer now: None
 ```
@@ -145,6 +145,6 @@ EOF
 
 - Delete `Working/Queue/rewrites/8863-rewrite.txt` and `Working/Queue/rewrites/8863-rewrite-overlap.json`.
 - Delete `Tools/scripts/trigram_overlap.py`.
-- Put `8906-smart-search-route-after-jeb.txt` back: `AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/jeb-qwen-fair-test.md`
+- Put `8906-smart-search-route-after-jeb.txt` back: `AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/jeb-qwen-fair-test.md`
   and the body clause `unless reports/jeb-qwen-fair-test.md says otherwise`.
 - Nothing in `tmp/freebuff/low/` was modified, so no restore step is needed there.

@@ -42,7 +42,7 @@ GAME = Path("E:/Games/Batman - Arkham Knight")
 CONFIG = GAME / "BmGame" / "Config"
 START_INI = CONFIG / "PC" / "PCInput.ini"
 UPK = GAME / "BmGame" / "CookedPCConsole" / "BmGame.upk"
-OUT_DIR = Path("E:/Modding/JC3-Batmobile/Research/BatmobileGrab")
+OUT_DIR = Path("E:/Modding/JustCause3/JC3-Batmobile/Research/BatmobileGrab")
 OUT_MD = OUT_DIR / "CONTROLS.md"
 OUT_JSON = OUT_DIR / "CONTROLS.json"
 

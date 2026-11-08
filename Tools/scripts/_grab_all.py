@@ -4,7 +4,7 @@ Usage: python _grab_all.py
 """
 import glob, hashlib, json, os, struct
 
-A = r"E:\Modding\JC3-Batmobile\Working\Audio"
+A = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio"
 CK = r"E:\Games\Batman - Arkham Knight\BmGame\CookedPCConsole"
 
 def inc_name(n):
@@ -18,7 +18,7 @@ def inc_name(n):
             or (lo.startswith("pso_") and "batmobile" in lo))
 
 pairs = [(l.split("\t")[0].strip().upper(), l.split("\t")[1].strip())
-         for l in open(r"E:\Modding\JC3-Batmobile\Research\Arkham Knight SFX\Arkham Knight SFX\batman_bnk\bnk\hashlist.txt",
+         for l in open(r"E:\Modding\JustCause3\JC3-Batmobile\Research\Arkham Knight SFX\Arkham Knight SFX\batman_bnk\bnk\hashlist.txt",
                        encoding="utf-8", errors="replace").read().splitlines() if "\t" in l]
 want = {h: n for h, n in pairs if inc_name(n)}
 print("wanted hashes:", len(want))

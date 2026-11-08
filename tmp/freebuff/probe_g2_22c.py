@@ -13,7 +13,7 @@ import collections
 sys.path.insert(0, "Tools/scripts")
 from rbmhdr import hash_jenkins  # noqa: E402
 
-EPE = r"E:/Modding/_JC3grab/wiring/epe"
+EPE = r"E:/Modding/JustCause3/_grab/wiring/epe"
 
 
 def parse(path):

@@ -29,7 +29,7 @@ sys.path.insert(0, os.path.join(ROOT, "Tools", "scripts"))
 import jc3adf  # noqa: E402
 import jc3hkx  # noqa: E402
 
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/_shared/gamedata/JC3grab")
 TANK = os.path.join(RAW, "tmp", "mediumtank_vehicle_parts.vmodc")
 APC = os.path.join(RAW, "tmp", "apc_vehicle_parts.vmodc")
 TURRET = os.path.join(ROOT, "Research", "JC3Grab", "TURRET.json")

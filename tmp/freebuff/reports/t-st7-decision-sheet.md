@@ -66,7 +66,7 @@ B-as-labelled.
 ## 3. Verbatim commands
 
 ```
-$ cd E:/Modding/JC3-Batmobile && grep -n "T-ST7\|T-FX3\|T-WP13\|T-WP4\|T-S6" Working/Translation/BLOCKED_PROPOSALS.md
+$ cd E:/Modding/JustCause3/JC3-Batmobile && grep -n "T-ST7\|T-FX3\|T-WP13\|T-WP4\|T-S6" Working/Translation/BLOCKED_PROPOSALS.md
 3:STATUS: partial - 17 blocked rows enumerated (13 ledger + 4 T6 = STATUS.md's 17 of 180), the first six tested against the repo: 1 unblocked with evidence (T-FX3), 1 reason refuted and needs a decision (T-ST7), 1 partially unblocked (T-WP4), 3 still blocked (T-AU3, T-S6, T-AU5).
 12:| 2 | `T-FX3` | T-2b | nothing structural: JC3's `usage_effects` carrier and the `EngineNitro` usage are decoded; what is missing is a decision on which usage raises the flame |
 13:| 3 | `T-S6` | T-3 | BmAK's numeric stiffness/damping in a known unit - no project file carries one - and JC3 has no droop member to carry `BM*MaxDroop` |

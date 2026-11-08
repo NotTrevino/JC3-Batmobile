@@ -56,7 +56,7 @@ the check do match. The check's *inputs* are the problem, not its assertions.
 
 | value in the doc | where verified |
 |---|---|
-| `InitVehicleWeapons` **9** arguments with those defaults; `UpdateVehicleWeapons` **6** (`JC3_HUD_WEAPONS.md:14-15`, §1-2) | `E:/Modding/_JC3grab/hud/dec/scripts/hud.as:5030` and `:5160` — the signatures match the doc character for character (arg names, types and defaults) |
+| `InitVehicleWeapons` **9** arguments with those defaults; `UpdateVehicleWeapons` **6** (`JC3_HUD_WEAPONS.md:14-15`, §1-2) | `E:/Modding/JustCause3/_grab/hud/dec/scripts/hud.as:5030` and `:5160` — the signatures match the doc character for character (arg names, types and defaults) |
 | vehicle HUD has **2 slots**, and `E_NUM_WEAPON_SLOTS = 7` is the on-foot wheel (`JC3_HUD_WEAPONS.md` §3) | `hud.as:4951` builds `m_WeaponsArray` from exactly `MCI_vehicle_weapons0, MCI_vehicle_weapons1`; `hud.as:429` `E_NUM_WEAPON_SLOTS:* = 7`, used only by the 7-slot loops at `:5426`/`:5536` |
 | the only call sites are **2 demo calls inside `TestConstructor`** (`JC3_HUD_WEAPONS.md` §8) | `grep -rn "InitVehicleWeapons\|UpdateVehicleWeapons"` over all 260 `.as` files: definitions plus `hud.as:7535/7536` only, and the enclosing function is `TestConstructor` at `hud.as:7394` |
 | lock-on is **one POI**, `POI_TYPE_LOCK_ON_TARGET = 21`, rotated once per **1.5 s** | `hud.as:1011` `POI_TYPE_LOCK_ON_TARGET:int = 21`; `hud_code/poi.as:75` `LOCK_ON_TARGET_ROTATION_TIME:Number = 1.5` |

@@ -1,7 +1,7 @@
 # test-061: STATMAP rpm diagnostic (max_rpm 14600->6000, all else = 060).
 # Base = test-059 aaf (060 tree). Repack + internalize (same 5 as 059) + bank copy.
 $ErrorActionPreference = 'Stop'
-$root = 'E:\Modding\JC3-Batmobile'
+$root = 'E:\Modding\JustCause3\JC3-Batmobile'
 $py = 'uv'
 $g  = "$root\Tools\Gibbed"
 $ee = 'v0300_car_kensington_sportsmuscle_civilian_01.ee'
@@ -43,13 +43,13 @@ param([ValidateSet('Install','Rollback060','Rollback059','Status')][string]`$Act
 `$EeSha = '$eeH'
 `$TocSha = '$tocH'
 `$BankSha = '$bankH'
-`$B = 'E:\Modding\JC3-Batmobile\Builds\_shelved-061maxrpm'
+`$B = 'E:\Modding\JustCause3\JC3-Batmobile\Builds\_shelved-061maxrpm'
 function DepBank { `$d = Split-Path -Parent `$BankT; if (-not (Test-Path -LiteralPath `$d)) { New-Item -ItemType Directory -Force -Path `$d | Out-Null }; Copy-Item -LiteralPath (Join-Path `$B 'vehicles.bank') -Destination `$BankT -Force }
 function UnBank { if (Test-Path -LiteralPath `$BankT) { Remove-Item -LiteralPath `$BankT -Force; Write-Host 'removed dropzone vehicles.bank' } }
 switch (`$Action) {
     'Install' { Copy-Item -LiteralPath (Join-Path `$B 'v0300_car_kensington_sportsmuscle_civilian_01.ee') -Destination `$EeT -Force; Copy-Item -LiteralPath (Join-Path `$B 'v0300_car_kensington_sportsmuscle_civilian_01.ee.toc') -Destination (`$EeT + '.toc') -Force; DepBank; Write-Host 'deployed test-061: 060 + max_rpm 6000' }
-    'Rollback060' { powershell -NoProfile -ExecutionPolicy Bypass -File 'E:\Modding\JC3-Batmobile\Builds\test-060\install.ps1' -Action Install }
-    'Rollback059' { powershell -NoProfile -ExecutionPolicy Bypass -File 'E:\Modding\JC3-Batmobile\Builds\test-060\install.ps1' -Action Rollback059 }
+    'Rollback060' { powershell -NoProfile -ExecutionPolicy Bypass -File 'E:\Modding\JustCause3\JC3-Batmobile\Builds\test-060\install.ps1' -Action Install }
+    'Rollback059' { powershell -NoProfile -ExecutionPolicy Bypass -File 'E:\Modding\JustCause3\JC3-Batmobile\Builds\test-060\install.ps1' -Action Rollback059 }
     'Status' {
         `$e = if (Test-Path -LiteralPath `$EeT) { (Get-FileHash -LiteralPath `$EeT).Hash } else { 'none' }
         `$t = if (Test-Path -LiteralPath (`$EeT + '.toc')) { (Get-FileHash -LiteralPath (`$EeT + '.toc')).Hash } else { 'none' }

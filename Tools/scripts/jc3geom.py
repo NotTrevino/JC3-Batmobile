@@ -50,7 +50,7 @@ Seven decoders, each with its own oracle:
 Outputs:
   Research/JC3Grab/GEOMETRY.jsonl    one row per mesh: counts, materials, decode status
   Research/JC3Grab/GEOMETRY.md       fleet summary (generated)
-  E:/Modding/_gamedata/JC3grab/geom/<slug>.json + .bin   per entity: mesh records and payload
+  E:/Modding/_shared/gamedata/JC3grab/geom/<slug>.json + .bin   per entity: mesh records and payload
                                    (positions as float32 x3, indices as uint16;
                                     raw block bytes are kept in the .bin too)
 
@@ -75,7 +75,7 @@ from eetoc import unaaf, sarc_dir  # noqa: E402
 import rbm_geom  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(HERE))
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/_shared/gamedata/JC3grab")
 OUT = os.path.join(ROOT, "Research", "JC3Grab")
 GEOM = os.path.join(RAW, "geom")
 

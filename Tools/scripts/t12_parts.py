@@ -7,7 +7,7 @@ Reads the grab evidence and regenerates `Working/Translation/T8_PARTS.{md,json}`
                                                           moved bones with per-bone degrees
           Research/BatmobileGrab/BONES.json        G1-11  bind pose + `pivot_jc3_m` per bone
           Research/BatmobileGrab/POSES.json        G1-12  pursuit -> battle deltas
-          E:/Modding/_gamedata/BmAKgrab/anims/keys/*.json   G1-10  per-bone key frames (game data, outside repo)
+          E:/Modding/_shared/gamedata/BmAKgrab/anims/keys/*.json   G1-10  per-bone key frames (game data, outside repo)
     JC3   Research/JC3Grab/MOVING_PARTS.json       G2-14  behaviour -> channel, variable, proof
           Research/JC3Grab/TURRET.json             G2-13  carrier hinge: axis, min/max deg, damage type
           Research/JC3Grab/DOORS.json              G2-15  door answers, per-part hinges
@@ -52,7 +52,7 @@ ROOT = os.path.dirname(os.path.dirname(HERE))
 BMAK = os.path.join(ROOT, "Research", "BatmobileGrab")
 JC3 = os.path.join(ROOT, "Research", "JC3Grab")
 TRANS = os.path.join(ROOT, "Working", "Translation")
-KEYS = os.environ.get("BMAK_KEYS", r"E:/Modding/_gamedata/BmAKgrab/anims/keys")
+KEYS = os.environ.get("BMAK_KEYS", r"E:/Modding/_shared/gamedata/BmAKgrab/anims/keys")
 MANIFEST = os.path.join(ROOT, "Working", "Appearance", "build_parts", "parts_manifest.json")
 SPEC = os.path.join(TRANS, "T8_PARTS.json")
 MD = os.path.join(TRANS, "T8_PARTS.md")
@@ -755,7 +755,7 @@ def render_md(d: dict) -> str:
           "python Tools/scripts/t12_parts.py --check   # Done-when gate",
           "python Tools/scripts/t12_parts.py dump rows|parts",
           "```", "",
-          "Key frames are read from `E:/Modding/_gamedata/BmAKgrab/anims/keys/` (game data, outside the",
+          "Key frames are read from `E:/Modding/_shared/gamedata/BmAKgrab/anims/keys/` (game data, outside the",
           "repo, R10). `T8_PARTS.json` stays a valid `bat_assemble.py --parts` spec: `parts` is",
           "unchanged, the behaviour rows are added beside it.", ""]
     return "\n".join(L)

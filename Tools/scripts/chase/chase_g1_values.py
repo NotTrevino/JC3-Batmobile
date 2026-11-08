@@ -34,7 +34,7 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(HERE)))
 OUT = os.path.join(ROOT, "Research", "BatmobileGrab", "chase")
-GRAB = os.path.join(r"E:\Modding\_gamedata\BmAKgrab", "chase")
+GRAB = os.path.join(r"E:\Modding\_shared\gamedata\BmAKgrab", "chase")
 EXE = r"E:\Games\Batman - Arkham Knight\Binaries\Win64\BatmanAK.exe"
 OBJECTS = os.path.join(ROOT, "Research", "BatmobileGrab", "objects.jsonl")
 OFFSETS = os.path.join(ROOT, "Research", "BatmobileGrab", "BMSDK_OFFSETS.json")

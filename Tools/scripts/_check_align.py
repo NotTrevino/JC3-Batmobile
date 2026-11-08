@@ -10,12 +10,12 @@ cause.
 import struct
 import sys
 
-sys.path.insert(0, r"E:\Modding\JC3-Batmobile\Tools\scripts")
+sys.path.insert(0, r"E:\Modding\JustCause3\JC3-Batmobile\Tools\scripts")
 import rbm_geom as R  # noqa: E402
 
-VAN = ("E:/Modding/JC3-Batmobile/Builds/test-003/aaf/models/jc_vehicles/01_land/"
+VAN = ("E:/Modding/JustCause3/JC3-Batmobile/Builds/test-003/aaf/models/jc_vehicles/01_land/"
        "v0300_car_kensington_sportsmuscle/sportsmuscle_body_lod1.rbm")
-FIN = "E:/Modding/JC3-Batmobile/Builds/test-013/body_lod1_finned.rbm"
+FIN = "E:/Modding/JustCause3/JC3-Batmobile/Builds/test-013/body_lod1_finned.rbm"
 
 
 def payload_offsets(enc, blk):

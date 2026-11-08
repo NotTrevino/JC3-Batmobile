@@ -89,10 +89,10 @@ Not touched: `Working/Entity/bm_epe_edits.json`, `Working/Translation/T_ROWS.jso
 1. Reading the brief's material and the toolchain:
 
 ```
-$ cd /e/Modding/JC3-Batmobile && ls -la Working/Translation/ ... Working/Appearance/build_parts
+$ cd /e/Modding/JustCause3/JC3-Batmobile && ls -la Working/Translation/ ... Working/Appearance/build_parts
 (... 80 .rbm parts incl. body_lod1.rbm, assembly.json, T15_WORLD.md 18256 B, t15_world.json 42666 B)
 
-$ ls /e/Modding/_gamedata/JC3grab/
+$ ls /e/Modding/_shared/gamedata/JC3grab/
 audio b13 ... entities ... geom ... hkx ... phys ...
 ```
 
@@ -149,7 +149,7 @@ Builds/bm-009/aaf/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/s
 5. The shipped tool, write and check:
 
 ```
-$ cd /e/Modding/JC3-Batmobile && uv run --with numpy python Tools/scripts/t_wld11.py --write
+$ cd /e/Modding/JustCause3/JC3-Batmobile && uv run --with numpy python Tools/scripts/t_wld11.py --write
 areas 3  vertices 22  indices exist 22/22
 stored pass 0  mapped pass 4  inside stored 11  inside mapped 0
 O-1 FAIL  pool 15

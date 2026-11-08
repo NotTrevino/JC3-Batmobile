@@ -3,7 +3,7 @@ import os, wave
 import numpy as np
 
 for tag in ["EC2FD42B", "E7BD5AD0"]:
-    w = wave.open(r"E:\Modding\JC3-Batmobile\Working\Audio\hashid\%s.wav" % tag, "rb")
+    w = wave.open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\hashid\%s.wav" % tag, "rb")
     nch, sw, fr, nf = w.getnchannels(), w.getsampwidth(), w.getframerate(), w.getnframes()
     a = np.frombuffer(w.readframes(nf), dtype=np.int16).astype(np.float64).reshape(-1, nch).mean(axis=1)
     w.close()

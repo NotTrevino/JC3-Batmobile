@@ -621,7 +621,7 @@ auditing "T-14's rows" gets 28.
   caches.
 * No game file, archive, save, build or shared module was touched; nothing was installed into
   `D:\Games`; no game was launched; nothing was committed.
-* The raw decoded corpus (`E:\Modding\_JC3grab\`) and the BmAK packages were not re-decoded; every
+* The raw decoded corpus (`E:\Modding\JustCause3\_grab\`) and the BmAK packages were not re-decoded; every
   test uses the records the card itself names, which is also what its `--check` sees.
 * Where a claim depends on the composition of `*_armor`/`str`ength (H0/H1/H2), the report follows the
   card's own framing: three named models with Q-1 probes, not a single decoded answer.

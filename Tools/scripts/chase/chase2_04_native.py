@@ -40,7 +40,7 @@ sys.path.insert(0, HERE)
 import chase09_native as n9  # sections / off_to_va / va_to_off / window_start / disasm  # noqa: E402
 
 EXE = n9.EXE
-OUT = r"E:\Modding\_gamedata\BmAKgrab\chase\chase2_04_native.json"
+OUT = r"E:\Modding\_shared\gamedata\BmAKgrab\chase\chase2_04_native.json"
 
 # operand widths, so a wide store can be tested for overlap with the 4-byte field
 WIDTH = [

@@ -5,10 +5,10 @@ import os
 import struct
 import sys
 
-sys.path.insert(0, r"E:/Modding/JC3-Batmobile/Tools/scripts")
+sys.path.insert(0, r"E:/Modding/JustCause3/JC3-Batmobile/Tools/scripts")
 import jc3hkx as R  # reader + shape_checks only
 
-W = r"E:/Modding/_JC3grab/hkx/write"
+W = r"E:/Modding/JustCause3/_grab/hkx/write"
 DON = R.DONOR
 donor = open(DON, "rb").read()
 

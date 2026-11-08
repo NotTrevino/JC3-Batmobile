@@ -12,7 +12,7 @@
 #
 # LOCAL TEST ONLY: the three DaBaby files are Luke JC's work. Never publish this build.
 $ErrorActionPreference = 'Stop'
-$root = 'E:\Modding\JC3-Batmobile'
+$root = 'E:\Modding\JustCause3\JC3-Batmobile'
 $g    = "$root\Tools\Gibbed"
 $b    = "$root\Builds\test-022"
 $dab  = "$root\Research\DaBaby\aaf"

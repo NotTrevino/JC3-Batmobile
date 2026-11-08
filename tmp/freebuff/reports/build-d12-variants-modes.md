@@ -159,7 +159,7 @@ adds no asset, so this is the base's number holding — and it is the D-04 budge
 
 ## 5. Checks actually run
 
-All in `E:/Modding/JC3-Batmobile` with `OPENBLAS_NUM_THREADS=1 PYTHONIOENCODING=utf-8` (this host
+All in `E:/Modding/JustCause3/JC3-Batmobile` with `OPENBLAS_NUM_THREADS=1 PYTHONIOENCODING=utf-8` (this host
 caps allocations, so numpy-heavy helpers need the single thread).
 
 | command | result |

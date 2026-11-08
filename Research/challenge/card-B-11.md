@@ -13,7 +13,7 @@ inputs `Working/Translation/t12_audio_map.json` (T-16), `Research/JC3Grab/JC3_AU
 files in the tree.
 
 **Two limits, stated up front.**
-1. `weapons.bank`'s vanilla source is `E:\Modding\_JC3grab\audio\weapons.bank` (outside the repo, R10),
+1. `weapons.bank`'s vanilla source is `E:\Modding\JustCause3\_grab\audio\weapons.bank` (outside the repo, R10),
    so the weapons side can be verified **only against the built file and the manifest**, never
    against its source. The vehicles side can be verified end-to-end because its source is in-repo.
 2. `python Tools/scripts/bm_audio.py --check` was **not** re-run: `build(write=False)` copies both
@@ -455,7 +455,7 @@ all samples: 48 kHz, header mode PCM16 (2); 506 mono / 143 stereo (vehicles), 88
 ```
 
 **Result.** Reproduced for vehicles against the in-repo source; for weapons only the built side can
-be read (the source is `E:\Modding\_JC3grab\...`, outside the repo). The "every donor sample is
+be read (the source is `E:\Modding\JustCause3\_grab\...`, outside the repo). The "every donor sample is
 16-bit PCM at 48 kHz" census holds for both banks.
 
 **Verdict: HOLDS** for vehicles; **WEAK** for weapons (source unavailable here — a limitation, not a

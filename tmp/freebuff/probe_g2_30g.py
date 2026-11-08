@@ -1,7 +1,7 @@
 """G2-30 probe 7: isolate the round-trip byte diff and the failing case."""
 import sys
 
-sys.path.insert(0, r"E:/Modding/JC3-Batmobile/Tools/scripts")
+sys.path.insert(0, r"E:/Modding/JustCause3/JC3-Batmobile/Tools/scripts")
 import jc3hkx as H  # noqa: E402
 
 blob = open(H.DONOR, "rb").read()

@@ -141,7 +141,7 @@ rows (`G2-27`, `G2-28`, …) that name both.
 
 | value in the doc | where I verified it |
 |---|---|
-| `TETHER.md:55-70` — **12 `CVehicleCargoBay` objects on 12 entities** (6 plane, 4 boat, 2 flatbed), `enabled = 1`, `enable`/`disable` empty, four distinct world transforms counting 4 / 6 / 1 / 1 | Independent scan of `E:/Modding/_JC3grab/detail/*.json`: exactly one `CVehicleCargoBay` per entity on 12 entities; `enable = ''`, `disable = ''`, `enabled = 1` on all 12; the four transform strings and their 4/6/1/1 split match `TETHER.json:carriers.bay_worlds` |
+| `TETHER.md:55-70` — **12 `CVehicleCargoBay` objects on 12 entities** (6 plane, 4 boat, 2 flatbed), `enabled = 1`, `enable`/`disable` empty, four distinct world transforms counting 4 / 6 / 1 / 1 | Independent scan of `E:/Modding/JustCause3/_grab/detail/*.json`: exactly one `CVehicleCargoBay` per entity on 12 entities; `enable = ''`, `disable = ''`, `enabled = 1` on all 12; the four transform strings and their 4/6/1/1 split match `TETHER.json:carriers.bay_worlds` |
 | `TETHER.md:48, 206-214` — **335 `tether` paths, 7 non-dialogue, 0 `winch`**, and the 7 listed paths | Independent scan of `Research/JC3Grab/INDEX.jsonl`: 335 paths containing `tether`, 7 without `dialogue` (the `t_challenge_dual_tether_alpha_dif.hmddsc` decal, the `.gdc`/`.gsc` graph pair, 2 upgrade icons, 2 upgrade videos), 0 containing `winch` |
 | `TETHER.md:175-180` — **11,643 part rows, 7,367 `None`, 67 distinct named behaviours, `CargoBayDoor` x28** | Independent scan of `Research/JC3Grab/PARTS_TABLE.jsonl`: 11,643 rows, 67 distinct non-`None` behaviours, `CargoBayDoor` 28 (also surfaced the wagon couplings of issue 5: 5 + 5 + 12) |
 | `TETHER.md:30, 43` — compound entity = **40,000 plane + 25,000 tank**, donor 975 = **6.154x**, 15.0 % / 6.0 % / 40.0 % | Raw entity caches: all 6 `v4603_plane_urga_cargotransport` entities 40,000, only `…_military_cargo_tank` also 25,000; 6000/975 = 6.1538, 6000/40000 = 15.0 %, 6000/100000 = 6.0 %, 6000/15000 = 40.0 % |
@@ -156,4 +156,4 @@ rows (`G2-27`, `G2-28`, …) that name both.
   produces those two failures was read (`jc3tether.py:626-645`) and is consistent with the
   recorded messages.
 - No archive was opened and no game was launched, per the review rules; every number above comes
-  from the decoded caches under `E:/Modding/_JC3grab` and the repo's own JSONL tables.
+  from the decoded caches under `E:/Modding/JustCause3/_grab` and the repo's own JSONL tables.

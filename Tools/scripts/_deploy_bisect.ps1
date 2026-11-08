@@ -1,5 +1,5 @@
 $ErrorActionPreference = 'Stop'
-$root = 'E:\Modding\JC3-Batmobile'
+$root = 'E:\Modding\JustCause3\JC3-Batmobile'
 $g = "$root\Tools\Gibbed"
 $van = "$root\Builds\test-003\aaf"
 $target_rel = 'models\jc_vehicles\01_land\v0300_car_kensington_sportsmuscle\sportsmuscle_body_lod1.rbm'

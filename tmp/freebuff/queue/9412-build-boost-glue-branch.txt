@@ -1,7 +1,7 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-boost-glue-branch.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/build-boost-glue-branch.md
 ONLY: freebuff
 EST: 50
 BRIEF: hand-written 2026-11-08
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-handling-values.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/unknown-handling-members-walk.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/rc5-handling-values.md, E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/unknown-handling-members-walk.md
 Build the afterburner glue as branch Builds/bm-RC5-boost with Tools/scripts/rc5_boost.py (--write, --check). Cells: boost duration 2.0 s, the quick-recharge cooldowns, the boost-to-drift interaction (DriftingBoostCooldown 1.5 s) and heat_boost restore (T-B4), using the nitro_boost block already set by 9120 (torque multiplier 6.3, grip 1.5, extra 80) as the base so you add and do not repeat. Source the BmAK values from Research/BatmobileGrab/MODES.md and the walk report tmp/freebuff/reports/hdl-unknown-members-walk.md; where that report says exe-only, write the cell as assumed in the branch record, with the class stated. Share the effects half (flames, sound) with the weapons landmark by writing only the physics cells. Put a tuning table at the top mapping each cell to takes A2 and A9. Register the branch under Working/RC5/branches/ in the standard format. Done check: --check reads each cell back through the .toc and prints it next to its ledger row id.
-Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.
+Shared rules: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

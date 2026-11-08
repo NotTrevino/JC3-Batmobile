@@ -62,7 +62,7 @@ Game-data sources: `sim_cdo*.json`, `chase2_defaults*.json`, `g1_chase_native.js
 candidate snippet. The `v1` route returned the calibration file itself for P01-P20:
 
 `decoded` — `calib_runs/51c8dd3c_v1search/P01.json`:
-`reach_sources = ["E:/Modding/_BmAKgrab/chase/calib.jsonl:1", "E:/Modding/_BmAKgrab/chase/calib.jsonl:1"]`,
+`reach_sources = ["E:/Modding/ArkhamKnight/_grab/chase/calib.jsonl:1", "E:/Modding/ArkhamKnight/_grab/chase/calib.jsonl:1"]`,
 and `calib.jsonl:1` is the answer key:
 
 ```

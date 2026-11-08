@@ -41,7 +41,7 @@ Limits, measured and carried as such (never filled in with a plausible value, R4
 * **Weapon rows** - T-11 has a carrier for four structural rows. `T-WP5` has no trigger in the files
   (`t7_weapons_edits.json` `structural`), and the 11 BmAK weapons with no JC3 carrier are not written
   here at all. The components are clones of the armed APC's `CBulletWeaponBase`
-  (`E:/Modding/_gamedata/JC3grab/epe_schema/apc_debug.xml`, R10 outside the repo): the ~60 *unnamed* members
+  (`E:/Modding/_shared/gamedata/JC3grab/epe_schema/apc_debug.xml`, R10 outside the repo): the ~60 *unnamed* members
   are copied verbatim, because their meaning is UNKNOWN. That means the unnamed weapon-path members
   still name the donor template until **B-06** repoints them at the private weapon copies - recorded
   in the spec, not hidden.
@@ -101,7 +101,7 @@ OUT = os.path.join(ROOT, "Builds", TAG)
 OUT_EPE = os.path.join(OUT, "aaf", ENT, EPE)
 SPEC = os.path.join(ROOT, "Working", "Entity", "bm_epe_edits.json")
 CONV = os.path.join(ROOT, "Tools", "Gibbed", "Gibbed.JustCause3.ConvertProperty.exe")
-APC = r"E:\Modding\_gamedata\JC3grab\epe_schema\apc_debug.epe"
+APC = r"E:\Modding\_shared\gamedata\JC3grab\epe_schema\apc_debug.epe"
 PARTS = os.path.join(ROOT, "Working", "Parts", "bm_vehicle_parts.json")
 T7 = os.path.join(ROOT, "Working", "Translation", "t7_weapons_edits.json")
 T9 = os.path.join(ROOT, "Working", "Translation", "t9_interaction.json")
@@ -149,7 +149,7 @@ SONAR_TUNE = "editor/entities/jc_explosions/gen_explosion_5m_nodamage.ftune"  # 
 EMP_FLAGS = {"4912FC04": "0", "AE6F7EFF": "1", "CF4F7880": "1"}       # G2-16, unique in 307
 # read-only donor graphs (R10, outside the repo) - XML is the ConvertProperty output the repo's own
 # reader consumes; the APC `.epe` is already a build-time input.
-DONOR_DIR = r"E:\Modding\_gamedata\JC3grab\wiring\epe"
+DONOR_DIR = r"E:\Modding\_shared\gamedata\JC3grab\wiring\epe"
 EMP_TRUCK = os.path.join(DONOR_DIR, "v0505_car_solar_oldtruck_rebel_emp_01.ee.xml")
 CARGO_PLANE = os.path.join(DONOR_DIR, "v4603_plane_urga_cargotransport_blackhand_01.ee.xml")
 
@@ -841,7 +841,7 @@ def installer_text(doc: dict) -> str:
         "    'Rollback091' {",
         "        Remove-Item -LiteralPath (Join-Path $D '" + EPE + "') -Force -ErrorAction SilentlyContinue",
         "        if ($GameDir -eq 'D:\\Games\\Just Cause 3') {",
-        "            & (Join-Path 'E:\\Modding\\JC3-Batmobile\\Builds\\test-091' 'install.ps1') "
+        "            & (Join-Path 'E:\\Modding\\JustCause3\\JC3-Batmobile\\Builds\\test-091' 'install.ps1') "
         "-Action Install",
         "        } else { Write-Host ('rehearsal on ' + $GameDir + ': test-091 re-install skipped') }",
         "    }",

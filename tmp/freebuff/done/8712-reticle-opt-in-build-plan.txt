@@ -1,6 +1,6 @@
-DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/reticle-opt-in-build-plan.md
+DONE: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/reticle-opt-in-build-plan.md
 ONLY: freebuff
 EST: 50
 BRIEF: hand-written 2026-11-06
-AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/lock-on-reticle-hud-link.md
+AFTER: E:/Modding/JustCause3/JC3-Batmobile/tmp/freebuff/reports/lock-on-reticle-hud-link.md
 The report lock-on-reticle-hud-link.md found that a private Batmobile missile can opt into lock behaviour by data alone, with the reticle link itself still native. Turn that into a build plan: which weapon-preset or AutoAim fields the private missile weapon sets, which HUD movie elements show the lock boxes, what BmAK shows (Research/BatmobileGrab/HUD.md, HUD_SPEC.json) versus what JC3 draws, and for each difference the closest JC3 mechanism that reproduces BmAK (HUD movie edit, icon/colour setters, POI marker data) with the numbers. Label decoded / derived / UNKNOWN; each UNKNOWN names the file that settles it and a one-sentence pilot-card check. No accept-the-limit wording; the build closes gaps.

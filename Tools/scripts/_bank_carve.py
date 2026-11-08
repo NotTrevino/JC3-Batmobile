@@ -1,7 +1,7 @@
 """Carve embedded banks by BKHD scan within AkBank export ranges."""
 import os, struct
 
-stream = open(r"E:\Modding\JC3-Batmobile\Working\Audio\bm_stream.bin", "rb").read()
+stream = open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\bm_stream.bin", "rb").read()
 exports = {"BML_Engine": (7278764, 0x107DF6), "BML_Burnout": (477026, 0x93694),
            "AUX_InBatmobile": (67651, 0x82E51)}
 for nm, (size, off) in exports.items():
@@ -26,5 +26,5 @@ for nm, (size, off) in exports.items():
         if tag == b"HIRC":
             total = o
     if total:
-        open(os.path.join(r"E:\Modding\JC3-Batmobile\Working\Audio", "bank_%s.bank" % nm), "wb").write(seg[i:total])
+        open(os.path.join(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio", "bank_%s.bank" % nm), "wb").write(seg[i:total])
         print("   SAVED (%d B)" % (total - i))

@@ -46,8 +46,8 @@ from upk_read import Package, export_summary  # noqa: E402
 ROOT = Path(__file__).resolve().parents[2]
 GAME = Path(os.environ.get("BMAK_GAME", r"E:/Games/Batman - Arkham Knight"))
 BMAK_DEC = Path(os.environ.get("BMAK_HUD_DEC",
-                              r"E:/Modding/_gamedata/BmAKgrab_early/hud/modules/HudModuleBatmobile/dec"))
-JC3_DEC = Path(os.environ.get("JC3_HUD_DEC", r"E:/Modding/_gamedata/JC3grab/hud/dec"))
+                              r"E:/Modding/_shared/gamedata/BmAKgrab_early/hud/modules/HudModuleBatmobile/dec"))
+JC3_DEC = Path(os.environ.get("JC3_HUD_DEC", r"E:/Modding/_shared/gamedata/JC3grab/hud/dec"))
 SDK = ROOT / "Working" / "vendor" / "BmSDK"
 INTERFACES = ROOT / "Research" / "BatmobileGrab" / "HUD_INTERFACES.json"
 SPEEDO = ROOT / "Research" / "BatmobileGrab" / "SPEEDOMETER.json"

@@ -292,8 +292,8 @@ $ python tmp/freebuff/scratch/fx_candidates.py
 
 ```text
 $ python Tools/scripts/fx9_haze.py write --write
-wrote E:\Modding\JC3-Batmobile\Research\JC3Grab\FX9_HAZE.md
-wrote E:\Modding\JC3-Batmobile\Research\JC3Grab\FX9_HAZE.json
+wrote E:\Modding\JustCause3\JC3-Batmobile\Research\JC3Grab\FX9_HAZE.md
+wrote E:\Modding\JustCause3\JC3-Batmobile\Research\JC3Grab\FX9_HAZE.json
 effc 955 strings 0 blocks 8 trims 208 digest 1635cca08e759db67408899656fb7f707a453328
 
 $ python Tools/scripts/fx9_haze.py check --check

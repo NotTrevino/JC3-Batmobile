@@ -8,7 +8,7 @@ Read: `GRAB_BACKLOG.md` §0.5 (R1–R14, lines 59–79), §7 card T-12 (line 878
 outputs `Working/Translation/T8_PARTS.md` (268 lines), `Working/Translation/T8_PARTS.json`
 (schema 2), `Tools/scripts/t12_parts.py`; inputs `Research/BatmobileGrab/{ANIMATIONS,BONES,POSES,
 MOVING_PARTS,TURRET}.json`, `Research/JC3Grab/PARTS_TABLE.jsonl`, `Working/Appearance/build_parts/
-parts_manifest.json`, key frames `E:/Modding/_BmAKgrab/anims/keys/`, `Tools/scripts/bat_assemble.py`.
+parts_manifest.json`, key frames `E:/Modding/ArkhamKnight/_grab/anims/keys/`, `Tools/scripts/bat_assemble.py`.
 
 ## VERDICT: needs rework (narrow)
 
@@ -161,7 +161,7 @@ the doc never says which clip/statistic each is, so a reader cannot reconcile th
 | value in `T8_PARTS.md` | verified at |
 |---|---|
 | P-01 pivot `0.000, 0.876, 0.333` and "max pivot disagreement 0.000013918 m" | independent `bat_assemble.pivot_point(bind.world_position_cm, scale 0.01, offset)` on `BONES.json`'s `Batmobile_Rig_Weapons_Turret_Root` → `(1.3e-05, 0.876249, 0.333226)`, delta 1.3678e-05 m; tolerance `pivot_tolerance_m` 1.4462e-05 = BONES `offset_delta_m` 1.3462e-05 + 1e-6 ✓ |
-| P-03 "1229.51 °/s", "−179.493…177.861°" | recomputed from `E:/Modding/_BmAKgrab/anims/keys/Playable_Batmobile_SF__Batmobile_V2_Pose_States.json` → `Batmobile_V2_ChainGun_Spin`: min −179.493, max 177.861, peak rate 1229.51 °/s — exact; total travel 2160.0° (issue 3) |
+| P-03 "1229.51 °/s", "−179.493…177.861°" | recomputed from `E:/Modding/ArkhamKnight/_grab/anims/keys/Playable_Batmobile_SF__Batmobile_V2_Pose_States.json` → `Batmobile_V2_ChainGun_Spin`: min −179.493, max 177.861, peak rate 1229.51 °/s — exact; total travel 2160.0° (issue 3) |
 | damage types per row (`Land_Generic`, `Land_Hood`, `Train_Generic`, `Plane_Control_Surface`, `Boat_Generic`) | `part_table_dt()` over `Research/JC3Grab/PARTS_TABLE.jsonl`: Turret `Land_Generic`, Cannon `Land_Generic`, GatlingGun `Boat_Generic` (no land carrier), Hood `Land_Hood`, MissileHatch `Train_Generic`, AirBrake `Plane_Control_Surface`, SteeringWheel `Land_Generic` (fleet `Boat_Steering_Wheel`, `Land_Generic`, `Land_Steering_Wheel`) — all match, including "no land vehicle carries GatlingGun" |
 | shipped hinges P-01/P-02/P-04/P-06 (`mediumtank_turret` +Y ±179 pivot 0,2.2812,1.1382; `mediumtank_cannon` +X −5…20 pivot 0,2.5347,0; `sportsmuscle_hood_signature` +X 0…70 pivot 0,1.0572,−0.8478) | `Research/JC3Grab/TURRET.json` `samples` — the four rows are byte-equal to the doc's quotes, damage types included |
 | P-09's part bone moves 20.007° at 37.20 °/s while the row's headline is 25.817° at 48.70 °/s | `T8_PARTS.json` P-09 `joint.candidates` / "other bones" line, recomputed from the same key file (issue 7) |
@@ -174,5 +174,5 @@ the doc never says which clip/statistic each is, so a reader cannot reconcile th
   copies, so those failure modes are structural.
 - I re-derived the Vulcan track and the turret pivot independently and spot-checked the damage/hinge
   tables; I did not recompute all 25 row-sequence extents.
-- Key frames live outside the repo (`E:/Modding/_BmAKgrab/anims/keys`, R10); reading them is what the
+- Key frames live outside the repo (`E:/Modding/ArkhamKnight/_grab/anims/keys`, R10); reading them is what the
   script does and no file was written there.

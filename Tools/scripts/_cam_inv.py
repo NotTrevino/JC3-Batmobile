@@ -1,7 +1,7 @@
 """JC3 camera inventory: car_base instances (values) + Serpente camera refs."""
 import json, os, re, struct
 
-x = open(r"E:\Modding\JC3-Batmobile\Working\Audio\car_base.xml", encoding="utf-8").read()
+x = open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\car_base.xml", encoding="utf-8").read()
 i = x.find("<instances")
 print("instances at:", i, "total len:", len(x))
 rows = []
@@ -15,7 +15,7 @@ print("members:", len(rows))
 for r in rows:
     print("  @%s %-34s %-7s %s" % (r["off"], r["name"], r["type"], r["val"]))
 
-e = open(r"E:\Modding\JC3-Batmobile\Working\Audio\serpente_epe.xml", encoding="utf-8").read()
+e = open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\serpente_epe.xml", encoding="utf-8").read()
 print("== Serpente camera refs:")
 for m in re.finditer(r"<object name=\"(CCamera[^\"]+)\">(.*?)</object>", e, re.S):
     cls, body = m.group(1), m.group(2)
@@ -25,4 +25,4 @@ for m in re.finditer(r"<object name=\"(CCamera[^\"]+)\">(.*?)</object>", e, re.S
     for dd in det[:6]:
         if dd.strip() and "class" not in dd:
             print("     ", dd.strip()[:110])
-json.dump(rows, open(r"E:\Modding\JC3-Batmobile\Working\Audio\jc3_cam.json", "w"), indent=1)
+json.dump(rows, open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\jc3_cam.json", "w"), indent=1)

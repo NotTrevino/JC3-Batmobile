@@ -121,7 +121,7 @@ produced a given runtime transition.
 ## Commands run, with output
 
 ```
-$ cd /e/Modding/JC3-Batmobile && PYTHONIOENCODING=utf-8 python Tools/scripts/grab_driverleft_regions.py --write
+$ cd /e/Modding/JustCause3/JC3-Batmobile && PYTHONIOENCODING=utf-8 python Tools/scripts/grab_driverleft_regions.py --write
 wrote Research/BatmobileGrab/DRIVERLEFT_REGIONS.md (19,504 chars)
 WRITE_EXIT=0
 ```

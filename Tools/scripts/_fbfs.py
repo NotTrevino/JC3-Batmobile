@@ -1,7 +1,7 @@
 """BFS from Serpente engine GUIDs through bank refs to FSB subsongs."""
 import struct
 
-P = r"E:\Modding\JC3-Batmobile\Working\Audio\jc3bank\sound\fmod_banks\vehicles.bank"
+P = r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\jc3bank\sound\fmod_banks\vehicles.bank"
 d = open(P, "rb").read()
 
 # index every 16B high-entropy GUID-like value -> list of offsets (metadata region only, pre-FSB)
@@ -25,7 +25,7 @@ while True:
     o += 4
 
 print("distinct GUID-like values:", len(idx))
-evs = [l.strip() for l in open(r"E:\Modding\JC3-Batmobile\Working\Audio\serpente_fmod_events.txt")]
+evs = [l.strip() for l in open(r"E:\Modding\JustCause3\JC3-Batmobile\Working\Audio\serpente_fmod_events.txt")]
 targets = {bytes.fromhex(g.strip("{}").replace("-", "")) for g in evs}
 # BFS
 seen = {}
