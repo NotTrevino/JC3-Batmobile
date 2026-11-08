@@ -1,0 +1,15 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/sound-regrab-to-swap-slots.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/bmak-banks-media-regrab.md
+Using the newly decoded media from reports/bmak-banks-media-regrab.md, plan the JC3 carrier for each weapon and gadget sound:
+- the lock beep, for both the pursuit circle shrinking and the battle diamond;
+- the missile salvo;
+- the EMP missile impact (the impact sound carries the "Immobiliser" string);
+- the EMP burst;
+- the tracker fire/tag;
+- the sonar pulse;
+- the cannon fire and reload;
+- the Vulcan spin and loop.
+For each, name the JC3 event or GUID that our private bank copies can swap in place (Working/Translation/T12_AUDIO.md, t12_audio_map.json, the B-26 rows). Give the sample-length constraint: Fmod Bank Tools replaces only payloads of the same length (reports/jc3-community-writers-check.md (c)). Then give the trim or loop plan. Also note which sounds the native hook could play directly instead, through an FMOD Studio API call in fmod_studio_F.dll, if the design report finds an entry point. Report only. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

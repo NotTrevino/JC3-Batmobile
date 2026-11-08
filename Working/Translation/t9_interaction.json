@@ -1,0 +1,4592 @@
+{
+ "anchors": {
+  "hood": {
+   "area": "front_area",
+   "donor_gap_m": 0.048,
+   "normal": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "surface": [
+    0.0005,
+    1.3606,
+    -2.14
+   ]
+  },
+  "left": {
+   "donor_gap_m": null,
+   "normal": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "station_m": [
+    1.15,
+    -0.95
+   ],
+   "surface": [
+    -1.471,
+    1.15,
+    -0.95
+   ]
+  },
+  "right": {
+   "donor_gap_m": null,
+   "normal": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "station_m": [
+    1.15,
+    -0.95
+   ],
+   "surface": [
+    1.462,
+    1.15,
+    -0.95
+   ]
+  },
+  "roof": {
+   "area": "main_area",
+   "donor_gap_m": 0.1474,
+   "normal": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "surface": [
+    0.0005,
+    2.0811,
+    -0.5
+   ]
+  }
+ },
+ "band_m": [
+  0.05,
+  0.3
+ ],
+ "card": "T-13",
+ "counts": {
+  "by_role": {
+   "driver": 29,
+   "hood": 9,
+   "passenger": 25,
+   "seat.driver": 1,
+   "seat.passenger1": 1,
+   "seat.stunt": 1,
+   "stunt": 19
+  },
+  "dropped_D9": 6,
+  "in_band": 77,
+  "objects": 85,
+  "placed": 77,
+  "socket": 1,
+  "unknown": 1
+ },
+ "decision": {
+  "applied": "hijack objects (*pull.out*, *pulled.out*) dropped",
+  "id": "D-9",
+  "status": "resolved 2026-10-28 (user): no"
+ },
+ "frames": {
+  "driver_socket": [
+   -0.0025,
+   0.8647,
+   -1.0654
+  ],
+  "jc3": "x lateral (left -x), y up, z longitudinal (nose -z)"
+ },
+ "generator": "t9_interaction.py",
+ "mesh": {
+  "bbox": [
+   [
+    -1.7531,
+    0.0783,
+    -3.4218
+   ],
+   [
+    1.7508,
+    2.3667,
+    3.6093
+   ]
+  ],
+  "file": "Working/TrueScale/body_lod1.rbm",
+  "triangles": 20000,
+  "vertices": 28940
+ },
+ "objects": [
+  {
+   "anchor": {
+    "kind": "socket",
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "surface": [
+     -0.0025,
+     0.8647,
+     -1.0654
+    ]
+   },
+   "class": "CInteraction",
+   "clearance": {
+    "m": 0.0,
+    "source": "COCKPIT.md §2 Driver socket"
+   },
+   "disposition": "socket",
+   "donor_serpente": [
+    6.246567e-05,
+    0.0,
+    0.0
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0279
+   },
+   "name": "interaction.seat.driver",
+   "role": "seat.driver",
+   "state": null,
+   "transform": {
+    "forward": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "pos_m": [
+     -0.0025,
+     0.8647,
+     -1.0654
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 0.0
+   },
+   "verdict": "inside by design (the seat is in the cockpit)"
+  },
+  {
+   "anchor": {
+    "kind": "left",
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     -1.471,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphEntry",
+   "clearance": {
+    "m": 0.1,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0969
+   },
+   "name": "entry.driver",
+   "role": "driver",
+   "state": "S_ENTER_DRIVER_VEHICLE",
+   "transform": {
+    "forward": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     -1.571,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "left",
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     -1.471,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphPointNode",
+   "clearance": {
+    "m": 0.1,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0969
+   },
+   "name": "point.driver",
+   "role": "driver",
+   "state": null,
+   "transform": {
+    "forward": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     -1.571,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "left",
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     -1.471,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphExit",
+   "clearance": {
+    "m": 0.1,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0969
+   },
+   "name": "exit.driver.default",
+   "role": "driver",
+   "state": "S_EXIT_VEHICLE",
+   "transform": {
+    "forward": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     -1.571,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "left",
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     -1.471,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphExit",
+   "clearance": {
+    "m": 0.1,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0969
+   },
+   "name": "exit.ai.driver.default",
+   "role": "driver",
+   "state": "S_EXIT_VEHICLE",
+   "transform": {
+    "forward": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     -1.571,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "right",
+    "normal": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     1.462,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphTransition",
+   "clearance": {
+    "m": 0.1124,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1001
+   },
+   "name": "transition.passenger1",
+   "role": "passenger",
+   "state": null,
+   "transform": {
+    "forward": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     1.5744,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": -90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "hood",
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "surface": [
+     0.0005,
+     1.3606,
+     -2.14
+    ]
+   },
+   "class": "CInteractionGraphExit",
+   "clearance": {
+    "m": 0.1659,
+    "source": "decoded (donor stunt-area gap 0.048 m, band floor applied)",
+    "target_m": 0.06
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0573
+   },
+   "name": "exit.ai.driver.to.hood",
+   "role": "hood",
+   "state": "S_EXIT_DRIVER_TO_HOOD_VEHICLE",
+   "transform": {
+    "forward": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "pos_m": [
+     0.0005,
+     1.5265,
+     -2.14
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 0.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "left",
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     -1.471,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphExit",
+   "clearance": {
+    "m": 0.1,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0969
+   },
+   "name": "exit.driver.roll.out",
+   "role": "driver",
+   "state": "S_ROLL_OUT_EXIT_VEHICLE",
+   "transform": {
+    "forward": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     -1.571,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "left",
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     -1.471,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphExit",
+   "clearance": {
+    "m": 0.1,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0969
+   },
+   "name": "exit.driver.moving.parachute",
+   "role": "driver",
+   "state": "S_EXIT_VEHICLE_PARA",
+   "transform": {
+    "forward": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     -1.571,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "left",
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     -1.471,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphExit",
+   "clearance": {
+    "m": 0.1,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0969
+   },
+   "name": "exit.ai.driver.default90R",
+   "role": "driver",
+   "state": "S_EXIT_VEHICLE_90R",
+   "transform": {
+    "forward": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     -1.571,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "left",
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     -1.471,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphExit",
+   "clearance": {
+    "m": 0.1,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0969
+   },
+   "name": "exit.driver.pushed.out",
+   "role": "driver",
+   "state": "S_PUSHED_OUT_VEHICLE",
+   "transform": {
+    "forward": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     -1.571,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "left",
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     -1.471,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphExit",
+   "clearance": {
+    "m": 0.1,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0969
+   },
+   "name": "exit.ai.driver.default90L",
+   "role": "driver",
+   "state": "S_EXIT_VEHICLE_90L",
+   "transform": {
+    "forward": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     -1.571,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "left",
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     -1.471,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphExit",
+   "clearance": {
+    "m": 0.1,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0969
+   },
+   "name": "exit.driver.to.fall",
+   "role": "driver",
+   "state": "S_EXIT_VEHICLE_TO_FALL",
+   "transform": {
+    "forward": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     -1.571,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "left",
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     -1.471,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphExit",
+   "clearance": {
+    "m": 0.1,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0969
+   },
+   "name": "exit.ai.driver.default180",
+   "role": "driver",
+   "state": "S_EXIT_VEHICLE_180",
+   "transform": {
+    "forward": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     -1.571,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "left",
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     -1.471,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphExit",
+   "clearance": {
+    "m": 0.1,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0969
+   },
+   "name": "exit.driver.to.swim",
+   "role": "driver",
+   "state": "S_EXIT_DRIVER_VEHICLE_IN_WATER",
+   "transform": {
+    "forward": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     -1.571,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "roof",
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "surface": [
+     0.0005,
+     2.0811,
+     -0.5
+    ]
+   },
+   "class": "CInteractionGraphTransition",
+   "clearance": {
+    "m": 0.1656,
+    "source": "decoded (donor stunt-area gap 0.1474 m, band floor applied)",
+    "target_m": 0.1474
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1453
+   },
+   "name": "transition.stunt",
+   "role": "stunt",
+   "state": null,
+   "transform": {
+    "forward": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "pos_m": [
+     0.0005,
+     2.2467,
+     -0.5
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 0.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "left",
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     -1.471,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphExit",
+   "clearance": {
+    "m": 0.1,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0969
+   },
+   "name": "exit.ai.driver.default0",
+   "role": "driver",
+   "state": "S_EXIT_VEHICLE_0",
+   "transform": {
+    "forward": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     -1.571,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "left",
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     -1.471,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphExit",
+   "clearance": {
+    "m": 0.1,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "dropped (D-9)",
+   "donor_serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0969
+   },
+   "name": "exit.driver.pulled.out",
+   "role": "driver",
+   "state": "S_PULLED_OUT_VEHICLE",
+   "transform": {
+    "forward": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     -1.571,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "right",
+    "normal": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     1.462,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphTransition",
+   "clearance": {
+    "m": 0.1124,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1001
+   },
+   "name": "transition.passenger1.exit",
+   "role": "passenger",
+   "state": null,
+   "transform": {
+    "forward": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     1.5744,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": -90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "left",
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     -1.471,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphExit",
+   "clearance": {
+    "m": 0.1,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0969
+   },
+   "name": "exit.driver.upside.down",
+   "role": "driver",
+   "state": "S_EXIT_DRIVER_VEHICLE_UPSIDE_DOWN",
+   "transform": {
+    "forward": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     -1.571,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "right",
+    "normal": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     1.462,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphPointNode",
+   "clearance": {
+    "m": 0.1124,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1001
+   },
+   "name": "point.passenger1.onground",
+   "role": "passenger",
+   "state": null,
+   "transform": {
+    "forward": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     1.5744,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": -90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "right",
+    "normal": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     1.462,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphTransition",
+   "clearance": {
+    "m": 0.1124,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1001
+   },
+   "name": "transition.passenger1",
+   "role": "passenger",
+   "state": null,
+   "transform": {
+    "forward": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     1.5744,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": -90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "right",
+    "normal": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     1.462,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphTransition",
+   "clearance": {
+    "m": 0.1124,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1001
+   },
+   "name": "transition.passenger1.side",
+   "role": "passenger",
+   "state": null,
+   "transform": {
+    "forward": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     1.5744,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": -90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "right",
+    "normal": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     1.462,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphEntry",
+   "clearance": {
+    "m": 0.1124,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1001
+   },
+   "name": "entry.ai.passenger1",
+   "role": "passenger",
+   "state": "S_ENTER_PASSENGER_VEHICLE",
+   "transform": {
+    "forward": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     1.5744,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": -90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "roof",
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "surface": [
+     0.0005,
+     2.0811,
+     -0.5
+    ]
+   },
+   "class": "CInteractionGraphEntry",
+   "clearance": {
+    "m": 0.1656,
+    "source": "decoded (donor stunt-area gap 0.1474 m, band floor applied)",
+    "target_m": 0.1474
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1453
+   },
+   "name": "entry.jump_to_stunt_vehicle_to_vehicle",
+   "role": "stunt",
+   "state": "S_STUNT_TO_JUMP_VEHICLE_TO_VEHICLE",
+   "transform": {
+    "forward": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "pos_m": [
+     0.0005,
+     2.2467,
+     -0.5
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 0.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "left",
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     -1.471,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphEntry",
+   "clearance": {
+    "m": 0.1,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "dropped (D-9)",
+   "donor_serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0969
+   },
+   "name": "entry.driver.pull.out.onground.no.door",
+   "role": "driver",
+   "state": "S_ENTER_ON_GROUND_THROW_OUT_NO_DOOR_VEHICLE",
+   "transform": {
+    "forward": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     -1.571,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "roof",
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "surface": [
+     0.0005,
+     2.0811,
+     -0.5
+    ]
+   },
+   "class": "CInteractionGraphPointNode",
+   "clearance": {
+    "m": 0.1656,
+    "source": "decoded (donor stunt-area gap 0.1474 m, band floor applied)",
+    "target_m": 0.1474
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.0,
+    1.487549,
+    0.421875
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1453
+   },
+   "name": "point.stunt",
+   "role": "stunt",
+   "state": null,
+   "transform": {
+    "forward": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "pos_m": [
+     0.0005,
+     2.2467,
+     -0.5
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 0.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "roof",
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "surface": [
+     0.0005,
+     2.0811,
+     -0.5
+    ]
+   },
+   "class": "CInteractionGraphExit",
+   "clearance": {
+    "m": 0.1656,
+    "source": "decoded (donor stunt-area gap 0.1474 m, band floor applied)",
+    "target_m": 0.1474
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.0,
+    1.487549,
+    0.421875
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1453
+   },
+   "name": "exit.from.stunt",
+   "role": "stunt",
+   "state": "S_STUNT_EXIT_VEHICLE",
+   "transform": {
+    "forward": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "pos_m": [
+     0.0005,
+     2.2467,
+     -0.5
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 0.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "right",
+    "normal": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     1.462,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphPointNode",
+   "clearance": {
+    "m": 0.1124,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    -0.18,
+    1.49,
+    1.01
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1001
+   },
+   "name": "point.passenger1.side",
+   "role": "passenger",
+   "state": null,
+   "transform": {
+    "forward": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     1.5744,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": -90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "right",
+    "normal": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     1.462,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphTransition",
+   "clearance": {
+    "m": 0.1124,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    -0.18,
+    1.49,
+    1.01
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1001
+   },
+   "name": "transition.passenger1",
+   "role": "passenger",
+   "state": null,
+   "transform": {
+    "forward": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     1.5744,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": -90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "roof",
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "surface": [
+     0.0005,
+     2.0811,
+     -0.5
+    ]
+   },
+   "class": "CInteractionGraphTransition",
+   "clearance": {
+    "m": 0.1656,
+    "source": "decoded (donor stunt-area gap 0.1474 m, band floor applied)",
+    "target_m": 0.1474
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    -0.18,
+    1.49,
+    1.01
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1453
+   },
+   "name": "transition.stunt",
+   "role": "stunt",
+   "state": null,
+   "transform": {
+    "forward": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "pos_m": [
+     0.0005,
+     2.2467,
+     -0.5
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 0.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "hood",
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "surface": [
+     0.0005,
+     1.3606,
+     -2.14
+    ]
+   },
+   "class": "CInteractionGraphEntry",
+   "clearance": {
+    "m": 0.1659,
+    "source": "decoded (donor stunt-area gap 0.048 m, band floor applied)",
+    "target_m": 0.06
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0573
+   },
+   "name": "entry.pull.up.to.stunt.hood.close",
+   "role": "hood",
+   "state": "S_PULL_UP_TO_STUNT_CLOSE_VEHICLE",
+   "transform": {
+    "forward": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "pos_m": [
+     0.0005,
+     1.5265,
+     -2.14
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 0.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "roof",
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "surface": [
+     0.0005,
+     2.0811,
+     -0.5
+    ]
+   },
+   "class": "CInteractionGraphEntry",
+   "clearance": {
+    "m": 0.1656,
+    "source": "decoded (donor stunt-area gap 0.1474 m, band floor applied)",
+    "target_m": 0.1474
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1453
+   },
+   "name": "entry.stunt.to.driver.side.enter.vehicle2",
+   "role": "stunt",
+   "state": "S_ENTER_STUNT_TO_DRIVER_SIDE_VEHICLE",
+   "transform": {
+    "forward": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "pos_m": [
+     0.0005,
+     2.2467,
+     -0.5
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 0.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "roof",
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "surface": [
+     0.0005,
+     2.0811,
+     -0.5
+    ]
+   },
+   "class": "CInteractionGraphEntry",
+   "clearance": {
+    "m": 0.1656,
+    "source": "decoded (donor stunt-area gap 0.1474 m, band floor applied)",
+    "target_m": 0.1474
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1453
+   },
+   "name": "entry.stunt.to.driver.side.enter.vehicle3",
+   "role": "stunt",
+   "state": "S_ENTER_STUNT_TO_DRIVER_SIDE_VEHICLE",
+   "transform": {
+    "forward": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "pos_m": [
+     0.0005,
+     2.2467,
+     -0.5
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 0.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "right",
+    "normal": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     1.462,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphEntry",
+   "clearance": {
+    "m": 0.1124,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1001
+   },
+   "name": "entry.passenger1.no.door",
+   "role": "passenger",
+   "state": "S_ENTER_PASSENGER_NO_DOOR_VEHICLE",
+   "transform": {
+    "forward": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     1.5744,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": -90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "hood",
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "surface": [
+     0.0005,
+     1.3606,
+     -2.14
+    ]
+   },
+   "class": "CInteractionGraphEntry",
+   "clearance": {
+    "m": 0.1659,
+    "source": "decoded (donor stunt-area gap 0.048 m, band floor applied)",
+    "target_m": 0.06
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0573
+   },
+   "name": "entry.reel.to.stunt.hood",
+   "role": "hood",
+   "state": "S_GRAPPLE_REEL_TO_STUNT_LAND",
+   "transform": {
+    "forward": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "pos_m": [
+     0.0005,
+     1.5265,
+     -2.14
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 0.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "roof",
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "surface": [
+     0.0005,
+     2.0811,
+     -0.5
+    ]
+   },
+   "class": "CInteractionGraphEntry",
+   "clearance": {
+    "m": 0.1656,
+    "source": "decoded (donor stunt-area gap 0.1474 m, band floor applied)",
+    "target_m": 0.1474
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1453
+   },
+   "name": "entry.reel.to.stunt.main",
+   "role": "stunt",
+   "state": "S_GRAPPLE_REEL_TO_STUNT_LAND",
+   "transform": {
+    "forward": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "pos_m": [
+     0.0005,
+     2.2467,
+     -0.5
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 0.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "right",
+    "normal": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     1.462,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphEntry",
+   "clearance": {
+    "m": 0.1124,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "dropped (D-9)",
+   "donor_serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1001
+   },
+   "name": "entry.passenger1.pull.out.onground",
+   "role": "passenger",
+   "state": "S_ENTER_PASSENGER_ON_GROUND_THROW_OUT_VEHICLE",
+   "transform": {
+    "forward": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     1.5744,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": -90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "hood",
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "surface": [
+     0.0005,
+     1.3606,
+     -2.14
+    ]
+   },
+   "class": "CInteractionGraphEntry",
+   "clearance": {
+    "m": 0.1659,
+    "source": "decoded (donor stunt-area gap 0.048 m, band floor applied)",
+    "target_m": 0.06
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0573
+   },
+   "name": "entry.pull.up.to.stunt.hood.far",
+   "role": "hood",
+   "state": "S_PULL_UP_TO_STUNT_FAR_VEHICLE",
+   "transform": {
+    "forward": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "pos_m": [
+     0.0005,
+     1.5265,
+     -2.14
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 0.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "right",
+    "normal": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     1.462,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphEntry",
+   "clearance": {
+    "m": 0.1124,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1001
+   },
+   "name": "entry.passenger1.side.fast",
+   "role": "passenger",
+   "state": "S_PASSENGER_ON_GROUND_TO_ENTER_SIDE_VEHICLE",
+   "transform": {
+    "forward": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     1.5744,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": -90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "hood",
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "surface": [
+     0.0005,
+     1.3606,
+     -2.14
+    ]
+   },
+   "class": "CInteractionGraphEntry",
+   "clearance": {
+    "m": 0.1659,
+    "source": "decoded (donor stunt-area gap 0.048 m, band floor applied)",
+    "target_m": 0.06
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0573
+   },
+   "name": "entry.step.over.low.stunt.hood",
+   "role": "hood",
+   "state": "S_STEP_OVER_LOW_TO_STUNT_VEHICLE_P1",
+   "transform": {
+    "forward": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "pos_m": [
+     0.0005,
+     1.5265,
+     -2.14
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 0.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "roof",
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "surface": [
+     0.0005,
+     2.0811,
+     -0.5
+    ]
+   },
+   "class": "CInteractionGraphEntry",
+   "clearance": {
+    "m": 0.1656,
+    "source": "decoded (donor stunt-area gap 0.1474 m, band floor applied)",
+    "target_m": 0.1474
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1453
+   },
+   "name": "entry.pull.up.to.stunt.close",
+   "role": "stunt",
+   "state": "S_PULL_UP_TO_STUNT_CLOSE_VEHICLE",
+   "transform": {
+    "forward": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "pos_m": [
+     0.0005,
+     2.2467,
+     -0.5
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 0.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "roof",
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "surface": [
+     0.0005,
+     2.0811,
+     -0.5
+    ]
+   },
+   "class": "CInteractionGraphEntry",
+   "clearance": {
+    "m": 0.1656,
+    "source": "decoded (donor stunt-area gap 0.1474 m, band floor applied)",
+    "target_m": 0.1474
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1453
+   },
+   "name": "entry.jump_to_stunt",
+   "role": "stunt",
+   "state": "S_JUMP_TO_STUNT_VEHICLE",
+   "transform": {
+    "forward": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "pos_m": [
+     0.0005,
+     2.2467,
+     -0.5
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 0.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "left",
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     -1.471,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphEntry",
+   "clearance": {
+    "m": 0.1,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0969
+   },
+   "name": "entry.driver.locked.onground",
+   "role": "driver",
+   "state": "S_ENTER_ON_GROUND_UNLOCK_VEHICLE",
+   "transform": {
+    "forward": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     -1.571,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "right",
+    "normal": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     1.462,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphPointNode",
+   "clearance": {
+    "m": 0.1124,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.4421713,
+    0.34,
+    0.2
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1001
+   },
+   "name": "point.passenger1",
+   "role": "passenger",
+   "state": null,
+   "transform": {
+    "forward": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     1.5744,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": -90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "right",
+    "normal": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     1.462,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphExit",
+   "clearance": {
+    "m": 0.1124,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.4421713,
+    0.34,
+    0.2
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1001
+   },
+   "name": "exit.passenger1.default",
+   "role": "passenger",
+   "state": "S_EXIT_VEHICLE",
+   "transform": {
+    "forward": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     1.5744,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": -90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "right",
+    "normal": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     1.462,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphExit",
+   "clearance": {
+    "m": 0.1124,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.4421713,
+    0.34,
+    0.2
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1001
+   },
+   "name": "exit.passenger1.roll.out",
+   "role": "passenger",
+   "state": "S_ROLL_OUT_EXIT_VEHICLE",
+   "transform": {
+    "forward": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     1.5744,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": -90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "right",
+    "normal": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     1.462,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphExit",
+   "clearance": {
+    "m": 0.1124,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.4421713,
+    0.34,
+    0.2
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1001
+   },
+   "name": "exit.ai.passenger1.default90L",
+   "role": "passenger",
+   "state": "S_EXIT_VEHICLE_90L",
+   "transform": {
+    "forward": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     1.5744,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": -90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "right",
+    "normal": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     1.462,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphExit",
+   "clearance": {
+    "m": 0.1124,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.4421713,
+    0.34,
+    0.2
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1001
+   },
+   "name": "exit.ai.passenger1.default180",
+   "role": "passenger",
+   "state": "S_EXIT_VEHICLE_180",
+   "transform": {
+    "forward": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     1.5744,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": -90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "right",
+    "normal": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     1.462,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphExit",
+   "clearance": {
+    "m": 0.1124,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.4421713,
+    0.34,
+    0.2
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1001
+   },
+   "name": "exit.ai.passenger1.default",
+   "role": "passenger",
+   "state": "S_EXIT_VEHICLE",
+   "transform": {
+    "forward": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     1.5744,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": -90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "left",
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     -1.471,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphTransition",
+   "clearance": {
+    "m": 0.1,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.4421713,
+    0.34,
+    0.2
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0969
+   },
+   "name": "transition.driver",
+   "role": "driver",
+   "state": null,
+   "transform": {
+    "forward": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     -1.571,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "right",
+    "normal": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     1.462,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphExit",
+   "clearance": {
+    "m": 0.1124,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.4421713,
+    0.34,
+    0.2
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1001
+   },
+   "name": "exit.passenger1.upside.down",
+   "role": "passenger",
+   "state": "S_EXIT_PASSENGER_VEHICLE_UPSIDE_DOWN",
+   "transform": {
+    "forward": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     1.5744,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": -90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "right",
+    "normal": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     1.462,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphExit",
+   "clearance": {
+    "m": 0.1124,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.4421713,
+    0.34,
+    0.2
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1001
+   },
+   "name": "exit.ai.passenger1.default0",
+   "role": "passenger",
+   "state": "S_EXIT_VEHICLE_0",
+   "transform": {
+    "forward": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     1.5744,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": -90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "right",
+    "normal": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     1.462,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphExit",
+   "clearance": {
+    "m": 0.1124,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "dropped (D-9)",
+   "donor_serpente": [
+    0.4421713,
+    0.34,
+    0.2
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1001
+   },
+   "name": "exit.passenger1.pulled.out",
+   "role": "passenger",
+   "state": "S_PULLED_OUT_VEHICLE",
+   "transform": {
+    "forward": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     1.5744,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": -90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "hood",
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "surface": [
+     0.0005,
+     1.3606,
+     -2.14
+    ]
+   },
+   "class": "CInteractionGraphExit",
+   "clearance": {
+    "m": 0.1659,
+    "source": "decoded (donor stunt-area gap 0.048 m, band floor applied)",
+    "target_m": 0.06
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.4421713,
+    0.34,
+    0.2
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0573
+   },
+   "name": "exit.ai.passenger1.to.hood",
+   "role": "hood",
+   "state": "S_EXIT_DRIVER_TO_HOOD_VEHICLE",
+   "transform": {
+    "forward": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "pos_m": [
+     0.0005,
+     1.5265,
+     -2.14
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 0.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "right",
+    "normal": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     1.462,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphExit",
+   "clearance": {
+    "m": 0.1124,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.4421713,
+    0.34,
+    0.2
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1001
+   },
+   "name": "exit.ai.passenger1.default90R",
+   "role": "passenger",
+   "state": "S_EXIT_VEHICLE_90R",
+   "transform": {
+    "forward": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     1.5744,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": -90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "right",
+    "normal": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     1.462,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphEntry",
+   "clearance": {
+    "m": 0.1124,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "dropped (D-9)",
+   "donor_serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1001
+   },
+   "name": "entry.passenger1.pull.out.onground.no.door",
+   "role": "passenger",
+   "state": "S_ENTER_PASSENGER_ON_GROUND_THROW_OUT_NO_DOOR_VEHICLE",
+   "transform": {
+    "forward": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     1.5744,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": -90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "right",
+    "normal": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     1.462,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphEntry",
+   "clearance": {
+    "m": 0.1124,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1001
+   },
+   "name": "entry.passenger1",
+   "role": "passenger",
+   "state": "S_ENTER_PASSENGER_VEHICLE",
+   "transform": {
+    "forward": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     1.5744,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": -90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "roof",
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "surface": [
+     0.0005,
+     2.0811,
+     -0.5
+    ]
+   },
+   "class": "CInteractionGraphEntry",
+   "clearance": {
+    "m": 0.1656,
+    "source": "decoded (donor stunt-area gap 0.1474 m, band floor applied)",
+    "target_m": 0.1474
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1453
+   },
+   "name": "entry.step.over.high.stunt",
+   "role": "stunt",
+   "state": "S_STEP_OVER_HIGH_TO_STUNT_VEHICLE_P1",
+   "transform": {
+    "forward": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "pos_m": [
+     0.0005,
+     2.2467,
+     -0.5
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 0.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "hood",
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "surface": [
+     0.0005,
+     1.3606,
+     -2.14
+    ]
+   },
+   "class": "CInteractionGraphPointNode",
+   "clearance": {
+    "m": 0.1659,
+    "source": "decoded (donor stunt-area gap 0.048 m, band floor applied)",
+    "target_m": 0.06
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.0,
+    1.050659,
+    -1.504883
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0573
+   },
+   "name": "point.stunt.hood",
+   "role": "hood",
+   "state": null,
+   "transform": {
+    "forward": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "pos_m": [
+     0.0005,
+     1.5265,
+     -2.14
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 0.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "hood",
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "surface": [
+     0.0005,
+     1.3606,
+     -2.14
+    ]
+   },
+   "class": "CInteractionGraphExit",
+   "clearance": {
+    "m": 0.1659,
+    "source": "decoded (donor stunt-area gap 0.048 m, band floor applied)",
+    "target_m": 0.06
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.0,
+    1.050659,
+    -1.504883
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0573
+   },
+   "name": "exit.from.stunt.hood",
+   "role": "hood",
+   "state": "S_STUNT_EXIT_VEHICLE",
+   "transform": {
+    "forward": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "pos_m": [
+     0.0005,
+     1.5265,
+     -2.14
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 0.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "left",
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     -1.471,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphPointNode",
+   "clearance": {
+    "m": 0.1,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    -1.33,
+    0.0,
+    0.77
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0969
+   },
+   "name": "point.driver.onground",
+   "role": "driver",
+   "state": null,
+   "transform": {
+    "forward": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     -1.571,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "left",
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     -1.471,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphTransition",
+   "clearance": {
+    "m": 0.1,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    -1.33,
+    0.0,
+    0.77
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0969
+   },
+   "name": "transition.driver",
+   "role": "driver",
+   "state": null,
+   "transform": {
+    "forward": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     -1.571,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "left",
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     -1.471,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphTransition",
+   "clearance": {
+    "m": 0.1,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    -1.33,
+    0.0,
+    0.77
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0969
+   },
+   "name": "transition.driver.side",
+   "role": "driver",
+   "state": null,
+   "transform": {
+    "forward": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     -1.571,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "left",
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     -1.471,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphEntry",
+   "clearance": {
+    "m": 0.1,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "dropped (D-9)",
+   "donor_serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0969
+   },
+   "name": "entry.driver.pull.out.onground",
+   "role": "driver",
+   "state": "S_ENTER_ON_GROUND_THROW_OUT_VEHICLE",
+   "transform": {
+    "forward": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     -1.571,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "roof",
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "surface": [
+     0.0005,
+     2.0811,
+     -0.5
+    ]
+   },
+   "class": "CInteractionGraphEntry",
+   "clearance": {
+    "m": 0.1656,
+    "source": "decoded (donor stunt-area gap 0.1474 m, band floor applied)",
+    "target_m": 0.1474
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1453
+   },
+   "name": "entry.stunt.to.driver.side.enter.vehicle",
+   "role": "stunt",
+   "state": "S_ENTER_STUNT_TO_TRANS_ENTER_VEHICLE_P1",
+   "transform": {
+    "forward": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "pos_m": [
+     0.0005,
+     2.2467,
+     -0.5
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 0.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "roof",
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "surface": [
+     0.0005,
+     2.0811,
+     -0.5
+    ]
+   },
+   "class": "CInteractionGraphEntry",
+   "clearance": {
+    "m": 0.1656,
+    "source": "decoded (donor stunt-area gap 0.1474 m, band floor applied)",
+    "target_m": 0.1474
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1453
+   },
+   "name": "entry.step.over.low.stunt",
+   "role": "stunt",
+   "state": "S_STEP_OVER_LOW_TO_STUNT_VEHICLE_P1",
+   "transform": {
+    "forward": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "pos_m": [
+     0.0005,
+     2.2467,
+     -0.5
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 0.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "right",
+    "normal": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     1.462,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphEntry",
+   "clearance": {
+    "m": 0.1124,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1001
+   },
+   "name": "entry.passenger1.locked.onground",
+   "role": "passenger",
+   "state": "S_ENTER_PASSENGER_ON_GROUND_UNLOCK_VEHICLE",
+   "transform": {
+    "forward": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     1.5744,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": -90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "hood",
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "surface": [
+     0.0005,
+     1.3606,
+     -2.14
+    ]
+   },
+   "class": "CInteractionGraphEntry",
+   "clearance": {
+    "m": 0.1659,
+    "source": "decoded (donor stunt-area gap 0.048 m, band floor applied)",
+    "target_m": 0.06
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0573
+   },
+   "name": "entry.step.over.high.stunt.hood",
+   "role": "hood",
+   "state": "S_STEP_OVER_HIGH_TO_STUNT_VEHICLE_P1",
+   "transform": {
+    "forward": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "pos_m": [
+     0.0005,
+     1.5265,
+     -2.14
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 0.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "left",
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     -1.471,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphEntry",
+   "clearance": {
+    "m": 0.1,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0969
+   },
+   "name": "entry.ai.driver.left",
+   "role": "driver",
+   "state": "S_ENTER_DRIVER_VEHICLE",
+   "transform": {
+    "forward": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     -1.571,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "roof",
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "surface": [
+     0.0005,
+     2.0811,
+     -0.5
+    ]
+   },
+   "class": "CInteractionGraphEntry",
+   "clearance": {
+    "m": 0.1656,
+    "source": "decoded (donor stunt-area gap 0.1474 m, band floor applied)",
+    "target_m": 0.1474
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1453
+   },
+   "name": "entry.pull.up.to.stunt.far",
+   "role": "stunt",
+   "state": "S_PULL_UP_TO_STUNT_FAR_VEHICLE",
+   "transform": {
+    "forward": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "pos_m": [
+     0.0005,
+     2.2467,
+     -0.5
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 0.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "left",
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     -1.471,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphEntry",
+   "clearance": {
+    "m": 0.1,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0969
+   },
+   "name": "entry.driver.side.fast",
+   "role": "driver",
+   "state": "S_ON_GROUND_TO_ENTER_DRIVER_SIDE_VEHICLE",
+   "transform": {
+    "forward": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     -1.571,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "left",
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     -1.471,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphPointNode",
+   "clearance": {
+    "m": 0.1,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    -0.26,
+    1.47,
+    0.37
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0969
+   },
+   "name": "point.driver.side",
+   "role": "driver",
+   "state": null,
+   "transform": {
+    "forward": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     -1.571,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "left",
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     -1.471,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphTransition",
+   "clearance": {
+    "m": 0.1,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    -0.26,
+    1.47,
+    0.37
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0969
+   },
+   "name": "transition.driver",
+   "role": "driver",
+   "state": null,
+   "transform": {
+    "forward": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     -1.571,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "roof",
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "surface": [
+     0.0005,
+     2.0811,
+     -0.5
+    ]
+   },
+   "class": "CInteractionGraphTransition",
+   "clearance": {
+    "m": 0.1656,
+    "source": "decoded (donor stunt-area gap 0.1474 m, band floor applied)",
+    "target_m": 0.1474
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    -0.26,
+    1.47,
+    0.37
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1453
+   },
+   "name": "transition.stunt",
+   "role": "stunt",
+   "state": null,
+   "transform": {
+    "forward": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "pos_m": [
+     0.0005,
+     2.2467,
+     -0.5
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 0.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "left",
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     -1.471,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionGraphEntry",
+   "clearance": {
+    "m": 0.1,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0969
+   },
+   "name": "entry.driver.no.door",
+   "role": "driver",
+   "state": "S_ENTER_DRIVER_NO_DOOR_VEHICLE",
+   "transform": {
+    "forward": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     -1.571,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "left",
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     -1.471,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionTrigger",
+   "clearance": {
+    "m": 0.1,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    -1.48,
+    -0.117,
+    0.287
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0969
+   },
+   "name": "trigger.driver",
+   "role": "driver",
+   "state": null,
+   "transform": {
+    "forward": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     -1.571,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "roof",
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "surface": [
+     0.0005,
+     2.0811,
+     -0.5
+    ]
+   },
+   "class": "CInteractionTrigger",
+   "clearance": {
+    "m": 0.1656,
+    "source": "decoded (donor stunt-area gap 0.1474 m, band floor applied)",
+    "target_m": 0.1474
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1453
+   },
+   "name": "trigger.step.to.stunt",
+   "role": "stunt",
+   "state": null,
+   "transform": {
+    "forward": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "pos_m": [
+     0.0005,
+     2.2467,
+     -0.5
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 0.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "left",
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     -1.471,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionTrigger",
+   "clearance": {
+    "m": 0.1,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    -1.620605,
+    -0.1606445,
+    0.8964844
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.0969
+   },
+   "name": "trigger.driver.fast",
+   "role": "driver",
+   "state": null,
+   "transform": {
+    "forward": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     -1.571,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "roof",
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "surface": [
+     0.0005,
+     2.0811,
+     -0.5
+    ]
+   },
+   "class": "CInteraction",
+   "clearance": {
+    "m": 0.1656,
+    "source": "decoded (donor stunt-area gap 0.1474 m, band floor applied)",
+    "target_m": 0.1474
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    6.246567e-05,
+    0.0,
+    0.0
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1453
+   },
+   "name": "interaction.seat.stunt",
+   "role": "seat.stunt",
+   "state": null,
+   "transform": {
+    "forward": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "pos_m": [
+     0.0005,
+     2.2467,
+     -0.5
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 0.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "right",
+    "normal": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "surface": [
+     1.462,
+     1.15,
+     -0.95
+    ]
+   },
+   "class": "CInteractionTrigger",
+   "clearance": {
+    "m": 0.1124,
+    "source": "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)",
+    "target_m": 0.1
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    1.48,
+    -0.117,
+    0.287
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1001
+   },
+   "name": "trigger.passenger1",
+   "role": "passenger",
+   "state": null,
+   "transform": {
+    "forward": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "pos_m": [
+     1.5744,
+     1.15,
+     -0.95
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": -90.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "roof",
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "surface": [
+     0.0005,
+     2.0811,
+     -0.5
+    ]
+   },
+   "class": "CInteractionTrigger",
+   "clearance": {
+    "m": 0.1656,
+    "source": "decoded (donor stunt-area gap 0.1474 m, band floor applied)",
+    "target_m": 0.1474
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    -0.41,
+    1.65,
+    -0.09
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1453
+   },
+   "name": "trigger.stunt.vehicle.to.vehicle",
+   "role": "stunt",
+   "state": null,
+   "transform": {
+    "forward": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "pos_m": [
+     0.0005,
+     2.2467,
+     -0.5
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 0.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": null,
+   "class": "CInteraction",
+   "clearance": null,
+   "disposition": "unknown",
+   "donor_serpente": [
+    6.246567e-05,
+    0.0,
+    0.0
+   ],
+   "measure": null,
+   "name": "interaction.seat.passenger1",
+   "role": "seat.passenger1",
+   "state": null,
+   "transform": null,
+   "verdict": "UNKNOWN - the Batmobile cockpit has one seat (COCKPIT.md §1); no analogous location for a passenger seat"
+  },
+  {
+   "anchor": {
+    "kind": "roof",
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "surface": [
+     0.0005,
+     2.0811,
+     -0.5
+    ]
+   },
+   "class": "CInteractionTrigger",
+   "clearance": {
+    "m": 0.1656,
+    "source": "decoded (donor stunt-area gap 0.1474 m, band floor applied)",
+    "target_m": 0.1474
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    -0.02832031,
+    1.268188,
+    -0.09667969
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1453
+   },
+   "name": "trigger.stationary.stunt",
+   "role": "stunt",
+   "state": null,
+   "transform": {
+    "forward": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "pos_m": [
+     0.0005,
+     2.2467,
+     -0.5
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 0.0
+   },
+   "verdict": "in band"
+  },
+  {
+   "anchor": {
+    "kind": "roof",
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "surface": [
+     0.0005,
+     2.0811,
+     -0.5
+    ]
+   },
+   "class": "CInteractionTrigger",
+   "clearance": {
+    "m": 0.1656,
+    "source": "decoded (donor stunt-area gap 0.1474 m, band floor applied)",
+    "target_m": 0.1474
+   },
+   "disposition": "placed",
+   "donor_serpente": [
+    -0.41,
+    1.65,
+    -0.09
+   ],
+   "measure": {
+    "inside": false,
+    "nearest_m": 0.1453
+   },
+   "name": "trigger.stunt",
+   "role": "stunt",
+   "state": null,
+   "transform": {
+    "forward": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "pos_m": [
+     0.0005,
+     2.2467,
+     -0.5
+    ],
+    "up": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "yaw_deg": 0.0
+   },
+   "verdict": "in band"
+  }
+ ],
+ "schema": 1,
+ "source": "Research/JC3Grab/INTERACTION.json",
+ "source_digest": "da864a28edcbcbff"
+}

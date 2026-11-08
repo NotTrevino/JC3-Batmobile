@@ -1,0 +1,905 @@
+{
+ "checks": [
+  {
+   "name": "export names resolve to the two DrivingMode bodies",
+   "pass": true
+  },
+  {
+   "name": "the decoded callee is Core.SetRBLinearVelocity",
+   "pass": true
+  },
+  {
+   "name": "the argument list tiles exactly to its 0x16 terminator",
+   "pass": true
+  },
+  {
+   "name": "exactly two arguments: a vector and a bool",
+   "pass": true
+  },
+  {
+   "name": "the vector is the literal (0, 0, 0) with all 12 bytes zero",
+   "pass": true
+  },
+  {
+   "name": "the receiver Context chain re-serialises to the original bytes",
+   "pass": true
+  },
+  {
+   "name": "the receiver chain names the car and its Core.Mesh component",
+   "pass": true
+  },
+  {
+   "name": "token 0x23 measures 13 bytes across the package (>=100 samples on 0x16)",
+   "pass": true
+  },
+  {
+   "name": "ToggleBattleMode carries exactly two TryToChangeMode calls, 5269 and 61474",
+   "pass": true
+  },
+  {
+   "name": "the first mode call is the condition of an if, its ReturnValue reserialises",
+   "pass": true
+  },
+  {
+   "name": "a single jump token sits between the two mode calls",
+   "pass": true
+  },
+  {
+   "name": "the then-block tiles the whole gap from the condition to the second mode call",
+   "pass": true
+  },
+  {
+   "name": "the second mode call is followed by a return (0x04)",
+   "pass": true
+  },
+  {
+   "name": "the velocity call is inside an if whose condition is a stored bool",
+   "pass": true
+  },
+  {
+   "name": "the body calls TriggerSpecialMove after the velocity call",
+   "pass": true
+  },
+  {
+   "name": "no jump encoding places every target inside the body (reported, not assumed)",
+   "pass": true
+  }
+ ],
+ "class_defaults": {
+  "count": 50,
+  "mode_id_count": 0,
+  "mode_id_entries": [],
+  "numeric_velocity_keys": [],
+  "special_move_refs": [
+   "Eject.Abseil_Eject_To_Glide",
+   "Eject.Abseil_Eject_Up_To_Glide",
+   "Eject.Eject_Fwd_To_Glide",
+   "Eject.Eject_Up_To_Glide"
+  ],
+  "velocity_or_eject_entries": [
+   {
+    "path": "/cdo/subclass/tags[6]/candidates[0]/member",
+    "value": "EjectUpMove"
+   },
+   {
+    "path": "/cdo/subclass/tags[6]/members[0]/member",
+    "value": "EjectUpMove"
+   },
+   {
+    "path": "/cdo/subclass/tags[6]/name",
+    "value": "EjectUpMove"
+   },
+   {
+    "path": "/cdo/subclass/tags[6]/value_text",
+    "value": "Eject.Eject_Up_To_Glide (RSpecialMoveConfigConfigurable)"
+   },
+   {
+    "path": "/cdo/subclass/tags[6]/ref",
+    "value": "Eject.Eject_Up_To_Glide"
+   },
+   {
+    "path": "/cdo/subclass/tags[7]/candidates[0]/member",
+    "value": "EjectForwardMove"
+   },
+   {
+    "path": "/cdo/subclass/tags[7]/members[0]/member",
+    "value": "EjectForwardMove"
+   },
+   {
+    "path": "/cdo/subclass/tags[7]/name",
+    "value": "EjectForwardMove"
+   },
+   {
+    "path": "/cdo/subclass/tags[7]/value_text",
+    "value": "Eject.Eject_Fwd_To_Glide (RSpecialMoveConfigConfigurable)"
+   },
+   {
+    "path": "/cdo/subclass/tags[7]/ref",
+    "value": "Eject.Eject_Fwd_To_Glide"
+   },
+   {
+    "path": "/cdo/subclass/tags[12]/candidates[0]/member",
+    "value": "EjectWhenBatmobileVerticalMove"
+   },
+   {
+    "path": "/cdo/subclass/tags[12]/members[0]/member",
+    "value": "EjectWhenBatmobileVerticalMove"
+   },
+   {
+    "path": "/cdo/subclass/tags[12]/name",
+    "value": "EjectWhenBatmobileVerticalMove"
+   },
+   {
+    "path": "/cdo/subclass/tags[12]/value_text",
+    "value": "Eject.Abseil_Eject_To_Glide (RSpecialMoveConfigConfigurable)"
+   },
+   {
+    "path": "/cdo/subclass/tags[12]/ref",
+    "value": "Eject.Abseil_Eject_To_Glide"
+   },
+   {
+    "path": "/cdo/subclass/tags[13]/candidates[0]/member",
+    "value": "EjectUpWhenBatmobileVerticalMove"
+   },
+   {
+    "path": "/cdo/subclass/tags[13]/members[0]/member",
+    "value": "EjectUpWhenBatmobileVerticalMove"
+   },
+   {
+    "path": "/cdo/subclass/tags[13]/name",
+    "value": "EjectUpWhenBatmobileVerticalMove"
+   },
+   {
+    "path": "/cdo/subclass/tags[13]/value_text",
+    "value": "Eject.Abseil_Eject_Up_To_Glide (RSpecialMoveConfigConfigurable)"
+   },
+   {
+    "path": "/cdo/subclass/tags[13]/ref",
+    "value": "Eject.Abseil_Eject_Up_To_Glide"
+   },
+   {
+    "path": "/cdo/subclass/tags[62]/candidates[0]/member",
+    "value": "EjectUpDist"
+   },
+   {
+    "path": "/cdo/subclass/tags[62]/members[0]/member",
+    "value": "EjectUpDist"
+   },
+   {
+    "path": "/cdo/subclass/tags[62]/name",
+    "value": "EjectUpDist"
+   },
+   {
+    "path": "/cdo/base/tags[41]/candidates[0]/member",
+    "value": "MaxEjectType"
+   },
+   {
+    "path": "/cdo/base/tags[41]/members[0]/member",
+    "value": "MaxEjectType"
+   },
+   {
+    "path": "/cdo/base/tags[41]/members[0]/array_type",
+    "value": "EBatmobileEjectType"
+   },
+   {
+    "path": "/cdo/base/tags[41]/name",
+    "value": "MaxEjectType"
+   },
+   {
+    "path": "/cdo/base/tags[41]/value",
+    "value": "EBET_NormalEject"
+   },
+   {
+    "path": "/cdo/base/tags[41]/value_text",
+    "value": "'EBET_NormalEject' (enum FName)"
+   },
+   {
+    "path": "/cdo/base/tags[53]/candidates[0]/member",
+    "value": "ImpactRoadAssistAngVelocityTime"
+   },
+   {
+    "path": "/cdo/base/tags[53]/members[0]/member",
+    "value": "ImpactRoadAssistAngVelocityTime"
+   },
+   {
+    "path": "/cdo/base/tags[53]/name",
+    "value": "ImpactRoadAssistAngVelocityTime"
+   },
+   {
+    "path": "/cdo/base/tags[131]/candidates[0]/member",
+    "value": "DriftAngularVelocityBySteer"
+   },
+   {
+    "path": "/cdo/base/tags[131]/members[0]/member",
+    "value": "DriftAngularVelocityBySteer"
+   },
+   {
+    "path": "/cdo/base/tags[131]/name",
+    "value": "DriftAngularVelocityBySteer"
+   },
+   {
+    "path": "/cdo/base/tags[133]/candidates[0]/member",
+    "value": "DriftAngularVelocityFactor"
+   },
+   {
+    "path": "/cdo/base/tags[133]/members[0]/member",
+    "value": "DriftAngularVelocityFactor"
+   },
+   {
+    "path": "/cdo/base/tags[133]/name",
+    "value": "DriftAngularVelocityFactor"
+   },
+   {
+    "path": "/cdo/base/tags[134]/candidates[0]/member",
+    "value": "DriftAngularVelocityFactorMax"
+   },
+   {
+    "path": "/cdo/base/tags[134]/members[0]/member",
+    "value": "DriftAngularVelocityFactorMax"
+   }
+  ]
+ },
+ "exports": {
+  "DrivingMode.state": 105048,
+  "EjectFromVehicle": 104931,
+  "ToggleBattleMode": 105028
+ },
+ "jumps": {
+  "EjectFromVehicle": {
+   "schemes": {
+    "operand_end": {
+     "inside_body": 10,
+     "of": 20,
+     "on_statement_start": 0
+    },
+    "operand_start": {
+     "inside_body": 10,
+     "of": 20,
+     "on_statement_start": 1
+    },
+    "token": {
+     "inside_body": 10,
+     "of": 20,
+     "on_statement_start": 3
+    }
+   },
+   "sites": [
+    {
+     "at": 0,
+     "next_byte": "0x1b",
+     "operand_u16": 13,
+     "token": "0x07",
+     "u32_read": 1511718925
+    },
+    {
+     "at": 75,
+     "next_byte": "0x82",
+     "operand_u16": 240,
+     "token": "0x07",
+     "u32_read": 763494640
+    },
+    {
+     "at": 156,
+     "next_byte": "0x81",
+     "operand_u16": 278,
+     "token": "0x07",
+     "u32_read": 427884822
+    },
+    {
+     "at": 209,
+     "next_byte": "0x77",
+     "operand_u16": 485,
+     "token": "0x07",
+     "u32_read": 7799269
+    },
+    {
+     "at": 220,
+     "next_byte": "0x19",
+     "operand_u16": 485,
+     "token": "0x07",
+     "u32_read": 1638885
+    },
+    {
+     "at": 260,
+     "next_byte": "0x19",
+     "operand_u16": 483,
+     "token": "0x07",
+     "u32_read": 1638883
+    },
+    {
+     "at": 308,
+     "next_byte": "0x04",
+     "operand_u16": 485,
+     "token": "0x06",
+     "u32_read": 184812005
+    },
+    {
+     "at": 348,
+     "next_byte": "0xf2",
+     "operand_u16": 635,
+     "token": "0x07",
+     "u32_read": 435290747
+    },
+    {
+     "at": 417,
+     "next_byte": "0x00",
+     "operand_u16": 0,
+     "token": "0x06",
+     "u32_read": 0
+    },
+    {
+     "at": 436,
+     "next_byte": "0x00",
+     "operand_u16": 0,
+     "token": "0x06",
+     "u32_read": 0
+    },
+    {
+     "at": 478,
+     "next_byte": "0x2d",
+     "operand_u16": 847,
+     "token": "0x07",
+     "u32_read": 2949967
+    },
+    {
+     "at": 605,
+     "next_byte": "0xc0",
+     "operand_u16": 1814,
+     "token": "0x06",
+     "u32_read": 130025238
+    },
+    {
+     "at": 607,
+     "next_byte": "0x82",
+     "operand_u16": 1984,
+     "token": "0x07",
+     "u32_read": 2005010368
+    },
+    {
+     "at": 609,
+     "next_byte": "0x00",
+     "operand_u16": 30594,
+     "token": "0x07",
+     "u32_read": -520063102
+    },
+    {
+     "at": 631,
+     "next_byte": "0x82",
+     "operand_u16": 1953,
+     "token": "0x07",
+     "u32_read": -2105407583
+    },
+    {
+     "at": 633,
+     "next_byte": "0x82",
+     "operand_u16": 33410,
+     "token": "0x07",
+     "u32_read": 2005041794
+    },
+    {
+     "at": 1140,
+     "next_byte": "0x72",
+     "operand_u16": 1950,
+     "token": "0x07",
+     "u32_read": 896665502
+    },
+    {
+     "at": 1142,
+     "next_byte": "0x44",
+     "operand_u16": 13682,
+     "token": "0x07",
+     "u32_read": -180079246
+    },
+    {
+     "at": 1250,
+     "next_byte": "0x0f",
+     "operand_u16": 1984,
+     "token": "0x06",
+     "u32_read": 17762240
+    },
+    {
+     "at": 1252,
+     "next_byte": "0xab",
+     "operand_u16": 271,
+     "token": "0x07",
+     "u32_read": -1733623537
+    }
+   ]
+  },
+  "ToggleBattleMode": {
+   "schemes": {
+    "operand_end": {
+     "inside_body": 2,
+     "of": 5,
+     "on_statement_start": 2
+    },
+    "operand_start": {
+     "inside_body": 2,
+     "of": 5,
+     "on_statement_start": 1
+    },
+    "token": {
+     "inside_body": 2,
+     "of": 5,
+     "on_statement_start": 0
+    }
+   },
+   "sites": [
+    {
+     "at": 0,
+     "next_byte": "0x1c",
+     "operand_u16": 15,
+     "token": "0x07",
+     "u32_read": 1931214863
+    },
+    {
+     "at": 11,
+     "next_byte": "0x82",
+     "operand_u16": 115,
+     "token": "0x07",
+     "u32_read": -1702756237
+    },
+    {
+     "at": 79,
+     "next_byte": "0x82",
+     "operand_u16": 255,
+     "token": "0x07",
+     "u32_read": -2122186497
+    },
+    {
+     "at": 129,
+     "next_byte": "0x19",
+     "operand_u16": 252,
+     "token": "0x07",
+     "u32_read": 18415868
+    },
+    {
+     "at": 172,
+     "next_byte": "0x19",
+     "operand_u16": 291,
+     "token": "0x06",
+     "u32_read": 18415907
+    }
+   ]
+  }
+ },
+ "launch_sequence": [
+  {
+   "args": [
+    {
+     "at": 8,
+     "kind": "<0x4A unnamed 1-byte token>",
+     "raw_token": "0x4a",
+     "token": 74
+    },
+    {
+     "at": 9,
+     "kind": "<0x4A unnamed 1-byte token>",
+     "raw_token": "0x4a",
+     "token": 74
+    }
+   ],
+   "at": 3,
+   "call": "CantEjectFromBatmobile",
+   "raw": "1b 5a 3c 00 00 4a 4a 16"
+  },
+  {
+   "args": [],
+   "at": 173,
+   "call": "RVehicleBatmobileBase.CheckSpaceAboveBatmobileCockpit",
+   "raw": "1c 0c 2a 00 00 16"
+  },
+  {
+   "args": [
+    {
+     "at": 370,
+     "kind": "True",
+     "raw_token": "0x27",
+     "token": 39
+    },
+    {
+     "at": 371,
+     "flag": 0,
+     "index": 104926,
+     "kind": "BoolVariable",
+     "ref": "EjectFromVehicle.FFInRange"
+    }
+   ],
+   "at": 365,
+   "call": "DriverLeave",
+   "raw": "1b 01 6c 00 00 27 2d 00 de 99 01 00 16"
+  },
+  {
+   "args": [],
+   "at": 424,
+   "call": "RemoveBatmobileBindsAndSetBatmanBinds",
+   "raw": "1b 30 fc 00 00 16"
+  },
+  {
+   "args": [],
+   "at": 443,
+   "call": "PlayCockpitOpenFast",
+   "raw": "1b 9e e7 00 00 16"
+  },
+  {
+   "args": [
+    {
+     "at": 518,
+     "kind": "VectorConst",
+     "value": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "at": 531,
+     "kind": "False",
+     "raw_token": "0x28",
+     "token": 40
+    }
+   ],
+   "at": 513,
+   "call": "Core.SetRBLinearVelocity",
+   "raw": "1c 04 f7 ff ff 23 00 00 00 00 00 00 00 00 00 00 00 00 28 16"
+  },
+  {
+   "args": [
+    {
+     "at": 1108,
+     "kind": "Self",
+     "raw_token": "0x17",
+     "token": 23
+    },
+    {
+     "at": 1109,
+     "index": 104928,
+     "kind": "LocalVariable",
+     "ref": "EjectFromVehicle.Loc"
+    },
+    {
+     "at": 1114,
+     "kind": "<0x4A unnamed 1-byte token>",
+     "raw_token": "0x4a",
+     "token": 74
+    }
+   ],
+   "at": 1103,
+   "call": "TriggerSpecialMove",
+   "raw": "1b a5 36 01 00 17 00 e0 99 01 00 4a 16"
+  }
+ ],
+ "package": "BmGame.upk",
+ "package_sha1": "36b5903579b80e7e0d3036a605cbf803c64e5b32",
+ "script_lengths": {
+  "EjectFromVehicle": 1297,
+  "ToggleBattleMode": 200
+ },
+ "status": "DONE",
+ "toggle": {
+  "byte_after_second_call": "0x04",
+  "if_condition": {
+   "at": 129,
+   "condition": {
+    "at": 132,
+    "flag": 0,
+    "function": {
+     "args": [
+      {
+       "at": 150,
+       "kind": "IntConst2B",
+       "value": 5269
+      }
+     ],
+     "at": 145,
+     "call": "RVehicleBatmobileBase.TryToChangeMode",
+     "kind": "FinalFunction"
+    },
+    "kind": "Context",
+    "object": {
+     "at": 133,
+     "index": 104683,
+     "kind": "InstanceVariable",
+     "ref": "RPlayerController.BatmobilePawn"
+    },
+    "prop": "TryToChangeMode.ReturnValue",
+    "skip": 15
+   },
+   "condition_bytes": [
+    132,
+    156
+   ],
+   "condition_reserialises": true,
+   "operand_u16": 252
+  },
+  "jump_after_then": {
+   "at": 172,
+   "operand_u16": 291
+  },
+  "modes": [
+   {
+    "at": 145,
+    "enclosing": [
+     [
+      129,
+      7,
+      252
+     ],
+     [
+      172,
+      6,
+      291
+     ]
+    ],
+    "literal": 5269,
+    "literal_kind": "IntConst2B"
+   },
+   {
+    "at": 188,
+    "enclosing": [
+     [
+      172,
+      6,
+      291
+     ],
+     null
+    ],
+    "literal": 61474,
+    "literal_kind": "IntConst2B"
+   }
+  ],
+  "second_call_context_at": 175,
+  "second_call_ends_at": 199,
+  "then_block_statements": [
+   {
+    "at": 156,
+    "end": 164,
+    "node": {
+     "at": 156,
+     "kind": "LetBool",
+     "lhs": {
+      "at": 157,
+      "flag": 1,
+      "index": 104307,
+      "kind": "BoolVariable",
+      "ref": "RPlayerController.bWaitingToDebounceRun"
+     },
+     "rhs": {
+      "at": 163,
+      "kind": "True",
+      "raw_token": "0x27",
+      "token": 39
+     }
+    }
+   },
+   {
+    "at": 164,
+    "end": 172,
+    "node": {
+     "at": 164,
+     "kind": "LetBool",
+     "lhs": {
+      "at": 165,
+      "flag": 1,
+      "index": 104305,
+      "kind": "BoolVariable",
+      "ref": "RPlayerController.bWaitingToDebounceAimGadget"
+     },
+     "rhs": {
+      "at": 171,
+      "kind": "True",
+      "raw_token": "0x27",
+      "token": 39
+     }
+    }
+   },
+   {
+    "at": 172,
+    "end": 175,
+    "node": {
+     "at": 172,
+     "kind": "Jump",
+     "operand_u16": 291
+    }
+   }
+  ],
+  "then_block_until": 175
+ },
+ "vector_token_census": {
+  "all_zero": 786,
+  "finite_three_float_payloads": 4409,
+  "followed_directly_by_end_parms": 934,
+  "occurrences": 6116,
+  "samples": [
+   {
+    "at": 25,
+    "export": "GatherPointsFromCenter",
+    "next_byte": "0x16",
+    "vector": [
+     0.0,
+     0.0,
+     100.0
+    ]
+   },
+   {
+    "at": 187,
+    "export": "SetSmokeScreen",
+    "next_byte": "0x16",
+    "vector": [
+     0.0,
+     0.0,
+     150.0
+    ]
+   },
+   {
+    "at": 246,
+    "export": "StartGatherPointsFromCenter",
+    "next_byte": "0x16",
+    "vector": [
+     0.0,
+     0.0,
+     100.0
+    ]
+   },
+   {
+    "at": 370,
+    "export": "StartGatherPointsFromCenter",
+    "next_byte": "0x16",
+    "vector": [
+     0.0,
+     0.0,
+     -2000.0
+    ]
+   },
+   {
+    "at": 403,
+    "export": "StartGatherPointsFromCenter",
+    "next_byte": "0x16",
+    "vector": [
+     0.0,
+     0.0,
+     100.0
+    ]
+   },
+   {
+    "at": 177,
+    "export": "GatherPointsFromCenter",
+    "next_byte": "0x16",
+    "vector": [
+     0.0,
+     0.0,
+     -2000.0
+    ]
+   }
+  ]
+ },
+ "velocity_call": {
+  "arg_bytes": "23 00 00 00 00 00 00 00 00 00 00 00 00 28 16",
+  "args": [
+   {
+    "at": 518,
+    "kind": "VectorConst",
+    "value": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "at": 531,
+    "kind": "False",
+    "raw_token": "0x28",
+    "token": 40
+   }
+  ],
+  "at": 513,
+  "bool": {
+   "at": 531,
+   "kind": "False",
+   "raw_token": "0x28",
+   "token": 40
+  },
+  "callee": "Core.SetRBLinearVelocity",
+  "callee_index": -2300,
+  "receiver_at": 487,
+  "receiver_chain": [
+   {
+    "bytes": "19",
+    "flag": 0,
+    "func": {
+     "at": 501,
+     "index": -1125,
+     "kind": "InstanceVariable",
+     "ref": "Core.Mesh"
+    },
+    "level": "inner",
+    "object": {
+     "at": 489,
+     "index": 104930,
+     "kind": "LocalVariable",
+     "ref": "EjectFromVehicle.Car"
+    },
+    "prop": "Core.Mesh",
+    "prop_index": -1125,
+    "skip": 9
+   },
+   {
+    "bytes": "19",
+    "flag": 0,
+    "func": {
+     "args": [
+      {
+       "at": 518,
+       "kind": "VectorConst",
+       "value": [
+        0.0,
+        0.0,
+        0.0
+       ]
+      },
+      {
+       "at": 531,
+       "kind": "False",
+       "raw_token": "0x28",
+       "token": 40
+      }
+     ],
+     "at": 513,
+     "call": "Core.SetRBLinearVelocity",
+     "kind": "FinalFunction"
+    },
+    "level": "outer",
+    "object": {
+     "at": 488,
+     "flag": 0,
+     "function": {
+      "at": 501,
+      "index": -1125,
+      "kind": "InstanceVariable",
+      "ref": "Core.Mesh"
+     },
+     "kind": "Context",
+     "object": {
+      "at": 489,
+      "index": 104930,
+      "kind": "LocalVariable",
+      "ref": "EjectFromVehicle.Car"
+     },
+     "prop": "Core.Mesh",
+     "skip": 9
+    },
+    "prop": null,
+    "prop_index": 0,
+    "skip": 24
+   }
+  ],
+  "receiver_retiles": true,
+  "span": [
+   518,
+   532
+  ],
+  "units": "cm/s (UE3 world unit is the centimetre; the stored floats are the unit)",
+  "vector": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "vector_at": 518
+ },
+ "velocity_call_if": {
+  "at": 478,
+  "condition": {
+   "at": 481,
+   "flag": 0,
+   "index": 104926,
+   "kind": "BoolVariable",
+   "ref": "EjectFromVehicle.FFInRange"
+  },
+  "condition_bytes": [
+   481,
+   487
+  ],
+  "condition_reserialises": true,
+  "operand_u16": 847
+ }
+}

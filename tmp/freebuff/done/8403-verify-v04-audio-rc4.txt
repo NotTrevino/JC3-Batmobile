@@ -1,0 +1,18 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-v04-audio-rc4.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-07 (rewritten from the 2026-11-06 brief by review 8399)
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/review-build-wave.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-d09-audio.md
+Phase V-04 on Builds/bm-RC4. Templates v04_audio_004c.py and v04_loops.py. Decode the built banks and compare every sample to its WAV: length within 1 frame, loudness within 1 LU of the vanilla event, loop wrap free of clicks above -40 dBFS.
+
+The tree carries exactly two banks in drop/sound/fmod_banks/: vehicles.bank 210,781,376 B and weapons.bank 177,586,080 B (build-d13 artifact table). character.bank and effects.bank are NOT in the tree.
+
+Expected results, from build-d09 §6 and the 2026-11-06 measurement:
+- events: 45 GUIDs pinned, 24 resolved in the built banks (vehicles 24/24), 21 still donor (19 effects + 2 character) = B-26. 45/45 present in the re-emitted .fmod_guids.
+- loudness 5/5 within 1 LU.
+- loop wrap 2/3, NOT 3/3: weapons#408 is fixed (+0.00 LU, wrap -61.21 dBFS), vehicles#279 is still RED — wrap -28.27 dBFS on the record / -39.68 dBFS on the payload against the -40 dBFS rule and its own p99 of -46.01. A run that reports 3/3 is wrong; print the per-sample numbers that make it 2/3.
+- do not count bm_audio.py --check on Builds/bm-004 as a failure of this build: it probes the live install, whose two banks were overwritten by later test installs (2026-11-02 21:48:39), and its derivation diff is 0.
+
+Environment: C: is full and /tmp is on it. Point TMPDIR/TEMP/TMP at E:/Modding/JC3-Batmobile/tmp/tmpdir before the two checks or they die with "No space left on device" while writing the 610 MB temp tree.
+
+Updated by review 8399: bank sizes, the 24/45 resolved set and the measured 5/5 + 2/3 (vehicles#279 -39.68) are now stated as the expected result instead of a hope.

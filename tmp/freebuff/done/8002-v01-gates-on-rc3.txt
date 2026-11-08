@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/v01-rc3.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-06
+When Builds/bm-RC3 exists (task 8001 builds it; if the folder is missing, say so and stop after confirming that) run the same five V-01 file gates that passed on bm-RC2 (Tools/scripts/v01_rc2.py, see Builds/bm-RC2/verify/files.md): spec_check, jc3parts check, the budgets, the jc3adf re-read of each edited module and the .toc read-back. Make a copy Tools/scripts/v01_rc3.py pointed at bm-RC3 and write Builds/bm-RC3/verify/files.md. Report any gate that differs from the RC2 result and why.

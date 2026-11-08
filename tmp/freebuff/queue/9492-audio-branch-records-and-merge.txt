@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/audio-branch-records-and-merge.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-engine-layers-build.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-sets-battle-weapons-fx.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-merge-release-candidate.md
+Hand the audio trees to the RC5 merge. Read how brief 9190 merges branches (reports/rc5-scaffold-and-merge-script.md) and the merge result. Make sure the branch records for Builds/bm-RC5-audio3 (and, if the route needs it, the hook audio build and the extra bank file) are registered under Working/RC5/branches/ with correct file lists, install targets, rollback notes, and size totals (the loose banks are 210,781,376 B plus 177,586,080 B today; report the new total). Check that merging audio2 and audio3 does not give two versions of one bank file; if so, write a merge rule. Run the merge script in its dry-run mode and the installer rehearsal against a scratch folder, never the game folder. Output tmp/freebuff/reports/audio-branch-records-and-merge.md. Done check: dry run lists each audio file once, rollback restores the original hashes in the scratch copy. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

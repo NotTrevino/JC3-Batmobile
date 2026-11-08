@@ -1,0 +1,73 @@
+# T-13 · Interaction translation — report
+
+## STATUS
+
+**deferred (decision D-9 is not resolved)**
+
+The card needs a §11 decision that is still open, so per the session rule the item was **not
+started** and no artefact was produced.
+
+| gate | result |
+|---|---|
+| resume: `grep -n "T-13" MODLOG.md` | no intended-change entry (the three hits are other sections mentioning the FX doc name `T-13`); none of the three output paths exists |
+| deps `G2X` | `done` — `Research/JC3Grab/G2X.md` + `g2x_gate.py --check` |
+| deps `G2-18` | `done` — `Research/JC3Grab/INTERACTION.md` |
+| deps `G2-19` | `done` — `Research/JC3Grab/SEAT.md` + `SEAT.json` |
+| deps `G2-20` | `done` — `Research/JC3Grab/EJECT.md` + `EJECT.json` |
+| deps `G1-13` | `done` — `Research/BatmobileGrab/SOCKETS_JC3.md` |
+| deps `G1-19` | `done` — `Research/BatmobileGrab/COCKPIT.md` |
+| **§11 decision** | **`D-9` unresolved** — *"Can enemies pull Rico out of the Batmobile?"* (G2-18, recommended *no (lore)*), `blocks: T-13` |
+
+The card says so itself:
+
+> T-13 `Do:` … *"Decide hijack entries (`entry.driver.pull.out.*`, `exit.driver.pulled.out`) per
+> D-9."*
+
+and §11's `D-9` row carries `T-13` in its `blocks` column. The decision register shows no
+`resolved` marker on `D-9` (only `D-1` is marked resolved), and no later MODLOG entry answers it.
+
+## Outputs (paths)
+
+None. Nothing was created, edited or flipped:
+
+- `Tools/scripts/t9_interaction.py` — not created
+- `Working/Translation/T9_INTERACTION.md` — not created
+- `Working/Translation/t9_interaction.json` — not created
+- `GRAB_BACKLOG.md` §12 — `| T-13 | todo | |` left as it was (a deferral is not one of the §0.3
+  status words, so the row must not be moved)
+- `MODLOG.md` — one appended note, `## T-13 · Interaction translation — deferred (2026-10-28)`
+  (R14 journaling; no intended-change entry, because nothing was changed)
+
+## Done-check command and output (verbatim)
+
+Not run — the card was not started, so there is no `t9_interaction.py` to check. For the record the
+card's gate would be:
+
+```
+Done: every object has a new transform; every transform is >= 0.05 m outside the hull and
+      <= 0.30 m from the surface (stunt/entry) - checked by the script.
+```
+
+## Tamper test
+
+Not applicable (no script, no generated doc or JSON to tamper with).
+
+## UNKNOWNs and limits
+
+1. **The blocking unknown is D-9 itself**: whether enemies may pull Rico out of the Batmobile. Until
+   it is answered, the disposition of `entry.driver.pull.out.*` and `exit.driver.pulled.out` (drop
+   with a named reason, or keep the donor's roles and place them like the other entries) cannot be
+   written, and the card's "every object has a new transform" gate cannot be closed honestly.
+2. Everything else the card needs is on disk and needs no decision: `INTERACTION.json`, `SEAT.md`,
+   `EJECT.md`, `COCKPIT.md`, `SOCKETS_JC3.json` (`Driver` socket, 65/65 placed) and the two
+   decision-free placement rules (surface-relative entry positions, stunt planes fitted to faces
+   with normals within 20° of up).
+3. No game file was read and no engine claim was made for this item, so nothing here is an
+   unsupported JC3 value.
+
+**To unblock:** answer D-9. With "no" (the lore default and the register's own recommendation) the
+two hijack families are dropped with that reason recorded and the card runs unchanged.
+
+## MODLOG heading used
+
+`## T-13 · Interaction translation — deferred (2026-10-28)`

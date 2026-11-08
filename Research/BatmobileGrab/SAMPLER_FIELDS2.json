@@ -1,0 +1,886 @@
+{
+ "candidates": [
+  {
+   "class": "RPlayerInput",
+   "field": "bReadyGadgetButton",
+   "label": "decoded field, UNKNOWN binding",
+   "offset": 773,
+   "why": "a gadget button byte, but the layout does not say it is X (could be the gadget-wheel open)"
+  },
+  {
+   "class": "RPlayerInput",
+   "field": "bGadgetSelectWheel",
+   "label": "decoded field, UNKNOWN binding",
+   "offset": 784,
+   "why": "the gadget wheel input, not the X action"
+  },
+  {
+   "class": "RPlayerInput",
+   "field": "bCancelButton",
+   "label": "decoded field, UNKNOWN binding",
+   "offset": 774,
+   "why": "cancel; the live sampler already watches this one"
+  },
+  {
+   "class": "RPlayerController",
+   "field": "UsedQuickGadget",
+   "label": "decoded field, UNKNOWN binding",
+   "offset": null,
+   "why": "set by the QuickGadgetX handler; a consequence of X, not the input byte"
+  }
+ ],
+ "card": "G3-02f - BmSDK offsets for the BmAK runtime sampler: X (barrage), Y (boost), missile launcher, booster, A (eject)",
+ "classes": {
+  "RBatmobileBooster": {
+   "fields": 2,
+   "file": "BmSDK/Generated/BmGame/RBatmobileBooster.g.cs",
+   "flags": 10485810,
+   "size": 2400
+  },
+  "RBatmobileMissileLauncher": {
+   "fields": 30,
+   "file": "BmSDK/Generated/BmGame/RBatmobileMissileLauncher.g.cs",
+   "flags": 10485810,
+   "size": 2648
+  },
+  "RPlayerController": {
+   "fields": 998,
+   "file": "BmSDK/Generated/BmGame/RPlayerController.g.cs",
+   "flags": 144703638,
+   "size": 7440
+  },
+  "RPlayerInput": {
+   "fields": 79,
+   "file": "BmSDK/Generated/BmGame/RPlayerInput.g.cs",
+   "flags": 134217886,
+   "size": 872
+  },
+  "RVehicleBatmobileBase": {
+   "fields": 518,
+   "file": "BmSDK/Generated/BmGame/RVehicleBatmobileBase.g.cs",
+   "flags": 144704183,
+   "size": 8352
+  },
+  "RVehicleWeapon": {
+   "fields": 57,
+   "file": "BmSDK/Generated/BmGame/RVehicleWeapon.g.cs",
+   "flags": 144703667,
+   "size": 2396
+  }
+ },
+ "labels": {
+  "UNKNOWN": "no such field exists in the layouts read; what was scanned is stated",
+  "decoded": "read from the named .g.cs comment line + the Ptr + N in its getter",
+  "derived": "computed from decoded facts (widths from the next field, offsets from TArray.cs)"
+ },
+ "observables": [
+  {
+   "area": "inputs",
+   "class": "RPlayerInput",
+   "cs_file": "BmSDK/Generated/BmGame/RPlayerInput.g.cs",
+   "cs_line": 944,
+   "element": null,
+   "field": "bVehicleBoostButton",
+   "kind": "u8",
+   "label": "decoded (BmSDK/Generated/BmGame/RPlayerInput.g.cs:944, u8 @781)",
+   "mask": null,
+   "note": "D-11 user mapping: Y = boost in pursuit; the field name is the only RPlayerInput member that names the vehicle boost",
+   "offset": 781,
+   "role": "Y held (boost) - the digital button byte",
+   "width": 1
+  },
+  {
+   "area": "inputs",
+   "class": "RPlayerInput",
+   "cs_file": "BmSDK/Generated/BmGame/RPlayerInput.g.cs",
+   "cs_line": 935,
+   "element": null,
+   "field": "bThrottleButton",
+   "kind": "u8",
+   "label": "decoded (BmSDK/Generated/BmGame/RPlayerInput.g.cs:935, u8 @780)",
+   "mask": null,
+   "note": "read with bBrakeButton/aThrottleAxis to tell a boost from a coast",
+   "offset": 780,
+   "role": "Y context - throttle/brake for a boost make/break comparison",
+   "width": 1
+  },
+  {
+   "area": "inputs",
+   "class": "RPlayerInput",
+   "cs_file": "BmSDK/Generated/BmGame/RPlayerInput.g.cs",
+   "cs_line": 953,
+   "element": null,
+   "field": "bBrakeButton",
+   "kind": "u8",
+   "label": "decoded (BmSDK/Generated/BmGame/RPlayerInput.g.cs:953, u8 @782)",
+   "mask": null,
+   "note": "",
+   "offset": 782,
+   "role": "Y context - brake",
+   "width": 1
+  },
+  {
+   "area": "inputs",
+   "class": "RPlayerInput",
+   "cs_file": "BmSDK/Generated/BmGame/RPlayerInput.g.cs",
+   "cs_line": 1124,
+   "element": null,
+   "field": "aThrottleAxis",
+   "kind": "f32",
+   "label": "decoded (BmSDK/Generated/BmGame/RPlayerInput.g.cs:1124, f32 @840)",
+   "mask": null,
+   "note": "",
+   "offset": 840,
+   "role": "Y context - analog throttle",
+   "width": 4
+  },
+  {
+   "area": "inputs",
+   "class": "RPlayerInput",
+   "cs_file": "BmSDK/Generated/BmGame/RPlayerInput.g.cs",
+   "cs_line": 1133,
+   "element": null,
+   "field": "aBrakeAxis",
+   "kind": "f32",
+   "label": "decoded (BmSDK/Generated/BmGame/RPlayerInput.g.cs:1133, f32 @844)",
+   "mask": null,
+   "note": "",
+   "offset": 844,
+   "role": "Y context - analog brake",
+   "width": 4
+  },
+  {
+   "area": "inputs",
+   "class": "RPlayerInput",
+   "cs_file": "BmSDK/Generated/BmGame/RPlayerInput.g.cs",
+   "cs_line": 917,
+   "element": null,
+   "field": "bFireVehicleWeapon",
+   "kind": "u8",
+   "label": "decoded (BmSDK/Generated/BmGame/RPlayerInput.g.cs:917, u8 @778)",
+   "mask": null,
+   "note": "",
+   "offset": 778,
+   "role": "combat context - primary fire",
+   "width": 1
+  },
+  {
+   "area": "inputs",
+   "class": "RPlayerInput",
+   "cs_file": "BmSDK/Generated/BmGame/RPlayerInput.g.cs",
+   "cs_line": 926,
+   "element": null,
+   "field": "bFireVehicleSecondaryWeapon",
+   "kind": "u8",
+   "label": "decoded (BmSDK/Generated/BmGame/RPlayerInput.g.cs:926, u8 @779)",
+   "mask": null,
+   "note": "",
+   "offset": 779,
+   "role": "combat context - secondary fire",
+   "width": 1
+  },
+  {
+   "area": "inputs",
+   "class": "RPlayerInput",
+   "cs_file": "BmSDK/Generated/BmGame/RPlayerInput.g.cs",
+   "cs_line": 989,
+   "element": null,
+   "field": "bBatmobileEjectModifier",
+   "kind": "u8",
+   "label": "decoded (BmSDK/Generated/BmGame/RPlayerInput.g.cs:989, u8 @786)",
+   "mask": null,
+   "note": "the only eject-named input field in RPlayerInput; what button it modifies is not in the layout",
+   "offset": 786,
+   "role": "eject - modifier byte beside the eject",
+   "width": 1
+  },
+  {
+   "area": "inputs",
+   "class": "RPlayerInput",
+   "cs_file": "BmSDK/Generated/BmGame/RPlayerInput.g.cs",
+   "cs_line": 899,
+   "element": null,
+   "field": "bHandBrakeButton",
+   "kind": "u8",
+   "label": "decoded (BmSDK/Generated/BmGame/RPlayerInput.g.cs:899, u8 @776)",
+   "mask": null,
+   "note": "",
+   "offset": 776,
+   "role": "handbrake (control sample, unchanged behaviour)",
+   "width": 1
+  },
+  {
+   "area": "missiles",
+   "class": "RBatmobileMissileLauncher",
+   "cs_file": "BmSDK/Generated/BmGame/RBatmobileMissileLauncher.g.cs",
+   "cs_line": 291,
+   "element": null,
+   "field": "MaxTargets",
+   "kind": "i32",
+   "label": "decoded (BmSDK/Generated/BmGame/RBatmobileMissileLauncher.g.cs:291, i32 @2396)",
+   "mask": null,
+   "note": "the array Max may exceed this; compare Num against it",
+   "offset": 2396,
+   "role": "target count ceiling",
+   "width": 4
+  },
+  {
+   "area": "missiles",
+   "class": "RBatmobileMissileLauncher",
+   "cs_file": "BmSDK/Generated/BmGame/RBatmobileMissileLauncher.g.cs",
+   "cs_line": 300,
+   "element": "BmSDK.Engine.Actor",
+   "field": "CurrentTargets",
+   "kind": "tarray",
+   "label": "decoded (BmSDK/Generated/BmGame/RBatmobileMissileLauncher.g.cs:300, tarray @2400)",
+   "mask": null,
+   "note": "pointer +0, Num +8, Max +12",
+   "offset": 2400,
+   "role": "targets currently held (array; read Num at +8)",
+   "width": 16
+  },
+  {
+   "area": "missiles",
+   "class": "RBatmobileMissileLauncher",
+   "cs_file": "BmSDK/Generated/BmGame/RBatmobileMissileLauncher.g.cs",
+   "cs_line": 309,
+   "element": "BmSDK.Engine.Actor",
+   "field": "LastTargets",
+   "kind": "tarray",
+   "label": "decoded (BmSDK/Generated/BmGame/RBatmobileMissileLauncher.g.cs:309, tarray @2416)",
+   "mask": null,
+   "note": "compare with CurrentTargets to see a re-target",
+   "offset": 2416,
+   "role": "targets on the previous frame (array)",
+   "width": 16
+  },
+  {
+   "area": "missiles",
+   "class": "RVehicleWeapon",
+   "cs_file": "BmSDK/Generated/BmGame/RVehicleWeapon.g.cs",
+   "cs_line": 637,
+   "element": null,
+   "field": "bFiring",
+   "kind": "bit",
+   "label": "decoded (BmSDK/Generated/BmGame/RVehicleWeapon.g.cs:637, bit @2084, mask 0x2)",
+   "mask": 2,
+   "note": "inherited by both missile and booster: RBatmobileBooster : RVehicleWeapon",
+   "offset": 2084,
+   "role": "firing flag",
+   "width": 4
+  },
+  {
+   "area": "missiles",
+   "class": "RVehicleWeapon",
+   "cs_file": "BmSDK/Generated/BmGame/RVehicleWeapon.g.cs",
+   "cs_line": 628,
+   "element": null,
+   "field": "ContinuousFire",
+   "kind": "bit",
+   "label": "decoded (BmSDK/Generated/BmGame/RVehicleWeapon.g.cs:628, bit @2084, mask 0x1)",
+   "mask": 1,
+   "note": "",
+   "offset": 2084,
+   "role": "continuous-fire flag (same word as bFiring)",
+   "width": 4
+  },
+  {
+   "area": "missiles",
+   "class": "RVehicleWeapon",
+   "cs_file": "BmSDK/Generated/BmGame/RVehicleWeapon.g.cs",
+   "cs_line": 727,
+   "element": null,
+   "field": "CoolDown",
+   "kind": "f32",
+   "label": "decoded (BmSDK/Generated/BmGame/RVehicleWeapon.g.cs:727, f32 @2092)",
+   "mask": null,
+   "note": "per-weapon timer",
+   "offset": 2092,
+   "role": "cooldown remaining",
+   "width": 4
+  },
+  {
+   "area": "missiles",
+   "class": "RVehicleWeapon",
+   "cs_file": "BmSDK/Generated/BmGame/RVehicleWeapon.g.cs",
+   "cs_line": 736,
+   "element": null,
+   "field": "WeaponCoolDown",
+   "kind": "f32",
+   "label": "decoded (BmSDK/Generated/BmGame/RVehicleWeapon.g.cs:736, f32 @2096)",
+   "mask": null,
+   "note": "distinct from CoolDown; which one gates the barrage is UNKNOWN",
+   "offset": 2096,
+   "role": "weapon cooldown (second timer)",
+   "width": 4
+  },
+  {
+   "area": "missiles",
+   "class": "RVehicleWeapon",
+   "cs_file": "BmSDK/Generated/BmGame/RVehicleWeapon.g.cs",
+   "cs_line": 718,
+   "element": null,
+   "field": "FiringInterval",
+   "kind": "f32",
+   "label": "decoded (BmSDK/Generated/BmGame/RVehicleWeapon.g.cs:718, f32 @2088)",
+   "mask": null,
+   "note": "",
+   "offset": 2088,
+   "role": "fire interval",
+   "width": 4
+  },
+  {
+   "area": "missiles",
+   "class": "RBatmobileMissileLauncher",
+   "cs_file": "BmSDK/Generated/BmGame/RBatmobileMissileLauncher.g.cs",
+   "cs_line": 354,
+   "element": null,
+   "field": "CooldownDelay",
+   "kind": "f32",
+   "label": "decoded (BmSDK/Generated/BmGame/RBatmobileMissileLauncher.g.cs:354, f32 @2448)",
+   "mask": null,
+   "note": "",
+   "offset": 2448,
+   "role": "cooldown configured for the launcher",
+   "width": 4
+  },
+  {
+   "area": "missiles",
+   "class": "RBatmobileMissileLauncher",
+   "cs_file": "BmSDK/Generated/BmGame/RBatmobileMissileLauncher.g.cs",
+   "cs_line": 336,
+   "element": null,
+   "field": "InitialFireDelay",
+   "kind": "f32",
+   "label": "decoded (BmSDK/Generated/BmGame/RBatmobileMissileLauncher.g.cs:336, f32 @2440)",
+   "mask": null,
+   "note": "",
+   "offset": 2440,
+   "role": "initial delay before the first missile",
+   "width": 4
+  },
+  {
+   "area": "missiles",
+   "class": "RBatmobileMissileLauncher",
+   "cs_file": "BmSDK/Generated/BmGame/RBatmobileMissileLauncher.g.cs",
+   "cs_line": 345,
+   "element": null,
+   "field": "FireInterval",
+   "kind": "f32",
+   "label": "decoded (BmSDK/Generated/BmGame/RBatmobileMissileLauncher.g.cs:345, f32 @2444)",
+   "mask": null,
+   "note": "note: a different field from RVehicleWeapon.FiringInterval",
+   "offset": 2444,
+   "role": "spacing between missiles in a volley",
+   "width": 4
+  },
+  {
+   "area": "missiles",
+   "class": "RBatmobileMissileLauncher",
+   "cs_file": "BmSDK/Generated/BmGame/RBatmobileMissileLauncher.g.cs",
+   "cs_line": 477,
+   "element": null,
+   "field": "NthTarget",
+   "kind": "i32",
+   "label": "decoded (BmSDK/Generated/BmGame/RBatmobileMissileLauncher.g.cs:477, i32 @2560)",
+   "mask": null,
+   "note": "",
+   "offset": 2560,
+   "role": "index of the next target to fire at",
+   "width": 4
+  },
+  {
+   "area": "missiles",
+   "class": "RBatmobileMissileLauncher",
+   "cs_file": "BmSDK/Generated/BmGame/RBatmobileMissileLauncher.g.cs",
+   "cs_line": 486,
+   "element": null,
+   "field": "LastState",
+   "kind": "fname",
+   "label": "decoded (BmSDK/Generated/BmGame/RBatmobileMissileLauncher.g.cs:486, fname @2564)",
+   "mask": null,
+   "note": "FName: read index and number; resolve through GNames",
+   "offset": 2564,
+   "role": "launcher state name",
+   "width": 8
+  },
+  {
+   "area": "missiles",
+   "class": "RBatmobileMissileLauncher",
+   "cs_file": "BmSDK/Generated/BmGame/RBatmobileMissileLauncher.g.cs",
+   "cs_line": 504,
+   "element": null,
+   "field": "CurrentLevel",
+   "kind": "i32",
+   "label": "decoded (BmSDK/Generated/BmGame/RBatmobileMissileLauncher.g.cs:504, i32 @2588)",
+   "mask": null,
+   "note": "with MaxTargetsPerLevel, the per-level target cap",
+   "offset": 2588,
+   "role": "current target level",
+   "width": 4
+  },
+  {
+   "area": "missiles",
+   "class": "RBatmobileMissileLauncher",
+   "cs_file": "BmSDK/Generated/BmGame/RBatmobileMissileLauncher.g.cs",
+   "cs_line": 513,
+   "element": "int",
+   "field": "MaxTargetsPerLevel",
+   "kind": "tarray",
+   "label": "decoded (BmSDK/Generated/BmGame/RBatmobileMissileLauncher.g.cs:513, tarray @2592)",
+   "mask": null,
+   "note": "",
+   "offset": 2592,
+   "role": "per-level target cap (array)",
+   "width": 16
+  },
+  {
+   "area": "missiles",
+   "class": "RBatmobileMissileLauncher",
+   "cs_file": "BmSDK/Generated/BmGame/RBatmobileMissileLauncher.g.cs",
+   "cs_line": 522,
+   "element": "BmSDK.FName",
+   "field": "MissileSockets",
+   "kind": "tarray",
+   "label": "decoded (BmSDK/Generated/BmGame/RBatmobileMissileLauncher.g.cs:522, tarray @2608)",
+   "mask": null,
+   "note": "",
+   "offset": 2608,
+   "role": "missile sockets (array)",
+   "width": 16
+  },
+  {
+   "area": "missiles",
+   "class": "RBatmobileMissileLauncher",
+   "cs_file": "BmSDK/Generated/BmGame/RBatmobileMissileLauncher.g.cs",
+   "cs_line": 531,
+   "element": null,
+   "field": "CurrentMissileSocket",
+   "kind": "i32",
+   "label": "decoded (BmSDK/Generated/BmGame/RBatmobileMissileLauncher.g.cs:531, i32 @2624)",
+   "mask": null,
+   "note": "",
+   "offset": 2624,
+   "role": "socket index in use",
+   "width": 4
+  },
+  {
+   "area": "missiles",
+   "class": "RBatmobileMissileLauncher",
+   "cs_file": "BmSDK/Generated/BmGame/RBatmobileMissileLauncher.g.cs",
+   "cs_line": 540,
+   "element": null,
+   "field": "InfinitMissilesTime",
+   "kind": "f32",
+   "label": "decoded (BmSDK/Generated/BmGame/RBatmobileMissileLauncher.g.cs:540, f32 @2628)",
+   "mask": null,
+   "note": "seconds of free fire; 0 when inactive",
+   "offset": 2628,
+   "role": "unlimited-missiles window",
+   "width": 4
+  },
+  {
+   "area": "missiles",
+   "class": "RBatmobileMissileLauncher",
+   "cs_file": "BmSDK/Generated/BmGame/RBatmobileMissileLauncher.g.cs",
+   "cs_line": 549,
+   "element": "BmSDK.BmGame.RProjectile",
+   "field": "FiredProjectiles",
+   "kind": "tarray",
+   "label": "decoded (BmSDK/Generated/BmGame/RBatmobileMissileLauncher.g.cs:549, tarray @2632)",
+   "mask": null,
+   "note": "",
+   "offset": 2632,
+   "role": "missiles in flight (array)",
+   "width": 16
+  },
+  {
+   "area": "missiles",
+   "class": "RBatmobileMissileLauncher",
+   "cs_file": "BmSDK/Generated/BmGame/RBatmobileMissileLauncher.g.cs",
+   "cs_line": 318,
+   "element": null,
+   "field": "LockOnAngle",
+   "kind": "f32",
+   "label": "decoded (BmSDK/Generated/BmGame/RBatmobileMissileLauncher.g.cs:318, f32 @2432)",
+   "mask": null,
+   "note": "",
+   "offset": 2432,
+   "role": "lock-on cone",
+   "width": 4
+  },
+  {
+   "area": "missiles",
+   "class": "RBatmobileMissileLauncher",
+   "cs_file": "BmSDK/Generated/BmGame/RBatmobileMissileLauncher.g.cs",
+   "cs_line": 327,
+   "element": null,
+   "field": "LockOnRange",
+   "kind": "f32",
+   "label": "decoded (BmSDK/Generated/BmGame/RBatmobileMissileLauncher.g.cs:327, f32 @2436)",
+   "mask": null,
+   "note": "",
+   "offset": 2436,
+   "role": "lock-on range",
+   "width": 4
+  },
+  {
+   "area": "missiles",
+   "class": "RVehicleWeapon",
+   "cs_file": "BmSDK/Generated/BmGame/RVehicleWeapon.g.cs",
+   "cs_line": 835,
+   "element": null,
+   "field": "AimTarget",
+   "kind": "ptr",
+   "label": "decoded (BmSDK/Generated/BmGame/RVehicleWeapon.g.cs:835, ptr @2168)",
+   "mask": null,
+   "note": "",
+   "offset": 2168,
+   "role": "aim target inherited from the weapon base",
+   "width": 8
+  },
+  {
+   "area": "boost",
+   "class": "RBatmobileBooster",
+   "cs_file": "BmSDK/Generated/BmGame/RBatmobileBooster.g.cs",
+   "cs_line": 82,
+   "element": null,
+   "field": "bBoosting",
+   "kind": "bit",
+   "label": "decoded (BmSDK/Generated/BmGame/RBatmobileBooster.g.cs:82, bit @2396, mask 0x1)",
+   "mask": 1,
+   "note": "the booster object's own flag; setter is the afterburner code",
+   "offset": 2396,
+   "role": "boost active",
+   "width": 4
+  },
+  {
+   "area": "boost",
+   "class": "RBatmobileBooster",
+   "cs_file": "BmSDK/Generated/BmGame/RBatmobileBooster.g.cs",
+   "cs_line": 91,
+   "element": null,
+   "field": "bWarming",
+   "kind": "bit",
+   "label": "decoded (BmSDK/Generated/BmGame/RBatmobileBooster.g.cs:91, bit @2396, mask 0x2)",
+   "mask": 2,
+   "note": "same int word as bBoosting",
+   "offset": 2396,
+   "role": "boost warming up",
+   "width": 4
+  },
+  {
+   "area": "boost",
+   "class": "RVehicleBatmobileBase",
+   "cs_file": "BmSDK/Generated/BmGame/RVehicleBatmobileBase.g.cs",
+   "cs_line": 4581,
+   "element": null,
+   "field": "bBoostLocked",
+   "kind": "bit",
+   "label": "decoded (BmSDK/Generated/BmGame/RVehicleBatmobileBase.g.cs:4581, bit @4568, mask 0x4000)",
+   "mask": 16384,
+   "note": "same int word as InfiniteBoost",
+   "offset": 4568,
+   "role": "boost locked (cannot engage)",
+   "width": 4
+  },
+  {
+   "area": "boost",
+   "class": "RVehicleBatmobileBase",
+   "cs_file": "BmSDK/Generated/BmGame/RVehicleBatmobileBase.g.cs",
+   "cs_line": 4716,
+   "element": null,
+   "field": "InfiniteBoost",
+   "kind": "bit",
+   "label": "decoded (BmSDK/Generated/BmGame/RVehicleBatmobileBase.g.cs:4716, bit @4568, mask 0x20000000)",
+   "mask": 536870912,
+   "note": "",
+   "offset": 4568,
+   "role": "boost permanently allowed",
+   "width": 4
+  },
+  {
+   "area": "boost",
+   "class": "RVehicleBatmobileBase",
+   "cs_file": "BmSDK/Generated/BmGame/RVehicleBatmobileBase.g.cs",
+   "cs_line": 5298,
+   "element": null,
+   "field": "AfterburnerSystem",
+   "kind": "ptr",
+   "label": "decoded (BmSDK/Generated/BmGame/RVehicleBatmobileBase.g.cs:5298, ptr @4636)",
+   "mask": null,
+   "note": "non-null while the effect exists; not an activity flag",
+   "offset": 4636,
+   "role": "afterburner particle component",
+   "width": 8
+  },
+  {
+   "area": "boost",
+   "class": "RVehicleBatmobileBase",
+   "cs_file": "BmSDK/Generated/BmGame/RVehicleBatmobileBase.g.cs",
+   "cs_line": 7527,
+   "element": null,
+   "field": "LastBoostPickupTime",
+   "kind": "f32",
+   "label": "decoded (BmSDK/Generated/BmGame/RVehicleBatmobileBase.g.cs:7527, f32 @6580)",
+   "mask": null,
+   "note": "a timestamp, not a duration",
+   "offset": 6580,
+   "role": "last boost pickup time",
+   "width": 4
+  },
+  {
+   "area": "boost",
+   "class": "RVehicleBatmobileBase",
+   "cs_file": "BmSDK/Generated/BmGame/RVehicleBatmobileBase.g.cs",
+   "cs_line": 6812,
+   "element": null,
+   "field": "BoostingOut",
+   "kind": "u8",
+   "label": "decoded (BmSDK/Generated/BmGame/RVehicleBatmobileBase.g.cs:6812, u8 @5901)",
+   "mask": null,
+   "note": "byte, not the bBoosting bit",
+   "offset": 5901,
+   "role": "boosting-out state byte",
+   "width": 1
+  },
+  {
+   "area": "eject",
+   "class": "RVehicleBatmobileBase",
+   "cs_file": "BmSDK/Generated/BmGame/RVehicleBatmobileBase.g.cs",
+   "cs_line": 6821,
+   "element": null,
+   "field": "MaxEjectType",
+   "kind": "u8",
+   "label": "decoded (BmSDK/Generated/BmGame/RVehicleBatmobileBase.g.cs:6821, u8 @5902)",
+   "mask": null,
+   "note": "",
+   "offset": 5902,
+   "role": "eject type configured",
+   "width": 2
+  },
+  {
+   "area": "eject",
+   "class": "RVehicleBatmobileBase",
+   "cs_file": "BmSDK/Generated/BmGame/RVehicleBatmobileBase.g.cs",
+   "cs_line": 7004,
+   "element": null,
+   "field": "EjectUpDist",
+   "kind": "f32",
+   "label": "decoded (BmSDK/Generated/BmGame/RVehicleBatmobileBase.g.cs:7004, f32 @6032)",
+   "mask": null,
+   "note": "",
+   "offset": 6032,
+   "role": "eject upward distance",
+   "width": 4
+  },
+  {
+   "area": "eject",
+   "class": "RVehicleBatmobileBase",
+   "cs_file": "BmSDK/Generated/BmGame/RVehicleBatmobileBase.g.cs",
+   "cs_line": 6373,
+   "element": null,
+   "field": "OverrideNextEject",
+   "kind": "ptr",
+   "label": "decoded (BmSDK/Generated/BmGame/RVehicleBatmobileBase.g.cs:6373, ptr @5604)",
+   "mask": null,
+   "note": "object pointer; non-null forces a scripted eject",
+   "offset": 5604,
+   "role": "forced next eject",
+   "width": 8
+  },
+  {
+   "area": "eject",
+   "class": "RPlayerController",
+   "cs_file": "BmSDK/Generated/BmGame/RPlayerController.g.cs",
+   "cs_line": 28120,
+   "element": null,
+   "field": "CurrentEjectType",
+   "kind": "u8",
+   "label": "decoded (BmSDK/Generated/BmGame/RPlayerController.g.cs:28120, u8 @3502)",
+   "mask": null,
+   "note": "player-controller side; offset resolved here, value observed live",
+   "offset": 3502,
+   "role": "eject type chosen at the last eject",
+   "width": 2
+  },
+  {
+   "area": "eject",
+   "class": "RPlayerController",
+   "cs_file": "BmSDK/Generated/BmGame/RPlayerController.g.cs",
+   "cs_line": 31720,
+   "element": null,
+   "field": "LastEjectFromBatmobileTime",
+   "kind": "f32",
+   "label": "decoded (BmSDK/Generated/BmGame/RPlayerController.g.cs:31720, f32 @7188)",
+   "mask": null,
+   "note": "",
+   "offset": 7188,
+   "role": "time of the last eject from the Batmobile",
+   "width": 4
+  },
+  {
+   "area": "eject",
+   "class": "RPlayerController",
+   "cs_file": "BmSDK/Generated/BmGame/RPlayerController.g.cs",
+   "cs_line": 26194,
+   "element": null,
+   "field": "UsedQuickGadget",
+   "kind": "bit",
+   "label": "decoded (BmSDK/Generated/BmGame/RPlayerController.g.cs:26194, bit @3452, mask 0x80000)",
+   "mask": 524288,
+   "note": "bit; the QuickGadgetX handler sets it, but no per-button field exists",
+   "offset": 3452,
+   "role": "last eject/exit time comparison for X use",
+   "width": 4
+  }
+ ],
+ "oracles": {
+  "booster_inherits_weapon": {
+   "detail": {
+    "bFiring": 2084,
+    "rule": "RBatmobileBooster : RVehicleWeapon, so bFiring/CoolDown are inherited at the same offsets"
+   },
+   "ok": true
+  },
+  "class_sizes": {
+   "detail": {
+    "expected": {
+     "RBatmobileBooster": 2400,
+     "RBatmobileMissileLauncher": 2648,
+     "RPlayerInput": 872,
+     "RVehicleBatmobileBase": 8352,
+     "RVehicleWeapon": 2396
+    },
+    "mismatch": {}
+   },
+   "ok": true
+  },
+  "collision_mode_offset_matches_sampler": {
+   "detail": {
+    "layout": 5895,
+    "note": "bmak_runtime_sampler.py VEH uses 0x1707; the layout says 5895",
+    "sampler": 5895
+   },
+   "ok": true
+  },
+  "expected_offsets": {
+   "detail": {
+    "checked": 53,
+    "failures": []
+   },
+   "ok": true
+  },
+  "line_points_at_comment": {
+   "detail": {
+    "count": 0,
+    "failures": []
+   },
+   "ok": true
+  },
+  "mask_uniqueness": {
+   "detail": {
+    "failures": []
+   },
+   "ok": true
+  },
+  "observables_resolve": {
+   "detail": {
+    "count": 44,
+    "missing": []
+   },
+   "ok": true
+  },
+  "observables_unique": {
+   "detail": {
+    "count": 44,
+    "unique": 44
+   },
+   "ok": true
+  },
+  "offsets_ascending": {
+   "detail": {
+    "failures": []
+   },
+   "ok": true
+  },
+  "tarray_layout": {
+   "detail": {
+    "lines": [
+     24,
+     25,
+     26
+    ],
+    "offsets": {
+     "count": 8,
+     "data": 0,
+     "max": 12
+    },
+    "rule": "IntPtr,int,int sequential -> 0/8/12 (x64)"
+   },
+   "ok": true
+  },
+  "unknowns_present": {
+   "detail": {
+    "unknowns": [
+     "X (missile barrage) input byte",
+     "A (eject) input byte",
+     "boost duration / boost time field",
+     "TArray element stride for CurrentTargets / FiredProjectiles"
+    ]
+   },
+   "ok": true
+  },
+  "widths_fit_class": {
+   "detail": {
+    "failures": []
+   },
+   "ok": true
+  }
+ },
+ "readers": {
+  "bit": "int32 at offset & mask != 0",
+  "f32": "float32 at offset",
+  "fname": "int32 index at offset (and int32 number at offset+4)",
+  "i32": "int32 at offset",
+  "ptr": "pointer at offset",
+  "struct": "raw bytes at offset",
+  "tarray": "count = int32 at offset+8",
+  "u8": "byte at offset"
+ },
+ "schema": 1,
+ "source": "BmSDK-AK generated layouts (MIT), E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated",
+ "tarray_layout": {
+  "allocator": 24,
+  "file": "BmSDK/Classes/Core/TArray.cs",
+  "max": 26,
+  "num": 25,
+  "offsets": {
+   "count": 8,
+   "data": 0,
+   "max": 12
+  }
+ },
+ "unknowns": [
+  {
+   "tried": "all 79 top-level property blocks of RPlayerInput were parsed; there is no field named *QuickGadgetX*, *XButton*, *Barrage* or similar. RPlayerController.QuickGadgetX is a Function (BmSDK/Generated/BmGame/RPlayerController.g.cs:491), not a field, so the byte the X binding writes is not in the layout",
+   "what": "X (missile barrage) input byte",
+   "where_it_would_be": "answer from RPlayerInput's bind table or BmGame/Config/BmInput.ini - neither is in these files"
+  },
+  {
+   "tried": "RPlayerInput has bBatmobileEjectModifier (786) and no bAButton / bActionButton / bEjectButton; grep over the whole Generated tree finds no such property",
+   "what": "A (eject) input byte",
+   "where_it_would_be": "same place as X: the bind table / BmInput.ini; the modifier byte at 786 is decoded but its trigger button is not"
+  },
+  {
+   "tried": "RBatmobileBooster has only bBoosting and bWarming (2 fields, size 2400); RVehicleBatmobileBase.GetBoostPct is a Function (g.cs:3084), not a field, and LastBoostPickupTime (6580) is a timestamp. grep over Generated finds no BoostTimer/BoostTime field",
+   "what": "boost duration / boost time field",
+   "where_it_would_be": "observe bBoosting transitions and measure the interval instead of reading a timer"
+  },
+  {
+   "tried": "the layouts give the array offset and the element type but not the element size; BmSDK MarshalUtil.GetSizeUnmanaged<T> would, and is not in the generated tree",
+   "what": "TArray element stride for CurrentTargets / FiredProjectiles",
+   "where_it_would_be": "needed only to walk the targets, not to count them"
+  }
+ ]
+}

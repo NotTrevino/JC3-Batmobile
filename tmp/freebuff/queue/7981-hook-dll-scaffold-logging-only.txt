@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-dll-scaffold-logging-only.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/native-hook-design-jc3mp-contract.md
+First code for the Batmobile native hook, following the design in reports/native-hook-design-jc3mp-contract.md. Create the source tree at E:/Modding/JC3-Batmobile/Tools/hook/ (CMake, x64, C++17). Base it on the loader and hooking layer of E:/Modding/_tools/jc3-console-thingy (MIT: keep its licence text and attribution in Tools/hook/THIRD_PARTY.md). This first build does only one thing: it writes a timestamped log line each second to %LOCALAPPDATA%/jc3-batmobile-hook/log.txt with the game_state value at 0x142D6F8AC, plus whether the player is in a vehicle if the design names a safe read for that. No writes into game memory. Build it only if a compiler is already installed (look for MSVC Build Tools or clang-cl; do not install one). Stage the DLL under E:/Modding/JC3-Batmobile/Builds/hook-0001/ with a receipt: sha256, the proxy name, install steps, undo steps. Never copy it into D:/Games. Report the tree, the build result or the missing toolchain, and the receipt path. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

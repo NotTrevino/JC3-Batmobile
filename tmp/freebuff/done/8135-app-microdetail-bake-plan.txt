@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/app-microdetail-bake-plan.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-06
+Textures Batmobile_Microdetail and Batmobile_Micropattern_A/B/C (plus their normals) and the material scalars BaseMaterial_Microdetail_Size / Material1..3_Microdetail_Size are excluded with plan "bake into s1" (rules P1 to P3). Verify what the build actually does today: open Working/Appearance/bodytex and build_bud1 and report whether any micro-detail is present in the shipped body textures. Then write the bake procedure (tiling scale, UV set, blend weights from the material instance scalars) with the numbers decoded from Research/BatmobileGrab, and the check that would measure it (e.g. high-frequency energy in the baked normal against the BmAK source at equal scale).
+Where JC3 has no exact carrier, give the closest system and the gap for the build to fill (STAGES.md).

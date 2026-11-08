@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-controller-and-animator.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-mode-controller-build.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-transform-animator-build.md
+Offline verification of the mode controller and transform animator. Re-run the builds in Builds/hook-mod-controller and Builds/hook-mod-animator from a clean copy, replay five recorded or synthetic gamepad traces (quick tap, full hold, release at 1.0 s, hold-release-hold, a hold while stopped) through the logic cores, and compare against Working/Modes/mode_state_machine.json and transform_timeline.json. Check that no code path writes outside the hook's own state when the in-our-Batmobile check is false, and that every stub is listed in a table with the experiment that would replace it. Output Working/Modes/verify_controller.md with a PASS or FAIL per trace and per bone. Done-check: all five traces are shown, any FAIL cites the transition or bone, and a fix-card text is attached to each FAIL. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

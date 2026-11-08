@@ -1,0 +1,743 @@
+{
+ "digest": "1b9878e9ed0e6308",
+ "fleet": {
+  "cemp": 0,
+  "components": 88
+ },
+ "trucks": [
+  {
+   "emitters": [],
+   "emp_parts": [
+    {
+     "behavior": "None",
+     "model": "models/jc_vehicles/01_land/v0505_car_solar_oldtruck/oldtruck_emp_device_rebel.lod",
+     "name": "oldtruck_emp_device_rebel",
+     "parent": 0,
+     "part_index": 5
+    },
+    {
+     "behavior": "Rotor",
+     "model": "models/jc_vehicles/01_land/v0505_car_solar_oldtruck/oldtruck_emp_device_core_rebel.lod",
+     "name": "oldtruck_emp_device_core_rebel",
+     "parent": 5,
+     "part_index": 46
+    },
+    {
+     "behavior": "None",
+     "model": "models/jc_vehicles/01_land/v0505_car_solar_oldtruck/oldtruck_emp_device_core_rebel_partswap.lod",
+     "name": "oldtruck_emp_device_core_rebel_partswap",
+     "parent": 5,
+     "part_index": 47
+    }
+   ],
+   "entity": "editor/entities/jc_vehicles/01_land/v0505_car_solar_oldtruck/v0505_car_solar_oldtruck_rebel_emp_01.ee",
+   "files": [
+    {
+     "path": "editor/entities/jc_explosions/vehicles/car_explosion_medium.ftunec",
+     "size": 644
+    },
+    {
+     "path": "editor/entities/jc_explosions/vehicles/truck_emp.ftunec",
+     "size": 633
+    },
+    {
+     "path": "effects/destruction/explosion_emp_flatbed.effc",
+     "size": 24015
+    },
+    {
+     "path": "effects/jc_weapons/rpg_launcher/rpg_explosion_water.effc",
+     "size": 17231
+    },
+    {
+     "path": "effects/jc_vehicles/wheels/wheel_explosion_notiremesh.effc",
+     "size": 16879
+    },
+    {
+     "path": "effects/destruction/explosion_template_trail.effc",
+     "size": 11295
+    }
+   ],
+   "material_tables": [
+    {
+     "class": "CMaterialEffectTable",
+     "name": "emp_flatbed_table"
+    }
+   ],
+   "members": 794,
+   "objects": 454,
+   "parts_total": 78,
+   "pulses": [
+    {
+     "name": "CForcePulse",
+     "props": {
+      "id:060AAA81": "20",
+      "id:06A05F33": "",
+      "id:1AF6FDF0": "00000000",
+      "id:24872388": "100",
+      "id:2849C306": "0",
+      "id:34303F77": "0",
+      "id:4912FC04": "1",
+      "id:530046B3": "10",
+      "id:57F1B4E1": "0.1",
+      "id:593FCDBF": "",
+      "id:5AF29116": "1",
+      "id:6B47B5C3": "0",
+      "id:71446B1A": "",
+      "id:74896A12": "0",
+      "id:7FD59340": "",
+      "id:831DAB81": "0",
+      "id:879640EA": "",
+      "id:9865E7F2": "100",
+      "id:9BD6FA33": "",
+      "id:A1B0DAF9": "2",
+      "id:AE6F7EFF": "0",
+      "id:CF4F7880": "0",
+      "id:D04059E6": "-1128945961",
+      "id:D3DDD766": "00000000",
+      "id:F39EC6EA": "0.1"
+     },
+     "refs": {},
+     "settings": "editor/entities/jc_explosions/vehicles/car_explosion_medium.ftune",
+     "xyz": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "name": "EMP",
+     "props": {
+      "id:060AAA81": "20",
+      "id:06A05F33": "5FED74E7=FFFF7F53",
+      "id:1AF6FDF0": "00000000",
+      "id:24872388": "100",
+      "id:2849C306": "0",
+      "id:34303F77": "0",
+      "id:4912FC04": "0",
+      "id:530046B3": "10",
+      "id:57F1B4E1": "0.1",
+      "id:593FCDBF": "",
+      "id:5AF29116": "1",
+      "id:6B47B5C3": "0",
+      "id:71446B1A": "",
+      "id:74896A12": "0",
+      "id:7FD59340": "",
+      "id:831DAB81": "0",
+      "id:879640EA": "",
+      "id:9865E7F2": "100",
+      "id:9BD6FA33": "",
+      "id:A1B0DAF9": "2",
+      "id:AE6F7EFF": "1",
+      "id:CF4F7880": "1",
+      "id:D04059E6": "-1128945961",
+      "id:D3DDD766": "EE5AEE78=FFFFD9E6",
+      "id:F39EC6EA": "0.1"
+     },
+     "refs": {
+      "id:06A05F33": {
+       "id": "5FED74E7=FFFF7F53",
+       "resolved": null
+      },
+      "id:D3DDD766": {
+       "id": "EE5AEE78=FFFFD9E6",
+       "resolved": "CMaterialEffectTable emp_flatbed_table"
+      }
+     },
+     "settings": "editor/entities/jc_explosions/vehicles/truck_emp.ftune",
+     "xyz": [
+      0.0,
+      2.0356,
+      0.6992
+     ]
+    }
+   ],
+   "rotor": [
+    {
+     "max_rpm_visible": -1.0,
+     "min_rpm_visible": -1.0,
+     "number_of_blades": 6,
+     "part_index": 46,
+     "position[0]": 0.0,
+     "position[1]": 2.443000078201294,
+     "position[2]": 0.7720000147819519,
+     "rotation_axis[0]": 2.220446049250313e-16,
+     "rotation_axis[1]": 0.0,
+     "rotation_axis[2]": 1.0,
+     "rpm_multiplier": 1.0,
+     "rpm_opacity_transition": -1.0
+    }
+   ],
+   "tag": "emp_01",
+   "tunes": {
+    "car_explosion_medium.ftunec": [
+     {
+      "name": "PlayerDamage",
+      "type": "uint32",
+      "value": 500
+     },
+     {
+      "name": "PlayerDamageRadius",
+      "type": "float",
+      "value": 5.0
+     },
+     {
+      "name": "PlayerDamageRadiusPercentageMax",
+      "type": "float",
+      "value": 0.0
+     },
+     {
+      "name": "PlayerDamageRadiusMin",
+      "type": "float",
+      "value": 0.0
+     },
+     {
+      "name": "AIDamage",
+      "type": "uint32",
+      "value": 500
+     },
+     {
+      "name": "AIDamageRadius",
+      "type": "float",
+      "value": 5.0
+     },
+     {
+      "name": "AIDamageRadiusPercentageMax",
+      "type": "float",
+      "value": 0.0
+     },
+     {
+      "name": "AIDamageRadiusMin",
+      "type": "float",
+      "value": 0.0
+     }
+    ],
+    "truck_emp.ftunec": [
+     {
+      "name": "PlayerDamage",
+      "type": "uint32",
+      "value": 100
+     },
+     {
+      "name": "PlayerDamageRadius",
+      "type": "float",
+      "value": 25.0
+     },
+     {
+      "name": "PlayerDamageRadiusPercentageMax",
+      "type": "float",
+      "value": 1.0
+     },
+     {
+      "name": "PlayerDamageRadiusMin",
+      "type": "float",
+      "value": 1.0
+     },
+     {
+      "name": "AIDamage",
+      "type": "uint32",
+      "value": 100
+     },
+     {
+      "name": "AIDamageRadius",
+      "type": "float",
+      "value": 25.0
+     },
+     {
+      "name": "AIDamageRadiusPercentageMax",
+      "type": "float",
+      "value": 1.0
+     },
+     {
+      "name": "AIDamageRadiusMin",
+      "type": "float",
+      "value": 1.0
+     }
+    ]
+   },
+   "use_item": [
+    {
+     "class": "CInteractionGraphEntry",
+     "enabled": "1",
+     "name": "entry.use_item",
+     "prompt": "ui_activate_emp",
+     "state": "S_STUNT_USE_ITEM_VEHICLE"
+    },
+    {
+     "class": "CInteractionTrigger",
+     "enabled": "1",
+     "links": [
+      "6D433019=FFFF8C71",
+      "E880D61A=0000CAE5"
+     ],
+     "name": "trigger.use_item",
+     "xyz": [
+      0.0,
+      1.3507,
+      2.396
+     ]
+    }
+   ],
+   "weapon_classes": []
+  },
+  {
+   "emitters": [
+    {
+     "effect": "-1458959942",
+     "enabled": "0",
+     "events": {
+      "event_enable": "04AE24DE=FFFFDE84",
+      "event_finished_playing": "",
+      "event_play": "04AE24DE=FFFFDE84",
+      "event_stop": ""
+     },
+     "name": "epe_emp_powering_up",
+     "xyz": [
+      -0.011,
+      2.448,
+      0.07
+     ]
+    }
+   ],
+   "emp_parts": [
+    {
+     "behavior": "None",
+     "model": "models/jc_vehicles/01_land/v0505_car_solar_oldtruck/oldtruck_emp_device_rebel.lod",
+     "name": "oldtruck_emp_device_rebel",
+     "parent": 0,
+     "part_index": 5
+    },
+    {
+     "behavior": "Rotor",
+     "model": "models/jc_vehicles/01_land/v0505_car_solar_oldtruck/oldtruck_emp_device_core_rebel.lod",
+     "name": "oldtruck_emp_device_core_rebel",
+     "parent": 5,
+     "part_index": 46
+    },
+    {
+     "behavior": "None",
+     "model": "models/jc_vehicles/01_land/v0505_car_solar_oldtruck/oldtruck_emp_device_core_rebel_partswap.lod",
+     "name": "oldtruck_emp_device_core_rebel_partswap",
+     "parent": 5,
+     "part_index": 47
+    }
+   ],
+   "entity": "editor/entities/jc_vehicles/01_land/v0505_car_solar_oldtruck/v0505_car_solar_oldtruck_rebel_emp_custom_mm250.ee",
+   "files": [
+    {
+     "path": "editor/entities/jc_explosions/vehicles/car_explosion_medium.ftunec",
+     "size": 644
+    },
+    {
+     "path": "effects/destruction/explosion_emp_flatbed.effc",
+     "size": 24015
+    },
+    {
+     "path": "effects/jc_weapons/rpg_launcher/rpg_explosion_water.effc",
+     "size": 17231
+    },
+    {
+     "path": "effects/jc_vehicles/wheels/wheel_explosion_notiremesh.effc",
+     "size": 16879
+    },
+    {
+     "path": "effects/destruction/explosion_template_trail.effc",
+     "size": 11295
+    },
+    {
+     "path": "effects/props/emp_active.effc",
+     "size": 8783
+    }
+   ],
+   "material_tables": [
+    {
+     "class": "CMaterialEffectTable",
+     "name": "emp_flatbed_table"
+    }
+   ],
+   "members": 794,
+   "objects": 454,
+   "parts_total": 78,
+   "pulses": [
+    {
+     "name": "CForcePulse",
+     "props": {
+      "id:060AAA81": "20",
+      "id:06A05F33": "",
+      "id:1AF6FDF0": "00000000",
+      "id:24872388": "100",
+      "id:2849C306": "0",
+      "id:34303F77": "0",
+      "id:4912FC04": "1",
+      "id:530046B3": "10",
+      "id:57F1B4E1": "0.1",
+      "id:593FCDBF": "",
+      "id:5AF29116": "1",
+      "id:6B47B5C3": "0",
+      "id:71446B1A": "",
+      "id:74896A12": "0",
+      "id:7FD59340": "",
+      "id:831DAB81": "0",
+      "id:879640EA": "",
+      "id:9865E7F2": "100",
+      "id:9BD6FA33": "",
+      "id:A1B0DAF9": "2",
+      "id:AE6F7EFF": "0",
+      "id:CF4F7880": "0",
+      "id:D04059E6": "-1128945961",
+      "id:D3DDD766": "00000000",
+      "id:F39EC6EA": "0.1"
+     },
+     "refs": {},
+     "settings": "editor/entities/jc_explosions/vehicles/car_explosion_medium.ftune",
+     "xyz": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "rotor": [
+    {
+     "max_rpm_visible": -1.0,
+     "min_rpm_visible": -1.0,
+     "number_of_blades": 6,
+     "part_index": 46,
+     "position[0]": 0.0,
+     "position[1]": 2.443000078201294,
+     "position[2]": 0.7720000147819519,
+     "rotation_axis[0]": 2.220446049250313e-16,
+     "rotation_axis[1]": 0.0,
+     "rotation_axis[2]": 1.0,
+     "rpm_multiplier": 1.0,
+     "rpm_opacity_transition": -1.0
+    }
+   ],
+   "tag": "mm250",
+   "tunes": {
+    "car_explosion_medium.ftunec": [
+     {
+      "name": "PlayerDamage",
+      "type": "uint32",
+      "value": 500
+     },
+     {
+      "name": "PlayerDamageRadius",
+      "type": "float",
+      "value": 5.0
+     },
+     {
+      "name": "PlayerDamageRadiusPercentageMax",
+      "type": "float",
+      "value": 0.0
+     },
+     {
+      "name": "PlayerDamageRadiusMin",
+      "type": "float",
+      "value": 0.0
+     },
+     {
+      "name": "AIDamage",
+      "type": "uint32",
+      "value": 500
+     },
+     {
+      "name": "AIDamageRadius",
+      "type": "float",
+      "value": 5.0
+     },
+     {
+      "name": "AIDamageRadiusPercentageMax",
+      "type": "float",
+      "value": 0.0
+     },
+     {
+      "name": "AIDamageRadiusMin",
+      "type": "float",
+      "value": 0.0
+     }
+    ]
+   },
+   "use_item": [
+    {
+     "class": "CInteractionGraphEntry",
+     "enabled": "0",
+     "name": "entry.use_item",
+     "prompt": "ui_activate_emp",
+     "state": "S_STUNT_USE_ITEM_VEHICLE"
+    },
+    {
+     "class": "CInteractionTrigger",
+     "enabled": "1",
+     "links": [
+      "C6F3CC5F=FFFF1D0E",
+      "E880D61A=0000CAE5"
+     ],
+     "name": "trigger.use_item",
+     "xyz": [
+      0.0,
+      1.3507,
+      2.396
+     ]
+    }
+   ],
+   "weapon_classes": []
+  }
+ ],
+ "variants": [
+  {
+   "emp_parts": [
+    "oldtruck_emp_device_rebel",
+    "oldtruck_emp_device_core_rebel",
+    "oldtruck_emp_device_core_rebel_partswap"
+   ],
+   "emp_props": 0,
+   "emp_pulse": 0,
+   "entity": "v0505_car_solar_oldtruck_commercial_01.ee",
+   "parts": 78
+  },
+  {
+   "emp_parts": [
+    "oldtruck_emp_device_rebel",
+    "oldtruck_emp_device_core_rebel",
+    "oldtruck_emp_device_core_rebel_partswap"
+   ],
+   "emp_props": 0,
+   "emp_pulse": 0,
+   "entity": "v0505_car_solar_oldtruck_commercial_cargo_barrel.ee",
+   "parts": 78
+  },
+  {
+   "emp_parts": [
+    "oldtruck_emp_device_rebel",
+    "oldtruck_emp_device_core_rebel",
+    "oldtruck_emp_device_core_rebel_partswap"
+   ],
+   "emp_props": 0,
+   "emp_pulse": 0,
+   "entity": "v0505_car_solar_oldtruck_commercial_cargo_random.ee",
+   "parts": 78
+  },
+  {
+   "emp_parts": [
+    "oldtruck_emp_device_rebel",
+    "oldtruck_emp_device_core_rebel",
+    "oldtruck_emp_device_core_rebel_partswap"
+   ],
+   "emp_props": 0,
+   "emp_pulse": 0,
+   "entity": "v0505_car_solar_oldtruck_commercial_cargo_wine.ee",
+   "parts": 78
+  },
+  {
+   "emp_parts": [
+    "oldtruck_emp_device_rebel",
+    "oldtruck_emp_device_core_rebel",
+    "oldtruck_emp_device_core_rebel_partswap"
+   ],
+   "emp_props": 0,
+   "emp_pulse": 0,
+   "entity": "v0505_car_solar_oldtruck_debug.ee",
+   "parts": 78
+  },
+  {
+   "emp_parts": [
+    "oldtruck_emp_device_rebel",
+    "oldtruck_emp_device_core_rebel",
+    "oldtruck_emp_device_core_rebel_partswap"
+   ],
+   "emp_props": 0,
+   "emp_pulse": 0,
+   "entity": "v0505_car_solar_oldtruck_military_01.ee",
+   "parts": 78
+  },
+  {
+   "emp_parts": [
+    "oldtruck_emp_device_rebel",
+    "oldtruck_emp_device_core_rebel",
+    "oldtruck_emp_device_core_rebel_partswap"
+   ],
+   "emp_props": 0,
+   "emp_pulse": 0,
+   "entity": "v0505_car_solar_oldtruck_rebel_01.ee",
+   "parts": 78
+  },
+  {
+   "emp_parts": [
+    "oldtruck_emp_device_rebel",
+    "oldtruck_emp_device_core_rebel",
+    "oldtruck_emp_device_core_rebel_partswap"
+   ],
+   "emp_props": 3,
+   "emp_pulse": 1,
+   "entity": "v0505_car_solar_oldtruck_rebel_emp_01.ee",
+   "parts": 78
+  },
+  {
+   "emp_parts": [
+    "oldtruck_emp_device_rebel",
+    "oldtruck_emp_device_core_rebel",
+    "oldtruck_emp_device_core_rebel_partswap"
+   ],
+   "emp_props": 3,
+   "emp_pulse": 0,
+   "entity": "v0505_car_solar_oldtruck_rebel_emp_custom_mm250.ee",
+   "parts": 78
+  }
+ ],
+ "weapons": [
+  {
+   "component": {
+    "class": "CEMPWeapon",
+    "material_table": null,
+    "name": "w702_emp",
+    "tune": "editor/entities/jc_weapons/00_shared/autoaim_tuning/autoaim_assault_rifle.wtune",
+    "weapon_id": "702",
+    "weapon_type": "6"
+   },
+   "components": {
+    "CBarrelSpinWeaponComponent": 3,
+    "CInteractionComponentPickup": 1,
+    "CWallPenetrationWeaponComponent": 1
+   },
+   "effects": [
+    {
+     "name": "EMP_impact_effect_table",
+     "target": ""
+    },
+    {
+     "name": "HolsterWeapon",
+     "target": ""
+    },
+    {
+     "name": "Charging",
+     "target": ""
+    },
+    {
+     "name": "Charged",
+     "target": ""
+    },
+    {
+     "name": "DrawWeapon",
+     "target": ""
+    },
+    {
+     "name": "Fire1",
+     "target": "-1116076693"
+    },
+    {
+     "name": "Dryfire1",
+     "target": ""
+    },
+    {
+     "name": "Pickup",
+     "target": ""
+    }
+   ],
+   "entity": "editor/entities/jc_weapons/02_two_handed/w702_emp/w702_emp.ee",
+   "files": [
+    {
+     "path": "effects/jc_weapons/fow2/impact_emp_handheld_default.effc",
+     "size": 20671
+    },
+    {
+     "path": "effects/jc_weapons/fow2/emp_handheld_trail.effc",
+     "size": 17455
+    },
+    {
+     "path": "effects/jc_weapons/muzzle_flash/rico_emp_muzzleflash.effc",
+     "size": 16031
+    }
+   ],
+   "kind": "handheld",
+   "members": 59,
+   "points": [
+    {
+     "name": "FirePosition",
+     "type": "2",
+     "xyz": [
+      0.0,
+      0.13,
+      -0.69
+     ]
+    }
+   ],
+   "tag": "w702",
+   "tune": {
+    "emp_keys": [],
+    "file": "editor/entities/jc_weapons/02_two_handed/w702_emp/w702_emp.wtunec",
+    "rows": 146,
+    "values": {
+     "damage": 500.0,
+     "fire_rate": 0.0,
+     "magazine_size": 1,
+     "max_range": 50.0,
+     "velocity": 400.0
+    }
+   }
+  },
+  {
+   "component": {
+    "class": "CEMPWeapon",
+    "material_table": null,
+    "name": "w503_turret_emp",
+    "tune": "editor/entities/jc_weapons/00_shared/autoaim_tuning/autoaim_assault_rifle.wtune",
+    "weapon_id": "503",
+    "weapon_type": "2"
+   },
+   "components": {
+    "CTurretWeaponComponent": 1
+   },
+   "effects": [
+    {
+     "name": "Fire1",
+     "target": "752324526"
+    },
+    {
+     "name": "emp_impact_table",
+     "target": ""
+    }
+   ],
+   "entity": "editor/entities/jc_weapons/05_stationary/w503_turret_emp/w503_turret_emp.ee",
+   "files": [
+    {
+     "path": "effects/jc_weapons/muzzle_flash/emp_large_muzzleflash.effc",
+     "size": 28927
+    },
+    {
+     "path": "effects/jc_weapons/emp_mounted/impact_emp_large.effc",
+     "size": 26847
+    },
+    {
+     "path": "effects/jc_weapons/emp_mounted/emp_large_trail.effc",
+     "size": 17471
+    }
+   ],
+   "kind": "static turret",
+   "members": 73,
+   "points": [
+    {
+     "name": "fire_position_1",
+     "type": "2",
+     "xyz": [
+      0.0,
+      3.762,
+      -9.708
+     ]
+    }
+   ],
+   "tag": "w503",
+   "tune": {
+    "emp_keys": [],
+    "file": "editor/entities/jc_weapons/05_stationary/w503_turret_emp/w503_turret_emp.wtunec",
+    "rows": 146,
+    "values": {
+     "damage": 500.0,
+     "fire_rate": 0.5,
+     "magazine_size": 3,
+     "max_range": 750.0,
+     "velocity": 600.0
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/checks-sweep-h.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-06
+Second half of the repo health sweep, another agent covers the scripts a-g. Yours: Tools/scripts/*.py starting with the letters h through z (include names starting with a digit or underscore last) that accept --check. Use Tools/scripts/checks_sweep.py if it already exists (another task may have written it; if not, run the scripts one by one yourself), running each under a 5-minute limit with the uv --with dependencies numpy scipy pillow pefile capstone fsb5. Record exit code and the last two output lines, then classify each failure as real failure, missing dependency (name it) or missing input (name it). Write Working/Translation/CHECKS_SWEEP_H.md. Do not fix or edit any script, and skip any script that would write to Builds/ or a game path.

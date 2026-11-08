@@ -1,0 +1,104 @@
+{
+ "verdict": "no Scaleform movie draws speed; the only speedometer in the install is the native debug readout gated by RPlayerController.bDebugSpeedometer",
+ "movies": {
+  "scanned": 19,
+  "matches": [
+   {
+    "object": "HudModuleHealth.Image",
+    "tokens": [
+     "SpeedMax",
+     "SpeedMin"
+    ]
+   }
+  ],
+  "note": "HudModuleHealth's SpeedMin/SpeedMax are FrameLabel tags (tag id 43) per `ffdec -dumpSWF`; no movie defines a speed setter."
+ },
+ "native": {
+  "flag": {
+   "class": "RPlayerController",
+   "property": "bDebugSpeedometer",
+   "type": "BoolProperty",
+   "config": {
+    "BmGame.ini": false,
+    "DefaultGame.ini": false
+   }
+  },
+  "toggle": {
+   "function": "RDebugMenuContent.DoGadgetsMenu",
+   "label": "Speedometer",
+   "bytes": 4933,
+   "references_flag": true
+  },
+  "draw": {
+   "native_function": "RPlayerControllerBase.DrawHUD",
+   "bytes": 39,
+   "caller": "RPlayerController.DrawHUD",
+   "caller_bytes": 656,
+   "caller_calls_base": true,
+   "canvas": "RPlayerController.PreRender"
+  },
+  "script_references": [
+   "RDebugMenuContent.DoGadgetsMenu"
+  ]
+ },
+ "fields": [
+  {
+   "class": "RVehicleBatmobileBase",
+   "name": "CurrentThrottle",
+   "offset": 6408,
+   "default": null,
+   "type": "FloatProperty"
+  },
+  {
+   "class": "RVehicleBatmobileBase",
+   "name": "ThrottleSpeed",
+   "offset": 6412,
+   "default": 2.0,
+   "type": "FloatProperty"
+  },
+  {
+   "class": "RVehicleBatmobileBase",
+   "name": "FakeExtraSpeed",
+   "offset": 7152,
+   "default": null,
+   "type": "FloatProperty"
+  },
+  {
+   "class": "RVehicleBatmobileBase",
+   "name": "FakeExtraSpeedMax",
+   "offset": 7156,
+   "default": 3500.0,
+   "type": "FloatProperty"
+  },
+  {
+   "class": "RVehicleBatmobileBase",
+   "name": "FakeExtaSpeedAccel",
+   "offset": 7160,
+   "default": 600.0,
+   "type": "FloatProperty"
+  },
+  {
+   "class": "RVehicleBatmobileBase",
+   "name": "FakeExtaSpeedDecel",
+   "offset": 7164,
+   "default": 2000.0,
+   "type": "FloatProperty"
+  },
+  {
+   "class": "RVehicleBatmobileBase",
+   "name": "BattleModeSpeedDelta",
+   "offset": 7860,
+   "default": null,
+   "type": "FloatProperty"
+  },
+  {
+   "class": "Engine.Actor",
+   "name": "Velocity",
+   "offset": null,
+   "default": null,
+   "type": "StructProperty",
+   "package": "Engine.upk"
+  }
+ ],
+ "units": "Unreal units are cm/s; FakeExtraSpeedMax 3500.0 is 126 km/h. The native readout's own conversion is not in script and is not claimed."
+}

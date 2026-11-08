@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/G3-10i.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-03
+G3-10h (Research/JC3Grab/CONSTRAINT_CODE.md) found the second body of every JC3 vehicle constraint record is the engine's 'no body' marker, 0x7fffffff, in 494 of 494 records. What does the runtime do with a constraint whose second body is absent? Statically in JustCause3.exe (never run the game), follow the code from where the cinfo list is walked to the constraint-creation call and see what it substitutes for an invalid body: the world's fixed body, the system's root body, or a body supplied by the vehicle at spawn (for example its chassis). Show the instructions that make the choice. New script jc3_constraint_code2.py (--write/--check) -> Research/JC3Grab/CONSTRAINT_CODE2.md + .json. Rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md section 3. Report at the DONE path with STATUS and every command with its output.

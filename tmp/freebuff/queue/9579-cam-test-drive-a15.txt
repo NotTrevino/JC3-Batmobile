@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/cam-test-drive-a15.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/cam-pilot-cards-write.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-merge-release-candidate.md, E:/Modding/JC3-Batmobile/tmp/freebuff/APPROVED_Q_FULL.txt
+In-game camera drive, agent-piloted under operator supervision, once approved. Use cards CAM_REST.md, CAM_SPEED_FOV.md, CAM_ROLL.md and CAM_NO_CLIP.md in Working/Q/PILOT/ with the RC5 merged build from brief 9190. One observation for each card, recorded as a clip: rest distance, FOV change over the speed range, roll with lean, and no wall or body clipping. Pass rule: rest boom near 700 cm back and 130 cm up measured against a known object; FOV stops growing at 108 km/h; roll matches the 0.38 tune sign; no clipping in a tight corner. On fail, write a fix card naming the value in bat_base.ctunec and the bmak_camfile.py row to change. Write reports/cam-test-drive.md with measured numbers. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/7210-t-blocked-rows.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-05
+The translation tracker (STATUS.md) shows 17 blocked rows of 180. List them from Working/Translation/T_ROWS.jsonl (field dispo), and for each blocked row state in one line what input it waits for. Then for the first 6 try to unblock from files already in the repo (Research/JC3Grab, Research/BatmobileGrab): show the evidence or name the exact missing input. Do not change T_ROWS.jsonl; write proposed row edits to Working/Translation/BLOCKED_PROPOSALS.json and a note BLOCKED_PROPOSALS.md; checker Tools/scripts/t_blocked.py --check.
+Rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md section 3 (test ban stays; never guess; label decoded/derived/UNKNOWN). Write the report at the DONE path: STATUS line first, files written, every command with verbatim output, UNKNOWNs with what you tried.

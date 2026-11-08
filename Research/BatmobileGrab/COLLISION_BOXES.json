@@ -1,0 +1,7194 @@
+{
+ "bodies": [
+  {
+   "accounting": {
+    "boxes_end": 244,
+    "convex_ends": 1750,
+    "exact": true,
+    "footer_bytes": 9,
+    "label": "derived: the byte map's sizes sum to the declared AggGeom size, with no gap and no overlap (offsets are consecutive by construction and checked below)",
+    "mapped_bytes": 1759,
+    "payload_bytes": 1759
+   },
+   "aggeom_bytes": 1759,
+   "bone": "Batmobile_Chassis",
+   "bone_expected": "Batmobile_Chassis",
+   "box_count_header": 2,
+   "box_count_matches": true,
+   "box_offsets_reference": {
+    "bodies": {
+     "169748": 25907,
+     "169749": 8275
+    },
+    "label": "decoded by G3-01c; used here as the hull oracle and for the convex section's layout",
+    "summary": {
+     "box_exact": 56,
+     "elements": 56,
+     "elements_by_body": {
+      "169748": 43,
+      "169749": 13
+     },
+     "plane_clean": 53
+    }
+   },
+   "boxes": [
+    {
+     "bool_bits_set": [
+      6
+     ],
+     "bool_tag": {
+      "at": 116,
+      "bytes": 8,
+      "kind": "bool",
+      "offset": 76,
+      "type": 3,
+      "word": 64
+     },
+     "bool_word": 64,
+     "bytes": 118,
+     "end": 126,
+     "extent_offsets_present": [
+      64,
+      68,
+      72
+     ],
+     "extent_tags": [
+      {
+       "at": 92,
+       "bytes": 8,
+       "kind": "float",
+       "offset": 64,
+       "type": 4,
+       "value": 690.3049926757812
+      },
+      {
+       "at": 100,
+       "bytes": 8,
+       "kind": "float",
+       "offset": 68,
+       "type": 4,
+       "value": 374.53607177734375
+      },
+      {
+       "at": 108,
+       "bytes": 8,
+       "kind": "float",
+       "offset": 72,
+       "type": 4,
+       "value": 207.5
+      },
+      {
+       "at": 116,
+       "bytes": 8,
+       "kind": "bool",
+       "offset": 76,
+       "type": 3,
+       "word": 64
+      },
+      {
+       "at": 124,
+       "bytes": 2,
+       "kind": "end",
+       "offset": 10,
+       "type": 0
+      }
+     ],
+     "extents_cm": [
+      690.305,
+      374.5361,
+      207.5
+     ],
+     "index": 0,
+     "labels": {
+      "bool": "decoded (BoolProperty tag at logical offset 0x4C; payload is the packed 32-bit bool word, so the value is a bit mask, not a 0/1 flag)",
+      "extents": "decoded (FloatProperty tags at logical offsets 0x40/0x44/0x48)",
+      "tm_floats": "decoded (16 floats from byte 28, raw 64-byte payload)",
+      "tm_tag": "decoded (StructProperty tag at byte 8: name_index 78655 = `TM`, size 64)"
+     },
+     "readings": {
+      "A_planes_lead_first": {
+       "oracle": {
+        "det": 1.0,
+        "is_rotation": true,
+        "max_abs_dot": 0.0,
+        "max_norm_error": 0.0,
+        "pairwise_dots": [
+         0.0,
+         0.0,
+         0.0
+        ],
+        "row_norms": [
+         1.0,
+         1.0,
+         1.0
+        ],
+        "translation_cm": [
+         9.0,
+         0.0,
+         106.75
+        ]
+       },
+       "quad_leads": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+       ],
+       "rows": [
+        [
+         1.0,
+         0.0,
+         0.0
+        ],
+        [
+         0.0,
+         1.0,
+         0.0
+        ],
+        [
+         0.0,
+         0.0,
+         1.0
+        ]
+       ],
+       "translation": [
+        9.0,
+        0.0,
+        106.75
+       ]
+      },
+      "B_planes_xyz_first": {
+       "oracle": {
+        "det": 0.0,
+        "is_rotation": false,
+        "max_abs_dot": 0.0,
+        "max_norm_error": 1.0,
+        "pairwise_dots": [
+         0.0,
+         0.0,
+         0.0
+        ],
+        "row_norms": [
+         1.0,
+         1.0,
+         0.0
+        ],
+        "translation_cm": [
+         1.0,
+         9.0,
+         0.0
+        ]
+       },
+       "rows": [
+        [
+         0.0,
+         1.0,
+         0.0
+        ],
+        [
+         0.0,
+         0.0,
+         1.0
+        ],
+        [
+         0.0,
+         0.0,
+         0.0
+        ]
+       ],
+       "translation": [
+        1.0,
+        9.0,
+        0.0
+       ]
+      }
+     },
+     "rotation": {
+      "axis_angle": {
+       "angle_deg": 0.0,
+       "axis": null,
+       "label": "derived: trace formula on the decoded 3x3; degenerate axis undefined"
+      },
+      "label": "decoded (reading A, proven below by the orthonormality oracle); the translation is the same 12 bytes the earlier tools read as the centre",
+      "oracle": {
+       "det": 1.0,
+       "is_rotation": true,
+       "max_abs_dot": 0.0,
+       "max_norm_error": 0.0,
+       "pairwise_dots": [
+        0.0,
+        0.0,
+        0.0
+       ],
+       "row_norms": [
+        1.0,
+        1.0,
+        1.0
+       ],
+       "translation_cm": [
+        9.0,
+        0.0,
+        106.75
+       ]
+      },
+      "rows": [
+       [
+        1.0,
+        0.0,
+        0.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        0.0,
+        0.0,
+        1.0
+       ]
+      ],
+      "translation_cm": [
+       9.0,
+       0.0,
+       106.75
+      ]
+     },
+     "start": 8,
+     "tm_at": 28,
+     "tm_float_offsets": [
+      28,
+      32,
+      36,
+      40,
+      44,
+      48,
+      52,
+      56,
+      60,
+      64,
+      68,
+      72,
+      76,
+      80,
+      84,
+      88
+     ],
+     "tm_floats": [
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      9.0,
+      0.0,
+      106.75
+     ],
+     "tm_quad_leads": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "tm_tag": {
+      "array_index": 0,
+      "at": 8,
+      "name": "TM",
+      "name_index": 78655,
+      "number": 0,
+      "offset": 0,
+      "size": 64,
+      "type": 10
+     },
+     "translation_vs_previous_rule": {
+      "agrees": true,
+      "label": "decoded (both reads are the same 12 bytes; the old centre value stands)",
+      "rule": "12 bytes before the first element tag (grab_physics / grab_collision_geom)",
+      "values_cm": [
+       9.0,
+       0.0,
+       106.75
+      ]
+     }
+    },
+    {
+     "bool_bits_set": [],
+     "bool_tag": {
+      "at": 234,
+      "bytes": 8,
+      "kind": "bool",
+      "offset": 76,
+      "type": 3,
+      "word": 0
+     },
+     "bool_word": 0,
+     "bytes": 118,
+     "end": 244,
+     "extent_offsets_present": [
+      64,
+      68,
+      72
+     ],
+     "extent_tags": [
+      {
+       "at": 210,
+       "bytes": 8,
+       "kind": "float",
+       "offset": 64,
+       "type": 4,
+       "value": 679.585205078125
+      },
+      {
+       "at": 218,
+       "bytes": 8,
+       "kind": "float",
+       "offset": 68,
+       "type": 4,
+       "value": 345.6875915527344
+      },
+      {
+       "at": 226,
+       "bytes": 8,
+       "kind": "float",
+       "offset": 72,
+       "type": 4,
+       "value": 103.5
+      },
+      {
+       "at": 234,
+       "bytes": 8,
+       "kind": "bool",
+       "offset": 76,
+       "type": 3,
+       "word": 0
+      },
+      {
+       "at": 242,
+       "bytes": 2,
+       "kind": "end",
+       "offset": 0,
+       "type": 0
+      }
+     ],
+     "extents_cm": [
+      679.5852,
+      345.6876,
+      103.5
+     ],
+     "index": 1,
+     "labels": {
+      "bool": "decoded (BoolProperty tag at logical offset 0x4C; payload is the packed 32-bit bool word, so the value is a bit mask, not a 0/1 flag)",
+      "extents": "decoded (FloatProperty tags at logical offsets 0x40/0x44/0x48)",
+      "tm_floats": "decoded (16 floats from byte 146, raw 64-byte payload)",
+      "tm_tag": "decoded (StructProperty tag at byte 126: name_index 78655 = `TM`, size 64)"
+     },
+     "readings": {
+      "A_planes_lead_first": {
+       "oracle": {
+        "det": 1.0,
+        "is_rotation": true,
+        "max_abs_dot": 0.0,
+        "max_norm_error": 0.0,
+        "pairwise_dots": [
+         0.0,
+         0.0,
+         0.0
+        ],
+        "row_norms": [
+         1.0,
+         1.0,
+         1.0
+        ],
+        "translation_cm": [
+         0.0,
+         0.0,
+         79.0
+        ]
+       },
+       "quad_leads": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+       ],
+       "rows": [
+        [
+         1.0,
+         0.0,
+         0.0
+        ],
+        [
+         0.0,
+         1.0,
+         0.0
+        ],
+        [
+         0.0,
+         0.0,
+         1.0
+        ]
+       ],
+       "translation": [
+        0.0,
+        1.5385559393486315e-22,
+        79.0
+       ]
+      },
+      "B_planes_xyz_first": {
+       "oracle": {
+        "det": 0.0,
+        "is_rotation": false,
+        "max_abs_dot": 0.0,
+        "max_norm_error": 1.0,
+        "pairwise_dots": [
+         0.0,
+         0.0,
+         0.0
+        ],
+        "row_norms": [
+         1.0,
+         1.0,
+         0.0
+        ],
+        "translation_cm": [
+         1.0,
+         0.0,
+         0.0
+        ]
+       },
+       "rows": [
+        [
+         0.0,
+         1.0,
+         0.0
+        ],
+        [
+         0.0,
+         0.0,
+         1.0
+        ],
+        [
+         0.0,
+         0.0,
+         0.0
+        ]
+       ],
+       "translation": [
+        1.0,
+        0.0,
+        1.5385559393486315e-22
+       ]
+      }
+     },
+     "rotation": {
+      "axis_angle": {
+       "angle_deg": 0.0,
+       "axis": null,
+       "label": "derived: trace formula on the decoded 3x3; degenerate axis undefined"
+      },
+      "label": "decoded (reading A, proven below by the orthonormality oracle); the translation is the same 12 bytes the earlier tools read as the centre",
+      "oracle": {
+       "det": 1.0,
+       "is_rotation": true,
+       "max_abs_dot": 0.0,
+       "max_norm_error": 0.0,
+       "pairwise_dots": [
+        0.0,
+        0.0,
+        0.0
+       ],
+       "row_norms": [
+        1.0,
+        1.0,
+        1.0
+       ],
+       "translation_cm": [
+        0.0,
+        0.0,
+        79.0
+       ]
+      },
+      "rows": [
+       [
+        1.0,
+        0.0,
+        0.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        0.0,
+        0.0,
+        1.0
+       ]
+      ],
+      "translation_cm": [
+       0.0,
+       0.0,
+       79.0
+      ]
+     },
+     "start": 126,
+     "tm_at": 146,
+     "tm_float_offsets": [
+      146,
+      150,
+      154,
+      158,
+      162,
+      166,
+      170,
+      174,
+      178,
+      182,
+      186,
+      190,
+      194,
+      198,
+      202,
+      206
+     ],
+     "tm_floats": [
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      0.0,
+      0.0,
+      79.0
+     ],
+     "tm_quad_leads": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "tm_tag": {
+      "array_index": 0,
+      "at": 126,
+      "name": "TM",
+      "name_index": 78655,
+      "number": 0,
+      "offset": 0,
+      "size": 64,
+      "type": 10
+     },
+     "translation_vs_previous_rule": {
+      "agrees": true,
+      "label": "decoded (both reads are the same 12 bytes; the old centre value stands)",
+      "rule": "12 bytes before the first element tag (grab_physics / grab_collision_geom)",
+      "values_cm": [
+       0.0,
+       0.0,
+       79.0
+      ]
+     }
+    }
+   ],
+   "byte_map": [
+    {
+     "kind": "sphere_count",
+     "label": "decoded (u32; 0 spheres in both bodies)",
+     "offset": 0,
+     "size": 4,
+     "value": 0
+    },
+    {
+     "kind": "box_count",
+     "label": "decoded (u32; equals the number of box elements decoded)",
+     "offset": 4,
+     "size": 4,
+     "value": 2
+    },
+    {
+     "kind": "tm_struct_tag",
+     "label": "decoded StructProperty tag, name `TM`, size 64",
+     "offset": 8,
+     "size": 20
+    },
+    {
+     "kind": "tm",
+     "label": "decoded TM (16 floats: 3x3 + translation)",
+     "offset": 28,
+     "size": 64
+    },
+    {
+     "kind": "extent_float",
+     "label": "decoded FloatProperty at logical offset 0x40",
+     "logical_offset": 64,
+     "offset": 92,
+     "size": 8,
+     "value": 690.305
+    },
+    {
+     "kind": "extent_float",
+     "label": "decoded FloatProperty at logical offset 0x44",
+     "logical_offset": 68,
+     "offset": 100,
+     "size": 8,
+     "value": 374.5361
+    },
+    {
+     "kind": "extent_float",
+     "label": "decoded FloatProperty at logical offset 0x48",
+     "logical_offset": 72,
+     "offset": 108,
+     "size": 8,
+     "value": 207.5
+    },
+    {
+     "kind": "bool_word",
+     "label": "decoded BoolProperty at logical offset 0x4c (packed word)",
+     "logical_offset": 76,
+     "offset": 116,
+     "size": 8,
+     "value": 64
+    },
+    {
+     "kind": "element_end",
+     "label": "decoded end-of-tag-list marker (type 0)",
+     "offset": 124,
+     "size": 2
+    },
+    {
+     "kind": "tm_struct_tag",
+     "label": "decoded StructProperty tag, name `TM`, size 64",
+     "offset": 126,
+     "size": 20
+    },
+    {
+     "kind": "tm",
+     "label": "decoded TM (16 floats: 3x3 + translation)",
+     "offset": 146,
+     "size": 64
+    },
+    {
+     "kind": "extent_float",
+     "label": "decoded FloatProperty at logical offset 0x40",
+     "logical_offset": 64,
+     "offset": 210,
+     "size": 8,
+     "value": 679.5852
+    },
+    {
+     "kind": "extent_float",
+     "label": "decoded FloatProperty at logical offset 0x44",
+     "logical_offset": 68,
+     "offset": 218,
+     "size": 8,
+     "value": 345.6876
+    },
+    {
+     "kind": "extent_float",
+     "label": "decoded FloatProperty at logical offset 0x48",
+     "logical_offset": 72,
+     "offset": 226,
+     "size": 8,
+     "value": 103.5
+    },
+    {
+     "kind": "bool_word",
+     "label": "decoded BoolProperty at logical offset 0x4c (packed word)",
+     "logical_offset": 76,
+     "offset": 234,
+     "size": 8,
+     "value": 0
+    },
+    {
+     "kind": "element_end",
+     "label": "decoded end-of-tag-list marker (type 0)",
+     "offset": 242,
+     "size": 2
+    },
+    {
+     "kind": "sphyl_or_third_count",
+     "label": "decoded u32, 0 in both bodies; which element type it counts is UNKNOWN (no such element exists in any decoded body to test the order against)",
+     "offset": 244,
+     "size": 4,
+     "value": 0
+    },
+    {
+     "kind": "convex_count",
+     "label": "decoded u32; equals the number of elements that follow and that consume the payload to its footer (byte accounting oracle)",
+     "offset": 248,
+     "size": 4,
+     "value": 1
+    },
+    {
+     "kind": "convex_nV",
+     "label": "decoded (convex_nV of G3-01c's proven layout)",
+     "offset": 252,
+     "size": 4
+    },
+    {
+     "kind": "convex_vertices",
+     "label": "decoded (convex_vertices of G3-01c's proven layout)",
+     "offset": 256,
+     "size": 144
+    },
+    {
+     "kind": "convex_nP",
+     "label": "decoded (convex_nP of G3-01c's proven layout)",
+     "offset": 400,
+     "size": 4
+    },
+    {
+     "kind": "convex_permuted",
+     "label": "decoded (convex_permuted of G3-01c's proven layout)",
+     "offset": 404,
+     "size": 144
+    },
+    {
+     "kind": "convex_nI",
+     "label": "decoded (convex_nI of G3-01c's proven layout)",
+     "offset": 548,
+     "size": 4
+    },
+    {
+     "kind": "convex_indices",
+     "label": "decoded (convex_indices of G3-01c's proven layout)",
+     "offset": 552,
+     "size": 240
+    },
+    {
+     "kind": "convex_nE",
+     "label": "decoded (convex_nE of G3-01c's proven layout)",
+     "offset": 792,
+     "size": 4
+    },
+    {
+     "kind": "convex_edge_vectors",
+     "label": "decoded (convex_edge_vectors of G3-01c's proven layout)",
+     "offset": 796,
+     "size": 300
+    },
+    {
+     "kind": "convex_nX",
+     "label": "decoded (convex_nX of G3-01c's proven layout)",
+     "offset": 1096,
+     "size": 4
+    },
+    {
+     "kind": "convex_face_vectors",
+     "label": "decoded (convex_face_vectors of G3-01c's proven layout)",
+     "offset": 1100,
+     "size": 228
+    },
+    {
+     "kind": "convex_nY",
+     "label": "decoded (convex_nY of G3-01c's proven layout)",
+     "offset": 1328,
+     "size": 4
+    },
+    {
+     "kind": "convex_planes",
+     "label": "decoded (convex_planes of G3-01c's proven layout)",
+     "offset": 1332,
+     "size": 320
+    },
+    {
+     "kind": "convex_nZ",
+     "label": "decoded (convex_nZ of G3-01c's proven layout)",
+     "offset": 1652,
+     "size": 4
+    },
+    {
+     "kind": "convex_edge_records",
+     "label": "decoded (convex_edge_records of G3-01c's proven layout)",
+     "offset": 1656,
+     "size": 56
+    },
+    {
+     "kind": "convex_elem_box",
+     "label": "decoded (convex_elem_box of G3-01c's proven layout)",
+     "offset": 1712,
+     "size": 24
+    },
+    {
+     "kind": "convex_trailer",
+     "label": "decoded (convex_trailer of G3-01c's proven layout)",
+     "offset": 1736,
+     "size": 14
+    },
+    {
+     "kind": "footer",
+     "label": "decoded zero footer",
+     "offset": 1750,
+     "size": 9
+    }
+   ],
+   "convex_count": 1,
+   "convex_elements": [
+    {
+     "box_max_cm": [
+      350.75,
+      175.5,
+      227.75
+     ],
+     "box_min_cm": [
+      -339.25,
+      -169.5,
+      40.5
+     ],
+     "box_vs_vertex_bounds": {
+      "box_max_cm": [
+       350.75,
+       175.5,
+       227.75
+      ],
+      "box_min_cm": [
+       -339.25,
+       -169.5,
+       40.5
+      ],
+      "label": "derived: the element's decoded vertex bounds against the decoded ElemBox; rule = max |component - box component|, must be 0",
+      "matches": true,
+      "max_abs_diff_cm": 0.0,
+      "vertex_bounds_max_cm": [
+       350.75,
+       175.5,
+       227.75
+      ],
+      "vertex_bounds_min_cm": [
+       -339.25,
+       -169.5,
+       40.5
+      ]
+     },
+     "bytes": 1498,
+     "end": 1750,
+     "index": 0,
+     "n_edge_records": 14,
+     "n_edge_vectors": 25,
+     "n_face_vectors": 19,
+     "n_indices": 60,
+     "n_permuted": 9,
+     "n_planes": 20,
+     "n_vertices": 12,
+     "start": 252,
+     "trailer_hex": "0100000000000000000000000100"
+    }
+   ],
+   "errors": [],
+   "export": 169750,
+   "export_size": 2698,
+   "footer": {
+    "all_zero": true,
+    "at": 1750,
+    "bytes": 9,
+    "hex": "000000000000000000",
+    "label": "decoded: the bytes left after the last element (G3-01c found the same 9-byte zero footer in 169748/169749)"
+   },
+   "object": "Batmobile_V3_Physics.RB_BodySetup",
+   "sphere_count": 0
+  },
+  {
+   "accounting": {
+    "boxes_end": 126,
+    "convex_ends": 134,
+    "exact": true,
+    "footer_bytes": 9,
+    "label": "derived: the byte map's sizes sum to the declared AggGeom size, with no gap and no overlap (offsets are consecutive by construction and checked below)",
+    "mapped_bytes": 143,
+    "payload_bytes": 143
+   },
+   "aggeom_bytes": 143,
+   "bone": "Batmobile_Rig_Weapons_Trans",
+   "bone_expected": "Batmobile_Rig_Weapons_Trans",
+   "box_count_header": 1,
+   "box_count_matches": true,
+   "box_offsets_reference": {
+    "bodies": {
+     "169748": 25907,
+     "169749": 8275
+    },
+    "label": "decoded by G3-01c; used here as the hull oracle and for the convex section's layout",
+    "summary": {
+     "box_exact": 56,
+     "elements": 56,
+     "elements_by_body": {
+      "169748": 43,
+      "169749": 13
+     },
+     "plane_clean": 53
+    }
+   },
+   "boxes": [
+    {
+     "bool_bits_set": [],
+     "bool_tag": {
+      "at": 116,
+      "bytes": 8,
+      "kind": "bool",
+      "offset": 76,
+      "type": 3,
+      "word": 0
+     },
+     "bool_word": 0,
+     "bytes": 118,
+     "end": 126,
+     "extent_offsets_present": [
+      64,
+      68,
+      72
+     ],
+     "extent_tags": [
+      {
+       "at": 92,
+       "bytes": 8,
+       "kind": "float",
+       "offset": 64,
+       "type": 4,
+       "value": 166.1769256591797
+      },
+      {
+       "at": 100,
+       "bytes": 8,
+       "kind": "float",
+       "offset": 68,
+       "type": 4,
+       "value": 189.36488342285156
+      },
+      {
+       "at": 108,
+       "bytes": 8,
+       "kind": "float",
+       "offset": 72,
+       "type": 4,
+       "value": 39.80005645751953
+      },
+      {
+       "at": 116,
+       "bytes": 8,
+       "kind": "bool",
+       "offset": 76,
+       "type": 3,
+       "word": 0
+      },
+      {
+       "at": 124,
+       "bytes": 2,
+       "kind": "end",
+       "offset": 0,
+       "type": 0
+      }
+     ],
+     "extents_cm": [
+      166.1769,
+      189.3649,
+      39.8001
+     ],
+     "index": 0,
+     "labels": {
+      "bool": "decoded (BoolProperty tag at logical offset 0x4C; payload is the packed 32-bit bool word, so the value is a bit mask, not a 0/1 flag)",
+      "extents": "decoded (FloatProperty tags at logical offsets 0x40/0x44/0x48)",
+      "tm_floats": "decoded (16 floats from byte 28, raw 64-byte payload)",
+      "tm_tag": "decoded (StructProperty tag at byte 8: name_index 78655 = `TM`, size 64)"
+     },
+     "readings": {
+      "A_planes_lead_first": {
+       "oracle": {
+        "det": 1.0000001,
+        "is_rotation": true,
+        "max_abs_dot": 3.4874619892926794e-21,
+        "max_norm_error": 2.683355426746914e-08,
+        "pairwise_dots": [
+         -0.0,
+         -0.0,
+         -0.0
+        ],
+        "row_norms": [
+         1.0,
+         1.0,
+         1.0
+        ],
+        "translation_cm": [
+         -30.5,
+         -0.0,
+         93.25
+        ]
+       },
+       "quad_leads": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+       ],
+       "rows": [
+        [
+         0.9975640773773193,
+         -4.504527566245474e-15,
+         -0.06975647062063217
+        ],
+        [
+         -4.504527566245474e-15,
+         1.0,
+         -1.2899279084113702e-13
+        ],
+        [
+         0.06975647062063217,
+         1.2899279084113702e-13,
+         0.9975640773773193
+        ]
+       ],
+       "translation": [
+        -30.499996185302734,
+        -5.4503956903317885e-11,
+        93.25
+       ]
+      },
+      "B_planes_xyz_first": {
+       "oracle": {
+        "det": -0.0,
+        "is_rotation": false,
+        "max_abs_dot": 0.06958654925576901,
+        "max_norm_error": 0.9302435293793678,
+        "pairwise_dots": [
+         -0.0,
+         0.0695865,
+         0.0
+        ],
+        "row_norms": [
+         0.997564,
+         1.0,
+         0.069756
+        ],
+        "translation_cm": [
+         1.0,
+         -30.5,
+         -0.0
+        ]
+       },
+       "rows": [
+        [
+         0.0,
+         0.9975640773773193,
+         -4.504527566245474e-15
+        ],
+        [
+         0.0,
+         -4.504527566245474e-15,
+         1.0
+        ],
+        [
+         0.0,
+         0.06975647062063217,
+         1.2899279084113702e-13
+        ]
+       ],
+       "translation": [
+        1.0,
+        -30.499996185302734,
+        -5.4503956903317885e-11
+       ]
+      }
+     },
+     "rotation": {
+      "axis_angle": {
+       "angle_deg": 4.0,
+       "axis_label": "-Y",
+       "axis_vector": [
+        0.0,
+        -1.000006,
+        0.0
+       ],
+       "label": "derived: axis and angle from the decoded 3x3 (geometric axis; R vs R^T is not decidable from one matrix, so the sign of the angle is conditional)",
+       "sign_conditional": true
+      },
+      "label": "decoded (reading A, proven below by the orthonormality oracle); the translation is the same 12 bytes the earlier tools read as the centre",
+      "oracle": {
+       "det": 1.0000001,
+       "is_rotation": true,
+       "max_abs_dot": 3.4874619892926794e-21,
+       "max_norm_error": 2.683355426746914e-08,
+       "pairwise_dots": [
+        -0.0,
+        -0.0,
+        -0.0
+       ],
+       "row_norms": [
+        1.0,
+        1.0,
+        1.0
+       ],
+       "translation_cm": [
+        -30.5,
+        -0.0,
+        93.25
+       ]
+      },
+      "rows": [
+       [
+        0.997564,
+        -0.0,
+        -0.069756
+       ],
+       [
+        -0.0,
+        1.0,
+        -0.0
+       ],
+       [
+        0.069756,
+        0.0,
+        0.997564
+       ]
+      ],
+      "translation_cm": [
+       -30.5,
+       -0.0,
+       93.25
+      ]
+     },
+     "start": 8,
+     "tm_at": 28,
+     "tm_float_offsets": [
+      28,
+      32,
+      36,
+      40,
+      44,
+      48,
+      52,
+      56,
+      60,
+      64,
+      68,
+      72,
+      76,
+      80,
+      84,
+      88
+     ],
+     "tm_floats": [
+      0.0,
+      0.997564,
+      -0.0,
+      -0.069756,
+      0.0,
+      -0.0,
+      1.0,
+      -0.0,
+      0.0,
+      0.069756,
+      0.0,
+      0.997564,
+      1.0,
+      -30.499996,
+      -0.0,
+      93.25
+     ],
+     "tm_quad_leads": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "tm_tag": {
+      "array_index": 0,
+      "at": 8,
+      "name": "TM",
+      "name_index": 78655,
+      "number": 0,
+      "offset": 0,
+      "size": 64,
+      "type": 10
+     },
+     "translation_vs_previous_rule": {
+      "agrees": true,
+      "label": "decoded (both reads are the same 12 bytes; the old centre value stands)",
+      "rule": "12 bytes before the first element tag (grab_physics / grab_collision_geom)",
+      "values_cm": [
+       -30.499996,
+       -0.0,
+       93.25
+      ]
+     }
+    }
+   ],
+   "byte_map": [
+    {
+     "kind": "sphere_count",
+     "label": "decoded (u32; 0 spheres in both bodies)",
+     "offset": 0,
+     "size": 4,
+     "value": 0
+    },
+    {
+     "kind": "box_count",
+     "label": "decoded (u32; equals the number of box elements decoded)",
+     "offset": 4,
+     "size": 4,
+     "value": 1
+    },
+    {
+     "kind": "tm_struct_tag",
+     "label": "decoded StructProperty tag, name `TM`, size 64",
+     "offset": 8,
+     "size": 20
+    },
+    {
+     "kind": "tm",
+     "label": "decoded TM (16 floats: 3x3 + translation)",
+     "offset": 28,
+     "size": 64
+    },
+    {
+     "kind": "extent_float",
+     "label": "decoded FloatProperty at logical offset 0x40",
+     "logical_offset": 64,
+     "offset": 92,
+     "size": 8,
+     "value": 166.1769
+    },
+    {
+     "kind": "extent_float",
+     "label": "decoded FloatProperty at logical offset 0x44",
+     "logical_offset": 68,
+     "offset": 100,
+     "size": 8,
+     "value": 189.3649
+    },
+    {
+     "kind": "extent_float",
+     "label": "decoded FloatProperty at logical offset 0x48",
+     "logical_offset": 72,
+     "offset": 108,
+     "size": 8,
+     "value": 39.8001
+    },
+    {
+     "kind": "bool_word",
+     "label": "decoded BoolProperty at logical offset 0x4c (packed word)",
+     "logical_offset": 76,
+     "offset": 116,
+     "size": 8,
+     "value": 0
+    },
+    {
+     "kind": "element_end",
+     "label": "decoded end-of-tag-list marker (type 0)",
+     "offset": 124,
+     "size": 2
+    },
+    {
+     "kind": "sphyl_or_third_count",
+     "label": "decoded u32, 0 in both bodies; which element type it counts is UNKNOWN (no such element exists in any decoded body to test the order against)",
+     "offset": 126,
+     "size": 4,
+     "value": 0
+    },
+    {
+     "kind": "convex_count",
+     "label": "decoded u32; equals the number of elements that follow and that consume the payload to its footer (byte accounting oracle)",
+     "offset": 130,
+     "size": 4,
+     "value": 0
+    },
+    {
+     "kind": "footer",
+     "label": "decoded zero footer",
+     "offset": 134,
+     "size": 9
+    }
+   ],
+   "convex_count": 0,
+   "convex_elements": [],
+   "errors": [],
+   "export": 169751,
+   "export_size": 214,
+   "footer": {
+    "all_zero": true,
+    "at": 134,
+    "bytes": 9,
+    "hex": "000000000000000000",
+    "label": "decoded: the bytes left after the last element (G3-01c found the same 9-byte zero footer in 169748/169749)"
+   },
+   "object": "Batmobile_V3_Physics.RB_BodySetup",
+   "sphere_count": 0
+  }
+ ],
+ "card": "G3-01b (open item: box rotations, the 0x4C tag, every byte of the box record)",
+ "checks": [
+  {
+   "detail": "169750: Batmobile_Chassis, 169751: Batmobile_Rig_Weapons_Trans",
+   "name": "both bodies decoded (bone matches the card)",
+   "pass": true
+  },
+  {
+   "detail": "169750: header 2, decoded 2, 169751: header 1, decoded 1",
+   "name": "the box count in the payload equals the number of box elements decoded",
+   "pass": true
+  },
+  {
+   "detail": "3 boxes",
+   "name": "every box starts with a StructProperty tag of size 64 named TM",
+   "pass": true
+  },
+  {
+   "detail": "3 boxes, extents 0x40/0x44/0x48, bool 0x4C",
+   "name": "every box's tag list is exactly 0x40/0x44/0x48 floats + 0x4C bool + end",
+   "pass": true
+  },
+  {
+   "detail": "A 131/131, B 0/131",
+   "name": "reading A gives a proper rotation on every box; reading B does not",
+   "pass": true
+  },
+  {
+   "detail": "128/128 identity, dets [1.0]",
+   "name": "the wreck's 128 boxes are identity rotations under reading A",
+   "pass": true
+  },
+  {
+   "detail": "3 boxes",
+   "name": "the translation equals the '12 bytes before the tags' the earlier tools read",
+   "pass": true
+  },
+  {
+   "detail": "[0.0, 1.0]",
+   "name": "the four quad-leading floats are 0,0,0,1 in every box",
+   "pass": true
+  },
+  {
+   "detail": "169750: 1759/1759 B, footer 9 B; 169751: 143/143 B, footer 9 B",
+   "name": "the AggGeom payload is covered byte for byte, with a zero footer",
+   "pass": true
+  },
+  {
+   "detail": "169750: 1 element(s); 169751: 0 element(s)",
+   "name": "the convex element after the boxes satisfies ElemBox == vertex bounds",
+   "pass": true
+  },
+  {
+   "detail": "FULL lengths (worst dev full 0.15, half 0.575)",
+   "name": "the extents convention is decided by the hull oracle",
+   "pass": true
+  },
+  {
+   "detail": "4 packages, 128 boxes",
+   "name": "the four wreck packages carry identical box layouts",
+   "pass": true
+  },
+  {
+   "detail": "wreck TM names ['TM']",
+   "name": "every box, in every package, has its TM struct tag named `TM`",
+   "pass": true
+  },
+  {
+   "detail": "Batmobile_Chassis box 0 word 64 bits [6]; Batmobile_Chassis box 1 word 0 bits []; Batmobile_Rig_Weapons_Trans box 0 word 0 bits []",
+   "name": "the 0x4C bool is recorded as a bitmask and its name stays UNKNOWN",
+   "pass": true
+  }
+ ],
+ "convex_record": {
+  "bodies": {
+   "169748": 25907,
+   "169749": 8275
+  },
+  "label": "decoded by G3-01c; used here as the hull oracle and for the convex section's layout",
+  "summary": {
+   "box_exact": 56,
+   "elements": 56,
+   "elements_by_body": {
+    "169748": 43,
+    "169749": 13
+   },
+   "plane_clean": 53
+  }
+ },
+ "generator": "grab_collision_boxes.py",
+ "inputs": {
+  "bmgame": "E:\\Games\\Batman - Arkham Knight\\BmGame\\CookedPCConsole\\BmGame.upk",
+  "bodies": [
+   169750,
+   169751
+  ],
+  "convex_record": "E:\\Modding\\JC3-Batmobile\\Research\\BatmobileGrab\\COLLISION_CONVEX.json",
+  "wreck_packages": [
+   "E:\\Games\\Batman - Arkham Knight\\BmGame\\CookedPCConsole\\Playable_Batmobile_SF.upk",
+   "E:\\Games\\Batman - Arkham Knight\\BmGame\\CookedPCConsole\\Playable_BatmobileMK2_SF.upk",
+   "E:\\Games\\Batman - Arkham Knight\\BmGame\\CookedPCConsole\\Playable_BatmobileJoker_SF.upk",
+   "E:\\Games\\Batman - Arkham Knight\\BmGame\\CookedPCConsole\\Playable_BatmobileFunhouse_SF.upk"
+  ]
+ },
+ "oracles": {
+  "byte_accounting": {
+   "label": "derived: header + box elements + zero count + convex section + footer cover the declared AggGeom payload exactly, with byte-map records that start at 0 and are strictly increasing",
+   "rows": [
+    {
+     "boxes": 2,
+     "convex_elements": 1,
+     "exact": true,
+     "export": 169750,
+     "footer_bytes": 9,
+     "footer_hex": "000000000000000000",
+     "mapped_bytes": 1759,
+     "offsets_consecutive": true,
+     "payload_bytes": 1759
+    },
+    {
+     "boxes": 1,
+     "convex_elements": 0,
+     "exact": true,
+     "export": 169751,
+     "footer_bytes": 9,
+     "footer_hex": "000000000000000000",
+     "mapped_bytes": 143,
+     "offsets_consecutive": true,
+     "payload_bytes": 143
+    }
+   ]
+  },
+  "extents": {
+   "chassis_box0": {
+    "extents_cm": [
+     690.305,
+     374.5361,
+     207.5
+    ],
+    "span_full_m": [
+     6.903,
+     3.745,
+     2.075
+    ],
+    "span_half_m": [
+     13.806,
+     7.491,
+     4.15
+    ],
+    "translation_cm": [
+     9.0,
+     0.0,
+     106.75
+    ]
+   },
+   "conditions": {
+    "chassis_span_within_30%_of_the_tight_hull": true,
+    "every_box_inside_the_hull_at_full_length_(<=30_cm)": true,
+    "half_span_reading_at_least_1.6x_worse": true,
+    "the_half_reading_leaves_it_by_at_least_3x_that": true
+   },
+   "containment": {
+    "full": {
+     "boxes": [
+      {
+       "bone": "Batmobile_Chassis",
+       "box": 0,
+       "export": 169750,
+       "intervals": [
+        {
+         "axis": "X",
+         "box_interval_cm": [
+          -336.15,
+          354.15
+         ],
+         "hull_interval_cm": [
+          -331.34,
+          339.6
+         ],
+         "overhang_cm": 14.55
+        },
+        {
+         "axis": "Y",
+         "box_interval_cm": [
+          -187.27,
+          187.27
+         ],
+         "hull_interval_cm": [
+          -159.16,
+          159.16
+         ],
+         "overhang_cm": 28.11
+        },
+        {
+         "axis": "Z",
+         "box_interval_cm": [
+          3.0,
+          210.5
+         ],
+         "hull_interval_cm": [
+          -0.0,
+          224.09
+         ],
+         "overhang_cm": 0.0
+        }
+       ],
+       "max_overhang_cm": 28.11
+      },
+      {
+       "bone": "Batmobile_Chassis",
+       "box": 1,
+       "export": 169750,
+       "intervals": [
+        {
+         "axis": "X",
+         "box_interval_cm": [
+          -339.79,
+          339.79
+         ],
+         "hull_interval_cm": [
+          -331.34,
+          339.6
+         ],
+         "overhang_cm": 8.45
+        },
+        {
+         "axis": "Y",
+         "box_interval_cm": [
+          -172.84,
+          172.84
+         ],
+         "hull_interval_cm": [
+          -159.16,
+          159.16
+         ],
+         "overhang_cm": 13.69
+        },
+        {
+         "axis": "Z",
+         "box_interval_cm": [
+          27.25,
+          130.75
+         ],
+         "hull_interval_cm": [
+          -0.0,
+          224.09
+         ],
+         "overhang_cm": 0.0
+        }
+       ],
+       "max_overhang_cm": 13.69
+      },
+      {
+       "bone": "Batmobile_Rig_Weapons_Trans",
+       "box": 0,
+       "export": 169751,
+       "intervals": [
+        {
+         "axis": "X",
+         "box_interval_cm": [
+          -113.59,
+          52.59
+         ],
+         "hull_interval_cm": [
+          -331.34,
+          339.6
+         ],
+         "overhang_cm": 0.0
+        },
+        {
+         "axis": "Y",
+         "box_interval_cm": [
+          -94.68,
+          94.68
+         ],
+         "hull_interval_cm": [
+          -159.16,
+          159.16
+         ],
+         "overhang_cm": 0.0
+        },
+        {
+         "axis": "Z",
+         "box_interval_cm": [
+          73.35,
+          113.15
+         ],
+         "hull_interval_cm": [
+          -0.0,
+          224.09
+         ],
+         "overhang_cm": 0.0
+        }
+       ],
+       "max_overhang_cm": 0.0
+      }
+     ],
+     "hull_max_span_cm": 670.95,
+     "max_overhang_cm": 28.11,
+     "overhang_fraction_of_hull_max_span": 0.042
+    },
+    "half": {
+     "boxes": [
+      {
+       "bone": "Batmobile_Chassis",
+       "box": 0,
+       "export": 169750,
+       "intervals": [
+        {
+         "axis": "X",
+         "box_interval_cm": [
+          -681.3,
+          699.3
+         ],
+         "hull_interval_cm": [
+          -331.34,
+          339.6
+         ],
+         "overhang_cm": 359.7
+        },
+        {
+         "axis": "Y",
+         "box_interval_cm": [
+          -374.54,
+          374.54
+         ],
+         "hull_interval_cm": [
+          -159.16,
+          159.16
+         ],
+         "overhang_cm": 215.38
+        },
+        {
+         "axis": "Z",
+         "box_interval_cm": [
+          -100.75,
+          314.25
+         ],
+         "hull_interval_cm": [
+          -0.0,
+          224.09
+         ],
+         "overhang_cm": 100.75
+        }
+       ],
+       "max_overhang_cm": 359.7
+      },
+      {
+       "bone": "Batmobile_Chassis",
+       "box": 1,
+       "export": 169750,
+       "intervals": [
+        {
+         "axis": "X",
+         "box_interval_cm": [
+          -679.59,
+          679.59
+         ],
+         "hull_interval_cm": [
+          -331.34,
+          339.6
+         ],
+         "overhang_cm": 348.24
+        },
+        {
+         "axis": "Y",
+         "box_interval_cm": [
+          -345.69,
+          345.69
+         ],
+         "hull_interval_cm": [
+          -159.16,
+          159.16
+         ],
+         "overhang_cm": 186.53
+        },
+        {
+         "axis": "Z",
+         "box_interval_cm": [
+          -24.5,
+          182.5
+         ],
+         "hull_interval_cm": [
+          -0.0,
+          224.09
+         ],
+         "overhang_cm": 24.5
+        }
+       ],
+       "max_overhang_cm": 348.24
+      },
+      {
+       "bone": "Batmobile_Rig_Weapons_Trans",
+       "box": 0,
+       "export": 169751,
+       "intervals": [
+        {
+         "axis": "X",
+         "box_interval_cm": [
+          -196.68,
+          135.68
+         ],
+         "hull_interval_cm": [
+          -331.34,
+          339.6
+         ],
+         "overhang_cm": 0.0
+        },
+        {
+         "axis": "Y",
+         "box_interval_cm": [
+          -189.36,
+          189.36
+         ],
+         "hull_interval_cm": [
+          -159.16,
+          159.16
+         ],
+         "overhang_cm": 30.21
+        },
+        {
+         "axis": "Z",
+         "box_interval_cm": [
+          53.45,
+          133.05
+         ],
+         "hull_interval_cm": [
+          -0.0,
+          224.09
+         ],
+         "overhang_cm": 0.0
+        }
+       ],
+       "max_overhang_cm": 30.21
+      }
+     ],
+     "hull_max_span_cm": 670.95,
+     "max_overhang_cm": 359.7,
+     "overhang_fraction_of_hull_max_span": 0.536
+    }
+   },
+   "dev_full": 0.15,
+   "dev_half": 0.575,
+   "hull_source": "E:\\Modding\\JC3-Batmobile\\Research\\BatmobileGrab\\COLLISION_CONVEX.json",
+   "hull_union": {
+    "169748": {
+     "elements": 43,
+     "extent_cm": [
+      695.4123,
+      492.9222,
+      294.5026
+     ],
+     "max_cm": [
+      356.9706,
+      246.9817,
+      293.7526
+     ],
+     "min_cm": [
+      -338.4417,
+      -245.9405,
+      -0.75
+     ]
+    },
+    "169749": {
+     "elements": 13,
+     "extent_cm": [
+      670.9457,
+      318.3124,
+      224.0855
+     ],
+     "max_cm": [
+      339.6018,
+      159.1562,
+      224.0855
+     ],
+     "min_cm": [
+      -331.3439,
+      -159.1562,
+      -0.0
+     ]
+    }
+   },
+   "other_hull_finding": "the other hull (169748, the battle-mode mesh) has larger sorted spans than chassis box 0 at full length: [294.5, 492.92, 695.41] cm against [207.5, 374.54, 690.3] cm (worst deviation 0.419), and the box's intervals leave it by at most 0.0 cm - so the box sits inside that hull. The pursuit hull (169749) is the closer match. Recorded, not explained.",
+   "overhang_full_cm": 28.11,
+   "overhang_half_cm": 359.7,
+   "reason": "against the tight hull (169749) the full-length spans are within 30% on every axis (worst 0.150) while the half-length reading is 3.8x worse (0.575), and at full length every decoded box sits inside that hull's AABB to within 28.1 cm (4.2% of the hull's largest span) against 359.7 cm for the half-length reading",
+   "rule": "derived: compare sorted spans (frame-agnostic) of the chassis box with the union of the drivable collision hull's decoded element boxes. Full lengths hug the hull (ratio ~1); half lengths would be twice it.",
+   "separation": 1.6,
+   "tests": [
+    {
+     "box_sorted_span_cm": [
+      207.5,
+      374.54,
+      690.3
+     ],
+     "convention": "full",
+     "hull_export": "169748",
+     "hull_sorted_span_cm": [
+      294.5,
+      492.92,
+      695.41
+     ],
+     "intervals": [
+      {
+       "axis": "X",
+       "box_interval_cm": [
+        -336.15,
+        354.15
+       ],
+       "hull_interval_cm": [
+        -338.44,
+        356.97
+       ],
+       "overhang_cm": 0.0
+      },
+      {
+       "axis": "Y",
+       "box_interval_cm": [
+        -187.27,
+        187.27
+       ],
+       "hull_interval_cm": [
+        -245.94,
+        246.98
+       ],
+       "overhang_cm": 0.0
+      },
+      {
+       "axis": "Z",
+       "box_interval_cm": [
+        3.0,
+        210.5
+       ],
+       "hull_interval_cm": [
+        -0.75,
+        293.75
+       ],
+       "overhang_cm": 0.0
+      }
+     ],
+     "max_abs_dev_from_1": 0.419,
+     "max_overhang_cm": 0.0,
+     "ratios": [
+      1.419,
+      1.316,
+      1.007
+     ]
+    },
+    {
+     "box_sorted_span_cm": [
+      415.0,
+      749.07,
+      1380.61
+     ],
+     "convention": "half",
+     "hull_export": "169748",
+     "hull_sorted_span_cm": [
+      294.5,
+      492.92,
+      695.41
+     ],
+     "intervals": [
+      {
+       "axis": "X",
+       "box_interval_cm": [
+        -681.3,
+        699.3
+       ],
+       "hull_interval_cm": [
+        -338.44,
+        356.97
+       ],
+       "overhang_cm": 342.86
+      },
+      {
+       "axis": "Y",
+       "box_interval_cm": [
+        -374.54,
+        374.54
+       ],
+       "hull_interval_cm": [
+        -245.94,
+        246.98
+       ],
+       "overhang_cm": 128.6
+      },
+      {
+       "axis": "Z",
+       "box_interval_cm": [
+        -100.75,
+        314.25
+       ],
+       "hull_interval_cm": [
+        -0.75,
+        293.75
+       ],
+       "overhang_cm": 100.0
+      }
+     ],
+     "max_abs_dev_from_1": 0.496,
+     "max_overhang_cm": 342.86,
+     "ratios": [
+      0.71,
+      0.658,
+      0.504
+     ]
+    },
+    {
+     "box_sorted_span_cm": [
+      207.5,
+      374.54,
+      690.3
+     ],
+     "convention": "full",
+     "hull_export": "169749",
+     "hull_sorted_span_cm": [
+      224.09,
+      318.31,
+      670.95
+     ],
+     "intervals": [
+      {
+       "axis": "X",
+       "box_interval_cm": [
+        -336.15,
+        354.15
+       ],
+       "hull_interval_cm": [
+        -331.34,
+        339.6
+       ],
+       "overhang_cm": 14.55
+      },
+      {
+       "axis": "Y",
+       "box_interval_cm": [
+        -187.27,
+        187.27
+       ],
+       "hull_interval_cm": [
+        -159.16,
+        159.16
+       ],
+       "overhang_cm": 28.11
+      },
+      {
+       "axis": "Z",
+       "box_interval_cm": [
+        3.0,
+        210.5
+       ],
+       "hull_interval_cm": [
+        -0.0,
+        224.09
+       ],
+       "overhang_cm": 0.0
+      }
+     ],
+     "max_abs_dev_from_1": 0.15,
+     "max_overhang_cm": 28.11,
+     "ratios": [
+      1.08,
+      0.85,
+      0.972
+     ]
+    },
+    {
+     "box_sorted_span_cm": [
+      415.0,
+      749.07,
+      1380.61
+     ],
+     "convention": "half",
+     "hull_export": "169749",
+     "hull_sorted_span_cm": [
+      224.09,
+      318.31,
+      670.95
+     ],
+     "intervals": [
+      {
+       "axis": "X",
+       "box_interval_cm": [
+        -681.3,
+        699.3
+       ],
+       "hull_interval_cm": [
+        -331.34,
+        339.6
+       ],
+       "overhang_cm": 359.7
+      },
+      {
+       "axis": "Y",
+       "box_interval_cm": [
+        -374.54,
+        374.54
+       ],
+       "hull_interval_cm": [
+        -159.16,
+        159.16
+       ],
+       "overhang_cm": 215.38
+      },
+      {
+       "axis": "Z",
+       "box_interval_cm": [
+        -100.75,
+        314.25
+       ],
+       "hull_interval_cm": [
+        -0.0,
+        224.09
+       ],
+       "overhang_cm": 100.75
+      }
+     ],
+     "max_abs_dev_from_1": 0.575,
+     "max_overhang_cm": 359.7,
+     "ratios": [
+      0.54,
+      0.425,
+      0.486
+     ]
+    }
+   ],
+   "tight_hull": "169749",
+   "tolerance": 0.3,
+   "verdict": "FULL lengths",
+   "wreck_conclusion": {
+    "largest_box_axis_cm": 317.9422,
+    "reason": "read as full lengths the union of the 128 wreck boxes is [453.2, 197.09, 156.04] cm and read as half lengths [717.94, 394.18, 247.9] cm, against the intact car's hull [670.9457, 318.3124, 224.0855] cm: the half reading is the one that matches the intact car, the opposite of the chassis-box test. The wreck asset's boxes are per-bone envelopes of an exploded rig - the largest is 317.9422 cm on one axis while the translations span only [312.3, 79.3, 80.6] cm - so the assumption this comparison rests on (that those boxes tile the intact car) is not proven either way. Recorded; not used in the verdict.",
+    "translation_span_cm": [
+     312.3,
+     79.3,
+     80.6
+    ],
+    "union_full_cm": [
+     453.2,
+     197.09,
+     156.04
+    ],
+    "union_half_cm": [
+     717.94,
+     394.18,
+     247.9
+    ],
+    "verdict": "does not decide"
+   },
+   "wreck_test": {
+    "full": {
+     "box_sorted_span_cm": [
+      156.04,
+      197.09,
+      453.2
+     ],
+     "max_abs_dev_from_1": 0.615,
+     "ratios": [
+      1.436,
+      1.615,
+      1.48
+     ]
+    },
+    "half": {
+     "box_sorted_span_cm": [
+      247.9,
+      394.18,
+      717.94
+     ],
+     "max_abs_dev_from_1": 0.192,
+     "ratios": [
+      0.904,
+      0.808,
+      0.935
+     ]
+    }
+   },
+   "wreck_union": {
+    "boxes": 128,
+    "label": "derived: corners of every wreck box (identity rotation) at translation +/- e/2 (full lengths) and +/- e (half lengths)",
+    "union_full_cm": {
+     "extent": [
+      453.2,
+      197.09,
+      156.04
+     ],
+     "max": [
+      172.31,
+      93.54,
+      88.95
+     ],
+     "min": [
+      -280.89,
+      -103.55,
+      -67.1
+     ]
+    },
+    "union_half_cm": {
+     "extent": [
+      717.94,
+      394.18,
+      247.9
+     ],
+     "max": [
+      278.08,
+      192.08,
+      125.86
+     ],
+     "min": [
+      -439.86,
+      -202.1,
+      -122.04
+     ]
+    }
+   }
+  },
+  "orthonormality": {
+   "boxes_bmgame": 3,
+   "boxes_wreck": 128,
+   "label": "derived: rows = floats[4i+1..4i+3] (reading A) give an orthonormal 3x3 with det +1 on every box; rows = floats[4i..4i+2] (reading B) do not. The four quad-leading floats are 0,0,0,1 in every box, which is the invariant that fixes which three floats of each quad are the row.",
+   "quad_lead_values": [
+    0.0,
+    1.0
+   ],
+   "reading_A_dets": [
+    1.0,
+    1.0000001
+   ],
+   "reading_A_pass": 131,
+   "reading_A_worst_dot": 3.4874619892926794e-21,
+   "reading_A_worst_norm_error": 2.683355426746914e-08,
+   "reading_B_pass": 0
+  },
+  "struct_tag_name": {
+   "bmgame": {
+    "name": "TM",
+    "name_index": 78655
+   },
+   "label": "decoded: the StructProperty tag's name_index resolves to `TM` in both packages, so the 64-byte payload is the box's TM member",
+   "wreck": {
+    "Playable_BatmobileFunhouse_SF": {
+     "name": "Trail_Full_UPGR",
+     "name_index": 2846
+    },
+    "Playable_BatmobileJoker_SF": {
+     "name": "ShortRPMBurstThrottleThreshold",
+     "name_index": 2846
+    },
+    "Playable_BatmobileMK2_SF": {
+     "name": "TimeDuration",
+     "name_index": 2846
+    },
+    "Playable_Batmobile_SF": {
+     "name": "TM",
+     "name_index": 2846
+    }
+   }
+  }
+ },
+ "summary": {
+  "bodies": 2,
+  "boxes_bmgame": 3,
+  "boxes_total": 131,
+  "boxes_wreck": 128,
+  "extents_convention": "FULL lengths",
+  "rotations_decoded": 3,
+  "rotations_non_identity": 1,
+  "tag_0x4c_words": [
+   0,
+   64
+  ],
+  "unaccounted_bytes": {
+   "169750": 0,
+   "169751": 0
+  },
+  "unknowns": [
+   "the 0x4C bool's member name and meaning",
+   "which element type the zero count before the convex count belongs to",
+   "whether the decoded 3x3 is the transform's rows or its columns (the 4.00 deg Y tilt's sign)",
+   "the StaticMesh Bounds as a second extents oracle (not a tag; no layout)"
+  ]
+ },
+ "tag_0x4c": {
+  "name": "UNKNOWN",
+  "name_reason": "the member's name is not stored (simple types carry no FName in this format) and no local layout lists it: BMSDK_OFFSETS.json has 41 classes (Actor, RVehicle*, SVehicle* ...) and no FKBoxElem/AggGeom struct, so which bool bit 6 is cannot be named from local evidence",
+  "offset_proof": "decoded: the tag's u16 offset field is 0x4C and its 4-byte payload is the packed bool word, so the element struct has a bool bitfield word at 0x4C and its size is 0x50 (80 B: TM 0x00-0x3F, extents 0x40-0x4B, word 0x4C-0x4F)",
+  "rows": [
+   {
+    "bits": [
+     6
+    ],
+    "bone": "Batmobile_Chassis",
+    "box": 0,
+    "export": 169750,
+    "logical_offset": 76,
+    "tag_at": 116,
+    "word": 64
+   },
+   {
+    "bits": [],
+    "bone": "Batmobile_Chassis",
+    "box": 1,
+    "export": 169750,
+    "logical_offset": 76,
+    "tag_at": 234,
+    "word": 0
+   },
+   {
+    "bits": [],
+    "bone": "Batmobile_Rig_Weapons_Trans",
+    "box": 0,
+    "export": 169751,
+    "logical_offset": 76,
+    "tag_at": 116,
+    "word": 0
+   }
+  ],
+  "where_it_would_be_found": "BmSDK-AK's struct dump for the box element (card G3-06, native layouts), or a body where another bit of the same word differs and its effect can be observed",
+  "wreck_words": [
+   0
+  ]
+ },
+ "wreck": {
+  "boxes": {
+   "Playable_BatmobileFunhouse_SF": [
+    {
+     "bone": "Root",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5156,
+     "extents_cm": [
+      30.3,
+      30.3,
+      30.3
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "bone": "SUSP2_Wheel_Front_Left_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5157,
+     "extents_cm": [
+      211.5401,
+      51.0926,
+      109.0027
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      66.54195404052734,
+      -1.6083831787109375,
+      12.661212921142578
+     ]
+    },
+    {
+     "bone": "SUSP2_Wheel_Front_Right_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5158,
+     "extents_cm": [
+      157.8046,
+      60.0581,
+      110.255
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      64.41890716552734,
+      28.091480255126953,
+      15.606605529785156
+     ]
+    },
+    {
+     "bone": "Wheel_Front_Left_Vis_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5159,
+     "extents_cm": [
+      97.6049,
+      55.3417,
+      101.5329
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      11.71820068359375,
+      -3.285003662109375,
+      -4.991455078125
+     ]
+    },
+    {
+     "bone": "Wheel_Back_Left_Vis_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5160,
+     "extents_cm": [
+      98.9893,
+      60.5728,
+      108.901
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      2.7552719116210938,
+      1.7811088562011719,
+      -9.908584594726562
+     ]
+    },
+    {
+     "bone": "Wheel_Front_Right_Vis_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5161,
+     "extents_cm": [
+      97.0098,
+      52.5447,
+      103.247
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      0.4042510986328125,
+      -1.5905685424804688,
+      0.383758544921875
+     ]
+    },
+    {
+     "bone": "SUSP1_Wheel_Rear_Right_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5162,
+     "extents_cm": [
+      317.9422,
+      64.5518,
+      97.9657
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -121.91537475585938,
+      25.70769500732422,
+      -17.364425659179688
+     ]
+    },
+    {
+     "bone": "Wheel_Rear_Right_Vis_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5163,
+     "extents_cm": [
+      106.6101,
+      64.8124,
+      106.0333
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      0.0594482421875,
+      -1.2730484008789062,
+      -2.677532196044922
+     ]
+    },
+    {
+     "bone": "SUSP1_Wheel_Rear_Left_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5164,
+     "extents_cm": [
+      316.1554,
+      63.4179,
+      109.8809
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -117.41433715820312,
+      -17.568653106689453,
+      -12.155342102050781
+     ]
+    },
+    {
+     "bone": "Object001",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5165,
+     "extents_cm": [
+      40.2667,
+      51.0679,
+      50.3794
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -245.72216796875,
+      13.216642379760742,
+      28.15915870666504
+     ]
+    },
+    {
+     "bone": "Main_Turret_00",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5166,
+     "extents_cm": [
+      114.0423,
+      64.7938,
+      79.5297
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -37.52008056640625,
+      1.2868213653564453,
+      -17.553634643554688
+     ]
+    },
+    {
+     "bone": "CockPit_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5167,
+     "extents_cm": [
+      143.3565,
+      80.6631,
+      64.8507
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -1.8419265747070312,
+      -4.190799713134766,
+      21.585973739624023
+     ]
+    },
+    {
+     "bone": "Rear_Door_BOTTOM",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5168,
+     "extents_cm": [
+      26.0056,
+      152.7601,
+      71.7387
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      13.995925903320312,
+      1.4912261962890625,
+      40.038330078125
+     ]
+    },
+    {
+     "bone": "Rear_Door_MIDDLE",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5169,
+     "extents_cm": [
+      59.1013,
+      197.0903,
+      37.5797
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      6.466682434082031,
+      -5.005363464355469,
+      -14.893074035644531
+     ]
+    },
+    {
+     "bone": "Object003_frag_007",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5170,
+     "extents_cm": [
+      89.6485,
+      63.0243,
+      65.7652
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      2.173320770263672,
+      -8.361801147460938,
+      -2.6217613220214844
+     ]
+    },
+    {
+     "bone": "Object003_frag_008",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5171,
+     "extents_cm": [
+      144.9533,
+      111.4476,
+      117.238
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      1.7039337158203125,
+      -3.676959991455078,
+      4.731723785400391
+     ]
+    },
+    {
+     "bone": "Object003_frag_017",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5172,
+     "extents_cm": [
+      89.8172,
+      75.4895,
+      26.5387
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -0.6625442504882812,
+      0.7661094665527344,
+      18.1744384765625
+     ]
+    },
+    {
+     "bone": "Object003_frag_023",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5173,
+     "extents_cm": [
+      128.5565,
+      94.3125,
+      101.8191
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -1.4446754455566406,
+      -1.9884071350097656,
+      -0.4139671325683594
+     ]
+    },
+    {
+     "bone": "Object003_frag_024",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5174,
+     "extents_cm": [
+      117.9916,
+      92.692,
+      102.0926
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -1.92919921875,
+      0.8226394653320312,
+      -0.9356269836425781
+     ]
+    },
+    {
+     "bone": "Object003_frag_025",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5175,
+     "extents_cm": [
+      104.6675,
+      61.1565,
+      90.3782
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      0.8868331909179688,
+      12.672504425048828,
+      6.955432891845703
+     ]
+    },
+    {
+     "bone": "Object004_frag_002",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5176,
+     "extents_cm": [
+      82.2681,
+      83.6968,
+      79.3146
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -19.944305419921875,
+      3.3632774353027344,
+      -0.2997474670410156
+     ]
+    },
+    {
+     "bone": "Object004_frag_003",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5177,
+     "extents_cm": [
+      61.1303,
+      41.8543,
+      64.0694
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      1.100250244140625,
+      6.472919464111328,
+      -3.3317832946777344
+     ]
+    },
+    {
+     "bone": "Object004_frag_006",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5178,
+     "extents_cm": [
+      91.4336,
+      73.846,
+      64.8681
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      6.790435791015625,
+      -2.9936904907226562,
+      -18.720855712890625
+     ]
+    },
+    {
+     "bone": "Object004_frag_007",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5179,
+     "extents_cm": [
+      80.7138,
+      60.2929,
+      63.5204
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      10.360183715820312,
+      10.925495147705078,
+      -14.705974578857422
+     ]
+    },
+    {
+     "bone": "Jet_Fins001",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5180,
+     "extents_cm": [
+      129.1104,
+      61.1954,
+      28.7111
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -0.38806915283203125,
+      9.832073211669922,
+      -1.7837600708007812
+     ]
+    },
+    {
+     "bone": "Object007",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5181,
+     "extents_cm": [
+      138.5332,
+      73.3408,
+      28.9609
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -4.0068359375,
+      3.8500709533691406,
+      -9.773845672607422
+     ]
+    },
+    {
+     "bone": "Object",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5182,
+     "extents_cm": [
+      70.0956,
+      41.6142,
+      27.4115
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      2.6683425903320312,
+      38.82896041870117,
+      5.336597442626953
+     ]
+    },
+    {
+     "bone": "Object011",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5183,
+     "extents_cm": [
+      142.069,
+      97.6281,
+      44.3129
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -1.212738037109375,
+      -33.476104736328125,
+      52.41887664794922
+     ]
+    },
+    {
+     "bone": "Object013",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5184,
+     "extents_cm": [
+      130.5941,
+      118.5985,
+      54.1265
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -2.476104736328125,
+      -4.678779602050781,
+      61.884910583496094
+     ]
+    },
+    {
+     "bone": "Object009",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5185,
+     "extents_cm": [
+      166.1201,
+      141.8228,
+      62.9364
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -5.30804443359375,
+      1.8183975219726562,
+      40.06749725341797
+     ]
+    },
+    {
+     "bone": "Object017",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5186,
+     "extents_cm": [
+      77.6225,
+      73.1757,
+      23.9064
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -11.188346862792969,
+      5.849895477294922,
+      50.45942687988281
+     ]
+    },
+    {
+     "bone": "Object015",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5187,
+     "extents_cm": [
+      78.3309,
+      65.6377,
+      42.0429
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      24.174095153808594,
+      -40.50669479370117,
+      45.97325134277344
+     ]
+    }
+   ],
+   "Playable_BatmobileJoker_SF": [
+    {
+     "bone": "Root",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 3088,
+     "extents_cm": [
+      30.3,
+      30.3,
+      30.3
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "bone": "SUSP2_Wheel_Front_Left_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 3089,
+     "extents_cm": [
+      211.5401,
+      51.0926,
+      109.0027
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      66.54195404052734,
+      -1.6083831787109375,
+      12.661212921142578
+     ]
+    },
+    {
+     "bone": "SUSP2_Wheel_Front_Right_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 3090,
+     "extents_cm": [
+      157.8046,
+      60.0581,
+      110.255
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      64.41890716552734,
+      28.091480255126953,
+      15.606605529785156
+     ]
+    },
+    {
+     "bone": "Wheel_Front_Left_Vis_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 3091,
+     "extents_cm": [
+      97.6049,
+      55.3417,
+      101.5329
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      11.71820068359375,
+      -3.285003662109375,
+      -4.991455078125
+     ]
+    },
+    {
+     "bone": "Wheel_Back_Left_Vis_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 3092,
+     "extents_cm": [
+      98.9893,
+      60.5728,
+      108.901
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      2.7552719116210938,
+      1.7811088562011719,
+      -9.908584594726562
+     ]
+    },
+    {
+     "bone": "Wheel_Front_Right_Vis_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 3093,
+     "extents_cm": [
+      97.0098,
+      52.5447,
+      103.247
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      0.4042510986328125,
+      -1.5905685424804688,
+      0.383758544921875
+     ]
+    },
+    {
+     "bone": "SUSP1_Wheel_Rear_Right_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 3094,
+     "extents_cm": [
+      317.9422,
+      64.5518,
+      97.9657
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -121.91537475585938,
+      25.70769500732422,
+      -17.364425659179688
+     ]
+    },
+    {
+     "bone": "Wheel_Rear_Right_Vis_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 3095,
+     "extents_cm": [
+      106.6101,
+      64.8124,
+      106.0333
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      0.0594482421875,
+      -1.2730484008789062,
+      -2.677532196044922
+     ]
+    },
+    {
+     "bone": "SUSP1_Wheel_Rear_Left_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 3096,
+     "extents_cm": [
+      316.1554,
+      63.4179,
+      109.8809
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -117.41433715820312,
+      -17.568653106689453,
+      -12.155342102050781
+     ]
+    },
+    {
+     "bone": "Object001",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 3097,
+     "extents_cm": [
+      40.2667,
+      51.0679,
+      50.3794
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -245.72216796875,
+      13.216642379760742,
+      28.15915870666504
+     ]
+    },
+    {
+     "bone": "Main_Turret_00",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 3098,
+     "extents_cm": [
+      114.0423,
+      64.7938,
+      79.5297
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -37.52008056640625,
+      1.2868213653564453,
+      -17.553634643554688
+     ]
+    },
+    {
+     "bone": "CockPit_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 3099,
+     "extents_cm": [
+      143.3565,
+      80.6631,
+      64.8507
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -1.8419265747070312,
+      -4.190799713134766,
+      21.585973739624023
+     ]
+    },
+    {
+     "bone": "Rear_Door_BOTTOM",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 3100,
+     "extents_cm": [
+      26.0056,
+      152.7601,
+      71.7387
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      13.995925903320312,
+      1.4912261962890625,
+      40.038330078125
+     ]
+    },
+    {
+     "bone": "Rear_Door_MIDDLE",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 3101,
+     "extents_cm": [
+      59.1013,
+      197.0903,
+      37.5797
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      6.466682434082031,
+      -5.005363464355469,
+      -14.893074035644531
+     ]
+    },
+    {
+     "bone": "Object003_frag_007",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 3102,
+     "extents_cm": [
+      89.6485,
+      63.0243,
+      65.7652
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      2.173320770263672,
+      -8.361801147460938,
+      -2.6217613220214844
+     ]
+    },
+    {
+     "bone": "Object003_frag_008",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 3103,
+     "extents_cm": [
+      144.9533,
+      111.4476,
+      117.238
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      1.7039337158203125,
+      -3.676959991455078,
+      4.731723785400391
+     ]
+    },
+    {
+     "bone": "Object003_frag_017",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 3104,
+     "extents_cm": [
+      89.8172,
+      75.4895,
+      26.5387
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -0.6625442504882812,
+      0.7661094665527344,
+      18.1744384765625
+     ]
+    },
+    {
+     "bone": "Object003_frag_023",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 3105,
+     "extents_cm": [
+      128.5565,
+      94.3125,
+      101.8191
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -1.4446754455566406,
+      -1.9884071350097656,
+      -0.4139671325683594
+     ]
+    },
+    {
+     "bone": "Object003_frag_024",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 3106,
+     "extents_cm": [
+      117.9916,
+      92.692,
+      102.0926
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -1.92919921875,
+      0.8226394653320312,
+      -0.9356269836425781
+     ]
+    },
+    {
+     "bone": "Object003_frag_025",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 3107,
+     "extents_cm": [
+      104.6675,
+      61.1565,
+      90.3782
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      0.8868331909179688,
+      12.672504425048828,
+      6.955432891845703
+     ]
+    },
+    {
+     "bone": "Object004_frag_002",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 3108,
+     "extents_cm": [
+      82.2681,
+      83.6968,
+      79.3146
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -19.944305419921875,
+      3.3632774353027344,
+      -0.2997474670410156
+     ]
+    },
+    {
+     "bone": "Object004_frag_003",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 3109,
+     "extents_cm": [
+      61.1303,
+      41.8543,
+      64.0694
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      1.100250244140625,
+      6.472919464111328,
+      -3.3317832946777344
+     ]
+    },
+    {
+     "bone": "Object004_frag_006",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 3110,
+     "extents_cm": [
+      91.4336,
+      73.846,
+      64.8681
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      6.790435791015625,
+      -2.9936904907226562,
+      -18.720855712890625
+     ]
+    },
+    {
+     "bone": "Object004_frag_007",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 3111,
+     "extents_cm": [
+      80.7138,
+      60.2929,
+      63.5204
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      10.360183715820312,
+      10.925495147705078,
+      -14.705974578857422
+     ]
+    },
+    {
+     "bone": "Jet_Fins001",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 3112,
+     "extents_cm": [
+      129.1104,
+      61.1954,
+      28.7111
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -0.38806915283203125,
+      9.832073211669922,
+      -1.7837600708007812
+     ]
+    },
+    {
+     "bone": "Object007",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 3113,
+     "extents_cm": [
+      138.5332,
+      73.3408,
+      28.9609
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -4.0068359375,
+      3.8500709533691406,
+      -9.773845672607422
+     ]
+    },
+    {
+     "bone": "Object",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 3114,
+     "extents_cm": [
+      70.0956,
+      41.6142,
+      27.4115
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      2.6683425903320312,
+      38.82896041870117,
+      5.336597442626953
+     ]
+    },
+    {
+     "bone": "Object011",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 3115,
+     "extents_cm": [
+      142.069,
+      97.6281,
+      44.3129
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -1.212738037109375,
+      -33.476104736328125,
+      52.41887664794922
+     ]
+    },
+    {
+     "bone": "Object013",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 3116,
+     "extents_cm": [
+      130.5941,
+      118.5985,
+      54.1265
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -2.476104736328125,
+      -4.678779602050781,
+      61.884910583496094
+     ]
+    },
+    {
+     "bone": "Object009",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 3117,
+     "extents_cm": [
+      166.1201,
+      141.8228,
+      62.9364
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -5.30804443359375,
+      1.8183975219726562,
+      40.06749725341797
+     ]
+    },
+    {
+     "bone": "Object017",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 3118,
+     "extents_cm": [
+      77.6225,
+      73.1757,
+      23.9064
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -11.188346862792969,
+      5.849895477294922,
+      50.45942687988281
+     ]
+    },
+    {
+     "bone": "Object015",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 3119,
+     "extents_cm": [
+      78.3309,
+      65.6377,
+      42.0429
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      24.174095153808594,
+      -40.50669479370117,
+      45.97325134277344
+     ]
+    }
+   ],
+   "Playable_BatmobileMK2_SF": [
+    {
+     "bone": "Root",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5117,
+     "extents_cm": [
+      30.3,
+      30.3,
+      30.3
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "bone": "SUSP2_Wheel_Front_Left_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5118,
+     "extents_cm": [
+      211.5401,
+      51.0926,
+      109.0027
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      66.54195404052734,
+      -1.6083831787109375,
+      12.661212921142578
+     ]
+    },
+    {
+     "bone": "SUSP2_Wheel_Front_Right_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5119,
+     "extents_cm": [
+      157.8046,
+      60.0581,
+      110.255
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      64.41890716552734,
+      28.091480255126953,
+      15.606605529785156
+     ]
+    },
+    {
+     "bone": "Wheel_Front_Left_Vis_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5120,
+     "extents_cm": [
+      97.6049,
+      55.3417,
+      101.5329
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      11.71820068359375,
+      -3.285003662109375,
+      -4.991455078125
+     ]
+    },
+    {
+     "bone": "Wheel_Back_Left_Vis_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5121,
+     "extents_cm": [
+      98.9893,
+      60.5728,
+      108.901
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      2.7552719116210938,
+      1.7811088562011719,
+      -9.908584594726562
+     ]
+    },
+    {
+     "bone": "Wheel_Front_Right_Vis_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5122,
+     "extents_cm": [
+      97.0098,
+      52.5447,
+      103.247
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      0.4042510986328125,
+      -1.5905685424804688,
+      0.383758544921875
+     ]
+    },
+    {
+     "bone": "SUSP1_Wheel_Rear_Right_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5123,
+     "extents_cm": [
+      317.9422,
+      64.5518,
+      97.9657
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -121.91537475585938,
+      25.70769500732422,
+      -17.364425659179688
+     ]
+    },
+    {
+     "bone": "Wheel_Rear_Right_Vis_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5124,
+     "extents_cm": [
+      106.6101,
+      64.8124,
+      106.0333
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      0.0594482421875,
+      -1.2730484008789062,
+      -2.677532196044922
+     ]
+    },
+    {
+     "bone": "SUSP1_Wheel_Rear_Left_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5125,
+     "extents_cm": [
+      316.1554,
+      63.4179,
+      109.8809
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -117.41433715820312,
+      -17.568653106689453,
+      -12.155342102050781
+     ]
+    },
+    {
+     "bone": "Object001",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5126,
+     "extents_cm": [
+      40.2667,
+      51.0679,
+      50.3794
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -245.72216796875,
+      13.216642379760742,
+      28.15915870666504
+     ]
+    },
+    {
+     "bone": "Main_Turret_00",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5127,
+     "extents_cm": [
+      114.0423,
+      64.7938,
+      79.5297
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -37.52008056640625,
+      1.2868213653564453,
+      -17.553634643554688
+     ]
+    },
+    {
+     "bone": "CockPit_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5128,
+     "extents_cm": [
+      143.3565,
+      80.6631,
+      64.8507
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -1.8419265747070312,
+      -4.190799713134766,
+      21.585973739624023
+     ]
+    },
+    {
+     "bone": "Rear_Door_BOTTOM",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5129,
+     "extents_cm": [
+      26.0056,
+      152.7601,
+      71.7387
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      13.995925903320312,
+      1.4912261962890625,
+      40.038330078125
+     ]
+    },
+    {
+     "bone": "Rear_Door_MIDDLE",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5130,
+     "extents_cm": [
+      59.1013,
+      197.0903,
+      37.5797
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      6.466682434082031,
+      -5.005363464355469,
+      -14.893074035644531
+     ]
+    },
+    {
+     "bone": "Object003_frag_007",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5131,
+     "extents_cm": [
+      89.6485,
+      63.0243,
+      65.7652
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      2.173320770263672,
+      -8.361801147460938,
+      -2.6217613220214844
+     ]
+    },
+    {
+     "bone": "Object003_frag_008",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5132,
+     "extents_cm": [
+      144.9533,
+      111.4476,
+      117.238
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      1.7039337158203125,
+      -3.676959991455078,
+      4.731723785400391
+     ]
+    },
+    {
+     "bone": "Object003_frag_017",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5133,
+     "extents_cm": [
+      89.8172,
+      75.4895,
+      26.5387
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -0.6625442504882812,
+      0.7661094665527344,
+      18.1744384765625
+     ]
+    },
+    {
+     "bone": "Object003_frag_023",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5134,
+     "extents_cm": [
+      128.5565,
+      94.3125,
+      101.8191
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -1.4446754455566406,
+      -1.9884071350097656,
+      -0.4139671325683594
+     ]
+    },
+    {
+     "bone": "Object003_frag_024",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5135,
+     "extents_cm": [
+      117.9916,
+      92.692,
+      102.0926
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -1.92919921875,
+      0.8226394653320312,
+      -0.9356269836425781
+     ]
+    },
+    {
+     "bone": "Object003_frag_025",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5136,
+     "extents_cm": [
+      104.6675,
+      61.1565,
+      90.3782
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      0.8868331909179688,
+      12.672504425048828,
+      6.955432891845703
+     ]
+    },
+    {
+     "bone": "Object004_frag_002",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5137,
+     "extents_cm": [
+      82.2681,
+      83.6968,
+      79.3146
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -19.944305419921875,
+      3.3632774353027344,
+      -0.2997474670410156
+     ]
+    },
+    {
+     "bone": "Object004_frag_003",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5138,
+     "extents_cm": [
+      61.1303,
+      41.8543,
+      64.0694
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      1.100250244140625,
+      6.472919464111328,
+      -3.3317832946777344
+     ]
+    },
+    {
+     "bone": "Object004_frag_006",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5139,
+     "extents_cm": [
+      91.4336,
+      73.846,
+      64.8681
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      6.790435791015625,
+      -2.9936904907226562,
+      -18.720855712890625
+     ]
+    },
+    {
+     "bone": "Object004_frag_007",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5140,
+     "extents_cm": [
+      80.7138,
+      60.2929,
+      63.5204
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      10.360183715820312,
+      10.925495147705078,
+      -14.705974578857422
+     ]
+    },
+    {
+     "bone": "Jet_Fins001",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5141,
+     "extents_cm": [
+      129.1104,
+      61.1954,
+      28.7111
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -0.38806915283203125,
+      9.832073211669922,
+      -1.7837600708007812
+     ]
+    },
+    {
+     "bone": "Object007",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5142,
+     "extents_cm": [
+      138.5332,
+      73.3408,
+      28.9609
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -4.0068359375,
+      3.8500709533691406,
+      -9.773845672607422
+     ]
+    },
+    {
+     "bone": "Object",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5143,
+     "extents_cm": [
+      70.0956,
+      41.6142,
+      27.4115
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      2.6683425903320312,
+      38.82896041870117,
+      5.336597442626953
+     ]
+    },
+    {
+     "bone": "Object011",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5144,
+     "extents_cm": [
+      142.069,
+      97.6281,
+      44.3129
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -1.212738037109375,
+      -33.476104736328125,
+      52.41887664794922
+     ]
+    },
+    {
+     "bone": "Object013",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5145,
+     "extents_cm": [
+      130.5941,
+      118.5985,
+      54.1265
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -2.476104736328125,
+      -4.678779602050781,
+      61.884910583496094
+     ]
+    },
+    {
+     "bone": "Object009",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5146,
+     "extents_cm": [
+      166.1201,
+      141.8228,
+      62.9364
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -5.30804443359375,
+      1.8183975219726562,
+      40.06749725341797
+     ]
+    },
+    {
+     "bone": "Object017",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5147,
+     "extents_cm": [
+      77.6225,
+      73.1757,
+      23.9064
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -11.188346862792969,
+      5.849895477294922,
+      50.45942687988281
+     ]
+    },
+    {
+     "bone": "Object015",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5148,
+     "extents_cm": [
+      78.3309,
+      65.6377,
+      42.0429
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      24.174095153808594,
+      -40.50669479370117,
+      45.97325134277344
+     ]
+    }
+   ],
+   "Playable_Batmobile_SF": [
+    {
+     "bone": "Root",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5066,
+     "extents_cm": [
+      30.3,
+      30.3,
+      30.3
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "bone": "SUSP2_Wheel_Front_Left_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5067,
+     "extents_cm": [
+      211.5401,
+      51.0926,
+      109.0027
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      66.54195404052734,
+      -1.6083831787109375,
+      12.661212921142578
+     ]
+    },
+    {
+     "bone": "SUSP2_Wheel_Front_Right_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5068,
+     "extents_cm": [
+      157.8046,
+      60.0581,
+      110.255
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      64.41890716552734,
+      28.091480255126953,
+      15.606605529785156
+     ]
+    },
+    {
+     "bone": "Wheel_Front_Left_Vis_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5069,
+     "extents_cm": [
+      97.6049,
+      55.3417,
+      101.5329
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      11.71820068359375,
+      -3.285003662109375,
+      -4.991455078125
+     ]
+    },
+    {
+     "bone": "Wheel_Back_Left_Vis_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5070,
+     "extents_cm": [
+      98.9893,
+      60.5728,
+      108.901
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      2.7552719116210938,
+      1.7811088562011719,
+      -9.908584594726562
+     ]
+    },
+    {
+     "bone": "Wheel_Front_Right_Vis_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5071,
+     "extents_cm": [
+      97.0098,
+      52.5447,
+      103.247
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      0.4042510986328125,
+      -1.5905685424804688,
+      0.383758544921875
+     ]
+    },
+    {
+     "bone": "SUSP1_Wheel_Rear_Right_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5072,
+     "extents_cm": [
+      317.9422,
+      64.5518,
+      97.9657
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -121.91537475585938,
+      25.70769500732422,
+      -17.364425659179688
+     ]
+    },
+    {
+     "bone": "Wheel_Rear_Right_Vis_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5073,
+     "extents_cm": [
+      106.6101,
+      64.8124,
+      106.0333
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      0.0594482421875,
+      -1.2730484008789062,
+      -2.677532196044922
+     ]
+    },
+    {
+     "bone": "SUSP1_Wheel_Rear_Left_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5074,
+     "extents_cm": [
+      316.1554,
+      63.4179,
+      109.8809
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -117.41433715820312,
+      -17.568653106689453,
+      -12.155342102050781
+     ]
+    },
+    {
+     "bone": "Object001",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5075,
+     "extents_cm": [
+      40.2667,
+      51.0679,
+      50.3794
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -245.72216796875,
+      13.216642379760742,
+      28.15915870666504
+     ]
+    },
+    {
+     "bone": "Main_Turret_00",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5076,
+     "extents_cm": [
+      114.0423,
+      64.7938,
+      79.5297
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -37.52008056640625,
+      1.2868213653564453,
+      -17.553634643554688
+     ]
+    },
+    {
+     "bone": "CockPit_Mesh",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5077,
+     "extents_cm": [
+      143.3565,
+      80.6631,
+      64.8507
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -1.8419265747070312,
+      -4.190799713134766,
+      21.585973739624023
+     ]
+    },
+    {
+     "bone": "Rear_Door_BOTTOM",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5078,
+     "extents_cm": [
+      26.0056,
+      152.7601,
+      71.7387
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      13.995925903320312,
+      1.4912261962890625,
+      40.038330078125
+     ]
+    },
+    {
+     "bone": "Rear_Door_MIDDLE",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5079,
+     "extents_cm": [
+      59.1013,
+      197.0903,
+      37.5797
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      6.466682434082031,
+      -5.005363464355469,
+      -14.893074035644531
+     ]
+    },
+    {
+     "bone": "Object003_frag_007",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5080,
+     "extents_cm": [
+      89.6485,
+      63.0243,
+      65.7652
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      2.173320770263672,
+      -8.361801147460938,
+      -2.6217613220214844
+     ]
+    },
+    {
+     "bone": "Object003_frag_008",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5081,
+     "extents_cm": [
+      144.9533,
+      111.4476,
+      117.238
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      1.7039337158203125,
+      -3.676959991455078,
+      4.731723785400391
+     ]
+    },
+    {
+     "bone": "Object003_frag_017",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5082,
+     "extents_cm": [
+      89.8172,
+      75.4895,
+      26.5387
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -0.6625442504882812,
+      0.7661094665527344,
+      18.1744384765625
+     ]
+    },
+    {
+     "bone": "Object003_frag_023",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5083,
+     "extents_cm": [
+      128.5565,
+      94.3125,
+      101.8191
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -1.4446754455566406,
+      -1.9884071350097656,
+      -0.4139671325683594
+     ]
+    },
+    {
+     "bone": "Object003_frag_024",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5084,
+     "extents_cm": [
+      117.9916,
+      92.692,
+      102.0926
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -1.92919921875,
+      0.8226394653320312,
+      -0.9356269836425781
+     ]
+    },
+    {
+     "bone": "Object003_frag_025",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5085,
+     "extents_cm": [
+      104.6675,
+      61.1565,
+      90.3782
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      0.8868331909179688,
+      12.672504425048828,
+      6.955432891845703
+     ]
+    },
+    {
+     "bone": "Object004_frag_002",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5086,
+     "extents_cm": [
+      82.2681,
+      83.6968,
+      79.3146
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -19.944305419921875,
+      3.3632774353027344,
+      -0.2997474670410156
+     ]
+    },
+    {
+     "bone": "Object004_frag_003",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5087,
+     "extents_cm": [
+      61.1303,
+      41.8543,
+      64.0694
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      1.100250244140625,
+      6.472919464111328,
+      -3.3317832946777344
+     ]
+    },
+    {
+     "bone": "Object004_frag_006",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5088,
+     "extents_cm": [
+      91.4336,
+      73.846,
+      64.8681
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      6.790435791015625,
+      -2.9936904907226562,
+      -18.720855712890625
+     ]
+    },
+    {
+     "bone": "Object004_frag_007",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5089,
+     "extents_cm": [
+      80.7138,
+      60.2929,
+      63.5204
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      10.360183715820312,
+      10.925495147705078,
+      -14.705974578857422
+     ]
+    },
+    {
+     "bone": "Jet_Fins001",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5090,
+     "extents_cm": [
+      129.1104,
+      61.1954,
+      28.7111
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -0.38806915283203125,
+      9.832073211669922,
+      -1.7837600708007812
+     ]
+    },
+    {
+     "bone": "Object007",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5091,
+     "extents_cm": [
+      138.5332,
+      73.3408,
+      28.9609
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -4.0068359375,
+      3.8500709533691406,
+      -9.773845672607422
+     ]
+    },
+    {
+     "bone": "Object",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5092,
+     "extents_cm": [
+      70.0956,
+      41.6142,
+      27.4115
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      2.6683425903320312,
+      38.82896041870117,
+      5.336597442626953
+     ]
+    },
+    {
+     "bone": "Object011",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5093,
+     "extents_cm": [
+      142.069,
+      97.6281,
+      44.3129
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -1.212738037109375,
+      -33.476104736328125,
+      52.41887664794922
+     ]
+    },
+    {
+     "bone": "Object013",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5094,
+     "extents_cm": [
+      130.5941,
+      118.5985,
+      54.1265
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -2.476104736328125,
+      -4.678779602050781,
+      61.884910583496094
+     ]
+    },
+    {
+     "bone": "Object009",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5095,
+     "extents_cm": [
+      166.1201,
+      141.8228,
+      62.9364
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -5.30804443359375,
+      1.8183975219726562,
+      40.06749725341797
+     ]
+    },
+    {
+     "bone": "Object017",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5096,
+     "extents_cm": [
+      77.6225,
+      73.1757,
+      23.9064
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      -11.188346862792969,
+      5.849895477294922,
+      50.45942687988281
+     ]
+    },
+    {
+     "bone": "Object015",
+     "bool_word": 0,
+     "bytes": 118,
+     "det": 1.0,
+     "export": 5097,
+     "extents_cm": [
+      78.3309,
+      65.6377,
+      42.0429
+     ],
+     "reading_A": {
+      "is_rotation": true,
+      "max_abs_dot": 0.0,
+      "max_norm_error": 0.0
+     },
+     "reading_B_is_rotation": false,
+     "rotation_is_identity": true,
+     "tm_name": "TM",
+     "translation_cm": [
+      24.174095153808594,
+      -40.50669479370117,
+      45.97325134277344
+     ]
+    }
+   ]
+  },
+  "layouts_identical": true,
+  "packages": [
+   {
+    "bool_words": [
+     0
+    ],
+    "boxes": 32,
+    "boxes_identity_rotation": 32,
+    "errors": 0,
+    "package": "Playable_Batmobile_SF",
+    "path": "E:\\Games\\Batman - Arkham Knight\\BmGame\\CookedPCConsole\\Playable_Batmobile_SF.upk",
+    "tm_names": [
+     "TM"
+    ]
+   },
+   {
+    "bool_words": [
+     0
+    ],
+    "boxes": 32,
+    "boxes_identity_rotation": 32,
+    "errors": 0,
+    "package": "Playable_BatmobileMK2_SF",
+    "path": "E:\\Games\\Batman - Arkham Knight\\BmGame\\CookedPCConsole\\Playable_BatmobileMK2_SF.upk",
+    "tm_names": [
+     "TM"
+    ]
+   },
+   {
+    "bool_words": [
+     0
+    ],
+    "boxes": 32,
+    "boxes_identity_rotation": 32,
+    "errors": 0,
+    "package": "Playable_BatmobileJoker_SF",
+    "path": "E:\\Games\\Batman - Arkham Knight\\BmGame\\CookedPCConsole\\Playable_BatmobileJoker_SF.upk",
+    "tm_names": [
+     "TM"
+    ]
+   },
+   {
+    "bool_words": [
+     0
+    ],
+    "boxes": 32,
+    "boxes_identity_rotation": 32,
+    "errors": 0,
+    "package": "Playable_BatmobileFunhouse_SF",
+    "path": "E:\\Games\\Batman - Arkham Knight\\BmGame\\CookedPCConsole\\Playable_BatmobileFunhouse_SF.upk",
+    "tm_names": [
+     "TM"
+    ]
+   }
+  ],
+  "signature": {
+   "Playable_BatmobileFunhouse_SF": [
+    [
+     "Root",
+     [
+      30.3,
+      30.3,
+      30.3
+     ],
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "SUSP2_Wheel_Front_Left_Mesh",
+     [
+      211.5401,
+      51.0926,
+      109.0027
+     ],
+     [
+      66.54195404052734,
+      -1.6083831787109375,
+      12.661212921142578
+     ]
+    ],
+    [
+     "SUSP2_Wheel_Front_Right_Mesh",
+     [
+      157.8046,
+      60.0581,
+      110.255
+     ],
+     [
+      64.41890716552734,
+      28.091480255126953,
+      15.606605529785156
+     ]
+    ],
+    [
+     "Wheel_Front_Left_Vis_Mesh",
+     [
+      97.6049,
+      55.3417,
+      101.5329
+     ],
+     [
+      11.71820068359375,
+      -3.285003662109375,
+      -4.991455078125
+     ]
+    ],
+    [
+     "Wheel_Back_Left_Vis_Mesh",
+     [
+      98.9893,
+      60.5728,
+      108.901
+     ],
+     [
+      2.7552719116210938,
+      1.7811088562011719,
+      -9.908584594726562
+     ]
+    ],
+    [
+     "Wheel_Front_Right_Vis_Mesh",
+     [
+      97.0098,
+      52.5447,
+      103.247
+     ],
+     [
+      0.4042510986328125,
+      -1.5905685424804688,
+      0.383758544921875
+     ]
+    ],
+    [
+     "SUSP1_Wheel_Rear_Right_Mesh",
+     [
+      317.9422,
+      64.5518,
+      97.9657
+     ],
+     [
+      -121.91537475585938,
+      25.70769500732422,
+      -17.364425659179688
+     ]
+    ],
+    [
+     "Wheel_Rear_Right_Vis_Mesh",
+     [
+      106.6101,
+      64.8124,
+      106.0333
+     ],
+     [
+      0.0594482421875,
+      -1.2730484008789062,
+      -2.677532196044922
+     ]
+    ],
+    [
+     "SUSP1_Wheel_Rear_Left_Mesh",
+     [
+      316.1554,
+      63.4179,
+      109.8809
+     ],
+     [
+      -117.41433715820312,
+      -17.568653106689453,
+      -12.155342102050781
+     ]
+    ],
+    [
+     "Object001",
+     [
+      40.2667,
+      51.0679,
+      50.3794
+     ],
+     [
+      -245.72216796875,
+      13.216642379760742,
+      28.15915870666504
+     ]
+    ],
+    [
+     "Main_Turret_00",
+     [
+      114.0423,
+      64.7938,
+      79.5297
+     ],
+     [
+      -37.52008056640625,
+      1.2868213653564453,
+      -17.553634643554688
+     ]
+    ],
+    [
+     "CockPit_Mesh",
+     [
+      143.3565,
+      80.6631,
+      64.8507
+     ],
+     [
+      -1.8419265747070312,
+      -4.190799713134766,
+      21.585973739624023
+     ]
+    ],
+    [
+     "Rear_Door_BOTTOM",
+     [
+      26.0056,
+      152.7601,
+      71.7387
+     ],
+     [
+      13.995925903320312,
+      1.4912261962890625,
+      40.038330078125
+     ]
+    ],
+    [
+     "Rear_Door_MIDDLE",
+     [
+      59.1013,
+      197.0903,
+      37.5797
+     ],
+     [
+      6.466682434082031,
+      -5.005363464355469,
+      -14.893074035644531
+     ]
+    ],
+    [
+     "Object003_frag_007",
+     [
+      89.6485,
+      63.0243,
+      65.7652
+     ],
+     [
+      2.173320770263672,
+      -8.361801147460938,
+      -2.6217613220214844
+     ]
+    ],
+    [
+     "Object003_frag_008",
+     [
+      144.9533,
+      111.4476,
+      117.238
+     ],
+     [
+      1.7039337158203125,
+      -3.676959991455078,
+      4.731723785400391
+     ]
+    ],
+    [
+     "Object003_frag_017",
+     [
+      89.8172,
+      75.4895,
+      26.5387
+     ],
+     [
+      -0.6625442504882812,
+      0.7661094665527344,
+      18.1744384765625
+     ]
+    ],
+    [
+     "Object003_frag_023",
+     [
+      128.5565,
+      94.3125,
+      101.8191
+     ],
+     [
+      -1.4446754455566406,
+      -1.9884071350097656,
+      -0.4139671325683594
+     ]
+    ],
+    [
+     "Object003_frag_024",
+     [
+      117.9916,
+      92.692,
+      102.0926
+     ],
+     [
+      -1.92919921875,
+      0.8226394653320312,
+      -0.9356269836425781
+     ]
+    ],
+    [
+     "Object003_frag_025",
+     [
+      104.6675,
+      61.1565,
+      90.3782
+     ],
+     [
+      0.8868331909179688,
+      12.672504425048828,
+      6.955432891845703
+     ]
+    ],
+    [
+     "Object004_frag_002",
+     [
+      82.2681,
+      83.6968,
+      79.3146
+     ],
+     [
+      -19.944305419921875,
+      3.3632774353027344,
+      -0.2997474670410156
+     ]
+    ],
+    [
+     "Object004_frag_003",
+     [
+      61.1303,
+      41.8543,
+      64.0694
+     ],
+     [
+      1.100250244140625,
+      6.472919464111328,
+      -3.3317832946777344
+     ]
+    ],
+    [
+     "Object004_frag_006",
+     [
+      91.4336,
+      73.846,
+      64.8681
+     ],
+     [
+      6.790435791015625,
+      -2.9936904907226562,
+      -18.720855712890625
+     ]
+    ],
+    [
+     "Object004_frag_007",
+     [
+      80.7138,
+      60.2929,
+      63.5204
+     ],
+     [
+      10.360183715820312,
+      10.925495147705078,
+      -14.705974578857422
+     ]
+    ],
+    [
+     "Jet_Fins001",
+     [
+      129.1104,
+      61.1954,
+      28.7111
+     ],
+     [
+      -0.38806915283203125,
+      9.832073211669922,
+      -1.7837600708007812
+     ]
+    ],
+    [
+     "Object007",
+     [
+      138.5332,
+      73.3408,
+      28.9609
+     ],
+     [
+      -4.0068359375,
+      3.8500709533691406,
+      -9.773845672607422
+     ]
+    ],
+    [
+     "Object",
+     [
+      70.0956,
+      41.6142,
+      27.4115
+     ],
+     [
+      2.6683425903320312,
+      38.82896041870117,
+      5.336597442626953
+     ]
+    ],
+    [
+     "Object011",
+     [
+      142.069,
+      97.6281,
+      44.3129
+     ],
+     [
+      -1.212738037109375,
+      -33.476104736328125,
+      52.41887664794922
+     ]
+    ],
+    [
+     "Object013",
+     [
+      130.5941,
+      118.5985,
+      54.1265
+     ],
+     [
+      -2.476104736328125,
+      -4.678779602050781,
+      61.884910583496094
+     ]
+    ],
+    [
+     "Object009",
+     [
+      166.1201,
+      141.8228,
+      62.9364
+     ],
+     [
+      -5.30804443359375,
+      1.8183975219726562,
+      40.06749725341797
+     ]
+    ],
+    [
+     "Object017",
+     [
+      77.6225,
+      73.1757,
+      23.9064
+     ],
+     [
+      -11.188346862792969,
+      5.849895477294922,
+      50.45942687988281
+     ]
+    ],
+    [
+     "Object015",
+     [
+      78.3309,
+      65.6377,
+      42.0429
+     ],
+     [
+      24.174095153808594,
+      -40.50669479370117,
+      45.97325134277344
+     ]
+    ]
+   ],
+   "Playable_BatmobileJoker_SF": [
+    [
+     "Root",
+     [
+      30.3,
+      30.3,
+      30.3
+     ],
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "SUSP2_Wheel_Front_Left_Mesh",
+     [
+      211.5401,
+      51.0926,
+      109.0027
+     ],
+     [
+      66.54195404052734,
+      -1.6083831787109375,
+      12.661212921142578
+     ]
+    ],
+    [
+     "SUSP2_Wheel_Front_Right_Mesh",
+     [
+      157.8046,
+      60.0581,
+      110.255
+     ],
+     [
+      64.41890716552734,
+      28.091480255126953,
+      15.606605529785156
+     ]
+    ],
+    [
+     "Wheel_Front_Left_Vis_Mesh",
+     [
+      97.6049,
+      55.3417,
+      101.5329
+     ],
+     [
+      11.71820068359375,
+      -3.285003662109375,
+      -4.991455078125
+     ]
+    ],
+    [
+     "Wheel_Back_Left_Vis_Mesh",
+     [
+      98.9893,
+      60.5728,
+      108.901
+     ],
+     [
+      2.7552719116210938,
+      1.7811088562011719,
+      -9.908584594726562
+     ]
+    ],
+    [
+     "Wheel_Front_Right_Vis_Mesh",
+     [
+      97.0098,
+      52.5447,
+      103.247
+     ],
+     [
+      0.4042510986328125,
+      -1.5905685424804688,
+      0.383758544921875
+     ]
+    ],
+    [
+     "SUSP1_Wheel_Rear_Right_Mesh",
+     [
+      317.9422,
+      64.5518,
+      97.9657
+     ],
+     [
+      -121.91537475585938,
+      25.70769500732422,
+      -17.364425659179688
+     ]
+    ],
+    [
+     "Wheel_Rear_Right_Vis_Mesh",
+     [
+      106.6101,
+      64.8124,
+      106.0333
+     ],
+     [
+      0.0594482421875,
+      -1.2730484008789062,
+      -2.677532196044922
+     ]
+    ],
+    [
+     "SUSP1_Wheel_Rear_Left_Mesh",
+     [
+      316.1554,
+      63.4179,
+      109.8809
+     ],
+     [
+      -117.41433715820312,
+      -17.568653106689453,
+      -12.155342102050781
+     ]
+    ],
+    [
+     "Object001",
+     [
+      40.2667,
+      51.0679,
+      50.3794
+     ],
+     [
+      -245.72216796875,
+      13.216642379760742,
+      28.15915870666504
+     ]
+    ],
+    [
+     "Main_Turret_00",
+     [
+      114.0423,
+      64.7938,
+      79.5297
+     ],
+     [
+      -37.52008056640625,
+      1.2868213653564453,
+      -17.553634643554688
+     ]
+    ],
+    [
+     "CockPit_Mesh",
+     [
+      143.3565,
+      80.6631,
+      64.8507
+     ],
+     [
+      -1.8419265747070312,
+      -4.190799713134766,
+      21.585973739624023
+     ]
+    ],
+    [
+     "Rear_Door_BOTTOM",
+     [
+      26.0056,
+      152.7601,
+      71.7387
+     ],
+     [
+      13.995925903320312,
+      1.4912261962890625,
+      40.038330078125
+     ]
+    ],
+    [
+     "Rear_Door_MIDDLE",
+     [
+      59.1013,
+      197.0903,
+      37.5797
+     ],
+     [
+      6.466682434082031,
+      -5.005363464355469,
+      -14.893074035644531
+     ]
+    ],
+    [
+     "Object003_frag_007",
+     [
+      89.6485,
+      63.0243,
+      65.7652
+     ],
+     [
+      2.173320770263672,
+      -8.361801147460938,
+      -2.6217613220214844
+     ]
+    ],
+    [
+     "Object003_frag_008",
+     [
+      144.9533,
+      111.4476,
+      117.238
+     ],
+     [
+      1.7039337158203125,
+      -3.676959991455078,
+      4.731723785400391
+     ]
+    ],
+    [
+     "Object003_frag_017",
+     [
+      89.8172,
+      75.4895,
+      26.5387
+     ],
+     [
+      -0.6625442504882812,
+      0.7661094665527344,
+      18.1744384765625
+     ]
+    ],
+    [
+     "Object003_frag_023",
+     [
+      128.5565,
+      94.3125,
+      101.8191
+     ],
+     [
+      -1.4446754455566406,
+      -1.9884071350097656,
+      -0.4139671325683594
+     ]
+    ],
+    [
+     "Object003_frag_024",
+     [
+      117.9916,
+      92.692,
+      102.0926
+     ],
+     [
+      -1.92919921875,
+      0.8226394653320312,
+      -0.9356269836425781
+     ]
+    ],
+    [
+     "Object003_frag_025",
+     [
+      104.6675,
+      61.1565,
+      90.3782
+     ],
+     [
+      0.8868331909179688,
+      12.672504425048828,
+      6.955432891845703
+     ]
+    ],
+    [
+     "Object004_frag_002",
+     [
+      82.2681,
+      83.6968,
+      79.3146
+     ],
+     [
+      -19.944305419921875,
+      3.3632774353027344,
+      -0.2997474670410156
+     ]
+    ],
+    [
+     "Object004_frag_003",
+     [
+      61.1303,
+      41.8543,
+      64.0694
+     ],
+     [
+      1.100250244140625,
+      6.472919464111328,
+      -3.3317832946777344
+     ]
+    ],
+    [
+     "Object004_frag_006",
+     [
+      91.4336,
+      73.846,
+      64.8681
+     ],
+     [
+      6.790435791015625,
+      -2.9936904907226562,
+      -18.720855712890625
+     ]
+    ],
+    [
+     "Object004_frag_007",
+     [
+      80.7138,
+      60.2929,
+      63.5204
+     ],
+     [
+      10.360183715820312,
+      10.925495147705078,
+      -14.705974578857422
+     ]
+    ],
+    [
+     "Jet_Fins001",
+     [
+      129.1104,
+      61.1954,
+      28.7111
+     ],
+     [
+      -0.38806915283203125,
+      9.832073211669922,
+      -1.7837600708007812
+     ]
+    ],
+    [
+     "Object007",
+     [
+      138.5332,
+      73.3408,
+      28.9609
+     ],
+     [
+      -4.0068359375,
+      3.8500709533691406,
+      -9.773845672607422
+     ]
+    ],
+    [
+     "Object",
+     [
+      70.0956,
+      41.6142,
+      27.4115
+     ],
+     [
+      2.6683425903320312,
+      38.82896041870117,
+      5.336597442626953
+     ]
+    ],
+    [
+     "Object011",
+     [
+      142.069,
+      97.6281,
+      44.3129
+     ],
+     [
+      -1.212738037109375,
+      -33.476104736328125,
+      52.41887664794922
+     ]
+    ],
+    [
+     "Object013",
+     [
+      130.5941,
+      118.5985,
+      54.1265
+     ],
+     [
+      -2.476104736328125,
+      -4.678779602050781,
+      61.884910583496094
+     ]
+    ],
+    [
+     "Object009",
+     [
+      166.1201,
+      141.8228,
+      62.9364
+     ],
+     [
+      -5.30804443359375,
+      1.8183975219726562,
+      40.06749725341797
+     ]
+    ],
+    [
+     "Object017",
+     [
+      77.6225,
+      73.1757,
+      23.9064
+     ],
+     [
+      -11.188346862792969,
+      5.849895477294922,
+      50.45942687988281
+     ]
+    ],
+    [
+     "Object015",
+     [
+      78.3309,
+      65.6377,
+      42.0429
+     ],
+     [
+      24.174095153808594,
+      -40.50669479370117,
+      45.97325134277344
+     ]
+    ]
+   ],
+   "Playable_BatmobileMK2_SF": [
+    [
+     "Root",
+     [
+      30.3,
+      30.3,
+      30.3
+     ],
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "SUSP2_Wheel_Front_Left_Mesh",
+     [
+      211.5401,
+      51.0926,
+      109.0027
+     ],
+     [
+      66.54195404052734,
+      -1.6083831787109375,
+      12.661212921142578
+     ]
+    ],
+    [
+     "SUSP2_Wheel_Front_Right_Mesh",
+     [
+      157.8046,
+      60.0581,
+      110.255
+     ],
+     [
+      64.41890716552734,
+      28.091480255126953,
+      15.606605529785156
+     ]
+    ],
+    [
+     "Wheel_Front_Left_Vis_Mesh",
+     [
+      97.6049,
+      55.3417,
+      101.5329
+     ],
+     [
+      11.71820068359375,
+      -3.285003662109375,
+      -4.991455078125
+     ]
+    ],
+    [
+     "Wheel_Back_Left_Vis_Mesh",
+     [
+      98.9893,
+      60.5728,
+      108.901
+     ],
+     [
+      2.7552719116210938,
+      1.7811088562011719,
+      -9.908584594726562
+     ]
+    ],
+    [
+     "Wheel_Front_Right_Vis_Mesh",
+     [
+      97.0098,
+      52.5447,
+      103.247
+     ],
+     [
+      0.4042510986328125,
+      -1.5905685424804688,
+      0.383758544921875
+     ]
+    ],
+    [
+     "SUSP1_Wheel_Rear_Right_Mesh",
+     [
+      317.9422,
+      64.5518,
+      97.9657
+     ],
+     [
+      -121.91537475585938,
+      25.70769500732422,
+      -17.364425659179688
+     ]
+    ],
+    [
+     "Wheel_Rear_Right_Vis_Mesh",
+     [
+      106.6101,
+      64.8124,
+      106.0333
+     ],
+     [
+      0.0594482421875,
+      -1.2730484008789062,
+      -2.677532196044922
+     ]
+    ],
+    [
+     "SUSP1_Wheel_Rear_Left_Mesh",
+     [
+      316.1554,
+      63.4179,
+      109.8809
+     ],
+     [
+      -117.41433715820312,
+      -17.568653106689453,
+      -12.155342102050781
+     ]
+    ],
+    [
+     "Object001",
+     [
+      40.2667,
+      51.0679,
+      50.3794
+     ],
+     [
+      -245.72216796875,
+      13.216642379760742,
+      28.15915870666504
+     ]
+    ],
+    [
+     "Main_Turret_00",
+     [
+      114.0423,
+      64.7938,
+      79.5297
+     ],
+     [
+      -37.52008056640625,
+      1.2868213653564453,
+      -17.553634643554688
+     ]
+    ],
+    [
+     "CockPit_Mesh",
+     [
+      143.3565,
+      80.6631,
+      64.8507
+     ],
+     [
+      -1.8419265747070312,
+      -4.190799713134766,
+      21.585973739624023
+     ]
+    ],
+    [
+     "Rear_Door_BOTTOM",
+     [
+      26.0056,
+      152.7601,
+      71.7387
+     ],
+     [
+      13.995925903320312,
+      1.4912261962890625,
+      40.038330078125
+     ]
+    ],
+    [
+     "Rear_Door_MIDDLE",
+     [
+      59.1013,
+      197.0903,
+      37.5797
+     ],
+     [
+      6.466682434082031,
+      -5.005363464355469,
+      -14.893074035644531
+     ]
+    ],
+    [
+     "Object003_frag_007",
+     [
+      89.6485,
+      63.0243,
+      65.7652
+     ],
+     [
+      2.173320770263672,
+      -8.361801147460938,
+      -2.6217613220214844
+     ]
+    ],
+    [
+     "Object003_frag_008",
+     [
+      144.9533,
+      111.4476,
+      117.238
+     ],
+     [
+      1.7039337158203125,
+      -3.676959991455078,
+      4.731723785400391
+     ]
+    ],
+    [
+     "Object003_frag_017",
+     [
+      89.8172,
+      75.4895,
+      26.5387
+     ],
+     [
+      -0.6625442504882812,
+      0.7661094665527344,
+      18.1744384765625
+     ]
+    ],
+    [
+     "Object003_frag_023",
+     [
+      128.5565,
+      94.3125,
+      101.8191
+     ],
+     [
+      -1.4446754455566406,
+      -1.9884071350097656,
+      -0.4139671325683594
+     ]
+    ],
+    [
+     "Object003_frag_024",
+     [
+      117.9916,
+      92.692,
+      102.0926
+     ],
+     [
+      -1.92919921875,
+      0.8226394653320312,
+      -0.9356269836425781
+     ]
+    ],
+    [
+     "Object003_frag_025",
+     [
+      104.6675,
+      61.1565,
+      90.3782
+     ],
+     [
+      0.8868331909179688,
+      12.672504425048828,
+      6.955432891845703
+     ]
+    ],
+    [
+     "Object004_frag_002",
+     [
+      82.2681,
+      83.6968,
+      79.3146
+     ],
+     [
+      -19.944305419921875,
+      3.3632774353027344,
+      -0.2997474670410156
+     ]
+    ],
+    [
+     "Object004_frag_003",
+     [
+      61.1303,
+      41.8543,
+      64.0694
+     ],
+     [
+      1.100250244140625,
+      6.472919464111328,
+      -3.3317832946777344
+     ]
+    ],
+    [
+     "Object004_frag_006",
+     [
+      91.4336,
+      73.846,
+      64.8681
+     ],
+     [
+      6.790435791015625,
+      -2.9936904907226562,
+      -18.720855712890625
+     ]
+    ],
+    [
+     "Object004_frag_007",
+     [
+      80.7138,
+      60.2929,
+      63.5204
+     ],
+     [
+      10.360183715820312,
+      10.925495147705078,
+      -14.705974578857422
+     ]
+    ],
+    [
+     "Jet_Fins001",
+     [
+      129.1104,
+      61.1954,
+      28.7111
+     ],
+     [
+      -0.38806915283203125,
+      9.832073211669922,
+      -1.7837600708007812
+     ]
+    ],
+    [
+     "Object007",
+     [
+      138.5332,
+      73.3408,
+      28.9609
+     ],
+     [
+      -4.0068359375,
+      3.8500709533691406,
+      -9.773845672607422
+     ]
+    ],
+    [
+     "Object",
+     [
+      70.0956,
+      41.6142,
+      27.4115
+     ],
+     [
+      2.6683425903320312,
+      38.82896041870117,
+      5.336597442626953
+     ]
+    ],
+    [
+     "Object011",
+     [
+      142.069,
+      97.6281,
+      44.3129
+     ],
+     [
+      -1.212738037109375,
+      -33.476104736328125,
+      52.41887664794922
+     ]
+    ],
+    [
+     "Object013",
+     [
+      130.5941,
+      118.5985,
+      54.1265
+     ],
+     [
+      -2.476104736328125,
+      -4.678779602050781,
+      61.884910583496094
+     ]
+    ],
+    [
+     "Object009",
+     [
+      166.1201,
+      141.8228,
+      62.9364
+     ],
+     [
+      -5.30804443359375,
+      1.8183975219726562,
+      40.06749725341797
+     ]
+    ],
+    [
+     "Object017",
+     [
+      77.6225,
+      73.1757,
+      23.9064
+     ],
+     [
+      -11.188346862792969,
+      5.849895477294922,
+      50.45942687988281
+     ]
+    ],
+    [
+     "Object015",
+     [
+      78.3309,
+      65.6377,
+      42.0429
+     ],
+     [
+      24.174095153808594,
+      -40.50669479370117,
+      45.97325134277344
+     ]
+    ]
+   ],
+   "Playable_Batmobile_SF": [
+    [
+     "Root",
+     [
+      30.3,
+      30.3,
+      30.3
+     ],
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     "SUSP2_Wheel_Front_Left_Mesh",
+     [
+      211.5401,
+      51.0926,
+      109.0027
+     ],
+     [
+      66.54195404052734,
+      -1.6083831787109375,
+      12.661212921142578
+     ]
+    ],
+    [
+     "SUSP2_Wheel_Front_Right_Mesh",
+     [
+      157.8046,
+      60.0581,
+      110.255
+     ],
+     [
+      64.41890716552734,
+      28.091480255126953,
+      15.606605529785156
+     ]
+    ],
+    [
+     "Wheel_Front_Left_Vis_Mesh",
+     [
+      97.6049,
+      55.3417,
+      101.5329
+     ],
+     [
+      11.71820068359375,
+      -3.285003662109375,
+      -4.991455078125
+     ]
+    ],
+    [
+     "Wheel_Back_Left_Vis_Mesh",
+     [
+      98.9893,
+      60.5728,
+      108.901
+     ],
+     [
+      2.7552719116210938,
+      1.7811088562011719,
+      -9.908584594726562
+     ]
+    ],
+    [
+     "Wheel_Front_Right_Vis_Mesh",
+     [
+      97.0098,
+      52.5447,
+      103.247
+     ],
+     [
+      0.4042510986328125,
+      -1.5905685424804688,
+      0.383758544921875
+     ]
+    ],
+    [
+     "SUSP1_Wheel_Rear_Right_Mesh",
+     [
+      317.9422,
+      64.5518,
+      97.9657
+     ],
+     [
+      -121.91537475585938,
+      25.70769500732422,
+      -17.364425659179688
+     ]
+    ],
+    [
+     "Wheel_Rear_Right_Vis_Mesh",
+     [
+      106.6101,
+      64.8124,
+      106.0333
+     ],
+     [
+      0.0594482421875,
+      -1.2730484008789062,
+      -2.677532196044922
+     ]
+    ],
+    [
+     "SUSP1_Wheel_Rear_Left_Mesh",
+     [
+      316.1554,
+      63.4179,
+      109.8809
+     ],
+     [
+      -117.41433715820312,
+      -17.568653106689453,
+      -12.155342102050781
+     ]
+    ],
+    [
+     "Object001",
+     [
+      40.2667,
+      51.0679,
+      50.3794
+     ],
+     [
+      -245.72216796875,
+      13.216642379760742,
+      28.15915870666504
+     ]
+    ],
+    [
+     "Main_Turret_00",
+     [
+      114.0423,
+      64.7938,
+      79.5297
+     ],
+     [
+      -37.52008056640625,
+      1.2868213653564453,
+      -17.553634643554688
+     ]
+    ],
+    [
+     "CockPit_Mesh",
+     [
+      143.3565,
+      80.6631,
+      64.8507
+     ],
+     [
+      -1.8419265747070312,
+      -4.190799713134766,
+      21.585973739624023
+     ]
+    ],
+    [
+     "Rear_Door_BOTTOM",
+     [
+      26.0056,
+      152.7601,
+      71.7387
+     ],
+     [
+      13.995925903320312,
+      1.4912261962890625,
+      40.038330078125
+     ]
+    ],
+    [
+     "Rear_Door_MIDDLE",
+     [
+      59.1013,
+      197.0903,
+      37.5797
+     ],
+     [
+      6.466682434082031,
+      -5.005363464355469,
+      -14.893074035644531
+     ]
+    ],
+    [
+     "Object003_frag_007",
+     [
+      89.6485,
+      63.0243,
+      65.7652
+     ],
+     [
+      2.173320770263672,
+      -8.361801147460938,
+      -2.6217613220214844
+     ]
+    ],
+    [
+     "Object003_frag_008",
+     [
+      144.9533,
+      111.4476,
+      117.238
+     ],
+     [
+      1.7039337158203125,
+      -3.676959991455078,
+      4.731723785400391
+     ]
+    ],
+    [
+     "Object003_frag_017",
+     [
+      89.8172,
+      75.4895,
+      26.5387
+     ],
+     [
+      -0.6625442504882812,
+      0.7661094665527344,
+      18.1744384765625
+     ]
+    ],
+    [
+     "Object003_frag_023",
+     [
+      128.5565,
+      94.3125,
+      101.8191
+     ],
+     [
+      -1.4446754455566406,
+      -1.9884071350097656,
+      -0.4139671325683594
+     ]
+    ],
+    [
+     "Object003_frag_024",
+     [
+      117.9916,
+      92.692,
+      102.0926
+     ],
+     [
+      -1.92919921875,
+      0.8226394653320312,
+      -0.9356269836425781
+     ]
+    ],
+    [
+     "Object003_frag_025",
+     [
+      104.6675,
+      61.1565,
+      90.3782
+     ],
+     [
+      0.8868331909179688,
+      12.672504425048828,
+      6.955432891845703
+     ]
+    ],
+    [
+     "Object004_frag_002",
+     [
+      82.2681,
+      83.6968,
+      79.3146
+     ],
+     [
+      -19.944305419921875,
+      3.3632774353027344,
+      -0.2997474670410156
+     ]
+    ],
+    [
+     "Object004_frag_003",
+     [
+      61.1303,
+      41.8543,
+      64.0694
+     ],
+     [
+      1.100250244140625,
+      6.472919464111328,
+      -3.3317832946777344
+     ]
+    ],
+    [
+     "Object004_frag_006",
+     [
+      91.4336,
+      73.846,
+      64.8681
+     ],
+     [
+      6.790435791015625,
+      -2.9936904907226562,
+      -18.720855712890625
+     ]
+    ],
+    [
+     "Object004_frag_007",
+     [
+      80.7138,
+      60.2929,
+      63.5204
+     ],
+     [
+      10.360183715820312,
+      10.925495147705078,
+      -14.705974578857422
+     ]
+    ],
+    [
+     "Jet_Fins001",
+     [
+      129.1104,
+      61.1954,
+      28.7111
+     ],
+     [
+      -0.38806915283203125,
+      9.832073211669922,
+      -1.7837600708007812
+     ]
+    ],
+    [
+     "Object007",
+     [
+      138.5332,
+      73.3408,
+      28.9609
+     ],
+     [
+      -4.0068359375,
+      3.8500709533691406,
+      -9.773845672607422
+     ]
+    ],
+    [
+     "Object",
+     [
+      70.0956,
+      41.6142,
+      27.4115
+     ],
+     [
+      2.6683425903320312,
+      38.82896041870117,
+      5.336597442626953
+     ]
+    ],
+    [
+     "Object011",
+     [
+      142.069,
+      97.6281,
+      44.3129
+     ],
+     [
+      -1.212738037109375,
+      -33.476104736328125,
+      52.41887664794922
+     ]
+    ],
+    [
+     "Object013",
+     [
+      130.5941,
+      118.5985,
+      54.1265
+     ],
+     [
+      -2.476104736328125,
+      -4.678779602050781,
+      61.884910583496094
+     ]
+    ],
+    [
+     "Object009",
+     [
+      166.1201,
+      141.8228,
+      62.9364
+     ],
+     [
+      -5.30804443359375,
+      1.8183975219726562,
+      40.06749725341797
+     ]
+    ],
+    [
+     "Object017",
+     [
+      77.6225,
+      73.1757,
+      23.9064
+     ],
+     [
+      -11.188346862792969,
+      5.849895477294922,
+      50.45942687988281
+     ]
+    ],
+    [
+     "Object015",
+     [
+      78.3309,
+      65.6377,
+      42.0429
+     ],
+     [
+      24.174095153808594,
+      -40.50669479370117,
+      45.97325134277344
+     ]
+    ]
+   ]
+  }
+ }
+}

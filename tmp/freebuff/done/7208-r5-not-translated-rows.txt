@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/7208-r5-not-translated-rows.md
+ONLY: freebuff
+EST: 60
+BRIEF: hand-written 2026-11-05
+R-5 / G3-11: Working/Translation/LEDGER_AUDIT.md says 106 of 198 ledger rows are "not translated". Take the first 35 of those rows in ledger order and, for each, decide with evidence from Builds/bm-RC2 (or bm-RC1) whether the value is in the built files: read the built value through the toc/adf tools (Tools/scripts/jc3adf.py, jc3fleet.py) and compare with the row. Classes: built-and-equal / built-and-different / absent / cannot-read. Never judge from the row text alone. Output Working/Translation/R5_PART1.md + Tools/scripts/r5_part1.py --check.
+Shared project rules: tmp/freebuff/INSTRUCTIONS.md.

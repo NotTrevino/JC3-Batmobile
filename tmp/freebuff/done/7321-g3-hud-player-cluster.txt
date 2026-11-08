@@ -1,0 +1,15 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/G3-HUD-CLUSTER.md
+ONLY: freebuff
+EST: 60
+BRIEF: hand-written 2026-11-05 (operator leads on the Batmobile's own HUD cluster)
+Translation analysis is allowed (operator 2026-11-05); the TEST BAN stays: read-only on game installs, no game launch. Goal 100% BmAK lore accuracy; do NOT close any row as 'JC3 cannot'.
+OPERATOR LEADS (play memory = hypotheses to PROVE or REFUTE in the bytes): (a) HEALTH BAR is TOP-LEFT in BATTLE mode; (b) AFTERBURNER gauge is on the LEFT in PURSUIT mode; (c) a SECOND afterburner cooldown gauge sits LEFT of the afterburner gauge and appears to be the quick-recharge (cooldown speed-up) cooldown; (d) the Batmobile has NO speedometer, so JC3's speedometer must be DISABLED for it.
+Already grabbed (read first): Research/BatmobileGrab/HUD.md sections 1-6 (HudModuleBatmobile.Image 99 scripts, HudModuleHealth, battle-mode elements battle_mode_topCorner/bottomCorner, ZoomInterface*), HUD_INVENTORY.json, SPEEDOMETER.md, Working/Translation/T6_HUD_CAMERA.md (its 'speed -> reuse MCI_speedo' and 'boost gauge -> MCI_nitro_meter, badges no equivalent' dispositions contradict leads (b),(c),(d) and are reopened by this task).
+Task, files only, each item decoded / derived / UNKNOWN:
+ 1. For each of (a)-(d): carve the movie clips involved, give stage position (x,y,scale) and which mode state shows/hides them (pursuit vs battle; DrivingMode/BattleMode state machine in HudModuleBatmobile), the UC_* setters that drive them and the native fields/offsets that feed them. Confirm or refute the left/top-left placement.
+ 2. AFTERBURNER: decode the primary gauge and the second cooldown gauge: what values each shows (0..1? seconds?), what BmSDK fields feed them (afterburner charge, cooldown, the quick-recharge/cooldown speed-up upgrade), fill/drain direction, colours, and the exact event that switches the second gauge on.
+ 3. HEALTH: battle-mode health bar: clip, the health + armour fields, segments, damage flash.
+ 4. SPEEDOMETER: prove from SPEEDOMETER.md and the code whether BmAK's Batmobile HUD draws none. Then find how JC3 shows/hides its speedometer per vehicle (ui/hud.gfx: InitPrimaryMeter/SetVehicleType, HideVehicleNitrous, vehicle-type tables in the vehicle entity/module data) and a per-vehicle route to disable it for the Batmobile only (R7: never change a shared module; private copy).
+ 5. JC3 HOST: how to reproduce each BmAK gauge in JC3's HUD pipeline (reuse BmAK clip in hud.gfx / re-skin JC3 meters / custom module): decoded, derived or UNKNOWN, with the next 5-minute experiment. No speculative implementation.
+ 6. Row table: BmAK element | decoded evidence | JC3 route | status. Compromises under COMPROMISES, each with a RECOMMENDED COMPROMISE line (what, why, accuracy lost); you never approve it, the operator approves through Claude.
+Rules: tmp/freebuff/INSTRUCTIONS.md section 3. Never guess. New script Tools/scripts/bmak_hud_cluster.py with --write/--check (recompute from bytes, >=1 tamper test), outputs Working/HUD/CLUSTER.md + CLUSTER.json, DONE report as above. Do not edit existing files.

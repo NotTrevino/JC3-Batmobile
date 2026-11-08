@@ -1,0 +1,14 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/correction-8397-module-conflict.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-07 by review 8399
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/review-build-wave.md
+Correction 8/9 — two cards write the same binary module and one silently loses.
+
+Evidence: build-d13 §1 (receipt.conflicts[0], not_done item 3). `..._custom_land_global.vmodc` is written by D-08 (front/rear wheel `skew_health` 200 -> 400) and by D-10 (nitro/heat/drift members). A .vmodc is binary, so the merge keeps one: D-10 wins (18 handling writes vs D-08's 2 rows). `front_wheels_damage.skew_health` and `rear_wheels_damage.skew_health` are absent from Builds/bm-RC4 and listed as `not_carried`.
+
+Task: make the loss recoverable rather than permanent. Either (a) apply D-08's two skew_health rows on top of D-10's module (write both into one custom_land_global pass and verify both sets by read-back from the packed .toc), or (b) if the two writes are mutually exclusive, prove it with the byte/member evidence and record the wheel skew as an owned compromise in the ledger (not only in receipt.not_done). Re-run bm_rc4.py --write/--check; the receipt must show either 0 conflicts or a conflict with a named, tested resolution. Do not hand-edit the packed .ee.
+
+Revert: Builds/bm-RC4-damage-collision + Builds/bm-RC4-handling trees, then rebuild; the .ee/.toc are generated.
+
+Updated by review 8399: the conflict is real and currently drops two decoded health values; the correction requires both sets or a proven exclusivity.

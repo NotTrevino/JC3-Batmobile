@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/handling-damage-upright-classes.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+The earlier intent of decoding the handling, upright, damage and material classes of the Batmobile package was never delivered; Research/BatmobileGrab/REMAINDER.md only accounts for bytes. Close it. Using Research/BatmobileGrab/REMAINDER_SAMPLE_AUDIT.md for the sample list, pick every object whose class name mentions upright, stuck, flip, damage, health, surface or material, and decode its tagged properties with Tools/scripts/upk_read.py. Produce Research/BatmobileGrab/HANDLING_CLASSES.md with one section per class: purpose, property table with values, which pursuit-handling ledger row it feeds (for example T-SR1 self-right or T-DM7 contact damage), and whether the value is serialised or exe-only. Cross-check the stuck and flip values against BatmobileStuckTimeMax 2.0 s and BatmobileStuckTimeFlip 0.5 s in the offsets file and say which object the numbers really sit in. Done check: every object found is listed once; a final line gives counts of serialised versus exe-only properties; unresolved items are named UNKNOWN with a 5-minute experiment.
+Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

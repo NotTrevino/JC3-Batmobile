@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/fx-effc-growth-probe.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-08
+The effect writer is proven only for in-place patches (Tools/scripts/effc_writer.py check: 95 of 95 byte-identical). Test growth offline. Pick a donor .effc with few emitters, such as car_cycle_base_nitrous.effc (8 emitters). On a copy in Builds/effc-growth/ attempt, one step at a time: add one emitter by copying an existing one; grow the A[] pair layout; update total_size. After each step read the result back with the writer's parser and with the .ee container reader (reports/effc-format-writable.md describes both). Then verify a new private .effc name is reachable from an .ee entry, and record any lost-emitter risk. Output reports/fx-growth-probe.md with a table: step, pass or fail, bytes changed, offending field. Done when every step is pass or fail with evidence and the unchanged donor file hash is shown. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

@@ -1,0 +1,960 @@
+{
+ "landmark": "L7",
+ "briefs": [
+  {
+   "key": "hud-01",
+   "slug": "hud-bmak-unknowns-decode",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "NEW-HUD-GRAB-1",
+    "G1-HUD-ICON"
+   ],
+   "deps": [
+    "7957"
+   ],
+   "body": "Close the BmAK HUD unknowns that block the build. Read Research/BatmobileGrab/HUD.md, HUD_SPEC.json and the carved movies listed in HUD_INVENTORY.json, decompiled with FFDec in E:/Modding/_tools/ffdec. Settle each of these from bytes: how many frames the Cap Decrease label lasts; what text argument the damage-number setter takes; what the child clip ch1040 is; the pixel size of every radar icon symbol; the three BoostCooldown tier values (tier 0 is 12.0 s, find tiers 1 and 2). Write Research/BatmobileGrab/HUD_UNKNOWNS.md with one row per question: answer, the AS3 or tag evidence, or the word UNKNOWN when the movie does not say. Add a --check script Tools/scripts/hud_unknowns.py that re-derives each number. Done when the script exits 0 and no row lacks evidence. Operator fact: no speedometer; do not spend time on it. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-02",
+   "slug": "jc3-poi-and-module-disposition",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "NEW-HUD-GRAB-2",
+    "NEW-HUD-23"
+   ],
+   "deps": [],
+   "body": "Two read-only decodes. First, in the JC3 HUD scripts exported from ui/hud.gfx (see Research/JC3Grab/JC3_HUD_WEAPONS.md for the export folder), decode hud_code/poi.as: where the icon label is placed, how the Update call advances sub-frames, and what delivers m_CurrentType. Second, build a disposition table for all 25 BmAK RHudModule classes in Research/BatmobileGrab/HUD_INVENTORY.json: for each, one of use, replace-with-JC3-closest, or drop-because-operator-says-absent, with the closest JC3 system named and the gap stated (never write that JC3 has no system). Only Batmobile, Targets, Radar, Health, Scanner and Alerts are expected to matter. Output Research/JC3Grab/POI_DECODE.md and Working/HUD/MODULE_DISPOSITION.md. Done when 25 of 25 modules have a row and every claim cites a file and line. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-03",
+   "slug": "hud-gfx-loader-compat-offline",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "NEW-HUD-4"
+   ],
+   "deps": [
+    "7978"
+   ],
+   "body": "The writer half of a modified ui/hud.gfx is answered by reports/hud-gfx-ffdec-roundtrip.md; the loader half is not. Do the offline part of it. Using ffdec -dumpSWF, compare tag types and versions of the BmAK movies (carved from the UPKs per HUD_INVENTORY.json) against the JC3 ui/hud.gfx, listing every tag or AVM2 feature present in one and absent in the other. Then answer from files only: can a HUD movie be chosen per vehicle, or is ui/hud.gfx one global movie (cite RJ names lines about hud.gfx references and the payload tree Builds/probe-L0/P3-hud-gfx)? Write Working/HUD/LOADER_COMPAT.md with a table: question, offline answer, what only a game take can settle, and the exact one-line observation for that take. Done when every row has evidence or UNKNOWN, with no guesses about Scaleform behaviour. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-04",
+   "slug": "hud-ledger-rows-apply",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "NEW-HUD-1",
+    "T-HUD1",
+    "T-HUD4",
+    "NEW-HUD-8"
+   ],
+   "deps": [
+    "9033",
+    "7957",
+    "7958"
+   ],
+   "body": "Bring the HUD translation ledger in line with the operator facts. Read Working/Translation/T6_HUD_CAMERA.md, OPERATOR_PRIORITIES.md, reports/hud-cluster-closest-system-plan.md section 10 and reports/hud-radar-dash-plans-v2.md. Apply these changes as appended rows to Working/Translation/T_ROWS.jsonl (never rewrite old lines): T-HUD1 becomes suppress the speedometer inside the Batmobile; the badge row becomes map; armour overlay is dropped because the operator describes one health bar; add new rows for health top-left in battle, afterburner gauge left in pursuit, the cooldown gauge left of it, and radar class icons. For the second cooldown gauge write down what BmAK has (the native boost cooldown) and what the gap is. Output Working/Translation/HUD_LEDGER_V3.md listing each row id, old text, new text, evidence. Done when t19_hud.py --check and hud_spec.py --check still pass. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-05",
+   "slug": "hud-layout-refit-coordinates",
+   "est": 35,
+   "ingame": false,
+   "covers": [
+    "NEW-HUD-25"
+   ],
+   "deps": [
+    "hud-01"
+   ],
+   "body": "BmAK HUD placement is authored for a 1024 by 720 stage (the cluster maths used 1024 by 768); the target is a 1280 by 720 viewport and also fractions of the viewport for the hook overlay. Derive the coordinates once. From Working/HUD/CLUSTER.json, Research/BatmobileGrab/HUD_SPEC.json and Research/BatmobileGrab/HUD_UNKNOWNS.md, produce Working/HUD/LAYOUT_1280x720.json: for each element (health bar, boost meter, cooldown gauge, radar, weapon slots, reticle, lock marker) give pixel x, y, width, height at 1280 by 720, the same as fractions, and the scaling rule used (letterbox, stretch, or anchor-to-edge) with the evidence for it. Add Tools/scripts/hud_layout.py --check that recomputes every row. Done when the check exits 0 and the health bar lands near the (32.8, 55.7) target of hud-radar-dash-plans-v2.md. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-06",
+   "slug": "hud-reopen-out-rows",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "NEW-HUD-22",
+    "NEW-CAM-11"
+   ],
+   "deps": [
+    "hud-04"
+   ],
+   "body": "Several HUD rows were closed as out even though the project rule forbids concluding that JC3 has no system. Re-open them. Read the out rows in Working/Translation/T6_HUD_CAMERA.md lines 25 to 29 (battle overlay, winch meter, energy system, combo and medals, occupants) and reports/remote-control-range-static-overlay-plan.md (halted). For each, state whether the operator's play facts (ROADMAP.md section 7, memory bmak-gameplay-facts) say the element exists. If yes, name the closest JC3 HUD or POI system, the gap, and what a build must add; if no, record the operator fact that removes it. Output Working/Translation/HUD_OUT_ROWS_REOPENED.md with a decision per row and the file lines behind it. Done when every out row has either a closest-system plan or a cited operator fact, and no row says JC3 has no system. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-07",
+   "slug": "hud-gadget-wheel-translate",
+   "est": 35,
+   "ingame": false,
+   "covers": [
+    "NEW-HUD-21"
+   ],
+   "deps": [
+    "hud-03"
+   ],
+   "body": "Gadget selection HUD for the Batmobile. Read reports/gadget-wheel-input-plan.md, Research/BatmobileGrab/HUD.md section 8 (RadialGadgetSelect pairing unconfirmed) and the hold-LT and gadget facts in ROADMAP.md section 7. Confirm from the decompiled movie whether RadialGadgetSelect is the module that BmAK's gadget wheel uses: list its setters and frame labels. Then map it to the closest JC3 radial or weapon-select HUD in the JC3 scripts and state the gap. Write Working/HUD/GADGET_WHEEL.md with the setter table, which gadgets the Batmobile shows per mode, and the drawing spec for the hook overlay of brief 7985 as the fallback if hud.gfx cannot be edited (use Working/HUD/LOADER_COMPAT.md for that decision). Done when the module pairing is stated as confirmed or UNKNOWN with the evidence. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-08",
+   "slug": "hud-vulcan-bloom-numbers",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "T-HUD15",
+    "T-HUD23",
+    "NEW-HUD-15"
+   ],
+   "deps": [
+    "7945"
+   ],
+   "body": "Turn the Vulcan crosshair capture analysis into numbers a build can use. Input: reports/vulcan-capture-frame-timing.md, reports/vulcan-capture-fire-and-overheat-timing.md, and the movie facts in Research/BatmobileGrab/HUD_SPEC.json (accuracy frame labels). The operator saw the crosshair spread while firing, turn red, and never lock out. Write Working/HUD/VULCAN_RETICLE.md giving: spread radius in screen fractions at rest and at full bloom, seconds to full bloom, seconds to recover after release, the colour change point, and the formula for the JC3 UpdateWeaponReticle reticle_size argument as well as for an overlay. Mark every number that came from the capture versus the movie. Where the scale is unknown, say UNKNOWN and name the one measurement a game take must make. Done when each number carries its frame range or file line. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-09",
+   "slug": "hud-cannon-circle-tracker-spec",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "T-HUD24",
+    "NEW-HUD-16",
+    "NEW-HUD-17"
+   ],
+   "deps": [
+    "7958",
+    "9103"
+   ],
+   "body": "Two drawing specs for the overlay of brief 7985. One: the 60 mm cannon reload circle, a 0 to 1 cooldown arc swept through 360 degrees over the reload time (reports/cannon-60mm-reload-circle-plan.md; take the reload seconds from the decoded weapon values, not memory). Two: the tracker marker, yellow while the target is tracked and grey when the signal is lost, with a distance string, weakening with range and visible through walls (reports/tracker-lock-hud-plan.md, operator facts in ROADMAP.md section 7). Give for each: anchor, radius, stroke width, colours as RGB from the movie, the value that drives it, and the JC3 POI types 19 and 24 as the alternative route. Output Working/HUD/CANNON_TRACKER_SPEC.md. Done when the spec names the source file and line of every colour and number, or UNKNOWN. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-10",
+   "slug": "hud-radar-driver-route-decision",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "NEW-HUD-11",
+    "NEW-HUD-12",
+    "NEW-HUD-13"
+   ],
+   "deps": [
+    "7956",
+    "7982",
+    "7985"
+   ],
+   "body": "Radar needs a per-frame vehicle to marker driver, and the movie contains zero vehicle CreatePoi calls. Decide the route from evidence. Inputs: reports/radar-icon-set-extract.md, reports/radar-minimap-icon-plan.md section 8, the 7982 telemetry report for what the hook can read per entity, and the 7985 overlay report. Compare route a (hook draws the radar icons itself) and route b (hook feeds JC3 POIs to a modified hud.gfx), per icon class: cops, military, tracked, hacked red to green, tank (larger), helicopter (spinning blades). For each class state the state source (the hacked flag comes from brief 9108's SAM hack) and the accuracy cost, e.g. the eight-way m_ArrowState versus continuous bearing. Output Working/HUD/RADAR_ROUTE.md ending in one chosen route with reasons. Done when all six classes have a source or UNKNOWN. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-11",
+   "slug": "hud-mode-signal-caller-census",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "NEW-HUD-3",
+    "NEW-HUD-5"
+   ],
+   "deps": [
+    "7982",
+    "7984"
+   ],
+   "body": "The HUD must show the afterburner gauge in pursuit and the health bar in battle, and nothing yet tells it which mode is active. Find out what can. Read reports/hook-live-vehicle-readout.md and the mode swap report from brief 7984, Research/JC3Grab/JC3_HUD_WEAPONS.md section 7, and reports/hud-cluster-closest-system-plan.md U2 and U4. List every source of a mode flag: the hook's own mode variable, the entity's m_CurrentType delivery, or the donor nitro and weapon components that make stock code push InitVehicleNitrous or UpdateVehicleWeapons. For each, give whether it works for the hook overlay and for a gfx edit, plus the one read a game take must make. Output Working/HUD/MODE_SIGNAL.md. Done when each source is marked evidenced or UNKNOWN with a file citation. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-12",
+   "slug": "hud-review-grab-wave",
+   "est": 30,
+   "ingame": false,
+   "covers": [
+    "review"
+   ],
+   "deps": [
+    "hud-01",
+    "hud-02",
+    "hud-03",
+    "hud-04",
+    "hud-05",
+    "hud-06",
+    "hud-07",
+    "hud-08"
+   ],
+   "body": "Review pass over the HUD grab and translation wave. Re-read the reports of the briefs that produced Research/BatmobileGrab/HUD_UNKNOWNS.md, Research/JC3Grab/POI_DECODE.md, Working/HUD/LOADER_COMPAT.md, Working/Translation/HUD_LEDGER_V3.md, Working/HUD/LAYOUT_1280x720.json, Working/Translation/HUD_OUT_ROWS_REOPENED.md, Working/HUD/GADGET_WHEEL.md and Working/HUD/VULCAN_RETICLE.md. List every fact that changed a plan assumption (for instance the loader answer, any icon size, any UNKNOWN that turned into a number). Then open the later HUD queue briefs in tmp/freebuff/queue/ that have not started (the files whose report does not yet exist and that concern hud, radar, lock, reticle, health bar, afterburner, speedometer) and edit their text so they cite the new numbers and drop questions already answered. Do not touch started briefs. Write the change list to reports/review-hud-grab-wave.md. Done when each edited brief is named with before and after of the changed sentence. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-13",
+   "slug": "hud-speedometer-suppress-build",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "NEW-HUD-9"
+   ],
+   "deps": [
+    "hud-03",
+    "hud-11",
+    "7985"
+   ],
+   "body": "Hide JC3's speedometer only while the player is in the Batmobile. Start with the five-minute probe design: MCI_speedo.visible set false, compared on the Batmobile and a vanilla car (reports/dash-hud-unknown-closing.md N23). Read Working/HUD/LOADER_COMPAT.md and Working/HUD/MODE_SIGNAL.md to pick the route: an AS3 edit in a private ui/hud.gfx tree, or a hook-side call from the overlay of brief 7985. Build the chosen route under Builds/hud-speedo/ with a receipt listing each changed byte range or hook symbol, and a one-line revert note. Operator fact: no speedometer appears anywhere in the Batmobile. Do not install anything in the game folder. Done when the receipt exists, the file parses (ffdec round trip or a compile check), and a script Tools/scripts/hud_speedo_check.py --check confirms the vanilla path is untouched. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-14",
+   "slug": "hud-radar-icon-assets-build",
+   "est": 55,
+   "ingame": false,
+   "covers": [
+    "NEW-HUD-10"
+   ],
+   "deps": [
+    "hud-10",
+    "7956",
+    "hud-01"
+   ],
+   "body": "Author the radar icon set. Use the icon extract of reports/radar-icon-set-extract.md and the pixel sizes in Research/BatmobileGrab/HUD_UNKNOWNS.md. Produce six icons and their atlas entry: cops, military, tracked in green, hacked in red and its green twin, an enlarged tank arrow, and a helicopter arrow with blades as a rotating frame set. Render them as PNG sprites plus, if the route file Working/HUD/RADAR_ROUTE.md picked hud.gfx, SVG shapes ready for an ffdec import. Place them in Builds/hud-radar/ with a manifest.json holding name, size, colour hex and source symbol. Operator fact: most icons are arrows pointing where the vehicle faces. Done when manifest.json lists all eight sprites and a script Tools/scripts/hud_radar_assets.py --check confirms each file exists and has the stated size. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-15",
+   "slug": "hud-lock-markers-build",
+   "est": 55,
+   "ingame": false,
+   "covers": [
+    "NEW-HUD-14",
+    "T-HUD21",
+    "T-HUD22"
+   ],
+   "deps": [
+    "7958",
+    "hud-09",
+    "hud-08",
+    "7985",
+    "9105"
+   ],
+   "body": "Build the reticle layer of the hook overlay, from the specs. Inputs: reports/lock-markers-spec.md (battle orange diamond that appears instantly; pursuit shrinking circle inside an edge-gapped diamond), Working/HUD/VULCAN_RETICLE.md, Working/HUD/CANNON_TRACKER_SPEC.md and the overlay structure from the 7985 report. Implement drawing code and fixtures under Builds/hook-0006/ (new tree, not hook-0005): functions for the two lock markers, the Vulcan crosshair with bloom and red shift, the cannon reload arc and the tracker marker, each taking plain numbers so they can be tested without the game. Provide a golden-image test: render each at three input values to PNG and store them with hashes. Lock progress comes from MissileLockOnDuration of brief 9105. Done when the golden PNGs exist for all four elements and a check script exits 0. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-16",
+   "slug": "hud-weapon-slot-content-build",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "NEW-HUD-19",
+    "NEW-HUD-20"
+   ],
+   "deps": [
+    "9160",
+    "9101",
+    "hud-03"
+   ],
+   "body": "Weapon slot content and the four visible slots. Read reports/four-weapon-slot-build-plan.md B8, the output of brief 9160 (reports/rc5-hud-build.md) and Working/HUD/LOADER_COMPAT.md. For the four Batmobile weapons per mode give names, icon ids (602, 603, 618, 619; boost badge 614) and the rule that infiniteAmmo=true hides the counters. MCI_vehicle_weapons2 and 3 are hard-sized to two slots in the movie, so decide, from the loader answer, between extending the movie and drawing slots 3 and 4 from the hook overlay. Build the chosen part in Builds/bm-RC5-hud-slots/ with rc5_hud_slots.py --write and --check, plus a branch record under Working/RC5/branches/ using the format in reports/rc5-scaffold-and-merge-script.md. Done when the check lists four slots with name, icon and counter state for each mode and every edited file parses. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-17",
+   "slug": "hud-damage-number-hitmarker-build",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "NEW-HUD-18"
+   ],
+   "deps": [
+    "hud-01",
+    "9160"
+   ],
+   "body": "Damage number and hit marker. From Research/BatmobileGrab/HUD_UNKNOWNS.md take the decoded setter signature (part, amount, duration, frames), and from Research/BatmobileGrab/HUD_SPEC.json the frame labels. Check ROADMAP.md section 7 before building: the operator says the Batmobile takes no crash damage and shows no damage stages, so decide whether numbers appear on the player's own vehicle at all; if the operator facts say they only appear on targets, build only that. Write the spec and a minimal implementation (hook overlay text draw or the gfx text tag edit proven in Builds/probe-L0/P3-hud-gfx) under Builds/hud-dmg/, with the screen position derived from Working/HUD/LAYOUT_1280x720.json or marked UNKNOWN. Done when the receipt lists each field's source and a check script confirms the parse. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-18",
+   "slug": "hud-review-build-wave",
+   "est": 30,
+   "ingame": false,
+   "covers": [
+    "review"
+   ],
+   "deps": [
+    "hud-13",
+    "hud-14",
+    "hud-15",
+    "hud-16",
+    "hud-17",
+    "hud-10",
+    "hud-11",
+    "hud-09"
+   ],
+   "body": "Review pass over the HUD build wave. Re-read the reports for the speedometer suppression, radar assets, lock marker overlay, weapon slot content, damage number, radar route decision, mode signal census and cannon/tracker spec briefs. Note every place where a build contradicts another (for example a build assuming hud.gfx editing while the loader report says global-only) and every figure that changed. Then edit the text of the not-yet-started HUD verify, pilot and test briefs in tmp/freebuff/queue/ so their checks, card names and pass bands match what was actually built; leave started briefs alone. Record the edits in reports/review-hud-build-wave.md with before and after sentences, and flag any element whose route changed from gfx to overlay or back. Done when the report lists each edited queue file and no later brief still names an abandoned route. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-19",
+   "slug": "hud-offline-verify-all",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "NEW-HUD-24",
+    "NEW-HUD-26"
+   ],
+   "deps": [
+    "9160",
+    "hud-16",
+    "hud-13",
+    "hud-14",
+    "hud-15",
+    "hud-17"
+   ],
+   "body": "Offline verification of every HUD build. Run, from E:/Modding/JC3-Batmobile, each of: Tools/scripts/bmak_hud_cluster.py, hud_spec.py --check, bmak_speedometer.py --check, t19_hud.py --check, hud_radar_recheck.py, bm_rc4.py, v03_wiring.py, plus the new checks hud_layout.py, hud_radar_assets.py, hud_speedo_check.py, rc5_hud.py --check and rc5_hud_slots.py --check, and a parse of every edited hud.gfx via ffdec. Record the exit code and the first failing line of each. For each of the operator's seven HUD leads (health top-left in battle, afterburner gauge left in pursuit with cooldown gauge, no speedometer, radar icon set, lock diamond and circle, cannon reload circle, Vulcan bloom) state which build file implements it and which check proves the file side. Output reports/hud-offline-verify.md. Done when each of the seven leads has an implementing file or a stated gap. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-20",
+   "slug": "hud-pilot-cards-write",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "NEW-HUD-27"
+   ],
+   "deps": [
+    "hud-19",
+    "7985"
+   ],
+   "body": "Write the HUD pilot cards in the format of Working/Q/PILOT/CARD_FORMAT.md, one file per card in Working/Q/PILOT/: HUD_REST.md, HUD_BATTLE_HEALTH.md, HUD_PURSUIT_BOOST.md, HUD_SPEEDO_HIDDEN.md, HUD_RADAR_ICONS.md, HUD_LOCK_MARKERS.md, HUD_VULCAN_CANNON.md. Each card has: the setup spawn (use SPAWN_BATMOBILE.md, ENTER_EXIT.md and CONTROLS.md steps by name), one observation, the pass rule with numbers from the build (boost ring 12.0 s plus or minus 0.3, eight arrow headings, tank arrow larger, helicopter distinct from the arrow, speedometer absent versus a vanilla car), the screenshot or recording instruction from SCREENSHOT.md and RECORD.md, and the fix-card route on fail naming the build brief to re-open. Done when the seven files exist and a grep shows each has the four headed parts. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-21",
+   "slug": "hud-test-gfx-load-gate",
+   "est": 45,
+   "ingame": true,
+   "covers": [
+    "NEW-HUD-28"
+   ],
+   "deps": [
+    "hud-20",
+    "hud-03",
+    "8606",
+    "APPROVED_Q"
+   ],
+   "body": "In-game test, agent-piloted under operator supervision, only after the operator approves. Install the private hud.gfx tree from Builds/bm-RC5-hud or Builds/hud-speedo into a copy only as the console-thingy install flow allows, using cards Working/Q/PILOT/HUD_SPEEDO_HIDDEN.md and HUD_REST.md. One observation: does the game load the modified hud.gfx at all, and is the vanilla speedometer hidden on foot-to-car and in the Batmobile only? Pass rule: the changed text or element shows in the HUD, no crash within three minutes, speedometer absent in the Batmobile and present in a vanilla car. Save a screenshot and the log tail. On fail, write a fix card in Working/Q/ naming the loader row in Working/HUD/LOADER_COMPAT.md and mark the gfx route abandoned in the report. Write reports/hud-gfx-load-gate.md. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-22",
+   "slug": "hud-test-overlay-health-boost",
+   "est": 45,
+   "ingame": true,
+   "covers": [
+    "NEW-HUD-28",
+    "NEW-HUD-6",
+    "NEW-HUD-7"
+   ],
+   "deps": [
+    "hud-20",
+    "7985",
+    "APPROVED_Q"
+   ],
+   "body": "In-game test of the hook overlay, agent-piloted, operator-approved only. Use cards HUD_BATTLE_HEALTH.md and HUD_PURSUIT_BOOST.md in Working/Q/PILOT/ plus the hook-0005 install notes from the 7985 report. One observation: with the overlay on, does the health bar sit top-left in battle mode, and does the afterburner gauge sit on the left in pursuit mode with its cooldown gauge to its left? Pass rule: both positions within 5 percent of Working/HUD/LAYOUT_1280x720.json, boost ring empties in about 2.0 s and refills in 12.0 s plus or minus 0.3, no gauge in the wrong mode. Record a short clip and a timing table. Fail route: write a fix card in Working/Q/ naming the 7985 build file and the layout row. Write reports/hud-test-overlay-health-boost.md. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-23",
+   "slug": "hud-test-radar-lock-reticle",
+   "est": 50,
+   "ingame": true,
+   "covers": [
+    "NEW-HUD-28",
+    "NEW-HUD-14",
+    "NEW-HUD-15",
+    "NEW-HUD-16"
+   ],
+   "deps": [
+    "hud-20",
+    "hud-14",
+    "hud-15",
+    "hud-22",
+    "APPROVED_Q"
+   ],
+   "body": "In-game test, agent-piloted, operator-approved only. Use cards HUD_RADAR_ICONS.md, HUD_LOCK_MARKERS.md and HUD_VULCAN_CANNON.md from Working/Q/PILOT/. Three observations, each recorded: (1) radar shows eight arrow headings, a bigger tank arrow and a distinct helicopter icon; (2) in battle an orange diamond appears at once on a target and in pursuit a circle shrinks inside the gapped diamond over about 2 s; (3) the Vulcan crosshair spreads then reddens and the cannon reload arc sweeps once per shot. Pass rule: each matches its golden image from Builds/hook-0006 by eye and timing within 0.3 s. On fail write a fix card per element naming the build brief. Write reports/hud-test-radar-lock-reticle.md with screenshot paths. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-24",
+   "slug": "hud-release-concerns",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "NEW-HUD-29",
+    "NEW-REL-1"
+   ],
+   "deps": [
+    "hud-21",
+    "hud-19"
+   ],
+   "body": "Release notes and safeguards for the HUD. Read Working/Installer/install_v3.ps1, Working/HUD/LOADER_COMPAT.md and the gate test report reports/hud-gfx-load-gate.md. Answer: if the chosen route replaces ui/hud.gfx globally, what changes for every vehicle and for on-foot play; how does the installer back up and restore the original; what is the install size added; and which route gives the least collateral (overlay versus gfx). Draft the HUD part of the user README and the changelog line in Working/Installer/HUD_RELEASE_NOTES.md and write a rollback check script description (do not edit install_v3.ps1; list the exact lines to add). Done when the notes name the chosen route, the rollback steps and the measured size, each with a file citation. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-25",
+   "slug": "cam-ledger-and-config-grab",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "NEW-CAM-1",
+    "NEW-CAM-GRAB-1",
+    "NEW-CAM-12",
+    "NEW-CAM-13",
+    "T-CAM2"
+   ],
+   "deps": [
+    "9033"
+   ],
+   "body": "Camera loose ends, offline. One: apply Working/Translation/T_CAM2_PROPOSAL.md as an appended ledger row, and settle the cameras-per-mode boost value (67.7 against 72.49 vertical) in reports/cameras-per-mode-plan.md section 4. Two: read the configs not yet read, BatmobileConversationCamConfig and RidingCarCamFOV, in Research/BatmobileGrab/CAMERA.md data, and decide whether a bonnet or cockpit camera exists for the Batmobile; state the closest JC3 camera for each. Three: write how the FOV conversion changes for aspect ratios other than 16:9. Output Working/Camera/CAM_LOOSE_ENDS.md with a row per item (answer, evidence, UNKNOWN where the files are silent). Done when Tools/scripts/bmak_camfile.py check still reports 8 of 8 and no row is missing evidence. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-26",
+   "slug": "cam-per-mode-switch-plan",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "NEW-CAM-2",
+    "NEW-CAM-3",
+    "NEW-CAM-10",
+    "T-CAM8"
+   ],
+   "deps": [
+    "7984",
+    "9130"
+   ],
+   "body": "One CCameraRef per entity means a battle camera, a boost camera and a chase-2 preset need a switching route. Plan it. Read Working/Camera/CAM_REF.md, reports/cameras-per-mode-plan.md and the mode swap report of 7984. List the candidate routes: a second tune applied by the mode pair of brief 9130, a hook call that swaps the CCameraRef at runtime, or a variant entity; mark which are evidenced. Also write the closest-system plan for head impulse (0.5), drift orientation (0.15) and airborne smoothing, naming what the nearest GenericVehicleCamera members are and the gap. Output Working/Camera/CAM_SWITCH_PLAN.md with a recommended route and the single probe that would confirm it. Done when each of T-CAM8 and NEW-CAM-2 and NEW-CAM-3 has a recommended route or UNKNOWN with a probe. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-27",
+   "slug": "cam-battle-tune-build",
+   "est": 50,
+   "ingame": false,
+   "covers": [
+    "NEW-CAM-4",
+    "NEW-CAM-5",
+    "T-CAM10"
+   ],
+   "deps": [
+    "hud-26",
+    "9130",
+    "9101"
+   ],
+   "body": "Build the battle camera tunes. Values from reports/cameras-per-mode-plan.md section 4: battle position [0,2.05,13.50], look-at [0,0.05,0], FOV 36 degrees both ends (BmAK 60 horizontal), rigid pivot; battle with winch [0,4.05,12.50]; anti-personnel 40 horizontal. Use Tools/scripts/bmak_camfile.py to write extra .ctunec files beside bat_base.ctunec in a new tree Builds/bm-RC5-camera/, without touching the RC4 files, and add the entity or mode reference the route in Working/Camera/CAM_SWITCH_PLAN.md recommends. Do not invent a unit conversion: reuse the vertical FOV formula already in T_CAM2_PROPOSAL.md. Add a script rc5_camera.py with --write and --check and a branch record under Working/RC5/branches/. Done when the check reads back every value from the written files and 8 of 8 base values are unchanged. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-28",
+   "slug": "cam-adf-append-writer-proto",
+   "est": 50,
+   "ingame": false,
+   "covers": [
+    "NEW-CAM-8"
+   ],
+   "deps": [],
+   "body": "The camera shake needs an ADF writer that can append a new type and instance, while Tools/scripts/bmak_camfile.py only rewrites existing rows. Prototype that writer on a copy. Study Tools/scripts/jc3adf.py and the .ctunec layout in Working/Camera/CAM_TUNE.json; pick one shipped .ctunec as the test file. Write Tools/scripts/adf_append.py that appends one instance of an already present type first (a second instance of the tune struct), then, if that round trips, a type the file does not yet contain, copying it from a donor ADF. Prove by reading the result back with jc3adf.py and by byte-diff that nothing else moved. Work only in Builds/adf-append/ and mark any offset table, hash table or size field you had to rewrite. Done when both append cases parse and a diff report shows only the intended regions changed, or the failing case is named. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-29",
+   "slug": "cam-shake-instance-build",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "NEW-CAM-8",
+    "T-CAM11"
+   ],
+   "deps": [
+    "hud-28",
+    "hud-25"
+   ],
+   "body": "Author the camera shake. With the appended-type writer from the previous brief (Tools/scripts/adf_append.py) put a CameraShakeModifierParams instance into a copy of the Batmobile .ctunec in Builds/bm-RC5-camera/. Values: BmAK boost shake 35 and wheelspin shake 50 by 50 by 25 over 0.1 s (Research/BatmobileGrab/CAMERA.md); do not convert units by guess. Read reports/cameras-per-mode-plan.md section 6 steps 1 to 3 and the JC3 shipped shake instances (Working/Camera/CAM_REF.md) to find what the JC3 numbers mean, and list each value you could not map as UNKNOWN with a check for a game take. Done when jc3adf.py reads the new instance and the shake members hold the stated source numbers, a report lists mapped and UNKNOWN fields, and the RC4 camera files are unchanged by hash. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-30",
+   "slug": "cam-battle-yaw-coupling-spec",
+   "est": 35,
+   "ingame": false,
+   "covers": [
+    "NEW-CAM-6"
+   ],
+   "deps": [
+    "9122"
+   ],
+   "body": "Operator fact (memory bmak-gameplay-facts): in battle mode the nose swings toward where the camera points. Camera-side specification. Read reports/rc5-drive-modes-and-yaw.md from brief 9122, the camera yaw members in Working/Camera/CAM_REF.md and Research/BatmobileGrab/CAMERA.md. State where the yaw target comes from (camera forward vector), how the hook or the handling tune receives it, the rate at which the nose follows (use the decoded battle yaw rate, otherwise UNKNOWN), and what a pilot observes. Output Working/Camera/YAW_COUPLING.md including the camera quantity the hook must read and the exact observation for a test card. Done when the quantity, source symbol or UNKNOWN, rate and observation are each stated with a citation. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-31",
+   "slug": "cam-chasing-remote-plan",
+   "est": 35,
+   "ingame": false,
+   "covers": [
+    "NEW-CAM-7",
+    "NEW-CAM-11"
+   ],
+   "deps": [
+    "hud-06",
+    "hud-26"
+   ],
+   "body": "Two special camera states. The chasing takedown camera (position [0,-2,25], 80 degrees horizontal, default pitch -65.9 degrees, which is not a JC3 member) and the remote-control view. Read reports/cameras-per-mode-plan.md, Working/Translation/HUD_OUT_ROWS_REOPENED.md and reports/remote-control-range-static-overlay-plan.md. For each, name the closest GenericVehicleCamera or hook-controlled camera route from Working/Camera/CAM_SWITCH_PLAN.md, state the gap, and list the fields a build must set, with a value from BmAK or UNKNOWN. Check ROADMAP.md section 7 for whether the operator confirmed either state exists. Output Working/Camera/SPECIAL_CAMERAS.md. Done when both states have a verdict (build, or removed by a cited operator fact) and a probe. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-32",
+   "slug": "cam-ref-and-doc-verify",
+   "est": 35,
+   "ingame": false,
+   "covers": [
+    "NEW-CAM-14",
+    "NEW-CAM-17"
+   ],
+   "deps": [
+    "9101",
+    "hud-27"
+   ],
+   "body": "Verify the camera wiring after the entity rebuild. In the tree produced by brief 9101 and in Builds/bm-RC5-camera/, confirm the CarCameraRef of every Batmobile entity points at the bat_base tune (or the battle tune where intended), the 2-byte .epe rename is intact, and the RC4 camera values are unchanged: run Tools/scripts/bmak_camfile.py check and compare hashes. Also correct the stale status text in Working/Camera/CAM_REF.md sections 5 and 6, listed in reports/review-CAM-1.md, by editing only those paragraphs. Output reports/cam-ref-verify.md with a table of entity, reference, target file, hash match. Done when every entity row matches and bmak_camfile.py check reports 8 of 8. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-33",
+   "slug": "cam-light-review-wave",
+   "est": 30,
+   "ingame": false,
+   "covers": [
+    "review"
+   ],
+   "deps": [
+    "hud-25",
+    "hud-26",
+    "hud-27",
+    "hud-28",
+    "hud-29",
+    "hud-30",
+    "hud-31",
+    "hud-32"
+   ],
+   "body": "Review pass over the camera briefs. Re-read the reports from the camera loose ends, switch plan, battle tune build, ADF append writer, shake build, yaw coupling spec, special cameras and camera verify. Record which plan assumptions changed: the chosen switching route, whether the append writer works, which shake fields stayed UNKNOWN. Then rewrite the text of any not-yet-started camera pilot or test brief in tmp/freebuff/queue/ (cards for chase distance, FOV stop at 108 km/h, battle camera, shake) so each states the real file names, numbers and pass bands. Leave started briefs alone. Write reports/review-camera-wave.md with the edited files and sentence diffs. Done when every edited queue file is listed and no later camera brief assumes a route the reports dismissed. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-34",
+   "slug": "cam-pilot-cards-write",
+   "est": 35,
+   "ingame": false,
+   "covers": [
+    "NEW-CAM-16"
+   ],
+   "deps": [
+    "hud-32",
+    "hud-27"
+   ],
+   "body": "Write the camera pilot cards in the format of Working/Q/PILOT/CARD_FORMAT.md as new files in Working/Q/PILOT/: CAM_REST.md (distance behind at rest, about 700 cm back and 130 cm up), CAM_SPEED_FOV.md (field of view widens and stops by 108 km/h, vertical 55 to 63 degrees), CAM_ROLL.md (roll follows lean), CAM_NO_CLIP.md (no clipping through the taller body), CAM_BATTLE.md (battle tune after the mode swap) and CAM_SHAKE.md. Take the numbers from Working/Camera/CAM_TUNE.json and Builds/bm-RC5-camera/. Each card gives setup using SPAWN_BATMOBILE.md and CONTROLS.md, one observation, a pass rule with numbers, how to capture it (SCREENSHOT.md, RECORD.md) and the fix route naming the camera build brief. Done when six card files exist and each has the four parts. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-35",
+   "slug": "cam-test-drive-a15",
+   "est": 45,
+   "ingame": true,
+   "covers": [
+    "NEW-CAM-15",
+    "T-CAM5",
+    "T-CAM6",
+    "T-CAM13"
+   ],
+   "deps": [
+    "hud-34",
+    "9190",
+    "APPROVED_Q"
+   ],
+   "body": "In-game camera drive, agent-piloted under operator supervision, once approved. Use cards CAM_REST.md, CAM_SPEED_FOV.md, CAM_ROLL.md and CAM_NO_CLIP.md in Working/Q/PILOT/ with the RC5 merged build from brief 9190. One observation for each card, recorded as a clip: rest distance, FOV change over the speed range, roll with lean, and no wall or body clipping. Pass rule: rest boom near 700 cm back and 130 cm up measured against a known object; FOV stops growing at 108 km/h; roll matches the 0.38 tune sign; no clipping in a tight corner. On fail, write a fix card naming the value in bat_base.ctunec and the bmak_camfile.py row to change. Write reports/cam-test-drive.md with measured numbers. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-36",
+   "slug": "cam-test-battle-and-spring-felt",
+   "est": 50,
+   "ingame": true,
+   "covers": [
+    "NEW-CAM-9",
+    "NEW-CAM-4",
+    "T-CAM9"
+   ],
+   "deps": [
+    "hud-35",
+    "hud-34",
+    "9130",
+    "APPROVED_Q"
+   ],
+   "body": "In-game camera felt test, agent-piloted, operator-supervised, after approval. Cards CAM_BATTLE.md and CAM_SHAKE.md in Working/Q/PILOT/. Part one: enter battle mode and verify the battle camera tune is active (farther, higher, FOV 36 vertical) and the transition has no jump. Part two: one-variable A/B takes of the spring: stock yaw spring against the candidate 0.12 and 0.6 values named in reports/cameras-per-mode-plan.md section 5, same road, same speed, one change per take. Pass rule: battle camera matches the written position within the hook's readout; the operator picks which spring feels closest to the Arkham Knight clip. Fail route: fix card naming the battle ctunec or the spring row. Write reports/cam-test-battle-spring.md with the operator's choice recorded verbatim. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-37",
+   "slug": "lights-t-l17-ledger-apply",
+   "est": 30,
+   "ingame": false,
+   "covers": [
+    "NEW-LGT-3",
+    "T-L17"
+   ],
+   "deps": [
+    "9033"
+   ],
+   "body": "Apply the battle spotlight correction. Read Working/Translation/TL17_PROPOSAL.md and reports/light-entry-11.md: row T-L17 (Front_Secondary_Head) wrongly carries the colour graph 0.604, 0.604, 0.953 where BmAK uses white 1, 1, 1; the cone of 60 degrees and the volume 0.25 are outside the shipped set. Append a corrected row for T-L17 to Working/Translation/T_ROWS.jsonl, keeping intensity as multiplier 1.0 until the unit bridge of brief 7966 is in, and update the colour entry 11 in Working/Lights/bm_lightrig.json in a copy named bm_lightrig.v2.json (leave the original). Write the old and new values and the evidence into Working/Lights/TL17_APPLIED.md. Done when bm_lightrig.v2.json differs from the original in the colour of entry 11 only, proven with a diff, and t18_lights.py still passes. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-38",
+   "slug": "lights-orphan-socket-proof",
+   "est": 30,
+   "ingame": false,
+   "covers": [
+    "NEW-LGT-5"
+   ],
+   "deps": [],
+   "body": "Prove whether the sockets HeadLight1c and HeadLight2c exist in the shipped Batmobile mesh. Read the B-25 card in GRAB_BACKLOG.md lines 1587 to 1607, Research/BatmobileGrab/LIGHT_SOCKETS.md and reports/LIGHTS-sockets.md. Search every geometry and socket list: the decoded RBM/model dumps in Working/Appearance/build_lights/lights_manifest.json, the BmAK socket list and the JC3 donor mesh socket lists. For each of the two names report: present or absent, in which file and at what offset, and which flare entry rows (T-L28, T-L30) point at them. Output Working/Lights/ORPHAN_SOCKETS.md with a yes or no and evidence, plus a short note on what this means for the body-hosted light pattern. Done when both names have a definite answer or UNKNOWN with the files searched listed. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-39",
+   "slug": "lights-body-hosted-light-build",
+   "est": 50,
+   "ingame": false,
+   "covers": [
+    "NEW-LGT-4",
+    "T-L28",
+    "T-L30"
+   ],
+   "deps": [
+    "hud-38",
+    "7966",
+    "9142"
+   ],
+   "body": "Unblock T-L28 and T-L30, the flare entries with a null socket and null bone. Read Working/Lights/ORPHAN_SOCKETS.md, reports/correction-8394-light-units-domain.md section 1 and the output of 9142 (reports/rc5-lights-flares-beams.md). Following the body-hosted HeadLight pattern seen in shipped vehicles, author a _LIG node and a CarLight block on the body part of the Batmobile in a new tree Builds/bm-RC5-lights2/, using the repository's existing RBM and model writers named in Tools/scripts/. Choose light units from the domain table of brief 7966 (reports/light-unit-domain.md) and show any value you extrapolate. Script rc5_lights2.py --write --check. Done when both rows now have a named part and socket, the model reads back, and the lamp count versus the budget note is recorded in the receipt. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-40",
+   "slug": "fx-effc-growth-probe",
+   "est": 50,
+   "ingame": false,
+   "covers": [
+    "NEW-FX-1",
+    "B-17"
+   ],
+   "deps": [],
+   "body": "The effect writer is proven only for in-place patches (Tools/scripts/effc_writer.py check: 95 of 95 byte-identical). Test growth offline. Pick a donor .effc with few emitters, such as car_cycle_base_nitrous.effc (8 emitters). On a copy in Builds/effc-growth/ attempt, one step at a time: add one emitter by copying an existing one; grow the A[] pair layout; update total_size. After each step read the result back with the writer's parser and with the .ee container reader (reports/effc-format-writable.md describes both). Then verify a new private .effc name is reachable from an .ee entry, and record any lost-emitter risk. Output reports/fx-growth-probe.md with a table: step, pass or fail, bytes changed, offending field. Done when every step is pass or fail with evidence and the unchanged donor file hash is shown. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-41",
+   "slug": "fx-lamp-flare-sprite-attach",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "T-24",
+    "T-L25",
+    "T-L26",
+    "T-L27",
+    "T-L29",
+    "T-L31",
+    "T-L32",
+    "T-L33",
+    "T-L34"
+   ],
+   "deps": [
+    "hud-40",
+    "7966"
+   ],
+   "body": "Lamp-bound flare sprite. Use the carrier effects\\flare\\headlight_flare_01.effc (8,079 B, present in 160 .ee files) and attach it with SAttachedEffect at the six lamp sockets. Read reports/lens-flare-carriers.md, reports/apply-light-rows.md and the flare rows in Working/Translation/T_ROWS.jsonl. Decide whether the shipped effect can be reused unchanged (preferred) or needs a private restyled copy, based on reports/fx-growth-probe.md. Write the attachment rows and, if needed, the private effect into Builds/bm-RC5-lights2/ with the scripts called by the prior lights brief. Colour and size come from the BmAK lens-flare objects (Research/BatmobileGrab/LIGHTS.md); the sprite binding for glow-only flares stays as in T-24. Done when 6 sockets have an attachment row, the .ee read-back lists the effect, and the model budget remains inside 4,915 KB. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-42",
+   "slug": "lights-brake-reverse-state-decide",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "NEW-LGT-6",
+    "T-25"
+   ],
+   "deps": [
+    "7966",
+    "9142"
+   ],
+   "body": "Brake, tail and reverse lamps. BmAK has two TailLight entries (colour FF2600, radius 150, falloff 6), brake differs from tail only by LensFlare objects and trail particles, and no reverse lamp exists (reports/taillight-brake-reverse-plan.md). Settle the JC3 carrier. Read reports/t25-lamp-state-carrier.md and the 9142 report. State, citing the shipped vehicle data: which JC3 lamp-state member switches the brake level, what the blinking flag's period is (UNKNOWN unless found), whether adding a reverse lamp would break BmAK fidelity (the operator rule is 100 percent BmAK fidelity: record no reverse lamp unless the operator says otherwise). Output Working/Lights/BRAKE_STATE.md with the member table, the chosen rows and the gaps. Done when brake and tail each have a named member and a value or an explicit UNKNOWN. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-43",
+   "slug": "lights-headlight-beam-values",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "NEW-LGT-7",
+    "T-LG1",
+    "T-LG3",
+    "T-LG6"
+   ],
+   "deps": [
+    "7966"
+   ],
+   "body": "Headlight beam values. BmAK uses two spot components per socket (70 and 20 degrees, 60 m, colour [138,197,246], brightness 0.15; the narrow one 18 m with falloff 2). JC3 has one cone plus the .epe spot_inner_angle. Read reports/headlight-beam-plan.md and the domain table in reports/light-unit-domain.md. Compute the bridged values: range, outer and inner angle, multiplier and falloff_start for each of the 12 head lamps, expressing each as a position in the shipped domain with the error versus the BmAK number shown. Whether a high-beam toggle exists in the Batmobile is unknown (no BmAK state identified): list it as an operator question rather than inventing one. Output Working/Lights/BEAM_VALUES.json and a --check script Tools/scripts/lights_beam_check.py. Done when the check recomputes all 12 rows. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-44",
+   "slug": "lights-battle-mode-switch",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "NEW-LGT-9",
+    "T-L18",
+    "T-L19",
+    "T-L20",
+    "T-LG5"
+   ],
+   "deps": [
+    "hud-37",
+    "9130",
+    "9142"
+   ],
+   "body": "Battle-mode lamps. Per the ledger the battle spotlight (Front_Secondary_Head) and the battle head lamps ride the HeadLight mechanism, and the fleet has no battle-light behaviour. Read Working/Lights/TL17_APPLIED.md, reports/rc5-mode-pair-and-swap.md (brief 9130) and Working/Lights/bm_lightrig.json. Define how those lamps are on in battle and off in pursuit, using the closest evidenced mechanism: the mode pair swapping entity variants with different lamp lists, or a lamp-state flag. Build the lamp-list difference for both modes in Builds/bm-RC5-lights2/ with the existing script, then print per mode the lamp count, which are enabled, and the colour. Done when the mode A and mode B tables are generated and the two lists differ only by the battle lamps. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-45",
+   "slug": "lights-budget-and-verify",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "NEW-LGT-11",
+    "NEW-LGT-12"
+   ],
+   "deps": [
+    "9142",
+    "hud-39",
+    "hud-41",
+    "hud-42",
+    "hud-43",
+    "hud-44"
+   ],
+   "body": "Offline check of all lights work. Compute the model budget (limit 4,915 KB, the RC4 value was 4,791.3 KB, see Builds/bm-RC4/verify/files.md) after adding lamp meshes and flare attachments, and the lights per vehicle count for both modes. Then re-run the successor of v_lights_rc2.py against Builds/bm-RC5-lights and Builds/bm-RC5-lights2: 17 of 17 flare entries have a named part and socket, no lamp row falls outside the shipped domain without a stated reason, the lighting module reads back, and colours match LIGHTS.md. Output reports/lights-offline-verify.md with a table per check, the failing line for any red check and the budget numbers. Done when budget and four checks are reported with exit codes. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-46",
+   "slug": "lights-pilot-cards-stock-vs-mod",
+   "est": 35,
+   "ingame": false,
+   "covers": [
+    "NEW-LGT-13",
+    "NEW-LGT-1",
+    "NEW-LGT-2",
+    "NEW-LGT-8"
+   ],
+   "deps": [
+    "hud-45"
+   ],
+   "body": "Write pilot cards for lights in Working/Q/PILOT/ (format: CARD_FORMAT.md): LIGHT_STOCK_VS_MOD.md, a take comparing the same lamp spawned on a stock vehicle and with the mod values, to settle which list renders (module or .epe SVehicleLight) and whether range, angle and multiplier change anything; LIGHT_NIGHT.md for the night look (expected 18 entries, 12 HeadLight plus 6 TailLight, flares counted from the build); LIGHT_FLARE.md for the flare at each of 6 sockets; LIGHT_BEAM.md for beam reach; LIGHT_BATTLE.md for the battle spotlight. Each card has one observation, a numeric pass rule taken from reports/lights-offline-verify.md, the capture method from SCREENSHOT.md, and the fix route naming the lights brief. Done when five card files exist with all four parts. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-47",
+   "slug": "lights-test-stock-vs-mod",
+   "est": 40,
+   "ingame": true,
+   "covers": [
+    "NEW-LGT-1",
+    "NEW-LGT-2"
+   ],
+   "deps": [
+    "hud-46",
+    "8606",
+    "APPROVED_Q"
+   ],
+   "body": "In-game test, agent-piloted with operator supervision, after approval. Card LIGHT_STOCK_VS_MOD.md. One observation: does changing the RC5 lamp range, angle and multiplier visibly change the rendered light compared with the stock car, at night on a flat road, same camera? Take two screenshots at identical position and time of day and compare lit-area radius in pixels, plus the hook or log readout if available. Pass rule: a visible, measurable difference means the module list renders and the bridged values matter; none means display-only, which the B-25 stop condition records. Write reports/lights-test-stock-vs-mod.md including which list renders, and a fix card in Working/Q/ if values need a different bridge. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-48",
+   "slug": "lights-test-night-flare-battle",
+   "est": 50,
+   "ingame": true,
+   "covers": [
+    "NEW-LGT-14",
+    "NEW-LGT-8",
+    "NEW-LGT-9"
+   ],
+   "deps": [
+    "hud-46",
+    "hud-47",
+    "hud-44",
+    "APPROVED_Q"
+   ],
+   "body": "In-game night test, agent-piloted, operator-approved only. Cards LIGHT_NIGHT.md, LIGHT_FLARE.md, LIGHT_BEAM.md and LIGHT_BATTLE.md in Working/Q/PILOT/. Observations: lit lamp count at night against 18; a flare at each of the 6 sockets; beam reach in metres; the battle spotlight on after the LT transform and off in pursuit; brake lamps brighten on braking; lamps switch with JC3 night rather than a BmAK day/night member. Pass rule: counts equal the expected table, beam reach within 20 percent of the bridged range. Capture one screenshot per card. On fail write a fix card naming the lights row and the build brief. Write reports/lights-test-night.md. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-49",
+   "slug": "fx-burn-smoke-conflict-resolve",
+   "est": 30,
+   "ingame": false,
+   "covers": [
+    "T-FX22",
+    "T-FX23"
+   ],
+   "deps": [
+    "9033",
+    "9171"
+   ],
+   "body": "Settle the conflict between donor burn and smoke effects (dmg_fire_*, EngineSmoking) and the operator fact that the Batmobile shows no damage stages before an instant explosion. Read ROADMAP.md section 7, reports/health-to-explosion-no-crash-damage-plan.md lines 86 and 234 to 242, and the 9171 report. Decide per row: remove the burn and smoke rows from the fleet-carried set, or confirm the player-visible condition in which they appear. Append the decision as ledger rows in Working/Translation/T_ROWS.jsonl (no rewrite of old lines) and list which entity components must lose the effect attachments. Output Working/Effects/BURN_SMOKE_DECISION.md. Done when t17_fx.py --check passes and both rows carry a decision with the operator fact cited. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-50",
+   "slug": "fx-emp-visuals-build",
+   "est": 55,
+   "ingame": false,
+   "covers": [
+    "NEW-FX-2"
+   ],
+   "deps": [
+    "hud-40",
+    "9104",
+    "9107"
+   ],
+   "body": "EMP visuals: the EMP burst, the EMP missile visual and the lightning on disabled vehicles (15 systems, 141 emitters in the particle inventory). Read reports/emp-visual-and-hit-plan.md, reports/emp-effects-closest-system-plan.md, reports/fx-growth-probe.md and the CForcePulse notes from briefs 9104 and 9107. Pick the JC3 carriers per visual and build private .effc copies under Builds/bm-RC5-effects3/ with rc5_effects3.py (--write, --check). The writer has no material support (U-6), so keep textures as the carrier's and record each BmAK material difference in a table. Done when each of the three visuals is either built and read back with every patched member equal to its ledger number, or has a named reason listed, and the lost-emitter list is explicit. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-51",
+   "slug": "fx-sonar-ring-build",
+   "est": 50,
+   "ingame": false,
+   "covers": [
+    "NEW-FX-3"
+   ],
+   "deps": [
+    "hud-40",
+    "9109"
+   ],
+   "body": "Sonar pulse ring. BmAK has 7 emitters with axial speed 25 m/s lasting 1 to 3 seconds (reports/sonar-pulse-visual-plan.md, reports/sonar-marker-reveal.md); JC3 has no ring effect by name. Operator fact: outside missions it is visual and audio only. From reports/fx-growth-probe.md decide whether a ring can be made by growing a closest JC3 shockwave or radial effect or must be composed; name that carrier from Research/JC3Grab/USAGES.md. Build in Builds/bm-RC5-effects3/ with the same script as the EMP visuals, matching the 25 m/s speed and 1 to 3 s life, and list each field you could not map. Done when the effect reads back from its container with the ring emitters present, or the failing growth step is named. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-52",
+   "slug": "fx-tracer-casing-trail-coverage",
+   "est": 50,
+   "ingame": false,
+   "covers": [
+    "NEW-FX-8",
+    "T-FX12",
+    "T-FX13",
+    "T-FX16"
+   ],
+   "deps": [
+    "9174",
+    "hud-40"
+   ],
+   "body": "Beyond one effect per kind. Brief 9174 covers the first tracer, casing and trail systems; the BmAK inventory has 16 tracer systems (112 emitters), 8 casing systems (40) and 18 trail systems (53), per Research/BatmobileGrab/PARTICLES_FEATURES.md. Read the 9174 report and reports/fx12-16-tracer-and-trail.md. Build a coverage table: each BmAK system, the JC3 carrier chosen, built or composed or capability-card, and the emitters lost if the carrier is smaller. Build the missing ones that the writer can handle into Builds/bm-RC5-effects2/ under the 9174 script, or a new rc5_effects4.py. Done when the table covers 42 of 42 systems and every built one reads back. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-53",
+   "slug": "fx-hack-flip-weapon-misc",
+   "est": 50,
+   "ingame": false,
+   "covers": [
+    "NEW-FX-11",
+    "NEW-FX-13",
+    "NEW-FX-14"
+   ],
+   "deps": [
+    "9108",
+    "9124",
+    "9110",
+    "hud-40"
+   ],
+   "body": "Remaining effect families. (1) The SAM and drone hack chain visuals, 12 systems (reports/hacker-gadget-visual-plan.md). (2) Flip and stuck thruster effects, and the side-booster effect for left-stick plus A (reports/stuck-flip-build-plan-merge.md and the 9124 report). (3) Winch or grapple (6 systems), gel rounds (8), fear gas (12), target-marker effects (20): the T13 file calls some named omissions, which contradicts the operator's rule that all BmAK weapons are required, so reconcile them with ROADMAP.md. Output Working/Effects/MISC_FX_COVERAGE.md with a row per system (carrier, status, gap) and build those the writer can do into Builds/bm-RC5-effects3/. Done when each of the 58 systems has a status and the built ones read back. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-54",
+   "slug": "fx-offline-verify-and-afterburner",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "NEW-FX-15",
+    "NEW-FX-5",
+    "NEW-FX-12",
+    "NEW-LGT-10"
+   ],
+   "deps": [
+    "9102",
+    "9174",
+    "hud-50",
+    "hud-51",
+    "hud-52",
+    "hud-53",
+    "hud-49"
+   ],
+   "body": "Offline verification of the effects. Run Tools/scripts/bm_fx.py --check, effc_writer.py check, t17_fx.py --check and every rc5_effects*.py --check; read every built effect back through its container and confirm the FX budget of the entity graph is unchanged. Then answer the afterburner questions from files: heat haze (T-FX9 carrier car_speedrom_heater.effc), the EngineNitro sound GUID binding and the boost input trigger (reports/afterburner-effects-audio-plan.md). Also compare BmAK tyre-surface systems (16 systems, 90 emitters) to the donor dust and slide carriers (reports/surface-skids-and-tracks-plan.md) and give a fidelity table. Output reports/fx-offline-verify.md. Done when every check has an exit code and each afterburner question is answered or UNKNOWN. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-55",
+   "slug": "fx-lights-review-wave",
+   "est": 30,
+   "ingame": false,
+   "covers": [
+    "review"
+   ],
+   "deps": [
+    "hud-37",
+    "hud-38",
+    "hud-39",
+    "hud-40",
+    "hud-41",
+    "hud-42",
+    "hud-43",
+    "hud-44"
+   ],
+   "body": "Review pass for lights and effects. Re-read the reports of the T-L17 apply, orphan socket proof, body-hosted light build, effc growth probe, flare attach, brake state, beam values and battle lamps briefs. Record what changed: whether the effect writer can grow, whether the orphan sockets exist, which light values stayed outside the shipped domain. Then rewrite the text of every not-yet-started lights or effects brief in tmp/freebuff/queue/ (EMP, sonar, tracer coverage, misc, verify, pilot and test briefs) so they cite the real numbers and drop stale assumptions; for example if growth failed, change build briefs to the in-place patch or composition route. Do not touch started briefs. Write reports/review-lights-fx-wave.md with each edited file and the changed sentences. Done when no later brief assumes an answer the reports disproved. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-56",
+   "slug": "fx-pilot-cards-write",
+   "est": 35,
+   "ingame": false,
+   "covers": [
+    "NEW-FX-16"
+   ],
+   "deps": [
+    "hud-54"
+   ],
+   "body": "Write the effects pilot cards in Working/Q/PILOT/ (format CARD_FORMAT.md): FX_BOOST_FLAME.md, FX_MUZZLE.md, FX_TRAIL.md, FX_TYRE_SURFACE.md, FX_EXPLOSION.md, FX_SONAR.md and FX_EMP.md. Take the expected values from Working/Q/PREDICTIONS_COMBAT.md, reports/fx-offline-verify.md and the built effects: flame appears on the boost input at the Afterburner socket, muzzle flash at the cannon and Vulcan, missile trail at MissileL and MissileR, tyre dust on loose surface and slide dust on drift, instant explosion with no earlier smoke (operator fact), sonar ring lasting 1 to 3 s. Each card gives setup, one observation, a pass rule and the fix route naming the build brief. Done when seven card files exist and each contains the four parts. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-57",
+   "slug": "fx-test-flame-muzzle-trail",
+   "est": 50,
+   "ingame": true,
+   "covers": [
+    "NEW-FX-16",
+    "T-FX3",
+    "T-FX10",
+    "T-FX11",
+    "T-FX14"
+   ],
+   "deps": [
+    "hud-56",
+    "9190",
+    "APPROVED_Q"
+   ],
+   "body": "In-game effects take, agent-piloted under operator supervision, after approval. Cards FX_BOOST_FLAME.md, FX_MUZZLE.md and FX_TRAIL.md. Observations: the afterburner flame appears on the boost input at the rear socket and stops on release; the cannon and Vulcan muzzle effects play per shot; the missile trail follows the missile from MissileL and MissileR. Pass rule: each effect visible in a recorded clip for at least 80 percent of triggers, none stuck on after the trigger ends, and no crash. Record clips per SCREENSHOT.md and RECORD.md. On fail write a fix card naming the effect row and the build brief (9102 or 9174). Write reports/fx-test-flame-muzzle-trail.md with trigger counts. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-58",
+   "slug": "fx-test-surface-explosion-sonar",
+   "est": 50,
+   "ingame": true,
+   "covers": [
+    "NEW-FX-16",
+    "NEW-FX-3",
+    "NEW-FX-2",
+    "NEW-FX-9",
+    "T-FX17",
+    "T-FX18",
+    "T-FX21"
+   ],
+   "deps": [
+    "hud-56",
+    "hud-57",
+    "APPROVED_Q"
+   ],
+   "body": "In-game effects take two, agent-piloted, operator-approved only. Cards FX_TYRE_SURFACE.md, FX_EXPLOSION.md, FX_SONAR.md and FX_EMP.md. Observations: tyre dust on dirt and slide dust in a drift; the death explosion is instant with no smoke or sparks beforehand and the passengers die; the sonar ring lasts 1 to 3 s and is audible outside missions; an EMP shows the burst and lightning on a disabled vehicle. Pass rule: each effect appears within one second of its trigger and the explosion has zero earlier smoke frames in the clip. Capture a clip per card. On fail write a fix card naming the effect row and its build brief. Write reports/fx-test-surface-explosion-sonar.md. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "hud-59",
+   "slug": "fx-lights-camera-release-notes",
+   "est": 35,
+   "ingame": false,
+   "covers": [
+    "NEW-REL-1"
+   ],
+   "deps": [
+    "hud-58",
+    "hud-48",
+    "hud-36",
+    "hud-24"
+   ],
+   "body": "Release documentation for the camera, lights and effects. Read the test reports reports/cam-test-drive.md, reports/cam-test-battle-spring.md, reports/lights-test-stock-vs-mod.md, reports/lights-test-night.md, reports/fx-test-flame-muzzle-trail.md and reports/fx-test-surface-explosion-sonar.md, plus Working/Installer/HUD_RELEASE_NOTES.md. Draft Working/Installer/CAM_LIGHTS_FX_RELEASE_NOTES.md: what the user sees for each, known display-only items (any lamp values that did not change the render), what is not delivered with the reason and the closest system, and the changelog lines. Also list the files the installer must restore on rollback. Do not edit install_v3.ps1; instead quote the lines a later installer change must add. Keep the note short enough for a player to read in two minutes. Done when every claim is tied to a test report line or marked untested. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  }
+ ]
+}

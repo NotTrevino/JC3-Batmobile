@@ -1,0 +1,326 @@
+{
+ "schema": 1,
+ "generated_by": "Tools/scripts/jc3_input_d11.py --write",
+ "card": "D-11 - battle-mode toggle / immobilizer / eject against the JC3 keymaps and vehicle modules",
+ "method": {
+  "hash": "rbmhdr.hash_jenkins (Jenkins lookup3), the same function G3-08 used",
+  "keymap_reader": "jc3_input.read_entries + parse_keymap (G3-08), read-only",
+  "encodings": [
+   "u32 little-endian",
+   "u32 big-endian",
+   "decimal ASCII",
+   "hex ASCII (upper/lower)",
+   "action NAME ASCII"
+  ],
+  "hit_rule": "a hit needs the hash in a vehicle module AND a nameable member; a name-level keymap match alone is not a hit"
+ },
+ "keymap": {
+  "copies": [
+   {
+    "path": "settings/keymap_gamepad.bin",
+    "mount": "base",
+    "archive": "archives_win64/game2",
+    "entry_offset": 2332672,
+    "bindings": 131,
+    "root_hash": "AA7D522A",
+    "sha256": "d945f9a02b79d332",
+    "tiles": true
+   },
+   {
+    "path": "settings/keymap_gamepad.bin",
+    "mount": "patch",
+    "archive": "patch_win64/game4",
+    "entry_offset": 610914304,
+    "bindings": 145,
+    "root_hash": "AA7D522A",
+    "sha256": "0944e37d8588feed",
+    "tiles": true
+   },
+   {
+    "path": "settings/keymap_keyboard.bin",
+    "mount": "base",
+    "archive": "archives_win64/game5",
+    "entry_offset": 249499648,
+    "bindings": 94,
+    "root_hash": "AA7D522A",
+    "sha256": "528f1c6cd82fa33e",
+    "tiles": true
+   },
+   {
+    "path": "settings/keymap_keyboard.bin",
+    "mount": "patch",
+    "archive": "patch_win64/game4",
+    "entry_offset": 610922496,
+    "bindings": 104,
+    "root_hash": "AA7D522A",
+    "sha256": "5674c38366c69a85",
+    "tiles": true
+   }
+  ],
+  "active": {
+   "settings/keymap_gamepad.bin": "patch",
+   "settings/keymap_keyboard.bin": "patch"
+  },
+  "bindings": 474,
+  "actions": 154
+ },
+ "search": {
+  "root": "E:/Modding/_gamedata/JC3grab",
+  "files_on_disk": 207,
+  "files_unique": 134,
+  "duplicates": 73,
+  "kinds": {
+   "20464441": 117,
+   "52545043": 17
+  },
+  "vehicles": 79,
+  "vehicle_names": [
+   "advancedassault",
+   "apc",
+   "armoredjeep",
+   "armoredtransport",
+   "armoredtruck",
+   "articulatedtruck",
+   "assault",
+   "atv",
+   "bavariumtank",
+   "buggy",
+   "cargotransport",
+   "combatdirt",
+   "corvette",
+   "dlctestcar",
+   "duck",
+   "fighterbomber",
+   "fighterjet",
+   "flatbed",
+   "heavyassault",
+   "heavypatrol",
+   "heavytroop",
+   "jetski",
+   "ladbil",
+   "lightassault",
+   "lightpatrol",
+   "mediumoldfishing",
+   "mediumtank",
+   "minetruck",
+   "modernbus",
+   "moderncircuitracer",
+   "modernecosuper",
+   "moderngrandtourer",
+   "modernlimo",
+   "modernmini",
+   "modernmoped",
+   "modernpickup",
+   "modernroad",
+   "modernroadster",
+   "modernsaloon",
+   "modernsedan",
+   "modernsport",
+   "modernsportssaloon",
+   "modernsuper",
+   "modernsuv",
+   "monorailcargoengine",
+   "monorailmissilecar",
+   "monstertruck",
+   "motoryacht",
+   "oldbus",
+   "oldcampervan",
+   "oldcompact",
+   "oldfourdoorhatch",
+   "oldjeep",
+   "oldmini",
+   "oldmoped",
+   "oldroad",
+   "oldtractor",
+   "oldtruck",
+   "oldtwodoorhatch",
+   "privatepropeller",
+   "racingboat",
+   "racinghothatch",
+   "racingsupercar",
+   "sailboat",
+   "seascout",
+   "smallfloatprop",
+   "smalloldfishing",
+   "smalltank",
+   "smallvan",
+   "snowmobile",
+   "sportsmuscle",
+   "spyspeedboat",
+   "technicaljeep",
+   "transport",
+   "trials",
+   "utility",
+   "vintagefighter",
+   "vintagesports",
+   "vintagesuper"
+  ]
+ },
+ "entities": {
+  "files": 232,
+  "ascii_hits": {
+   "USE_ITEM": 0,
+   "BATTLE": 0,
+   "EJECT": 0
+  },
+  "hash_hits": {
+   "USE_ITEM": 0,
+   "BATTLE": 0,
+   "EJECT": 0
+  }
+ },
+ "controls": {
+  "root_hash": "AA7D522A",
+  "files_with_root": 17,
+  "files_with_RTPC_magic": 17
+ },
+ "rows": [
+  {
+   "id": "battle-mode toggle",
+   "key": "battle",
+   "regex": "(?i)BATTLE|PURSUIT|TRANSFORM|MODE$",
+   "inputmd_row": "battle mode (LT hold / release pursuit)",
+   "inputmd_verdict": "not reachable",
+   "actions_by_name": [],
+   "near_names": [],
+   "names_searched": [],
+   "binding": {},
+   "hashes": {},
+   "hits": [],
+   "name_hits": [],
+   "verdict": "no keymap action",
+   "detail": "no action name in the four keymap copies matches /(?i)BATTLE|PURSUIT|TRANSFORM|MODE$/ (INPUT.md's regex for the same row)",
+   "answer": "UNKNOWN"
+  },
+  {
+   "id": "immobilizer",
+   "key": "immobilizer",
+   "regex": "(?i)IMMOBIL|EMP",
+   "inputmd_row": "immobilizer (B in track)",
+   "inputmd_verdict": "reachable (via USE_ITEM)",
+   "actions_by_name": [],
+   "near_names": [
+    "USE_ITEM"
+   ],
+   "names_searched": [
+    "USE_ITEM"
+   ],
+   "binding": {
+    "USE_ITEM": {
+     "inputs": {
+      "gamepad": [
+       "RPADUP"
+      ],
+      "keyboard": [
+       "E"
+      ]
+     },
+     "ids": [
+      "C0EC1595"
+     ],
+     "mounts": [
+      "patch"
+     ]
+    }
+   },
+   "hashes": {
+    "USE_ITEM": {
+     "h": 3236697493,
+     "action_id": [
+      "C0EC1595"
+     ]
+    }
+   },
+   "hits": [],
+   "name_hits": [],
+   "verdict": "name only, no consumer",
+   "detail": "1 keymap action(s) match by name (USE_ITEM) but none of the 134 decoded vehicle .epe/.vmodc files contains its id or H(name) in any encoding",
+   "answer": "UNKNOWN"
+  },
+  {
+   "id": "eject",
+   "key": "eject",
+   "regex": "(?i)EJECT|LAUNCH|CATA.?PULT",
+   "inputmd_row": "electromagnetic ejection (A)",
+   "inputmd_verdict": "not reachable",
+   "actions_by_name": [],
+   "near_names": [],
+   "names_searched": [],
+   "binding": {},
+   "hashes": {},
+   "hits": [],
+   "name_hits": [],
+   "verdict": "no keymap action",
+   "detail": "no action name in the four keymap copies matches /(?i)EJECT|LAUNCH|CATA.?PULT/ (INPUT.md's regex for the same row)",
+   "answer": "UNKNOWN"
+  }
+ ],
+ "oracles": {
+  "keymap_parse_matches_g3_08": {
+   "ok": true,
+   "detail": {
+    "bindings": 474,
+    "actions": 154,
+    "expected": [
+     474,
+     154
+    ]
+   }
+  },
+  "four_keymap_copies_tile": {
+   "ok": true,
+   "detail": {
+    "settings/keymap_gamepad.bin@base": 131,
+    "settings/keymap_gamepad.bin@patch": 145,
+    "settings/keymap_keyboard.bin@base": 94,
+    "settings/keymap_keyboard.bin@patch": 104
+   }
+  },
+  "positive_control_root_hash_found": {
+   "ok": true,
+   "detail": {
+    "root_hash": "AA7D522A",
+    "files_with_root": 17,
+    "files_with_RTPC_magic": 17
+   }
+  },
+  "vehicle_parts_modules_found": {
+   "ok": true,
+   "detail": {
+    "vehicle_parts_modules": 79
+   }
+  },
+  "use_item_id_is_H_of_its_name": {
+   "ok": true,
+   "detail": {
+    "H(USE_ITEM)": "C0EC1595",
+    "decoded ids": [
+     "C0EC1595"
+    ]
+   }
+  },
+  "no_vehicle_module_carries_any_action_hash": {
+   "ok": true,
+   "detail": {
+    "files_with_any_action_id": 0,
+    "files_with_any_H(action)": 0,
+    "action_ids": 159
+   }
+  },
+  "every_target_reports_a_reason": {
+   "ok": true,
+   "detail": {
+    "battle-mode toggle": "no keymap action",
+    "immobilizer": "name only, no consumer",
+    "eject": "no keymap action"
+   }
+  }
+ },
+ "unknowns": [
+  "battle-mode toggle: no keymap action name matches BATTLE/PURSUIT/TRANSFORM/MODE$ in any of the four copies, so there is nothing to bind and nothing a module could receive. Whether the game has a native mode switch outside the keymap is UNKNOWN.",
+  "eject: likewise zero names match EJECT/LAUNCH/CATA.?PULT; the D-11 'A' mapping has no JC3 action in the decoded tables.",
+  "immobilizer: `USE_ITEM` is bound (gamepad RPADUP, keyboard E) and is the name G3-08 mapped 'B in track' to, but it is a generic item action: no vehicle module in the 207 files references it, so what it does inside a car is UNKNOWN.",
+  "the .epe/.vmodc property-name decoder: these containers store property hashes, not strings, and no decoder in this tree maps a .vmodc property hash to a member path by offset. A raw 4-byte hit could therefore not be named even if it existed, which is why the hit rule requires a nameable member.",
+  "whether a car's input path exists at all in data: no vehicle .epe/.vmodc and no entity dump carries any of the 154 action ids or their name hashes, so the keymap-to-vehicle wiring is native to the engine, not a data member."
+ ]
+}

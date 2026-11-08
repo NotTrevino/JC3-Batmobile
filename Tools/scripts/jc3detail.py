@@ -42,7 +42,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 TOOLS = os.path.dirname(HERE)
 ROOT = os.path.dirname(TOOLS)
 CONVERT = os.path.join(TOOLS, "Gibbed", "Gibbed.JustCause3.ConvertProperty.exe")
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
 OUT = os.path.join(ROOT, "Research", "JC3Grab")
 
 

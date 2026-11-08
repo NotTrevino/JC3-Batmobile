@@ -1,0 +1,987 @@
+{
+ "landmark": "L6",
+ "briefs": [
+  {
+   "key": "arm-01",
+   "slug": "health-scale-ruling-1200-vs-36000",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "NEW-ARM-03",
+    "T-DM1"
+   ],
+   "deps": [
+    "7951",
+    "7953"
+   ],
+   "body": "Settle which health scale ships, using the operator facts: zero health means an instant explosion, crashes do no damage, and armour is identical in both modes. Read Working/Translation/T10_DAMAGE.md sections 1 and 7, Research/JC3Grab/DAMAGE_MODEL.md, Research/BatmobileGrab/DAMAGE_RULES.md and run Tools/scripts/damage_predict.py. For each of three routes (max_health 36000 as shipped, max_health 1200 with scaled channel armour, max_health 1200 with member damage multipliers) compute hits-to-kill for the nine BmAK arms and the three vehicle archetypes, and the ratio to BmAK's 24 heavy cannon hits of 50 against 1200. Pick the route whose ratios match BmAK within rounding and name every member path it writes; if none matches, name the closest and the exact remaining gap as a capability card. Write Tools/scripts/health_scale_ruling.py (--write, --check), Working/Damage/health_scale_ruling.md and the report. Label each figure decoded, derived or UNKNOWN. Do not edit T10_DAMAGE.md; the ruling is a new file that brief 9171 can cite. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-02",
+   "slug": "death-sequence-static-decode",
+   "est": 50,
+   "ingame": false,
+   "covers": [
+    "NEW-ARM-02",
+    "G3-06d",
+    "ARM-6"
+   ],
+   "deps": [
+    "7953"
+   ],
+   "body": "Locate the BmAK death sequence in the files already decoded. Inputs: Research/BatmobileGrab/DAMAGE_RULES.md (14 damage entry points), NATIVE_TRIAGE.md section 4 (the four RVisualDamageComponent exports), PARTICLES_FEATURES.md, AUDIO_FEATURES.md, and the report death-explosion-carriers.md from brief 7953. Trace the bytecode of the TakeDamage branch that fires when health reaches zero with Tools/scripts/bmak_damage.py and upk_read.py: what it spawns (explosion archetype, particle system, DeathExplosionSoundArray entry chosen), any delay constant, and the call that kills occupants (script call or native stub). Also read the four RVisualDamageComponent exports and say whether they produce any intermediate visible stage. Write Tools/scripts/bmak_death.py (--write, --check), Research/BatmobileGrab/DEATH_SEQUENCE.md and .json. Every line carries package, export and offset, or the word UNKNOWN with what was tried and which native function would settle it. The exe consumer of occupant death stays UNKNOWN unless an instruction address proves it. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-03",
+   "slug": "health-recover-rate-static-read",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "NEW-ARM-01"
+   ],
+   "deps": [
+    "7952"
+   ],
+   "body": "Find the Batmobile regeneration rate without running BmAK. The member HealthRecoverRate is a TArray<float> at +8220 in the vehicle class, one entry per difficulty (Research/BatmobileGrab/DAMAGE_RULES.md section 5). Read tmp/freebuff/reports/regen-reader-function.md, bmak-gog-live-batmobile-reader.md and bmak-live-values-to-rows.md first, then look for the value in three static places: the class default properties of the Batmobile archetype in the cooked packages, any archetype or ini override, and the save or profile structures that LoadHealth reads. Use Tools/scripts/upk_read.py for the default-property scan and say which difficulty index applies to the player's game (UNKNOWN if the files do not state it). Output Tools/scripts/bmak_regen_value.py (--write, --check), Research/BatmobileGrab/REGEN_VALUE.md and .json with every candidate value, its offset and its units (per second or per XP award; the earlier note says per award). If nothing is found, write the exact live read as one 5-minute step for the hook telemetry of brief 7982. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-04",
+   "slug": "regen-carrier-in-jc3",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "ARM-5"
+   ],
+   "deps": [
+    "7952",
+    "arm-03",
+    "7986"
+   ],
+   "body": "Pick the JC3 carrier for out-of-combat regeneration. Operator facts: health refills over time when the car is not under attack, and is full on every re-summon. JC3 has no regen member in the 52-type damage vocabulary (Research/JC3Grab/DAMAGE_MECHANISMS.md), so apply the closest-system rule: name the nearest members (a repair or heal property on CDamageable, an entity-script heal, the hook module drafted in brief 7986) with member paths and values, then state the gap. Use the trigger and delay that d03 and the report regen-reader-function.md decoded; where they are UNKNOWN, define the rate and the out-of-combat delay as named parameters with a default and the live check that sets them, never as invented lore. Write Working/Damage/regen_carrier.md and Working/Damage/regen_spec.json (parameters, trigger, off switch, log lines the telemetry of brief 7982 can show). The report must say which behaviour belongs in data and which needs the hook, and the one supervised test that proves it. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-05",
+   "slug": "remove-visible-damage-stages-rows",
+   "est": 50,
+   "ingame": false,
+   "covers": [
+    "NEW-ARM-05",
+    "T-DM4",
+    "T-DM5"
+   ],
+   "deps": [
+    "7953",
+    "arm-01"
+   ],
+   "body": "BmAK shows no intermediate visible damage, while the build still carries donor smoke and burn thresholds (1050 and 250) and 24 Land_* part damage types on 59 parts. Audit every row that can produce a visible stage: the smoke and burn thresholds, OnPartReachedDamageState uses (Research/JC3Grab/USAGES.md), the part damage types in Working/Damage/bm_health.json, mesh-swap parts, and the effects T-FX22 and T-FX23. For each, give the member path, the current value in Builds/bm-RC4, the value that suppresses the stage until the zero-health explosion, and the evidence it is the nearest member. Check against Tools/scripts/bm_health.py so no value breaks the explosion route. Produce Tools/scripts/damage_stage_rows.py (--write, --check), Working/Damage/stage_removal_rows.json (row id, path, old, new) and a report; the RC5 damage build reads that json. Where no member can suppress a stage, write the capability card with the missing capability named. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-06",
+   "slug": "no-crash-channel-audit",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "NEW-ARM-06",
+    "T-DM8"
+   ],
+   "deps": [
+    "arm-01"
+   ],
+   "body": "Operator fact: crashes never damage, scratch or dent the Batmobile. Prove that every JC3 channel which could hurt a car is covered. List from Research/JC3Grab/DAMAGE_MECHANISMS.md and the vehicle_damage fields: impact (wall and vehicle), fall, fire, explosion splash, train, water, crush by script, mission kill zone, and the speed-based impact damage factor. For each channel say the member, the shipped value in Builds/bm-RC4, whether it hurts a car at all, and the value that makes the Batmobile immune except for the weapon hits that should kill it. Note which channels the hook (briefs 7982, 7986) would need because no data member exists. Also read tmp/freebuff/reports/collision-impact-effects-plan.md for deformation and sparks that must go with the damage. Output Tools/scripts/no_crash_audit.py (--write, --check), Working/Damage/no_crash_channels.md and .json, and the report. Mark any behaviour not shown by a file as UNKNOWN with the probe that decides it. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-07",
+   "slug": "ram-damage-direction-ruling",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "T-DM7",
+    "NEW-ARM-08"
+   ],
+   "deps": [
+    "arm-06"
+   ],
+   "body": "Two plans use impact_damage_factor in opposite directions: T-DM8 sets it to 0 as incoming collision damage to the Batmobile, while the traffic plan raises it to 2.25 as damage dealt. Read Research/JC3Grab/DAMAGE_MODEL.md around lines 43-50, tmp/freebuff/reports/traffic-ai-claims-audit.md, tdm7-contact-damage-speed-band.md, carrier-ram-and-dodge.md and Working/Translation/T_ROWS.jsonl rows T-DM7 and T-DM8. Decide, from member names and values in the fleet, which side the factor acts on, which other member carries damage the Batmobile deals to others (rotor_collision.damage_to_other_per_second and neighbours), and what each takes for the lore ram (kills on speed, strafe 2.25, boost 2.0, Research/BatmobileGrab/DAMAGE_RULES.md section 3.3.1). Output Tools/scripts/ram_direction.py (--write, --check), Working/Damage/ram_direction.md and a table of rows with old value, new value, evidence. Anything the files cannot settle is UNKNOWN plus the in-game number to read. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-08",
+   "slug": "attacker-set-and-hits-to-kill",
+   "est": 50,
+   "ingame": false,
+   "covers": [
+    "NEW-ARM-07",
+    "T-DM3"
+   ],
+   "deps": [
+    "arm-01"
+   ],
+   "body": "Define which JC3 attackers count as heavy against the Batmobile and what each does to it. Use Research/JC3Grab/DAMAGE_MODEL.md, the weapon tables from G2-11 in Research/JC3Grab, and the BmAK relationship that rifle and machine-gun fire leaves the health bar still while tank shells, missiles, mines and helicopter rockets reduce it (a player claim, to be confirmed in play). List each JC3 attacker class (infantry rifle, MG, shotgun, sniper, helicopter MG, helicopter rocket, tank cannon, RPG, mine, grenade, AA gun) with its damage type and channel, and search the weapon writers for any that writes the bullet_heavy channel. With the ruling of d01, compute hits-to-kill per attacker on the final tree with Tools/scripts/damage_predict.py --root, and list the attackers that should do zero. Output Tools/scripts/attacker_set.py (--write, --check), Working/Damage/attacker_table.md and .json, and the report. Mark every BmAK-side claim about which weapons hurt as UNKNOWN until the damage test confirms it. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-09",
+   "slug": "wheels-and-small-arms-immunity-rows",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "T-DM9",
+    "ARM-4"
+   ],
+   "deps": [
+    "arm-08"
+   ],
+   "body": "Close the immunity rows. Wheels: front_wheels_damage and rear_wheels_damage skew_health is 400 at its ceiling, labelled not proven unbreakable. Small arms: option A (the invulnerable int32 at epe+1167) is unproven on the vehicle root, option B uses channel armour. From Working/Translation/T10_DAMAGE.md sections 1, 2 and 7, Research/JC3Grab/DAMAGE_MECHANISMS.md and the attacker table of d08, decide which option carries each immunity on the RC5 tree, with member paths, old and new values and the hits-to-kill it implies. If tyres can still burst, find the nearest member that stops it (tyre health, puncture speed, wheel detach), or write a capability card for the hook. Output Tools/scripts/immunity_rows.py (--write, --check), Working/Damage/immunity_rows.json and a report with a prediction for each row that the damage test cards will read. Do not edit the damage tree. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-10",
+   "slug": "resummon-full-health-persistence",
+   "est": 35,
+   "ingame": false,
+   "covers": [
+    "NEW-ARM-11"
+   ],
+   "deps": [
+    "7952",
+    "arm-04"
+   ],
+   "body": "Operator fact: health is full on every re-summon. BmAK persists health (LoadHealth) and has a RebelDropTimer 1800 of unknown unit (Research/BatmobileGrab/DAMAGE_RULES.md section 4); JC3 Rebel Drop re-delivers a fresh car. Establish, from Research/JC3Grab/REBELDROP.md, the item record rows and the entity spawn data, whether a re-delivered car starts at max_health, whether the previous entity is removed on re-summon, and whether a cooldown exists in the item record or elsewhere. Compare with the regen spec of d04 so a destroyed car and a damaged car both come back full. State what a save and load does to the car. Write Working/Damage/resummon_health.md and a row list, plus Tools/scripts/resummon_health.py (--write, --check). Anything about runtime state not visible in files is UNKNOWN, with a pilot-card step written as a single observation that settles it. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-11",
+   "slug": "hook-death-and-occupant-kill-module",
+   "est": 55,
+   "ingame": false,
+   "covers": [
+    "NEW-ARM-04",
+    "ARM-6"
+   ],
+   "deps": [
+    "7982",
+    "7986",
+    "arm-02",
+    "7953"
+   ],
+   "body": "Design and stage the hook module for the one gap data may not close: zero health must produce an immediate violent explosion and kill the occupants. Use the vehicle readout offsets from brief 7982 (health, max health, occupant list) and the scaffold of 7981 under Tools/hook/. Drawing on DEATH_SEQUENCE.md from d02 and the carrier report death-explosion-carriers.md, implement an isolated module with an off switch: detect health at or below zero once, trigger the donor explosion event and the BmAK death effect slot, apply lethal damage to every occupant, and mark the car destroyed so it cannot be driven. Log each trigger as JSON lines in the telemetry file. Every offset cites its source line or is marked to-confirm-live with its 5-minute check. No writes unless the module switch is on, and nothing touches the game folder. Stage Builds/hook-0008-death/ with a receipt and a --check that rebuilds the source hash. Report the offsets table and unresolved items. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-12",
+   "slug": "health-bar-feed-spec",
+   "est": 35,
+   "ingame": false,
+   "covers": [
+    "NEW-ARM-10"
+   ],
+   "deps": [
+    "7985",
+    "7982"
+   ],
+   "body": "Specify how the BmAK health bar (top left, shown in battle mode, element UC_SetHealth in Research/BatmobileGrab/HUD.md and HUD_SPEC.json) gets its value in JC3. JC3's HUD has no entity-to-HUD caller (STATUS.md, HUD bridge). Read the hook overlay design in tmp/freebuff/reports/hook-batmobile-hud-overlay.md and the telemetry fields of hook-live-vehicle-readout.md, then write the feed contract: the health fraction source, update rate, behaviour at 0 and during regen, hidden or shown per mode, and the exact overlay element fields. Include how the fraction is derived when max_health is not 1200 (see the d01 ruling). Produce Working/Damage/health_bar_feed.json and .md and Tools/scripts/health_bar_feed.py (--write, --check), which validates the json against the HUD_SPEC.json element names. The HUD lane builds the overlay; this brief hands it the contract and names the pilot-card observation (bar fraction after a known number of shell hits). Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-13",
+   "slug": "review-damage-desk-before-build",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "review"
+   ],
+   "deps": [
+    "arm-01",
+    "arm-02",
+    "arm-03",
+    "arm-04",
+    "arm-05",
+    "arm-06",
+    "arm-07",
+    "arm-08",
+    "arm-09",
+    "arm-10"
+   ],
+   "body": "Checkpoint over the ten damage desk reports (health scale, death sequence, regen value and carrier, stage removal, no-crash channels, ram direction, attacker table, immunity rows, re-summon). Re-read each report and run its --check. List every place where a later report changes a number an earlier one used (for example the d01 ruling against the d08 hits-to-kill table), and every UNKNOWN that two reports disagree on. Then open the queue files tmp/freebuff/queue/9171-rc5-health-explosion-no-crash.txt, 9123-rc5-air-control-and-ram.txt and 9124-rc5-flip-water-remote.txt, provided their reports do not exist yet, and edit them in place so their text cites the new files (health_scale_ruling.md, stage_removal_rows.json, no_crash_channels.json, ram_direction.md, immunity_rows.json, regen_spec.json) instead of the stale 36000 and smoke/burn text. Append a line starting Updated by review at the end of each edited brief naming what changed. If a queue file already has a report, leave it and write a fix brief request in your report. Output: the report and a table of edits made. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-14",
+   "slug": "verify-rc5-damage-tree",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "9171",
+    "T-DM1",
+    "T-DM4",
+    "T-DM5",
+    "T-DM8"
+   ],
+   "deps": [
+    "9171"
+   ],
+   "body": "Offline read-back of Builds/bm-RC5-damage after brief 9171. Run Tools/scripts/rc5_damage.py --check, then recompute from the built bytes, with Tools/scripts/damage_predict.py --root, the hits-to-kill of the nine BmAK arms on the three vehicle archetypes and compare them with Working/Damage/health_scale_ruling.md and attacker_table.json. Confirm four absences by reading the built entity and module rows: no smoke or burn threshold below zero-health, no part damage type that detaches or swaps a mesh, impact_damage_factor 0 (incoming), and deform_scale 0. Confirm the explosion route rows exist and the occupant kill is either present or listed as a hook item pointing at Builds/hook-0008-death. Compare the branch record under Working/RC5/branches/ with the files on disk (counts and sha256). Write Tools/scripts/verify_rc5_damage.py (--write, --check), Builds/bm-RC5-damage/verify/readback.md and the report. Every mismatch becomes a row with owner and a proposed fix; no tree is edited. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-15",
+   "slug": "damage-ledger-reconcile",
+   "est": 35,
+   "ingame": false,
+   "covers": [
+    "T-DM7",
+    "T-14",
+    "NEW-ARM-09"
+   ],
+   "deps": [
+    "arm-07",
+    "arm-01"
+   ],
+   "body": "Remove the contradictions the roadmap map found in the damage records, without editing the original files. Targets: Working/Translation/T10_DAMAGE.md says T-DM7 is out while T_ROWS.jsonl has it next; STATUS.md reads T-14 as 28 rows, 26 queued although those are the lamp rows T-L8 to T-L35; the health scale in T-DM1 against the d01 ruling; ArmourModeDamageReduction 0 against the operator fact that armour is identical in both modes. Using the reports of 7951 and d01 and d07, write Working/Damage/ledger_reconcile.md with one row per contradiction (record, line, current text, correct text, evidence) and Working/Damage/ledger_rows_v2.jsonl holding replacement rows in the T_ROWS.jsonl schema for T-DM1, T-DM7 and T-DM9. Add Tools/scripts/damage_ledger_check.py (--write, --check) which fails if a replacement row does not parse or disagrees with the ruling. The operator or the status lane merges the rows; you do not. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-16",
+   "slug": "damage-pilot-cards",
+   "est": 50,
+   "ingame": false,
+   "covers": [
+    "NEW-ARM-13",
+    "Q-PILOT"
+   ],
+   "deps": [
+    "9194",
+    "arm-08",
+    "arm-09",
+    "arm-11",
+    "arm-04"
+   ],
+   "body": "Write the damage pilot cards in the format of Working/Q/PILOT/CARD_FORMAT.md, new files named DMG_*.md in Working/Q/PILOT/. Required cards: DMG_SHOTS (count rounds from a pistol, rifle and MG until the bar moves, expected zero), DMG_HEAVY (count tank shells or RPG hits to destruction, expected from Working/Damage/attacker_table.json), DMG_EXPLODE (observe the explosion at zero health, whether occupants die, whether the wreck is undrivable), DMG_RAM (wall hit at 40 and 80 km/h, expected no damage and no mark), DMG_REGEN (damage, wait out of combat, read the bar), DMG_RESUMMON (destroy, re-summon via SPAWN_BATMOBILE.md, read the bar full). Each step uses only commands from the three source files that CARD_FORMAT.md names, reads state from the hook telemetry of brief 7982 where possible and from a frame otherwise, and writes a pass band taken from the prediction files, never a number invented here. Include the trap ids the cards defend against. Add a --check script Tools/scripts/dmg_cards_check.py that confirms the card shape and that every cited command exists in the source files. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-17",
+   "slug": "test-hits-to-kill-small-arms-heavy",
+   "est": 45,
+   "ingame": true,
+   "covers": [
+    "Q1-DM-A",
+    "Q1-DM-B",
+    "Q1-DM-C",
+    "T-DM9"
+   ],
+   "deps": [
+    "APPROVED_Q",
+    "9193",
+    "arm-16",
+    "9171",
+    "7982"
+   ],
+   "body": "Supervised in-game test, run only after the operator writes tmp/freebuff/APPROVED_Q.txt. Use cards LAUNCH.md, SPAWN_BATMOBILE.md, DMG_SHOTS.md, DMG_HEAVY.md and KILL.md from Working/Q/PILOT. Observation: the number of pistol rounds (up to 200), rifle and MG rounds, then tank-shell or RPG hits needed to destroy the car, in pursuit and in battle mode. Pass rule: small arms leave the health fraction unchanged within 0.01, and the heavy hit count equals the prediction in Working/Damage/attacker_table.json within one hit, identical in both modes (operator fact: armour is the same in both modes). Record telemetry lines and screenshots under Working/Q/results/damage-hits/ and a table in the report: attacker, count, predicted, delta. Decide the hypothesis H0, H1 or H2 from DAMAGE_MODEL.md and state which the numbers support. On fail, write a fix card in the GRAB_BACKLOG.md section 0.4 format inside the report, changing one value only, and name it for the damage fix-loop brief. Stop on any crash; run KILL.md. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-18",
+   "slug": "test-zero-health-explosion-passengers",
+   "est": 40,
+   "ingame": true,
+   "covers": [
+    "Q-1#6",
+    "ARM-6",
+    "NEW-ARM-04"
+   ],
+   "deps": [
+    "APPROVED_Q",
+    "9193",
+    "arm-16",
+    "9171",
+    "arm-11",
+    "7982"
+   ],
+   "body": "Supervised in-game test after the operator's approval file exists. Cards: LAUNCH.md, SPAWN_BATMOBILE.md, ENTER_EXIT.md, DMG_EXPLODE.md, RECORD.md, KILL.md. Observation: with the player inside, destroy the car with heavy hits and record a 10 second clip around the last hit. Pass rule, all three: no smoke, burn or sparks before the last hit; the explosion begins within 1 second of the health fraction reaching zero in the telemetry; the player (and any passenger) dies; the wreck cannot be driven or re-entered. Then, from outside, repeat once with the car empty and note whether the explosion is the same. Save the clip, telemetry and frames under Working/Q/results/damage-explosion/ and tabulate observed against expected. If the occupant kill is missing, the fix card names the hook switch of Builds/hook-0008-death; if smoke appears, the fix card names the row in stage_removal_rows.json. One value per fix card. Use KILL.md at the end, even after a crash. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-19",
+   "slug": "test-no-crash-damage",
+   "est": 40,
+   "ingame": true,
+   "covers": [
+    "Q-3#1",
+    "T-DM8",
+    "NEW-ARM-06"
+   ],
+   "deps": [
+    "APPROVED_Q",
+    "9193",
+    "arm-16",
+    "9171",
+    "7982"
+   ],
+   "body": "Supervised in-game test after APPROVED_Q.txt exists. Cards: LAUNCH.md, SPAWN_BATMOBILE.md, ENTER_EXIT.md, CONTROLS.md, DMG_RAM.md, SCREENSHOT.md, KILL.md. Drive into a solid wall at 40 km/h and at 80 km/h, into a parked civilian car, off a roof or ledge of about 20 m, and through a billboard or fence. Observation: health fraction from the telemetry before and after each, and one screenshot of the front end each time. Pass rule: the health fraction changes by no more than 0.001, no dent, scratch, smoke or panel deformation shows, and the other car is damaged or launched as the d07 ram table predicts. Operator fact: crashes never damage the Batmobile. A train or fire check goes in only if a safe spot is named in the card. Results under Working/Q/results/no-crash/. On fail, the fix card quotes the channel from Working/Damage/no_crash_channels.md and changes one value. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-20",
+   "slug": "test-regen-and-resummon-health",
+   "est": 40,
+   "ingame": true,
+   "covers": [
+    "ARM-5",
+    "NEW-ARM-11"
+   ],
+   "deps": [
+    "APPROVED_Q",
+    "9193",
+    "arm-16",
+    "7986",
+    "arm-04",
+    "arm-10",
+    "7982"
+   ],
+   "body": "Supervised in-game test after APPROVED_Q.txt exists, using the regen module from brief 7986 (isolated switch on for this test only, switch state in the report). Cards: LAUNCH.md, SPAWN_BATMOBILE.md, DMG_REGEN.md, DMG_RESUMMON.md, SCREENSHOT.md, KILL.md. Step A: take the health fraction to about 0.5 with heavy hits, stay out of combat, and sample the telemetry each 5 seconds for 120 seconds; record the delay before regeneration starts and the rate. Step B: damage to 0.5 again, leave and re-summon with SPAWN_BATMOBILE.md, read the fraction. Step C: destroy the car and re-summon; read the fraction. Pass rule: the fraction rises monotonically out of combat after a delay and reaches 1.0 on both re-summons. The measured delay and rate are written into Working/Damage/regen_spec.json as live values, not judged against any lore number. On fail, one fix card per observation. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-21",
+   "slug": "test-heat-survival-and-tank-shells",
+   "est": 40,
+   "ingame": true,
+   "covers": [
+    "Q-3#2"
+   ],
+   "deps": [
+    "APPROVED_Q",
+    "9193",
+    "arm-16",
+    "9171",
+    "arm-08"
+   ],
+   "body": "Supervised in-game test after APPROVED_Q.txt exists. Cards: LAUNCH.md, SPAWN_BATMOBILE.md, CONTROLS.md, SCREENSHOT.md, KILL.md plus DMG_HEAVY.md. Step A: raise heat to five stars with the console route of CONSOLE_RECEIPT.md, drive for 120 seconds under pursuit by cars and helicopters without leaving the car, and sample the health fraction every 10 seconds. Step B: stand a tank 50 m away, take 5 shell hits, and compare the fraction with the prediction in attacker_table.json. Pass rule: A, the car is alive after 120 seconds unless helicopter rockets or tank shells hit it; the drop per attacker matches the table within 10 percent. Record the attackers seen, using the telemetry. Results under Working/Q/results/heat/. On fail, name the attacker whose number is wrong and write a fix card changing that one attacker's channel value. This test is separate from the hit-count test of d17 because it uses real AI fire. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-22",
+   "slug": "damage-fix-loop-desk",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "Q-4-DMG"
+   ],
+   "deps": [
+    "arm-17",
+    "arm-18",
+    "arm-19",
+    "arm-20",
+    "arm-21"
+   ],
+   "body": "Turn the damage test reports into one corrected build plan. Read the five reports of the in-game damage tests (hit counts, explosion and passengers, no-crash, regen and re-summon, heat survival) and the fix cards they wrote. For each failed observation decide the single value to change, in order, one per original failure; refuse to bundle two changes. Re-run Tools/scripts/damage_predict.py with the proposed value to show the new prediction, and write the patch into Working/Damage/fix_round1.json (row, path, old, new, source observation). Do not edit a built tree: write the instructions for the damage re-build brief (rc5_damage.py, a new --round 2 option) in the report. If all observations passed, say so and write the closing line for the QX checklist. State in the report which values are now live-measured rather than derived. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-23",
+   "slug": "retest-damage-after-fixes",
+   "est": 30,
+   "ingame": true,
+   "covers": [
+    "Q-4-DMG"
+   ],
+   "deps": [
+    "APPROVED_Q",
+    "arm-22"
+   ],
+   "body": "Supervised in-game retest, only after APPROVED_Q.txt exists and the rebuilt damage tree of the fix round is installed by the operator. Read Working/Damage/fix_round1.json and run only the cards whose observation failed before (a subset of DMG_SHOTS, DMG_HEAVY, DMG_EXPLODE, DMG_RAM, DMG_REGEN, DMG_RESUMMON), plus LAUNCH.md, SPAWN_BATMOBILE.md and KILL.md. Pass rule: each retested observation falls in the band that its original failure report stated. One extra fix round per original failure is the limit; a second failure is recorded as a named blocker with the telemetry and clip, and not retried. Results under Working/Q/results/damage-round2/. Final table: observation, round 1, round 2, verdict, so the QX checklist can mark the damage rows closed or open. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-24",
+   "slug": "rebase-world-rows-on-debug-leaf",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "NEW-WLD-04",
+    "T-WLD1",
+    "T-WLD4",
+    "T-WLD5",
+    "T-WLD6",
+    "T-WLD7",
+    "G2-27"
+   ],
+   "deps": [
+    "8607"
+   ],
+   "body": "The game proved that a brand-new entity path never spawns, so the shipped Batmobile replaces the vanilla leaf v0300_car_kensington_sportsmuscle_debug (hash 1621485476, Builds/bm-RC4/receipt.json), not the dead _batmobile leaf 443190071. Rewrite every world row on that fact. Read Working/Translation/T15_WORLD.md, T_ROWS.jsonl rows T-WLD1 to T-WLD7, MODLOG.md near line 19682-19690, Research/JC3Grab/STANDALONE.md and the triage in tmp/freebuff/reports/l0-probe-triage.md. For each row give the old text, the corrected text (leaf, hash, category now military UIFlag 7, caption), and the evidence; add the backlog D-6 and B-13 lines in corrected form. Produce Working/World/rebased_rows.md, Working/World/rebased_rows.jsonl in the T_ROWS schema, and Tools/scripts/world_rebase_check.py (--write, --check) which fails if any row still names 443190071 as live. Never edit the originals. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-25",
+   "slug": "logic-carrier-decision-hook-vs-graph",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "NEW-WLD-03",
+    "NEW-WLD-12",
+    "NEW-WLD-15"
+   ],
+   "deps": [
+    "7955",
+    "7986"
+   ],
+   "body": "Decide how the world behaviours that run on a condition (water teleport, flip recovery, regen) are carried. Question NEW-WLD-03: can JC3 execute mod-authored vehicle script or graph (.gsc, .gdc) from the dropzone, or must the native hook carry them? Search Research/JC3Grab and E:/Modding/_JC3grab for any graph writer or loader precedent (file types, loaders in RTTI, mod examples), then compare with the hook design in tmp/freebuff/reports/native-hook-design-jc3mp-contract.md and the water signal candidates from water-detection-static.md. Write a verdict table: behaviour, data-only route (with evidence or UNKNOWN), hook route, the one supervised check for each. Hooks are permitted; so the answer is the closest carrier plus what the build must still write. Output Tools/scripts/logic_carrier.py (--write, --check), Working/World/logic_carrier.md/.json, and a statement for the rewrite of the 9124 queue text if its data-only route is unsupported. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-26",
+   "slug": "written-halts-remote-homing-summon",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "NEW-WLD-13",
+    "NEW-WLD-14",
+    "NEW-WLD-01"
+   ],
+   "deps": [
+    "9124",
+    "9173"
+   ],
+   "body": "Operator ruling: Rebel Drop is the summon, so remote driving and the homing call (LB sends the car to the player) may be halted if the reason is written. Produce those records. For remote driving (static overlay from about 100 m, no movement past 150 m), homing, and the drive-in arrival through car_drive_to_point.btc, write one halt record each: the BmAK behaviour with its source file, the closest JC3 system (member paths or file names), the gap, the evidence for why the Rebel Drop route supersedes it, what would reopen the halt, and the hook sketch if reopened. Sources: tmp/freebuff/reports/remote-control-range-static-overlay-plan.md, remote-and-autonomous-drive-plan.md, summon-drive-in-closest-system.md, summon-and-unranked-weapon-plans-v2.md. State that the .btc body decode (NEW-WLD-01) is deferred because nothing built depends on it. Write Working/World/HALTS.md/.json and Tools/scripts/halts_check.py (--write, --check) that fails if a record lacks any of the six fields. Do not edit queue briefs; the review brief applies your result. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-27",
+   "slug": "factions-heat-ai-reaction-decode",
+   "est": 50,
+   "ingame": false,
+   "covers": [
+    "NEW-WLD-02"
+   ],
+   "deps": [],
+   "body": "Decode the three files that decide how enemies and police treat a vehicle: settings/factions.bin, global/heat.blo and settings/heat.gadfc. Locate them through Research/JC3Grab/INDEX.jsonl and the extracted game data under E:/Modding/_gamedata. Start from tmp/freebuff/reports/traffic-and-ai-reaction-to-batmobile-plan.md, its controls 4 and 5. Use the repo's existing binary readers (Tools/scripts/jc3adf.py and neighbours) and write a reader Tools/scripts/ai_reaction_decode.py (--write, --check, the check re-decodes and compares record counts and a checksum). Report the schema, the faction table, how a vehicle is classed (model, entity name, hash or archetype), which heat events involve vehicles, and whether any field would make AI ignore, flee from or target a particular vehicle hash. Output Research/JC3Grab/AI_REACTION.md and .json. Label decoded, derived, or UNKNOWN with the byte range tried; a guess about a field name is not a result. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-28",
+   "slug": "enemy-hijack-and-theft-closure",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "NEW-WLD-10",
+    "T-WLD8",
+    "T-WLD9",
+    "T-WLD10"
+   ],
+   "deps": [
+    "arm-27"
+   ],
+   "body": "Operator fact: enemies cannot pull Rico out of the Batmobile. Extend that to the empty parked car: confirm no NPC can steal or enter it. From Working/Translation/T9_INTERACTION.md (six hijack objects dropped), the entity graph of Builds/bm-RC4-entity and Builds/bm-RC5-entity, and the w04 decode, list every object and member that allows an AI to enter, hijack, pull the driver out or target the car as a vehicle to take: seat and door interaction nodes, hijack nodes, driver-eject on damage, AI vehicle-claim flags. For each, give the member path, the shipped value, and the value that closes it. Write Tools/scripts/hijack_closure.py (--write, --check), Working/World/hijack_closure.md/.json and a row list that the RC5 world build reads. Where only the hook can close a path, say so and name the telemetry field. Unknown AI behaviour stays UNKNOWN with the pilot observation that settles it. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-29",
+   "slug": "traffic-ai-reaction-plan-v3",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "NEW-WLD-11",
+    "T-WLD18",
+    "T-WLD19"
+   ],
+   "deps": [
+    "arm-07",
+    "arm-27"
+   ],
+   "body": "Rewrite the traffic and AI reaction plan with the three audit errors removed. Read tmp/freebuff/reports/traffic-and-ai-reaction-to-batmobile-plan.md, traffic-ai-claims-audit.md and Research/JC3Grab/TRAFFIC.md, then use the ram direction ruling of d07 and the AI decode of w04. Correct the claims: impact_damage_factor direction, impact_armor (the build is 5000@100, not 0@0), and the number of civilian trees (4, not 11). State what the operator expects (civilians flee or are launched, police react as to any player vehicle, no traffic record for the Batmobile) and for each part choose the closest JC3 member with its path and value, or name the gap. Output Working/World/traffic_plan_v3.md and traffic_rows.json (path, old, new, evidence) plus Tools/scripts/traffic_rows_check.py (--write, --check) which recomputes every census figure from Research/JC3Grab. Unsourced numbers stay UNKNOWN with the file that settles each. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-30",
+   "slug": "skin-leaf-census-and-entry-plan",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "NEW-WLD-05",
+    "D-5"
+   ],
+   "deps": [
+    "7954",
+    "arm-24"
+   ],
+   "body": "Skins (MK2, Jokerfied, Funhouse) need extra Rebel Drop entries, and each entry needs its own vanilla unregistered leaf to hijack, because a new entity path does not spawn. Read tmp/freebuff/reports/skins-entity-plan.md, standalone-spawn-census-check.md, Research/JC3Grab/STANDALONE.md section 4.1 and Research/BatmobileGrab/VARIANTS.md. Find at least three more vanilla leaves that match the properties of the proven _debug leaf (unregistered in traffic, in the same entity folder style, never referenced by a mission, no vehicle spawn definition) and rank them with the proof for each property. Write per-skin rows: leaf path and hash, .ee/.toc names, item record fields, string pair keys, icon name. Output Tools/scripts/skin_leaf_census.py (--write, --check), Working/World/skin_leaves.md/.json. The proof must come from file reads that the check repeats; a leaf that fails any property is listed and rejected, not hidden. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-31",
+   "slug": "build-skin-rebel-drop-entries",
+   "est": 55,
+   "ingame": false,
+   "covers": [
+    "NEW-WLD-05"
+   ],
+   "deps": [
+    "arm-30",
+    "9101",
+    "9100"
+   ],
+   "body": "Build the extra Rebel Drop entries chosen in Working/World/skin_leaves.json into the new private tree Builds/bm-RC5-skins. Script Tools/scripts/rc5_skins.py with --write and --check, modelled on Tools/scripts/bm_rebel.py and bm_rc4.py. For each skin: the entity .ee and .toc for its leaf (copy of the base Batmobile entity from Builds/bm-RC5-entity with the skin variant rows from the appearance lane's report, if it exists, otherwise the base look and a listed gap), one Item row in profile/item.onlinec after the base entry, the unlock reward in task.onlinec, the name and blurb string pairs in online.stringlookup, and the icon slot. Register a branch record under Working/RC5/branches/ in the format of reports/rc5-scaffold-and-merge-script.md. Done line: readback of every row, hash uniqueness across entries (no two share a hash), file counts and sizes in the report, and the unresolved list. Never edit an existing Builds tree and never write to a game folder. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-32",
+   "slug": "verify-skin-entries-offline",
+   "est": 30,
+   "ingame": false,
+   "covers": [
+    "NEW-WLD-05"
+   ],
+   "deps": [
+    "arm-31"
+   ],
+   "body": "Offline verification of Builds/bm-RC5-skins. Run Tools/scripts/rc5_skins.py --check. Then re-derive independently, without that script's helper functions, the Jenkins hash of each leaf name and compare it with the Item.Name in the built item.onlinec; confirm the string-pair hashes exist for all 11 languages in online.stringlookup; confirm no entry overlaps another by hash, UIDisplayOrder or leaf; confirm each .toc lists its .ee with the right size and hash. Use Tools/scripts/jc3rebeldrop.py for decode only. Write Builds/bm-RC5-skins/verify/readback.md and the report with one row per skin and check, pass or fail with the byte or line proving it. For every fail, name the row of rc5_skins.py to change. No tree is edited here. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-33",
+   "slug": "localisation-source-for-blurb",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "NEW-WLD-06"
+   ],
+   "deps": [],
+   "body": "The Batmobile name stays Batmobile; the blurb is English in all 11 languages today (Builds/bm-RC2/verify/strings_languages.md). Find whether Arkham Knight ships localised text for the Batmobile description in the 10 other languages: search the extracted localisation files under E:/Modding/_gamedata and Research/BatmobileGrab for strings that contain Batmobile, or the text id of its menu or garage entry, in the format that Tools/scripts uses to read the engine's loc files. Report per language the exact string, the source file and byte offset, and its character set against what profile/online.stringlookup can hold (Research/JC3Grab/NAMES.md). Where BmAK has no such text, mark UNKNOWN and list the translations that would be a compromise needing operator approval. Output Tools/scripts/blurb_sources.py (--write, --check), Working/World/blurb_sources.md/.json. Do not translate anything yourself. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-34",
+   "slug": "build-localised-name-blurb-rows",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "NEW-WLD-06",
+    "T-WLD4",
+    "T-WLD6"
+   ],
+   "deps": [
+    "arm-33",
+    "arm-24",
+    "9100"
+   ],
+   "body": "Build the string rows for the Batmobile Rebel Drop entry into the private tree Builds/bm-RC5-strings, using the sources found in Working/World/blurb_sources.json, with Tools/scripts/rc5_strings.py (--write, --check) modelled on the string part of Tools/scripts/bm_rebel.py. The key pair is the hash pair of the _debug leaf (name 60A5E7A4 and blurb F34BA8E8 in RC2; recompute them for the live leaf 1621485476 and show the arithmetic). Languages with no source remain English and are listed under COMPROMISES with the file that would settle each. Encode as profile/online.stringlookup rows for all 11 languages, respecting the length limit from NAMES.md. Register the branch record under Working/RC5/branches/. Done line: decode your own output back and print name and blurb per language; counts must be 22 strings. Do not edit an existing Builds tree and do not write to a game folder. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-35",
+   "slug": "build-batmobile-icon-ddsc",
+   "est": 50,
+   "ingame": false,
+   "covers": [
+    "NEW-WLD-07",
+    "T-WLD5"
+   ],
+   "deps": [
+    "arm-24"
+   ],
+   "body": "Replace the copy of the Serpente icon with a Batmobile icon. First read the donor Builds/bm-RC4/drop/textures/ui/vehicle_icons/*.ddsc header (the 18,688 byte file): dimensions, pixel format, mip chain, how Tools/scripts texture writers produce it. Then find the Batmobile image: a BmAK garage or HUD icon texture in Research/BatmobileGrab (list candidates in MESHES.json or the texture ledger Builds/bm-RC4-appearance/texture_ledger.json), or, if none exists, render a front-three-quarter view from the Batmobile mesh with the repo's own tools. Convert to the donor's format and size exactly. Build in Builds/bm-RC5-icon with Tools/scripts/rc5_icon.py (--write, --check), register a branch record in Working/RC5/branches/, and keep the output file name equal to the live leaf name. Done line: a decoded PNG preview under verify/ and a header comparison table of donor against new; the file size may differ only if the format table allows. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-36",
+   "slug": "verify-strings-and-icon-offline",
+   "est": 30,
+   "ingame": false,
+   "covers": [
+    "NEW-WLD-06",
+    "NEW-WLD-07"
+   ],
+   "deps": [
+    "arm-34",
+    "arm-35"
+   ],
+   "body": "Verify Builds/bm-RC5-strings and Builds/bm-RC5-icon offline. Run both rc5_strings.py --check and rc5_icon.py --check. Decode profile/online.stringlookup back with Tools/scripts that read it, list the name and blurb for each of the 11 languages with the hash that points to them, and compare with the source table in Working/World/blurb_sources.json. For the icon, decode the .ddsc and compare its header fields with the donor file, check the image is not the Serpente image (pixel hash differs) and that the name matches the live leaf. Confirm that the two builds do not write the same file as each other or as Builds/bm-RC5-world (compare paths); note any overlap for the merge brief. Output Builds/bm-RC5-strings/verify/readback.md, Builds/bm-RC5-icon/verify/readback.md and one report with pass or fail per check and the line that proves it. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-37",
+   "slug": "other-name-sites-hud-map-notifications",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "NEW-WLD-08"
+   ],
+   "deps": [
+    "7956",
+    "7985",
+    "arm-24"
+   ],
+   "body": "Find every place besides the Rebel Drop list where JC3 shows a vehicle name or icon, so the Batmobile appears correctly: the in-vehicle HUD name, the minimap and map icons (the operator's HUD leads give cops their own icon, tracked vehicles a green icon, military vehicles their own), the on-foot vehicle prompt, and notification toasts. Read Research/JC3Grab/NAMES.md, the radar icon report radar-icon-set-extract.md and the overlay design hook-batmobile-hud-overlay.md. For each site list the data source (stringlookup key, icon file, UI flag, hook text), the value the Batmobile needs, and whether the Rebel Drop build already supplies it. Output Tools/scripts/name_sites.py (--write, --check), Working/World/name_sites.md/.json with a row per site. Sites that only the hook overlay can supply are marked with the hook element name. UNKNOWN stays UNKNOWN with the pilot observation (a frame at a stated moment) that settles it. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-38",
+   "slug": "mass-unit-airlift-tether-carriers",
+   "est": 50,
+   "ingame": false,
+   "covers": [
+    "T-WLD12",
+    "T-WLD15",
+    "T-WLD16",
+    "T-WLD17",
+    "NEW-WLD-17"
+   ],
+   "deps": [
+    "arm-24"
+   ],
+   "body": "Close the heavy-car rows. (a) Mass: the Batmobile mass 6000 has an unknown unit; compare it with the mass fields of every land vehicle in Research/JC3Grab, find the unit by cross-checking against the vehicles whose real weight is stated in game text, and say how it changes shove and crush. (b) Tether: the closest system is CVehicleCargoBay with a grapple (Research/JC3Grab/TETHER.md, tmp/freebuff/reports/winch-and-tether.md, apply-winch-tether-rows.md); list what a 6 t car does to it. (c) Airlift: none of 23 helicopters has a bay; name the nearest carrier (cargo plane or boat bay, winch hook module, hook attach of the entity) and the gap, as a design for the build. (d) Batwing or helicopter carry of the car is only to be recorded if BmAK shows it in a read file. Output Tools/scripts/heavy_car_rows.py (--write, --check), Working/World/heavy_car_rows.md/.json (path, old, new, evidence) and one in-game observation per carrier. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-39",
+   "slug": "stunt-area-decision",
+   "est": 35,
+   "ingame": false,
+   "covers": [
+    "T-WLD11",
+    "NEW-WLD-18"
+   ],
+   "deps": [
+    "arm-24"
+   ],
+   "body": "Decide the stunt-area row. Roof standing currently relies on the point.stunt nodes alone; the three stunt areas (22 vertices copied from DeformPoints) have an UNKNOWN verdict because nobody knows if the runtime recomputes vertices3D_local. Read Working/Translation/T_WLD11_AREAS.md and T_WLD11B_SURFACES.md and Research/JC3Grab for the loader code names. Find a static answer: other vehicles whose vertices3D_local and local vertex fields disagree, or whose area is clearly transformed, show which is read at runtime. State the answer with the vehicle names and numbers. If it stays UNKNOWN, write the candidate R-2 rows, the O-1 and O-2 conditions they must pass, and one supervised observation (stand on the roof, read whether the stunt prompt appears). Output Tools/scripts/stunt_area_decision.py (--write, --check), Working/World/stunt_area_decision.md/.json; do not edit the entity trees. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-40",
+   "slug": "rebel-drop-mod-compatibility",
+   "est": 35,
+   "ingame": false,
+   "covers": [
+    "NEW-WLD-19"
+   ],
+   "deps": [],
+   "body": "The dropzone already contains files that other mods overwrite: profile/item.onlinec, profile/task.onlinec, profile/online.stringlookup. Compare our build with the Rebel Drop Mod V5.3 package under Research/1456340180_Rebel-Drop-Mod-V5.3/ using Tools/scripts/jc3rebeldrop.py for decode. List each file the mod ships that we also ship, the records each one adds, and whether a whole-file replace by us deletes the other mod's entries. Propose a safe policy: merge our one Item, one reward and string pairs into a copy of the other mod's files (rows to add, rows untouched), and describe the rebuild rule when either side updates. Write Tools/scripts/mod_compat.py (--write, --check) that recomputes the overlap tables and the proposed merge from the files, plus Working/World/mod_compat.md. Do not install anything; the merged variant is for the later merge brief to adopt or reject. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-41",
+   "slug": "verify-rc5-world-and-survival-readback",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "RC5-world",
+    "RC5-survival"
+   ],
+   "deps": [
+    "9173",
+    "9124"
+   ],
+   "body": "Offline read-back of Builds/bm-RC5-world and Builds/bm-RC5-survival after briefs 9173 and 9124. Run rc5_world.py --check and rc5_survival.py --check, then recompute independently: the census figures in the world report (each recounted from Research/JC3Grab), the Rebel Drop item hash of the _debug leaf, the traffic rows against Working/World/traffic_rows.json, the hijack rows against hijack_closure.json, and for survival the water teleport parameters, the flip idle timer and thruster numbers against their plan files. Where 9124 or 9173 built a remote or homing part, compare it with Working/World/HALTS.md and flag any built part that the halt records say should not exist, or any halted part the build silently omits. Write Tools/scripts/verify_rc5_world.py (--write, --check), a readback.md in each tree's verify folder, and the report. Every failure names its owner row. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-42",
+   "slug": "world-pilot-cards",
+   "est": 50,
+   "ingame": false,
+   "covers": [
+    "Q-PILOT",
+    "NEW-ARM-13"
+   ],
+   "deps": [
+    "9194",
+    "arm-28",
+    "arm-29",
+    "arm-34",
+    "arm-35",
+    "arm-38"
+   ],
+   "body": "Write world pilot cards in Working/Q/PILOT in the format of CARD_FORMAT.md, as new files WLD_*.md: WLD_DROP (open Rebel Drop, read the Batmobile entry name, blurb and icon, order it), WLD_UNLOCK (does the starter grant fire on an existing save), WLD_WATER (drive into deep water, shallow water, a river), WLD_FLIP (flip the car on its roof, wait), WLD_HIJACK (hostile soldiers near the parked and the occupied car), WLD_TRAFFIC (civilians and police near the car), WLD_TETHER (grapple a 6 t car; mass check), WLD_ROOF (stand on the roof). Pass bands come from the prediction files (Working/World/*.json, Builds/bm-RC5-survival), never new numbers. Where telemetry from brief 7982 gives a number (position, speed, orientation) the card reads that instead of a frame. Add Tools/scripts/wld_cards_check.py (--write, --check) that checks card shape, that every command appears in the three sources named by CARD_FORMAT.md, and that each card names its fix-card route. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-43",
+   "slug": "review-world-builds-before-merge",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "review"
+   ],
+   "deps": [
+    "arm-24",
+    "arm-25",
+    "arm-26",
+    "arm-27",
+    "arm-28",
+    "arm-29",
+    "arm-30",
+    "arm-31",
+    "arm-34",
+    "arm-35"
+   ],
+   "body": "Checkpoint over the world desk and build briefs. Re-run the --check of each new script (rebase, logic carrier, halts, AI decode, hijack closure, traffic plan v3, skin census and build, strings, icon). List changes between reports that affect others (the leaf hash used by the strings against the skins; the ram direction used by traffic; the carrier verdict used by survival). Then edit, in place, any unstarted queue brief that is now wrong: 9173 and 9124 in tmp/freebuff/queue (they must cite Working/World/rebased_rows.jsonl, HALTS.md, hijack_closure.json, traffic_rows.json, logic_carrier.md and must not build the halted remote or homing parts), 9190 (add the new branches bm-RC5-skins, bm-RC5-strings, bm-RC5-icon to the merge list and the three-way conflicts on profile/online.stringlookup, item.onlinec and task.onlinec) and 9192. Add an Updated by review line to each edited file. Where a report already exists leave the brief and request a fix brief. Output: the report with a table of edits. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-44",
+   "slug": "test-rebel-drop-entry-and-unlock",
+   "est": 40,
+   "ingame": true,
+   "covers": [
+    "Q-1a",
+    "B-13",
+    "NEW-WLD-09",
+    "T-WLD2",
+    "T-WLD3"
+   ],
+   "deps": [
+    "APPROVED_Q",
+    "9193",
+    "arm-42",
+    "8607"
+   ],
+   "body": "Supervised in-game test after APPROVED_Q.txt exists, using the installed RC5 chosen by the operator. Cards: LAUNCH.md, LOAD_SAVE.md, WLD_DROP.md, WLD_UNLOCK.md, SPAWN_BATMOBILE.md (route B, Rebel Drop), SCREENSHOT.md, KILL.md. Observation: on an existing save and on a new one, the Rebel Drop list shows a Batmobile entry with the name Batmobile, the blurb text and the Batmobile icon (not the Serpente image); the order spawns the car; the unlock reward fires once or repeatedly (record which). Pass rule: the entry is present, the name reads Batmobile in the language setting used (English), the icon frame differs from the Serpente icon frame by a stated hash check, and the spawned entity name in the telemetry is the Batmobile. Results under Working/Q/results/rebel-drop/. On fail, the fix card names the row: item.onlinec, task.onlinec, stringlookup or icon, one value only. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-45",
+   "slug": "test-summon-arrival-and-persistence",
+   "est": 40,
+   "ingame": true,
+   "covers": [
+    "NEW-WLD-13",
+    "T-WLD18"
+   ],
+   "deps": [
+    "APPROVED_Q",
+    "9193",
+    "arm-42",
+    "arm-26",
+    "9173"
+   ],
+   "body": "Supervised in-game test after APPROVED_Q.txt exists. Since Rebel Drop is the summon, test that route as the shipped summon. Cards: LAUNCH.md, SPAWN_BATMOBILE.md (route B), WLD_DROP.md, CONTROLS.md, SCREENSHOT.md, KILL.md. Observation: where the car arrives relative to the player (distance and bearing from the telemetry), how many seconds from order to a drivable car, whether it appears in traffic by itself, and whether it persists or despawns after the player walks 300 m away and returns. Pass rule: the car arrives within 10 s, within 100 m of the player, is not seen in traffic in a 5 minute drive, and the telemetry names the Batmobile entity throughout. Write the measured arrival numbers into Working/World/summon_measured.json; they replace the chosen numbers of the summon plan. On fail, one fix card, one value. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-46",
+   "slug": "test-water-teleport",
+   "est": 40,
+   "ingame": true,
+   "covers": [
+    "NEW-WLD-12",
+    "T-WLD13",
+    "T-WLD14"
+   ],
+   "deps": [
+    "APPROVED_Q",
+    "9193",
+    "arm-42",
+    "9124",
+    "7986",
+    "7982"
+   ],
+   "body": "Supervised in-game test after APPROVED_Q.txt exists. The module under test is the water watcher of brief 7986 and the water rows of Builds/bm-RC5-survival; the operator installs the hook, and its switch state goes in the report. Cards: LAUNCH.md, SPAWN_BATMOBILE.md, ENTER_EXIT.md, WLD_WATER.md, RECORD.md, KILL.md. Drive the car into deep sea, into a river and into a shallow puddle. Observation: the telemetry position before entry, the position 3 seconds after, the engine and health state, and a clip. Pass rule: in deep water the car is teleported to land within 3 seconds; it does not sink or swim; the engine keeps running; the driver stays seated; health unchanged; shallow water leaves the car in place. Operator fact: the engine does not fail. Record the landing offset from the entry point. On fail, the fix card changes one parameter named in the water plan. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-47",
+   "slug": "test-flip-recovery",
+   "est": 35,
+   "ingame": true,
+   "covers": [
+    "NEW-WLD-15"
+   ],
+   "deps": [
+    "APPROVED_Q",
+    "9193",
+    "arm-42",
+    "9124",
+    "7986",
+    "7982"
+   ],
+   "body": "Supervised in-game test after APPROVED_Q.txt exists, for the flip module of briefs 7986 and 9124. Cards: LAUNCH.md, SPAWN_BATMOBILE.md, CONTROLS.md, WLD_FLIP.md, RECORD.md, KILL.md. Drive the car onto its roof on a ramp or roll it with a stunt, then release all controls. Observation: seconds from coming to rest on the roof to the first thruster effect, seconds until the car is upright, and the orientation readings from the telemetry at 0.5 s intervals. Repeat once on its side. Pass rule: the car is upright within the idle timer plus 3 seconds, and no recovery fires while the car is still moving or when it is the right way up. The decoded candidates BatmobileStuckTimeMax 2.0 and BatmobileStuckTimeFlip 0.5 are compared with the measured values and logged. On fail, one fix card changing the timer or the impulse. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-48",
+   "slug": "test-enemy-hijack-and-traffic-reaction",
+   "est": 40,
+   "ingame": true,
+   "covers": [
+    "NEW-WLD-10",
+    "NEW-WLD-11",
+    "NEW-WLD-02"
+   ],
+   "deps": [
+    "APPROVED_Q",
+    "9193",
+    "arm-42",
+    "arm-28",
+    "arm-29",
+    "9173"
+   ],
+   "body": "Supervised in-game test after APPROVED_Q.txt exists. Cards: LAUNCH.md, SPAWN_BATMOBILE.md, ENTER_EXIT.md, WLD_HIJACK.md, WLD_TRAFFIC.md, SCREENSHOT.md, KILL.md. Part A: stand armed hostile soldiers (console spawn) beside the occupied car and the parked car for 60 seconds each. Pass: nobody pulls the player out (operator fact), nobody enters the parked car, the car does not change owner. Part B: drive through a busy road and park near police. Observation: do civilians swerve or flee, do police treat the car as an ordinary player vehicle, is the car ever targeted by AI as a threat. Record the observations against the predictions in Working/World/traffic_rows.json and hijack_closure.json. Fail routes: the fix card names the single row (a hijack node, a faction field or a traffic value) and quotes the telemetry lines that show the failure. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-49",
+   "slug": "test-tether-mass-roof-stunt",
+   "est": 40,
+   "ingame": true,
+   "covers": [
+    "NEW-WLD-17",
+    "T-WLD15",
+    "T-WLD12",
+    "T-WLD11"
+   ],
+   "deps": [
+    "APPROVED_Q",
+    "9193",
+    "arm-42",
+    "arm-38",
+    "arm-39"
+   ],
+   "body": "Supervised in-game test after APPROVED_Q.txt exists. Cards: LAUNCH.md, SPAWN_BATMOBILE.md, CONTROLS.md, WLD_TETHER.md, WLD_ROOF.md, SCREENSHOT.md, KILL.md. Part A: tether the car with the grapple and observe whether the 6 t car moves, how fast, and whether the player is pulled instead. Part B: push a civilian car and a lamp post at 30 km/h and compare shove and crush with the prediction in Working/World/heavy_car_rows.json. Part C: stand on the roof and read whether the stunt prompt appears, which settles the stunt-area question. Pass rule: each observation is within the band the heavy-car rows predict, and the roof prompt result matches one of the two outcomes w16 listed. Record numbers from telemetry where available. On fail, one fix card per row, one value each. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-50",
+   "slug": "world-fix-loop-desk",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "Q-4"
+   ],
+   "deps": [
+    "arm-44",
+    "arm-45",
+    "arm-46",
+    "arm-47",
+    "arm-48",
+    "arm-49"
+   ],
+   "body": "Turn the world test reports into one correction plan. Read the six world test reports (Rebel Drop entry and unlock, summon, water, flip, enemies and traffic, tether and roof) with their fix cards. For each failed observation pick the single value to change, one per original failure, and refuse bundling. Write Working/World/fix_round1.json (row, path, old, new, source observation) and re-run the relevant predictors to show the expected new numbers. Update Working/World/summon_measured.json into the build inputs if the arrival test replaced chosen numbers. State which behaviours are now measured rather than chosen, and list the survivors that the next retest must check. Do not edit a built tree; the instruction for the rebuild is the report text (which script, which option). If all observations passed, say so and give the closing line for the QX checklist. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-51",
+   "slug": "retest-world-after-fixes",
+   "est": 30,
+   "ingame": true,
+   "covers": [
+    "Q-4"
+   ],
+   "deps": [
+    "APPROVED_Q",
+    "arm-50"
+   ],
+   "body": "Supervised in-game retest after APPROVED_Q.txt exists and the operator has installed the corrected build. Run only the cards whose observation failed in round one, as listed in Working/World/fix_round1.json (any of WLD_DROP, WLD_UNLOCK, WLD_WATER, WLD_FLIP, WLD_HIJACK, WLD_TRAFFIC, WLD_TETHER, WLD_ROOF), with LAUNCH.md, SPAWN_BATMOBILE.md and KILL.md around them. Pass rule: each retested observation falls in the band its first failure report stated. The loop allows one extra round per original failure; a second failure becomes a named blocker with telemetry and clip, not another retry. Results under Working/Q/results/world-round2/. Final table: observation, round one, round two, verdict, so the QX checklist can close or keep open each world row. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-52",
+   "slug": "release-portability-exe-and-patch-levels",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "NEW-WLD-23"
+   ],
+   "deps": [],
+   "body": "Document what differs between the exe the work was developed against and the ones a player could own. Facts to collect from the repo: the operator's JustCause3.exe (D:/Games/Just Cause 3, 51,083,264 bytes), the repack, GOG and Steam variants named in tmp/freebuff/QUEUE_MAP.md (the BmSDK hook offset 0x5B7220 was invalid on the repack), the hook base addresses checked by Tools/scripts/exe_addr_check.py, the dropzone location, and which of our files depend on the exe build (the hook DLL offsets, the entity format) and which do not (data under dropzone). Output Tools/scripts/portability_matrix.py (--write, --check) with Working/Release/portability.md/.json: per variant, what works, what is unknown and how a user checks it with one hash command. Also state the hook version guard that brief 7967 builds, and what the install must print when the exe hash is not on the known list. Do not run or probe any game. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-53",
+   "slug": "installer-state-audit-and-stale-records",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "V-06-RC2",
+    "install_v2",
+    "install_v3",
+    "NEW-WLD-20"
+   ],
+   "deps": [],
+   "body": "Establish the true state of the installer, because the records disagree. The ledger (GRAB_BACKLOG.md rows V-06-RC2, V-06-fix, install_v3, lines near 1999-2021) says install_v3 is not adopted and Rollback091 still fails, yet Tools/scripts/bm_rc4.py already renders Builds/bm-RC4/install.ps1 from Working/Installer/install_v3.ps1 and tmp/freebuff/reports/verify-v06-install-dry-run-rc4.md reports six passing cases. Build a table: for every Builds/*/install.ps1 and every generator (bm_rc.py, bm_rc2.py, bm_rc3.py, bm_rc4.py, _make_installer.py) say whether it contains Rollback091, the v3 guard strings, the snapshot-and-restore rollback, and the simulation root it accepts. Report which trees are safe and which must never be run. Write Tools/scripts/installer_audit.py (--write, --check, the check greps the files again), Working/Installer/INSTALLER_STATE.md/.json, and the replacement text for the three stale ledger rows (do not edit the ledger). Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-54",
+   "slug": "shared-rc-installer-generator",
+   "est": 50,
+   "ingame": false,
+   "covers": [
+    "NEW-WLD-20"
+   ],
+   "deps": [
+    "arm-53",
+    "9100"
+   ],
+   "body": "Move the installer generation out of bm_rc4.py so every later release candidate uses the same adopted code. Create Tools/scripts/rc_installer.py exposing installer(files, tag, sim_root, source_dir) that renders the PowerShell from Working/Installer/install_v3.ps1 exactly as bm_rc4.py's installer() does today (read that function and the dropzone_sim2.py harness first). Parameters: the build tag, the simulation root (default E:/Modding/_dropzone_sim_<tag lowercase>), the payload rows. Keep every guard: component-wise containment, fail-closed REFUSED with exit 2, per-target containment, always-snapshot, restore-or-delete rollback with manifest validation. Prove by running --check that the output for tag bm-RC4 is byte-identical to Builds/bm-RC4/install.ps1; then run the six V-06 cases against a copy under E:/Modding/_dropzone_sim_rc5. Write the report and the --check. Do not edit bm_rc4.py or any existing Builds tree; write the result to a new tree Builds/installer-test/. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-55",
+   "slug": "repoint-merge-and-verify-briefs-to-installer",
+   "est": 30,
+   "ingame": false,
+   "covers": [
+    "NEW-WLD-20",
+    "V-06"
+   ],
+   "deps": [
+    "arm-54"
+   ],
+   "body": "Edit the unstarted merge and verify briefs so the RC5 release candidate gets the adopted installer. Check first that tmp/freebuff/reports/rc5-merge-release-candidate.md and rc5-verify-geometry-predictions-install.md do not exist; if one exists, write the needed fix as a brief request in your report and stop. Otherwise open tmp/freebuff/queue/9190-rc5-merge-release-candidate.txt and make its install.ps1 sentence say that bm_rc5.py must call Tools/scripts/rc_installer.py (not hand-written PowerShell, not the old RC2 script), with sim root E:/Modding/_dropzone_sim_rc5, and that the receipt records the installer sha256. In 9192-rc5-verify-geometry-predictions-install.txt add the case that the dropzone already holds a previous payload (see Working/Installer/INSTALLER_STATE.md). Add an Updated by line to each. Report the diff of each file as before and after text. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-56",
+   "slug": "live-dropzone-mode-and-rc2-state",
+   "est": 55,
+   "ingame": false,
+   "covers": [
+    "NEW-WLD-21",
+    "V-06-RC2"
+   ],
+   "deps": [
+    "arm-54",
+    "arm-24"
+   ],
+   "body": "Design the controlled path for the first real install. The shipped guard refuses every path outside the simulation root, which is right for tests but means the real dropzone has no sanctioned route. Extend the generator (a new file Tools/scripts/rc_installer_live.py, not edits to the old one) to produce a live variant: allowed root is exactly the dropzone path named by the operator in a parameter, the script refuses unless a token file written by the operator exists beside it, refuses while JustCause3.exe runs, always takes a full snapshot first and prints the snapshot location, and Rollback restores it byte for byte. Then model the state the operator reported: the live dropzone already holds the RC2 payload (nine files with the old _batmobile leaf names listed in Builds/bm-RC2/receipt.json). On a copy build that state under E:/Modding/_dropzone_sim_rc5_live and run Install, Verify, Rollback, and the orphan question: after installing RC5, which RC2 files remain, and write a separate cleanup list to restore the vanilla dropzone. Report the cases with before and after tree hashes. Nothing real is read or written. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-57",
+   "slug": "verify-installer-rc5-and-live-variant",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "V-06",
+    "NEW-WLD-20",
+    "NEW-WLD-21"
+   ],
+   "deps": [
+    "arm-56",
+    "arm-55",
+    "9190"
+   ],
+   "body": "Offline verification of the installer on the merged RC5. Run Builds/bm-RC5/install.ps1 only against copies under E:/Modding/_dropzone_sim_rc5: Status, WhatIf, Install on an empty root, Install over an installed root, decoy Install with Rollback restoring it, the guard refusing a path outside the root and a sibling prefix path (_dropzone_sim_rc5_prefix), and Install over a dropzone holding the RC2 payload. Repeat the three rollback scenarios with the live variant from i04 on copies. Compare the output trees by sha256 before and after; the pass rule is identical trees after Rollback in every case and exit 2 with nothing created for each refused case. Also confirm install.ps1 contains neither the string Rollback091 nor a bare StartsWith guard. Write Tools/scripts/verify_installer_rc5.py (--write, --check), Builds/bm-RC5/verify/installer.md and the report; a failure names the generator line to change. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-58",
+   "slug": "install-rollback-live-card",
+   "est": 35,
+   "ingame": false,
+   "covers": [
+    "V-06",
+    "NEW-WLD-22"
+   ],
+   "deps": [
+    "arm-56",
+    "arm-42"
+   ],
+   "body": "Write the pilot card for the first real install and rollback, in the format of Working/Q/PILOT/CARD_FORMAT.md, as new files INSTALL_REAL.md and ROLLBACK_REAL.md in Working/Q/PILOT. The operator performs the file copy; the card tells the pilot what to read: the process list shows no JustCause3.exe, the snapshot folder exists with the manifest row count, Status prints the expected states, Verify prints verified N/N, a launch reaches the menu, and after Rollback the tree hash equals the pre-install hash recorded by the card. A second part covers rollback while the Batmobile is owned in a save: load a save that contains the car, run Rollback, load again and read whether the save opens and whether the game reports a missing vehicle. Pass bands are the counts and hashes from Builds/bm-RC5/verify/installer.md, never new numbers. Commands come only from the sources named in CARD_FORMAT.md or from the installer's own usage text. Add Tools/scripts/install_cards_check.py (--write, --check). Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-59",
+   "slug": "test-real-install-rollback-owned-car",
+   "est": 45,
+   "ingame": true,
+   "covers": [
+    "NEW-WLD-21",
+    "NEW-WLD-22",
+    "V-06"
+   ],
+   "deps": [
+    "APPROVED_Q",
+    "9193",
+    "arm-58",
+    "arm-57"
+   ],
+   "body": "Supervised test after the operator writes APPROVED_Q.txt, and only for the steps the operator carries out by hand. Cards: INSTALL_REAL.md, LAUNCH.md, LOAD_SAVE.md, SPAWN_BATMOBILE.md, ROLLBACK_REAL.md, KILL.md. Observation 1: the operator runs um backup (record its output), then the live installer; the pilot records Status and Verify. Observation 2: launch, load the save, spawn the Batmobile through Rebel Drop. Observation 3: close the game, run Rollback, record the tree hash, relaunch, load the save that still owns the car. Pass rule: the install tree hash after Rollback equals the pre-install hash from observation 1; the game launches both times; the save loads in both states. Whether a save that owns the car loads without the entity is the unknown; record exactly what the game prints. On fail, the fix card names the installer line and one change. Never run Rollback091 anywhere. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-60",
+   "slug": "release-package-r1",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "R-1"
+   ],
+   "deps": [
+    "arm-50",
+    "arm-22",
+    "arm-52",
+    "arm-23",
+    "arm-51",
+    "arm-59"
+   ],
+   "body": "Prepare the release as a pipeline only (GRAB_BACKLOG.md section 10): no Arkham Knight-extracted asset may be in the package. Write Tools/scripts/release_pack.py (--write, --check) which lists every file of the final RC5 drop, marks each as pipeline output, JC3-derived, or AK-derived, and fails if a shipped file's bytes are copied from an AK package (compare hashes against the extracted-asset hash list the repo already keeps). Where the build ships AK-derived data, the release gets a rebuild script instead. Produce Working/Release/RELEASE.md (what the user needs, the install steps from the verified installer, how to roll back, what is UNKNOWN), and run um publish check if the tool is installed (record the exact output; if not installed record that). The package contents stay in a new tree Builds/release-RC5; nothing goes to the game folder. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "arm-61",
+   "slug": "release-field-note-r2",
+   "est": 30,
+   "ingame": false,
+   "covers": [
+    "R-2"
+   ],
+   "deps": [
+    "arm-60",
+    "arm-23",
+    "arm-51",
+    "arm-59"
+   ],
+   "body": "Write the knowledge-base field note for the finished Batmobile mod. Read RELEASE.md, MODLOG.md, the damage and world reports and the Universal Modder knowledge folder the repo cites. The note covers what was learned and is reusable: the entity-path finding (new paths never spawn; hijack an unregistered vanilla leaf), the Rebel Drop item recipe, the installer guard and rollback design, the hook route for the logic behaviours, and the damage model result of the in-game tests (hypothesis H0, H1 or H2, measured regen delay and rate). Every claim is labeled decoded, derived or tested, with the report that proves it. Output Working/Release/FIELD_NOTE.md and Tools/scripts/field_note_check.py (--write, --check) which fails if a claim lacks a citation to an existing file. Keep it free of AK-extracted content. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  }
+ ]
+}

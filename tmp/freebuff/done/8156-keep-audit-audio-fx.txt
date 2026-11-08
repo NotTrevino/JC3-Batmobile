@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/keep-audit-audio-fx.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-06
+Rows T-AU1 and T-AU2 (LandAudio module, engine start/loop, bank swapped in test-060) and T-FX1, T-FX2, T-FX5 (glass and lamp break, burn effects, 74 donor effects) are marked keep. Check against the BmAK audio and effect tables (AUDIO_MAP.json, AUDIO_FEATURES.md, G1-16 effect lists): which BmAK events and effects are matched by a JC3 one that is the same in meaning, and which are merely the donor's. Count lore-exact, approximate and missing events (361 events, 447 media), and name the biggest gaps first. Output a prioritised list for the audio and effect build briefs.
+Where JC3 has no exact carrier, give the closest system and the gap for the build to fill (STAGES.md).

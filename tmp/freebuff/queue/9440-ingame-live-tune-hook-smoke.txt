@@ -1,0 +1,7 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/ingame-live-tune-hook-smoke.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-live-tune-hook.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/ingame-a2-top-speed-take.md, E:/Modding/JC3-Batmobile/tmp/freebuff/APPROVED_Q_FULL.txt
+Prove the runtime tuning path so later fix iterations are cheap. Install Builds/hook-0003 (from hdl-29) on top of the RC5 install, using install_v3 only and with saves backed up first. In the Batmobile on the straight, make three changes to %LOCALAPPDATA%/jc3-batmobile-hook/tune.json through Tools/scripts/tune_apply.py: lower the top speed cap, raise brake torque, then lengthen steering lock time. After each change repeat the matching short take (plateau speed, 60 to 0 distance, lock time). Observation: the telemetry takes change by the expected sign and rough size; the hook log lists each applied member with old and new value; the revert-all key restores the original behaviour. Pass rule: all three effects seen and the revert works. Fail route: Working/Q/FIXES.md line for the hook owner naming the member whose write had no effect; mark the live-tuning path unavailable so that fix iterations use rebuilds instead. Files in Working/Q/caps/tunehook/. Kill the game by exact PID.
+Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

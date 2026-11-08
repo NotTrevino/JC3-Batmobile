@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/app-per-pixel-reflectivity.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-06
+The per-pixel reflectivity/roughness textures of the Batmobile (Batmobile_V3_BRAKE_DISC_R, Int_Cockpit_S, Missile_Upgrade_S, Nimbus_Power_Cell_S, and the body masks) were dropped under rule D3 with the reason "JC3 varies properties only by channel". That is the difference between a flat plastic car and BmAK's surface. Work out exactly which texture channels each JC3 block reads (CarPaintMM s0..s3 and the others used by the car: Window, Carlight, General, GeneralMkIII) and what they mean, from the shader and block notes under Research/JC3Grab. Then write the channel-packing plan that would put BmAK's roughness and reflectivity maps into those channels, listing every texture and its source channel. No bake yet; just a plan with tests that could prove it.
+Where JC3 has no exact carrier, give the closest system and the gap for the build to fill (STAGES.md).

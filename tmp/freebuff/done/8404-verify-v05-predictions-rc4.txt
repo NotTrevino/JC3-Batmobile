@@ -1,0 +1,21 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-v05-predictions-rc4.md
+ONLY: freebuff
+EST: 60
+BRIEF: hand-written 2026-11-07 (rewritten from the 2026-11-06 brief by review 8399)
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-v01-file-gates-rc4.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-v02-geometry-poses-rc4.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-v03-wiring-rc4.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-v04-audio-rc4.md
+Phase V-05: refresh Working/Q/PREDICTIONS.md, PREDICTIONS_COMBAT.md and PREDICTIONS_LOOKS.md for RC4 so every check in section 9b has an expected number and a pass band derived from the ledger and damage_predict.py. Nothing in phase Q may be judged without a prediction.
+
+The three reds are genuine and must be fixed or disclosed, not silenced (see 8396):
+- v05_driving.py --check FAIL: T-ST7 is no longer blocked (built t_to_full_steer_s 0.8 low / 0.6 high; 0.25 s low / 0.091 s high is the 2026-11-06 ruling, the latter out-of-domain). Re-derive the turning circle from the built 0.8/0.6 and 55/20 deg before any sheet.
+- t_boost_rows.py 20/21: it asserts a 198-row ledger and the ledger now has 199.
+- t_vnf_six.py AssertionError: hard-coded 198 (ledger 199, 145 evidenced).
+Do not delete or weaken those assertions; update the pins to 199 and re-run.
+
+Values to carry as label bands, not measured truths:
+- T-E5 336.4 km/h is an assumed wiki label; drag was written 0.55 -> 0.1213 to make it reachable at 2921 N.m (build-d10 §5.2). The sheet must state both the label and the derivation and must not present 336.4 as decoded.
+- T-ST6 0.625 is an INFERRED reciprocal, falsifier 0.48; T-K3 4.0 sits above the 6 t band 1..2.25; T-K4's ledger `from` still says 5 while the build value is 1.
+- collision Q-2 check: 2 bodies / 3 boxes / 1 constraint, 2 shapes missing, placement 6.1 cm (gate false). Make that a named expected failure.
+- lights: angle 70 / range 60 above the shipped max 50/50 (U-1).
+- audio: 21 of 45 GUIDs donor.
+
+Updated by review 8399: named the three reds with their exact failure, the ledger pin 198 -> 199, and each label/out-of-domain value the sheets must disclose.

@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/paint-plans-v2.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+reports/audit-paint-plan-colour-numbers.md checked twenty rows of paint-gaps-closest-system-plan.md and colour-bmak-wet-look.md: twelve match, five mismatch and three are unsourced. Two of the mismatches matter most: channel 3 takes 0.5 from parent 767 but Research/BatmobileGrab/COLOUR_PARAMS.md line 37 gives 0.15 on parent 763, and the nearest-MIC rule that the channel 0 row uses yields an F0 of 0.0060 and not the planned 0.0200. reports/paint-slots-palette-verify.md and reports/paint-slots-to-bmak-values-apply-plan.md hold the later palette work. Produce paint-plans-v2.md with one row per paint number (channel, member, planned value, audited value, the rule that produces it, file and line) so that the four channels can be written from the table alone, with the 3 unsourced values either sourced from Research/BatmobileGrab or marked UNKNOWN with the file that would settle them. Close with the closest JC3 paint members for each remaining gap, the build step, and a pilot sentence about the body colour whose band is a measured RGB range.

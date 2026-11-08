@@ -1,0 +1,10 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-world-logic-water-flip-regen.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-live-vehicle-readout.md
+Three "when X do Y" behaviours (RB-9), written as hook logic. The values come from the operator facts (memory, and ROADMAP.md section 7).
+(1) Water. The Batmobile never swims: when it enters water it is teleported to land, and the engine does not fail. Find the water test (a submerged flag, or a water-height query reachable from CVehicle or hknp). The landing spot is the last on-land position, recorded once a second.
+(2) Flip. After resting on its roof or side for a while, the thrusters fire and right the car. The decoded candidates are BatmobileStuckTimeMax 2.0 s and BatmobileStuckTimeFlip 0.5 s; if 7976 read the live value, use that. Apply an upright impulse, or set the orientation.
+(3) Regen. Health refills out of combat over time, and is full on re-summon. Use HealthRecoverRate from 7976 if it was read; otherwise mark it UNKNOWN. Define "out of combat" as no damage for N seconds, with N UNKNOWN.
+Write each behaviour as an isolated module with an off switch, log every trigger, and add one supervised test step per behaviour. Stage Builds/hook-0006/. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

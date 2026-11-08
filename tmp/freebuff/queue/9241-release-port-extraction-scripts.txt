@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/release-port-extraction-scripts.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/release-config-layer-and-doctor.md
+Port the first script group, Working/Release/MANIFEST_A.txt (the extraction and grab tools). For each script, copy it into Builds/release-0001/tools/ and replace every literal path with a call to jc3bm_paths.py using the PATHS.csv row as the purpose; do not edit the original under Tools/scripts. Where a script reads a project data file that is WITHHELD, make it take the file from the work folder and print a message telling the user which earlier step creates it. Keep the command line interface identical, including --write and --check. Run each ported script with --help and then with no config to prove it fails with the doctor message and no traceback; run its --check only when the inputs are SAFE. Write a table: script, literals replaced, --help result, no-config result. Done when the table covers every script in the manifest and a grep for drive letters in the ported group returns zero. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

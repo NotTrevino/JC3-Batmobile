@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-winch-build.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/winch-input-and-pull.md
+Verify both winch builds offline. Run --check of rc5_winch_parts.py and rc5_winch_pull.py. Trace the event chain from the D-pad right binding to rope extend, latch and pull and show each link by file and member. Confirm no key collides with an existing binding in Working/Q/PILOT/CONTROLS.md (the mission select replaced is intentional; any other collision is a failure). Confirm the rope anchor sits at the WinchOrigin position of Research/BatmobileGrab/SOCKETS_JC3.md within 1 cm, that the two rope components exist, and that the capability cards are listed in the release notes input file Working/Roadmap/weapon_limits.md (create it if absent, append otherwise). Output tmp/freebuff/reports/verify-winch-build.md with PASS or FAIL per item. Done-check: collision scan result and anchor distance are both quoted as numbers. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

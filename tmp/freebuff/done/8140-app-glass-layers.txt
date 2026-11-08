@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/app-glass-layers.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-06
+Batmobile_Glass has 8 empty slots and Batmobile_V3_Glass_S (the glass layer mask) is carried only as a tint (route R4). BmAK glass has tint, reflectivity, dirt and a frame mask. Read the decoded glass material rows and the JC3 Window block (members, textures, how the shipped vehicles' windows are tinted and cracked), and write a per-parameter table BmAK value / JC3 member / equal or not. Also check the canopy's two shapes (open and closed) share the material. Report where the glass is not yet faithful and exactly what would fix it.
+Where JC3 has no exact carrier, give the closest system and the gap for the build to fill (STAGES.md).

@@ -1,0 +1,4133 @@
+{
+ "rows": [
+  {
+   "id": "P-01",
+   "part": "batmobile_turret",
+   "mechanism": "turret",
+   "joint": "Batmobile_Rig_Weapons_Turret_Root",
+   "static_reason": null,
+   "sequences": [
+    "Batmobile_V2_Turret_Spin"
+   ],
+   "found": [
+    {
+     "name": "Batmobile_V2_Turret_Spin",
+     "package": "Playable_Batmobile_SF",
+     "export_index": 223,
+     "export_name": "AnimSequence",
+     "set": "Batmobile_V2_Pose_States",
+     "outer": "Batmobile_V2_Mesh.Batmobile_V2_Pose_States",
+     "mechanism": "turret",
+     "max_rotation_deg": 60.001,
+     "max_translation_cm": 10.8964,
+     "duplicates": [
+      "Playable_Batmobile_SF",
+      "Playable_BatmobileMK2_SF",
+      "Playable_BatmobileFunhouse_SF",
+      "Playable_BatmobileJoker_SF"
+     ]
+    }
+   ],
+   "missing": [],
+   "bone_in_bones": true,
+   "bone_index": 100,
+   "bone_in_seq": [
+    {
+     "seq": "Batmobile_V2_Turret_Spin",
+     "in_moved": true,
+     "in_active": true
+    }
+   ],
+   "ranges": [
+    {
+     "seq": "Batmobile_V2_Turret_Spin",
+     "drot_deg": 60.001,
+     "dpos_cm": 0.0,
+     "category": "turret"
+    }
+   ],
+   "has_moved_range": true,
+   "verdict": "covered"
+  },
+  {
+   "id": "P-02",
+   "part": "batmobile_cannon",
+   "mechanism": "cannon",
+   "joint": null,
+   "static_reason": "no rotation is animated; the bones translate (`Batmobile_Rig_Weapons_Heavy_Cannon_Barrrel_02` 53.376 cm in `Batmobile_V2_Cannon_Fire`) and a hinge cannot reproduce translation",
+   "sequences": [],
+   "found": [],
+   "missing": [],
+   "bone_in_bones": false,
+   "bone_index": null,
+   "bone_in_seq": [],
+   "ranges": [],
+   "has_moved_range": false,
+   "verdict": "no-sequence"
+  },
+  {
+   "id": "P-03",
+   "part": "batmobile_machine_gun",
+   "mechanism": "Vulcan",
+   "joint": "Batmobile_Rig_Weapons_Machine_Gun_02",
+   "static_reason": null,
+   "sequences": [
+    "Batmobile_V2_ChainGun_Spin"
+   ],
+   "found": [
+    {
+     "name": "Batmobile_V2_ChainGun_Spin",
+     "package": "Playable_Batmobile_SF",
+     "export_index": 218,
+     "export_name": "AnimSequence",
+     "set": "Batmobile_V2_Pose_States",
+     "outer": "Batmobile_V2_Mesh.Batmobile_V2_Pose_States",
+     "mechanism": "Vulcan",
+     "max_rotation_deg": 179.496,
+     "max_translation_cm": 0.0,
+     "duplicates": [
+      "Playable_Batmobile_SF",
+      "Playable_BatmobileMK2_SF",
+      "Playable_BatmobileFunhouse_SF",
+      "Playable_BatmobileJoker_SF"
+     ]
+    }
+   ],
+   "missing": [],
+   "bone_in_bones": true,
+   "bone_index": 152,
+   "bone_in_seq": [
+    {
+     "seq": "Batmobile_V2_ChainGun_Spin",
+     "in_moved": true,
+     "in_active": true
+    }
+   ],
+   "ranges": [
+    {
+     "seq": "Batmobile_V2_ChainGun_Spin",
+     "drot_deg": 179.496,
+     "dpos_cm": 0.0,
+     "category": "Vulcan"
+    }
+   ],
+   "has_moved_range": true,
+   "verdict": "covered"
+  },
+  {
+   "id": "P-04",
+   "part": "batmobile_riot_suppressor",
+   "mechanism": "cannon",
+   "joint": "Batmobile_Rig_Weapons_Riot_Sup_Ammo",
+   "static_reason": null,
+   "sequences": [
+    "Batmobile_V2_Cannon_Fire",
+    "Batmobile_V2_Riot_Suppressor"
+   ],
+   "found": [
+    {
+     "name": "Batmobile_V2_Cannon_Fire",
+     "package": "Playable_Batmobile_SF",
+     "export_index": 216,
+     "export_name": "AnimSequence",
+     "set": "Batmobile_V2_Pose_States",
+     "outer": "Batmobile_V2_Mesh.Batmobile_V2_Pose_States",
+     "mechanism": "cannon",
+     "max_rotation_deg": 2.99,
+     "max_translation_cm": 53.376,
+     "duplicates": [
+      "Playable_Batmobile_SF",
+      "Playable_BatmobileMK2_SF",
+      "Playable_BatmobileFunhouse_SF",
+      "Playable_BatmobileJoker_SF"
+     ]
+    },
+    {
+     "name": "Batmobile_V2_Riot_Suppressor",
+     "package": "Playable_Batmobile_SF",
+     "export_index": 217,
+     "export_name": "AnimSequence",
+     "set": "Batmobile_V2_Pose_States",
+     "outer": "Batmobile_V2_Mesh.Batmobile_V2_Pose_States",
+     "mechanism": "cannon",
+     "max_rotation_deg": 89.999,
+     "max_translation_cm": 13.047,
+     "duplicates": [
+      "Playable_Batmobile_SF",
+      "Playable_BatmobileMK2_SF",
+      "Playable_BatmobileFunhouse_SF",
+      "Playable_BatmobileJoker_SF"
+     ]
+    }
+   ],
+   "missing": [],
+   "bone_in_bones": true,
+   "bone_index": 149,
+   "bone_in_seq": [
+    {
+     "seq": "Batmobile_V2_Cannon_Fire",
+     "in_moved": false,
+     "in_active": false
+    },
+    {
+     "seq": "Batmobile_V2_Riot_Suppressor",
+     "in_moved": true,
+     "in_active": true
+    }
+   ],
+   "ranges": [
+    {
+     "seq": "Batmobile_V2_Riot_Suppressor",
+     "drot_deg": 89.999,
+     "dpos_cm": 0.0,
+     "category": "cannon"
+    }
+   ],
+   "has_moved_range": true,
+   "verdict": "covered"
+  },
+  {
+   "id": "P-05",
+   "part": "batmobile_jet",
+   "mechanism": "transformation",
+   "joint": null,
+   "static_reason": "no rotation is animated; the bones translate (`JetSMove` 40.163 cm in `Batmobile_V2_Bat_Tracker`) and a hinge cannot reproduce translation; the spin itself is driven by `engine_rpm` (code, not an animation)",
+   "sequences": [],
+   "found": [],
+   "missing": [],
+   "bone_in_bones": false,
+   "bone_index": null,
+   "bone_in_seq": [],
+   "ranges": [],
+   "has_moved_range": false,
+   "verdict": "no-sequence"
+  },
+  {
+   "id": "P-06",
+   "part": "\u2014",
+   "mechanism": "canopy",
+   "joint": "CockPit_Mesh",
+   "static_reason": null,
+   "sequences": [
+    "Batmobile_V2_Cockpit_Close",
+    "Batmobile_V2_Cockpit_Open",
+    "Cockpit_Close",
+    "Cockpit_Open",
+    "Cockpit_Open_Idle"
+   ],
+   "found": [
+    {
+     "name": "Batmobile_V2_Cockpit_Close",
+     "package": "Playable_Batmobile_SF",
+     "export_index": 211,
+     "export_name": "AnimSequence",
+     "set": "Batmobile_V2_Pose_States",
+     "outer": "Batmobile_V2_Mesh.Batmobile_V2_Pose_States",
+     "mechanism": "canopy",
+     "max_rotation_deg": 11.227,
+     "max_translation_cm": 71.0094,
+     "duplicates": [
+      "Playable_Batmobile_SF",
+      "Playable_BatmobileMK2_SF",
+      "Playable_BatmobileFunhouse_SF",
+      "Playable_BatmobileJoker_SF"
+     ]
+    },
+    {
+     "name": "Batmobile_V2_Cockpit_Open",
+     "package": "Playable_Batmobile_SF",
+     "export_index": 212,
+     "export_name": "AnimSequence",
+     "set": "Batmobile_V2_Pose_States",
+     "outer": "Batmobile_V2_Mesh.Batmobile_V2_Pose_States",
+     "mechanism": "canopy",
+     "max_rotation_deg": 11.227,
+     "max_translation_cm": 71.0094,
+     "duplicates": [
+      "Playable_Batmobile_SF",
+      "Playable_BatmobileMK2_SF",
+      "Playable_BatmobileFunhouse_SF",
+      "Playable_BatmobileJoker_SF"
+     ]
+    },
+    {
+     "name": "Cockpit_Close",
+     "package": "Playable_Batmobile_SF",
+     "export_index": 207,
+     "export_name": "AnimSequence",
+     "set": "BM_Batmobile_Chassis",
+     "outer": "Code.BM_Batmobile_Chassis",
+     "mechanism": "canopy",
+     "max_rotation_deg": 12.493,
+     "max_translation_cm": 72.4813,
+     "duplicates": [
+      "Playable_Batmobile_SF",
+      "Playable_BatmobileMK2_SF",
+      "Playable_BatmobileFunhouse_SF",
+      "Playable_BatmobileJoker_SF"
+     ]
+    },
+    {
+     "name": "Cockpit_Open",
+     "package": "Playable_Batmobile_SF",
+     "export_index": 209,
+     "export_name": "AnimSequence",
+     "set": "BM_Batmobile_Chassis",
+     "outer": "Code.BM_Batmobile_Chassis",
+     "mechanism": "canopy",
+     "max_rotation_deg": 12.445,
+     "max_translation_cm": 72.3771,
+     "duplicates": [
+      "Playable_Batmobile_SF",
+      "Playable_BatmobileMK2_SF",
+      "Playable_BatmobileFunhouse_SF",
+      "Playable_BatmobileJoker_SF"
+     ]
+    },
+    {
+     "name": "Cockpit_Open_Idle",
+     "package": "Playable_Batmobile_SF",
+     "export_index": 208,
+     "export_name": "AnimSequence",
+     "set": "BM_Batmobile_Chassis",
+     "outer": "Code.BM_Batmobile_Chassis",
+     "mechanism": "canopy",
+     "max_rotation_deg": 0.0,
+     "max_translation_cm": 0.0,
+     "duplicates": [
+      "Playable_Batmobile_SF",
+      "Playable_BatmobileMK2_SF",
+      "Playable_BatmobileFunhouse_SF",
+      "Playable_BatmobileJoker_SF"
+     ]
+    }
+   ],
+   "missing": [],
+   "bone_in_bones": true,
+   "bone_index": 62,
+   "bone_in_seq": [
+    {
+     "seq": "Batmobile_V2_Cockpit_Close",
+     "in_moved": true,
+     "in_active": true
+    },
+    {
+     "seq": "Batmobile_V2_Cockpit_Open",
+     "in_moved": true,
+     "in_active": true
+    },
+    {
+     "seq": "Cockpit_Close",
+     "in_moved": true,
+     "in_active": true
+    },
+    {
+     "seq": "Cockpit_Open",
+     "in_moved": true,
+     "in_active": true
+    },
+    {
+     "seq": "Cockpit_Open_Idle",
+     "in_moved": false,
+     "in_active": true
+    }
+   ],
+   "ranges": [
+    {
+     "seq": "Batmobile_V2_Cockpit_Close",
+     "drot_deg": 11.227,
+     "dpos_cm": 71.0094,
+     "category": "canopy"
+    },
+    {
+     "seq": "Batmobile_V2_Cockpit_Open",
+     "drot_deg": 11.227,
+     "dpos_cm": 71.0094,
+     "category": "canopy"
+    },
+    {
+     "seq": "Cockpit_Close",
+     "drot_deg": 12.493,
+     "dpos_cm": 72.4813,
+     "category": "canopy"
+    },
+    {
+     "seq": "Cockpit_Open",
+     "drot_deg": 12.445,
+     "dpos_cm": 72.3771,
+     "category": "canopy"
+    }
+   ],
+   "has_moved_range": true,
+   "verdict": "covered"
+  },
+  {
+   "id": "P-07",
+   "part": "\u2014",
+   "mechanism": "missile bays",
+   "joint": "Batmobile_Rig_Weapons_Missiles_L_T",
+   "static_reason": null,
+   "sequences": [
+    "Batmobile_V2_Missles_Down",
+    "Batmobile_V2_Missles_Up"
+   ],
+   "found": [
+    {
+     "name": "Batmobile_V2_Missles_Down",
+     "package": "Playable_Batmobile_SF",
+     "export_index": 239,
+     "export_name": "AnimSequence",
+     "set": "Batmobile_V2_Pose_States",
+     "outer": "Batmobile_V2_Mesh.Batmobile_V2_Pose_States",
+     "mechanism": "missile bays",
+     "max_rotation_deg": 14.988,
+     "max_translation_cm": 10.8658,
+     "duplicates": [
+      "Playable_Batmobile_SF",
+      "Playable_BatmobileMK2_SF",
+      "Playable_BatmobileFunhouse_SF",
+      "Playable_BatmobileJoker_SF"
+     ]
+    },
+    {
+     "name": "Batmobile_V2_Missles_Up",
+     "package": "Playable_Batmobile_SF",
+     "export_index": 237,
+     "export_name": "AnimSequence",
+     "set": "Batmobile_V2_Pose_States",
+     "outer": "Batmobile_V2_Mesh.Batmobile_V2_Pose_States",
+     "mechanism": "missile bays",
+     "max_rotation_deg": 14.988,
+     "max_translation_cm": 10.8658,
+     "duplicates": [
+      "Playable_Batmobile_SF",
+      "Playable_BatmobileMK2_SF",
+      "Playable_BatmobileFunhouse_SF",
+      "Playable_BatmobileJoker_SF"
+     ]
+    }
+   ],
+   "missing": [],
+   "bone_in_bones": true,
+   "bone_index": 161,
+   "bone_in_seq": [
+    {
+     "seq": "Batmobile_V2_Missles_Down",
+     "in_moved": true,
+     "in_active": true
+    },
+    {
+     "seq": "Batmobile_V2_Missles_Up",
+     "in_moved": true,
+     "in_active": true
+    }
+   ],
+   "ranges": [
+    {
+     "seq": "Batmobile_V2_Missles_Down",
+     "drot_deg": 14.988,
+     "dpos_cm": 0.0,
+     "category": "missile bays"
+    },
+    {
+     "seq": "Batmobile_V2_Missles_Up",
+     "drot_deg": 14.988,
+     "dpos_cm": 0.0,
+     "category": "missile bays"
+    }
+   ],
+   "has_moved_range": true,
+   "verdict": "covered"
+  },
+  {
+   "id": "P-08",
+   "part": "\u2014",
+   "mechanism": "missile bays",
+   "joint": "Batmobile_Rig_Weapons_Missiles_R_T",
+   "static_reason": null,
+   "sequences": [
+    "Batmobile_V2_Missles_Down",
+    "Batmobile_V2_Missles_Up"
+   ],
+   "found": [
+    {
+     "name": "Batmobile_V2_Missles_Down",
+     "package": "Playable_Batmobile_SF",
+     "export_index": 239,
+     "export_name": "AnimSequence",
+     "set": "Batmobile_V2_Pose_States",
+     "outer": "Batmobile_V2_Mesh.Batmobile_V2_Pose_States",
+     "mechanism": "missile bays",
+     "max_rotation_deg": 14.988,
+     "max_translation_cm": 10.8658,
+     "duplicates": [
+      "Playable_Batmobile_SF",
+      "Playable_BatmobileMK2_SF",
+      "Playable_BatmobileFunhouse_SF",
+      "Playable_BatmobileJoker_SF"
+     ]
+    },
+    {
+     "name": "Batmobile_V2_Missles_Up",
+     "package": "Playable_Batmobile_SF",
+     "export_index": 237,
+     "export_name": "AnimSequence",
+     "set": "Batmobile_V2_Pose_States",
+     "outer": "Batmobile_V2_Mesh.Batmobile_V2_Pose_States",
+     "mechanism": "missile bays",
+     "max_rotation_deg": 14.988,
+     "max_translation_cm": 10.8658,
+     "duplicates": [
+      "Playable_Batmobile_SF",
+      "Playable_BatmobileMK2_SF",
+      "Playable_BatmobileFunhouse_SF",
+      "Playable_BatmobileJoker_SF"
+     ]
+    }
+   ],
+   "missing": [],
+   "bone_in_bones": true,
+   "bone_index": 154,
+   "bone_in_seq": [
+    {
+     "seq": "Batmobile_V2_Missles_Down",
+     "in_moved": true,
+     "in_active": true
+    },
+    {
+     "seq": "Batmobile_V2_Missles_Up",
+     "in_moved": true,
+     "in_active": true
+    }
+   ],
+   "ranges": [
+    {
+     "seq": "Batmobile_V2_Missles_Down",
+     "drot_deg": 14.988,
+     "dpos_cm": 0.0,
+     "category": "missile bays"
+    },
+    {
+     "seq": "Batmobile_V2_Missles_Up",
+     "drot_deg": 14.988,
+     "dpos_cm": 0.0,
+     "category": "missile bays"
+    }
+   ],
+   "has_moved_range": true,
+   "verdict": "covered"
+  },
+  {
+   "id": "P-09",
+   "part": "batmobile_aero_flap_l_f",
+   "mechanism": "fins/air-brakes",
+   "joint": "Batmobile_Rig_Aero_Flap_L_F_Piston_Top",
+   "static_reason": null,
+   "sequences": [
+    "Batmobile_V2_Aero_Flap_L_Down",
+    "Batmobile_V2_Aero_Flap_L_Up"
+   ],
+   "found": [
+    {
+     "name": "Batmobile_V2_Aero_Flap_L_Down",
+     "package": "Playable_Batmobile_SF",
+     "export_index": 232,
+     "export_name": "AnimSequence",
+     "set": "Batmobile_V2_Pose_States",
+     "outer": "Batmobile_V2_Mesh.Batmobile_V2_Pose_States",
+     "mechanism": "fins/air-brakes",
+     "max_rotation_deg": 54.787,
+     "max_translation_cm": 0.0,
+     "duplicates": [
+      "Playable_Batmobile_SF",
+      "Playable_BatmobileMK2_SF",
+      "Playable_BatmobileFunhouse_SF",
+      "Playable_BatmobileJoker_SF"
+     ]
+    },
+    {
+     "name": "Batmobile_V2_Aero_Flap_L_Up",
+     "package": "Playable_Batmobile_SF",
+     "export_index": 233,
+     "export_name": "AnimSequence",
+     "set": "Batmobile_V2_Pose_States",
+     "outer": "Batmobile_V2_Mesh.Batmobile_V2_Pose_States",
+     "mechanism": "fins/air-brakes",
+     "max_rotation_deg": 54.787,
+     "max_translation_cm": 0.0,
+     "duplicates": [
+      "Playable_Batmobile_SF",
+      "Playable_BatmobileMK2_SF",
+      "Playable_BatmobileFunhouse_SF",
+      "Playable_BatmobileJoker_SF"
+     ]
+    }
+   ],
+   "missing": [],
+   "bone_in_bones": true,
+   "bone_index": 169,
+   "bone_in_seq": [
+    {
+     "seq": "Batmobile_V2_Aero_Flap_L_Down",
+     "in_moved": true,
+     "in_active": true
+    },
+    {
+     "seq": "Batmobile_V2_Aero_Flap_L_Up",
+     "in_moved": true,
+     "in_active": true
+    }
+   ],
+   "ranges": [
+    {
+     "seq": "Batmobile_V2_Aero_Flap_L_Down",
+     "drot_deg": 25.763,
+     "dpos_cm": 0.0,
+     "category": "fins/air-brakes"
+    },
+    {
+     "seq": "Batmobile_V2_Aero_Flap_L_Up",
+     "drot_deg": 25.763,
+     "dpos_cm": 0.0,
+     "category": "fins/air-brakes"
+    }
+   ],
+   "has_moved_range": true,
+   "verdict": "covered"
+  },
+  {
+   "id": "P-10",
+   "part": "batmobile_aero_flap_r_f",
+   "mechanism": "fins/air-brakes",
+   "joint": "Batmobile_Rig_Aero_Flap_R_F_Piston_Top",
+   "static_reason": null,
+   "sequences": [
+    "Batmobile_V2_Aero_Flap_R_Down",
+    "Batmobile_V2_Aero_Flap_R_Up"
+   ],
+   "found": [
+    {
+     "name": "Batmobile_V2_Aero_Flap_R_Down",
+     "package": "Playable_Batmobile_SF",
+     "export_index": 230,
+     "export_name": "AnimSequence",
+     "set": "Batmobile_V2_Pose_States",
+     "outer": "Batmobile_V2_Mesh.Batmobile_V2_Pose_States",
+     "mechanism": "fins/air-brakes",
+     "max_rotation_deg": 54.799,
+     "max_translation_cm": 1.8479,
+     "duplicates": [
+      "Playable_Batmobile_SF",
+      "Playable_BatmobileMK2_SF",
+      "Playable_BatmobileFunhouse_SF",
+      "Playable_BatmobileJoker_SF"
+     ]
+    },
+    {
+     "name": "Batmobile_V2_Aero_Flap_R_Up",
+     "package": "Playable_Batmobile_SF",
+     "export_index": 231,
+     "export_name": "AnimSequence",
+     "set": "Batmobile_V2_Pose_States",
+     "outer": "Batmobile_V2_Mesh.Batmobile_V2_Pose_States",
+     "mechanism": "fins/air-brakes",
+     "max_rotation_deg": 54.799,
+     "max_translation_cm": 0.0,
+     "duplicates": [
+      "Playable_Batmobile_SF",
+      "Playable_BatmobileMK2_SF",
+      "Playable_BatmobileFunhouse_SF",
+      "Playable_BatmobileJoker_SF"
+     ]
+    }
+   ],
+   "missing": [],
+   "bone_in_bones": true,
+   "bone_index": 171,
+   "bone_in_seq": [
+    {
+     "seq": "Batmobile_V2_Aero_Flap_R_Down",
+     "in_moved": true,
+     "in_active": true
+    },
+    {
+     "seq": "Batmobile_V2_Aero_Flap_R_Up",
+     "in_moved": true,
+     "in_active": true
+    }
+   ],
+   "ranges": [
+    {
+     "seq": "Batmobile_V2_Aero_Flap_R_Down",
+     "drot_deg": 25.763,
+     "dpos_cm": 0.0,
+     "category": "fins/air-brakes"
+    },
+    {
+     "seq": "Batmobile_V2_Aero_Flap_R_Up",
+     "drot_deg": 25.763,
+     "dpos_cm": 0.0,
+     "category": "fins/air-brakes"
+    }
+   ],
+   "has_moved_range": true,
+   "verdict": "covered"
+  },
+  {
+   "id": "P-11",
+   "part": "batmobile_aero_flap_l_b",
+   "mechanism": "fins/air-brakes",
+   "joint": "Batmobile_Rig_Aero_Flap_L_B_Piston_Top_001",
+   "static_reason": null,
+   "sequences": [
+    "Batmobile_V2_Aero_Flap_L_Down",
+    "Batmobile_V2_Aero_Flap_L_Up"
+   ],
+   "found": [
+    {
+     "name": "Batmobile_V2_Aero_Flap_L_Down",
+     "package": "Playable_Batmobile_SF",
+     "export_index": 232,
+     "export_name": "AnimSequence",
+     "set": "Batmobile_V2_Pose_States",
+     "outer": "Batmobile_V2_Mesh.Batmobile_V2_Pose_States",
+     "mechanism": "fins/air-brakes",
+     "max_rotation_deg": 54.787,
+     "max_translation_cm": 0.0,
+     "duplicates": [
+      "Playable_Batmobile_SF",
+      "Playable_BatmobileMK2_SF",
+      "Playable_BatmobileFunhouse_SF",
+      "Playable_BatmobileJoker_SF"
+     ]
+    },
+    {
+     "name": "Batmobile_V2_Aero_Flap_L_Up",
+     "package": "Playable_Batmobile_SF",
+     "export_index": 233,
+     "export_name": "AnimSequence",
+     "set": "Batmobile_V2_Pose_States",
+     "outer": "Batmobile_V2_Mesh.Batmobile_V2_Pose_States",
+     "mechanism": "fins/air-brakes",
+     "max_rotation_deg": 54.787,
+     "max_translation_cm": 0.0,
+     "duplicates": [
+      "Playable_Batmobile_SF",
+      "Playable_BatmobileMK2_SF",
+      "Playable_BatmobileFunhouse_SF",
+      "Playable_BatmobileJoker_SF"
+     ]
+    }
+   ],
+   "missing": [],
+   "bone_in_bones": true,
+   "bone_index": 174,
+   "bone_in_seq": [
+    {
+     "seq": "Batmobile_V2_Aero_Flap_L_Down",
+     "in_moved": true,
+     "in_active": true
+    },
+    {
+     "seq": "Batmobile_V2_Aero_Flap_L_Up",
+     "in_moved": true,
+     "in_active": true
+    }
+   ],
+   "ranges": [
+    {
+     "seq": "Batmobile_V2_Aero_Flap_L_Down",
+     "drot_deg": 54.787,
+     "dpos_cm": 0.0,
+     "category": "fins/air-brakes"
+    },
+    {
+     "seq": "Batmobile_V2_Aero_Flap_L_Up",
+     "drot_deg": 54.787,
+     "dpos_cm": 0.0,
+     "category": "fins/air-brakes"
+    }
+   ],
+   "has_moved_range": true,
+   "verdict": "covered"
+  },
+  {
+   "id": "P-12",
+   "part": "batmobile_aero_flap_r_b",
+   "mechanism": "fins/air-brakes",
+   "joint": "Batmobile_Rig_Aero_Flap_R_B_Piston_Top_001",
+   "static_reason": null,
+   "sequences": [
+    "Batmobile_V2_Aero_Flap_R_Down",
+    "Batmobile_V2_Aero_Flap_R_Up"
+   ],
+   "found": [
+    {
+     "name": "Batmobile_V2_Aero_Flap_R_Down",
+     "package": "Playable_Batmobile_SF",
+     "export_index": 230,
+     "export_name": "AnimSequence",
+     "set": "Batmobile_V2_Pose_States",
+     "outer": "Batmobile_V2_Mesh.Batmobile_V2_Pose_States",
+     "mechanism": "fins/air-brakes",
+     "max_rotation_deg": 54.799,
+     "max_translation_cm": 1.8479,
+     "duplicates": [
+      "Playable_Batmobile_SF",
+      "Playable_BatmobileMK2_SF",
+      "Playable_BatmobileFunhouse_SF",
+      "Playable_BatmobileJoker_SF"
+     ]
+    },
+    {
+     "name": "Batmobile_V2_Aero_Flap_R_Up",
+     "package": "Playable_Batmobile_SF",
+     "export_index": 231,
+     "export_name": "AnimSequence",
+     "set": "Batmobile_V2_Pose_States",
+     "outer": "Batmobile_V2_Mesh.Batmobile_V2_Pose_States",
+     "mechanism": "fins/air-brakes",
+     "max_rotation_deg": 54.799,
+     "max_translation_cm": 0.0,
+     "duplicates": [
+      "Playable_Batmobile_SF",
+      "Playable_BatmobileMK2_SF",
+      "Playable_BatmobileFunhouse_SF",
+      "Playable_BatmobileJoker_SF"
+     ]
+    }
+   ],
+   "missing": [],
+   "bone_in_bones": true,
+   "bone_index": 179,
+   "bone_in_seq": [
+    {
+     "seq": "Batmobile_V2_Aero_Flap_R_Down",
+     "in_moved": true,
+     "in_active": true
+    },
+    {
+     "seq": "Batmobile_V2_Aero_Flap_R_Up",
+     "in_moved": true,
+     "in_active": true
+    }
+   ],
+   "ranges": [
+    {
+     "seq": "Batmobile_V2_Aero_Flap_R_Down",
+     "drot_deg": 54.799,
+     "dpos_cm": 0.0,
+     "category": "fins/air-brakes"
+    },
+    {
+     "seq": "Batmobile_V2_Aero_Flap_R_Up",
+     "drot_deg": 54.799,
+     "dpos_cm": 0.0,
+     "category": "fins/air-brakes"
+    }
+   ],
+   "has_moved_range": true,
+   "verdict": "covered"
+  },
+  {
+   "id": "P-13",
+   "part": "\u2014",
+   "mechanism": null,
+   "joint": null,
+   "static_reason": "no bone carries this part, so nothing can be animated",
+   "sequences": [],
+   "found": [],
+   "missing": [],
+   "bone_in_bones": false,
+   "bone_index": null,
+   "bone_in_seq": [],
+   "ranges": [],
+   "has_moved_range": false,
+   "verdict": "no-sequence"
+  },
+  {
+   "id": "P-14",
+   "part": "batmobile_missile_pod_l",
+   "mechanism": "missile bays",
+   "joint": "Batmobile_Rig_Weapons_Missiles_L_T",
+   "static_reason": null,
+   "sequences": [
+    "Batmobile_V2_Missles_Down",
+    "Batmobile_V2_Missles_Up"
+   ],
+   "found": [
+    {
+     "name": "Batmobile_V2_Missles_Down",
+     "package": "Playable_Batmobile_SF",
+     "export_index": 239,
+     "export_name": "AnimSequence",
+     "set": "Batmobile_V2_Pose_States",
+     "outer": "Batmobile_V2_Mesh.Batmobile_V2_Pose_States",
+     "mechanism": "missile bays",
+     "max_rotation_deg": 14.988,
+     "max_translation_cm": 10.8658,
+     "duplicates": [
+      "Playable_Batmobile_SF",
+      "Playable_BatmobileMK2_SF",
+      "Playable_BatmobileFunhouse_SF",
+      "Playable_BatmobileJoker_SF"
+     ]
+    },
+    {
+     "name": "Batmobile_V2_Missles_Up",
+     "package": "Playable_Batmobile_SF",
+     "export_index": 237,
+     "export_name": "AnimSequence",
+     "set": "Batmobile_V2_Pose_States",
+     "outer": "Batmobile_V2_Mesh.Batmobile_V2_Pose_States",
+     "mechanism": "missile bays",
+     "max_rotation_deg": 14.988,
+     "max_translation_cm": 10.8658,
+     "duplicates": [
+      "Playable_Batmobile_SF",
+      "Playable_BatmobileMK2_SF",
+      "Playable_BatmobileFunhouse_SF",
+      "Playable_BatmobileJoker_SF"
+     ]
+    }
+   ],
+   "missing": [],
+   "bone_in_bones": true,
+   "bone_index": 161,
+   "bone_in_seq": [
+    {
+     "seq": "Batmobile_V2_Missles_Down",
+     "in_moved": true,
+     "in_active": true
+    },
+    {
+     "seq": "Batmobile_V2_Missles_Up",
+     "in_moved": true,
+     "in_active": true
+    }
+   ],
+   "ranges": [
+    {
+     "seq": "Batmobile_V2_Missles_Down",
+     "drot_deg": 14.988,
+     "dpos_cm": 0.0,
+     "category": "missile bays"
+    },
+    {
+     "seq": "Batmobile_V2_Missles_Up",
+     "drot_deg": 14.988,
+     "dpos_cm": 0.0,
+     "category": "missile bays"
+    }
+   ],
+   "has_moved_range": true,
+   "verdict": "covered"
+  },
+  {
+   "id": "P-15",
+   "part": "batmobile_missile_pod_r",
+   "mechanism": "missile bays",
+   "joint": "Batmobile_Rig_Weapons_Missiles_R_T",
+   "static_reason": null,
+   "sequences": [
+    "Batmobile_V2_Missles_Down",
+    "Batmobile_V2_Missles_Up"
+   ],
+   "found": [
+    {
+     "name": "Batmobile_V2_Missles_Down",
+     "package": "Playable_Batmobile_SF",
+     "export_index": 239,
+     "export_name": "AnimSequence",
+     "set": "Batmobile_V2_Pose_States",
+     "outer": "Batmobile_V2_Mesh.Batmobile_V2_Pose_States",
+     "mechanism": "missile bays",
+     "max_rotation_deg": 14.988,
+     "max_translation_cm": 10.8658,
+     "duplicates": [
+      "Playable_Batmobile_SF",
+      "Playable_BatmobileMK2_SF",
+      "Playable_BatmobileFunhouse_SF",
+      "Playable_BatmobileJoker_SF"
+     ]
+    },
+    {
+     "name": "Batmobile_V2_Missles_Up",
+     "package": "Playable_Batmobile_SF",
+     "export_index": 237,
+     "export_name": "AnimSequence",
+     "set": "Batmobile_V2_Pose_States",
+     "outer": "Batmobile_V2_Mesh.Batmobile_V2_Pose_States",
+     "mechanism": "missile bays",
+     "max_rotation_deg": 14.988,
+     "max_translation_cm": 10.8658,
+     "duplicates": [
+      "Playable_Batmobile_SF",
+      "Playable_BatmobileMK2_SF",
+      "Playable_BatmobileFunhouse_SF",
+      "Playable_BatmobileJoker_SF"
+     ]
+    }
+   ],
+   "missing": [],
+   "bone_in_bones": true,
+   "bone_index": 154,
+   "bone_in_seq": [
+    {
+     "seq": "Batmobile_V2_Missles_Down",
+     "in_moved": true,
+     "in_active": true
+    },
+    {
+     "seq": "Batmobile_V2_Missles_Up",
+     "in_moved": true,
+     "in_active": true
+    }
+   ],
+   "ranges": [
+    {
+     "seq": "Batmobile_V2_Missles_Down",
+     "drot_deg": 14.988,
+     "dpos_cm": 0.0,
+     "category": "missile bays"
+    },
+    {
+     "seq": "Batmobile_V2_Missles_Up",
+     "drot_deg": 14.988,
+     "dpos_cm": 0.0,
+     "category": "missile bays"
+    }
+   ],
+   "has_moved_range": true,
+   "verdict": "covered"
+  }
+ ],
+ "n_rows": 15,
+ "n_seq": 253,
+ "n_cited": 60,
+ "n_cited_names": 15,
+ "n_unrowed": 193,
+ "unrowed_by_mech": {
+  "transformation": [
+   {
+    "name": "Drive_To_Combat",
+    "package": "Playable_Batmobile_SF",
+    "export_index": 205,
+    "set": "BM_Batmobile_Chassis",
+    "max_rotation_deg": 179.995,
+    "max_translation_cm": 69.7866,
+    "moved_bones": 73
+   },
+   {
+    "name": "Batmobile_V2_Tank_Spread_Close",
+    "package": "Playable_Batmobile_SF",
+    "export_index": 220,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 179.995,
+    "max_translation_cm": 69.783,
+    "moved_bones": 73
+   },
+   {
+    "name": "Batmobile_V2_Tank_Spread_Open",
+    "package": "Playable_Batmobile_SF",
+    "export_index": 222,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 179.995,
+    "max_translation_cm": 69.783,
+    "moved_bones": 73
+   },
+   {
+    "name": "Batmobile_V2_Tank_Spread_Close_Game",
+    "package": "Playable_Batmobile_SF",
+    "export_index": 225,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 179.995,
+    "max_translation_cm": 69.783,
+    "moved_bones": 69
+   },
+   {
+    "name": "Batmobile_V2_Tank_Spread_Open_Game",
+    "package": "Playable_Batmobile_SF",
+    "export_index": 226,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 179.995,
+    "max_translation_cm": 69.783,
+    "moved_bones": 69
+   },
+   {
+    "name": "Batmobile_V2_Bat_Tracker",
+    "package": "Playable_Batmobile_SF",
+    "export_index": 229,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 28.372,
+    "max_translation_cm": 60.462,
+    "moved_bones": 57
+   },
+   {
+    "name": "Batmobile_V2_Cannon_Reload_Right",
+    "package": "Playable_Batmobile_SF",
+    "export_index": 240,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 79.75,
+    "max_translation_cm": 14.6518,
+    "moved_bones": 14
+   },
+   {
+    "name": "Batmobile_V2_Cannon_Reload_Left",
+    "package": "Playable_Batmobile_SF",
+    "export_index": 241,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 77.5,
+    "max_translation_cm": 14.6513,
+    "moved_bones": 14
+   },
+   {
+    "name": "Drive_To_Combat",
+    "package": "Playable_BatmobileMK2_SF",
+    "export_index": 204,
+    "set": "BM_Batmobile_Chassis",
+    "max_rotation_deg": 179.995,
+    "max_translation_cm": 69.7866,
+    "moved_bones": 73
+   },
+   {
+    "name": "Batmobile_V2_Tank_Spread_Close",
+    "package": "Playable_BatmobileMK2_SF",
+    "export_index": 219,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 179.995,
+    "max_translation_cm": 69.783,
+    "moved_bones": 73
+   },
+   {
+    "name": "Batmobile_V2_Tank_Spread_Open",
+    "package": "Playable_BatmobileMK2_SF",
+    "export_index": 221,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 179.995,
+    "max_translation_cm": 69.783,
+    "moved_bones": 73
+   },
+   {
+    "name": "Batmobile_V2_Tank_Spread_Close_Game",
+    "package": "Playable_BatmobileMK2_SF",
+    "export_index": 224,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 179.995,
+    "max_translation_cm": 69.783,
+    "moved_bones": 69
+   },
+   {
+    "name": "Batmobile_V2_Tank_Spread_Open_Game",
+    "package": "Playable_BatmobileMK2_SF",
+    "export_index": 225,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 179.995,
+    "max_translation_cm": 69.783,
+    "moved_bones": 69
+   },
+   {
+    "name": "Batmobile_V2_Bat_Tracker",
+    "package": "Playable_BatmobileMK2_SF",
+    "export_index": 228,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 28.372,
+    "max_translation_cm": 60.462,
+    "moved_bones": 57
+   },
+   {
+    "name": "Batmobile_V2_Cannon_Reload_Right",
+    "package": "Playable_BatmobileMK2_SF",
+    "export_index": 239,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 79.75,
+    "max_translation_cm": 14.6518,
+    "moved_bones": 14
+   },
+   {
+    "name": "Batmobile_V2_Cannon_Reload_Left",
+    "package": "Playable_BatmobileMK2_SF",
+    "export_index": 240,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 77.5,
+    "max_translation_cm": 14.6513,
+    "moved_bones": 14
+   },
+   {
+    "name": "Drive_To_Combat",
+    "package": "Playable_BatmobileFunhouse_SF",
+    "export_index": 202,
+    "set": "BM_Batmobile_Chassis",
+    "max_rotation_deg": 179.995,
+    "max_translation_cm": 69.7866,
+    "moved_bones": 73
+   },
+   {
+    "name": "Batmobile_V2_Tank_Spread_Close",
+    "package": "Playable_BatmobileFunhouse_SF",
+    "export_index": 217,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 179.995,
+    "max_translation_cm": 69.783,
+    "moved_bones": 73
+   },
+   {
+    "name": "Batmobile_V2_Tank_Spread_Open",
+    "package": "Playable_BatmobileFunhouse_SF",
+    "export_index": 219,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 179.995,
+    "max_translation_cm": 69.783,
+    "moved_bones": 73
+   },
+   {
+    "name": "Batmobile_V2_Tank_Spread_Close_Game",
+    "package": "Playable_BatmobileFunhouse_SF",
+    "export_index": 222,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 179.995,
+    "max_translation_cm": 69.783,
+    "moved_bones": 69
+   },
+   {
+    "name": "Batmobile_V2_Tank_Spread_Open_Game",
+    "package": "Playable_BatmobileFunhouse_SF",
+    "export_index": 223,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 179.995,
+    "max_translation_cm": 69.783,
+    "moved_bones": 69
+   },
+   {
+    "name": "Batmobile_V2_Bat_Tracker",
+    "package": "Playable_BatmobileFunhouse_SF",
+    "export_index": 226,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 28.372,
+    "max_translation_cm": 60.462,
+    "moved_bones": 57
+   },
+   {
+    "name": "Batmobile_V2_Cannon_Reload_Right",
+    "package": "Playable_BatmobileFunhouse_SF",
+    "export_index": 237,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 79.75,
+    "max_translation_cm": 14.6518,
+    "moved_bones": 14
+   },
+   {
+    "name": "Batmobile_V2_Cannon_Reload_Left",
+    "package": "Playable_BatmobileFunhouse_SF",
+    "export_index": 238,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 77.5,
+    "max_translation_cm": 14.6513,
+    "moved_bones": 14
+   },
+   {
+    "name": "Drive_To_Combat",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 336,
+    "set": "BM_Batmobile_Chassis",
+    "max_rotation_deg": 179.995,
+    "max_translation_cm": 69.7866,
+    "moved_bones": 73
+   },
+   {
+    "name": "Batmobile_V2_Tank_Spread_Close",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 452,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 179.995,
+    "max_translation_cm": 69.783,
+    "moved_bones": 73
+   },
+   {
+    "name": "Batmobile_V2_Tank_Spread_Open",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 454,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 179.995,
+    "max_translation_cm": 69.783,
+    "moved_bones": 73
+   },
+   {
+    "name": "Batmobile_V2_Tank_Spread_Close_Game",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 457,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 179.995,
+    "max_translation_cm": 69.783,
+    "moved_bones": 69
+   },
+   {
+    "name": "Batmobile_V2_Tank_Spread_Open_Game",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 458,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 179.995,
+    "max_translation_cm": 69.783,
+    "moved_bones": 69
+   },
+   {
+    "name": "Batmobile_V2_Bat_Tracker",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 461,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 28.372,
+    "max_translation_cm": 60.462,
+    "moved_bones": 57
+   },
+   {
+    "name": "Batmobile_V2_Cannon_Reload_Right",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 472,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 79.75,
+    "max_translation_cm": 14.6518,
+    "moved_bones": 14
+   },
+   {
+    "name": "Batmobile_V2_Cannon_Reload_Left",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 473,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 77.5,
+    "max_translation_cm": 14.6513,
+    "moved_bones": 14
+   }
+  ],
+  "wheels/strafe": [
+   {
+    "name": "BatMobile_Drift_In_01",
+    "package": "Playable_Batmobile_SF",
+    "export_index": 206,
+    "set": "BM_Batmobile_Chassis",
+    "max_rotation_deg": 179.993,
+    "max_translation_cm": 6583.8698,
+    "moved_bones": 20
+   },
+   {
+    "name": "Batmobile_V2_Spin",
+    "package": "Playable_Batmobile_SF",
+    "export_index": 210,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 177.547,
+    "max_translation_cm": 3.3483,
+    "moved_bones": 13
+   },
+   {
+    "name": "Batmobile_V2_Tank_Strafe",
+    "package": "Playable_Batmobile_SF",
+    "export_index": 213,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 178.237,
+    "max_translation_cm": 491.7997,
+    "moved_bones": 13
+   },
+   {
+    "name": "Batmobile_V2_Fans_Spin",
+    "package": "Playable_Batmobile_SF",
+    "export_index": 227,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 180.0,
+    "max_translation_cm": 0.0,
+    "moved_bones": 4
+   },
+   {
+    "name": "BatMobile_Drift_In_01",
+    "package": "Playable_BatmobileMK2_SF",
+    "export_index": 205,
+    "set": "BM_Batmobile_Chassis",
+    "max_rotation_deg": 179.993,
+    "max_translation_cm": 6583.8698,
+    "moved_bones": 20
+   },
+   {
+    "name": "Batmobile_V2_Spin",
+    "package": "Playable_BatmobileMK2_SF",
+    "export_index": 209,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 177.547,
+    "max_translation_cm": 3.3483,
+    "moved_bones": 13
+   },
+   {
+    "name": "Batmobile_V2_Tank_Strafe",
+    "package": "Playable_BatmobileMK2_SF",
+    "export_index": 212,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 178.237,
+    "max_translation_cm": 491.7997,
+    "moved_bones": 13
+   },
+   {
+    "name": "Batmobile_V2_Fans_Spin",
+    "package": "Playable_BatmobileMK2_SF",
+    "export_index": 226,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 180.0,
+    "max_translation_cm": 0.0,
+    "moved_bones": 4
+   },
+   {
+    "name": "BatMobile_Drift_In_01",
+    "package": "Playable_BatmobileFunhouse_SF",
+    "export_index": 203,
+    "set": "BM_Batmobile_Chassis",
+    "max_rotation_deg": 179.993,
+    "max_translation_cm": 6583.8698,
+    "moved_bones": 20
+   },
+   {
+    "name": "Batmobile_V2_Spin",
+    "package": "Playable_BatmobileFunhouse_SF",
+    "export_index": 207,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 177.547,
+    "max_translation_cm": 3.3483,
+    "moved_bones": 13
+   },
+   {
+    "name": "Batmobile_V2_Tank_Strafe",
+    "package": "Playable_BatmobileFunhouse_SF",
+    "export_index": 210,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 178.237,
+    "max_translation_cm": 491.7997,
+    "moved_bones": 13
+   },
+   {
+    "name": "Batmobile_V2_Fans_Spin",
+    "package": "Playable_BatmobileFunhouse_SF",
+    "export_index": 224,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 180.0,
+    "max_translation_cm": 0.0,
+    "moved_bones": 4
+   },
+   {
+    "name": "BatMobile_Drift_In_01",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 337,
+    "set": "BM_Batmobile_Chassis",
+    "max_rotation_deg": 179.993,
+    "max_translation_cm": 6583.8698,
+    "moved_bones": 20
+   },
+   {
+    "name": "Batmobile_V2_Spin",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 442,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 177.547,
+    "max_translation_cm": 3.3483,
+    "moved_bones": 13
+   },
+   {
+    "name": "Batmobile_V2_Tank_Strafe",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 445,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 178.237,
+    "max_translation_cm": 491.7997,
+    "moved_bones": 13
+   },
+   {
+    "name": "Batmobile_V2_Fans_Spin",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 459,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 180.0,
+    "max_translation_cm": 0.0,
+    "moved_bones": 4
+   }
+  ],
+  "fins/air-brakes": [
+   {
+    "name": "Batmobile_V2_Jet_Boost",
+    "package": "Playable_Batmobile_SF",
+    "export_index": 214,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 16.725,
+    "max_translation_cm": 12.4983,
+    "moved_bones": 20
+   },
+   {
+    "name": "Batmobile_V2_Jet_Boost",
+    "package": "Playable_BatmobileMK2_SF",
+    "export_index": 213,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 16.725,
+    "max_translation_cm": 12.4983,
+    "moved_bones": 20
+   },
+   {
+    "name": "Batmobile_V2_Jet_Boost",
+    "package": "Playable_BatmobileFunhouse_SF",
+    "export_index": 211,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 16.725,
+    "max_translation_cm": 12.4983,
+    "moved_bones": 20
+   },
+   {
+    "name": "Batmobile_V2_Jet_Boost",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 446,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 16.725,
+    "max_translation_cm": 12.4983,
+    "moved_bones": 20
+   }
+  ],
+  "other": [
+   {
+    "name": "Batmobile_V2_Back_Door_Open",
+    "package": "Playable_Batmobile_SF",
+    "export_index": 215,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 120.0,
+    "max_translation_cm": 51.0594,
+    "moved_bones": 24
+   },
+   {
+    "name": "Batmobile_V2_Boost_Noise",
+    "package": "Playable_Batmobile_SF",
+    "export_index": 219,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 14.355,
+    "max_translation_cm": 0.6347,
+    "moved_bones": 19
+   },
+   {
+    "name": "Batmobile_V2_Tank_Idle",
+    "package": "Playable_Batmobile_SF",
+    "export_index": 221,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 0.0,
+    "max_translation_cm": 0.0,
+    "moved_bones": 0
+   },
+   {
+    "name": "Batmobile_V2_Idle",
+    "package": "Playable_Batmobile_SF",
+    "export_index": 224,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 0.0,
+    "max_translation_cm": 0.0,
+    "moved_bones": 0
+   },
+   {
+    "name": "Batmobile_V2_Winch_Door_Open",
+    "package": "Playable_Batmobile_SF",
+    "export_index": 228,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 40.0,
+    "max_translation_cm": 0.0,
+    "moved_bones": 1
+   },
+   {
+    "name": "Batmobile_V2_Back_Door_Close",
+    "package": "Playable_Batmobile_SF",
+    "export_index": 234,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 120.0,
+    "max_translation_cm": 51.0594,
+    "moved_bones": 24
+   },
+   {
+    "name": "Batmobile_V2_Chair_Close",
+    "package": "Playable_Batmobile_SF",
+    "export_index": 235,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 180.0,
+    "max_translation_cm": 150.7468,
+    "moved_bones": 9
+   },
+   {
+    "name": "Batmobile_V2_Chair_Open",
+    "package": "Playable_Batmobile_SF",
+    "export_index": 236,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 179.999,
+    "max_translation_cm": 150.7468,
+    "moved_bones": 9
+   },
+   {
+    "name": "Batmobile_V2_Jet_Close",
+    "package": "Playable_Batmobile_SF",
+    "export_index": 238,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 14.602,
+    "max_translation_cm": 4.6499,
+    "moved_bones": 20
+   },
+   {
+    "name": "Batmobile_V2_Back_Door_Open",
+    "package": "Playable_BatmobileMK2_SF",
+    "export_index": 214,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 120.0,
+    "max_translation_cm": 51.0594,
+    "moved_bones": 24
+   },
+   {
+    "name": "Batmobile_V2_Boost_Noise",
+    "package": "Playable_BatmobileMK2_SF",
+    "export_index": 218,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 14.355,
+    "max_translation_cm": 0.6347,
+    "moved_bones": 19
+   },
+   {
+    "name": "Batmobile_V2_Tank_Idle",
+    "package": "Playable_BatmobileMK2_SF",
+    "export_index": 220,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 0.0,
+    "max_translation_cm": 0.0,
+    "moved_bones": 0
+   },
+   {
+    "name": "Batmobile_V2_Idle",
+    "package": "Playable_BatmobileMK2_SF",
+    "export_index": 223,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 0.0,
+    "max_translation_cm": 0.0,
+    "moved_bones": 0
+   },
+   {
+    "name": "Batmobile_V2_Winch_Door_Open",
+    "package": "Playable_BatmobileMK2_SF",
+    "export_index": 227,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 40.0,
+    "max_translation_cm": 0.0,
+    "moved_bones": 1
+   },
+   {
+    "name": "Batmobile_V2_Back_Door_Close",
+    "package": "Playable_BatmobileMK2_SF",
+    "export_index": 233,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 120.0,
+    "max_translation_cm": 51.0594,
+    "moved_bones": 24
+   },
+   {
+    "name": "Batmobile_V2_Chair_Close",
+    "package": "Playable_BatmobileMK2_SF",
+    "export_index": 234,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 180.0,
+    "max_translation_cm": 150.7468,
+    "moved_bones": 9
+   },
+   {
+    "name": "Batmobile_V2_Chair_Open",
+    "package": "Playable_BatmobileMK2_SF",
+    "export_index": 235,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 179.999,
+    "max_translation_cm": 150.7468,
+    "moved_bones": 9
+   },
+   {
+    "name": "Batmobile_V2_Jet_Close",
+    "package": "Playable_BatmobileMK2_SF",
+    "export_index": 237,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 14.602,
+    "max_translation_cm": 4.6499,
+    "moved_bones": 20
+   },
+   {
+    "name": "Batmobile_V2_Back_Door_Open",
+    "package": "Playable_BatmobileFunhouse_SF",
+    "export_index": 212,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 120.0,
+    "max_translation_cm": 51.0594,
+    "moved_bones": 24
+   },
+   {
+    "name": "Batmobile_V2_Boost_Noise",
+    "package": "Playable_BatmobileFunhouse_SF",
+    "export_index": 216,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 14.355,
+    "max_translation_cm": 0.6347,
+    "moved_bones": 19
+   },
+   {
+    "name": "Batmobile_V2_Tank_Idle",
+    "package": "Playable_BatmobileFunhouse_SF",
+    "export_index": 218,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 0.0,
+    "max_translation_cm": 0.0,
+    "moved_bones": 0
+   },
+   {
+    "name": "Batmobile_V2_Idle",
+    "package": "Playable_BatmobileFunhouse_SF",
+    "export_index": 221,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 0.0,
+    "max_translation_cm": 0.0,
+    "moved_bones": 0
+   },
+   {
+    "name": "Batmobile_V2_Winch_Door_Open",
+    "package": "Playable_BatmobileFunhouse_SF",
+    "export_index": 225,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 40.0,
+    "max_translation_cm": 0.0,
+    "moved_bones": 1
+   },
+   {
+    "name": "Batmobile_V2_Back_Door_Close",
+    "package": "Playable_BatmobileFunhouse_SF",
+    "export_index": 231,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 120.0,
+    "max_translation_cm": 51.0594,
+    "moved_bones": 24
+   },
+   {
+    "name": "Batmobile_V2_Chair_Close",
+    "package": "Playable_BatmobileFunhouse_SF",
+    "export_index": 232,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 180.0,
+    "max_translation_cm": 150.7468,
+    "moved_bones": 9
+   },
+   {
+    "name": "Batmobile_V2_Chair_Open",
+    "package": "Playable_BatmobileFunhouse_SF",
+    "export_index": 233,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 179.999,
+    "max_translation_cm": 150.7468,
+    "moved_bones": 9
+   },
+   {
+    "name": "Batmobile_V2_Jet_Close",
+    "package": "Playable_BatmobileFunhouse_SF",
+    "export_index": 235,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 14.602,
+    "max_translation_cm": 4.6499,
+    "moved_bones": 20
+   },
+   {
+    "name": "Beatdown_Out",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 341,
+    "set": "Camera",
+    "max_rotation_deg": 89.089,
+    "max_translation_cm": 301.1601,
+    "moved_bones": 1
+   },
+   {
+    "name": "180_Scare",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 342,
+    "set": "Camera",
+    "max_rotation_deg": 16.679,
+    "max_translation_cm": 53.6876,
+    "moved_bones": 1
+   },
+   {
+    "name": "FPS_Open_Door_Front",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 343,
+    "set": "Camera",
+    "max_rotation_deg": 27.156,
+    "max_translation_cm": 263.5246,
+    "moved_bones": 1
+   },
+   {
+    "name": "Reload",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 344,
+    "set": "Camera",
+    "max_rotation_deg": 0.0,
+    "max_translation_cm": 0.0,
+    "moved_bones": 0
+   },
+   {
+    "name": "BM_Seperate_Idle",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 345,
+    "set": "Camera",
+    "max_rotation_deg": 0.0,
+    "max_translation_cm": 0.0,
+    "moved_bones": 0
+   },
+   {
+    "name": "Disarm_Switch_Player",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 346,
+    "set": "Camera",
+    "max_rotation_deg": 174.189,
+    "max_translation_cm": 249.9811,
+    "moved_bones": 1
+   },
+   {
+    "name": "JK_Environment_Takedown_Pre",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 347,
+    "set": "Camera",
+    "max_rotation_deg": 47.155,
+    "max_translation_cm": 362.8353,
+    "moved_bones": 1
+   },
+   {
+    "name": "BM_Seperate_In",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 348,
+    "set": "Camera",
+    "max_rotation_deg": 17.102,
+    "max_translation_cm": 216.6958,
+    "moved_bones": 1
+   },
+   {
+    "name": "BatMobile_Stand_Out_Roof_Bak",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 349,
+    "set": "Camera",
+    "max_rotation_deg": 179.508,
+    "max_translation_cm": 1047.4882,
+    "moved_bones": 1
+   },
+   {
+    "name": "Final_Takedown_In",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 350,
+    "set": "Camera",
+    "max_rotation_deg": 98.564,
+    "max_translation_cm": 403.5152,
+    "moved_bones": 1
+   },
+   {
+    "name": "Jump_Attack",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 351,
+    "set": "Camera",
+    "max_rotation_deg": 83.222,
+    "max_translation_cm": 389.1098,
+    "moved_bones": 1
+   },
+   {
+    "name": "GrateFront",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 352,
+    "set": "Camera",
+    "max_rotation_deg": 122.898,
+    "max_translation_cm": 298.6244,
+    "moved_bones": 1
+   },
+   {
+    "name": "BM_Seperate_Out",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 353,
+    "set": "Camera",
+    "max_rotation_deg": 8.021,
+    "max_translation_cm": 343.4548,
+    "moved_bones": 1
+   },
+   {
+    "name": "ManequinFront",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 354,
+    "set": "Camera",
+    "max_rotation_deg": 74.377,
+    "max_translation_cm": 119.0829,
+    "moved_bones": 1
+   },
+   {
+    "name": "ManequinFront_End",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 355,
+    "set": "Camera",
+    "max_rotation_deg": 179.942,
+    "max_translation_cm": 790.8703,
+    "moved_bones": 1
+   },
+   {
+    "name": "BM_JK_Seperate_Sequence",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 356,
+    "set": "Camera",
+    "max_rotation_deg": 78.532,
+    "max_translation_cm": 517.5525,
+    "moved_bones": 1
+   },
+   {
+    "name": "Intro_Joker_TiedUp",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 357,
+    "set": "Camera",
+    "max_rotation_deg": 179.947,
+    "max_translation_cm": 1931.1783,
+    "moved_bones": 1
+   },
+   {
+    "name": "Crime_Alley",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 358,
+    "set": "Camera",
+    "max_rotation_deg": 179.681,
+    "max_translation_cm": 337.2241,
+    "moved_bones": 1
+   },
+   {
+    "name": "Gun_Down_Idle",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 359,
+    "set": "Camera",
+    "max_rotation_deg": 0.75,
+    "max_translation_cm": 1.8257,
+    "moved_bones": 1
+   },
+   {
+    "name": "JK_Environment_Takedown_In",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 360,
+    "set": "Camera",
+    "max_rotation_deg": 27.163,
+    "max_translation_cm": 288.1848,
+    "moved_bones": 1
+   },
+   {
+    "name": "BatMobile_Stand_Out",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 361,
+    "set": "Camera",
+    "max_rotation_deg": 179.557,
+    "max_translation_cm": 1154.8882,
+    "moved_bones": 1
+   },
+   {
+    "name": "Van_Crash",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 362,
+    "set": "Camera",
+    "max_rotation_deg": 177.786,
+    "max_translation_cm": 786.6628,
+    "moved_bones": 1
+   },
+   {
+    "name": "Beatdown_Idle",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 363,
+    "set": "Camera",
+    "max_rotation_deg": 0.293,
+    "max_translation_cm": 2.1887,
+    "moved_bones": 1
+   },
+   {
+    "name": "2Face_Talk_Idle",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 364,
+    "set": "Camera",
+    "max_rotation_deg": 0.0,
+    "max_translation_cm": 0.0,
+    "moved_bones": 0
+   },
+   {
+    "name": "BatMobile_Stand_Out_Roof",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 365,
+    "set": "Camera",
+    "max_rotation_deg": 179.977,
+    "max_translation_cm": 1197.9716,
+    "moved_bones": 1
+   },
+   {
+    "name": "FPS_Fire_01",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 366,
+    "set": "Camera",
+    "max_rotation_deg": 1.461,
+    "max_translation_cm": 3.2204,
+    "moved_bones": 1
+   },
+   {
+    "name": "Gun_Down_Walk_Forward",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 367,
+    "set": "Camera",
+    "max_rotation_deg": 0.0,
+    "max_translation_cm": 0.0,
+    "moved_bones": 0
+   },
+   {
+    "name": "FPS_Fire_02",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 368,
+    "set": "Camera",
+    "max_rotation_deg": 1.31,
+    "max_translation_cm": 2.8713,
+    "moved_bones": 1
+   },
+   {
+    "name": "Portable_Nuke_Transformation",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 369,
+    "set": "Camera",
+    "max_rotation_deg": 114.124,
+    "max_translation_cm": 365.3841,
+    "moved_bones": 1
+   },
+   {
+    "name": "Gun_Up",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 370,
+    "set": "Camera",
+    "max_rotation_deg": 0.36,
+    "max_translation_cm": 0.7336,
+    "moved_bones": 1
+   },
+   {
+    "name": "GrateBack",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 371,
+    "set": "Camera",
+    "max_rotation_deg": 163.281,
+    "max_translation_cm": 407.5999,
+    "moved_bones": 1
+   },
+   {
+    "name": "LedgeTakedown",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 372,
+    "set": "Camera",
+    "max_rotation_deg": 122.886,
+    "max_translation_cm": 424.1631,
+    "moved_bones": 1
+   },
+   {
+    "name": "Crime_Alley_Left",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 373,
+    "set": "Camera",
+    "max_rotation_deg": 179.843,
+    "max_translation_cm": 560.0295,
+    "moved_bones": 1
+   },
+   {
+    "name": "Admin_Scarecrow_Speech",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 374,
+    "set": "Camera",
+    "max_rotation_deg": 89.574,
+    "max_translation_cm": 147.7301,
+    "moved_bones": 1
+   },
+   {
+    "name": "Crime_Alley_Right",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 375,
+    "set": "Camera",
+    "max_rotation_deg": 179.943,
+    "max_translation_cm": 623.7469,
+    "moved_bones": 1
+   },
+   {
+    "name": "FPS_Idle",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 376,
+    "set": "Camera",
+    "max_rotation_deg": 0.856,
+    "max_translation_cm": 2.0276,
+    "moved_bones": 1
+   },
+   {
+    "name": "Stage_3_Intro",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 377,
+    "set": "Camera",
+    "max_rotation_deg": 156.369,
+    "max_translation_cm": 369.9988,
+    "moved_bones": 1
+   },
+   {
+    "name": "RailingBack",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 378,
+    "set": "Camera",
+    "max_rotation_deg": 179.997,
+    "max_translation_cm": 606.4155,
+    "moved_bones": 1
+   },
+   {
+    "name": "Beatdown_Punch_01",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 379,
+    "set": "Camera",
+    "max_rotation_deg": 1.696,
+    "max_translation_cm": 4.4787,
+    "moved_bones": 1
+   },
+   {
+    "name": "Admin_Scarecrow_Final",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 380,
+    "set": "Camera",
+    "max_rotation_deg": 179.992,
+    "max_translation_cm": 337.2713,
+    "moved_bones": 1
+   },
+   {
+    "name": "Cling_Onto_Cell_Idle",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 381,
+    "set": "Camera",
+    "max_rotation_deg": 0.975,
+    "max_translation_cm": 0.674,
+    "moved_bones": 1
+   },
+   {
+    "name": "RailingFront",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 382,
+    "set": "Camera",
+    "max_rotation_deg": 50.801,
+    "max_translation_cm": 441.5516,
+    "moved_bones": 1
+   },
+   {
+    "name": "Final_Takedown_Idle",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 383,
+    "set": "Camera",
+    "max_rotation_deg": 0.0,
+    "max_translation_cm": 0.0,
+    "moved_bones": 0
+   },
+   {
+    "name": "Door_Front_JK",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 384,
+    "set": "Camera",
+    "max_rotation_deg": 26.096,
+    "max_translation_cm": 255.3324,
+    "moved_bones": 1
+   },
+   {
+    "name": "Final_Takedown_Out",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 385,
+    "set": "Camera",
+    "max_rotation_deg": 179.716,
+    "max_translation_cm": 320.4788,
+    "moved_bones": 1
+   },
+   {
+    "name": "Cell_Open",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 386,
+    "set": "Camera",
+    "max_rotation_deg": 179.835,
+    "max_translation_cm": 778.8783,
+    "moved_bones": 1
+   },
+   {
+    "name": "FPS_Joker Walks through door",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 387,
+    "set": "Camera",
+    "max_rotation_deg": 87.478,
+    "max_translation_cm": 313.4693,
+    "moved_bones": 1
+   },
+   {
+    "name": "2Face_Talk_In",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 388,
+    "set": "Camera",
+    "max_rotation_deg": 3.709,
+    "max_translation_cm": 270.9941,
+    "moved_bones": 1
+   },
+   {
+    "name": "FPS_Joker_Door_Shot",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 389,
+    "set": "Camera",
+    "max_rotation_deg": 84.504,
+    "max_translation_cm": 337.1854,
+    "moved_bones": 1
+   },
+   {
+    "name": "Final_Takedown_Break_Tap",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 390,
+    "set": "Camera",
+    "max_rotation_deg": 16.141,
+    "max_translation_cm": 16.3503,
+    "moved_bones": 1
+   },
+   {
+    "name": "Idle_Overlay_01",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 391,
+    "set": "Camera",
+    "max_rotation_deg": 1.912,
+    "max_translation_cm": 4.5667,
+    "moved_bones": 1
+   },
+   {
+    "name": "Vent_Takedown",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 392,
+    "set": "Camera",
+    "max_rotation_deg": 94.539,
+    "max_translation_cm": 505.8408,
+    "moved_bones": 1
+   },
+   {
+    "name": "Beatdown_In_Back",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 393,
+    "set": "Camera",
+    "max_rotation_deg": 114.472,
+    "max_translation_cm": 643.9746,
+    "moved_bones": 1
+   },
+   {
+    "name": "Walk_Forward",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 394,
+    "set": "Camera",
+    "max_rotation_deg": 0.0,
+    "max_translation_cm": 0.0,
+    "moved_bones": 0
+   },
+   {
+    "name": "Beatdown_In_Front",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 395,
+    "set": "Camera",
+    "max_rotation_deg": 70.945,
+    "max_translation_cm": 746.1745,
+    "moved_bones": 1
+   },
+   {
+    "name": "Kick_Open_Door",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 396,
+    "set": "Camera",
+    "max_rotation_deg": 2.351,
+    "max_translation_cm": 373.8873,
+    "moved_bones": 1
+   },
+   {
+    "name": "ManequinBack",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 397,
+    "set": "Camera",
+    "max_rotation_deg": 179.983,
+    "max_translation_cm": 558.2601,
+    "moved_bones": 1
+   },
+   {
+    "name": "Idle_Overlay_Nervous",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 398,
+    "set": "Camera",
+    "max_rotation_deg": 4.757,
+    "max_translation_cm": 14.7846,
+    "moved_bones": 1
+   },
+   {
+    "name": "JK_Environment_Takedown_Near_Pre",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 399,
+    "set": "Camera",
+    "max_rotation_deg": 46.931,
+    "max_translation_cm": 241.4065,
+    "moved_bones": 1
+   },
+   {
+    "name": "Disarm_Switch_Player",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 400,
+    "set": "Camera",
+    "max_rotation_deg": 175.54,
+    "max_translation_cm": 175.6853,
+    "moved_bones": 1
+   },
+   {
+    "name": "RailingTakedown_Grab",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 401,
+    "set": "Camera",
+    "max_rotation_deg": 30.265,
+    "max_translation_cm": 219.9273,
+    "moved_bones": 1
+   },
+   {
+    "name": "Beatdown_Punch_02",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 402,
+    "set": "Camera",
+    "max_rotation_deg": 1.696,
+    "max_translation_cm": 4.4787,
+    "moved_bones": 1
+   },
+   {
+    "name": "2Face_Finale",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 403,
+    "set": "Camera",
+    "max_rotation_deg": 179.984,
+    "max_translation_cm": 3155.5581,
+    "moved_bones": 1
+   },
+   {
+    "name": "Turn_On_Torch",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 404,
+    "set": "Camera",
+    "max_rotation_deg": 2.333,
+    "max_translation_cm": 8.6643,
+    "moved_bones": 1
+   },
+   {
+    "name": "JK_Environment_Takedown_Near_In",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 405,
+    "set": "Camera",
+    "max_rotation_deg": 179.68,
+    "max_translation_cm": 184.815,
+    "moved_bones": 1
+   },
+   {
+    "name": "Beatdown_In",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 406,
+    "set": "Camera",
+    "max_rotation_deg": 75.493,
+    "max_translation_cm": 1084.6269,
+    "moved_bones": 1
+   },
+   {
+    "name": "2Face_Finale_Ver01",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 407,
+    "set": "Camera",
+    "max_rotation_deg": 0.0,
+    "max_translation_cm": 0.0,
+    "moved_bones": 0
+   },
+   {
+    "name": "Crime_Alley_Back",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 408,
+    "set": "Camera",
+    "max_rotation_deg": 180.0,
+    "max_translation_cm": 880.9701,
+    "moved_bones": 1
+   },
+   {
+    "name": "Stage_3_Outro",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 409,
+    "set": "Camera",
+    "max_rotation_deg": 37.276,
+    "max_translation_cm": 188.5929,
+    "moved_bones": 1
+   },
+   {
+    "name": "Gun_Down",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 410,
+    "set": "Camera",
+    "max_rotation_deg": 0.754,
+    "max_translation_cm": 1.7748,
+    "moved_bones": 1
+   },
+   {
+    "name": "Thug_Death_Idle_06",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 428,
+    "set": "Phase2_TG",
+    "max_rotation_deg": 2.119,
+    "max_translation_cm": 0.3123,
+    "moved_bones": 4
+   },
+   {
+    "name": "Thug_Death_Idle_01",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 440,
+    "set": "Phase2_TG",
+    "max_rotation_deg": 1.543,
+    "max_translation_cm": 0.0,
+    "moved_bones": 3
+   },
+   {
+    "name": "Batmobile_V2_Back_Door_Open",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 447,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 120.0,
+    "max_translation_cm": 51.0594,
+    "moved_bones": 24
+   },
+   {
+    "name": "Batmobile_V2_Boost_Noise",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 451,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 14.355,
+    "max_translation_cm": 0.6347,
+    "moved_bones": 19
+   },
+   {
+    "name": "Batmobile_V2_Tank_Idle",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 453,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 0.0,
+    "max_translation_cm": 0.0,
+    "moved_bones": 0
+   },
+   {
+    "name": "Batmobile_V2_Idle",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 456,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 0.0,
+    "max_translation_cm": 0.0,
+    "moved_bones": 0
+   },
+   {
+    "name": "Batmobile_V2_Winch_Door_Open",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 460,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 40.0,
+    "max_translation_cm": 0.0,
+    "moved_bones": 1
+   },
+   {
+    "name": "Batmobile_V2_Back_Door_Close",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 466,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 120.0,
+    "max_translation_cm": 51.0594,
+    "moved_bones": 24
+   },
+   {
+    "name": "Batmobile_V2_Chair_Close",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 467,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 180.0,
+    "max_translation_cm": 150.7468,
+    "moved_bones": 9
+   },
+   {
+    "name": "Batmobile_V2_Chair_Open",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 468,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 179.999,
+    "max_translation_cm": 150.7468,
+    "moved_bones": 9
+   },
+   {
+    "name": "Batmobile_V2_Jet_Close",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 470,
+    "set": "Batmobile_V2_Pose_States",
+    "max_rotation_deg": 14.602,
+    "max_translation_cm": 4.6499,
+    "moved_bones": 20
+   },
+   {
+    "name": "Batwing_Rescue_01",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 474,
+    "set": "Batwing_Rescue",
+    "max_rotation_deg": 179.995,
+    "max_translation_cm": 26170.4296,
+    "moved_bones": 6
+   },
+   {
+    "name": "Batmobile_Vertical_Rescue_Out",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 475,
+    "set": "Batwing_Rescue",
+    "max_rotation_deg": 109.998,
+    "max_translation_cm": 36480.4605,
+    "moved_bones": 5
+   },
+   {
+    "name": "Batmobile_Vertical_Rescue_Idle",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 476,
+    "set": "Batwing_Rescue",
+    "max_rotation_deg": 0.0,
+    "max_translation_cm": 120.3396,
+    "moved_bones": 2
+   },
+   {
+    "name": "Batmobile_Vertical_Rescue_In",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 477,
+    "set": "Batwing_Rescue",
+    "max_rotation_deg": 0.0,
+    "max_translation_cm": 36499.6871,
+    "moved_bones": 1
+   }
+  ],
+  "driver/Batman": [
+   {
+    "name": "BatMobile_Stand_Out",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 411,
+    "set": "Phase2_JK",
+    "max_rotation_deg": 120.912,
+    "max_translation_cm": 378.3675,
+    "moved_bones": 54
+   },
+   {
+    "name": "BatMobile_Stand_Out_Roof_Bak",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 412,
+    "set": "Phase2_JK",
+    "max_rotation_deg": 137.943,
+    "max_translation_cm": 188.7346,
+    "moved_bones": 54
+   },
+   {
+    "name": "Intro_Joker_TiedUp00",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 413,
+    "set": "Phase2_JK",
+    "max_rotation_deg": 174.598,
+    "max_translation_cm": 1343.1668,
+    "moved_bones": 54
+   },
+   {
+    "name": "BatMobile_Stand_Out_Roof",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 414,
+    "set": "Phase2_JK",
+    "max_rotation_deg": 120.915,
+    "max_translation_cm": 417.6877,
+    "moved_bones": 54
+   },
+   {
+    "name": "BM_Seperate_Out",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 415,
+    "set": "Phase2_JK",
+    "max_rotation_deg": 179.849,
+    "max_translation_cm": 206.2969,
+    "moved_bones": 50
+   },
+   {
+    "name": "Vent_Takedown",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 416,
+    "set": "Phase2_JK",
+    "max_rotation_deg": 179.832,
+    "max_translation_cm": 593.6787,
+    "moved_bones": 55
+   },
+   {
+    "name": "BM_JK_Seperate_Sequence",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 417,
+    "set": "Phase2_JK",
+    "max_rotation_deg": 129.028,
+    "max_translation_cm": 208.4718,
+    "moved_bones": 54
+   },
+   {
+    "name": "Jump_Attack",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 418,
+    "set": "Phase2_JK",
+    "max_rotation_deg": 152.125,
+    "max_translation_cm": 477.7425,
+    "moved_bones": 55
+   },
+   {
+    "name": "2Face_Finale",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 419,
+    "set": "Phase2_JK",
+    "max_rotation_deg": 179.981,
+    "max_translation_cm": 2866.593,
+    "moved_bones": 54
+   },
+   {
+    "name": "2Face_Talk_Idle",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 420,
+    "set": "Phase2_JK",
+    "max_rotation_deg": 13.001,
+    "max_translation_cm": 3.2254,
+    "moved_bones": 48
+   },
+   {
+    "name": "2Face_Finale_Ver01",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 421,
+    "set": "Phase2_JK",
+    "max_rotation_deg": 7.007,
+    "max_translation_cm": 0.6986,
+    "moved_bones": 1
+   },
+   {
+    "name": "Kick_Open_Door",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 422,
+    "set": "Phase2_JK",
+    "max_rotation_deg": 103.514,
+    "max_translation_cm": 351.9943,
+    "moved_bones": 53
+   },
+   {
+    "name": "Intro_Joker_TiedUp",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 423,
+    "set": "Phase2_JK",
+    "max_rotation_deg": 176.227,
+    "max_translation_cm": 1368.0986,
+    "moved_bones": 54
+   },
+   {
+    "name": "2Face_Talk_In",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 424,
+    "set": "Phase2_JK",
+    "max_rotation_deg": 85.991,
+    "max_translation_cm": 248.581,
+    "moved_bones": 53
+   },
+   {
+    "name": "Main_Ch10_S05_Joker_A1_Warehouse_Two_Face_Gordon_Outro-2Face_Finale_Ver01",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 425,
+    "set": "Phase2_JK_FACE",
+    "max_rotation_deg": 29.489,
+    "max_translation_cm": 3.6517,
+    "moved_bones": 38
+   },
+   {
+    "name": "Main_Ch10_S05_Joker_A1_Warehouse_Intro_Conversation-Intro_Joker_TiedUp_Joker",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 426,
+    "set": "Phase2_JK_FACE",
+    "max_rotation_deg": 32.773,
+    "max_translation_cm": 3.2033,
+    "moved_bones": 38
+   },
+   {
+    "name": "Main_Ch10_S05_Joker_A1_Warehouse_Two_Face_Gordon_Outro-2Face_Finale",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 427,
+    "set": "Phase2_JK_FACE",
+    "max_rotation_deg": 0.0,
+    "max_translation_cm": 0.0,
+    "moved_bones": 0
+   },
+   {
+    "name": "Thug_Death_03",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 429,
+    "set": "Phase2_TG",
+    "max_rotation_deg": 175.678,
+    "max_translation_cm": 279.7274,
+    "moved_bones": 53
+   },
+   {
+    "name": "Thug_Death_Idle_04",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 430,
+    "set": "Phase2_TG",
+    "max_rotation_deg": 0.0,
+    "max_translation_cm": 0.0,
+    "moved_bones": 0
+   },
+   {
+    "name": "Thug_Death_04",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 431,
+    "set": "Phase2_TG",
+    "max_rotation_deg": 178.517,
+    "max_translation_cm": 279.6206,
+    "moved_bones": 37
+   },
+   {
+    "name": "Thug_Death_Idle_05",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 432,
+    "set": "Phase2_TG",
+    "max_rotation_deg": 5.368,
+    "max_translation_cm": 0.0,
+    "moved_bones": 3
+   },
+   {
+    "name": "Thug_Death_05",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 433,
+    "set": "Phase2_TG",
+    "max_rotation_deg": 132.026,
+    "max_translation_cm": 165.3243,
+    "moved_bones": 37
+   },
+   {
+    "name": "Thug_Death_Idle_02",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 434,
+    "set": "Phase2_TG",
+    "max_rotation_deg": 0.0,
+    "max_translation_cm": 0.0,
+    "moved_bones": 0
+   },
+   {
+    "name": "Thug_Death_Idle_07",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 435,
+    "set": "Phase2_TG",
+    "max_rotation_deg": 0.0,
+    "max_translation_cm": 0.0,
+    "moved_bones": 0
+   },
+   {
+    "name": "Thug_Death_07",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 436,
+    "set": "Phase2_TG",
+    "max_rotation_deg": 126.037,
+    "max_translation_cm": 191.4181,
+    "moved_bones": 54
+   },
+   {
+    "name": "Thug_Death_02",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 437,
+    "set": "Phase2_TG",
+    "max_rotation_deg": 173.025,
+    "max_translation_cm": 279.6955,
+    "moved_bones": 36
+   },
+   {
+    "name": "Thug_Death_06",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 438,
+    "set": "Phase2_TG",
+    "max_rotation_deg": 176.281,
+    "max_translation_cm": 220.9491,
+    "moved_bones": 38
+   },
+   {
+    "name": "Thug_Death_Idle_03",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 439,
+    "set": "Phase2_TG",
+    "max_rotation_deg": 0.0,
+    "max_translation_cm": 0.0,
+    "moved_bones": 0
+   },
+   {
+    "name": "Thug_Death_01",
+    "package": "Playable_BatmobileJoker_SF",
+    "export_index": 441,
+    "set": "Phase2_TG",
+    "max_rotation_deg": 153.523,
+    "max_translation_cm": 191.4173,
+    "moved_bones": 54
+   }
+  ]
+ },
+ "unrowed": [
+  {
+   "name": "Drive_To_Combat",
+   "package": "Playable_Batmobile_SF",
+   "export_index": 205,
+   "set": "BM_Batmobile_Chassis",
+   "mechanism": "transformation"
+  },
+  {
+   "name": "BatMobile_Drift_In_01",
+   "package": "Playable_Batmobile_SF",
+   "export_index": 206,
+   "set": "BM_Batmobile_Chassis",
+   "mechanism": "wheels/strafe"
+  },
+  {
+   "name": "Batmobile_V2_Spin",
+   "package": "Playable_Batmobile_SF",
+   "export_index": 210,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "wheels/strafe"
+  },
+  {
+   "name": "Batmobile_V2_Tank_Strafe",
+   "package": "Playable_Batmobile_SF",
+   "export_index": 213,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "wheels/strafe"
+  },
+  {
+   "name": "Batmobile_V2_Jet_Boost",
+   "package": "Playable_Batmobile_SF",
+   "export_index": 214,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "fins/air-brakes"
+  },
+  {
+   "name": "Batmobile_V2_Back_Door_Open",
+   "package": "Playable_Batmobile_SF",
+   "export_index": 215,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Boost_Noise",
+   "package": "Playable_Batmobile_SF",
+   "export_index": 219,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Tank_Spread_Close",
+   "package": "Playable_Batmobile_SF",
+   "export_index": 220,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "transformation"
+  },
+  {
+   "name": "Batmobile_V2_Tank_Idle",
+   "package": "Playable_Batmobile_SF",
+   "export_index": 221,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Tank_Spread_Open",
+   "package": "Playable_Batmobile_SF",
+   "export_index": 222,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "transformation"
+  },
+  {
+   "name": "Batmobile_V2_Idle",
+   "package": "Playable_Batmobile_SF",
+   "export_index": 224,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Tank_Spread_Close_Game",
+   "package": "Playable_Batmobile_SF",
+   "export_index": 225,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "transformation"
+  },
+  {
+   "name": "Batmobile_V2_Tank_Spread_Open_Game",
+   "package": "Playable_Batmobile_SF",
+   "export_index": 226,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "transformation"
+  },
+  {
+   "name": "Batmobile_V2_Fans_Spin",
+   "package": "Playable_Batmobile_SF",
+   "export_index": 227,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "wheels/strafe"
+  },
+  {
+   "name": "Batmobile_V2_Winch_Door_Open",
+   "package": "Playable_Batmobile_SF",
+   "export_index": 228,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Bat_Tracker",
+   "package": "Playable_Batmobile_SF",
+   "export_index": 229,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "transformation"
+  },
+  {
+   "name": "Batmobile_V2_Back_Door_Close",
+   "package": "Playable_Batmobile_SF",
+   "export_index": 234,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Chair_Close",
+   "package": "Playable_Batmobile_SF",
+   "export_index": 235,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Chair_Open",
+   "package": "Playable_Batmobile_SF",
+   "export_index": 236,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Jet_Close",
+   "package": "Playable_Batmobile_SF",
+   "export_index": 238,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Cannon_Reload_Right",
+   "package": "Playable_Batmobile_SF",
+   "export_index": 240,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "transformation"
+  },
+  {
+   "name": "Batmobile_V2_Cannon_Reload_Left",
+   "package": "Playable_Batmobile_SF",
+   "export_index": 241,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "transformation"
+  },
+  {
+   "name": "Drive_To_Combat",
+   "package": "Playable_BatmobileMK2_SF",
+   "export_index": 204,
+   "set": "BM_Batmobile_Chassis",
+   "mechanism": "transformation"
+  },
+  {
+   "name": "BatMobile_Drift_In_01",
+   "package": "Playable_BatmobileMK2_SF",
+   "export_index": 205,
+   "set": "BM_Batmobile_Chassis",
+   "mechanism": "wheels/strafe"
+  },
+  {
+   "name": "Batmobile_V2_Spin",
+   "package": "Playable_BatmobileMK2_SF",
+   "export_index": 209,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "wheels/strafe"
+  },
+  {
+   "name": "Batmobile_V2_Tank_Strafe",
+   "package": "Playable_BatmobileMK2_SF",
+   "export_index": 212,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "wheels/strafe"
+  },
+  {
+   "name": "Batmobile_V2_Jet_Boost",
+   "package": "Playable_BatmobileMK2_SF",
+   "export_index": 213,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "fins/air-brakes"
+  },
+  {
+   "name": "Batmobile_V2_Back_Door_Open",
+   "package": "Playable_BatmobileMK2_SF",
+   "export_index": 214,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Boost_Noise",
+   "package": "Playable_BatmobileMK2_SF",
+   "export_index": 218,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Tank_Spread_Close",
+   "package": "Playable_BatmobileMK2_SF",
+   "export_index": 219,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "transformation"
+  },
+  {
+   "name": "Batmobile_V2_Tank_Idle",
+   "package": "Playable_BatmobileMK2_SF",
+   "export_index": 220,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Tank_Spread_Open",
+   "package": "Playable_BatmobileMK2_SF",
+   "export_index": 221,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "transformation"
+  },
+  {
+   "name": "Batmobile_V2_Idle",
+   "package": "Playable_BatmobileMK2_SF",
+   "export_index": 223,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Tank_Spread_Close_Game",
+   "package": "Playable_BatmobileMK2_SF",
+   "export_index": 224,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "transformation"
+  },
+  {
+   "name": "Batmobile_V2_Tank_Spread_Open_Game",
+   "package": "Playable_BatmobileMK2_SF",
+   "export_index": 225,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "transformation"
+  },
+  {
+   "name": "Batmobile_V2_Fans_Spin",
+   "package": "Playable_BatmobileMK2_SF",
+   "export_index": 226,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "wheels/strafe"
+  },
+  {
+   "name": "Batmobile_V2_Winch_Door_Open",
+   "package": "Playable_BatmobileMK2_SF",
+   "export_index": 227,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Bat_Tracker",
+   "package": "Playable_BatmobileMK2_SF",
+   "export_index": 228,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "transformation"
+  },
+  {
+   "name": "Batmobile_V2_Back_Door_Close",
+   "package": "Playable_BatmobileMK2_SF",
+   "export_index": 233,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Chair_Close",
+   "package": "Playable_BatmobileMK2_SF",
+   "export_index": 234,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Chair_Open",
+   "package": "Playable_BatmobileMK2_SF",
+   "export_index": 235,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Jet_Close",
+   "package": "Playable_BatmobileMK2_SF",
+   "export_index": 237,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Cannon_Reload_Right",
+   "package": "Playable_BatmobileMK2_SF",
+   "export_index": 239,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "transformation"
+  },
+  {
+   "name": "Batmobile_V2_Cannon_Reload_Left",
+   "package": "Playable_BatmobileMK2_SF",
+   "export_index": 240,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "transformation"
+  },
+  {
+   "name": "Drive_To_Combat",
+   "package": "Playable_BatmobileFunhouse_SF",
+   "export_index": 202,
+   "set": "BM_Batmobile_Chassis",
+   "mechanism": "transformation"
+  },
+  {
+   "name": "BatMobile_Drift_In_01",
+   "package": "Playable_BatmobileFunhouse_SF",
+   "export_index": 203,
+   "set": "BM_Batmobile_Chassis",
+   "mechanism": "wheels/strafe"
+  },
+  {
+   "name": "Batmobile_V2_Spin",
+   "package": "Playable_BatmobileFunhouse_SF",
+   "export_index": 207,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "wheels/strafe"
+  },
+  {
+   "name": "Batmobile_V2_Tank_Strafe",
+   "package": "Playable_BatmobileFunhouse_SF",
+   "export_index": 210,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "wheels/strafe"
+  },
+  {
+   "name": "Batmobile_V2_Jet_Boost",
+   "package": "Playable_BatmobileFunhouse_SF",
+   "export_index": 211,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "fins/air-brakes"
+  },
+  {
+   "name": "Batmobile_V2_Back_Door_Open",
+   "package": "Playable_BatmobileFunhouse_SF",
+   "export_index": 212,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Boost_Noise",
+   "package": "Playable_BatmobileFunhouse_SF",
+   "export_index": 216,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Tank_Spread_Close",
+   "package": "Playable_BatmobileFunhouse_SF",
+   "export_index": 217,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "transformation"
+  },
+  {
+   "name": "Batmobile_V2_Tank_Idle",
+   "package": "Playable_BatmobileFunhouse_SF",
+   "export_index": 218,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Tank_Spread_Open",
+   "package": "Playable_BatmobileFunhouse_SF",
+   "export_index": 219,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "transformation"
+  },
+  {
+   "name": "Batmobile_V2_Idle",
+   "package": "Playable_BatmobileFunhouse_SF",
+   "export_index": 221,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Tank_Spread_Close_Game",
+   "package": "Playable_BatmobileFunhouse_SF",
+   "export_index": 222,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "transformation"
+  },
+  {
+   "name": "Batmobile_V2_Tank_Spread_Open_Game",
+   "package": "Playable_BatmobileFunhouse_SF",
+   "export_index": 223,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "transformation"
+  },
+  {
+   "name": "Batmobile_V2_Fans_Spin",
+   "package": "Playable_BatmobileFunhouse_SF",
+   "export_index": 224,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "wheels/strafe"
+  },
+  {
+   "name": "Batmobile_V2_Winch_Door_Open",
+   "package": "Playable_BatmobileFunhouse_SF",
+   "export_index": 225,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Bat_Tracker",
+   "package": "Playable_BatmobileFunhouse_SF",
+   "export_index": 226,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "transformation"
+  },
+  {
+   "name": "Batmobile_V2_Back_Door_Close",
+   "package": "Playable_BatmobileFunhouse_SF",
+   "export_index": 231,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Chair_Close",
+   "package": "Playable_BatmobileFunhouse_SF",
+   "export_index": 232,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Chair_Open",
+   "package": "Playable_BatmobileFunhouse_SF",
+   "export_index": 233,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Jet_Close",
+   "package": "Playable_BatmobileFunhouse_SF",
+   "export_index": 235,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Cannon_Reload_Right",
+   "package": "Playable_BatmobileFunhouse_SF",
+   "export_index": 237,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "transformation"
+  },
+  {
+   "name": "Batmobile_V2_Cannon_Reload_Left",
+   "package": "Playable_BatmobileFunhouse_SF",
+   "export_index": 238,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "transformation"
+  },
+  {
+   "name": "Drive_To_Combat",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 336,
+   "set": "BM_Batmobile_Chassis",
+   "mechanism": "transformation"
+  },
+  {
+   "name": "BatMobile_Drift_In_01",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 337,
+   "set": "BM_Batmobile_Chassis",
+   "mechanism": "wheels/strafe"
+  },
+  {
+   "name": "Beatdown_Out",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 341,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "180_Scare",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 342,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "FPS_Open_Door_Front",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 343,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Reload",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 344,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "BM_Seperate_Idle",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 345,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Disarm_Switch_Player",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 346,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "JK_Environment_Takedown_Pre",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 347,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "BM_Seperate_In",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 348,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "BatMobile_Stand_Out_Roof_Bak",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 349,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Final_Takedown_In",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 350,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Jump_Attack",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 351,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "GrateFront",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 352,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "BM_Seperate_Out",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 353,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "ManequinFront",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 354,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "ManequinFront_End",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 355,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "BM_JK_Seperate_Sequence",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 356,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Intro_Joker_TiedUp",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 357,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Crime_Alley",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 358,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Gun_Down_Idle",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 359,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "JK_Environment_Takedown_In",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 360,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "BatMobile_Stand_Out",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 361,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Van_Crash",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 362,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Beatdown_Idle",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 363,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "2Face_Talk_Idle",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 364,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "BatMobile_Stand_Out_Roof",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 365,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "FPS_Fire_01",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 366,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Gun_Down_Walk_Forward",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 367,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "FPS_Fire_02",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 368,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Portable_Nuke_Transformation",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 369,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Gun_Up",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 370,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "GrateBack",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 371,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "LedgeTakedown",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 372,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Crime_Alley_Left",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 373,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Admin_Scarecrow_Speech",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 374,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Crime_Alley_Right",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 375,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "FPS_Idle",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 376,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Stage_3_Intro",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 377,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "RailingBack",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 378,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Beatdown_Punch_01",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 379,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Admin_Scarecrow_Final",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 380,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Cling_Onto_Cell_Idle",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 381,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "RailingFront",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 382,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Final_Takedown_Idle",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 383,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Door_Front_JK",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 384,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Final_Takedown_Out",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 385,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Cell_Open",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 386,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "FPS_Joker Walks through door",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 387,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "2Face_Talk_In",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 388,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "FPS_Joker_Door_Shot",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 389,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Final_Takedown_Break_Tap",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 390,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Idle_Overlay_01",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 391,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Vent_Takedown",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 392,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Beatdown_In_Back",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 393,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Walk_Forward",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 394,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Beatdown_In_Front",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 395,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Kick_Open_Door",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 396,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "ManequinBack",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 397,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Idle_Overlay_Nervous",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 398,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "JK_Environment_Takedown_Near_Pre",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 399,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Disarm_Switch_Player",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 400,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "RailingTakedown_Grab",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 401,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Beatdown_Punch_02",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 402,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "2Face_Finale",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 403,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Turn_On_Torch",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 404,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "JK_Environment_Takedown_Near_In",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 405,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Beatdown_In",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 406,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "2Face_Finale_Ver01",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 407,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Crime_Alley_Back",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 408,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Stage_3_Outro",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 409,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "Gun_Down",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 410,
+   "set": "Camera",
+   "mechanism": "other"
+  },
+  {
+   "name": "BatMobile_Stand_Out",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 411,
+   "set": "Phase2_JK",
+   "mechanism": "driver/Batman"
+  },
+  {
+   "name": "BatMobile_Stand_Out_Roof_Bak",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 412,
+   "set": "Phase2_JK",
+   "mechanism": "driver/Batman"
+  },
+  {
+   "name": "Intro_Joker_TiedUp00",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 413,
+   "set": "Phase2_JK",
+   "mechanism": "driver/Batman"
+  },
+  {
+   "name": "BatMobile_Stand_Out_Roof",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 414,
+   "set": "Phase2_JK",
+   "mechanism": "driver/Batman"
+  },
+  {
+   "name": "BM_Seperate_Out",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 415,
+   "set": "Phase2_JK",
+   "mechanism": "driver/Batman"
+  },
+  {
+   "name": "Vent_Takedown",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 416,
+   "set": "Phase2_JK",
+   "mechanism": "driver/Batman"
+  },
+  {
+   "name": "BM_JK_Seperate_Sequence",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 417,
+   "set": "Phase2_JK",
+   "mechanism": "driver/Batman"
+  },
+  {
+   "name": "Jump_Attack",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 418,
+   "set": "Phase2_JK",
+   "mechanism": "driver/Batman"
+  },
+  {
+   "name": "2Face_Finale",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 419,
+   "set": "Phase2_JK",
+   "mechanism": "driver/Batman"
+  },
+  {
+   "name": "2Face_Talk_Idle",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 420,
+   "set": "Phase2_JK",
+   "mechanism": "driver/Batman"
+  },
+  {
+   "name": "2Face_Finale_Ver01",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 421,
+   "set": "Phase2_JK",
+   "mechanism": "driver/Batman"
+  },
+  {
+   "name": "Kick_Open_Door",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 422,
+   "set": "Phase2_JK",
+   "mechanism": "driver/Batman"
+  },
+  {
+   "name": "Intro_Joker_TiedUp",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 423,
+   "set": "Phase2_JK",
+   "mechanism": "driver/Batman"
+  },
+  {
+   "name": "2Face_Talk_In",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 424,
+   "set": "Phase2_JK",
+   "mechanism": "driver/Batman"
+  },
+  {
+   "name": "Main_Ch10_S05_Joker_A1_Warehouse_Two_Face_Gordon_Outro-2Face_Finale_Ver01",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 425,
+   "set": "Phase2_JK_FACE",
+   "mechanism": "driver/Batman"
+  },
+  {
+   "name": "Main_Ch10_S05_Joker_A1_Warehouse_Intro_Conversation-Intro_Joker_TiedUp_Joker",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 426,
+   "set": "Phase2_JK_FACE",
+   "mechanism": "driver/Batman"
+  },
+  {
+   "name": "Main_Ch10_S05_Joker_A1_Warehouse_Two_Face_Gordon_Outro-2Face_Finale",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 427,
+   "set": "Phase2_JK_FACE",
+   "mechanism": "driver/Batman"
+  },
+  {
+   "name": "Thug_Death_Idle_06",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 428,
+   "set": "Phase2_TG",
+   "mechanism": "other"
+  },
+  {
+   "name": "Thug_Death_03",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 429,
+   "set": "Phase2_TG",
+   "mechanism": "driver/Batman"
+  },
+  {
+   "name": "Thug_Death_Idle_04",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 430,
+   "set": "Phase2_TG",
+   "mechanism": "driver/Batman"
+  },
+  {
+   "name": "Thug_Death_04",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 431,
+   "set": "Phase2_TG",
+   "mechanism": "driver/Batman"
+  },
+  {
+   "name": "Thug_Death_Idle_05",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 432,
+   "set": "Phase2_TG",
+   "mechanism": "driver/Batman"
+  },
+  {
+   "name": "Thug_Death_05",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 433,
+   "set": "Phase2_TG",
+   "mechanism": "driver/Batman"
+  },
+  {
+   "name": "Thug_Death_Idle_02",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 434,
+   "set": "Phase2_TG",
+   "mechanism": "driver/Batman"
+  },
+  {
+   "name": "Thug_Death_Idle_07",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 435,
+   "set": "Phase2_TG",
+   "mechanism": "driver/Batman"
+  },
+  {
+   "name": "Thug_Death_07",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 436,
+   "set": "Phase2_TG",
+   "mechanism": "driver/Batman"
+  },
+  {
+   "name": "Thug_Death_02",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 437,
+   "set": "Phase2_TG",
+   "mechanism": "driver/Batman"
+  },
+  {
+   "name": "Thug_Death_06",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 438,
+   "set": "Phase2_TG",
+   "mechanism": "driver/Batman"
+  },
+  {
+   "name": "Thug_Death_Idle_03",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 439,
+   "set": "Phase2_TG",
+   "mechanism": "driver/Batman"
+  },
+  {
+   "name": "Thug_Death_Idle_01",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 440,
+   "set": "Phase2_TG",
+   "mechanism": "other"
+  },
+  {
+   "name": "Thug_Death_01",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 441,
+   "set": "Phase2_TG",
+   "mechanism": "driver/Batman"
+  },
+  {
+   "name": "Batmobile_V2_Spin",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 442,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "wheels/strafe"
+  },
+  {
+   "name": "Batmobile_V2_Tank_Strafe",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 445,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "wheels/strafe"
+  },
+  {
+   "name": "Batmobile_V2_Jet_Boost",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 446,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "fins/air-brakes"
+  },
+  {
+   "name": "Batmobile_V2_Back_Door_Open",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 447,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Boost_Noise",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 451,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Tank_Spread_Close",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 452,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "transformation"
+  },
+  {
+   "name": "Batmobile_V2_Tank_Idle",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 453,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Tank_Spread_Open",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 454,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "transformation"
+  },
+  {
+   "name": "Batmobile_V2_Idle",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 456,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Tank_Spread_Close_Game",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 457,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "transformation"
+  },
+  {
+   "name": "Batmobile_V2_Tank_Spread_Open_Game",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 458,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "transformation"
+  },
+  {
+   "name": "Batmobile_V2_Fans_Spin",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 459,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "wheels/strafe"
+  },
+  {
+   "name": "Batmobile_V2_Winch_Door_Open",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 460,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Bat_Tracker",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 461,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "transformation"
+  },
+  {
+   "name": "Batmobile_V2_Back_Door_Close",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 466,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Chair_Close",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 467,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Chair_Open",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 468,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Jet_Close",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 470,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_V2_Cannon_Reload_Right",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 472,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "transformation"
+  },
+  {
+   "name": "Batmobile_V2_Cannon_Reload_Left",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 473,
+   "set": "Batmobile_V2_Pose_States",
+   "mechanism": "transformation"
+  },
+  {
+   "name": "Batwing_Rescue_01",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 474,
+   "set": "Batwing_Rescue",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_Vertical_Rescue_Out",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 475,
+   "set": "Batwing_Rescue",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_Vertical_Rescue_Idle",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 476,
+   "set": "Batwing_Rescue",
+   "mechanism": "other"
+  },
+  {
+   "name": "Batmobile_Vertical_Rescue_In",
+   "package": "Playable_BatmobileJoker_SF",
+   "export_index": 477,
+   "set": "Batwing_Rescue",
+   "mechanism": "other"
+  }
+ ],
+ "bones_total": 180,
+ "bones_pkg": "Playable_Batmobile_SF",
+ "bones_export": 5284,
+ "bones_mesh": "Batmobile_V2",
+ "sha": {
+  "T8_PARTS.json": "5150d2c7be4afc8f",
+  "ANIMATIONS.json": "81751c749de88016",
+  "BONES.json": "d92590d5907f6566"
+ },
+ "no_seq_rows": [
+  "P-02",
+  "P-05",
+  "P-13"
+ ],
+ "counts": {
+  "covered": 12,
+  "no-range": 0,
+  "no-bone": 0,
+  "missing-sequence": 0,
+  "no-sequence": 3
+ }
+}

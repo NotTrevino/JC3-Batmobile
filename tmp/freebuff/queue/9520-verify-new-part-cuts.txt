@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-new-part-cuts.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/canopy-part-cut-build.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hatches-doors-barrel-cut-build.md
+Offline verification of the new part cuts in Builds/bm-RC5-canopy and Builds/bm-RC5-hatches. Rerun the V-02 census and pose-render logic described in reports/verify-v02-geometry-poses-rc4.md and verify-v02b-pose-renders-lights.md for P-02, P-05, P-06, P-07 and P-08, the six UNKNOWN rows from the last run. Check: silhouette overlap against the original (target 99.97 percent), no hole at the cut edges, each part rotated or slid to its end pose by the BmAK values without collision with neighbours, and the model size budget. Produce render comparisons under Working/Modes/verify_cuts/ and a table in Working/Modes/verify_cuts.md with PASS, FAIL or UNKNOWN per part. A FAIL must name the vertex or triangle range and the card that fixes it. Done-check: the table has all five parts and the UNKNOWN count dropped from six to the number you can justify. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

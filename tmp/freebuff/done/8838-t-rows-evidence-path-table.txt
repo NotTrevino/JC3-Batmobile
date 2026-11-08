@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/t-rows-evidence-path-table.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+Working/Translation/T_ROWS.jsonl is the machine ledger for the translation rows, and each record carries a cells array whose evidence is written as text. The task is to confirm that every record whose dispo is keep or next names at least one evidence path that exists on disk. Parse each line of that file with a short script kept outside the repo, resolve every path-looking token against the repository root, and test whether it exists. Write the result to Working/Prep/t_rows_evidence.tsv with the columns row_id, dispo, evidence_path, path_exists and note, where note is MISSING_PATH for a record with no path at all. Do not edit T_ROWS.jsonl or any backup of it, and report the count of rows per outcome in the summary.

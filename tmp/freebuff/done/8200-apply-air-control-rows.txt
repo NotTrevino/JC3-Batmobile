@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/apply-air-control-rows.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-06
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/apply-world-text-rows.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/apply-winch-tether-rows.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/air-control-closest-system-plan.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/carrier-air-control.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/new-behaviour-routes-survey.md
+Consume the report on air control (reports/carrier-air-control.md). If it names a carrier for AirControlYawTorqueFactorMax and the righting torque, move T-AC1 and T-SR1 out of "out" in Working/Translation/T_ROWS.jsonl: write the value cells, the member path and the evidence, and change Working/Translation/BLOCKED_PROPOSALS together with it, then re-pin and re-run t_blocked.py, t_rows.py check and status_audit.py --check. If there is no exact carrier, write the closest JC3 system as the row's carrier and a build card for the gap between it and BmAK (what the build composes or authors on top); "no JC3 system" is never an acceptable row text.

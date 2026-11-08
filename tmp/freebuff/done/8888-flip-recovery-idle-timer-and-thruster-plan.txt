@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/flip-recovery-idle-timer-and-thruster-plan.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+Player fact from the operator, 2026-11-08: when the Batmobile rests on its roof or side for a while, its thrusters fire and right it. Reports/stuck-flip-scrape.md and reports/stuck-flip-build-plan-merge.md found no field for the roll angle or speed gate and say the flip does not share the strafe kick. Work from the player's description: search the BmSDK members and the scraped objects for any timer, idle-duration, stationary-time or upside-down state that could be the "for a while" condition, and for the effects spawned when it fires (the SideExhaust effects and KickStrafe are candidates to confirm or reject by file). Give the timer value and unit if one is decoded, and mark it UNKNOWN with the file that would settle it if not. Then name the closest JC3 systems for an idle-triggered righting force and thruster effect (FlipVehicle, AddTorqueOverTime, CForcePulse), the members and values, and one pilot-card sentence with a pass band for the delay and the final orientation.

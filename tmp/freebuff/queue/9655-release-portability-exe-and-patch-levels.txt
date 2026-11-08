@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/release-portability-exe-and-patch-levels.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+Document what differs between the exe the work was developed against and the ones a player could own. Facts to collect from the repo: the operator's JustCause3.exe (D:/Games/Just Cause 3, 51,083,264 bytes), the repack, GOG and Steam variants named in tmp/freebuff/QUEUE_MAP.md (the BmSDK hook offset 0x5B7220 was invalid on the repack), the hook base addresses checked by Tools/scripts/exe_addr_check.py, the dropzone location, and which of our files depend on the exe build (the hook DLL offsets, the entity format) and which do not (data under dropzone). Output Tools/scripts/portability_matrix.py (--write, --check) with Working/Release/portability.md/.json: per variant, what works, what is unknown and how a user checks it with one hash command. Also state the hook version guard that brief 7967 builds, and what the install must print when the exe hash is not on the known list. Do not run or probe any game. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

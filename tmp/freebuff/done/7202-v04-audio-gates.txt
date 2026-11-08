@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/7202-v04-audio-gates.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-05
+V-04 (GRAB_BACKLOG.md section 9a): audio gates on the built bank. Builds/bm-004 holds the bank (manifest Working/Audio/bm_bank_manifest.json, checker Tools/scripts/bm_audio.py). Decode the built bank back and compare each sample with its WAV source (length within 1 frame); report loudness difference against the vanilla event it replaces in LU where the vanilla sample is readable offline, and check loop points for a click above -40 dBFS. New script Tools/scripts/v04_audio.py with --write/--check, output Builds/bm-RC1/verify/audio.json and audio.md. Say plainly which events cannot be checked offline.
+Rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md section 3 (test ban stays; never guess; label decoded/derived/UNKNOWN). Write the report at the DONE path: STATUS line first, files written, every command with verbatim output, UNKNOWNs with what you tried.

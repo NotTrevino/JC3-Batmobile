@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/lights-body-hosted-light-build.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/lights-orphan-socket-proof.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/light-unit-domain.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-lights-flares-beams.md
+Unblock T-L28 and T-L30, the flare entries with a null socket and null bone. Read Working/Lights/ORPHAN_SOCKETS.md, reports/correction-8394-light-units-domain.md section 1 and the output of 9142 (reports/rc5-lights-flares-beams.md). Following the body-hosted HeadLight pattern seen in shipped vehicles, author a _LIG node and a CarLight block on the body part of the Batmobile in a new tree Builds/bm-RC5-lights2/, using the repository's existing RBM and model writers named in Tools/scripts/. Choose light units from the domain table of brief 7966 (reports/light-unit-domain.md) and show any value you extrapolate. Script rc5_lights2.py --write --check. Done when both rows now have a named part and socket, the model reads back, and the lamp count versus the budget note is recorded in the receipt. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

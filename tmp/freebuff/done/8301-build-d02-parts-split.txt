@@ -1,0 +1,8 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-d02-parts-split.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-06
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-d01-scaffold-rc4.md
+Build step B-02/B-04 refresh: the part split and the parts module for the new design. Read Working/Translation/BUILD_BATCHES.md (parts batch), the winch, gadget and mode-switch rows and Working/Parts/bm_vehicle_parts_v2.json, then regenerate the part list and models into Builds/bm-RC4-parts with bm_parts_v2.py or its successor, keeping every cut part's pivot re-derived from BONES.json. Run parts_manifest_check.py --check and jc3parts.py check; report silhouette percentage, part count and budget (Model 4,915 KB, Texture 7,065 KB).
+
+Updated by review 8299: bm-RC2 carries 61 parts (42 bm-009 parts + 19 B-04 additions, incl. wheel-arch parts 42/43), 19 damage types with 4 fallback types (Boat_Antenna, Boat_Generic, Plane_Control_Surface, Train_Generic); T-P2's 42-part denominator is stale. The parts payload is the parts batch in BUILD_BATCHES.md; keep 99.9% silhouette as the gate (RC2 passed by 0.0004).

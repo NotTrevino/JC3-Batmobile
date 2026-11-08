@@ -1,0 +1,168 @@
+{
+ "bmak": {
+  "bias_BM": 50.0,
+  "bias_PM": 20.0,
+  "bias_front": 10.0,
+  "bias_stationary": 5.0,
+  "chassis_mass_default": 210.0,
+  "damping_BM": 300.0,
+  "droop_rear": 100.0,
+  "stiffness_BM": 3000.0,
+  "stiffness_PM": 750.0,
+  "travel_down": 40.0,
+  "travel_up": 30.0,
+  "wheel_radius": 64.0
+ },
+ "bridge": {
+  "bias_front_needed": -0.1,
+  "bias_rear_needed": -0.5,
+  "bias_rear_packable": 37.5,
+  "cm_to_m": 0.01,
+  "compression_calc": 1.3887301766619131,
+  "f_at_210": 0.42918749999999994,
+  "f_error": -0.05499996325000012,
+  "implied_mass_kg": 222.22221358024723,
+  "km_at_210": 14.285714285714286,
+  "length_radius_percentiles": {
+   "travel_down": 51.58730158730159,
+   "travel_total": 82.53968253968254
+  },
+  "mass_error_vs_210": 0.05820101704879632,
+  "pm_fraction_of_length": 1.7167499999999998,
+  "pm_implied_mass_kg": 55.55555339506181,
+  "pm_km_at_210": 3.5714285714285716,
+  "pm_length_needed_m": 1.5120000588,
+  "pm_sag_m": 0.6867,
+  "sag_at_210_m": 0.171675,
+  "strength_needed": 13.500000525,
+  "strength_rule": "sag = g/(4*strength) ; strength is mass-normalised (T-S6b oracle)",
+  "zeta_bmak_300": 0.1889822365046136,
+  "zeta_error": -0.0438171125324851
+ },
+ "card": "T-S6",
+ "donor": {
+  "f_comp": 4,
+  "f_length": 0.25,
+  "f_off": -0.0375000015,
+  "f_relax": 7,
+  "f_strength": 40,
+  "file": "v0300_car_kensington_sportsmuscle__v0300_car_kensington_sportsmuscle_civilian_01.ee.json",
+  "km": 40,
+  "mass": 975,
+  "r_off": -0.042857144,
+  "radius": 0.379999995,
+  "sag_frac": 0.24525000000000002,
+  "zeta": 0.31622776601683794
+ },
+ "files": {
+  "distinct_presets": 38,
+  "entities": 232,
+  "with_mass_and_radius": 126,
+  "with_suspension": 166
+ },
+ "fleet": {
+  "comp_over_relax": {
+   "p5": 0.1,
+   "p50": 0.5,
+   "p95": 0.5535714285714286
+  },
+  "length_over_radius": {
+   "max": 2.2727271831955957,
+   "p5": 0.3191489429228911,
+   "p50": 0.6172839727683787,
+   "p95": 2.0306323512908366
+  },
+  "offset_front": {
+   "max": 0.5,
+   "min": -0.375,
+   "p50": -0.100000001
+  },
+  "offset_rear": {
+   "max": 0.5,
+   "min": -0.375,
+   "p50": -0.0899999996
+  },
+  "sag_fraction": {
+   "p25": 0.327,
+   "p5": 0.18166665940000032,
+   "p50": 0.45416664900463033,
+   "p75": 0.45416664900463033,
+   "p95": 0.6812499735069456,
+   "violations": [
+    "v0510_car_solar_modernroadster__v0510_car_solar_modernroadster_civilian_01.ee.json",
+    "v0510_car_solar_modernroadster__v0510_car_solar_modernroadster_debug.ee.json"
+   ]
+  },
+  "zeta": {
+   "p5": 0.09128709291752768,
+   "p50": 0.1976423537605237,
+   "p95": 0.33061458897293583
+  }
+ },
+ "gate": "suspension unit bridge",
+ "placements": [
+  {
+   "bmak": "SuspensionTravelDown 40",
+   "error": "unit only (cm/100)",
+   "member": "Suspension.front.length / rear.length (m)",
+   "value": 0.4,
+   "verdict": "PLACEABLE - length/radius 0.625 sits at fleet p51.6"
+  },
+  {
+   "bmak": "SuspensionTravelUp 30",
+   "error": "n/a",
+   "member": "(no member: one length per axle)",
+   "value": null,
+   "verdict": "NO MEMBER - min_length and max_length_offset are 0 on all 166; closest is max_length_offset 0.30 (never authored, semantics UNKNOWN)"
+  },
+  {
+   "bmak": "BMRearWheelMaxDroop 100",
+   "error": "n/a",
+   "member": "(no member: no droop channel)",
+   "value": null,
+   "verdict": "NO MEMBER - 1.0 m droop has no authorable field; gap for BUILD"
+  },
+  {
+   "bmak": "BMWheelSuspensionStiffness 3000",
+   "error": "+5.8% mass vs 210 kg",
+   "member": "Suspension.front.strength (s^-2)",
+   "value": 13.5,
+   "verdict": "PLACEABLE via the fit: strength = g/(4*f*length)"
+  },
+  {
+   "bmak": "BMWheelSuspensionDamping 300",
+   "error": "-31.1% zeta",
+   "member": "compression + relaxation (ints)",
+   "value": "1 / 2",
+   "verdict": "PLACEABLE as a pair - JC3 splits bump/rebound, BmAK has one number"
+  },
+  {
+   "bmak": "BMFrontWheelSuspensionBias 10",
+   "error": "0.0% vs fleet median -0.100",
+   "member": "front.hardpoint_offset_along_spring",
+   "value": -0.1,
+   "verdict": "PLACEABLE - offset = -bias/100"
+  },
+  {
+   "bmak": "BMWheelSuspensionBias 50",
+   "error": "outside authored range",
+   "member": "rear.hardpoint_offset_along_spring",
+   "value": -0.5,
+   "verdict": "NO MEMBER RANGE - needs -0.50, fleet min -0.375 (packable 37.5 = -25.0%)"
+  },
+  {
+   "bmak": "PMWheelSuspensionStiffness 750",
+   "error": "sag = 172% of length",
+   "member": "strength at the same length",
+   "value": 3.571,
+   "verdict": "UNKNOWN - implies 55.6 kg or a 1.51 m length; no member carries a mode rate"
+  }
+ ],
+ "unknown": [
+  "BmAK mass unit and the per-vehicle mass: no body setup serialises one; ChassisMass 210.0 is the class default (INERTIA.md:210).",
+  "The unit of BMWheelSuspensionStiffness (3000) and Damping (300): no paired vehicle decodes it; the 210 kg default is the only anchor.",
+  "The semantics of JC3 max_length_offset / min_length: 0 on all 166 vehicles.",
+  "Whether the engine reads hardpoint_offset_along_spring at run time as a rest position.",
+  "PM mode's 750: no JC3 member carries a per-mode spring rate."
+ ]
+}

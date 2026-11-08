@@ -1,0 +1,10 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/tracker-marker-jc3-carrier.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+Vehicle tracker, the operator's rank-1 weapon together with the EMP missile. Operator facts:
+- A tracked vehicle has a signal lock that weakens with distance.
+- It can be seen through walls when close enough.
+- Some JC3 missions and random encounters already track a vehicle with a distance readout and a yellow or grey circle above it (operator lead).
+- The tracker HUD persists across the battle-mode switch.
+Find that JC3 mission-tracking marker in the JC3 grab: the UI movie in hud.gfx, the POI/marker types in Research/JC3Grab/, and the strings for the distance readout. Report how it is created (data, mission script, or native), what it can show (distance, colour states, an occlusion flag), and the closest route to attach it to a vehicle our tracker tags: a data route, or a hook call (brief 7974's contract). Also give the BmAK tracker's range and signal-fade values from WEAPONS.md, or UNKNOWN. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

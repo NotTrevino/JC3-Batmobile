@@ -1,0 +1,7 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/fix-iter2-merge-and-verify.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/fix-iter2-joint-change-cards.md
+Merge iteration 2. Run each edited branch script's --write, then Tools/scripts/bm_rc5.py --write for Builds/bm-RC5, archiving the preceding receipt. Verify with bm_rc5.py --check, the read-back script from hdl-33, v05_driving.py --check (regenerate the sheet only for derived changes) and Tools/scripts/status_audit.py --check. Compare to the iteration 1 receipt cell by cell and make sure the only differences are the ones in Working/Q/FIXES_ITER2.md. Also check the build against the budget limits in Tools/scripts/bm_budget.py and that the install package size is still near the earlier 383 MiB. Write tmp/freebuff/reports/hdl-iter2-build.md with receipt hashes, the diff table, the install command, and the rollback command pointing at the iteration 1 receipt. Done check: all exit codes zero; the number of changed cells equals the planned number; the rollback command was dry-run on a copy and its output is quoted.
+Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

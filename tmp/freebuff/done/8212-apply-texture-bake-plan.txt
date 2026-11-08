@@ -1,0 +1,8 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/apply-texture-bake-plan.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-06
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/apply-colour-and-material-rows.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/app-microdetail-bake-plan.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/app-emissive-mask-channel.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/app-texture-binding-audit.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/app-damage-chapter-masks.md
+Reports app-microdetail-bake-plan, app-emissive-mask-channel, app-texture-binding-audit and app-damage-chapter-masks hold the plans for the textures that are still dropped or baked. Merge them into one ordered texture build list in Working/Appearance (TEXTURE_BUILD_PLAN.md and a json): each BmAK texture, its destination block and channel, the transform, and the check that will prove it. Recompute progress with Tools/scripts/appearance_progress.py so the percentages show the new plan; flag any texture that still has no faithful route.
+
+Pin upkeep: if your edits change which rows are blocked or the in-scope row count, update WAITS and the in_scope == value in Tools/scripts/t_blocked.py (back it up first), run t_blocked.py --write then --check, and keep both passing before you finish.

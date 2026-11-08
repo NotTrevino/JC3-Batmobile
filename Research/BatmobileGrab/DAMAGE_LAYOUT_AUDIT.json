@@ -1,0 +1,760 @@
+{
+ "body_length_test": {
+  "ScriptSize (= @18)": {
+   "exact_end": 26039,
+   "overshoot": 3581,
+   "percent": 87.9,
+   "total": 29620
+  },
+  "ScriptSize + 1": {
+   "exact_end": 1531,
+   "overshoot": 28089,
+   "percent": 5.2,
+   "total": 29620
+  },
+  "ScriptSize - 1 (= len(export) - 38, the note)": {
+   "exact_end": 14456,
+   "overshoot": 15164,
+   "percent": 48.8,
+   "total": 29620
+  }
+ },
+ "claims": [
+  {
+   "claim": "u16 prefix at 0 is constant 0 on every Function export",
+   "evidence": "two bytes read at export offset 0",
+   "id": "L1",
+   "measured": "29620/29620",
+   "section": "1",
+   "verdict": "PASS"
+  },
+  {
+   "claim": "Next @2 is the UField sibling link",
+   "evidence": "every value is 0 or an export whose class is a UField subclass (ArrayProperty, BoolProperty, ByteProperty, ClassProperty, ComponentProperty, Const, Enum, FloatProperty, Function, IntProperty, InterfaceProperty, NameProperty, ObjectProperty, ScriptStruct, State, StrProperty, StructProperty)",
+   "id": "L2",
+   "measured": "0: 1379, UField-subclass export: 28241, unresolvable: 0",
+   "section": "1",
+   "verdict": "PASS"
+  },
+  {
+   "claim": "Children @10 is the first child property (the first parameter)",
+   "evidence": "every value is 0 or an export whose outer_index is the function itself",
+   "id": "L3",
+   "measured": "own property: 22737, 0: 6883, other: 0",
+   "section": "1",
+   "verdict": "PASS"
+  },
+  {
+   "claim": "ScriptSize @18 == len(script) + 1",
+   "evidence": "the field is a byte count: a scan of ScriptSize bytes ends exactly on the last byte in 26039 of 29620 bodies, the note's length in 14456",
+   "id": "L4",
+   "measured": "ScriptSize - (len(export) - 38) = {'-1': 145, '1': 29475}",
+   "section": "1",
+   "verdict": "FAIL"
+  },
+  {
+   "claim": "Script @22 is len(export) - 38 bytes",
+   "evidence": "the note's slice is one byte short in 29475 exports and one byte long in 145; 17345 bodies end in `04 0b` (`return;`) which the note's slice turns into a bare `04`",
+   "id": "L5",
+   "measured": "trailer after 22 + ScriptSize: {'15': 29475, '17': 145} bytes",
+   "section": "1",
+   "verdict": "FAIL"
+  },
+  {
+   "claim": "trailing i32 @size-16 is a flags word",
+   "evidence": "the export ends with a 15/17-byte trailer that ends in the own FName; @size-16 is not a field",
+   "id": "L6",
+   "measured": "@size-16 is the body's last byte in 29475 exports",
+   "section": "1",
+   "verdict": "FAIL"
+  },
+  {
+   "claim": "pre-name word @size-12 is always 0x0002xxxx",
+   "evidence": "as an exact pattern it holds for 26400 of 29620; the field takes 0x00824802 (TakeRadius) and 0xffff2002 (the 145 exports with a 17-byte trailer)",
+   "id": "L7",
+   "measured": "{'0x00020000': 26400, '0x00820000': 1764, '0x00420000': 1027, '0x00c20000': 176, '0xffff0000': 145, '0x00120000': 39, '0x00040000': 26, '0x00080000': 15}",
+   "section": "1",
+   "verdict": "FAIL"
+  },
+  {
+   "claim": "name FName @size-8 is the function's own name; number @size-4 is 0",
+   "evidence": "index resolved through this audit's own name table",
+   "id": "L8",
+   "measured": "29620 name, 29620 number",
+   "section": "1",
+   "verdict": "PASS"
+  },
+  {
+   "claim": "anchor C: the thinnest script in the package is one byte and it is 0x04",
+   "evidence": "in the file's frame every one-byte body is `0b` (`EX_Nothing`, 1,544 of them) and `04` alone is never a body; the 2-byte `04 0b` bodies are what the note's one-byte slice turns into `04`, so in the note's own frame the thinnest body is either still the 0x0b one-byte body or zero bytes.  The anchor holds in neither frame",
+   "id": "L9",
+   "measured": "shortest body 1 byte(s); bodies of <=3 bytes: {'04 0b': 1728, '0b': 1544, '0b 04 0b': 10}",
+   "section": "1",
+   "verdict": "FAIL"
+  },
+  {
+   "claim": "anchor F: a 0x1c token is followed by a Function export in 99%+ of hits",
+   "evidence": "every 0x1c operand in every body, not a 1-in-7 sample",
+   "id": "L10",
+   "measured": "54022/54211 = 99.651%",
+   "section": "1",
+   "verdict": "PASS"
+  },
+  {
+   "claim": "UEViewer stops after Children for GAME_Batman4",
+   "evidence": "the local copy carries the quoted `return;` comment",
+   "id": "L11",
+   "measured": "UnTypeinfo.h:164",
+   "section": "1",
+   "verdict": "PASS"
+  },
+  {
+   "claim": "UEViewer reads ScriptSize bytes of script",
+   "evidence": "the serializer's own line: ScriptSize is a byte count",
+   "id": "L12",
+   "measured": "UnTypeinfo.h `Ar.Serialize(&Script[0], ScriptSize)`",
+   "section": "1",
+   "verdict": "PASS"
+  },
+  {
+   "claim": "body B column: TakeDamage 2,028 / TakeRadius 288 / Drain 322",
+   "evidence": "each is one byte short of the ScriptSize field (2029 / 289 / 323)",
+   "id": "L13",
+   "measured": "2029 / 289 / 323",
+   "section": "2",
+   "verdict": "FAIL"
+  },
+  {
+   "claim": "TakeDamage body literals: 9 found, distinct 0.5/1.0/2.0/2.5/5.0/1000.0",
+   "evidence": "offsets [486, 516, 606, 636, 1395, 1773, 1778, 1783, 1791]",
+   "id": "L14",
+   "measured": "9 plausible of 9 0x1e bytes, distinct [0.5, 1.0, 2.0, 2.5, 5.0, 1000.0]",
+   "section": "3.1",
+   "verdict": "PASS"
+  },
+  {
+   "claim": "TakeRadiusDamageFromWeapon body literals: 0.0/0.1/0.5/1.0/1500.0",
+   "evidence": "offsets [3, 112, 119, 134, 159, 174, 192, 205, 226]",
+   "id": "L15",
+   "measured": "9 plausible of 9 0x1e bytes, distinct [0.0, 0.1, 0.5, 1.0, 1500.0]",
+   "section": "3.2",
+   "verdict": "PASS"
+  },
+  {
+   "claim": "DrainWeaponGeneratorForDamage body literals: 8 found, distinct 0.0/0.05/0.5/1.0",
+   "evidence": "offsets [148, 159, 178, 218, 236, 251, 271, 290]",
+   "id": "L16",
+   "measured": "8 plausible of 8 0x1e bytes, distinct [0.0, 0.05, 0.5, 1.0]",
+   "section": "4",
+   "verdict": "PASS"
+  },
+  {
+   "claim": "TakesDamageFromRam body is 7 bytes (sha1 1aa78f33...); its 4 trailing bytes do not form a descriptor, so the tail is UNKNOWN",
+   "evidence": "the 8-byte body reads `04 27` (return true) then `04 3a 60 29 00 00` (return ReturnValue = export 10592, `TakesDamageFromRam.ReturnValue`, a BoolProperty)",
+   "id": "L17",
+   "measured": "body is 8 bytes (sha1 f3a2180b2691eb6a13645b7c48a0e70a26e1511e); the note's 7-byte slice hashes 1aa78f331a90f55e8fb9f173dcc80128458f4030",
+   "section": "3.4",
+   "verdict": "FAIL"
+  },
+  {
+   "claim": "ArmourModeDamageReduction is read by exactly 1 script function",
+   "evidence": "4-byte operand scan over all Function bodies",
+   "id": "L18",
+   "measured": "1",
+   "section": "3.1",
+   "verdict": "PASS"
+  },
+  {
+   "claim": "LowHealthWarningLevel has exactly 1 reader",
+   "evidence": "same scan",
+   "id": "L19",
+   "measured": "1",
+   "section": "4",
+   "verdict": "PASS"
+  },
+  {
+   "claim": "HealthRecoverRate is read by exactly 1 script function (ExperienceAwarded)",
+   "evidence": "same scan",
+   "id": "L20",
+   "measured": "1",
+   "section": "5",
+   "verdict": "PASS"
+  },
+  {
+   "claim": "`exec<>` count in the exe: TakeDamage 3, TakeRadius 0, Drain 0",
+   "evidence": "the note's substring method reproduces 3; one of the three is `execTakeDamageFromChainGun`, so the registrations of this exact name are 2.  The count still does not decide native-vs-script, as the note says \u2014 the body does",
+   "id": "L24",
+   "measured": "3 / 0 / 0 prefix hits; 2 / 0 / 0 NUL-terminated",
+   "section": "2",
+   "verdict": "PASS"
+  },
+  {
+   "claim": "anchor A_super: SuperField of TakeDamage resolves to an inherited TakeDamage",
+   "evidence": "the field is an import (negative index) naming the parent's function",
+   "id": "L21",
+   "measured": "Core.TakeDamage",
+   "section": "1",
+   "verdict": "PASS"
+  },
+  {
+   "claim": "anchor A_children: Children of TakeDamage is TakeDamage.DamageAmount",
+   "evidence": "the field is an export whose outer_index is the function",
+   "id": "L22",
+   "measured": "RVehicleBatmobileBase.TakeDamage.DamageAmount",
+   "section": "1",
+   "verdict": "PASS"
+  },
+  {
+   "claim": "anchor E_native_parm_refs_own_properties",
+   "evidence": "every `29 <ref>` stub in the package, not just the traced five",
+   "id": "L23",
+   "measured": "3407/3407 refs in 1825 descriptor stubs",
+   "section": "1",
+   "verdict": "PASS"
+  }
+ ],
+ "corpus": {
+  "bodies_ending_return_nothing": 17345,
+  "bodies_ending_return_ref": 8451,
+  "bodies_le_3_bytes": {
+   "04 0b": 1728,
+   "0b": 1544,
+   "0b 04 0b": 10
+  },
+  "body_lengths": {
+   "1": 1544,
+   "2": 1728,
+   "3": 10,
+   "4": 5,
+   "5": 23,
+   "6": 1408
+  },
+  "call_token_operands": 54211,
+  "call_token_operands_are_functions": 54022,
+  "children_kind": {
+   "0": 6883,
+   "own property": 22737
+  },
+  "descriptor_refs": 3407,
+  "descriptor_refs_own": 3407,
+  "descriptor_stubs": 1825,
+  "function_exports": 29620,
+  "min_body_length": 1,
+  "name_at_minus8_is_own_name": 29620,
+  "name_number_zero": 29620,
+  "next_kind": {
+   "0": 1379,
+   "export:ArrayProperty": 120,
+   "export:BoolProperty": 180,
+   "export:ByteProperty": 38,
+   "export:ClassProperty": 16,
+   "export:ComponentProperty": 60,
+   "export:Const": 60,
+   "export:Enum": 144,
+   "export:FloatProperty": 147,
+   "export:Function": 26160,
+   "export:IntProperty": 64,
+   "export:InterfaceProperty": 4,
+   "export:NameProperty": 25,
+   "export:ObjectProperty": 440,
+   "export:ScriptStruct": 108,
+   "export:State": 449,
+   "export:StrProperty": 41,
+   "export:StructProperty": 185
+  },
+  "pre_name_word_high16": {
+   "0x00020000": 26400,
+   "0x00040000": 26,
+   "0x00080000": 15,
+   "0x00120000": 39,
+   "0x00420000": 1027,
+   "0x00820000": 1764,
+   "0x00c20000": 176,
+   "0xffff0000": 145
+  },
+  "prefix_zero": 29620,
+  "script_size_minus_(size-38)": {
+   "-1": 145,
+   "1": 29475
+  },
+  "trailer_bytes": {
+   "15": 29475,
+   "17": 145
+  }
+ },
+ "exe_registrations": {
+  "DrainWeaponGeneratorForDamage": {
+   "exact": 0,
+   "note": 0,
+   "prefix": 0,
+   "strings": []
+  },
+  "TakeDamage": {
+   "exact": 2,
+   "note": 3,
+   "prefix": 3,
+   "strings": [
+    "execTakeDamage",
+    "execTakeDamage",
+    "execTakeDamageFromChainGun"
+   ]
+  },
+  "TakeRadiusDamageFromWeapon": {
+   "exact": 0,
+   "note": 0,
+   "prefix": 0,
+   "strings": []
+  }
+ },
+ "exec_strings": {
+  "RVehicleBatmobileBase.DrainWeaponGeneratorForDamage": 0,
+  "RVehicleBatmobileBase.TakeDamage": 3,
+  "RVehicleBatmobileBase.TakeRadiusDamageFromWeapon": 0,
+  "RVehicleBatmobileBase.TakesDamageFromRam": 0
+ },
+ "functions": {
+  "RVehicleBatmobileBase.DrainWeaponGeneratorForDamage": {
+   "body_bytes_audit": 323,
+   "body_bytes_note": 322,
+   "body_head_hex": "0f 00 f3 27 00 00 01 8e 25 00 00 07",
+   "body_sha1_audit": "e953a6f723d0893b878ddb046e819f9a6cb33cac",
+   "body_sha1_note": "1bcee99ec38ec9a7c71575e903a5bf682e213bff",
+   "body_tail_hex": "f8 b5 00 00 4a 16 04 0b",
+   "children_path": "RVehicleBatmobileBase.DrainWeaponGeneratorForDamage.HitNumber",
+   "export": 10231,
+   "file_offset": 16861640,
+   "float_bytes": [
+    {
+     "at": 148,
+     "plausible": true,
+     "value": 0.0
+    },
+    {
+     "at": 159,
+     "plausible": true,
+     "value": 1.0
+    },
+    {
+     "at": 178,
+     "plausible": true,
+     "value": 0.05
+    },
+    {
+     "at": 218,
+     "plausible": true,
+     "value": 0.5
+    },
+    {
+     "at": 236,
+     "plausible": true,
+     "value": 0.5
+    },
+    {
+     "at": 251,
+     "plausible": true,
+     "value": 0.0
+    },
+    {
+     "at": 271,
+     "plausible": true,
+     "value": 1.0
+    },
+    {
+     "at": 290,
+     "plausible": true,
+     "value": 1.0
+    }
+   ],
+   "head": {
+    "children": 10230,
+    "line": 467,
+    "next": 10225,
+    "prefix_u16": 0,
+    "script_size": 323,
+    "super": 0
+   },
+   "next_path": "RVehicleBatmobileBase.TriggerWeaponGeneratorScarecrowBonus",
+   "path": "RVehicleBatmobileBase.DrainWeaponGeneratorForDamage",
+   "scan_exact_end": true,
+   "size": 360,
+   "super_path": null,
+   "trailer_bytes": 15,
+   "trailer_hex": "00 00 00 03 00 02 00 41 6b 00 00 00 00 00 00",
+   "trailer_name": "DrainWeaponGeneratorForDamage"
+  },
+  "RVehicleBatmobileBase.TakeDamage": {
+   "body_bytes_audit": 2029,
+   "body_bytes_note": 2028,
+   "body_head_hex": "0b 0b 07 1c 00 77 13 62 2b 01 00 00",
+   "body_sha1_audit": "f5b3fde67e9228623d598daca8b0a1f27d354837",
+   "body_sha1_note": "b00acfae06bd5bcf95606c6273f73fc70bc199d5",
+   "body_tail_hex": "00 00 16 06 40 0b 04 0b",
+   "children_path": "RVehicleBatmobileBase.TakeDamage.DamageAmount",
+   "export": 10436,
+   "file_offset": 16877887,
+   "float_bytes": [
+    {
+     "at": 486,
+     "plausible": true,
+     "value": 1000.0
+    },
+    {
+     "at": 516,
+     "plausible": true,
+     "value": 2.5
+    },
+    {
+     "at": 606,
+     "plausible": true,
+     "value": 2.0
+    },
+    {
+     "at": 636,
+     "plausible": true,
+     "value": 1.0
+    },
+    {
+     "at": 1395,
+     "plausible": true,
+     "value": 2.0
+    },
+    {
+     "at": 1773,
+     "plausible": true,
+     "value": 0.5
+    },
+    {
+     "at": 1778,
+     "plausible": true,
+     "value": 0.5
+    },
+    {
+     "at": 1783,
+     "plausible": true,
+     "value": 5.0
+    },
+    {
+     "at": 1791,
+     "plausible": true,
+     "value": 1.0
+    }
+   ],
+   "head": {
+    "children": 10435,
+    "line": 3041,
+    "next": 10419,
+    "prefix_u16": 0,
+    "script_size": 2029,
+    "super": -2500
+   },
+   "next_path": "RVehicleBatmobileBase.InGodMode",
+   "path": "RVehicleBatmobileBase.TakeDamage",
+   "scan_exact_end": true,
+   "size": 2066,
+   "super_path": "Core.TakeDamage",
+   "trailer_bytes": 15,
+   "trailer_hex": "00 00 00 02 48 02 00 00 29 01 00 00 00 00 00",
+   "trailer_name": "TakeDamage"
+  },
+  "RVehicleBatmobileBase.TakeRadiusDamageFromWeapon": {
+   "body_bytes_audit": 289,
+   "body_bytes_note": 288,
+   "body_head_hex": "49 06 00 1e 00 00 80 3f 15 07 2d 00",
+   "body_sha1_audit": "d311fcfe1186448fed2743e803960558dadca5d5",
+   "body_sha1_note": "b05295b1a5371efaa0b93a9770f45a542427cd78",
+   "body_tail_hex": "00 16 04 3a a6 28 00 00",
+   "children_path": "RVehicleBatmobileBase.TakeRadiusDamageFromWeapon.InstigatedBy",
+   "export": 10416,
+   "file_offset": 16876770,
+   "float_bytes": [
+    {
+     "at": 3,
+     "plausible": true,
+     "value": 1.0
+    },
+    {
+     "at": 112,
+     "plausible": true,
+     "value": 0.5
+    },
+    {
+     "at": 119,
+     "plausible": true,
+     "value": 0.0
+    },
+    {
+     "at": 134,
+     "plausible": true,
+     "value": 0.0
+    },
+    {
+     "at": 159,
+     "plausible": true,
+     "value": 1500.0
+    },
+    {
+     "at": 174,
+     "plausible": true,
+     "value": 0.5
+    },
+    {
+     "at": 192,
+     "plausible": true,
+     "value": 0.1
+    },
+    {
+     "at": 205,
+     "plausible": true,
+     "value": 1.0
+    },
+    {
+     "at": 226,
+     "plausible": true,
+     "value": 1.0
+    }
+   ],
+   "head": {
+    "children": 10415,
+    "line": 425,
+    "next": 10400,
+    "prefix_u16": 0,
+    "script_size": 289,
+    "super": -1635
+   },
+   "next_path": "RVehicleBatmobileBase.EquipSecondaryWeapon",
+   "path": "RVehicleBatmobileBase.TakeRadiusDamageFromWeapon",
+   "scan_exact_end": true,
+   "size": 326,
+   "super_path": "Core.TakeRadiusDamageFromWeapon",
+   "trailer_bytes": 15,
+   "trailer_hex": "00 00 00 02 48 82 00 81 29 01 00 00 00 00 00",
+   "trailer_name": "TakeRadiusDamageFromWeapon"
+  },
+  "RVehicleBatmobileBase.TakesDamageFromRam": {
+   "body_bytes_audit": 8,
+   "body_bytes_note": 7,
+   "body_head_hex": "04 27 04 3a 60 29 00 00",
+   "body_sha1_audit": "f3a2180b2691eb6a13645b7c48a0e70a26e1511e",
+   "body_sha1_note": "1aa78f331a90f55e8fb9f173dcc80128458f4030",
+   "body_tail_hex": "04 27 04 3a 60 29 00 00",
+   "children_path": "RVehicleBatmobileBase.TakesDamageFromRam.Target",
+   "export": 10595,
+   "file_offset": 16894143,
+   "float_bytes": [],
+   "head": {
+    "children": 10594,
+    "line": 12,
+    "next": 10591,
+    "prefix_u16": 0,
+    "script_size": 8,
+    "super": 0
+   },
+   "next_path": "RVehicleBatmobileBase.GetCurrentSideSwipeTarget",
+   "path": "RVehicleBatmobileBase.TakesDamageFromRam",
+   "scan_exact_end": true,
+   "size": 45,
+   "super_path": null,
+   "trailer_bytes": 15,
+   "trailer_hex": "00 00 00 03 00 02 00 82 29 01 00 00 00 00 00",
+   "trailer_name": "TakesDamageFromRam"
+  }
+ },
+ "generated_by": "Tools/scripts/bmak_damage_layout_audit.py",
+ "head_table": [
+  [
+   "@0",
+   "u16 prefix",
+   "29620/29620 zero",
+   "two bytes at export offset 0"
+  ],
+  [
+   "@2",
+   "Next",
+   "28241/29620 resolve",
+   "0, or an export of a UField subclass \u2014 never an import"
+  ],
+  [
+   "@6",
+   "SuperField",
+   "negative = import",
+   "`Core.TakeDamage` for TakeDamage; 0 for the two functions the class declares"
+  ],
+  [
+   "@10",
+   "Children",
+   "22737/29620 own property",
+   "0, or an export whose outer_index is this function"
+  ],
+  [
+   "@14",
+   "Line",
+   "source lines 12..3041",
+   "plausible editor lines"
+  ],
+  [
+   "@18",
+   "ScriptSize",
+   "body byte count",
+   "\u00a72 \u2014 not len + 1"
+  ]
+ ],
+ "package": {
+  "bytes": 214757637,
+  "chunked": true,
+  "exports": 177031,
+  "functions": 29620,
+  "header_size": 16243315,
+  "imports": 3268,
+  "licensee": 32995,
+  "names": 84813,
+  "path": "E:\\Games\\Batman - Arkham Knight\\BmGame\\CookedPCConsole\\BmGame.upk",
+  "version": 863
+ },
+ "rules": [
+  {
+   "export": 10436,
+   "field_ref": {
+    "at": 134,
+    "index": 9734
+   },
+   "function": "RVehicleBatmobileBase.TakeDamage",
+   "gate": {
+    "at": 108,
+    "bytes": "07 cf 00",
+    "condition_at": 111,
+    "condition_bytes": "2d 01 ff 26 00 00",
+    "jump_offset": 207,
+    "target_at": 318,
+    "target_byte": "0xff",
+    "target_is_statement_start": false,
+    "token": "0x07 JumpIfNot"
+   },
+   "gate_condition_ref": {
+    "at": 113,
+    "class": "BoolProperty",
+    "index": 9983,
+    "path": "RVehicleBatmobileBase.ArmouredMode"
+   },
+   "id": "R1_armour_mode_reduction",
+   "literal_100_count": 2,
+   "readers_in_package": [
+    "RVehicleBatmobileBase.TakeDamage"
+   ],
+   "rule": "DAMAGE_RULES.md 3.1: `ArmouredMode` gates `ArmourModeDamageReduction`, whose shipped value 0 makes armoured mode reduce nothing",
+   "shipped_values": [
+    {
+     "archetype": "Playable_BatmobileFunhouse_SF.BatmobileFunhouse",
+     "value": 0
+    },
+    {
+     "archetype": "Playable_BatmobileMK2_SF.Batmobile_MK2",
+     "value": 0
+    },
+    {
+     "archetype": "Playable_Batmobile_SF.Batmobile",
+     "value": 0
+    }
+   ],
+   "statement": {
+    "at": 117,
+    "bytes": "0f 00 c3 28 00 00 91 90 00 c3 28 00 00 93 2c 64 01 06 26 00 00 16 16 2c 64 16",
+    "end": 143
+   },
+   "statement_ends_at_next_statement": true,
+   "statement_tree": {
+    "lhs": {
+     "ref": {
+      "index": 10435,
+      "token": "LocalVariable"
+     }
+    },
+    "rhs": {
+     "op": "0x91",
+     "parms": [
+      {
+       "op": "0x90",
+       "parms": [
+        {
+         "ref": {
+          "index": 10435,
+          "token": "LocalVariable"
+         }
+        },
+        {
+         "op": "0x93",
+         "parms": [
+          {
+           "int": 100
+          },
+          {
+           "ref": {
+            "index": 9734,
+            "token": "InstanceVariable"
+           }
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "int": 100
+      }
+     ]
+    }
+   }
+  },
+  {
+   "body": "04 27 04 3a 60 29 00 00",
+   "body_bytes": 8,
+   "body_sha1": "f3a2180b2691eb6a13645b7c48a0e70a26e1511e",
+   "decode": [
+    "04 Return",
+    "27 True",
+    "04 Return",
+    "3a <ref ReturnValue> 0x2960"
+   ],
+   "export": 10595,
+   "function": "RVehicleBatmobileBase.TakesDamageFromRam",
+   "id": "R2_ram_is_unconditional",
+   "note_body_bytes": 7,
+   "note_body_sha1": "1aa78f331a90f55e8fb9f173dcc80128458f4030",
+   "return_value_ref": {
+    "at": 3,
+    "class": "BoolProperty",
+    "index": 10592,
+    "path": "RVehicleBatmobileBase.TakesDamageFromRam.ReturnValue"
+   },
+   "rule": "DAMAGE_RULES.md 3.4: `TakesDamageFromRam` opens with `return true`; its trailing bytes are called an incomplete descriptor of UNKNOWN meaning",
+   "unconditional": true
+  }
+ ],
+ "schema": "bmak.damage_layout_audit/1",
+ "subject": "Research/BatmobileGrab/DAMAGE_RULES.md",
+ "ueviewer": {
+  "children_return": {
+   "file": "Working/vendor/UEViewer/Unreal/UnTypeinfo.h",
+   "line": 164,
+   "text": "return;\t\t\t\t//!! remaining data will be dropped anyway"
+  },
+  "script_size_bytes": {
+   "file": "Working/vendor/UEViewer/Unreal/UnTypeinfo.h",
+   "line": 200,
+   "text": "Ar.Serialize(&Script[0], ScriptSize);"
+  }
+ },
+ "unknowns": [
+  "Opcode semantics above `0x7F` (`0x90`, `0x91`, `0x93`, `0xb1`, \u2026): the bodies use operators the note's token table does not list, and this audit does not name them.  They are decoded only as parm-list operators, and only where the nesting balances exactly; which of `0x90`/`0x91` is multiply and which is divide is not established here.  A runnable oracle (the game's VM) is outside the read-only inputs.",
+  "The trailer's own fields (the bytes before the FName): neither the note nor this audit identifies them.  Only the length, the constant tail (FName index + 0) and the effect on the body boundary are decoded.",
+  "The 145 exports with a 17-byte trailer are counted, not explained.",
+  "`Next`/`SuperField` are checked for resolution and class, not by walking the UField chain in order."
+ ],
+ "verdict": "STRUCTURE HOLDS; BODY LENGTH IS ONE BYTE SHORT",
+ "verdict_points": [
+  "Head offsets 0/2/6/10/14/18: **confirmed**, each by an oracle over all 29620 `Function` exports (`u16@0` zero 29620/29620, `Children` an own property 22737/29620, trailing FName = own name 29620/29620).",
+  "Body length: **one byte wrong**.  `ScriptSize` is the number of body bytes, not `len + 1`; the note's `len(export) - 38` cuts the last byte in 29475 of 29620 exports (and keeps one trailer byte in 145).  A token scan of ScriptSize bytes ends exactly on the last byte in 26039 bodies against 14456 for the note's length.",
+  "Trailer: 15 bytes, 17 on 145 exports, always ending in the own FName + a zero number; the note's `flags word @size-16` is not a field and `pre-name word == 0x0002xxxx` is not exact.",
+  "Anchors: 5 of the note's 7 hold as stated (A_super, A_children, D_name, E_native_parm_refs \u2014 3407/3407 refs over 1825 stubs \u2014 and F_call_token at 54022/54211); 2 do not (B_script_size_is_len_plus_one, C_thinnest_script_is_return).",
+  "Constants: every literal the note quotes for the three audited functions re-decodes to the quoted value, and no plausible float in those bodies is unaccounted for; the note quotes no offsets, this audit adds them.",
+  "Rules: \u00a73.1's armour-mode reduction and \u00a73.4's unconditional `return true` both trace to exact bytecode; \u00a73.4 is also the case where the one-byte error bites, because the cut byte is what completes `return ReturnValue`."
+ ]
+}

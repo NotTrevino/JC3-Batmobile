@@ -1,0 +1,776 @@
+{
+ "bmak": {
+  "all_setters": 252,
+  "batmobile_setter_names": [
+   "UC_DoIntro",
+   "UC_DoOutro",
+   "UC_GetDeferredExternalCalls",
+   "UC_HideBoostGauge",
+   "UC_SetBatmobileCombo",
+   "UC_SetBattleAndZoomMode",
+   "UC_SetBattleModeOpacity",
+   "UC_SetBoostLevel",
+   "UC_SetCannonCoolDown",
+   "UC_SetColorTransform",
+   "UC_SetEnemyCount",
+   "UC_SetEnergySystemParams",
+   "UC_SetEnergyTutorialLevel",
+   "UC_SetForensicTracking",
+   "UC_SetHealth",
+   "UC_SetHealthBarVisible",
+   "UC_SetImpactDamageFlash",
+   "UC_SetMachineGunAccuracyFrame",
+   "UC_SetMedalAccruing",
+   "UC_SetMedalProportion",
+   "UC_SetMedalType",
+   "UC_SetOccupant",
+   "UC_SetPrimaryWeapon",
+   "UC_SetRemoteInterfaceVisible",
+   "UC_SetSecondaryWeapon",
+   "UC_SetSelectiveVisibilityModule",
+   "UC_SetSpecialWeapons",
+   "UC_SetTurnAround",
+   "UC_SetVirusUploadState",
+   "UC_SetWeaponFeedback",
+   "UC_SetWinchMeter",
+   "UC_SetWinchMeterVisible",
+   "UC_SetXpLevel",
+   "UC_ShakeAndFlashHud",
+   "UC_ShakeEntireHud",
+   "UC_ShowBoostUpgrade",
+   "UC_TestNextSelectiveVisibilityModule"
+  ],
+  "batmobile_setters": 37,
+  "cannon_cooldown_row": "| `UC_SetCannonCoolDown` | `0…4` | reticle `Ready` / `Blank` / `PreReady*` |",
+  "cannon_cooldown_states": "0…4",
+  "missile_target_kinds": [
+   "Invalid",
+   "bomb",
+   "emp",
+   "friend",
+   "multi",
+   "plain"
+  ],
+  "setters_with_heat": [],
+  "targets_element_cell": "`VehicleMissileTarget`, `…_bomb`, `…_emp`, `…_friend`, `…_multi`, `…Invalid`, `missile_border_anim`, `missile_lockon_square_anim`, `batmobile_lockon`, `batmobile_aim`, `batmobileattack`, `Tank_Hack_BOMB/EMP/FRIEND`, compass ring, `FocusDetail*`, grapple/winch reticles, `Vehicle_Onscreen` markers",
+  "targets_row": "| `HudModuleTargets` | `VehicleMissileTarget`, `…_bomb`, `…_emp`, `…_friend`, `…_multi`, `…Invalid`, `missile_border_anim`, `missile_lockon_square_anim`, `batmobile_lockon`, `batmobile_aim`, `batmobileattack`, `Tank_Hack_BOMB/EMP/FRIEND`, compass ring, `FocusDetail*`, grapple/winch reticles, `Vehicle_Onscreen` markers | `UC_SetBatmobileWeapon(primary, bool)`, `UC_SetBatmobileWeaponHit`, `UC_SetBatmobileWeaponFailure`, `UC_SetCompassMode`, `UC_SetFocusDetail`, `UC_SendToFlash(8 args)`, `UC_SetGrappleBoost`, `UC_SetSuperEject` |",
+  "targets_setter_names": [
+   "UC_GetDeferredExternalCalls",
+   "UC_PlaySubAnimOnCursor3D",
+   "UC_SendToFlash",
+   "UC_SetBatmobileWeapon",
+   "UC_SetBatmobileWeaponFailure",
+   "UC_SetBatmobileWeaponHit",
+   "UC_SetColorTransform",
+   "UC_SetCompassMode",
+   "UC_SetFocusDetail",
+   "UC_SetGrappleBoost",
+   "UC_SetLevelUpVisible",
+   "UC_SetSelectiveVisibilityModule",
+   "UC_SetSuperEject",
+   "UC_ShakeAndFlashHud",
+   "UC_ShakeEntireHud",
+   "UC_TestNextSelectiveVisibilityModule"
+  ],
+  "targets_setters": 16,
+  "vehicle_weapon_setters": [
+   "UC_SetBatmobileWeapon",
+   "UC_SetBatmobileWeaponFailure",
+   "UC_SetBatmobileWeaponHit",
+   "UC_SetCannonCoolDown",
+   "UC_SetLockonValue",
+   "UC_SetPrimaryWeapon",
+   "UC_SetSecondaryWeapon",
+   "UC_SetSpecialWeapons",
+   "UC_SetStationaryLockonValue",
+   "UC_SetWeaponFeedback"
+  ],
+  "vulcan_heat": {
+   "fields": [
+    "HeatBarSize",
+    "HeatBarStart"
+   ],
+   "rows": 4,
+   "weapon_archetypes": [
+    "Batmobile_Cannon_V2"
+   ]
+  }
+ },
+ "callers": {
+  "init": {
+   "count": 2,
+   "sites": [
+    {
+     "in": "TestConstructor",
+     "line": 7535,
+     "text": "this.InitVehicleWeapons(0,141,\"Panther\",true,5,15,60);"
+    },
+    {
+     "in": "TestConstructor",
+     "line": 7536,
+     "text": "this.InitVehicleWeapons(1,141,\"Minigun\",true,2,20,100);"
+    }
+   ]
+  },
+  "reticle": {
+   "count": 0,
+   "sites": []
+  },
+  "update": {
+   "count": 0,
+   "sites": []
+  }
+ },
+ "cooldown": {
+  "bar_frames": 65,
+  "bar_scale_time": 0.3,
+  "half": 180,
+  "low_ammo_alpha": 0.2,
+  "low_ammo_time": 0.25,
+  "overcharge_alpha": 0.7,
+  "rot_degrees": 360,
+  "sounds": [
+   "dlc_wingsuit_weapon_ready"
+  ],
+  "toggled_by": "weapon_cooldown != -1"
+ },
+ "heat": {
+  "body_mentions": 0,
+  "params_with_heat": [],
+  "police_heat_dir": "hud_code/heat/",
+  "police_heat_states": 11
+ },
+ "icons": {
+  "count": 69,
+  "dir": "textures/ui/weapon_icons/",
+  "files": 110,
+  "ids": [
+   11,
+   12,
+   13,
+   14,
+   21,
+   31,
+   32,
+   33,
+   41,
+   111,
+   112,
+   117,
+   118,
+   119,
+   121,
+   123,
+   131,
+   141,
+   142,
+   143,
+   144,
+   147,
+   151,
+   153,
+   155,
+   161,
+   162,
+   163,
+   176,
+   177,
+   180,
+   201,
+   205,
+   206,
+   210,
+   301,
+   401,
+   502,
+   601,
+   602,
+   603,
+   604,
+   605,
+   606,
+   607,
+   608,
+   609,
+   610,
+   611,
+   612,
+   613,
+   615,
+   616,
+   617,
+   618,
+   619,
+   620,
+   621,
+   622,
+   630,
+   631,
+   636,
+   640,
+   701,
+   702,
+   704,
+   801,
+   802,
+   901
+  ],
+  "low_res_suffix": "_sm.ddsc",
+  "missing_owners": {
+   "614": [
+    "w614_monorailmissilecar_missile"
+   ]
+  },
+  "owner_literals": [
+   "textures/ui/weapon_icons/"
+  ],
+  "rejected_ids": [
+   -1,
+   0
+  ],
+  "suffix": ".ddsc",
+  "wired_components": 88,
+  "wired_hulls": 21,
+  "wired_ids": [
+   206,
+   601,
+   602,
+   603,
+   604,
+   605,
+   606,
+   607,
+   608,
+   609,
+   610,
+   611,
+   612,
+   613,
+   614,
+   615,
+   616,
+   617,
+   618,
+   619,
+   620,
+   621,
+   622
+  ],
+  "wired_with_icon": [
+   206,
+   601,
+   602,
+   603,
+   604,
+   605,
+   606,
+   607,
+   608,
+   609,
+   610,
+   611,
+   612,
+   613,
+   615,
+   616,
+   617,
+   618,
+   619,
+   620,
+   621,
+   622
+  ],
+  "wired_without_icon": [
+   614
+  ]
+ },
+ "init": {
+  "body_lines": 34,
+  "params": [
+   {
+    "default": null,
+    "name": "slot_index",
+    "type": "int"
+   },
+   {
+    "default": null,
+    "name": "weapon_id",
+    "type": "int"
+   },
+   {
+    "default": null,
+    "name": "weapon_name",
+    "type": "String"
+   },
+   {
+    "default": "true",
+    "name": "infiniteAmmo",
+    "type": "Boolean"
+   },
+   {
+    "default": "-1",
+    "name": "magazine_ammo",
+    "type": "int"
+   },
+   {
+    "default": "-1",
+    "name": "magazine_size",
+    "type": "int"
+   },
+   {
+    "default": "-1",
+    "name": "inventory_ammo",
+    "type": "int"
+   },
+   {
+    "default": "-1",
+    "name": "weapon_cooldown",
+    "type": "Number"
+   },
+   {
+    "default": "false",
+    "name": "is_overcharged",
+    "type": "Boolean"
+   }
+  ],
+  "signature": "public function InitVehicleWeapons(slot_index:int, weapon_id:int, weapon_name:String, infiniteAmmo:Boolean = true, magazine_ammo:int = -1, magazine_size:int = -1, inventory_ammo:int = -1, weapon_cooldown:Number = -1, is_overcharged:Boolean = false) : void"
+ },
+ "inputs": {
+  "E:\\Modding\\JC3-Batmobile\\Research\\BatmobileGrab\\HUD.md": {
+   "sha256": "7def612430d053f276c35a8690d8bf6a3b3b9dccffd864206fdcc329a607d661",
+   "size": 25933
+  },
+  "E:\\Modding\\JC3-Batmobile\\Research\\BatmobileGrab\\HUD_INTERFACES.json": {
+   "sha256": "cfc155cc73cf13139be81117a32de03db9501ebf23242a36818156d9a31958ee",
+   "size": 25235
+  },
+  "E:\\Modding\\JC3-Batmobile\\Research\\JC3Grab\\INDEX.jsonl": {
+   "sha256": "3060ea8becba834dbaba63b2607a8c5e85cd0a97eb96dccde7fde1f44a5de2d1",
+   "size": 17436753
+  },
+  "E:\\Modding\\JC3-Batmobile\\Research\\JC3Grab\\WEAPONS.jsonl": {
+   "sha256": "31c0b905e770cb90a103b2260dd1c84d2fb4a5e360fac152c5316e6afdf59240",
+   "size": 856913
+  },
+  "E:\\Modding\\JC3-Batmobile\\Research\\JC3Grab\\WEAPON_WIRING.jsonl": {
+   "sha256": "8f59553998ed75bae9ef9d627591cf252a8e86cba59a1fd5708fec249572dae2",
+   "size": 518004
+  },
+  "E:\\Modding\\_gamedata\\JC3grab\\hud\\dec\\scripts\\hud.as": {
+   "sha256": "4f3ae2434d63c5f31b372a7e20a1e50c2a7bef048ae5e7989c6d2410beb61986",
+   "size": 481904
+  },
+  "E:\\Modding\\_gamedata\\JC3grab\\hud\\dec\\scripts\\hud_code\\poi.as": {
+   "sha256": "658bb82ae2c20070403d5a869488b46ecc4e5370106c8f42314ef39da9d86bff",
+   "size": 37480
+  },
+  "E:\\Modding\\_gamedata\\JC3grab\\hud\\dec\\scripts\\hud_code\\weapon_icon_type.as": {
+   "sha256": "aabb32959458df50a30593ecb95b8eaa8916bf653ca893b52e941184e0189353",
+   "size": 3908
+  }
+ },
+ "lockon": {
+  "create_poi_public": true,
+  "hide_missile_locked_calls": {
+   "count": 0,
+   "sites": []
+  },
+  "lock_on_created_in_movie": 0,
+  "lock_on_icon": [
+   "MCI_lock_on.MCI_reticle"
+  ],
+  "lock_on_poi_constant": 21,
+  "lock_on_rotation_time": 1.5,
+  "lock_on_type": 21,
+  "missile_locked_element": "MCI_safe_area_bottom_middle.MCI_missile_locked",
+  "missile_locked_timer": 0.5,
+  "poi_types": {
+   "POI_TYPE_CHALLENGE": 25,
+   "POI_TYPE_CHOP_SHOP": 23,
+   "POI_TYPE_DUAL_TETHER": 16,
+   "POI_TYPE_ENCOUNTER": 12,
+   "POI_TYPE_ENCOUNTER_START": 13,
+   "POI_TYPE_GRENADE": 18,
+   "POI_TYPE_HEAT_RADIO": 11,
+   "POI_TYPE_KILL_TARGET": 15,
+   "POI_TYPE_LABEL": 0,
+   "POI_TYPE_LABEL2": 17,
+   "POI_TYPE_LOCKED": 24,
+   "POI_TYPE_LOCK_ON_TARGET": 21,
+   "POI_TYPE_MISSION": 19,
+   "POI_TYPE_OPEN_WORLD": 20,
+   "POI_TYPE_ROM_START_AIR_RACE": 8,
+   "POI_TYPE_ROM_START_ATTACKWAVE": 31,
+   "POI_TYPE_ROM_START_DELIVERY": 5,
+   "POI_TYPE_ROM_START_DESTRUCTION": 7,
+   "POI_TYPE_ROM_START_FLIGHT_MASTER": 26,
+   "POI_TYPE_ROM_START_LAND_RACE": 2,
+   "POI_TYPE_ROM_START_MECH_ARENA": 29,
+   "POI_TYPE_ROM_START_SCRAPHEAP": 30,
+   "POI_TYPE_ROM_START_SCRAPYARD": 3,
+   "POI_TYPE_ROM_START_SEA_RACE": 9,
+   "POI_TYPE_ROM_START_SHOOTING": 6,
+   "POI_TYPE_ROM_START_SKY_TERROR": 27,
+   "POI_TYPE_ROM_START_SPEED": 4,
+   "POI_TYPE_ROM_START_WINGSUIT": 1,
+   "POI_TYPE_USER_PLACED": 10,
+   "POI_TYPE_WEAPON_PICKUP": 22,
+   "POI_TYPE_WEAPON_RETICLE_AUTO": 14,
+   "POI_TYPE_WEAPON_RETICLE_AUTO_WINGSUIT": 28
+  },
+  "poi_types_in_hud": 32,
+  "show_missile_locked_calls": {
+   "count": 0,
+   "sites": []
+  }
+ },
+ "reticle": {
+  "hidden_inflict_damage_shape": 3,
+  "inflict_damage_y": [
+   -111,
+   -21
+  ],
+  "look": {
+   "ECrosshairLook_InRangeNoTarget": 3,
+   "ECrosshairLook_InRangeTargetAllied": 1,
+   "ECrosshairLook_InRangeTargetHostile": 2,
+   "ECrosshairLook_InRangeTargetNeutral": 0,
+   "ECrosshairLook_OutOfRange": 4
+  },
+  "out_of_range_alpha": 0.4,
+  "params": [
+   {
+    "default": null,
+    "name": "show",
+    "type": "Boolean"
+   },
+   {
+    "default": null,
+    "name": "weapons_look",
+    "type": "int"
+   },
+   {
+    "default": null,
+    "name": "reticle_size",
+    "type": "Number"
+   },
+   {
+    "default": null,
+    "name": "reticle_shape",
+    "type": "int"
+   }
+  ],
+  "poi_types_seen": [
+   "POI_TYPE_WEAPON_RETICLE_AUTO",
+   "POI_TYPE_WEAPON_RETICLE_AUTO_WINGSUIT"
+  ],
+  "rigged_shapes": [
+   "E_RETICLE_AUTO",
+   "E_RETICLE_CIRCLE",
+   "E_RETICLE_FLAK",
+   "E_RETICLE_ROCKET",
+   "E_RETICLE_SINGLE_SHOT"
+  ],
+  "shapes": {
+   "E_RETICLE_AUTO": 4,
+   "E_RETICLE_CANNON": 8,
+   "E_RETICLE_CIRCLE": 1,
+   "E_RETICLE_DOT": 2,
+   "E_RETICLE_FLAK": 9,
+   "E_RETICLE_GRENADE_LAUNCHER": 7,
+   "E_RETICLE_MECH_CANNON": 11,
+   "E_RETICLE_MECH_MINIGUN": 12,
+   "E_RETICLE_NONE": 3,
+   "E_RETICLE_POWERCORE": 13,
+   "E_RETICLE_ROCKET": 6,
+   "E_RETICLE_SINGLE_SHOT": 0,
+   "E_RETICLE_WINGSUIT": 5,
+   "E_RETICLE_WINGSUIT_WEAPONIZED": 10
+  },
+  "signature": "public function UpdateWeaponReticle(show:Boolean, weapons_look:int, reticle_size:Number, reticle_shape:int) : void",
+  "size_cases": [
+   "E_RETICLE_AUTO",
+   "E_RETICLE_CANNON",
+   "E_RETICLE_CIRCLE",
+   "E_RETICLE_DOT",
+   "E_RETICLE_FLAK",
+   "E_RETICLE_GRENADE_LAUNCHER",
+   "E_RETICLE_MECH_CANNON",
+   "E_RETICLE_MECH_MINIGUN",
+   "E_RETICLE_NONE",
+   "E_RETICLE_POWERCORE",
+   "E_RETICLE_ROCKET",
+   "E_RETICLE_SINGLE_SHOT",
+   "E_RETICLE_WINGSUIT",
+   "E_RETICLE_WINGSUIT_WEAPONIZED"
+  ],
+  "widths": {
+   "RETICLE_CIRCLE_WIDTH_MAX": 33,
+   "RETICLE_CIRCLE_WIDTH_MIN": 14,
+   "RETICLE_CROSS_WIDTH_MAX": 30,
+   "RETICLE_CROSS_WIDTH_MIN": 5,
+   "RETICLE_GRAPPLE_GHOST_ALPHA": 0.2,
+   "RETICLE_GRAPPLE_GRIP_TWEEN_TIME": 0.2,
+   "RETICLE_GRAPPLE_SCALE": 1,
+   "RETICLE_GRAPPLE_SCALE_MAX": 1,
+   "RETICLE_GRAPPLE_SCALE_MIN": 0.5,
+   "RETICLE_GRAPPLE_SCALE_TIME": 0.75,
+   "RETICLE_GRAPPLE_SCALE_TO": 1.2,
+   "RETICLE_GRAPPLE_SLOW_SPIN_TIME": 3,
+   "RETICLE_GRAPPLE_SPIN_TIME": 1.5,
+   "RETICLE_IN_RANGE_ALPHA": 1,
+   "RETICLE_OUT_OF_RANGE_ALPHA": 0.4,
+   "RETICLE_ROCKET_WIDTH_MAX": 20,
+   "RETICLE_ROCKET_WIDTH_MIN": 5
+  }
+ },
+ "rows": {
+  "card": "#### G2-25 · HUD vehicle-weapons API   S · deps: G2-11 · serves: HUD-2, WPN-12\nIn: decompiled `ui/hud.gfx` (260 scripts), `T6_HUD_CAMERA.md`.\nDo: document `InitVehicleWeapons` / `UpdateVehicleWeapons` arguments (slot count, icon id,\nammo/heat/cooldown), the lock-on HUD used by `w609`/`w612`/`w613`, and how the entity feeds them\n(weapon id → icon).\nOut: `Research/JC3Grab/JC3_HUD_WEAPONS.md`.\nDone: each BmAK HUD element in WPN-12 has a JC3 element or a stated absence.",
+  "t_hud5": {
+   "current": "T6_HUD_CAMERA.md section 1a (completed by T-19, 2026-10-28)",
+   "date": "2026-10-27",
+   "sha256": "e41b8a5849f00e550d354a17c83367ef79d7675b14c4e10e3b036fb4e1ab4cb9",
+   "source": "Working/Translation/T6_HUD_CAMERA.md",
+   "text": "| T-HUD5 | `UC_SetCannonCoolDown(0…4)`, heavy reticle, special weapon states | `InitVehicleWeapons` / `UpdateVehicleWeapons` (2 slots) | categorical | no weapon component on the mod | **blocked**: the HUD supports it, the entity does not | decoded | fire the cannon, reticle cooldown |"
+  },
+  "wpn12": "HUD: weapon slots, reticle, cannon cooldown, Vulcan heat, missile lock | `HUD_INTERFACES.json` (`UC_SetCannonCoolDown` …) | `hud.gfx` `InitVehicleWeapons`/`UpdateVehicleWeapons` (T-HUD5)"
+ },
+ "scripts": {
+  "hud_as_bytes": 470609,
+  "hud_as_lines": 11295,
+  "root": "hud\\dec\\scripts",
+  "total": 260
+ },
+ "slots": {
+  "array_line": "this.m_WeaponsArray = new Array(this.MCI_safe_area_bottom_right.MCI_vehicle_weapons0,this.MCI_safe_area_bottom_right.MCI_vehicle_weapons1);",
+  "bar_parts": [
+   "MCI_bullet_bar_anim",
+   "MCI_radial_loader_cooldown",
+   "alpha"
+  ],
+  "clips": [
+   "MCI_vehicle_weapons0",
+   "MCI_vehicle_weapons1"
+  ],
+  "constant_alt": 1,
+  "constant_main": 0,
+  "count": 2,
+  "data_fields": [
+   "m_HasInfiniteAmmo",
+   "m_MagazineAmmo",
+   "m_MagazineSize",
+   "m_TotalInventoryAmmo",
+   "m_WeaponId",
+   "m_WeaponName"
+  ],
+  "icon_call": "this.SetWeaponIcon(this.m_WeaponsArray[slot_index].MCI_selected_weapon_icon,weapon_id,this);",
+  "on_foot_slots": 7,
+  "slot_widgets": [
+   "MCI_bullet_bar",
+   "MCI_inventory_infinity",
+   "MCI_selected_weapon_icon",
+   "TXT_bullet_ammo",
+   "TXT_name",
+   "TXT_selected_inventory_ammo",
+   "TXT_slash_mark"
+  ]
+ },
+ "update": {
+  "body_lines": 39,
+  "params": [
+   {
+    "default": null,
+    "name": "slot_index",
+    "type": "int"
+   },
+   {
+    "default": null,
+    "name": "new_magazine_ammo_amount",
+    "type": "int"
+   },
+   {
+    "default": null,
+    "name": "total_ammo",
+    "type": "int"
+   },
+   {
+    "default": null,
+    "name": "is_low_ammo",
+    "type": "Boolean"
+   },
+   {
+    "default": "-1",
+    "name": "weapon_cooldown",
+    "type": "Number"
+   },
+   {
+    "default": "false",
+    "name": "is_overcharged",
+    "type": "Boolean"
+   }
+  ],
+  "signature": "public function UpdateVehicleWeapons(slot_index:int, new_magazine_ammo_amount:int, total_ammo:int, is_low_ammo:Boolean, weapon_cooldown:Number = -1, is_overcharged:Boolean = false) : void"
+ },
+ "weapons": {
+  "w609": {
+   "autoaim": {
+    "OnFoot.AngleThresholdCurrentTarget": 0.30000001192092896,
+    "OnFoot.AngleThresholdNewTarget": 0.08500000089406967,
+    "OnFoot.CanTargetCharacters": 0,
+    "OnFoot.CanTargetRigidObjects": 1,
+    "OnFoot.CanTargetVehicles": 1,
+    "OnFoot.MaxAimDistance": 750.0,
+    "OnFoot.MinAimDistance": 25.0
+   },
+   "autoaim_file": "w609_fighterjet_missile_air_lockon_autoaim.wtune",
+   "bindings": [
+    "secondary (id:00568A74)"
+   ],
+   "carriers": 3,
+   "chassis": [
+    "v4202_plane_capstone_fighterjet"
+   ],
+   "class": "CRPGFireLeachWeapon",
+   "components": [
+    "CLaserBeamWeaponComponent"
+   ],
+   "files": [
+    "w609_fighterjet_missile_air_lockon.wtunec",
+    "w609_fighterjet_missile_air_lockon_autoaim.wtunec"
+   ],
+   "icon": true,
+   "name": "w609_fighterjet_missile_air_lockon",
+   "tune": {
+    "burst_cooldown": 1.0,
+    "burst_count": 1,
+    "fire_rate": 0.20000000298023224,
+    "magazine_size": 8,
+    "max_range": 750.0,
+    "missile_weapon[0].tuning.base_tuning.damage": 1500.0,
+    "missile_weapon[0].tuning.missile_base_tuning.missile_loose_lock_distance": 0.0,
+    "missile_weapon[0].tuning.missile_base_tuning.missile_turning_speed": 150.0,
+    "velocity": 600.0
+   },
+   "tune_source": "w609_fighterjet_missile_air_lockon.wtunec",
+   "weapon_id": "609"
+  },
+  "w612": {
+   "autoaim": {
+    "OnFoot.AngleThresholdCurrentTarget": 1.399999976158142,
+    "OnFoot.AngleThresholdNewTarget": 1.399999976158142,
+    "OnFoot.CanTargetCharacters": 0,
+    "OnFoot.CanTargetRigidObjects": 1,
+    "OnFoot.CanTargetVehicles": 1,
+    "OnFoot.MaxAimDistance": 750.0,
+    "OnFoot.MinAimDistance": 5.0
+   },
+   "autoaim_file": "w612_fighterbomber_missile_air_lockon_autoaim.wtune",
+   "bindings": [],
+   "carriers": 3,
+   "chassis": [
+    "v4602_plane_urga_fighterbomber"
+   ],
+   "class": "CRPGFireLeachWeapon",
+   "components": [],
+   "files": [
+    "w612_fighterbomber_missile_air_lockon.wtunec",
+    "w612_fighterbomber_missile_air_lockon_autoaim.wtunec"
+   ],
+   "icon": true,
+   "name": "w612_fighterbomber_missile_air_lockon",
+   "tune": {
+    "burst_cooldown": 0.0,
+    "burst_count": 1,
+    "fire_rate": 0.5,
+    "magazine_size": 2,
+    "max_range": 300.0,
+    "missile_weapon[0].tuning.base_tuning.damage": 1500.0,
+    "missile_weapon[0].tuning.missile_base_tuning.missile_loose_lock_distance": 0.0,
+    "missile_weapon[0].tuning.missile_base_tuning.missile_turning_speed": 300.0,
+    "velocity": 600.0
+   },
+   "tune_source": "w612_fighterbomber_missile_air_lockon.wtunec",
+   "weapon_id": "612"
+  },
+  "w613": {
+   "autoaim": {
+    "OnFoot.AngleThresholdCurrentTarget": 0.15000000596046448,
+    "OnFoot.AngleThresholdNewTarget": 0.11999999731779099,
+    "OnFoot.CanTargetCharacters": 0,
+    "OnFoot.CanTargetRigidObjects": 0,
+    "OnFoot.CanTargetVehicles": 0,
+    "OnFoot.MaxAimDistance": -1.0,
+    "OnFoot.MinAimDistance": 15.0
+   },
+   "autoaim_file": "autoaim_w613_bombs.wtune",
+   "bindings": [
+    "secondary (id:00568A74)"
+   ],
+   "carriers": 3,
+   "chassis": [
+    "v4602_plane_urga_fighterbomber"
+   ],
+   "class": "CMissileWeaponBase",
+   "components": [
+    "CLightWeaponComponent"
+   ],
+   "files": [
+    "autoaim_w613_bombs.wtunec",
+    "w613_bomb.ftunec",
+    "w613_fighterbomber_missile_ground_lockon.wtunec"
+   ],
+   "icon": true,
+   "name": "w613_fighterbomber_missile_ground_lockon",
+   "tune": {
+    "burst_cooldown": 4.0,
+    "burst_count": 6,
+    "fire_rate": 0.20000000298023224,
+    "magazine_size": 6,
+    "max_range": 300.0,
+    "missile_weapon[0].tuning.base_tuning.damage": 1500.0,
+    "missile_weapon[0].tuning.missile_base_tuning.missile_loose_lock_distance": 0.0,
+    "missile_weapon[0].tuning.missile_base_tuning.missile_turning_speed": 0.0,
+    "velocity": 600.0
+   },
+   "tune_source": "autoaim_w613_bombs.wtunec",
+   "weapon_id": "613"
+  }
+ },
+ "wpn12": [
+  {
+   "bmak": "HudModuleBatmobile.UC_SetPrimaryWeapon(name), UC_SetSecondaryWeapon(name, b, b), UC_SetSpecialWeapons(3 x state); HudModuleTargets reacts to Weapon/WeaponHit/WeaponFailure",
+   "disposition": "map",
+   "element": "weapon slots",
+   "jc3": "2 slots (MCI_vehicle_weapons0, MCI_vehicle_weapons1) via InitVehicleWeapons(slot_index 0..1) / ShowVehicleSlotAction / HideVehicleSlotAction; hidden by HideVehicleUi",
+   "limit": "2 slots total: the Batmobile's primary + secondary weapon map, the special-weapon states have no JC3 member"
+  },
+  {
+   "bmak": "HudModuleBatmobile battle-mode reticle (recticuleHeavy) + UC_SetCannonCoolDown states Ready/Blank/PreReady*; UC_SetMachineGunAccuracyFrame",
+   "disposition": "map (shape id UNKNOWN)",
+   "element": "reticle",
+   "jc3": "UpdateWeaponReticle(show, weapons_look, reticle_size, reticle_shape): 14 shapes (E_RETICLE_NONE 3 .. E_RETICLE_POWERCORE 13), 5 look states, size 5..30 px, cross/rocket/circle rigs",
+   "limit": "which shape id the Batmobile's heavy reticle should use is not in the files; E_RETICLE_CANNON exists but nothing maps it to a vehicle cannon"
+  },
+  {
+   "bmak": "UC_SetCannonCoolDown(int in 0…4) -> reticle Ready / Blank / PreReady*",
+   "disposition": "map (0..1 replaces 5 states)",
+   "element": "cannon cooldown",
+   "jc3": "weapon_cooldown in Init/UpdateVehicleWeapons (-1 = no loader), SetCooldownRotation 0..1 -> 360 deg over MCI_mask_0_50 + MCI_mask_50_100, AnimateOvercharged; is_overcharged sound 'dlc_wingsuit_weapon_ready'",
+   "limit": "BmAK sends 5 categorical states, JC3 takes a 0..1 fraction: the 5 states have to be pinned to 5 fractions before the loader reproduces them"
+  },
+  {
+   "bmak": "2 script fields (HeatBarSize, HeatBarStart) on Batmobile_Cannon_V2; 0 of 252 UC_* setters contain 'heat'",
+   "disposition": "stated absence (both sides)",
+   "element": "Vulcan heat",
+   "jc3": "0 heat parameter in the vehicle-weapon API, 0 mention of heat in the bodies it drives; the movie's heat code is the 11-state police wanted level (hud_code/heat/)",
+   "limit": "JC3 shows ammo + a cooldown loader + an overcharge tint, never a heat bar; the Batmobile's heat is a weapon-entity script variable with no HUD setter, so no number or member carries WPN-12's heat bar"
+  },
+  {
+   "bmak": "HudModuleTargets: batmobile_lockon, batmobile_aim, missile_lockon_square_anim, 6 VehicleMissileTarget kinds (Invalid, bomb, emp, friend, multi, plain); UC_SetBatmobileWeapon(primary, b) / WeaponHit / WeaponFailure; radar side UC_SetLockonValue(value, kind)",
+   "disposition": "partial: one lock-on marker, no target-kind family",
+   "element": "missile lock",
+   "jc3": "one lock-on POI: POI_TYPE_LOCK_ON_TARGET = 21 -> MCI_icon.MCI_lock_on.MCI_reticle, rotated 360 deg every 1.5 s (hud_code/poi.as); separate incoming-missile warning MCI_missile_locked flashing at 0.5 s (ShowMissileLocked/HideMissileLocked, 0 movie callers)",
+   "limit": "JC3 has a single rotating lock-on icon and one incoming warning; the 6-kind missile box family, the aim box, per-target health and the hit/failure events have no JC3 element"
+  }
+ ]
+}

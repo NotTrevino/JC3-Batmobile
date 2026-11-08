@@ -1,0 +1,1407 @@
+{
+ "air_global": {
+  "archive": "patch_win64/game1",
+  "entry_offset": 431886336,
+  "members": [
+   {
+    "name": "ground_pitch_angle_deg",
+    "offset": 0,
+    "size": 4,
+    "type": "float"
+   },
+   {
+    "name": "altitude_limit_threshold_low",
+    "offset": 4,
+    "size": 4,
+    "type": "float"
+   },
+   {
+    "name": "altitude_limit_threshold_high",
+    "offset": 8,
+    "size": 4,
+    "type": "float"
+   },
+   {
+    "name": "number_of_wheels",
+    "offset": 12,
+    "size": 4,
+    "type": "int32"
+   },
+   {
+    "name": "number_of_front_wheels",
+    "offset": 16,
+    "size": 4,
+    "type": "int32"
+   },
+   {
+    "name": "steering_type",
+    "offset": 24,
+    "size": 8,
+    "type": "HashString"
+   },
+   {
+    "name": "front_wheels",
+    "offset": 40,
+    "size": 4,
+    "type": "LandWheel"
+   },
+   {
+    "name": "rear_wheels",
+    "offset": 72,
+    "size": 4,
+    "type": "LandWheel"
+   },
+   {
+    "name": "base_wheel_hardpoint_positions",
+    "offset": 104,
+    "size": 8,
+    "type": "A[WheelHardpoint]"
+   },
+   {
+    "name": "nitro_boost",
+    "offset": 120,
+    "size": 4,
+    "type": "AirPerformanceBoost"
+   },
+   {
+    "name": "nitro_boost_upgraded",
+    "offset": 132,
+    "size": 4,
+    "type": "AirPerformanceBoost"
+   },
+   {
+    "name": "heat_boost",
+    "offset": 144,
+    "size": 4,
+    "type": "AirPerformanceBoost"
+   }
+  ],
+  "path": "editor/entities/jc_vehicles/02_air/v4202_plane_capstone_fighterjet/modules/default/v4202_plane_capstone_fighterjet_air_global.vmodc",
+  "root": "AirGlobal",
+  "root_size": 160,
+  "rows": [
+   {
+    "path": "ground_pitch_angle_deg",
+    "value": 0.0
+   },
+   {
+    "path": "altitude_limit_threshold_low",
+    "value": 4500.0
+   },
+   {
+    "path": "altitude_limit_threshold_high",
+    "value": 5500.0
+   },
+   {
+    "path": "number_of_wheels",
+    "value": 3
+   },
+   {
+    "path": "number_of_front_wheels",
+    "value": -1
+   },
+   {
+    "path": "steering_type.string",
+    "value": "FrontSteered"
+   },
+   {
+    "path": "steering_type.hash",
+    "value": 398605813
+   },
+   {
+    "path": "front_wheels.radius",
+    "value": 0.2199999988079071
+   },
+   {
+    "path": "front_wheels.rim_radius",
+    "value": 0.15000000596046448
+   },
+   {
+    "path": "front_wheels.width",
+    "value": 0.20000000298023224
+   },
+   {
+    "path": "front_wheels.use_shape_cast",
+    "value": 0
+   },
+   {
+    "path": "front_wheels.mass",
+    "value": 20.0
+   },
+   {
+    "path": "front_wheels.arcade_friction_multiplier",
+    "value": 4.0
+   },
+   {
+    "path": "front_wheels.arcade_drag_multiplier",
+    "value": 0.0
+   },
+   {
+    "path": "front_wheels.match_road_velocity_on_landing",
+    "value": 0
+   },
+   {
+    "path": "rear_wheels.radius",
+    "value": 0.33000001311302185
+   },
+   {
+    "path": "rear_wheels.rim_radius",
+    "value": 0.2199999988079071
+   },
+   {
+    "path": "rear_wheels.width",
+    "value": 0.20000000298023224
+   },
+   {
+    "path": "rear_wheels.use_shape_cast",
+    "value": 0
+   },
+   {
+    "path": "rear_wheels.mass",
+    "value": 20.0
+   },
+   {
+    "path": "rear_wheels.arcade_friction_multiplier",
+    "value": 4.0
+   },
+   {
+    "path": "rear_wheels.arcade_drag_multiplier",
+    "value": 0.0
+   },
+   {
+    "path": "rear_wheels.match_road_velocity_on_landing",
+    "value": 0
+   },
+   {
+    "path": "base_wheel_hardpoint_positions",
+    "value": ""
+   },
+   {
+    "path": "base_wheel_hardpoint_positions[0].position[0]",
+    "value": 0.0
+   },
+   {
+    "path": "base_wheel_hardpoint_positions[0].position[1]",
+    "value": 0.21400000154972076
+   },
+   {
+    "path": "base_wheel_hardpoint_positions[0].position[2]",
+    "value": -2.938999891281128
+   },
+   {
+    "path": "base_wheel_hardpoint_positions[1].position[0]",
+    "value": 1.2970000505447388
+   },
+   {
+    "path": "base_wheel_hardpoint_positions[1].position[1]",
+    "value": 0.33799999952316284
+   },
+   {
+    "path": "base_wheel_hardpoint_positions[1].position[2]",
+    "value": 3.0759999752044678
+   },
+   {
+    "path": "base_wheel_hardpoint_positions[2].position[0]",
+    "value": -1.2580000162124634
+   },
+   {
+    "path": "base_wheel_hardpoint_positions[2].position[1]",
+    "value": 0.328000009059906
+   },
+   {
+    "path": "base_wheel_hardpoint_positions[2].position[2]",
+    "value": 3.0920000076293945
+   },
+   {
+    "path": "nitro_boost.push_acceleration",
+    "value": 1.0
+   },
+   {
+    "path": "nitro_boost.boost_blend_time",
+    "value": 0.20000000298023224
+   },
+   {
+    "path": "nitro_boost.extra_top_speed",
+    "value": 30.0
+   },
+   {
+    "path": "nitro_boost_upgraded.push_acceleration",
+    "value": 2.0
+   },
+   {
+    "path": "nitro_boost_upgraded.boost_blend_time",
+    "value": 0.20000000298023224
+   },
+   {
+    "path": "nitro_boost_upgraded.extra_top_speed",
+    "value": 60.0
+   },
+   {
+    "path": "heat_boost.push_acceleration",
+    "value": 10.0
+   },
+   {
+    "path": "heat_boost.boost_blend_time",
+    "value": 0.20000000298023224
+   },
+   {
+    "path": "heat_boost.extra_top_speed",
+    "value": 150.0
+   }
+  ],
+  "sha256": "7d005c95e50b0f7100fa1cdd6b3c3e1913dc70c3c0d71a44f51268ac3be77a52",
+  "size": 2012,
+  "types": {
+   "A[WheelHardpoint]": [],
+   "AirGlobal": [
+    {
+     "name": "ground_pitch_angle_deg",
+     "offset": 0,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "altitude_limit_threshold_low",
+     "offset": 4,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "altitude_limit_threshold_high",
+     "offset": 8,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "number_of_wheels",
+     "offset": 12,
+     "size": 4,
+     "type": "int32"
+    },
+    {
+     "name": "number_of_front_wheels",
+     "offset": 16,
+     "size": 4,
+     "type": "int32"
+    },
+    {
+     "name": "steering_type",
+     "offset": 24,
+     "size": 8,
+     "type": "HashString"
+    },
+    {
+     "name": "front_wheels",
+     "offset": 40,
+     "size": 4,
+     "type": "LandWheel"
+    },
+    {
+     "name": "rear_wheels",
+     "offset": 72,
+     "size": 4,
+     "type": "LandWheel"
+    },
+    {
+     "name": "base_wheel_hardpoint_positions",
+     "offset": 104,
+     "size": 8,
+     "type": "A[WheelHardpoint]"
+    },
+    {
+     "name": "nitro_boost",
+     "offset": 120,
+     "size": 4,
+     "type": "AirPerformanceBoost"
+    },
+    {
+     "name": "nitro_boost_upgraded",
+     "offset": 132,
+     "size": 4,
+     "type": "AirPerformanceBoost"
+    },
+    {
+     "name": "heat_boost",
+     "offset": 144,
+     "size": 4,
+     "type": "AirPerformanceBoost"
+    }
+   ],
+   "AirPerformanceBoost": [
+    {
+     "name": "push_acceleration",
+     "offset": 0,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "boost_blend_time",
+     "offset": 4,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "extra_top_speed",
+     "offset": 8,
+     "size": 4,
+     "type": "float"
+    }
+   ],
+   "HashString": [
+    {
+     "name": "string",
+     "offset": 0,
+     "size": 8,
+     "type": "string"
+    },
+    {
+     "name": "hash",
+     "offset": 8,
+     "size": 4,
+     "type": "uint32"
+    }
+   ],
+   "IA[float]": [],
+   "LandWheel": [
+    {
+     "name": "radius",
+     "offset": 0,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "rim_radius",
+     "offset": 4,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "width",
+     "offset": 8,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "use_shape_cast",
+     "offset": 12,
+     "size": 1,
+     "type": "int8"
+    },
+    {
+     "name": "mass",
+     "offset": 16,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "arcade_friction_multiplier",
+     "offset": 20,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "arcade_drag_multiplier",
+     "offset": 24,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "match_road_velocity_on_landing",
+     "offset": 28,
+     "size": 1,
+     "type": "int8"
+    }
+   ],
+   "WheelHardpoint": [
+    {
+     "name": "position",
+     "offset": 0,
+     "size": 4,
+     "type": "IA[float]"
+    }
+   ]
+  }
+ },
+ "blocks": [
+  {
+   "block": "heat_boost",
+   "builds": 41,
+   "module": "AirGlobal"
+  },
+  {
+   "block": "nitro_boost",
+   "builds": 41,
+   "module": "AirGlobal"
+  },
+  {
+   "block": "nitro_boost_upgraded",
+   "builds": 41,
+   "module": "AirGlobal"
+  },
+  {
+   "block": "heat_boost",
+   "builds": 35,
+   "module": "BoatGlobal"
+  },
+  {
+   "block": "nitro_boost",
+   "builds": 35,
+   "module": "BoatGlobal"
+  },
+  {
+   "block": "nitro_boost_upgraded",
+   "builds": 35,
+   "module": "BoatGlobal"
+  },
+  {
+   "block": "heat_boost",
+   "builds": 145,
+   "module": "CustomLandGlobal"
+  },
+  {
+   "block": "nitro_boost",
+   "builds": 145,
+   "module": "CustomLandGlobal"
+  },
+  {
+   "block": "nitro_boost_upgraded",
+   "builds": 145,
+   "module": "CustomLandGlobal"
+  }
+ ],
+ "bmak": [
+  {
+   "carrier": "`EBatmobileDriveMode`",
+   "kind": "enum",
+   "label": "decoded",
+   "value": "0 `BMDM_Drive`, 1 `BMDM_TurnOnSpot`, 2 `BMDM_BattleMode`, 3 `BMDM_MAX`"
+  },
+  {
+   "carrier": "`RVehicleSimBatmobile.DriveMode`",
+   "kind": "selector",
+   "label": "decoded",
+   "value": "ByteProperty at 0x03b0; CDO tag `None` = 0, shipped sim inherits it"
+  },
+  {
+   "carrier": "`PursuitMode.BeginState`",
+   "kind": "state -> mode",
+   "label": "decoded",
+   "value": "`SetDriveMode(0)` at script offset 69 (NPC twin 58)"
+  },
+  {
+   "carrier": "`BattleMode.BeginState`",
+   "kind": "state -> mode",
+   "label": "decoded",
+   "value": "`SetDriveMode(2)` at script offset 88 (NPC twin 103)"
+  },
+  {
+   "carrier": "`BMDM_TurnOnSpot`",
+   "kind": "no state",
+   "label": "UNKNOWN",
+   "value": "no decoded body passes 1; `ForceTurnOnSpotMode` has no writer"
+  },
+  {
+   "carrier": "`BattleMode*` family",
+   "kind": "per-mode fields",
+   "label": "decoded",
+   "value": "40 fields on the sim, e.g. `BattleModeSteerAngleFactor` 2.5 at 0x0300, `BattleModeMaxSteering` 80 at 0x02cc, `BattleModeLatSlipScale` 4 at 0x02d4, `BattleModeMaxSpeed` 1200 at 0x02f0"
+  },
+  {
+   "carrier": "`TurnOnSpotFront/RearTorqueFactor`",
+   "kind": "torque split",
+   "label": "decoded",
+   "value": "0.6 / -0.5 at 0x01c8 / 0x01cc: opposite signs = front/rear counter-torque"
+  },
+  {
+   "carrier": "`RVehicleSimBatmobile.SetDriveMode`",
+   "kind": "native arithmetic",
+   "label": "UNKNOWN",
+   "value": "5-byte native declaration; the per-mode maths is in the executable"
+  }
+ ],
+ "custom_land_global": {
+  "archive": "patch_win64/game1",
+  "entry_offset": 402485248,
+  "members": [
+   {
+    "name": "linear_damping",
+    "offset": 0,
+    "size": 4,
+    "type": "IA[float]"
+   },
+   {
+    "name": "gravity_multiplier_grounded",
+    "offset": 12,
+    "size": 4,
+    "type": "float"
+   },
+   {
+    "name": "gravity_multiplier_in_air_up",
+    "offset": 16,
+    "size": 4,
+    "type": "float"
+   },
+   {
+    "name": "gravity_multiplier_in_air_down",
+    "offset": 20,
+    "size": 4,
+    "type": "float"
+   },
+   {
+    "name": "takeoff_pitch_damping",
+    "offset": 24,
+    "size": 4,
+    "type": "float"
+   },
+   {
+    "name": "front_wheels_damage",
+    "offset": 28,
+    "size": 4,
+    "type": "WheelDamage"
+   },
+   {
+    "name": "rear_wheels_damage",
+    "offset": 40,
+    "size": 4,
+    "type": "WheelDamage"
+   },
+   {
+    "name": "drift",
+    "offset": 52,
+    "size": 4,
+    "type": "Drift"
+   },
+   {
+    "name": "arcade",
+    "offset": 136,
+    "size": 4,
+    "type": "ArcadePhysics"
+   }
+  ],
+  "path": "editor/entities/jc_vehicles/01_land/v0012_car_autostraad_atv/modules/default/v0012_car_autostraad_atv_custom_land_global.vmodc",
+  "root": "CustomLandGlobal",
+  "root_size": 244,
+  "rows": [
+   {
+    "path": "linear_damping[0]",
+    "value": 0.0
+   },
+   {
+    "path": "linear_damping[1]",
+    "value": 0.0
+   },
+   {
+    "path": "linear_damping[2]",
+    "value": 0.0
+   },
+   {
+    "path": "gravity_multiplier_grounded",
+    "value": 1.0
+   },
+   {
+    "path": "gravity_multiplier_in_air_up",
+    "value": 1.5
+   },
+   {
+    "path": "gravity_multiplier_in_air_down",
+    "value": 1.5
+   },
+   {
+    "path": "takeoff_pitch_damping",
+    "value": 0.20000000298023224
+   },
+   {
+    "path": "front_wheels_damage.skew_health",
+    "value": 200
+   },
+   {
+    "path": "front_wheels_damage.broken_wheel_friction_fraction",
+    "value": 0.75
+   },
+   {
+    "path": "front_wheels_damage.broken_wheel_radius_fraction",
+    "value": 0.75
+   },
+   {
+    "path": "rear_wheels_damage.skew_health",
+    "value": 200
+   },
+   {
+    "path": "rear_wheels_damage.broken_wheel_friction_fraction",
+    "value": 0.75
+   },
+   {
+    "path": "rear_wheels_damage.broken_wheel_radius_fraction",
+    "value": 0.75
+   },
+   {
+    "path": "drift.drift_entry_slip_angle",
+    "value": 20.0
+   },
+   {
+    "path": "drift.drift_exit_slip_angle",
+    "value": 10.0
+   },
+   {
+    "path": "drift.max_drift_angle_deg",
+    "value": 30.0
+   },
+   {
+    "path": "drift.drift_limit_spread_angle_deg",
+    "value": 15.0
+   },
+   {
+    "path": "drift.constant_drift_torque",
+    "value": 100.0
+   },
+   {
+    "path": "drift.max_drift_torque",
+    "value": 750.0
+   },
+   {
+    "path": "drift.counter_steer_torque",
+    "value": 500.0
+   },
+   {
+    "path": "drift.counter_steer_torque_handbrake",
+    "value": 1000.0
+   },
+   {
+    "path": "drift.counter_steer_torque_brake",
+    "value": 750.0
+   },
+   {
+    "path": "drift.drift_yaw_vel_damp",
+    "value": 0.029999999329447746
+   },
+   {
+    "path": "drift.overdrift_yaw_vel_damp",
+    "value": 0.10000000149011612
+   },
+   {
+    "path": "drift.exit_drift_yaw_vel_damp",
+    "value": 0.30000001192092896
+   },
+   {
+    "path": "drift.velocity_rotation_start_angle",
+    "value": 5.0
+   },
+   {
+    "path": "drift.velocity_rotation_end_angle",
+    "value": 40.0
+   },
+   {
+    "path": "drift.velocity_rotation_amount",
+    "value": 75.0
+   },
+   {
+    "path": "drift.velocity_rotation_angle_exp",
+    "value": 0.5
+   },
+   {
+    "path": "drift.counter_steer_rot_factor",
+    "value": 0.10000000149011612
+   },
+   {
+    "path": "drift.steering_sensitivity",
+    "value": 2.0
+   },
+   {
+    "path": "drift.min_speed_to_drift_kmph",
+    "value": 20.0
+   },
+   {
+    "path": "drift.keep_velocity_strength",
+    "value": 0.8999999761581421
+   },
+   {
+    "path": "drift.max_keep_velocity_acceleration_g",
+    "value": 2.0
+   },
+   {
+    "path": "arcade.heat_boost.torque_multiplier",
+    "value": 2.0
+   },
+   {
+    "path": "arcade.heat_boost.grip_multiplier",
+    "value": 1.5
+   },
+   {
+    "path": "arcade.heat_boost.push_force",
+    "value": 0.0
+   },
+   {
+    "path": "arcade.heat_boost.boost_blend_time",
+    "value": 0.0
+   },
+   {
+    "path": "arcade.heat_boost.extra_top_speed",
+    "value": 80.0
+   },
+   {
+    "path": "arcade.nitro_boost.torque_multiplier",
+    "value": 1.5
+   },
+   {
+    "path": "arcade.nitro_boost.grip_multiplier",
+    "value": 1.2000000476837158
+   },
+   {
+    "path": "arcade.nitro_boost.push_force",
+    "value": 15000.0
+   },
+   {
+    "path": "arcade.nitro_boost.boost_blend_time",
+    "value": 0.20000000298023224
+   },
+   {
+    "path": "arcade.nitro_boost.extra_top_speed",
+    "value": 40.0
+   },
+   {
+    "path": "arcade.nitro_boost_upgraded.torque_multiplier",
+    "value": 2.0
+   },
+   {
+    "path": "arcade.nitro_boost_upgraded.grip_multiplier",
+    "value": 1.5
+   },
+   {
+    "path": "arcade.nitro_boost_upgraded.push_force",
+    "value": 20000.0
+   },
+   {
+    "path": "arcade.nitro_boost_upgraded.boost_blend_time",
+    "value": 0.20000000298023224
+   },
+   {
+    "path": "arcade.nitro_boost_upgraded.extra_top_speed",
+    "value": 80.0
+   },
+   {
+    "path": "arcade.turbo_jump.f_multiplier",
+    "value": 15.0
+   },
+   {
+    "path": "arcade.turbo_jump.r_multiplier",
+    "value": 12.0
+   },
+   {
+    "path": "arcade.turbo_jump.punch_delay_time",
+    "value": 0.10000000149011612
+   },
+   {
+    "path": "arcade.turbo_jump.punch_speed_kph",
+    "value": 50.0
+   },
+   {
+    "path": "arcade.turbo_jump.top_speed_kph",
+    "value": 200.0
+   },
+   {
+    "path": "arcade.turbo_jump.top_speed_jump_multiplier",
+    "value": 2.0
+   },
+   {
+    "path": "arcade.turbo_jump_upgraded.f_multiplier",
+    "value": 30.0
+   },
+   {
+    "path": "arcade.turbo_jump_upgraded.r_multiplier",
+    "value": 25.0
+   },
+   {
+    "path": "arcade.turbo_jump_upgraded.punch_delay_time",
+    "value": 0.10000000149011612
+   },
+   {
+    "path": "arcade.turbo_jump_upgraded.punch_speed_kph",
+    "value": 80.0
+   },
+   {
+    "path": "arcade.turbo_jump_upgraded.top_speed_kph",
+    "value": 200.0
+   },
+   {
+    "path": "arcade.turbo_jump_upgraded.top_speed_jump_multiplier",
+    "value": 2.0
+   }
+  ],
+  "sha256": "27cd0c4eff76fb4bcad02b5972d87578eadaa2973edf42323b5113c936b36999",
+  "size": 3399,
+  "types": {
+   "ArcadePhysics": [
+    {
+     "name": "heat_boost",
+     "offset": 0,
+     "size": 4,
+     "type": "PerformanceBoost"
+    },
+    {
+     "name": "nitro_boost",
+     "offset": 20,
+     "size": 4,
+     "type": "PerformanceBoost"
+    },
+    {
+     "name": "nitro_boost_upgraded",
+     "offset": 40,
+     "size": 4,
+     "type": "PerformanceBoost"
+    },
+    {
+     "name": "turbo_jump",
+     "offset": 60,
+     "size": 4,
+     "type": "TurboJump"
+    },
+    {
+     "name": "turbo_jump_upgraded",
+     "offset": 84,
+     "size": 4,
+     "type": "TurboJump"
+    }
+   ],
+   "CustomLandGlobal": [
+    {
+     "name": "linear_damping",
+     "offset": 0,
+     "size": 4,
+     "type": "IA[float]"
+    },
+    {
+     "name": "gravity_multiplier_grounded",
+     "offset": 12,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "gravity_multiplier_in_air_up",
+     "offset": 16,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "gravity_multiplier_in_air_down",
+     "offset": 20,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "takeoff_pitch_damping",
+     "offset": 24,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "front_wheels_damage",
+     "offset": 28,
+     "size": 4,
+     "type": "WheelDamage"
+    },
+    {
+     "name": "rear_wheels_damage",
+     "offset": 40,
+     "size": 4,
+     "type": "WheelDamage"
+    },
+    {
+     "name": "drift",
+     "offset": 52,
+     "size": 4,
+     "type": "Drift"
+    },
+    {
+     "name": "arcade",
+     "offset": 136,
+     "size": 4,
+     "type": "ArcadePhysics"
+    }
+   ],
+   "Drift": [
+    {
+     "name": "drift_entry_slip_angle",
+     "offset": 0,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "drift_exit_slip_angle",
+     "offset": 4,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "max_drift_angle_deg",
+     "offset": 8,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "drift_limit_spread_angle_deg",
+     "offset": 12,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "constant_drift_torque",
+     "offset": 16,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "max_drift_torque",
+     "offset": 20,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "counter_steer_torque",
+     "offset": 24,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "counter_steer_torque_handbrake",
+     "offset": 28,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "counter_steer_torque_brake",
+     "offset": 32,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "drift_yaw_vel_damp",
+     "offset": 36,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "overdrift_yaw_vel_damp",
+     "offset": 40,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "exit_drift_yaw_vel_damp",
+     "offset": 44,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "velocity_rotation_start_angle",
+     "offset": 48,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "velocity_rotation_end_angle",
+     "offset": 52,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "velocity_rotation_amount",
+     "offset": 56,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "velocity_rotation_angle_exp",
+     "offset": 60,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "counter_steer_rot_factor",
+     "offset": 64,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "steering_sensitivity",
+     "offset": 68,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "min_speed_to_drift_kmph",
+     "offset": 72,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "keep_velocity_strength",
+     "offset": 76,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "max_keep_velocity_acceleration_g",
+     "offset": 80,
+     "size": 4,
+     "type": "float"
+    }
+   ],
+   "IA[float]": [],
+   "PerformanceBoost": [
+    {
+     "name": "torque_multiplier",
+     "offset": 0,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "grip_multiplier",
+     "offset": 4,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "push_force",
+     "offset": 8,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "boost_blend_time",
+     "offset": 12,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "extra_top_speed",
+     "offset": 16,
+     "size": 4,
+     "type": "float"
+    }
+   ],
+   "TurboJump": [
+    {
+     "name": "f_multiplier",
+     "offset": 0,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "r_multiplier",
+     "offset": 4,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "punch_delay_time",
+     "offset": 8,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "punch_speed_kph",
+     "offset": 12,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "top_speed_kph",
+     "offset": 16,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "top_speed_jump_multiplier",
+     "offset": 20,
+     "size": 4,
+     "type": "float"
+    }
+   ],
+   "WheelDamage": [
+    {
+     "name": "skew_health",
+     "offset": 0,
+     "size": 4,
+     "type": "int32"
+    },
+    {
+     "name": "broken_wheel_friction_fraction",
+     "offset": 4,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "broken_wheel_radius_fraction",
+     "offset": 8,
+     "size": 4,
+     "type": "float"
+    }
+   ]
+  }
+ },
+ "inputs": {
+  "air_global_bytes": 13,
+  "custom_land_global_bytes": 3,
+  "digest": "1099511d737fdbb9",
+  "entities": 232,
+  "module_types": 51
+ },
+ "land_donor": {
+  "arcade.heat_boost.boost_blend_time": 0,
+  "arcade.heat_boost.extra_top_speed": 80,
+  "arcade.heat_boost.grip_multiplier": 1.5,
+  "arcade.heat_boost.push_force": 0,
+  "arcade.heat_boost.torque_multiplier": 2,
+  "arcade.nitro_boost.boost_blend_time": 0.200000003,
+  "arcade.nitro_boost.extra_top_speed": 40,
+  "arcade.nitro_boost.grip_multiplier": 2,
+  "arcade.nitro_boost.push_force": 15000,
+  "arcade.nitro_boost.torque_multiplier": 2,
+  "arcade.nitro_boost_upgraded.boost_blend_time": 0.200000003,
+  "arcade.nitro_boost_upgraded.extra_top_speed": 80,
+  "arcade.nitro_boost_upgraded.grip_multiplier": 1.5,
+  "arcade.nitro_boost_upgraded.push_force": 20000,
+  "arcade.nitro_boost_upgraded.torque_multiplier": 2
+ },
+ "modules": [
+  {
+   "instances": 41,
+   "type": "Aerodynamics"
+  },
+  {
+   "instances": 41,
+   "type": "AirAudio"
+  },
+  {
+   "instances": 41,
+   "type": "AirEngine"
+  },
+  {
+   "instances": 41,
+   "type": "AirGlobal"
+  },
+  {
+   "instances": 18,
+   "type": "AirSteering"
+  },
+  {
+   "instances": 2,
+   "type": "AirplaneAI"
+  },
+  {
+   "instances": 2,
+   "type": "BoatAI"
+  },
+  {
+   "instances": 35,
+   "type": "BoatAudio"
+  },
+  {
+   "instances": 35,
+   "type": "BoatBuoyancy"
+  },
+  {
+   "instances": 35,
+   "type": "BoatEngine"
+  },
+  {
+   "instances": 35,
+   "type": "BoatGlobal"
+  },
+  {
+   "instances": 35,
+   "type": "BoatSteering"
+  },
+  {
+   "instances": 145,
+   "type": "Brakes"
+  },
+  {
+   "instances": 198,
+   "type": "Buoyancy"
+  },
+  {
+   "instances": 3,
+   "type": "CarAI"
+  },
+  {
+   "instances": 145,
+   "type": "CustomLandGlobal"
+  },
+  {
+   "instances": 145,
+   "type": "CustomVelocityDamper"
+  },
+  {
+   "instances": 123,
+   "type": "Decals"
+  },
+  {
+   "instances": 233,
+   "type": "DeformPoints"
+  },
+  {
+   "instances": 23,
+   "type": "DriverLean"
+  },
+  {
+   "instances": 225,
+   "type": "EffectAttachments"
+  },
+  {
+   "instances": 232,
+   "type": "ExtendedEffectUsages"
+  },
+  {
+   "instances": 11,
+   "type": "ExtendedExposedVariables"
+  },
+  {
+   "instances": 40,
+   "type": "Fins"
+  },
+  {
+   "instances": 23,
+   "type": "HelicopterModel"
+  },
+  {
+   "instances": 23,
+   "type": "HelicopterSteering"
+  },
+  {
+   "instances": 180,
+   "type": "LandAerodynamics"
+  },
+  {
+   "instances": 145,
+   "type": "LandAudio"
+  },
+  {
+   "instances": 145,
+   "type": "LandEngine"
+  },
+  {
+   "instances": 145,
+   "type": "LandGlobal"
+  },
+  {
+   "instances": 126,
+   "type": "LandSteering"
+  },
+  {
+   "instances": 19,
+   "type": "MotorbikeSteering"
+  },
+  {
+   "instances": 19,
+   "type": "MotorbikeSuspension"
+  },
+  {
+   "instances": 229,
+   "type": "None"
+  },
+  {
+   "instances": 76,
+   "type": "Palette"
+  },
+  {
+   "instances": 38,
+   "type": "Propellers"
+  },
+  {
+   "instances": 233,
+   "type": "RigidBody"
+  },
+  {
+   "instances": 41,
+   "type": "Rotors"
+  },
+  {
+   "instances": 41,
+   "type": "Rudders"
+  },
+  {
+   "instances": 175,
+   "type": "StuntAreas"
+  },
+  {
+   "instances": 167,
+   "type": "Suspension"
+  },
+  {
+   "instances": 290,
+   "type": "Tire"
+  },
+  {
+   "instances": 12,
+   "type": "TrainAudio"
+  },
+  {
+   "instances": 12,
+   "type": "TrainGlobal"
+  },
+  {
+   "instances": 145,
+   "type": "Transmission"
+  },
+  {
+   "instances": 232,
+   "type": "VehicleCommon"
+  },
+  {
+   "instances": 233,
+   "type": "VehicleDamage"
+  },
+  {
+   "instances": 224,
+   "type": "VehicleDynamicLights"
+  },
+  {
+   "instances": 233,
+   "type": "VehicleMisc"
+  },
+  {
+   "instances": 4,
+   "type": "VehicleParts"
+  },
+  {
+   "instances": 233,
+   "type": "WaterInteraction"
+  }
+ ],
+ "rotor_steer": {},
+ "scan": {
+  "hits": [
+   {
+    "builds": 2,
+    "member": "Limit_Pitch_Yaw_Switch",
+    "module": "AirplaneAI",
+    "values": [
+     "-1"
+    ]
+   }
+  ],
+  "tokens": [
+   "vtol",
+   "hover",
+   "_mode",
+   "mode_",
+   "state_machine",
+   "_switch",
+   "switch_",
+   "alternate",
+   "gear_up",
+   "gear_down",
+   "retract",
+   "deploy",
+   "rotor_tilt",
+   "thrust_angle",
+   "amphibious",
+   "two_mode",
+   "transform_",
+   "model_swap",
+   "convert"
+  ]
+ },
+ "schema": "t-md14b/1"
+}

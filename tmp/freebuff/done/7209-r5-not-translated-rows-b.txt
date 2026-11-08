@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/g3-20b-open-rows.md
+ONLY: freebuff
+EST: 60
+BRIEF: hand-written 2026-11-05
+Research/BatmobileGrab (file LEDGER_G3B.md) says 96 of 105 ledger rows are still open, and LEDGER_SOURCES.md says 69 of them are re-derivable from files and 27 are not. Work only on the 69 re-derivable ones, and only on those whose row id sorts in the second half of the list (the other half goes to someone else). For each, run the source script named in LEDGER_SOURCES.md fresh, take the value it prints, and mark the row holds / wrong value / still open with the command output as evidence. Do not rely on the stored JSON. New script Tools/scripts/g3_20e_rows.py with --write/--check, output Research/BatmobileGrab/LEDGER_G3E.md. Rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md section 3. Write the report at the DONE path with STATUS first, files written, verbatim commands, UNKNOWNs.

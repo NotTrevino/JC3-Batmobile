@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hud-gfx-loader-compat-offline.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hud-gfx-ffdec-roundtrip.md
+The writer half of a modified ui/hud.gfx is answered by reports/hud-gfx-ffdec-roundtrip.md; the loader half is not. Do the offline part of it. Using ffdec -dumpSWF, compare tag types and versions of the BmAK movies (carved from the UPKs per HUD_INVENTORY.json) against the JC3 ui/hud.gfx, listing every tag or AVM2 feature present in one and absent in the other. Then answer from files only: can a HUD movie be chosen per vehicle, or is ui/hud.gfx one global movie (cite RJ names lines about hud.gfx references and the payload tree Builds/probe-L0/P3-hud-gfx)? Write Working/HUD/LOADER_COMPAT.md with a table: question, offline answer, what only a game take can settle, and the exact one-line observation for that take. Done when every row has evidence or UNKNOWN, with no guesses about Scaleform behaviour. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

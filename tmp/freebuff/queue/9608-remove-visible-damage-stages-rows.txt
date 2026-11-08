@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/remove-visible-damage-stages-rows.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/death-explosion-carriers.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/health-scale-ruling-1200-vs-36000.md
+BmAK shows no intermediate visible damage, while the build still carries donor smoke and burn thresholds (1050 and 250) and 24 Land_* part damage types on 59 parts. Audit every row that can produce a visible stage: the smoke and burn thresholds, OnPartReachedDamageState uses (Research/JC3Grab/USAGES.md), the part damage types in Working/Damage/bm_health.json, mesh-swap parts, and the effects T-FX22 and T-FX23. For each, give the member path, the current value in Builds/bm-RC4, the value that suppresses the stage until the zero-health explosion, and the evidence it is the nearest member. Check against Tools/scripts/bm_health.py so no value breaks the explosion route. Produce Tools/scripts/damage_stage_rows.py (--write, --check), Working/Damage/stage_removal_rows.json (row id, path, old, new) and a report; the RC5 damage build reads that json. Where no member can suppress a stage, write the capability card with the missing capability named. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-emp-levels.md
+ONLY: freebuff
+EST: 25
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/emp-burst-charge-levels-build.md
+Verify the burst level build offline. Run the --check mode of Tools/scripts/rc5_emp_levels.py and compare every printed number with Working/Translation/T_WP5B_EMP_BURST.md (range 75 m, disable 2/4/8/12 s, charge 0/0.5/1/1.5 s, impulse 15000, cooldown 2.0 s). Confirm the tap default is flagged as the operator rule and the level table as decoded data. Check that the HUD call name matches the one listed in Research/JC3Grab/JC3_HUD_WEAPONS.md and that the movie clip it targets exists in the 9160 output. Output tmp/freebuff/reports/verify-emp-levels.md: one row per number (expected, found, PASS or FAIL) and a final line stating whether a missing capability card is still open. Done-check: seven numeric rows and the HUD name check are present. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

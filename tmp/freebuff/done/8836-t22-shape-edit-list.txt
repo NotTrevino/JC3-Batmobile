@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/t22-shape-edit-list.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-08
+Working/Translation/T22_REOPEN.md and Research/BatmobileGrab/COLLISION_WHERE.md say the BmAK Batmobile_V3_Physics body is two bodies with three boxes, while the built set is short two shapes. Turn that finding into an exact edit list for the build step, not a new decode. For each missing chassis or pod shape, record the member name, byte or field offset, the old value now in the built file, the new value from the decoded box extents and transforms, and the source line that states the new value. Write it as Working/Prep/t22_shape_edits.json with one object per edit, and put a dry-run check in the same report that confirms every old value matches the built file before anything is changed. Do not apply any edit, do not change Working/Collision/batmobile.physicsc and do not change the T-22 row, because this brief is a plan that a later build step will consume.

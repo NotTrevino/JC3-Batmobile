@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hud-test-overlay-health-boost.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hud-pilot-cards-write.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-batmobile-hud-overlay.md, E:/Modding/JC3-Batmobile/tmp/freebuff/APPROVED_Q_FULL.txt
+In-game test of the hook overlay, agent-piloted, operator-approved only. Use cards HUD_BATTLE_HEALTH.md and HUD_PURSUIT_BOOST.md in Working/Q/PILOT/ plus the hook-0005 install notes from the 7985 report. One observation: with the overlay on, does the health bar sit top-left in battle mode, and does the afterburner gauge sit on the left in pursuit mode with its cooldown gauge to its left? Pass rule: both positions within 5 percent of Working/HUD/LAYOUT_1280x720.json, boost ring empties in about 2.0 s and refills in 12.0 s plus or minus 0.3, no gauge in the wrong mode. Record a short clip and a timing table. Fail route: write a fix card in Working/Q/ naming the 7985 build file and the layout row. Write reports/hud-test-overlay-health-boost.md. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

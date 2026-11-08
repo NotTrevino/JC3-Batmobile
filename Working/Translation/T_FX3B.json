@@ -1,0 +1,850 @@
+{
+ "schema": 1,
+ "card": "T-FX3b",
+ "generator": "Tools/scripts/t_fx3b_exhaust.py",
+ "question": "is there ANY JC3 carrier for a vehicle exhaust/boost flame?",
+ "answer": "YES",
+ "module": {
+  "path": "Builds/bm-001/aaf/editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/generated/v0300_car_kensington_sportsmuscle_effect_attachments.vmodc",
+  "bytes": 12163,
+  "sha256": "50fcf90b14421a08",
+  "adf_version": 4,
+  "instances": [
+   {
+    "name": "EffectAttachments",
+    "type": 600100251,
+    "offset": 80,
+    "size": 10576
+   }
+  ],
+  "types": [
+   {
+    "type_hash": 600100251,
+    "name": "EffectAttachments",
+    "size": 48,
+    "members": 3
+   },
+   {
+    "type_hash": 3213548423,
+    "name": "EffectAttachment",
+    "size": 32,
+    "members": 2
+   },
+   {
+    "type_hash": 2788046073,
+    "name": "HashString",
+    "size": 16,
+    "members": 2
+   },
+   {
+    "type_hash": 2407029346,
+    "name": "PartEffectAttachments",
+    "size": 184,
+    "members": 5
+   },
+   {
+    "type_hash": 3450260605,
+    "name": "PartEffectReactions",
+    "size": 80,
+    "members": 5
+   },
+   {
+    "type_hash": 2674124397,
+    "name": "UsageEffectAttachments",
+    "size": 32,
+    "members": 2
+   }
+  ],
+  "fields": [
+   {
+    "member": "deform_point",
+    "type": 2788046073,
+    "offset": 0,
+    "size": 8
+   },
+   {
+    "member": "effect",
+    "type": 2788046073,
+    "offset": 16,
+    "size": 8
+   }
+  ],
+  "attachment_type": {
+   "type_hash": 3213548423,
+   "name": "EffectAttachment",
+   "size": 32
+  },
+  "root_type": {
+   "type_hash": 600100251,
+   "name": "EffectAttachments",
+   "size": 48,
+   "fields": [
+    {
+     "member": "all_effects",
+     "type": 459717905,
+     "offset": 0,
+     "size": 8
+    },
+    {
+     "member": "part_effects",
+     "type": 468153434,
+     "offset": 16,
+     "size": 8
+    },
+    {
+     "member": "usage_effects",
+     "type": 3128759027,
+     "offset": 32,
+     "size": 8
+    }
+   ]
+  },
+  "offsets": {
+   "deform_point": [
+    {
+     "type_name": "EffectAttachment",
+     "type_hash": 3213548423,
+     "member": "deform_point",
+     "offset": 0,
+     "size": 8
+    }
+   ],
+   "effect": [
+    {
+     "type_name": "EffectAttachment",
+     "type_hash": 3213548423,
+     "member": "effect",
+     "offset": 16,
+     "size": 8
+    }
+   ],
+   "usage": [
+    {
+     "type_name": "UsageEffectAttachments",
+     "type_hash": 2674124397,
+     "member": "usage",
+     "offset": 0,
+     "size": 8
+    }
+   ]
+  },
+  "parse_error": null
+ },
+ "fleet": {
+  "rows": 997,
+  "effects": 43,
+  "containers": 296,
+  "mounts": [
+   "base",
+   "dlc",
+   "patch"
+  ],
+  "fleet": [
+   {
+    "path": "effects/jc_vehicles/exhaust/car_tjump_trail.effc",
+    "containers": 135,
+    "mounts": [
+     "base",
+     "dlc"
+    ],
+    "size": 8815,
+    "root": "EffectRTSystem",
+    "cargo": "car"
+   },
+   {
+    "path": "effects/jc_vehicles/damage/dmg_engine_ground_flames.effc",
+    "containers": 134,
+    "mounts": [
+     "base",
+     "dlc"
+    ],
+    "size": 6943,
+    "root": "EffectRTSystem",
+    "cargo": "car"
+   },
+   {
+    "path": "effects/jc_vehicles/exhaust/car_cycle_base_tjump.effc",
+    "containers": 133,
+    "mounts": [
+     "base",
+     "dlc"
+    ],
+    "size": 12031,
+    "root": "EffectRTSystem",
+    "cargo": "car"
+   },
+   {
+    "path": "effects/jc_vehicles/exhaust/car_cycle_base_nitrous.effc",
+    "containers": 132,
+    "mounts": [
+     "base",
+     "dlc"
+    ],
+    "size": 15359,
+    "root": "EffectRTSystem",
+    "cargo": "car"
+   },
+   {
+    "path": "effects/jc_vehicles/exhaust/car_cycle_base.effc",
+    "containers": 128,
+    "mounts": [
+     "base",
+     "dlc"
+    ],
+    "size": 9695,
+    "root": "EffectRTSystem",
+    "cargo": "car"
+   },
+   {
+    "path": "effects/jc_vehicles/exhaust/helicopter_base_nitrous.effc",
+    "containers": 65,
+    "mounts": [
+     "base",
+     "dlc",
+     "patch"
+    ],
+    "size": 13599,
+    "root": "EffectRTSystem",
+    "cargo": "helicopter/jet"
+   },
+   {
+    "path": "effects/jc_vehicles/traversal_water/boat_splash_nitrous.effc",
+    "containers": 41,
+    "mounts": [
+     "base",
+     "dlc"
+    ],
+    "size": 12335,
+    "root": "EffectRTSystem",
+    "cargo": "boat"
+   },
+   {
+    "path": "effects/jc_vehicles/exhaust/helicopter_base.effc",
+    "containers": 34,
+    "mounts": [
+     "base",
+     "dlc",
+     "patch"
+    ],
+    "size": 11215,
+    "root": "EffectRTSystem",
+    "cargo": "helicopter/jet"
+   },
+   {
+    "path": "effects/jc_vehicles/exhaust/car_cycle_base_dual.effc",
+    "containers": 17,
+    "mounts": [
+     "base"
+    ],
+    "size": 12127,
+    "root": "EffectRTSystem",
+    "cargo": "car"
+   },
+   {
+    "path": "effects/jc_vehicles/exhaust/car_cycle_base_dual_nitrous.effc",
+    "containers": 17,
+    "mounts": [
+     "base"
+    ],
+    "size": 20671,
+    "root": "EffectRTSystem",
+    "cargo": "car"
+   },
+   {
+    "path": "effects/jc_vehicles/exhaust/car_cycle_base_dual_tjump.effc",
+    "containers": 17,
+    "mounts": [
+     "base"
+    ],
+    "size": 15439,
+    "root": "EffectRTSystem",
+    "cargo": "car"
+   },
+   {
+    "path": "effects/jc_vehicles/exhaust/car_speedrom_heater.effc",
+    "containers": 12,
+    "mounts": [
+     "base"
+    ],
+    "size": 14703,
+    "root": "EffectRTSystem",
+    "cargo": "car"
+   },
+   {
+    "path": "effects/jc_vehicles/exhaust/car_speedrom_pop.effc",
+    "containers": 11,
+    "mounts": [
+     "base"
+    ],
+    "size": 6991,
+    "root": "EffectRTSystem",
+    "cargo": "car"
+   },
+   {
+    "path": "effects/jc_vehicles/exhaust/car_cycle_z80_exhaust.effc",
+    "containers": 10,
+    "mounts": [
+     "base"
+    ],
+    "size": 19727,
+    "root": "EffectRTSystem",
+    "cargo": "car"
+   },
+   {
+    "path": "effects/jc_vehicles/exhaust/jet_cargo_exhaust_base.effc",
+    "containers": 9,
+    "mounts": [
+     "base",
+     "dlc"
+    ],
+    "size": 14351,
+    "root": "EffectRTSystem",
+    "cargo": "car"
+   },
+   {
+    "path": "dlc/mech_land_assault/effects/jc_vehicles/exhaust/dlc_dist_grunt_rotor_drone.effc",
+    "containers": 9,
+    "mounts": [
+     "dlc"
+    ],
+    "size": 6991,
+    "root": "EffectRTSystem",
+    "cargo": "car"
+   },
+   {
+    "path": "effects/jc_vehicles/exhaust/prop_plane_base.effc",
+    "containers": 7,
+    "mounts": [
+     "base",
+     "dlc"
+    ],
+    "size": 11455,
+    "root": "EffectRTSystem",
+    "cargo": "car"
+   },
+   {
+    "path": "dlc/sky_fortress/effects/jc_vehicles/exhaust/dlc_dist_grunt_rotor_drone.effc",
+    "containers": 7,
+    "mounts": [
+     "dlc"
+    ],
+    "size": 6991,
+    "root": "EffectRTSystem",
+    "cargo": "car"
+   },
+   {
+    "path": "effects/jc_vehicles/traversal_water/jetski_splash_nitrous.effc",
+    "containers": 7,
+    "mounts": [
+     "base"
+    ],
+    "size": 12335,
+    "root": "EffectRTSystem",
+    "cargo": "boat"
+   },
+   {
+    "path": "dlc/mech_land_assault/effects/jc_vehicles/exhaust/dlc_angry_exhaust_grunt_drone.effc",
+    "containers": 6,
+    "mounts": [
+     "dlc"
+    ],
+    "size": 11247,
+    "root": "EffectRTSystem",
+    "cargo": "car"
+   },
+   {
+    "path": "effects/jc_vehicles/exhaust/jet_exhaust_base.effc",
+    "containers": 6,
+    "mounts": [
+     "base"
+    ],
+    "size": 18927,
+    "root": "EffectRTSystem",
+    "cargo": "car"
+   },
+   {
+    "path": "effects/jc_vehicles/exhaust/minetruck_cycle_base.effc",
+    "containers": 5,
+    "mounts": [
+     "base"
+    ],
+    "size": 9759,
+    "root": "EffectRTSystem",
+    "cargo": "car"
+   },
+   {
+    "path": "effects/jc_vehicles/exhaust/minetruck_cycle_base_nitrous.effc",
+    "containers": 5,
+    "mounts": [
+     "base"
+    ],
+    "size": 18287,
+    "root": "EffectRTSystem",
+    "cargo": "car"
+   },
+   {
+    "path": "effects/jc_vehicles/exhaust/minetruck_cycle_base_tjump.effc",
+    "containers": 5,
+    "mounts": [
+     "base"
+    ],
+    "size": 12031,
+    "root": "EffectRTSystem",
+    "cargo": "car"
+   },
+   {
+    "path": "dlc/mech_land_assault/effects/jc_vehicles/exhaust/dlc_dist_elite_rotor_drone.effc",
+    "containers": 4,
+    "mounts": [
+     "dlc"
+    ],
+    "size": 6991,
+    "root": "EffectRTSystem",
+    "cargo": "car"
+   },
+   {
+    "path": "dlc/sky_fortress/effects/jc_vehicles/exhaust/dlc_angry_exhaust_grunt_drone.effc",
+    "containers": 4,
+    "mounts": [
+     "dlc"
+    ],
+    "size": 11247,
+    "root": "EffectRTSystem",
+    "cargo": "car"
+   },
+   {
+    "path": "dlc/sky_fortress/effects/jc_vehicles/exhaust/dlc_dist_elite_rotor_drone.effc",
+    "containers": 4,
+    "mounts": [
+     "dlc"
+    ],
+    "size": 6991,
+    "root": "EffectRTSystem",
+    "cargo": "car"
+   },
+   {
+    "path": "effects/jc_vehicles/exhaust/bavarium_tank_exhaust_base.effc",
+    "containers": 3,
+    "mounts": [
+     "base"
+    ],
+    "size": 11231,
+    "root": "EffectRTSystem",
+    "cargo": "car"
+   },
+   {
+    "path": "effects/jc_vehicles/exhaust/car_cycle_base_nitrous_v0602.effc",
+    "containers": 3,
+    "mounts": [
+     "base"
+    ],
+    "size": 15359,
+    "root": "EffectRTSystem",
+    "cargo": "car"
+   },
+   {
+    "path": "effects/jc_vehicles/exhaust/monstertruck_base_nitrous.effc",
+    "containers": 3,
+    "mounts": [
+     "base"
+    ],
+    "size": 16735,
+    "root": "EffectRTSystem",
+    "cargo": "car"
+   },
+   {
+    "path": "effects/jc_vehicles/exhaust/helicopter_civ_base.effc",
+    "containers": 3,
+    "mounts": [
+     "base"
+    ],
+    "size": 11215,
+    "root": "EffectRTSystem",
+    "cargo": "helicopter/jet"
+   },
+   {
+    "path": "effects/jc_vehicles/exhaust/boat_base.effc",
+    "containers": 3,
+    "mounts": [
+     "base"
+    ],
+    "size": 7279,
+    "root": "EffectRTSystem",
+    "cargo": "boat"
+   },
+   {
+    "path": "dlc/bavarium_sea_heist/effects/jc_vehicles/exhaust/rocketboat_jet_exhaust.effc",
+    "containers": 2,
+    "mounts": [
+     "dlc"
+    ],
+    "size": 13727,
+    "root": "EffectRTSystem",
+    "cargo": "boat"
+   },
+   {
+    "path": "dlc/mech_land_assault/effects/jc_vehicles/exhaust/dlc_dist_transport_rotor_drone.effc",
+    "containers": 2,
+    "mounts": [
+     "dlc"
+    ],
+    "size": 6991,
+    "root": "EffectRTSystem",
+    "cargo": "car"
+   },
+   {
+    "path": "dlc/sky_fortress/effects/jc_vehicles/exhaust/dlc_dist_transport_rotor_drone.effc",
+    "containers": 2,
+    "mounts": [
+     "dlc"
+    ],
+    "size": 6991,
+    "root": "EffectRTSystem",
+    "cargo": "car"
+   },
+   {
+    "path": "dlc/v0805_sportmech/effects/jc_vehicles/exhaust/double_mech_exhaust.effc",
+    "containers": 2,
+    "mounts": [
+     "dlc"
+    ],
+    "size": 12735,
+    "root": "EffectRTSystem",
+    "cargo": "car"
+   },
+   {
+    "path": "effects/jc_vehicles/damage/dmg_engine_ground_flames_minetruck.effc",
+    "containers": 2,
+    "mounts": [
+     "base"
+    ],
+    "size": 7055,
+    "root": "EffectRTSystem",
+    "cargo": "car"
+   },
+   {
+    "path": "effects/jc_vehicles/exhaust/tractor_cycle_z80_exhaust.effc",
+    "containers": 2,
+    "mounts": [
+     "base"
+    ],
+    "size": 17263,
+    "root": "EffectRTSystem",
+    "cargo": "car"
+   },
+   {
+    "path": "effects/jc_vehicles/exhaust/car_cycle_base_nitrous_c.effc",
+    "containers": 2,
+    "mounts": [
+     "base"
+    ],
+    "size": 13999,
+    "root": "EffectRTSystem",
+    "cargo": "car"
+   },
+   {
+    "path": "dlc/mech_land_assault/effects/jc_vehicles/exhaust/dlc_shield_exhaust_01.effc",
+    "containers": 1,
+    "mounts": [
+     "dlc"
+    ],
+    "size": 8623,
+    "root": "EffectRTSystem",
+    "cargo": "car"
+   },
+   {
+    "path": "dlc/sky_fortress/effects/jc_vehicles/exhaust/dlc_shield_exhaust_01.effc",
+    "containers": 1,
+    "mounts": [
+     "dlc"
+    ],
+    "size": 8623,
+    "root": "EffectRTSystem",
+    "cargo": "car"
+   },
+   {
+    "path": "dlc_rico_wingsuit_exhaust.effc",
+    "containers": 1,
+    "mounts": [
+     "patch"
+    ],
+    "size": 16895,
+    "root": "EffectRTSystem",
+    "cargo": "other"
+   },
+   {
+    "path": "dlc_rico_wingsuit_exhaust_upgrade.effc",
+    "containers": 1,
+    "mounts": [
+     "patch"
+    ],
+    "size": 18143,
+    "root": "EffectRTSystem",
+    "cargo": "other"
+   }
+  ]
+ },
+ "trigger": {
+  "epe_classes": {
+   "SAttachedEffect": 5342,
+   "SAttachedEffectTable": 1678,
+   "SDynamicAttachedEffect": 4344,
+   "SDynamicAttachedEffectTable": 1212
+  },
+  "detail_files": 232,
+  "distinct_values": 155,
+  "name_provenance": {
+   "SValueDrivenEffectUsage name": 4,
+   "UNKNOWN": 85,
+   "module effect name": 60,
+   "module usage name": 6
+  },
+  "flame_containers": 275,
+  "donor_exhaust_files": [
+   "effects/jc_vehicles/exhaust/car_cycle_base_dual.effc",
+   "effects/jc_vehicles/exhaust/car_cycle_base_dual_nitrous.effc",
+   "effects/jc_vehicles/exhaust/car_cycle_base_dual_tjump.effc",
+   "effects/jc_vehicles/exhaust/car_tjump_trail.effc"
+  ],
+  "exhaust_usages": [
+   {
+    "usage": 2819629913,
+    "names": [
+     "EngineRunning"
+    ],
+    "effects": [
+     {
+      "effect": "EngineNitro",
+      "hash": 4197885156,
+      "vehicles": 20
+     },
+     {
+      "effect": "dynamic_exhaust",
+      "hash": 94496804,
+      "vehicles": 46
+     }
+    ],
+    "modules": 69,
+    "vehicles": 69
+   },
+   {
+    "usage": 3877802965,
+    "names": [
+     "EngineTurboJump"
+    ],
+    "effects": [
+     {
+      "effect": "dynamic_tjump",
+      "hash": 3850682818,
+      "vehicles": 11
+     }
+    ],
+    "modules": 11,
+    "vehicles": 11
+   },
+   {
+    "usage": 4197885156,
+    "names": [
+     "EngineNitro"
+    ],
+    "effects": [
+     {
+      "effect": "EngineNitro",
+      "hash": 4197885156,
+      "vehicles": 4
+     },
+     {
+      "effect": "dynamic_nitrous",
+      "hash": 397752766,
+      "vehicles": 14
+     }
+    ],
+    "modules": 18,
+    "vehicles": 18
+   }
+  ],
+  "usage_names": {
+   "41428721": "medium_break",
+   "102641159": "EngineSmoking",
+   "283166569": "electric_break",
+   "330657054": "dynamic_headlight",
+   "1376299179": "effect_trail",
+   "1747834702": "window_break",
+   "1752342301": "burn_roof",
+   "2178731301": "IsInWater",
+   "2288865358": "taillight_break",
+   "2590244958": "LightDestroyedOff",
+   "2687093853": "large_break",
+   "2819629913": "EngineRunning",
+   "2845671190": "small_break",
+   "3336946931": "EngineKeyOn",
+   "3343329694": "burn_base",
+   "3384295553": "window_break_sm",
+   "3491230408": "turnsignal_break",
+   "3600488098": "Explosion",
+   "3824625250": "burn_engine",
+   "3877802965": "EngineTurboJump",
+   "4139857690": "IsPlayerControlled",
+   "4197885156": "EngineNitro"
+  },
+  "value_driven": [
+   {
+    "name": "BavariumShieldOn",
+    "name_hash": 2476254024,
+    "objects": 3,
+    "vehicles": 3
+   },
+   {
+    "name": "IsInAir",
+    "name_hash": 646966454,
+    "objects": 126,
+    "vehicles": 126
+   },
+   {
+    "name": "IsInWater",
+    "name_hash": 2178731301,
+    "objects": 126,
+    "vehicles": 126
+   },
+   {
+    "name": "IsPlayerControlled",
+    "name_hash": 4139857690,
+    "objects": 180,
+    "vehicles": 180
+   },
+   {
+    "name": "SValueDrivenEffectUsage",
+    "name_hash": 3028931432,
+    "objects": 12,
+    "vehicles": 12
+   },
+   {
+    "name": "Sinking",
+    "name_hash": 2801386962,
+    "objects": 35,
+    "vehicles": 35
+   },
+   {
+    "name": "WaterHullImpactSound",
+    "name_hash": 946363877,
+    "objects": 35,
+    "vehicles": 35
+   },
+   {
+    "name": "z80_speed_threshold",
+    "name_hash": 3342738042,
+    "objects": 10,
+    "vehicles": 10
+   }
+  ],
+  "nitro_carriers": {
+   "heat_boost": 145,
+   "nitro_boost": 145,
+   "nitro_boost_upgraded": 145,
+   "turbo_jump": 145,
+   "turbo_jump_upgraded": 145
+  },
+  "nitro_donor": {
+   "heat_boost": {
+    "boost_blend_time": 0,
+    "extra_top_speed": 80,
+    "grip_multiplier": 1.5,
+    "push_force": 0,
+    "torque_multiplier": 2
+   },
+   "nitro_boost": {
+    "boost_blend_time": 0.200000003,
+    "extra_top_speed": 40,
+    "grip_multiplier": 2,
+    "push_force": 15000,
+    "torque_multiplier": 2
+   },
+   "nitro_boost_upgraded": {
+    "boost_blend_time": 0.200000003,
+    "extra_top_speed": 80,
+    "grip_multiplier": 1.5,
+    "push_force": 20000,
+    "torque_multiplier": 2
+   },
+   "turbo_jump": {
+    "f_multiplier": 15,
+    "punch_delay_time": 0.100000001,
+    "punch_speed_kph": 50,
+    "r_multiplier": 12,
+    "top_speed_jump_multiplier": 2,
+    "top_speed_kph": 200
+   },
+   "turbo_jump_upgraded": {
+    "f_multiplier": 30,
+    "punch_delay_time": 0.100000001,
+    "punch_speed_kph": 80,
+    "r_multiplier": 25,
+    "top_speed_jump_multiplier": 2,
+    "top_speed_kph": 200
+   }
+  },
+  "donor_nitrous_usage": null
+ },
+ "build": {
+  "flame": {
+   "row": "T-FX7",
+   "effect_path": "effects/jc_vehicles/exhaust/car_cycle_base_dual_nitrous.effc",
+   "effect_hash": -776668445,
+   "usage": "EngineNitro",
+   "usage_hash": 4197885156,
+   "emitters": [
+    "exhaust_upgrade_nitrous2",
+    "exhaust_upgrade_nitrous"
+   ]
+  },
+  "socket": {
+   "socket": "Afterburner",
+   "bone": "JetSMove",
+   "bone_parent": "Batmobile_Chassis_Mesh",
+   "role": "afterburner",
+   "position_m": [
+    -0.009578,
+    0.537762,
+    3.393177
+   ],
+   "forward_jc3": [
+    -3.9e-05,
+    0.0,
+    -1.0
+   ],
+   "up_jc3": [
+    1.0,
+    3e-06,
+    -3.9e-05
+   ]
+  },
+  "world": "-3e-06,1,1.17e-10,0,1,3e-06,-3.9e-05,0,-3.9e-05,0,-1,0,-0.009578,0.537762,3.393177,1",
+  "emitters": [
+   "exhaust_upgrade_nitrous2",
+   "exhaust_upgrade_nitrous"
+  ],
+  "world_offsets": [
+   {
+    "emitter": "exhaust_upgrade_nitrous2",
+    "class": "SAttachedEffect",
+    "member": "world",
+    "byte_offset": null,
+    "epe": "Builds/bm-005/aaf/editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_civilian_01.epe"
+   },
+   {
+    "emitter": "exhaust_upgrade_nitrous",
+    "class": "SAttachedEffect",
+    "member": "world",
+    "byte_offset": null,
+    "epe": "Builds/bm-005/aaf/editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_civilian_01.epe"
+   }
+  ],
+  "probe": {
+   "bytes": 124488,
+   "pos_literal": -1,
+   "rot_literal": -1
+  },
+  "t17_rows": 17
+ },
+ "labels": "decoded: ADF instances/members, FX_TABLE rows, USAGES classes; derived: looping vs triggered usage reading; UNKNOWN: non-arcade usage triggers, world axis semantics"
+}

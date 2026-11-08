@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/weapon-audio-bind-unranked.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/weapon-audio-event-inventory.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-audio-override-and-layers.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/riot-entity-bind-and-switch.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/winch-input-and-pull.md
+Bind weapon audio for the unranked weapons: cannon fire and impact, the Vulcan loop, missile flight and launch, riot bolt and impacts, winch fire and attach. Take the rows from Working/Roadmap/weapon_audio_inventory.json. The two missile loop events are missing-object: use the stand-in the inventory names and flag it. The Vulcan loop had a RED click issue earlier (weapons#408): keep the loop start and end markers as decoded and write the click risk into Working/Roadmap/weapon_limits.md. Attach each binding to the weapon entity or effect, using the private effects bank of 9150 and never the shipped bank. Script Tools/scripts/rc5_audio_unranked.py (--write, --check), tree Builds/bm-RC5-audiounranked, branch for the merge. Done-check: --check prints every event, stand-in flag, binding target and zero dangling ids. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

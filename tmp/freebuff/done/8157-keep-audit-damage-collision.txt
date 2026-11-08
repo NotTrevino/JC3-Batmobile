@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/keep-audit-damage-collision.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-06
+Rows T-DM3, T-DM4, T-DM5, T-DM6, T-DM8 (armour, thresholds, 32 per-bone damage bodies, deform scale 0, ram immunity), T-CO1 and T-CO3 (collision shapes, "donor chassis by decision", world collision flags) and T-P2 (42 damage parts) are marked keep. Compare with BmAK damage (RVisualDamageComponent, the destroyed physics asset with 32 boxes, health model) and what the build carries (Builds/bm-009, bm-RC2 collision). For each row: BmAK behaviour, carried behaviour, LORE-EXACT or COMPROMISE. Note that the ram-immunity and deform choices came from earlier decisions; report them as facts, with whether they match what a player sees in Arkham Knight.
+Where JC3 has no exact carrier, give the closest system and the gap for the build to fill (STAGES.md).

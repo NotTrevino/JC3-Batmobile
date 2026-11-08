@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/shared-rc-installer-generator.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/installer-state-audit-and-stale-records.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-scaffold-and-merge-script.md
+Move the installer generation out of bm_rc4.py so every later release candidate uses the same adopted code. Create Tools/scripts/rc_installer.py exposing installer(files, tag, sim_root, source_dir) that renders the PowerShell from Working/Installer/install_v3.ps1 exactly as bm_rc4.py's installer() does today (read that function and the dropzone_sim2.py harness first). Parameters: the build tag, the simulation root (default E:/Modding/_dropzone_sim_<tag lowercase>), the payload rows. Keep every guard: component-wise containment, fail-closed REFUSED with exit 2, per-target containment, always-snapshot, restore-or-delete rollback with manifest validation. Prove by running --check that the output for tag bm-RC4 is byte-identical to Builds/bm-RC4/install.ps1; then run the six V-06 cases against a copy under E:/Modding/_dropzone_sim_rc5. Write the report and the --check. Do not edit bm_rc4.py or any existing Builds tree; write the result to a new tree Builds/installer-test/. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

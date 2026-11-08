@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-riot-bind.md
+ONLY: freebuff
+EST: 25
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/riot-entity-bind-and-switch.md
+Offline check of the riot suppressor binding. Run --check of Tools/scripts/rc5_riot.py, then read back Builds/bm-RC5-riot with Tools/scripts/jc3weapons.py --check --root. Confirm: the riot tune has base damage 0 and a non-zero impulse, cadence 0.75 s, the lock-on angle 7.5 written in the unit verdict of tmp/freebuff/reports/autoaim-angle-unit.md, the entity is reachable from the battle-mode driver slot only, and the Vulcan entity is byte-identical to its pre-riot version. Check that no pursuit entity references the riot weapon. Output tmp/freebuff/reports/verify-riot-bind.md with PASS or FAIL per item and the exit statuses. Done-check: each of the five confirmations has its own line, and the negative pursuit check is quoted. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

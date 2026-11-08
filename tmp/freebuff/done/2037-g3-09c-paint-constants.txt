@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/G3-09c.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-03
+G3-09b (Research/JC3Grab/COLOUR_NATIVE.md, report tmp/freebuff/reports/G3-09b.md) found where JC3's paint knowledge lives in JustCause3.exe - the 216-name ADF schema run, CarPaintMM at 0x142332188, the CarPaintMM%s%s%s format string and three functions - but its review (reports/review-G3-09b.md) caught a real bug: the 15 constants the parameter-block builder copies are not zeros, they are small integers 0..10 stored as denormal floats that round(x, 6) collapsed to 0.0. Read them again as raw u32 and as floats, decide from how the consuming code uses them which interpretation is right (indices, enum values, bit counts), and redo the conclusion the card built on 'all zeros'. New script jc3_colour_native2.py (--write/--check) -> Research/JC3Grab/COLOUR_NATIVE2.md + .json; do not edit G3-09b's files. Rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md section 3. Report at the DONE path with STATUS (or VERDICT for a review) and every command with its output.

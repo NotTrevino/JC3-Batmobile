@@ -1,0 +1,19 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/correction-8394-light-units-domain.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-07 by review 8399
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/review-build-wave.md
+Correction 5/9 — the lights module writes out-of-domain values and uses a fleet mode where BmAK has a brightness.
+
+Evidence: build-d03 §3-§8; the 24-row module is 7,105 B internal at .toc offset 16,499,504.
+- U-1: angle 70 / range 60 on the two headlight-beam rows (2, 10) exceed the shipped max 50/50; valid floats but unproven rendering.
+- multiplier 1.0 on those rows is the fleet mode, not a decode: no Brightness -> multiplier bridge exists (BmAK Brightness 0.15).
+- falloff_start 0.8 is not BmAK's falloff (a spot exponent) — the member is a different quantity.
+- Row 11 (T-L17) keeps the donor graph object's own values (radius 10, spot_angle 60, volume 0.25) because no plan gives it numbers.
+- T-L28/T-L30 are blocked (null socket/bone), the forensics rig is dropped, the underglow is deliberately absent, and the flare sprite cannot be attached (no effect member on a lamp; T-24).
+
+Task: for each item, either prove the domain (a fleet census that shows 60 m / 70 deg is rendered) or label the row as an out-of-domain claim in the lights ledger and in PREDICTIONS_LOOKS. Row 11 must be marked donor-carried, not translated. Do not add a lamp BmAK does not have. Re-read the 24 rows from the packed module after any change (bm_rc4_lights.py --check compares byte-identical re-encode and .toc offset/size).
+
+Revert: Working/Lights/bm_rc4_lights.json + Builds/bm-RC4-lights; the module is regenerated from the plan.
+
+Updated by review 8399: the 60 m / 70 deg values, the Brightness->multiplier gap and the donor row 11 are a measured out-of-domain / stand-in set, not just UNKNOWNs.

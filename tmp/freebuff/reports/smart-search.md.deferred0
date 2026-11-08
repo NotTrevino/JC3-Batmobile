@@ -1,0 +1,41 @@
+# Smart search tool + calibration — DEFERRED
+
+## STATUS
+
+**STATUS: deferred (chase_candidates not done)**
+
+The prerequisite for this card is not met, so nothing was built, calibrated or changed.
+
+## Evidence (checked 2026-10-29)
+
+| expected prerequisite | result |
+|---|---|
+| `tmp/freebuff/reports/chase-candidates.md` | **does not exist** — `ls tmp/freebuff/reports/` (66 entries) has no `*chase*` file at all |
+| `Tools/scripts/chase/chase_candidates.py` | **does not exist** — `ls Tools/scripts/chase/` (17 files) and `find . -name "chase_candidates*"` return nothing |
+
+The report and the script are both absent, so the first stage this card depends on ("script search"
+producing `{"id", "row", "member", "owner", "offset", "type", "source", "snippet"}` rows) has no
+implementation to call. `chase_judge.py` exists and is intact (`Tools/scripts/chase/chase_judge.py`,
+stage two: one hit per request, `found`/`value`/`why`/`raw` verdicts, resumable by id), but a judge
+with no candidate producer cannot be wired up or calibrated.
+
+## What was NOT done (deliberately)
+
+- No `--member/--owner/--offset/--type/--routes/--out` single-member mode added anywhere, because
+  the file that would need it (`chase_candidates.py`) does not exist.
+- No `Tools/scripts/chase/smart_search.py`, no `Tools/scripts/chase/chase_calibrate.py`.
+- No `E:/Modding/_BmAKgrab/chase/calib.jsonl`, no judge cache population, no prompt revisions in
+  `chase_judge.py`, no calibration runs or scores.
+- No `MODLOG.md` entry (there is no build to record and no scores to append).
+- No game launched, nothing under `D:/Games` or `E:/Games` written, no git action.
+
+## What unblocks it
+
+1. The `chase-candidates` card must first produce `Tools/scripts/chase/chase_candidates.py` and its
+   `tmp/freebuff/reports/chase-candidates.md` with `STATUS: done` (all-open-rows mode, JSONL with
+   `id/row/member/owner/offset/type/source/snippet`, as `chase_judge.py`'s docstring specifies).
+2. Then this card can add the single-member mode to that script, build `smart_search.py` on top of
+   its in-memory candidate builder, and run the calibration/`--check` as specified.
+
+Nothing in this report asserts anything about the chase stage's behaviour: no such behaviour exists
+in the tree yet.

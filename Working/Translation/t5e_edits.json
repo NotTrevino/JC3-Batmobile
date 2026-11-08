@@ -1,0 +1,34 @@
+{
+ "_comment": "Batch B4: one value, re-sourced from the grab. bmak_chain.py shows SVehicleWheel.SuspensionTravelUp 30 + SuspensionTravelDown 40 (cm, archetype on all four wheels) = a 0.70 m total stroke, and T-S6 already proved JC3's suspension.length/min_length carry exactly one stroke - so the bridge is cm -> m with no assumption. Supersedes T-S3's fleet-sourced 0.25.",
+ "source": "T_PLAN.md section 4 Batch B4 + Working/Translation/T1_TRANSLATION.md section 4 (T-S3)",
+ "base_build": "Builds/test-089 (the build Batch B3 wrote)",
+ "status": "staged: value computed from CHAIN.json; T-S3 stays `next` until its take passes (R4)",
+ "edits": [
+  {
+   "row": "T-S3",
+   "kind": "number",
+   "module": "Suspension",
+   "member": "front.length",
+   "old": 0.25,
+   "new": 0.7,
+   "conf": "derived",
+   "behaviour": "SVehicleWheel.SuspensionTravelUp 30 + SuspensionTravelDown 40 cm, archetype on all four wheels (class default 10/20), = 0.70 m total stroke (CHAIN.json); length/min_length carry one stroke (T-S6)",
+   "take": "A6 kerb strike, pothole, landing at 3 speeds plus static ride height on a known kerb: no bottoming, stance holds, no clipping",
+   "why": "identity cm -> m from the chain; in-domain for the 6t+ class (0.18..0.75, n=26) though 3.9x its 0.18 median - declared BmAK-first in the row, as T-ST1's 55 deg is"
+  },
+  {
+   "row": "T-S3",
+   "kind": "number",
+   "module": "Suspension",
+   "member": "rear.length",
+   "old": 0.25,
+   "new": 0.7,
+   "conf": "derived",
+   "behaviour": "same as front: all four wheels carry TravelUp 30 / TravelDown 40 in the archetype",
+   "take": "A6, same run",
+   "why": "same as front"
+  }
+ ],
+ "withdrawn": [],
+ "not_numeric": []
+}

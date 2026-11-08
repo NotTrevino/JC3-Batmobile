@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hud-release-concerns.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hud-test-gfx-load-gate.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hud-offline-verify-all.md
+Release notes and safeguards for the HUD. Read Working/Installer/install_v3.ps1, Working/HUD/LOADER_COMPAT.md and the gate test report reports/hud-gfx-load-gate.md. Answer: if the chosen route replaces ui/hud.gfx globally, what changes for every vehicle and for on-foot play; how does the installer back up and restore the original; what is the install size added; and which route gives the least collateral (overlay versus gfx). Draft the HUD part of the user README and the changelog line in Working/Installer/HUD_RELEASE_NOTES.md and write a rollback check script description (do not edit install_v3.ps1; list the exact lines to add). Done when the notes name the chosen route, the rollback steps and the measured size, each with a file citation. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

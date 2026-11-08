@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/review-G3-10e.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-03
+G3-10e (Research/JC3Grab/PHYSICS_LIMITS.md, Tools/scripts/jc3_physics_limits.py) walked hkpConstraintAtom lists and put the hinge limits at +0x0FC (min) and +0x100 (max), proven over 419 limited hinges and 71 ragdoll constraints in 51 files. Try to break it: check the atom type codes against Havok 2014.1's hkpConstraintAtom enum (a public header or the exe's RTTI), confirm +0x0FC/+0x100 sit inside the limit atom and not a neighbouring motor atom, and find one car where the limit has an obvious physical meaning (a door that opens about 70 degrees, a suspension arm) to sanity-check units and sign. Rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md section 3. Report at the DONE path with STATUS (or VERDICT for a review) and every command with its output.

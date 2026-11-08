@@ -15,6 +15,10 @@ This tool parses the vendored `.g.cs` files (never the game's files), writes
 again to check the dump against it: one constant base, the same names, the same class extent. A
 build mismatch shows up there as a size or a name delta.
 
+A `BoolProperty` entry also carries its `mask`: consecutive bools share one 32-bit word (the cooked
+tag stores the whole word as `bits`), so the offset alone does not say which flag was set - G1-17
+reads `CastShadows` / `CastDynamicShadows` that way.
+
 Usage:
     python Tools/scripts/bmsdk_offsets.py            # write BMSDK_OFFSETS.json
     python Tools/scripts/bmsdk_offsets.py --check    # fail if the index is stale
@@ -112,9 +116,16 @@ def parse_file(path):
             mem = MEMBER.search(tail)
             off = PTR.search(tail)
             if mem and off:
-                members.append({"offset": int(off.group(1)), "name": name,
-                                "member": mem.group(1), "kind": kind})
-        members.sort(key=lambda x: (x["offset"], x["name"]))
+                m = {"offset": int(off.group(1)), "name": name,
+                     "member": mem.group(1), "kind": kind}
+                if kind == "BoolProperty":
+                    # consecutive bools share one 32-bit word; the getter carries the bit mask
+                    # (`(Ptr + 544) & 16) != 0`), which is what tells the members apart.
+                    bit = re.search(r"Ptr \+ \d+\) & (\d+)\)", tail)
+                    if bit:
+                        m["mask"] = int(bit.group(1))
+                members.append(m)
+            members.sort(key=lambda x: (x["offset"], x["name"]))
         out["structs"][sname] = {"size": ssize, "members": members}
 
     # Class-level properties: documented entries with a `Ptr + N` outside any struct body.
@@ -138,6 +149,10 @@ def parse_file(path):
         if mem and off:
             entry = {"offset": int(off.group(1)), "name": name, "member": mem.group(1),
                      "kind": kind}
+            if kind == "BoolProperty":
+                bit = re.search(r"Ptr \+ \d+\) & (\d+)\)", tail)
+                if bit:
+                    entry["mask"] = int(bit.group(1))
             decl = MEMBER.search(tail)
             if decl:
                 # the declared type, last identifier: `BmSDK.Engine.AkEvent` -> `AkEvent`

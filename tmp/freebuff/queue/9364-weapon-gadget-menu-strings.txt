@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/weapon-gadget-menu-strings.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-world-spawn-traffic-summon.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/weapon-loadout-table-per-mode.md
+Add the weapon and gadget name strings that the menu and HUD show, as stringlookup rows through the string route that 9173 uses. Names come from Working/Q/PILOT/CONTROLS.md and the loadout table: 60mm Cannon, Vulcan, Missile Barrage, Tracker / Immobilizer, EMP, Hacker, Sonar, Winch, Booster, Riot Suppressor. Use the BmAK display text from Research/BatmobileGrab (HUD.json and any string tables) where it exists; where it does not, write the plain English name and flag it as authored. Keep each string within the length that the HUD text field accepts (read the field width from the 9160 tree). Script Tools/scripts/rc5_weapon_strings.py (--write, --check), tree Builds/bm-RC5-wpnstrings, branch for the merge. Done-check: --check lists ten rows with source (BmAK or authored), id, and length. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

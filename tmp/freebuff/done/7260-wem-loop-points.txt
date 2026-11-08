@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/wem-loop-points.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-06
+V-04 left three loop points UNKNOWN (Builds/bm-RC1/verify/audio.md). For each of the three looping events, find where the loop start/end live: in the Wwise bank event/sound structure inside the built bank (Tools/scripts/bm_audio.py knows the layout) or in the WAV smpl chunk of the source file. Print the bytes and the loop points in samples, then say whether the sample at the loop end joins the sample at the loop start without a step larger than -40 dBFS. Write Builds/bm-RC1/verify/loops.md and Tools/scripts/v04_loops.py with --write/--check. Report at the DONE path. Shared rules: tmp/freebuff/INSTRUCTIONS.md.

@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/physicsc-append-hinges.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-06
+The new parts tree Builds/bm-RC3-parts points the turret and cannon at constraint indices 11 and 12, but Working/Collision/batmobile.physicsc has only 11 constraint objects (indices 0..10), so those two indices name nothing. Read Research/JC3Grab/PHYSICS_WRITE.md and Tools/scripts/jc3hkx.py write mode (round trip byte-identical, a 16-byte insert was shown to work) and Working/Parts/JOINT_FIELDS.md for the hinge fields (axis, pivot, limits in radians). Write a script Tools/scripts/bm_physicsc_hinges.py that makes a COPY of the physicsc, Working/Collision/batmobile_hinged.physicsc, with two appended hkpLimitedHingeConstraintData copied from the donor medium tank turret and cannon hinge objects with axis, pivot and limits replaced by the Batmobile values, then re-reads it with jc3hkx.py check and shows the object count is 13 with the new objects at positions 11 and 12. Offline only; never overwrite the original physicsc and never touch a Builds tree.

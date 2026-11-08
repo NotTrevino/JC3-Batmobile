@@ -1,0 +1,21 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-mode-swap-prototype.md
+ONLY: freebuff
+EST: 60
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-live-vehicle-readout.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-gamepad-scoping.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/l0-rc4-probe-session.md
+Pursuit <-> battle mode at runtime (RB-4; decision D-2 reopened). Operator facts:
+- LT hold transforms the car in about 2 s: the turret rises from the body, and the wheels and body reconfigure.
+- The swap brings a near-instant slowdown.
+- The tracker HUD persists across the switch.
+- Armour is identical in both modes.
+
+First read the P9 result in reports/l0-rc4-probe-session.md: did the console spawn our entity, and does it take a path, a name or a hash?
+
+Then write the prototype in Tools/hook/. On the LT-hold event:
+1. Record position, rotation, velocity and health.
+2. Spawn the battle entity through the spawn system (addresses in console-thingy's spawn_system.h).
+3. Seat the player as the driver and carry the health over.
+4. Apply the lore slowdown.
+5. Remove the pursuit entity.
+
+Do the reverse on release. If seating has no known function, find it (console-thingy sources, RTTI vtables) or mark it UNKNOWN with the experiment that would settle it. Stage Builds/hook-0004/ with a receipt and a one-variable test script for the next supervised session. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

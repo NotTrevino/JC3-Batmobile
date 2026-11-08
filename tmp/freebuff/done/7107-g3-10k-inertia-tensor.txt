@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/G3-10k.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-05
+G3-10k, JC3 vehicle inertia. PHYSICS_ROLES3.md, PHYSICS_ROLES5.md and PHYSICS_ROLES6.md under E:/Modding/JC3-Batmobile/Research/JC3Grab all end with inertia UNKNOWN; PHYSICS_ROLES2.md decoded 56 masses. Find where the inertia tensor of a vehicle body lives in the .physicsc (hknp body/motion cinfo or the mass-properties block that Tools/scripts/jc3hkx.py already parses) for the Serpente donor and two other fleet cars. Decide by oracle: for a box-shaped body with known mass and extents the stored tensor must match m/12*(b^2+c^2) within float tolerance; run that on every fleet body that is a single box and report hit counts. If the field is a packed form, show the decode that reproduces the box formula, or say UNKNOWN with every offset you tried. Static only. New script Tools/scripts/jc3_inertia.py (--write/--check), output Research/JC3Grab/INERTIA.md. Do not edit PHYSICS_ROLES*. Rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md section 3-4.

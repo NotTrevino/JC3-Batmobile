@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hacker-sam-flip-compose-build.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-hacker-and-sam-hack.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/sam-allegiance-consumer-search.md
+Complete the hacker where 9108 stops. 9108 builds the magenta beam and the interaction; the missing piece is the side change of a SAM site. Take the first-ranked route of tmp/freebuff/reports/sam-flip-routes.md and compose it: a hacked SAM must stop firing at the player and fire at enemy aircraft only. If the route is a friendly turret entity swap, build that entity as a private copy with its target filter set to aircraft; if it needs the native hook event injection, write the hook request as an exact card for the hook chain (7981 to 7987 style, no hook code here). The beam timing stays as decoded: 4 s on a drone, 10 s on a heavy tank, cooldown 1.0 s; drones are not hackable in JC3 terms, so the drone branch is the Rebel Drop equivalent, written as flagged. Script Tools/scripts/rc5_hacker_flip.py (--write, --check), tree Builds/bm-RC5-hackerflip. Done-check: --check prints the route used, the target filter and the timing. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

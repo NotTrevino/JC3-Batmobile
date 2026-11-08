@@ -1,0 +1,215 @@
+{
+ "gate": "collision",
+ "command": "python Tools/scripts/v02a_rc4.py --gate collision",
+ "shipped_member": "Builds/bm-RC4/drop/editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.ee::models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle.physicsc",
+ "sha256": "fda78f4d8056a4ee47bd8316b6c738fac6f16d227e3bd4769853a43613b41095",
+ "bytes": 340368,
+ "aaf_copy": "Builds/bm-RC4/aaf/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle.physicsc",
+ "aaf_copy_sha256": "fda78f4d8056a4ee47bd8316b6c738fac6f16d227e3bd4769853a43613b41095",
+ "aaf_matches_ee": true,
+ "donor": "Builds/test-091/aaf/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle.physicsc",
+ "donor_sha256": "1b90daefdc9660b44649c32aca758f6beb1395b424d1269d50415bbc6a8f321d",
+ "donor_bytes": 340368,
+ "objects": 430,
+ "polytopes": 54,
+ "polytopes_convex": 54,
+ "shape_instances": 112,
+ "hull_instances": 74,
+ "hull_shapes_referenced": 54,
+ "free_hull_slots": 0,
+ "hulls_differing_from_donor": [
+  {
+   "shape": "0x5250",
+   "part_indices": [
+    0
+   ],
+   "ship_size_m": [
+    3.74536,
+    2.075,
+    6.90305
+   ],
+   "donor_size_m": [
+    2.085002,
+    1.212002,
+    3.678848
+   ]
+  },
+  {
+   "shape": "0xb5d0",
+   "part_indices": [
+    26
+   ],
+   "ship_size_m": [
+    0.491012,
+    1.3654,
+    1.298572
+   ],
+   "donor_size_m": [
+    0.295781,
+    0.822504,
+    0.782248
+   ]
+  },
+  {
+   "shape": "0xb910",
+   "part_indices": [
+    27
+   ],
+   "ship_size_m": [
+    0.491012,
+    1.3654,
+    1.298572
+   ],
+   "donor_size_m": [
+    0.295781,
+    0.822504,
+    0.782248
+   ]
+  },
+  {
+   "shape": "0xfb40",
+   "part_indices": [
+    11
+   ],
+   "ship_size_m": [
+    0.491012,
+    1.3654,
+    1.298572
+   ],
+   "donor_size_m": [
+    0.295781,
+    0.822504,
+    0.782248
+   ]
+  },
+  {
+   "shape": "0xfe80",
+   "part_indices": [
+    12
+   ],
+   "ship_size_m": [
+    0.491012,
+    1.3654,
+    1.298572
+   ],
+   "donor_size_m": [
+    0.295781,
+    0.822504,
+    0.782248
+   ]
+  }
+ ],
+ "hulls_written": 5,
+ "donor_bodies": 62,
+ "body0_hull": {
+  "shape": "0x5250",
+  "part_index": 0,
+  "instance": 0,
+  "translation": [
+   0.0,
+   0.0,
+   0.0,
+   0.5
+  ],
+  "min": [
+   -1.87318,
+   0.03,
+   -3.359025
+  ],
+  "max": [
+   1.87218,
+   2.105,
+   3.544025
+  ],
+  "size": [
+   3.74536,
+   2.075,
+   6.90305
+  ]
+ },
+ "chassis_box_0": {
+  "min": [
+   -1.87268,
+   0.03,
+   -3.361525
+  ],
+  "max": [
+   1.87268,
+   2.105,
+   3.541525
+  ],
+  "size_m": [
+   3.74536,
+   2.075,
+   6.90305
+  ]
+ },
+ "shape_dev_m": 0.0,
+ "placement_dev_m": [
+  0.0005,
+  0.0,
+  0.0025
+ ],
+ "placement_cm": 0.25,
+ "limit_m": 0.05,
+ "boxes": [
+  {
+   "export": 169750,
+   "bone": "Batmobile_Chassis",
+   "box": 0,
+   "size_m": [
+    3.74536,
+    2.075,
+    6.90305
+   ],
+   "nearest_hull_part_index": 0,
+   "best_size_dev_m": 0.0,
+   "has_shape": true
+  },
+  {
+   "export": 169750,
+   "bone": "Batmobile_Chassis",
+   "box": 1,
+   "size_m": [
+    3.45688,
+    1.035,
+    6.79585
+   ],
+   "nearest_hull_part_index": 0,
+   "best_size_dev_m": 1.04,
+   "has_shape": false
+  },
+  {
+   "export": 169751,
+   "bone": "Batmobile_Rig_Weapons_Trans",
+   "box": 0,
+   "size_m": [
+    1.89365,
+    0.398,
+    1.66177
+   ],
+   "nearest_hull_part_index": 24,
+   "best_size_dev_m": 0.321804,
+   "has_shape": false
+  }
+ ],
+ "boxes_decoded": 3,
+ "boxes_carried": 1,
+ "constraint_objects": 11,
+ "constraint_brief": "Physics.Batmobile_V3_Physics declares 1 constraint; named omission (no JC3 constraint writer)",
+ "brief_payload": {
+  "placement_m": [
+   0.0005,
+   0.061,
+   0.0025
+  ],
+  "max_placement_m": 0.061,
+  "gate_pass": false,
+  "sha256": "0164936b928f821c058c5a154a93b7cadcdbb9baca7d44fb67cb8f18a9399323",
+  "file_present_in_rc4_tree": false,
+  "source": "build-d08 section 4 / build-d13 section 2; corrected in tmp/freebuff/reports/correction-8390-collision-placement.md section 2"
+ },
+ "three_point_one_is_not_a_pass": true,
+ "render_bbox_not_a_gate": true,
+ "pass": true
+}

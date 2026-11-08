@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/fix-similarity-deadlock-producer.md
+ONLY: freebuff
+EST: 20
+BRIEF: hand-written 2026-11-08
+Queue 8906 waits on a producer, the file 8863-jeb-qwen-fair-test.txt, which the similarity guard moved to tmp/freebuff/low/too-similar, so 8906 can never start. Read 8863, 8906 and the neighbouring files in low/too-similar (8734 and the 8214 .orig). Rewrite the 8863 task in entirely new wording: same goal and done-check, new sentences, no shared openings or closing lines with any file in queue/ or done/. Save the rewrite at Working/Queue/rewrites/8863-rewrite.txt and compute its maximum pairwise word-trigram overlap against queue/*.txt with a short script you write at Tools/scripts/trigram_overlap.py; the overlap must be under 0.30. Then edit queue/8906 only if it still has a dead AFTER entry, replacing that entry with the report path of the rewrite. Do not move files in or out of low/. Done when the overlap number is in the report and 8906 has no AFTER entry that points at a missing producer. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

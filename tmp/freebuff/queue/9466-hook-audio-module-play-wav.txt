@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-audio-module-play-wav.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-dll-scaffold-logging-only.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/fmod-hook-surface-static.md
+Add an audio module to the native hook scaffold in Tools/hook/ (created by the logging-only DLL brief). Follow Research/JC3Grab/FMOD_HOOK_SURFACE.json for the call surface. The module should expose three functions: obtain the game's FMOD system pointer, load a WAV or raw sample from a path with loop points, and start or stop playback on a named channel with volume and playback frequency. Keep every pointer use guarded and log-only on failure; honour the version guard of the safety brief 7967 so an unknown exe build disables the module. Write a text command file the hook polls, such as 'play <name>', so tests need no recompile. Build to Builds/hook-audio-0001/ with a receipt (hashes, build command, what was not tested). Nothing is installed into the game folder. Done check: the DLL compiles, an offline unit harness that mocks FMOD calls passes, and the receipt lists untested live behaviours. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

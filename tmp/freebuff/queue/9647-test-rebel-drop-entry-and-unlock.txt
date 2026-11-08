@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/test-rebel-drop-entry-and-unlock.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/APPROVED_Q_FULL.txt, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-gate-vx-approval-request.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/world-pilot-cards.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/l0-probe-triage.md
+Supervised in-game test after APPROVED_Q.txt exists, using the installed RC5 chosen by the operator. Cards: LAUNCH.md, LOAD_SAVE.md, WLD_DROP.md, WLD_UNLOCK.md, SPAWN_BATMOBILE.md (route B, Rebel Drop), SCREENSHOT.md, KILL.md. Observation: on an existing save and on a new one, the Rebel Drop list shows a Batmobile entry with the name Batmobile, the blurb text and the Batmobile icon (not the Serpente image); the order spawns the car; the unlock reward fires once or repeatedly (record which). Pass rule: the entry is present, the name reads Batmobile in the language setting used (English), the icon frame differs from the Serpente icon frame by a stated hash check, and the spawned entity name in the telemetry is the Batmobile. Results under Working/Q/results/rebel-drop/. On fail, the fix card names the row: item.onlinec, task.onlinec, stringlookup or icon, one value only. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

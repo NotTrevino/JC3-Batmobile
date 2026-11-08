@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/app-damage-chapter-masks.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-06
+BmAK has four damage reveal masks (Body, Weaponry, WheelArch, Undercarriage _Damage_ChapterMask) that show story-chapter battle damage; the plan drops them (D9) because JC3 damage is hit-driven (SupportDmgBlend 0). The Batmobile in Arkham Knight looks different depending on chapter, so this is lore. Work out what JC3's damage blend does: decode SupportDmgBlend and the damage-texture members in the vehicle materials, how many damage stages exist, where the damage texture slot is. State whether a private material could carry a pre-damaged look as a fixed state or as hit-driven stages using BmAK's mask, and list the chapter-state data BmAK holds (which chapters set which mask).
+Where JC3 has no exact carrier, give the closest system and the gap for the build to fill (STAGES.md).

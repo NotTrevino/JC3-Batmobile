@@ -1,0 +1,22 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/paint-gunmetal-reference-plan.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+APP-2 now has a player reference: the operator's in-game screenshot, taken at night, in rain, on mud (2026-11-08). It shows:
+- dark gunmetal grey, not pure black;
+- a satin/metallic sheen, with bright specular streaks along panel edges;
+- darker carbon-fibre-weave inset panels;
+- white chevron (">") decal arrows on the body panels;
+- blue-glowing cockpit screens;
+- rain droplets beading on the body.
+The earlier RC colour 0x837d86 read white-violet (RESET_FINDINGS.md section 2).
+
+First, check whether the RC4 material slots carry the carbon-weave inset and chevron decal textures (Research/BatmobileGrab/SLOTS.json, MATERIALS.md, Working/Appearance/progress.md): which slot, which texture, and whether the build binds it.
+
+Then write the acceptance checks for the first look session:
+- the hue must read grey, not violet;
+- the specular must show on the edges;
+- the insets must be darker than the panels;
+- the chevrons must be visible;
+- the screens must glow through the canopy.
+For each check, give the CarPaintMM parameter that moves it (factors.py, TINT_WRITE.md). Report only; no build. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

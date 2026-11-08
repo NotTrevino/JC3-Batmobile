@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/blurb-translations.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-06
+The new car's Rebel Drop blurb is the same English sentence in all 11 languages, which Builds/bm-RC2/verify/strings_languages.md shows is abnormal (vanilla blurbs are translated in all languages). Find the English blurb text (Builds/bm-RC2/verify/strings.md, Working/Translation/NAMES rows), look at how three vanilla vehicle blurbs read in the other 10 languages in profile/online.stringlookup (tone and length) and write proposed translations of the new blurb for the 10 non-English languages, matching the vanilla register. Label every line "machine-written proposal, needs native review". Also check that the Jenkins hash key of each pair stays the same and the text fits the same maximum length the vanilla ones use. Write them to Working/Translation/BLURB_TRANSLATIONS.json and .md; do not touch the build.

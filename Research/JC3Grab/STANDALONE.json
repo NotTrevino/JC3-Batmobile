@@ -1,0 +1,620 @@
+{
+ "card": "G2-27",
+ "generated_by": "Tools/scripts/jc3standalone.py --write",
+ "donor_leaf": "v0300_car_kensington_sportsmuscle_civilian_01",
+ "new_leaf": "v0300_car_kensington_sportsmuscle_batmobile",
+ "sites": {
+  "rows": [
+   {
+    "file": "settings/spawn_vehicle_defs.bin",
+    "mount": "base",
+    "kind": "spawn table",
+    "name_hits": 2,
+    "hash_hits": 1,
+    "confidence": "name",
+    "key": "path string",
+    "needed_for_new_path": "yes, as a new record"
+   },
+   {
+    "file": "locations/jc_prototype/mm320/train_test.blo",
+    "mount": "patch",
+    "kind": "level rule",
+    "name_hits": 1,
+    "hash_hits": 0,
+    "confidence": "name",
+    "key": "path string in a `.bl?` object",
+    "needed_for_new_path": "no"
+   },
+   {
+    "file": "locations/rom/wingsuit_course/wing20_logic.blo",
+    "mount": "patch",
+    "kind": "level rule",
+    "name_hits": 1,
+    "hash_hits": 0,
+    "confidence": "name",
+    "key": "path string in a `.bl?` object",
+    "needed_for_new_path": "no"
+   },
+   {
+    "file": "profile/item.onlinec",
+    "mount": "base",
+    "kind": "Rebel Drop",
+    "name_hits": 4,
+    "hash_hits": 1,
+    "confidence": "name",
+    "key": "32-bit leaf hash",
+    "needed_for_new_path": "yes, a computable hash"
+   },
+   {
+    "file": "profile/item.onlinec",
+    "mount": "patch",
+    "kind": "Rebel Drop",
+    "name_hits": 4,
+    "hash_hits": 1,
+    "confidence": "name",
+    "key": "32-bit leaf hash",
+    "needed_for_new_path": "yes, a computable hash"
+   },
+   {
+    "file": "profile/task.onlinec",
+    "mount": "base",
+    "kind": "task table",
+    "name_hits": 2,
+    "hash_hits": 1,
+    "confidence": "name",
+    "key": "leaf string in a task key",
+    "needed_for_new_path": "no"
+   },
+   {
+    "file": "profile/task.onlinec",
+    "mount": "patch",
+    "kind": "task table",
+    "name_hits": 2,
+    "hash_hits": 1,
+    "confidence": "name",
+    "key": "leaf string in a task key",
+    "needed_for_new_path": "no"
+   },
+   {
+    "file": "global/frontend_global.blo",
+    "mount": "patch",
+    "kind": "frontend",
+    "name_hits": 1,
+    "hash_hits": 0,
+    "confidence": "name",
+    "key": "hash/name in the frontend list",
+    "needed_for_new_path": "no"
+   },
+   {
+    "file": "global/entityregistry_gen.entityregc",
+    "mount": "base",
+    "kind": "entity registry",
+    "name_hits": 1,
+    "hash_hits": 1,
+    "confidence": "name",
+    "key": "leaf + 32-bit hash + asset paths",
+    "needed_for_new_path": "UNKNOWN"
+   },
+   {
+    "file": "global/entityregistry_gen.entityregc",
+    "mount": "patch",
+    "kind": "entity registry",
+    "name_hits": 1,
+    "hash_hits": 1,
+    "confidence": "name",
+    "key": "leaf + 32-bit hash + asset paths",
+    "needed_for_new_path": "UNKNOWN"
+   },
+   {
+    "file": "profile/online.stringlookup",
+    "mount": "base",
+    "kind": "localisation",
+    "name_hits": 0,
+    "hash_hits": 1,
+    "confidence": "hash only (may be a coincidence)",
+    "key": "hash only",
+    "needed_for_new_path": "optional, for a label"
+   },
+   {
+    "file": "profile/online.stringlookup",
+    "mount": "patch",
+    "kind": "localisation",
+    "name_hits": 0,
+    "hash_hits": 1,
+    "confidence": "hash only (may be a coincidence)",
+    "key": "hash only",
+    "needed_for_new_path": "optional, for a label"
+   },
+   {
+    "file": "patchmetadata.bin",
+    "mount": "patch",
+    "kind": "patch metadata",
+    "name_hits": 3,
+    "hash_hits": 0,
+    "confidence": "name",
+    "key": "file hash, patch bookkeeping",
+    "needed_for_new_path": "no"
+   },
+   {
+    "file": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_civilian_01.ee.toc",
+    "mount": "patch",
+    "kind": "self",
+    "name_hits": 3,
+    "hash_hits": 0,
+    "confidence": "name",
+    "key": "its own `.epe`/`.toc`",
+    "needed_for_new_path": "no"
+   },
+   {
+    "file": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_civilian_01.epe",
+    "mount": "patch",
+    "kind": "self",
+    "name_hits": 1,
+    "hash_hits": 1,
+    "confidence": "name",
+    "key": "its own `.epe`/`.toc`",
+    "needed_for_new_path": "no"
+   },
+   {
+    "file": "dlc/mech_land_assault/editor/entities/jc_weapons/05_stationary/w506_sam_blackhand_heavycontroldrone/dlc2_sam_bh_controldrone_02.ee",
+    "mount": "dlc",
+    "kind": "other",
+    "name_hits": 0,
+    "hash_hits": 1,
+    "confidence": "hash only (may be a coincidence)",
+    "key": "name or hash in another table",
+    "needed_for_new_path": "-"
+   },
+   {
+    "file": "dlc/mech_land_assault/editor/entities/jc_weapons/05_stationary/w506_sam_blackhand_heavycontroldrone/dlc2_sam_bh_controldrone_04.ee",
+    "mount": "dlc",
+    "kind": "other",
+    "name_hits": 0,
+    "hash_hits": 1,
+    "confidence": "hash only (may be a coincidence)",
+    "key": "name or hash in another table",
+    "needed_for_new_path": "-"
+   }
+  ],
+  "count": 17,
+  "by_kind": {
+   "spawn table": 1,
+   "level rule": 2,
+   "Rebel Drop": 2,
+   "task table": 2,
+   "frontend": 1,
+   "entity registry": 2,
+   "localisation": 2,
+   "patch metadata": 1,
+   "self": 2,
+   "other": 2
+  }
+ },
+ "registry": {
+  "per_file": {
+   "base": {
+    "bytes": 33003365,
+    "tag03_strings": 381985,
+    "path_strings": 56173,
+    "class_strings": 29079,
+    "leaf_like": 6526,
+    "index_leaves": 232,
+    "vehicles": 157,
+    "donor_records": 1,
+    "donor_record": {
+     "offset": 7376079,
+     "leaf_len": 45,
+     "hash_after": "01496bb4",
+     "hash_value": 3026929921,
+     "tail": "8c863a7d01496bb4d2502586"
+    }
+   },
+   "patch": {
+    "bytes": 39220585,
+    "tag03_strings": 454351,
+    "path_strings": 67037,
+    "class_strings": 35088,
+    "leaf_like": 6988,
+    "index_leaves": 251,
+    "vehicles": 158,
+    "donor_records": 1,
+    "donor_record": {
+     "offset": 13461069,
+     "leaf_len": 45,
+     "hash_after": "01496bb4",
+     "hash_value": 3026929921,
+     "tail": "8c863a7d01496bb4d2502586"
+    }
+   }
+  },
+  "index_ee_leaves": 922,
+  "registry_leaves": 7005,
+  "index_leaves_with_record": 251,
+  "index_leaves_without_record": 671,
+  "without_record_sample": [
+   "air_conditioner01_small",
+   "air_conditioner2_ac01",
+   "air_conditioner2_ac02",
+   "air_ducting_pieces_a_outlet_small_001",
+   "ammo_box_bullet_spewer_single",
+   "ammo_caches_cache_03_crate",
+   "ammo_caches_crate_01",
+   "ammo_caches_crate_02"
+  ],
+  "vehicles": 233,
+  "vehicles_with_record": 158,
+  "vehicles_without_record": 75,
+  "vehicle_without_sample": [
+   "v0000_car_autostraad_oldjeep_debug",
+   "v0001_car_autostraad_armoredtruck_debug",
+   "v0003_car_autostraad_racinghothatch_debug",
+   "v0005_car_autostraad_minetruck_debug",
+   "v0006_car_autostraad_modernbus_debug",
+   "v0008_car_autostraad_modernsportssaloon_debug"
+  ],
+  "path_extension_census": {
+   "eff": 81531,
+   "ctune": 23977,
+   "vmod": 11753,
+   "etune": 1211,
+   "wtune": 980,
+   "ftune": 539,
+   "model_xml": 527,
+   "vehicle_deform_xml": 511
+  }
+ },
+ "spawn": {
+  "tables": [
+   {
+    "path": "dlc/bavarium_sea_heist/settings/spawn_vehicle_defs.bin",
+    "mount": "dlc",
+    "bytes": 781,
+    "ee_records": 2,
+    "sample": "dlc/bavarium_sea_heist/editor/entities/jc_vehicles/01_land/v0600_car_urga_armoredjeep/v0600_car_urga_armoredjeep_blackhand_01.ee",
+    "unregistered": 1
+   },
+   {
+    "path": "dlc/bavarium_sea_heist/settings/spawn_vehicle_proto_defs.bin",
+    "mount": "dlc",
+    "bytes": 291,
+    "ee_records": 1,
+    "sample": "editor\\entities\\jc_vehicles\\03_sea\\v1706_boat_na_rocketboat\\v1706_boat_na_rocketboat_debug.ee",
+    "unregistered": 1
+   },
+   {
+    "path": "dlc/mech_land_assault/settings/spawn_vehicle_defs.bin",
+    "mount": "dlc",
+    "bytes": 4894,
+    "ee_records": 16,
+    "sample": "dlc/mech_land_assault/editor/entities/jc_vehicles/01_land/v0805_car_na_mech/v0805_car_na_mech_rebel_minigun_spawner.ee",
+    "unregistered": 11
+   },
+   {
+    "path": "dlc/v0300_preorder/settings/spawn_vehicle_defs.bin",
+    "mount": "dlc",
+    "bytes": 437,
+    "ee_records": 1,
+    "sample": "editor\\entities\\jc_vehicles\\01_land\\v0300_car_kensington_sportsmuscle\\v0300_car_kensington_sportsmuscle_signature_preorder.ee",
+    "unregistered": 0
+   },
+   {
+    "path": "dlc/v0604_preorder/settings/spawn_vehicle_defs.bin",
+    "mount": "dlc",
+    "bytes": 387,
+    "ee_records": 1,
+    "sample": "editor\\entities\\jc_vehicles\\01_land\\v0604_car_urga_buggy\\v0604_car_urga_buggy_signature_preorder.ee",
+    "unregistered": 0
+   },
+   {
+    "path": "dlc/v0805_sportmech/settings/spawn_vehicle_defs.bin",
+    "mount": "dlc",
+    "bytes": 314,
+    "ee_records": 1,
+    "sample": "dlc/v0805_sportmech/editor/entities/jc_vehicles/01_land/v0806_car_na_sportmech/v0806_car_na_sportmech_01.ee",
+    "unregistered": 1
+   },
+   {
+    "path": "settings/spawn_vehicle_defs.bin",
+    "mount": "base",
+    "bytes": 27513,
+    "ee_records": 86,
+    "sample": "editor\\entities\\jc_vehicles\\01_land\\v0402_car_mugello_vintagesuper\\v0402_car_mugello_vintagesuper_civilian_z80_01.ee",
+    "unregistered": 0
+   },
+   {
+    "path": "settings/spawn_vehicle_proto_defs.bin",
+    "mount": "base",
+    "bytes": 16410,
+    "ee_records": 79,
+    "sample": "editor\\entities\\jc_vehicles\\03_sea\\v1302_boat_kensington_sailboat\\v1302_boat_kensington_sailboat_debug.ee",
+    "unregistered": 75
+   },
+   {
+    "path": "settings/spawn_vehicle_proto_defs.bin",
+    "mount": "patch",
+    "bytes": 18374,
+    "ee_records": 89,
+    "sample": "editor\\entities\\jc_vehicles\\03_sea\\v1302_boat_kensington_sailboat\\v1302_boat_kensington_sailboat_debug.ee",
+    "unregistered": 87
+   }
+  ],
+  "distinct_leaves": 196,
+  "leaves_without_registry_record": [
+   "spawner_mech_enemy_cannon",
+   "spawner_mech_enemy_minigun",
+   "spawner_mech_friendly_cannon",
+   "spawner_mech_friendly_minigun",
+   "v0000_car_autostraad_oldjeep_debug",
+   "v0001_car_autostraad_armoredtruck_debug",
+   "v0003_car_autostraad_racinghothatch_debug",
+   "v0005_car_autostraad_minetruck_debug",
+   "v0006_car_autostraad_modernbus_debug",
+   "v0008_car_autostraad_modernsportssaloon_debug",
+   "v0009_car_autostraad_modernsaloon_debug",
+   "v0011_car_autostraad_articulatedtruck_debug",
+   "v0012_car_autostraad_atv_debug",
+   "v0200_car_capstone_apc_debug",
+   "v0201_car_capstone_mediumtank_blackhand_01",
+   "v0201_car_capstone_mediumtank_debug",
+   "v0202_car_capstone_bavariumtank_debug",
+   "v0300_car_kensington_sportsmuscle_debug",
+   "v0302_car_kensington_modernlimo_debug",
+   "v0305_car_kensington_moderngrandtourer_debug",
+   "v0400_car_mugello_vintagesports_debug",
+   "v0401_car_mugello_racingsupercar_debug",
+   "v0402_car_mugello_vintagesuper_debug",
+   "v0403_car_mugello_modernecosuper_debug",
+   "v0405_car_mugello_moderncircuitracer_debug",
+   "v0500_car_solar_oldmini_debug",
+   "v0501_car_solar_smallvan_debug",
+   "v0502_car_solar_modernsedan_debug",
+   "v0503_car_solar_modernsuv_debug",
+   "v0504_car_solar_technicaljeep_debug",
+   "v0505_car_solar_oldtruck_debug",
+   "v0506_car_solar_oldtractor_debug",
+   "v0507_car_solar_oldbus_debug",
+   "v0508_car_solar_oldcompact_debug",
+   "v0510_car_solar_modernroadster_debug",
+   "v0512_car_solar_oldtwodoorhatch_debug",
+   "v0513_car_solar_oldfourdoorhatch_debug",
+   "v0514_car_solar_modernpickup_debug",
+   "v0600_car_urga_armoredjeep_blackhand_01",
+   "v0600_car_urga_armoredjeep_debug",
+   "v0602_car_urga_armoredtransport_debug",
+   "v0603_car_urga_smalltank_debug",
+   "v0604_car_urga_buggy_debug",
+   "v0800_car_na_mechloader_debug",
+   "v0801_car_na_mechloader01_debug",
+   "v0802_car_na_mechloader02_debug",
+   "v0803_car_na_monstertruck_debug",
+   "v0804_car_na_mechloader03_debug",
+   "v0805_car_na_mech_civilian",
+   "v0805_car_na_mech_minigun",
+   "v0805_car_na_mech_rebel_minigun",
+   "v0805_car_na_mech_rebel_minigun_spawner",
+   "v0806_car_na_sportmech_01",
+   "v0866_car_na_ladbil_debug",
+   "v1200_boat_capstone_heavypatrol_debug",
+   "v1202_boat_capstone_corvette_debug",
+   "v1300_boat_kensington_motoryacht_debug",
+   "v1302_boat_kensington_sailboat_debug",
+   "v1400_boat_mugello_spyspeedboat_debug",
+   "v1401_boat_mugello_racingboat_debug",
+   "v1500_boat_solar_jetski_debug",
+   "v1602_boat_urga_transport_debug",
+   "v1701_boat_na_smalloldfishing_debug",
+   "v1704_boat_na_lightpatrol_debug",
+   "v1705_boat_na_mediumoldfishing_debug",
+   "v1706_boat_na_rocketboat_debug",
+   "v1717_boat_na_duck_debug",
+   "v2102_helicopter_eubus_utility_debug",
+   "v2200_helicopter_capstone_assault_debug",
+   "v2201_helicopter_capstone_heavytroop_debug",
+   "v2601_helicopter_urga_heavyassault_debug",
+   "v2602_helicopter_urga_lightassault_debug",
+   "v2603_helicopter_urga_seascout_debug",
+   "v2604_helicopter_urga_advancedassault_debug",
+   "v2900_drone_eden_gruntdrone_debug",
+   "v2900_helicopter_eden_gruntdrone_debug",
+   "v2901_drone_eden_elitedrone_debug",
+   "v2901_helicopter_eden_elitedrone_debug",
+   "v2902_helicopter_eden_heavycontroldrone_debug",
+   "v2903_drone_eden_transportdrone_debug",
+   "v2903_helicopter_eden_transportdrone_debug",
+   "v2904_drone_eden_shielddrone_debug",
+   "v2904_helicopter_eden_shielddrone_debug",
+   "v3000_bike_autostraad_trials_debug",
+   "v3001_bike_autostraad_snowmobile_debug",
+   "v3401_bike_mugello_modernsport_debug",
+   "v3402_bike_mugello_modernsuper_debug",
+   "v3500_bike_solar_oldmoped_debug",
+   "v3501_bike_solar_modernmoped_debug",
+   "v3502_bike_solar_modernroad_debug",
+   "v3503_bike_solar_oldroad_debug",
+   "v3600_bike_urga_combatdirt_blackhand_01",
+   "v3600_bike_urga_combatdirt_debug",
+   "v4202_plane_capstone_fighterjet_debug",
+   "v4500_plane_solar_smallfloatprop_debug",
+   "v4600_plane_urga_privatepropeller_debug",
+   "v4602_plane_urga_fighterbomber_debug",
+   "v4603_plane_urga_cargotransport_debug",
+   "v4603_plane_urga_cargotransport_military_cargo_tank",
+   "v4800_plane_brothers_vintagefighter_debug",
+   "v9999_car_mugello_dlctestcar_debug"
+  ],
+  "count_without_record": 101,
+  "production_unregistered": 13
+ },
+ "mod": {
+  "ee_files": 20,
+  "per_variant": {
+   "V5.2 Plus": 5,
+   "V5.3 Plus": 15
+  },
+  "toc_files": 0,
+  "files": [
+   {
+    "variant": "V5.3 Plus",
+    "path": "editor/entities/jc_design_tools/world_at_war/encounters/ambient/armored_transport_wreck.ee",
+    "bytes": 118816
+   },
+   {
+    "variant": "V5.3 Plus",
+    "path": "editor/entities/jc_design_tools/world_at_war/encounters/ambient/bus_wreck.ee",
+    "bytes": 485932
+   },
+   {
+    "variant": "V5.3 Plus",
+    "path": "editor/entities/jc_design_tools/world_at_war/encounters/ambient/oldcompact_wreck.ee",
+    "bytes": 4348628
+   },
+   {
+    "variant": "V5.3 Plus",
+    "path": "editor/entities/jc_design_tools/world_at_war/encounters/ambient/tank2_transport_wreck.ee",
+    "bytes": 3660592
+   },
+   {
+    "variant": "V5.3 Plus",
+    "path": "editor/entities/jc_design_tools/world_at_war/encounters/ambient/tank_bus_wreck.ee",
+    "bytes": 1149664
+   },
+   {
+    "variant": "V5.3 Plus",
+    "path": "editor/entities/jc_design_tools/world_at_war/encounters/ambient/tank_oldcompact_wreck.ee",
+    "bytes": 1657216
+   },
+   {
+    "variant": "V5.3 Plus",
+    "path": "editor/entities/jc_design_tools/world_at_war/encounters/ambient/tank_techinal_wreck.ee",
+    "bytes": 1533136
+   },
+   {
+    "variant": "V5.3 Plus",
+    "path": "editor/entities/jc_design_tools/world_at_war/encounters/ambient/tank_wreck.ee",
+    "bytes": 121824
+   },
+   {
+    "variant": "V5.3 Plus",
+    "path": "editor/entities/jc_design_tools/world_at_war/encounters/ambient/techinal2_oldcompact_wreck.ee",
+    "bytes": 3542656
+   },
+   {
+    "variant": "V5.3 Plus",
+    "path": "editor/entities/jc_design_tools/world_at_war/encounters/ambient/technicaljeep_wreck.ee",
+    "bytes": 1600784
+   },
+   {
+    "variant": "V5.2 Plus",
+    "path": "editor/entities/jc_environments/props/animation_prop/pinata/pinata.ee",
+    "bytes": 1505920
+   },
+   {
+    "variant": "V5.3 Plus",
+    "path": "editor/entities/jc_environments/props/animation_prop/pinata/pinata.ee",
+    "bytes": 1505920
+   },
+   {
+    "variant": "V5.2 Plus",
+    "path": "editor/entities/jc_environments/props/animation_prop/pinata/pinata_stick.ee",
+    "bytes": 1129040
+   },
+   {
+    "variant": "V5.3 Plus",
+    "path": "editor/entities/jc_environments/props/animation_prop/pinata/pinata_stick.ee",
+    "bytes": 1129040
+   },
+   {
+    "variant": "V5.2 Plus",
+    "path": "editor/entities/jc_environments/props/modern/elements/sponge_01/sponge.ee",
+    "bytes": 3453728
+   },
+   {
+    "variant": "V5.3 Plus",
+    "path": "editor/entities/jc_environments/props/modern/elements/sponge_01/sponge.ee",
+    "bytes": 3453728
+   },
+   {
+    "variant": "V5.2 Plus",
+    "path": "editor/entities/jc_vehicles/03_sea/v1704_boat_na_lightpatrol/v1704_boat_na_lightpatrol_civic_police_01.ee",
+    "bytes": 202736
+   },
+   {
+    "variant": "V5.3 Plus",
+    "path": "editor/entities/jc_vehicles/03_sea/v1704_boat_na_lightpatrol/v1704_boat_na_lightpatrol_civic_police_01.ee",
+    "bytes": 202736
+   },
+   {
+    "variant": "V5.2 Plus",
+    "path": "editor/entities/jc_weapons/02_two_handed/w141_rpg_uvk_13/w141_rpg_uvk_13_mm110.ee",
+    "bytes": 261840
+   },
+   {
+    "variant": "V5.3 Plus",
+    "path": "editor/entities/jc_weapons/02_two_handed/w141_rpg_uvk_13/w141_rpg_uvk_13_mm110.ee",
+    "bytes": 261840
+   }
+  ],
+  "inner_probe": {
+   "file": "editor/entities/jc_vehicles/03_sea/v1704_boat_na_lightpatrol/v1704_boat_na_lightpatrol_civic_police_01.ee",
+   "inner_files": 23,
+   "epe": [
+    "editor/entities/jc_environments/structures/modern/playground_kit/merry_go_boom_01.epe"
+   ],
+   "foreign": [
+    "shared",
+    "structures"
+   ]
+  },
+  "in_index": 20,
+  "absent": 0
+ },
+ "needs": {
+  "source": "Builds/test-091/v0300_car_kensington_sportsmuscle_civilian_01.ee",
+  "bytes": 10737057,
+  "inner_files": 604,
+  "by_ext": {
+   ".rbm": 198,
+   ".ddsc": 153,
+   ".effc": 74,
+   ".trim": 60,
+   ".lod": 59,
+   ".vmodc": 31,
+   ".ctunec": 18,
+   ".pfxc": 4,
+   ".etunec": 2,
+   ".fmod_guids": 1,
+   ".physicsc": 1,
+   ".stringlookup": 1,
+   ".ftunec": 1,
+   ".epe": 1
+  },
+  "by_top": {
+   "models": 363,
+   "effects": 188,
+   "editor": 52,
+   "textures": 1
+  },
+  "the_one_entity_file": [
+   "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_civilian_01.epe"
+  ],
+  "entity_files": [
+   "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_civilian_01.ee.fmod_guids",
+   "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/generated/v0300_car_kensington_sportsmuscle_effect_attachments.vmodc",
+   "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/generated/v0300_car_kensington_sportsmuscle_lights.vmodc",
+   "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/v0300_car_kensington_sportsmuscle_front_tire.vmodc",
+   "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/v0300_car_kensington_sportsmuscle_rear_tire.vmodc",
+   "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/generated/v0300_car_kensington_sportsmuscle_water_interaction.vmodc"
+  ],
+  "toc": {
+   "present": true,
+   "entries": 506,
+   "sarc_entries": 604
+  },
+  "inner_mentions_leaf": 4
+ },
+ "verdict": {
+  "load_new_path": "yes (derived, one UNKNOWN)",
+  "global_registry_edit_required": "no evidence of one for a path reference",
+  "drop_hash_resolution": "UNKNOWN"
+ }
+}

@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/no-deform-switches-build.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-health-explosion-no-crash.md
+The Batmobile must never show damage. Operator facts: no damage stages and no scratches, and at zero health it explodes instantly. Read Research/JC3Grab/DAMAGE_MODEL.md, tmp/freebuff/reports/app-mud-and-dirt-default.md, the 9171 report, and the GRAB_BACKLOG.md APP-7 line, whose wording is stale. List every JC3 member that could still produce a damage look on this car (dirt and damage blend, low-health smoke, part detach, tyre burst visuals, deformation on the vehicle damage class) with its container, offset and current value. Build Builds/bm-RC5-nodeform with each of them set to the off value, script Tools/scripts/rc5_nodeform.py (--write, --check), and keep the 9171 explosion mechanism untouched. Rewrite the stale APP-7 wording in a new file Working/Appearance/APP7_REWORD.md (do not edit GRAB_BACKLOG.md). Done check: every listed member reads back at its off value, and the list names at least the deformation, dirt blend, smoke and detach switches or says UNKNOWN for each missing one. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

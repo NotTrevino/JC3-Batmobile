@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/cam-adf-append-writer-proto.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-08
+The camera shake needs an ADF writer that can append a new type and instance, while Tools/scripts/bmak_camfile.py only rewrites existing rows. Prototype that writer on a copy. Study Tools/scripts/jc3adf.py and the .ctunec layout in Working/Camera/CAM_TUNE.json; pick one shipped .ctunec as the test file. Write Tools/scripts/adf_append.py that appends one instance of an already present type first (a second instance of the tune struct), then, if that round trips, a type the file does not yet contain, copying it from a donor ADF. Prove by reading the result back with jc3adf.py and by byte-diff that nothing else moved. Work only in Builds/adf-append/ and mark any offset table, hash table or size field you had to rewrite. Done when both append cases parse and a diff report shows only the intended regions changed, or the failing case is named. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

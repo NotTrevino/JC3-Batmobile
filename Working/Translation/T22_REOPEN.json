@@ -1,0 +1,220 @@
+{
+ "schema": 1,
+ "generator": "Tools/scripts/t22_reopen.py",
+ "task": "collision-where apply",
+ "cards": [
+  "T-22",
+  "B-10"
+ ],
+ "inputs": {
+  "collision_where": {
+   "path": "Research/BatmobileGrab/COLLISION_WHERE.json",
+   "generator": "Tools/scripts/grab_collision_where.py (G3-16)"
+  },
+  "vehicle_hull": {
+   "path": "Working/Collision2/bm_vehicle_hull.json",
+   "generator": "Tools/scripts/bm_vehicle_hull.py (B-10e)"
+  },
+  "built": {
+   "path": "Working/Collision/bm_collision.json",
+   "generator": "Tools/scripts/bm_collision.py (B-10)"
+  },
+  "hull_slots": {
+   "path": "Working/Translation/t16_collision.json",
+   "generator": "Tools/scripts/t22_collision.py (T-22)"
+  }
+ },
+ "asset": {
+  "path": "Physics.Batmobile_V3_Physics",
+  "package": "BmGame.upk",
+  "export": 158266,
+  "size": 194,
+  "reached_from": "Batmobile.SVehicleMesh property offset 824 (Default__RVehicleBatmobileBase.SVehicleMesh, export 175716)",
+  "bodies": 2,
+  "boxes": 3,
+  "constraints": 1,
+  "instance": {
+   "export": 158308,
+   "path": "Batmobile_V3_Physics.PhysicsAssetInstance"
+  }
+ },
+ "bodies": [
+  {
+   "bone": "Batmobile_Chassis",
+   "export": 169750,
+   "boxes": 2,
+   "box": [
+    {
+     "extents_cm": [
+      690.305,
+      374.536,
+      207.5
+     ],
+     "centre_cm": [
+      9.0,
+      0.0,
+      106.75
+     ],
+     "extents_m": [
+      6.9030499999999995,
+      3.74536,
+      2.075
+     ]
+    },
+    {
+     "extents_cm": [
+      679.585,
+      345.688,
+      103.5
+     ],
+     "centre_cm": [
+      0.0,
+      0.0,
+      79.0
+     ],
+     "extents_m": [
+      6.795850000000001,
+      3.45688,
+      1.035
+     ]
+    }
+   ],
+   "tm_identity_error": 0.0,
+   "rotation_deg_about_y": 0.0
+  },
+  {
+   "bone": "Batmobile_Rig_Weapons_Trans",
+   "export": 169751,
+   "boxes": 1,
+   "box": [
+    {
+     "extents_cm": [
+      166.177,
+      189.365,
+      39.8
+     ],
+     "centre_cm": [
+      -30.5,
+      -0.0,
+      93.25
+     ],
+     "extents_m": [
+      1.66177,
+      1.89365,
+      0.39799999999999996
+     ]
+    }
+   ],
+   "tm_identity_error": 0.069756470621,
+   "rotation_deg_about_y": 4.0
+  }
+ ],
+ "today": {
+  "built_bodies": 62,
+  "hulls_written": 5,
+  "body_shapes_today": 1,
+  "shapes_missing": 2,
+  "objects": 430,
+  "file": "Working/Collision/batmobile.physicsc",
+  "sha256": "192c12479d81da6e",
+  "source": "bm-RC2 donor topology re-cut to the body mesh (54 hulls)"
+ },
+ "plan": [
+  {
+   "id": "S1",
+   "box": "chassis box 0, 690.305 x 374.536 x 207.500 cm at (9, 0, 106.75)",
+   "target": "body 0's existing hull slot - the one hull B-10/B-10d already rewrite",
+   "state": "writable: scale + translate into an existing slot is proven (G2-30)",
+   "axis": "bone x (6.903 m) -> JC3 z, y (3.745 m) -> x, z (2.075 m) -> y, residual <= 25.036 cm"
+  },
+  {
+   "id": "S2",
+   "box": "chassis box 1, 679.585 x 345.688 x 103.500 cm at (0, 0, 79)",
+   "target": "a second shape instance in body 0's compound (the underside box)",
+   "state": "UNKNOWN: 0 free hull slots - 14 unbound instances belong to the donor bumpers; re-purpose one or grow the object count (unproven)",
+   "axis": "same map; it sits 27.75 cm below box 0's centre"
+  },
+  {
+   "id": "S3",
+   "box": "weapons pod, 166.177 x 189.365 x 39.800 cm at (-30.5, -0, 93.25), 4.000 deg about y",
+   "target": "a third shape carried rigid with body 0 (no `Rig_Weapons_Trans` part exists in the JC3 part table, so a separate body has no owner)",
+   "state": "UNKNOWN: same slot question; BmAK's 2nd body has no JC3 part to bind to",
+   "axis": "4 deg about y is decoded and must be re-applied to the box, not to the car"
+  },
+  {
+   "id": "S4",
+   "box": "constraint setup 171462 (1), names [Weapons_Trans, Weapons_Trans, Chassis]",
+   "target": "one constraint between the chassis and the pod",
+   "state": "NOT WRITABLE: `bm_collision.json` carries 0 constraint data and no JC3 constraint writer is decoded - named omission",
+   "axis": "parent/child order is UNKNOWN (no `RB_ConstraintSetup` layout)"
+  },
+  {
+   "id": "S5",
+   "box": "acceptance",
+   "target": "the rebuilt file + a drive",
+   "state": "gate: `jc3hkx.py check --all --file`, body-0 shape union within 5 cm of the two chassis boxes, pod within 5 cm at 4 deg, then Q-2 kerb + ram",
+   "axis": "the render-bbox gate becomes the raycast-body check (B-10b / body 42)"
+  }
+ ],
+ "replaces": "The donor Serpente chassis hull stops being the colliding body-0 shape: body 0's hull is re-cut to the BmAK chassis boxes (identity TM, decoded) and the pod box is added at 4 deg, so the car's rigid-body contact is BmAK's own. The other 61 donor bodies stay as JC3's per-part contact - BmAK has 2 bodies in total, so carrying its 2-body model literally would delete part-level contact; the difference is declared, not silently dropped. The one BmAK constraint has no JC3 writer (S4).",
+ "oracles": [
+  {
+   "id": "O1-drivable-asset-2-bodies",
+   "ok": true,
+   "detail": "Physics.Batmobile_V3_Physics export 158266 (194 B): BodySetup 2, bodies decoded 2"
+  },
+  {
+   "id": "O2-boxes-3",
+   "ok": true,
+   "detail": "boxes Batmobile_Chassis 2, Batmobile_Rig_Weapons_Trans 1"
+  },
+  {
+   "id": "O3-one-constraint",
+   "ok": true,
+   "detail": "ConstraintSetup 1, instance arrays Bodies 2 / Constraints 1"
+  },
+  {
+   "id": "O4-chassis-tm-identity",
+   "ok": true,
+   "detail": "chassis identity_error 0.0e+00, 0.0e+00"
+  },
+  {
+   "id": "O5-pod-4deg",
+   "ok": true,
+   "detail": "pod rotation 4.000 deg about y, det 1.000000054"
+  },
+  {
+   "id": "O6-built-set-still-donor",
+   "ok": true,
+   "detail": "built file carries 62 donor bodies; 5 hulls written (1 body + 4 wheels) -> 2 shape(s) missing"
+  },
+  {
+   "id": "O7-no-free-hull-slot",
+   "ok": true,
+   "detail": "54 donor hulls, 14 unbound instances (the two donor bumpers), object count fixed"
+  },
+  {
+   "id": "O8-axis-map-inside-band",
+   "ok": true,
+   "detail": "best [2, 0, 1] residual [12.195, 25.036, 19.6] cm; second 147.436 cm"
+  },
+  {
+   "id": "O9-cards-reopened",
+   "ok": true,
+   "detail": "T-22 heading 1 / \u00a712 row 1; B-10 heading 1 / \u00a712 row 1 carry REOPENED 2026-11-07"
+  },
+  {
+   "id": "O10-ledger-rows",
+   "ok": true,
+   "detail": "T-P3 next, T-CO1 next - both cite the drivable asset"
+  }
+ ],
+ "all_ok": true,
+ "unknowns": [
+  "Whether the object count may grow: no free hull slot exists, and G2-30 proved scale/translate of an existing hull, not a new shape.",
+  "Which FName in constraint 171462 is the parent body (no `RB_ConstraintSetup` layout in BMSDK_OFFSETS.json).",
+  "Whether the engine simulates the pod body (bool at 0x224 is true, unnamed), so S3's 'carried rigid' is a plan, not a decoded runtime fact.",
+  "The live Batman-vs-Batmobile mesh per mode (selector at 5895 not serialised) - unchanged by this plan."
+ ],
+ "revert": "Delete `T22_REOPEN.*`, `t22_reopen.py`; revert the T-P3/T-CO1/T-CO2/T-CO3 cells via `git`-less backups (`Backups/`) or re-run `t22_collision.py --write` after restoring its rows, then `t_rows.py build`, `t_blocked.py --write`, `status_audit.py --write`."
+}

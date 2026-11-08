@@ -1,0 +1,130 @@
+# B-05 — Entity graph (`.epe`)
+
+**STATUS: deferred**
+
+§12 reads `| B-05 | doing | … |` (§0.3's word for a card that is in progress and not done); this
+report's STATUS says `deferred`, the word the report contract asks for. Same state: **the card is not
+done, no `.epe` was written, and what is left is enumerated below.** Nothing here is claimed as done.
+
+Card (`GRAB_BACKLOG.md` §8):
+
+```
+#### B-05 · Entity graph (`.epe`)   L · deps: B-04, T-11, T-13, T-14, T-18 · serves: WPN, WLD-3/4, ARM-1, LGT-1, ANI-9
+Do: using `ConvertProperty` round-trip (proven, plan §7.1) and the signature-preorder diff
+(G2-12) as the template: 1. `CPartProp` for every new part. 2. Weapon components and
+`SWeaponPoint`s per T-11 (points at `SOCKETS_JC3.json` positions, parented to the turret/cannon
+parts). 3. `SVehicleLight` entries per T-18. 4. Interaction objects moved per
+`t9_interaction.json`. 5. Root `health`/`invulnerable` per T-14. 6. Keep the camera reference
+(`bat_base.ctune`, test-091).
+Out: `Working/Entity/bm_epe_edits.json` + the `.epe` in the build.
+Done: `ConvertProperty` round-trips the built `.epe` to identical XML; every weapon point,
+light and part name resolves (script check); `.epe` object count = base + planned additions.
+```
+
+## Blocker: the remaining work is the L-card implementation, not missing evidence
+
+The card is a single artefact (one `.epe`, one object count), so a partial graph was **not** staged:
+`Working/Entity/` does not exist, `Builds/bm-003/` does not exist, and `Tools/scripts/bm_entity.py`
+does not exist. A half-built entity graph is worse than none — the next run would have to guess which
+objects were planned — and an invented object would break R4.
+
+What is left, concretely (all inputs are on disk now):
+
+| step | state |
+|---|---|
+| 1 — 19 `CPartProp` inserts | specified: clone a node, set `<object id>`, `name`, `name_hash = hash_jenkins(name)` (**verified 5/5** on shipped `CPartProp` values), `part_index` from B-04's module (42…60); proven to survive `--i` |
+| 2 — weapon component + `SWeaponPoint`s | specified: template = the armed APC's `CBulletWeaponBase` (schema recorded below); values from T-11's carrier rows and `SOCKETS_JC3.json` |
+| 3 — 16 `SVehicleLight` rows | inputs on disk (`t14_lights.json` `rows`/`custom`/`parts`/`light_parts`); 22 `SVehicleLight` objects already in the graph, so the member set is copyable |
+| 4 — 77 interaction transforms | input on disk (`t9_interaction.json` `objects`, `band_m` [0.05, 0.30]); needs the id → `.epe` object mapping |
+| 5 — root `health`/`invulnerable` | input on disk (`t10_damage_edits.json`), root already carries `health` 100 / `invulnerable` 0 |
+| build + Done checks | `bm-003` from `bm-002`, `.toc` patch for the `.epe`, then the three Done commands |
+
+## Evidence produced this round (the previous blocker, lifted)
+
+**1. The weapon schema exists in an armed vehicle already indexed by this repo — read-only, offline.**
+
+`Research/JC3Grab/WEAPON_WIRING.jsonl`'s first row is
+`editor/entities/jc_vehicles/01_land/v0200_car_capstone_apc/v0200_car_capstone_apc_debug.ee` (1 weapon,
+1 gunner slot, parts `apc_turret_base` 30 / `apc_weapon_mount_vertical` 44). Extracted with
+`jc3detail` from `archives_win64/game35` @ 160,751,616 (6,093,712 B bundle, `.epe` member 100,278 B →
+`E:\Modding\_JC3grab\epe_schema\apc_debug.epe`, outside the repo per R10), exported with
+`ConvertProperty --e` (exit 0):
+
+```
+objects 375 classes 49
+  CBulletWeaponBase: 1
+  SWeaponPoint: 4
+```
+
+The component and its children, member for member:
+
+```
+CBulletWeaponBase  children=6
+    name: string = w206_mounted_capstone_m2hm      name_hash: int = 1091350153
+    weapon_id: int = 206                          weapon_type: int = 2
+    world: mat = 1,0,0,0, 0,1,0,0, 0,0,1,0, -0.0003029108,2.628777,0.5228999,1
+  SEffects  (6 rows)  Fire / sound_turret_rotation_yaw / sound_turret_rotation_pitch /
+                      ShellEjection / Fire_AI  (each SAttachedEffect: Effect|Sound, Usage, world)
+                      + SDynamicAttachedEffectTable 50calImpact (Material 31)
+  SWeaponPoint  FirePosition             type=2  world … 0,0.1409615,-1.004058,1
+  SWeaponPoint  attach.vehicle           type=4  world … 0,-0.05405688,0.002082527,1
+  SWeaponPoint  LeftHandMountedAttach    type=1  world … -0.1,0.08,0.3,1
+  SWeaponPoint  RightHandMountedAttach   type=1  world …  0.1,0.08,0.3,1
+  CAIEntityProxy  faction=2
+```
+
+**2. The writer path holds: `ConvertProperty` round-trips the bm-002 `.epe` byte for byte.**
+
+```
+$ Tools/Gibbed/Gibbed.JustCause3.ConvertProperty.exe --e …/v0300_…_civilian_01.epe tmp/b05/base.xml
+EXPORT_EXIT=0                       # 426,534 B XML
+$ … --i tmp/b05/base.xml tmp/b05/base_rt.epe        → IMPORT_EXIT=0
+$ … --e tmp/b05/base_rt.epe tmp/b05/base_rt.xml     → EXPORT2_EXIT=0
+XML IDENTICAL
+EPE IDENTICAL
+1a9caf9c… *tmp/b05/base.xml   = 1a9caf9c… *tmp/b05/base_rt.xml
+cf49315a… *tmp/b05/base_rt.epe = cf49315a… *Builds/bm-002/…_civilian_01.epe
+```
+
+**3. Do step 1 is a node-insertion job.** The graph is `CParts` → a `CPartProp` tree (`CParts` + 6
+nodes: body `0` with `wheel_r_r 12`, `wheel_r_l 11`, `wheel_f_r 27`, `wheel_f_l 26`,
+`taillight_r_l 8`). A node cloned with a new `<object id="B10B10B1">`, `name`
+`sportsmuscle_headlight_f_l`, a new `name_hash` and `part_index` 42 imports cleanly (105,430 →
+105,638 B) and re-exports with the new part name present.
+
+**4. Both hash recipes are verified, not assumed.**
+Part `name_hash` / `_GUID` = `rbmhdr.hash_jenkins(<name>)`, 5/5 on shipped values
+(`sportsmuscle_wheel_f_l` 1432199802 exactly; `sportsmuscle_body` 3076414876 = −1218552420,
+`sportsmuscle_wheel_r_r` 2792115682 = −1502851614, `sportsmuscle_taillight_r_l` 3654365951 =
+−640601345, `Parts` 2770622556 = −1524344740 as int32). Module-path reference =
+`hash_jenkins("editor/entities/…/<module>.vmodc")` (B-09's root `damage` 670155287).
+
+## Done criteria, as run
+
+| # | criterion | result |
+|---|---|---|
+| 1 | `ConvertProperty` round-trips the built `.epe` to identical XML | **passes on the base file** (quoted above); there is no *built* file yet, so it is unproven for a B-05 output |
+| 2 | every weapon point, light and part name resolves | **not evaluated** — no `.epe` was written; the schema that makes it checkable is now recorded |
+| 3 | `.epe` object count = base + planned additions | **not evaluated** — base is **416** objects; the planned set cannot be fixed until step 2's object list is written |
+
+## Files changed by this session
+
+| file | change |
+|---|---|
+| `MODLOG.md` | `## B-05 start — intended change` and `## B-05 · entity-schema update — the weapon blocker is lifted` |
+| `GRAB_BACKLOG.md` §12 | the `B-05` row: `doing: …` with the lifted-blocker evidence |
+| `tmp/freebuff/reports/B-05.md` | this report |
+| `E:\Modding\_JC3grab\epe_schema\{apc_debug.epe,apc_debug.xml}`, `tmp/b05/*` | the schema cache (outside the repo, R10) and the scratch of the two experiments |
+
+No `Tools/scripts/` generator, no `Working/Entity/`, no `Builds/bm-003/`, no `.epe` in any build; the
+game install was only read; no dropzone write, no launch, no git.
+
+## To finish it (one pass, no guesses left)
+
+Write `Tools/scripts/bm_entity.py --write/--check`: export `bm-002`'s `.epe`; insert the 19
+`CPartProp` nodes (hash recipe above); clone the APC's `CBulletWeaponBase` once per T-11 weapon with
+`name`/`weapon_id`/`weapon_type`/`world` and its `SWeaponPoint` worlds from `SOCKETS_JC3.json`; clone
+`SVehicleLight` rows from `t14_lights.json`; set the 77 interaction `world` translations from
+`t9_interaction.json`; set root `health`/`invulnerable` from `t10_damage_edits.json`; import, re-export
+and `cmp` the XML; then stage `Builds/bm-003` from `bm-002`, patch the `.toc` record for the `.epe`,
+and run the three Done checks (object count = 416 + the written objects).

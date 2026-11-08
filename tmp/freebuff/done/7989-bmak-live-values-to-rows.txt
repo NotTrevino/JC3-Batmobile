@@ -1,0 +1,12 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/bmak-live-values-to-rows.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/bmak-gog-live-batmobile-reader.md
+Take the live Arkham Knight values that reports/bmak-gog-live-batmobile-reader.md read, or the ones it left UNKNOWN: the LT hold time, the eject charge window, the steering curve at speed, HealthRecoverRate, the summon/homing numbers, and the physics asset in use.
+For each, propose the translation-ledger change:
+- the row id in Working/Translation/T_ROWS.jsonl;
+- the current value and its provenance;
+- the new value, with provenance class "read (live)";
+- the hook module or data file that will carry it (7983 gamepad, 7986 regen/flip, 7987 handling).
+Report only; do not edit the ledger (the 903x apply chain owns it). Flag any live value that contradicts an operator fact in ROADMAP.md section 7, and keep both. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

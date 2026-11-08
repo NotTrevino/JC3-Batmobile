@@ -1,0 +1,2288 @@
+{
+ "task": "G3-09b",
+ "image": {
+  "path": "D:/Games/Just Cause 3/JustCause3.exe",
+  "size": 51083264,
+  "base": "0x140000000",
+  "sections": [
+   {
+    "name": ".text",
+    "va": "0x140001000",
+    "vsize": 36310271,
+    "raw_size": 36310528
+   },
+   {
+    "name": ".rdata",
+    "va": "0x1422a2000",
+    "vsize": 11102522,
+    "raw_size": 11102720
+   },
+   {
+    "name": ".data",
+    "va": "0x142d39000",
+    "vsize": 2553112,
+    "raw_size": 956928
+   },
+   {
+    "name": ".pdata",
+    "va": "0x142fa9000",
+    "vsize": 2264040,
+    "raw_size": 2264064
+   },
+   {
+    "name": ".tls",
+    "va": "0x1431d2000",
+    "vsize": 6225,
+    "raw_size": 6656
+   },
+   {
+    "name": ".rsrc",
+    "va": "0x1431d4000",
+    "vsize": 17536,
+    "raw_size": 17920
+   },
+   {
+    "name": ".reloc",
+    "va": "0x1431d9000",
+    "vsize": 423390,
+    "raw_size": 423424
+   }
+  ],
+  "functions_in_pdata": 188670
+ },
+ "schema_block": {
+  "run_length": 216,
+  "first_va": 5406957251,
+  "last_va": 5406961660,
+  "strings": [
+   {
+    "va": 5406957251,
+    "file_offset": 38244547,
+    "name": "AirplaneAI",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957262,
+    "file_offset": 38244558,
+    "name": "Input_Flight_Thrust",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957282,
+    "file_offset": 38244578,
+    "name": "Input_Flight_Pitch",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957301,
+    "file_offset": 38244597,
+    "name": "Input_Flight_Roll",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957319,
+    "file_offset": 38244615,
+    "name": "Input_Flight_Yaw",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957336,
+    "file_offset": 38244632,
+    "name": "Limit_Flight_Speed",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957355,
+    "file_offset": 38244651,
+    "name": "Input_Taxi_Speed",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957372,
+    "file_offset": 38244668,
+    "name": "Input_Taxi_Turn",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957388,
+    "file_offset": 38244684,
+    "name": "Limit_Taxi_Speed",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957405,
+    "file_offset": 38244701,
+    "name": "Speed_Takeoff",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957419,
+    "file_offset": 38244715,
+    "name": "Speed_Cruising",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957434,
+    "file_offset": 38244730,
+    "name": "Speed_Landing",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957448,
+    "file_offset": 38244744,
+    "name": "Speed_Taxi",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957459,
+    "file_offset": 38244755,
+    "name": "Altitude_Cruising",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957477,
+    "file_offset": 38244773,
+    "name": "Limit_Path_Altitude",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957497,
+    "file_offset": 38244793,
+    "name": "Limit_Path_Radius",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957515,
+    "file_offset": 38244811,
+    "name": "Limit_Path_Jump_Scalar_Flight",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957545,
+    "file_offset": 38244841,
+    "name": "Limit_Path_Jump_Scalar_Taxi",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957573,
+    "file_offset": 38244869,
+    "name": "Limit_Pitch",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957585,
+    "file_offset": 38244881,
+    "name": "Limit_Roll",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957596,
+    "file_offset": 38244892,
+    "name": "Limit_Full_Roll",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957612,
+    "file_offset": 38244908,
+    "name": "Limit_Pitch_Yaw_Switch",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957635,
+    "file_offset": 38244931,
+    "name": "Stunt_BarrelRoll",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957652,
+    "file_offset": 38244948,
+    "name": "Stunt_Loop",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957663,
+    "file_offset": 38244959,
+    "name": "Stunt_UTurn",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957675,
+    "file_offset": 38244971,
+    "name": "HelicopterAI",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957688,
+    "file_offset": 38244984,
+    "name": "Input_Pitch",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957700,
+    "file_offset": 38244996,
+    "name": "Input_Roll",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957711,
+    "file_offset": 38245007,
+    "name": "Input_Yaw",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957721,
+    "file_offset": 38245017,
+    "name": "Input_Altitude",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957736,
+    "file_offset": 38245032,
+    "name": "Input_Altitude_Landing",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957759,
+    "file_offset": 38245055,
+    "name": "Limit_Path_Jump_Scalar",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957782,
+    "file_offset": 38245078,
+    "name": "Limit_Speed_Flight",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957801,
+    "file_offset": 38245097,
+    "name": "Limit_Speed_Hover",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957819,
+    "file_offset": 38245115,
+    "name": "CarAI",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957825,
+    "file_offset": 38245121,
+    "name": "Input_Speed",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957837,
+    "file_offset": 38245133,
+    "name": "Input_Turn",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957848,
+    "file_offset": 38245144,
+    "name": "Limit_Speed",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957860,
+    "file_offset": 38245156,
+    "name": "Limit_IsLargeVehicle",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957881,
+    "file_offset": 38245177,
+    "name": "BikeAI",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957888,
+    "file_offset": 38245184,
+    "name": "Input_Settings",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957903,
+    "file_offset": 38245199,
+    "name": "Input_Lean",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957914,
+    "file_offset": 38245210,
+    "name": "Bike_Lean_Limit",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957930,
+    "file_offset": 38245226,
+    "name": "Bike_Full_Lean_Angle",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957951,
+    "file_offset": 38245247,
+    "name": "BoatAI",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957958,
+    "file_offset": 38245254,
+    "name": "Limit_Speed_Cruising",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957979,
+    "file_offset": 38245275,
+    "name": "Limit_Path_Depth",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406957996,
+    "file_offset": 38245292,
+    "name": "A[float]",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958005,
+    "file_offset": 38245301,
+    "name": "A[uint8]",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958014,
+    "file_offset": 38245310,
+    "name": "TriangulatedMesh",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958031,
+    "file_offset": 38245327,
+    "name": "vertices",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958040,
+    "file_offset": 38245336,
+    "name": "triangles",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958050,
+    "file_offset": 38245346,
+    "name": "PartWaterInteractionElement",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958078,
+    "file_offset": 38245374,
+    "name": "from_part",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958088,
+    "file_offset": 38245384,
+    "name": "hull",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958093,
+    "file_offset": 38245389,
+    "name": "A[PartWaterInteractionElement]",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958124,
+    "file_offset": 38245420,
+    "name": "WaterInteraction",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958141,
+    "file_offset": 38245437,
+    "name": "part_elements",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958155,
+    "file_offset": 38245451,
+    "name": "will_sink",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958165,
+    "file_offset": 38245461,
+    "name": "angular_drag_pitch",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958184,
+    "file_offset": 38245480,
+    "name": "angular_drag_yaw",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958201,
+    "file_offset": 38245497,
+    "name": "angular_drag_roll",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958219,
+    "file_offset": 38245515,
+    "name": "angular_drag_roll_at_speed",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958246,
+    "file_offset": 38245542,
+    "name": "angular_drag_ref_speed_kmph",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958274,
+    "file_offset": 38245570,
+    "name": "drag_falloff_power",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958293,
+    "file_offset": 38245589,
+    "name": "pressure_drag_2",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958309,
+    "file_offset": 38245605,
+    "name": "suction_drag",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958322,
+    "file_offset": 38245618,
+    "name": "suction_drag_2",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958337,
+    "file_offset": 38245633,
+    "name": "depth_full_drag",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958353,
+    "file_offset": 38245649,
+    "name": "add_skin_friction_laminar",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958379,
+    "file_offset": 38245675,
+    "name": "add_skin_friction_turbulent",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958407,
+    "file_offset": 38245703,
+    "name": "reference_drag_speed_ms",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958431,
+    "file_offset": 38245727,
+    "name": "anti_penetration_max_accel",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958458,
+    "file_offset": 38245754,
+    "name": "anti_penetration_multiplier",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958486,
+    "file_offset": 38245782,
+    "name": "anti_penetration_power",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958509,
+    "file_offset": 38245805,
+    "name": "depth_full_anti_penetration",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958537,
+    "file_offset": 38245833,
+    "name": "planing_vs_forward_speed_ms",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958565,
+    "file_offset": 38245861,
+    "name": "buoyancy_factor_vs_speed_ms",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958593,
+    "file_offset": 38245889,
+    "name": "flat_water_vs_speed_ms",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958616,
+    "file_offset": 38245912,
+    "name": "Tint",
+    "schema_member": true,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958621,
+    "file_offset": 38245917,
+    "name": "occurrence",
+    "schema_member": true,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958632,
+    "file_offset": 38245928,
+    "name": "tint_r",
+    "schema_member": true,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958639,
+    "file_offset": 38245935,
+    "name": "tint_g",
+    "schema_member": true,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958646,
+    "file_offset": 38245942,
+    "name": "tint_b",
+    "schema_member": true,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958653,
+    "file_offset": 38245949,
+    "name": "specular_gloss",
+    "schema_member": true,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958668,
+    "file_offset": 38245964,
+    "name": "metallic",
+    "schema_member": true,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958677,
+    "file_offset": 38245973,
+    "name": "clear_coat",
+    "schema_member": true,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958688,
+    "file_offset": 38245984,
+    "name": "A[Tint]",
+    "schema_member": true,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958696,
+    "file_offset": 38245992,
+    "name": "Palette",
+    "schema_member": true,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958704,
+    "file_offset": 38246000,
+    "name": "tints",
+    "schema_member": true,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958710,
+    "file_offset": 38246006,
+    "name": "A[int16]",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958719,
+    "file_offset": 38246015,
+    "name": "Decals",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958726,
+    "file_offset": 38246022,
+    "name": "decal_indices",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958740,
+    "file_offset": 38246036,
+    "name": "decal_counts",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958753,
+    "file_offset": 38246049,
+    "name": "PartTuning",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958764,
+    "file_offset": 38246060,
+    "name": "hello_world",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958776,
+    "file_offset": 38246072,
+    "name": "magnetic_sensitivity",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958797,
+    "file_offset": 38246093,
+    "name": "A[PartTuning]",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958811,
+    "file_offset": 38246107,
+    "name": "PartTunings",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958823,
+    "file_offset": 38246119,
+    "name": "part_tunings",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958836,
+    "file_offset": 38246132,
+    "name": "ExtendedExposedVariable",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958860,
+    "file_offset": 38246156,
+    "name": "expression",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958871,
+    "file_offset": 38246167,
+    "name": "A[ExtendedExposedVariable]",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958898,
+    "file_offset": 38246194,
+    "name": "ExtendedExposedVariables",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958923,
+    "file_offset": 38246219,
+    "name": "variables",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958933,
+    "file_offset": 38246229,
+    "name": "ExtendedEffectUsage",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958953,
+    "file_offset": 38246249,
+    "name": "activation_expression",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958975,
+    "file_offset": 38246271,
+    "name": "deactivation_expression",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406958999,
+    "file_offset": 38246295,
+    "name": "A[ExtendedEffectUsage]",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959022,
+    "file_offset": 38246318,
+    "name": "ExtendedEffectUsages",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959043,
+    "file_offset": 38246339,
+    "name": "usages",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959050,
+    "file_offset": 38246346,
+    "name": "PartBehavior",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959063,
+    "file_offset": 38246359,
+    "name": "behavior_type",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959077,
+    "file_offset": 38246373,
+    "name": "behavior_name",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959091,
+    "file_offset": 38246387,
+    "name": "A[PartBehavior]",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959107,
+    "file_offset": 38246403,
+    "name": "PartType",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959116,
+    "file_offset": 38246412,
+    "name": "part_behaviors",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959131,
+    "file_offset": 38246427,
+    "name": "Default:529D3A81_6840E768",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959157,
+    "file_offset": 38246453,
+    "name": "Default:529D3A81_D69D4712",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959183,
+    "file_offset": 38246479,
+    "name": "Default:C0950F5F_A4731157",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959209,
+    "file_offset": 38246505,
+    "name": "Default:43EA28F5_BD14B573",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959235,
+    "file_offset": 38246531,
+    "name": "Default:9E5090AF_D0310F6E",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959261,
+    "file_offset": 38246557,
+    "name": "Default:9E5090AF_44EDBF2D",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959287,
+    "file_offset": 38246583,
+    "name": "Default:9E5090AF_E7108A8A",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959313,
+    "file_offset": 38246609,
+    "name": "Default:9E5090AF_4B29860D",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959339,
+    "file_offset": 38246635,
+    "name": "Default:9E5090AF_BB41DDDB",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959365,
+    "file_offset": 38246661,
+    "name": "Default:36BB2144_D68FED1E",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959391,
+    "file_offset": 38246687,
+    "name": "Default:8CE64096_A4731157",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959417,
+    "file_offset": 38246713,
+    "name": "Default:BBCDC7F2_A4731157",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959443,
+    "file_offset": 38246739,
+    "name": "Default:89F6C32_90A65463",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959468,
+    "file_offset": 38246764,
+    "name": "Default:BBCBB145_A6CD375A",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959494,
+    "file_offset": 38246790,
+    "name": "Default:BBCBB145_1A2B3476",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959520,
+    "file_offset": 38246816,
+    "name": "Default:679E0368_F8B35ACC",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959546,
+    "file_offset": 38246842,
+    "name": "Default:4F30F46B_617ACC4F",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959572,
+    "file_offset": 38246868,
+    "name": "Default:D74FB627_8946D97",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959597,
+    "file_offset": 38246893,
+    "name": "Default:D3F9E92B_1A221B4D",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959623,
+    "file_offset": 38246919,
+    "name": "Default:D3F9E92B_D18407E9",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959649,
+    "file_offset": 38246945,
+    "name": "Default:D3F9E92B_C5F45610",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959675,
+    "file_offset": 38246971,
+    "name": "Default:605D1006_BD14B573",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959701,
+    "file_offset": 38246997,
+    "name": "Default:605D1006_44EDBF2D",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959727,
+    "file_offset": 38247023,
+    "name": "Default:605D1006_E7108A8A",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959753,
+    "file_offset": 38247049,
+    "name": "Default:605D1006_D0310F6E",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959779,
+    "file_offset": 38247075,
+    "name": "Default:5A5BFF51_52C35A51",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959805,
+    "file_offset": 38247101,
+    "name": "Default:5A5BFF51_2A3FA301",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959831,
+    "file_offset": 38247127,
+    "name": "Default:5A5BFF51_E1A271FF",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959857,
+    "file_offset": 38247153,
+    "name": "Default:BF54EF46_D31AB684",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959883,
+    "file_offset": 38247179,
+    "name": "Default:BF54EF46_CEAC918C",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959909,
+    "file_offset": 38247205,
+    "name": "Default:BF54EF46_57582D19",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959935,
+    "file_offset": 38247231,
+    "name": "Default:BF54EF46_828C6269",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959961,
+    "file_offset": 38247257,
+    "name": "Default:102B4AC3_DD75862A",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406959987,
+    "file_offset": 38247283,
+    "name": "Default:102B4AC3_F7A2D3B1",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960013,
+    "file_offset": 38247309,
+    "name": "Default:A98B97E0_D31AB684",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960039,
+    "file_offset": 38247335,
+    "name": "Default:A98B97E0_CEAC918C",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960065,
+    "file_offset": 38247361,
+    "name": "Default:A98B97E0_5B505995",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960091,
+    "file_offset": 38247387,
+    "name": "Default:A98B97E0_C74C7555",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960117,
+    "file_offset": 38247413,
+    "name": "Default:A98B97E0_C6E77061",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960143,
+    "file_offset": 38247439,
+    "name": "Default:E6B0FEB_CEAC918C",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960168,
+    "file_offset": 38247464,
+    "name": "Default:E6B0FEB_A4731157",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960193,
+    "file_offset": 38247489,
+    "name": "Default:E6B0FEB_3742BD87",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960218,
+    "file_offset": 38247514,
+    "name": "Default:C48F2AC9_D0310F6E",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960244,
+    "file_offset": 38247540,
+    "name": "Default:C48F2AC9_44EDBF2D",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960270,
+    "file_offset": 38247566,
+    "name": "Default:C48F2AC9_E7108A8A",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960296,
+    "file_offset": 38247592,
+    "name": "Default:C48F2AC9_4B29860D",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960322,
+    "file_offset": 38247618,
+    "name": "Default:C48F2AC9_BB41DDDB",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960348,
+    "file_offset": 38247644,
+    "name": "Default:EE060E57_2E3E80D0",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960374,
+    "file_offset": 38247670,
+    "name": "Default:EE060E57_EF9FB3E8",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960400,
+    "file_offset": 38247696,
+    "name": "Default:68D69DD0_CEAC918C",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960426,
+    "file_offset": 38247722,
+    "name": "Default:68D69DD0_D5BC62F8",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960452,
+    "file_offset": 38247748,
+    "name": "Default:68D69DD0_8ABA5272",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960478,
+    "file_offset": 38247774,
+    "name": "Default:68D69DD0_12A0FF9D",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960504,
+    "file_offset": 38247800,
+    "name": "Default:E8EC836_76E26E05",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960529,
+    "file_offset": 38247825,
+    "name": "Default:E8EC836_D52B1188",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960554,
+    "file_offset": 38247850,
+    "name": "Default:E8EC836_57CB7EB3",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960579,
+    "file_offset": 38247875,
+    "name": "Default:E8EC836_EE44D87D",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960604,
+    "file_offset": 38247900,
+    "name": "Default:B0B5664A_CEAC918C",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960630,
+    "file_offset": 38247926,
+    "name": "Default:9B9BAF82_CA1A7B34",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960656,
+    "file_offset": 38247952,
+    "name": "Default:9B9BAF82_57CB7EB3",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960682,
+    "file_offset": 38247978,
+    "name": "Default:B2EC143C_CEAC918C",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960708,
+    "file_offset": 38248004,
+    "name": "Default:B2EC143C_98E0AB63",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960734,
+    "file_offset": 38248030,
+    "name": "Default:B2EC143C_121AC582",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960760,
+    "file_offset": 38248056,
+    "name": "Default:B2EC143C_DA9272F",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960785,
+    "file_offset": 38248081,
+    "name": "Default:B2EC143C_B9FC2749",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960811,
+    "file_offset": 38248107,
+    "name": "Default:3C3EBDB_7DD76FFF",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960836,
+    "file_offset": 38248132,
+    "name": "Default:971A0A42_957E0CBF",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960862,
+    "file_offset": 38248158,
+    "name": "Default:971A0A42_8846A31D",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960888,
+    "file_offset": 38248184,
+    "name": "Default:971A0A42_FE9AB644",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960914,
+    "file_offset": 38248210,
+    "name": "Default:971A0A42_EA606086",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960940,
+    "file_offset": 38248236,
+    "name": "Default:83BBC1E_D31AB684",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960965,
+    "file_offset": 38248261,
+    "name": "Default:83BBC1E_11CD030F",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406960990,
+    "file_offset": 38248286,
+    "name": "Default:83BBC1E_5990563D",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406961015,
+    "file_offset": 38248311,
+    "name": "Default:83BBC1E_CE8CC494",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406961040,
+    "file_offset": 38248336,
+    "name": "Default:83BBC1E_3510388C",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406961065,
+    "file_offset": 38248361,
+    "name": "Default:83BBC1E_E910EC15",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406961090,
+    "file_offset": 38248386,
+    "name": "Default:83BBC1E_18B5587F",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406961115,
+    "file_offset": 38248411,
+    "name": "Default:2F3643FD_CEAC918C",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406961141,
+    "file_offset": 38248437,
+    "name": "Default:82B4F7A1_D31AB684",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406961167,
+    "file_offset": 38248463,
+    "name": "Default:CF09CD96_D31AB684",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406961193,
+    "file_offset": 38248489,
+    "name": "Default:D95D1C62_D31AB684",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406961219,
+    "file_offset": 38248515,
+    "name": "Default:D95D1C62_4615CF99",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406961245,
+    "file_offset": 38248541,
+    "name": "Default:B361CBB_D31AB684",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406961270,
+    "file_offset": 38248566,
+    "name": "Default:A44B60A9_D31AB684",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406961296,
+    "file_offset": 38248592,
+    "name": "Default:A44B60A9_963CD12B",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406961322,
+    "file_offset": 38248618,
+    "name": "Default:A38A3E72_D31AB684",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406961348,
+    "file_offset": 38248644,
+    "name": "Default:132B517B_D31AB684",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406961374,
+    "file_offset": 38248670,
+    "name": "Default:486281BA_7106491E",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406961400,
+    "file_offset": 38248696,
+    "name": "Default:451B0905_38A28228",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406961426,
+    "file_offset": 38248722,
+    "name": "Default:451B0905_6B59E5A5",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406961452,
+    "file_offset": 38248748,
+    "name": "Default:451B0905_65D85E03",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406961478,
+    "file_offset": 38248774,
+    "name": "Default:DCED0396_11CD030F",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406961504,
+    "file_offset": 38248800,
+    "name": "Default:DCED0396_6704AC9B",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406961530,
+    "file_offset": 38248826,
+    "name": "Default:D7FD9895_42DD61D8",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406961556,
+    "file_offset": 38248852,
+    "name": "Default:4E0CB728_2E7ED30A",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406961582,
+    "file_offset": 38248878,
+    "name": "Default:4E0CB728_50DEF9F9",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406961608,
+    "file_offset": 38248904,
+    "name": "Default:659475E9_6171BAAC",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406961634,
+    "file_offset": 38248930,
+    "name": "Default:659475E9_C2F0980F",
+    "schema_member": false,
+    "code_refs": 0
+   },
+   {
+    "va": 5406961660,
+    "file_offset": 38248956,
+    "name": "Default:3F5642E3_D31AB684",
+    "schema_member": false,
+    "code_refs": 0
+   }
+  ],
+  "schema_order_present": [
+   "Tint",
+   "occurrence",
+   "tint_r",
+   "tint_g",
+   "tint_b",
+   "specular_gloss",
+   "metallic",
+   "clear_coat"
+  ],
+  "schema_order_contiguous": true,
+  "schema_member_code_refs": 0
+ },
+ "tone": {
+  "ToneMapping": {
+   "occurrences": 0,
+   "rows": [],
+   "code_refs_total": 0
+  },
+  "ToneMap": {
+   "occurrences": 0,
+   "rows": [],
+   "code_refs_total": 0
+  },
+  "Exposure": {
+   "occurrences": 3,
+   "rows": [
+    {
+     "va": 5405612369,
+     "file_offset": 36899665,
+     "code_refs": 0
+    },
+    {
+     "va": 5405617428,
+     "file_offset": 36904724,
+     "code_refs": 0
+    },
+    {
+     "va": 5407044912,
+     "file_offset": 38332208,
+     "code_refs": 0
+    }
+   ],
+   "code_refs_total": 0
+  },
+  "exposure": {
+   "occurrences": 1,
+   "rows": [
+    {
+     "va": 5405617393,
+     "file_offset": 36904689,
+     "code_refs": 0
+    }
+   ],
+   "code_refs_total": 0
+  }
+ },
+ "paint": [
+  {
+   "function": [
+    5369779872,
+    5369780330
+   ],
+   "bytes": 458,
+   "direct_refs": [
+    {
+     "at": 5369780071,
+     "name_va": 5405614472,
+     "name": "CarPaintMM"
+    }
+   ],
+   "calls": [
+    {
+     "at": 5369779929,
+     "target": 5395363568
+    },
+    {
+     "at": 5369779952,
+     "target": 5395363568
+    },
+    {
+     "at": 5369779975,
+     "target": 5395363568
+    },
+    {
+     "at": 5369779995,
+     "target": 5395363568
+    },
+    {
+     "at": 5369780015,
+     "target": 5395363568
+    },
+    {
+     "at": 5369780035,
+     "target": 5395363568
+    },
+    {
+     "at": 5369780058,
+     "target": 5395363712
+    },
+    {
+     "at": 5369780078,
+     "target": 5395363568
+    },
+    {
+     "at": 5369780098,
+     "target": 5395363568
+    },
+    {
+     "at": 5369780118,
+     "target": 5395363568
+    },
+    {
+     "at": 5369780141,
+     "target": 5395363568
+    },
+    {
+     "at": 5369780164,
+     "target": 5395363568
+    },
+    {
+     "at": 5369780187,
+     "target": 5395363568
+    },
+    {
+     "at": 5369780210,
+     "target": 5395363712
+    },
+    {
+     "at": 5369780260,
+     "target": 5386641824
+    },
+    {
+     "at": 5369780277,
+     "target": 5395363712
+    },
+    {
+     "at": 5369780306,
+     "target": 5400932736
+    }
+   ],
+   "call_targets": [
+    5386641824,
+    5395363568,
+    5395363712,
+    5400932736
+   ],
+   "car_paint_names": [
+    "CarOutline",
+    "CarOutlineDeform",
+    "CarOutlineSkinned",
+    "CarPaintMM",
+    "CarPaintMMPreZVelocity",
+    "CarPaintMMPreZVelocity_Deform",
+    "CarPaintMMPreZVelocity_Skinned",
+    "CarPaintMMShadow",
+    "CarPaintMMShadow_Deform",
+    "CarPaintMMShadow_Skinned",
+    "CarPaintMM_Deform",
+    "CarPaintMM_Skinned"
+   ],
+   "name_count": 15,
+   "format_strings": [
+    {
+     "at": 5369780243,
+     "name": "CarLight%s",
+     "name_va": 5405614336,
+     "ins": "lea r8, [rip + 0x222c8e6]"
+    }
+   ],
+   "constants": [],
+   "stores16": []
+  },
+  {
+   "function": [
+    5369784320,
+    5369785085
+   ],
+   "bytes": 765,
+   "direct_refs": [
+    {
+     "at": 5369784674,
+     "name_va": 5405614472,
+     "name": "CarPaintMM"
+    }
+   ],
+   "calls": [
+    {
+     "at": 5369784385,
+     "target": 5395363568
+    },
+    {
+     "at": 5369784408,
+     "target": 5395363568
+    },
+    {
+     "at": 5369784431,
+     "target": 5395363568
+    },
+    {
+     "at": 5369784454,
+     "target": 5395363712
+    },
+    {
+     "at": 5369784477,
+     "target": 5395363568
+    },
+    {
+     "at": 5369784500,
+     "target": 5395363568
+    },
+    {
+     "at": 5369784523,
+     "target": 5395363568
+    },
+    {
+     "at": 5369784546,
+     "target": 5395363712
+    },
+    {
+     "at": 5369784569,
+     "target": 5395363712
+    },
+    {
+     "at": 5369784592,
+     "target": 5395363712
+    },
+    {
+     "at": 5369784615,
+     "target": 5395363712
+    },
+    {
+     "at": 5369784638,
+     "target": 5395363712
+    },
+    {
+     "at": 5369784661,
+     "target": 5395363712
+    },
+    {
+     "at": 5369784681,
+     "target": 5395363568
+    },
+    {
+     "at": 5369784701,
+     "target": 5395363568
+    },
+    {
+     "at": 5369784721,
+     "target": 5395363568
+    },
+    {
+     "at": 5369784741,
+     "target": 5395363568
+    },
+    {
+     "at": 5369784761,
+     "target": 5395363568
+    },
+    {
+     "at": 5369784781,
+     "target": 5395363568
+    },
+    {
+     "at": 5369784804,
+     "target": 5395363712
+    },
+    {
+     "at": 5369784827,
+     "target": 5395363568
+    },
+    {
+     "at": 5369784850,
+     "target": 5395363568
+    },
+    {
+     "at": 5369784873,
+     "target": 5395363568
+    },
+    {
+     "at": 5369784896,
+     "target": 5395363712
+    },
+    {
+     "at": 5369785006,
+     "target": 5395363712
+    },
+    {
+     "at": 5369785053,
+     "target": 5400932736
+    }
+   ],
+   "call_targets": [
+    5395363568,
+    5395363712,
+    5400932736
+   ],
+   "car_paint_names": [
+    "CarOutline",
+    "CarOutlineDeform",
+    "CarOutlineSkinned",
+    "CarPaintMM",
+    "CarPaintMM%s%s%s",
+    "CarPaintMMPreZVelocity",
+    "CarPaintMMPreZVelocity_Deform",
+    "CarPaintMMPreZVelocity_Skinned",
+    "CarPaintMMShadow",
+    "CarPaintMMShadow_Deform",
+    "CarPaintMMShadow_Skinned",
+    "CarPaintMM_Deform",
+    "CarPaintMM_Deform_RSM",
+    "CarPaintMM_RSM",
+    "CarPaintMM_Skinned",
+    "CarPaintMM_Skinned_RSM",
+    "CarPaintRSM"
+   ],
+   "name_count": 25,
+   "format_strings": [
+    {
+     "at": 5369784971,
+     "name": "CarPaintMM%s%s%s",
+     "name_va": 5405614696,
+     "ins": "lea rdx, [rip + 0x222b7d6]"
+    }
+   ],
+   "constants": [],
+   "stores16": []
+  },
+  {
+   "function": [
+    5370098736,
+    5370099939
+   ],
+   "bytes": 1203,
+   "direct_refs": [
+    {
+     "at": 5370098820,
+     "name_va": 5405614472,
+     "name": "CarPaintMM"
+    }
+   ],
+   "calls": [
+    {
+     "at": 5370098831,
+     "target": 5386641696
+    },
+    {
+     "at": 5370098916,
+     "target": 5369554320
+    },
+    {
+     "at": 5370098968,
+     "target": 5369784320
+    },
+    {
+     "at": 5370099101,
+     "target": 5395263232
+    },
+    {
+     "at": 5370099271,
+     "target": 5395263232
+    },
+    {
+     "at": 5370099398,
+     "target": 5395263232
+    },
+    {
+     "at": 5370099456,
+     "target": 5395263232
+    },
+    {
+     "at": 5370099548,
+     "target": 5395263232
+    },
+    {
+     "at": 5370099649,
+     "target": 5395263232
+    },
+    {
+     "at": 5370099667,
+     "target": 5369785088
+    },
+    {
+     "at": 5370099795,
+     "target": 5395262912
+    },
+    {
+     "at": 5370099863,
+     "target": 5395262912
+    },
+    {
+     "at": 5370099885,
+     "target": 5400932736
+    }
+   ],
+   "call_targets": [
+    5369554320,
+    5369784320,
+    5369785088,
+    5386641696,
+    5395262912,
+    5395263232,
+    5400932736
+   ],
+   "car_paint_names": [
+    "CarPaintMM"
+   ],
+   "name_count": 1,
+   "format_strings": [],
+   "constants": [
+    {
+     "at": 5370098973,
+     "const_va": 5405610240,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "ins": "movdqa xmm10, xmmword ptr [rip + 0x21ddbda]"
+    },
+    {
+     "at": 5370098991,
+     "const_va": 5405610208,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "ins": "movdqa xmm0, xmmword ptr [rip + 0x21ddba9]"
+    },
+    {
+     "at": 5370099007,
+     "const_va": 5405610224,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "ins": "movdqa xmm1, xmmword ptr [rip + 0x21ddba9]"
+    },
+    {
+     "at": 5370099023,
+     "const_va": 5405610256,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "ins": "movdqa xmm0, xmmword ptr [rip + 0x21ddbb9]"
+    },
+    {
+     "at": 5370099039,
+     "const_va": 5405610272,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "ins": "movdqa xmm1, xmmword ptr [rip + 0x21ddbb9]"
+    },
+    {
+     "at": 5370099055,
+     "const_va": 5405610288,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "ins": "movdqa xmm0, xmmword ptr [rip + 0x21ddbb9]"
+    },
+    {
+     "at": 5370099113,
+     "const_va": 5405610304,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "ins": "movdqa xmm0, xmmword ptr [rip + 0x21ddb8f]"
+    },
+    {
+     "at": 5370099147,
+     "const_va": 5405610320,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "ins": "movdqa xmm9, xmmword ptr [rip + 0x21ddb7c]"
+    },
+    {
+     "at": 5370099165,
+     "const_va": 5405610336,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "ins": "movdqa xmm8, xmmword ptr [rip + 0x21ddb7a]"
+    },
+    {
+     "at": 5370099183,
+     "const_va": 5405610352,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "ins": "movdqa xmm7, xmmword ptr [rip + 0x21ddb79]"
+    },
+    {
+     "at": 5370099199,
+     "const_va": 5405610384,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "ins": "movdqa xmm0, xmmword ptr [rip + 0x21ddb89]"
+    },
+    {
+     "at": 5370099215,
+     "const_va": 5405610368,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "ins": "movdqa xmm6, xmmword ptr [rip + 0x21ddb69]"
+    },
+    {
+     "at": 5370099292,
+     "const_va": 5405610400,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "ins": "movdqa xmm0, xmmword ptr [rip + 0x21ddb3c]"
+    },
+    {
+     "at": 5370099334,
+     "const_va": 5405610416,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "ins": "movdqa xmm0, xmmword ptr [rip + 0x21ddb22]"
+    },
+    {
+     "at": 5370099698,
+     "const_va": 5405610848,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "ins": "movaps xmm0, xmmword ptr [rip + 0x21ddb67]"
+    }
+   ],
+   "stores16": [
+    {
+     "at": 5370098774,
+     "ins": "movaps xmmword ptr [rax - 0x28], xmm6"
+    },
+    {
+     "at": 5370098778,
+     "ins": "movaps xmmword ptr [rax - 0x38], xmm7"
+    },
+    {
+     "at": 5370098782,
+     "ins": "movaps xmmword ptr [rax - 0x48], xmm8"
+    },
+    {
+     "at": 5370098787,
+     "ins": "movaps xmmword ptr [rax - 0x58], xmm9"
+    },
+    {
+     "at": 5370098792,
+     "ins": "movaps xmmword ptr [rax - 0x68], xmm10"
+    },
+    {
+     "at": 5370098982,
+     "ins": "movdqa xmmword ptr [rbp + 0x1e0], xmm10"
+    },
+    {
+     "at": 5370098999,
+     "ins": "movdqa xmmword ptr [rbp + 0x1f0], xmm0"
+    },
+    {
+     "at": 5370099015,
+     "ins": "movdqa xmmword ptr [rbp + 0x200], xmm1"
+    },
+    {
+     "at": 5370099031,
+     "ins": "movdqa xmmword ptr [rbp + 0x210], xmm0"
+    },
+    {
+     "at": 5370099047,
+     "ins": "movdqa xmmword ptr [rbp + 0x220], xmm1"
+    },
+    {
+     "at": 5370099063,
+     "ins": "movdqa xmmword ptr [rbp + 0x230], xmm0"
+    },
+    {
+     "at": 5370099121,
+     "ins": "movdqa xmmword ptr [rbp + 0xe0], xmm0"
+    },
+    {
+     "at": 5370099156,
+     "ins": "movdqa xmmword ptr [rbp + 0x100], xmm9"
+    },
+    {
+     "at": 5370099174,
+     "ins": "movdqa xmmword ptr [rbp + 0x110], xmm8"
+    },
+    {
+     "at": 5370099191,
+     "ins": "movdqa xmmword ptr [rbp + 0x120], xmm7"
+    },
+    {
+     "at": 5370099207,
+     "ins": "movdqa xmmword ptr [rbp + 0x130], xmm0"
+    },
+    {
+     "at": 5370099223,
+     "ins": "movdqa xmmword ptr [rbp + 0x140], xmm6"
+    },
+    {
+     "at": 5370099283,
+     "ins": "movdqa xmmword ptr [rbp + 0x160], xmm10"
+    },
+    {
+     "at": 5370099300,
+     "ins": "movdqa xmmword ptr [rbp + 0x170], xmm0"
+    },
+    {
+     "at": 5370099308,
+     "ins": "movdqa xmmword ptr [rbp + 0x180], xmm9"
+    },
+    {
+     "at": 5370099317,
+     "ins": "movdqa xmmword ptr [rbp + 0x190], xmm8"
+    },
+    {
+     "at": 5370099326,
+     "ins": "movdqa xmmword ptr [rbp + 0x1a0], xmm7"
+    },
+    {
+     "at": 5370099342,
+     "ins": "movdqa xmmword ptr [rbp + 0x1b0], xmm0"
+    },
+    {
+     "at": 5370099350,
+     "ins": "movdqa xmmword ptr [rbp + 0x1c0], xmm6"
+    },
+    {
+     "at": 5370099705,
+     "ins": "movaps xmmword ptr [rbp - 0x60], xmm0"
+    },
+    {
+     "at": 5370099709,
+     "ins": "movaps xmmword ptr [rbp - 0x50], xmm0"
+    },
+    {
+     "at": 5370099713,
+     "ins": "movaps xmmword ptr [rbp - 0x40], xmm0"
+    },
+    {
+     "at": 5370099717,
+     "ins": "movaps xmmword ptr [rbp - 0x30], xmm0"
+    },
+    {
+     "at": 5370099721,
+     "ins": "movaps xmmword ptr [rbp - 0x20], xmm0"
+    },
+    {
+     "at": 5370099725,
+     "ins": "movaps xmmword ptr [rbp - 0x10], xmm0"
+    },
+    {
+     "at": 5370099729,
+     "ins": "movaps xmmword ptr [rbp], xmm0"
+    },
+    {
+     "at": 5370099733,
+     "ins": "movaps xmmword ptr [rbp + 0x10], xmm0"
+    }
+   ]
+  }
+ ],
+ "measured": {
+  "schema_run_length": 216,
+  "schema_member_code_refs": 0,
+  "paint_functions": 3,
+  "paint_name_total": 1,
+  "tone_code_refs": 0,
+  "variant_format_present": true,
+  "tintcolor_occurrences": 0
+ }
+}

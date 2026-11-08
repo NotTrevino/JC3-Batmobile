@@ -1,5 +1,7 @@
 # JC3 Batmobile — Engineering Plan and Backlog
 
+> **2026-10-24: the single backlog is now [GRAB_BACKLOG.md](GRAB_BACKLOG.md) (unified).** This file is kept as history and evidence; for *what to do next*, follow the unified backlog.
+
 **Status:** rewritten 2026-10-21 from the live project state, then reprioritised the same day: **the
 GRAB step is the gate**. Nothing is tuned by hand and nothing is tested in game until the whole BmAK
 Batmobile (every package, object, material, texture, mesh, socket, animation, sound, particle, weapon
@@ -11,16 +13,26 @@ never grabbed** — 1 of 232 vehicle entities is decoded in depth, and 14 of van
 have never been opened. Handling and appearance work was therefore guessing at targets. The order
 was **G1 (finish BmAK) → G2 (grab JC3) → T (translate) → build once**, with the full picture in
 [GRAB_BACKLOG.md](GRAB_BACKLOG.md). **That gate is now closed (2026-10-23):** G1 is 423/423 fields,
-G2 is 99.998% of entries, the translation ledger is 86/112 in-scope rows resolved (76.8%), and
-test-085 carries 35 values. The next handling build is the four-row / six-value batch in
-`T3_COVERAGE.md` §4; probes that answer architectural questions are still allowed (test-083 is one).
+G2 is 99.999% of entries, the translation ledger is 97/113 in-scope rows resolved (85.8%), and
+test-085 carries 35 values. **test-087 failed and is withdrawn** (2026-10-23): its damage rows
+translated the Batmobile's ram *attack* as collision *defence* and turned impact damage on. The
+chain is in `Working/Translation/POSTMORTEM_DAMAGE.md`; the dropzone was restored to test-085 and now carries **test-088** (Batch B2 on top of it). The
+next build is the six handling values in `t5c_edits.json`, not cleared until each has a behaviour
+and a take that can fail. Probes that answer architectural questions are still allowed (test-083
+is one).
+The whole translation is now mapped before it executes — stages, batches, verification gates and
+the improvisation register — in [Working/Translation/T_PLAN.md](Working/Translation/T_PLAN.md).
 **Scope:** a lore-accurate Arkham Knight Batmobile, drivable in Just Cause 3 single-player, spawned
 from a **new Rebel Drop entry called "Batmobile"** (RD-1; reference implementation in
 `Research/1456340180_Rebel-Drop-Mod-V5.3`). The Kerner Serpente R
 (`v0300_car_kensington_sportsmuscle`) is the **donor/spawn convenience** — Rico spawns beside it at
 Mario's house, so every test launch is instant — not a design constraint; the donor may change once
 the G2-4 distributions can be compared.
-**Method:** every claim below is tied to a file, a tool run or a MODLOG section. Anything unproven is
+**Method (revised 2026-10-23, after test-087):** a value's provenance is not a translation. A row
+with no semantic bridge is `blocked`, never `class`; a build value outside the shipped range is a
+declared switch, not a value (`damage_audit.py`); and a requirement is carried by a *behaviour* row
+with a take that can fail, not by the member that sounds closest. See `POSTMORTEM_DAMAGE.md` §8.
+Every claim below is tied to a file, a tool run or a MODLOG section. Anything unproven is
 labelled **UNKNOWN** and appears in the risk/gate sections instead of the backlog as if it were known.
 
 **How to use this document:** §0 is the measured starting point · §3 is the phase order · §4 is the
@@ -35,10 +47,10 @@ anything downstream can be planned · §7 records what not to repeat.
 
 | Item | Value | Evidence |
 |---|---|---|
-| Live dropzone build | **test-083 (installed 2026-10-22)** — the LGT-1 probe: 082 + one vanilla light part exposed. `.ee` `C51B7AC8FC71` (10,736,926 B), `.toc` `3C3F72BA279C` (50,573 B) | `install.ps1 -Action Status`, hash match re-verified §115 |
+| Live dropzone build | **test-088 (installed 2026-10-23)** — Batch B2's 4 values over 3 rows, packed on test-085, so the live pair still carries test-085's 35 values over 16 rows: 35/35 and 4/4 read back through the `.toc`. `.ee` `5A79D8859D0DCD6D…79DF556F7860` (10,736,878 B), `.toc` `4FD6DB3C1E2B7DB9…C88541A0` (50,573 B). test-086 (camera probe) was driven and its values withdrawn — **not** installed | `install.ps1 -Action Status` == test-088's receipt; `verify_install.py` 9/9, run 2026-10-23. The same day's deploy test first found the dropzone still holding **test-087's** `.ee` (the postmortem rollback had never run); it was restored to 085 before 088 was packed on it |
 | Appearance build underneath | **test-082** (BUD-1: body lod1 44,608 tris, footprint 4,764/4,915 KB) | MODLOG §111 |
 | Post-install proof | `verify_install.py`: **9/9 checks**, installed pair read through its `.toc` | MODLOG §105–§106 |
-| Rollback points | **test-082** (full appearance build, no probe), **test-081**, **test-080**, **test-079**, **test-078**, **test-077**; raw 077 copy in `Builds/_rollback/pre078/` | `install.ps1 -Action Rollback<one of those>` |
+| Rollback points | **test-083** (`Builds/test-085/install.ps1 -Action Rollback083`), **test-082** (full appearance build, no probe), **test-081**, **test-080**, **test-079**, **test-078**, **test-077**; raw 077 copy in `Builds/_rollback/pre078/` | `install.ps1 -Action Rollback<one of those>` |
 | Extra dropzone file | `sound/fmod_banks/vehicles.bank`, 210,781,376 B (nitro swap from test-060) | `D:\Games\Just Cause 3\dropzone\...` |
 | Body mesh | Batmobile, true scale: 3.495 × 2.271 × 7.026 m, wheelbase 5.029 m, tyre Ø1.37 m, lod1 **44,608 tris** (31,139 until BUD-1, MODLOG §111) | MODLOG §70, §111, `Working/TrueScale/` |
 | Body materials | **17 blocks per LOD** (16 `CarPaintMM` + 1 `Window`), 28 Batmobile textures; 200 `CarPaintMM` + 35 `Window` blocks across 35 meshes; body/arches/undercarriage/turret albedo `0x837d86` (linear ×4), gloss 0.45 | `verify_install.py` on the installed `.ee`, MODLOG §107 |
@@ -330,7 +342,7 @@ so the pipeline is closed before any feature work starts.
 | ALB-2 | ✅ Albedo gain ×4 in linear space: daylight readability, measured against the reference | S |
 | BUD-1 | ✅ Model budget: use the hard cap (or trim LOD4/5) so body lod1 can exceed 31k tris and decimation stops tearing plate borders | M |
 | PHY-1 | ✅ Collision bodies decoded (MODLOG §115): 32 `RB_BodySetup` per vehicle → `Research/BatmobileGrab/PHYSICS.md` (bone, box extents, local centre). No chassis body exists — the driveable car's hull collision stays JC3-side | S |
-| QA-1 | Objective measurement harness (speed, 0–100, turning circle, screenshots) | M |
+| QA-1 | Objective measurement harness (speed, 0–100, turning circle, screenshots) — **instrument built and first take measured**: `qa1_hud.py` decodes the HUD speedometer from a take with no hand-read frames; take 1 gives 0–100 in 16.4 s / 257 m, peak 138 km/h, braking 3.5–3.8 m/s² (T-M1 and T-E1 closed, T-E4/T-K1 partial). The remaining manoeuvres are prescribed in `T_PLAN.md` §5 | M |
 | LGT-1 | Batmobile lights module + light parts (`has_lights`, `_LIG` anchors) — **decoded 2026-10-22** (MODLOG §112): the 21 vanilla entries all name parts our entity does not expose; a vanilla light part is `CarLight` + `Window`, static; our body is static and the build has **no `CarLight` block**. Next: the one-variable part-exposure probe, then light parts | M |
 | LGT-2 | CarLight/emissive block so lights have an emitter source | S |
 | PRT-1 | Parts cleanup: drop the two dead door parts, name parts for the lights/weapons work | S |

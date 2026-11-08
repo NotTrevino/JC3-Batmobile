@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/transform-visual-build.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/battle-silhouette-table.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-moving-parts-animation.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-mode-swap-prototype.md
+Author the pursuit-to-battle transformation visual. Inputs: Working/Appearance/BATTLE_SILHOUETTE.md, the 9172 tree Builds/bm-RC5-parts, the mode swap prototype report of 7984, and tmp/freebuff/reports/transform-anim-to-hinges.md. Key times from BmAK: about 2 s total. Create Builds/bm-RC5-transform from the parts tree and write the hinge or driver data for each part in the table: angles at pursuit and battle, the key times (within one frame at 30 fps), and the easing source. Where JC3 animation length or axis count falls short, name the gap and author the substitute (extra part, chained hinges, shortened tracks). Script Tools/scripts/rc5_transform.py (--write, --check). Do not wire the trigger; that belongs to the mode branch. Done check: every moving part in the table has a driver with both pose angles and times, the total time reads 2 s within one frame, and the model KB delta is stated. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

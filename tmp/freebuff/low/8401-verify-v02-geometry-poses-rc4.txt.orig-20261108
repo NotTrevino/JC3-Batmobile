@@ -1,0 +1,16 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-v02-geometry-poses-rc4.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-07 (rewritten from the 2026-11-06 brief by review 8399)
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/review-build-wave.md
+Phase V-02 on Builds/bm-RC4. Templates v02_geometry.py and v02_render.py; output Builds/bm-RC4/verify/geometry.md plus PNGs.
+
+Gates and the numbers they must be compared with:
+- silhouette vs the BmAK body, limit 99.9 %. RC2 passed by 0.0004, so print the margin and name what moved it. Report the per-view figure, not one aggregate.
+- pose renders at each moving part's limits: turret yaw, cannon pitch, canopy, hatches, air-brakes, and the battle pose. T-MD13's battle pose is NOT written (build-d12: blocked by ConvertAdf NullReferenceException on the parts module), so render the delivered pose and label the battle pose "not in this tree", not "pass".
+- the parts module as packed carries 59 parts / 19 distinct types (build-d08 §2). The earlier "61 parts incl wheel-arch 42/43" is superseded; if the census returns 61, find the two extra before reporting.
+- interaction points: 5 cm outside the hull, within 30 cm of it; no part outside the envelope by more than 2 cm.
+- collision is NOT a render-bbox gate. The shipped hulls are 5 written (body 0 + 4 wheels) over the donor's 62 bodies; shape vs BmAK chassis box 0 is exact (0.0000 m) but placement is [0.0005, 0.061, 0.0025] m, i.e. 6.1 cm high, so the card's 5 cm gate is NOT MET (receipt.collision.gate.pass = false). 2 of BmAK's 3 boxes have no shape instance; 0 of 54 hull slots are free; the 1 constraint is a named omission. Re-measure and confirm those four facts; do not reinterpret the 6.1 cm as a pass (8390).
+- the 24-row lights module (7,105 B at .toc offset 16,499,504) places two 70 deg entries per headlight; angle 70 / range 60 are above the shipped max 50/50 (build-d03 U-1) — report them as an out-of-domain render risk, and check the 24 CarLight blocks over 8 lamp parts.
+
+Updated by review 8399: collision gate, the 59-part census, the unwritten battle pose and the 5-hull/2-missing-box facts now come from build-d08/d12/d13 instead of the pre-build plan.

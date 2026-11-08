@@ -1,0 +1,75 @@
+{
+ "schema": 1,
+ "card": "B-12",
+ "variant": "battle",
+ "generated_by": "hand-written 2026-11-07 for B-12 (D-2 = two variants)",
+ "planned_files": [
+  "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc",
+  "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/v0300_car_kensington_sportsmuscle_vehicle_misc.vmodc"
+ ],
+ "rows": [
+  {
+   "row": "T-MD5",
+   "carry": "composed",
+   "file": "…_custom_land_global.vmodc",
+   "member": "arcade.nitro_boost.extra_top_speed 43.2 -> 0",
+   "why": "the battle envelope is a curve and no member takes a curve; the variant zeroes the only in-place speed change (T-B2's nitro) so the battle top speed is its own"
+  },
+  {
+   "row": "T-MD6",
+   "carry": "composed",
+   "file": "…_vehicle_misc.vmodc",
+   "member": "official_top_speed 336.4 -> 21.6",
+   "why": "21.6 km/h is BmAK's decoded TurningModeMaxSpeed (600 cm/s); official_top_speed is the fleet's decoded km/h stat. The numbers are decoded, the join is the composition: no cap member exists"
+  },
+  {
+   "row": "T-MD7",
+   "carry": "not_built",
+   "file": null,
+   "member": null,
+   "why": "BattleModeSteerAngleFactor is 1, so the steering angle does not change; LatSlipScale/LongSlipScale/DrivingForceZOffset have no member on either side. No file changes for this row"
+  },
+  {
+   "row": "T-MD13",
+   "carry": "not_built",
+   "file": null,
+   "member": null,
+   "why": "the pose is a per-entity constant in the graph, and the parts module cannot be decoded by the toolchain: ConvertAdf on sportsmuscle_vehicle_parts.vmodc throws NullReferenceException in InstanceMemberInfo.PrepareForWritting (measured 2026-11-07). bm_build has no .epe applier, so the pose is declared, not written"
+  },
+  {
+   "row": "T-MD8",
+   "carry": "not_built",
+   "file": null,
+   "member": null,
+   "why": "named omission: no pivot carrier in either variant (G2-21 refuted all candidates)"
+  },
+  {
+   "row": "T-MD14",
+   "carry": "not_built",
+   "file": null,
+   "member": null,
+   "why": "named omission: the BML_Battlemode media exist but no Usage consumer dispatches on a battle mode (U1), and an entity swap is not a transition"
+  },
+  {
+   "row": "T-MD10",
+   "carry": "same_switch",
+   "file": null,
+   "member": null,
+   "why": "ArmourModeDamageReduction is 0 in every shipped package, so both variants carry the same no-reduction behaviour - turning on the switch changes no file"
+  },
+  {
+   "row": "T-MD11",
+   "carry": "same_switch",
+   "file": null,
+   "member": null,
+   "why": "battle FOV 60 already sits inside the delivered 55-63 band; the second variant changes nothing"
+  }
+ ],
+ "steps": [
+  {
+   "applier": "t5_apply",
+   "edits": "Working/Translation/b12_battle_edits.json",
+   "current": "Working/Translation/b12_current.json"
+  }
+ ]
+}

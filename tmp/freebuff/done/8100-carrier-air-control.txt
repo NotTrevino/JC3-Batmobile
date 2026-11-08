@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/carrier-air-control.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-06
+The project goal is a 100% lore-accurate Batmobile, so a ledger row that says "JC3 has no system" is a to-do, not an answer. Rows T-AC1 (air control yaw/pitch torque) and T-SR1 (righting torque in the air, jump ramp righting) in Working/Translation/T_ROWS.jsonl are marked out. Look for ANY way a JC3 land vehicle can be rotated while airborne: the gravity_multiplier_* and takeoff_pitch_damping members that already exist, DriverLean righting_torque on aircraft, CForcePulse, any entity-level physics member, anything the Rebel Drop or script layers expose. For every candidate give the member path, type, offset-in-file, and the BmAK number it would carry (AirControlYawTorqueFactorMax and the rest of the T-AC1 cells). End the report with: which candidate reproduces BmAK air control, what is still UNKNOWN, and the exact missing capability if none does. Rules: tmp/freebuff/INSTRUCTIONS.md.

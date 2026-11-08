@@ -1,0 +1,3749 @@
+{
+  "schema": 1,
+  "generated_by": "Tools/scripts/jc3_feature_census.py",
+  "inputs": {
+    "detail_graphs": 232,
+    "detail_root": "E:/Modding/_gamedata/JC3grab/detail",
+    "parts_table_rows": 233,
+    "parts_table_parts": 11643,
+    "index_rows": 81952,
+    "vehicle_common_entity": "v0300_car_kensington_sportsmuscle__v0300_car_kensington_sportsmuscle_civilian_01.ee.json",
+    "vehicle_common_module": "editor/entities/jc_vehicles/00_shared/modules/vehicle_common.vmodc"
+  },
+  "totals": {
+    "entities": 232,
+    "armed_entities": 53,
+    "armed_chassis": 21,
+    "weapon_classes": 9,
+    "weapon_ids": 25,
+    "weapon_id_spellings": 26,
+    "archive_weapon_ids": 22,
+    "part_behaviours": 67,
+    "behaviour_tables": 7
+  },
+  "weapon_classes": [
+    {
+      "class": "CAimPOIWeaponComponent",
+      "objects": 11,
+      "entities": 11,
+      "chassis": 6,
+      "chassis_list": [
+        "v0300_car_kensington_sportsmuscle",
+        "v0604_car_urga_buggy",
+        "v1401_boat_mugello_racingboat",
+        "v4202_plane_capstone_fighterjet",
+        "v4602_plane_urga_fighterbomber",
+        "v4800_plane_brothers_vintagefighter"
+      ]
+    },
+    {
+      "class": "CBarrelSpinWeaponComponent",
+      "objects": 12,
+      "entities": 12,
+      "chassis": 4,
+      "chassis_list": [
+        "v1401_boat_mugello_racingboat",
+        "v2601_helicopter_urga_heavyassault",
+        "v2602_helicopter_urga_lightassault",
+        "v2604_helicopter_urga_advancedassault"
+      ]
+    },
+    {
+      "class": "CBulletWeaponBase",
+      "objects": 57,
+      "entities": 45,
+      "chassis": 17,
+      "chassis_list": [
+        "v0200_car_capstone_apc",
+        "v0201_car_capstone_mediumtank",
+        "v0202_car_capstone_bavariumtank",
+        "v0504_car_solar_technicaljeep",
+        "v0600_car_urga_armoredjeep",
+        "v0603_car_urga_smalltank",
+        "v0604_car_urga_buggy",
+        "v1200_boat_capstone_heavypatrol",
+        "v1202_boat_capstone_corvette",
+        "v1401_boat_mugello_racingboat",
+        "v1704_boat_na_lightpatrol",
+        "v2601_helicopter_urga_heavyassault",
+        "v2602_helicopter_urga_lightassault",
+        "v2604_helicopter_urga_advancedassault",
+        "v4202_plane_capstone_fighterjet",
+        "v4603_plane_urga_cargotransport",
+        "v4800_plane_brothers_vintagefighter"
+      ]
+    },
+    {
+      "class": "CForcePulse",
+      "objects": 307,
+      "entities": 232,
+      "chassis": 79,
+      "chassis_list": [
+        "v0000_car_autostraad_oldjeep",
+        "v0001_car_autostraad_armoredtruck",
+        "v0002_car_autostraad_oldcampervan",
+        "v0003_car_autostraad_racinghothatch",
+        "v0005_car_autostraad_minetruck",
+        "v0006_car_autostraad_modernbus",
+        "v0008_car_autostraad_modernsportssaloon",
+        "v0009_car_autostraad_modernsaloon",
+        "v0011_car_autostraad_articulatedtruck",
+        "v0012_car_autostraad_atv",
+        "v0200_car_capstone_apc",
+        "v0201_car_capstone_mediumtank",
+        "v0202_car_capstone_bavariumtank",
+        "v0300_car_kensington_sportsmuscle",
+        "v0302_car_kensington_modernlimo",
+        "v0305_car_kensington_moderngrandtourer",
+        "v0400_car_mugello_vintagesports",
+        "v0401_car_mugello_racingsupercar",
+        "v0402_car_mugello_vintagesuper",
+        "v0403_car_mugello_modernecosuper",
+        "v0405_car_mugello_moderncircuitracer",
+        "v0500_car_solar_oldmini",
+        "v0501_car_solar_smallvan",
+        "v0502_car_solar_modernsedan",
+        "v0503_car_solar_modernsuv",
+        "v0504_car_solar_technicaljeep",
+        "v0505_car_solar_oldtruck",
+        "v0506_car_solar_oldtractor",
+        "v0507_car_solar_oldbus",
+        "v0508_car_solar_oldcompact",
+        "v0509_car_solar_modernmini",
+        "v0510_car_solar_modernroadster",
+        "v0512_car_solar_oldtwodoorhatch",
+        "v0513_car_solar_oldfourdoorhatch",
+        "v0514_car_solar_modernpickup",
+        "v0600_car_urga_armoredjeep",
+        "v0602_car_urga_armoredtransport",
+        "v0603_car_urga_smalltank",
+        "v0604_car_urga_buggy",
+        "v0803_car_na_monstertruck",
+        "v0866_car_na_ladbil",
+        "v1200_boat_capstone_heavypatrol",
+        "v1202_boat_capstone_corvette",
+        "v1300_boat_kensington_motoryacht",
+        "v1302_boat_kensington_sailboat",
+        "v1400_boat_mugello_spyspeedboat",
+        "v1401_boat_mugello_racingboat",
+        "v1500_boat_solar_jetski",
+        "v1602_boat_urga_transport",
+        "v1701_boat_na_smalloldfishing",
+        "v1704_boat_na_lightpatrol",
+        "v1705_boat_na_mediumoldfishing",
+        "v1717_boat_na_duck",
+        "v2102_helicopter_eubus_utility",
+        "v2200_helicopter_capstone_assault",
+        "v2201_helicopter_capstone_heavytroop",
+        "v2601_helicopter_urga_heavyassault",
+        "v2602_helicopter_urga_lightassault",
+        "v2603_helicopter_urga_seascout",
+        "v2604_helicopter_urga_advancedassault",
+        "v3000_bike_autostraad_trials",
+        "v3001_bike_autostraad_snowmobile",
+        "v3401_bike_mugello_modernsport",
+        "v3402_bike_mugello_modernsuper",
+        "v3500_bike_solar_oldmoped",
+        "v3501_bike_solar_modernmoped",
+        "v3502_bike_solar_modernroad",
+        "v3503_bike_solar_oldroad",
+        "v3600_bike_urga_combatdirt",
+        "v4202_plane_capstone_fighterjet",
+        "v4500_plane_solar_smallfloatprop",
+        "v4600_plane_urga_privatepropeller",
+        "v4602_plane_urga_fighterbomber",
+        "v4603_plane_urga_cargotransport",
+        "v4800_plane_brothers_vintagefighter",
+        "v5601_train_urga_monorailcargoengine",
+        "v5602_train_urga_monorailflatbed",
+        "v5603_train_urga_monorailmissilecar",
+        "v9999_car_mugello_dlctestcar"
+      ]
+    },
+    {
+      "class": "CLaserBeamWeaponComponent",
+      "objects": 3,
+      "entities": 3,
+      "chassis": 1,
+      "chassis_list": [
+        "v4202_plane_capstone_fighterjet"
+      ]
+    },
+    {
+      "class": "CLightWeaponComponent",
+      "objects": 30,
+      "entities": 27,
+      "chassis": 9,
+      "chassis_list": [
+        "v0201_car_capstone_mediumtank",
+        "v0202_car_capstone_bavariumtank",
+        "v0603_car_urga_smalltank",
+        "v1202_boat_capstone_corvette",
+        "v2200_helicopter_capstone_assault",
+        "v2601_helicopter_urga_heavyassault",
+        "v2604_helicopter_urga_advancedassault",
+        "v4602_plane_urga_fighterbomber",
+        "v4603_plane_urga_cargotransport"
+      ]
+    },
+    {
+      "class": "CMissileWeaponBase",
+      "objects": 25,
+      "entities": 19,
+      "chassis": 7,
+      "chassis_list": [
+        "v0300_car_kensington_sportsmuscle",
+        "v2200_helicopter_capstone_assault",
+        "v2601_helicopter_urga_heavyassault",
+        "v2604_helicopter_urga_advancedassault",
+        "v4202_plane_capstone_fighterjet",
+        "v4602_plane_urga_fighterbomber",
+        "v5603_train_urga_monorailmissilecar"
+      ]
+    },
+    {
+      "class": "CRPGFireLeachWeapon",
+      "objects": 6,
+      "entities": 6,
+      "chassis": 2,
+      "chassis_list": [
+        "v4202_plane_capstone_fighterjet",
+        "v4602_plane_urga_fighterbomber"
+      ]
+    },
+    {
+      "class": "CTurretWeaponComponent",
+      "objects": 1,
+      "entities": 1,
+      "chassis": 1,
+      "chassis_list": [
+        "v5603_train_urga_monorailmissilecar"
+      ]
+    }
+  ],
+  "weapon_ids": {
+    "ids": [
+      {
+        "id": "w601_helicopter_missile",
+        "spellings": [
+          "w601_helicopter_missile"
+        ],
+        "entities": 3
+      },
+      {
+        "id": "w602_mediumtank_canon",
+        "spellings": [
+          "w602_mediumtank_canon"
+        ],
+        "entities": 7
+      },
+      {
+        "id": "w603_mediumtank_mgun",
+        "spellings": [
+          "w603_mediumtank_mgun"
+        ],
+        "entities": 7
+      },
+      {
+        "id": "w604_helicopter_mgun",
+        "spellings": [
+          "w604_helicopter_mgun"
+        ],
+        "entities": 3
+      },
+      {
+        "id": "w604_helicopter_mgun_impact",
+        "spellings": [
+          "w604_helicopter_mgun_impact"
+        ],
+        "entities": 11
+      },
+      {
+        "id": "w605_smalltank_canon",
+        "spellings": [
+          "w605_smalltank_canon"
+        ],
+        "entities": 3
+      },
+      {
+        "id": "w606_heavyhelicopter_missile",
+        "spellings": [
+          "w606_heavyhelicopter_missile"
+        ],
+        "entities": 3
+      },
+      {
+        "id": "w607_heavyhelicopter_mgun",
+        "spellings": [
+          "w607_heavyhelicopter_mgun"
+        ],
+        "entities": 3
+      },
+      {
+        "id": "w608_fighterjet_missile",
+        "spellings": [
+          "w608_fighterjet_missile"
+        ],
+        "entities": 3
+      },
+      {
+        "id": "w609_fighterjet_missile_air_lockon",
+        "spellings": [
+          "w609_fighterjet_missile_air_lockon"
+        ],
+        "entities": 3
+      },
+      {
+        "id": "w610_fighterjet_mgun",
+        "spellings": [
+          "w610_fighterjet_mgun"
+        ],
+        "entities": 3
+      },
+      {
+        "id": "w610_fighterjet_mgun_impact",
+        "spellings": [
+          "w610_fighterjet_mgun_impact"
+        ],
+        "entities": 3
+      },
+      {
+        "id": "w611_fighterbomber_missile",
+        "spellings": [
+          "w611_fighterbomber_missile"
+        ],
+        "entities": 3
+      },
+      {
+        "id": "w612_fighterbomber_missile_air_lockon",
+        "spellings": [
+          "w612_fighterbomber_missile_air_lockon"
+        ],
+        "entities": 3
+      },
+      {
+        "id": "w613_fighterbomber_missile_ground_lockon",
+        "spellings": [
+          "w613_bomb",
+          "w613_fighterbomber_missile_ground_lockon"
+        ],
+        "entities": 3
+      },
+      {
+        "id": "w614_monorailmissilecar_missile",
+        "spellings": [
+          "w614_monorailmissilecar_missile"
+        ],
+        "entities": 1
+      },
+      {
+        "id": "w615_helicopter_heavy_missile",
+        "spellings": [
+          "w615_helicopter_heavy_missile"
+        ],
+        "entities": 3
+      },
+      {
+        "id": "w616_corvette_canon",
+        "spellings": [
+          "w616_corvette_canon"
+        ],
+        "entities": 3
+      },
+      {
+        "id": "w617_vintagefighter_mgun",
+        "spellings": [
+          "w617_vintagefighter_mgun"
+        ],
+        "entities": 2
+      },
+      {
+        "id": "w617_vintagefighter_mgun_impact",
+        "spellings": [
+          "w617_vintagefighter_mgun_impact"
+        ],
+        "entities": 2
+      },
+      {
+        "id": "w618_sportsmuscle_missile",
+        "spellings": [
+          "w618_sportsmuscle_missile"
+        ],
+        "entities": 1
+      },
+      {
+        "id": "w619_buggy_mgun",
+        "spellings": [
+          "w619_buggy_mgun"
+        ],
+        "entities": 1
+      },
+      {
+        "id": "w620_racingboat_mgun",
+        "spellings": [
+          "w620_racingboat_mgun"
+        ],
+        "entities": 1
+      },
+      {
+        "id": "w621_advancedhelicopter_missile",
+        "spellings": [
+          "w621_advancedhelicopter_missile"
+        ],
+        "entities": 5
+      },
+      {
+        "id": "w622_advancedhelicopter_mgun",
+        "spellings": [
+          "w622_advancedhelicopter_mgun"
+        ],
+        "entities": 5
+      }
+    ],
+    "aliases": {
+      "w613_bomb": "w613_fighterbomber_missile_ground_lockon"
+    },
+    "archive_ids": [
+      "w601_helicopter_missile",
+      "w602_mediumtank_canon",
+      "w603_mediumtank_mgun",
+      "w604_helicopter_mgun",
+      "w605_smalltank_canon",
+      "w606_heavyhelicopter_missile",
+      "w607_heavyhelicopter_mgun",
+      "w608_fighterjet_missile",
+      "w609_fighterjet_missile_air_lockon",
+      "w610_fighterjet_mgun",
+      "w611_fighterbomber_missile",
+      "w612_fighterbomber_missile_air_lockon",
+      "w613_fighterbomber_missile_ground_lockon",
+      "w614_monorailmissilecar_missile",
+      "w615_helicopter_heavy_missile",
+      "w616_corvette_canon",
+      "w617_vintagefighter_mgun",
+      "w618_sportsmuscle_missile",
+      "w619_buggy_mgun",
+      "w620_racingboat_mgun",
+      "w621_advancedhelicopter_missile",
+      "w622_advancedhelicopter_mgun"
+    ],
+    "index_spellings": [
+      "w601_helicopter_missile",
+      "w602_mediumtank_canon",
+      "w603_mediumtank_mgun",
+      "w604_helicopter_mgun",
+      "w605_smalltank_canon",
+      "w606_heavyheli_missile",
+      "w606_heavyhelicopter_missile",
+      "w607_heavyheli_mgun",
+      "w607_heavyhelicopter_mgun",
+      "w608_fighterjet_missile",
+      "w609_fighterjet_missile_air_lockon",
+      "w609_fighterjet_missile_air_lockon_autoaim",
+      "w610_fighterjet_mgun",
+      "w611_fighterbomber_missile",
+      "w612_fighterbomber_missile_air_lockon",
+      "w612_fighterbomber_missile_air_lockon_autoaim",
+      "w613_bombs",
+      "w613_fighterbomber_missile_ground_lockon",
+      "w614_monorailmissilecar_missile",
+      "w615_helicopter_heavy_missile",
+      "w616_corvette_canon",
+      "w617_vintagefighter_mgun",
+      "w618_sportsmuscle_missile",
+      "w619_buggy_mgun",
+      "w620_racingboat_mgun",
+      "w621_advancedhelicopter_missile",
+      "w622_advancedhelicopter_mgun"
+    ]
+  },
+  "armed_entities": [
+    {
+      "entity": "editor/entities/jc_vehicles/01_land/v0200_car_capstone_apc/v0200_car_capstone_apc_debug.ee",
+      "chassis": "v0200_car_capstone_apc",
+      "scheme": "01_land",
+      "root_class": "CCar",
+      "weapon_classes": {
+        "CBulletWeaponBase": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w206_mounted_capstone_m2hm",
+          "weapon_id": "206"
+        }
+      ],
+      "weapon_points": 4
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/01_land/v0200_car_capstone_apc/v0200_car_capstone_apc_military_01.ee",
+      "chassis": "v0200_car_capstone_apc",
+      "scheme": "01_land",
+      "root_class": "CCar",
+      "weapon_classes": {
+        "CBulletWeaponBase": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w206_mounted_capstone_m2hm",
+          "weapon_id": "206"
+        }
+      ],
+      "weapon_points": 4
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/01_land/v0200_car_capstone_apc/v0200_car_capstone_apc_rebel_01.ee",
+      "chassis": "v0200_car_capstone_apc",
+      "scheme": "01_land",
+      "root_class": "CCar",
+      "weapon_classes": {
+        "CBulletWeaponBase": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w206_mounted_capstone_m2hm",
+          "weapon_id": "206"
+        }
+      ],
+      "weapon_points": 4
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/01_land/v0201_car_capstone_mediumtank/v0201_car_capstone_mediumtank_debug.ee",
+      "chassis": "v0201_car_capstone_mediumtank",
+      "scheme": "01_land",
+      "root_class": "CCar",
+      "weapon_classes": {
+        "CBulletWeaponBase": 2,
+        "CLightWeaponComponent": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w602_mediumtank_canon",
+          "weapon_id": "602"
+        },
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w603_mediumtank_mgun",
+          "weapon_id": "603"
+        },
+        {
+          "class": "CLightWeaponComponent",
+          "name": "warning_light",
+          "weapon_id": null
+        }
+      ],
+      "weapon_points": 2
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/01_land/v0201_car_capstone_mediumtank/v0201_car_capstone_mediumtank_military_01.ee",
+      "chassis": "v0201_car_capstone_mediumtank",
+      "scheme": "01_land",
+      "root_class": "CCar",
+      "weapon_classes": {
+        "CBulletWeaponBase": 2,
+        "CLightWeaponComponent": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w602_mediumtank_canon",
+          "weapon_id": "602"
+        },
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w603_mediumtank_mgun",
+          "weapon_id": "603"
+        },
+        {
+          "class": "CLightWeaponComponent",
+          "name": "warning_light",
+          "weapon_id": null
+        }
+      ],
+      "weapon_points": 2
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/01_land/v0201_car_capstone_mediumtank/v0201_car_capstone_mediumtank_rebel_01.ee",
+      "chassis": "v0201_car_capstone_mediumtank",
+      "scheme": "01_land",
+      "root_class": "CCar",
+      "weapon_classes": {
+        "CBulletWeaponBase": 2,
+        "CLightWeaponComponent": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w602_mediumtank_canon",
+          "weapon_id": "602"
+        },
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w603_mediumtank_mgun",
+          "weapon_id": "603"
+        },
+        {
+          "class": "CLightWeaponComponent",
+          "name": "warning_light",
+          "weapon_id": null
+        }
+      ],
+      "weapon_points": 2
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/01_land/v0202_car_capstone_bavariumtank/v0202_car_capstone_bavariumtank_debug.ee",
+      "chassis": "v0202_car_capstone_bavariumtank",
+      "scheme": "01_land",
+      "root_class": "CCar",
+      "weapon_classes": {
+        "CBulletWeaponBase": 2,
+        "CLightWeaponComponent": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w602_mediumtank_canon",
+          "weapon_id": "602"
+        },
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w603_mediumtank_mgun",
+          "weapon_id": "603"
+        },
+        {
+          "class": "CLightWeaponComponent",
+          "name": "warning_light",
+          "weapon_id": null
+        }
+      ],
+      "weapon_points": 2
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/01_land/v0202_car_capstone_bavariumtank/v0202_car_capstone_bavariumtank_military_01.ee",
+      "chassis": "v0202_car_capstone_bavariumtank",
+      "scheme": "01_land",
+      "root_class": "CCar",
+      "weapon_classes": {
+        "CBulletWeaponBase": 2,
+        "CLightWeaponComponent": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w602_mediumtank_canon",
+          "weapon_id": "602"
+        },
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w603_mediumtank_mgun",
+          "weapon_id": "603"
+        },
+        {
+          "class": "CLightWeaponComponent",
+          "name": "warning_light",
+          "weapon_id": null
+        }
+      ],
+      "weapon_points": 2
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/01_land/v0202_car_capstone_bavariumtank/v0202_car_capstone_bavariumtank_rebel_01.ee",
+      "chassis": "v0202_car_capstone_bavariumtank",
+      "scheme": "01_land",
+      "root_class": "CCar",
+      "weapon_classes": {
+        "CBulletWeaponBase": 2,
+        "CLightWeaponComponent": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w602_mediumtank_canon",
+          "weapon_id": "602"
+        },
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w603_mediumtank_mgun",
+          "weapon_id": "603"
+        },
+        {
+          "class": "CLightWeaponComponent",
+          "name": "warning_light",
+          "weapon_id": null
+        }
+      ],
+      "weapon_points": 2
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_signature_preorder.ee",
+      "chassis": "v0300_car_kensington_sportsmuscle",
+      "scheme": "01_land",
+      "root_class": "CCar",
+      "weapon_classes": {
+        "CAimPOIWeaponComponent": 1,
+        "CMissileWeaponBase": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CMissileWeaponBase",
+          "name": "w618_sportsmuscle_missile",
+          "weapon_id": "618"
+        }
+      ],
+      "weapon_points": 4
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/01_land/v0504_car_solar_technicaljeep/v0504_car_solar_technicaljeep_rebel_machinegun.ee",
+      "chassis": "v0504_car_solar_technicaljeep",
+      "scheme": "01_land",
+      "root_class": "CCar",
+      "weapon_classes": {
+        "CBulletWeaponBase": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w206_mounted_capstone_m2hm",
+          "weapon_id": "206"
+        }
+      ],
+      "weapon_points": 4
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/01_land/v0600_car_urga_armoredjeep/v0600_car_urga_armoredjeep_military_01.ee",
+      "chassis": "v0600_car_urga_armoredjeep",
+      "scheme": "01_land",
+      "root_class": "CCar",
+      "weapon_classes": {
+        "CBulletWeaponBase": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w206_mounted_capstone_m2hm",
+          "weapon_id": "206"
+        }
+      ],
+      "weapon_points": 4
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/01_land/v0600_car_urga_armoredjeep/v0600_car_urga_armoredjeep_rebel_01.ee",
+      "chassis": "v0600_car_urga_armoredjeep",
+      "scheme": "01_land",
+      "root_class": "CCar",
+      "weapon_classes": {
+        "CBulletWeaponBase": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w206_mounted_capstone_m2hm",
+          "weapon_id": "206"
+        }
+      ],
+      "weapon_points": 4
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/01_land/v0603_car_urga_smalltank/v0603_car_urga_smalltank_debug.ee",
+      "chassis": "v0603_car_urga_smalltank",
+      "scheme": "01_land",
+      "root_class": "CCar",
+      "weapon_classes": {
+        "CBulletWeaponBase": 1,
+        "CLightWeaponComponent": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w605_smalltank_canon",
+          "weapon_id": "605"
+        },
+        {
+          "class": "CLightWeaponComponent",
+          "name": "warning_light",
+          "weapon_id": null
+        }
+      ],
+      "weapon_points": 1
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/01_land/v0603_car_urga_smalltank/v0603_car_urga_smalltank_military_01.ee",
+      "chassis": "v0603_car_urga_smalltank",
+      "scheme": "01_land",
+      "root_class": "CCar",
+      "weapon_classes": {
+        "CBulletWeaponBase": 1,
+        "CLightWeaponComponent": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w605_smalltank_canon",
+          "weapon_id": "605"
+        },
+        {
+          "class": "CLightWeaponComponent",
+          "name": "warning_light",
+          "weapon_id": null
+        }
+      ],
+      "weapon_points": 1
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/01_land/v0603_car_urga_smalltank/v0603_car_urga_smalltank_rebel_01.ee",
+      "chassis": "v0603_car_urga_smalltank",
+      "scheme": "01_land",
+      "root_class": "CCar",
+      "weapon_classes": {
+        "CBulletWeaponBase": 1,
+        "CLightWeaponComponent": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w605_smalltank_canon",
+          "weapon_id": "605"
+        },
+        {
+          "class": "CLightWeaponComponent",
+          "name": "warning_light",
+          "weapon_id": null
+        }
+      ],
+      "weapon_points": 1
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/01_land/v0604_car_urga_buggy/v0604_car_urga_buggy_signature_preorder.ee",
+      "chassis": "v0604_car_urga_buggy",
+      "scheme": "01_land",
+      "root_class": "CCar",
+      "weapon_classes": {
+        "CAimPOIWeaponComponent": 1,
+        "CBulletWeaponBase": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w619_buggy_mgun",
+          "weapon_id": "619"
+        }
+      ],
+      "weapon_points": 2
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/03_sea/v1200_boat_capstone_heavypatrol/v1200_boat_capstone_heavypatrol_debug.ee",
+      "chassis": "v1200_boat_capstone_heavypatrol",
+      "scheme": "03_sea",
+      "root_class": "CBoat",
+      "weapon_classes": {
+        "CBulletWeaponBase": 2
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w206_mounted_capstone_m2hm",
+          "weapon_id": "206"
+        },
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w206_mounted_capstone_m2hm",
+          "weapon_id": "206"
+        }
+      ],
+      "weapon_points": 8
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/03_sea/v1200_boat_capstone_heavypatrol/v1200_boat_capstone_heavypatrol_military_01.ee",
+      "chassis": "v1200_boat_capstone_heavypatrol",
+      "scheme": "03_sea",
+      "root_class": "CBoat",
+      "weapon_classes": {
+        "CBulletWeaponBase": 2
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w206_mounted_capstone_m2hm",
+          "weapon_id": "206"
+        },
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w206_mounted_capstone_m2hm",
+          "weapon_id": "206"
+        }
+      ],
+      "weapon_points": 8
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/03_sea/v1200_boat_capstone_heavypatrol/v1200_boat_capstone_heavypatrol_military_01_delivery.ee",
+      "chassis": "v1200_boat_capstone_heavypatrol",
+      "scheme": "03_sea",
+      "root_class": "CBoat",
+      "weapon_classes": {
+        "CBulletWeaponBase": 2
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w206_mounted_capstone_m2hm",
+          "weapon_id": "206"
+        },
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w206_mounted_capstone_m2hm",
+          "weapon_id": "206"
+        }
+      ],
+      "weapon_points": 8
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/03_sea/v1200_boat_capstone_heavypatrol/v1200_boat_capstone_heavypatrol_rebel_01.ee",
+      "chassis": "v1200_boat_capstone_heavypatrol",
+      "scheme": "03_sea",
+      "root_class": "CBoat",
+      "weapon_classes": {
+        "CBulletWeaponBase": 2
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w206_mounted_capstone_m2hm",
+          "weapon_id": "206"
+        },
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w206_mounted_capstone_m2hm",
+          "weapon_id": "206"
+        }
+      ],
+      "weapon_points": 8
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/03_sea/v1200_boat_capstone_heavypatrol/v1200_boat_capstone_heavypatrol_rebel_01_mm210.ee",
+      "chassis": "v1200_boat_capstone_heavypatrol",
+      "scheme": "03_sea",
+      "root_class": "CBoat",
+      "weapon_classes": {
+        "CBulletWeaponBase": 2
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w206_mounted_capstone_m2hm",
+          "weapon_id": "206"
+        },
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w206_mounted_capstone_m2hm",
+          "weapon_id": "206"
+        }
+      ],
+      "weapon_points": 8
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/03_sea/v1202_boat_capstone_corvette/v1202_boat_capstone_corvette_debug.ee",
+      "chassis": "v1202_boat_capstone_corvette",
+      "scheme": "03_sea",
+      "root_class": "CBoat",
+      "weapon_classes": {
+        "CBulletWeaponBase": 1,
+        "CLightWeaponComponent": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w616_corvette_canon",
+          "weapon_id": "616"
+        },
+        {
+          "class": "CLightWeaponComponent",
+          "name": "warning_light",
+          "weapon_id": null
+        }
+      ],
+      "weapon_points": 2
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/03_sea/v1202_boat_capstone_corvette/v1202_boat_capstone_corvette_military_01.ee",
+      "chassis": "v1202_boat_capstone_corvette",
+      "scheme": "03_sea",
+      "root_class": "CBoat",
+      "weapon_classes": {
+        "CBulletWeaponBase": 1,
+        "CLightWeaponComponent": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w616_corvette_canon",
+          "weapon_id": "616"
+        },
+        {
+          "class": "CLightWeaponComponent",
+          "name": "warning_light",
+          "weapon_id": null
+        }
+      ],
+      "weapon_points": 2
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/03_sea/v1202_boat_capstone_corvette/v1202_boat_capstone_corvette_rebel_01.ee",
+      "chassis": "v1202_boat_capstone_corvette",
+      "scheme": "03_sea",
+      "root_class": "CBoat",
+      "weapon_classes": {
+        "CBulletWeaponBase": 1,
+        "CLightWeaponComponent": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w616_corvette_canon",
+          "weapon_id": "616"
+        },
+        {
+          "class": "CLightWeaponComponent",
+          "name": "warning_light",
+          "weapon_id": null
+        }
+      ],
+      "weapon_points": 2
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/03_sea/v1401_boat_mugello_racingboat/v1401_boat_mugello_racingboat_signature_preorder.ee",
+      "chassis": "v1401_boat_mugello_racingboat",
+      "scheme": "03_sea",
+      "root_class": "CBoat",
+      "weapon_classes": {
+        "CAimPOIWeaponComponent": 1,
+        "CBarrelSpinWeaponComponent": 1,
+        "CBulletWeaponBase": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w620_racingboat_mgun",
+          "weapon_id": "620"
+        }
+      ],
+      "weapon_points": 2
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/03_sea/v1704_boat_na_lightpatrol/v1704_boat_na_lightpatrol_debug.ee",
+      "chassis": "v1704_boat_na_lightpatrol",
+      "scheme": "03_sea",
+      "root_class": "CBoat",
+      "weapon_classes": {
+        "CBulletWeaponBase": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w206_mounted_capstone_m2hm",
+          "weapon_id": "206"
+        }
+      ],
+      "weapon_points": 4
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/03_sea/v1704_boat_na_lightpatrol/v1704_boat_na_lightpatrol_military_01.ee",
+      "chassis": "v1704_boat_na_lightpatrol",
+      "scheme": "03_sea",
+      "root_class": "CBoat",
+      "weapon_classes": {
+        "CBulletWeaponBase": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w206_mounted_capstone_m2hm",
+          "weapon_id": "206"
+        }
+      ],
+      "weapon_points": 4
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/03_sea/v1704_boat_na_lightpatrol/v1704_boat_na_lightpatrol_rebel_01.ee",
+      "chassis": "v1704_boat_na_lightpatrol",
+      "scheme": "03_sea",
+      "root_class": "CBoat",
+      "weapon_classes": {
+        "CBulletWeaponBase": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w206_mounted_capstone_m2hm",
+          "weapon_id": "206"
+        }
+      ],
+      "weapon_points": 4
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/02_air/v2200_helicopter_capstone_assault/v2200_helicopter_capstone_assault_debug.ee",
+      "chassis": "v2200_helicopter_capstone_assault",
+      "scheme": "02_air",
+      "root_class": "CHelicopter",
+      "weapon_classes": {
+        "CLightWeaponComponent": 2,
+        "CMissileWeaponBase": 2
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CLightWeaponComponent",
+          "name": "warning_light",
+          "weapon_id": null
+        },
+        {
+          "class": "CLightWeaponComponent",
+          "name": "warning_light",
+          "weapon_id": null
+        },
+        {
+          "class": "CMissileWeaponBase",
+          "name": "w601_helicopter_missile",
+          "weapon_id": "601"
+        },
+        {
+          "class": "CMissileWeaponBase",
+          "name": "w615_helicopter_heavy_missile",
+          "weapon_id": "615"
+        }
+      ],
+      "weapon_points": 8
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/02_air/v2200_helicopter_capstone_assault/v2200_helicopter_capstone_assault_military_01.ee",
+      "chassis": "v2200_helicopter_capstone_assault",
+      "scheme": "02_air",
+      "root_class": "CHelicopter",
+      "weapon_classes": {
+        "CLightWeaponComponent": 2,
+        "CMissileWeaponBase": 2
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CLightWeaponComponent",
+          "name": "warning_light",
+          "weapon_id": null
+        },
+        {
+          "class": "CLightWeaponComponent",
+          "name": "warning_light",
+          "weapon_id": null
+        },
+        {
+          "class": "CMissileWeaponBase",
+          "name": "w601_helicopter_missile",
+          "weapon_id": "601"
+        },
+        {
+          "class": "CMissileWeaponBase",
+          "name": "w615_helicopter_heavy_missile",
+          "weapon_id": "615"
+        }
+      ],
+      "weapon_points": 8
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/02_air/v2200_helicopter_capstone_assault/v2200_helicopter_capstone_assault_rebel_01.ee",
+      "chassis": "v2200_helicopter_capstone_assault",
+      "scheme": "02_air",
+      "root_class": "CHelicopter",
+      "weapon_classes": {
+        "CLightWeaponComponent": 2,
+        "CMissileWeaponBase": 2
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CLightWeaponComponent",
+          "name": "warning_light",
+          "weapon_id": null
+        },
+        {
+          "class": "CLightWeaponComponent",
+          "name": "warning_light",
+          "weapon_id": null
+        },
+        {
+          "class": "CMissileWeaponBase",
+          "name": "w601_helicopter_missile",
+          "weapon_id": "601"
+        },
+        {
+          "class": "CMissileWeaponBase",
+          "name": "w615_helicopter_heavy_missile",
+          "weapon_id": "615"
+        }
+      ],
+      "weapon_points": 8
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/02_air/v2601_helicopter_urga_heavyassault/v2601_helicopter_urga_heavyassault_debug.ee",
+      "chassis": "v2601_helicopter_urga_heavyassault",
+      "scheme": "02_air",
+      "root_class": "CHelicopter",
+      "weapon_classes": {
+        "CBarrelSpinWeaponComponent": 1,
+        "CBulletWeaponBase": 1,
+        "CLightWeaponComponent": 1,
+        "CMissileWeaponBase": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w607_heavyhelicopter_mgun",
+          "weapon_id": "607"
+        },
+        {
+          "class": "CLightWeaponComponent",
+          "name": "warning_light",
+          "weapon_id": null
+        },
+        {
+          "class": "CMissileWeaponBase",
+          "name": "w606_heavyhelicopter_missile",
+          "weapon_id": "606"
+        }
+      ],
+      "weapon_points": 8
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/02_air/v2601_helicopter_urga_heavyassault/v2601_helicopter_urga_heavyassault_military_01.ee",
+      "chassis": "v2601_helicopter_urga_heavyassault",
+      "scheme": "02_air",
+      "root_class": "CHelicopter",
+      "weapon_classes": {
+        "CBarrelSpinWeaponComponent": 1,
+        "CBulletWeaponBase": 1,
+        "CLightWeaponComponent": 1,
+        "CMissileWeaponBase": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w607_heavyhelicopter_mgun",
+          "weapon_id": "607"
+        },
+        {
+          "class": "CLightWeaponComponent",
+          "name": "warning_light",
+          "weapon_id": null
+        },
+        {
+          "class": "CMissileWeaponBase",
+          "name": "w606_heavyhelicopter_missile",
+          "weapon_id": "606"
+        }
+      ],
+      "weapon_points": 8
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/02_air/v2601_helicopter_urga_heavyassault/v2601_helicopter_urga_heavyassault_rebel_01.ee",
+      "chassis": "v2601_helicopter_urga_heavyassault",
+      "scheme": "02_air",
+      "root_class": "CHelicopter",
+      "weapon_classes": {
+        "CBarrelSpinWeaponComponent": 1,
+        "CBulletWeaponBase": 1,
+        "CLightWeaponComponent": 1,
+        "CMissileWeaponBase": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w607_heavyhelicopter_mgun",
+          "weapon_id": "607"
+        },
+        {
+          "class": "CLightWeaponComponent",
+          "name": "warning_light",
+          "weapon_id": null
+        },
+        {
+          "class": "CMissileWeaponBase",
+          "name": "w606_heavyhelicopter_missile",
+          "weapon_id": "606"
+        }
+      ],
+      "weapon_points": 8
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/02_air/v2602_helicopter_urga_lightassault/v2602_helicopter_urga_lightassault_debug.ee",
+      "chassis": "v2602_helicopter_urga_lightassault",
+      "scheme": "02_air",
+      "root_class": "CHelicopter",
+      "weapon_classes": {
+        "CBarrelSpinWeaponComponent": 1,
+        "CBulletWeaponBase": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w604_helicopter_mgun",
+          "weapon_id": "604"
+        }
+      ],
+      "weapon_points": 3
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/02_air/v2602_helicopter_urga_lightassault/v2602_helicopter_urga_lightassault_military_01.ee",
+      "chassis": "v2602_helicopter_urga_lightassault",
+      "scheme": "02_air",
+      "root_class": "CHelicopter",
+      "weapon_classes": {
+        "CBarrelSpinWeaponComponent": 1,
+        "CBulletWeaponBase": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w604_helicopter_mgun",
+          "weapon_id": "604"
+        }
+      ],
+      "weapon_points": 3
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/02_air/v2602_helicopter_urga_lightassault/v2602_helicopter_urga_lightassault_rebel_01.ee",
+      "chassis": "v2602_helicopter_urga_lightassault",
+      "scheme": "02_air",
+      "root_class": "CHelicopter",
+      "weapon_classes": {
+        "CBarrelSpinWeaponComponent": 1,
+        "CBulletWeaponBase": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w604_helicopter_mgun",
+          "weapon_id": "604"
+        }
+      ],
+      "weapon_points": 3
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/02_air/v2604_helicopter_urga_advancedassault/v2604_helicopter_urga_advancedassault_debug.ee",
+      "chassis": "v2604_helicopter_urga_advancedassault",
+      "scheme": "02_air",
+      "root_class": "CHelicopter",
+      "weapon_classes": {
+        "CBarrelSpinWeaponComponent": 1,
+        "CBulletWeaponBase": 1,
+        "CLightWeaponComponent": 1,
+        "CMissileWeaponBase": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w622_advancedhelicopter_mgun",
+          "weapon_id": "622"
+        },
+        {
+          "class": "CLightWeaponComponent",
+          "name": "warning_light",
+          "weapon_id": null
+        },
+        {
+          "class": "CMissileWeaponBase",
+          "name": "w621_advancedhelicopter_missile",
+          "weapon_id": "621"
+        }
+      ],
+      "weapon_points": 11
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/02_air/v2604_helicopter_urga_advancedassault/v2604_helicopter_urga_advancedassault_military_01.ee",
+      "chassis": "v2604_helicopter_urga_advancedassault",
+      "scheme": "02_air",
+      "root_class": "CHelicopter",
+      "weapon_classes": {
+        "CBarrelSpinWeaponComponent": 1,
+        "CBulletWeaponBase": 1,
+        "CLightWeaponComponent": 1,
+        "CMissileWeaponBase": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w622_advancedhelicopter_mgun",
+          "weapon_id": "622"
+        },
+        {
+          "class": "CLightWeaponComponent",
+          "name": "warning_light",
+          "weapon_id": null
+        },
+        {
+          "class": "CMissileWeaponBase",
+          "name": "w621_advancedhelicopter_missile",
+          "weapon_id": "621"
+        }
+      ],
+      "weapon_points": 11
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/02_air/v2604_helicopter_urga_advancedassault/v2604_helicopter_urga_advancedassault_rebel_01.ee",
+      "chassis": "v2604_helicopter_urga_advancedassault",
+      "scheme": "02_air",
+      "root_class": "CHelicopter",
+      "weapon_classes": {
+        "CBarrelSpinWeaponComponent": 1,
+        "CBulletWeaponBase": 1,
+        "CLightWeaponComponent": 1,
+        "CMissileWeaponBase": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w622_advancedhelicopter_mgun",
+          "weapon_id": "622"
+        },
+        {
+          "class": "CLightWeaponComponent",
+          "name": "warning_light",
+          "weapon_id": null
+        },
+        {
+          "class": "CMissileWeaponBase",
+          "name": "w621_advancedhelicopter_missile",
+          "weapon_id": "621"
+        }
+      ],
+      "weapon_points": 11
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/02_air/v2604_helicopter_urga_advancedassault/v2604_helicopter_urga_advancedassault_signature_shielded.ee",
+      "chassis": "v2604_helicopter_urga_advancedassault",
+      "scheme": "02_air",
+      "root_class": "CHelicopter",
+      "weapon_classes": {
+        "CBarrelSpinWeaponComponent": 1,
+        "CBulletWeaponBase": 1,
+        "CLightWeaponComponent": 1,
+        "CMissileWeaponBase": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w622_advancedhelicopter_mgun",
+          "weapon_id": "622"
+        },
+        {
+          "class": "CLightWeaponComponent",
+          "name": "warning_light",
+          "weapon_id": null
+        },
+        {
+          "class": "CMissileWeaponBase",
+          "name": "w621_advancedhelicopter_missile",
+          "weapon_id": "621"
+        }
+      ],
+      "weapon_points": 11
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/02_air/v2604_helicopter_urga_advancedassault/v2604_helicopter_urga_advancedassault_signature_shielded_di_ravello.ee",
+      "chassis": "v2604_helicopter_urga_advancedassault",
+      "scheme": "02_air",
+      "root_class": "CHelicopter",
+      "weapon_classes": {
+        "CBarrelSpinWeaponComponent": 1,
+        "CBulletWeaponBase": 1,
+        "CLightWeaponComponent": 1,
+        "CMissileWeaponBase": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w622_advancedhelicopter_mgun",
+          "weapon_id": "622"
+        },
+        {
+          "class": "CLightWeaponComponent",
+          "name": "warning_light",
+          "weapon_id": null
+        },
+        {
+          "class": "CMissileWeaponBase",
+          "name": "w621_advancedhelicopter_missile",
+          "weapon_id": "621"
+        }
+      ],
+      "weapon_points": 11
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/02_air/v4202_plane_capstone_fighterjet/v4202_plane_capstone_fighterjet_debug.ee",
+      "chassis": "v4202_plane_capstone_fighterjet",
+      "scheme": "02_air",
+      "root_class": "CAirPlane",
+      "weapon_classes": {
+        "CAimPOIWeaponComponent": 1,
+        "CBulletWeaponBase": 1,
+        "CLaserBeamWeaponComponent": 1,
+        "CMissileWeaponBase": 1,
+        "CRPGFireLeachWeapon": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w610_fighterjet_mgun",
+          "weapon_id": "610"
+        },
+        {
+          "class": "CLaserBeamWeaponComponent",
+          "name": "LaserBeamWeaponComponent",
+          "weapon_id": null
+        },
+        {
+          "class": "CMissileWeaponBase",
+          "name": "w608_fighterjet_missile",
+          "weapon_id": "608"
+        },
+        {
+          "class": "CRPGFireLeachWeapon",
+          "name": "w609_fighterjet_missile_air_lockon",
+          "weapon_id": "609"
+        }
+      ],
+      "weapon_points": 11
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/02_air/v4202_plane_capstone_fighterjet/v4202_plane_capstone_fighterjet_military_01.ee",
+      "chassis": "v4202_plane_capstone_fighterjet",
+      "scheme": "02_air",
+      "root_class": "CAirPlane",
+      "weapon_classes": {
+        "CAimPOIWeaponComponent": 1,
+        "CBulletWeaponBase": 1,
+        "CLaserBeamWeaponComponent": 1,
+        "CMissileWeaponBase": 1,
+        "CRPGFireLeachWeapon": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w610_fighterjet_mgun",
+          "weapon_id": "610"
+        },
+        {
+          "class": "CLaserBeamWeaponComponent",
+          "name": "LaserBeamWeaponComponent",
+          "weapon_id": null
+        },
+        {
+          "class": "CMissileWeaponBase",
+          "name": "w608_fighterjet_missile",
+          "weapon_id": "608"
+        },
+        {
+          "class": "CRPGFireLeachWeapon",
+          "name": "w609_fighterjet_missile_air_lockon",
+          "weapon_id": "609"
+        }
+      ],
+      "weapon_points": 11
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/02_air/v4202_plane_capstone_fighterjet/v4202_plane_capstone_fighterjet_rebel_01.ee",
+      "chassis": "v4202_plane_capstone_fighterjet",
+      "scheme": "02_air",
+      "root_class": "CAirPlane",
+      "weapon_classes": {
+        "CAimPOIWeaponComponent": 1,
+        "CBulletWeaponBase": 1,
+        "CLaserBeamWeaponComponent": 1,
+        "CMissileWeaponBase": 1,
+        "CRPGFireLeachWeapon": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w610_fighterjet_mgun",
+          "weapon_id": "610"
+        },
+        {
+          "class": "CLaserBeamWeaponComponent",
+          "name": "LaserBeamWeaponComponent",
+          "weapon_id": null
+        },
+        {
+          "class": "CMissileWeaponBase",
+          "name": "w608_fighterjet_missile",
+          "weapon_id": "608"
+        },
+        {
+          "class": "CRPGFireLeachWeapon",
+          "name": "w609_fighterjet_missile_air_lockon",
+          "weapon_id": "609"
+        }
+      ],
+      "weapon_points": 11
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/02_air/v4602_plane_urga_fighterbomber/v4602_plane_urga_fighterbomber_debug.ee",
+      "chassis": "v4602_plane_urga_fighterbomber",
+      "scheme": "02_air",
+      "root_class": "CAirPlane",
+      "weapon_classes": {
+        "CAimPOIWeaponComponent": 1,
+        "CLightWeaponComponent": 1,
+        "CMissileWeaponBase": 2,
+        "CRPGFireLeachWeapon": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CLightWeaponComponent",
+          "name": "warning_light",
+          "weapon_id": null
+        },
+        {
+          "class": "CMissileWeaponBase",
+          "name": "w611_fighterbomber_missile",
+          "weapon_id": "611"
+        },
+        {
+          "class": "CMissileWeaponBase",
+          "name": "w613_fighterbomber_missile_ground_lockon",
+          "weapon_id": "613"
+        },
+        {
+          "class": "CRPGFireLeachWeapon",
+          "name": "w612_fighterbomber_missile_air_lockon",
+          "weapon_id": "612"
+        }
+      ],
+      "weapon_points": 10
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/02_air/v4602_plane_urga_fighterbomber/v4602_plane_urga_fighterbomber_military_01.ee",
+      "chassis": "v4602_plane_urga_fighterbomber",
+      "scheme": "02_air",
+      "root_class": "CAirPlane",
+      "weapon_classes": {
+        "CAimPOIWeaponComponent": 1,
+        "CLightWeaponComponent": 1,
+        "CMissileWeaponBase": 2,
+        "CRPGFireLeachWeapon": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CLightWeaponComponent",
+          "name": "warning_light",
+          "weapon_id": null
+        },
+        {
+          "class": "CMissileWeaponBase",
+          "name": "w611_fighterbomber_missile",
+          "weapon_id": "611"
+        },
+        {
+          "class": "CMissileWeaponBase",
+          "name": "w613_fighterbomber_missile_ground_lockon",
+          "weapon_id": "613"
+        },
+        {
+          "class": "CRPGFireLeachWeapon",
+          "name": "w612_fighterbomber_missile_air_lockon",
+          "weapon_id": "612"
+        }
+      ],
+      "weapon_points": 10
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/02_air/v4602_plane_urga_fighterbomber/v4602_plane_urga_fighterbomber_rebel_01.ee",
+      "chassis": "v4602_plane_urga_fighterbomber",
+      "scheme": "02_air",
+      "root_class": "CAirPlane",
+      "weapon_classes": {
+        "CAimPOIWeaponComponent": 1,
+        "CLightWeaponComponent": 1,
+        "CMissileWeaponBase": 2,
+        "CRPGFireLeachWeapon": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CLightWeaponComponent",
+          "name": "warning_light",
+          "weapon_id": null
+        },
+        {
+          "class": "CMissileWeaponBase",
+          "name": "w611_fighterbomber_missile",
+          "weapon_id": "611"
+        },
+        {
+          "class": "CMissileWeaponBase",
+          "name": "w613_fighterbomber_missile_ground_lockon",
+          "weapon_id": "613"
+        },
+        {
+          "class": "CRPGFireLeachWeapon",
+          "name": "w612_fighterbomber_missile_air_lockon",
+          "weapon_id": "612"
+        }
+      ],
+      "weapon_points": 10
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/02_air/v4603_plane_urga_cargotransport/v4603_plane_urga_cargotransport_military_cargo_tank.ee",
+      "chassis": "v4603_plane_urga_cargotransport",
+      "scheme": "02_air",
+      "root_class": "CAirPlane",
+      "weapon_classes": {
+        "CBulletWeaponBase": 2,
+        "CLightWeaponComponent": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w602_mediumtank_canon",
+          "weapon_id": "602"
+        },
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w603_mediumtank_mgun",
+          "weapon_id": "603"
+        },
+        {
+          "class": "CLightWeaponComponent",
+          "name": "warning_light",
+          "weapon_id": null
+        }
+      ],
+      "weapon_points": 2
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/02_air/v4800_plane_brothers_vintagefighter/v4800_plane_brothers_vintagefighter_debug.ee",
+      "chassis": "v4800_plane_brothers_vintagefighter",
+      "scheme": "02_air",
+      "root_class": "CAirPlane",
+      "weapon_classes": {
+        "CAimPOIWeaponComponent": 1,
+        "CBulletWeaponBase": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w617_vintagefighter_mgun",
+          "weapon_id": "617"
+        }
+      ],
+      "weapon_points": 6
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/02_air/v4800_plane_brothers_vintagefighter/v4800_plane_brothers_vintagefighter_rebel_01.ee",
+      "chassis": "v4800_plane_brothers_vintagefighter",
+      "scheme": "02_air",
+      "root_class": "CAirPlane",
+      "weapon_classes": {
+        "CAimPOIWeaponComponent": 1,
+        "CBulletWeaponBase": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CBulletWeaponBase",
+          "name": "w617_vintagefighter_mgun",
+          "weapon_id": "617"
+        }
+      ],
+      "weapon_points": 6
+    },
+    {
+      "entity": "editor/entities/jc_vehicles/01_land/v5603_train_urga_monorailmissilecar/v5603_train_urga_monorailmissilecar_military_01.ee",
+      "chassis": "v5603_train_urga_monorailmissilecar",
+      "scheme": "01_land",
+      "root_class": "CTrain",
+      "weapon_classes": {
+        "CMissileWeaponBase": 1,
+        "CTurretWeaponComponent": 1
+      },
+      "force_pulses": 0,
+      "weapons": [
+        {
+          "class": "CMissileWeaponBase",
+          "name": "w614_monorailmissilecar_missile",
+          "weapon_id": "614"
+        },
+        {
+          "class": "CTurretWeaponComponent",
+          "name": "TurretWeaponComponent",
+          "weapon_id": null
+        }
+      ],
+      "weapon_points": 6
+    }
+  ],
+  "part_behaviours": [
+    {
+      "behaviour": "AirBrake",
+      "parts": 3,
+      "entities": 3,
+      "chassis": 1,
+      "chassis_list": [
+        "v4602_plane_urga_fighterbomber"
+      ]
+    },
+    {
+      "behaviour": "Antenna",
+      "parts": 7,
+      "entities": 5,
+      "chassis": 2,
+      "chassis_list": [
+        "v0009_car_autostraad_modernsaloon",
+        "v0508_car_solar_oldcompact"
+      ]
+    },
+    {
+      "behaviour": "Axle",
+      "parts": 6,
+      "entities": 3,
+      "chassis": 1,
+      "chassis_list": [
+        "v0803_car_na_monstertruck"
+      ]
+    },
+    {
+      "behaviour": "BavariumShield",
+      "parts": 26,
+      "entities": 14,
+      "chassis": 4,
+      "chassis_list": [
+        "v0201_car_capstone_mediumtank",
+        "v0202_car_capstone_bavariumtank",
+        "v2601_helicopter_urga_heavyassault",
+        "v2604_helicopter_urga_advancedassault"
+      ]
+    },
+    {
+      "behaviour": "BoatEngine",
+      "parts": 38,
+      "entities": 22,
+      "chassis": 8,
+      "chassis_list": [
+        "v1300_boat_kensington_motoryacht",
+        "v1302_boat_kensington_sailboat",
+        "v1400_boat_mugello_spyspeedboat",
+        "v1401_boat_mugello_racingboat",
+        "v1602_boat_urga_transport",
+        "v1701_boat_na_smalloldfishing",
+        "v1704_boat_na_lightpatrol",
+        "v1705_boat_na_mediumoldfishing"
+      ]
+    },
+    {
+      "behaviour": "Body",
+      "parts": 83,
+      "entities": 83,
+      "chassis": 31,
+      "chassis_list": [
+        "v0001_car_autostraad_armoredtruck",
+        "v0002_car_autostraad_oldcampervan",
+        "v0003_car_autostraad_racinghothatch",
+        "v0008_car_autostraad_modernsportssaloon",
+        "v0009_car_autostraad_modernsaloon",
+        "v0011_car_autostraad_articulatedtruck",
+        "v0012_car_autostraad_atv",
+        "v0200_car_capstone_apc",
+        "v0305_car_kensington_moderngrandtourer",
+        "v0402_car_mugello_vintagesuper",
+        "v0405_car_mugello_moderncircuitracer",
+        "v0506_car_solar_oldtractor",
+        "v0507_car_solar_oldbus",
+        "v0509_car_solar_modernmini",
+        "v0510_car_solar_modernroadster",
+        "v0512_car_solar_oldtwodoorhatch",
+        "v0514_car_solar_modernpickup",
+        "v0604_car_urga_buggy",
+        "v0803_car_na_monstertruck",
+        "v1400_boat_mugello_spyspeedboat",
+        "v1401_boat_mugello_racingboat",
+        "v2602_helicopter_urga_lightassault",
+        "v3000_bike_autostraad_trials",
+        "v3001_bike_autostraad_snowmobile",
+        "v3402_bike_mugello_modernsuper",
+        "v3500_bike_solar_oldmoped",
+        "v3501_bike_solar_modernmoped",
+        "v3503_bike_solar_oldroad",
+        "v3600_bike_urga_combatdirt",
+        "v4202_plane_capstone_fighterjet",
+        "v4800_plane_brothers_vintagefighter"
+      ]
+    },
+    {
+      "behaviour": "BrakeCalipers",
+      "parts": 330,
+      "entities": 85,
+      "chassis": 30,
+      "chassis_list": [
+        "v0003_car_autostraad_racinghothatch",
+        "v0008_car_autostraad_modernsportssaloon",
+        "v0009_car_autostraad_modernsaloon",
+        "v0012_car_autostraad_atv",
+        "v0302_car_kensington_modernlimo",
+        "v0305_car_kensington_moderngrandtourer",
+        "v0400_car_mugello_vintagesports",
+        "v0401_car_mugello_racingsupercar",
+        "v0402_car_mugello_vintagesuper",
+        "v0403_car_mugello_modernecosuper",
+        "v0405_car_mugello_moderncircuitracer",
+        "v0500_car_solar_oldmini",
+        "v0504_car_solar_technicaljeep",
+        "v0509_car_solar_modernmini",
+        "v0510_car_solar_modernroadster",
+        "v0513_car_solar_oldfourdoorhatch",
+        "v0514_car_solar_modernpickup",
+        "v0604_car_urga_buggy",
+        "v0803_car_na_monstertruck",
+        "v3000_bike_autostraad_trials",
+        "v3401_bike_mugello_modernsport",
+        "v3402_bike_mugello_modernsuper",
+        "v3500_bike_solar_oldmoped",
+        "v3501_bike_solar_modernmoped",
+        "v3502_bike_solar_modernroad",
+        "v3503_bike_solar_oldroad",
+        "v3600_bike_urga_combatdirt",
+        "v4202_plane_capstone_fighterjet",
+        "v4602_plane_urga_fighterbomber",
+        "v4603_plane_urga_cargotransport"
+      ]
+    },
+    {
+      "behaviour": "BrakeDisc",
+      "parts": 192,
+      "entities": 48,
+      "chassis": 16,
+      "chassis_list": [
+        "v0003_car_autostraad_racinghothatch",
+        "v0012_car_autostraad_atv",
+        "v0302_car_kensington_modernlimo",
+        "v0305_car_kensington_moderngrandtourer",
+        "v0400_car_mugello_vintagesports",
+        "v0401_car_mugello_racingsupercar",
+        "v0402_car_mugello_vintagesuper",
+        "v0403_car_mugello_modernecosuper",
+        "v0500_car_solar_oldmini",
+        "v0504_car_solar_technicaljeep",
+        "v0509_car_solar_modernmini",
+        "v0510_car_solar_modernroadster",
+        "v0513_car_solar_oldfourdoorhatch",
+        "v0514_car_solar_modernpickup",
+        "v0604_car_urga_buggy",
+        "v0803_car_na_monstertruck"
+      ]
+    },
+    {
+      "behaviour": "BrakeDrum",
+      "parts": 78,
+      "entities": 24,
+      "chassis": 7,
+      "chassis_list": [
+        "v0012_car_autostraad_atv",
+        "v0400_car_mugello_vintagesports",
+        "v0405_car_mugello_moderncircuitracer",
+        "v0500_car_solar_oldmini",
+        "v0604_car_urga_buggy",
+        "v0803_car_na_monstertruck",
+        "v3503_bike_solar_oldroad"
+      ]
+    },
+    {
+      "behaviour": "Cannon",
+      "parts": 68,
+      "entities": 40,
+      "chassis": 11,
+      "chassis_list": [
+        "v0200_car_capstone_apc",
+        "v0201_car_capstone_mediumtank",
+        "v0202_car_capstone_bavariumtank",
+        "v0504_car_solar_technicaljeep",
+        "v0600_car_urga_armoredjeep",
+        "v0603_car_urga_smalltank",
+        "v1200_boat_capstone_heavypatrol",
+        "v1202_boat_capstone_corvette",
+        "v1704_boat_na_lightpatrol",
+        "v2602_helicopter_urga_lightassault",
+        "v2604_helicopter_urga_advancedassault"
+      ]
+    },
+    {
+      "behaviour": "CargoBayDoor",
+      "parts": 28,
+      "entities": 10,
+      "chassis": 2,
+      "chassis_list": [
+        "v1602_boat_urga_transport",
+        "v4603_plane_urga_cargotransport"
+      ]
+    },
+    {
+      "behaviour": "CenterLeftDoor",
+      "parts": 17,
+      "entities": 17,
+      "chassis": 4,
+      "chassis_list": [
+        "v0002_car_autostraad_oldcampervan",
+        "v0200_car_capstone_apc",
+        "v0501_car_solar_smallvan",
+        "v4603_plane_urga_cargotransport"
+      ]
+    },
+    {
+      "behaviour": "CenterLeftWindow",
+      "parts": 53,
+      "entities": 29,
+      "chassis": 10,
+      "chassis_list": [
+        "v0000_car_autostraad_oldjeep",
+        "v0001_car_autostraad_armoredtruck",
+        "v0302_car_kensington_modernlimo",
+        "v0305_car_kensington_moderngrandtourer",
+        "v0501_car_solar_smallvan",
+        "v0503_car_solar_modernsuv",
+        "v0513_car_solar_oldfourdoorhatch",
+        "v2200_helicopter_capstone_assault",
+        "v2201_helicopter_capstone_heavytroop",
+        "v4600_plane_urga_privatepropeller"
+      ]
+    },
+    {
+      "behaviour": "CenterRightDoor",
+      "parts": 21,
+      "entities": 19,
+      "chassis": 5,
+      "chassis_list": [
+        "v0002_car_autostraad_oldcampervan",
+        "v0006_car_autostraad_modernbus",
+        "v0200_car_capstone_apc",
+        "v0501_car_solar_smallvan",
+        "v4603_plane_urga_cargotransport"
+      ]
+    },
+    {
+      "behaviour": "CenterRightWindow",
+      "parts": 43,
+      "entities": 29,
+      "chassis": 9,
+      "chassis_list": [
+        "v0000_car_autostraad_oldjeep",
+        "v0302_car_kensington_modernlimo",
+        "v0305_car_kensington_moderngrandtourer",
+        "v0501_car_solar_smallvan",
+        "v0503_car_solar_modernsuv",
+        "v0513_car_solar_oldfourdoorhatch",
+        "v1200_boat_capstone_heavypatrol",
+        "v2200_helicopter_capstone_assault",
+        "v4600_plane_urga_privatepropeller"
+      ]
+    },
+    {
+      "behaviour": "Elevator",
+      "parts": 36,
+      "entities": 18,
+      "chassis": 6,
+      "chassis_list": [
+        "v4202_plane_capstone_fighterjet",
+        "v4500_plane_solar_smallfloatprop",
+        "v4600_plane_urga_privatepropeller",
+        "v4602_plane_urga_fighterbomber",
+        "v4603_plane_urga_cargotransport",
+        "v4800_plane_brothers_vintagefighter"
+      ]
+    },
+    {
+      "behaviour": "Engine",
+      "parts": 187,
+      "entities": 150,
+      "chassis": 50,
+      "chassis_list": [
+        "v0000_car_autostraad_oldjeep",
+        "v0003_car_autostraad_racinghothatch",
+        "v0005_car_autostraad_minetruck",
+        "v0006_car_autostraad_modernbus",
+        "v0008_car_autostraad_modernsportssaloon",
+        "v0009_car_autostraad_modernsaloon",
+        "v0011_car_autostraad_articulatedtruck",
+        "v0200_car_capstone_apc",
+        "v0302_car_kensington_modernlimo",
+        "v0305_car_kensington_moderngrandtourer",
+        "v0401_car_mugello_racingsupercar",
+        "v0402_car_mugello_vintagesuper",
+        "v0403_car_mugello_modernecosuper",
+        "v0405_car_mugello_moderncircuitracer",
+        "v0500_car_solar_oldmini",
+        "v0501_car_solar_smallvan",
+        "v0503_car_solar_modernsuv",
+        "v0504_car_solar_technicaljeep",
+        "v0505_car_solar_oldtruck",
+        "v0506_car_solar_oldtractor",
+        "v0507_car_solar_oldbus",
+        "v0508_car_solar_oldcompact",
+        "v0509_car_solar_modernmini",
+        "v0510_car_solar_modernroadster",
+        "v0512_car_solar_oldtwodoorhatch",
+        "v0513_car_solar_oldfourdoorhatch",
+        "v0514_car_solar_modernpickup",
+        "v0604_car_urga_buggy",
+        "v0803_car_na_monstertruck",
+        "v1200_boat_capstone_heavypatrol",
+        "v1202_boat_capstone_corvette",
+        "v1300_boat_kensington_motoryacht",
+        "v1602_boat_urga_transport",
+        "v1705_boat_na_mediumoldfishing",
+        "v2200_helicopter_capstone_assault",
+        "v2601_helicopter_urga_heavyassault",
+        "v2604_helicopter_urga_advancedassault",
+        "v3000_bike_autostraad_trials",
+        "v3001_bike_autostraad_snowmobile",
+        "v3401_bike_mugello_modernsport",
+        "v3402_bike_mugello_modernsuper",
+        "v3500_bike_solar_oldmoped",
+        "v3501_bike_solar_modernmoped",
+        "v3502_bike_solar_modernroad",
+        "v3503_bike_solar_oldroad",
+        "v3600_bike_urga_combatdirt",
+        "v4600_plane_urga_privatepropeller",
+        "v4603_plane_urga_cargotransport",
+        "v5601_train_urga_monorailcargoengine",
+        "v9999_car_mugello_dlctestcar"
+      ]
+    },
+    {
+      "behaviour": "EngineRotatingPart",
+      "parts": 3,
+      "entities": 3,
+      "chassis": 1,
+      "chassis_list": [
+        "v0506_car_solar_oldtractor"
+      ]
+    },
+    {
+      "behaviour": "Flaps",
+      "parts": 202,
+      "entities": 23,
+      "chassis": 8,
+      "chassis_list": [
+        "v0011_car_autostraad_articulatedtruck",
+        "v0602_car_urga_armoredtransport",
+        "v4202_plane_capstone_fighterjet",
+        "v4500_plane_solar_smallfloatprop",
+        "v4600_plane_urga_privatepropeller",
+        "v4602_plane_urga_fighterbomber",
+        "v4603_plane_urga_cargotransport",
+        "v4800_plane_brothers_vintagefighter"
+      ]
+    },
+    {
+      "behaviour": "FrontLeftDoor",
+      "parts": 173,
+      "entities": 173,
+      "chassis": 56,
+      "chassis_list": [
+        "v0000_car_autostraad_oldjeep",
+        "v0001_car_autostraad_armoredtruck",
+        "v0002_car_autostraad_oldcampervan",
+        "v0003_car_autostraad_racinghothatch",
+        "v0005_car_autostraad_minetruck",
+        "v0006_car_autostraad_modernbus",
+        "v0008_car_autostraad_modernsportssaloon",
+        "v0009_car_autostraad_modernsaloon",
+        "v0011_car_autostraad_articulatedtruck",
+        "v0200_car_capstone_apc",
+        "v0201_car_capstone_mediumtank",
+        "v0202_car_capstone_bavariumtank",
+        "v0300_car_kensington_sportsmuscle",
+        "v0302_car_kensington_modernlimo",
+        "v0305_car_kensington_moderngrandtourer",
+        "v0400_car_mugello_vintagesports",
+        "v0401_car_mugello_racingsupercar",
+        "v0402_car_mugello_vintagesuper",
+        "v0403_car_mugello_modernecosuper",
+        "v0500_car_solar_oldmini",
+        "v0501_car_solar_smallvan",
+        "v0502_car_solar_modernsedan",
+        "v0503_car_solar_modernsuv",
+        "v0504_car_solar_technicaljeep",
+        "v0505_car_solar_oldtruck",
+        "v0507_car_solar_oldbus",
+        "v0508_car_solar_oldcompact",
+        "v0509_car_solar_modernmini",
+        "v0510_car_solar_modernroadster",
+        "v0512_car_solar_oldtwodoorhatch",
+        "v0513_car_solar_oldfourdoorhatch",
+        "v0514_car_solar_modernpickup",
+        "v0600_car_urga_armoredjeep",
+        "v0602_car_urga_armoredtransport",
+        "v0603_car_urga_smalltank",
+        "v0604_car_urga_buggy",
+        "v0803_car_na_monstertruck",
+        "v1200_boat_capstone_heavypatrol",
+        "v1202_boat_capstone_corvette",
+        "v1400_boat_mugello_spyspeedboat",
+        "v1602_boat_urga_transport",
+        "v1705_boat_na_mediumoldfishing",
+        "v2102_helicopter_eubus_utility",
+        "v2200_helicopter_capstone_assault",
+        "v2201_helicopter_capstone_heavytroop",
+        "v2601_helicopter_urga_heavyassault",
+        "v2602_helicopter_urga_lightassault",
+        "v2603_helicopter_urga_seascout",
+        "v2604_helicopter_urga_advancedassault",
+        "v4202_plane_capstone_fighterjet",
+        "v4500_plane_solar_smallfloatprop",
+        "v4600_plane_urga_privatepropeller",
+        "v4602_plane_urga_fighterbomber",
+        "v4603_plane_urga_cargotransport",
+        "v4800_plane_brothers_vintagefighter",
+        "v9999_car_mugello_dlctestcar"
+      ]
+    },
+    {
+      "behaviour": "FrontLeftWindow",
+      "parts": 145,
+      "entities": 137,
+      "chassis": 47,
+      "chassis_list": [
+        "v0000_car_autostraad_oldjeep",
+        "v0001_car_autostraad_armoredtruck",
+        "v0002_car_autostraad_oldcampervan",
+        "v0003_car_autostraad_racinghothatch",
+        "v0005_car_autostraad_minetruck",
+        "v0006_car_autostraad_modernbus",
+        "v0008_car_autostraad_modernsportssaloon",
+        "v0009_car_autostraad_modernsaloon",
+        "v0011_car_autostraad_articulatedtruck",
+        "v0300_car_kensington_sportsmuscle",
+        "v0302_car_kensington_modernlimo",
+        "v0305_car_kensington_moderngrandtourer",
+        "v0400_car_mugello_vintagesports",
+        "v0401_car_mugello_racingsupercar",
+        "v0402_car_mugello_vintagesuper",
+        "v0403_car_mugello_modernecosuper",
+        "v0500_car_solar_oldmini",
+        "v0501_car_solar_smallvan",
+        "v0502_car_solar_modernsedan",
+        "v0503_car_solar_modernsuv",
+        "v0504_car_solar_technicaljeep",
+        "v0505_car_solar_oldtruck",
+        "v0507_car_solar_oldbus",
+        "v0508_car_solar_oldcompact",
+        "v0509_car_solar_modernmini",
+        "v0510_car_solar_modernroadster",
+        "v0512_car_solar_oldtwodoorhatch",
+        "v0513_car_solar_oldfourdoorhatch",
+        "v0514_car_solar_modernpickup",
+        "v0600_car_urga_armoredjeep",
+        "v0602_car_urga_armoredtransport",
+        "v0803_car_na_monstertruck",
+        "v1200_boat_capstone_heavypatrol",
+        "v1602_boat_urga_transport",
+        "v1701_boat_na_smalloldfishing",
+        "v1705_boat_na_mediumoldfishing",
+        "v2102_helicopter_eubus_utility",
+        "v2200_helicopter_capstone_assault",
+        "v2201_helicopter_capstone_heavytroop",
+        "v2601_helicopter_urga_heavyassault",
+        "v2602_helicopter_urga_lightassault",
+        "v2603_helicopter_urga_seascout",
+        "v4500_plane_solar_smallfloatprop",
+        "v4600_plane_urga_privatepropeller",
+        "v4602_plane_urga_fighterbomber",
+        "v4800_plane_brothers_vintagefighter",
+        "v9999_car_mugello_dlctestcar"
+      ]
+    },
+    {
+      "behaviour": "FrontRightDoor",
+      "parts": 132,
+      "entities": 132,
+      "chassis": 42,
+      "chassis_list": [
+        "v0000_car_autostraad_oldjeep",
+        "v0001_car_autostraad_armoredtruck",
+        "v0002_car_autostraad_oldcampervan",
+        "v0003_car_autostraad_racinghothatch",
+        "v0006_car_autostraad_modernbus",
+        "v0008_car_autostraad_modernsportssaloon",
+        "v0009_car_autostraad_modernsaloon",
+        "v0011_car_autostraad_articulatedtruck",
+        "v0300_car_kensington_sportsmuscle",
+        "v0302_car_kensington_modernlimo",
+        "v0305_car_kensington_moderngrandtourer",
+        "v0400_car_mugello_vintagesports",
+        "v0401_car_mugello_racingsupercar",
+        "v0402_car_mugello_vintagesuper",
+        "v0403_car_mugello_modernecosuper",
+        "v0500_car_solar_oldmini",
+        "v0501_car_solar_smallvan",
+        "v0502_car_solar_modernsedan",
+        "v0503_car_solar_modernsuv",
+        "v0504_car_solar_technicaljeep",
+        "v0505_car_solar_oldtruck",
+        "v0507_car_solar_oldbus",
+        "v0508_car_solar_oldcompact",
+        "v0509_car_solar_modernmini",
+        "v0510_car_solar_modernroadster",
+        "v0512_car_solar_oldtwodoorhatch",
+        "v0513_car_solar_oldfourdoorhatch",
+        "v0514_car_solar_modernpickup",
+        "v0600_car_urga_armoredjeep",
+        "v0602_car_urga_armoredtransport",
+        "v0604_car_urga_buggy",
+        "v0803_car_na_monstertruck",
+        "v2102_helicopter_eubus_utility",
+        "v2200_helicopter_capstone_assault",
+        "v2201_helicopter_capstone_heavytroop",
+        "v2601_helicopter_urga_heavyassault",
+        "v2602_helicopter_urga_lightassault",
+        "v2603_helicopter_urga_seascout",
+        "v2604_helicopter_urga_advancedassault",
+        "v4600_plane_urga_privatepropeller",
+        "v4603_plane_urga_cargotransport",
+        "v9999_car_mugello_dlctestcar"
+      ]
+    },
+    {
+      "behaviour": "FrontRightWindow",
+      "parts": 130,
+      "entities": 122,
+      "chassis": 41,
+      "chassis_list": [
+        "v0000_car_autostraad_oldjeep",
+        "v0001_car_autostraad_armoredtruck",
+        "v0002_car_autostraad_oldcampervan",
+        "v0003_car_autostraad_racinghothatch",
+        "v0005_car_autostraad_minetruck",
+        "v0008_car_autostraad_modernsportssaloon",
+        "v0009_car_autostraad_modernsaloon",
+        "v0011_car_autostraad_articulatedtruck",
+        "v0300_car_kensington_sportsmuscle",
+        "v0302_car_kensington_modernlimo",
+        "v0305_car_kensington_moderngrandtourer",
+        "v0400_car_mugello_vintagesports",
+        "v0401_car_mugello_racingsupercar",
+        "v0402_car_mugello_vintagesuper",
+        "v0403_car_mugello_modernecosuper",
+        "v0500_car_solar_oldmini",
+        "v0501_car_solar_smallvan",
+        "v0502_car_solar_modernsedan",
+        "v0503_car_solar_modernsuv",
+        "v0504_car_solar_technicaljeep",
+        "v0505_car_solar_oldtruck",
+        "v0508_car_solar_oldcompact",
+        "v0509_car_solar_modernmini",
+        "v0510_car_solar_modernroadster",
+        "v0512_car_solar_oldtwodoorhatch",
+        "v0513_car_solar_oldfourdoorhatch",
+        "v0514_car_solar_modernpickup",
+        "v0600_car_urga_armoredjeep",
+        "v0602_car_urga_armoredtransport",
+        "v0803_car_na_monstertruck",
+        "v1200_boat_capstone_heavypatrol",
+        "v1602_boat_urga_transport",
+        "v1701_boat_na_smalloldfishing",
+        "v1705_boat_na_mediumoldfishing",
+        "v2102_helicopter_eubus_utility",
+        "v2200_helicopter_capstone_assault",
+        "v2201_helicopter_capstone_heavytroop",
+        "v2601_helicopter_urga_heavyassault",
+        "v2602_helicopter_urga_lightassault",
+        "v4600_plane_urga_privatepropeller",
+        "v9999_car_mugello_dlctestcar"
+      ]
+    },
+    {
+      "behaviour": "FrontWagonCoupling",
+      "parts": 5,
+      "entities": 5,
+      "chassis": 2,
+      "chassis_list": [
+        "v5602_train_urga_monorailflatbed",
+        "v5603_train_urga_monorailmissilecar"
+      ]
+    },
+    {
+      "behaviour": "FrontWagonCouplingLinked",
+      "parts": 5,
+      "entities": 5,
+      "chassis": 2,
+      "chassis_list": [
+        "v5602_train_urga_monorailflatbed",
+        "v5603_train_urga_monorailmissilecar"
+      ]
+    },
+    {
+      "behaviour": "GatlingGun",
+      "parts": 24,
+      "entities": 12,
+      "chassis": 3,
+      "chassis_list": [
+        "v1401_boat_mugello_racingboat",
+        "v2602_helicopter_urga_lightassault",
+        "v2604_helicopter_urga_advancedassault"
+      ]
+    },
+    {
+      "behaviour": "Hood",
+      "parts": 78,
+      "entities": 78,
+      "chassis": 27,
+      "chassis_list": [
+        "v0000_car_autostraad_oldjeep",
+        "v0001_car_autostraad_armoredtruck",
+        "v0003_car_autostraad_racinghothatch",
+        "v0006_car_autostraad_modernbus",
+        "v0008_car_autostraad_modernsportssaloon",
+        "v0009_car_autostraad_modernsaloon",
+        "v0300_car_kensington_sportsmuscle",
+        "v0302_car_kensington_modernlimo",
+        "v0305_car_kensington_moderngrandtourer",
+        "v0400_car_mugello_vintagesports",
+        "v0401_car_mugello_racingsupercar",
+        "v0402_car_mugello_vintagesuper",
+        "v0403_car_mugello_modernecosuper",
+        "v0500_car_solar_oldmini",
+        "v0501_car_solar_smallvan",
+        "v0502_car_solar_modernsedan",
+        "v0504_car_solar_technicaljeep",
+        "v0508_car_solar_oldcompact",
+        "v0509_car_solar_modernmini",
+        "v0510_car_solar_modernroadster",
+        "v0512_car_solar_oldtwodoorhatch",
+        "v0513_car_solar_oldfourdoorhatch",
+        "v0514_car_solar_modernpickup",
+        "v0602_car_urga_armoredtransport",
+        "v0604_car_urga_buggy",
+        "v0803_car_na_monstertruck",
+        "v3001_bike_autostraad_snowmobile"
+      ]
+    },
+    {
+      "behaviour": "LandingGear",
+      "parts": 114,
+      "entities": 25,
+      "chassis": 7,
+      "chassis_list": [
+        "v2200_helicopter_capstone_assault",
+        "v2601_helicopter_urga_heavyassault",
+        "v2604_helicopter_urga_advancedassault",
+        "v4202_plane_capstone_fighterjet",
+        "v4602_plane_urga_fighterbomber",
+        "v4603_plane_urga_cargotransport",
+        "v4800_plane_brothers_vintagefighter"
+      ]
+    },
+    {
+      "behaviour": "LandingGearHatch",
+      "parts": 76,
+      "entities": 19,
+      "chassis": 5,
+      "chassis_list": [
+        "v2604_helicopter_urga_advancedassault",
+        "v4202_plane_capstone_fighterjet",
+        "v4602_plane_urga_fighterbomber",
+        "v4603_plane_urga_cargotransport",
+        "v4800_plane_brothers_vintagefighter"
+      ]
+    },
+    {
+      "behaviour": "LandingSkid",
+      "parts": 21,
+      "entities": 12,
+      "chassis": 4,
+      "chassis_list": [
+        "v2102_helicopter_eubus_utility",
+        "v2602_helicopter_urga_lightassault",
+        "v2603_helicopter_urga_seascout",
+        "v4500_plane_solar_smallfloatprop"
+      ]
+    },
+    {
+      "behaviour": "LeftAileron",
+      "parts": 18,
+      "entities": 18,
+      "chassis": 6,
+      "chassis_list": [
+        "v4202_plane_capstone_fighterjet",
+        "v4500_plane_solar_smallfloatprop",
+        "v4600_plane_urga_privatepropeller",
+        "v4602_plane_urga_fighterbomber",
+        "v4603_plane_urga_cargotransport",
+        "v4800_plane_brothers_vintagefighter"
+      ]
+    },
+    {
+      "behaviour": "LeftRotor",
+      "parts": 8,
+      "entities": 8,
+      "chassis": 2,
+      "chassis_list": [
+        "v4600_plane_urga_privatepropeller",
+        "v4603_plane_urga_cargotransport"
+      ]
+    },
+    {
+      "behaviour": "LeftWing",
+      "parts": 9,
+      "entities": 9,
+      "chassis": 4,
+      "chassis_list": [
+        "v4202_plane_capstone_fighterjet",
+        "v4500_plane_solar_smallfloatprop",
+        "v4600_plane_urga_privatepropeller",
+        "v4800_plane_brothers_vintagefighter"
+      ]
+    },
+    {
+      "behaviour": "MainRotor",
+      "parts": 24,
+      "entities": 24,
+      "chassis": 7,
+      "chassis_list": [
+        "v2102_helicopter_eubus_utility",
+        "v2200_helicopter_capstone_assault",
+        "v2201_helicopter_capstone_heavytroop",
+        "v2601_helicopter_urga_heavyassault",
+        "v2602_helicopter_urga_lightassault",
+        "v2603_helicopter_urga_seascout",
+        "v2604_helicopter_urga_advancedassault"
+      ]
+    },
+    {
+      "behaviour": "MissileHatch",
+      "parts": 16,
+      "entities": 1,
+      "chassis": 1,
+      "chassis_list": [
+        "v5603_train_urga_monorailmissilecar"
+      ]
+    },
+    {
+      "behaviour": "OuterLeftRotor",
+      "parts": 6,
+      "entities": 6,
+      "chassis": 1,
+      "chassis_list": [
+        "v4603_plane_urga_cargotransport"
+      ]
+    },
+    {
+      "behaviour": "OuterRightRotor",
+      "parts": 6,
+      "entities": 6,
+      "chassis": 1,
+      "chassis_list": [
+        "v4603_plane_urga_cargotransport"
+      ]
+    },
+    {
+      "behaviour": "Propeller",
+      "parts": 47,
+      "entities": 25,
+      "chassis": 9,
+      "chassis_list": [
+        "v1202_boat_capstone_corvette",
+        "v1300_boat_kensington_motoryacht",
+        "v1302_boat_kensington_sailboat",
+        "v1400_boat_mugello_spyspeedboat",
+        "v1401_boat_mugello_racingboat",
+        "v1602_boat_urga_transport",
+        "v1701_boat_na_smalloldfishing",
+        "v1704_boat_na_lightpatrol",
+        "v1705_boat_na_mediumoldfishing"
+      ]
+    },
+    {
+      "behaviour": "RadarFast",
+      "parts": 3,
+      "entities": 3,
+      "chassis": 1,
+      "chassis_list": [
+        "v1202_boat_capstone_corvette"
+      ]
+    },
+    {
+      "behaviour": "RadarSlow",
+      "parts": 3,
+      "entities": 3,
+      "chassis": 1,
+      "chassis_list": [
+        "v1202_boat_capstone_corvette"
+      ]
+    },
+    {
+      "behaviour": "RearDoor",
+      "parts": 14,
+      "entities": 9,
+      "chassis": 3,
+      "chassis_list": [
+        "v0001_car_autostraad_armoredtruck",
+        "v0504_car_solar_technicaljeep",
+        "v0602_car_urga_armoredtransport"
+      ]
+    },
+    {
+      "behaviour": "RearLeftDoor",
+      "parts": 50,
+      "entities": 50,
+      "chassis": 16,
+      "chassis_list": [
+        "v0000_car_autostraad_oldjeep",
+        "v0002_car_autostraad_oldcampervan",
+        "v0009_car_autostraad_modernsaloon",
+        "v0200_car_capstone_apc",
+        "v0302_car_kensington_modernlimo",
+        "v0305_car_kensington_moderngrandtourer",
+        "v0501_car_solar_smallvan",
+        "v0502_car_solar_modernsedan",
+        "v0503_car_solar_modernsuv",
+        "v0508_car_solar_oldcompact",
+        "v0513_car_solar_oldfourdoorhatch",
+        "v0600_car_urga_armoredjeep",
+        "v2102_helicopter_eubus_utility",
+        "v2201_helicopter_capstone_heavytroop",
+        "v4600_plane_urga_privatepropeller",
+        "v4603_plane_urga_cargotransport"
+      ]
+    },
+    {
+      "behaviour": "RearLeftWindow",
+      "parts": 103,
+      "entities": 98,
+      "chassis": 33,
+      "chassis_list": [
+        "v0000_car_autostraad_oldjeep",
+        "v0001_car_autostraad_armoredtruck",
+        "v0003_car_autostraad_racinghothatch",
+        "v0005_car_autostraad_minetruck",
+        "v0008_car_autostraad_modernsportssaloon",
+        "v0009_car_autostraad_modernsaloon",
+        "v0300_car_kensington_sportsmuscle",
+        "v0302_car_kensington_modernlimo",
+        "v0305_car_kensington_moderngrandtourer",
+        "v0400_car_mugello_vintagesports",
+        "v0401_car_mugello_racingsupercar",
+        "v0403_car_mugello_modernecosuper",
+        "v0500_car_solar_oldmini",
+        "v0501_car_solar_smallvan",
+        "v0502_car_solar_modernsedan",
+        "v0503_car_solar_modernsuv",
+        "v0504_car_solar_technicaljeep",
+        "v0505_car_solar_oldtruck",
+        "v0508_car_solar_oldcompact",
+        "v0509_car_solar_modernmini",
+        "v0510_car_solar_modernroadster",
+        "v0512_car_solar_oldtwodoorhatch",
+        "v0513_car_solar_oldfourdoorhatch",
+        "v0514_car_solar_modernpickup",
+        "v0600_car_urga_armoredjeep",
+        "v0803_car_na_monstertruck",
+        "v2102_helicopter_eubus_utility",
+        "v2200_helicopter_capstone_assault",
+        "v2201_helicopter_capstone_heavytroop",
+        "v2601_helicopter_urga_heavyassault",
+        "v2602_helicopter_urga_lightassault",
+        "v4600_plane_urga_privatepropeller",
+        "v9999_car_mugello_dlctestcar"
+      ]
+    },
+    {
+      "behaviour": "RearRightDoor",
+      "parts": 62,
+      "entities": 56,
+      "chassis": 18,
+      "chassis_list": [
+        "v0000_car_autostraad_oldjeep",
+        "v0002_car_autostraad_oldcampervan",
+        "v0006_car_autostraad_modernbus",
+        "v0009_car_autostraad_modernsaloon",
+        "v0302_car_kensington_modernlimo",
+        "v0305_car_kensington_moderngrandtourer",
+        "v0501_car_solar_smallvan",
+        "v0502_car_solar_modernsedan",
+        "v0503_car_solar_modernsuv",
+        "v0508_car_solar_oldcompact",
+        "v0513_car_solar_oldfourdoorhatch",
+        "v0600_car_urga_armoredjeep",
+        "v2102_helicopter_eubus_utility",
+        "v2201_helicopter_capstone_heavytroop",
+        "v2601_helicopter_urga_heavyassault",
+        "v2602_helicopter_urga_lightassault",
+        "v4600_plane_urga_privatepropeller",
+        "v4603_plane_urga_cargotransport"
+      ]
+    },
+    {
+      "behaviour": "RearRightWindow",
+      "parts": 119,
+      "entities": 110,
+      "chassis": 36,
+      "chassis_list": [
+        "v0000_car_autostraad_oldjeep",
+        "v0001_car_autostraad_armoredtruck",
+        "v0002_car_autostraad_oldcampervan",
+        "v0003_car_autostraad_racinghothatch",
+        "v0008_car_autostraad_modernsportssaloon",
+        "v0009_car_autostraad_modernsaloon",
+        "v0300_car_kensington_sportsmuscle",
+        "v0302_car_kensington_modernlimo",
+        "v0305_car_kensington_moderngrandtourer",
+        "v0400_car_mugello_vintagesports",
+        "v0401_car_mugello_racingsupercar",
+        "v0403_car_mugello_modernecosuper",
+        "v0500_car_solar_oldmini",
+        "v0501_car_solar_smallvan",
+        "v0502_car_solar_modernsedan",
+        "v0503_car_solar_modernsuv",
+        "v0504_car_solar_technicaljeep",
+        "v0505_car_solar_oldtruck",
+        "v0508_car_solar_oldcompact",
+        "v0509_car_solar_modernmini",
+        "v0510_car_solar_modernroadster",
+        "v0512_car_solar_oldtwodoorhatch",
+        "v0513_car_solar_oldfourdoorhatch",
+        "v0514_car_solar_modernpickup",
+        "v0600_car_urga_armoredjeep",
+        "v0803_car_na_monstertruck",
+        "v1200_boat_capstone_heavypatrol",
+        "v1602_boat_urga_transport",
+        "v1705_boat_na_mediumoldfishing",
+        "v2102_helicopter_eubus_utility",
+        "v2200_helicopter_capstone_assault",
+        "v2201_helicopter_capstone_heavytroop",
+        "v2601_helicopter_urga_heavyassault",
+        "v2602_helicopter_urga_lightassault",
+        "v4600_plane_urga_privatepropeller",
+        "v9999_car_mugello_dlctestcar"
+      ]
+    },
+    {
+      "behaviour": "RearWagonCoupling",
+      "parts": 12,
+      "entities": 12,
+      "chassis": 3,
+      "chassis_list": [
+        "v5601_train_urga_monorailcargoengine",
+        "v5602_train_urga_monorailflatbed",
+        "v5603_train_urga_monorailmissilecar"
+      ]
+    },
+    {
+      "behaviour": "RearWindow",
+      "parts": 112,
+      "entities": 99,
+      "chassis": 33,
+      "chassis_list": [
+        "v0000_car_autostraad_oldjeep",
+        "v0002_car_autostraad_oldcampervan",
+        "v0003_car_autostraad_racinghothatch",
+        "v0005_car_autostraad_minetruck",
+        "v0006_car_autostraad_modernbus",
+        "v0008_car_autostraad_modernsportssaloon",
+        "v0009_car_autostraad_modernsaloon",
+        "v0300_car_kensington_sportsmuscle",
+        "v0302_car_kensington_modernlimo",
+        "v0305_car_kensington_moderngrandtourer",
+        "v0400_car_mugello_vintagesports",
+        "v0401_car_mugello_racingsupercar",
+        "v0402_car_mugello_vintagesuper",
+        "v0403_car_mugello_modernecosuper",
+        "v0500_car_solar_oldmini",
+        "v0502_car_solar_modernsedan",
+        "v0503_car_solar_modernsuv",
+        "v0504_car_solar_technicaljeep",
+        "v0505_car_solar_oldtruck",
+        "v0507_car_solar_oldbus",
+        "v0508_car_solar_oldcompact",
+        "v0509_car_solar_modernmini",
+        "v0510_car_solar_modernroadster",
+        "v0512_car_solar_oldtwodoorhatch",
+        "v0513_car_solar_oldfourdoorhatch",
+        "v0514_car_solar_modernpickup",
+        "v0602_car_urga_armoredtransport",
+        "v0803_car_na_monstertruck",
+        "v1200_boat_capstone_heavypatrol",
+        "v1602_boat_urga_transport",
+        "v2200_helicopter_capstone_assault",
+        "v4602_plane_urga_fighterbomber",
+        "v9999_car_mugello_dlctestcar"
+      ]
+    },
+    {
+      "behaviour": "RightAileron",
+      "parts": 18,
+      "entities": 18,
+      "chassis": 6,
+      "chassis_list": [
+        "v4202_plane_capstone_fighterjet",
+        "v4500_plane_solar_smallfloatprop",
+        "v4600_plane_urga_privatepropeller",
+        "v4602_plane_urga_fighterbomber",
+        "v4603_plane_urga_cargotransport",
+        "v4800_plane_brothers_vintagefighter"
+      ]
+    },
+    {
+      "behaviour": "RightRotor",
+      "parts": 8,
+      "entities": 8,
+      "chassis": 2,
+      "chassis_list": [
+        "v4600_plane_urga_privatepropeller",
+        "v4603_plane_urga_cargotransport"
+      ]
+    },
+    {
+      "behaviour": "RightWing",
+      "parts": 9,
+      "entities": 9,
+      "chassis": 4,
+      "chassis_list": [
+        "v4202_plane_capstone_fighterjet",
+        "v4500_plane_solar_smallfloatprop",
+        "v4600_plane_urga_privatepropeller",
+        "v4800_plane_brothers_vintagefighter"
+      ]
+    },
+    {
+      "behaviour": "Rotor",
+      "parts": 13,
+      "entities": 13,
+      "chassis": 3,
+      "chassis_list": [
+        "v0505_car_solar_oldtruck",
+        "v4500_plane_solar_smallfloatprop",
+        "v4800_plane_brothers_vintagefighter"
+      ]
+    },
+    {
+      "behaviour": "Rudder",
+      "parts": 41,
+      "entities": 20,
+      "chassis": 7,
+      "chassis_list": [
+        "v1705_boat_na_mediumoldfishing",
+        "v4202_plane_capstone_fighterjet",
+        "v4500_plane_solar_smallfloatprop",
+        "v4600_plane_urga_privatepropeller",
+        "v4602_plane_urga_fighterbomber",
+        "v4603_plane_urga_cargotransport",
+        "v4800_plane_brothers_vintagefighter"
+      ]
+    },
+    {
+      "behaviour": "Spring",
+      "parts": 61,
+      "entities": 23,
+      "chassis": 7,
+      "chassis_list": [
+        "v0012_car_autostraad_atv",
+        "v0500_car_solar_oldmini",
+        "v0604_car_urga_buggy",
+        "v0803_car_na_monstertruck",
+        "v3000_bike_autostraad_trials",
+        "v3501_bike_solar_modernmoped",
+        "v3503_bike_solar_oldroad"
+      ]
+    },
+    {
+      "behaviour": "Stabilizer",
+      "parts": 5,
+      "entities": 5,
+      "chassis": 2,
+      "chassis_list": [
+        "v4202_plane_capstone_fighterjet",
+        "v4500_plane_solar_smallfloatprop"
+      ]
+    },
+    {
+      "behaviour": "SteeringFork",
+      "parts": 27,
+      "entities": 27,
+      "chassis": 11,
+      "chassis_list": [
+        "v0012_car_autostraad_atv",
+        "v1500_boat_solar_jetski",
+        "v1717_boat_na_duck",
+        "v3000_bike_autostraad_trials",
+        "v3401_bike_mugello_modernsport",
+        "v3402_bike_mugello_modernsuper",
+        "v3500_bike_solar_oldmoped",
+        "v3501_bike_solar_modernmoped",
+        "v3502_bike_solar_modernroad",
+        "v3503_bike_solar_oldroad",
+        "v3600_bike_urga_combatdirt"
+      ]
+    },
+    {
+      "behaviour": "SteeringWheel",
+      "parts": 20,
+      "entities": 20,
+      "chassis": 9,
+      "chassis_list": [
+        "v0002_car_autostraad_oldcampervan",
+        "v0003_car_autostraad_racinghothatch",
+        "v0008_car_autostraad_modernsportssaloon",
+        "v0011_car_autostraad_articulatedtruck",
+        "v0302_car_kensington_modernlimo",
+        "v0305_car_kensington_moderngrandtourer",
+        "v0509_car_solar_modernmini",
+        "v0513_car_solar_oldfourdoorhatch",
+        "v1302_boat_kensington_sailboat"
+      ]
+    },
+    {
+      "behaviour": "Tail",
+      "parts": 16,
+      "entities": 16,
+      "chassis": 5,
+      "chassis_list": [
+        "v2200_helicopter_capstone_assault",
+        "v2601_helicopter_urga_heavyassault",
+        "v2604_helicopter_urga_advancedassault",
+        "v4202_plane_capstone_fighterjet",
+        "v4800_plane_brothers_vintagefighter"
+      ]
+    },
+    {
+      "behaviour": "TailRotor",
+      "parts": 19,
+      "entities": 19,
+      "chassis": 6,
+      "chassis_list": [
+        "v2102_helicopter_eubus_utility",
+        "v2200_helicopter_capstone_assault",
+        "v2201_helicopter_capstone_heavytroop",
+        "v2601_helicopter_urga_heavyassault",
+        "v2602_helicopter_urga_lightassault",
+        "v2603_helicopter_urga_seascout"
+      ]
+    },
+    {
+      "behaviour": "TailWing",
+      "parts": 8,
+      "entities": 4,
+      "chassis": 2,
+      "chassis_list": [
+        "v4500_plane_solar_smallfloatprop",
+        "v4600_plane_urga_privatepropeller"
+      ]
+    },
+    {
+      "behaviour": "TrainCargo",
+      "parts": 60,
+      "entities": 4,
+      "chassis": 1,
+      "chassis_list": [
+        "v5602_train_urga_monorailflatbed"
+      ]
+    },
+    {
+      "behaviour": "TrimTab",
+      "parts": 6,
+      "entities": 6,
+      "chassis": 1,
+      "chassis_list": [
+        "v0604_car_urga_buggy"
+      ]
+    },
+    {
+      "behaviour": "Trunk",
+      "parts": 58,
+      "entities": 58,
+      "chassis": 20,
+      "chassis_list": [
+        "v0000_car_autostraad_oldjeep",
+        "v0003_car_autostraad_racinghothatch",
+        "v0008_car_autostraad_modernsportssaloon",
+        "v0009_car_autostraad_modernsaloon",
+        "v0302_car_kensington_modernlimo",
+        "v0305_car_kensington_moderngrandtourer",
+        "v0400_car_mugello_vintagesports",
+        "v0401_car_mugello_racingsupercar",
+        "v0402_car_mugello_vintagesuper",
+        "v0403_car_mugello_modernecosuper",
+        "v0500_car_solar_oldmini",
+        "v0502_car_solar_modernsedan",
+        "v0507_car_solar_oldbus",
+        "v0508_car_solar_oldcompact",
+        "v0509_car_solar_modernmini",
+        "v0510_car_solar_modernroadster",
+        "v0512_car_solar_oldtwodoorhatch",
+        "v0513_car_solar_oldfourdoorhatch",
+        "v0514_car_solar_modernpickup",
+        "v0604_car_urga_buggy"
+      ]
+    },
+    {
+      "behaviour": "Turret",
+      "parts": 22,
+      "entities": 22,
+      "chassis": 7,
+      "chassis_list": [
+        "v0200_car_capstone_apc",
+        "v0201_car_capstone_mediumtank",
+        "v0202_car_capstone_bavariumtank",
+        "v0504_car_solar_technicaljeep",
+        "v0600_car_urga_armoredjeep",
+        "v0603_car_urga_smalltank",
+        "v1202_boat_capstone_corvette"
+      ]
+    },
+    {
+      "behaviour": "TurretDoor",
+      "parts": 6,
+      "entities": 6,
+      "chassis": 2,
+      "chassis_list": [
+        "v0200_car_capstone_apc",
+        "v0600_car_urga_armoredjeep"
+      ]
+    },
+    {
+      "behaviour": "Wheel",
+      "parts": 710,
+      "entities": 174,
+      "chassis": 60,
+      "chassis_list": [
+        "v0000_car_autostraad_oldjeep",
+        "v0001_car_autostraad_armoredtruck",
+        "v0002_car_autostraad_oldcampervan",
+        "v0003_car_autostraad_racinghothatch",
+        "v0005_car_autostraad_minetruck",
+        "v0006_car_autostraad_modernbus",
+        "v0008_car_autostraad_modernsportssaloon",
+        "v0009_car_autostraad_modernsaloon",
+        "v0011_car_autostraad_articulatedtruck",
+        "v0012_car_autostraad_atv",
+        "v0200_car_capstone_apc",
+        "v0201_car_capstone_mediumtank",
+        "v0202_car_capstone_bavariumtank",
+        "v0300_car_kensington_sportsmuscle",
+        "v0302_car_kensington_modernlimo",
+        "v0305_car_kensington_moderngrandtourer",
+        "v0400_car_mugello_vintagesports",
+        "v0401_car_mugello_racingsupercar",
+        "v0402_car_mugello_vintagesuper",
+        "v0403_car_mugello_modernecosuper",
+        "v0405_car_mugello_moderncircuitracer",
+        "v0500_car_solar_oldmini",
+        "v0501_car_solar_smallvan",
+        "v0502_car_solar_modernsedan",
+        "v0503_car_solar_modernsuv",
+        "v0504_car_solar_technicaljeep",
+        "v0505_car_solar_oldtruck",
+        "v0506_car_solar_oldtractor",
+        "v0507_car_solar_oldbus",
+        "v0508_car_solar_oldcompact",
+        "v0509_car_solar_modernmini",
+        "v0510_car_solar_modernroadster",
+        "v0512_car_solar_oldtwodoorhatch",
+        "v0513_car_solar_oldfourdoorhatch",
+        "v0514_car_solar_modernpickup",
+        "v0600_car_urga_armoredjeep",
+        "v0602_car_urga_armoredtransport",
+        "v0603_car_urga_smalltank",
+        "v0604_car_urga_buggy",
+        "v0803_car_na_monstertruck",
+        "v0866_car_na_ladbil",
+        "v2200_helicopter_capstone_assault",
+        "v2201_helicopter_capstone_heavytroop",
+        "v2601_helicopter_urga_heavyassault",
+        "v2604_helicopter_urga_advancedassault",
+        "v3000_bike_autostraad_trials",
+        "v3001_bike_autostraad_snowmobile",
+        "v3401_bike_mugello_modernsport",
+        "v3402_bike_mugello_modernsuper",
+        "v3500_bike_solar_oldmoped",
+        "v3501_bike_solar_modernmoped",
+        "v3502_bike_solar_modernroad",
+        "v3503_bike_solar_oldroad",
+        "v3600_bike_urga_combatdirt",
+        "v4202_plane_capstone_fighterjet",
+        "v4600_plane_urga_privatepropeller",
+        "v4602_plane_urga_fighterbomber",
+        "v4603_plane_urga_cargotransport",
+        "v4800_plane_brothers_vintagefighter",
+        "v9999_car_mugello_dlctestcar"
+      ]
+    },
+    {
+      "behaviour": "Windshield",
+      "parts": 229,
+      "entities": 151,
+      "chassis": 51,
+      "chassis_list": [
+        "v0000_car_autostraad_oldjeep",
+        "v0001_car_autostraad_armoredtruck",
+        "v0002_car_autostraad_oldcampervan",
+        "v0003_car_autostraad_racinghothatch",
+        "v0005_car_autostraad_minetruck",
+        "v0006_car_autostraad_modernbus",
+        "v0008_car_autostraad_modernsportssaloon",
+        "v0009_car_autostraad_modernsaloon",
+        "v0011_car_autostraad_articulatedtruck",
+        "v0300_car_kensington_sportsmuscle",
+        "v0302_car_kensington_modernlimo",
+        "v0305_car_kensington_moderngrandtourer",
+        "v0400_car_mugello_vintagesports",
+        "v0401_car_mugello_racingsupercar",
+        "v0402_car_mugello_vintagesuper",
+        "v0403_car_mugello_modernecosuper",
+        "v0500_car_solar_oldmini",
+        "v0501_car_solar_smallvan",
+        "v0502_car_solar_modernsedan",
+        "v0503_car_solar_modernsuv",
+        "v0504_car_solar_technicaljeep",
+        "v0505_car_solar_oldtruck",
+        "v0507_car_solar_oldbus",
+        "v0508_car_solar_oldcompact",
+        "v0509_car_solar_modernmini",
+        "v0510_car_solar_modernroadster",
+        "v0512_car_solar_oldtwodoorhatch",
+        "v0513_car_solar_oldfourdoorhatch",
+        "v0514_car_solar_modernpickup",
+        "v0600_car_urga_armoredjeep",
+        "v0602_car_urga_armoredtransport",
+        "v0604_car_urga_buggy",
+        "v0803_car_na_monstertruck",
+        "v1200_boat_capstone_heavypatrol",
+        "v1602_boat_urga_transport",
+        "v1701_boat_na_smalloldfishing",
+        "v1704_boat_na_lightpatrol",
+        "v1705_boat_na_mediumoldfishing",
+        "v2102_helicopter_eubus_utility",
+        "v2200_helicopter_capstone_assault",
+        "v2201_helicopter_capstone_heavytroop",
+        "v2601_helicopter_urga_heavyassault",
+        "v2602_helicopter_urga_lightassault",
+        "v2603_helicopter_urga_seascout",
+        "v3402_bike_mugello_modernsuper",
+        "v3501_bike_solar_modernmoped",
+        "v3502_bike_solar_modernroad",
+        "v4600_plane_urga_privatepropeller",
+        "v4602_plane_urga_fighterbomber",
+        "v4800_plane_brothers_vintagefighter",
+        "v9999_car_mugello_dlctestcar"
+      ]
+    },
+    {
+      "behaviour": "WindshieldWiper",
+      "parts": 4,
+      "entities": 2,
+      "chassis": 1,
+      "chassis_list": [
+        "v0008_car_autostraad_modernsportssaloon"
+      ]
+    }
+  ],
+  "behaviour_variables": [
+    {
+      "table": "all_door_part_properties",
+      "source": "editor/entities/jc_vehicles/00_shared/modules/vehicle_common.vmodc",
+      "rows": 14,
+      "entries": [
+        {
+          "name": "FrontLeftDoor",
+          "variable": null,
+          "members": {}
+        },
+        {
+          "name": "FrontRightDoor",
+          "variable": null,
+          "members": {}
+        },
+        {
+          "name": "CenterLeftDoor",
+          "variable": null,
+          "members": {}
+        },
+        {
+          "name": "CenterRightDoor",
+          "variable": null,
+          "members": {}
+        },
+        {
+          "name": "RearLeftDoor",
+          "variable": null,
+          "members": {}
+        },
+        {
+          "name": "RearRightDoor",
+          "variable": null,
+          "members": {}
+        },
+        {
+          "name": "TurretDoor",
+          "variable": null,
+          "members": {}
+        },
+        {
+          "name": "Trunk",
+          "variable": null,
+          "members": {}
+        },
+        {
+          "name": "Hood",
+          "variable": null,
+          "members": {}
+        },
+        {
+          "name": "RearDoor",
+          "variable": null,
+          "members": {}
+        },
+        {
+          "name": "CargoBayDoor",
+          "variable": null,
+          "members": {}
+        },
+        {
+          "name": "LeftWing",
+          "variable": null,
+          "members": {}
+        },
+        {
+          "name": "RightWing",
+          "variable": null,
+          "members": {}
+        },
+        {
+          "name": "MissileHatch",
+          "variable": null,
+          "members": {}
+        }
+      ]
+    },
+    {
+      "table": "all_fin_part_properties",
+      "source": "editor/entities/jc_vehicles/00_shared/modules/vehicle_common.vmodc",
+      "rows": 1,
+      "entries": [
+        {
+          "name": "BoatRudder",
+          "variable": null,
+          "members": {}
+        }
+      ]
+    },
+    {
+      "table": "all_hinged_part_properties",
+      "source": "editor/entities/jc_vehicles/00_shared/modules/vehicle_common.vmodc",
+      "rows": 25,
+      "entries": [
+        {
+          "name": "LeftAileron",
+          "variable": "steering_roll",
+          "members": {
+            "lod": 1,
+            "use_target_position_as_angle": 0
+          }
+        },
+        {
+          "name": "RightAileron",
+          "variable": "steering_roll_inverted",
+          "members": {
+            "lod": 1,
+            "use_target_position_as_angle": 0
+          }
+        },
+        {
+          "name": "LeftElevon",
+          "variable": "elevon_left_T",
+          "members": {
+            "lod": 1,
+            "use_target_position_as_angle": 0
+          }
+        },
+        {
+          "name": "RightElevon",
+          "variable": "elevon_right_T",
+          "members": {
+            "lod": 1,
+            "use_target_position_as_angle": 0
+          }
+        },
+        {
+          "name": "Elevator",
+          "variable": "steering_pitch",
+          "members": {
+            "lod": 1,
+            "use_target_position_as_angle": 0
+          }
+        },
+        {
+          "name": "Rudder",
+          "variable": "steering_yaw",
+          "members": {
+            "lod": 1,
+            "use_target_position_as_angle": 0
+          }
+        },
+        {
+          "name": "Flaps",
+          "variable": "flaps_T",
+          "members": {
+            "lod": 1,
+            "use_target_position_as_angle": 0
+          }
+        },
+        {
+          "name": "AirBrake",
+          "variable": "air_brakes_T",
+          "members": {
+            "lod": 1,
+            "use_target_position_as_angle": 0
+          }
+        },
+        {
+          "name": "LandingGear",
+          "variable": "landing_gears_T",
+          "members": {
+            "lod": 0,
+            "use_target_position_as_angle": 0
+          }
+        },
+        {
+          "name": "LandingGearHatch",
+          "variable": "hatches_T",
+          "members": {
+            "lod": 0,
+            "use_target_position_as_angle": 0
+          }
+        },
+        {
+          "name": "BoatEngine",
+          "variable": "steering_turn",
+          "members": {
+            "lod": 1,
+            "use_target_position_as_angle": 0
+          }
+        },
+        {
+          "name": "SteeringWheel",
+          "variable": "steering_turn",
+          "members": {
+            "lod": 1,
+            "use_target_position_as_angle": 0
+          }
+        },
+        {
+          "name": "SteeringFork",
+          "variable": "steering_angle_inverted",
+          "members": {
+            "lod": 0,
+            "use_target_position_as_angle": 1
+          }
+        },
+        {
+          "name": "RearLeftCoxa",
+          "variable": "rear_left_coxa_t",
+          "members": {
+            "lod": 1,
+            "use_target_position_as_angle": 0
+          }
+        },
+        {
+          "name": "RearRightCoxa",
+          "variable": "rear_right_coxa_t",
+          "members": {
+            "lod": 1,
+            "use_target_position_as_angle": 0
+          }
+        },
+        {
+          "name": "RearLeftFemur",
+          "variable": "rear_left_femur_t",
+          "members": {
+            "lod": 1,
+            "use_target_position_as_angle": 0
+          }
+        },
+        {
+          "name": "RearRightFemur",
+          "variable": "rear_right_femur_t",
+          "members": {
+            "lod": 1,
+            "use_target_position_as_angle": 0
+          }
+        },
+        {
+          "name": "RearLeftTibia",
+          "variable": "rear_left_tibia_t",
+          "members": {
+            "lod": 1,
+            "use_target_position_as_angle": 0
+          }
+        },
+        {
+          "name": "RearRightTibia",
+          "variable": "rear_right_tibia_t",
+          "members": {
+            "lod": 1,
+            "use_target_position_as_angle": 0
+          }
+        },
+        {
+          "name": "FrontLeftCoxa",
+          "variable": "front_left_coxa_t",
+          "members": {
+            "lod": 1,
+            "use_target_position_as_angle": 0
+          }
+        },
+        {
+          "name": "FrontLeftFemur",
+          "variable": "front_left_femur_t",
+          "members": {
+            "lod": 1,
+            "use_target_position_as_angle": 0
+          }
+        },
+        {
+          "name": "FrontLeftTibia",
+          "variable": "front_left_tibia_t",
+          "members": {
+            "lod": 1,
+            "use_target_position_as_angle": 0
+          }
+        },
+        {
+          "name": "FrontRightCoxa",
+          "variable": "front_right_coxa_t",
+          "members": {
+            "lod": 1,
+            "use_target_position_as_angle": 0
+          }
+        },
+        {
+          "name": "FrontRightFemur",
+          "variable": "front_right_femur_t",
+          "members": {
+            "lod": 1,
+            "use_target_position_as_angle": 0
+          }
+        },
+        {
+          "name": "FrontRightTibia",
+          "variable": "front_right_tibia_t",
+          "members": {
+            "lod": 1,
+            "use_target_position_as_angle": 0
+          }
+        }
+      ]
+    },
+    {
+      "table": "all_propeller_part_properties",
+      "source": "editor/entities/jc_vehicles/00_shared/modules/vehicle_common.vmodc",
+      "rows": 1,
+      "entries": [
+        {
+          "name": "Propeller",
+          "variable": null,
+          "members": {}
+        }
+      ]
+    },
+    {
+      "table": "all_rotating_part_properties",
+      "source": "editor/entities/jc_vehicles/00_shared/modules/vehicle_common.vmodc",
+      "rows": 12,
+      "entries": [
+        {
+          "name": "MainRotor",
+          "variable": "main_rotor_rpm",
+          "members": {
+            "inverted": 0,
+            "number_of_water_collision_sensors": 5,
+            "rotoscope_enabled": 1,
+            "rotoscope_rpm_per_cycle": 20,
+            "special_collision_enabled": 1
+          }
+        },
+        {
+          "name": "TailRotor",
+          "variable": "tail_rotor_rpm",
+          "members": {
+            "inverted": 0,
+            "number_of_water_collision_sensors": 3,
+            "rotoscope_enabled": 1,
+            "rotoscope_rpm_per_cycle": 20,
+            "special_collision_enabled": 1
+          }
+        },
+        {
+          "name": "Propeller",
+          "variable": "propeller_rpm",
+          "members": {
+            "inverted": 0,
+            "number_of_water_collision_sensors": 0,
+            "rotoscope_enabled": 1,
+            "rotoscope_rpm_per_cycle": 20,
+            "special_collision_enabled": 1
+          }
+        },
+        {
+          "name": "GatlingGun",
+          "variable": "weapon_rpm",
+          "members": {
+            "inverted": 0,
+            "number_of_water_collision_sensors": 0,
+            "rotoscope_enabled": 0,
+            "rotoscope_rpm_per_cycle": 20,
+            "special_collision_enabled": 0
+          }
+        },
+        {
+          "name": "RadarSlow",
+          "variable": "radar_slow_rpm",
+          "members": {
+            "inverted": 0,
+            "number_of_water_collision_sensors": 0,
+            "rotoscope_enabled": 0,
+            "rotoscope_rpm_per_cycle": 20,
+            "special_collision_enabled": 0
+          }
+        },
+        {
+          "name": "RadarFast",
+          "variable": "radar_fast_rpm",
+          "members": {
+            "inverted": 0,
+            "number_of_water_collision_sensors": 0,
+            "rotoscope_enabled": 0,
+            "rotoscope_rpm_per_cycle": 20,
+            "special_collision_enabled": 0
+          }
+        },
+        {
+          "name": "LeftRotor",
+          "variable": "rotor_rpm",
+          "members": {
+            "inverted": 1,
+            "number_of_water_collision_sensors": 3,
+            "rotoscope_enabled": 1,
+            "rotoscope_rpm_per_cycle": 50,
+            "special_collision_enabled": 1
+          }
+        },
+        {
+          "name": "RightRotor",
+          "variable": "rotor_rpm",
+          "members": {
+            "inverted": 0,
+            "number_of_water_collision_sensors": 3,
+            "rotoscope_enabled": 1,
+            "rotoscope_rpm_per_cycle": 50,
+            "special_collision_enabled": 1
+          }
+        },
+        {
+          "name": "Rotor",
+          "variable": "rotor_rpm",
+          "members": {
+            "inverted": 0,
+            "number_of_water_collision_sensors": 3,
+            "rotoscope_enabled": 1,
+            "rotoscope_rpm_per_cycle": 50,
+            "special_collision_enabled": 1
+          }
+        },
+        {
+          "name": "EngineRotatingPart",
+          "variable": "engine_rpm",
+          "members": {
+            "inverted": 0,
+            "number_of_water_collision_sensors": 0,
+            "rotoscope_enabled": 1,
+            "rotoscope_rpm_per_cycle": 20,
+            "special_collision_enabled": 1
+          }
+        },
+        {
+          "name": "OuterLeftRotor",
+          "variable": "rotor_rpm",
+          "members": {
+            "inverted": 0,
+            "number_of_water_collision_sensors": 3,
+            "rotoscope_enabled": 1,
+            "rotoscope_rpm_per_cycle": 50,
+            "special_collision_enabled": 1
+          }
+        },
+        {
+          "name": "OuterRightRotor",
+          "variable": "rotor_rpm",
+          "members": {
+            "inverted": 0,
+            "number_of_water_collision_sensors": 3,
+            "rotoscope_enabled": 1,
+            "rotoscope_rpm_per_cycle": 50,
+            "special_collision_enabled": 1
+          }
+        }
+      ]
+    },
+    {
+      "table": "all_spring_part_properties",
+      "source": "editor/entities/jc_vehicles/00_shared/modules/vehicle_common.vmodc",
+      "rows": 1,
+      "entries": [
+        {
+          "name": "Spring",
+          "variable": null,
+          "members": {}
+        }
+      ]
+    },
+    {
+      "table": "all_wheel_part_properties",
+      "source": "editor/entities/jc_vehicles/00_shared/modules/vehicle_common.vmodc",
+      "rows": 4,
+      "entries": [
+        {
+          "name": "Wheel",
+          "variable": null,
+          "members": {}
+        },
+        {
+          "name": "BrakeCalipers",
+          "variable": null,
+          "members": {}
+        },
+        {
+          "name": "BrakeDisc",
+          "variable": null,
+          "members": {}
+        },
+        {
+          "name": "BrakeDrum",
+          "variable": null,
+          "members": {}
+        }
+      ]
+    }
+  ],
+  "reconciliation": [
+    {
+      "claim": "§2.1 CBulletWeaponBase: 17 entities",
+      "derived": "17 chassis, 45 .ee, 57 objects",
+      "verdict": "match at chassis granularity; wording corrected to say chassis"
+    },
+    {
+      "claim": "§2.1 CMissileWeaponBase: 7 entities",
+      "derived": "7 chassis, 19 .ee, 25 objects",
+      "verdict": "match at chassis granularity; wording corrected to say chassis"
+    },
+    {
+      "claim": "§2.1 25 weapon ids",
+      "derived": "25 ids (26 spellings incl. w613_bomb) in .epe values; 22 archive ids",
+      "verdict": "match (25 ids after the w613_bomb alias; 26 spellings; 22 archive dirs)"
+    },
+    {
+      "claim": "G2-17/§1.4 CForcePulse: 79 entities",
+      "derived": "79 chassis, 232 .ee, 307 objects",
+      "verdict": "match at chassis granularity; wording corrected to say chassis"
+    },
+    {
+      "claim": "G2-11 'the 24 armed entities (P0-2 list)'",
+      "derived": "53 armed .ee over 21 chassis (17 bullet + 7 missile - 3 chassis with both)",
+      "verdict": "24 was 17+7 chassis with the 3 overlapping chassis counted twice; use this list"
+    },
+    {
+      "claim": "§2.3 SteeringWheel on 9 cars",
+      "derived": "9 chassis, 20 entities, 20 parts; boat chassis: v1302_boat_kensington_sailboat",
+      "verdict": "count matches; wording corrected to say chassis, not cars"
+    },
+    {
+      "claim": "§2.3 Turret/Cannon: medium tank, small tank, APC, technical, armoured jeep",
+      "derived": "Turret 22 parts / 7 chassis; Cannon 68 parts / 11 chassis; all five named chassis present",
+      "verdict": "match (the census adds the corvette's Turret and boat/heli Cannons)"
+    },
+    {
+      "claim": "§2.3 EngineRotatingPart on v0506",
+      "derived": "1 chassis ['v0506_car_solar_oldtractor'], 3 parts",
+      "verdict": "match (v0506_car_solar_oldtractor)"
+    },
+    {
+      "claim": "§2.3 GatlingGun: racing boat and helicopters",
+      "derived": "3 chassis ['v1401_boat_mugello_racingboat', 'v2602_helicopter_urga_lightassault', 'v2604_helicopter_urga_advancedassault']",
+      "verdict": "match"
+    },
+    {
+      "claim": "§2.3 MissileHatch: monorail missile car, 16 hatches",
+      "derived": "16 parts on 1 entity (['v5603_train_urga_monorailmissilecar'])",
+      "verdict": "match"
+    },
+    {
+      "claim": "§2.3 AirBrake: fighter-bomber only",
+      "derived": "1 chassis ['v4602_plane_urga_fighterbomber'], 3 parts",
+      "verdict": "match - still the only land-use probe"
+    },
+    {
+      "claim": "§2.3 Flaps: articulated truck / armoured transport / planes",
+      "derived": "8 chassis, 202 parts",
+      "verdict": "match"
+    },
+    {
+      "claim": "§2.3 Spring: ATV, buggy, monster truck",
+      "derived": "7 chassis, 61 parts",
+      "verdict": "match"
+    }
+  ]
+}

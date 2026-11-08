@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/G3-20e.md
+ONLY: freebuff
+EST: 40
+NEEDS: 7103-g3-11c-ledger-not-rederivable-27
+BRIEF: hand-written 2026-11-05
+G3-20e, narrowed to a merge. Start only after E:/Modding/JC3-Batmobile/tmp/freebuff/reports/G3-11c.md exists (if not, write STATUS: blocked and stop). ALREADY DONE, do not re-verify rows: Working/Translation/LEDGER_G3B.md covers 105 rows (T-1, T-13, T-2b), LEDGER_G3C.md covers 93 rows (T-20, T-3, T-7, T-15, T-14), LEDGER_SOURCES.md sorted the 96 open rows of G3B into 69 re-derivable and 27 not, and G3-11c handled those 27. Your job is only to merge these verdicts into one table of the 198 rows in T_ROWS.jsonl: one verdict per row (holds / wrong value / wrong card / open / not re-derivable), each carrying the source file and line it was taken from. If two files disagree about a row, list the conflict and take neither. A row with no verdict in any file is listed as UNKNOWN, not re-derived. Counts per verdict by script. Do not edit T_ROWS.jsonl or any LEDGER file. Output Working/Translation/LEDGER_G3E.md and Tools/scripts/ledger_g3e.py (--write/--check). Rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md section 3-4.

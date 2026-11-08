@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/jet-part-bone-driver.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-08
+Working/Translation/P02_CANNON.md and Working/Translation/P13_STEERING.md now answer the cannon and the steering wheel, so the jet part P-05 is the only row of Working/Translation/PARTS_ANIM_COVERAGE.md still without a mechanism. The P-05 row sits at line 50 of Working/Translation/T8_PARTS.md: batmobile_jet, class EngineRotatingPart, static, no hinge. The ANI-4 row of GRAB_BACKLOG.md (line 219) ties EngineRotatingPart to an engine_rpm driver on a land vehicle, which is a donor fact and not a BmAK fact. Look up the BmAK object that carries the batmobile_jet name using Tools/scripts/upk_read.py and the BmSDK-AK layouts under E:/Modding/_tools/BmSDK-AK, and check whether that object has an engine_rpm-driven rotation or a bone named after the jet. Record each property you find with its package and export index, or write UNKNOWN together with the packages you searched. Write Working/Translation/P05_JET.md and a checker Tools/scripts/p05_jet.py that supports --check, labelling each line decoded, derived or UNKNOWN.

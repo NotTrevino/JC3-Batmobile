@@ -1,0 +1,1870 @@
+{
+ "review": "G3-10d",
+ "schema": 1,
+ "tool": "Tools/scripts/review_g310d.py",
+ "inputs": {
+  "fleet_glob": "E:/Modding/_gamedata/JC3grab/**/*.physicsc",
+  "files_scanned": 51,
+  "skipped": [
+   {
+    "file": "../_gamedata/JC3grab/hkx/all/town_01_ai_junction.physicsc",
+    "error": "no hknpPhysicsSystemData"
+   }
+  ],
+  "reviewed_tool": "Tools/scripts/jc3_physics_roles4.py",
+  "reviewed_card": "Research/JC3Grab/PHYSICS_ROLES4.md",
+  "donor": "Builds/test-091/aaf/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle.physicsc"
+ },
+ "stats": {
+  "files_scanned": 51,
+  "files_decoded": 50,
+  "cinfos": 494,
+  "measurable": 188,
+  "mass_linked_hulls": 2011,
+  "mass_files": 46,
+  "non_identity_body_transforms": 447,
+  "bodies_total": 3556,
+  "body0_identity_all": true,
+  "files_with_non_identity": 48,
+  "measurable_b_identity": 187,
+  "min_inertia_spread_rounded": 1.3271,
+  "p_both_5cm": 0.3511,
+  "p_b_5cm": 0.766,
+  "p_a_5cm": 0.484,
+  "p_control_5cm": 0.0053,
+  "a_only_5cm": 25,
+  "contradictions": 65,
+  "contradictions_b_nearest": 53,
+  "max_d_a": 6.193,
+  "min_inertia_spread": 1.3366,
+  "any_reading_decodes": false,
+  "unused_symbols": 7,
+  "verdict": "the oracle reproduces, the universal inference does not"
+ },
+ "cinfo_words": {
+  "cinfos": 494,
+  "word_04_values": [
+   0
+  ],
+  "word_04_all_zero": true,
+  "word_0c_values": [
+   "0x7FFFFFFF"
+  ],
+  "word_0c_all_7fffffff": true,
+  "words_10_14_values": [
+   0
+  ],
+  "words_10_14_all_zero": true
+ },
+ "partner": {
+  "records": 494,
+  "measurable": 188,
+  "measurable_a_identity": 188,
+  "measurable_b_identity": 187,
+  "contradictions_in_frame": 65,
+  "records_a_missing": 266,
+  "records_b_missing": 86,
+  "tolerance_table": [
+   {
+    "tol_m": 0.02,
+    "n": 188,
+    "p_body_a": 0.1702,
+    "p_body_b": 0.5745,
+    "p_both": 0.0745,
+    "p_neither": 0.3298,
+    "a_hit_b_miss": 18,
+    "p_body_a_only": 0.0957,
+    "control_hits": 0,
+    "control_n": 188,
+    "p_control": 0.0
+   },
+   {
+    "tol_m": 0.05,
+    "n": 188,
+    "p_body_a": 0.484,
+    "p_body_b": 0.766,
+    "p_both": 0.3511,
+    "p_neither": 0.1011,
+    "a_hit_b_miss": 25,
+    "p_body_a_only": 0.133,
+    "control_hits": 1,
+    "control_n": 188,
+    "p_control": 0.0053
+   },
+   {
+    "tol_m": 0.1,
+    "n": 188,
+    "p_body_a": 0.5426,
+    "p_body_b": 0.9628,
+    "p_both": 0.5426,
+    "p_neither": 0.0372,
+    "a_hit_b_miss": 0,
+    "p_body_a_only": 0.0,
+    "control_hits": 3,
+    "control_n": 188,
+    "p_control": 0.016
+   },
+   {
+    "tol_m": 0.2,
+    "n": 188,
+    "p_body_a": 0.5851,
+    "p_body_b": 0.984,
+    "p_both": 0.5851,
+    "p_neither": 0.016,
+    "a_hit_b_miss": 0,
+    "p_body_a_only": 0.0,
+    "control_hits": 3,
+    "control_n": 188,
+    "p_control": 0.016
+   }
+  ],
+  "per_body": [
+   {
+    "body": 0,
+    "within_5cm": 91,
+    "measured": 188,
+    "rate": 0.484
+   },
+   {
+    "body": 1,
+    "within_5cm": 13,
+    "measured": 181,
+    "rate": 0.0718
+   },
+   {
+    "body": 2,
+    "within_5cm": 12,
+    "measured": 188,
+    "rate": 0.0638
+   },
+   {
+    "body": 3,
+    "within_5cm": 15,
+    "measured": 154,
+    "rate": 0.0974
+   }
+  ],
+  "median_d_a": 0.0597,
+  "median_d_b": 0.0139,
+  "far_records": 78,
+  "contradictions": [
+   {
+    "file": "armoredtransport.physicsc",
+    "k": 8,
+    "body_a": 0,
+    "d_a": 6.193,
+    "body_b": 20,
+    "d_b": 0.01,
+    "nearest_body": 20,
+    "nearest_d": 0.01,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "armoredtransport.physicsc",
+    "k": 7,
+    "body_a": 0,
+    "d_a": 6.1917,
+    "body_b": 18,
+    "d_b": 0.01,
+    "nearest_body": 18,
+    "nearest_d": 0.01,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "armoredtransport.physicsc",
+    "k": 12,
+    "body_a": 0,
+    "d_a": 5.8344,
+    "body_b": 27,
+    "d_b": 0.0096,
+    "nearest_body": 27,
+    "nearest_d": 0.0096,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "armoredtransport.physicsc",
+    "k": 14,
+    "body_a": 0,
+    "d_a": 5.8344,
+    "body_b": 30,
+    "d_b": 0.0096,
+    "nearest_body": 30,
+    "nearest_d": 0.0096,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "articulatedtruck.physicsc",
+    "k": 4,
+    "body_a": 0,
+    "d_a": 5.2753,
+    "body_b": 20,
+    "d_b": 0.0101,
+    "nearest_body": 20,
+    "nearest_d": 0.0101,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "articulatedtruck.physicsc",
+    "k": 5,
+    "body_a": 0,
+    "d_a": 5.0173,
+    "body_b": 25,
+    "d_b": 0.01,
+    "nearest_body": 25,
+    "nearest_d": 0.01,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "bavariumtank.physicsc",
+    "k": 1,
+    "body_a": 0,
+    "d_a": 4.9494,
+    "body_b": 8,
+    "d_b": 0.033,
+    "nearest_body": 8,
+    "nearest_d": 0.033,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "apc.physicsc",
+    "k": 11,
+    "body_a": 0,
+    "d_a": 4.3404,
+    "body_b": 22,
+    "d_b": 0.0112,
+    "nearest_body": 22,
+    "nearest_d": 0.0112,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "apc.physicsc",
+    "k": 12,
+    "body_a": 0,
+    "d_a": 4.3404,
+    "body_b": 23,
+    "d_b": 0.0112,
+    "nearest_body": 23,
+    "nearest_d": 0.0112,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "armoredtransport.physicsc",
+    "k": 11,
+    "body_a": 0,
+    "d_a": 3.3405,
+    "body_b": 26,
+    "d_b": 0.0096,
+    "nearest_body": 26,
+    "nearest_d": 0.0096,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "armoredtransport.physicsc",
+    "k": 13,
+    "body_a": 0,
+    "d_a": 3.3404,
+    "body_b": 29,
+    "d_b": 0.0096,
+    "nearest_body": 29,
+    "nearest_d": 0.0096,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "apc.physicsc",
+    "k": 10,
+    "body_a": 0,
+    "d_a": 2.7465,
+    "body_b": 15,
+    "d_b": 0.0273,
+    "nearest_body": 13,
+    "nearest_d": 0.0249,
+    "nearest_is_recorded_b": false,
+    "a_identity": true
+   },
+   {
+    "file": "apc.physicsc",
+    "k": 1,
+    "body_a": 0,
+    "d_a": 2.7419,
+    "body_b": 1,
+    "d_b": 0.0106,
+    "nearest_body": 1,
+    "nearest_d": 0.0106,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "apc.physicsc",
+    "k": 3,
+    "body_a": 0,
+    "d_a": 2.7419,
+    "body_b": 3,
+    "d_b": 0.0106,
+    "nearest_body": 3,
+    "nearest_d": 0.0106,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "articulatedtruck.physicsc",
+    "k": 3,
+    "body_a": 0,
+    "d_a": 2.2891,
+    "body_b": 15,
+    "d_b": 0.01,
+    "nearest_body": 15,
+    "nearest_d": 0.01,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "armoredjeep.physicsc",
+    "k": 11,
+    "body_a": 0,
+    "d_a": 2.182,
+    "body_b": 42,
+    "d_b": 0.0214,
+    "nearest_body": 42,
+    "nearest_d": 0.0214,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "armoredjeep.physicsc",
+    "k": 17,
+    "body_a": 0,
+    "d_a": 2.1476,
+    "body_b": 62,
+    "d_b": 0.1324,
+    "nearest_body": 63,
+    "nearest_d": 0.0297,
+    "nearest_is_recorded_b": false,
+    "a_identity": true
+   },
+   {
+    "file": "armoredjeep.physicsc",
+    "k": 1,
+    "body_a": 0,
+    "d_a": 2.143,
+    "body_b": 7,
+    "d_b": 0.0216,
+    "nearest_body": 7,
+    "nearest_d": 0.0216,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "armoredjeep.physicsc",
+    "k": 3,
+    "body_a": 0,
+    "d_a": 2.1402,
+    "body_b": 11,
+    "d_b": 0.0137,
+    "nearest_body": 11,
+    "nearest_d": 0.0137,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "apc.physicsc",
+    "k": 5,
+    "body_a": 0,
+    "d_a": 2.0256,
+    "body_b": 5,
+    "d_b": 0.0066,
+    "nearest_body": 5,
+    "nearest_d": 0.0066,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "apc.physicsc",
+    "k": 9,
+    "body_a": 0,
+    "d_a": 1.9154,
+    "body_b": 14,
+    "d_b": 0.0441,
+    "nearest_body": 18,
+    "nearest_d": 0.0332,
+    "nearest_is_recorded_b": false,
+    "a_identity": true
+   },
+   {
+    "file": "armoredjeep.physicsc",
+    "k": 7,
+    "body_a": 0,
+    "d_a": 1.8499,
+    "body_b": 22,
+    "d_b": 0.0136,
+    "nearest_body": 22,
+    "nearest_d": 0.0136,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "armoredjeep.physicsc",
+    "k": 4,
+    "body_a": 0,
+    "d_a": 1.8438,
+    "body_b": 14,
+    "d_b": 0.0042,
+    "nearest_body": 14,
+    "nearest_d": 0.0042,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "armoredjeep.physicsc",
+    "k": 13,
+    "body_a": 0,
+    "d_a": 1.818,
+    "body_b": 44,
+    "d_b": 0.0078,
+    "nearest_body": 44,
+    "nearest_d": 0.0078,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "armoredjeep.physicsc",
+    "k": 0,
+    "body_a": 0,
+    "d_a": 1.6403,
+    "body_b": 4,
+    "d_b": 0.0216,
+    "nearest_body": 4,
+    "nearest_d": 0.0216,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "armoredjeep.physicsc",
+    "k": 18,
+    "body_a": 0,
+    "d_a": 1.5183,
+    "body_b": 64,
+    "d_b": 0.0356,
+    "nearest_body": 64,
+    "nearest_d": 0.0356,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "articulatedtruck.physicsc",
+    "k": 2,
+    "body_a": 0,
+    "d_a": 1.4844,
+    "body_b": 14,
+    "d_b": 0.01,
+    "nearest_body": 14,
+    "nearest_d": 0.01,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "armoredjeep.physicsc",
+    "k": 16,
+    "body_a": 0,
+    "d_a": 1.449,
+    "body_b": 61,
+    "d_b": 0.0014,
+    "nearest_body": 61,
+    "nearest_d": 0.0014,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "armoredjeep.physicsc",
+    "k": 14,
+    "body_a": 0,
+    "d_a": 1.4191,
+    "body_b": 45,
+    "d_b": 0.0038,
+    "nearest_body": 45,
+    "nearest_d": 0.0038,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "atv.physicsc",
+    "k": 3,
+    "body_a": 0,
+    "d_a": 1.3869,
+    "body_b": 5,
+    "d_b": 0.0039,
+    "nearest_body": 5,
+    "nearest_d": 0.0039,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "apc.physicsc",
+    "k": 14,
+    "body_a": 0,
+    "d_a": 1.3542,
+    "body_b": 34,
+    "d_b": 0.1329,
+    "nearest_body": 33,
+    "nearest_d": 0.0331,
+    "nearest_is_recorded_b": false,
+    "a_identity": true
+   },
+   {
+    "file": "apc.physicsc",
+    "k": 13,
+    "body_a": 0,
+    "d_a": 1.3505,
+    "body_b": 32,
+    "d_b": 0.0104,
+    "nearest_body": 32,
+    "nearest_d": 0.0104,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "apc.physicsc",
+    "k": 2,
+    "body_a": 0,
+    "d_a": 1.3215,
+    "body_b": 2,
+    "d_b": 0.0106,
+    "nearest_body": 2,
+    "nearest_d": 0.0106,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "armoredjeep.physicsc",
+    "k": 10,
+    "body_a": 0,
+    "d_a": 1.2757,
+    "body_b": 41,
+    "d_b": 0.0251,
+    "nearest_body": 41,
+    "nearest_d": 0.0251,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "k": 6,
+    "body_a": 0,
+    "d_a": 1.1874,
+    "body_b": 18,
+    "d_b": 0.0286,
+    "nearest_body": 18,
+    "nearest_d": 0.0286,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "k": 6,
+    "body_a": 0,
+    "d_a": 1.1874,
+    "body_b": 18,
+    "d_b": 0.0286,
+    "nearest_body": 18,
+    "nearest_d": 0.0286,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "replace_hull.physicsc",
+    "k": 6,
+    "body_a": 0,
+    "d_a": 1.1874,
+    "body_b": 18,
+    "d_b": 0.0286,
+    "nearest_body": 18,
+    "nearest_d": 0.0286,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "roundtrip_assembled.physicsc",
+    "k": 6,
+    "body_a": 0,
+    "d_a": 1.1874,
+    "body_b": 18,
+    "d_b": 0.0286,
+    "nearest_body": 18,
+    "nearest_d": 0.0286,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "roundtrip_donor.physicsc",
+    "k": 6,
+    "body_a": 0,
+    "d_a": 1.1874,
+    "body_b": 18,
+    "d_b": 0.0286,
+    "nearest_body": 18,
+    "nearest_d": 0.0286,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "scale_wheel.physicsc",
+    "k": 6,
+    "body_a": 0,
+    "d_a": 1.1874,
+    "body_b": 18,
+    "d_b": 0.0286,
+    "nearest_body": 18,
+    "nearest_d": 0.0286,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "shift16.physicsc",
+    "k": 6,
+    "body_a": 0,
+    "d_a": 1.1874,
+    "body_b": 18,
+    "d_b": 0.0286,
+    "nearest_body": 18,
+    "nearest_d": 0.0286,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "k": 6,
+    "body_a": 0,
+    "d_a": 1.1874,
+    "body_b": 18,
+    "d_b": 0.0286,
+    "nearest_body": 18,
+    "nearest_d": 0.0286,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "atv.physicsc",
+    "k": 2,
+    "body_a": 0,
+    "d_a": 1.0714,
+    "body_b": 4,
+    "d_b": 0.0045,
+    "nearest_body": 6,
+    "nearest_d": 0.0005,
+    "nearest_is_recorded_b": false,
+    "a_identity": true
+   },
+   {
+    "file": "armoredtransport.physicsc",
+    "k": 1,
+    "body_a": 0,
+    "d_a": 1.0608,
+    "body_b": 4,
+    "d_b": 0.0233,
+    "nearest_body": 4,
+    "nearest_d": 0.0233,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "armoredtransport.physicsc",
+    "k": 15,
+    "body_a": 0,
+    "d_a": 0.9608,
+    "body_b": 35,
+    "d_b": 0.01,
+    "nearest_body": 35,
+    "nearest_d": 0.01,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "oldjeep.physicsc",
+    "k": 9,
+    "body_a": 0,
+    "d_a": 0.9555,
+    "body_b": 26,
+    "d_b": 0.0604,
+    "nearest_body": 14,
+    "nearest_d": 0.0273,
+    "nearest_is_recorded_b": false,
+    "a_identity": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "k": 3,
+    "body_a": 0,
+    "d_a": 0.8588,
+    "body_b": 6,
+    "d_b": 0.0135,
+    "nearest_body": 6,
+    "nearest_d": 0.0135,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "k": 3,
+    "body_a": 0,
+    "d_a": 0.8588,
+    "body_b": 6,
+    "d_b": 0.0135,
+    "nearest_body": 6,
+    "nearest_d": 0.0135,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "k": 1,
+    "body_a": 0,
+    "d_a": 0.8572,
+    "body_b": 3,
+    "d_b": 0.0139,
+    "nearest_body": 3,
+    "nearest_d": 0.0139,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "k": 1,
+    "body_a": 0,
+    "d_a": 0.8572,
+    "body_b": 3,
+    "d_b": 0.0139,
+    "nearest_body": 3,
+    "nearest_d": 0.0139,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "armoredjeep.physicsc",
+    "k": 8,
+    "body_a": 0,
+    "d_a": 0.8446,
+    "body_b": 33,
+    "d_b": 0.0016,
+    "nearest_body": 33,
+    "nearest_d": 0.0016,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "armoredjeep.physicsc",
+    "k": 12,
+    "body_a": 0,
+    "d_a": 0.8089,
+    "body_b": 43,
+    "d_b": 0.0072,
+    "nearest_body": 43,
+    "nearest_d": 0.0072,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "k": 10,
+    "body_a": 0,
+    "d_a": 0.8013,
+    "body_b": 35,
+    "d_b": 0.0497,
+    "nearest_body": 34,
+    "nearest_d": 0.01,
+    "nearest_is_recorded_b": false,
+    "a_identity": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "k": 10,
+    "body_a": 0,
+    "d_a": 0.8013,
+    "body_b": 35,
+    "d_b": 0.0497,
+    "nearest_body": 34,
+    "nearest_d": 0.01,
+    "nearest_is_recorded_b": false,
+    "a_identity": true
+   },
+   {
+    "file": "armoredjeep.physicsc",
+    "k": 2,
+    "body_a": 0,
+    "d_a": 0.7979,
+    "body_b": 9,
+    "d_b": 0.0067,
+    "nearest_body": 9,
+    "nearest_d": 0.0067,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "apc.physicsc",
+    "k": 4,
+    "body_a": 0,
+    "d_a": 0.6862,
+    "body_b": 4,
+    "d_b": 0.0066,
+    "nearest_body": 4,
+    "nearest_d": 0.0066,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "k": 0,
+    "body_a": 0,
+    "d_a": 0.5375,
+    "body_b": 1,
+    "d_b": 0.0105,
+    "nearest_body": 8,
+    "nearest_d": 0.0055,
+    "nearest_is_recorded_b": false,
+    "a_identity": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "k": 2,
+    "body_a": 0,
+    "d_a": 0.5375,
+    "body_b": 4,
+    "d_b": 0.0105,
+    "nearest_body": 12,
+    "nearest_d": 0.0085,
+    "nearest_is_recorded_b": false,
+    "a_identity": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "k": 0,
+    "body_a": 0,
+    "d_a": 0.5375,
+    "body_b": 1,
+    "d_b": 0.0105,
+    "nearest_body": 8,
+    "nearest_d": 0.0055,
+    "nearest_is_recorded_b": false,
+    "a_identity": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "k": 2,
+    "body_a": 0,
+    "d_a": 0.5375,
+    "body_b": 4,
+    "d_b": 0.0105,
+    "nearest_body": 12,
+    "nearest_d": 0.0085,
+    "nearest_is_recorded_b": false,
+    "a_identity": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "k": 6,
+    "body_a": 0,
+    "d_a": 0.5248,
+    "body_b": 18,
+    "d_b": 0.0286,
+    "nearest_body": 18,
+    "nearest_d": 0.0286,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "k": 6,
+    "body_a": 0,
+    "d_a": 0.5248,
+    "body_b": 18,
+    "d_b": 0.0286,
+    "nearest_body": 18,
+    "nearest_d": 0.0286,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "atv.physicsc",
+    "k": 4,
+    "body_a": 0,
+    "d_a": 0.4786,
+    "body_b": 20,
+    "d_b": 0.0282,
+    "nearest_body": 20,
+    "nearest_d": 0.0282,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "atv.physicsc",
+    "k": 1,
+    "body_a": 0,
+    "d_a": 0.4385,
+    "body_b": 3,
+    "d_b": 0.0009,
+    "nearest_body": 3,
+    "nearest_d": 0.0009,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   },
+   {
+    "file": "armoredjeep.physicsc",
+    "k": 9,
+    "body_a": 0,
+    "d_a": 0.4329,
+    "body_b": 34,
+    "d_b": 0.0031,
+    "nearest_body": 34,
+    "nearest_d": 0.0031,
+    "nearest_is_recorded_b": true,
+    "a_identity": true
+   }
+  ],
+  "contradictions_with_b_nearest": 53,
+  "b_over_10cm": 7,
+  "b_over_10cm_with_a_near": 0,
+  "max_d_a": 6.193,
+  "donor_rows": [
+   {
+    "k": 0,
+    "type": "LimitedHinge",
+    "body_b": 1,
+    "pivot": [
+     -1.0185,
+     0.6223,
+     -0.7714
+    ],
+    "d_a": 0.0313,
+    "d_b": 0.0105,
+    "own_body_over_5cm": false,
+    "nearest": [
+     {
+      "body": 8,
+      "abs_dist": 0.0055
+     },
+     {
+      "body": 1,
+      "abs_dist": 0.0105
+     },
+     {
+      "body": 0,
+      "abs_dist": 0.0313
+     }
+    ],
+    "frames": 2,
+    "frames_same_pivot": true
+   },
+   {
+    "k": 1,
+    "type": "LimitedHinge",
+    "body_b": 3,
+    "pivot": [
+     -0.833,
+     1.0016,
+     -0.5032
+    ],
+    "d_a": 0.0481,
+    "d_b": 0.0139,
+    "own_body_over_5cm": false,
+    "nearest": [
+     {
+      "body": 3,
+      "abs_dist": 0.0139
+     },
+     {
+      "body": 2,
+      "abs_dist": 0.0475
+     },
+     {
+      "body": 0,
+      "abs_dist": 0.0481
+     }
+    ],
+    "frames": 2,
+    "frames_same_pivot": true
+   },
+   {
+    "k": 2,
+    "type": "LimitedHinge",
+    "body_b": 4,
+    "pivot": [
+     1.0185,
+     0.6223,
+     -0.7714
+    ],
+    "d_a": 0.0313,
+    "d_b": 0.0105,
+    "own_body_over_5cm": false,
+    "nearest": [
+     {
+      "body": 12,
+      "abs_dist": 0.0085
+     },
+     {
+      "body": 4,
+      "abs_dist": 0.0105
+     },
+     {
+      "body": 0,
+      "abs_dist": 0.0313
+     }
+    ],
+    "frames": 2,
+    "frames_same_pivot": true
+   },
+   {
+    "k": 3,
+    "type": "LimitedHinge",
+    "body_b": 6,
+    "pivot": [
+     0.833,
+     1.0016,
+     -0.5032
+    ],
+    "d_a": 0.0481,
+    "d_b": 0.0135,
+    "own_body_over_5cm": false,
+    "nearest": [
+     {
+      "body": 6,
+      "abs_dist": 0.0135
+     },
+     {
+      "body": 5,
+      "abs_dist": 0.0475
+     },
+     {
+      "body": 0,
+      "abs_dist": 0.0481
+     }
+    ],
+    "frames": 2,
+    "frames_same_pivot": true
+   },
+   {
+    "k": 4,
+    "type": "Ragdoll",
+    "body_b": 7,
+    "pivot": [
+     0.0,
+     0.2646,
+     -1.2019
+    ],
+    "d_a": 0.0007,
+    "d_b": 0.0736,
+    "own_body_over_5cm": true,
+    "nearest": [
+     {
+      "body": 0,
+      "abs_dist": 0.0007
+     },
+     {
+      "body": 7,
+      "abs_dist": 0.0736
+     },
+     {
+      "body": 19,
+      "abs_dist": 0.6611
+     }
+    ],
+    "frames": 3,
+    "frames_same_pivot": true
+   },
+   {
+    "k": 5,
+    "type": "LimitedHinge",
+    "body_b": 16,
+    "pivot": [
+     0.6508,
+     0.2089,
+     -0.2296
+    ],
+    "d_a": 0.0352,
+    "d_b": null,
+    "own_body_over_5cm": false,
+    "nearest": [
+     {
+      "body": 0,
+      "abs_dist": 0.0352
+     },
+     {
+      "body": 25,
+      "abs_dist": 0.1609
+     },
+     {
+      "body": 4,
+      "abs_dist": 0.2521
+     }
+    ],
+    "frames": 2,
+    "frames_same_pivot": true
+   },
+   {
+    "k": 6,
+    "type": "Ragdoll",
+    "body_b": 18,
+    "pivot": [
+     0.0307,
+     0.6598,
+     -2.3886
+    ],
+    "d_a": 1.1874,
+    "d_b": 0.0286,
+    "own_body_over_5cm": false,
+    "nearest": [
+     {
+      "body": 18,
+      "abs_dist": 0.0286
+     },
+     {
+      "body": 7,
+      "abs_dist": 0.0315
+     },
+     {
+      "body": 19,
+      "abs_dist": 0.0934
+     }
+    ],
+    "frames": 3,
+    "frames_same_pivot": true
+   },
+   {
+    "k": 7,
+    "type": "LimitedHinge",
+    "body_b": 19,
+    "pivot": [
+     0.0,
+     1.0572,
+     -0.8478
+    ],
+    "d_a": 0.0437,
+    "d_b": 0.0554,
+    "own_body_over_5cm": true,
+    "nearest": [
+     {
+      "body": 0,
+      "abs_dist": 0.0437
+     },
+     {
+      "body": 19,
+      "abs_dist": 0.0554
+     },
+     {
+      "body": 20,
+      "abs_dist": 0.0554
+     }
+    ],
+    "frames": 2,
+    "frames_same_pivot": true
+   },
+   {
+    "k": 8,
+    "type": "LimitedHinge",
+    "body_b": 20,
+    "pivot": [
+     0.0,
+     1.0572,
+     -0.8478
+    ],
+    "d_a": 0.0437,
+    "d_b": 0.0554,
+    "own_body_over_5cm": true,
+    "nearest": [
+     {
+      "body": 0,
+      "abs_dist": 0.0437
+     },
+     {
+      "body": 19,
+      "abs_dist": 0.0554
+     },
+     {
+      "body": 20,
+      "abs_dist": 0.0554
+     }
+    ],
+    "frames": 2,
+    "frames_same_pivot": true
+   },
+   {
+    "k": 9,
+    "type": "LimitedHinge",
+    "body_b": 26,
+    "pivot": [
+     -0.5078,
+     0.7374,
+     2.4304
+    ],
+    "d_a": 0.0107,
+    "d_b": null,
+    "own_body_over_5cm": false,
+    "nearest": [
+     {
+      "body": 28,
+      "abs_dist": 0.0069
+     },
+     {
+      "body": 0,
+      "abs_dist": 0.0107
+     },
+     {
+      "body": 31,
+      "abs_dist": 0.0415
+     }
+    ],
+    "frames": 2,
+    "frames_same_pivot": true
+   },
+   {
+    "k": 10,
+    "type": "LimitedHinge",
+    "body_b": 35,
+    "pivot": [
+     0.0035,
+     1.44,
+     1.0209
+    ],
+    "d_a": 0.0023,
+    "d_b": 0.0497,
+    "own_body_over_5cm": false,
+    "nearest": [
+     {
+      "body": 0,
+      "abs_dist": 0.0023
+     },
+     {
+      "body": 34,
+      "abs_dist": 0.01
+     },
+     {
+      "body": 35,
+      "abs_dist": 0.0497
+     }
+    ],
+    "frames": 2,
+    "frames_same_pivot": true
+   }
+  ]
+ },
+ "inertia": {
+  "linked_hulls": 2011,
+  "files": 46,
+  "min_spread_rounded": 1.3271,
+  "sample": [
+   {
+    "file": "sportsmuscle.physicsc",
+    "body": 0,
+    "mass": 800.0,
+    "extents": [
+     2.085,
+     1.212,
+     3.6788
+    ],
+    "box_inertia": [
+     1000.1916,
+     1192.0772,
+     387.7455
+    ],
+    "raw": "8fff9759d8560030d93c8546cd188035d77d0580e87f2af5"
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "body": 1,
+    "mass": 40.0,
+    "extents": [
+     0.3871,
+     1.0451,
+     1.415
+    ],
+    "box_inertia": [
+     10.3144,
+     7.1733,
+     4.1399
+    ],
+    "raw": "558dac5bf9f80030994b6a3a2c150032617a2e81b37480f4"
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "body": 2,
+    "mass": 5.0,
+    "extents": [
+     0.1535,
+     0.3491,
+     1.2675
+    ],
+    "box_inertia": [
+     0.7202,
+     0.6792,
+     0.0606
+    ],
+    "raw": "bcd08c4d80068030154c8446e00500305676d281ab6acff2"
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "body": 3,
+    "mass": 1.0,
+    "extents": [
+     0.2074,
+     0.1532,
+     0.1338
+    ],
+    "box_inertia": [
+     0.0034,
+     0.0051,
+     0.0055
+    ],
+    "raw": "b9c4d9458be38030b02d6f739a7f802c7c65019ed26637eb"
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "body": 4,
+    "mass": 40.0,
+    "extents": [
+     0.3878,
+     1.0477,
+     1.415
+    ],
+    "box_inertia": [
+     10.3327,
+     7.1753,
+     4.1598
+    ],
+    "raw": "ab72ac5bf9f80030994b6a3a2c150032617ad17e4c8b80f4"
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "body": 5,
+    "mass": 5.0,
+    "extents": [
+     0.1468,
+     0.3491,
+     1.2675
+    ],
+    "box_inertia": [
+     0.7202,
+     0.6784,
+     0.0598
+    ],
+    "raw": "442f8c4d80068030154c8546df0500305576277e4995d1f2"
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "body": 6,
+    "mass": 1.0,
+    "extents": [
+     0.1882,
+     0.1531,
+     0.1192
+    ],
+    "box_inertia": [
+     0.0031,
+     0.0041,
+     0.0049
+    ],
+    "raw": "cb3ae44579e38030df23e957de64802c90880e65a89f3bed"
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "body": 7,
+    "mass": 275.0,
+    "extents": [
+     1.9443,
+     0.8531,
+     1.5455
+    ],
+    "box_inertia": [
+     71.4169,
+     141.3689,
+     103.3081
+    ],
+    "raw": "f6ffc323df8d80307c226a40d52c00347b6e0280f77fdef3"
+   }
+  ],
+  "readings": [
+   {
+    "reading": "6 x IEEE f32",
+    "how": "f32",
+    "best_triple": {
+     "triple": [
+      0,
+      1,
+      2
+     ],
+     "median_spread": 1.2541150005447832e+22,
+     "n": 194
+    },
+    "decodes": false
+   },
+   {
+    "reading": "12 x int16 raw",
+    "how": "i16",
+    "best_triple": {
+     "triple": [
+      4,
+      5,
+      6
+     ],
+     "median_spread": 1.3366,
+     "n": 2011
+    },
+    "decodes": false
+   },
+   {
+    "reading": "12 x int16 / 16384",
+    "how": "i16_16384",
+    "best_triple": {
+     "triple": [
+      4,
+      5,
+      6
+     ],
+     "median_spread": 1.3366,
+     "n": 2011
+    },
+    "decodes": false
+   },
+   {
+    "reading": "12 x int16 / 32767",
+    "how": "i16_32767",
+    "best_triple": {
+     "triple": [
+      4,
+      5,
+      6
+     ],
+     "median_spread": 1.3366,
+     "n": 2011
+    },
+    "decodes": false
+   },
+   {
+    "reading": "12 x u16 raw",
+    "how": "u16",
+    "best_triple": {
+     "triple": [
+      4,
+      5,
+      6
+     ],
+     "median_spread": 1.3366,
+     "n": 2011
+    },
+    "decodes": false
+   },
+   {
+    "reading": "12 x IEEE half",
+    "how": "half",
+    "best_triple": {
+     "triple": [
+      3,
+      4,
+      5
+     ],
+     "median_spread": 6263.3048,
+     "n": 1946
+    },
+    "decodes": false
+   },
+   {
+    "reading": "6 x int32 (new)",
+    "how": "i32",
+    "best_triple": {
+     "triple": [
+      1,
+      2,
+      3
+     ],
+     "median_spread": 2.6103,
+     "n": 2011
+    },
+    "decodes": false
+   },
+   {
+    "reading": "6 x uint32 (new)",
+    "how": "u32",
+    "best_triple": {
+     "triple": [
+      1,
+      2,
+      3
+     ],
+     "median_spread": 2.6103,
+     "n": 2011
+    },
+    "decodes": false
+   },
+   {
+    "reading": "24 x int8 (new)",
+    "how": "i8",
+    "best_triple": {
+     "triple": [
+      9,
+      10,
+      11
+     ],
+     "median_spread": 2.9776,
+     "n": 952
+    },
+    "decodes": false
+   },
+   {
+    "reading": "24 x uint8 (new)",
+    "how": "u8",
+    "best_triple": {
+     "triple": [
+      9,
+      10,
+      11
+     ],
+     "median_spread": 3.576,
+     "n": 1970
+    },
+    "decodes": false
+   },
+   {
+    "reading": "3 x double (new)",
+    "how": "f64",
+    "best_triple": null,
+    "decodes": false
+   },
+   {
+    "reading": "3 x f32 first 12 B (new)",
+    "how": "f32x3",
+    "best_triple": {
+     "triple": [
+      0,
+      1,
+      2
+     ],
+     "median_spread": 1.2541150005447832e+22,
+     "n": 194
+    },
+    "decodes": false
+   },
+   {
+    "reading": "6 x IEEE half (new)",
+    "how": "half6",
+    "best_triple": {
+     "triple": [
+      3,
+      4,
+      5
+     ],
+     "median_spread": 6263.3048,
+     "n": 1946
+    },
+    "decodes": false
+   }
+  ],
+  "any_reading_decodes": false,
+  "min_spread": 1.3366,
+  "redundancy": [
+   {
+    "how": "i16_16384",
+    "max_abs_delta_vs_i16": 0.0,
+    "same_test": true
+   },
+   {
+    "how": "i16_32767",
+    "max_abs_delta_vs_i16": 0.0,
+    "same_test": true
+   },
+   {
+    "how": "u16",
+    "max_abs_delta_vs_i16": 2.192719527,
+    "same_test": false
+   }
+  ],
+  "direction_test": [
+   {
+    "triple": [
+     0,
+     1,
+     2
+    ],
+    "mean_cos": 0.8016,
+    "min_cos": 0.0075,
+    "n": 2011
+   },
+   {
+    "triple": [
+     3,
+     4,
+     5
+    ],
+    "mean_cos": 0.8335,
+    "min_cos": 0.2708,
+    "n": 2011
+   },
+   {
+    "triple": [
+     6,
+     7,
+     8
+    ],
+    "mean_cos": 0.7795,
+    "min_cos": 0.2508,
+    "n": 2011
+   },
+   {
+    "triple": [
+     9,
+     10,
+     11
+    ],
+    "mean_cos": 0.8245,
+    "min_cos": 0.511,
+    "n": 2011
+   },
+   {
+    "triple": [
+     1,
+     2,
+     3
+    ],
+    "mean_cos": 0.8307,
+    "min_cos": 0.184,
+    "n": 2011
+   },
+   {
+    "triple": [
+     4,
+     5,
+     6
+    ],
+    "mean_cos": 0.9661,
+    "min_cos": 0.5049,
+    "n": 2011
+   },
+   {
+    "triple": [
+     7,
+     8,
+     9
+    ],
+    "mean_cos": 0.8621,
+    "min_cos": 0.6363,
+    "n": 2011
+   }
+  ],
+  "slots": [
+   {
+    "slot": 0,
+    "rho_mass": 0.056,
+    "rho_Ixx": 0.145,
+    "rho_Iyy": 0.0173,
+    "rho_Izz": -0.0127
+   },
+   {
+    "slot": 1,
+    "rho_mass": -0.0594,
+    "rho_Ixx": 0.0067,
+    "rho_Iyy": 0.0058,
+    "rho_Izz": -0.016
+   },
+   {
+    "slot": 2,
+    "rho_mass": -0.0189,
+    "rho_Ixx": -0.0558,
+    "rho_Iyy": -0.041,
+    "rho_Izz": -0.0037
+   },
+   {
+    "slot": 3,
+    "rho_mass": -0.1394,
+    "rho_Ixx": -0.05,
+    "rho_Iyy": -0.0224,
+    "rho_Izz": 0.0199
+   },
+   {
+    "slot": 4,
+    "rho_mass": 0.0543,
+    "rho_Ixx": 0.1944,
+    "rho_Iyy": 0.0315,
+    "rho_Izz": 0.0003
+   },
+   {
+    "slot": 5,
+    "rho_mass": -0.074,
+    "rho_Ixx": -0.1288,
+    "rho_Iyy": 0.0447,
+    "rho_Izz": -0.1186
+   },
+   {
+    "slot": 6,
+    "rho_mass": -0.0847,
+    "rho_Ixx": -0.1837,
+    "rho_Iyy": -0.1749,
+    "rho_Izz": 0.0496
+   },
+   {
+    "slot": 7,
+    "rho_mass": 0.866,
+    "rho_Ixx": 0.9206,
+    "rho_Iyy": 0.9366,
+    "rho_Izz": 0.8931
+   },
+   {
+    "slot": 8,
+    "rho_mass": 0.1268,
+    "rho_Ixx": 0.214,
+    "rho_Iyy": 0.1573,
+    "rho_Izz": 0.1129
+   },
+   {
+    "slot": 9,
+    "rho_mass": 0.2699,
+    "rho_Ixx": 0.2826,
+    "rho_Iyy": 0.3222,
+    "rho_Izz": 0.3236
+   },
+   {
+    "slot": 10,
+    "rho_mass": 0.2844,
+    "rho_Ixx": 0.2314,
+    "rho_Iyy": 0.2844,
+    "rho_Izz": 0.3577
+   },
+   {
+    "slot": 11,
+    "rho_mass": -0.2431,
+    "rho_Ixx": -0.2836,
+    "rho_Iyy": -0.2723,
+    "rho_Izz": -0.2805
+   }
+  ]
+ },
+ "script": {
+  "source": "Tools/scripts/jc3_physics_roles4.py",
+  "lines": 783,
+  "unused_symbols": [
+   {
+    "token": "NO_BODY",
+    "lines": [
+     70
+    ],
+    "occurrences": 1,
+    "note": "constant 0x7FFFFFFF: defined, never compared"
+   },
+   {
+    "token": "quaternion",
+    "lines": [
+     174
+    ],
+    "occurrences": 1,
+    "note": "body quaternion: collected, never read"
+   },
+   {
+    "token": "\"position\"",
+    "lines": [
+     172
+    ],
+    "occurrences": 1,
+    "note": "body position: collected, never read"
+   },
+   {
+    "token": "word_0c",
+    "lines": [
+     202
+    ],
+    "occurrences": 1,
+    "note": "cinfo +0x0C: collected, never read"
+   },
+   {
+    "token": "field_08",
+    "lines": [
+     176
+    ],
+    "occurrences": 1,
+    "note": "body +0x08: collected, never read"
+   },
+   {
+    "token": "field_0c",
+    "lines": [
+     177
+    ],
+    "occurrences": 1,
+    "note": "body +0x0C: collected, never read"
+   },
+   {
+    "token": "field_10",
+    "lines": [
+     178
+    ],
+    "occurrences": 1,
+    "note": "body +0x10: collected, never read"
+   },
+   {
+    "token": "pivots_equal",
+    "lines": [
+     203,
+     222,
+     284
+    ],
+    "occurrences": 3,
+    "note": "all-frames-equal: collected, only written to JSON"
+   }
+  ],
+  "no_body_occurrences": 1,
+  "i16_16384_occurrences": 4,
+  "i16_16384_lines": [
+   312,
+   326,
+   387,
+   401
+  ],
+  "decode_bar": 1.15,
+  "decode_bar_in_source": 1.15,
+  "oracle_a_is_vacuous": true,
+  "donor_own_body_over_5cm": [
+   7,
+   19,
+   20
+  ],
+  "donor_rows_with_frames": 11,
+  "donor_rows_same_pivot": 11,
+  "inertia_readings_named": 13,
+  "inertia_readings_distinct": 11
+ },
+ "oracles": {
+  "all_ok": true,
+  "checks": {
+   "word_04_zero_in_every_record": true,
+   "word_0c_is_7fffffff": true,
+   "words_10_14_zero": true,
+   "measurable_matches_g3_10d": true,
+   "mass_link_reproduced": true,
+   "pair_rate_reproduced": true,
+   "control_rate_reproduced": true,
+   "recorded_body_beats_body0_5cm": true,
+   "body0_never_anchors_alone_past_10cm": true,
+   "counterexamples_exist": true,
+   "counterexamples_in_valid_frame": true,
+   "body0_identity_in_every_file": true,
+   "donor_ab_frames_share_one_pivot": true,
+   "no_inertia_reading_decodes": true,
+   "int16_scalings_are_one_test": true,
+   "u16_is_a_distinct_test": true,
+   "inertia_reproduces_g3_10d": true,
+   "review_tool_constants_match": true
+  },
+  "detail": {
+   "p_a": 0.484,
+   "p_b": 0.766,
+   "p_both": 0.3511,
+   "p_control": 0.0053,
+   "contradictions": 65,
+   "max_d_a_m": 6.193,
+   "min_spread": 1.3366
+  }
+ }
+}

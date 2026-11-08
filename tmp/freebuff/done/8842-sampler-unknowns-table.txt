@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/sampler-unknowns-table.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-08
+The G3-02f sampler report tmp/freebuff/reports/7207-g3-02f-sampler-unknowns.md lists twenty-four UNKNOWN sampler fields, and no build lane can use them in prose form. Read that report and build a table of the fields, using the file path and line the report gives for each one, and keep the field name exactly as the report writes it. Save the table as Working/Prep/sampler_unknowns.json, with the fields field_name, shader_or_cb, report_line, cited_path and reason_unknown, and leave reason_unknown as the report states it. Check that each cited path exists, and mark any that does not as MISSING_PATH in a separate list at the bottom of the same JSON file. The source report and any Research/ file must stay unchanged, because this table is only an input for a later build step.

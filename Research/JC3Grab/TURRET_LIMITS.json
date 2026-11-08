@@ -1,0 +1,2354 @@
+{
+ "fleet_full_rotation_hinges": [
+  {
+   "category": "armed_land",
+   "class": "hkpLimitedHingeConstraintData",
+   "constraint": 5,
+   "entities": [
+    "v0012_car_autostraad_atv_civilian_01.ee",
+    "v0012_car_autostraad_atv_civilian_01_z80.ee",
+    "v0012_car_autostraad_atv_debug.ee",
+    "v0012_car_autostraad_atv_signature_01.ee"
+   ],
+   "entity": "v0012_car_autostraad_atv_civilian_01.ee",
+   "file": "atv.physicsc",
+   "max_deg": 180.0,
+   "min_deg": -180.0,
+   "model": "atv",
+   "offset": 609168,
+   "owner_is_turret": false,
+   "owners": [
+    {
+     "behaviour": "SteeringFork",
+     "parent": 0,
+     "part": "atv_upper_steering"
+    }
+   ],
+   "part_in_module": true,
+   "span_deg": 360.0,
+   "variants": 4
+  },
+  {
+   "category": "armed_land",
+   "class": "hkpLimitedHingeConstraintData",
+   "constraint": 0,
+   "entities": [
+    "v3600_bike_urga_combatdirt_debug.ee",
+    "v3600_bike_urga_combatdirt_military_01.ee",
+    "v3600_bike_urga_combatdirt_rebel_01.ee"
+   ],
+   "entity": "v3600_bike_urga_combatdirt_debug.ee",
+   "file": "combatdirt.physicsc",
+   "max_deg": 180.0,
+   "min_deg": -180.0,
+   "model": "combatdirt",
+   "offset": 278496,
+   "owner_is_turret": false,
+   "owners": [
+    {
+     "behaviour": "SteeringFork",
+     "parent": 0,
+     "part": "combatdirt_upper_steering"
+    }
+   ],
+   "part_in_module": true,
+   "span_deg": 360.0,
+   "variants": 3
+  },
+  {
+   "category": "boat",
+   "class": "hkpLimitedHingeConstraintData",
+   "constraint": 0,
+   "entities": [
+    "v1717_boat_na_duck_civilian_01.ee",
+    "v1717_boat_na_duck_debug.ee"
+   ],
+   "entity": "v1717_boat_na_duck_civilian_01.ee",
+   "file": "duck.physicsc",
+   "max_deg": 180.0,
+   "min_deg": -180.0,
+   "model": "duck",
+   "offset": 25008,
+   "owner_is_turret": false,
+   "owners": [
+    {
+     "behaviour": "SteeringFork",
+     "parent": 0,
+     "part": "duck_upper_steering"
+    }
+   ],
+   "part_in_module": true,
+   "span_deg": 360.0,
+   "variants": 2
+  },
+  {
+   "category": "boat",
+   "class": "hkpLimitedHingeConstraintData",
+   "constraint": 0,
+   "entities": [
+    "v1500_boat_solar_jetski_civilian_01.ee",
+    "v1500_boat_solar_jetski_debug.ee",
+    "v1500_boat_solar_jetski_signature_01.ee"
+   ],
+   "entity": "v1500_boat_solar_jetski_civilian_01.ee",
+   "file": "jetski.physicsc",
+   "max_deg": 180.0,
+   "min_deg": -180.0,
+   "model": "jetski",
+   "offset": 67472,
+   "owner_is_turret": false,
+   "owners": [
+    {
+     "behaviour": "SteeringFork",
+     "parent": 0,
+     "part": "jetski_upper_steering"
+    }
+   ],
+   "part_in_module": true,
+   "span_deg": 360.0,
+   "variants": 3
+  },
+  {
+   "category": "boat",
+   "class": "hkpHingeConstraintData",
+   "constraint": 34,
+   "entities": [
+    "v1705_boat_na_mediumoldfishing_civilian_01.ee",
+    "v1705_boat_na_mediumoldfishing_debug.ee"
+   ],
+   "entity": "v1705_boat_na_mediumoldfishing_civilian_01.ee",
+   "file": "mediumoldfishing.physicsc",
+   "max_deg": null,
+   "min_deg": null,
+   "model": "mediumoldfishing",
+   "offset": 530960,
+   "owner_is_turret": false,
+   "owners": [
+    {
+     "behaviour": "None",
+     "parent": 39,
+     "part": "mediumoldfishing_cast_net_c"
+    }
+   ],
+   "part_in_module": true,
+   "span_deg": null,
+   "variants": 2
+  },
+  {
+   "category": "boat",
+   "class": "hkpHingeConstraintData",
+   "constraint": 35,
+   "entities": [
+    "v1705_boat_na_mediumoldfishing_civilian_01.ee",
+    "v1705_boat_na_mediumoldfishing_debug.ee"
+   ],
+   "entity": "v1705_boat_na_mediumoldfishing_civilian_01.ee",
+   "file": "mediumoldfishing.physicsc",
+   "max_deg": null,
+   "min_deg": null,
+   "model": "mediumoldfishing",
+   "offset": 531184,
+   "owner_is_turret": false,
+   "owners": [
+    {
+     "behaviour": "None",
+     "parent": 39,
+     "part": "mediumoldfishing_cast_net_l"
+    }
+   ],
+   "part_in_module": true,
+   "span_deg": null,
+   "variants": 2
+  },
+  {
+   "category": "boat",
+   "class": "hkpHingeConstraintData",
+   "constraint": 36,
+   "entities": [
+    "v1705_boat_na_mediumoldfishing_civilian_01.ee",
+    "v1705_boat_na_mediumoldfishing_debug.ee"
+   ],
+   "entity": "v1705_boat_na_mediumoldfishing_civilian_01.ee",
+   "file": "mediumoldfishing.physicsc",
+   "max_deg": null,
+   "min_deg": null,
+   "model": "mediumoldfishing",
+   "offset": 531408,
+   "owner_is_turret": false,
+   "owners": [
+    {
+     "behaviour": "None",
+     "parent": 39,
+     "part": "mediumoldfishing_cast_net_r"
+    }
+   ],
+   "part_in_module": true,
+   "span_deg": null,
+   "variants": 2
+  },
+  {
+   "category": "armed_land",
+   "class": "hkpLimitedHingeConstraintData",
+   "constraint": 0,
+   "entities": [
+    "v3501_bike_solar_modernmoped_civilian_01.ee",
+    "v3501_bike_solar_modernmoped_debug.ee"
+   ],
+   "entity": "v3501_bike_solar_modernmoped_civilian_01.ee",
+   "file": "modernmoped.physicsc",
+   "max_deg": 180.0,
+   "min_deg": -180.0,
+   "model": "modernmoped",
+   "offset": 196256,
+   "owner_is_turret": false,
+   "owners": [
+    {
+     "behaviour": "SteeringFork",
+     "parent": 0,
+     "part": "modernmoped_upper_steering"
+    }
+   ],
+   "part_in_module": true,
+   "span_deg": 360.0,
+   "variants": 2
+  },
+  {
+   "category": "armed_land",
+   "class": "hkpLimitedHingeConstraintData",
+   "constraint": 0,
+   "entities": [
+    "v3502_bike_solar_modernroad_civilian_01.ee",
+    "v3502_bike_solar_modernroad_debug.ee"
+   ],
+   "entity": "v3502_bike_solar_modernroad_civilian_01.ee",
+   "file": "modernroad.physicsc",
+   "max_deg": 180.0,
+   "min_deg": -180.0,
+   "model": "modernroad",
+   "offset": 250272,
+   "owner_is_turret": false,
+   "owners": [
+    {
+     "behaviour": "SteeringFork",
+     "parent": 0,
+     "part": "modernroad_upper_steering"
+    }
+   ],
+   "part_in_module": true,
+   "span_deg": 360.0,
+   "variants": 2
+  },
+  {
+   "category": "armed_land",
+   "class": "hkpLimitedHingeConstraintData",
+   "constraint": 0,
+   "entities": [
+    "v3401_bike_mugello_modernsport_civilian_01.ee",
+    "v3401_bike_mugello_modernsport_debug.ee"
+   ],
+   "entity": "v3401_bike_mugello_modernsport_civilian_01.ee",
+   "file": "modernsport.physicsc",
+   "max_deg": 180.0,
+   "min_deg": -180.0,
+   "model": "modernsport",
+   "offset": 208640,
+   "owner_is_turret": false,
+   "owners": [
+    {
+     "behaviour": "SteeringFork",
+     "parent": 0,
+     "part": "modernsport_upper_steering"
+    }
+   ],
+   "part_in_module": true,
+   "span_deg": 360.0,
+   "variants": 2
+  },
+  {
+   "category": "armed_land",
+   "class": "hkpLimitedHingeConstraintData",
+   "constraint": 0,
+   "entities": [
+    "v3500_bike_solar_oldmoped_civilian_01.ee",
+    "v3500_bike_solar_oldmoped_debug.ee"
+   ],
+   "entity": "v3500_bike_solar_oldmoped_civilian_01.ee",
+   "file": "oldmoped.physicsc",
+   "max_deg": 180.0,
+   "min_deg": -180.0,
+   "model": "oldmoped",
+   "offset": 132016,
+   "owner_is_turret": false,
+   "owners": [
+    {
+     "behaviour": "SteeringFork",
+     "parent": 0,
+     "part": "oldmoped_upper_steering"
+    }
+   ],
+   "part_in_module": true,
+   "span_deg": 360.0,
+   "variants": 2
+  },
+  {
+   "category": "armed_land",
+   "class": "hkpLimitedHingeConstraintData",
+   "constraint": 0,
+   "entities": [
+    "v3503_bike_solar_oldroad_civilian_01.ee",
+    "v3503_bike_solar_oldroad_debug.ee"
+   ],
+   "entity": "v3503_bike_solar_oldroad_civilian_01.ee",
+   "file": "oldroad.physicsc",
+   "max_deg": 180.0,
+   "min_deg": -180.0,
+   "model": "oldroad",
+   "offset": 503936,
+   "owner_is_turret": false,
+   "owners": [
+    {
+     "behaviour": "SteeringFork",
+     "parent": 0,
+     "part": "oldroad_upper_steering"
+    }
+   ],
+   "part_in_module": true,
+   "span_deg": 360.0,
+   "variants": 2
+  },
+  {
+   "category": "armed_land",
+   "class": "hkpLimitedHingeConstraintData",
+   "constraint": 1,
+   "entities": [
+    "v3001_bike_autostraad_snowmobile_debug.ee"
+   ],
+   "entity": "v3001_bike_autostraad_snowmobile_debug.ee",
+   "file": "snowmobile.physicsc",
+   "max_deg": 180.0,
+   "min_deg": -180.0,
+   "model": "snowmobile",
+   "offset": 204480,
+   "owner_is_turret": false,
+   "owners": [
+    {
+     "behaviour": "None",
+     "parent": 0,
+     "part": "snowmobile_upper_steering"
+    }
+   ],
+   "part_in_module": true,
+   "span_deg": 360.0,
+   "variants": 1
+  },
+  {
+   "category": "boat",
+   "class": "hkpHingeConstraintData",
+   "constraint": 9,
+   "entities": [
+    "v1602_boat_urga_transport_debug.ee",
+    "v1602_boat_urga_transport_military_01.ee",
+    "v1602_boat_urga_transport_military_01_delivery.ee",
+    "v1602_boat_urga_transport_rebel_01.ee"
+   ],
+   "entity": "v1602_boat_urga_transport_debug.ee",
+   "file": "transport.physicsc",
+   "max_deg": null,
+   "min_deg": null,
+   "model": "transport",
+   "offset": 153120,
+   "owner_is_turret": false,
+   "owners": [
+    {
+     "behaviour": "None",
+     "parent": 26,
+     "part": "transport_spool"
+    }
+   ],
+   "part_in_module": true,
+   "span_deg": null,
+   "variants": 4
+  },
+  {
+   "category": "armed_land",
+   "class": "hkpLimitedHingeConstraintData",
+   "constraint": 0,
+   "entities": [
+    "v3000_bike_autostraad_trials_civilian_01.ee",
+    "v3000_bike_autostraad_trials_debug.ee",
+    "v3000_bike_autostraad_trials_signature_01.ee"
+   ],
+   "entity": "v3000_bike_autostraad_trials_civilian_01.ee",
+   "file": "trials.physicsc",
+   "max_deg": 180.0,
+   "min_deg": -180.0,
+   "model": "trials",
+   "offset": 196544,
+   "owner_is_turret": false,
+   "owners": [
+    {
+     "behaviour": "SteeringFork",
+     "parent": 0,
+     "part": "trials_upper_steering"
+    }
+   ],
+   "part_in_module": true,
+   "span_deg": 360.0,
+   "variants": 3
+  }
+ ],
+ "full_rotation_census": {
+  "entities": 32,
+  "full_span_model_hinges": 11,
+  "full_span_models": [
+   "atv",
+   "combatdirt",
+   "duck",
+   "jetski",
+   "modernmoped",
+   "modernroad",
+   "modernsport",
+   "oldmoped",
+   "oldroad",
+   "snowmobile",
+   "trials"
+  ],
+  "full_span_objects": 26,
+  "model_hinges": 15,
+  "objects": 36,
+  "owner_behaviours": {
+   "None": 5,
+   "SteeringFork": 10
+  },
+  "unlimited_model_hinges": 4,
+  "unlimited_models": [
+   "mediumoldfishing",
+   "transport"
+  ],
+  "unlimited_objects": 10
+ },
+ "meta": {
+  "builds_on": [
+   "G2-13 (Research/JC3Grab/TURRET.md: turret = Turret part + Cannon part + two limited hinges)",
+   "G3-10e (Research/JC3Grab/PHYSICS_LIMITS.md: the hinge's angular limit atom, +0x0FC min / +0x100 max, radians)"
+  ],
+  "decode": {
+   "atom_offset": "0xf8",
+   "atom_type_code": 14,
+   "axis": "frame A row 0 at +0x30 (frame B row 0 at +0x70 checked against it): the limited hinge's free axis",
+   "hinge_class": "hkpLimitedHingeConstraintData",
+   "max_offset": "0x100",
+   "min_offset": "0xfc",
+   "pivot": "frame A translation at +0x60",
+   "provenance": "Research/JC3Grab/PHYSICS_LIMITS.md sections 1-2",
+   "units": "radians in the file, degrees here (x 57.29577951308232)"
+  },
+  "entities_in_table": 233,
+  "entities_scanned": 233,
+  "entities_with_a_Turret_or_Cannon_part": 40,
+  "entities_with_constraints": 220,
+  "entities_with_parts_module": 233,
+  "game": "D:/Games/Just Cause 3",
+  "generated_by": "Tools/scripts/jc3_turret_limits.py",
+  "inputs": [
+   "Research/JC3Grab/PARTS_TABLE.jsonl (233 vehicle entities)",
+   "Research/JC3Grab/WEAPON_WIRING.jsonl (fire points)",
+   "the game install's .ee bundles (read-only)",
+   "Tools/scripts/jc3_physics_limits.py (imported: HINGE_LIMIT)"
+  ],
+  "labels": {
+   "UNKNOWN": "no byte in the files pins it",
+   "decoded": "read at the stated offset; the oracle is named",
+   "derived": "a rule over decoded inputs, stated in prose"
+  },
+  "scan_errors": [],
+  "task": "turret limits over the whole vehicle fleet"
+ },
+ "models": [
+  {
+   "category": "aircraft",
+   "entities": [
+    "v2604_helicopter_urga_advancedassault_debug.ee",
+    "v2604_helicopter_urga_advancedassault_military_01.ee",
+    "v2604_helicopter_urga_advancedassault_rebel_01.ee",
+    "v2604_helicopter_urga_advancedassault_signature_shielded.ee",
+    "v2604_helicopter_urga_advancedassault_signature_shielded_di_ravello.ee"
+   ],
+   "identical_across_variants": true,
+   "model": "advancedassault",
+   "module": "advancedassault_vehicle_parts.vmodc",
+   "units": [
+    {
+     "anchor": {
+      "behaviour": "None",
+      "constraint": -1,
+      "hinge": null,
+      "identity_offset": true,
+      "index": 0,
+      "parent": -1,
+      "part": "advancedassault_body"
+     },
+     "key": "pitch_only + advancedassault_gatling_l_mount",
+     "kind": "pitch_only",
+     "pitch": {
+      "behaviour": "Cannon",
+      "constraint": 11,
+      "hinge": {
+       "axis": [
+        1.0,
+        0.0,
+        0.0
+       ],
+       "axis_b": [
+        1.0,
+        0.0,
+        0.0
+       ],
+       "class": "hkpLimitedHingeConstraintData",
+       "file": "advancedassault.physicsc",
+       "max_deg": 30.0,
+       "max_rad": 0.5235987901687622,
+       "min_deg": -45.0,
+       "min_rad": -0.7853981852531433,
+       "offset": 186400,
+       "pivot": [
+        -0.989,
+        1.26,
+        -0.094
+       ],
+       "span_deg": 75.0,
+       "type_code": 14
+      },
+      "identity_offset": true,
+      "index": 7,
+      "parent": 0,
+      "part": "advancedassault_gatling_l_mount"
+     },
+     "weapons": [
+      {
+       "binding": [
+        "main_weapon"
+       ],
+       "point": "weapon.point.left",
+       "weapon": "w622_advancedhelicopter_mgun"
+      }
+     ],
+     "yaw": null
+    },
+    {
+     "anchor": {
+      "behaviour": "None",
+      "constraint": -1,
+      "hinge": null,
+      "identity_offset": true,
+      "index": 0,
+      "parent": -1,
+      "part": "advancedassault_body"
+     },
+     "key": "pitch_only + advancedassault_gatling_r_mount",
+     "kind": "pitch_only",
+     "pitch": {
+      "behaviour": "Cannon",
+      "constraint": 12,
+      "hinge": {
+       "axis": [
+        1.0,
+        0.0,
+        0.0
+       ],
+       "axis_b": [
+        1.0,
+        0.0,
+        0.0
+       ],
+       "class": "hkpLimitedHingeConstraintData",
+       "file": "advancedassault.physicsc",
+       "max_deg": 30.0,
+       "max_rad": 0.5235987901687622,
+       "min_deg": -45.0,
+       "min_rad": -0.7853981852531433,
+       "offset": 186704,
+       "pivot": [
+        0.983,
+        1.26,
+        -0.094
+       ],
+       "span_deg": 75.0,
+       "type_code": 14
+      },
+      "identity_offset": true,
+      "index": 8,
+      "parent": 0,
+      "part": "advancedassault_gatling_r_mount"
+     },
+     "weapons": [
+      {
+       "binding": [
+        "main_weapon"
+       ],
+       "point": "weapon.point.right",
+       "weapon": "w622_advancedhelicopter_mgun"
+      }
+     ],
+     "yaw": null
+    }
+   ],
+   "units_digest": "[{\"anchor\": {\"behaviour\": \"None\", \"constraint\": -1, \"hinge\": null, \"identity_offset\": true, \"index\": 0, \"parent\": -1, \"part\": \"advancedassault_body\"}, \"kind\": \"pitch_only\", \"pitch\": {\"behaviour\": \"Cannon\", \"constraint\": 11, \"hinge\": {\"axis\": [1.0, 0.0, 0.0], \"axis_b\": [1.0, 0.0, 0.0], \"class\": \"hkpLimitedHingeConstraintData\", \"file\": \"advancedassault.physicsc\", \"max_deg\": 30.0, \"max_rad\": 0.5235987901687622, \"min_deg\": -45.0, \"min_rad\": -0.7853981852531433, \"offset\": 186400, \"pivot\": [-0.989, 1.26, -0.094], \"span_deg\": 75.0, \"type_code\": 14}, \"identity_offset\": true, \"index\": 7, \"parent\": 0, \"part\": \"advancedassault_gatling_l_mount\"}, \"yaw\": null}, {\"anchor\": {\"behaviour\": \"None\", \"constraint\": -1, \"hinge\": null, \"identity_offset\": true, \"index\": 0, \"parent\": -1, \"part\": \"advancedassault_body\"}, \"kind\": \"pitch_only\", \"pitch\": {\"behaviour\": \"Cannon\", \"constraint\": 12, \"hinge\": {\"axis\": [1.0, 0.0, 0.0], \"axis_b\": [1.0, 0.0, 0.0], \"class\": \"hkpLimitedHingeConstraintData\", \"file\": \"advancedassault.physicsc\", \"max_deg\": 30.0, \"max_rad\": 0.5235987901687622, \"min_deg\": -45.0, \"min_rad\": -0.7853981852531433, \"offset\": 186704, \"pivot\": [0.983, 1.26, -0.094], \"span_deg\": 75.0, \"type_code\": 14}, \"identity_offset\": true, \"index\": 8, \"parent\": 0, \"part\": \"advancedassault_gatling_r_mount\"}, \"yaw\": null}]",
+   "variants": 5
+  },
+  {
+   "category": "aircraft",
+   "entities": [
+    "v2602_helicopter_urga_lightassault_debug.ee",
+    "v2602_helicopter_urga_lightassault_military_01.ee",
+    "v2602_helicopter_urga_lightassault_military_01_custom_mm230.ee",
+    "v2602_helicopter_urga_lightassault_rebel_01.ee"
+   ],
+   "identical_across_variants": true,
+   "model": "lightassault",
+   "module": "lightassault_vehicle_parts.vmodc",
+   "units": [
+    {
+     "anchor": {
+      "behaviour": "None",
+      "constraint": -1,
+      "hinge": null,
+      "identity_offset": true,
+      "index": 9,
+      "parent": 0,
+      "part": "lightassault_minigun_mount_l_base"
+     },
+     "key": "pitch_only + lightassault_minigun_mount_l_vertical",
+     "kind": "pitch_only",
+     "pitch": {
+      "behaviour": "Cannon",
+      "constraint": 6,
+      "hinge": {
+       "axis": [
+        1.0,
+        -0.0,
+        0.0
+       ],
+       "axis_b": [
+        1.0,
+        -0.0,
+        0.0
+       ],
+       "class": "hkpLimitedHingeConstraintData",
+       "file": "lightassault.physicsc",
+       "max_deg": 35.0,
+       "max_rad": 0.6108652353286743,
+       "min_deg": -45.0,
+       "min_rad": -0.7853981852531433,
+       "offset": 285568,
+       "pivot": [
+        -2.075,
+        1.134,
+        1.121
+       ],
+       "span_deg": 80.0,
+       "type_code": 14
+      },
+      "identity_offset": true,
+      "index": 30,
+      "parent": 9,
+      "part": "lightassault_minigun_mount_l_vertical"
+     },
+     "weapons": [
+      {
+       "binding": [
+        "main_weapon"
+       ],
+       "point": "weapon.point.left",
+       "weapon": "w604_helicopter_mgun"
+      }
+     ],
+     "yaw": null
+    },
+    {
+     "anchor": {
+      "behaviour": "None",
+      "constraint": -1,
+      "hinge": null,
+      "identity_offset": true,
+      "index": 10,
+      "parent": 0,
+      "part": "lightassault_minigun_mount_r_base"
+     },
+     "key": "pitch_only + lightassault_minigun_mount_r_vertical",
+     "kind": "pitch_only",
+     "pitch": {
+      "behaviour": "Cannon",
+      "constraint": 7,
+      "hinge": {
+       "axis": [
+        1.0,
+        -0.0,
+        0.0
+       ],
+       "axis_b": [
+        1.0,
+        -0.0,
+        0.0
+       ],
+       "class": "hkpLimitedHingeConstraintData",
+       "file": "lightassault.physicsc",
+       "max_deg": 35.0,
+       "max_rad": 0.6108652353286743,
+       "min_deg": -45.0,
+       "min_rad": -0.7853981852531433,
+       "offset": 285872,
+       "pivot": [
+        2.075,
+        1.134,
+        1.121
+       ],
+       "span_deg": 80.0,
+       "type_code": 14
+      },
+      "identity_offset": true,
+      "index": 31,
+      "parent": 10,
+      "part": "lightassault_minigun_mount_r_vertical"
+     },
+     "weapons": [
+      {
+       "binding": [
+        "main_weapon"
+       ],
+       "point": "weapon.point.right",
+       "weapon": "w604_helicopter_mgun"
+      }
+     ],
+     "yaw": null
+    }
+   ],
+   "units_digest": "[{\"anchor\": {\"behaviour\": \"None\", \"constraint\": -1, \"hinge\": null, \"identity_offset\": true, \"index\": 9, \"parent\": 0, \"part\": \"lightassault_minigun_mount_l_base\"}, \"kind\": \"pitch_only\", \"pitch\": {\"behaviour\": \"Cannon\", \"constraint\": 6, \"hinge\": {\"axis\": [1.0, -0.0, 0.0], \"axis_b\": [1.0, -0.0, 0.0], \"class\": \"hkpLimitedHingeConstraintData\", \"file\": \"lightassault.physicsc\", \"max_deg\": 35.0, \"max_rad\": 0.6108652353286743, \"min_deg\": -45.0, \"min_rad\": -0.7853981852531433, \"offset\": 285568, \"pivot\": [-2.075, 1.134, 1.121], \"span_deg\": 80.0, \"type_code\": 14}, \"identity_offset\": true, \"index\": 30, \"parent\": 9, \"part\": \"lightassault_minigun_mount_l_vertical\"}, \"yaw\": null}, {\"anchor\": {\"behaviour\": \"None\", \"constraint\": -1, \"hinge\": null, \"identity_offset\": true, \"index\": 10, \"parent\": 0, \"part\": \"lightassault_minigun_mount_r_base\"}, \"kind\": \"pitch_only\", \"pitch\": {\"behaviour\": \"Cannon\", \"constraint\": 7, \"hinge\": {\"axis\": [1.0, -0.0, 0.0], \"axis_b\": [1.0, -0.0, 0.0], \"class\": \"hkpLimitedHingeConstraintData\", \"file\": \"lightassault.physicsc\", \"max_deg\": 35.0, \"max_rad\": 0.6108652353286743, \"min_deg\": -45.0, \"min_rad\": -0.7853981852531433, \"offset\": 285872, \"pivot\": [2.075, 1.134, 1.121], \"span_deg\": 80.0, \"type_code\": 14}, \"identity_offset\": true, \"index\": 31, \"parent\": 10, \"part\": \"lightassault_minigun_mount_r_vertical\"}, \"yaw\": null}]",
+   "variants": 4
+  },
+  {
+   "category": "apc",
+   "entities": [
+    "v0200_car_capstone_apc_debug.ee",
+    "v0200_car_capstone_apc_military_01.ee",
+    "v0200_car_capstone_apc_rebel_01.ee"
+   ],
+   "identical_across_variants": true,
+   "model": "apc",
+   "module": "apc_vehicle_parts.vmodc",
+   "units": [
+    {
+     "anchor": {
+      "behaviour": "Turret",
+      "constraint": 15,
+      "hinge": {
+       "axis": [
+        -0.0,
+        1.0,
+        0.0
+       ],
+       "axis_b": [
+        0.0,
+        1.0,
+        0.0
+       ],
+       "class": "hkpLimitedHingeConstraintData",
+       "file": "apc.physicsc",
+       "max_deg": 179.0,
+       "max_rad": 3.1241393089294434,
+       "min_deg": -179.0,
+       "min_rad": -3.1241393089294434,
+       "offset": 335424,
+       "pivot": [
+        -0.0037,
+        2.1367,
+        1.3048
+       ],
+       "span_deg": 358.0,
+       "type_code": 14
+      },
+      "identity_offset": true,
+      "index": 30,
+      "parent": 0,
+      "part": "apc_turret_base"
+     },
+     "key": "turret + apc_turret_base + apc_weapon_mount_vertical",
+     "kind": "turret",
+     "pitch": {
+      "behaviour": "Cannon",
+      "constraint": 14,
+      "hinge": {
+       "axis": [
+        1.0,
+        0.0,
+        0.0
+       ],
+       "axis_b": [
+        1.0,
+        0.0,
+        0.0
+       ],
+       "class": "hkpLimitedHingeConstraintData",
+       "file": "apc.physicsc",
+       "max_deg": 50.0,
+       "max_rad": 0.8726646304130554,
+       "min_deg": -15.0,
+       "min_rad": -0.2617993950843811,
+       "offset": 335120,
+       "pivot": [
+        -0.0,
+        2.7313,
+        0.5942
+       ],
+       "span_deg": 65.0,
+       "type_code": 14
+      },
+      "identity_offset": true,
+      "index": 44,
+      "parent": 30,
+      "part": "apc_weapon_mount_vertical"
+     },
+     "weapons": [
+      {
+       "binding": [
+        "mounted_weapon"
+       ],
+       "point": "attach.vehicle",
+       "weapon": "w206_mounted_capstone_m2hm"
+      }
+     ],
+     "yaw": {
+      "behaviour": "Turret",
+      "constraint": 15,
+      "hinge": {
+       "axis": [
+        -0.0,
+        1.0,
+        0.0
+       ],
+       "axis_b": [
+        0.0,
+        1.0,
+        0.0
+       ],
+       "class": "hkpLimitedHingeConstraintData",
+       "file": "apc.physicsc",
+       "max_deg": 179.0,
+       "max_rad": 3.1241393089294434,
+       "min_deg": -179.0,
+       "min_rad": -3.1241393089294434,
+       "offset": 335424,
+       "pivot": [
+        -0.0037,
+        2.1367,
+        1.3048
+       ],
+       "span_deg": 358.0,
+       "type_code": 14
+      },
+      "identity_offset": true,
+      "index": 30,
+      "parent": 0,
+      "part": "apc_turret_base"
+     }
+    }
+   ],
+   "units_digest": "[{\"anchor\": {\"behaviour\": \"Turret\", \"constraint\": 15, \"hinge\": {\"axis\": [-0.0, 1.0, 0.0], \"axis_b\": [0.0, 1.0, 0.0], \"class\": \"hkpLimitedHingeConstraintData\", \"file\": \"apc.physicsc\", \"max_deg\": 179.0, \"max_rad\": 3.1241393089294434, \"min_deg\": -179.0, \"min_rad\": -3.1241393089294434, \"offset\": 335424, \"pivot\": [-0.0037, 2.1367, 1.3048], \"span_deg\": 358.0, \"type_code\": 14}, \"identity_offset\": true, \"index\": 30, \"parent\": 0, \"part\": \"apc_turret_base\"}, \"kind\": \"turret\", \"pitch\": {\"behaviour\": \"Cannon\", \"constraint\": 14, \"hinge\": {\"axis\": [1.0, 0.0, 0.0], \"axis_b\": [1.0, 0.0, 0.0], \"class\": \"hkpLimitedHingeConstraintData\", \"file\": \"apc.physicsc\", \"max_deg\": 50.0, \"max_rad\": 0.8726646304130554, \"min_deg\": -15.0, \"min_rad\": -0.2617993950843811, \"offset\": 335120, \"pivot\": [-0.0, 2.7313, 0.5942], \"span_deg\": 65.0, \"type_code\": 14}, \"identity_offset\": true, \"index\": 44, \"parent\": 30, \"part\": \"apc_weapon_mount_vertical\"}, \"yaw\": {\"behaviour\": \"Turret\", \"constraint\": 15, \"hinge\": {\"axis\": [-0.0, 1.0, 0.0], \"axis_b\": [0.0, 1.0, 0.0], \"class\": \"hkpLimitedHingeConstraintData\", \"file\": \"apc.physicsc\", \"max_deg\": 179.0, \"max_rad\": 3.1241393089294434, \"min_deg\": -179.0, \"min_rad\": -3.1241393089294434, \"offset\": 335424, \"pivot\": [-0.0037, 2.1367, 1.3048], \"span_deg\": 358.0, \"type_code\": 14}, \"identity_offset\": true, \"index\": 30, \"parent\": 0, \"part\": \"apc_turret_base\"}}]",
+   "variants": 3
+  },
+  {
+   "category": "armed_land",
+   "entities": [
+    "v0600_car_urga_armoredjeep_debug.ee",
+    "v0600_car_urga_armoredjeep_military_01.ee",
+    "v0600_car_urga_armoredjeep_rebel_01.ee"
+   ],
+   "identical_across_variants": true,
+   "model": "armoredjeep",
+   "module": "armoredjeep_vehicle_parts.vmodc",
+   "units": [
+    {
+     "anchor": {
+      "behaviour": "None",
+      "constraint": -1,
+      "hinge": null,
+      "identity_offset": true,
+      "index": 59,
+      "parent": 34,
+      "part": "armoredjeep_weapon_mount_horizontal"
+     },
+     "key": "turret + armoredjeep_turret_base + armoredjeep_weapon_mount_vertical",
+     "kind": "turret",
+     "pitch": {
+      "behaviour": "Cannon",
+      "constraint": 17,
+      "hinge": {
+       "axis": [
+        1.0,
+        0.0,
+        0.0
+       ],
+       "axis_b": [
+        1.0,
+        0.0,
+        0.0
+       ],
+       "class": "hkpLimitedHingeConstraintData",
+       "file": "armoredjeep.physicsc",
+       "max_deg": 50.0,
+       "max_rad": 0.8726646304130554,
+       "min_deg": -25.0,
+       "min_rad": -0.4363323152065277,
+       "offset": 410128,
+       "pivot": [
+        0.5099,
+        2.2898,
+        -0.3751
+       ],
+       "span_deg": 75.0,
+       "type_code": 14
+      },
+      "identity_offset": true,
+      "index": 66,
+      "parent": 59,
+      "part": "armoredjeep_weapon_mount_vertical"
+     },
+     "weapons": [],
+     "yaw": {
+      "behaviour": "Turret",
+      "constraint": 18,
+      "hinge": {
+       "axis": [
+        -0.0,
+        1.0,
+        0.0
+       ],
+       "axis_b": [
+        0.0,
+        1.0,
+        0.0
+       ],
+       "class": "hkpLimitedHingeConstraintData",
+       "file": "armoredjeep.physicsc",
+       "max_deg": 179.0,
+       "max_rad": 3.1241393089294434,
+       "min_deg": -179.0,
+       "min_rad": -3.1241393089294434,
+       "offset": 410432,
+       "pivot": [
+        0.507,
+        2.0,
+        0.263
+       ],
+       "span_deg": 358.0,
+       "type_code": 14
+      },
+      "identity_offset": true,
+      "index": 34,
+      "parent": 0,
+      "part": "armoredjeep_turret_base"
+     }
+    }
+   ],
+   "units_digest": "[{\"anchor\": {\"behaviour\": \"None\", \"constraint\": -1, \"hinge\": null, \"identity_offset\": true, \"index\": 59, \"parent\": 34, \"part\": \"armoredjeep_weapon_mount_horizontal\"}, \"kind\": \"turret\", \"pitch\": {\"behaviour\": \"Cannon\", \"constraint\": 17, \"hinge\": {\"axis\": [1.0, 0.0, 0.0], \"axis_b\": [1.0, 0.0, 0.0], \"class\": \"hkpLimitedHingeConstraintData\", \"file\": \"armoredjeep.physicsc\", \"max_deg\": 50.0, \"max_rad\": 0.8726646304130554, \"min_deg\": -25.0, \"min_rad\": -0.4363323152065277, \"offset\": 410128, \"pivot\": [0.5099, 2.2898, -0.3751], \"span_deg\": 75.0, \"type_code\": 14}, \"identity_offset\": true, \"index\": 66, \"parent\": 59, \"part\": \"armoredjeep_weapon_mount_vertical\"}, \"yaw\": {\"behaviour\": \"Turret\", \"constraint\": 18, \"hinge\": {\"axis\": [-0.0, 1.0, 0.0], \"axis_b\": [0.0, 1.0, 0.0], \"class\": \"hkpLimitedHingeConstraintData\", \"file\": \"armoredjeep.physicsc\", \"max_deg\": 179.0, \"max_rad\": 3.1241393089294434, \"min_deg\": -179.0, \"min_rad\": -3.1241393089294434, \"offset\": 410432, \"pivot\": [0.507, 2.0, 0.263], \"span_deg\": 358.0, \"type_code\": 14}, \"identity_offset\": true, \"index\": 34, \"parent\": 0, \"part\": \"armoredjeep_turret_base\"}}]",
+   "variants": 3
+  },
+  {
+   "category": "armed_land",
+   "entities": [
+    "v0504_car_solar_technicaljeep_debug.ee",
+    "v0504_car_solar_technicaljeep_militia_01.ee",
+    "v0504_car_solar_technicaljeep_rebel_01.ee",
+    "v0504_car_solar_technicaljeep_rebel_machinegun.ee"
+   ],
+   "identical_across_variants": true,
+   "model": "technicaljeep",
+   "module": "technicaljeep_vehicle_parts.vmodc",
+   "units": [
+    {
+     "anchor": {
+      "behaviour": "None",
+      "constraint": -1,
+      "hinge": null,
+      "identity_offset": true,
+      "index": 54,
+      "parent": 46,
+      "part": "technicaljeep_weapon_mount_horizontal"
+     },
+     "key": "turret + technicaljeep_rebel_turret + technicaljeep_weapon_mount_vertical",
+     "kind": "turret",
+     "pitch": {
+      "behaviour": "Cannon",
+      "constraint": 12,
+      "hinge": {
+       "axis": [
+        1.0,
+        0.0,
+        0.0
+       ],
+       "axis_b": [
+        1.0,
+        0.0,
+        0.0
+       ],
+       "class": "hkpLimitedHingeConstraintData",
+       "file": "technicaljeep.physicsc",
+       "max_deg": 45.0,
+       "max_rad": 0.7853981852531433,
+       "min_deg": -10.0,
+       "min_rad": -0.1745329201221466,
+       "offset": 445792,
+       "pivot": [
+        0.0,
+        2.0498,
+        0.6697
+       ],
+       "span_deg": 55.0,
+       "type_code": 14
+      },
+      "identity_offset": true,
+      "index": 55,
+      "parent": 54,
+      "part": "technicaljeep_weapon_mount_vertical"
+     },
+     "weapons": [],
+     "yaw": {
+      "behaviour": "Turret",
+      "constraint": 11,
+      "hinge": {
+       "axis": [
+        -0.0,
+        1.0,
+        0.0
+       ],
+       "axis_b": [
+        0.0,
+        1.0,
+        0.0
+       ],
+       "class": "hkpLimitedHingeConstraintData",
+       "file": "technicaljeep.physicsc",
+       "max_deg": 179.0,
+       "max_rad": 3.1241393089294434,
+       "min_deg": -179.0,
+       "min_rad": -3.1241393089294434,
+       "offset": 445488,
+       "pivot": [
+        0.0,
+        1.3878,
+        1.2902
+       ],
+       "span_deg": 358.0,
+       "type_code": 14
+      },
+      "identity_offset": true,
+      "index": 46,
+      "parent": 12,
+      "part": "technicaljeep_rebel_turret"
+     }
+    }
+   ],
+   "units_digest": "[{\"anchor\": {\"behaviour\": \"None\", \"constraint\": -1, \"hinge\": null, \"identity_offset\": true, \"index\": 54, \"parent\": 46, \"part\": \"technicaljeep_weapon_mount_horizontal\"}, \"kind\": \"turret\", \"pitch\": {\"behaviour\": \"Cannon\", \"constraint\": 12, \"hinge\": {\"axis\": [1.0, 0.0, 0.0], \"axis_b\": [1.0, 0.0, 0.0], \"class\": \"hkpLimitedHingeConstraintData\", \"file\": \"technicaljeep.physicsc\", \"max_deg\": 45.0, \"max_rad\": 0.7853981852531433, \"min_deg\": -10.0, \"min_rad\": -0.1745329201221466, \"offset\": 445792, \"pivot\": [0.0, 2.0498, 0.6697], \"span_deg\": 55.0, \"type_code\": 14}, \"identity_offset\": true, \"index\": 55, \"parent\": 54, \"part\": \"technicaljeep_weapon_mount_vertical\"}, \"yaw\": {\"behaviour\": \"Turret\", \"constraint\": 11, \"hinge\": {\"axis\": [-0.0, 1.0, 0.0], \"axis_b\": [0.0, 1.0, 0.0], \"class\": \"hkpLimitedHingeConstraintData\", \"file\": \"technicaljeep.physicsc\", \"max_deg\": 179.0, \"max_rad\": 3.1241393089294434, \"min_deg\": -179.0, \"min_rad\": -3.1241393089294434, \"offset\": 445488, \"pivot\": [0.0, 1.3878, 1.2902], \"span_deg\": 358.0, \"type_code\": 14}, \"identity_offset\": true, \"index\": 46, \"parent\": 12, \"part\": \"technicaljeep_rebel_turret\"}}]",
+   "variants": 4
+  },
+  {
+   "category": "boat",
+   "entities": [
+    "v1202_boat_capstone_corvette_debug.ee",
+    "v1202_boat_capstone_corvette_military_01.ee",
+    "v1202_boat_capstone_corvette_rebel_01.ee"
+   ],
+   "identical_across_variants": true,
+   "model": "corvette",
+   "module": "corvette_vehicle_parts.vmodc",
+   "units": [
+    {
+     "anchor": {
+      "behaviour": "Turret",
+      "constraint": 6,
+      "hinge": {
+       "axis": [
+        -0.0,
+        1.0,
+        0.0
+       ],
+       "axis_b": [
+        0.0,
+        1.0,
+        0.0
+       ],
+       "class": "hkpLimitedHingeConstraintData",
+       "file": "corvette.physicsc",
+       "max_deg": 150.0,
+       "max_rad": 2.6179938316345215,
+       "min_deg": -150.0,
+       "min_rad": -2.6179938316345215,
+       "offset": 286320,
+       "pivot": [
+        0.0,
+        2.5787,
+        -8.8316
+       ],
+       "span_deg": 300.0,
+       "type_code": 14
+      },
+      "identity_offset": true,
+      "index": 24,
+      "parent": 0,
+      "part": "corvette_turret"
+     },
+     "key": "turret + corvette_turret + corvette_gun",
+     "kind": "turret",
+     "pitch": {
+      "behaviour": "Cannon",
+      "constraint": 5,
+      "hinge": {
+       "axis": [
+        1.0,
+        -0.0,
+        0.0
+       ],
+       "axis_b": [
+        1.0,
+        -0.0,
+        0.0
+       ],
+       "class": "hkpLimitedHingeConstraintData",
+       "file": "corvette.physicsc",
+       "max_deg": 75.0,
+       "max_rad": 1.3089969158172607,
+       "min_deg": -5.0,
+       "min_rad": -0.0872664600610733,
+       "offset": 286016,
+       "pivot": [
+        0.0212,
+        3.7889,
+        -9.0548
+       ],
+       "span_deg": 80.0,
+       "type_code": 14
+      },
+      "identity_offset": true,
+      "index": 51,
+      "parent": 24,
+      "part": "corvette_gun"
+     },
+     "weapons": [
+      {
+       "binding": [
+        "main_weapon"
+       ],
+       "point": "fire_position_0",
+       "weapon": "w616_corvette_canon"
+      }
+     ],
+     "yaw": {
+      "behaviour": "Turret",
+      "constraint": 6,
+      "hinge": {
+       "axis": [
+        -0.0,
+        1.0,
+        0.0
+       ],
+       "axis_b": [
+        0.0,
+        1.0,
+        0.0
+       ],
+       "class": "hkpLimitedHingeConstraintData",
+       "file": "corvette.physicsc",
+       "max_deg": 150.0,
+       "max_rad": 2.6179938316345215,
+       "min_deg": -150.0,
+       "min_rad": -2.6179938316345215,
+       "offset": 286320,
+       "pivot": [
+        0.0,
+        2.5787,
+        -8.8316
+       ],
+       "span_deg": 300.0,
+       "type_code": 14
+      },
+      "identity_offset": true,
+      "index": 24,
+      "parent": 0,
+      "part": "corvette_turret"
+     }
+    }
+   ],
+   "units_digest": "[{\"anchor\": {\"behaviour\": \"Turret\", \"constraint\": 6, \"hinge\": {\"axis\": [-0.0, 1.0, 0.0], \"axis_b\": [0.0, 1.0, 0.0], \"class\": \"hkpLimitedHingeConstraintData\", \"file\": \"corvette.physicsc\", \"max_deg\": 150.0, \"max_rad\": 2.6179938316345215, \"min_deg\": -150.0, \"min_rad\": -2.6179938316345215, \"offset\": 286320, \"pivot\": [0.0, 2.5787, -8.8316], \"span_deg\": 300.0, \"type_code\": 14}, \"identity_offset\": true, \"index\": 24, \"parent\": 0, \"part\": \"corvette_turret\"}, \"kind\": \"turret\", \"pitch\": {\"behaviour\": \"Cannon\", \"constraint\": 5, \"hinge\": {\"axis\": [1.0, -0.0, 0.0], \"axis_b\": [1.0, -0.0, 0.0], \"class\": \"hkpLimitedHingeConstraintData\", \"file\": \"corvette.physicsc\", \"max_deg\": 75.0, \"max_rad\": 1.3089969158172607, \"min_deg\": -5.0, \"min_rad\": -0.0872664600610733, \"offset\": 286016, \"pivot\": [0.0212, 3.7889, -9.0548], \"span_deg\": 80.0, \"type_code\": 14}, \"identity_offset\": true, \"index\": 51, \"parent\": 24, \"part\": \"corvette_gun\"}, \"yaw\": {\"behaviour\": \"Turret\", \"constraint\": 6, \"hinge\": {\"axis\": [-0.0, 1.0, 0.0], \"axis_b\": [0.0, 1.0, 0.0], \"class\": \"hkpLimitedHingeConstraintData\", \"file\": \"corvette.physicsc\", \"max_deg\": 150.0, \"max_rad\": 2.6179938316345215, \"min_deg\": -150.0, \"min_rad\": -2.6179938316345215, \"offset\": 286320, \"pivot\": [0.0, 2.5787, -8.8316], \"span_deg\": 300.0, \"type_code\": 14}, \"identity_offset\": true, \"index\": 24, \"parent\": 0, \"part\": \"corvette_turret\"}}]",
+   "variants": 3
+  },
+  {
+   "category": "boat",
+   "entities": [
+    "v1200_boat_capstone_heavypatrol_debug.ee",
+    "v1200_boat_capstone_heavypatrol_military_01.ee",
+    "v1200_boat_capstone_heavypatrol_military_01_delivery.ee",
+    "v1200_boat_capstone_heavypatrol_rebel_01.ee",
+    "v1200_boat_capstone_heavypatrol_rebel_01_mm210.ee"
+   ],
+   "identical_across_variants": true,
+   "model": "heavypatrol",
+   "module": "heavypatrol_vehicle_parts.vmodc",
+   "units": [
+    {
+     "anchor": {
+      "behaviour": "Cannon",
+      "constraint": 4,
+      "hinge": {
+       "axis": [
+        -0.0,
+        1.0,
+        0.0
+       ],
+       "axis_b": [
+        0.0,
+        1.0,
+        0.0
+       ],
+       "class": "hkpLimitedHingeConstraintData",
+       "file": "heavypatrol.physicsc",
+       "max_deg": 75.0,
+       "max_rad": 1.3089969158172607,
+       "min_deg": -75.0,
+       "min_rad": -1.3089969158172607,
+       "offset": 367344,
+       "pivot": [
+        -2.7544,
+        2.7423,
+        -0.2488
+       ],
+       "span_deg": 150.0,
+       "type_code": 14
+      },
+      "identity_offset": true,
+      "index": 66,
+      "parent": 45,
+      "part": "heavypatrol_weapon_mount_l_horizontal"
+     },
+     "key": "two_cannon + heavypatrol_weapon_mount_l_horizontal + heavypatrol_weapon_mount_l_vertical",
+     "kind": "two_cannon",
+     "pitch": {
+      "behaviour": "Cannon",
+      "constraint": 3,
+      "hinge": {
+       "axis": [
+        -0.0,
+        0.0,
+        -1.0
+       ],
+       "axis_b": [
+        -0.0,
+        0.0,
+        -1.0
+       ],
+       "class": "hkpLimitedHingeConstraintData",
+       "file": "heavypatrol.physicsc",
+       "max_deg": 50.0,
+       "max_rad": 0.8726646304130554,
+       "min_deg": -50.0,
+       "min_rad": -0.8726646304130554,
+       "offset": 367040,
+       "pivot": [
+        -2.7851,
+        2.9218,
+        -0.2488
+       ],
+       "span_deg": 100.0,
+       "type_code": 14
+      },
+      "identity_offset": true,
+      "index": 68,
+      "parent": 66,
+      "part": "heavypatrol_weapon_mount_l_vertical"
+     },
+     "weapons": [
+      {
+       "binding": [
+        "mounted_weapon_2"
+       ],
+       "point": "MountAttach",
+       "weapon": "w206_mounted_capstone_m2hm"
+      }
+     ],
+     "yaw": {
+      "behaviour": "Cannon",
+      "constraint": 4,
+      "hinge": {
+       "axis": [
+        -0.0,
+        1.0,
+        0.0
+       ],
+       "axis_b": [
+        0.0,
+        1.0,
+        0.0
+       ],
+       "class": "hkpLimitedHingeConstraintData",
+       "file": "heavypatrol.physicsc",
+       "max_deg": 75.0,
+       "max_rad": 1.3089969158172607,
+       "min_deg": -75.0,
+       "min_rad": -1.3089969158172607,
+       "offset": 367344,
+       "pivot": [
+        -2.7544,
+        2.7423,
+        -0.2488
+       ],
+       "span_deg": 150.0,
+       "type_code": 14
+      },
+      "identity_offset": true,
+      "index": 66,
+      "parent": 45,
+      "part": "heavypatrol_weapon_mount_l_horizontal"
+     }
+    },
+    {
+     "anchor": {
+      "behaviour": "Cannon",
+      "constraint": 6,
+      "hinge": {
+       "axis": [
+        -0.0,
+        1.0,
+        0.0
+       ],
+       "axis_b": [
+        0.0,
+        1.0,
+        0.0
+       ],
+       "class": "hkpLimitedHingeConstraintData",
+       "file": "heavypatrol.physicsc",
+       "max_deg": 75.0,
+       "max_rad": 1.3089969158172607,
+       "min_deg": -75.0,
+       "min_rad": -1.3089969158172607,
+       "offset": 367952,
+       "pivot": [
+        2.7544,
+        2.7423,
+        -0.2488
+       ],
+       "span_deg": 150.0,
+       "type_code": 14
+      },
+      "identity_offset": true,
+      "index": 67,
+      "parent": 46,
+      "part": "heavypatrol_weapon_mount_r_horizontal"
+     },
+     "key": "two_cannon + heavypatrol_weapon_mount_r_horizontal + heavypatrol_weapon_mount_r_vertical",
+     "kind": "two_cannon",
+     "pitch": {
+      "behaviour": "Cannon",
+      "constraint": 5,
+      "hinge": {
+       "axis": [
+        0.0,
+        0.0,
+        1.0
+       ],
+       "axis_b": [
+        0.0,
+        0.0,
+        1.0
+       ],
+       "class": "hkpLimitedHingeConstraintData",
+       "file": "heavypatrol.physicsc",
+       "max_deg": 50.0,
+       "max_rad": 0.8726646304130554,
+       "min_deg": -50.0,
+       "min_rad": -0.8726646304130554,
+       "offset": 367648,
+       "pivot": [
+        2.7844,
+        2.9224,
+        -0.2488
+       ],
+       "span_deg": 100.0,
+       "type_code": 14
+      },
+      "identity_offset": true,
+      "index": 69,
+      "parent": 67,
+      "part": "heavypatrol_weapon_mount_r_vertical"
+     },
+     "weapons": [
+      {
+       "binding": [
+        "mounted_weapon"
+       ],
+       "point": "MountAttach",
+       "weapon": "w206_mounted_capstone_m2hm"
+      }
+     ],
+     "yaw": {
+      "behaviour": "Cannon",
+      "constraint": 6,
+      "hinge": {
+       "axis": [
+        -0.0,
+        1.0,
+        0.0
+       ],
+       "axis_b": [
+        0.0,
+        1.0,
+        0.0
+       ],
+       "class": "hkpLimitedHingeConstraintData",
+       "file": "heavypatrol.physicsc",
+       "max_deg": 75.0,
+       "max_rad": 1.3089969158172607,
+       "min_deg": -75.0,
+       "min_rad": -1.3089969158172607,
+       "offset": 367952,
+       "pivot": [
+        2.7544,
+        2.7423,
+        -0.2488
+       ],
+       "span_deg": 150.0,
+       "type_code": 14
+      },
+      "identity_offset": true,
+      "index": 67,
+      "parent": 46,
+      "part": "heavypatrol_weapon_mount_r_horizontal"
+     }
+    }
+   ],
+   "units_digest": "[{\"anchor\": {\"behaviour\": \"Cannon\", \"constraint\": 4, \"hinge\": {\"axis\": [-0.0, 1.0, 0.0], \"axis_b\": [0.0, 1.0, 0.0], \"class\": \"hkpLimitedHingeConstraintData\", \"file\": \"heavypatrol.physicsc\", \"max_deg\": 75.0, \"max_rad\": 1.3089969158172607, \"min_deg\": -75.0, \"min_rad\": -1.3089969158172607, \"offset\": 367344, \"pivot\": [-2.7544, 2.7423, -0.2488], \"span_deg\": 150.0, \"type_code\": 14}, \"identity_offset\": true, \"index\": 66, \"parent\": 45, \"part\": \"heavypatrol_weapon_mount_l_horizontal\"}, \"kind\": \"two_cannon\", \"pitch\": {\"behaviour\": \"Cannon\", \"constraint\": 3, \"hinge\": {\"axis\": [-0.0, 0.0, -1.0], \"axis_b\": [-0.0, 0.0, -1.0], \"class\": \"hkpLimitedHingeConstraintData\", \"file\": \"heavypatrol.physicsc\", \"max_deg\": 50.0, \"max_rad\": 0.8726646304130554, \"min_deg\": -50.0, \"min_rad\": -0.8726646304130554, \"offset\": 367040, \"pivot\": [-2.7851, 2.9218, -0.2488], \"span_deg\": 100.0, \"type_code\": 14}, \"identity_offset\": true, \"index\": 68, \"parent\": 66, \"part\": \"heavypatrol_weapon_mount_l_vertical\"}, \"yaw\": {\"behaviour\": \"Cannon\", \"constraint\": 4, \"hinge\": {\"axis\": [-0.0, 1.0, 0.0], \"axis_b\": [0.0, 1.0, 0.0], \"class\": \"hkpLimitedHingeConstraintData\", \"file\": \"heavypatrol.physicsc\", \"max_deg\": 75.0, \"max_rad\": 1.3089969158172607, \"min_deg\": -75.0, \"min_rad\": -1.3089969158172607, \"offset\": 367344, \"pivot\": [-2.7544, 2.7423, -0.2488], \"span_deg\": 150.0, \"type_code\": 14}, \"identity_offset\": true, \"index\": 66, \"parent\": 45, \"part\": \"heavypatrol_weapon_mount_l_horizontal\"}}, {\"anchor\": {\"behaviour\": \"Cannon\", \"constraint\": 6, \"hinge\": {\"axis\": [-0.0, 1.0, 0.0], \"axis_b\": [0.0, 1.0, 0.0], \"class\": \"hkpLimitedHingeConstraintData\", \"file\": \"heavypatrol.physicsc\", \"max_deg\": 75.0, \"max_rad\": 1.3089969158172607, \"min_deg\": -75.0, \"min_rad\": -1.3089969158172607, \"offset\": 367952, \"pivot\": [2.7544, 2.7423, -0.2488], \"span_deg\": 150.0, \"type_code\": 14}, \"identity_offset\": true, \"index\": 67, \"parent\": 46, \"part\": \"heavypatrol_weapon_mount_r_horizontal\"}, \"kind\": \"two_cannon\", \"pitch\": {\"behaviour\": \"Cannon\", \"constraint\": 5, \"hinge\": {\"axis\": [0.0, 0.0, 1.0], \"axis_b\": [0.0, 0.0, 1.0], \"class\": \"hkpLimitedHingeConstraintData\", \"file\": \"heavypatrol.physicsc\", \"max_deg\": 50.0, \"max_rad\": 0.8726646304130554, \"min_deg\": -50.0, \"min_rad\": -0.8726646304130554, \"offset\": 367648, \"pivot\": [2.7844, 2.9224, -0.2488], \"span_deg\": 100.0, \"type_code\": 14}, \"identity_offset\": true, \"index\": 69, \"parent\": 67, \"part\": \"heavypatrol_weapon_mount_r_vertical\"}, \"yaw\": {\"behaviour\": \"Cannon\", \"constraint\": 6, \"hinge\": {\"axis\": [-0.0, 1.0, 0.0], \"axis_b\": [0.0, 1.0, 0.0], \"class\": \"hkpLimitedHingeConstraintData\", \"file\": \"heavypatrol.physicsc\", \"max_deg\": 75.0, \"max_rad\": 1.3089969158172607, \"min_deg\": -75.0, \"min_rad\": -1.3089969158172607, \"offset\": 367952, \"pivot\": [2.7544, 2.7423, -0.2488], \"span_deg\": 150.0, \"type_code\": 14}, \"identity_offset\": true, \"index\": 67, \"parent\": 46, \"part\": \"heavypatrol_weapon_mount_r_horizontal\"}}]",
+   "variants": 5
+  },
+  {
+   "category": "boat",
+   "entities": [
+    "v1704_boat_na_lightpatrol_civic_police_01.ee",
+    "v1704_boat_na_lightpatrol_debug.ee",
+    "v1704_boat_na_lightpatrol_military_01.ee",
+    "v1704_boat_na_lightpatrol_rebel_01.ee"
+   ],
+   "identical_across_variants": true,
+   "model": "lightpatrol",
+   "module": "lightpatrol_vehicle_parts.vmodc",
+   "units": [
+    {
+     "anchor": {
+      "behaviour": "Cannon",
+      "constraint": 3,
+      "hinge": {
+       "axis": [
+        -0.0,
+        1.0,
+        0.0
+       ],
+       "axis_b": [
+        0.0,
+        1.0,
+        0.0
+       ],
+       "class": "hkpLimitedHingeConstraintData",
+       "file": "lightpatrol.physicsc",
+       "max_deg": 75.0,
+       "max_rad": 1.3089969158172607,
+       "min_deg": -75.0,
+       "min_rad": -1.3089969158172607,
+       "offset": 258464,
+       "pivot": [
+        -0.0176,
+        1.4733,
+        -3.0386
+       ],
+       "span_deg": 150.0,
+       "type_code": 14
+      },
+      "identity_offset": true,
+      "index": 29,
+      "parent": 21,
+      "part": "lightpatrol_weapon_mount_horizontal"
+     },
+     "key": "two_cannon + lightpatrol_weapon_mount_horizontal + lightpatrol_weapon_mount_vertical",
+     "kind": "two_cannon",
+     "pitch": {
+      "behaviour": "Cannon",
+      "constraint": 2,
+      "hinge": {
+       "axis": [
+        1.0,
+        0.0,
+        0.0
+       ],
+       "axis_b": [
+        1.0,
+        0.0,
+        0.0
+       ],
+       "class": "hkpLimitedHingeConstraintData",
+       "file": "lightpatrol.physicsc",
+       "max_deg": 25.0,
+       "max_rad": 0.4363323152065277,
+       "min_deg": -50.0,
+       "min_rad": -0.8726646304130554,
+       "offset": 258160,
+       "pivot": [
+        -0.0176,
+        1.6429,
+        -3.0668
+       ],
+       "span_deg": 75.0,
+       "type_code": 14
+      },
+      "identity_offset": true,
+      "index": 30,
+      "parent": 29,
+      "part": "lightpatrol_weapon_mount_vertical"
+     },
+     "weapons": [],
+     "yaw": {
+      "behaviour": "Cannon",
+      "constraint": 3,
+      "hinge": {
+       "axis": [
+        -0.0,
+        1.0,
+        0.0
+       ],
+       "axis_b": [
+        0.0,
+        1.0,
+        0.0
+       ],
+       "class": "hkpLimitedHingeConstraintData",
+       "file": "lightpatrol.physicsc",
+       "max_deg": 75.0,
+       "max_rad": 1.3089969158172607,
+       "min_deg": -75.0,
+       "min_rad": -1.3089969158172607,
+       "offset": 258464,
+       "pivot": [
+        -0.0176,
+        1.4733,
+        -3.0386
+       ],
+       "span_deg": 150.0,
+       "type_code": 14
+      },
+      "identity_offset": true,
+      "index": 29,
+      "parent": 21,
+      "part": "lightpatrol_weapon_mount_horizontal"
+     }
+    }
+   ],
+   "units_digest": "[{\"anchor\": {\"behaviour\": \"Cannon\", \"constraint\": 3, \"hinge\": {\"axis\": [-0.0, 1.0, 0.0], \"axis_b\": [0.0, 1.0, 0.0], \"class\": \"hkpLimitedHingeConstraintData\", \"file\": \"lightpatrol.physicsc\", \"max_deg\": 75.0, \"max_rad\": 1.3089969158172607, \"min_deg\": -75.0, \"min_rad\": -1.3089969158172607, \"offset\": 258464, \"pivot\": [-0.0176, 1.4733, -3.0386], \"span_deg\": 150.0, \"type_code\": 14}, \"identity_offset\": true, \"index\": 29, \"parent\": 21, \"part\": \"lightpatrol_weapon_mount_horizontal\"}, \"kind\": \"two_cannon\", \"pitch\": {\"behaviour\": \"Cannon\", \"constraint\": 2, \"hinge\": {\"axis\": [1.0, 0.0, 0.0], \"axis_b\": [1.0, 0.0, 0.0], \"class\": \"hkpLimitedHingeConstraintData\", \"file\": \"lightpatrol.physicsc\", \"max_deg\": 25.0, \"max_rad\": 0.4363323152065277, \"min_deg\": -50.0, \"min_rad\": -0.8726646304130554, \"offset\": 258160, \"pivot\": [-0.0176, 1.6429, -3.0668], \"span_deg\": 75.0, \"type_code\": 14}, \"identity_offset\": true, \"index\": 30, \"parent\": 29, \"part\": \"lightpatrol_weapon_mount_vertical\"}, \"yaw\": {\"behaviour\": \"Cannon\", \"constraint\": 3, \"hinge\": {\"axis\": [-0.0, 1.0, 0.0], \"axis_b\": [0.0, 1.0, 0.0], \"class\": \"hkpLimitedHingeConstraintData\", \"file\": \"lightpatrol.physicsc\", \"max_deg\": 75.0, \"max_rad\": 1.3089969158172607, \"min_deg\": -75.0, \"min_rad\": -1.3089969158172607, \"offset\": 258464, \"pivot\": [-0.0176, 1.4733, -3.0386], \"span_deg\": 150.0, \"type_code\": 14}, \"identity_offset\": true, \"index\": 29, \"parent\": 21, \"part\": \"lightpatrol_weapon_mount_horizontal\"}}]",
+   "variants": 4
+  },
+  {
+   "category": "tank",
+   "entities": [
+    "v0202_car_capstone_bavariumtank_debug.ee",
+    "v0202_car_capstone_bavariumtank_military_01.ee",
+    "v0202_car_capstone_bavariumtank_rebel_01.ee"
+   ],
+   "identical_across_variants": true,
+   "model": "bavariumtank",
+   "module": "bavariumtank_vehicle_parts.vmodc",
+   "units": [
+    {
+     "anchor": {
+      "behaviour": "Turret",
+      "constraint": 2,
+      "hinge": {
+       "axis": [
+        -0.0,
+        1.0,
+        0.0
+       ],
+       "axis_b": [
+        0.0,
+        1.0,
+        0.0
+       ],
+       "class": "hkpLimitedHingeConstraintData",
+       "file": "bavariumtank.physicsc",
+       "max_deg": 179.0,
+       "max_rad": 3.1241393089294434,
+       "min_deg": -179.0,
+       "min_rad": -3.1241393089294434,
+       "offset": 151440,
+       "pivot": [
+        0.0,
+        2.2812,
+        1.1382
+       ],
+       "span_deg": 358.0,
+       "type_code": 14
+      },
+      "identity_offset": true,
+      "index": 24,
+      "parent": 0,
+      "part": "bavariumtank_turret"
+     },
+     "key": "turret + bavariumtank_turret + bavariumtank_cannon",
+     "kind": "turret",
+     "pitch": {
+      "behaviour": "Cannon",
+      "constraint": 0,
+      "hinge": {
+       "axis": [
+        1.0,
+        0.0,
+        0.0
+       ],
+       "axis_b": [
+        1.0,
+        0.0,
+        0.0
+       ],
+       "class": "hkpLimitedHingeConstraintData",
+       "file": "bavariumtank.physicsc",
+       "max_deg": 20.0,
+       "max_rad": 0.3490658402442932,
+       "min_deg": -5.0,
+       "min_rad": -0.0872664600610733,
+       "offset": 150832,
+       "pivot": [
+        0.0,
+        2.5347,
+        0.0
+       ],
+       "span_deg": 25.0,
+       "type_code": 14
+      },
+      "identity_offset": true,
+      "index": 34,
+      "parent": 24,
+      "part": "bavariumtank_cannon"
+     },
+     "weapons": [
+      {
+       "binding": [
+        "main_weapon"
+       ],
+       "point": "fire_position_0",
+       "weapon": "w602_mediumtank_canon"
+      }
+     ],
+     "yaw": {
+      "behaviour": "Turret",
+      "constraint": 2,
+      "hinge": {
+       "axis": [
+        -0.0,
+        1.0,
+        0.0
+       ],
+       "axis_b": [
+        0.0,
+        1.0,
+        0.0
+       ],
+       "class": "hkpLimitedHingeConstraintData",
+       "file": "bavariumtank.physicsc",
+       "max_deg": 179.0,
+       "max_rad": 3.1241393089294434,
+       "min_deg": -179.0,
+       "min_rad": -3.1241393089294434,
+       "offset": 151440,
+       "pivot": [
+        0.0,
+        2.2812,
+        1.1382
+       ],
+       "span_deg": 358.0,
+       "type_code": 14
+      },
+      "identity_offset": true,
+      "index": 24,
+      "parent": 0,
+      "part": "bavariumtank_turret"
+     }
+    }
+   ],
+   "units_digest": "[{\"anchor\": {\"behaviour\": \"Turret\", \"constraint\": 2, \"hinge\": {\"axis\": [-0.0, 1.0, 0.0], \"axis_b\": [0.0, 1.0, 0.0], \"class\": \"hkpLimitedHingeConstraintData\", \"file\": \"bavariumtank.physicsc\", \"max_deg\": 179.0, \"max_rad\": 3.1241393089294434, \"min_deg\": -179.0, \"min_rad\": -3.1241393089294434, \"offset\": 151440, \"pivot\": [0.0, 2.2812, 1.1382], \"span_deg\": 358.0, \"type_code\": 14}, \"identity_offset\": true, \"index\": 24, \"parent\": 0, \"part\": \"bavariumtank_turret\"}, \"kind\": \"turret\", \"pitch\": {\"behaviour\": \"Cannon\", \"constraint\": 0, \"hinge\": {\"axis\": [1.0, 0.0, 0.0], \"axis_b\": [1.0, 0.0, 0.0], \"class\": \"hkpLimitedHingeConstraintData\", \"file\": \"bavariumtank.physicsc\", \"max_deg\": 20.0, \"max_rad\": 0.3490658402442932, \"min_deg\": -5.0, \"min_rad\": -0.0872664600610733, \"offset\": 150832, \"pivot\": [0.0, 2.5347, 0.0], \"span_deg\": 25.0, \"type_code\": 14}, \"identity_offset\": true, \"index\": 34, \"parent\": 24, \"part\": \"bavariumtank_cannon\"}, \"yaw\": {\"behaviour\": \"Turret\", \"constraint\": 2, \"hinge\": {\"axis\": [-0.0, 1.0, 0.0], \"axis_b\": [0.0, 1.0, 0.0], \"class\": \"hkpLimitedHingeConstraintData\", \"file\": \"bavariumtank.physicsc\", \"max_deg\": 179.0, \"max_rad\": 3.1241393089294434, \"min_deg\": -179.0, \"min_rad\": -3.1241393089294434, \"offset\": 151440, \"pivot\": [0.0, 2.2812, 1.1382], \"span_deg\": 358.0, \"type_code\": 14}, \"identity_offset\": true, \"index\": 24, \"parent\": 0, \"part\": \"bavariumtank_turret\"}}]",
+   "variants": 3
+  },
+  {
+   "category": "tank",
+   "entities": [
+    "v0201_car_capstone_mediumtank_debug.ee",
+    "v0201_car_capstone_mediumtank_military_01.ee",
+    "v0201_car_capstone_mediumtank_rebel_01.ee"
+   ],
+   "identical_across_variants": true,
+   "model": "mediumtank",
+   "module": "mediumtank_vehicle_parts.vmodc",
+   "units": [
+    {
+     "anchor": {
+      "behaviour": "Turret",
+      "constraint": 2,
+      "hinge": {
+       "axis": [
+        -0.0,
+        1.0,
+        0.0
+       ],
+       "axis_b": [
+        0.0,
+        1.0,
+        0.0
+       ],
+       "class": "hkpLimitedHingeConstraintData",
+       "file": "mediumtank.physicsc",
+       "max_deg": 179.0,
+       "max_rad": 3.1241393089294434,
+       "min_deg": -179.0,
+       "min_rad": -3.1241393089294434,
+       "offset": 190576,
+       "pivot": [
+        0.0,
+        2.2812,
+        1.1382
+       ],
+       "span_deg": 358.0,
+       "type_code": 14
+      },
+      "identity_offset": true,
+      "index": 26,
+      "parent": 0,
+      "part": "mediumtank_turret"
+     },
+     "key": "turret + mediumtank_turret + mediumtank_cannon",
+     "kind": "turret",
+     "pitch": {
+      "behaviour": "Cannon",
+      "constraint": 0,
+      "hinge": {
+       "axis": [
+        1.0,
+        0.0,
+        0.0
+       ],
+       "axis_b": [
+        1.0,
+        0.0,
+        0.0
+       ],
+       "class": "hkpLimitedHingeConstraintData",
+       "file": "mediumtank.physicsc",
+       "max_deg": 20.0,
+       "max_rad": 0.3490658402442932,
+       "min_deg": -5.0,
+       "min_rad": -0.0872664600610733,
+       "offset": 189968,
+       "pivot": [
+        0.0,
+        2.5347,
+        0.0
+       ],
+       "span_deg": 25.0,
+       "type_code": 14
+      },
+      "identity_offset": true,
+      "index": 38,
+      "parent": 26,
+      "part": "mediumtank_cannon"
+     },
+     "weapons": [
+      {
+       "binding": [
+        "main_weapon"
+       ],
+       "point": "fire_position_0",
+       "weapon": "w602_mediumtank_canon"
+      }
+     ],
+     "yaw": {
+      "behaviour": "Turret",
+      "constraint": 2,
+      "hinge": {
+       "axis": [
+        -0.0,
+        1.0,
+        0.0
+       ],
+       "axis_b": [
+        0.0,
+        1.0,
+        0.0
+       ],
+       "class": "hkpLimitedHingeConstraintData",
+       "file": "mediumtank.physicsc",
+       "max_deg": 179.0,
+       "max_rad": 3.1241393089294434,
+       "min_deg": -179.0,
+       "min_rad": -3.1241393089294434,
+       "offset": 190576,
+       "pivot": [
+        0.0,
+        2.2812,
+        1.1382
+       ],
+       "span_deg": 358.0,
+       "type_code": 14
+      },
+      "identity_offset": true,
+      "index": 26,
+      "parent": 0,
+      "part": "mediumtank_turret"
+     }
+    }
+   ],
+   "units_digest": "[{\"anchor\": {\"behaviour\": \"Turret\", \"constraint\": 2, \"hinge\": {\"axis\": [-0.0, 1.0, 0.0], \"axis_b\": [0.0, 1.0, 0.0], \"class\": \"hkpLimitedHingeConstraintData\", \"file\": \"mediumtank.physicsc\", \"max_deg\": 179.0, \"max_rad\": 3.1241393089294434, \"min_deg\": -179.0, \"min_rad\": -3.1241393089294434, \"offset\": 190576, \"pivot\": [0.0, 2.2812, 1.1382], \"span_deg\": 358.0, \"type_code\": 14}, \"identity_offset\": true, \"index\": 26, \"parent\": 0, \"part\": \"mediumtank_turret\"}, \"kind\": \"turret\", \"pitch\": {\"behaviour\": \"Cannon\", \"constraint\": 0, \"hinge\": {\"axis\": [1.0, 0.0, 0.0], \"axis_b\": [1.0, 0.0, 0.0], \"class\": \"hkpLimitedHingeConstraintData\", \"file\": \"mediumtank.physicsc\", \"max_deg\": 20.0, \"max_rad\": 0.3490658402442932, \"min_deg\": -5.0, \"min_rad\": -0.0872664600610733, \"offset\": 189968, \"pivot\": [0.0, 2.5347, 0.0], \"span_deg\": 25.0, \"type_code\": 14}, \"identity_offset\": true, \"index\": 38, \"parent\": 26, \"part\": \"mediumtank_cannon\"}, \"yaw\": {\"behaviour\": \"Turret\", \"constraint\": 2, \"hinge\": {\"axis\": [-0.0, 1.0, 0.0], \"axis_b\": [0.0, 1.0, 0.0], \"class\": \"hkpLimitedHingeConstraintData\", \"file\": \"mediumtank.physicsc\", \"max_deg\": 179.0, \"max_rad\": 3.1241393089294434, \"min_deg\": -179.0, \"min_rad\": -3.1241393089294434, \"offset\": 190576, \"pivot\": [0.0, 2.2812, 1.1382], \"span_deg\": 358.0, \"type_code\": 14}, \"identity_offset\": true, \"index\": 26, \"parent\": 0, \"part\": \"mediumtank_turret\"}}]",
+   "variants": 3
+  },
+  {
+   "category": "tank",
+   "entities": [
+    "v0603_car_urga_smalltank_debug.ee",
+    "v0603_car_urga_smalltank_military_01.ee",
+    "v0603_car_urga_smalltank_rebel_01.ee"
+   ],
+   "identical_across_variants": true,
+   "model": "smalltank",
+   "module": "smalltank_vehicle_parts.vmodc",
+   "units": [
+    {
+     "anchor": {
+      "behaviour": "Turret",
+      "constraint": 16,
+      "hinge": {
+       "axis": [
+        -0.0,
+        1.0,
+        0.0
+       ],
+       "axis_b": [
+        0.0,
+        1.0,
+        0.0
+       ],
+       "class": "hkpLimitedHingeConstraintData",
+       "file": "smalltank.physicsc",
+       "max_deg": 179.0,
+       "max_rad": 3.1241393089294434,
+       "min_deg": -179.0,
+       "min_rad": -3.1241393089294434,
+       "offset": 355200,
+       "pivot": [
+        0.0,
+        1.8131,
+        0.5247
+       ],
+       "span_deg": 358.0,
+       "type_code": 14
+      },
+      "identity_offset": true,
+      "index": 10,
+      "parent": 0,
+      "part": "smalltank_turret"
+     },
+     "key": "turret + smalltank_turret + smalltank_cannon",
+     "kind": "turret",
+     "pitch": {
+      "behaviour": "Cannon",
+      "constraint": 11,
+      "hinge": {
+       "axis": [
+        1.0,
+        0.0,
+        0.0
+       ],
+       "axis_b": [
+        1.0,
+        0.0,
+        0.0
+       ],
+       "class": "hkpLimitedHingeConstraintData",
+       "file": "smalltank.physicsc",
+       "max_deg": 25.0,
+       "max_rad": 0.4363323152065277,
+       "min_deg": -5.0,
+       "min_rad": -0.0872664600610733,
+       "offset": 353568,
+       "pivot": [
+        0.0,
+        1.9143,
+        -0.3611
+       ],
+       "span_deg": 30.0,
+       "type_code": 14
+      },
+      "identity_offset": true,
+      "index": 32,
+      "parent": 10,
+      "part": "smalltank_cannon"
+     },
+     "weapons": [
+      {
+       "binding": [
+        "main_weapon"
+       ],
+       "point": "fire_position_0",
+       "weapon": "w605_smalltank_canon"
+      }
+     ],
+     "yaw": {
+      "behaviour": "Turret",
+      "constraint": 16,
+      "hinge": {
+       "axis": [
+        -0.0,
+        1.0,
+        0.0
+       ],
+       "axis_b": [
+        0.0,
+        1.0,
+        0.0
+       ],
+       "class": "hkpLimitedHingeConstraintData",
+       "file": "smalltank.physicsc",
+       "max_deg": 179.0,
+       "max_rad": 3.1241393089294434,
+       "min_deg": -179.0,
+       "min_rad": -3.1241393089294434,
+       "offset": 355200,
+       "pivot": [
+        0.0,
+        1.8131,
+        0.5247
+       ],
+       "span_deg": 358.0,
+       "type_code": 14
+      },
+      "identity_offset": true,
+      "index": 10,
+      "parent": 0,
+      "part": "smalltank_turret"
+     }
+    }
+   ],
+   "units_digest": "[{\"anchor\": {\"behaviour\": \"Turret\", \"constraint\": 16, \"hinge\": {\"axis\": [-0.0, 1.0, 0.0], \"axis_b\": [0.0, 1.0, 0.0], \"class\": \"hkpLimitedHingeConstraintData\", \"file\": \"smalltank.physicsc\", \"max_deg\": 179.0, \"max_rad\": 3.1241393089294434, \"min_deg\": -179.0, \"min_rad\": -3.1241393089294434, \"offset\": 355200, \"pivot\": [0.0, 1.8131, 0.5247], \"span_deg\": 358.0, \"type_code\": 14}, \"identity_offset\": true, \"index\": 10, \"parent\": 0, \"part\": \"smalltank_turret\"}, \"kind\": \"turret\", \"pitch\": {\"behaviour\": \"Cannon\", \"constraint\": 11, \"hinge\": {\"axis\": [1.0, 0.0, 0.0], \"axis_b\": [1.0, 0.0, 0.0], \"class\": \"hkpLimitedHingeConstraintData\", \"file\": \"smalltank.physicsc\", \"max_deg\": 25.0, \"max_rad\": 0.4363323152065277, \"min_deg\": -5.0, \"min_rad\": -0.0872664600610733, \"offset\": 353568, \"pivot\": [0.0, 1.9143, -0.3611], \"span_deg\": 30.0, \"type_code\": 14}, \"identity_offset\": true, \"index\": 32, \"parent\": 10, \"part\": \"smalltank_cannon\"}, \"yaw\": {\"behaviour\": \"Turret\", \"constraint\": 16, \"hinge\": {\"axis\": [-0.0, 1.0, 0.0], \"axis_b\": [0.0, 1.0, 0.0], \"class\": \"hkpLimitedHingeConstraintData\", \"file\": \"smalltank.physicsc\", \"max_deg\": 179.0, \"max_rad\": 3.1241393089294434, \"min_deg\": -179.0, \"min_rad\": -3.1241393089294434, \"offset\": 355200, \"pivot\": [0.0, 1.8131, 0.5247], \"span_deg\": 358.0, \"type_code\": 14}, \"identity_offset\": true, \"index\": 10, \"parent\": 0, \"part\": \"smalltank_turret\"}}]",
+   "variants": 3
+  }
+ ],
+ "oracles": {
+  "all_ok": true,
+  "checks": {
+   "TURRET_md_samples_reproduce": true,
+   "boat_pitch_spans_exceed_tank_pitch_spans": true,
+   "every_Turret_part_on_a_limited_hinge_type_14": true,
+   "every_entity_scanned": true,
+   "every_pitch_axis_is_horizontal": true,
+   "every_yaw_axis_is_vertical": true,
+   "frame_A_and_frame_B_share_the_axis": true,
+   "full_rotation_hinges_are_variant_stable": true,
+   "limits_ordered_and_within_pi": true,
+   "no_turret_part_on_a_full_rotation_hinge": true,
+   "turret_parts_identity_parent_offset": true,
+   "turret_yaw_all_round_two_cannon_yaw_not": true,
+   "variants_of_a_model_agree": true
+  },
+  "detail": {
+   "TURRET_md_sample_mismatches": [],
+   "turret_yaws": 7,
+   "two_cannon_units": 3,
+   "worst_axis_A_vs_B_dot_error": 0.0
+  }
+ },
+ "pitch_by_category": {
+  "aircraft": {
+   "depression_min_deg": -45.0,
+   "elevation_max_deg": 35.0,
+   "models": [
+    "advancedassault",
+    "lightassault"
+   ],
+   "pitch_parts": 4,
+   "ranges": [
+    [
+     -45.0,
+     30.0
+    ],
+    [
+     -45.0,
+     30.0
+    ],
+    [
+     -45.0,
+     35.0
+    ],
+    [
+     -45.0,
+     35.0
+    ]
+   ],
+   "rows": [
+    {
+     "kind": "pitch_only",
+     "max_deg": 30.0,
+     "min_deg": -45.0,
+     "model": "advancedassault",
+     "part": "advancedassault_gatling_l_mount",
+     "span_deg": 75.0
+    },
+    {
+     "kind": "pitch_only",
+     "max_deg": 30.0,
+     "min_deg": -45.0,
+     "model": "advancedassault",
+     "part": "advancedassault_gatling_r_mount",
+     "span_deg": 75.0
+    },
+    {
+     "kind": "pitch_only",
+     "max_deg": 35.0,
+     "min_deg": -45.0,
+     "model": "lightassault",
+     "part": "lightassault_minigun_mount_l_vertical",
+     "span_deg": 80.0
+    },
+    {
+     "kind": "pitch_only",
+     "max_deg": 35.0,
+     "min_deg": -45.0,
+     "model": "lightassault",
+     "part": "lightassault_minigun_mount_r_vertical",
+     "span_deg": 80.0
+    }
+   ],
+   "span_max_deg": 80.0,
+   "span_min_deg": 75.0,
+   "yaw_spans": []
+  },
+  "apc": {
+   "depression_min_deg": -15.0,
+   "elevation_max_deg": 50.0,
+   "models": [
+    "apc"
+   ],
+   "pitch_parts": 1,
+   "ranges": [
+    [
+     -15.0,
+     50.0
+    ]
+   ],
+   "rows": [
+    {
+     "kind": "turret",
+     "max_deg": 50.0,
+     "min_deg": -15.0,
+     "model": "apc",
+     "part": "apc_weapon_mount_vertical",
+     "span_deg": 65.0
+    }
+   ],
+   "span_max_deg": 65.0,
+   "span_min_deg": 65.0,
+   "yaw_spans": [
+    358.0
+   ]
+  },
+  "armed_land": {
+   "depression_min_deg": -25.0,
+   "elevation_max_deg": 50.0,
+   "models": [
+    "armoredjeep",
+    "technicaljeep"
+   ],
+   "pitch_parts": 2,
+   "ranges": [
+    [
+     -25.0,
+     50.0
+    ],
+    [
+     -10.0,
+     45.0
+    ]
+   ],
+   "rows": [
+    {
+     "kind": "turret",
+     "max_deg": 50.0,
+     "min_deg": -25.0,
+     "model": "armoredjeep",
+     "part": "armoredjeep_weapon_mount_vertical",
+     "span_deg": 75.0
+    },
+    {
+     "kind": "turret",
+     "max_deg": 45.0,
+     "min_deg": -10.0,
+     "model": "technicaljeep",
+     "part": "technicaljeep_weapon_mount_vertical",
+     "span_deg": 55.0
+    }
+   ],
+   "span_max_deg": 75.0,
+   "span_min_deg": 55.0,
+   "yaw_spans": [
+    358.0
+   ]
+  },
+  "boat": {
+   "depression_min_deg": -50.0,
+   "elevation_max_deg": 75.0,
+   "models": [
+    "corvette",
+    "heavypatrol",
+    "lightpatrol"
+   ],
+   "pitch_parts": 4,
+   "ranges": [
+    [
+     -50.0,
+     25.0
+    ],
+    [
+     -50.0,
+     50.0
+    ],
+    [
+     -50.0,
+     50.0
+    ],
+    [
+     -5.0,
+     75.0
+    ]
+   ],
+   "rows": [
+    {
+     "kind": "two_cannon",
+     "max_deg": 25.0,
+     "min_deg": -50.0,
+     "model": "lightpatrol",
+     "part": "lightpatrol_weapon_mount_vertical",
+     "span_deg": 75.0
+    },
+    {
+     "kind": "two_cannon",
+     "max_deg": 50.0,
+     "min_deg": -50.0,
+     "model": "heavypatrol",
+     "part": "heavypatrol_weapon_mount_l_vertical",
+     "span_deg": 100.0
+    },
+    {
+     "kind": "two_cannon",
+     "max_deg": 50.0,
+     "min_deg": -50.0,
+     "model": "heavypatrol",
+     "part": "heavypatrol_weapon_mount_r_vertical",
+     "span_deg": 100.0
+    },
+    {
+     "kind": "turret",
+     "max_deg": 75.0,
+     "min_deg": -5.0,
+     "model": "corvette",
+     "part": "corvette_gun",
+     "span_deg": 80.0
+    }
+   ],
+   "span_max_deg": 100.0,
+   "span_min_deg": 75.0,
+   "yaw_spans": [
+    150.0,
+    300.0
+   ]
+  },
+  "tank": {
+   "depression_min_deg": -5.0,
+   "elevation_max_deg": 25.0,
+   "models": [
+    "bavariumtank",
+    "mediumtank",
+    "smalltank"
+   ],
+   "pitch_parts": 3,
+   "ranges": [
+    [
+     -5.0,
+     20.0
+    ],
+    [
+     -5.0,
+     20.0
+    ],
+    [
+     -5.0,
+     25.0
+    ]
+   ],
+   "rows": [
+    {
+     "kind": "turret",
+     "max_deg": 20.0,
+     "min_deg": -5.0,
+     "model": "bavariumtank",
+     "part": "bavariumtank_cannon",
+     "span_deg": 25.0
+    },
+    {
+     "kind": "turret",
+     "max_deg": 20.0,
+     "min_deg": -5.0,
+     "model": "mediumtank",
+     "part": "mediumtank_cannon",
+     "span_deg": 25.0
+    },
+    {
+     "kind": "turret",
+     "max_deg": 25.0,
+     "min_deg": -5.0,
+     "model": "smalltank",
+     "part": "smalltank_cannon",
+     "span_deg": 30.0
+    }
+   ],
+   "span_max_deg": 30.0,
+   "span_min_deg": 25.0,
+   "yaw_spans": [
+    358.0
+   ]
+  }
+ },
+ "totals": {
+  "by_kind": {
+   "pitch_only": 4,
+   "turret": 7,
+   "two_cannon": 3
+  },
+  "entities": 40,
+  "models_with_a_weapon_mount": 11,
+  "pitch_hinges": 14,
+  "pitch_spans_deg": [
+   25.0,
+   30.0,
+   55.0,
+   65.0,
+   75.0,
+   80.0,
+   100.0
+  ],
+  "units": 14,
+  "yaw_hinges": 10,
+  "yaw_spans_deg": [
+   150.0,
+   300.0,
+   358.0
+  ]
+ },
+ "unknowns": [
+  {
+   "tried": "compared the decoded pivots and axes with the art: the medium tank's turret pivot (0, 2.2812, 1.1382) and +Y axis agree with vehicle space, but the patrol boats' pitch hinge reads +-Z in a yawing parent's frame",
+   "what": "the hinge axis frame (body-A local vs vehicle space)",
+   "why_unknown": "no byte names the frame; only the parent part's rest orientation would settle it, and that matrix is in the .lod, not decoded here"
+  },
+  {
+   "tried": "read every atom of the limited hinge (type 14 only carries the pair) and the parts module (no such field)",
+   "what": "a rotation speed or acceleration for the turret",
+   "why_unknown": "the turn rate is code-side; the files carry an axis and two angles (G3-10e's finding, still true)"
+  },
+  {
+   "tried": "the weapon fire point names the horizontal part as yaw and the vertical part as pitch, and the vertical part's parent is the horizontal one",
+   "what": "which of a two-Cannon boat mount is the 'turret' in game logic",
+   "why_unknown": "both parts carry behaviour Cannon; there is no decoded ordinal"
+  },
+  {
+   "tried": "censused every hinge in the fleet: 4 hkpHingeConstraintData and 8 limited hinges with a full 360 deg span exist, none on a turret part",
+   "what": "whether a full-rotation turret is possible without a new hinge class",
+   "why_unknown": "no shipped turret uses either; a port would have to change the class or the pair, and that is a build change, not a decode"
+  }
+ ],
+ "yaw": {
+  "default_minus_179_plus_179": 6,
+  "full_rotation_yaw_hinges": 0,
+  "kinds_without_a_yaw_part": {
+   "pitch_only": [
+    {
+     "model": "advancedassault",
+     "parent": "advancedassault_body",
+     "parent_behaviour": "None",
+     "parent_has_hinge": false,
+     "part": "advancedassault_gatling_l_mount"
+    },
+    {
+     "model": "advancedassault",
+     "parent": "advancedassault_body",
+     "parent_behaviour": "None",
+     "parent_has_hinge": false,
+     "part": "advancedassault_gatling_r_mount"
+    },
+    {
+     "model": "lightassault",
+     "parent": "lightassault_minigun_mount_l_base",
+     "parent_behaviour": "None",
+     "parent_has_hinge": false,
+     "part": "lightassault_minigun_mount_l_vertical"
+    },
+    {
+     "model": "lightassault",
+     "parent": "lightassault_minigun_mount_r_base",
+     "parent_behaviour": "None",
+     "parent_has_hinge": false,
+     "part": "lightassault_minigun_mount_r_vertical"
+    }
+   ]
+  },
+  "limited_less_than_358": [
+   {
+    "category": "boat",
+    "kind": "turret",
+    "max_deg": 150.0,
+    "min_deg": -150.0,
+    "model": "corvette",
+    "part": "corvette_turret",
+    "span_deg": 300.0
+   },
+   {
+    "category": "boat",
+    "kind": "two_cannon",
+    "max_deg": 75.0,
+    "min_deg": -75.0,
+    "model": "heavypatrol",
+    "part": "heavypatrol_weapon_mount_l_horizontal",
+    "span_deg": 150.0
+   },
+   {
+    "category": "boat",
+    "kind": "two_cannon",
+    "max_deg": 75.0,
+    "min_deg": -75.0,
+    "model": "heavypatrol",
+    "part": "heavypatrol_weapon_mount_r_horizontal",
+    "span_deg": 150.0
+   },
+   {
+    "category": "boat",
+    "kind": "two_cannon",
+    "max_deg": 75.0,
+    "min_deg": -75.0,
+    "model": "lightpatrol",
+    "part": "lightpatrol_weapon_mount_horizontal",
+    "span_deg": 150.0
+   }
+  ],
+  "turret_parts_in_fleet": 22,
+  "unlimited_yaw_hinges": 0,
+  "yaw_hinge_count": 10
+ }
+}

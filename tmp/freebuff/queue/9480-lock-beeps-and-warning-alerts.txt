@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/lock-beeps-and-warning-alerts.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/bind-26-events-to-jc3-slots.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-lock-hold-salvo-reticle.md
+Lock-on and warning sounds. Events: Play_HUD_Missile_Lock, Play_Tank_Heavy_LockBeep and LockBeep Locked (VEH_Tank_Heavy), Play_HUD_fail 0xDEAD7680 and the weapon-warning alert referenced by FBatmobileWeaponWarningContainer (reports/horn-and-siren-plan.md). The lock timing and diamond are covered by brief 9105 and player facts in memory (lock diamond behaviour). Decode the beep intervals from the WAVs (Research/BatmobileGrab/AUDIO_REGRAB.json), derive the beep rate versus lock progress, and write a trigger table: progress fraction to beep period, locked tone, failure tone. Build the sounds into Builds/bm-RC5-audio3 via the chosen route, and leave the JC3 lock-duration member as UNKNOWN unless 9105 names it. Done check: table of beep period against lock fraction, every listed event built or reasoned, --check passes. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

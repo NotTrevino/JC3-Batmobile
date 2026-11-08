@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/autoaim-angle-unit-settle.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/exe-entity-swap-consumer.md
+The lock-on cone cannot be written until the unit of the AutoAim angle fields is known: 0.15 might be a turn fraction (54 degrees) or radians (8.6 degrees), and BmAK wants a 40 degree cone. Search the sources in this order: tmp/freebuff/reports/exe-entity-swap-consumer.md and Research/JC3Grab/WEAPONS.md, then values of the shipped AutoAim entries that have a known real-world cone (turret or aircraft cones named in Research/JC3Grab/TURRET.md), then the decoded exe consumer of that struct if 9050 found one. Compare at least three shipped entries against their described behaviour. Output: tmp/freebuff/reports/autoaim-angle-unit.md with a verdict (turns, radians, degrees or UNKNOWN), the evidence list, and the exact in-game observation that would settle it if still UNKNOWN. Done-check: the report states the cone value to write for 40 degrees under each candidate unit. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

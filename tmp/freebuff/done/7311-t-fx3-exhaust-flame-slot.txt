@@ -1,0 +1,7 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/T-FX3b.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-05 (from Working/Translation/T_ROWS.jsonl blocked rows)
+Rows: T-FX3 (no usage slot for an exhaust flame). Translation analysis is allowed (operator 2026-11-05); the TEST BAN stays: read-only on game installs, no game launch.
+Task, files only: Find out whether JC3 has ANY way to attach a looping or triggered particle effect to a vehicle exhaust point: scan Research/JC3Grab vehicle module/pfx/epe decodes for exhaust, afterburner, boost-flame or nitro effect carriers on fleet vehicles (jets, boats, Rico's boost). Report each carrier: module, member, offset, how it is triggered. If none exists, say UNKNOWN with the searches run. Do not invent a slot.
+Rules: follow tmp/freebuff/INSTRUCTIONS.md section 3. Never guess; label every value decoded/derived/UNKNOWN. New script under Tools/scripts/ with --write/--check, outputs under Working/Translation/, DONE report as above.

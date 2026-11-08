@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/app-emissive-mask-channel.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-06
+Textures Batmobile_V3_Int_Cockpit_E and Batmobile_V3_Wheel_E are partial (rule R2): the emissive mask is carried only as a material-level m_Emissive because "JC3 emissive mask channel not decoded". Decode it. Look at the B-03 lamp build (Working/Appearance/build_lights), the shipped Carlight block, GeneralMkIII emissive members and the shipped vehicle textures with emissive content (e.g. instrument clusters, neon cars); find which texture channel the shader multiplies by the emissive colour. Give the channel, the evidence (shader constants or measured pixels of a shipped car's texture), and the packing plan for the two BmAK masks.
+Where JC3 has no exact carrier, give the closest system and the gap for the build to fill (STAGES.md).

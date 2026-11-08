@@ -1,0 +1,3562 @@
+{
+ "card": "G2-18",
+ "counts": {
+  "by_class": {
+   "CInteraction": 3,
+   "CInteractionGraphEntry": 29,
+   "CInteractionGraphExit": 26,
+   "CInteractionGraphPointNode": 8,
+   "CInteractionGraphTransition": 12,
+   "CInteractionTrigger": 7
+  },
+  "by_prefix": {
+   "entry": 29,
+   "exit": 26,
+   "interaction": 3,
+   "point": 8,
+   "transition": 12,
+   "trigger": 7
+  },
+  "objects": 85,
+  "states": {
+   "S_ENTER_DRIVER_NO_DOOR_VEHICLE": 1,
+   "S_ENTER_DRIVER_VEHICLE": 2,
+   "S_ENTER_ON_GROUND_THROW_OUT_NO_DOOR_VEHICLE": 1,
+   "S_ENTER_ON_GROUND_THROW_OUT_VEHICLE": 1,
+   "S_ENTER_ON_GROUND_UNLOCK_VEHICLE": 1,
+   "S_ENTER_PASSENGER_NO_DOOR_VEHICLE": 1,
+   "S_ENTER_PASSENGER_ON_GROUND_THROW_OUT_NO_DOOR_VEHICLE": 1,
+   "S_ENTER_PASSENGER_ON_GROUND_THROW_OUT_VEHICLE": 1,
+   "S_ENTER_PASSENGER_ON_GROUND_UNLOCK_VEHICLE": 1,
+   "S_ENTER_PASSENGER_VEHICLE": 2,
+   "S_ENTER_STUNT_TO_DRIVER_SIDE_VEHICLE": 2,
+   "S_ENTER_STUNT_TO_TRANS_ENTER_VEHICLE_P1": 1,
+   "S_EXIT_DRIVER_TO_HOOD_VEHICLE": 2,
+   "S_EXIT_DRIVER_VEHICLE_IN_WATER": 1,
+   "S_EXIT_DRIVER_VEHICLE_UPSIDE_DOWN": 1,
+   "S_EXIT_PASSENGER_VEHICLE_UPSIDE_DOWN": 1,
+   "S_EXIT_VEHICLE": 4,
+   "S_EXIT_VEHICLE_0": 2,
+   "S_EXIT_VEHICLE_180": 2,
+   "S_EXIT_VEHICLE_90L": 2,
+   "S_EXIT_VEHICLE_90R": 2,
+   "S_EXIT_VEHICLE_PARA": 1,
+   "S_EXIT_VEHICLE_TO_FALL": 1,
+   "S_GRAPPLE_REEL_TO_STUNT_LAND": 2,
+   "S_JUMP_TO_STUNT_VEHICLE": 1,
+   "S_ON_GROUND_TO_ENTER_DRIVER_SIDE_VEHICLE": 1,
+   "S_PASSENGER_ON_GROUND_TO_ENTER_SIDE_VEHICLE": 1,
+   "S_PULLED_OUT_VEHICLE": 2,
+   "S_PULL_UP_TO_STUNT_CLOSE_VEHICLE": 2,
+   "S_PULL_UP_TO_STUNT_FAR_VEHICLE": 2,
+   "S_PUSHED_OUT_VEHICLE": 1,
+   "S_ROLL_OUT_EXIT_VEHICLE": 2,
+   "S_STEP_OVER_HIGH_TO_STUNT_VEHICLE_P1": 2,
+   "S_STEP_OVER_LOW_TO_STUNT_VEHICLE_P1": 2,
+   "S_STUNT_EXIT_VEHICLE": 2,
+   "S_STUNT_TO_JUMP_VEHICLE_TO_VEHICLE": 1
+  },
+  "verdicts": {
+   "floating": 23,
+   "inside": 30,
+   "n/a (container origin)": 32
+  },
+  "with_position": 85,
+  "world_source": {
+   "inherited": 70,
+   "own": 15
+  }
+ },
+ "digest": "a08510e57dd54a7f",
+ "frames": {
+  "batmobile_body": [
+   [
+    -1.747,
+    0.091,
+    -3.42
+   ],
+   [
+    1.748,
+    2.362,
+    3.605
+   ]
+  ],
+  "batmobile_hardpoints": [
+   [
+    -1.208,
+    0.7047,
+    -2.57
+   ],
+   [
+    1.208,
+    0.7047,
+    -2.5699
+   ],
+   [
+    -1.2845,
+    0.7027,
+    2.4589
+   ],
+   [
+    1.2845,
+    0.7027,
+    2.4589
+   ]
+  ],
+  "batmobile_track_front": 2.416,
+  "batmobile_track_rear": 2.569,
+  "batmobile_wheelbase": 5.0289,
+  "mapping": "u = (p - serpente_min) / (serpente_size); p' = bat_min + u * bat_size",
+  "scale_xyz": [
+   1.3139,
+   1.49,
+   1.3809
+  ],
+  "serpente_deform": [
+   [
+    -1.33,
+    0.0,
+    -2.56017
+   ],
+   [
+    1.33,
+    1.52421,
+    2.52697
+   ]
+  ],
+  "serpente_hardpoints": [
+   [
+    -0.88499999,
+    0.400000006,
+    -1.55700004
+   ],
+   [
+    0.88499999,
+    0.400000006,
+    -1.55700004
+   ],
+   [
+    0.88499999,
+    0.400000006,
+    1.44599998
+   ],
+   [
+    -0.88499999,
+    0.400000006,
+    1.44599998
+   ]
+  ],
+  "serpente_mesh_union": [
+   [
+    -1.0615,
+    -0.4288,
+    -2.57
+   ],
+   [
+    1.0615,
+    1.511,
+    2.5643
+   ]
+  ],
+  "serpente_track": 1.77,
+  "serpente_wheelbase": 3.003
+ },
+ "inputs": {
+  "detail": "E:/Modding/_gamedata/JC3grab\\detail\\v0300_car_kensington_sportsmuscle__v0300_car_kensington_sportsmuscle_civilian_01.ee.json",
+  "entity": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_civilian_01.ee",
+  "entity_modules": 31,
+  "mesh_count": 198,
+  "object_count": 450,
+  "sha1_relevant": "5f4beea693433842",
+  "xml": "Research\\Epe\\serpente_civilian.xml"
+ },
+ "json_match": true,
+ "json_mismatch": [],
+ "json_missing_world": [
+  "trigger.driver.fast",
+  "trigger.stationary.stunt"
+ ],
+ "json_names": 79,
+ "mesh": {
+  "bbox": [
+   -1.7531,
+   0.0783,
+   -3.4218,
+   1.7508,
+   2.3667,
+   3.6093
+  ],
+  "file": "Working\\TrueScale\\body_lod1.rbm",
+  "on_surface_threshold_m": 0.03,
+  "triangles": 20000,
+  "vertices": 28940
+ },
+ "points": [
+  {
+   "batmobile": [
+    0.0006,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteraction",
+   "depth": 1,
+   "enabled": null,
+   "inside_mesh": null,
+   "interaction": null,
+   "lateral_track": null,
+   "modifier": null,
+   "name": "interaction.seat.driver",
+   "nearest_corner": null,
+   "parent": "context",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    6.246567e-05,
+    0.0,
+    0.0
+   ],
+   "state": null,
+   "surface_m": null,
+   "verdict": "n/a (container origin)",
+   "wheelbase_fraction": null,
+   "world": null,
+   "world_from": "context",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteractionGraphEntry",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": null,
+   "interaction": "00000000",
+   "lateral_track": null,
+   "modifier": null,
+   "name": "entry.driver",
+   "nearest_corner": null,
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "state": "S_ENTER_DRIVER_VEHICLE",
+   "surface_m": null,
+   "verdict": "n/a (container origin)",
+   "wheelbase_fraction": null,
+   "world": null,
+   "world_from": "graph",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    -0.5776,
+    0.5976,
+    0.3916
+   ],
+   "class": "CInteractionGraphPointNode",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": true,
+   "interaction": null,
+   "lateral_track": 0.497,
+   "modifier": null,
+   "name": "point.driver",
+   "nearest_corner": "r_r",
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "state": null,
+   "surface_m": 0.0428,
+   "verdict": "inside",
+   "wheelbase_fraction": 0.585,
+   "world": "1,0,0,0, 0,1,0,0, 0,0,1,0, -0.44,0.34,0.2,1",
+   "world_from": "point.driver",
+   "world_source": "own"
+  },
+  {
+   "batmobile": [
+    -0.5776,
+    0.5976,
+    0.3916
+   ],
+   "class": "CInteractionGraphExit",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": true,
+   "interaction": "00000000",
+   "lateral_track": 0.497,
+   "modifier": null,
+   "name": "exit.driver.default",
+   "nearest_corner": "r_r",
+   "parent": "point.driver",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "state": "S_EXIT_VEHICLE",
+   "surface_m": 0.0428,
+   "verdict": "inside",
+   "wheelbase_fraction": 0.585,
+   "world": null,
+   "world_from": "point.driver",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    -0.5776,
+    0.5976,
+    0.3916
+   ],
+   "class": "CInteractionGraphExit",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": true,
+   "interaction": "00000000",
+   "lateral_track": 0.497,
+   "modifier": null,
+   "name": "exit.ai.driver.default",
+   "nearest_corner": "r_r",
+   "parent": "point.driver",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "state": "S_EXIT_VEHICLE",
+   "surface_m": 0.0428,
+   "verdict": "inside",
+   "wheelbase_fraction": 0.585,
+   "world": null,
+   "world_from": "point.driver",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    -0.5776,
+    0.5976,
+    0.3916
+   ],
+   "class": "CInteractionGraphTransition",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": true,
+   "interaction": null,
+   "lateral_track": 0.497,
+   "modifier": null,
+   "name": "transition.passenger1",
+   "nearest_corner": "r_r",
+   "parent": "point.driver",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "state": null,
+   "surface_m": 0.0428,
+   "verdict": "inside",
+   "wheelbase_fraction": 0.585,
+   "world": null,
+   "world_from": "point.driver",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    -0.5776,
+    0.5976,
+    0.3916
+   ],
+   "class": "CInteractionGraphExit",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": true,
+   "interaction": "00000000",
+   "lateral_track": 0.497,
+   "modifier": null,
+   "name": "exit.ai.driver.to.hood",
+   "nearest_corner": "r_r",
+   "parent": "point.driver",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "state": "S_EXIT_DRIVER_TO_HOOD_VEHICLE",
+   "surface_m": 0.0428,
+   "verdict": "inside",
+   "wheelbase_fraction": 0.585,
+   "world": null,
+   "world_from": "point.driver",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    -0.5776,
+    0.5976,
+    0.3916
+   ],
+   "class": "CInteractionGraphExit",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": true,
+   "interaction": "00000000",
+   "lateral_track": 0.497,
+   "modifier": null,
+   "name": "exit.driver.roll.out",
+   "nearest_corner": "r_r",
+   "parent": "point.driver",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "state": "S_ROLL_OUT_EXIT_VEHICLE",
+   "surface_m": 0.0428,
+   "verdict": "inside",
+   "wheelbase_fraction": 0.585,
+   "world": null,
+   "world_from": "point.driver",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    -0.5776,
+    0.5976,
+    0.3916
+   ],
+   "class": "CInteractionGraphExit",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": true,
+   "interaction": "00000000",
+   "lateral_track": 0.497,
+   "modifier": null,
+   "name": "exit.driver.moving.parachute",
+   "nearest_corner": "r_r",
+   "parent": "point.driver",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "state": "S_EXIT_VEHICLE_PARA",
+   "surface_m": 0.0428,
+   "verdict": "inside",
+   "wheelbase_fraction": 0.585,
+   "world": null,
+   "world_from": "point.driver",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    -0.5776,
+    0.5976,
+    0.3916
+   ],
+   "class": "CInteractionGraphExit",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": true,
+   "interaction": "00000000",
+   "lateral_track": 0.497,
+   "modifier": null,
+   "name": "exit.ai.driver.default90R",
+   "nearest_corner": "r_r",
+   "parent": "point.driver",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "state": "S_EXIT_VEHICLE_90R",
+   "surface_m": 0.0428,
+   "verdict": "inside",
+   "wheelbase_fraction": 0.585,
+   "world": null,
+   "world_from": "point.driver",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    -0.5776,
+    0.5976,
+    0.3916
+   ],
+   "class": "CInteractionGraphExit",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": true,
+   "interaction": "00000000",
+   "lateral_track": 0.497,
+   "modifier": null,
+   "name": "exit.driver.pushed.out",
+   "nearest_corner": "r_r",
+   "parent": "point.driver",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "state": "S_PUSHED_OUT_VEHICLE",
+   "surface_m": 0.0428,
+   "verdict": "inside",
+   "wheelbase_fraction": 0.585,
+   "world": null,
+   "world_from": "point.driver",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    -0.5776,
+    0.5976,
+    0.3916
+   ],
+   "class": "CInteractionGraphExit",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": true,
+   "interaction": "00000000",
+   "lateral_track": 0.497,
+   "modifier": null,
+   "name": "exit.ai.driver.default90L",
+   "nearest_corner": "r_r",
+   "parent": "point.driver",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "state": "S_EXIT_VEHICLE_90L",
+   "surface_m": 0.0428,
+   "verdict": "inside",
+   "wheelbase_fraction": 0.585,
+   "world": null,
+   "world_from": "point.driver",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    -0.5776,
+    0.5976,
+    0.3916
+   ],
+   "class": "CInteractionGraphExit",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": true,
+   "interaction": "00000000",
+   "lateral_track": 0.497,
+   "modifier": null,
+   "name": "exit.driver.to.fall",
+   "nearest_corner": "r_r",
+   "parent": "point.driver",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "state": "S_EXIT_VEHICLE_TO_FALL",
+   "surface_m": 0.0428,
+   "verdict": "inside",
+   "wheelbase_fraction": 0.585,
+   "world": null,
+   "world_from": "point.driver",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    -0.5776,
+    0.5976,
+    0.3916
+   ],
+   "class": "CInteractionGraphExit",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": true,
+   "interaction": "00000000",
+   "lateral_track": 0.497,
+   "modifier": null,
+   "name": "exit.ai.driver.default180",
+   "nearest_corner": "r_r",
+   "parent": "point.driver",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "state": "S_EXIT_VEHICLE_180",
+   "surface_m": 0.0428,
+   "verdict": "inside",
+   "wheelbase_fraction": 0.585,
+   "world": null,
+   "world_from": "point.driver",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    -0.5776,
+    0.5976,
+    0.3916
+   ],
+   "class": "CInteractionGraphExit",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": true,
+   "interaction": "00000000",
+   "lateral_track": 0.497,
+   "modifier": null,
+   "name": "exit.driver.to.swim",
+   "nearest_corner": "r_r",
+   "parent": "point.driver",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "state": "S_EXIT_DRIVER_VEHICLE_IN_WATER",
+   "surface_m": 0.0428,
+   "verdict": "inside",
+   "wheelbase_fraction": 0.585,
+   "world": null,
+   "world_from": "point.driver",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    -0.5776,
+    0.5976,
+    0.3916
+   ],
+   "class": "CInteractionGraphTransition",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": true,
+   "interaction": null,
+   "lateral_track": 0.497,
+   "modifier": null,
+   "name": "transition.stunt",
+   "nearest_corner": "r_r",
+   "parent": "point.driver",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "state": null,
+   "surface_m": 0.0428,
+   "verdict": "inside",
+   "wheelbase_fraction": 0.585,
+   "world": null,
+   "world_from": "point.driver",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    -0.5776,
+    0.5976,
+    0.3916
+   ],
+   "class": "CInteractionGraphExit",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": true,
+   "interaction": "00000000",
+   "lateral_track": 0.497,
+   "modifier": null,
+   "name": "exit.ai.driver.default0",
+   "nearest_corner": "r_r",
+   "parent": "point.driver",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "state": "S_EXIT_VEHICLE_0",
+   "surface_m": 0.0428,
+   "verdict": "inside",
+   "wheelbase_fraction": 0.585,
+   "world": null,
+   "world_from": "point.driver",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    -0.5776,
+    0.5976,
+    0.3916
+   ],
+   "class": "CInteractionGraphExit",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": true,
+   "interaction": "00000000",
+   "lateral_track": 0.497,
+   "modifier": null,
+   "name": "exit.driver.pulled.out",
+   "nearest_corner": "r_r",
+   "parent": "point.driver",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "state": "S_PULLED_OUT_VEHICLE",
+   "surface_m": 0.0428,
+   "verdict": "inside",
+   "wheelbase_fraction": 0.585,
+   "world": null,
+   "world_from": "point.driver",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    -0.5776,
+    0.5976,
+    0.3916
+   ],
+   "class": "CInteractionGraphTransition",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": true,
+   "interaction": null,
+   "lateral_track": 0.497,
+   "modifier": null,
+   "name": "transition.passenger1.exit",
+   "nearest_corner": "r_r",
+   "parent": "point.driver",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "state": null,
+   "surface_m": 0.0428,
+   "verdict": "inside",
+   "wheelbase_fraction": 0.585,
+   "world": null,
+   "world_from": "point.driver",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    -0.5776,
+    0.5976,
+    0.3916
+   ],
+   "class": "CInteractionGraphExit",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": true,
+   "interaction": "00000000",
+   "lateral_track": 0.497,
+   "modifier": null,
+   "name": "exit.driver.upside.down",
+   "nearest_corner": "r_r",
+   "parent": "point.driver",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    -0.44,
+    0.34,
+    0.2
+   ],
+   "state": "S_EXIT_DRIVER_VEHICLE_UPSIDE_DOWN",
+   "surface_m": 0.0428,
+   "verdict": "inside",
+   "wheelbase_fraction": 0.585,
+   "world": null,
+   "world_from": "point.driver",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteractionGraphPointNode",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": false,
+   "interaction": null,
+   "lateral_track": -0.0,
+   "modifier": null,
+   "name": "point.passenger1.onground",
+   "nearest_corner": "r_l",
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "state": null,
+   "surface_m": 0.333,
+   "verdict": "floating",
+   "wheelbase_fraction": 0.518,
+   "world": "1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1",
+   "world_from": "point.passenger1.onground",
+   "world_source": "own"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteractionGraphTransition",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": false,
+   "interaction": null,
+   "lateral_track": -0.0,
+   "modifier": null,
+   "name": "transition.passenger1",
+   "nearest_corner": "r_l",
+   "parent": "point.passenger1.onground",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "state": null,
+   "surface_m": 0.333,
+   "verdict": "floating",
+   "wheelbase_fraction": 0.518,
+   "world": null,
+   "world_from": "point.passenger1.onground",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteractionGraphTransition",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": false,
+   "interaction": null,
+   "lateral_track": -0.0,
+   "modifier": null,
+   "name": "transition.passenger1.side",
+   "nearest_corner": "r_l",
+   "parent": "point.passenger1.onground",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "state": null,
+   "surface_m": 0.333,
+   "verdict": "floating",
+   "wheelbase_fraction": 0.518,
+   "world": null,
+   "world_from": "point.passenger1.onground",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteractionGraphEntry",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": null,
+   "interaction": "00000000",
+   "lateral_track": null,
+   "modifier": null,
+   "name": "entry.ai.passenger1",
+   "nearest_corner": null,
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "state": "S_ENTER_PASSENGER_VEHICLE",
+   "surface_m": null,
+   "verdict": "n/a (container origin)",
+   "wheelbase_fraction": null,
+   "world": null,
+   "world_from": "graph",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteractionGraphEntry",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": null,
+   "interaction": "00000000",
+   "lateral_track": null,
+   "modifier": null,
+   "name": "entry.jump_to_stunt_vehicle_to_vehicle",
+   "nearest_corner": null,
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "state": "S_STUNT_TO_JUMP_VEHICLE_TO_VEHICLE",
+   "surface_m": null,
+   "verdict": "n/a (container origin)",
+   "wheelbase_fraction": null,
+   "world": null,
+   "world_from": "graph",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteractionGraphEntry",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": null,
+   "interaction": "00000000",
+   "lateral_track": null,
+   "modifier": null,
+   "name": "entry.driver.pull.out.onground.no.door",
+   "nearest_corner": null,
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "state": "S_ENTER_ON_GROUND_THROW_OUT_NO_DOOR_VEHICLE",
+   "surface_m": null,
+   "verdict": "n/a (container origin)",
+   "wheelbase_fraction": null,
+   "world": null,
+   "world_from": "graph",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    2.3074,
+    0.698
+   ],
+   "class": "CInteractionGraphPointNode",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": false,
+   "interaction": null,
+   "lateral_track": -0.0,
+   "modifier": null,
+   "name": "point.stunt",
+   "nearest_corner": "r_l",
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    1.487549,
+    0.421875
+   ],
+   "state": null,
+   "surface_m": 0.3494,
+   "verdict": "floating",
+   "wheelbase_fraction": 0.659,
+   "world": "1,0,0,0, 0,1,0,0, 0,0,1,0, 0,1.487549,0.421875,1",
+   "world_from": "point.stunt",
+   "world_source": "own"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    2.3074,
+    0.698
+   ],
+   "class": "CInteractionGraphExit",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": false,
+   "interaction": "00000000",
+   "lateral_track": -0.0,
+   "modifier": null,
+   "name": "exit.from.stunt",
+   "nearest_corner": "r_l",
+   "parent": "point.stunt",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    1.487549,
+    0.421875
+   ],
+   "state": "S_STUNT_EXIT_VEHICLE",
+   "surface_m": 0.3494,
+   "verdict": "floating",
+   "wheelbase_fraction": 0.659,
+   "world": null,
+   "world_from": "point.stunt",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    -0.236,
+    2.311,
+    1.5102
+   ],
+   "class": "CInteractionGraphPointNode",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": false,
+   "interaction": null,
+   "lateral_track": 0.203,
+   "modifier": null,
+   "name": "point.passenger1.side",
+   "nearest_corner": "r_r",
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    -0.18,
+    1.49,
+    1.01
+   ],
+   "state": null,
+   "surface_m": 0.1887,
+   "verdict": "floating",
+   "wheelbase_fraction": 0.855,
+   "world": "1,0,0,0, 0,1,0,0, 0,0,1,0, -0.18,1.49,1.01,1",
+   "world_from": "point.passenger1.side",
+   "world_source": "own"
+  },
+  {
+   "batmobile": [
+    -0.236,
+    2.311,
+    1.5102
+   ],
+   "class": "CInteractionGraphTransition",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": false,
+   "interaction": null,
+   "lateral_track": 0.203,
+   "modifier": null,
+   "name": "transition.passenger1",
+   "nearest_corner": "r_r",
+   "parent": "point.passenger1.side",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    -0.18,
+    1.49,
+    1.01
+   ],
+   "state": null,
+   "surface_m": 0.1887,
+   "verdict": "floating",
+   "wheelbase_fraction": 0.855,
+   "world": null,
+   "world_from": "point.passenger1.side",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    -0.236,
+    2.311,
+    1.5102
+   ],
+   "class": "CInteractionGraphTransition",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": false,
+   "interaction": null,
+   "lateral_track": 0.203,
+   "modifier": null,
+   "name": "transition.stunt",
+   "nearest_corner": "r_r",
+   "parent": "point.passenger1.side",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    -0.18,
+    1.49,
+    1.01
+   ],
+   "state": null,
+   "surface_m": 0.1887,
+   "verdict": "floating",
+   "wheelbase_fraction": 0.855,
+   "world": null,
+   "world_from": "point.passenger1.side",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteractionGraphEntry",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": null,
+   "interaction": "00000000",
+   "lateral_track": null,
+   "modifier": null,
+   "name": "entry.pull.up.to.stunt.hood.close",
+   "nearest_corner": null,
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "state": "S_PULL_UP_TO_STUNT_CLOSE_VEHICLE",
+   "surface_m": null,
+   "verdict": "n/a (container origin)",
+   "wheelbase_fraction": null,
+   "world": null,
+   "world_from": "graph",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteractionGraphEntry",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": null,
+   "interaction": "00000000",
+   "lateral_track": null,
+   "modifier": null,
+   "name": "entry.stunt.to.driver.side.enter.vehicle2",
+   "nearest_corner": null,
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "state": "S_ENTER_STUNT_TO_DRIVER_SIDE_VEHICLE",
+   "surface_m": null,
+   "verdict": "n/a (container origin)",
+   "wheelbase_fraction": null,
+   "world": null,
+   "world_from": "graph",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteractionGraphEntry",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": null,
+   "interaction": "00000000",
+   "lateral_track": null,
+   "modifier": null,
+   "name": "entry.stunt.to.driver.side.enter.vehicle3",
+   "nearest_corner": null,
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "state": "S_ENTER_STUNT_TO_DRIVER_SIDE_VEHICLE",
+   "surface_m": null,
+   "verdict": "n/a (container origin)",
+   "wheelbase_fraction": null,
+   "world": null,
+   "world_from": "graph",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteractionGraphEntry",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": null,
+   "interaction": "00000000",
+   "lateral_track": null,
+   "modifier": null,
+   "name": "entry.passenger1.no.door",
+   "nearest_corner": null,
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "state": "S_ENTER_PASSENGER_NO_DOOR_VEHICLE",
+   "surface_m": null,
+   "verdict": "n/a (container origin)",
+   "wheelbase_fraction": null,
+   "world": null,
+   "world_from": "graph",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteractionGraphEntry",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": null,
+   "interaction": "00000000",
+   "lateral_track": null,
+   "modifier": null,
+   "name": "entry.reel.to.stunt.hood",
+   "nearest_corner": null,
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "state": "S_GRAPPLE_REEL_TO_STUNT_LAND",
+   "surface_m": null,
+   "verdict": "n/a (container origin)",
+   "wheelbase_fraction": null,
+   "world": null,
+   "world_from": "graph",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteractionGraphEntry",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": null,
+   "interaction": "00000000",
+   "lateral_track": null,
+   "modifier": null,
+   "name": "entry.reel.to.stunt.main",
+   "nearest_corner": null,
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "state": "S_GRAPPLE_REEL_TO_STUNT_LAND",
+   "surface_m": null,
+   "verdict": "n/a (container origin)",
+   "wheelbase_fraction": null,
+   "world": null,
+   "world_from": "graph",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteractionGraphEntry",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": null,
+   "interaction": "00000000",
+   "lateral_track": null,
+   "modifier": null,
+   "name": "entry.passenger1.pull.out.onground",
+   "nearest_corner": null,
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "state": "S_ENTER_PASSENGER_ON_GROUND_THROW_OUT_VEHICLE",
+   "surface_m": null,
+   "verdict": "n/a (container origin)",
+   "wheelbase_fraction": null,
+   "world": null,
+   "world_from": "graph",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteractionGraphEntry",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": null,
+   "interaction": "00000000",
+   "lateral_track": null,
+   "modifier": null,
+   "name": "entry.pull.up.to.stunt.hood.far",
+   "nearest_corner": null,
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "state": "S_PULL_UP_TO_STUNT_FAR_VEHICLE",
+   "surface_m": null,
+   "verdict": "n/a (container origin)",
+   "wheelbase_fraction": null,
+   "world": null,
+   "world_from": "graph",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteractionGraphEntry",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": null,
+   "interaction": "00000000",
+   "lateral_track": null,
+   "modifier": null,
+   "name": "entry.passenger1.side.fast",
+   "nearest_corner": null,
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "state": "S_PASSENGER_ON_GROUND_TO_ENTER_SIDE_VEHICLE",
+   "surface_m": null,
+   "verdict": "n/a (container origin)",
+   "wheelbase_fraction": null,
+   "world": null,
+   "world_from": "graph",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteractionGraphEntry",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": null,
+   "interaction": "00000000",
+   "lateral_track": null,
+   "modifier": null,
+   "name": "entry.step.over.low.stunt.hood",
+   "nearest_corner": null,
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "state": "S_STEP_OVER_LOW_TO_STUNT_VEHICLE_P1",
+   "surface_m": null,
+   "verdict": "n/a (container origin)",
+   "wheelbase_fraction": null,
+   "world": null,
+   "world_from": "graph",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteractionGraphEntry",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": null,
+   "interaction": "00000000",
+   "lateral_track": null,
+   "modifier": null,
+   "name": "entry.pull.up.to.stunt.close",
+   "nearest_corner": null,
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "state": "S_PULL_UP_TO_STUNT_CLOSE_VEHICLE",
+   "surface_m": null,
+   "verdict": "n/a (container origin)",
+   "wheelbase_fraction": null,
+   "world": null,
+   "world_from": "graph",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteractionGraphEntry",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": null,
+   "interaction": "00000000",
+   "lateral_track": null,
+   "modifier": null,
+   "name": "entry.jump_to_stunt",
+   "nearest_corner": null,
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "state": "S_JUMP_TO_STUNT_VEHICLE",
+   "surface_m": null,
+   "verdict": "n/a (container origin)",
+   "wheelbase_fraction": null,
+   "world": null,
+   "world_from": "graph",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteractionGraphEntry",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": null,
+   "interaction": "00000000",
+   "lateral_track": null,
+   "modifier": null,
+   "name": "entry.driver.locked.onground",
+   "nearest_corner": null,
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "state": "S_ENTER_ON_GROUND_UNLOCK_VEHICLE",
+   "surface_m": null,
+   "verdict": "n/a (container origin)",
+   "wheelbase_fraction": null,
+   "world": null,
+   "world_from": "graph",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.5815,
+    0.5976,
+    0.3916
+   ],
+   "class": "CInteractionGraphPointNode",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": true,
+   "interaction": null,
+   "lateral_track": -0.5,
+   "modifier": null,
+   "name": "point.passenger1",
+   "nearest_corner": "r_l",
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.4421713,
+    0.34,
+    0.2
+   ],
+   "state": null,
+   "surface_m": 0.0483,
+   "verdict": "inside",
+   "wheelbase_fraction": 0.585,
+   "world": "1,0,0,0, 0,1,0,0, 0,0,1,0, 0.4421713,0.34,0.2,1",
+   "world_from": "point.passenger1",
+   "world_source": "own"
+  },
+  {
+   "batmobile": [
+    0.5815,
+    0.5976,
+    0.3916
+   ],
+   "class": "CInteractionGraphExit",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": true,
+   "interaction": "00000000",
+   "lateral_track": -0.5,
+   "modifier": "MOD_LOW_RIGHT",
+   "name": "exit.passenger1.default",
+   "nearest_corner": "r_l",
+   "parent": "point.passenger1",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.4421713,
+    0.34,
+    0.2
+   ],
+   "state": "S_EXIT_VEHICLE",
+   "surface_m": 0.0483,
+   "verdict": "inside",
+   "wheelbase_fraction": 0.585,
+   "world": null,
+   "world_from": "point.passenger1",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.5815,
+    0.5976,
+    0.3916
+   ],
+   "class": "CInteractionGraphExit",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": true,
+   "interaction": "00000000",
+   "lateral_track": -0.5,
+   "modifier": "MOD_RIGHT",
+   "name": "exit.passenger1.roll.out",
+   "nearest_corner": "r_l",
+   "parent": "point.passenger1",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.4421713,
+    0.34,
+    0.2
+   ],
+   "state": "S_ROLL_OUT_EXIT_VEHICLE",
+   "surface_m": 0.0483,
+   "verdict": "inside",
+   "wheelbase_fraction": 0.585,
+   "world": null,
+   "world_from": "point.passenger1",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.5815,
+    0.5976,
+    0.3916
+   ],
+   "class": "CInteractionGraphExit",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": true,
+   "interaction": "00000000",
+   "lateral_track": -0.5,
+   "modifier": "MOD_RIGHT",
+   "name": "exit.ai.passenger1.default90L",
+   "nearest_corner": "r_l",
+   "parent": "point.passenger1",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.4421713,
+    0.34,
+    0.2
+   ],
+   "state": "S_EXIT_VEHICLE_90L",
+   "surface_m": 0.0483,
+   "verdict": "inside",
+   "wheelbase_fraction": 0.585,
+   "world": null,
+   "world_from": "point.passenger1",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.5815,
+    0.5976,
+    0.3916
+   ],
+   "class": "CInteractionGraphExit",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": true,
+   "interaction": "00000000",
+   "lateral_track": -0.5,
+   "modifier": "MOD_RIGHT",
+   "name": "exit.ai.passenger1.default180",
+   "nearest_corner": "r_l",
+   "parent": "point.passenger1",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.4421713,
+    0.34,
+    0.2
+   ],
+   "state": "S_EXIT_VEHICLE_180",
+   "surface_m": 0.0483,
+   "verdict": "inside",
+   "wheelbase_fraction": 0.585,
+   "world": null,
+   "world_from": "point.passenger1",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.5815,
+    0.5976,
+    0.3916
+   ],
+   "class": "CInteractionGraphExit",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": true,
+   "interaction": "00000000",
+   "lateral_track": -0.5,
+   "modifier": "MOD_RIGHT",
+   "name": "exit.ai.passenger1.default",
+   "nearest_corner": "r_l",
+   "parent": "point.passenger1",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.4421713,
+    0.34,
+    0.2
+   ],
+   "state": "S_EXIT_VEHICLE",
+   "surface_m": 0.0483,
+   "verdict": "inside",
+   "wheelbase_fraction": 0.585,
+   "world": null,
+   "world_from": "point.passenger1",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.5815,
+    0.5976,
+    0.3916
+   ],
+   "class": "CInteractionGraphTransition",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": true,
+   "interaction": null,
+   "lateral_track": -0.5,
+   "modifier": null,
+   "name": "transition.driver",
+   "nearest_corner": "r_l",
+   "parent": "point.passenger1",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.4421713,
+    0.34,
+    0.2
+   ],
+   "state": null,
+   "surface_m": 0.0483,
+   "verdict": "inside",
+   "wheelbase_fraction": 0.585,
+   "world": null,
+   "world_from": "point.passenger1",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.5815,
+    0.5976,
+    0.3916
+   ],
+   "class": "CInteractionGraphExit",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": true,
+   "interaction": "00000000",
+   "lateral_track": -0.5,
+   "modifier": null,
+   "name": "exit.passenger1.upside.down",
+   "nearest_corner": "r_l",
+   "parent": "point.passenger1",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.4421713,
+    0.34,
+    0.2
+   ],
+   "state": "S_EXIT_PASSENGER_VEHICLE_UPSIDE_DOWN",
+   "surface_m": 0.0483,
+   "verdict": "inside",
+   "wheelbase_fraction": 0.585,
+   "world": null,
+   "world_from": "point.passenger1",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.5815,
+    0.5976,
+    0.3916
+   ],
+   "class": "CInteractionGraphExit",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": true,
+   "interaction": "00000000",
+   "lateral_track": -0.5,
+   "modifier": "MOD_RIGHT",
+   "name": "exit.ai.passenger1.default0",
+   "nearest_corner": "r_l",
+   "parent": "point.passenger1",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.4421713,
+    0.34,
+    0.2
+   ],
+   "state": "S_EXIT_VEHICLE_0",
+   "surface_m": 0.0483,
+   "verdict": "inside",
+   "wheelbase_fraction": 0.585,
+   "world": null,
+   "world_from": "point.passenger1",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.5815,
+    0.5976,
+    0.3916
+   ],
+   "class": "CInteractionGraphExit",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": true,
+   "interaction": "00000000",
+   "lateral_track": -0.5,
+   "modifier": "MOD_LOW_RIGHT",
+   "name": "exit.passenger1.pulled.out",
+   "nearest_corner": "r_l",
+   "parent": "point.passenger1",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.4421713,
+    0.34,
+    0.2
+   ],
+   "state": "S_PULLED_OUT_VEHICLE",
+   "surface_m": 0.0483,
+   "verdict": "inside",
+   "wheelbase_fraction": 0.585,
+   "world": null,
+   "world_from": "point.passenger1",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.5815,
+    0.5976,
+    0.3916
+   ],
+   "class": "CInteractionGraphExit",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": true,
+   "interaction": "00000000",
+   "lateral_track": -0.5,
+   "modifier": "MOD_RIGHT",
+   "name": "exit.ai.passenger1.to.hood",
+   "nearest_corner": "r_l",
+   "parent": "point.passenger1",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.4421713,
+    0.34,
+    0.2
+   ],
+   "state": "S_EXIT_DRIVER_TO_HOOD_VEHICLE",
+   "surface_m": 0.0483,
+   "verdict": "inside",
+   "wheelbase_fraction": 0.585,
+   "world": null,
+   "world_from": "point.passenger1",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.5815,
+    0.5976,
+    0.3916
+   ],
+   "class": "CInteractionGraphExit",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": true,
+   "interaction": "00000000",
+   "lateral_track": -0.5,
+   "modifier": "MOD_RIGHT",
+   "name": "exit.ai.passenger1.default90R",
+   "nearest_corner": "r_l",
+   "parent": "point.passenger1",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.4421713,
+    0.34,
+    0.2
+   ],
+   "state": "S_EXIT_VEHICLE_90R",
+   "surface_m": 0.0483,
+   "verdict": "inside",
+   "wheelbase_fraction": 0.585,
+   "world": null,
+   "world_from": "point.passenger1",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteractionGraphEntry",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": null,
+   "interaction": "00000000",
+   "lateral_track": null,
+   "modifier": null,
+   "name": "entry.passenger1.pull.out.onground.no.door",
+   "nearest_corner": null,
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "state": "S_ENTER_PASSENGER_ON_GROUND_THROW_OUT_NO_DOOR_VEHICLE",
+   "surface_m": null,
+   "verdict": "n/a (container origin)",
+   "wheelbase_fraction": null,
+   "world": null,
+   "world_from": "graph",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteractionGraphEntry",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": null,
+   "interaction": "00000000",
+   "lateral_track": null,
+   "modifier": null,
+   "name": "entry.passenger1",
+   "nearest_corner": null,
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "state": "S_ENTER_PASSENGER_VEHICLE",
+   "surface_m": null,
+   "verdict": "n/a (container origin)",
+   "wheelbase_fraction": null,
+   "world": null,
+   "world_from": "graph",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteractionGraphEntry",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": null,
+   "interaction": "00000000",
+   "lateral_track": null,
+   "modifier": null,
+   "name": "entry.step.over.high.stunt",
+   "nearest_corner": null,
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "state": "S_STEP_OVER_HIGH_TO_STUNT_VEHICLE_P1",
+   "surface_m": null,
+   "verdict": "n/a (container origin)",
+   "wheelbase_fraction": null,
+   "world": null,
+   "world_from": "graph",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    1.6564,
+    -1.9627
+   ],
+   "class": "CInteractionGraphPointNode",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": false,
+   "interaction": null,
+   "lateral_track": -0.0,
+   "modifier": null,
+   "name": "point.stunt.hood",
+   "nearest_corner": "f_l",
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    1.050659,
+    -1.504883
+   ],
+   "state": null,
+   "surface_m": 0.0405,
+   "verdict": "floating",
+   "wheelbase_fraction": 0.017,
+   "world": "1,0,0,0, 0,1,0,0, 0,0,1,0, 0,1.050659,-1.504883,1",
+   "world_from": "point.stunt.hood",
+   "world_source": "own"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    1.6564,
+    -1.9627
+   ],
+   "class": "CInteractionGraphExit",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": false,
+   "interaction": "00000000",
+   "lateral_track": -0.0,
+   "modifier": null,
+   "name": "exit.from.stunt.hood",
+   "nearest_corner": "f_l",
+   "parent": "point.stunt.hood",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    1.050659,
+    -1.504883
+   ],
+   "state": "S_STUNT_EXIT_VEHICLE",
+   "surface_m": 0.0405,
+   "verdict": "floating",
+   "wheelbase_fraction": 0.017,
+   "world": null,
+   "world_from": "point.stunt.hood",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    -1.747,
+    0.091,
+    1.1787
+   ],
+   "class": "CInteractionGraphPointNode",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": false,
+   "interaction": null,
+   "lateral_track": 1.503,
+   "modifier": null,
+   "name": "point.driver.onground",
+   "nearest_corner": "r_r",
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    -1.33,
+    0.0,
+    0.77
+   ],
+   "state": null,
+   "surface_m": 0.4448,
+   "verdict": "floating",
+   "wheelbase_fraction": 0.775,
+   "world": "1,0,0,0, 0,1,0,0, 0,0,1,0, -1.33,0,0.77,1",
+   "world_from": "point.driver.onground",
+   "world_source": "own"
+  },
+  {
+   "batmobile": [
+    -1.747,
+    0.091,
+    1.1787
+   ],
+   "class": "CInteractionGraphTransition",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": false,
+   "interaction": null,
+   "lateral_track": 1.503,
+   "modifier": null,
+   "name": "transition.driver",
+   "nearest_corner": "r_r",
+   "parent": "point.driver.onground",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    -1.33,
+    0.0,
+    0.77
+   ],
+   "state": null,
+   "surface_m": 0.4448,
+   "verdict": "floating",
+   "wheelbase_fraction": 0.775,
+   "world": null,
+   "world_from": "point.driver.onground",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    -1.747,
+    0.091,
+    1.1787
+   ],
+   "class": "CInteractionGraphTransition",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": false,
+   "interaction": null,
+   "lateral_track": 1.503,
+   "modifier": null,
+   "name": "transition.driver.side",
+   "nearest_corner": "r_r",
+   "parent": "point.driver.onground",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    -1.33,
+    0.0,
+    0.77
+   ],
+   "state": null,
+   "surface_m": 0.4448,
+   "verdict": "floating",
+   "wheelbase_fraction": 0.775,
+   "world": null,
+   "world_from": "point.driver.onground",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteractionGraphEntry",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": null,
+   "interaction": "00000000",
+   "lateral_track": null,
+   "modifier": null,
+   "name": "entry.driver.pull.out.onground",
+   "nearest_corner": null,
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "state": "S_ENTER_ON_GROUND_THROW_OUT_VEHICLE",
+   "surface_m": null,
+   "verdict": "n/a (container origin)",
+   "wheelbase_fraction": null,
+   "world": null,
+   "world_from": "graph",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteractionGraphEntry",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": null,
+   "interaction": "00000000",
+   "lateral_track": null,
+   "modifier": null,
+   "name": "entry.stunt.to.driver.side.enter.vehicle",
+   "nearest_corner": null,
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "state": "S_ENTER_STUNT_TO_TRANS_ENTER_VEHICLE_P1",
+   "surface_m": null,
+   "verdict": "n/a (container origin)",
+   "wheelbase_fraction": null,
+   "world": null,
+   "world_from": "graph",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteractionGraphEntry",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": null,
+   "interaction": "00000000",
+   "lateral_track": null,
+   "modifier": null,
+   "name": "entry.step.over.low.stunt",
+   "nearest_corner": null,
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "state": "S_STEP_OVER_LOW_TO_STUNT_VEHICLE_P1",
+   "surface_m": null,
+   "verdict": "n/a (container origin)",
+   "wheelbase_fraction": null,
+   "world": null,
+   "world_from": "graph",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteractionGraphEntry",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": null,
+   "interaction": "00000000",
+   "lateral_track": null,
+   "modifier": null,
+   "name": "entry.passenger1.locked.onground",
+   "nearest_corner": null,
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "state": "S_ENTER_PASSENGER_ON_GROUND_UNLOCK_VEHICLE",
+   "surface_m": null,
+   "verdict": "n/a (container origin)",
+   "wheelbase_fraction": null,
+   "world": null,
+   "world_from": "graph",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteractionGraphEntry",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": null,
+   "interaction": "00000000",
+   "lateral_track": null,
+   "modifier": null,
+   "name": "entry.step.over.high.stunt.hood",
+   "nearest_corner": null,
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "state": "S_STEP_OVER_HIGH_TO_STUNT_VEHICLE_P1",
+   "surface_m": null,
+   "verdict": "n/a (container origin)",
+   "wheelbase_fraction": null,
+   "world": null,
+   "world_from": "graph",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteractionGraphEntry",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": null,
+   "interaction": "00000000",
+   "lateral_track": null,
+   "modifier": null,
+   "name": "entry.ai.driver.left",
+   "nearest_corner": null,
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "state": "S_ENTER_DRIVER_VEHICLE",
+   "surface_m": null,
+   "verdict": "n/a (container origin)",
+   "wheelbase_fraction": null,
+   "world": null,
+   "world_from": "graph",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteractionGraphEntry",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": null,
+   "interaction": "00000000",
+   "lateral_track": null,
+   "modifier": null,
+   "name": "entry.pull.up.to.stunt.far",
+   "nearest_corner": null,
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "state": "S_PULL_UP_TO_STUNT_FAR_VEHICLE",
+   "surface_m": null,
+   "verdict": "n/a (container origin)",
+   "wheelbase_fraction": null,
+   "world": null,
+   "world_from": "graph",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteractionGraphEntry",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": null,
+   "interaction": "00000000",
+   "lateral_track": null,
+   "modifier": null,
+   "name": "entry.driver.side.fast",
+   "nearest_corner": null,
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "state": "S_ON_GROUND_TO_ENTER_DRIVER_SIDE_VEHICLE",
+   "surface_m": null,
+   "verdict": "n/a (container origin)",
+   "wheelbase_fraction": null,
+   "world": null,
+   "world_from": "graph",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    -0.3411,
+    2.2812,
+    0.6264
+   ],
+   "class": "CInteractionGraphPointNode",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": false,
+   "interaction": null,
+   "lateral_track": 0.294,
+   "modifier": null,
+   "name": "point.driver.side",
+   "nearest_corner": "r_r",
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    -0.26,
+    1.47,
+    0.37
+   ],
+   "state": null,
+   "surface_m": 0.3779,
+   "verdict": "floating",
+   "wheelbase_fraction": 0.642,
+   "world": "1,0,0,0, 0,1,0,0, 0,0,1,0, -0.26,1.47,0.37,1",
+   "world_from": "point.driver.side",
+   "world_source": "own"
+  },
+  {
+   "batmobile": [
+    -0.3411,
+    2.2812,
+    0.6264
+   ],
+   "class": "CInteractionGraphTransition",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": false,
+   "interaction": null,
+   "lateral_track": 0.294,
+   "modifier": null,
+   "name": "transition.driver",
+   "nearest_corner": "r_r",
+   "parent": "point.driver.side",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    -0.26,
+    1.47,
+    0.37
+   ],
+   "state": null,
+   "surface_m": 0.3779,
+   "verdict": "floating",
+   "wheelbase_fraction": 0.642,
+   "world": null,
+   "world_from": "point.driver.side",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    -0.3411,
+    2.2812,
+    0.6264
+   ],
+   "class": "CInteractionGraphTransition",
+   "depth": 3,
+   "enabled": "1",
+   "inside_mesh": false,
+   "interaction": null,
+   "lateral_track": 0.294,
+   "modifier": null,
+   "name": "transition.stunt",
+   "nearest_corner": "r_r",
+   "parent": "point.driver.side",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    -0.26,
+    1.47,
+    0.37
+   ],
+   "state": null,
+   "surface_m": 0.3779,
+   "verdict": "floating",
+   "wheelbase_fraction": 0.642,
+   "world": null,
+   "world_from": "point.driver.side",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteractionGraphEntry",
+   "depth": 2,
+   "enabled": "1",
+   "inside_mesh": null,
+   "interaction": "00000000",
+   "lateral_track": null,
+   "modifier": null,
+   "name": "entry.driver.no.door",
+   "nearest_corner": null,
+   "parent": "graph",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "state": "S_ENTER_DRIVER_NO_DOOR_VEHICLE",
+   "surface_m": null,
+   "verdict": "n/a (container origin)",
+   "wheelbase_fraction": null,
+   "world": null,
+   "world_from": "graph",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    -1.9441,
+    -0.0833,
+    0.5118
+   ],
+   "class": "CInteractionTrigger",
+   "depth": 1,
+   "enabled": null,
+   "inside_mesh": false,
+   "interaction": null,
+   "lateral_track": 1.672,
+   "modifier": null,
+   "name": "trigger.driver",
+   "nearest_corner": "r_r",
+   "parent": "context",
+   "scale": [
+    2.65,
+    1.91,
+    2.83
+   ],
+   "serpente": [
+    -1.48,
+    -0.117,
+    0.287
+   ],
+   "state": null,
+   "surface_m": 0.7832,
+   "verdict": "floating",
+   "wheelbase_fraction": 0.614,
+   "world": "2.65,0,0,0, 0,1.91,0,0, 0,0,2.83,0, -1.48,-0.117,0.287,1",
+   "world_from": "trigger.driver",
+   "world_source": "own"
+  },
+  {
+   "batmobile": [
+    0.0005,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteractionTrigger",
+   "depth": 1,
+   "enabled": null,
+   "inside_mesh": false,
+   "interaction": null,
+   "lateral_track": -0.0,
+   "modifier": null,
+   "name": "trigger.step.to.stunt",
+   "nearest_corner": "r_l",
+   "parent": "context",
+   "scale": [
+    10.0,
+    10.0,
+    10.0
+   ],
+   "serpente": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "state": null,
+   "surface_m": 0.333,
+   "verdict": "floating",
+   "wheelbase_fraction": 0.518,
+   "world": "10,0,0,0, 0,10,0,0, 0,0,10,0, 0,0,0,1",
+   "world_from": "trigger.step.to.stunt",
+   "world_source": "own"
+  },
+  {
+   "batmobile": [
+    -2.1288,
+    -0.1484,
+    1.3534
+   ],
+   "class": "CInteractionTrigger",
+   "depth": 1,
+   "enabled": null,
+   "inside_mesh": false,
+   "interaction": null,
+   "lateral_track": 1.831,
+   "modifier": null,
+   "name": "trigger.driver.fast",
+   "nearest_corner": "r_r",
+   "parent": "context",
+   "scale": [
+    3.6904,
+    1.7762,
+    6.7485
+   ],
+   "serpente": [
+    -1.620605,
+    -0.1606445,
+    0.8964844
+   ],
+   "state": null,
+   "surface_m": 0.8435,
+   "verdict": "floating",
+   "wheelbase_fraction": 0.817,
+   "world": "3.690429,0,0,0, 0,1.776245,0,0, 0,0,6.748535,0, -1.620605,-0.1606445,0.8964844,1",
+   "world_from": "trigger.driver.fast",
+   "world_source": "own"
+  },
+  {
+   "batmobile": [
+    0.0006,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteraction",
+   "depth": 1,
+   "enabled": null,
+   "inside_mesh": null,
+   "interaction": null,
+   "lateral_track": null,
+   "modifier": null,
+   "name": "interaction.seat.stunt",
+   "nearest_corner": null,
+   "parent": "context",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    6.246567e-05,
+    0.0,
+    0.0
+   ],
+   "state": null,
+   "surface_m": null,
+   "verdict": "n/a (container origin)",
+   "wheelbase_fraction": null,
+   "world": null,
+   "world_from": "context",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    1.9451,
+    -0.0833,
+    0.5118
+   ],
+   "class": "CInteractionTrigger",
+   "depth": 1,
+   "enabled": null,
+   "inside_mesh": false,
+   "interaction": null,
+   "lateral_track": -1.672,
+   "modifier": null,
+   "name": "trigger.passenger1",
+   "nearest_corner": "r_l",
+   "parent": "context",
+   "scale": [
+    2.65,
+    1.91,
+    2.83
+   ],
+   "serpente": [
+    1.48,
+    -0.117,
+    0.287
+   ],
+   "state": null,
+   "surface_m": 0.7839,
+   "verdict": "floating",
+   "wheelbase_fraction": 0.614,
+   "world": "2.65,0,0,0, 0,1.91,0,0, 0,0,2.83,0, 1.48,-0.117,0.287,1",
+   "world_from": "trigger.passenger1",
+   "world_source": "own"
+  },
+  {
+   "batmobile": [
+    -0.5382,
+    2.5494,
+    -0.0089
+   ],
+   "class": "CInteractionTrigger",
+   "depth": 1,
+   "enabled": null,
+   "inside_mesh": false,
+   "interaction": null,
+   "lateral_track": 0.463,
+   "modifier": null,
+   "name": "trigger.stunt.vehicle.to.vehicle",
+   "nearest_corner": "f_l",
+   "parent": "context",
+   "scale": [
+    19.1198,
+    14.1098,
+    23.4098
+   ],
+   "serpente": [
+    -0.41,
+    1.65,
+    -0.09
+   ],
+   "state": null,
+   "surface_m": 0.6704,
+   "verdict": "floating",
+   "wheelbase_fraction": 0.489,
+   "world": "19.11985,0,0,0, 0,14.10985,0,0, 0,0,23.40985,0, -0.41,1.65,-0.09,1",
+   "world_from": "trigger.stunt.vehicle.to.vehicle",
+   "world_source": "own"
+  },
+  {
+   "batmobile": [
+    0.0006,
+    0.091,
+    0.1154
+   ],
+   "class": "CInteraction",
+   "depth": 1,
+   "enabled": null,
+   "inside_mesh": null,
+   "interaction": null,
+   "lateral_track": null,
+   "modifier": null,
+   "name": "interaction.seat.passenger1",
+   "nearest_corner": null,
+   "parent": "context",
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "serpente": [
+    6.246567e-05,
+    0.0,
+    0.0
+   ],
+   "state": null,
+   "surface_m": null,
+   "verdict": "n/a (container origin)",
+   "wheelbase_fraction": null,
+   "world": null,
+   "world_from": "context",
+   "world_source": "inherited"
+  },
+  {
+   "batmobile": [
+    -0.0367,
+    1.9805,
+    -0.0181
+   ],
+   "class": "CInteractionTrigger",
+   "depth": 1,
+   "enabled": null,
+   "inside_mesh": false,
+   "interaction": null,
+   "lateral_track": 0.032,
+   "modifier": null,
+   "name": "trigger.stationary.stunt",
+   "nearest_corner": "f_l",
+   "parent": "context",
+   "scale": [
+    1.9478,
+    1.5964,
+    5.1157
+   ],
+   "serpente": [
+    -0.02832031,
+    1.268188,
+    -0.09667969
+   ],
+   "state": null,
+   "surface_m": 0.0646,
+   "verdict": "floating",
+   "wheelbase_fraction": 0.486,
+   "world": "1.947754,0,0,0, 0,1.596436,0,0, 0,0,5.115723,0, -0.02832031,1.268188,-0.09667969,1",
+   "world_from": "trigger.stationary.stunt",
+   "world_source": "own"
+  },
+  {
+   "batmobile": [
+    -0.5382,
+    2.5494,
+    -0.0089
+   ],
+   "class": "CInteractionTrigger",
+   "depth": 1,
+   "enabled": null,
+   "inside_mesh": false,
+   "interaction": null,
+   "lateral_track": 0.463,
+   "modifier": null,
+   "name": "trigger.stunt",
+   "nearest_corner": "f_l",
+   "parent": "context",
+   "scale": [
+    14.32,
+    9.31,
+    18.61
+   ],
+   "serpente": [
+    -0.41,
+    1.65,
+    -0.09
+   ],
+   "state": null,
+   "surface_m": 0.6704,
+   "verdict": "floating",
+   "wheelbase_fraction": 0.489,
+   "world": "14.32,0,0,0, 0,9.31,0,0, 0,0,18.61,0, -0.41,1.65,-0.09,1",
+   "world_from": "trigger.stunt",
+   "world_source": "own"
+  }
+ ],
+ "stunt_areas": {
+  "active": 3,
+  "areas": [
+   {
+    "bat_center": [
+     0.0005,
+     1.6144,
+     -2.0772
+    ],
+    "bat_center_geom": [
+     0.0005,
+     1.6386,
+     -2.1396
+    ],
+    "bat_center_geom_surface_m": 0.1512,
+    "bat_center_geom_verdict": "floating",
+    "bat_center_surface_m": 0.1035,
+    "bat_center_verdict": "floating",
+    "bat_max_clearance_m": 0.374,
+    "bat_on_surface": 0,
+    "bat_vertex_verdicts": [
+     "floating",
+     "floating",
+     "floating",
+     "floating",
+     "floating",
+     "floating"
+    ],
+    "bat_vertices": [
+     0.3619,
+     0.374,
+     0.1237,
+     0.1599,
+     0.1586,
+     0.1235
+    ],
+    "bbox": [
+     -0.8367,
+     0.8367,
+     0.9292,
+     1.1157,
+     -2.2526,
+     -0.9229
+    ],
+    "center": [
+     -0.0,
+     1.0224,
+     -1.5878
+    ],
+    "center_gap_m": 0.048,
+    "center_geom": [
+     -0.0,
+     1.0387,
+     -1.633
+    ],
+    "deform_point_names": [
+     "|sportsmuscle_LOD1|body|engine|hood|hood_STUNT|front_area[0]",
+     "|sportsmuscle_LOD1|body|engine|hood|hood_STUNT|front_area[1]",
+     "|sportsmuscle_LOD1|body|engine|hood|hood_STUNT|front_area[2]",
+     "|sportsmuscle_LOD1|body|engine|hood|hood_STUNT|front_area[3]",
+     "|sportsmuscle_LOD1|body|engine|hood|hood_STUNT|front_area[4]",
+     "|sportsmuscle_LOD1|body|engine|hood|hood_STUNT|front_area[5]"
+    ],
+    "deform_points": [
+     76,
+     87,
+     110,
+     28,
+     11,
+     65
+    ],
+    "edges_valid": 6,
+    "n_deform_points": 6,
+    "n_triangles": 4,
+    "name": "front_area",
+    "part_index": 24,
+    "part_name": "sportsmuscle_hood",
+    "size": [
+     1.6734,
+     0.1865,
+     1.3297
+    ],
+    "slot": 0,
+    "triangles": [
+     [
+      4,
+      2,
+      3
+     ],
+     [
+      5,
+      1,
+      2
+     ],
+     [
+      5,
+      2,
+      4
+     ],
+     [
+      0,
+      1,
+      5
+     ]
+    ],
+    "vertices": [
+     [
+      -0.8229,
+      1.1157,
+      -0.9229
+     ],
+     [
+      0.8229,
+      1.1157,
+      -0.9229
+     ],
+     [
+      0.8367,
+      1.0712,
+      -1.7234
+     ],
+     [
+      0.6694,
+      0.9292,
+      -2.2526
+     ],
+     [
+      -0.6694,
+      0.9292,
+      -2.2526
+     ],
+     [
+      -0.8367,
+      1.0712,
+      -1.7234
+     ]
+    ]
+   },
+   {
+    "bat_center": [
+     0.0005,
+     1.6144,
+     -2.0772
+    ],
+    "bat_center_geom": [
+     0.0005,
+     1.6386,
+     -2.1396
+    ],
+    "bat_center_geom_surface_m": 0.1512,
+    "bat_center_geom_verdict": "floating",
+    "bat_center_surface_m": 0.1035,
+    "bat_center_verdict": "floating",
+    "bat_max_clearance_m": 0.374,
+    "bat_on_surface": 0,
+    "bat_vertex_verdicts": [
+     "floating",
+     "floating",
+     "floating",
+     "floating",
+     "floating",
+     "floating"
+    ],
+    "bat_vertices": [
+     0.3619,
+     0.374,
+     0.1237,
+     0.1599,
+     0.1586,
+     0.1235
+    ],
+    "bbox": [
+     -0.8367,
+     0.8367,
+     0.9292,
+     1.1157,
+     -2.2526,
+     -0.9229
+    ],
+    "center": [
+     -0.0,
+     1.0224,
+     -1.5878
+    ],
+    "center_gap_m": 0.048,
+    "center_geom": [
+     -0.0,
+     1.0387,
+     -1.633
+    ],
+    "deform_point_names": [
+     "|sportsmuscle_LOD1|body|engine|hood_signature|hood_signature_STUNT|front_signature_area[0]",
+     "|sportsmuscle_LOD1|body|engine|hood_signature|hood_signature_STUNT|front_signature_area[1]",
+     "|sportsmuscle_LOD1|body|engine|hood_signature|hood_signature_STUNT|front_signature_area[2]",
+     "|sportsmuscle_LOD1|body|engine|hood_signature|hood_signature_STUNT|front_signature_area[3]",
+     "|sportsmuscle_LOD1|body|engine|hood_signature|hood_signature_STUNT|front_signature_area[4]",
+     "|sportsmuscle_LOD1|body|engine|hood_signature|hood_signature_STUNT|front_signature_area[5]"
+    ],
+    "deform_points": [
+     89,
+     70,
+     58,
+     42,
+     108,
+     25
+    ],
+    "edges_valid": 6,
+    "n_deform_points": 6,
+    "n_triangles": 4,
+    "name": "front_signature_area",
+    "part_index": 25,
+    "part_name": "sportsmuscle_hood_signature",
+    "size": [
+     1.6734,
+     0.1865,
+     1.3297
+    ],
+    "slot": 1,
+    "triangles": [
+     [
+      4,
+      2,
+      3
+     ],
+     [
+      5,
+      1,
+      2
+     ],
+     [
+      5,
+      2,
+      4
+     ],
+     [
+      0,
+      1,
+      5
+     ]
+    ],
+    "vertices": [
+     [
+      -0.8229,
+      1.1157,
+      -0.9229
+     ],
+     [
+      0.8229,
+      1.1157,
+      -0.9229
+     ],
+     [
+      0.8367,
+      1.0712,
+      -1.7234
+     ],
+     [
+      0.6694,
+      0.9292,
+      -2.2526
+     ],
+     [
+      -0.6694,
+      0.9292,
+      -2.2526
+     ],
+     [
+      -0.8367,
+      1.0712,
+      -1.7234
+     ]
+    ]
+   },
+   {
+    "bat_center": [
+     0.0005,
+     2.0491,
+     1.1449
+    ],
+    "bat_center_geom": [
+     0.0005,
+     1.9819,
+     1.3386
+    ],
+    "bat_center_geom_surface_m": 0.0746,
+    "bat_center_geom_verdict": "floating",
+    "bat_center_surface_m": 0.0197,
+    "bat_center_verdict": "on-surface",
+    "bat_max_clearance_m": 0.5955,
+    "bat_on_surface": 0,
+    "bat_vertex_verdicts": [
+     "floating",
+     "floating",
+     "floating",
+     "floating",
+     "floating",
+     "floating",
+     "floating",
+     "floating",
+     "floating",
+     "floating"
+    ],
+    "bat_vertices": [
+     0.3619,
+     0.5951,
+     0.4549,
+     0.2366,
+     0.466,
+     0.4752,
+     0.2367,
+     0.4476,
+     0.5955,
+     0.374
+    ],
+    "bbox": [
+     -0.8229,
+     0.8229,
+     1.1041,
+     1.5242,
+     -0.9229,
+     2.4139
+    ],
+    "center": [
+     0.0,
+     1.3142,
+     0.7455
+    ],
+    "center_gap_m": 0.1474,
+    "center_geom": [
+     -0.0,
+     1.2691,
+     0.8858
+    ],
+    "deform_point_names": [
+     "|sportsmuscle_LOD1|body|body_STUNT|main_area[0]",
+     "|sportsmuscle_LOD1|body|body_STUNT|main_area[1]",
+     "|sportsmuscle_LOD1|body|body_STUNT|main_area[2]",
+     "|sportsmuscle_LOD1|body|body_STUNT|main_area[3]",
+     "|sportsmuscle_LOD1|body|body_STUNT|main_area[4]",
+     "|sportsmuscle_LOD1|body|body_STUNT|main_area[5]",
+     "|sportsmuscle_LOD1|body|body_STUNT|main_area[6]",
+     "|sportsmuscle_LOD1|body|body_STUNT|main_area[7]",
+     "|sportsmuscle_LOD1|body|body_STUNT|main_area[8]",
+     "|sportsmuscle_LOD1|body|body_STUNT|main_area[9]"
+    ],
+    "deform_points": [
+     53,
+     99,
+     81,
+     132,
+     116,
+     35,
+     10,
+     63,
+     48,
+     32
+    ],
+    "edges_valid": 10,
+    "n_deform_points": 10,
+    "n_triangles": 8,
+    "name": "main_area",
+    "part_index": 0,
+    "part_name": "sportsmuscle_body",
+    "size": [
+     1.6458,
+     0.4201,
+     3.3368
+    ],
+    "slot": 2,
+    "triangles": [
+     [
+      0,
+      8,
+      9
+     ],
+     [
+      1,
+      7,
+      8
+     ],
+     [
+      2,
+      6,
+      7
+     ],
+     [
+      3,
+      5,
+      6
+     ],
+     [
+      8,
+      0,
+      1
+     ],
+     [
+      7,
+      1,
+      2
+     ],
+     [
+      6,
+      2,
+      3
+     ],
+     [
+      5,
+      3,
+      4
+     ]
+    ],
+    "vertices": [
+     [
+      -0.8229,
+      1.1157,
+      -0.9229
+     ],
+     [
+      -0.6409,
+      1.4967,
+      -0.0758
+     ],
+     [
+      -0.58,
+      1.5242,
+      0.8805
+     ],
+     [
+      -0.7905,
+      1.1041,
+      2.1333
+     ],
+     [
+      -0.6144,
+      1.1046,
+      2.4139
+     ],
+     [
+      0.6144,
+      1.1046,
+      2.4139
+     ],
+     [
+      0.7905,
+      1.1041,
+      2.1333
+     ],
+     [
+      0.58,
+      1.5242,
+      0.8805
+     ],
+     [
+      0.6409,
+      1.4967,
+      -0.0758
+     ],
+     [
+      0.8229,
+      1.1157,
+      -0.9229
+     ]
+    ]
+   }
+  ],
+  "declared": 3,
+  "inactive": 29,
+  "real_welds": 8,
+  "slots": 32,
+  "weld_pairs": {
+   "0-1": 6,
+   "0-2": 1,
+   "1-2": 1
+  },
+  "weld_rows": 64
+ }
+}

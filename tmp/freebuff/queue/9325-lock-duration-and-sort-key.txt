@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/lock-duration-and-sort-key.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/barrage-levels-reconcile.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/lock-markers-spec.md
+Settle three open lock facts with evidence, not memory. (1) What MissileLockOnDuration 2.0 s governs in BmAK (pursuit circle, battle diamond, or neither): read Research/BatmobileGrab/WEAPONS.md and FOOTAGE.md (LockOnTime 233 samples, maximum 1 s). (2) Where the decoded MaxTargets 8 came from, given the operator-confirmed 1/4/7/10 targets by upgrade level; record the conflict, do not overwrite it. (3) The target sort key: the operator is unsure between crosshair-nearest first and proximity second; list what tmp/freebuff/reports/bm-lock-target-sort-key.md and bm-lock-duration-and-cone.md support. Operator facts: the barrage auto-fires at lock; battle lock is an instant orange diamond; pursuit lock is a shrinking circle. Output tmp/freebuff/reports/lock-semantics-settled.md with one row per question: answer, evidence, UNKNOWN flag. Done-check: three rows, each with at least one file citation or the word UNKNOWN. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

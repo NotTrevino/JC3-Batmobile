@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/t26-drag-offset-lookup.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-08
+The T-26 row in GRAB_BACKLOG.md records that RVehicleSimBatmobile Drag at offset 16, DragNoLoad at offset 20 and DriftDrag at offset 712 are declared but carry no decoded value. Look for those three offsets in the class dump and decode notes under Research/BatmobileGrab/ and Research/RBM/, and check whether any decoded file gives a value at those byte positions. Put the result in Working/Prep/t26_drag_offsets.json with one entry per member, holding the fields member, offset, source_path, source_line, value_or_null and status (DECODED or UNKNOWN). Quote the exact line you rely on, and where a member has no value name the file that would carry it. The T-26 row itself must stay as it is, and this brief only produces the lookup table.

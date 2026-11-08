@@ -1,0 +1,2563 @@
+{
+ "card": "T-23",
+ "schema": 2,
+ "generated_by": "Tools/scripts/t23_closeout.py",
+ "sources": {
+  "backlog": "GRAB_BACKLOG.md §1/§7/§8/§11",
+  "ledger": "T_ROWS.jsonl",
+  "assumed": "status_audit.py"
+ },
+ "gate": {
+  "codes": 75,
+  "codes_carried": 58,
+  "codes_omitted": 3,
+  "codes_blocked": 4,
+  "codes_documented": 10,
+  "codes_unknown": 0,
+  "codes_unmapped": 0,
+  "blocked_codes": [
+   "AUD-1",
+   "AUD-4",
+   "HUD-2",
+   "WPN-6"
+  ],
+  "documented_codes": [
+   "ANI-2",
+   "ANI-3",
+   "ANI-4",
+   "ANI-5",
+   "ANI-6",
+   "ANI-7",
+   "ANI-8",
+   "ANI-9",
+   "CAM-1",
+   "HUD-1"
+  ],
+  "doc_rows": {
+   "anchors": 34,
+   "by_state": {
+    "blocked": 4,
+    "carried (document row)": 3,
+    "documented": 21,
+    "named omission": 6
+   },
+   "carried_total": 58,
+   "carried_codes_with_doc_anchor": 11,
+   "codes_with_doc_anchor": 27
+  },
+  "rows": 244,
+  "dispositions": {
+   "blocked": 27,
+   "edit": 16,
+   "epe": 38,
+   "keep": 30,
+   "next": 120,
+   "out": 6,
+   "superseded": 7
+  },
+  "assumed": {
+   "count": 1,
+   "in_scope": 260,
+   "rows": [
+    {
+     "id": "T-E5",
+     "conf": "assumed",
+     "why": "keep 336.4 as the top of a **300-336 km/h band labelled assumed** (the 2026-10-23 sign-off covers the label, not a measurement) and do NOT tune drag to it: `land_aerodynamics.drag_coefficient` stays T-A2's class fit 0.55, so the pair is two decisions, not one translation; at T-E2's 2921 N.m x the 0.65 wash at 4500 rpm = 894.7 kW, Cd.A = 0.55 x 6.634667 = 3.649 m^2 and rho 1.2 the predicted terminal is (2P/(rho Cd A))^(1/3) = 74.2 m/s = 267 km/h (265 at rho 1.225) - the number a take compares with - while 93.44 m/s at the same power would need Cd.A = 1.828 m^2, i.e. Cd 0.276, also not written; the Cd 0.1213 this row used to carry was reverse-engineered from the label and is rejected/not written (0.1213 x 6.635 = 0.805 m^2 is only 394 kW at 93.44 m/s, not the 894.7 kW it cited, and the earlier 260 km/h did not follow from its own inputs - correction 8391); any top-speed take tests **reachability of a label, not fidelity to BmAK**; whether `official_top_speed` is a cap is UNKNOWN (`keep-audit-engine-boost-aero.md` T-E5)",
+     "signed_off": true
+    }
+   ],
+   "unsigned": [],
+   "evidenced": 170,
+   "blocked": 31,
+   "out": 13,
+   "superseded": 8,
+   "rows_total": 281,
+   "next": 120
+  },
+  "decisions": [
+   {
+    "id": "D-1",
+    "question": "Tyre diameter: keep the PSKX true scale (1.366 m measured) or scale the **whole car** so the tyre reads 1.40 m?",
+    "data": "G1-18 → `Research/BatmobileGrab/TYRES.md`: tread Ø1.3652–1.3657, shoulder Ø1.371, all four wheels within 0.5 mm; 1.42 has no source (initial-commit docstring; the wheel `Disc` bone's own vertical extent is 1.427)",
+    "answer": "**resolved 2026-10-24: keep the PSKX true scale** — the condition failed: 1.366 does exclude the shoulder, but the bulge is 5.5 mm, so the tyre with its shoulder reads 1.371, still 2.0% short of 1.40; the missing 34 mm to 1.40 is not in the mesh, so rescaling would move ride height, track and body by 2.5% to chase a wiki estimate",
+    "blocks": "DIM-2, T-G2",
+    "resolved": "2026-10-24",
+    "state": "answered",
+    "cited_rows": [
+     "T-MD1",
+     "T-MD2",
+     "T-MD3",
+     "T-MD4",
+     "T-WLD1",
+     "T-WLD2",
+     "T-WLD3"
+    ],
+    "blocked_rows": []
+   },
+   {
+    "id": "D-2",
+    "question": "Pursuit/Battle: (a) two Rebel Drop entries, (b) one hybrid car, (c) research a runtime toggle first",
+    "data": "G2-14, G2-21, G1-21",
+    "answer": "**REOPENED 2026-11-06 (research, task 8301): (b) withdrawn — awaiting the operator.** BmAK has **two modes** (`BattleMode*` 42 declared / 15 serialised, `TurningModeMaxSpeed` 600 cm/s, `TurnOnSpot*`, `Transformation*`) and **a hybrid cannot carry rows T-MD5, T-MD6, T-MD7, T-MD8, T-MD13 and T-MD14**: no JC3 member switches a handling value at runtime, and the only carrier that holds a second value set is a **second entity** (`tmp/freebuff/reports/mode-switch-carriers.md` §3/§6; audio: `tmp/freebuff/reports/battle-audio-switch-event.md` §4; the two rows that already turn on this switch: `tmp/freebuff/reports/keep-audit-world-modes.md` §3). Options now: **(a) two Rebel Drop entries, two entities of one chassis** — the only carrier for the six rows, cost = the swap trigger is UNKNOWN (§7 U1); **(b) keep the hybrid** and accept the six losses as declared omissions; **(c) a runtime selector** — no decoded selector in any module, entity graph or `.physicsc` (UNKNOWN, not planned). The two-mode plan (what flips, which member, which carrier, and every build step that changes) is `tmp/freebuff/reports/apply-mode-switch-rows.md`. Previous answer, kept as history and **no longer in force**: **resolved 2026-10-28 (user): (b) one hybrid car** — a single Rebel Drop entry carrying both modes; pursuit/battle switching is borrowed from JC3 functionality and altered to match BmAK. Until D-2 re-resolves, every approval that rests on the hybrid (audit A-02) is **provisional**, and B-12 is `todo: D-2 reopened`.",
+    "blocks": "MOD-2, T-15, B-12",
+    "resolved": "2026-10-28",
+    "state": "answered",
+    "cited_rows": [
+     "T-BM1",
+     "T-L17",
+     "T-L18",
+     "T-L19",
+     "T-L20",
+     "T-LG5",
+     "T-MD10",
+     "T-MD11",
+     "T-MD12",
+     "T-MD13",
+     "T-MD14",
+     "T-MD15",
+     "T-MD5",
+     "T-MD6",
+     "T-MD7",
+     "T-MD8",
+     "T-MD9",
+     "T-WLD4",
+     "T-WLD5",
+     "T-WLD6",
+     "T-WLD7"
+    ],
+    "blocked_rows": []
+   },
+   {
+    "id": "D-3",
+    "question": "Weapon lethality: BmAK weapons are non-lethal to people (riot suppressor, drones are unmanned); JC3 weapons kill. Accept JC3 lethality, or limit the guns to vehicle targets where possible?",
+    "data": "G2-10, G2-11",
+    "answer": "**resolved 2026-10-28 (user): accept JC3 lethality, no toggle** — a non-lethal mode does not fit JC3 and would ruin battle mode; the riot suppressor stays a named omission",
+    "blocks": "WPN-2, WPN-10",
+    "resolved": "2026-10-28",
+    "state": "answered",
+    "cited_rows": [
+     "T-W1",
+     "T-WLD8",
+     "T-WLD9"
+    ],
+    "blocked_rows": []
+   },
+   {
+    "id": "D-4",
+    "question": "Donor chassis: keep `v0300` (the armed signature variant proves it can carry missiles) or move to a tank chassis for the turret?",
+    "data": "G2-12, G2-13, `FLEET.md`",
+    "answer": "**resolved 2026-10-28 (user): whichever is easiest** → keep `v0300` (the current donor; the armed signature variant already carries missiles) and import turret wiring from the tank",
+    "blocks": "B-04, B-05",
+    "resolved": "2026-10-28",
+    "state": "answered",
+    "cited_rows": [
+     "T-WLD10",
+     "T-WLD11"
+    ],
+    "blocked_rows": []
+   },
+   {
+    "id": "D-5",
+    "question": "Skins (MK2, Jokerfied) as extra drop entries, palette tints, or not at all",
+    "data": "G1-20",
+    "answer": "**resolved 2026-10-28 (user): skins as extra Rebel Drop entries** (MK2, Jokerfied, …)",
+    "blocks": "APP-8",
+    "resolved": "2026-10-28",
+    "state": "answered",
+    "cited_rows": [
+     "T-WLD12",
+     "T-WLD19"
+    ],
+    "blocked_rows": []
+   },
+   {
+    "id": "D-6",
+    "question": "Standalone entity, or keep replacing the Serpente (which may put NPC Batmobiles in traffic)",
+    "data": "G2-27, G2-29",
+    "answer": "**resolved 2026-10-28 (user): standalone entity** (no Serpente replacement)",
+    "blocks": "WLD-1/8, B-13",
+    "resolved": "2026-10-28",
+    "state": "answered",
+    "cited_rows": [
+     "T-WLD13",
+     "T-WLD14",
+     "T-WLD18",
+     "T-WLD19"
+    ],
+    "blocked_rows": []
+   },
+   {
+    "id": "D-7",
+    "question": "Weapon slots: which BmAK weapons take JC3's driver slots (cannon, Vulcan, missiles…)",
+    "data": "G2-11",
+    "answer": "**resolved 2026-10-28 (user): every BmAK weapon in both battle and pursuit modes** — no per-mode split; the slot count must carry all weapons (T-11 finds how, e.g. extra driver slots or mode-independent switching)",
+    "blocks": "T-11",
+    "resolved": "2026-10-28",
+    "state": "answered",
+    "cited_rows": [
+     "T-FX14",
+     "T-FX4",
+     "T-MD2",
+     "T-MD9",
+     "T-W1",
+     "T-WLD15",
+     "T-WLD16",
+     "T-WLD17",
+     "T-WP13"
+    ],
+    "blocked_rows": []
+   },
+   {
+    "id": "D-8",
+    "question": "Water: BmAK's Batmobile is not amphibious. Sink and stall (lore), or JC3 default?",
+    "data": "G2-31",
+    "answer": "**resolved 2026-10-28 (user): lore** — sink and stall, Rico swims out",
+    "blocks": "WLD-6",
+    "resolved": "2026-10-28",
+    "state": "answered",
+    "cited_rows": [
+     "T-WLD13",
+     "T-WLD14",
+     "T-WLD18",
+     "T-WLD19"
+    ],
+    "blocked_rows": []
+   },
+   {
+    "id": "D-9",
+    "question": "Can enemies pull Rico out of the Batmobile?",
+    "data": "G2-18",
+    "answer": "**resolved 2026-10-28 (user): no** — enemies cannot pull Rico out",
+    "blocks": "T-13",
+    "resolved": "2026-10-28",
+    "state": "answered",
+    "cited_rows": [
+     "T-WLD8"
+    ],
+    "blocked_rows": []
+   },
+   {
+    "id": "D-10",
+    "question": "JC3 gear mods (turbo jump, upgraded nitro tiers) on the Batmobile? BmAK cannot jump.",
+    "data": "G1-21, `CustomLandGlobal`",
+    "answer": "**resolved 2026-10-28 (user): no JC3 gear mods** (no turbo jump, no upgraded nitro tiers); JC3 functionality may be borrowed and altered only so the Batmobile is 100% lore-accurate",
+    "blocks": "HDL, T-B4",
+    "resolved": "2026-10-28",
+    "state": "answered",
+    "cited_rows": [],
+    "blocked_rows": []
+   },
+   {
+    "id": "D-11",
+    "question": "Controls: which actions use JC3's control and which the BmAK (lore) scheme",
+    "data": "G2-14, G2-21, T-11",
+    "answer": "**resolved 2026-11-02 (user): only ENTER uses JC3's control; exit and everything else (driving, pursuit/battle, afterburner, weapons) use BmAK's controls** (\"only ENTER with JC3 controls (exit and else with BmAK controls)\"). What JC3 lets a vehicle remap is not yet researched (open: G2 card) Mapping (user 2026-11-02, corrected 2026-11-03; runtime G3-02d): LT hold battle / release pursuit [CONFIRMED live]; B = immobilizer on an auto-tagged enemy [CONFIRMED live; tracking is automatic, not B]; X = missile barrage in battle [user; config QuickGadgetX -> SelectVehicleWeapon(2)]; Y = boost in pursuit [user; config bVehicleBoostButton]; LB = exit AND enter [CONFIRMED live]; A = ejection [exit CONFIRMED live, EM part UNKNOWN].",
+    "blocks": "MOD-1/2, WPN, D-2",
+    "resolved": "2026-11-02",
+    "state": "answered",
+    "cited_rows": [],
+    "blocked_rows": []
+   }
+  ],
+  "problems": []
+ },
+ "features": {
+  "APP-1": {
+   "requirement": "Body is `Batmobile_V2` at true scale, all 5 LODs, 19 material slots, no visible tears",
+   "source": "`MESHES.md`, `SLOTS.json`",
+   "rows": [
+    {
+     "anchor": "T-MA1",
+     "doc": "T2_TRANSLATION.md",
+     "state": "keep",
+     "source": "ledger",
+     "note": "19 material slots -> one CarPaintMM block per LOD"
+    },
+    {
+     "anchor": "T-G1",
+     "doc": "T1_TRANSLATION.md",
+     "state": "keep",
+     "source": "ledger",
+     "note": "body at the mesh-measured 7.026 x 3.495 x 2.271 m"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-21"
+   ]
+  },
+  "APP-2": {
+   "requirement": "Paint reads as the Arkham Knight matte/satin armour in noon and night light",
+   "source": "`MATERIALS.md`, `VALUES.json`",
+   "rows": [
+    {
+     "anchor": "T-MA3",
+     "doc": "T2_TRANSLATION.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "authored base colour -> CarPaintMM diffuse"
+    },
+    {
+     "anchor": "T-MA4",
+     "doc": "T2_TRANSLATION.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "authored gloss, clamped to the vanilla cap"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-21"
+   ]
+  },
+  "APP-3": {
+   "requirement": "Canopy is tinted glass; cockpit interior (seat, yoke, screens) visible through it",
+   "source": "`SLOTS.json`, materials",
+   "rows": [
+    {
+     "anchor": "T-MA5",
+     "doc": "T2_TRANSLATION.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "canopy -> Window block, empty slots as tint"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-21"
+   ]
+  },
+  "APP-4": {
+   "requirement": "Emissive parts glow (head-lamp lenses, tail strip, wheel-arch lights, dashboard)",
+   "source": "`LIGHTS.json`, emissive params",
+   "rows": [
+    {
+     "anchor": "T-L8",
+     "doc": "T14_LIGHTS.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "head-lamp lens row"
+    },
+    {
+     "anchor": "T-L13",
+     "doc": "T14_LIGHTS.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "wheel-arch lamp (custom preset)"
+    },
+    {
+     "anchor": "T-L24",
+     "doc": "T14_LIGHTS.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "dashboard lamp"
+    },
+    {
+     "anchor": "T-L35",
+     "doc": "T14_LIGHTS.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "boot lamp"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-18",
+    "T-21",
+    "T-24"
+   ]
+  },
+  "APP-5": {
+   "requirement": "Movable parts are separate meshes: turret, cannon, Vulcan barrels, rear fins/air-brakes, missile hatches, turbine fan, canopy, steering yoke",
+   "source": "BmAK bones + anims (G1-10…G1-12)",
+   "rows": [
+    {
+     "anchor": "P-01",
+     "doc": "T8_PARTS.md",
+     "state": "documented",
+     "source": "doc",
+     "note": "turret part"
+    },
+    {
+     "anchor": "P-03",
+     "doc": "T8_PARTS.md",
+     "state": "documented",
+     "source": "doc",
+     "note": "Vulcan part"
+    },
+    {
+     "anchor": "P-07",
+     "doc": "T8_PARTS.md",
+     "state": "documented",
+     "source": "doc",
+     "note": "missile hatch part"
+    },
+    {
+     "anchor": "P-09",
+     "doc": "T8_PARTS.md",
+     "state": "documented",
+     "source": "doc",
+     "note": "aero flap"
+    },
+    {
+     "anchor": "T-P1",
+     "doc": "T1_TRANSLATION.md",
+     "state": "epe",
+     "source": "ledger",
+     "note": "parts by bone name"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-12",
+    "T-21"
+   ]
+  },
+  "APP-6": {
+   "requirement": "Battle-mode silhouette (turret raised, stance) is reachable, either as a pose of the same car or a second variant",
+   "source": "`Batmobile_V2_Pose_States`, transform anims",
+   "rows": [
+    {
+     "anchor": "T-MD13",
+     "doc": "T11_MODES.md",
+     "state": "blocked",
+     "source": "ledger",
+     "note": "transformation pose - named omission"
+    },
+    {
+     "anchor": "T-MD15",
+     "doc": "T11_MODES.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "one hybrid car carries the battle set"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-12",
+    "T-21"
+   ]
+  },
+  "APP-7": {
+   "requirement": "The car never deforms; damage shows as scorch/smoke only",
+   "source": "user rule R1; BmAK has no deform",
+   "rows": [
+    {
+     "anchor": "T-DM6",
+     "doc": "T2_TRANSLATION.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "deform_scale 0 - the car never crumples"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-21"
+   ]
+  },
+  "APP-8": {
+   "requirement": "Optional: MK2 / Jokerfied skins",
+   "source": "`Batmobile_MK2_Skin`, `Batmobile_Jokerfied_Skin` meshes",
+   "rows": [
+    {
+     "anchor": "T-MA7",
+     "doc": "T2_TRANSLATION.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "palette tints (the skin route)"
+    },
+    {
+     "anchor": "T-WLD1",
+     "doc": "T15_WORLD.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "D-5: a skin is an extra drop entry"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-21"
+   ]
+  },
+  "DIM-1": {
+   "requirement": "7.026 × 3.495 × 2.271 m body, wheelbase 5.029 m, track 2.416 / 2.569 m",
+   "source": "PSKX at real cm (`bat_assemble.py`)",
+   "rows": [
+    {
+     "anchor": "T-G1",
+     "doc": "T1_TRANSLATION.md",
+     "state": "keep",
+     "source": "ledger",
+     "note": "body, wheelbase and track"
+    }
+   ],
+   "state": "carried",
+   "cards": []
+  },
+  "DIM-2": {
+   "requirement": "Tyre diameter matches the lore reference",
+   "source": "PSKX **1.365–1.366 m** measured on all four tyres (`TYRES.md`, T-G2) vs wiki 1.40 → 2.4% apart, **accepted**; the docstring's 1.42 has no source and what it measured is UNKNOWN (`TYRES.md` §3) (D-1 resolved: keep the PSKX)",
+   "rows": [
+    {
+     "anchor": "T-G2",
+     "doc": "T1_TRANSLATION.md",
+     "state": "keep",
+     "source": "ledger",
+     "note": "tyre diameter (D-1 resolved: keep the PSKX)"
+    }
+   ],
+   "state": "carried",
+   "cards": []
+  },
+  "DIM-3": {
+   "requirement": "Mass is heavy-armoured (BmAK has no absolute mass; the 6 t class row stands until a lore source exists)",
+   "source": "T-M1 ledger",
+   "rows": [
+    {
+     "anchor": "T-M1",
+     "doc": "T1_TRANSLATION.md",
+     "state": "edit",
+     "source": "ledger",
+     "note": "mass, 6 t class"
+    }
+   ],
+   "state": "carried",
+   "cards": []
+  },
+  "DIM-4": {
+   "requirement": "Collision hull matches the Batmobile body, not the Serpente",
+   "source": "`PHYSICS.md` (BmAK has no chassis body)",
+   "rows": [
+    {
+     "anchor": "T-P3",
+     "doc": "T1_TRANSLATION.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "hull set from the 11 driveable boxes"
+    },
+    {
+     "anchor": "T-CO2",
+     "doc": "T2_TRANSLATION.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "the largest box fits one donor hull"
+    },
+    {
+     "anchor": "T-CO3",
+     "doc": "T2_TRANSLATION.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "per-part collision bindings"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-22"
+   ]
+  },
+  "ARM-1": {
+   "requirement": "Small arms (pistol, rifle, MG) do not move the health bar",
+   "source": "BmAK play behaviour (T-DM9)",
+   "rows": [
+    {
+     "anchor": "T-DM9",
+     "doc": "T3_COVERAGE.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "small arms do not move the bar"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-14"
+   ]
+  },
+  "ARM-2": {
+   "requirement": "Heavy weapons (tank cannon, missiles, RPG) do damage; the car can be destroyed",
+   "source": "`RVehicleBatmobile.Health` 1,200, damage rules (G1-14)",
+   "rows": [
+    {
+     "anchor": "T-DM1",
+     "doc": "T10_DAMAGE.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "max_health 36000 for the BmAK 24-hit ratio"
+    },
+    {
+     "anchor": "T-DM4",
+     "doc": "T10_DAMAGE.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "explosion/smoke/burn thresholds"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-14"
+   ]
+  },
+  "ARM-3": {
+   "requirement": "Ramming anything never damages the Batmobile",
+   "source": "T-DM8",
+   "rows": [
+    {
+     "anchor": "T-DM8",
+     "doc": "T3_COVERAGE.md",
+     "state": "keep",
+     "source": "ledger",
+     "note": "impact_damage_factor 0 - ramming never hurts it"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-14"
+   ]
+  },
+  "ARM-4": {
+   "requirement": "Wheels cannot be shot off or burst",
+   "source": "BmAK (no wheel damage)",
+   "rows": [
+    {
+     "anchor": "T-P2",
+     "doc": "T1_TRANSLATION.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "per-part damage types"
+    },
+    {
+     "anchor": "T-DM5",
+     "doc": "T2_TRANSLATION.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "the 24-type join, wheels at the fleet ceiling"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-14"
+   ]
+  },
+  "ARM-5": {
+   "requirement": "Armour regeneration out of combat, **if** BmAK has a regen value (G1-14 decides)",
+   "source": "G1-14",
+   "rows": [
+    {
+     "anchor": "ARM-5 — regeneration",
+     "doc": "T10_DAMAGE.md",
+     "state": "named omission",
+     "source": "doc",
+     "note": "regen is a named omission: no recovery member on either side"
+    }
+   ],
+   "state": "named omission",
+   "cards": [
+    "T-14"
+   ]
+  },
+  "ARM-6": {
+   "requirement": "Death = BmAK death explosion look/sound, not a crumpled Serpente",
+   "source": "`DeathExplosionSoundArray`, particles",
+   "rows": [
+    {
+     "anchor": "ARM-6 — death look",
+     "doc": "T10_DAMAGE.md",
+     "state": "named omission",
+     "source": "doc",
+     "note": "death look is a named omission"
+    },
+    {
+     "anchor": "T-FX21",
+     "doc": "T13_FX.md",
+     "state": "epe",
+     "source": "ledger",
+     "note": "death explosion effect"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-14"
+   ]
+  },
+  "WPN-1": {
+   "requirement": "`Batmobile_Heavy_Cannon_Primary` (`RBatmobileHeavyCannon`) — 60 mm cannon",
+   "source": "charged shot, projectile, big impulse",
+   "rows": [
+    {
+     "anchor": "T-WP1",
+     "doc": "T7_WEAPONS.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "heavy cannon -> w602 clone"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-11"
+   ]
+  },
+  "WPN-2": {
+   "requirement": "`Batmobile_Cannon_V2` (`RBatmobileCannon`) — Vulcan chain gun, heat bar, inaccuracy curves",
+   "source": "sustained fire, overheats",
+   "rows": [
+    {
+     "anchor": "T-WP2",
+     "doc": "T7_WEAPONS.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "Vulcan -> w603 clone on the second driver slot"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-11"
+   ]
+  },
+  "WPN-3": {
+   "requirement": "`Batmobile_Missile_Launcher` (`RBatmobileMissileLauncher`) — missile barrage with target lock",
+   "source": "multi-target lock-on salvo",
+   "rows": [
+    {
+     "anchor": "T-WP3",
+     "doc": "T7_WEAPONS.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "missiles -> the donor's own w618"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-11"
+   ]
+  },
+  "WPN-4": {
+   "requirement": "`Batmobile_EMP_Missile_Launcher` (`RBatmobileEMPMissile`) — Immobilizer (pursuit mode, vs cars)",
+   "source": "disables vehicles",
+   "rows": [
+    {
+     "anchor": "T-WP4",
+     "doc": "T7_WEAPONS.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "EMP missile - blocked on the disable behaviour"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-11"
+   ]
+  },
+  "WPN-5": {
+   "requirement": "`Batmobile_EMP_Burst` (`RBatmobileEMP`) — electrical overcharge around the car",
+   "source": "radial stun/push",
+   "rows": [
+    {
+     "anchor": "T-WP5",
+     "doc": "T7_WEAPONS.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "EMP burst - blocked on the firing moment"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-11"
+   ]
+  },
+  "WPN-6": {
+   "requirement": "`Batmobile_Winch` (`RBatmobileWinch`) — power winch",
+   "source": "tow/pull objects",
+   "rows": [
+    {
+     "anchor": "T-WP6",
+     "doc": "T7_WEAPONS.md",
+     "state": "blocked",
+     "source": "ledger",
+     "note": "winch - named omission"
+    }
+   ],
+   "state": "blocked",
+   "cards": [
+    "T-11"
+   ]
+  },
+  "WPN-7": {
+   "requirement": "`Drone_Hacker` (`RBatmobileAllegianceSwitcher`)",
+   "source": "turns enemy drones",
+   "rows": [
+    {
+     "anchor": "T-WP7",
+     "doc": "T7_WEAPONS.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "allegiance switcher - named omission"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-11"
+   ]
+  },
+  "WPN-8": {
+   "requirement": "`Batmobile_Sonar` (`RBatmobileSonar`) — seismic sonar",
+   "source": "scan + shockwave",
+   "rows": [
+    {
+     "anchor": "T-WP8",
+     "doc": "T7_WEAPONS.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "sonar - named omission"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-11"
+   ]
+  },
+  "WPN-9": {
+   "requirement": "`Vehicle_Tracker` (`RBatmobileVehicleTracker`)",
+   "source": "tags a car",
+   "rows": [
+    {
+     "anchor": "T-WP9",
+     "doc": "T7_WEAPONS.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "vehicle tracker - named omission"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-11"
+   ]
+  },
+  "WPN-10": {
+   "requirement": "Riot suppressor (non-lethal mode of `RBatmobileCannon`, `RiotSuppressorMuzzle`)",
+   "source": "non-lethal vs humans",
+   "rows": [
+    {
+     "anchor": "T-WP10",
+     "doc": "T7_WEAPONS.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "riot suppressor - named omission under D-3"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-11"
+   ]
+  },
+  "WPN-11": {
+   "requirement": "`Batmobile_Booster` (`RBatmobileBooster`) — afterburner gadget mesh",
+   "source": "boost",
+   "rows": [
+    {
+     "anchor": "T-WP11",
+     "doc": "T7_WEAPONS.md",
+     "state": "keep",
+     "source": "ledger",
+     "note": "afterburner = JC3 nitro, live since test-091"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-11"
+   ]
+  },
+  "WPN-12": {
+   "requirement": "HUD: weapon slots, reticle, cannon cooldown, Vulcan heat, missile lock",
+   "source": "`HUD_INTERFACES.json` (`UC_SetCannonCoolDown` …)",
+   "rows": [
+    {
+     "anchor": "T-WP12",
+     "doc": "T7_WEAPONS.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "weapon HUD API facts"
+    },
+    {
+     "anchor": "T-HUD5",
+     "doc": "T6_HUD_CAMERA.md",
+     "state": "blocked",
+     "source": "doc",
+     "note": "the HUD rows"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-11"
+   ]
+  },
+  "HDL-1": {
+   "requirement": "Top speed 209 mph with afterburner (signed-off wiki row)",
+   "source": "T-E5",
+   "rows": [
+    {
+     "anchor": "T-E5",
+     "doc": "T1_TRANSLATION.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "top speed, signed-off wiki row"
+    }
+   ],
+   "state": "carried",
+   "cards": []
+  },
+  "HDL-2": {
+   "requirement": "Torque curve shape = BmAK `StandardTorqueVSpeedCurve` / `BoostTorqueVSpeedCurve`",
+   "source": "`MECHANICS.md`, T-E1…E4, T-B1",
+   "rows": [
+    {
+     "anchor": "T-E1",
+     "doc": "T1_TRANSLATION.md",
+     "state": "edit",
+     "source": "ledger",
+     "note": "rpm band"
+    },
+    {
+     "anchor": "T-E3",
+     "doc": "T1_TRANSLATION.md",
+     "state": "edit",
+     "source": "ledger",
+     "note": "curve shape"
+    },
+    {
+     "anchor": "T-B1",
+     "doc": "T1_TRANSLATION.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "boost torque multiplier"
+    }
+   ],
+   "state": "carried",
+   "cards": []
+  },
+  "HDL-3": {
+   "requirement": "Steering, drift, countersteer, braking, suspension from the T rows",
+   "source": "T-1 ledger (A, B2, B3, B4 batches live in test-091)",
+   "rows": [
+    {
+     "anchor": "T-ST1",
+     "doc": "T1_TRANSLATION.md",
+     "state": "edit",
+     "source": "ledger",
+     "note": "steer angle vs speed"
+    },
+    {
+     "anchor": "T-R1",
+     "doc": "T1_TRANSLATION.md",
+     "state": "edit",
+     "source": "ledger",
+     "note": "tyre friction"
+    },
+    {
+     "anchor": "T-K1",
+     "doc": "T1_TRANSLATION.md",
+     "state": "edit",
+     "source": "ledger",
+     "note": "brakes"
+    },
+    {
+     "anchor": "T-S3",
+     "doc": "T1_TRANSLATION.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "suspension stroke"
+    }
+   ],
+   "state": "carried",
+   "cards": []
+  },
+  "HDL-4": {
+   "requirement": "Afterburner = nitro, extra speed 43.2 km/h derived",
+   "source": "T-B2",
+   "rows": [
+    {
+     "anchor": "T-B2",
+     "doc": "T1_TRANSLATION.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "nitro extra speed 43.2 km/h"
+    }
+   ],
+   "state": "carried",
+   "cards": []
+  },
+  "HDL-5": {
+   "requirement": "Lands from jumps without bouncing, no wheel jitter, 0.70 m stroke",
+   "source": "T-S3",
+   "rows": [
+    {
+     "anchor": "T-S3",
+     "doc": "T1_TRANSLATION.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "0.70 m stroke, the BmAK travel"
+    }
+   ],
+   "state": "carried",
+   "cards": []
+  },
+  "HDL-6": {
+   "requirement": "Air control / self-righting where JC3 has any member (re-decided in T-10)",
+   "source": "T-AC1, T-SR1 (currently `out`)",
+   "rows": [
+    {
+     "anchor": "T-AC1",
+     "doc": "T3_COVERAGE.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "air control - closest system (drift torque + aero)"
+    },
+    {
+     "anchor": "T-SR1",
+     "doc": "T3_COVERAGE.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "self-righting - closest system (DriverLean + stabilizer)"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-10"
+   ]
+  },
+  "MOD-1": {
+   "requirement": "Pursuit mode: afterburner, Immobilizer, ram immunity, high speed",
+   "source": "BmAK (`StandardTorqueVSpeedCurve`, EMP missile)",
+   "rows": [
+    {
+     "anchor": "T-MD1",
+     "doc": "T11_MODES.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "afterburner"
+    },
+    {
+     "anchor": "T-MD2",
+     "doc": "T11_MODES.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "Immobilizer"
+    },
+    {
+     "anchor": "T-MD3",
+     "doc": "T11_MODES.md",
+     "state": "keep",
+     "source": "ledger",
+     "note": "ram immunity"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-15"
+   ]
+  },
+  "MOD-2": {
+   "requirement": "Battle mode: turret weapons, turn on the spot, low top speed (`BattleModeVSpeedCurve`), armour reduction (`ArmourModeDamageReduction`), battle camera FOV 60",
+   "source": "`MECHANICS.md`, T-BM1, T-CAM10",
+   "rows": [
+    {
+     "anchor": "T-MD9",
+     "doc": "T11_MODES.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "turret/cannon aim"
+    },
+    {
+     "anchor": "T-MD10",
+     "doc": "T11_MODES.md",
+     "state": "keep",
+     "source": "ledger",
+     "note": "armour"
+    },
+    {
+     "anchor": "T-MD11",
+     "doc": "T11_MODES.md",
+     "state": "keep",
+     "source": "ledger",
+     "note": "battle camera FOV inside the delivered band"
+    },
+    {
+     "anchor": "T-MD12",
+     "doc": "T11_MODES.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "battle lamps ride HeadLight"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-15"
+   ]
+  },
+  "MOD-3": {
+   "requirement": "Ejection: hold-to-eject launches the driver into the air (Batman glides)",
+   "source": "BmAK play",
+   "rows": [
+    {
+     "anchor": "exit.driver.moving.parachute",
+     "doc": "T9_INTERACTION.md",
+     "state": "documented",
+     "source": "doc",
+     "note": "the moving exit T-13 places"
+    },
+    {
+     "anchor": "T-WLD9",
+     "doc": "T15_WORLD.md",
+     "state": "epe",
+     "source": "ledger",
+     "note": "the 26 exit objects"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-13"
+   ]
+  },
+  "MOD-4": {
+   "requirement": "Canopy opens on entry/exit",
+   "source": "`Batmobile_Skel_Ctrl_Door`",
+   "rows": [
+    {
+     "anchor": "P-06",
+     "doc": "T8_PARTS.md",
+     "state": "documented",
+     "source": "doc",
+     "note": "canopy hinge"
+    },
+    {
+     "anchor": "T-PA5",
+     "doc": "T2_TRANSLATION.md",
+     "state": "epe",
+     "source": "ledger",
+     "note": "door_parts map"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-12"
+   ]
+  },
+  "MOD-5": {
+   "requirement": "Nobody but the player drives it: no NPC hijack, no traffic copies",
+   "source": "lore",
+   "rows": [
+    {
+     "anchor": "T-WLD19",
+     "doc": "T15_WORLD.md",
+     "state": "keep",
+     "source": "ledger",
+     "note": "the donor's traffic record is left alone"
+    },
+    {
+     "anchor": "hijack objects",
+     "doc": "T9_INTERACTION.md",
+     "state": "documented",
+     "source": "doc",
+     "note": "D-9: the 6 hijack objects are dropped"
+    }
+   ],
+   "state": "carried",
+   "cards": []
+  },
+  "AUD-1": {
+   "requirement": "Engine start, idle, rev/load loop driven by RPM",
+   "source": "`BML_Engine` / `VEH_Batmobile_MK2_Engine` banks, RTPC `RPM`",
+   "rows": [
+    {
+     "anchor": "A-01",
+     "doc": "T12_AUDIO.md",
+     "state": "blocked",
+     "source": "doc",
+     "note": "engine start/idle/rev into LandAudio's window"
+    }
+   ],
+   "state": "blocked",
+   "cards": [
+    "T-16"
+   ]
+  },
+  "AUD-2": {
+   "requirement": "Afterburner/boost roar, burnout",
+   "source": "`BML_Burnout`",
+   "rows": [
+    {
+     "anchor": "A-02",
+     "doc": "T12_AUDIO.md",
+     "state": "carried (document row)",
+     "source": "doc",
+     "note": "nitro sample swap, live since test-060"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-16"
+   ]
+  },
+  "AUD-3": {
+   "requirement": "Interior/cabin layer",
+   "source": "`AUX_InBatmobile`",
+   "rows": [
+    {
+     "anchor": "A-11",
+     "doc": "T12_AUDIO.md",
+     "state": "named omission",
+     "source": "doc",
+     "note": "interior layer - named omission"
+    }
+   ],
+   "state": "named omission",
+   "cards": [
+    "T-16"
+   ]
+  },
+  "AUD-4": {
+   "requirement": "Battle-mode transform in/out",
+   "source": "`Play_BattleMode_In_Rev` / `_Out_Rev`",
+   "rows": [
+    {
+     "anchor": "W-08",
+     "doc": "T12_AUDIO.md",
+     "state": "blocked",
+     "source": "doc",
+     "note": "battle-mode events - blocked (D-2 hybrid)"
+    }
+   ],
+   "state": "blocked",
+   "cards": [
+    "T-15",
+    "T-16"
+   ]
+  },
+  "AUD-5": {
+   "requirement": "Each weapon: fire, loop, tail, impact, lock beep",
+   "source": "weapon `AkEvent`s (G1-15)",
+   "rows": [
+    {
+     "anchor": "W-01",
+     "doc": "T12_AUDIO.md",
+     "state": "named omission",
+     "source": "doc",
+     "note": "cannon"
+    },
+    {
+     "anchor": "W-03",
+     "doc": "T12_AUDIO.md",
+     "state": "carried (document row)",
+     "source": "doc",
+     "note": "Vulcan"
+    },
+    {
+     "anchor": "W-07",
+     "doc": "T12_AUDIO.md",
+     "state": "named omission",
+     "source": "doc",
+     "note": "lock-on UI"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-16"
+   ]
+  },
+  "AUD-6": {
+   "requirement": "Tyres, skids, impacts",
+   "source": "`BML_Impacts` is **absent** (T-AU3)",
+   "rows": [
+    {
+     "anchor": "A-09",
+     "doc": "T12_AUDIO.md",
+     "state": "named omission",
+     "source": "doc",
+     "note": "tyre/impact layer - named omission"
+    }
+   ],
+   "state": "named omission",
+   "cards": [
+    "T-16"
+   ]
+  },
+  "AUD-7": {
+   "requirement": "No car radio / no horn unless lore has one (G1-15 decides)",
+   "source": "BmAK events",
+   "rows": [
+    {
+     "anchor": "A-13",
+     "doc": "T12_AUDIO.md",
+     "state": "carried (document row)",
+     "source": "doc",
+     "note": "horn removed"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-16"
+   ]
+  },
+  "ANI-1": {
+   "requirement": "Wheels spin, front wheels steer, suspension travels",
+   "source": "live",
+   "rows": [
+    {
+     "anchor": "T-PA4",
+     "doc": "T2_TRANSLATION.md",
+     "state": "epe",
+     "source": "ledger",
+     "note": "wheel_parts slots, spin/steer/suspension"
+    },
+    {
+     "anchor": "P-05",
+     "doc": "T8_PARTS.md",
+     "state": "documented",
+     "source": "doc",
+     "note": "turbine"
+    }
+   ],
+   "state": "carried",
+   "cards": []
+  },
+  "ANI-2": {
+   "requirement": "Turret yaws and cannon pitches toward the camera aim",
+   "source": "BmAK turret bones",
+   "rows": [
+    {
+     "anchor": "P-01",
+     "doc": "T8_PARTS.md",
+     "state": "documented",
+     "source": "doc",
+     "note": "turret yaw"
+    },
+    {
+     "anchor": "P-02",
+     "doc": "T8_PARTS.md",
+     "state": "documented",
+     "source": "doc",
+     "note": "cannon pitch"
+    }
+   ],
+   "state": "documented",
+   "cards": [
+    "T-12"
+   ]
+  },
+  "ANI-3": {
+   "requirement": "Vulcan barrels spin while firing",
+   "source": "`ChainGunMuzzle`, anims",
+   "rows": [
+    {
+     "anchor": "P-03",
+     "doc": "T8_PARTS.md",
+     "state": "documented",
+     "source": "doc",
+     "note": "Vulcan barrels through GatlingGun"
+    }
+   ],
+   "state": "documented",
+   "cards": [
+    "T-12"
+   ]
+  },
+  "ANI-4": {
+   "requirement": "Turbine fan spins with engine RPM",
+   "source": "rear turbine geometry",
+   "rows": [
+    {
+     "anchor": "P-05",
+     "doc": "T8_PARTS.md",
+     "state": "documented",
+     "source": "doc",
+     "note": "turbine fan through EngineRotatingPart"
+    }
+   ],
+   "state": "documented",
+   "cards": [
+    "T-12"
+   ]
+  },
+  "ANI-5": {
+   "requirement": "Rear fins / air-brakes deploy under braking",
+   "source": "BmAK anims (G1-10)",
+   "rows": [
+    {
+     "anchor": "P-09",
+     "doc": "T8_PARTS.md",
+     "state": "documented",
+     "source": "doc",
+     "note": "air-brake flaps (family P-09...P-12)"
+    }
+   ],
+   "state": "documented",
+   "cards": [
+    "T-12"
+   ]
+  },
+  "ANI-6": {
+   "requirement": "Missile hatches open when missiles fire",
+   "source": "`MissileL/R` sockets, anims",
+   "rows": [
+    {
+     "anchor": "P-07",
+     "doc": "T8_PARTS.md",
+     "state": "documented",
+     "source": "doc",
+     "note": "left missile hatch"
+    },
+    {
+     "anchor": "P-08",
+     "doc": "T8_PARTS.md",
+     "state": "documented",
+     "source": "doc",
+     "note": "right missile hatch"
+    }
+   ],
+   "state": "documented",
+   "cards": [
+    "T-12"
+   ]
+  },
+  "ANI-7": {
+   "requirement": "Steering yoke turns with steering",
+   "source": "cockpit bone",
+   "rows": [
+    {
+     "anchor": "P-13",
+     "doc": "T8_PARTS.md",
+     "state": "documented",
+     "source": "doc",
+     "note": "steering yoke - static, no bone"
+    }
+   ],
+   "state": "documented",
+   "cards": [
+    "T-12"
+   ]
+  },
+  "ANI-8": {
+   "requirement": "Canopy opens on entry",
+   "source": "`Batmobile_Skel_Ctrl_Door`",
+   "rows": [
+    {
+     "anchor": "P-06",
+     "doc": "T8_PARTS.md",
+     "state": "documented",
+     "source": "doc",
+     "note": "canopy on entry (MOD-4)"
+    }
+   ],
+   "state": "documented",
+   "cards": [
+    "T-12"
+   ]
+  },
+  "ANI-9": {
+   "requirement": "Rico sits in the Batmobile seat in a believable pose, head under the canopy",
+   "source": "`Driver` socket",
+   "rows": [
+    {
+     "anchor": "interaction.seat.driver",
+     "doc": "T9_INTERACTION.md",
+     "state": "documented",
+     "source": "doc",
+     "note": "Driver socket / seat transform"
+    }
+   ],
+   "state": "documented",
+   "cards": [
+    "T-13"
+   ]
+  },
+  "WLD-1": {
+   "requirement": "Spawned from a new Rebel Drop entry called \"Batmobile\"",
+   "source": "`profile/item.onlinec`, `task.onlinec` (RD-1)",
+   "rows": [
+    {
+     "anchor": "T-WLD1",
+     "doc": "T15_WORLD.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "the Rebel Drop item"
+    },
+    {
+     "anchor": "T-WLD2",
+     "doc": "T15_WORLD.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "the unlock link"
+    },
+    {
+     "anchor": "T-WLD3",
+     "doc": "T15_WORLD.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "the item field class"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-20"
+   ]
+  },
+  "WLD-2": {
+   "requirement": "Display name \"Batmobile\" and an icon everywhere JC3 names the vehicle",
+   "source": "`.stringlookup`, UI (POL-3)",
+   "rows": [
+    {
+     "anchor": "T-WLD4",
+     "doc": "T15_WORLD.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "name pair - blocked"
+    },
+    {
+     "anchor": "T-WLD5",
+     "doc": "T15_WORLD.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "icon"
+    },
+    {
+     "anchor": "T-WLD6",
+     "doc": "T15_WORLD.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "blurb - blocked"
+    },
+    {
+     "anchor": "T-WLD7",
+     "doc": "T15_WORLD.md",
+     "state": "keep",
+     "source": "ledger",
+     "note": "category caption"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-20"
+   ]
+  },
+  "WLD-3": {
+   "requirement": "Entry/exit points sit on the Batmobile's sides, not where the Serpente's doors were",
+   "source": "`.epe` `entry.*`/`exit.*` objects (G2-18)",
+   "rows": [
+    {
+     "anchor": "T-WLD8",
+     "doc": "T15_WORLD.md",
+     "state": "epe",
+     "source": "ledger",
+     "note": "entry points on the real sides"
+    },
+    {
+     "anchor": "T-WLD9",
+     "doc": "T15_WORLD.md",
+     "state": "epe",
+     "source": "ledger",
+     "note": "exit points"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-13",
+    "T-20"
+   ]
+  },
+  "WLD-4": {
+   "requirement": "Rico can stand/stunt on the roof; stunt points on the real roof surface",
+   "source": "`point.stunt*`, `stunt_areas.vmodc` (G2-18)",
+   "rows": [
+    {
+     "anchor": "T-WLD10",
+     "doc": "T15_WORLD.md",
+     "state": "epe",
+     "source": "ledger",
+     "note": "stunt points on the roof"
+    },
+    {
+     "anchor": "T-WLD11",
+     "doc": "T15_WORLD.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "the 3 stunt areas - blocked"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-13",
+    "T-20"
+   ]
+  },
+  "WLD-5": {
+   "requirement": "Heavy: shoves cars, flattens fences/lamp posts like a 6 t armoured vehicle",
+   "source": "mass + collision (DIM-3/4)",
+   "rows": [
+    {
+     "anchor": "T-WLD12",
+     "doc": "T15_WORLD.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "mass 6000"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-20"
+   ]
+  },
+  "WLD-6": {
+   "requirement": "Water behaviour decided (lore: not amphibious)",
+   "source": "`buoyancy`, `water_interaction` (G2-31, D-8)",
+   "rows": [
+    {
+     "anchor": "T-WLD13",
+     "doc": "T15_WORLD.md",
+     "state": "keep",
+     "source": "ledger",
+     "note": "the donor sinks (D-8)"
+    },
+    {
+     "anchor": "T-WLD14",
+     "doc": "T15_WORLD.md",
+     "state": "keep",
+     "source": "ledger",
+     "note": "water kill/stall constants"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-20"
+   ]
+  },
+  "WLD-7": {
+   "requirement": "Rico's tether, helicopter airlift and the cargo plane behave sensibly with a 6 t car",
+   "source": "tether/airlift tunes (G2-34)",
+   "rows": [
+    {
+     "anchor": "T-WLD15",
+     "doc": "T15_WORLD.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "no vehicle-side tether member"
+    },
+    {
+     "anchor": "T-WLD16",
+     "doc": "T15_WORLD.md",
+     "state": "keep",
+     "source": "ledger",
+     "note": "cargo bay share"
+    },
+    {
+     "anchor": "T-WLD17",
+     "doc": "T15_WORLD.md",
+     "state": "blocked",
+     "source": "ledger",
+     "note": "no airlift"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-20"
+   ]
+  },
+  "WLD-8": {
+   "requirement": "No traffic/NPC Batmobiles",
+   "source": "traffic spawn tables (G2-29)",
+   "rows": [
+    {
+     "anchor": "T-WLD18",
+     "doc": "T15_WORLD.md",
+     "state": "keep",
+     "source": "ledger",
+     "note": "spawn table untouched"
+    },
+    {
+     "anchor": "T-WLD19",
+     "doc": "T15_WORLD.md",
+     "state": "keep",
+     "source": "ledger",
+     "note": "traffic record untouched"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-20"
+   ]
+  },
+  "LGT-1": {
+   "requirement": "Headlights (2 cones + flares), high beams, tail/brake, wheel-arch lights, boot light, dashboard light; colours from BmAK light components",
+   "source": "`SVehicleLight` in `.epe`, lights module, `CarLight` blocks",
+   "rows": [
+    {
+     "anchor": "T-L8",
+     "doc": "T14_LIGHTS.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "head lamp"
+    },
+    {
+     "anchor": "T-L15",
+     "doc": "T14_LIGHTS.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "brake lamp"
+    },
+    {
+     "anchor": "T-L13",
+     "doc": "T14_LIGHTS.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "wheel-arch lamp"
+    },
+    {
+     "anchor": "T-L24",
+     "doc": "T14_LIGHTS.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "dashboard"
+    },
+    {
+     "anchor": "T-L35",
+     "doc": "T14_LIGHTS.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "boot"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-18",
+    "T-24",
+    "T-25"
+   ]
+  },
+  "LGT-2": {
+   "requirement": "Battle-mode spotlight, if battle mode exists (D-2)",
+   "source": "extra `SVehicleLight`",
+   "rows": [
+    {
+     "anchor": "T-L17",
+     "doc": "T14_LIGHTS.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "battle spot"
+    },
+    {
+     "anchor": "T-L18",
+     "doc": "T14_LIGHTS.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "battle head L"
+    },
+    {
+     "anchor": "T-L19",
+     "doc": "T14_LIGHTS.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "battle head R"
+    },
+    {
+     "anchor": "T-L20",
+     "doc": "T14_LIGHTS.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "battle arch"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-10",
+    "T-15",
+    "T-18",
+    "T-25"
+   ]
+  },
+  "FX-1": {
+   "requirement": "Afterburner flame + heat haze at the `Afterburner` socket during boost",
+   "source": "`effect_attachments` + a `usage` slot (T-FX3)",
+   "rows": [
+    {
+     "anchor": "T-FX7",
+     "doc": "T13_FX.md",
+     "state": "epe",
+     "source": "ledger",
+     "note": "afterburner flame"
+    },
+    {
+     "anchor": "T-FX8",
+     "doc": "T13_FX.md",
+     "state": "epe",
+     "source": "ledger",
+     "note": "always-on exhaust"
+    },
+    {
+     "anchor": "T-FX9",
+     "doc": "T13_FX.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "heat haze - out"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-17"
+   ]
+  },
+  "FX-2": {
+   "requirement": "Muzzle flashes, tracers, shell casings, missile trails, cannon impacts",
+   "source": "weapon `.ee` effects",
+   "rows": [
+    {
+     "anchor": "T-FX10",
+     "doc": "T13_FX.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "cannon muzzle flash"
+    },
+    {
+     "anchor": "T-FX11",
+     "doc": "T13_FX.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "Vulcan flash"
+    },
+    {
+     "anchor": "T-FX14",
+     "doc": "T13_FX.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "missile trail"
+    },
+    {
+     "anchor": "T-FX15",
+     "doc": "T13_FX.md",
+     "state": "next",
+     "source": "ledger",
+     "note": "cannon impact"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-17"
+   ]
+  },
+  "FX-3": {
+   "requirement": "Tyre smoke/kick-up, wall-scrape sparks, brake-light trails",
+   "source": "`tire_effects`, entity effects (T-EF1, T-FX6)",
+   "rows": [
+    {
+     "anchor": "T-FX17",
+     "doc": "T13_FX.md",
+     "state": "epe",
+     "source": "ledger",
+     "note": "tyre kick-up"
+    },
+    {
+     "anchor": "T-FX18",
+     "doc": "T13_FX.md",
+     "state": "epe",
+     "source": "ledger",
+     "note": "slide dust"
+    },
+    {
+     "anchor": "T-FX19",
+     "doc": "T13_FX.md",
+     "state": "epe",
+     "source": "ledger",
+     "note": "wall-scrape sparks"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-17"
+   ]
+  },
+  "FX-4": {
+   "requirement": "Death explosion, burn states without deform",
+   "source": "damage effects",
+   "rows": [
+    {
+     "anchor": "T-FX21",
+     "doc": "T13_FX.md",
+     "state": "epe",
+     "source": "ledger",
+     "note": "death explosion"
+    },
+    {
+     "anchor": "T-FX22",
+     "doc": "T13_FX.md",
+     "state": "epe",
+     "source": "ledger",
+     "note": "burn states"
+    },
+    {
+     "anchor": "T-FX23",
+     "doc": "T13_FX.md",
+     "state": "epe",
+     "source": "ledger",
+     "note": "engine smoke"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-17"
+   ]
+  },
+  "CAM-1": {
+   "requirement": "Chase camera at the decoded composition (7.00 m back, 1.30 m up, FOV 55…63)",
+   "source": "`bat_base.ctunec` (built in test-091)",
+   "rows": [
+    {
+     "anchor": "T-CAM5",
+     "doc": "T6_HUD_CAMERA.md",
+     "state": "documented",
+     "source": "doc",
+     "note": "the chase composition"
+    },
+    {
+     "anchor": "T-CAM2",
+     "doc": "T6_HUD_CAMERA.md",
+     "state": "documented",
+     "source": "doc",
+     "note": "FOV 85/95 horizontal -> 54.5/63.1"
+    },
+    {
+     "anchor": "T-CAM12",
+     "doc": "T6_HUD_CAMERA.md",
+     "state": "documented",
+     "source": "doc",
+     "note": "the 400 cm spring boom"
+    }
+   ],
+   "state": "documented",
+   "cards": []
+  },
+  "CAM-2": {
+   "requirement": "Battle camera framing (FOV 60) if battle mode exists",
+   "source": "second tune per variant",
+   "rows": [
+    {
+     "anchor": "T-CAM10",
+     "doc": "T6_HUD_CAMERA.md",
+     "state": "documented",
+     "source": "doc",
+     "note": "battle FOV 60 - inside the band"
+    },
+    {
+     "anchor": "T-MD11",
+     "doc": "T11_MODES.md",
+     "state": "keep",
+     "source": "ledger",
+     "note": "the value needs no change, only a mode switch"
+    }
+   ],
+   "state": "carried",
+   "cards": [
+    "T-10",
+    "T-15"
+   ]
+  },
+  "HUD-1": {
+   "requirement": "Speed, nitro meter (afterburner), health bar",
+   "source": "`hud.gfx` (T-HUD1…3)",
+   "rows": [
+    {
+     "anchor": "T-HUD1",
+     "doc": "T6_HUD_CAMERA.md",
+     "state": "documented",
+     "source": "doc",
+     "note": "speed"
+    },
+    {
+     "anchor": "T-HUD2",
+     "doc": "T6_HUD_CAMERA.md",
+     "state": "documented",
+     "source": "doc",
+     "note": "nitro meter"
+    },
+    {
+     "anchor": "T-HUD3",
+     "doc": "T6_HUD_CAMERA.md",
+     "state": "documented",
+     "source": "doc",
+     "note": "health bar"
+    }
+   ],
+   "state": "documented",
+   "cards": [
+    "T-19"
+   ]
+  },
+  "HUD-2": {
+   "requirement": "Weapon slots, reticle, cooldown/heat, lock-on",
+   "source": "T-HUD5, G2-25",
+   "rows": [
+    {
+     "anchor": "T-HUD5",
+     "doc": "T6_HUD_CAMERA.md",
+     "state": "blocked",
+     "source": "doc",
+     "note": "weapon slots/reticle, completed by T-19"
+    },
+    {
+     "anchor": "T-HUD11",
+     "doc": "T6_HUD_CAMERA.md",
+     "state": "blocked",
+     "source": "doc",
+     "note": "weapon slots"
+    },
+    {
+     "anchor": "T-HUD14",
+     "doc": "T6_HUD_CAMERA.md",
+     "state": "documented",
+     "source": "doc",
+     "note": "reticle"
+    },
+    {
+     "anchor": "T-HUD18",
+     "doc": "T6_HUD_CAMERA.md",
+     "state": "documented",
+     "source": "doc",
+     "note": "missile lock"
+    }
+   ],
+   "state": "blocked",
+   "cards": [
+    "T-10",
+    "T-19"
+   ]
+  }
+ },
+ "batches": {
+  "payloads": {
+   "T8_PARTS.json": {
+    "path": "Working/Translation/T8_PARTS.json",
+    "kind": "payload",
+    "steps": [
+     "B-02",
+     "B-04"
+    ],
+    "rows": 15,
+    "values": 15
+   },
+   "appearance_plan.json": {
+    "path": "Working/Appearance/appearance_plan.json",
+    "kind": "payload",
+    "steps": [
+     "B-02",
+     "B-03"
+    ],
+    "rows": 172,
+    "values": 172
+   },
+   "t14_lights.json": {
+    "path": "Working/Translation/t14_lights.json",
+    "kind": "payload",
+    "steps": [
+     "B-03",
+     "B-04",
+     "B-05",
+     "B-07"
+    ],
+    "rows": 28,
+    "values": 28
+   },
+   "t16_collision.json": {
+    "path": "Working/Translation/t16_collision.json",
+    "kind": "payload",
+    "steps": [
+     "B-10"
+    ],
+    "rows": 3,
+    "values": 3
+   },
+   "t7_weapons_edits.json": {
+    "path": "Working/Translation/t7_weapons_edits.json",
+    "kind": "payload",
+    "steps": [
+     "B-05",
+     "B-06"
+    ],
+    "rows": 3,
+    "values": 3
+   },
+   "t9_interaction.json": {
+    "path": "Working/Translation/t9_interaction.json",
+    "kind": "payload",
+    "steps": [
+     "B-05"
+    ],
+    "rows": 85,
+    "values": 85
+   },
+   "t10_damage_edits.json": {
+    "path": "Working/Translation/t10_damage_edits.json",
+    "kind": "payload",
+    "steps": [
+     "B-05",
+     "B-09"
+    ],
+    "rows": 9,
+    "values": 9
+   },
+   "t17_fx.json": {
+    "path": "Working/Translation/t17_fx.json",
+    "kind": "payload",
+    "steps": [
+     "B-08"
+    ],
+    "rows": 17,
+    "values": 17
+   },
+   "t12_audio_map.json": {
+    "path": "Working/Translation/t12_audio_map.json",
+    "kind": "payload",
+    "steps": [
+     "B-11"
+    ],
+    "rows": 53,
+    "values": 53
+   },
+   "t11_variants.json": {
+    "path": "Working/Translation/t11_variants.json",
+    "kind": "payload",
+    "steps": [
+     "B-12"
+    ],
+    "rows": 15,
+    "values": 15
+   },
+   "t15_world.json": {
+    "path": "Working/Translation/t15_world.json",
+    "kind": "payload",
+    "steps": [
+     "B-13"
+    ],
+    "rows": 19,
+    "values": 19
+   },
+   "t19_hud.json": {
+    "path": "Working/Translation/t19_hud.json",
+    "kind": "payload",
+    "steps": [],
+    "rows": 10,
+    "values": 10
+   },
+   "t1_handling.json": {
+    "path": "Working/Translation/t1_handling.json",
+    "kind": "payload",
+    "steps": [
+     "B-24"
+    ],
+    "rows": 14,
+    "values": 14
+   },
+   "t14_lights_keepaudit.json": {
+    "path": "Working/Translation/t14_lights_keepaudit.json",
+    "kind": "payload",
+    "steps": [
+     "B-07"
+    ],
+    "rows": 6,
+    "values": 6
+   },
+   "t12_audio_keepaudit.json": {
+    "path": "Working/Translation/t12_audio_keepaudit.json",
+    "kind": "payload",
+    "steps": [
+     "B-11"
+    ],
+    "rows": 7,
+    "values": 7
+   },
+   "t10_damage_keepaudit.json": {
+    "path": "Working/Translation/t10_damage_keepaudit.json",
+    "kind": "payload",
+    "steps": [
+     "B-09"
+    ],
+    "rows": 6,
+    "values": 6
+   },
+   "t16_collision_keepaudit.json": {
+    "path": "Working/Translation/t16_collision_keepaudit.json",
+    "kind": "payload",
+    "steps": [
+     "B-10"
+    ],
+    "rows": 4,
+    "values": 4
+   },
+   "T10_OPEN_ROWS.json": {
+    "path": "Working/Translation/T10_OPEN_ROWS.json",
+    "kind": "record",
+    "steps": [],
+    "rows": 16,
+    "values": 16
+   },
+   "damage_switches.json": {
+    "path": "Working/Translation/damage_switches.json",
+    "kind": "record",
+    "steps": [],
+    "rows": 6,
+    "values": 6
+   },
+   "t22_shape_edits.json": {
+    "path": "Working/Prep/t22_shape_edits.json",
+    "kind": "record",
+    "steps": [],
+    "rows": 8,
+    "values": 8
+   }
+  },
+  "base": [
+   {
+    "file": "t5_applied.json",
+    "values": 35,
+    "rows": 16,
+    "build": "test-085"
+   },
+   {
+    "file": "t5b_applied.json",
+    "values": 9,
+    "rows": 6,
+    "build": "test-087"
+   },
+   {
+    "file": "t5c_applied.json",
+    "values": 4,
+    "rows": 3,
+    "build": "test-088"
+   },
+   {
+    "file": "t5d_applied.json",
+    "values": 4,
+    "rows": 3,
+    "build": "test-089"
+   },
+   {
+    "file": "t5e_applied.json",
+    "values": 2,
+    "rows": 1,
+    "build": "test-090"
+   }
+  ],
+  "no_payload_steps": {
+   "B-01": "scaffold: copies test-091 and applies no new value (identity control)",
+   "B-14": "release candidate: receipts and installer only",
+   "B-17": "effect writer: the private `.effc` copies and FX-1…4 are written by the writer run (T-FX1/T-FX2)",
+   "B-18": "EMP disable: the immobiliser + burst write is the card's own gate; T-WP15 has no value until it runs",
+   "B-19": "drone hacker: the allegiance-flip rows are blocked on the T-11 module, per card B-19",
+   "B-20": "sonar pulse: the pulse/reveal rows are written by the card's own step, per card B-20",
+   "B-21": "vehicle tracker: the weapon entity + POI graph are the card's own output (T-WP9)",
+   "B-22": "droop and up-travel: one `max_length_offset` write in a private copy, per card B-22",
+   "B-23": "per-mode rate: no suspension edit exists while B-12 is unbuilt (card B-23)",
+   "B-25": "lens flares and light units: part-side emitters + one probe build, per card B-25",
+   "B-26": "per-entity audio override: private bank + binding rows + two takes, per card B-26"
+  },
+  "steps": [
+   {
+    "id": "B-01",
+    "title": "Build scaffold",
+    "size": "S",
+    "deps": "TX",
+    "serves": "all",
+    "out": "tool + `Builds/bm-001/` (identity build: no edits) as the control.",
+    "done": "`bm-001` `.ee`/`.toc` are byte-identical to test-091's (control proves the scaffold)."
+   },
+   {
+    "id": "B-02",
+    "title": "Split the body into movable parts (old PRT-2)",
+    "size": "L",
+    "deps": "B-01, T-12",
+    "serves": "APP-5, ANI-2…8",
+    "out": "`Working/Appearance/build_parts/` RBMs; `parts_manifest.json` (part, pivot, faces per LOD).",
+    "done": "reassembling every part at its pivot reproduces the body silhouette at ≥ 99.9 % (`silhouette_check.py`), 0 lost faces vs before the split, budget green."
+   },
+   {
+    "id": "B-03",
+    "title": "Emissive `CarLight` blocks and light parts (old LGT-2)",
+    "size": "M",
+    "deps": "B-02, T-18",
+    "serves": "APP-4, LGT-1",
+    "out": "light-part RBMs; manifest rows.",
+    "done": "`spec_check.py` passes on every new block; `GEOMETRY.md`-style decode of the written block round-trips."
+   },
+   {
+    "id": "B-04",
+    "title": "Parts module (`vehicle_parts.vmodc`)",
+    "size": "M",
+    "deps": "B-02, B-03, T-12, T-14, T-18",
+    "serves": "APP-5, ANI, ARM-4, LGT-1",
+    "out": "`Working/Parts/bm_vehicle_parts.json` (edit spec) + the module in the build.",
+    "done": "`jc3parts.py check` and `jc3adf.py` re-read the built module; every part's model resolves to a file in the build; `.toc` record for the module has a non-zero offset."
+   },
+   {
+    "id": "B-05",
+    "title": "Entity graph (`.epe`)",
+    "size": "L",
+    "deps": "B-04, T-11, T-13, T-14, T-18",
+    "serves": "WPN, WLD-3/4, ARM-1, LGT-1, ANI-9",
+    "out": "`Working/Entity/bm_epe_edits.json` + the `.epe` in the build.",
+    "done": "`ConvertProperty` round-trips the built `.epe` to identical XML; every weapon point, light and part name resolves (script check); `.epe` object count = base + planned additions."
+   },
+   {
+    "id": "B-06",
+    "title": "Weapon entities (private copies)",
+    "size": "M",
+    "deps": "B-05, T-11",
+    "serves": "WPN-1…5",
+    "out": "weapon files in the build tree; `Working/Weapons/manifest.json`.",
+    "done": "every weapon path the `.epe` names exists in the build; edited tunes re-read with the expected values (`jc3weapons.py --check --root <build>`)."
+   },
+   {
+    "id": "B-07",
+    "title": "Lights module rewrite (old LGT-1 build half)",
+    "size": "S",
+    "deps": "B-05",
+    "serves": "LGT-1/2",
+    "out": "",
+    "done": "every entry names a part that exists with `has_lights` = 1."
+   },
+   {
+    "id": "B-08",
+    "title": "Effect attachments",
+    "size": "S",
+    "deps": "B-05, T-17",
+    "serves": "FX-1…4",
+    "out": "",
+    "done": "every effect path resolves; usage hash exists in the fleet vocabulary."
+   },
+   {
+    "id": "B-09",
+    "title": "Private health module and damage types (old DMG-2/DMG-3)",
+    "size": "S",
+    "deps": "B-04, T-14",
+    "serves": "ARM-1…6",
+    "out": "",
+    "done": "`damage_audit.py` green; `damage_predict.py --root <build>` prints the T-14 table."
+   },
+   {
+    "id": "B-10",
+    "title": "Collision (only if T-22 resolved) — REOPENED 2026-11-07",
+    "size": "M",
+    "deps": "B-02, T-22 (reopened)",
+    "serves": "DIM-4",
+    "out": "",
+    "done": "`jc3hkx.py check --all --file` on the built file; body-0 shape union within 5 cm of the two chassis boxes and the pod shape within 5 cm at 4.000 deg; the render-mesh gate moves to the raycast body (B-10b/body 42); the 1 constraint carried or named as an omission with its missing writer."
+   },
+   {
+    "id": "B-11",
+    "title": "Audio bank",
+    "size": "M",
+    "deps": "T-16",
+    "serves": "AUD-1…7",
+    "out": "bank file(s) in the build tree; `Working/Audio/bm_bank_manifest.json`.",
+    "done": "every mapped event resolves; sample count/lengths match the manifest; the installer handles and rolls back the bank (old AUD-5)."
+   },
+   {
+    "id": "B-12",
+    "title": "Variants (only if D-2 = two variants) — REOPENED 2026-11-06",
+    "size": "S",
+    "deps": "B-05…B-11, T-15 re-run",
+    "serves": "MOD-1/2",
+    "out": "",
+    "done": "`aafdiff` between variants lists only the files the variant table names; each variant holds its own values for T-MD5/T-MD6/T-MD7/T-MD13, and T-MD8 and T-MD14 stay **named omissions** — the pivot has no carrier even with two variants (G2-21) and the `BattleMode` usage has no consumer (U1)."
+   },
+   {
+    "id": "B-13",
+    "title": "Rebel Drop entry, name, standalone/traffic (old RD-1, POL-3, EXP-2)",
+    "size": "M",
+    "deps": "B-12, T-20",
+    "serves": "WLD-1/2/8, MOD-5",
+    "out": "",
+    "done": "decoded `item.onlinec`/`task.onlinec` show the new entries; the entity paths they name exist in the build."
+   },
+   {
+    "id": "B-14",
+    "title": "Release candidate tree",
+    "size": "S",
+    "deps": "B-01…B-13",
+    "serves": "all",
+    "out": "`Builds/bm-RC1/`.",
+    "done": "receipt lists every file with sha256; installer `-WhatIf` lists exactly those."
+   },
+   {
+    "id": "B-17",
+    "title": "Effect writer (private `.effc` copies)",
+    "size": "S",
+    "deps": "B-05, T-17",
+    "serves": "FX-1…4",
+    "out": "private `.effc` files in the build tree, `Working/Effects/bm_effects.json`, the `.epe` attachment rows.",
+    "done": "`python Tools/scripts/effc_writer.py check` passes; every built effect re-reads through the built `.toc` with each patched member equal to its T-17 number and 0 unexplained bytes."
+   },
+   {
+    "id": "B-18",
+    "title": "EMP disable write path (Immobiliser + EMP burst)",
+    "size": "M",
+    "deps": "B-05, B-06, T-11",
+    "serves": "WPN-4, WPN-5, MOD-1",
+    "out": "`Working/Weapons/emp/` (cloned tune + weapon entity rows + pulse object), the probe build under `Builds/`, the four predictions in `Working/Q/PREDICTIONS.md`.",
+    "done": "Q-EMP-1…4 answered and the duration written from the measurement; failing that, the probes named and the card stays `todo`."
+   },
+   {
+    "id": "B-19",
+    "title": "Drone hacker chain (allegiance flip)",
+    "size": "M",
+    "deps": "B-05, B-06, T-11",
+    "serves": "WPN-7",
+    "out": "`Working/Weapons/hacker/` (two attachment rows, the interaction objects), the probe build.",
+    "done": "a probe records a stock drone stopping fire for its own side and firing for the player's; the HUD line (`NotEnoughEnergyThought` -> a POI label) is placed."
+   },
+   {
+    "id": "B-20",
+    "title": "Sonar pulse and reveal",
+    "size": "M",
+    "deps": "B-05, T-11, T-17",
+    "serves": "WPN-8",
+    "out": "`Working/Effects/sonar/` (private `.effc`), the pulse + tune rows, the audio import rows.",
+    "done": "the pulse fires from a car action, pushes a parked car without damaging it, plays `Pulse_Search`/`Pulse_Full`, and N markers appear and expire."
+   },
+   {
+    "id": "B-21",
+    "title": "Vehicle tracker (projectile + distance HUD)",
+    "size": "M",
+    "deps": "B-05, B-06, T-11, T-19",
+    "serves": "WPN-9",
+    "out": "`Working/Weapons/tracker/` (tune + fire position + projectile rows), the tracker graph, the HUD element row for T-19.",
+    "done": "the round homes onto a moving car and a POI with a live distance follows it."
+   },
+   {
+    "id": "B-22",
+    "title": "Droop and up-travel (the two travels JC3 has no member for)",
+    "size": "S",
+    "deps": "T-S6, T-S3",
+    "serves": "T-S6",
+    "out": "the private module row; one line per axle on `T-S6` in `Working/Translation/T3_COVERAGE.md`.",
+    "done": "the built module reads back `length` 0.40 / `max_length_offset` 0.30 / `min_length` 0, and a Q-2 take shows the wheel extending 0.30 m and compressing onto the 0.40 m stop."
+   },
+   {
+    "id": "B-23",
+    "title": "Pursuit-mode and stationary spring rate (no per-mode member)",
+    "size": "S",
+    "deps": "T-S6, B-12",
+    "serves": "T-S6",
+    "out": "the variant row or the omission lines.",
+    "done": "a take shows the authored ride height in both modes, or the row names all three numbers as omissions with the 172% sag beside them."
+   },
+   {
+    "id": "B-24",
+    "title": "Handling values: the three keep-audits' replacements",
+    "size": "M",
+    "deps": "T-1",
+    "serves": "T-ST2, T-ST3, T-ST4, T-ST6, T-K3, T-K4, T-DR1, T-E2, T-E5, T-B1, T-B4, T-A3, T-G4",
+    "out": "the private tree plus a read-back of each of the fourteen members through the built `.toc`.",
+    "done": "all fifteen read back at the ledger values; the three Q-2 takes named in the audits (lock timing, handbrake stop/yaw, 5 km/h drift entry) record their numbers."
+   },
+   {
+    "id": "B-25",
+    "title": "Lens flares and the light units (17 flare entries, 4 cone/intensity members)",
+    "size": "S",
+    "deps": "B-03, B-07",
+    "serves": "T-LG6",
+    "out": "the part-side emitter rows in `Working/Translation/t14_lights.json`, one probe build.",
+    "done": "17 of 17 flare entries have a named part and socket in the built entity, the two orphan sockets are recorded absent, and the take shows the beam reach/cone change proportionally when the `range`/`angle`/`multiplier` triple is moved by a known ratio."
+   },
+   {
+    "id": "B-26",
+    "title": "Per-entity audio override (21 of 45 pinned GUIDs)",
+    "size": "M",
+    "deps": "B-11",
+    "serves": "AUD-2, T-AU2",
+    "out": "the private bank plus the per-entity binding rows; a manifest list of the 21 GUIDs.",
+    "done": "a stock car and the Batmobile play different samples for the same 21 GUIDs in one session (recorded takes), and the 24 `vehicles.bank` GUIDs are unchanged."
+   }
+  ]
+ },
+ "t_cards": [
+  {
+   "id": "T-10",
+   "title": "Re-open the `out` rows with the G2 evidence",
+   "out": "updated rows; MODLOG section with a table old row → new disposition → evidence file."
+  },
+  {
+   "id": "T-11",
+   "title": "Weapons translation",
+   "out": "`Working/Translation/T7_WEAPONS.md` + rows (doc `T-7`), plus a weapon edits file per cloned weapon: `Working/Translation/t7_weapons_edits.json` (same shape as `t5*_edits.json`)."
+  },
+  {
+   "id": "T-12",
+   "title": "Moving-parts translation",
+   "out": "`Working/Translation/T8_PARTS.md` + rows (doc `T-8`)."
+  },
+  {
+   "id": "T-13",
+   "title": "Interaction translation",
+   "out": "`Working/Translation/T9_INTERACTION.md` + `Working/Translation/t9_interaction.json` (object id → new transform), generated by `Tools/scripts/t9_interaction.py`."
+  },
+  {
+   "id": "T-14",
+   "title": "Damage and armour translation",
+   "out": "rows in T-2b / new doc `T10_DAMAGE.md`; `t10_damage_edits.json`."
+  },
+  {
+   "id": "T-15",
+   "title": "Modes translation",
+   "out": "`Working/Translation/T11_MODES.md` + rows; variant table `t11_variants.json`."
+  },
+  {
+   "id": "T-16",
+   "title": "Audio translation",
+   "out": "`Working/Translation/T12_AUDIO.md` + `t12_audio_map.json`."
+  },
+  {
+   "id": "T-17",
+   "title": "Effects translation",
+   "out": "`Working/Translation/T13_FX.md` + rows."
+  },
+  {
+   "id": "T-18",
+   "title": "Lights translation completion",
+   "out": "rows; `Working/Translation/t14_lights.json`."
+  },
+  {
+   "id": "T-19",
+   "title": "HUD translation",
+   "out": "rows in `T6_HUD_CAMERA.md`."
+  },
+  {
+   "id": "T-20",
+   "title": "World translation",
+   "out": "`Working/Translation/T15_WORLD.md` + rows."
+  },
+  {
+   "id": "T-21",
+   "title": "Appearance completion",
+   "out": "`Working/Appearance/APPEARANCE_PLAN.md` + `appearance_progress.py` reflecting the plan."
+  },
+  {
+   "id": "T-22",
+   "title": "Collision translation (only if G2-30 succeeded) — REOPENED 2026-11-07",
+   "out": "rows + `Working/Translation/t16_collision.json` + `T22_REOPEN.md`."
+  },
+  {
+   "id": "T-23",
+   "title": "Ledger close-out and build batches",
+   "out": "`STATUS.md` regenerated; `Working/Translation/BUILD_BATCHES.md`."
+  },
+  {
+   "id": "T-24",
+   "title": "Lamp-bound flare sprite (the flare member JC3 does not have)",
+   "out": "rows or a `.epe` edit spec; one line per socket in `T14_LIGHTS.md` §6."
+  },
+  {
+   "id": "T-25",
+   "title": "Lamp state and pulse (forensics rig, muzzle flash)",
+   "out": "one carrier per state; the four rows lose their \"no member\" note."
+  },
+  {
+   "id": "T-26",
+   "title": "Decode the Batmobile drag triple (`Drag` / `DragNoLoad` / `DriftDrag`)",
+   "out": "three values or three proven absences, on the T-R2 row."
+  }
+ ]
+}

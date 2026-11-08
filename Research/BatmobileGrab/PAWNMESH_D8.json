@@ -1,0 +1,1266 @@
+{
+ "schema": 1,
+ "generated_by": "Tools/scripts/grab_pawnmesh_d8.py --write",
+ "card": "G3-02e follow-up: the float at [Pawn.Mesh+0xd8] and the state it measures",
+ "image": {
+  "path": "E:\\Games\\Batman - Arkham Knight\\Binaries\\Win64\\BatmanAK.exe",
+  "size": 55101440,
+  "base": "0x140000000"
+ },
+ "layout": {
+  "sdk": {
+   "vehicle_chain": [
+    "RVehicleBatmobileBase",
+    "RVehicle",
+    "AkVehicle",
+    "SVehicle",
+    "Vehicle",
+    "Pawn",
+    "Actor"
+   ],
+   "pawn_in_chain": true,
+   "pawn_mesh_entries": [
+    {
+     "name": "Mesh",
+     "kind": "ComponentProperty",
+     "type": "SkeletalMeshComponent",
+     "offset": 908
+    }
+   ],
+   "props_at_mesh_slot_on_vehicle_chain": [
+    {
+     "class": "Pawn",
+     "name": "Mesh",
+     "kind": "ComponentProperty",
+     "type": "SkeletalMeshComponent",
+     "mask": null
+    }
+   ],
+   "props_at_float_offset_on_vehicle_chain": [],
+   "sdk_classes": 41,
+   "mesh_class_present_in_sdk_dump": false,
+   "source": "E:\\Modding\\JC3-Batmobile\\Research\\BatmobileGrab\\BMSDK_OFFSETS.json"
+  },
+  "gcs": {
+   "mesh_class": "SkeletalMeshComponent",
+   "gcs_chain": [
+    {
+     "class": "SkeletalMeshComponent",
+     "base": "MeshComponent",
+     "size": 2648,
+     "file": "Engine/SkeletalMeshComponent.g.cs"
+    },
+    {
+     "class": "MeshComponent",
+     "base": "PrimitiveComponent",
+     "size": 640,
+     "file": "Engine/MeshComponent.g.cs"
+    },
+    {
+     "class": "PrimitiveComponent",
+     "base": "ActorComponent",
+     "size": 540,
+     "file": "Engine/PrimitiveComponent.g.cs"
+    },
+    {
+     "class": "ActorComponent",
+     "base": "Component",
+     "size": 122,
+     "file": "Engine/ActorComponent.g.cs"
+    },
+    {
+     "class": "Component",
+     "base": "GameObject",
+     "size": 100,
+     "file": "Core/Component.g.cs"
+    },
+    {
+     "class": "GameObject",
+     "base": "IGameObject",
+     "size": 84,
+     "file": "Core/GameObject.g.cs"
+    }
+   ],
+   "span_at_float_offset": {
+    "class": "PrimitiveComponent",
+    "name": "LocalToWorld",
+    "kind": "StructProperty",
+    "offset": 176,
+    "inside": true,
+    "width": 64,
+    "delta": 40,
+    "file": "Engine/PrimitiveComponent.g.cs",
+    "line": 2063,
+    "next_offset": 240
+   },
+   "props_starting_at_float_offset": [],
+   "float_offset": 216,
+   "fmatrix": {
+    "present": true,
+    "size": 64,
+    "members": {
+     "0": "XPlane",
+     "16": "YPlane",
+     "32": "ZPlane",
+     "48": "WPlane"
+    }
+   },
+   "fplane": {
+    "present": true,
+    "size": 16,
+    "members": {
+     "12": "W"
+    }
+   },
+   "vehicle_chain_gcs": []
+  }
+ },
+ "comparing_function": {
+  "function": [
+   5369118352,
+   5369118667
+  ],
+  "disassembly": [
+   {
+    "at": 5369118352,
+    "text": "0x140063e90: mov qword ptr [rsp + 0x18], rbx"
+   },
+   {
+    "at": 5369118357,
+    "text": "0x140063e95: mov qword ptr [rsp + 0x10], rdx"
+   },
+   {
+    "at": 5369118362,
+    "text": "0x140063e9a: push rdi"
+   },
+   {
+    "at": 5369118363,
+    "text": "0x140063e9b: sub rsp, 0x20"
+   },
+   {
+    "at": 5369118367,
+    "text": "0x140063e9f: mov rax, qword ptr [rcx + 0x9c]"
+   },
+   {
+    "at": 5369118374,
+    "text": "0x140063ea6: mov rbx, rcx"
+   },
+   {
+    "at": 5369118377,
+    "text": "0x140063ea9: mov rcx, qword ptr [rax + 0x5ac]"
+   },
+   {
+    "at": 5369118384,
+    "text": "0x140063eb0: mov rax, qword ptr [rcx]"
+   },
+   {
+    "at": 5369118387,
+    "text": "0x140063eb3: call qword ptr [rax + 0xaa0]"
+   },
+   {
+    "at": 5369118393,
+    "text": "0x140063eb9: lea rdx, [rsp + 0x30]"
+   },
+   {
+    "at": 5369118398,
+    "text": "0x140063ebe: mov rcx, rbx"
+   },
+   {
+    "at": 5369118401,
+    "text": "0x140063ec1: mov rdi, rax"
+   },
+   {
+    "at": 5369118404,
+    "text": "0x140063ec4: call 0x140fa3c70"
+   },
+   {
+    "at": 5369118409,
+    "text": "0x140063ec9: mov rdx, qword ptr [rsp + 0x38]"
+   },
+   {
+    "at": 5369118414,
+    "text": "0x140063ece: cmp rdx, qword ptr [rax]"
+   },
+   {
+    "at": 5369118417,
+    "text": "0x140063ed1: je 0x140063fbe"
+   },
+   {
+    "at": 5369118423,
+    "text": "0x140063ed7: cmp qword ptr [rbx + 0x1494], 0"
+   },
+   {
+    "at": 5369118431,
+    "text": "0x140063edf: je 0x140063fbe"
+   },
+   {
+    "at": 5369118437,
+    "text": "0x140063ee5: mov qword ptr [rsp + 0x30], 0x240"
+   },
+   {
+    "at": 5369118446,
+    "text": "0x140063eee: cmp rdx, qword ptr [rsp + 0x30]"
+   },
+   {
+    "at": 5369118451,
+    "text": "0x140063ef3: jne 0x140063f2f"
+   },
+   {
+    "at": 5369118453,
+    "text": "0x140063ef5: mov rax, qword ptr [rbx + 0x38c]"
+   },
+   {
+    "at": 5369118460,
+    "text": "0x140063efc: movss xmm1, dword ptr [rax + 0xd8]"
+   },
+   {
+    "at": 5369118468,
+    "text": "0x140063f04: comiss xmm1, dword ptr [rip + 0x1b8ddd1]"
+   },
+   {
+    "at": 5369118475,
+    "text": "0x140063f0b: jb 0x140063fbe"
+   },
+   {
+    "at": 5369118481,
+    "text": "0x140063f11: movss xmm0, dword ptr [rbx + 0x1d20]"
+   },
+   {
+    "at": 5369118489,
+    "text": "0x140063f19: comiss xmm0, dword ptr [rbx + 0x1d18]"
+   },
+   {
+    "at": 5369118496,
+    "text": "0x140063f20: jae 0x140063f2f"
+   },
+   {
+    "at": 5369118498,
+    "text": "0x140063f22: comiss xmm1, dword ptr [rip + 0x1b6a9cf]"
+   },
+   {
+    "at": 5369118505,
+    "text": "0x140063f29: jb 0x140063fbe"
+   },
+   {
+    "at": 5369118511,
+    "text": "0x140063f2f: cmp dword ptr [rbx + 0x112c], 0"
+   },
+   {
+    "at": 5369118518,
+    "text": "0x140063f36: jne 0x140063fbe"
+   },
+   {
+    "at": 5369118524,
+    "text": "0x140063f3c: test byte ptr [rbx + 0x11dc], 0x40"
+   },
+   {
+    "at": 5369118531,
+    "text": "0x140063f43: jne 0x140063fbe"
+   },
+   {
+    "at": 5369118533,
+    "text": "0x140063f45: test byte ptr [rbx + 0x11d8], 2"
+   },
+   {
+    "at": 5369118540,
+    "text": "0x140063f4c: jne 0x140063f63"
+   },
+   {
+    "at": 5369118542,
+    "text": "0x140063f4e: mov rax, qword ptr [rdi + 0x754]"
+   },
+   {
+    "at": 5369118549,
+    "text": "0x140063f55: test rax, rax"
+   },
+   {
+    "at": 5369118552,
+    "text": "0x140063f58: je 0x140063f63"
+   },
+   {
+    "at": 5369118554,
+    "text": "0x140063f5a: test byte ptr [rax + 0x164], 0x80"
+   },
+   {
+    "at": 5369118561,
+    "text": "0x140063f61: je 0x140063fbe"
+   },
+   {
+    "at": 5369118563,
+    "text": "0x140063f63: mov rcx, qword ptr [rbx + 0x6a4]"
+   },
+   {
+    "at": 5369118570,
+    "text": "0x140063f6a: call 0x1400620b0"
+   },
+   {
+    "at": 5369118575,
+    "text": "0x140063f6f: test dword ptr [rax + 0x294], 0x1000"
+   },
+   {
+    "at": 5369118585,
+    "text": "0x140063f79: jne 0x140063fbe"
+   },
+   {
+    "at": 5369118587,
+    "text": "0x140063f7b: xorps xmm0, xmm0"
+   },
+   {
+    "at": 5369118590,
+    "text": "0x140063f7e: ucomiss xmm0, dword ptr [rbx + 0x1990]"
+   },
+   {
+    "at": 5369118597,
+    "text": "0x140063f85: jne 0x140063fbe"
+   },
+   {
+    "at": 5369118599,
+    "text": "0x140063f87: mov rax, qword ptr [rbx]"
+   },
+   {
+    "at": 5369118602,
+    "text": "0x140063f8a: mov rcx, rbx"
+   },
+   {
+    "at": 5369118605,
+    "text": "0x140063f8d: call qword ptr [rax + 0x1120]"
+   },
+   {
+    "at": 5369118611,
+    "text": "0x140063f93: test eax, eax"
+   },
+   {
+    "at": 5369118613,
+    "text": "0x140063f95: je 0x140063fbe"
+   },
+   {
+    "at": 5369118615,
+    "text": "0x140063f97: mov rax, qword ptr [rbx]"
+   },
+   {
+    "at": 5369118618,
+    "text": "0x140063f9a: mov rdx, qword ptr [rsp + 0x38]"
+   },
+   {
+    "at": 5369118623,
+    "text": "0x140063f9f: xor r9d, r9d"
+   },
+   {
+    "at": 5369118626,
+    "text": "0x140063fa2: xor r8d, r8d"
+   },
+   {
+    "at": 5369118629,
+    "text": "0x140063fa5: mov rcx, rbx"
+   },
+   {
+    "at": 5369118632,
+    "text": "0x140063fa8: call qword ptr [rax + 0x280]"
+   },
+   {
+    "at": 5369118638,
+    "text": "0x140063fae: mov eax, 1"
+   },
+   {
+    "at": 5369118643,
+    "text": "0x140063fb3: mov rbx, qword ptr [rsp + 0x40]"
+   },
+   {
+    "at": 5369118648,
+    "text": "0x140063fb8: add rsp, 0x20"
+   },
+   {
+    "at": 5369118652,
+    "text": "0x140063fbc: pop rdi"
+   },
+   {
+    "at": 5369118653,
+    "text": "0x140063fbd: ret "
+   },
+   {
+    "at": 5369118654,
+    "text": "0x140063fbe: xor eax, eax"
+   },
+   {
+    "at": 5369118656,
+    "text": "0x140063fc0: mov rbx, qword ptr [rsp + 0x40]"
+   },
+   {
+    "at": 5369118661,
+    "text": "0x140063fc5: add rsp, 0x20"
+   },
+   {
+    "at": 5369118665,
+    "text": "0x140063fc9: pop rdi"
+   },
+   {
+    "at": 5369118666,
+    "text": "0x140063fca: ret "
+   }
+  ],
+  "mesh_load": "0x140063ef5: mov rax, qword ptr [rbx + 0x38c]",
+  "float_load": "0x140063efc: movss xmm1, dword ptr [rax + 0xd8]",
+  "compares": [
+   {
+    "at": 5369118468,
+    "text": "0x140063f04: comiss xmm1, dword ptr [rip + 0x1b8ddd1]",
+    "const_va": 5398011100,
+    "value": -0.707,
+    "next": "0x140063f0b: jb 0x140063fbe",
+    "branch": "jb",
+    "branch_target": 5369118654,
+    "target_is_reject": true,
+    "expected_const_va": 5398011100,
+    "operand_is_memory": true
+   },
+   {
+    "at": 5369118498,
+    "text": "0x140063f22: comiss xmm1, dword ptr [rip + 0x1b6a9cf]",
+    "const_va": 5397866744,
+    "value": 0.707,
+    "next": "0x140063f29: jb 0x140063fbe",
+    "branch": "jb",
+    "branch_target": 5369118654,
+    "target_is_reject": true,
+    "expected_const_va": 5397866744,
+    "operand_is_memory": true
+   }
+  ],
+  "gate_reads": [
+   {
+    "at": 5369118423,
+    "text": "0x140063ed7: cmp qword ptr [rbx + 0x1494], 0",
+    "offset": 5268,
+    "field": "TransformationAnimNode"
+   },
+   {
+    "at": 5369118481,
+    "text": "0x140063f11: movss xmm0, dword ptr [rbx + 0x1d20]",
+    "offset": 7456,
+    "field": "BatmobileStuckTimeFlip"
+   },
+   {
+    "at": 5369118489,
+    "text": "0x140063f19: comiss xmm0, dword ptr [rbx + 0x1d18]",
+    "offset": 7448,
+    "field": "BatmobileStuckTime"
+   },
+   {
+    "at": 5369118511,
+    "text": "0x140063f2f: cmp dword ptr [rbx + 0x112c], 0",
+    "offset": 4396,
+    "field": "MatineeControlRefCount"
+   },
+   {
+    "at": 5369118524,
+    "text": "0x140063f3c: test byte ptr [rbx + 0x11dc], 0x40",
+    "offset": 4572,
+    "field": "flags_11DC"
+   },
+   {
+    "at": 5369118533,
+    "text": "0x140063f45: test byte ptr [rbx + 0x11d8], 2",
+    "offset": 4568,
+    "field": "flags_11D8"
+   },
+   {
+    "at": 5369118590,
+    "text": "0x140063f7e: ucomiss xmm0, dword ptr [rbx + 0x1990]",
+    "offset": 6544,
+    "field": "PreventModeSwitchDuration"
+   }
+  ],
+  "epilogues": {
+   "reject": 5369118654,
+   "accept": 5369118638
+  }
+ },
+ "text_sites": {
+  "mesh_slot": 908,
+  "disp_occurrences": 893,
+  "functions": 503,
+  "functions_with_mesh_load": 352,
+  "outside_functions": 18,
+  "matrix_row_triples": {
+   "row1": [
+    "0x140051a60",
+    "0x140053850",
+    "0x1400563a0",
+    "0x140058f10",
+    "0x140059050",
+    "0x1400594a0",
+    "0x14005b040",
+    "0x140064d28",
+    "0x140065050",
+    "0x1400659c0",
+    "0x140066b79",
+    "0x14006ae00",
+    "0x14008a330",
+    "0x14008e790",
+    "0x1400ace78",
+    "0x1400adda0",
+    "0x1401228b7",
+    "0x1401c1999",
+    "0x14091ae58",
+    "0x14091f7a0"
+   ],
+   "row2": [
+    "0x1400536d0",
+    "0x140053850",
+    "0x140057e80",
+    "0x1400594a0",
+    "0x14005b040",
+    "0x14005e790",
+    "0x14005f4e0",
+    "0x140065050",
+    "0x140065488",
+    "0x140066b79",
+    "0x14006ae00",
+    "0x140074d60",
+    "0x14007ccf7",
+    "0x14008a330",
+    "0x1400abdb2",
+    "0x1400ace78",
+    "0x1400adda0",
+    "0x1401228b7",
+    "0x1401c1999",
+    "0x140390720",
+    "0x140415e42",
+    "0x1408fdca0",
+    "0x14091ae58",
+    "0x14091f7a0"
+   ],
+   "row0": [
+    "0x140053850",
+    "0x140059050",
+    "0x1400594a0",
+    "0x140064d28",
+    "0x140065050",
+    "0x1400659c0",
+    "0x140066b79",
+    "0x14006ae00",
+    "0x140074b40",
+    "0x140074d60",
+    "0x140077400",
+    "0x14008a330",
+    "0x1400926b0",
+    "0x1400ab867",
+    "0x1400ac180",
+    "0x1400ace78",
+    "0x1400adda0",
+    "0x1401228b7",
+    "0x1401c1999",
+    "0x14091ae58",
+    "0x14091f7a0"
+   ],
+   "row3": [
+    "0x140057e80",
+    "0x140065050",
+    "0x140066b79",
+    "0x14008a330",
+    "0x14009a8c0",
+    "0x1400a9f50",
+    "0x1400ace78",
+    "0x1400adda0",
+    "0x140107f22",
+    "0x1401c1999",
+    "0x14091f7a0"
+   ]
+  },
+  "d8_reads": [
+   {
+    "at": 5368812529,
+    "in_function": [
+     5368812432,
+     5368812585
+    ],
+    "text": "0x1400193f1: comiss xmm0, dword ptr [r8 + 0xd8]",
+    "offset": 216,
+    "const_va": 5397867200,
+    "const": 0.85,
+    "const_load": "0x1400193e9: movss xmm0, dword ptr [rip + 0x1bb56cf]"
+   },
+   {
+    "at": 5369051051,
+    "in_function": [
+     5369050832,
+     5369051204
+    ],
+    "text": "0x1400537ab: movss xmm3, dword ptr [rax + 0xd8]",
+    "offset": 216
+   },
+   {
+    "at": 5369051454,
+    "in_function": [
+     5369051216,
+     5369053823
+    ],
+    "text": "0x14005393e: movss xmm13, dword ptr [rax + 0xd8]",
+    "offset": 216
+   },
+   {
+    "at": 5369069646,
+    "in_function": [
+     5369069184,
+     5369072326
+    ],
+    "text": "0x14005804e: movss xmm11, dword ptr [rax + 0xd8]",
+    "offset": 216
+   },
+   {
+    "at": 5369075000,
+    "in_function": [
+     5369074848,
+     5369076443
+    ],
+    "text": "0x140059538: movss xmm15, dword ptr [rax + 0xd8]",
+    "offset": 216
+   },
+   {
+    "at": 5369075885,
+    "in_function": [
+     5369074848,
+     5369076443
+    ],
+    "text": "0x1400598ad: mulss xmm1, dword ptr [rcx + 0xd8]",
+    "offset": 216
+   },
+   {
+    "at": 5369083217,
+    "in_function": [
+     5369081920,
+     5369083963
+    ],
+    "text": "0x14005b551: movss xmm3, dword ptr [rax + 0xd8]",
+    "offset": 216
+   },
+   {
+    "at": 5369098843,
+    "in_function": [
+     5369096080,
+     5369099475
+    ],
+    "text": "0x14005f25b: mulss xmm1, dword ptr [rcx + 0xd8]",
+    "offset": 216
+   },
+   {
+    "at": 5369099672,
+    "in_function": [
+     5369099488,
+     5369101317
+    ],
+    "text": "0x14005f598: movss xmm3, dword ptr [rax + 0xd8]",
+    "offset": 216
+   },
+   {
+    "at": 5369118460,
+    "in_function": [
+     5369118352,
+     5369118667
+    ],
+    "text": "0x140063efc: movss xmm1, dword ptr [rax + 0xd8]",
+    "offset": 216
+   },
+   {
+    "at": 5369123219,
+    "in_function": [
+     5369122896,
+     5369123968
+    ],
+    "text": "0x140065193: mulss xmm5, dword ptr [rax + 0xd8]",
+    "offset": 216
+   },
+   {
+    "at": 5369123621,
+    "in_function": [
+     5369122896,
+     5369123968
+    ],
+    "text": "0x140065325: mulss xmm5, dword ptr [rax + 0xd8]",
+    "offset": 216
+   },
+   {
+    "at": 5369124266,
+    "in_function": [
+     5369123976,
+     5369125216
+    ],
+    "text": "0x1400655aa: mulss xmm0, dword ptr [rcx + 0xd8]",
+    "offset": 216
+   },
+   {
+    "at": 5369125470,
+    "in_function": [
+     5369125312,
+     5369129186
+    ],
+    "text": "0x140065a5e: movss xmm0, dword ptr [rax + 0xd8]",
+    "offset": 216
+   },
+   {
+    "at": 5369127920,
+    "in_function": [
+     5369125312,
+     5369129186
+    ],
+    "text": "0x1400663f0: movss xmm0, dword ptr [rcx + 0xd8]",
+    "offset": 216
+   },
+   {
+    "at": 5369130606,
+    "in_function": [
+     5369129849,
+     5369136702
+    ],
+    "text": "0x140066e6e: movss xmm6, dword ptr [r11 + 0xd8]",
+    "offset": 216
+   },
+   {
+    "at": 5369130727,
+    "in_function": [
+     5369129849,
+     5369136702
+    ],
+    "text": "0x140066ee7: mulss xmm3, dword ptr [r11 + 0xd8]",
+    "offset": 216
+   },
+   {
+    "at": 5369150432,
+    "in_function": [
+     5369146880,
+     5369151623
+    ],
+    "text": "0x14006bbe0: mulss xmm6, dword ptr [rax + 0xd8]",
+    "offset": 216
+   },
+   {
+    "at": 5369150767,
+    "in_function": [
+     5369146880,
+     5369151623
+    ],
+    "text": "0x14006bd2f: comiss xmm0, dword ptr [rcx + 0xd8]",
+    "offset": 216,
+    "const_va": 5397972584,
+    "const": -0.5,
+    "const_load": "0x14006bd27: movss xmm0, dword ptr [rip + 0x1b7c939]"
+   },
+   {
+    "at": 5369150884,
+    "in_function": [
+     5369146880,
+     5369151623
+    ],
+    "text": "0x14006bda4: movss xmm1, dword ptr [rax + 0xd8]",
+    "offset": 216
+   },
+   {
+    "at": 5369151036,
+    "in_function": [
+     5369146880,
+     5369151623
+    ],
+    "text": "0x14006be3c: movss xmm2, dword ptr [rax + 0xd8]",
+    "offset": 216
+   },
+   {
+    "at": 5369187738,
+    "in_function": [
+     5369187680,
+     5369188020
+    ],
+    "text": "0x140074d9a: movss xmm4, dword ptr [rbx + 0xd8]",
+    "offset": 216
+   },
+   {
+    "at": 5369220720,
+    "in_function": [
+     5369220343,
+     5369221596
+    ],
+    "text": "0x14007ce70: movss xmm12, dword ptr [rcx + 0xd8]",
+    "offset": 216
+   },
+   {
+    "at": 5369275467,
+    "in_function": [
+     5369275184,
+     5369275779
+    ],
+    "text": "0x14008a44b: mulss xmm6, dword ptr [rax + 0xd8]",
+    "offset": 216
+   },
+   {
+    "at": 5369413271,
+    "in_function": [
+     5369413042,
+     5369414002
+    ],
+    "text": "0x1400abe97: movss xmm11, dword ptr [rax + 0xd8]",
+    "offset": 216
+   },
+   {
+    "at": 5369417979,
+    "in_function": [
+     5369417336,
+     5369418309
+    ],
+    "text": "0x1400ad0fb: mulss xmm3, dword ptr [rax + 0xd8]",
+    "offset": 216
+   },
+   {
+    "at": 5369419891,
+    "in_function": [
+     5369418480,
+     5369421201
+    ],
+    "text": "0x1400ad873: comiss xmm0, dword ptr [rax + 0xd8]",
+    "offset": 216,
+    "const_va": 5397972936,
+    "const": 0.7,
+    "const_load": "0x1400ad86b: movss xmm0, dword ptr [rip + 0x1b3af55]"
+   },
+   {
+    "at": 5369421891,
+    "in_function": [
+     5369421216,
+     5369425071
+    ],
+    "text": "0x1400ae043: mulss xmm3, dword ptr [rax + 0xd8]",
+    "offset": 216
+   },
+   {
+    "at": 5369422151,
+    "in_function": [
+     5369421216,
+     5369425071
+    ],
+    "text": "0x1400ae147: mulss xmm4, dword ptr [rax + 0xd8]",
+    "offset": 216
+   },
+   {
+    "at": 5369423724,
+    "in_function": [
+     5369421216,
+     5369425071
+    ],
+    "text": "0x1400ae76c: mulss xmm4, dword ptr [rax + 0xd8]",
+    "offset": 216
+   },
+   {
+    "at": 5369871482,
+    "in_function": [
+     5369870176,
+     5369874329
+    ],
+    "text": "0x14011bc7a: movss xmm0, dword ptr [rax + 0xd8]",
+    "offset": 216
+   },
+   {
+    "at": 5369872611,
+    "in_function": [
+     5369870176,
+     5369874329
+    ],
+    "text": "0x14011c0e3: movss xmm0, dword ptr [rax + 0xd8]",
+    "offset": 216
+   },
+   {
+    "at": 5369900312,
+    "in_function": [
+     5369899191,
+     5369908375
+    ],
+    "text": "0x140122d18: mulss xmm5, dword ptr [rax + 0xd8]",
+    "offset": 216
+   },
+   {
+    "at": 5369911390,
+    "in_function": [
+     5369910026,
+     5369912970
+    ],
+    "text": "0x14012585e: comiss xmm0, dword ptr [rax + 0xd8]",
+    "offset": 216,
+    "const_va": 5398356164,
+    "const": 0.7,
+    "const_load": "0x140125856: movss xmm0, dword ptr [rip + 0x1b20866]"
+   },
+   {
+    "at": 5370551904,
+    "in_function": [
+     5370550681,
+     5370552197
+    ],
+    "text": "0x1401c1e60: mulss xmm3, dword ptr [rcx + 0xd8]",
+    "offset": 216
+   },
+   {
+    "at": 5372446792,
+    "in_function": [
+     5372446496,
+     5372446936
+    ],
+    "text": "0x140390848: comiss xmm0, dword ptr [rax + 0xd8]",
+    "offset": 216,
+    "const_va": 5397972936,
+    "const": 0.7,
+    "const_load": "0x140390840: movss xmm0, dword ptr [rip + 0x1857f80]"
+   },
+   {
+    "at": 5372993283,
+    "in_function": [
+     5372993090,
+     5372993435
+    ],
+    "text": "0x140415f03: movss xmm3, dword ptr [rcx + 0xd8]",
+    "offset": 216
+   },
+   {
+    "at": 5378137533,
+    "in_function": [
+     5378137248,
+     5378137604
+    ],
+    "text": "0x1408fddbd: movss xmm9, dword ptr [rax + 0xd8]",
+    "offset": 216
+   },
+   {
+    "at": 5378256846,
+    "in_function": [
+     5378256472,
+     5378256916
+    ],
+    "text": "0x14091afce: mulss xmm4, dword ptr [rcx + 0xd8]",
+    "offset": 216
+   },
+   {
+    "at": 5378276484,
+    "in_function": [
+     5378275232,
+     5378282153
+    ],
+    "text": "0x14091fc84: movss xmm8, dword ptr [rax + 0xd8]",
+    "offset": 216
+   },
+   {
+    "at": 5378279612,
+    "in_function": [
+     5378275232,
+     5378282153
+    ],
+    "text": "0x1409208bc: mulss xmm4, dword ptr [rax + 0xd8]",
+    "offset": 216
+   }
+  ],
+  "d8_compare_constants": [
+   -0.5,
+   0.7,
+   0.85
+  ],
+  "functions_in_triples": [
+   5369043552,
+   5369050832,
+   5369051216,
+   5369062304,
+   5369069184,
+   5369073424,
+   5369073744,
+   5369074848,
+   5369081920,
+   5369096080,
+   5369099488,
+   5369122088,
+   5369122896,
+   5369123976,
+   5369125312,
+   5369129849,
+   5369146880,
+   5369187136,
+   5369187680,
+   5369197568,
+   5369220343,
+   5369275184,
+   5369292688,
+   5369308848,
+   5369342144,
+   5369405264,
+   5369411687,
+   5369413042,
+   5369414016,
+   5369417336,
+   5369421216,
+   5369790242,
+   5369899191,
+   5370550681,
+   5372446496,
+   5372993090,
+   5378137248,
+   5378256472,
+   5378275232
+  ]
+ },
+ "sampler": {
+  "files": 7,
+  "records": 1122,
+  "keys": 63,
+  "mesh_named_keys": [],
+  "values_near_pm_0707": [],
+  "gate_fields_sampled": [
+   "veh0.PreventModeSwitchDuration",
+   "veh0.flags_11D8",
+   "veh0.flags_11DC",
+   "veh1.PreventModeSwitchDuration",
+   "veh1.flags_11D8",
+   "veh1.flags_11DC",
+   "veh2.PreventModeSwitchDuration",
+   "veh2.flags_11D8",
+   "veh2.flags_11DC"
+  ],
+  "note": "the sampler's field list is bmak_runtime_sampler.py VEH/PC/PI/GADGETS; no mesh or matrix field exists in it"
+ },
+ "answer": {
+  "slot": "[this+0x38c] = Pawn.Mesh (ComponentProperty, SkeletalMeshComponent)",
+  "member": "PrimitiveComponent.LocalToWorld.ZPlane(+8)",
+  "member_z_named": "ZPlane.Z (the Z naming is derived: FPlane declares only W at +12)",
+  "byte_index": "0xd8 = 0xb0 + 40 = ZPlane(+32) + 8",
+  "label": "decoded (layout) + decoded (instruction), meaning derived",
+  "state": "the mesh's world orientation: the Z component of the mesh's local +Z (up) axis = cos of the angle between the Batmobile's up axis and world up (+1 upright, 0 on its side, -1 on its roof)"
+ },
+ "oracles": {
+  "pawn_mesh_is_the_slot": {
+   "ok": true,
+   "detail": {
+    "chain": [
+     "RVehicleBatmobileBase",
+     "RVehicle",
+     "AkVehicle",
+     "SVehicle",
+     "Vehicle",
+     "Pawn",
+     "Actor"
+    ],
+    "pawn_mesh": [
+     {
+      "name": "Mesh",
+      "kind": "ComponentProperty",
+      "type": "SkeletalMeshComponent",
+      "offset": 908
+     }
+    ],
+    "at_0x38c_on_chain": [
+     {
+      "class": "Pawn",
+      "name": "Mesh",
+      "kind": "ComponentProperty",
+      "type": "SkeletalMeshComponent",
+      "mask": null
+     }
+    ]
+   }
+  },
+  "no_property_starts_at_0xd8_in_the_mesh_chain": {
+   "ok": true,
+   "detail": {
+    "span": {
+     "class": "PrimitiveComponent",
+     "name": "LocalToWorld",
+     "kind": "StructProperty",
+     "offset": 176,
+     "inside": true,
+     "width": 64,
+     "delta": 40,
+     "file": "Engine/PrimitiveComponent.g.cs",
+     "line": 2063,
+     "next_offset": 240
+    },
+    "props_starting_at_0xd8": [],
+    "chain": [
+     "SkeletalMeshComponent",
+     "MeshComponent",
+     "PrimitiveComponent",
+     "ActorComponent",
+     "Component",
+     "GameObject"
+    ]
+   }
+  },
+  "0xd8_is_the_third_float_of_the_local_to_world_z_plane": {
+   "ok": true,
+   "detail": {
+    "span_offset": 176,
+    "delta_from_field": 40,
+    "delta_in_zplane": 8,
+    "fmatrix": {
+     "present": true,
+     "size": 64,
+     "members": {
+      "0": "XPlane",
+      "16": "YPlane",
+      "32": "ZPlane",
+      "48": "WPlane"
+     }
+    },
+    "fplane": {
+     "present": true,
+     "size": 16,
+     "members": {
+      "12": "W"
+     }
+    },
+    "rule": "FPlane is 16 bytes with only W declared (+12); the Z member at +8 is derived from that size and the W offset, not named in the dump"
+   }
+  },
+  "compare_constants_are_pm_0_707": {
+   "ok": true,
+   "detail": [
+    {
+     "at": "0x140063f04",
+     "const_va": "0x141bf1cdc",
+     "value": -0.707
+    },
+    {
+     "at": "0x140063f22",
+     "const_va": "0x141bce8f8",
+     "value": 0.707
+    }
+   ]
+  },
+  "branch_reject_semantics_are_decoded": {
+   "ok": true,
+   "detail": [
+    {
+     "at": "0x140063f04",
+     "branch": "jb",
+     "target": "0x140063fbe",
+     "rule": "comiss xmm1,const sets CF when xmm1<const; jb takes CF"
+    },
+    {
+     "at": "0x140063f22",
+     "branch": "jb",
+     "target": "0x140063fbe",
+     "rule": "comiss xmm1,const sets CF when xmm1<const; jb takes CF"
+    }
+   ]
+  },
+  "mesh_matrix_is_read_as_rows_elsewhere": {
+   "ok": true,
+   "detail": {
+    "row_triples": {
+     "row1": [
+      "0x140051a60",
+      "0x140053850",
+      "0x1400563a0",
+      "0x140058f10",
+      "0x140059050",
+      "0x1400594a0",
+      "0x14005b040",
+      "0x140064d28",
+      "0x140065050",
+      "0x1400659c0",
+      "0x140066b79",
+      "0x14006ae00",
+      "0x14008a330",
+      "0x14008e790",
+      "0x1400ace78",
+      "0x1400adda0",
+      "0x1401228b7",
+      "0x1401c1999",
+      "0x14091ae58",
+      "0x14091f7a0"
+     ],
+     "row2": [
+      "0x1400536d0",
+      "0x140053850",
+      "0x140057e80",
+      "0x1400594a0",
+      "0x14005b040",
+      "0x14005e790",
+      "0x14005f4e0",
+      "0x140065050",
+      "0x140065488",
+      "0x140066b79",
+      "0x14006ae00",
+      "0x140074d60",
+      "0x14007ccf7",
+      "0x14008a330",
+      "0x1400abdb2",
+      "0x1400ace78",
+      "0x1400adda0",
+      "0x1401228b7",
+      "0x1401c1999",
+      "0x140390720",
+      "0x140415e42",
+      "0x1408fdca0",
+      "0x14091ae58",
+      "0x14091f7a0"
+     ],
+     "row0": [
+      "0x140053850",
+      "0x140059050",
+      "0x1400594a0",
+      "0x140064d28",
+      "0x140065050",
+      "0x1400659c0",
+      "0x140066b79",
+      "0x14006ae00",
+      "0x140074b40",
+      "0x140074d60",
+      "0x140077400",
+      "0x14008a330",
+      "0x1400926b0",
+      "0x1400ab867",
+      "0x1400ac180",
+      "0x1400ace78",
+      "0x1400adda0",
+      "0x1401228b7",
+      "0x1401c1999",
+      "0x14091ae58",
+      "0x14091f7a0"
+     ],
+     "row3": [
+      "0x140057e80",
+      "0x140065050",
+      "0x140066b79",
+      "0x14008a330",
+      "0x14009a8c0",
+      "0x1400a9f50",
+      "0x1400ace78",
+      "0x1400adda0",
+      "0x140107f22",
+      "0x1401c1999",
+      "0x14091f7a0"
+     ]
+    },
+    "rule": "a function that reads [mesh+0xb0],[+0xb4],[+0xb8] (and the same for 0xc0 and 0xd0) treats the block as rows of three floats"
+   }
+  },
+  "d8_compare_constants_stay_inside_unit_range": {
+   "ok": true,
+   "detail": {
+    "constants": [
+     -0.5,
+     0.7,
+     0.85
+    ],
+    "rule": "a cosine of an angle stays in [-1,1]; a distance or a degree value would not"
+   }
+  },
+  "sampler_has_no_mesh_field": {
+   "ok": true,
+   "detail": {
+    "files": 7,
+    "records": 1122,
+    "keys": 63,
+    "mesh_named_keys": [],
+    "near_pm_0707": []
+   }
+  }
+ },
+ "unknowns": [
+  "whether the Batmobile's LocalToWorld carries a non-unit Z scale: if it does, the value is scaleZ*cos(tilt) and the 0.707 thresholds would be scale-relative. The dump declares the matrix, not how the scale is folded in. Told apart by reading the lengths of the three LocalToWorld rows on a live mesh.",
+  "row-versus-column reading of the element: `FMatrix` is declared as four FPlanes (XPlane/YPlane/ZPlane/WPlane), so element 10 is ZPlane.Z either way and for an orthonormal basis the two readings give the same scalar; only the axis naming (local Z vs world Z) differs and the bytes cannot separate them.",
+  "which component of the angle the test means in gameplay terms (pitch-only vs pitch+roll combined) is not separable from LocalToWorld.Z.Z alone: it is the total tilt of the up axis, and splitting pitch from roll needs the other elements.",
+  "why the -0.707 branch exists (the BatmobileStuckTimeFlip >= BatmobileStuckTime exemption): the two timer fields are decoded by name, but their writers/tick logic are not decoded here."
+ ]
+}

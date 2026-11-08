@@ -206,7 +206,8 @@ class Grab:
                 socket = next((x.get("value") for x in props
                                if x.get("type") == "NameProperty" and isinstance(x.get("value"), str)), None)
                 sock = sockets.get((r["package"], socket)) or sockets.get(socket) or {}
-                comps = [{"path": x.get("ref"), "class": x.get("ref_class")}
+                comps = [{"path": x.get("ref"), "class": x.get("ref_class"),
+                          "index": x.get("value")}
                          for x in props if x.get("ref")]
                 out.append({
                     "package": r["package"], "owner": r.get("outer"),

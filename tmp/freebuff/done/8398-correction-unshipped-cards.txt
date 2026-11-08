@@ -1,0 +1,17 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/correction-8398-unshipped-cards.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-07 by review 8399
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/review-build-wave.md
+Correction 9/9 — five card groups are described as delivered somewhere but have no payload in Builds/bm-RC4.
+
+Evidence: build-d13 §5.4-5.5, build-d12 §0, BUILD_BATCHES (24 steps).
+- B-12 / D-2 modes: `Builds/bm-RC4-modes/pursuit` and `/battle` exist, aafdiff is exactly the 2 planned files, but 0 rows carried exactly; 2 composed (T-MD5, T-MD6), 2 same-switch (T-MD10, T-MD11), 4 not built (T-MD7, T-MD13, T-MD8 and T-MD14 named omissions). The RC is one tree; modes/ is not merged.
+- B-25 lens flares / light units and B-26 per-entity audio are cards only: the flare sprite cannot be attached (no effect member on a lamp), and 21 audio GUIDs stay donor.
+- B-17..B-20 are declared no-payload in BUILD_BATCHES; 2 CForcePulse objects sit at the graph origin with no proven firing path.
+
+Task: make the RC's claim match the bytes. Either merge the modes pair into the RC (and accept that it doubles the entity, name/hash unresolved), or state in the receipt and STATUS that the RC is the pursuit set only with the battle pair as a separate, unmerged payload. For each no-payload card, ensure the card/tracker says "no payload in RC4" with the reason, and that BUILD_BATCHES' 24-step/no-payload declaration matches. Do not mark any of them done; do not add a feature to make a card look shipped.
+
+Revert: Builds/bm-RC4-modes and the tracker edits; the RC .ee is unchanged unless the pair is merged.
+
+Updated by review 8399: the mode pair is built but unmerged (0 exact rows, 4 not built), and B-25/B-26 plus B-17..B-20 are payload-free in this RC.

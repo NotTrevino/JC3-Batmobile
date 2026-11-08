@@ -1,0 +1,2357 @@
+{
+  "task": "G3-20c",
+  "generated_by": "Tools/scripts/ledger_g3c.py",
+  "source_ledger": "Working/Translation/T_ROWS.jsonl",
+  "scope_groups": [
+    "T-20",
+    "T-3",
+    "T-7",
+    "T-15",
+    "T-14"
+  ],
+  "label": "decoded (file + line, quoted from the card) | OPEN (supplier named)",
+  "stats": {
+    "rows_in_scope": 93,
+    "status_counts": {
+      "OPEN": 68,
+      "QUOTED": 25
+    },
+    "relation_counts": {
+      "confirms-open": 3,
+      "adjacent": 21,
+      "differs": 8,
+      "agrees": 4,
+      "n/a": 32,
+      "supplies": 12,
+      "negative": 12,
+      "different-member": 1
+    },
+    "doc_counts": {
+      "T-3": 17,
+      "T-14": 28,
+      "T-7": 14,
+      "T-20": 19,
+      "T-15": 15
+    },
+    "card_citation_counts": {
+      "Research/BatmobileGrab/REMAINDER.md": 19,
+      "Research/JC3Grab/DECODE_DEPTH.md": 6,
+      "Research/BatmobileGrab/CLASS_DEFAULTS.md": 65,
+      "Research/BatmobileGrab/AUDIO_BANKS.md": 4,
+      "Research/BatmobileGrab/SKINS.md": 1,
+      "Research/JC3Grab/DECODE_DEPTH2.md": 1,
+      "Research/JC3Grab/DECODE_DEPTH3.md": 1
+    },
+    "ledger_rows_total": 198,
+    "excluded_docs": [
+      "T-1",
+      "T-13",
+      "T-2b"
+    ],
+    "cards_read": [
+      "Research/BatmobileGrab/PACKAGES_G305.md",
+      "Research/BatmobileGrab/REMAINDER.md",
+      "Research/BatmobileGrab/SKINS.md",
+      "Research/BatmobileGrab/COLOUR.md",
+      "Research/BatmobileGrab/AUDIO_BANKS.md",
+      "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+      "Research/JC3Grab/DECODE_DEPTH.md",
+      "Research/JC3Grab/DECODE_DEPTH2.md",
+      "Research/JC3Grab/DECODE_DEPTH3.md",
+      "Research/JC3Grab/COLOUR.md",
+      "Research/JC3Grab/COLOUR_NATIVE.md"
+    ],
+    "cards_unused": [
+      "Research/BatmobileGrab/PACKAGES_G305.md",
+      "Research/BatmobileGrab/COLOUR.md",
+      "Research/JC3Grab/COLOUR.md",
+      "Research/JC3Grab/COLOUR_NATIVE.md"
+    ],
+    "citations_verified": 97,
+    "absent_claims_verified": 29
+  },
+  "rows": [
+    {
+      "id": "T-G6",
+      "doc": "T-3",
+      "ledger_line": 89,
+      "dispo": "keep",
+      "section": "1. The rows",
+      "member": "`land_global.front/rear_wheels.radius`",
+      "status": "OPEN",
+      "relation": "confirms-open",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/REMAINDER.md",
+          "line": 1901,
+          "quote": "| 171139 | `WheelFL` | `SVehicleWheel` | 14",
+          "must": [
+            "past the 0x20000000 decode budget"
+          ]
+        }
+      ],
+      "ledger_value": "mesh 0.68275 / 0.68265 m (BmAK `SVehicleWheel.WheelRadius` 64.0)",
+      "note": "the four `SVehicleWheel` class defaults (WheelFL/FR/RL/RR, exports 171139-171142) are 14-byte payloads past the 512 MiB decode budget, so the class-default route to `WheelRadius` is unread; CLASS_DEFAULTS has no `WheelRadius` tag at all",
+      "supplier": "`CHAIN.json` (the archetype wheel tags the row already cites); otherwise REMAINDER §3b once the budget allows",
+      "absent_claim": [
+        "WheelRadius"
+      ]
+    },
+    {
+      "id": "T-S6",
+      "doc": "T-3",
+      "ledger_line": 90,
+      "dispo": "blocked",
+      "section": "1. The rows",
+      "member": "`suspension.*.length / min_length / strength / compression`",
+      "status": "OPEN",
+      "relation": "confirms-open",
+      "evidence": [
+        {
+          "file": "Research/JC3Grab/DECODE_DEPTH.md",
+          "line": 63,
+          "quote": "| `hknpPhysicsSystemData` | 1 | PARTIAL |",
+          "must": [
+            "the 80-byte body and 64-byte motion entry fields are counted and sized but not pinned"
+          ]
+        }
+      ],
+      "ledger_value": "no JC3 member; BmAK TravelUp 30 / TravelDown 40 / BMRearWheelMaxDroop 100",
+      "note": "JC3's suspension model is still not decoded: the wheel hardpoints read at +0x30 of the 96-byte entries, but the 80-byte body and 64-byte motion entries are never pinned. On the BmAK side CLASS_DEFAULTS carries no suspension member on any class it reads (`Suspension`, `SuspensionTravel`, `BMRearWheelMaxDroop`, `WheelSuspensionStiffness` all absent), so the stroke/rate pair is still only in the archetype",
+      "supplier": "`Research/JC3Grab/PHYSICS_WRITE.md` UNKNOWN 4 (the body-entry fields) plus the archetype `SVehicleWheel` tags in `CHAIN.json`",
+      "absent_claim": [
+        "Suspension",
+        "SuspensionTravel",
+        "BMRearWheelMaxDroop",
+        "WheelSuspensionStiffness"
+      ]
+    },
+    {
+      "id": "T-ST7",
+      "doc": "T-3",
+      "ledger_line": 91,
+      "dispo": "next",
+      "section": "1. The rows",
+      "member": "`land_steering.t_to_full_steer_s` (BmAK `SteerSpeed` 220 deg/s)",
+      "status": "OPEN",
+      "relation": "adjacent",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 317,
+          "quote": "`DriftCorrectionSteerSpeed` (RVehicleBatmobileBase) | FloatProperty | 1.0",
+          "must": [
+            "1.0"
+          ]
+        }
+      ],
+      "ledger_value": "0.8 s low / 0.6 s high speed; BmAK 220 deg/s = 0.25 s to lock",
+      "note": "the only steering-rate member in the two class-default streams is `DriftCorrectionSteerSpeed` 1.0 (a neutral drift modifier, already used by T-ST5); `SteerSpeed` 220 deg/s and the `SteerSpeedVsSpeedCurve` knots are not class defaults, so the 0.25 s figure is not re-derived here",
+      "supplier": "the archetype `RVehicleSimBatmobile` tag stream (`objects.jsonl` / `CHAIN.json`)",
+      "absent_claim": [
+        "`SteerSpeed`"
+      ]
+    },
+    {
+      "id": "T-K4",
+      "doc": "T-3",
+      "ledger_line": 92,
+      "dispo": "keep",
+      "section": "1. The rows",
+      "member": "`brakes.*.handbrake`, `min_time_to_block` (BmAK `EbrakeTime`, `EBrakeBrakeForce`)",
+      "status": "QUOTED",
+      "relation": "differs",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 183,
+          "quote": "`EbrakeTime` (RVehicleBatmobileBase) | FloatProperty | 1.0",
+          "must": [
+            "1.0"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 184,
+          "quote": "`EBrakeBrakeForce` (RVehicleBatmobileBase) | FloatProperty | 160000.0",
+          "must": [
+            "160000.0"
+          ]
+        }
+      ],
+      "ledger_value": "`EbrakeTime` 0.75, `EBrakeBrakeForce` 640000, `HandbrakeOnSpeed` 10000, `HandbrakeOffSpeed` 1, `HandbrakeLatSlipFactor` 1.5/1.1",
+      "note": "same two member names, different numbers, and the card's object is explicitly the class-default export `BmGame.Default__RVehicleBatmobileBase` (BmGame.upk export 10923), not the four-car archetype the row reads: 1.0 vs 0.75 and 160000.0 vs 640000. The other three members the row cites are not class defaults. `EBrakeAccelForce` 100000.0 sits beside them (line 185)",
+      "supplier": "",
+      "absent_claim": [
+        "HandbrakeOnSpeed",
+        "HandbrakeOffSpeed",
+        "HandbrakeLatSlip"
+      ]
+    },
+    {
+      "id": "T-DR1",
+      "doc": "T-3",
+      "ledger_line": 93,
+      "dispo": "keep",
+      "section": "1. The rows",
+      "member": "`custom_land_global.drift.*` (BmAK `LatSlipFactor`, `HandbrakeLatSlipFactor`)",
+      "status": "OPEN",
+      "relation": "adjacent",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 317,
+          "quote": "`DriftCorrectionSteerSpeed` (RVehicleBatmobileBase) | FloatProperty | 1.0",
+          "must": [
+            "1.0"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 312,
+          "quote": "`DriftAngularVelocityFactor` (RVehicleBatmobileBase) | FloatProperty | 320.0",
+          "must": [
+            "320.0"
+          ]
+        }
+      ],
+      "ledger_value": "`LatSlipFactor` 1.6, `HandbrakeLatSlipFactor` 1.5/1.1, `DriftingBoostCooldown` 1.5 s",
+      "note": "the class defaults carry the drift *steering* block (correction 1.0, angular-velocity factor 320.0, plus `DriftSpeedBySteer` / `DriftAngularVelocityBySteer` curves with 3 points each) but neither slip member the row cites",
+      "supplier": "the archetype tags for `LatSlipFactor` / `HandbrakeLatSlipFactor` (`CHAIN.json`, G1-1)",
+      "absent_claim": [
+        "LatSlipFactor",
+        "HandbrakeLatSlip"
+      ]
+    },
+    {
+      "id": "T-EF1",
+      "doc": "T-3",
+      "ledger_line": 94,
+      "dispo": "keep",
+      "section": "1. The rows",
+      "member": "`vehiclecommon.tire_effects.*` (BmAK `SquealThreshold`, `SquealLatThreshold`)",
+      "status": "QUOTED",
+      "relation": "differs",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 164,
+          "quote": "`SquealThreshold` (SVehicle) | FloatProperty | 0.5",
+          "must": [
+            "0.5"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 165,
+          "quote": "`SquealLatThreshold` (SVehicle) | FloatProperty | 0.5",
+          "must": [
+            "0.5"
+          ]
+        }
+      ],
+      "ledger_value": "`SquealThreshold` 0.2, `SquealLatThreshold` 0.2 (row keeps 0.5 / 0.8 / 0.25 JC3 values)",
+      "note": "both thresholds decode as 0.5 on the class default (SVehicle, Engine\\SVehicle.g.cs:1493 and :1502), not 0.2; the card's object is the class default, so this is a second reading of the same member name, not a re-read of the archetype the row quotes",
+      "supplier": "",
+      "absent_claim": []
+    },
+    {
+      "id": "T-DM7",
+      "doc": "T-3",
+      "ledger_line": 95,
+      "dispo": "out",
+      "section": "1. The rows",
+      "member": "outgoing ram damage (`ImpactMinDamageSpeed` etc.)",
+      "status": "QUOTED",
+      "relation": "differs",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 257,
+          "quote": "`ImpactMinDamageSpeed` (RVehicleBatmobileBase) | FloatProperty | 60.0",
+          "must": [
+            "60.0"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 256,
+          "quote": "`ImpactMaxDamageSpeed` (RVehicleBatmobileBase) | FloatProperty | 200.0",
+          "must": [
+            "200.0"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 258,
+          "quote": "`ImpactStrafeMod` (RVehicleBatmobileBase) | FloatProperty | 1.5",
+          "must": [
+            "1.5"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 260,
+          "quote": "`ImpactBoostMod` (RVehicleBatmobileBase) | FloatProperty | 1.5",
+          "must": [
+            "1.5"
+          ]
+        }
+      ],
+      "ledger_value": "`ImpactMinDamageSpeed` 20, `ImpactMaxDamageSpeed` 150, `ImpactStrafeMod` 2.25, `ImpactBoostMod` 2.0",
+      "note": "all four decode to different numbers on the class default: 60.0 / 200.0 / 1.5 / 1.5. The row's outgoing-damage conclusion is untouched by this card (it rests on the class API, G2-28), but its BmAK numbers are not the class-default ones",
+      "supplier": "",
+      "absent_claim": []
+    },
+    {
+      "id": "T-DM8",
+      "doc": "T-3",
+      "ledger_line": 96,
+      "dispo": "keep",
+      "section": "1. The rows",
+      "member": "`vehicledamage.impact_damage_factor`",
+      "status": "OPEN",
+      "relation": "adjacent",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 255,
+          "quote": "`ImpactMaxDamage` (RVehicleBatmobileBase) | FloatProperty | 100.0",
+          "must": [
+            "100.0"
+          ]
+        }
+      ],
+      "ledger_value": "0 (declared switch); BmAK behaviour: ramming never damages the car",
+      "note": "the carrier is a JC3 module member and no named card reads it. The one BmAK number next to the behaviour is `ImpactMaxDamage` 100.0 (the outgoing impact magnitude the switch multiplies off), which the row does not cite",
+      "supplier": "`Working/Damage/*` plus the `vehicle_damage` module read the switch (the row's own source)",
+      "absent_claim": []
+    },
+    {
+      "id": "T-DM9",
+      "doc": "T-3",
+      "ledger_line": 97,
+      "dispo": "next",
+      "section": "1. The rows",
+      "member": "entity root `CCar.invulnerable`",
+      "status": "OPEN",
+      "relation": "adjacent",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 353,
+          "quote": "`Health` (Pawn) | IntProperty | 1000",
+          "must": [
+            "1000"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 321,
+          "quote": "`ArmourLevels` (RVehicleBatmobileBase) | ArrayProperty | count=5 int [0, 300, 600, 900, 1200]",
+          "must": [
+            "[0, 300, 600, 900, 1200]"
+          ]
+        }
+      ],
+      "ledger_value": "all armour channels at the shipped ceiling; root flag 0; BmAK `Health` 1,200 (archetypes)",
+      "note": "the class defaults give BmAK's own armour ladder: Pawn `Health` 1000 and `ArmourLevels` [0, 300, 600, 900, 1200] with `LowHealthWarningLevel` 300 (line 322). Neither is the JC3 armour channel the row edits, and 1000 is not the 1,200 the row attributes to BmAK",
+      "supplier": "`Working/Damage/bm_health.json` and the 232-graph `DAMAGE_MECHANISMS.md` read (the row's own sources)",
+      "absent_claim": []
+    },
+    {
+      "id": "T-FX6",
+      "doc": "T-3",
+      "ledger_line": 98,
+      "dispo": "epe",
+      "section": "1. The rows",
+      "member": "entity-graph effect members",
+      "status": "QUOTED",
+      "relation": "agrees",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 111,
+          "quote": "`RearFinTrail` (RVehicleBatmobileBase) | ComponentProperty | Default__RVehicleBatmobile.FinTrail0 (ParticleSystemComponent)",
+          "must": [
+            "FinTrail0"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 112,
+          "quote": "`BrakeLightTrailSystemL` (RVehicleBatmobileBase) | ComponentProperty | Default__RVehicleBatmobile.BrakeTrail0 (ParticleSystemComponent)",
+          "must": [
+            "BrakeTrail0"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 113,
+          "quote": "`BrakeLightTrailSystemR` (RVehicleBatmobileBase) | ComponentProperty | Default__RVehicleBatmobile.BrakeTrail1 (ParticleSystemComponent)",
+          "must": [
+            "BrakeTrail1"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 114,
+          "quote": "`SpeedLinesSystem` (RVehicleBatmobileBase) | ComponentProperty | Default__RVehicleBatmobile.SpeedLines0 (ParticleSystemComponent)",
+          "must": [
+            "SpeedLines0"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 131,
+          "quote": "`HeatSteam` (RVehicleBatmobileBase) | ComponentProperty | Default__RVehicleBatmobile.HeatSteam (ParticleSystemComponent)",
+          "must": [
+            "HeatSteam"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 140,
+          "quote": "`WallScrapeSparksSystemR` (RVehicleBatmobileBase) | ComponentProperty | Default__RVehicleBatmobile.WallScrape1 (ParticleSystemComponent)",
+          "must": [
+            "WallScrape1"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 141,
+          "quote": "`WallScrapeSparksSystemL` (RVehicleBatmobileBase) | ComponentProperty | Default__RVehicleBatmobile.WallScrape0 (ParticleSystemComponent)",
+          "must": [
+            "WallScrape0"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 192,
+          "quote": "`SideExhaustBurstEffect` (RVehicleBatmobileBase) | ObjectProperty | Exhaust.Batmobile_Side_Exhaust (ParticleSystem)",
+          "must": [
+            "Batmobile_Side_Exhaust"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 193,
+          "quote": "`SideExhaustBoostEffect` (RVehicleBatmobileBase) | ObjectProperty | Exhaust.Batmobile_Side_Exhaust (ParticleSystem)",
+          "must": [
+            "Batmobile_Side_Exhaust"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 194,
+          "quote": "`JumpLandSparksEffectL` (RVehicleBatmobileBase) | ObjectProperty | Impacts.Batmobile_Landing_Sparks_L (ParticleSystem)",
+          "must": [
+            "Batmobile_Landing_Sparks_L"
+          ]
+        }
+      ],
+      "ledger_value": "carried from test-083: `BrakeLightTrailSystemL/R`, `RearFinTrail`, `SpeedLinesSystem`, `HeatSteam`, `WallScrapeSparksSystemL/R`, `ExhaustBurstEffect`, `SideExhaust*`, wheel particles",
+      "note": "every member the row lists is decoded as a component/object reference on the class default, with the asset it points at: FinTrail0, BrakeTrail0/1, SpeedLines0, HeatSteam, WallScrape1/0, `Exhaust.Batmobile_Side_Exhaust` (both side-exhaust members point at the same PS), `Impacts.Batmobile_Landing_Sparks_L`. The row's list is complete for these",
+      "supplier": "",
+      "absent_claim": []
+    },
+    {
+      "id": "T-AU5",
+      "doc": "T-3",
+      "ledger_line": 99,
+      "dispo": "next",
+      "section": "1. The rows",
+      "member": "audio banks in the entity graph (`TransformationReverseDirection*`, `TaserSound`, `VehicleSound`)",
+      "status": "QUOTED",
+      "relation": "differs",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/AUDIO_BANKS.md",
+          "line": 200,
+          "quote": "**10 claimed / 90 event rows -> 10 found, 0 confirmed absent.**",
+          "must": [
+            "10 found",
+            "0 confirmed absent"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/AUDIO_BANKS.md",
+          "line": 164,
+          "quote": "**29** distinct `package.bank` references over **361** event rows",
+          "must": [
+            "**29**",
+            "**361**"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/AUDIO_BANKS.md",
+          "line": 170,
+          "quote": "| `BML_Battlemode` | `Engine` |",
+          "must": [
+            "830548",
+            "7"
+          ]
+        }
+      ],
+      "ledger_value": "blocked: \"these events have no JC3 bank and 10 BmAK banks are absent from the install\"",
+      "note": "the absence premise fails: the 10 banks the row calls absent are all FOUND (as `AkBank` exports in Startup/BmGame/StartupPatch, 0 confirmed absent), and 29 of 29 referenced banks are present as package exports with 0 absent. `BML_Battlemode` (830,548 B, 7 events) and `BML_Batmobile` (2,268,588 B, 53 events, line 168) are the transformation/mode banks. What stays open is the JC3-side translation of those events, not their source",
+      "supplier": "",
+      "absent_claim": []
+    },
+    {
+      "id": "T-W1",
+      "doc": "T-3",
+      "ledger_line": 100,
+      "dispo": "superseded",
+      "section": "1. The rows",
+      "member": "11 BmAK weapon classes -> JC3 slots",
+      "status": "OPEN",
+      "relation": "n/a",
+      "evidence": [],
+      "ledger_value": "superseded by T-11",
+      "note": "the card set holds no JC3 weapon-slot decode; the row is already superseded by T-11, whose rows carry the weapon ids and the two driver slots",
+      "supplier": "T-11's rows (`Working/Translation/T7_WEAPONS.md`, `Research/JC3Grab/WEAPONS.md`)",
+      "absent_claim": []
+    },
+    {
+      "id": "T-BM1",
+      "doc": "T-3",
+      "ledger_line": 101,
+      "dispo": "superseded",
+      "section": "1. The rows",
+      "member": "`BattleMode*`, `TurnOnSpot*`, `TurningModeMaxSpeed`, `ArmourModeDamageReduction`",
+      "status": "QUOTED",
+      "relation": "supplies",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 242,
+          "quote": "`ArmourModeDamageReduction` (RVehicleBatmobileBase) | IntProperty | 20",
+          "must": [
+            "20"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 240,
+          "quote": "`BattleModeYawOffset` (RVehicleBatmobileBase) | IntProperty | 16384",
+          "must": [
+            "16384"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 246,
+          "quote": "`BattleModeWidth` (RVehicleBatmobileBase) | FloatProperty | 265.0",
+          "must": [
+            "265.0"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 243,
+          "quote": "`BattleModeTransformationAnimName` (RVehicleBatmobileBase) | NameProperty | 'Batmobile_V2_Tank_Spread_Open_Game'",
+          "must": [
+            "Batmobile_V2_Tank_Spread_Open_Game"
+          ]
+        }
+      ],
+      "ledger_value": "the row lists the member names without values (superseded by T-12 + T-15)",
+      "note": "the class defaults give values for the battle side: armour reduction 20, yaw offset 16384, the mode box 265 x 430 x 250 (lines 246-248), and the two transformation animation names. `TurnOnSpot*` and `TurningModeMaxSpeed` are in neither stream, which is consistent with the row's split to T-15/T-12 but is not a decode of them",
+      "supplier": "",
+      "absent_claim": [
+        "TurnOnSpot",
+        "TurningModeMaxSpeed"
+      ]
+    },
+    {
+      "id": "T-AC1",
+      "doc": "T-3",
+      "ledger_line": 102,
+      "dispo": "out",
+      "section": "1. The rows",
+      "member": "`AirControlYawTorqueFactorMax` 8000",
+      "status": "OPEN",
+      "relation": "confirms-open",
+      "evidence": [],
+      "ledger_value": "out: no JC3 yaw-torque member (`VOCABULARY.md`)",
+      "note": "the named cards do not carry the member: no `AirControlYawTorque*` tag exists in either class-default stream, so the 8000 is not re-derived here and the JC3 half is unchanged",
+      "supplier": "the archetype `RVehicleSimBatmobile` tags in `objects.jsonl`; the JC3 absence is already proven in `Research/JC3Grab/VOCABULARY.md`",
+      "absent_claim": [
+        "AirControlYawTorque"
+      ]
+    },
+    {
+      "id": "T-RA1",
+      "doc": "T-3",
+      "ledger_line": 103,
+      "dispo": "out",
+      "section": "1. The rows",
+      "member": "`ImpactRoadAssist*`, `PMDodge*`, `BattleDodgeImpulse`, `VehicleShovingTorque`, `KillFlip*`, `KillKeepyUp*`, `ImpactShake*`",
+      "status": "QUOTED",
+      "relation": "differs",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 229,
+          "quote": "`ImpactRoadAssistFactor` (RVehicleBatmobileBase) | FloatProperty | 40000.0",
+          "must": [
+            "40000.0"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 230,
+          "quote": "`ImpactRoadAssistMaxTorque` (RVehicleBatmobileBase) | FloatProperty | 15000.0",
+          "must": [
+            "15000.0"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 235,
+          "quote": "`ImpactRoadAssistAngleStrength` (RVehicleBatmobileBase) | FloatProperty | 1500.0",
+          "must": [
+            "1500.0"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 241,
+          "quote": "`BattleDodgeImpulse` (RVehicleBatmobileBase) | FloatProperty | 100000.0",
+          "must": [
+            "100000.0"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 286,
+          "quote": "`VehicleShovingTorque` (RVehicleBatmobileBase) | FloatProperty | 20000.0",
+          "must": [
+            "20000.0"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 270,
+          "quote": "`KillFlipTorque` (RVehicleBatmobileBase) | FloatProperty | -2000000.0",
+          "must": [
+            "-2000000.0"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 272,
+          "quote": "`KillKeepyUpFactor` (RVehicleBatmobileBase) | FloatProperty | 20.0",
+          "must": [
+            "20.0"
+          ]
+        }
+      ],
+      "ledger_value": "`ImpactRoadAssist*` (90000 / 30000 / 2000), `VehicleShovingTorque` 10000, plus the `PMDodge*`, `BattleDodgeImpulse`, `KillFlip*`, `KillKeepyUp*`, `ImpactShake*` names",
+      "note": "seven of the row's numbers are different on the class default: RoadAssist factor 40000 (not 90000), max torque 15000 (not 30000), angle strength 1500 (not 2000), shoving torque 20000 (not 10000); `BattleDodgeImpulse` 100000, `KillFlipTorque` -2000000, `KillKeepyUpFactor` 20.0 and `ImpactShake`/`ExplosiveImpactScreenShake` (18 nested props, lines 253 and 274) are decoded members. The row's `out` disposition rests on the JC3 vocabulary, which this card does not touch",
+      "supplier": "",
+      "absent_claim": []
+    },
+    {
+      "id": "T-SR1",
+      "doc": "T-3",
+      "ledger_line": 104,
+      "dispo": "out",
+      "section": "1. The rows",
+      "member": "`JumpRampRightingTorque`, `JumpNoRampRightingTorque`, `StayUprightConstraintSetup/Instance`",
+      "status": "QUOTED",
+      "relation": "differs",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 147,
+          "quote": "`JumpRampRightingTorque` (RVehicleBatmobileBase) | FloatProperty | 5000.0",
+          "must": [
+            "5000.0"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 148,
+          "quote": "`JumpNoRampRightingTorque` (RVehicleBatmobileBase) | FloatProperty | 2500.0",
+          "must": [
+            "2500.0"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 161,
+          "quote": "`StayUprightConstraintSetup` (SVehicle) | ObjectProperty",
+          "must": [
+            "MyStayUprightSetup"
+          ]
+        }
+      ],
+      "ledger_value": "`JumpRampRightingTorque` 2000, `JumpNoRampRightingTorque` 2000, `StayUprightConstraintSetup/Instance`",
+      "note": "the two torques decode as 5000.0 and 2500.0, not 2000 / 2000, and the stay-upright setup and instance are real object references (`RB_StayUprightSetup` / `RB_ConstraintInstance`). `JumpRampUpwardForce` 2000.0 (line 146) is the number that matches the row's 2000 - on a different member",
+      "supplier": "",
+      "absent_claim": []
+    },
+    {
+      "id": "T-PA9",
+      "doc": "T-3",
+      "ledger_line": 105,
+      "dispo": "keep",
+      "section": "1. The rows",
+      "member": "actor composition: components, refs",
+      "status": "QUOTED",
+      "relation": "supplies",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 171,
+          "quote": "`Components` (Actor) | ArrayProperty | count=4 ref ActorComponent",
+          "must": [
+            "SVehicleMesh",
+            "VisDmgComp",
+            "BatmobileOnFireMeshComp0",
+            "RVehicleSimBatmobile:SimulationModel"
+          ]
+        }
+      ],
+      "ledger_value": "carried by the entity graph; the row exists so the count is auditable",
+      "note": "the drivable class default's actor composition decodes exactly: 4 components (SVehicleMesh, VisDmgComp, BatmobileOnFireMeshComp0, SimulationModel). The base class default carries 3 (§5a, same line family), and that difference is the only component override between the two",
+      "supplier": "",
+      "absent_claim": []
+    },
+    {
+      "id": "T-L8",
+      "doc": "T-14",
+      "ledger_line": 123,
+      "dispo": "next",
+      "section": "3. The rows",
+      "member": "`HeadLight1` (row 13 point + row 8 volume)",
+      "status": "QUOTED",
+      "relation": "supplies",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 263,
+          "quote": "`HeadLightsColourPursuit` (RVehicleBatmobileBase) | StructProperty | raw 0000803f0000803f0000803f0000803f = 4 floats ['1.0', '1.0', '1.0', '1.0']",
+          "must": [
+            "'1.0', '1.0', '1.0', '1.0'"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/SKINS.md",
+          "line": 879,
+          "quote": "| `HeadLight1` | `Winch_DOOR_Mesh` |",
+          "must": [
+            "Winch_DOOR_Mesh"
+          ]
+        }
+      ],
+      "ledger_value": "BmAK LightColor 138,197,246,255 B 0.15 cone 20.0/70.0 R 6000.0; donor rows 13 + 8; anchor `sportsmuscle_LOD1·body·Winch_DOOR_Mesh·Winch_DOOR_Mesh_LIG`",
+      "note": "the pursuit headlight colour is a class default: 4 floats [1.0, 1.0, 1.0, 1.0] (white). The row's per-entry `LightColor` 138,197,246 is a different member on a different object, so it is not contradicted - but the car-level colour vector is decoded and it is white. SKINS confirms `HeadLight1`'s socket hangs on `Winch_DOOR_Mesh` in the baseline rig (the mk2 and jokerfied skins move it to `Batmobile_Chassis`)",
+      "supplier": "",
+      "absent_claim": []
+    },
+    {
+      "id": "T-L9",
+      "doc": "T-14",
+      "ledger_line": 124,
+      "dispo": "next",
+      "section": "3. The rows",
+      "member": "`HeadLight2` (row 19 point + row 20 volume)",
+      "status": "QUOTED",
+      "relation": "supplies",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 263,
+          "quote": "`HeadLightsColourPursuit` (RVehicleBatmobileBase) | StructProperty | raw 0000803f0000803f0000803f0000803f = 4 floats ['1.0', '1.0', '1.0', '1.0']",
+          "must": [
+            "'1.0', '1.0', '1.0', '1.0'"
+          ]
+        }
+      ],
+      "ledger_value": "BmAK LightColor 160,180,255,0 B 0.0 cone 10.0/35.0 R 0.1; donor rows 19 + 20",
+      "note": "same car-level colour vector as T-L8 (white 1,1,1,1); the row's second lamp entry is a different member with intensity 0",
+      "supplier": "",
+      "absent_claim": []
+    },
+    {
+      "id": "T-L10",
+      "doc": "T-14",
+      "ledger_line": 125,
+      "dispo": "out",
+      "section": "3. The rows",
+      "member": "`ChainGunMuzzle` weapon light (omitted)",
+      "status": "OPEN",
+      "relation": "n/a",
+      "evidence": [],
+      "ledger_value": "out: the fleet's 9 light behaviours have none for a gun",
+      "note": "no named card decodes the JC3 light behaviour list; the row's proof is `Research/JC3Grab/LIGHT_SYSTEM.md` §6",
+      "supplier": "`Research/JC3Grab/LIGHT_SYSTEM.md` (behaviours) - not in this card set",
+      "absent_claim": []
+    },
+    {
+      "id": "T-L11",
+      "doc": "T-14",
+      "ledger_line": 126,
+      "dispo": "next",
+      "section": "3. The rows",
+      "member": "`HeadLight1` (stripped) -> `Front_Left_Point` + `Front_Left_Volumetric`",
+      "status": "OPEN",
+      "relation": "adjacent",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 263,
+          "quote": "`HeadLightsColourPursuit` (RVehicleBatmobileBase) | StructProperty | raw 0000803f0000803f0000803f0000803f = 4 floats ['1.0', '1.0', '1.0', '1.0']",
+          "must": [
+            "'1.0', '1.0', '1.0', '1.0'"
+          ]
+        }
+      ],
+      "ledger_value": "BmAK LightColor 223,91,75,0 B 1.0 cone -/44.0 R 1024.0; donor rows 17 + 12",
+      "note": "the row's own light entry (red 223,91,75) has no class-default counterpart: the only decoded car-level light colour is the white pursuit vector, which belongs to the full rig, not this stripped variant",
+      "supplier": "`Research/JC3Grab/LIGHT_SYSTEM.md` presets (`Front_Left_Point` / `_Volumetric` rows)",
+      "absent_claim": []
+    },
+    {
+      "id": "T-L12",
+      "doc": "T-14",
+      "ledger_line": 127,
+      "dispo": "next",
+      "section": "3. The rows",
+      "member": "`HeadLight2` (stripped) -> `Front_Right_Point` + `Front_Right_Volumetric`",
+      "status": "OPEN",
+      "relation": "adjacent",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 263,
+          "quote": "`HeadLightsColourPursuit` (RVehicleBatmobileBase) | StructProperty | raw 0000803f0000803f0000803f0000803f = 4 floats ['1.0', '1.0', '1.0', '1.0']",
+          "must": [
+            "'1.0', '1.0', '1.0', '1.0'"
+          ]
+        }
+      ],
+      "ledger_value": "BmAK LightColor 223,91,75,0 B 1.0 cone -/44.0 R 1024.0; donor rows 11 + 14",
+      "note": "as T-L11: only the white pursuit colour vector is decoded at car level",
+      "supplier": "`Research/JC3Grab/LIGHT_SYSTEM.md` presets (`Front_Right_Point` / `_Volumetric` rows)",
+      "absent_claim": []
+    },
+    {
+      "id": "T-L13",
+      "doc": "T-14",
+      "ledger_line": 128,
+      "dispo": "next",
+      "section": "3. The rows",
+      "member": "`LWheelLight` -> custom `sportsmuscle_wheel_f_l_arch` (preset 0)",
+      "status": "OPEN",
+      "relation": "n/a",
+      "evidence": [],
+      "ledger_value": "custom entry, 25 members, G2-33 §7",
+      "note": "no named card covers the JC3 light-preset namespace or a custom preset-0 entry; the row's proof is `Research/JC3Grab/LIGHT_SYSTEM.md` §7",
+      "supplier": "G2-33 §7 recipe (`Research/JC3Grab/LIGHT_SYSTEM.md`)",
+      "absent_claim": []
+    },
+    {
+      "id": "T-L14",
+      "doc": "T-14",
+      "ledger_line": 129,
+      "dispo": "next",
+      "section": "3. The rows",
+      "member": "`RWheelLight` -> custom `sportsmuscle_wheel_f_r_arch` (preset 0)",
+      "status": "OPEN",
+      "relation": "n/a",
+      "evidence": [],
+      "ledger_value": "custom entry, 25 members, G2-33 §7",
+      "note": "as T-L13, mirrored",
+      "supplier": "G2-33 §7 recipe (`Research/JC3Grab/LIGHT_SYSTEM.md`)",
+      "absent_claim": []
+    },
+    {
+      "id": "T-L15",
+      "doc": "T-14",
+      "ledger_line": 130,
+      "dispo": "next",
+      "section": "3. The rows",
+      "member": "`BrakeLightL` -> `Sport_Muscle_Rear_Break_Left` (row 18)",
+      "status": "QUOTED",
+      "relation": "supplies",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 122,
+          "quote": "`BrakeLightsLensFlare` (RVehicleBatmobileBase) | ObjectProperty | Batmobile.Batmobile_brakelights (LensFlare)",
+          "must": [
+            "Batmobile.Batmobile_brakelights"
+          ]
+        }
+      ],
+      "ledger_value": "BmAK LightColor 255,38,0,0 B 1.0 R 150.0; donor row 18 on `sportsmuscle_signal_r_l`",
+      "note": "the brake lamps have their own flare object as a class default: `Batmobile.Batmobile_brakelights` (LensFlare). That is the object behind the row's brake colour, not a module member; `TailLightsLensFlare` (`Batmobile_brakelights_alwaysOn`, line 123) is its always-on sibling",
+      "supplier": "",
+      "absent_claim": []
+    },
+    {
+      "id": "T-L16",
+      "doc": "T-14",
+      "ledger_line": 131,
+      "dispo": "next",
+      "section": "3. The rows",
+      "member": "`BrakeLightR` -> `Sport_Muscle_Rear_Break_Right` (row 7)",
+      "status": "QUOTED",
+      "relation": "supplies",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 123,
+          "quote": "`TailLightsLensFlare` (RVehicleBatmobileBase) | ObjectProperty | Batmobile.Batmobile_brakelights_alwaysOn (LensFlare)",
+          "must": [
+            "Batmobile_brakelights_alwaysOn"
+          ]
+        }
+      ],
+      "ledger_value": "BmAK LightColor 255,38,0,0 B 1.0 R 150.0; donor row 7 on `sportsmuscle_signal_r_r`",
+      "note": "the always-on tail flare is decoded as `Batmobile.Batmobile_brakelights_alwaysOn`; with `Batmobile_brakelights` (line 122) these are the two brake-lamp flare objects the rig carries",
+      "supplier": "",
+      "absent_claim": []
+    },
+    {
+      "id": "T-L17",
+      "doc": "T-14",
+      "ledger_line": 132,
+      "dispo": "next",
+      "section": "3. The rows",
+      "member": "`BattleModeSpotLight` -> the graph's unreferenced `Front_Secondary_Head`",
+      "status": "QUOTED",
+      "relation": "supplies",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 198,
+          "quote": "`PSMLightTemplate` (RVehicleBatmobileBase) | ObjectProperty | Arch.BatmobilePSM_Light (RDeferred_SpotLight_Shadowed_Spawnable)",
+          "must": [
+            "Arch.BatmobilePSM_Light"
+          ]
+        }
+      ],
+      "ledger_value": "BmAK LightColor 255,255,255,0 B 0.0 cone 5.0/15.0 R 4500.0; graph object hash 3189390601, no module row references it",
+      "note": "the battle spotlight's own carrier is a class default: `PSMLightTemplate` = `Arch.BatmobilePSM_Light`, a `RDeferred_SpotLight_Shadowed_Spawnable`. That is the object the row's battle spot corresponds to on the BmAK side - the module row the row proposes is a JC3-side question this card does not read",
+      "supplier": "",
+      "absent_claim": []
+    },
+    {
+      "id": "T-L18",
+      "doc": "T-14",
+      "ledger_line": 133,
+      "dispo": "next",
+      "section": "3. The rows",
+      "member": "`HeadLight1` battle mode -> custom `headlight_battle_left`",
+      "status": "QUOTED",
+      "relation": "supplies",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 264,
+          "quote": "`HeadLightsColourBattle` (RVehicleBatmobileBase) | StructProperty | raw 0000c84100000000000000000000803f = 4 floats ['25.0', '0.0', '0.0', '1.0']",
+          "must": [
+            "'25.0', '0.0', '0.0', '1.0'"
+          ]
+        }
+      ],
+      "ledger_value": "BmAK LightColor 255,0,0,0 B 5.0 cone 10.0/35.0 R 1024.0",
+      "note": "the battle headlight colour is a class default: 4 floats [25.0, 0.0, 0.0, 1.0] - red with an intensity above 1, so it is not the same number as the row's 255,0,0 even though both name red. The pursuit vector beside it is [1,1,1,1] (line 263)",
+      "supplier": "",
+      "absent_claim": []
+    },
+    {
+      "id": "T-L19",
+      "doc": "T-14",
+      "ledger_line": 134,
+      "dispo": "next",
+      "section": "3. The rows",
+      "member": "`HeadLight2` battle mode -> custom `headlight_battle_right`",
+      "status": "QUOTED",
+      "relation": "supplies",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 264,
+          "quote": "`HeadLightsColourBattle` (RVehicleBatmobileBase) | StructProperty | raw 0000c84100000000000000000000803f = 4 floats ['25.0', '0.0', '0.0', '1.0']",
+          "must": [
+            "'25.0', '0.0', '0.0', '1.0'"
+          ]
+        }
+      ],
+      "ledger_value": "BmAK LightColor 255,0,0,0 B 5.0 cone 10.0/35.0 R 1024.0",
+      "note": "same vector as T-L18: [25.0, 0.0, 0.0, 1.0]",
+      "supplier": "",
+      "absent_claim": []
+    },
+    {
+      "id": "T-L20",
+      "doc": "T-14",
+      "ledger_line": 135,
+      "dispo": "next",
+      "section": "3. The rows",
+      "member": "`LWheelLight` battle mode -> custom `sportsmuscle_wheel_f_l_arch_battle`",
+      "status": "OPEN",
+      "relation": "adjacent",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 264,
+          "quote": "`HeadLightsColourBattle` (RVehicleBatmobileBase) | StructProperty | raw 0000c84100000000000000000000803f = 4 floats ['25.0', '0.0', '0.0', '1.0']",
+          "must": [
+            "'25.0', '0.0', '0.0', '1.0'"
+          ]
+        }
+      ],
+      "ledger_value": "BmAK LightColor 255,0,0,0 B 0.0 cone 5.0/15.0 R 2048.0",
+      "note": "only the car-level battle colour vector is decoded; the wheel-arch battle lamp is a separate light entry with no class-default counterpart",
+      "supplier": "G2-33 §7 recipe (`Research/JC3Grab/LIGHT_SYSTEM.md`) plus the row's own light entry",
+      "absent_claim": []
+    },
+    {
+      "id": "T-L21",
+      "doc": "T-14",
+      "ledger_line": 136,
+      "dispo": "out",
+      "section": "3. The rows",
+      "member": "`BattleModeSpotLight` forensics rig (omitted)",
+      "status": "OPEN",
+      "relation": "n/a",
+      "evidence": [],
+      "ledger_value": "out: the `VEHLT_ForensicsLight` rig is a scanner mode",
+      "note": "no named card reads the forensics rig; the row's proof is `Research/BatmobileGrab/LIGHTS.json` plus `Research/JC3Grab/LIGHT_SYSTEM.md` §8",
+      "supplier": "`Research/BatmobileGrab/LIGHTS.md` (`problems`) - not in this card set",
+      "absent_claim": []
+    },
+    {
+      "id": "T-L22",
+      "doc": "T-14",
+      "ledger_line": 137,
+      "dispo": "out",
+      "section": "3. The rows",
+      "member": "`HeadLight1` forensics rig (omitted)",
+      "status": "OPEN",
+      "relation": "n/a",
+      "evidence": [],
+      "ledger_value": "out: forensics rig",
+      "note": "as T-L21",
+      "supplier": "`Research/BatmobileGrab/LIGHTS.md` - not in this card set",
+      "absent_claim": []
+    },
+    {
+      "id": "T-L23",
+      "doc": "T-14",
+      "ledger_line": 138,
+      "dispo": "out",
+      "section": "3. The rows",
+      "member": "`HeadLight2` forensics rig (omitted)",
+      "status": "OPEN",
+      "relation": "n/a",
+      "evidence": [],
+      "ledger_value": "out: forensics rig",
+      "note": "as T-L21",
+      "supplier": "`Research/BatmobileGrab/LIGHTS.md` - not in this card set",
+      "absent_claim": []
+    },
+    {
+      "id": "T-L24",
+      "doc": "T-14",
+      "ledger_line": 139,
+      "dispo": "next",
+      "section": "3. The rows",
+      "member": "`Dashboard_Light` -> `Dash_Light` (row 2)",
+      "status": "OPEN",
+      "relation": "n/a",
+      "evidence": [],
+      "ledger_value": "BmAK LightColor 172,245,255,0 B 5.0 cone 20.0/45.0 R 80.0; donor row 2",
+      "note": "no `Dash_Light` or dashboard-light member exists in either class-default stream, and no named card decodes the JC3 preset; the row's donor row 2 is a light-module entry",
+      "supplier": "the donor module's row 2 (`Working/Lights/*`, T14_LIGHTS.md §3)",
+      "absent_claim": []
+    },
+    {
+      "id": "T-L25",
+      "doc": "T-14",
+      "ledger_line": 140,
+      "dispo": "out",
+      "section": "3. The rows",
+      "member": "`HeadLight1a` LensFlareComponent (rides T-L8)",
+      "status": "OPEN",
+      "relation": "adjacent",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 122,
+          "quote": "`BrakeLightsLensFlare` (RVehicleBatmobileBase) | ObjectProperty | Batmobile.Batmobile_brakelights (LensFlare)",
+          "must": [
+            "Batmobile.Batmobile_brakelights"
+          ]
+        }
+      ],
+      "ledger_value": "no light component; flare rides the lamp row",
+      "note": "the only LensFlare class defaults decoded are the two brake-lamp ones (lines 122-123); the headlight flare objects the row cites are not class defaults, so their `SourceColor` is still only in the archetype. JC3 has no flare member (G1-17), which this card does not change",
+      "supplier": "the archetype's `LensFlareComponent` exports (REMAINDER §2 lists 24 of them by export, payloads terminator-only)",
+      "absent_claim": []
+    },
+    {
+      "id": "T-L26",
+      "doc": "T-14",
+      "ledger_line": 141,
+      "dispo": "out",
+      "section": "3. The rows",
+      "member": "`HeadLight2a` LensFlareComponent (rides T-L9)",
+      "status": "OPEN",
+      "relation": "adjacent",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/REMAINDER.md",
+          "line": 1127,
+          "quote": "| 331 | `LensFlareComponent` | `LensFlareComponent` | 95/97 |",
+          "must": [
+            "LensFlareComponent"
+          ]
+        }
+      ],
+      "ledger_value": "no light component; flare rides the lamp row",
+      "note": "the vehicle package's 24 `LensFlareComponent` objects decode as 95-105-byte payloads that end on the 2-byte terminator - no property value is read from them here",
+      "supplier": "the archetype `LensFlareComponent` payloads (not decoded: REMAINDER §2 treats them as terminator-only)",
+      "absent_claim": []
+    },
+    {
+      "id": "T-L27",
+      "doc": "T-14",
+      "ledger_line": 142,
+      "dispo": "out",
+      "section": "3. The rows",
+      "member": "`HeadLight1b` LensFlareComponent (rides T-L8)",
+      "status": "OPEN",
+      "relation": "adjacent",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/REMAINDER.md",
+          "line": 1127,
+          "quote": "| 331 | `LensFlareComponent` | `LensFlareComponent` | 95/97 |",
+          "must": [
+            "LensFlareComponent"
+          ]
+        }
+      ],
+      "ledger_value": "no light component; flare rides the lamp row",
+      "note": "as T-L26",
+      "supplier": "the archetype `LensFlareComponent` payloads",
+      "absent_claim": []
+    },
+    {
+      "id": "T-L28",
+      "doc": "T-14",
+      "ledger_line": 143,
+      "dispo": "out",
+      "section": "3. The rows",
+      "member": "`HeadLight1c` (socket absent)",
+      "status": "OPEN",
+      "relation": "n/a",
+      "evidence": [],
+      "ledger_value": "out: socket not in the shipped mesh",
+      "note": "no named card covers the socket list of the shipped mesh; the row's proof is `Research/BatmobileGrab/LIGHTS.json` (`problems`)",
+      "supplier": "`Research/BatmobileGrab/LIGHTS.md` - not in this card set",
+      "absent_claim": []
+    },
+    {
+      "id": "T-L29",
+      "doc": "T-14",
+      "ledger_line": 144,
+      "dispo": "out",
+      "section": "3. The rows",
+      "member": "`HeadLight2b` LensFlareComponent (rides T-L9)",
+      "status": "OPEN",
+      "relation": "adjacent",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/REMAINDER.md",
+          "line": 1127,
+          "quote": "| 331 | `LensFlareComponent` | `LensFlareComponent` | 95/97 |",
+          "must": [
+            "LensFlareComponent"
+          ]
+        }
+      ],
+      "ledger_value": "no light component; flare rides the lamp row",
+      "note": "as T-L26",
+      "supplier": "the archetype `LensFlareComponent` payloads",
+      "absent_claim": []
+    },
+    {
+      "id": "T-L30",
+      "doc": "T-14",
+      "ledger_line": 145,
+      "dispo": "out",
+      "section": "3. The rows",
+      "member": "`HeadLight2c` (socket absent)",
+      "status": "OPEN",
+      "relation": "n/a",
+      "evidence": [],
+      "ledger_value": "out: socket not in the shipped mesh",
+      "note": "as T-L28",
+      "supplier": "`Research/BatmobileGrab/LIGHTS.md` - not in this card set",
+      "absent_claim": []
+    },
+    {
+      "id": "T-L31",
+      "doc": "T-14",
+      "ledger_line": 146,
+      "dispo": "out",
+      "section": "3. The rows",
+      "member": "`RWheelLight_top` flare (rides T-L14)",
+      "status": "OPEN",
+      "relation": "adjacent",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 123,
+          "quote": "`TailLightsLensFlare` (RVehicleBatmobileBase) | ObjectProperty | Batmobile.Batmobile_brakelights_alwaysOn (LensFlare)",
+          "must": [
+            "Batmobile_brakelights_alwaysOn"
+          ]
+        }
+      ],
+      "ledger_value": "no light component; custom preset-0 lamp carries it",
+      "note": "the decoded flare objects are the brake ones only; the wheel-arch flare has none",
+      "supplier": "the archetype `LensFlareComponent` payloads plus G2-33 §7",
+      "absent_claim": []
+    },
+    {
+      "id": "T-L32",
+      "doc": "T-14",
+      "ledger_line": 147,
+      "dispo": "out",
+      "section": "3. The rows",
+      "member": "`RWheelLight_bottom` flare (rides T-L14)",
+      "status": "OPEN",
+      "relation": "adjacent",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 123,
+          "quote": "`TailLightsLensFlare` (RVehicleBatmobileBase) | ObjectProperty | Batmobile.Batmobile_brakelights_alwaysOn (LensFlare)",
+          "must": [
+            "Batmobile_brakelights_alwaysOn"
+          ]
+        }
+      ],
+      "ledger_value": "no light component; custom preset-0 lamp carries it",
+      "note": "as T-L31",
+      "supplier": "the archetype `LensFlareComponent` payloads plus G2-33 §7",
+      "absent_claim": []
+    },
+    {
+      "id": "T-L33",
+      "doc": "T-14",
+      "ledger_line": 148,
+      "dispo": "out",
+      "section": "3. The rows",
+      "member": "`LWheelLight_top` flare (rides T-L13)",
+      "status": "OPEN",
+      "relation": "adjacent",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 123,
+          "quote": "`TailLightsLensFlare` (RVehicleBatmobileBase) | ObjectProperty | Batmobile.Batmobile_brakelights_alwaysOn (LensFlare)",
+          "must": [
+            "Batmobile_brakelights_alwaysOn"
+          ]
+        }
+      ],
+      "ledger_value": "no light component; custom preset-0 lamp carries it",
+      "note": "as T-L31",
+      "supplier": "the archetype `LensFlareComponent` payloads plus G2-33 §7",
+      "absent_claim": []
+    },
+    {
+      "id": "T-L34",
+      "doc": "T-14",
+      "ledger_line": 149,
+      "dispo": "out",
+      "section": "3. The rows",
+      "member": "`LWheelLight_bottom` flare (rides T-L13)",
+      "status": "OPEN",
+      "relation": "adjacent",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 123,
+          "quote": "`TailLightsLensFlare` (RVehicleBatmobileBase) | ObjectProperty | Batmobile.Batmobile_brakelights_alwaysOn (LensFlare)",
+          "must": [
+            "Batmobile_brakelights_alwaysOn"
+          ]
+        }
+      ],
+      "ledger_value": "no light component; custom preset-0 lamp carries it",
+      "note": "as T-L31",
+      "supplier": "the archetype `LensFlareComponent` payloads plus G2-33 §7",
+      "absent_claim": []
+    },
+    {
+      "id": "T-L35",
+      "doc": "T-14",
+      "ledger_line": 150,
+      "dispo": "next",
+      "section": "3. The rows",
+      "member": "`BootLight` -> custom `boot_light` (preset 0)",
+      "status": "OPEN",
+      "relation": "n/a",
+      "evidence": [],
+      "ledger_value": "BmAK LightColor 152,255,225,0 B 5.0 cone 50.0/60.0 R 400.0",
+      "note": "no boot-light member exists in either class-default stream and no named card decodes the JC3 preset namespace",
+      "supplier": "G2-33 §7 recipe (`Research/JC3Grab/LIGHT_SYSTEM.md`) plus the row's own light entry",
+      "absent_claim": [
+        "BootLight"
+      ]
+    },
+    {
+      "id": "T-WP1",
+      "doc": "T-7",
+      "ledger_line": 151,
+      "dispo": "next",
+      "section": "3. The rows",
+      "member": "heavy cannon -> `w602_mediumtank_canon` on `main_weapon`",
+      "status": "OPEN",
+      "relation": "n/a",
+      "evidence": [],
+      "ledger_value": "decoded tune rows, fire_rate 1.75 -> 2 s, velocity 500 -> 400",
+      "note": "the named cards hold no weapon tune: they cover the packages' class defaults, the untagged objects and the decoded assets, not the JC3 weapon tables",
+      "supplier": "`Research/JC3Grab/WEAPONS.md` / `WEAPON_WIRING.md` (T-11, B-06) - not in this card set",
+      "absent_claim": []
+    },
+    {
+      "id": "T-WP2",
+      "doc": "T-7",
+      "ledger_line": 152,
+      "dispo": "next",
+      "section": "3. The rows",
+      "member": "Vulcan -> `w603_mediumtank_mgun` on `id:00568A74`",
+      "status": "OPEN",
+      "relation": "n/a",
+      "evidence": [],
+      "ledger_value": "fire_rate 0.1 -> 0.138 s",
+      "note": "as T-WP1: no weapon tune in the named cards",
+      "supplier": "`Research/JC3Grab/WEAPONS.md` (T-11, B-06)",
+      "absent_claim": []
+    },
+    {
+      "id": "T-WP3",
+      "doc": "T-7",
+      "ledger_line": 153,
+      "dispo": "next",
+      "section": "3. The rows",
+      "member": "missiles -> the donor's own `w618_sportsmuscle_missile`",
+      "status": "OPEN",
+      "relation": "n/a",
+      "evidence": [],
+      "ledger_value": "4 fire points, blast 1100 in 8 m",
+      "note": "as T-WP1: no weapon tune in the named cards. The BmAK missile *components* are in the packages and are decoded as projectile objects (REMAINDER §2, `RocketTrail` x 8, `ImpulseComponent0` x 6), but no fire-point or blast value",
+      "supplier": "`Research/JC3Grab/WEAPONS.md` (T-11, B-06)",
+      "absent_claim": []
+    },
+    {
+      "id": "T-WP4",
+      "doc": "T-7",
+      "ledger_line": 154,
+      "dispo": "blocked",
+      "section": "3. The rows",
+      "member": "EMP missile: launcher + disable",
+      "status": "OPEN",
+      "relation": "negative",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/REMAINDER.md",
+          "line": 1778,
+          "quote": "| 7319 | `DisabledByEmpFx` | `ComponentProperty` | 34",
+          "must": [
+            "`DisabledByEmpFx`"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/REMAINDER.md",
+          "line": 1848,
+          "quote": "| 7497 | `SetDisabledByEMP` | `Function` | 209",
+          "must": [
+            "`SetDisabledByEMP`"
+          ]
+        }
+      ],
+      "ledger_value": "blocked: JC3 has no disable/duration member for the Immobilizer",
+      "note": "the BmAK side of the disable is now named: a `SetDisabledByEMP` function and a `DisabledByEmpFx` component default on `BmScript.RVehicleBatmobile`. Both are descriptors - REMAINDER §3a's oracle shows the 97 property payloads are fixed-size descriptors and three same-class ones are byte-identical, so no value is read, and §4 UNKNOWN 1 puts the values in `BmScript`, which is not shipped. The JC3 disable member is untouched",
+      "supplier": "nothing in the packages: the disable is BmScript-side, and §4 UNKNOWN 1 records that package as not on disk",
+      "absent_claim": []
+    },
+    {
+      "id": "T-WP5",
+      "doc": "T-7",
+      "ledger_line": 155,
+      "dispo": "blocked",
+      "section": "3. The rows",
+      "member": "EMP burst -> entity-level `CForcePulse` copy",
+      "status": "OPEN",
+      "relation": "adjacent",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/REMAINDER.md",
+          "line": 1208,
+          "quote": "| 5105 | `RB_RadialImpulseComponent` | `ImpulseComponent0` | 36/38",
+          "must": [
+            "ImpulseComponent0"
+          ]
+        }
+      ],
+      "ledger_value": "blocked: the object can be copied but nothing fires it",
+      "note": "the Batmobile's own package carries one radial impulse component (`RB_RadialImpulseComponent` `ImpulseComponent0`, 36/38 bytes, terminator-closed). It is the BmAK physical half of the burst; it says nothing about what fires the JC3 pulse",
+      "supplier": "G2-16/G2-17 (`Research/JC3Grab/FORCEPULSE.md`) for the JC3 pulse and its trigger",
+      "absent_claim": []
+    },
+    {
+      "id": "T-WP6",
+      "doc": "T-7",
+      "ledger_line": 156,
+      "dispo": "blocked",
+      "section": "3. The rows",
+      "member": "winch -> named omission (no functional winch class)",
+      "status": "QUOTED",
+      "relation": "agrees",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/REMAINDER.md",
+          "line": 1209,
+          "quote": "| 5268 | `RSimpleRopeComponent` | `RopeComponent0` | 44/46",
+          "must": [
+            "RopeComponent0"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/REMAINDER.md",
+          "line": 1210,
+          "quote": "| 5269 | `RSimpleRopeComponent` | `RopeComponent1` | 52/54",
+          "must": [
+            "RopeComponent1"
+          ]
+        }
+      ],
+      "ledger_value": "proven absence in JC3; BmAK ships rope/winch geometry (10 part names)",
+      "note": "the geometry half is decoded: two `RSimpleRopeComponent` objects (`RopeComponent0` 44/46 and `RopeComponent1` 52/54) in `Playable_Batmobile_SF`, both ending on the terminator, so they carry no pull parameter. That matches the row's 'geometry, no member' and adds the object count",
+      "supplier": "",
+      "absent_claim": []
+    },
+    {
+      "id": "T-WP7",
+      "doc": "T-7",
+      "ledger_line": 157,
+      "dispo": "out",
+      "section": "3. The rows",
+      "member": "hacker -> named omission (no allegiance-switch class)",
+      "status": "QUOTED",
+      "relation": "agrees",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/REMAINDER.md",
+          "line": 1202,
+          "quote": "| 5010 | `ParticleSystemComponent` | `DroneHackerEffect0` | 36/38",
+          "must": [
+            "DroneHackerEffect0"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/REMAINDER.md",
+          "line": 1207,
+          "quote": "| 5015 | `ParticleSystemComponent` | `DroneHackerEffect5` | 36/38",
+          "must": [
+            "DroneHackerEffect5"
+          ]
+        }
+      ],
+      "ledger_value": "BmAK cites `Particles.DroneHacker_Beam` etc.; JC3 has no allegiance-switch class",
+      "note": "six `DroneHackerEffect0..5` particle components are present in the vehicle package (36/38 bytes each), consistent with the row's effect refs; still no class that switches allegiance",
+      "supplier": "",
+      "absent_claim": []
+    },
+    {
+      "id": "T-WP8",
+      "doc": "T-7",
+      "ledger_line": 158,
+      "dispo": "out",
+      "section": "3. The rows",
+      "member": "sonar -> named omission (no sonar class)",
+      "status": "OPEN",
+      "relation": "adjacent",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/AUDIO_BANKS.md",
+          "line": 172,
+          "quote": "| `BML_Sonar` | `Engine` |",
+          "must": [
+            "355830",
+            "7"
+          ]
+        }
+      ],
+      "ledger_value": "no sonar class in the 103-class census; `CForcePulse` is the shockwave half",
+      "note": "the audio half of the sonar is available: bank `BML_Sonar` is a present `AkBank` export in BmGame (355,830 B, 7 events), referenced by 18 event rows. That is an asset, not the sonar class the row lacks",
+      "supplier": "`Research/JC3Grab/ENTITIES.md` (103-class census) for the class absence",
+      "absent_claim": []
+    },
+    {
+      "id": "T-WP9",
+      "doc": "T-7",
+      "ledger_line": 159,
+      "dispo": "out",
+      "section": "3. The rows",
+      "member": "tracker -> named omission (no tracker class)",
+      "status": "OPEN",
+      "relation": "n/a",
+      "evidence": [],
+      "ledger_value": "no tracker class (the only 'track' is `CMusicTrack`)",
+      "note": "nothing in the named cards covers the JC3 class census or the launch socket",
+      "supplier": "`Research/JC3Grab/ENTITIES.md`; the socket question is T-12's",
+      "absent_claim": []
+    },
+    {
+      "id": "T-WP10",
+      "doc": "T-7",
+      "ledger_line": 160,
+      "dispo": "next",
+      "section": "3. The rows",
+      "member": "riot-suppressor mode -> named omission",
+      "status": "OPEN",
+      "relation": "adjacent",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/REMAINDER.md",
+          "line": 1199,
+          "quote": "| 5007 | `ParticleSystemComponent` | `ChargeParticle0` | 60/62",
+          "must": [
+            "ChargeParticle0"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/REMAINDER.md",
+          "line": 1200,
+          "quote": "| 5008 | `ParticleSystemComponent` | `BeamElectricityComp0` | 36/38",
+          "must": [
+            "BeamElectricityComp0"
+          ]
+        }
+      ],
+      "ledger_value": "no non-lethal flag/damage type/mode in the JC3 vocabulary",
+      "note": "the effect components behind the riot/taser half decode (`ChargeParticle0` 60/62, `BeamElectricityComp0` 36/38, `FireElectricityComp0` 36/38); no flag or mode exists in the class-default streams (`RiotSuppressor` absent), so the non-lethal mode is still a named omission on both sides",
+      "supplier": "`Research/JC3Grab/VOCABULARY.md` (the row's own proof)",
+      "absent_claim": [
+        "RiotSuppressor"
+      ]
+    },
+    {
+      "id": "T-WP11",
+      "doc": "T-7",
+      "ledger_line": 161,
+      "dispo": "keep",
+      "section": "3. The rows",
+      "member": "afterburner gadget mesh",
+      "status": "QUOTED",
+      "relation": "agrees",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/REMAINDER.md",
+          "line": 1211,
+          "quote": "| 5290 | `SkeletalMeshComponent` | `GadgetMesh` | 28/42",
+          "must": [
+            "GadgetMesh"
+          ]
+        }
+      ],
+      "ledger_value": "the gadget is JC3 nitro (live since test-091); `RBatmobileBooster` 4 instances, 8 fields, 'the gadget mesh only'",
+      "note": "ten `GadgetMesh` skeletal mesh components decode in the vehicle package (28-50 bytes, all terminator_early with 12 asset bytes behind the tags), so the row's 'mesh only' reading holds: the gadget is geometry, not a boost member",
+      "supplier": "",
+      "absent_claim": []
+    },
+    {
+      "id": "T-WP12",
+      "doc": "T-7",
+      "ledger_line": 162,
+      "dispo": "next",
+      "section": "3. The rows",
+      "member": "HUD weapon slots (`HudModuleBatmobile`)",
+      "status": "OPEN",
+      "relation": "n/a",
+      "evidence": [],
+      "ledger_value": "2 clips, 5 mapped elements, no heat",
+      "note": "the named cards hold no SWF/HUD decode; the row's facts are T-19's",
+      "supplier": "`Research/JC3Grab/JC3_HUD_WEAPONS.md` (T-19) - not in this card set",
+      "absent_claim": []
+    },
+    {
+      "id": "T-WP13",
+      "doc": "T-7",
+      "ledger_line": 163,
+      "dispo": "blocked",
+      "section": "3. The rows",
+      "member": "driver weapon slots (all 11 weapons)",
+      "status": "OPEN",
+      "relation": "n/a",
+      "evidence": [],
+      "ledger_value": "blocked: at most 2 driver slots, no active-slot index",
+      "note": "no named card decodes driver slots or weapon groups; that is G2-11's read of the 232 `.epe` graphs",
+      "supplier": "`Research/JC3Grab/WEAPON_WIRING.md` / G2-11 - not in this card set",
+      "absent_claim": []
+    },
+    {
+      "id": "T-WP14",
+      "doc": "T-7",
+      "ledger_line": 164,
+      "dispo": "next",
+      "section": "3. The rows",
+      "member": "riot mode toggle (decision record)",
+      "status": "OPEN",
+      "relation": "adjacent",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/REMAINDER.md",
+          "line": 1199,
+          "quote": "| 5007 | `ParticleSystemComponent` | `ChargeParticle0` | 60/62",
+          "must": [
+            "ChargeParticle0"
+          ]
+        }
+      ],
+      "ledger_value": "out: D-3 resolved - accept JC3 lethality, no toggle",
+      "note": "as T-WP10: no `RiotSuppressor` member exists in the class-default streams, so there is no BmAK default a toggle could read; the decision record is untouched",
+      "supplier": "the decision record itself (`Working/Translation/T7_WEAPONS.md`)",
+      "absent_claim": [
+        "RiotSuppressor"
+      ]
+    },
+    {
+      "id": "T-WLD1",
+      "doc": "T-20",
+      "ledger_line": 165,
+      "dispo": "next",
+      "section": "2. The rows",
+      "member": "Rebel Drop item record",
+      "status": "OPEN",
+      "relation": "n/a",
+      "evidence": [],
+      "ledger_value": "leaf `v0300_..._batmobile`, `hash_jenkins` 443190071",
+      "note": "the named cards are BmAK-package and JC3-donor decodes; none reads `profile/item.onlinec`",
+      "supplier": "G2-26 (`Research/JC3Grab/...` item schema) and B-13's write",
+      "absent_claim": []
+    },
+    {
+      "id": "T-WLD2",
+      "doc": "T-20",
+      "ledger_line": 166,
+      "dispo": "next",
+      "section": "2. The rows",
+      "member": "unlock link (`ItemReward` on task 1361701860)",
+      "status": "OPEN",
+      "relation": "n/a",
+      "evidence": [],
+      "ledger_value": "`ItemReward` link, `permanent` 1, `quantity` 1",
+      "note": "no named card reads `task.onlinec`",
+      "supplier": "G2-26 / `Working/Translation/T15_WORLD.md`",
+      "absent_claim": []
+    },
+    {
+      "id": "T-WLD3",
+      "doc": "T-20",
+      "ledger_line": 167,
+      "dispo": "next",
+      "section": "2. The rows",
+      "member": "drop-item UI profile",
+      "status": "OPEN",
+      "relation": "n/a",
+      "evidence": [],
+      "ledger_value": "copy the donor profile: Type 1, UIType 3, UIFlag 5, UIDisplayOrder 12, RebelDropTimer 1800",
+      "note": "no named card reads the item profile; the 45/45 fleet census is the T-20 document's own input",
+      "supplier": "`Working/Translation/T15_WORLD.md` (the row's own source)",
+      "absent_claim": []
+    },
+    {
+      "id": "T-WLD4",
+      "doc": "T-20",
+      "ledger_line": 168,
+      "dispo": "next",
+      "section": "2. The rows",
+      "member": "display name (`profile/online.stringlookup` pair)",
+      "status": "OPEN",
+      "relation": "negative",
+      "evidence": [
+        {
+          "file": "Research/JC3Grab/DECODE_DEPTH.md",
+          "line": 28,
+          "quote": "| `.stringlookup` | 1 | 2210 | 1 | 0 | 0 |",
+          "must": [
+            "2210"
+          ]
+        }
+      ],
+      "ledger_value": "carried: key `HashJenkins(leaf)` = 1621485476 is present 11/11 for the shipped `_debug` leaf in bm-013's drop (text BATMOBILE); 443190071 is the unshipped `..._batmobile` leaf",
+      "note": "the store's container is closed (1 file, 2,210 B, grade FULL) and the write side exists: `jc3strings_write` added exactly 22 pairs (14,712 -> 14,734) in bm-013, nothing else changed",
+      "supplier": "carrying bm-013's drop into the RC, then Q-1's runtime resolution",
+      "absent_claim": []
+    },
+    {
+      "id": "T-WLD5",
+      "doc": "T-20",
+      "ledger_line": 169,
+      "dispo": "next",
+      "section": "2. The rows",
+      "member": "vehicle icon `textures/ui/vehicle_icons/<leaf>.ddsc`",
+      "status": "OPEN",
+      "relation": "adjacent",
+      "evidence": [
+        {
+          "file": "Research/JC3Grab/DECODE_DEPTH2.md",
+          "line": 52,
+          "quote": "| 77 | 66 | 68988624 | [16] | 594 | 44 | 22 |",
+          "must": [
+            "[16]"
+          ]
+        }
+      ],
+      "ledger_value": "copy the donor's 18,688 B icon under the new leaf name",
+      "note": "the `.ddsc` container is decoded here (format 77 => 16-byte 4x4 blocks; the mip chain tiles the payload to EOF on 116/116 files). That is the reason a byte-identical copy needs no encoder, but the icon file itself is outside the donor entity and no card reads it",
+      "supplier": "the icon directory copy (G2-32) - `Working/Translation/T15_WORLD.md`",
+      "absent_claim": []
+    },
+    {
+      "id": "T-WLD6",
+      "doc": "T-20",
+      "ledger_line": 170,
+      "dispo": "next",
+      "section": "2. The rows",
+      "member": "description pair (`<leaf>_desc`)",
+      "status": "OPEN",
+      "relation": "negative",
+      "evidence": [
+        {
+          "file": "Research/JC3Grab/DECODE_DEPTH.md",
+          "line": 28,
+          "quote": "| `.stringlookup` | 1 | 2210 | 1 | 0 | 0 |",
+          "must": [
+            "2210"
+          ]
+        }
+      ],
+      "ledger_value": "carried: `HashJenkins(\"..._debug_desc\")` = 4081821928 is present 11/11 in bm-013's drop with the Batmobile blurb; 2073308658 stays the donor's Serpente text",
+      "note": "as T-WLD4: the store's bytes are fully accounted and bm-013 writes exactly the two pairs",
+      "supplier": "carrying bm-013's drop into the RC, then Q-1",
+      "absent_claim": []
+    },
+    {
+      "id": "T-WLD7",
+      "doc": "T-20",
+      "ledger_line": 171,
+      "dispo": "keep",
+      "section": "2. The rows",
+      "member": "category captions (`UITypeDescription`, `UIFlagDescription`)",
+      "status": "OPEN",
+      "relation": "n/a",
+      "evidence": [],
+      "ledger_value": "keep: both hashes resolve 11/11",
+      "note": "no named card reads the string store's contents",
+      "supplier": "`Working/Translation/T15_WORLD.md`",
+      "absent_claim": []
+    },
+    {
+      "id": "T-WLD8",
+      "doc": "T-20",
+      "ledger_line": 172,
+      "dispo": "epe",
+      "section": "2. The rows",
+      "member": "entry points (29 `entry.*` objects)",
+      "status": "OPEN",
+      "relation": "n/a",
+      "evidence": [],
+      "ledger_value": "T-13's placement: 77/85 objects in the 0.05-0.30 m band",
+      "note": "no named card decodes the interaction graph; the placement is T-13's",
+      "supplier": "`Working/Translation/T13_*` / G2-18 - not in this card set",
+      "absent_claim": []
+    },
+    {
+      "id": "T-WLD9",
+      "doc": "T-20",
+      "ledger_line": 173,
+      "dispo": "epe",
+      "section": "2. The rows",
+      "member": "exit points (26 `exit.*` objects)",
+      "status": "OPEN",
+      "relation": "n/a",
+      "evidence": [],
+      "ledger_value": "same pass; 8 `point.*` nodes",
+      "note": "as T-WLD8",
+      "supplier": "G2-18 §4 - not in this card set",
+      "absent_claim": []
+    },
+    {
+      "id": "T-WLD10",
+      "doc": "T-20",
+      "ledger_line": 174,
+      "dispo": "epe",
+      "section": "2. The rows",
+      "member": "stunt point nodes",
+      "status": "OPEN",
+      "relation": "n/a",
+      "evidence": [],
+      "ledger_value": "8 `point.*` nodes, 19 objects mapped to a stunt role",
+      "note": "as T-WLD8",
+      "supplier": "G2-18 §3-4 - not in this card set",
+      "absent_claim": []
+    },
+    {
+      "id": "T-WLD11",
+      "doc": "T-20",
+      "ledger_line": 175,
+      "dispo": "next",
+      "section": "2. The rows",
+      "member": "stunt areas (`StuntAreas`, weld rows)",
+      "status": "OPEN",
+      "relation": "negative",
+      "evidence": [
+        {
+          "file": "Research/JC3Grab/DECODE_DEPTH3.md",
+          "line": 150,
+          "quote": "| `v0300_car_kensington_sportsmuscle_civilian_01.epe` | **FULL** | 109,526 B, 0 unexplained bytes on round trip",
+          "must": [
+            "**FULL**",
+            "0 unexplained bytes"
+          ]
+        },
+        {
+          "file": "Research/JC3Grab/DECODE_DEPTH.md",
+          "line": 30,
+          "quote": "| `.epe` | 1 | 109526 | 0 | 1 | 0 |",
+          "must": [
+            "109526"
+          ]
+        }
+      ],
+      "ledger_value": "re-fit derived: 3 areas, 64 weld rows of which 8 real; 22/22 bound vertices placeable at 0.036-0.105 m on a standing RC2 face (stored points sink 0.19-0.31 m; bbox map floats 0.32-0.49 m)",
+      "note": "the entity byte stream is closed (G3-19: 2,189 padding + 104 float ULP bytes, 0 unexplained; 109,526 B) and the deform list already exists - 135 `DeformPoints` bound by the 3 areas. The missing piece is the re-fit write (22 `start_transform` + `vertices3D_local` pairs) and a third column (indices 135+) for full width; the derived table is `tmp/freebuff/reports/stunt-areas-deform-points.md` §4.3",
+      "supplier": "the 22-point write into `sportsmuscle_vehicle_deform.vmodc` + `sportsmuscle_stunt_areas.vmodc`, then `t_wld11b.py --check`",
+      "absent_claim": []
+    },
+    {
+      "id": "T-WLD12",
+      "doc": "T-20",
+      "ledger_line": 176,
+      "dispo": "next",
+      "section": "2. The rows",
+      "member": "`rigid_body.mass` 975 -> 6000",
+      "status": "OPEN",
+      "relation": "negative",
+      "evidence": [
+        {
+          "file": "Research/JC3Grab/DECODE_DEPTH.md",
+          "line": 50,
+          "quote": "| `hknpShapeMassProperties` | 56 | NAMED-ONLY | nothing | none |",
+          "must": [
+            "no mass, inertia or centre of mass is read from it"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 158,
+          "quote": "`ChassisMass` (SVehicle) | FloatProperty | 210.0",
+          "must": [
+            "210.0"
+          ]
+        }
+      ],
+      "ledger_value": "mass 975 -> 6000 = 6.154x the donor; the mass unit is UNKNOWN",
+      "note": "confirmed unknowable from the physics file on this evidence: the 56 `hknpShapeMassProperties` objects are NAMED-ONLY and no mass is read from them. On the BmAK side the only absolute mass member the class defaults carry is `ChassisMass` 210.0 - a different quantity from a rigid-body mass",
+      "supplier": "`Research/JC3Grab/PHYSICS_ROLES2/3.md` (the per-shape mass block) plus a runtime weigh-in",
+      "absent_claim": []
+    },
+    {
+      "id": "T-WLD13",
+      "doc": "T-20",
+      "ledger_line": 177,
+      "dispo": "keep",
+      "section": "2. The rows",
+      "member": "`WaterInteraction.will_sink` + `Buoyancy`",
+      "status": "OPEN",
+      "relation": "n/a",
+      "evidence": [],
+      "ledger_value": "will_sink 1, buoyancy 2.0, drag 100.0",
+      "note": "no water/buoyancy member exists in the named cards' scope (BmAK class defaults carry none, JC3 decode cards read the mesh/physics/effect files only)",
+      "supplier": "`vehicle_common.vmodc` (the row's own source, R7-protected)",
+      "absent_claim": []
+    },
+    {
+      "id": "T-WLD14",
+      "doc": "T-20",
+      "ledger_line": 178,
+      "dispo": "keep",
+      "section": "2. The rows",
+      "member": "water kill/stall constants (shared `vehicle_common.vmodc`)",
+      "status": "OPEN",
+      "relation": "adjacent",
+      "evidence": [
+        {
+          "file": "Research/JC3Grab/DECODE_DEPTH.md",
+          "line": 22,
+          "quote": "| `.vmodc` | 31 | 195998 | 31 | 0 | 0 | jc3adf.Adf + walk",
+          "must": [
+            "31",
+            "195998"
+          ]
+        }
+      ],
+      "ledger_value": "10/20/20/50 ms entry constants, `engine_shut_down_delay_s` 30, 0 overrides",
+      "note": "the shared module's family decodes FULL (31 `.vmodc`, 195,998 B, header total == length and allocations tile on every one), so the row's constants are read from a fully accounted file - but the values themselves come from `vehicle_common`, not from any named card",
+      "supplier": "`editor/entities/jc_vehicles/00_shared/modules/vehicle_common.vmodc` (the row's own source)",
+      "absent_claim": []
+    },
+    {
+      "id": "T-WLD15",
+      "doc": "T-20",
+      "ledger_line": 179,
+      "dispo": "next",
+      "section": "2. The rows",
+      "member": "tether (`vehicle`-side member)",
+      "status": "OPEN",
+      "relation": "n/a",
+      "evidence": [],
+      "ledger_value": "out: no vehicle-side member; 335 tether paths are dialogue/UI",
+      "note": "no named card decodes the tether/grapnel members",
+      "supplier": "`Research/JC3Grab/TETHER.md` (`winch` = []) - not in this card set",
+      "absent_claim": []
+    },
+    {
+      "id": "T-WLD16",
+      "doc": "T-20",
+      "ledger_line": 180,
+      "dispo": "keep",
+      "section": "2. The rows",
+      "member": "cargo bay capacity",
+      "status": "OPEN",
+      "relation": "n/a",
+      "evidence": [],
+      "ledger_value": "12 `CVehicleCargoBay` objects; 6000 kg is 15.0/6.0/40.0 % of them",
+      "note": "no named card reads `CVehicleCargoBay`",
+      "supplier": "G2-34 - not in this card set",
+      "absent_claim": []
+    },
+    {
+      "id": "T-WLD17",
+      "doc": "T-20",
+      "ledger_line": 181,
+      "dispo": "blocked",
+      "section": "2. The rows",
+      "member": "helicopter airlift",
+      "status": "OPEN",
+      "relation": "n/a",
+      "evidence": [],
+      "ledger_value": "out: 0 of 23 helicopters carries a `CVehicleCargoBay`",
+      "note": "no named card reads the helicopter bays",
+      "supplier": "G2-34 - not in this card set",
+      "absent_claim": []
+    },
+    {
+      "id": "T-WLD18",
+      "doc": "T-20",
+      "ledger_line": 182,
+      "dispo": "keep",
+      "section": "2. The rows",
+      "member": "traffic record (`settings/spawn_vehicle_defs.bin`)",
+      "status": "OPEN",
+      "relation": "n/a",
+      "evidence": [],
+      "ledger_value": "0 records for the new leaf; D-6 standalone adds nothing",
+      "note": "no named card reads the spawn table",
+      "supplier": "G2-29 - not in this card set",
+      "absent_claim": []
+    },
+    {
+      "id": "T-WLD19",
+      "doc": "T-20",
+      "ledger_line": 183,
+      "dispo": "keep",
+      "section": "2. The rows",
+      "member": "the donor's own traffic record",
+      "status": "OPEN",
+      "relation": "n/a",
+      "evidence": [],
+      "ledger_value": "donor record at 23240, 13 tags, 1 of 41 selectors",
+      "note": "as T-WLD18",
+      "supplier": "G2-29 - not in this card set",
+      "absent_claim": []
+    },
+    {
+      "id": "T-MD1",
+      "doc": "T-15",
+      "ledger_line": 184,
+      "dispo": "next",
+      "section": "2. The rows",
+      "member": "afterburner -> `arcade.nitro_boost`",
+      "status": "QUOTED",
+      "relation": "supplies",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 265,
+          "quote": "`FakeExtraSpeedMax` (RVehicleBatmobileBase) | FloatProperty | 3500.0",
+          "must": [
+            "3500.0"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 192,
+          "quote": "`SideExhaustBurstEffect` (RVehicleBatmobileBase) | ObjectProperty | Exhaust.Batmobile_Side_Exhaust (ParticleSystem)",
+          "must": [
+            "Batmobile_Side_Exhaust"
+          ]
+        }
+      ],
+      "ledger_value": "`Batmobile_Booster` gadget; JC3 nitro carries torque x2, grip x2, push 15000, +40 km/h",
+      "note": "the BmAK afterburner's own members decode: `FakeExtraSpeedMax` 3500.0 (with `FakeExtaSpeedAccel` 600.0 / `FakeExtaSpeedDecel` 2000.0 at lines 266-268) and the side-exhaust effect object. These are the additive-speed members T-B2 already uses; the JC3 nitro block itself is unchanged",
+      "supplier": "",
+      "absent_claim": []
+    },
+    {
+      "id": "T-MD2",
+      "doc": "T-15",
+      "ledger_line": 185,
+      "dispo": "blocked",
+      "section": "2. The rows",
+      "member": "Immobilizer (EMP missile)",
+      "status": "OPEN",
+      "relation": "negative",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/REMAINDER.md",
+          "line": 1848,
+          "quote": "| 7497 | `SetDisabledByEMP` | `Function` | 209",
+          "must": [
+            "`SetDisabledByEMP`"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/REMAINDER.md",
+          "line": 1778,
+          "quote": "| 7319 | `DisabledByEmpFx` | `ComponentProperty` | 34",
+          "must": [
+            "`DisabledByEmpFx`"
+          ]
+        }
+      ],
+      "ledger_value": "blocked: the launcher can be mounted, the disable has no JC3 member",
+      "note": "the disable is a BmScript function (`SetDisabledByEMP`) with a component default (`DisabledByEmpFx`) - both names decoded, no values (REMAINDER §3a: the payloads are descriptors). So there is no BmAK class-default number a JC3 member could carry, and the row's block stands",
+      "supplier": "G2-16/G2-17 for the JC3 pulse; the disable behaviour is BmScript (not on disk)",
+      "absent_claim": []
+    },
+    {
+      "id": "T-MD3",
+      "doc": "T-15",
+      "ledger_line": 186,
+      "dispo": "keep",
+      "section": "2. The rows",
+      "member": "ram immunity",
+      "status": "QUOTED",
+      "relation": "supplies",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 206,
+          "quote": "`RamDamageType` (RVehicleBatmobileBase) | ClassProperty | RDmgType_Barge (None)",
+          "must": [
+            "RDmgType_Barge"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 205,
+          "quote": "`CrushDamageType` (RVehicleBatmobileBase) | ClassProperty | Core.DmgType_Crushed (Class)",
+          "must": [
+            "Core.DmgType_Crushed"
+          ]
+        }
+      ],
+      "ledger_value": "BmAK ramming never damages the Batmobile; JC3 `impact_damage_factor` 0",
+      "note": "BmAK gives the car two damage classes of its own: `RamDamageType` = `RDmgType_Barge` and `CrushDamageType` = `Core.DmgType_Crushed`. What the engine does with them is not in the bytes; the JC3 switch (T-DM8) is unchanged",
+      "supplier": "",
+      "absent_claim": []
+    },
+    {
+      "id": "T-MD4",
+      "doc": "T-15",
+      "ledger_line": 187,
+      "dispo": "keep",
+      "section": "2. The rows",
+      "member": "`StandardTorqueVSpeedCurve` / `BoostTorqueVSpeedCurve`",
+      "status": "OPEN",
+      "relation": "negative",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/REMAINDER.md",
+          "line": 1895,
+          "quote": "| 169320 | `SimulationModel` | `RVehicleSimBatmobile` | 4920",
+          "must": [
+            "StructProperty@0x1dc=None"
+          ]
+        }
+      ],
+      "ledger_value": "6-point and 7-point curves on `RVehicleSimBatmobile`, identical in all four packages",
+      "note": "the class-default `SimulationModel` object (4,920 B, closes on the terminator) carries every one of its `StructProperty` curve slots as `None` (@0x104, 0x118, 0x194, 0x1a8, 0x1dc, 0x1f0, 0x204, 0x218, 0x22c, 0x240, 0x254, 0x268, 0xc8), and the float values it does carry are offsets without member names. So the curves the row cites are not class defaults - they are archetype values, and no `StandardTorqueVSpeedCurve`/`BoostTorqueVSpeedCurve` name exists in either stream",
+      "supplier": "the archetype `SimulationModel` tag stream (`objects.jsonl` / `CHAIN.json`)",
+      "absent_claim": [
+        "StandardTorqueVSpeedCurve",
+        "BoostTorqueVSpeedCurve"
+      ]
+    },
+    {
+      "id": "T-MD5",
+      "doc": "T-15",
+      "ledger_line": 188,
+      "dispo": "out",
+      "section": "2. The rows",
+      "member": "`BattleModeVSpeedCurve`",
+      "status": "OPEN",
+      "relation": "negative",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/REMAINDER.md",
+          "line": 1895,
+          "quote": "| 169320 | `SimulationModel` | `RVehicleSimBatmobile` | 4920",
+          "must": [
+            "StructProperty@0x1dc=None"
+          ]
+        }
+      ],
+      "ledger_value": "3 points: 0 -> 60, 600 -> 40, 1200 -> 30",
+      "note": "same evidence as T-MD4: every curve slot in the class-default `SimulationModel` is `None`, and `BattleModeVSpeedCurve` is not a member name in either class-default stream",
+      "supplier": "the archetype `SimulationModel` tag stream",
+      "absent_claim": [
+        "BattleModeVSpeedCurve"
+      ]
+    },
+    {
+      "id": "T-MD6",
+      "doc": "T-15",
+      "ledger_line": 189,
+      "dispo": "out",
+      "section": "2. The rows",
+      "member": "`TurningModeMaxSpeed` 600 cm/s",
+      "status": "OPEN",
+      "relation": "negative",
+      "evidence": [],
+      "ledger_value": "600 cm/s = 21.6 km/h with `BattleModeThrottleSpeed` 10",
+      "note": "no `TurningModeMaxSpeed` (or any `TurningMode*`) tag exists in either class-default stream, so the value is not a class default and is not re-derived here",
+      "supplier": "the archetype `RVehicleSimBatmobile` tags in `objects.jsonl`",
+      "absent_claim": [
+        "TurningModeMaxSpeed"
+      ]
+    },
+    {
+      "id": "T-MD7",
+      "doc": "T-15",
+      "ledger_line": 190,
+      "dispo": "out",
+      "section": "2. The rows",
+      "member": "battle drive/slip factors",
+      "status": "OPEN",
+      "relation": "negative",
+      "evidence": [],
+      "ledger_value": "`BattleModeDriveForceFactor` 500, `BattleModeLatSlipScale` 0.75, `LongSlipScale` 1.25, `SteerAngleFactor` 1, `TrailingSteerFactorMoving` -0.25, `DrivingForceZOffset` 20 cm",
+      "note": "none of the six is a class-default member: `BattleModeDriveForceFactor`, `BattleModeLatSlipScale`, `BattleModeLongSlipScale`, `BattleModeSteerAngleFactor` and `BattleModeTrailingSteerFactorMoving` are all absent from both streams (only the mode box, the yaw offset and the two transformation names are carried there)",
+      "supplier": "the archetype `RVehicleSimBatmobile` tags in `objects.jsonl`",
+      "absent_claim": [
+        "BattleModeDriveForceFactor",
+        "BattleModeLatSlip",
+        "BattleModeLongSlip",
+        "BattleModeSteerAngleFactor",
+        "BattleModeTrailingSteerFactor"
+      ]
+    },
+    {
+      "id": "T-MD8",
+      "doc": "T-15",
+      "ledger_line": 191,
+      "dispo": "out",
+      "section": "2. The rows",
+      "member": "turn on the spot",
+      "status": "OPEN",
+      "relation": "negative",
+      "evidence": [],
+      "ledger_value": "`TurnOnSpotFrontTorqueFactor` 0.8, `RearTorqueFactor` -0.8, `ModeEngineBrakingFactor` 2, `BattleModeTurnOnSpotTorqueFactor` 0.333333",
+      "note": "no `TurnOnSpot*` tag exists in either class-default stream - consistent with G2-21's finding that the pivot has no data carrier, but not a re-decode of those four numbers",
+      "supplier": "`Research/JC3Grab/TANKTURN.md` (G2-21) - not in this card set",
+      "absent_claim": [
+        "TurnOnSpot"
+      ]
+    },
+    {
+      "id": "T-MD9",
+      "doc": "T-15",
+      "ledger_line": 192,
+      "dispo": "next",
+      "section": "2. The rows",
+      "member": "turret weapons",
+      "status": "OPEN",
+      "relation": "n/a",
+      "evidence": [],
+      "ledger_value": "T-12's part angles carry the aim; T-11's clones carry the weapons",
+      "note": "no named card decodes the turret parts or the weapon clones",
+      "supplier": "T-12 / T-11 rows - not in this card set",
+      "absent_claim": []
+    },
+    {
+      "id": "T-MD10",
+      "doc": "T-15",
+      "ledger_line": 193,
+      "dispo": "keep",
+      "section": "2. The rows",
+      "member": "`ArmourModeDamageReduction`",
+      "status": "QUOTED",
+      "relation": "differs",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 242,
+          "quote": "`ArmourModeDamageReduction` (RVehicleBatmobileBase) | IntProperty | 20",
+          "must": [
+            "20"
+          ]
+        }
+      ],
+      "ledger_value": "0, 'identical on the three packages that serialise it (Funhouse, MK2, V2)'",
+      "note": "the class default reads 20, not 0. The row's 0 is an archetype value from three other packages, so the two readings are of different objects with the same member name; neither refutes the other, and the class default is the one decoded here. A read of a fourth archetype, or of the four-car archetype set, would settle which object the translation should follow - that is not a decode this card performs",
+      "supplier": "",
+      "absent_claim": []
+    },
+    {
+      "id": "T-MD11",
+      "doc": "T-15",
+      "ledger_line": 194,
+      "dispo": "keep",
+      "section": "2. The rows",
+      "member": "battle camera FOV",
+      "status": "OPEN",
+      "relation": "negative",
+      "evidence": [],
+      "ledger_value": "`BattleModeCamFOV` 60, `BattleModeWinchCamFOV` 60, `AntiPersonelBattleModeCamFOV` 40",
+      "note": "no `BattleModeCamFOV` (or `BattleModeCam*`) member exists in either class-default stream; the camera values live in the per-entity `.ctune`, which no named card reads",
+      "supplier": "the `.ctune` read (T-CAM9/T-CAM10, `Research/JC3Grab/CAMERA.md`) - not in this card set",
+      "absent_claim": [
+        "BattleModeCamFOV"
+      ]
+    },
+    {
+      "id": "T-MD12",
+      "doc": "T-15",
+      "ledger_line": 195,
+      "dispo": "next",
+      "section": "2. The rows",
+      "member": "battle lights",
+      "status": "QUOTED",
+      "relation": "supplies",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 264,
+          "quote": "`HeadLightsColourBattle` (RVehicleBatmobileBase) | StructProperty | raw 0000c84100000000000000000000803f = 4 floats ['25.0', '0.0', '0.0', '1.0']",
+          "must": [
+            "'25.0', '0.0', '0.0', '1.0'"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 198,
+          "quote": "`PSMLightTemplate` (RVehicleBatmobileBase) | ObjectProperty | Arch.BatmobilePSM_Light (RDeferred_SpotLight_Shadowed_Spawnable)",
+          "must": [
+            "Arch.BatmobilePSM_Light"
+          ]
+        }
+      ],
+      "ledger_value": "4 `VEHLT_BattleModeLight` entries (T-L17-T-L20); the fleet's 9 behaviours have no battle value",
+      "note": "the battle light is a class-default pair: a colour vector [25.0, 0.0, 0.0, 1.0] and a spawned deferred spotlight template (`Arch.BatmobilePSM_Light`). Both are mode-level members, so the row's 'one behaviour, no mode' reading is what the data shows - the battle state is a colour and a template, not a light behaviour",
+      "supplier": "",
+      "absent_claim": []
+    },
+    {
+      "id": "T-MD13",
+      "doc": "T-15",
+      "ledger_line": 196,
+      "dispo": "out",
+      "section": "2. The rows",
+      "member": "transformation stance",
+      "status": "QUOTED",
+      "relation": "differs",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 243,
+          "quote": "`BattleModeTransformationAnimName` (RVehicleBatmobileBase) | NameProperty | 'Batmobile_V2_Tank_Spread_Open_Game'",
+          "must": [
+            "Batmobile_V2_Tank_Spread_Open_Game"
+          ]
+        },
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 244,
+          "quote": "`PursuitModeTransformationAnimName` (RVehicleBatmobileBase) | NameProperty | 'Batmobile_V2_Tank_Spread_Close_Game'",
+          "must": [
+            "Batmobile_V2_Tank_Spread_Close_Game"
+          ]
+        }
+      ],
+      "ledger_value": "`TransformationTurnTorqueFactor` 3000, `TransformationTurnDecelTorqueFactor` 24000, `TransformationAnimNode` not serialised; '0 `TransformationAnimNode` values in the files'",
+      "note": "two transformation animation names ARE serialised as class defaults: `Batmobile_V2_Tank_Spread_Open_Game` and `Batmobile_V2_Tank_Spread_Close_Game`. The row's claim about `TransformationAnimNode` stands (that member name is in neither stream), but the animation itself is named - so 'no transformation animation exists' would overstate it. The two torque factors the row cites are not class defaults",
+      "supplier": "",
+      "absent_claim": [
+        "TransformationAnimNode"
+      ]
+    },
+    {
+      "id": "T-MD14",
+      "doc": "T-15",
+      "ledger_line": 197,
+      "dispo": "blocked",
+      "section": "2. The rows",
+      "member": "battle audio (mode-switch sting)",
+      "status": "QUOTED",
+      "relation": "different-member",
+      "evidence": [
+        {
+          "file": "Research/BatmobileGrab/CLASS_DEFAULTS.md",
+          "line": 199,
+          "quote": "`Transform_In_Bed` (RVehicleBatmobileBase) | ObjectProperty | Ww_BML_Batmobile.Play_BattleMode_In_Bed (AkEvent)",
+          "must": [
+            "Play_BattleMode_In_Bed"
+          ]
+        }
+      ],
+      "ledger_value": "`TransformationReverseDirectionIntoPursuitModeSound` V2 62 / MK2 60 / Joker 191 / Funhouse 60 and `...IntoBattleModeSound` V2 47 / MK2 45 / Joker 176 / Funhouse 45",
+      "note": "the class defaults carry a different set of four transform events: `Transform_In_Bed`, `Transform_In_Reverse_Bed`, `Transform_Out_Bed`, `Transform_Out_Reverse_Bed` (lines 199-202), all AkEvents in `Ww_BML_Batmobile` - the `BML_Batmobile` bank that AUDIO_BANKS finds present (2,268,588 B, 53 events). So the bank exists and the events are named; the row's cited `*IntoPursuitModeSound` names are not class defaults",
+      "supplier": "",
+      "absent_claim": []
+    },
+    {
+      "id": "T-MD15",
+      "doc": "T-15",
+      "ledger_line": 198,
+      "dispo": "next",
+      "section": "2. The rows",
+      "member": "the hybrid itself (D-2)",
+      "status": "OPEN",
+      "relation": "n/a",
+      "evidence": [],
+      "ledger_value": "one entity, one Rebel Drop entry; B-12 skipped",
+      "note": "a decision row: no card decodes a hybrid, and none is expected to. The named cards supply the two modes' inputs (T-MD10/T-MD12/T-MD13), not the choice",
+      "supplier": "the decision record itself (D-2, `MODDING_PLAN.md`)",
+      "absent_claim": []
+    }
+  ]
+}

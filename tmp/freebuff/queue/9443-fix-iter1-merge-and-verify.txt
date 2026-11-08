@@ -1,0 +1,7 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/fix-iter1-merge-and-verify.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/fix-iter1-card-and-values.md
+Apply iteration 1 to the build. Re-run each edited branch script with --write, rebuild with Tools/scripts/bm_rc5.py --write into Builds/bm-RC5 (a new receipt, keep the previous receipt copy in Working/RC5/receipts/ for rollback), then run: bm_rc5.py --check, v05_driving.py --check, the geometry checks of brief 9192 and the read-back script of hdl-33 with the new numbers. Confirm that only the iteration 1 cells changed compared with the previous receipt, by diffing both receipts' module hashes and the cell values, and list every other difference as a fail. Regenerate the V-05 prediction sheet only if its inputs moved, and show the diff. Write tmp/freebuff/reports/hdl-iter1-build.md with receipt hashes before and after, the cells changed, and a statement of the install command the in-game retake must use. Done check: exit codes all zero; the changed-cell count equals the number of cells in Working/Q/FIXES_ITER1.md.
+Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

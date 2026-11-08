@@ -1,0 +1,10 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hud-gfx-ffdec-roundtrip.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+reports/jc3-community-writers-check.md found that JPEXS FFDec can write GFx (-replace, -importScript, -swf2xml/-xml2swf, -header -set gfx true), so the HUD blocker is narrower than the roadmap said: the open questions are whether JC3 loads a re-saved movie and whether AVM2 survives. FFDec is already in E:/Modding/_tools/ffdec. Desk experiment, entirely in a scratch folder under E:/Modding/_JC3grab/hud_roundtrip/ (outside the repo, never the game folder):
+1. Take JC3's ui/hud.gfx from the extracted archive data (find it through Research/JC3Grab/INDEX.jsonl; extract a private copy if needed with the repo's tools).
+2. Round trip with no edit (swf2xml then xml2swf with the gfx header). Compare the bytes and the tag lists (-dumpSWF) of the original and the copy; report every difference.
+3. Make one visible text edit (a static label) by the smallest route (-replace on a text tag), and write that probe file as the P3 payload candidate for the L0 probe session (copy to E:/Modding/JC3-Batmobile/Builds/probe-L0/P3-hud-gfx/ with a receipt: sha256, the change, the expected on-screen observation, the undo).
+4. Check whether the tag set includes anything FFDec warns about (unknown GFx tags, compression), the U6 concern in reports/hud-cluster-closest-system-plan.md.
+Do not install into the dropzone and do not launch the game. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

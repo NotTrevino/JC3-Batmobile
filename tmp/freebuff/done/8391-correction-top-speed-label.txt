@@ -1,0 +1,14 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/correction-8391-top-speed-label.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-07 by review 8399
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/review-build-wave.md
+Correction 2/9 — T-E5's 336.4 km/h is an assumed label and the drag value was reverse-engineered to make it reachable.
+
+Evidence: build-d10 §5.2 and its value table; the built custom_land_global.vmodc (internal record in the RC .toc, 714 records) carries drag_coefficient 0.55 -> 0.1213, derived from 336.4 km/h at 2921 N.m and A = 6.635 m^2. BmAK has no absolute speed member (COMPROMISES_T: "BmAK has no speed member"; only a wiki 209 mph figure). The row is `assumed`, not decoded, and the operator's 2026-10-23 sign-off covers the label, not the drag.
+
+Task: stop presenting the pair as one translation. Either (a) keep 336.4 as an explicitly labelled band (e.g. 300-336 km/h) and set drag back to the T-A2 value 0.55, reporting the resulting terminal as the predicted number, or (b) keep 0.1213 but record it as a second compromise row ("drag chosen to hit an assumed label") with its own evidence trail, and make PREDICTIONS state that any top-speed take tests reachability of a label, not fidelity to BmAK. Fix the d10 report's wording so it does not imply 336.4 is measured. Re-run t1_apply/bm_build --check on the handling tree if a value changes.
+
+Revert: Working/Translation/d10_spec.json + rc4_current.json restore the prior drag; rebuild Builds/bm-RC4-handling.
+
+Updated by review 8399: the drag number is a balance value derived from an assumption; it must be labelled as such in the ledger, the build report and the Q sheets.

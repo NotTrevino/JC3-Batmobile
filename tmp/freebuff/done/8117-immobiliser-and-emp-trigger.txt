@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/immobiliser-and-emp-trigger.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-06
+T-MD2 (Immobilizer EMP missile) and T-WP5 (EMP burst) both say: a w618 missile clone plus an entity-level CForcePulse copy can be built but nothing triggers the disabling of a vehicle. Search for the way JC3 disables a vehicle: engine kill on damage, the EMP-like Bavarium effects, the stalled-engine state in the water rules (vehicle_common 10/20/20/50 ms, 30 s engine), electrical or shock damage types, and any state setter reachable from a weapon or force pulse. Report the member chain from effect to stalled vehicle with paths and values, or the missing link.
+Where JC3 has no exact carrier, give the closest system and the gap for the build to fill (STAGES.md).

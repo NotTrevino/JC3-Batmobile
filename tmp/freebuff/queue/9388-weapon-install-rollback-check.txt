@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/weapon-install-rollback-check.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-verify-geometry-predictions-install.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/fix-loop-unranked-weapons.md
+Prepare the install path for the weapon tunes. Working/Installer/install_v2.ps1 has the rollback-safe flow, but V-06-RC2 found that Rollback091 deleted payload files and the fix covers copies only. Run the installer in dry-run mode against the merged RC5 plus fix trees (read-only on the game folder; no copy into it), with the weapon tune files and the private effect and audio trees in the file list. Confirm: every weapon tune is in the install manifest, the rollback restores every replaced file and deletes none of the payload, uninstall removes only what install added, and the verify mode reports the weapon tunes loaded by path. Output tmp/freebuff/reports/weapon-install-check.md with the manifest count, the rollback comparison by hash and the verdict. Done-check: the report quotes the dry-run exit status and zero files lost on rollback. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

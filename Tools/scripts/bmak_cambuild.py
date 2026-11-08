@@ -1,18 +1,19 @@
 """bmak_cambuild.py - pack the CAM-1 candidate into a test .ee/.toc + installer.
 
-**WITHDRAWN (2026-10-22).** `bmak_camfile.py` now fails closed: the old candidate used a
-body-scaled 7 m boom and treated UE3's horizontal FOV as vertical. The active
-`DrivingCamConfig1` carries 400/400 cm and a -3…-4 m sit offset whose composition is not
-decoded. `pack` therefore cannot run until that is settled; the tool is kept for the
-packaging/verification path, not as a way to emit a guess.
+**BATCH F (2026-10-23) — un-withdrawn with the decoded composition.** `bmak_camfile.py`
+now emits the corrected values (rest camera 7.00 m behind / 1.30 m up, FOV 55 … 63 vertical,
+108 km/h interp) and `guard()` fails closed on wrong inputs instead of refusing: the 400/400
+cm chase config plus a green `bmak_camdecode.py --check`. The packaging path below is
+unchanged; test-091 is the first batch built through it since the probe (test-086) was
+withdrawn.
 
-The candidate was two files from `bmak_camfile.py`: a modified `.ctunec` and a donor
+The candidate is two files from `bmak_camfile.py`: a modified `.ctunec` and a donor
 `.epe` whose `SharedCarCamera` path now says `bat_base.ctune`.  This tool turns that
 pair into a dropzone package derived from a named base build, then proves the
 package before anyone copies it into the game.
 
-    python Tools/scripts/bmak_cambuild.py pack --base Builds/test-085 --tag test-086
-    python Tools/scripts/bmak_cambuild.py verify --build Builds/test-086
+    python Tools/scripts/bmak_cambuild.py pack --base Builds/test-090 --tag test-091
+    python Tools/scripts/bmak_cambuild.py verify --build Builds/test-091
 
 Steps
   1. guard     base .ee/.toc match the hashes in the base installer
@@ -286,8 +287,17 @@ def pack(args) -> int:
 
         aaf = os.path.join(out, "aaf")
         shutil.copytree(os.path.join(base, "aaf"), aaf)
-        epe_rel = os.path.relpath(CAM.DONOR_EPE, os.path.join(base, "aaf")).replace(os.sep, "/")
+        # The candidate is built from the donor tree; what must land in *this* build is
+        # its path inside an aaf. Resolving the donor path against the base instead
+        # (relpath(donor_epe, base/aaf)) escapes into Builds/<donor>/ whenever
+        # base != donor and wrote the patched .epe into test-085 (fixed 2026-10-23).
+        donor_norm = CAM.DONOR_EPE.replace("\\", "/")
+        if "/aaf/" not in donor_norm:
+            raise Fail(f"donor epe is not inside an aaf tree: {CAM.DONOR_EPE}")
+        epe_rel = donor_norm.split("/aaf/", 1)[1]
         dst_epe = os.path.join(aaf, *epe_rel.split("/"))
+        if not (os.path.abspath(dst_epe) + os.sep).startswith(os.path.abspath(aaf) + os.sep):
+            raise Fail(f"stage path escapes the new tree: {dst_epe}")
         if not os.path.exists(dst_epe):
             raise Fail(f"base tree lost {epe_rel}")
         shutil.copyfile(epe_src, dst_epe)

@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/boost-rows-proposal.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-06
+Working/Translation/BOOST_COVERAGE.md shows BmAK boost values with no translation row: decel, duration, recharge, donut, base cap and the boost flags. For each uncovered value decide, from Research/JC3Grab/USAGES.md section 6 (arcade.nitro_boost: torque x2, grip x2, 15,000 N push, 0.2 s blend, +40 km/h), whether JC3 has a field that can carry it. Where a JC3 field exists propose the row (id, BmAK value with unit, JC3 field, converted value and the conversion rule); where none exists propose an explicit omission row with the reason. Write the proposals as JSON text in Working/Translation/BOOST_ROWS_PROPOSAL.md and a checker Tools/scripts/t_boost_rows.py --check that verifies each BmAK value against its source file. Do not edit T_ROWS.jsonl.

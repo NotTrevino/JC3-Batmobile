@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/app-mud-and-dirt-default.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-06
+Mud and dirt (Mud_Opacity, Mud2_Opacity, Mud_Edges_Opacity, Mud_WetStreaks, DirtColor) are dropped under D1 because BmAK scripts them per chapter. For the lore-accurate default state the Batmobile is clean. Read the BmAK material instances to confirm the default values of every one of those scalars (Research/BatmobileGrab), state the clean-state numbers, and read how JC3 dirt works per vehicle (SupportDirt, the dirt members in the CarPaintMM block) so the Batmobile's JC3 dirt behaviour is set explicitly instead of left to the donor. Report the values and the members.
+Where JC3 has no exact carrier, give the closest system and the gap for the build to fill (STAGES.md).

@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/wheel-rotation-axis.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-06
+Check how the four wheels are oriented in the build against BmAK: Research/BatmobileGrab/TYRES.md gives tyre diameters and width and the wheel bones; Working/Parts/bm_vehicle_parts.json and the built parts module say how the wheel parts rotate. Verify the spin axis, radius and width per wheel in the build match TYRES.md (cm vs m!) and that front/rear and left/right are not swapped after the coordinate conversion. Table of wheel, BmAK value, built value, difference. Output Builds/bm-RC2/verify/wheels.md + Tools/scripts/v_wheels.py --check. Read-only.

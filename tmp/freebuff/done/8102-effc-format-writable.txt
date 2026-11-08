@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/effc-format-writable.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-06
+Five effect rows (T-FX9 heat haze, T-FX12 tracer, T-FX13 casings, T-FX16 projectile trail, T-FX20 brake trail) are out only because none of the 955 shipped .effc files already does the job. A lore-accurate build can author a new effect if the format is understood. Decode the .effc container as far as the repo's tools go (see Tools/scripts and Research/JC3Grab effect notes), measure how many of its fields are named, and say whether an edited copy of a shipped effect can be written and re-read byte-for-byte on an unchanged file. Report the writer plan (what to patch, what is still UNKNOWN) and a proof that an untouched round trip is identical. Do not build a new effect yet, and do not touch the game folder. Standing rules live in tmp/freebuff/INSTRUCTIONS.md.
+Where JC3 has no exact carrier, give the closest system and the gap for the build to fill (STAGES.md).

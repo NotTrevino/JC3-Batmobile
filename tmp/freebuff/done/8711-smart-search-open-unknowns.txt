@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/smart-search-open-unknowns.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-06
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/jeb-vs-qwen-calibration.md
+Use the smart search tool (Tools/scripts/chase/smart_search.py) with whichever judge the report jeb-vs-qwen-calibration.md recommends (--judge jeb or qwen, and its threshold) on members the project still lists as UNKNOWN or not-found: read GRAB_BACKLOG.md, Research/BatmobileGrab/FOOTAGE.md and the chase rows for members that have an owner and field offset but no default value. Run up to 25 members one by one (one judge server at a time; the Jeb server is E:/AI/agent_jebadiah-9b-q5.bat on port 8081, Qwen is E:/AI/agent_qwen3.5-4b-q6-32k.bat on 8080). For every found=true re-verify the literal against the source address or offset yourself before reporting (rule R4); report member, value, source, P(true) if jeb, and whether you verified it. Do not edit FOOTAGE.md or the tracker: list the verified values so an apply brief can enter them. Never invent a value. When finished ensure the report file exists. Work autonomously.

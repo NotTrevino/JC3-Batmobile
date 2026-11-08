@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/traffic-ai-reaction-plan-v3.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/ram-damage-direction-ruling.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/factions-heat-ai-reaction-decode.md
+Rewrite the traffic and AI reaction plan with the three audit errors removed. Read tmp/freebuff/reports/traffic-and-ai-reaction-to-batmobile-plan.md, traffic-ai-claims-audit.md and Research/JC3Grab/TRAFFIC.md, then use the ram direction ruling of d07 and the AI decode of w04. Correct the claims: impact_damage_factor direction, impact_armor (the build is 5000@100, not 0@0), and the number of civilian trees (4, not 11). State what the operator expects (civilians flee or are launched, police react as to any player vehicle, no traffic record for the Batmobile) and for each part choose the closest JC3 member with its path and value, or name the gap. Output Working/World/traffic_plan_v3.md and traffic_rows.json (path, old, new, evidence) plus Tools/scripts/traffic_rows_check.py (--write, --check) which recomputes every census figure from Research/JC3Grab. Unsourced numbers stay UNKNOWN with the file that settles each. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

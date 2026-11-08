@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/retest-damage-after-fixes.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/APPROVED_Q_FULL.txt, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/damage-fix-loop-desk.md
+Supervised in-game retest, only after APPROVED_Q.txt exists and the rebuilt damage tree of the fix round is installed by the operator. Read Working/Damage/fix_round1.json and run only the cards whose observation failed before (a subset of DMG_SHOTS, DMG_HEAVY, DMG_EXPLODE, DMG_RAM, DMG_REGEN, DMG_RESUMMON), plus LAUNCH.md, SPAWN_BATMOBILE.md and KILL.md. Pass rule: each retested observation falls in the band that its original failure report stated. One extra fix round per original failure is the limit; a second failure is recorded as a named blocker with the telemetry and clip, and not retried. Results under Working/Q/results/damage-round2/. Final table: observation, round 1, round 2, verdict, so the QX checklist can mark the damage rows closed or open. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

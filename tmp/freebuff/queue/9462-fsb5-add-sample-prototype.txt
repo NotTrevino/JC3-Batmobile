@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/fsb5-add-sample-prototype.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/fsb5-roundtrip-writer.md
+Extend the writer from fsb5_rw.py so a sample can be appended instead of swapped. Choose the simplest codec that the shipped banks already use for vehicle loops; encode one mono WAV (the turbine donor named in reports/engine-sound-turbine-priority.md, media 0x330DC554 under E:/Modding/_BmAKgrab/audio_regrab/wav) with loop points. Append it to a copy of vehicles.bank in Builds/aud-spike/, fix the sample table, name table, data offsets, chunk sizes and the RIFF length, then reparse the result with Tools/scripts/bank_spec_check.py and with the vgmstream-cli binary in Tools/vgmstream-win64 to confirm that the new sample decodes to the same audio. The new sample is not yet reachable from an event; say so. Done check: reparse shows sample count plus one, existing 649 payload hashes unchanged, vgmstream decodes the appended sample, and the report lists every field touched. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

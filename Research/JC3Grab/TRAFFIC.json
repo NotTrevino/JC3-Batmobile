@@ -1,0 +1,1628 @@
+{
+ "donor": {
+  "directory": "v0300_car_kensington_sportsmuscle",
+  "name": "v0300_car_kensington_sportsmuscle_civilian_01",
+  "name_hash": "D2B46B49",
+  "path": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_civilian_01.ee",
+  "path_hash": "FC21B7E3"
+ },
+ "donor_modules": {
+  "ai": [
+   "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/ai/v0300_car_kensington_sportsmuscle_land_global_ai.vmodc"
+  ],
+  "modules": [
+   "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/ai/v0300_car_kensington_sportsmuscle_land_global_ai.vmodc",
+   "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/v0300_car_kensington_sportsmuscle_land_engine.vmodc",
+   "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/v0300_car_kensington_sportsmuscle_land_global.vmodc"
+  ]
+ },
+ "inputs": {
+  "INDEX.jsonl": {
+   "sha256": "3060ea8becba834dbaba63b2607a8c5e85cd0a97eb96dccde7fde1f44a5de2d1",
+   "size": 17436753
+  },
+  "global/global.blo": {
+   "sha256": "44de9f260e2760c15fdb4fa2c3e8c5690dc43692ba95a158baf653c6ddf9d653",
+   "size": 79340
+  },
+  "settings/spawn_vehicle_defs.bin": {
+   "sha256": "5c4a6a5e7972cf7a793e99a49b03bdba98f1900c34e6c2aae9087b2fee93e5bc",
+   "size": 27513
+  }
+ },
+ "profiles": {
+  "item": {
+   "digest": {
+    "sha256": "5ae44725bb7f7062374d70f2685db61c0a9db284394445a6b83227bdb5c4f02a",
+    "size": 52204
+   },
+   "keys": [
+    "v0300_car_kensington_sportsmuscle_civilian_01_desc"
+   ],
+   "mount": "patch",
+   "name_count": 3,
+   "path": "profile/item.onlinec",
+   "size": 52204
+  },
+  "task": {
+   "digest": {
+    "sha256": "bd53ac10d764bb54165d9fb3773c802c441c5641a66ba247576044c34f3115e6",
+    "size": 167470
+   },
+   "keys": [
+    "chopshop_v0300_car_kensington_sportsmuscle_civilian_01"
+   ],
+   "mount": "patch",
+   "name_count": 1,
+   "path": "profile/task.onlinec",
+   "size": 167470
+  }
+ },
+ "rules": {
+  "bts": [
+   "ai/bts/civilian/civilian_std.bts",
+   "ai/bts/enemies/01_shared/boat_gunner.bts",
+   "ai/bts/enemies/01_shared/soldier_tank_driver.bts",
+   "ai/bts/enemies/demolition/demolition_rpg.bts",
+   "ai/bts/enemies/gen_soldier/gen_soldier.bts",
+   "ai/bts/enemies/machinegunner/machinegunner.bts",
+   "ai/bts/enemies/shock_trooper/shock_trooper.bts",
+   "ai/bts/vehicle/airplane/airplane_roam.bts",
+   "ai/bts/vehicle/boat/civilian_roam_in_boat.bts",
+   "ai/bts/vehicle/boat/military_boat_driver_2.bts"
+  ],
+  "donor_matches": [
+   {
+    "denied_present": [],
+    "excludes": [
+     "highend"
+    ],
+    "missing": [],
+    "next_rule": "03_CivilianCarLiberatedProvince",
+    "offset": 34656,
+    "ok": true,
+    "requires": [
+     "ambient",
+     "ground",
+     "car",
+     "liberated"
+    ],
+    "selector": "ambient,ground,car,liberated,-highend"
+   }
+  ],
+  "donor_misses": 40,
+  "impostor": [
+   "AITrafficImpostorSystem",
+   "PCAITrafficImpostorSystem"
+  ],
+  "mount": "patch",
+  "other_rules": [
+   "AmbienGoatRule",
+   "AmbientDeerRule",
+   "PCEncounterRule",
+   "PPCAmbientWildlifeRule",
+   "PPPCSprinkleRule"
+  ],
+  "path": "global/global.blo",
+  "rule_names": [
+   {
+    "name": "CAmbientTrafficRule",
+    "offset": 2544
+   },
+   {
+    "name": "B03_RebelTankTrafficRule",
+    "offset": 2760
+   },
+   {
+    "name": "11_TruckOutsideSettlementsTrafficRule",
+    "offset": 4176
+   },
+   {
+    "name": "08_PoliceCarOutsideLiberatedSettlementsTrafficRule",
+    "offset": 5464
+   },
+   {
+    "name": "B01_MilitaryBikerTrafficRule",
+    "offset": 7440
+   },
+   {
+    "name": "MilitaryAmbientLowAltitudeAirTrafficRule",
+    "offset": 8800
+   },
+   {
+    "name": "B01_MilitaryBuggyTrafficRule",
+    "offset": 11920
+   },
+   {
+    "name": "B01_MilitaryJeepTrafficRule",
+    "offset": 13888
+   },
+   {
+    "name": "B06_MilitaryWaterTrafficRule",
+    "offset": 16888
+   },
+   {
+    "name": "B00_RebelBikerTrafficRule",
+    "offset": 19040
+   },
+   {
+    "name": "04_CivilianBikeLiberatedProvince",
+    "offset": 20384
+   },
+   {
+    "name": "02_CivilianBikeGlobalNeutral",
+    "offset": 21616
+   },
+   {
+    "name": "B06_RebelWaterTrafficRule2",
+    "offset": 25656
+   },
+   {
+    "name": "06_CivilianBikeOppressedProvinceLiberatedSettlement",
+    "offset": 31232
+   },
+   {
+    "name": "03_CivilianCarLiberatedProvince",
+    "offset": 34848
+   },
+   {
+    "name": "07b_HighEndOppressedProvinceLiberatedSettlement",
+    "offset": 36752
+   },
+   {
+    "name": "NOW02_ProvinceOppressed_MilitaryBikeTrafficRule",
+    "offset": 38424
+   },
+   {
+    "name": "99_OpenWorldAuthority_MilitaryTrafficRule",
+    "offset": 42824
+   },
+   {
+    "name": "B00_RebelOldJeepTrafficRule",
+    "offset": 45104
+   },
+   {
+    "name": "B00_RebelTechnicalJeepTrafficRule",
+    "offset": 47008
+   },
+   {
+    "name": "01_CivilianCarGlobalNeutral",
+    "offset": 48928
+   },
+   {
+    "name": "07_HighEndLiberatedProvince",
+    "offset": 52048
+   },
+   {
+    "name": "12_MilitaryJeepTrafficRule",
+    "offset": 53992
+   },
+   {
+    "name": "B00_RebelMountedGunnerJeepTrafficRule",
+    "offset": 56304
+   },
+   {
+    "name": "09_CommercialAmbientInSettlementsTrafficRule",
+    "offset": 62128
+   },
+   {
+    "name": "B05_MilitaryAmbientAirTrafficRule",
+    "offset": 65256
+   },
+   {
+    "name": "10_CommercialAmbientOutsideSettlementsTrafficRule",
+    "offset": 68416
+   },
+   {
+    "name": "NOW01_ProvinceOppressed_MilitaryTrafficRule",
+    "offset": 69832
+   },
+   {
+    "name": "05_CivilianCarOppressedProvinceLiberatedSettlement",
+    "offset": 73616
+   },
+   {
+    "name": "B02_MilitaryTankTrafficRule",
+    "offset": 75272
+   },
+   {
+    "name": "CivilianAmbientLowAltitudeAirTrafficRule",
+    "offset": 78952
+   }
+  ],
+  "seat_names": [
+   "Driver"
+  ],
+  "selector_count": 41,
+  "selectors": [
+   {
+    "next_rule": "B03_RebelTankTrafficRule",
+    "offset": 2564,
+    "text": "tank, rebel, ground,not_shielded",
+    "tokens": [
+     "tank",
+     "rebel",
+     "ground",
+     "not_shielded"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "11_TruckOutsideSettlementsTrafficRule",
+    "offset": 3272,
+    "text": "character,rebel",
+    "tokens": [
+     "character",
+     "rebel"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "11_TruckOutsideSettlementsTrafficRule",
+    "offset": 3296,
+    "text": "grunt",
+    "tokens": [
+     "grunt"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "11_TruckOutsideSettlementsTrafficRule",
+    "offset": 3972,
+    "text": "ambient, ground, commercial, unarmored, truck",
+    "tokens": [
+     "ambient",
+     "ground",
+     "commercial",
+     "unarmored",
+     "truck"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "08_PoliceCarOutsideLiberatedSettlementsTrafficRule",
+    "offset": 4568,
+    "text": "character,civilian,truck_driver",
+    "tokens": [
+     "character",
+     "civilian",
+     "truck_driver"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "08_PoliceCarOutsideLiberatedSettlementsTrafficRule",
+    "offset": 5272,
+    "text": "drm,heat1",
+    "tokens": [
+     "drm",
+     "heat1"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "B01_MilitaryBikerTrafficRule",
+    "offset": 6032,
+    "text": "pistol",
+    "tokens": [
+     "pistol"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "B01_MilitaryBikerTrafficRule",
+    "offset": 7292,
+    "text": "bike military",
+    "tokens": [
+     "bike",
+     "military"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "MilitaryAmbientLowAltitudeAirTrafficRule",
+    "offset": 7976,
+    "text": "scout",
+    "tokens": [
+     "scout"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "MilitaryAmbientLowAltitudeAirTrafficRule",
+    "offset": 7992,
+    "text": "guard",
+    "tokens": [
+     "guard"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "MilitaryAmbientLowAltitudeAirTrafficRule",
+    "offset": 8616,
+    "text": "military, plane, air, vehicle jet",
+    "tokens": [
+     "military",
+     "plane",
+     "air",
+     "vehicle",
+     "jet"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "B01_MilitaryBuggyTrafficRule",
+    "offset": 11740,
+    "text": "vehicle,ground,car,military,buggy",
+    "tokens": [
+     "vehicle",
+     "ground",
+     "car",
+     "military",
+     "buggy"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "B06_MilitaryWaterTrafficRule",
+    "offset": 15592,
+    "text": "machinegun",
+    "tokens": [
+     "machinegun"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "B06_MilitaryWaterTrafficRule",
+    "offset": 16700,
+    "text": "military, boat, patrol",
+    "tokens": [
+     "military",
+     "boat",
+     "patrol"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "B00_RebelBikerTrafficRule",
+    "offset": 18888,
+    "text": "bike rebel",
+    "tokens": [
+     "bike",
+     "rebel"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "04_CivilianBikeLiberatedProvince",
+    "offset": 20196,
+    "text": "ambient,ground,bike,liberated",
+    "tokens": [
+     "ambient",
+     "ground",
+     "bike",
+     "liberated"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "02_CivilianBikeGlobalNeutral",
+    "offset": 20772,
+    "text": "character,motor_bike_rider",
+    "tokens": [
+     "character",
+     "motor_bike_rider"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "02_CivilianBikeGlobalNeutral",
+    "offset": 21424,
+    "text": "ambient, bike, global_neutral",
+    "tokens": [
+     "ambient",
+     "bike",
+     "global_neutral"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "B06_RebelWaterTrafficRule2",
+    "offset": 25476,
+    "text": "rebel, boat, patrol",
+    "tokens": [
+     "rebel",
+     "boat",
+     "patrol"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "06_CivilianBikeOppressedProvinceLiberatedSettlement",
+    "offset": 26040,
+    "text": "rebel",
+    "tokens": [
+     "rebel"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "06_CivilianBikeOppressedProvinceLiberatedSettlement",
+    "offset": 29848,
+    "text": "civilian, boat, not_large,ambient",
+    "tokens": [
+     "civilian",
+     "boat",
+     "not_large",
+     "ambient"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "06_CivilianBikeOppressedProvinceLiberatedSettlement",
+    "offset": 30404,
+    "text": "character,civilian",
+    "tokens": [
+     "character",
+     "civilian"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "03_CivilianCarLiberatedProvince",
+    "offset": 34656,
+    "text": "ambient,ground,car,liberated,-highend",
+    "tokens": [
+     "ambient",
+     "ground",
+     "car",
+     "liberated",
+     "-highend"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "07b_HighEndOppressedProvinceLiberatedSettlement",
+    "offset": 35232,
+    "text": "character,civilian, -farmer, -servant",
+    "tokens": [
+     "character",
+     "civilian",
+     "-farmer",
+     "-servant"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "07b_HighEndOppressedProvinceLiberatedSettlement",
+    "offset": 36564,
+    "text": "ambient,ground,car, highend",
+    "tokens": [
+     "ambient",
+     "ground",
+     "car",
+     "highend"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "NOW02_ProvinceOppressed_MilitaryBikeTrafficRule",
+    "offset": 37152,
+    "text": "character, highend",
+    "tokens": [
+     "character",
+     "highend"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "NOW02_ProvinceOppressed_MilitaryBikeTrafficRule",
+    "offset": 38224,
+    "text": "mil_now_bike",
+    "tokens": [
+     "mil_now_bike"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "99_OpenWorldAuthority_MilitaryTrafficRule",
+    "offset": 42616,
+    "text": "mil_auth_road_traffic",
+    "tokens": [
+     "mil_auth_road_traffic"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "B00_RebelTechnicalJeepTrafficRule",
+    "offset": 45616,
+    "text": "shotgun",
+    "tokens": [
+     "shotgun"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "01_CivilianCarGlobalNeutral",
+    "offset": 48736,
+    "text": "ambient, ground, car, global_neutral",
+    "tokens": [
+     "ambient",
+     "ground",
+     "car",
+     "global_neutral"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "09_CommercialAmbientInSettlementsTrafficRule",
+    "offset": 58552,
+    "text": "demolition",
+    "tokens": [
+     "demolition"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "09_CommercialAmbientInSettlementsTrafficRule",
+    "offset": 58592,
+    "text": "demo_pistol",
+    "tokens": [
+     "demo_pistol"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "09_CommercialAmbientInSettlementsTrafficRule",
+    "offset": 61936,
+    "text": "ambient, ground, commercial, civil_servant",
+    "tokens": [
+     "ambient",
+     "ground",
+     "commercial",
+     "civil_servant"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "B05_MilitaryAmbientAirTrafficRule",
+    "offset": 62528,
+    "text": "character, civilian, civil, servant",
+    "tokens": [
+     "character",
+     "civilian",
+     "civil",
+     "servant"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "B05_MilitaryAmbientAirTrafficRule",
+    "offset": 63168,
+    "text": "deer",
+    "tokens": [
+     "deer"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "B05_MilitaryAmbientAirTrafficRule",
+    "offset": 65064,
+    "text": "military, plane, air, jet",
+    "tokens": [
+     "military",
+     "plane",
+     "air",
+     "jet"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "NOW01_ProvinceOppressed_MilitaryTrafficRule",
+    "offset": 69636,
+    "text": "mil_now_traffic",
+    "tokens": [
+     "mil_now_traffic"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "B02_MilitaryTankTrafficRule",
+    "offset": 75072,
+    "text": "tank, military, not_shielded",
+    "tokens": [
+     "tank",
+     "military",
+     "not_shielded"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "CivilianAmbientLowAltitudeAirTrafficRule",
+    "offset": 76392,
+    "text": "civilian, boat, large,ambient",
+    "tokens": [
+     "civilian",
+     "boat",
+     "large",
+     "ambient"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "CivilianAmbientLowAltitudeAirTrafficRule",
+    "offset": 78112,
+    "text": "goat",
+    "tokens": [
+     "goat"
+    ],
+    "unknown": []
+   },
+   {
+    "next_rule": "CivilianAmbientLowAltitudeAirTrafficRule",
+    "offset": 78784,
+    "text": "civilian, plane, air, vehicle",
+    "tokens": [
+     "civilian",
+     "plane",
+     "air",
+     "vehicle"
+    ],
+    "unknown": []
+   }
+  ],
+  "size": 79340
+ },
+ "scan": {
+  "bytes": 7719462378,
+  "deep": true,
+  "extensions": [
+   ".bin",
+   ".bl",
+   ".blo",
+   ".btc",
+   ".ctunec",
+   ".defc",
+   ".destc",
+   ".ee",
+   ".effc",
+   ".entityregc",
+   ".epe",
+   ".gadfc",
+   ".gdc",
+   ".gsc",
+   ".lua",
+   ".mdic",
+   ".onlinec",
+   ".pfs",
+   ".pfxc",
+   ".physicsc",
+   ".revolutionc",
+   ".stringlookup",
+   ".toc",
+   ".trim",
+   ".vmodc",
+   ".wtunec"
+  ],
+  "failed": [],
+  "files": 11751,
+  "hash": "D2B46B49",
+  "hits": [
+   {
+    "confidence": "name",
+    "hashes": 1,
+    "kind": "spawn table",
+    "mount": "base",
+    "note": "a record in a spawn-definition table",
+    "path": "settings/spawn_vehicle_defs.bin",
+    "size": 27513,
+    "strings": 2
+   },
+   {
+    "confidence": "name",
+    "hashes": 0,
+    "kind": "level rule",
+    "mount": "patch",
+    "note": "a CVehicleRule in a level's logic object",
+    "path": "locations/jc_prototype/mm320/train_test.blo",
+    "size": 2292,
+    "strings": 1
+   },
+   {
+    "confidence": "name",
+    "hashes": 0,
+    "kind": "level rule",
+    "mount": "patch",
+    "note": "a CVehicleRule in a level's logic object",
+    "path": "locations/rom/wingsuit_course/wing20_logic.blo",
+    "size": 539192,
+    "strings": 1
+   },
+   {
+    "confidence": "name",
+    "hashes": 1,
+    "kind": "Rebel Drop",
+    "mount": "base",
+    "note": "an item in the Rebel Drop list",
+    "path": "profile/item.onlinec",
+    "size": 52165,
+    "strings": 4
+   },
+   {
+    "confidence": "name",
+    "hashes": 1,
+    "kind": "Rebel Drop",
+    "mount": "patch",
+    "note": "an item in the Rebel Drop list",
+    "path": "profile/item.onlinec",
+    "size": 52204,
+    "strings": 4
+   },
+   {
+    "confidence": "name",
+    "hashes": 1,
+    "kind": "task table",
+    "mount": "base",
+    "note": "a task key naming the vehicle (chop shop)",
+    "path": "profile/task.onlinec",
+    "size": 167286,
+    "strings": 2
+   },
+   {
+    "confidence": "name",
+    "hashes": 1,
+    "kind": "task table",
+    "mount": "patch",
+    "note": "a task key naming the vehicle (chop shop)",
+    "path": "profile/task.onlinec",
+    "size": 167470,
+    "strings": 2
+   },
+   {
+    "confidence": "name",
+    "hashes": 0,
+    "kind": "frontend",
+    "mount": "patch",
+    "note": "named in the frontend's vehicle list",
+    "path": "global/frontend_global.blo",
+    "size": 95864,
+    "strings": 1
+   },
+   {
+    "confidence": "name",
+    "hashes": 1,
+    "kind": "entity registry",
+    "mount": "base",
+    "note": "lists the entity, not a spawn",
+    "path": "global/entityregistry_gen.entityregc",
+    "size": 33003365,
+    "strings": 1
+   },
+   {
+    "confidence": "name",
+    "hashes": 1,
+    "kind": "entity registry",
+    "mount": "patch",
+    "note": "lists the entity, not a spawn",
+    "path": "global/entityregistry_gen.entityregc",
+    "size": 39220585,
+    "strings": 1
+   },
+   {
+    "confidence": "hash only (may be a coincidence)",
+    "hashes": 1,
+    "kind": "localisation",
+    "mount": "base",
+    "note": "name lookup only",
+    "path": "profile/online.stringlookup",
+    "size": 1621250,
+    "strings": 0
+   },
+   {
+    "confidence": "hash only (may be a coincidence)",
+    "hashes": 1,
+    "kind": "localisation",
+    "mount": "patch",
+    "note": "name lookup only",
+    "path": "profile/online.stringlookup",
+    "size": 1627106,
+    "strings": 0
+   },
+   {
+    "confidence": "name",
+    "hashes": 0,
+    "kind": "patch metadata",
+    "mount": "patch",
+    "note": "lists the file as changed by the patch",
+    "path": "patchmetadata.bin",
+    "size": 9227364,
+    "strings": 3
+   },
+   {
+    "confidence": "name",
+    "hashes": 0,
+    "kind": "self",
+    "mount": "patch",
+    "note": "the entity's own file",
+    "path": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_civilian_01.ee.toc",
+    "size": 46192,
+    "strings": 3
+   },
+   {
+    "confidence": "name",
+    "hashes": 1,
+    "kind": "self",
+    "mount": "patch",
+    "note": "the entity's own file",
+    "path": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_civilian_01.epe",
+    "size": 109766,
+    "strings": 1
+   },
+   {
+    "confidence": "hash only (may be a coincidence)",
+    "hashes": 1,
+    "kind": "other",
+    "mount": "dlc",
+    "note": "unclassified",
+    "path": "dlc/mech_land_assault/editor/entities/jc_weapons/05_stationary/w506_sam_blackhand_heavycontroldrone/dlc2_sam_bh_controldrone_02.ee",
+    "size": 4028000,
+    "strings": 0
+   },
+   {
+    "confidence": "hash only (may be a coincidence)",
+    "hashes": 1,
+    "kind": "other",
+    "mount": "dlc",
+    "note": "unclassified",
+    "path": "dlc/mech_land_assault/editor/entities/jc_weapons/05_stationary/w506_sam_blackhand_heavycontroldrone/dlc2_sam_bh_controldrone_04.ee",
+    "size": 4028000,
+    "strings": 0
+   }
+  ],
+  "needle": "v0300_car_kensington_sportsmuscle_civilian_01",
+  "not_scanned": {
+   ".abc": {
+    "bytes": 9872,
+    "files": 3
+   },
+   ".afsmb": {
+    "bytes": 826091,
+    "files": 165
+   },
+   ".aisystunec": {
+    "bytes": 30206,
+    "files": 2
+   },
+   ".asb": {
+    "bytes": 8943248,
+    "files": 61
+   },
+   ".asynccc": {
+    "bytes": 61205,
+    "files": 2
+   },
+   ".avprojc": {
+    "bytes": 3395,
+    "files": 2
+   },
+   ".ban": {
+    "bytes": 141700912,
+    "files": 12554
+   },
+   ".bank": {
+    "bytes": 4994305756,
+    "files": 54
+   },
+   ".banklist": {
+    "bytes": 894,
+    "files": 2
+   },
+   ".bikc": {
+    "bytes": 2579117312,
+    "files": 228
+   },
+   ".bk2c": {
+    "bytes": 1668410136,
+    "files": 12
+   },
+   ".bmpc": {
+    "bytes": 3126,
+    "files": 1
+   },
+   ".brdd": {
+    "bytes": 4344,
+    "files": 1
+   },
+   ".bsk": {
+    "bytes": 8672,
+    "files": 1
+   },
+   ".cmtunec": {
+    "bytes": 9322,
+    "files": 1
+   },
+   ".collectionc": {
+    "bytes": 34060,
+    "files": 5
+   },
+   ".dds": {
+    "bytes": 76650704,
+    "files": 111
+   },
+   ".ddsc": {
+    "bytes": 1985902080,
+    "files": 1687
+   },
+   ".dlcinstallinfo": {
+    "bytes": 683,
+    "files": 19
+   },
+   ".environc": {
+    "bytes": 139380,
+    "files": 9
+   },
+   ".etunec": {
+    "bytes": 3780,
+    "files": 3
+   },
+   ".fl": {
+    "bytes": 1730339904,
+    "files": 1326
+   },
+   ".fmod_guids": {
+    "bytes": 72894,
+    "files": 54
+   },
+   ".ftunec": {
+    "bytes": 1280,
+    "files": 2
+   },
+   ".gfx": {
+    "bytes": 6335516,
+    "files": 59
+   },
+   ".gnf": {
+    "bytes": 16,
+    "files": 1
+   },
+   ".gvc": {
+    "bytes": 2146,
+    "files": 2
+   },
+   ".hikcc": {
+    "bytes": 13424,
+    "files": 2
+   },
+   ".hmddsc": {
+    "bytes": 14284881920,
+    "files": 8296
+   },
+   ".junction_physicsc": {
+    "bytes": 610864,
+    "files": 2
+   },
+   ".light_infob": {
+    "bytes": 8,
+    "files": 1
+   },
+   ".light_infoc": {
+    "bytes": 6284244,
+    "files": 2
+   },
+   ".lod": {
+    "bytes": 81029,
+    "files": 196
+   },
+   ".missionsc": {
+    "bytes": 12168,
+    "files": 4
+   },
+   ".navmeshc": {
+    "bytes": 2250591392,
+    "files": 2631
+   },
+   ".nl": {
+    "bytes": 12331596080,
+    "files": 2771
+   },
+   ".obc": {
+    "bytes": 42724,
+    "files": 11
+   },
+   ".occludersc": {
+    "bytes": 447850,
+    "files": 2
+   },
+   ".pfic": {
+    "bytes": 3866690,
+    "files": 61
+   },
+   ".rawc": {
+    "bytes": 8486912,
+    "files": 11
+   },
+   ".rbm": {
+    "bytes": 491894747,
+    "files": 3105
+   },
+   ".restartpointsc": {
+    "bytes": 134408,
+    "files": 4
+   },
+   ".roadgraphc": {
+    "bytes": 5656840,
+    "files": 7
+   },
+   ".routec": {
+    "bytes": 986,
+    "files": 1
+   },
+   ".shudc": {
+    "bytes": 9698,
+    "files": 2
+   },
+   ".sig": {
+    "bytes": 3234,
+    "files": 2
+   },
+   ".statisticsc": {
+    "bytes": 146657,
+    "files": 2
+   },
+   ".streampatch": {
+    "bytes": 3673756446,
+    "files": 5600
+   },
+   ".terrainsystemc": {
+    "bytes": 89474904,
+    "files": 2
+   },
+   ".ttfc": {
+    "bytes": 309424,
+    "files": 2
+   },
+   ".vegc": {
+    "bytes": 119332,
+    "files": 26
+   },
+   ".vegetationinfo": {
+    "bytes": 1306053,
+    "files": 2
+   },
+   ".vocals_settingsc": {
+    "bytes": 7610,
+    "files": 2
+   },
+   ".vocalsc": {
+    "bytes": 348840,
+    "files": 56
+   },
+   ".watertunec": {
+    "bytes": 630,
+    "files": 1
+   },
+   ".wavc": {
+    "bytes": 2277915728,
+    "files": 31001
+   },
+   ".world": {
+    "bytes": 1018,
+    "files": 2
+   },
+   ".worldaudioinfo_xmlc": {
+    "bytes": 5155,
+    "files": 1
+   },
+   ".xvmc": {
+    "bytes": 136706,
+    "files": 26
+   }
+  }
+ },
+ "spawn": {
+  "donor_record": {
+   "group": "",
+   "name": "v0300_car_kensington_sportsmuscle_civilian_01",
+   "offset": 23240,
+   "path": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_civilian_01.ee",
+   "tags": [
+    "vehicle",
+    "ground",
+    "car",
+    "civilian",
+    "racing",
+    "modern",
+    "muscle",
+    "kensington",
+    "sports",
+    "unarmed",
+    "unarmored",
+    "ambient",
+    "liberated"
+   ]
+  },
+  "main": {
+   "groups": [
+    "vehicle|bavarium",
+    "vehicle|ground|civilian",
+    "vehicle|ground|commercial",
+    "vehicle|ground|military",
+    "vehicle|ground|militia",
+    "vehicle|ground|rebel",
+    "vehicle|ground|reward",
+    "vehicle|ground|z80"
+   ],
+   "keyed_records": 8,
+   "mount": "base",
+   "path": "settings/spawn_vehicle_defs.bin",
+   "pool_counts": {
+    "vehicle|bavarium": 1,
+    "vehicle|ground|civilian": 1,
+    "vehicle|ground|commercial": 1,
+    "vehicle|ground|military": 1,
+    "vehicle|ground|militia": 1,
+    "vehicle|ground|rebel": 1,
+    "vehicle|ground|reward": 1,
+    "vehicle|ground|z80": 1
+   },
+   "records": 86,
+   "size": 27513,
+   "tag_pairs": {
+    "ambient": 32,
+    "ambient_and_liberated": 14,
+    "liberated": 14,
+    "liberated_without_ambient": 0,
+    "records": 86,
+    "traffic_tagged": 10
+   },
+   "v0300": [
+    {
+     "group": "",
+     "name": "v0300_car_kensington_sportsmuscle_civilian_01",
+     "offset": 23240,
+     "path": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_civilian_01.ee",
+     "tags": [
+      "vehicle",
+      "ground",
+      "car",
+      "civilian",
+      "racing",
+      "modern",
+      "muscle",
+      "kensington",
+      "sports",
+      "unarmed",
+      "unarmored",
+      "ambient",
+      "liberated"
+     ]
+    }
+   ]
+  },
+  "tables": {
+   "dlc/bavarium_sea_heist/settings/spawn_aircraft_defs.bin": {
+    "groups": 2,
+    "mount": "dlc",
+    "records": 8,
+    "size": 2857,
+    "v0300": []
+   },
+   "dlc/bavarium_sea_heist/settings/spawn_boat_defs.bin": {
+    "groups": 2,
+    "mount": "dlc",
+    "records": 8,
+    "size": 2653,
+    "v0300": []
+   },
+   "dlc/bavarium_sea_heist/settings/spawn_combatant_defs.bin": {
+    "groups": 2,
+    "mount": "dlc",
+    "records": 5,
+    "size": 1136,
+    "v0300": []
+   },
+   "dlc/bavarium_sea_heist/settings/spawn_prop_defs.bin": {
+    "groups": 1,
+    "mount": "dlc",
+    "records": 3,
+    "size": 655,
+    "v0300": []
+   },
+   "dlc/bavarium_sea_heist/settings/spawn_vehicle_defs.bin": {
+    "groups": 1,
+    "mount": "dlc",
+    "records": 2,
+    "size": 781,
+    "v0300": []
+   },
+   "dlc/bavarium_sea_heist/settings/spawn_vehicle_proto_defs.bin": {
+    "groups": 1,
+    "mount": "dlc",
+    "records": 1,
+    "size": 291,
+    "v0300": []
+   },
+   "dlc/bavarium_sea_heist/settings/spawn_weapon_defs.bin": {
+    "groups": 2,
+    "mount": "dlc",
+    "records": 3,
+    "size": 689,
+    "v0300": []
+   },
+   "dlc/mech_land_assault/settings/spawn_aircraft_defs.bin": {
+    "groups": 2,
+    "mount": "dlc",
+    "records": 14,
+    "size": 4623,
+    "v0300": []
+   },
+   "dlc/mech_land_assault/settings/spawn_boat_defs.bin": {
+    "groups": 3,
+    "mount": "dlc",
+    "records": 6,
+    "size": 2047,
+    "v0300": []
+   },
+   "dlc/mech_land_assault/settings/spawn_combatant_defs.bin": {
+    "groups": 1,
+    "mount": "dlc",
+    "records": 39,
+    "size": 8573,
+    "v0300": []
+   },
+   "dlc/mech_land_assault/settings/spawn_encounter_defs.bin": {
+    "groups": 0,
+    "mount": "dlc",
+    "records": 18,
+    "size": 3712,
+    "v0300": []
+   },
+   "dlc/mech_land_assault/settings/spawn_prop_defs.bin": {
+    "groups": 1,
+    "mount": "dlc",
+    "records": 3,
+    "size": 576,
+    "v0300": []
+   },
+   "dlc/mech_land_assault/settings/spawn_vehicle_defs.bin": {
+    "groups": 3,
+    "mount": "dlc",
+    "records": 16,
+    "size": 4894,
+    "v0300": []
+   },
+   "dlc/mech_land_assault/settings/spawn_weapon_defs.bin": {
+    "groups": 2,
+    "mount": "dlc",
+    "records": 12,
+    "size": 2603,
+    "v0300": []
+   },
+   "dlc/sky_fortress/settings/spawn_aircraft_defs.bin": {
+    "groups": 1,
+    "mount": "dlc",
+    "records": 11,
+    "size": 3189,
+    "v0300": []
+   },
+   "dlc/sky_fortress/settings/spawn_combatant_defs.bin": {
+    "groups": 1,
+    "mount": "dlc",
+    "records": 3,
+    "size": 672,
+    "v0300": []
+   },
+   "dlc/sky_fortress/settings/spawn_prop_defs.bin": {
+    "groups": 0,
+    "mount": "dlc",
+    "records": 4,
+    "size": 788,
+    "v0300": []
+   },
+   "dlc/sky_fortress/settings/spawn_weapon_defs.bin": {
+    "groups": 2,
+    "mount": "dlc",
+    "records": 7,
+    "size": 1558,
+    "v0300": []
+   },
+   "dlc/v0300_preorder/settings/spawn_vehicle_defs.bin": {
+    "groups": 1,
+    "mount": "dlc",
+    "records": 1,
+    "size": 437,
+    "v0300": [
+     "v0300_car_kensington_sportsmuscle_signature_preorder"
+    ]
+   },
+   "dlc/v0604_preorder/settings/spawn_vehicle_defs.bin": {
+    "groups": 1,
+    "mount": "dlc",
+    "records": 1,
+    "size": 387,
+    "v0300": []
+   },
+   "dlc/v0805_sportmech/settings/spawn_vehicle_defs.bin": {
+    "groups": 1,
+    "mount": "dlc",
+    "records": 1,
+    "size": 314,
+    "v0300": []
+   },
+   "dlc/v1401_preorder/settings/spawn_boat_defs.bin": {
+    "groups": 1,
+    "mount": "dlc",
+    "records": 1,
+    "size": 418,
+    "v0300": []
+   },
+   "dlc/w142_preorder/settings/spawn_weapon_defs.bin": {
+    "groups": 0,
+    "mount": "dlc",
+    "records": 1,
+    "size": 253,
+    "v0300": []
+   },
+   "dlc/w163_preorder/settings/spawn_weapon_defs.bin": {
+    "groups": 0,
+    "mount": "dlc",
+    "records": 1,
+    "size": 279,
+    "v0300": []
+   },
+   "dlc/w901_scorpiongun/settings/spawn_weapon_defs.bin": {
+    "groups": 0,
+    "mount": "dlc",
+    "records": 1,
+    "size": 208,
+    "v0300": []
+   },
+   "settings/spawn_aircraft_defs.bin": {
+    "groups": 5,
+    "mount": "patch",
+    "records": 29,
+    "size": 9900,
+    "v0300": []
+   },
+   "settings/spawn_aircraft_premium_defs.bin": {
+    "groups": 0,
+    "mount": "base",
+    "records": 0,
+    "size": 44,
+    "v0300": []
+   },
+   "settings/spawn_aircraft_proto_defs.bin": {
+    "groups": 0,
+    "mount": "base",
+    "records": 0,
+    "size": 44,
+    "v0300": []
+   },
+   "settings/spawn_animals_defs.bin": {
+    "groups": 1,
+    "mount": "base",
+    "records": 6,
+    "size": 1094,
+    "v0300": []
+   },
+   "settings/spawn_boat_defs.bin": {
+    "groups": 3,
+    "mount": "base",
+    "records": 18,
+    "size": 5915,
+    "v0300": []
+   },
+   "settings/spawn_boat_premium_defs.bin": {
+    "groups": 0,
+    "mount": "base",
+    "records": 0,
+    "size": 44,
+    "v0300": []
+   },
+   "settings/spawn_boat_proto_defs.bin": {
+    "groups": 0,
+    "mount": "patch",
+    "records": 0,
+    "size": 44,
+    "v0300": []
+   },
+   "settings/spawn_civilian_defs.bin": {
+    "groups": 14,
+    "mount": "base",
+    "records": 135,
+    "size": 24246,
+    "v0300": []
+   },
+   "settings/spawn_combatant_defs.bin": {
+    "groups": 7,
+    "mount": "base",
+    "records": 67,
+    "size": 10670,
+    "v0300": []
+   },
+   "settings/spawn_device_defs.bin": {
+    "groups": 0,
+    "mount": "base",
+    "records": 3,
+    "size": 489,
+    "v0300": []
+   },
+   "settings/spawn_effect_defs.bin": {
+    "groups": 0,
+    "mount": "base",
+    "records": 39,
+    "size": 6170,
+    "v0300": []
+   },
+   "settings/spawn_encounter_defs.bin": {
+    "groups": 0,
+    "mount": "base",
+    "records": 56,
+    "size": 9156,
+    "v0300": []
+   },
+   "settings/spawn_prop_defs.bin": {
+    "groups": 0,
+    "mount": "patch",
+    "records": 114,
+    "size": 16535,
+    "v0300": []
+   },
+   "settings/spawn_road_decoration_defs.bin": {
+    "groups": 0,
+    "mount": "base",
+    "records": 5,
+    "size": 910,
+    "v0300": []
+   },
+   "settings/spawn_train_defs.bin": {
+    "groups": 0,
+    "mount": "base",
+    "records": 11,
+    "size": 2320,
+    "v0300": []
+   },
+   "settings/spawn_vehicle_defs.bin": {
+    "groups": 8,
+    "mount": "base",
+    "records": 86,
+    "size": 27513,
+    "v0300": [
+     "v0300_car_kensington_sportsmuscle_civilian_01"
+    ]
+   },
+   "settings/spawn_vehicle_premium_defs.bin": {
+    "groups": 0,
+    "mount": "base",
+    "records": 0,
+    "size": 44,
+    "v0300": []
+   },
+   "settings/spawn_vehicle_proto_defs.bin": {
+    "groups": 3,
+    "mount": "patch",
+    "records": 89,
+    "size": 18374,
+    "v0300": [
+     "v0300_car_kensington_sportsmuscle_debug"
+    ]
+   },
+   "settings/spawn_weapon_defs.bin": {
+    "groups": 1,
+    "mount": "base",
+    "records": 65,
+    "size": 13393,
+    "v0300": []
+   },
+   "settings/spawn_weapon_premium_defs.bin": {
+    "groups": 0,
+    "mount": "base",
+    "records": 0,
+    "size": 44,
+    "v0300": []
+   },
+   "settings/spawn_weapon_proto_defs.bin": {
+    "groups": 1,
+    "mount": "patch",
+    "records": 1,
+    "size": 213,
+    "v0300": []
+   }
+  },
+  "tag_counts": {
+   "ambient": 32,
+   "ambulance": 1,
+   "apc": 2,
+   "armored": 11,
+   "articulated": 1,
+   "atv": 1,
+   "autostraad": 11,
+   "barrel": 1,
+   "bike": 9,
+   "buggy": 2,
+   "bus": 2,
+   "campervan": 1,
+   "cannon": 4,
+   "capstone": 4,
+   "car": 27,
+   "cargo": 2,
+   "civic": 2,
+   "civil_servant": 5,
+   "civilian": 25,
+   "combat": 2,
+   "combatdirt": 1,
+   "commercial": 7,
+   "compact": 1,
+   "dirt": 6,
+   "drm": 1,
+   "global_neutral": 15,
+   "grandtourer": 1,
+   "ground": 59,
+   "heat1": 1,
+   "heat2": 1,
+   "heat3": 2,
+   "heat4": 1,
+   "heat5": 1,
+   "highend": 5,
+   "huge": 1,
+   "industrial": 1,
+   "jeep": 6,
+   "kensington": 3,
+   "liberated": 14,
+   "limo": 1,
+   "machinegun": 5,
+   "mil_auth_road_traffic": 3,
+   "mil_now_bike": 1,
+   "mil_now_traffic": 5,
+   "military": 10,
+   "militia": 2,
+   "mine": 1,
+   "mini": 2,
+   "modern": 26,
+   "moped": 2,
+   "mounted": 2,
+   "mugello": 5,
+   "muscle": 1,
+   "not_shielded": 4,
+   "offroad": 7,
+   "old": 20,
+   "oppressed": 15,
+   "patrol": 1,
+   "pickup": 1,
+   "police": 1,
+   "propaganda": 1,
+   "r01_outpost": 8,
+   "r02_outpost": 10,
+   "r03_outpost": 12,
+   "racing": 2,
+   "random_cargo": 1,
+   "reb_auth_road_traffic": 4,
+   "rebel": 12,
+   "rebel_now_traffic": 3,
+   "road": 2,
+   "roadster": 1,
+   "saloon": 1,
+   "sedan": 3,
+   "shielded": 2,
+   "solar": 25,
+   "sport": 1,
+   "sports": 5,
+   "super": 3,
+   "suv": 1,
+   "tank": 4,
+   "tractor": 1,
+   "transport": 2,
+   "trials": 1,
+   "truck": 11,
+   "unarmed": 51,
+   "unarmored": 47,
+   "urga": 10,
+   "van": 4,
+   "vehicle": 63,
+   "vintage": 2,
+   "wine": 1,
+   "z80": 1
+  },
+  "vocabulary_size": 363
+ }
+}

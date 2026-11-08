@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/transform-anim-to-hinges.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+Battle-mode transform, animation side. Operator: LT hold makes the turret rise from the body and the wheels/body reconfigure, in about 2 s. Research/BatmobileGrab/ANIMATIONS.md, POSES.md and BONES.md hold the decoded transform sequences and the pursuit<->battle pose deltas (G1-10, G1-12). JC3 hinges rotate only (Working/Roadmap/modes_controls_anim.md: no carrier for the +0.633 m mast lift).
+Produce the per-bone keyframe table for the transform: bone, start pose, end pose, translation and rotation deltas, and timing. Classify each motion: hinge-rotation only (a JC3 part behaviour can carry it), translation (needs the native hook to move a part at runtime, or a second entity in the end pose), or wheel yaw (which wheels, and how far). Read Research/JC3Grab/PARTS_TABLE.jsonl to say which JC3 part behaviour fits each hinge. Report the table and the minimal hook features the translation parts need. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

@@ -1,0 +1,647 @@
+{
+ "active_mesh_per_mode": {
+  "reason": "BatmanVsBatmobileCollisionMode (BMSDK layout offset 5895) is not serialised in the archetype, the Startup CDO or the BmGame base template walked by grab_collision.py; no state function was decoded.",
+  "verdict": "UNKNOWN"
+ },
+ "battle_mesh_body_169748": {
+  "aggeom_bytes": 25907,
+  "convex_count_label": "decoded (header word 3); element count taken from it",
+  "convex_element_0": {
+   "blockA_count": 9,
+   "blockA_label": "decoded count; values are vertex components, semantic UNKNOWN",
+   "chain_marks": [
+    {
+     "at": 16,
+     "block": "V",
+     "count": 10
+    },
+    {
+     "at": 140,
+     "block": "A",
+     "count": 9
+    },
+    {
+     "at": 288,
+     "block": "I",
+     "count": 48
+    },
+    {
+     "at": 484,
+     "block": "E",
+     "count": 13
+    },
+    {
+     "at": 644,
+     "block": "X",
+     "count": 7
+    },
+    {
+     "at": 732,
+     "block": "Y",
+     "count": 7
+    },
+    {
+     "at": 848,
+     "block": "Z",
+     "count": 13
+    },
+    {
+     "next_at": 904,
+     "next_u32": 3281560258
+    }
+   ],
+   "chain_status": "UNKNOWN beyond element 0: the seven-array chain (V,A,I,E,X,Y,Z) leaves the element boundary without a valid next count (checked for 169749 at byte 644; for 169748 the Z count does not equal the triangle count), so elements 1..N are not decoded.",
+   "nI": 48,
+   "nV": 10,
+   "oracle_planes": {
+    "all_triangles_match_a_plane": true,
+    "planes_stored": 7,
+    "planes_used": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    "triangles": 16,
+    "unmatched": 0
+   },
+   "planes_label": "decoded block Y (count at byte 732); layout (W,nx,ny,nz) proven by the oracle below",
+   "planes_stored_W_nxnynz": [
+    [
+     171.6815,
+     0.1983,
+     0.0,
+     0.9801
+    ],
+    [
+     -86.8391,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     26.6178,
+     0.9261,
+     0.0,
+     -0.3772
+    ],
+    [
+     132.1999,
+     0.0117,
+     -0.9922,
+     -0.1239
+    ],
+    [
+     0.0,
+     0.0,
+     -0.0,
+     -1.0
+    ],
+    [
+     280.2131,
+     -0.7284,
+     -0.6651,
+     0.1647
+    ],
+    [
+     277.1136,
+     -0.6121,
+     -0.7517,
+     0.2456
+    ]
+   ],
+   "triangle_indices": [
+    9,
+    4,
+    1,
+    9,
+    2,
+    4,
+    9,
+    0,
+    2,
+    0,
+    6,
+    2,
+    0,
+    3,
+    6,
+    4,
+    6,
+    5,
+    4,
+    2,
+    6,
+    4,
+    8,
+    1,
+    4,
+    7,
+    8,
+    4,
+    5,
+    7,
+    6,
+    7,
+    5,
+    6,
+    3,
+    7,
+    8,
+    0,
+    9,
+    8,
+    3,
+    0,
+    8,
+    7,
+    3,
+    9,
+    1,
+    8
+   ],
+   "triangle_label": "decoded (u32 count then u32 indices, as the chain at byte 288)",
+   "triangles": 16,
+   "vertex_label": "decoded (u32 count at byte 16, FVector records from byte 20)",
+   "vertices_cm": [
+    [
+     -254.1862,
+     -86.8391,
+     226.5985
+    ],
+    [
+     -170.3851,
+     -161.4277,
+     209.6405
+    ],
+    [
+     92.4552,
+     -86.8391,
+     156.4522
+    ],
+    [
+     -305.2715,
+     -86.8391,
+     -0.0
+    ],
+    [
+     92.4552,
+     -151.6789,
+     156.4522
+    ],
+    [
+     28.7405,
+     -132.896,
+     0.0
+    ],
+    [
+     28.7405,
+     -86.8391,
+     -0.0
+    ],
+    [
+     -260.1524,
+     -136.3112,
+     0.0
+    ],
+    [
+     -220.6315,
+     -150.5435,
+     117.7186
+    ],
+    [
+     -251.1052,
+     -90.3676,
+     225.975
+    ]
+   ]
+  },
+  "export": 169748,
+  "export_size": 43346,
+  "header_u32": {
+   "label": "decoded (words 0..3 of the AggGeom payload); word 0 = 0 sphere count, word 3 = convex count when it is small",
+   "words": [
+    0,
+    0,
+    0,
+    43
+   ]
+  },
+  "label": "Batmobile_V2 battle"
+ },
+ "card": "G3-01b",
+ "cylinder_names": {
+  "reason": "BMSDK_OFFSETS.json has no CylinderComponent class; the 78.0 / 175.0 floats are not named by any decoded layout, so radius vs height is not proven.",
+  "verdict": "UNKNOWN"
+ },
+ "generator": "grab_collision_geom.py",
+ "inputs": {
+  "bmgame": "E:\\Games\\Batman - Arkham Knight\\BmGame\\CookedPCConsole\\BmGame.upk",
+  "sockets_jc3": "E:\\Modding\\JC3-Batmobile\\Research\\BatmobileGrab\\SOCKETS_JC3.json"
+ },
+ "oracle_chassis_box_vs_body_box": {
+  "body_box_span_m_sorted": [
+   2.271,
+   3.495,
+   7.025
+  ],
+  "body_box_span_m_xyz_jc3": [
+   3.495,
+   2.271,
+   7.025
+  ],
+  "chassis_box0_extents_cm": [
+   690.305,
+   374.536,
+   207.5
+  ],
+  "chassis_box0_full_m_sorted": [
+   2.075,
+   3.745,
+   6.903
+  ],
+  "label": "derived: compares sorted spans. If extents are FULL lengths the sorted spans agree within about 0.25 m (6.9/3.75/2.07 vs 7.0/3.5/2.27); if they were HALF lengths the box would be about 13.8 m long, which the body box does not show. Frame axes are not proven."
+ },
+ "physics_asset_158266": {
+  "BodySetup": {
+   "label": "decoded (ArrayProperty BodySetup: count + u32 object indices)",
+   "payload_bytes": 12,
+   "refs": [
+    169750,
+    169751
+   ]
+  },
+  "BoundsBodies": {
+   "label": "decoded (ArrayProperty BoundsBodies: body indices)",
+   "payload_bytes": 12,
+   "refs": [
+    0,
+    1
+   ]
+  },
+  "ConstraintSetup": {
+   "label": "decoded (ArrayProperty ConstraintSetup)",
+   "payload_bytes": 8,
+   "refs": [
+    171462
+   ]
+  },
+  "bodies": [
+   {
+    "aggeom_bytes": 1759,
+    "bone": "Batmobile_Chassis",
+    "bone_label": "decoded (NameProperty in the BodySetup's tags)",
+    "export": 169750,
+    "geometry": {
+     "aggeom_bytes": 1759,
+     "box_count_word": 2,
+     "boxes": [
+      {
+       "at": 92,
+       "centre_cm": [
+        9.0,
+        0.0,
+        106.75
+       ],
+       "extents_cm": [
+        690.305,
+        374.536,
+        207.5
+       ],
+       "label": "decoded (extents: tagged floats 0x40/0x44/0x48 at byte 92; centre: 12 bytes before the tag stream, grab_physics rule, rotation not decoded)"
+      },
+      {
+       "at": 210,
+       "centre_cm": [
+        0.0,
+        0.0,
+        79.0
+       ],
+       "extents_cm": [
+        679.585,
+        345.688,
+        103.5
+       ],
+       "label": "decoded (extents: tagged floats 0x40/0x44/0x48 at byte 210; centre: 12 bytes before the tag stream, grab_physics rule, rotation not decoded)"
+      }
+     ],
+     "header_note": "header word 3 = 78655 is not a convex count (word 1 = 2 boxes, word 2 = 10)",
+     "header_u32": {
+      "label": "decoded (words 0..3 of the AggGeom payload); word 0 = 0 sphere count, word 3 = convex count when it is small",
+      "words": [
+       0,
+       2,
+       10,
+       78655
+      ]
+     },
+     "sphyl_label": "UNKNOWN: word 2 = 10 on all box bodies (meaning not decoded)",
+     "sphyl_word": 10
+    },
+    "object": "Batmobile_V3_Physics.RB_BodySetup",
+    "object_ref": {
+     "path": "Code.Batmobile",
+     "value": 158234
+    },
+    "size": 2698
+   },
+   {
+    "aggeom_bytes": 143,
+    "bone": "Batmobile_Rig_Weapons_Trans",
+    "bone_label": "decoded (NameProperty in the BodySetup's tags)",
+    "export": 169751,
+    "geometry": {
+     "aggeom_bytes": 143,
+     "box_count_word": 1,
+     "boxes": [
+      {
+       "at": 92,
+       "centre_cm": [
+        -30.5,
+        -0.0,
+        93.25
+       ],
+       "extents_cm": [
+        166.177,
+        189.365,
+        39.8
+       ],
+       "label": "decoded (extents: tagged floats 0x40/0x44/0x48 at byte 92; centre: 12 bytes before the tag stream, grab_physics rule, rotation not decoded)"
+      }
+     ],
+     "header_note": "header word 3 = 78655 is not a convex count (word 1 = 1 boxes, word 2 = 10)",
+     "header_u32": {
+      "label": "decoded (words 0..3 of the AggGeom payload); word 0 = 0 sphere count, word 3 = convex count when it is small",
+      "words": [
+       0,
+       1,
+       10,
+       78655
+      ]
+     },
+     "sphyl_label": "UNKNOWN: word 2 = 10 on all box bodies (meaning not decoded)",
+     "sphyl_word": 10
+    },
+    "object": "Batmobile_V3_Physics.RB_BodySetup",
+    "size": 214
+   }
+  ],
+  "constraints": [
+   {
+    "export": 171462,
+    "fields": [
+     {
+      "label": "decoded (NameProperty at byte 84)",
+      "offset": 84,
+      "value": "Batmobile_Rig_Weapons_Trans"
+     },
+     {
+      "label": "decoded (NameProperty at byte 92)",
+      "offset": 92,
+      "value": "Batmobile_Rig_Weapons_Trans"
+     },
+     {
+      "label": "decoded (NameProperty at byte 100)",
+      "offset": 100,
+      "value": "Batmobile_Chassis"
+     },
+     {
+      "label": "decoded (VectorProperty at byte 144); field name UNKNOWN (no RB_ConstraintSetup layout in BMSDK_OFFSETS)",
+      "offset": 144,
+      "value": [
+       -0.004818,
+       -1.3e-05,
+       1.677767
+      ]
+     },
+     {
+      "label": "decoded (VectorProperty at byte 156); field name UNKNOWN (no RB_ConstraintSetup layout in BMSDK_OFFSETS)",
+      "offset": 156,
+      "value": [
+       1.0,
+       -0.0,
+       0.000108
+      ]
+     },
+     {
+      "label": "decoded (VectorProperty at byte 168); field name UNKNOWN (no RB_ConstraintSetup layout in BMSDK_OFFSETS)",
+      "offset": 168,
+      "value": [
+       0.0,
+       1.0,
+       -0.000214
+      ]
+     }
+    ],
+    "object": "Batmobile_V3_Physics.RB_ConstraintSetup",
+    "size": 86
+   }
+  ],
+  "export": 158266,
+  "name": "Physics.Batmobile_V3_Physics",
+  "size": 194
+ },
+ "pursuit_mesh_body_169749": {
+  "aggeom_bytes": 8275,
+  "convex_count_label": "decoded (header word 3); element count taken from it",
+  "convex_element_0": {
+   "blockA_count": 6,
+   "blockA_label": "decoded count; values are vertex components, semantic UNKNOWN",
+   "chain_marks": [
+    {
+     "at": 16,
+     "block": "V",
+     "count": 8
+    },
+    {
+     "at": 116,
+     "block": "A",
+     "count": 6
+    },
+    {
+     "at": 216,
+     "block": "I",
+     "count": 36
+    },
+    {
+     "at": 364,
+     "block": "E",
+     "count": 5
+    },
+    {
+     "at": 428,
+     "block": "X",
+     "count": 5
+    },
+    {
+     "at": 492,
+     "block": "Y",
+     "count": 6
+    },
+    {
+     "at": 592,
+     "block": "Z",
+     "count": 12
+    },
+    {
+     "next_at": 644,
+     "next_u32": 3279286437
+    }
+   ],
+   "chain_status": "UNKNOWN beyond element 0: the seven-array chain (V,A,I,E,X,Y,Z) leaves the element boundary without a valid next count (checked for 169749 at byte 644; for 169748 the Z count does not equal the triangle count), so elements 1..N are not decoded.",
+   "nI": 36,
+   "nV": 8,
+   "oracle_planes": {
+    "all_triangles_match_a_plane": true,
+    "planes_stored": 6,
+    "planes_used": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    "triangles": 12,
+    "unmatched": 0
+   },
+   "planes_label": "decoded block Y (count at byte 492); layout (W,nx,ny,nz) proven by the oracle below",
+   "planes_stored_W_nxnynz": [
+    [
+     152.2886,
+     -0.0,
+     -1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     -0.0,
+     -1.0
+    ],
+    [
+     245.94,
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     152.7762,
+     0.1748,
+     0.0,
+     0.9846
+    ],
+    [
+     -86.8391,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     26.1185,
+     0.9088,
+     0.0,
+     -0.4173
+    ]
+   ],
+   "triangle_indices": [
+    6,
+    2,
+    1,
+    6,
+    0,
+    2,
+    7,
+    2,
+    0,
+    7,
+    3,
+    2,
+    3,
+    1,
+    2,
+    3,
+    4,
+    1,
+    4,
+    6,
+    1,
+    4,
+    5,
+    6,
+    4,
+    7,
+    5,
+    4,
+    3,
+    7,
+    6,
+    7,
+    0,
+    6,
+    5,
+    7
+   ],
+   "triangle_label": "decoded (u32 count then u32 indices, as the chain at byte 216)",
+   "triangles": 12,
+   "vertex_label": "decoded (u32 count at byte 16, FVector records from byte 20)",
+   "vertices_cm": [
+    [
+     28.7405,
+     -152.2886,
+     0.0
+    ],
+    [
+     -245.94,
+     -152.2886,
+     198.8187
+    ],
+    [
+     -245.94,
+     -152.2886,
+     -0.0
+    ],
+    [
+     -245.94,
+     -86.8391,
+     -0.0
+    ],
+    [
+     -245.94,
+     -86.8391,
+     198.8187
+    ],
+    [
+     92.4552,
+     -86.8391,
+     138.7534
+    ],
+    [
+     92.4552,
+     -152.2886,
+     138.7534
+    ],
+    [
+     28.7405,
+     -86.8391,
+     -0.0
+    ]
+   ]
+  },
+  "export": 169749,
+  "export_size": 14062,
+  "header_u32": {
+   "label": "decoded (words 0..3 of the AggGeom payload); word 0 = 0 sphere count, word 3 = convex count when it is small",
+   "words": [
+    0,
+    0,
+    0,
+    13
+   ]
+  },
+  "label": "Batmobile_V2_Collision_Pursuite"
+ }
+}

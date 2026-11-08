@@ -1,0 +1,772 @@
+{
+  "card": "T-10",
+  "generated_by": "Tools/scripts/t10_reopen.py --write",
+  "summary": {
+    "rows": 16,
+    "superseded": 5,
+    "out": 6,
+    "blocked": 2,
+    "successors": [
+      "B-05",
+      "T-11",
+      "T-12",
+      "T-15",
+      "T-17",
+      "T-18"
+    ],
+    "decisions_open": [],
+    "evidence_files": [
+      "Builds/test-091/aaf/editor/entities/jc_cameras/vehicle_cameras/bat_base.ctunec",
+      "E:/Modding/_gamedata/JC3grab/hud/dec",
+      "Research/JC3Grab/DAMAGE_MODEL.md",
+      "Research/JC3Grab/EMP.md",
+      "Research/JC3Grab/ENTITIES.md",
+      "Research/JC3Grab/JC3_HUD_WEAPONS.md",
+      "Research/JC3Grab/LIGHT_SYSTEM.md",
+      "Research/JC3Grab/PHYSICS_LIMITS_REVIEW.md",
+      "Research/JC3Grab/TANKTURN.md",
+      "Research/JC3Grab/TETHER.md",
+      "Research/JC3Grab/TURRET.md",
+      "Research/JC3Grab/VOCABULARY.md",
+      "Research/JC3Grab/WEAPONS.md",
+      "Research/JC3Grab/WEAPON_WIRING.md",
+      "Research/challenge/card-T-10.md",
+      "Research/specs/G2-35.md",
+      "tmp/freebuff/reports/air-control-closest-system-plan.md",
+      "tmp/freebuff/reports/carrier-air-control.md",
+      "tmp/freebuff/reports/carrier-ram-and-dodge.md"
+    ],
+    "out_rows_with_proof": 6,
+    "hud_scripts": 260,
+    "vocab_types": 52,
+    "vocab_paths": 1421,
+    "census_classes": 103,
+    "problems": 0
+  },
+  "rows": [
+    {
+      "id": "T-W1",
+      "doc": "T-3",
+      "where": "ledger",
+      "was": "out",
+      "now": "superseded",
+      "actual": "superseded",
+      "successors": [
+        "T-11"
+      ],
+      "decisions": [
+        {
+          "id": "D-3",
+          "resolved": true
+        },
+        {
+          "id": "D-7",
+          "resolved": true
+        }
+      ],
+      "feature": "WPN-1…WPN-12",
+      "evidence": [
+        {
+          "kind": "needle",
+          "file": "Research/JC3Grab/WEAPONS.md",
+          "need": "w618_sportsmuscle_missile",
+          "anchor": "",
+          "must_not": [],
+          "allow": {},
+          "why": "the donor chassis's own missile weapon, tune decoded (G2-10)",
+          "ok": true,
+          "detail": "Research/JC3Grab/WEAPONS.md: | `w618_sportsmuscle_missile` | yes | missile | `missile`x1 | 1 | patch(WeaponTuning), bundle(ForcePulseSettings) | `autoaim_vehicle_no_lockon_missile` |"
+        },
+        {
+          "kind": "needle",
+          "file": "Research/JC3Grab/WEAPON_WIRING.md",
+          "need": "main_weapon",
+          "anchor": "",
+          "must_not": [],
+          "allow": {},
+          "why": "two driver-fired weapon slots on a `CCar` root (G2-11)",
+          "ok": true,
+          "detail": "Research/JC3Grab/WEAPON_WIRING.md: | 1st driver | `id:851CAABE` | `main_weapon` = `851CAABE` | driver |"
+        }
+      ],
+      "why": "refuted by G2-10/G2-11: the fleet's vehicle weapon ids and two driver slots on `CCar`, and the donor chassis ships `w618_sportsmuscle_missile`; split per weapon into T-11 (WPN-1…WPN-12), slots gated by D-3/D-7",
+      "split": "11 BmAK weapon classes -> one T-11 row set per WPN code; the fleet carries 25 vehicle weapon ids (26 spellings) on 21 armed chassis; the HUD half (WPN-12) is T-19's, on the API G2-25 decoded"
+    },
+    {
+      "id": "T-FX4",
+      "doc": "T-2b",
+      "where": "ledger",
+      "was": "out",
+      "now": "superseded",
+      "actual": "superseded",
+      "successors": [
+        "T-11",
+        "T-17"
+      ],
+      "decisions": [
+        {
+          "id": "D-7",
+          "resolved": true
+        }
+      ],
+      "feature": "WPN-4/5, FX-3",
+      "evidence": [
+        {
+          "kind": "needle",
+          "file": "Research/JC3Grab/EMP.md",
+          "need": "CForcePulse",
+          "anchor": "",
+          "must_not": [],
+          "allow": {},
+          "why": "the entity-level pulse is the carrier (G2-16)",
+          "ok": true,
+          "detail": "Research/JC3Grab/EMP.md: is - three parts, a `CForcePulse`, its explosion tune, an effect file and a use-item"
+        },
+        {
+          "kind": "needle",
+          "file": "Research/JC3Grab/EMP.md",
+          "need": "no vehicle weapon slot",
+          "anchor": "",
+          "must_not": [],
+          "allow": {},
+          "why": "EMP.md: **yes for the effect, no as a weapon-slot copy** - `CEMPWeapon` is only named, no slot in the game holds it",
+          "ok": true,
+          "detail": "Research/JC3Grab/EMP.md: when the action runs (that is code), and no vehicle weapon slot in the game currently"
+        },
+        {
+          "kind": "absent",
+          "file": "Research/JC3Grab/ENTITIES.md",
+          "need": "",
+          "anchor": "CMusicTrack",
+          "must_not": [
+            "sonar"
+          ],
+          "allow": {},
+          "why": "the 103-class fleet census has no sonar class (WPN-8 absence)",
+          "ok": true,
+          "detail": "Research/JC3Grab/ENTITIES.md: anchor 'CMusicTrack' present, 0 hits of sonar"
+        }
+      ],
+      "why": "split: the EMP *effect* has a carrier (`CForcePulse`, G2-16) but the weapon-slot copy does not, so the EMP/Immobilizer half moves to T-11 and the tyre-smoke half to T-17 (FX-3 `tire_effects`); seismic sonar stays a named omission - no sonar class in `Research/JC3Grab/ENTITIES.md`",
+      "split": "EMP / Immobilizer effect -> T-11 (WPN-4, WPN-5), with no weapon slot; tyre smoke -> T-17 (FX-3); seismic sonar -> named omission (WPN-8)"
+    },
+    {
+      "id": "T-DM7",
+      "doc": "T-3",
+      "where": "ledger",
+      "was": "out",
+      "now": "next",
+      "actual": "next",
+      "successors": [],
+      "decisions": [],
+      "feature": "ARM-3",
+      "evidence": [
+        {
+          "kind": "needle",
+          "file": "Research/JC3Grab/VOCABULARY.md",
+          "need": "rotor_collision.damage_to_other_per_second",
+          "anchor": "",
+          "must_not": [],
+          "allow": {},
+          "why": "an outgoing contact-damage member on every vehicle, donor included (n=232)",
+          "ok": true,
+          "detail": "Research/JC3Grab/VOCABULARY.md: | `rotor_collision.damage_to_other_per_second` | float | 100000 .. 100000 (med 100000, n=232) | 100000 |"
+        },
+        {
+          "kind": "needle",
+          "file": "Research/JC3Grab/VOCABULARY.md",
+          "need": "light_object_mass_ratio",
+          "anchor": "",
+          "must_not": [],
+          "allow": {},
+          "why": "the per-target mass rule BmAK's civilian/light-object modifier needs",
+          "ok": true,
+          "detail": "Research/JC3Grab/VOCABULARY.md: | `rotor_collision.light_object_mass_ratio` | float | 0.02 .. 0.02 (med 0.02, n=232) | 0.0199999996 |"
+        },
+        {
+          "kind": "needle",
+          "file": "tmp/freebuff/reports/carrier-ram-and-dodge.md",
+          "need": "no speed band and no strafe/boost modifier",
+          "anchor": "",
+          "must_not": [],
+          "allow": {},
+          "why": "the part of BmAK's rule that remains a named omission",
+          "ok": true,
+          "detail": "tmp/freebuff/reports/carrier-ram-and-dodge.md: > 100000/s on 232 builds) and the mass ratios, but **no speed band and no strafe/boost modifier**."
+        }
+      ],
+      "why": "moved off `out`: an outgoing contact-damage member exists on every vehicle - `rotor_collision.damage_to_other_per_second` 100000/s with `light_object_mass_ratio` 0.02, `mass_ratio_when_no_mass` 0.1 and `min_rpm` 30 (n=232, donor included) - so the outgoing channel is data, not a gap; the speed band (20->150, strafe 2.25, boost 2.0) has no JC3 member and whether a `CCar` evaluates the block is UNKNOWN (carrier `tmp/freebuff/reports/carrier-ram-and-dodge.md`)",
+      "split": ""
+    },
+    {
+      "id": "T-BM1",
+      "doc": "T-3",
+      "where": "ledger",
+      "was": "out",
+      "now": "superseded",
+      "actual": "superseded",
+      "successors": [
+        "T-12",
+        "T-15"
+      ],
+      "decisions": [
+        {
+          "id": "D-2",
+          "resolved": true
+        }
+      ],
+      "feature": "MOD-2, APP-6",
+      "evidence": [
+        {
+          "kind": "needle",
+          "file": "Research/JC3Grab/TURRET.md",
+          "need": "179",
+          "anchor": "",
+          "must_not": [],
+          "allow": {},
+          "why": "turret/Cannon parts reach the battle pose as part angles (G2-13)",
+          "ok": true,
+          "detail": "Research/JC3Grab/TURRET.md: | yaw hinge | constraint 2, pivot (0, 2.2812, 1.1382), axis +Y, **-179 .. +179 deg** |"
+        },
+        {
+          "kind": "needle",
+          "file": "Research/JC3Grab/TANKTURN.md",
+          "need": "Turn-on-the-spot has no JC3 data carrier",
+          "anchor": "",
+          "must_not": [],
+          "allow": {},
+          "why": "the tank pivot is a named omission, not a translation row (G2-21)",
+          "ok": true,
+          "detail": "Research/JC3Grab/TANKTURN.md: **Turn-on-the-spot has no JC3 data carrier** - it becomes a named omission for MOD-2:"
+        }
+      ],
+      "why": "split: the mode scalars/curves and `ArmourModeDamageReduction` go to T-15 (gated by D-2), the transformation pose to T-12; turn-on-the-spot stays a named omission, proof `Research/JC3Grab/TANKTURN.md` (no tank-only member, 0 in any driving module)",
+      "split": "`BattleMode*` / `TurningModeMaxSpeed` / `ArmourModeDamageReduction` -> T-15; `TransformationTurn*` (part pose) -> T-12; `TurnOnSpot*` -> named omission"
+    },
+    {
+      "id": "T-AC1",
+      "doc": "T-3",
+      "where": "ledger",
+      "was": "out",
+      "now": "next",
+      "actual": "next",
+      "successors": [],
+      "decisions": [],
+      "feature": "HDL-6",
+      "evidence": [
+        {
+          "kind": "needle",
+          "file": "tmp/freebuff/reports/carrier-air-control.md",
+          "need": "CustomLandGlobal.drift",
+          "anchor": "",
+          "must_not": [],
+          "allow": {},
+          "why": "the carrier search ranks `drift` first: the only yaw torque on a land vehicle",
+          "ok": true,
+          "detail": "tmp/freebuff/reports/carrier-air-control.md: **Member path / type / offset:** `CustomLandGlobal.drift.max_drift_torque`, float, 0x48;"
+        },
+        {
+          "kind": "needle",
+          "file": "tmp/freebuff/reports/air-control-closest-system-plan.md",
+          "need": "drift.max_drift_torque",
+          "anchor": "",
+          "must_not": [],
+          "allow": {},
+          "why": "the build card carries `max_drift_torque` 8000 and names the airborne gate as the gap",
+          "ok": true,
+          "detail": "tmp/freebuff/reports/air-control-closest-system-plan.md: | `drift.max_drift_torque` | **12000** | the yaw authority the build has today |"
+        },
+        {
+          "kind": "needle",
+          "file": "Research/JC3Grab/VOCABULARY.md",
+          "need": "gravity_multiplier_in_air_down",
+          "anchor": "",
+          "must_not": [],
+          "allow": {},
+          "why": "the gravity multipliers that do exist (145 land vehicles, donor 1)",
+          "ok": true,
+          "detail": "Research/JC3Grab/VOCABULARY.md: | `gravity_multiplier_in_air_down` | float | 1 .. 2 (med 1.5, n=145) | 1 |"
+        },
+        {
+          "kind": "absent",
+          "file": "Research/JC3Grab/VOCABULARY.md",
+          "need": "",
+          "anchor": "takeoff_pitch_damping",
+          "must_not": [
+            "air_control",
+            "aircontrol",
+            "yaw_torque"
+          ],
+          "allow": {},
+          "why": "the 52-type / 1,421-path vocabulary has no mid-air yaw member - hence a composed carrier",
+          "ok": true,
+          "detail": "Research/JC3Grab/VOCABULARY.md: anchor 'takeoff_pitch_damping' present, 0 hits of air_control, aircontrol, yaw_torque"
+        }
+      ],
+      "why": "moved off `out`: the carriers exist as a composed pair - `CustomLandGlobal.drift.max_drift_torque` (0x48, the fleet's only yaw torque on a land vehicle, 0..35000) for yaw and `AerodynamicSurface.turn/pitch_steering_factor` (0x38/0x3C) for air authority; no exact airborne-gated torque member exists (0 `air_control`/`yaw_torque` rows in `Research/JC3Grab/VOCABULARY.md`), so the gap is the airborne gate the build composes (build card `tmp/freebuff/reports/air-control-closest-system-plan.md`, carrier `tmp/freebuff/reports/carrier-air-control.md`)",
+      "split": ""
+    },
+    {
+      "id": "T-RA1",
+      "doc": "T-3",
+      "where": "ledger",
+      "was": "out",
+      "now": "blocked",
+      "actual": "blocked",
+      "successors": [],
+      "decisions": [],
+      "feature": "ARM-3, WLD-5",
+      "evidence": [
+        {
+          "kind": "absent",
+          "file": "Research/JC3Grab/VOCABULARY.md",
+          "need": "",
+          "anchor": "takeoff_pitch_damping",
+          "must_not": [
+            "shov",
+            "dodge",
+            "road_assist",
+            "kill_flip",
+            "impact_shake"
+          ],
+          "allow": {},
+          "why": "no shove/dodge/road-assist member in the 52-type / 1,421-path vocabulary",
+          "ok": true,
+          "detail": "Research/JC3Grab/VOCABULARY.md: anchor 'takeoff_pitch_damping' present, 0 hits of shov, dodge, road_assist, kill_flip, impact_shake"
+        },
+        {
+          "kind": "needle",
+          "file": "tmp/freebuff/reports/carrier-ram-and-dodge.md",
+          "need": "capability that would have to be added",
+          "anchor": "",
+          "must_not": [],
+          "allow": {},
+          "why": "all five layers searched; the missing mechanism is named, not assumed",
+          "ok": true,
+          "detail": "tmp/freebuff/reports/carrier-ram-and-dodge.md: ### The capability that would have to be added"
+        },
+        {
+          "kind": "needle",
+          "file": "Research/specs/G2-35.md",
+          "need": "four names for one mechanism",
+          "anchor": "",
+          "must_not": [],
+          "allow": {},
+          "why": "the backlog card that names what a hit has to wait for",
+          "ok": true,
+          "detail": "Research/specs/G2-35.md: dodge, shove and kill-flip are four names for one mechanism — an **event-triggered, non-damaging"
+        }
+      ],
+      "why": "moved off `out` to `blocked`: no road-assist, dodge, shove or kill-flip member exists at any layer (modules, entity graphs, `CDamageController`, `.physicsc`, script layer), so the capability to be found is a triggered, non-damaging impulse/torque with target selection and a duration - backlog card G2-35 (`Research/specs/G2-35.md`), carrier `tmp/freebuff/reports/carrier-ram-and-dodge.md` section 8/9",
+      "split": ""
+    },
+    {
+      "id": "T-SR1",
+      "doc": "T-3",
+      "where": "ledger",
+      "was": "out",
+      "now": "next",
+      "actual": "next",
+      "successors": [],
+      "decisions": [],
+      "feature": "HDL-6",
+      "evidence": [
+        {
+          "kind": "needle",
+          "file": "Research/JC3Grab/VOCABULARY.md",
+          "need": "righting_torque",
+          "anchor": "",
+          "must_not": [],
+          "allow": {},
+          "why": "`righting_torque` exists in `DriverLean` - the land carrier the old `why` denied",
+          "ok": true,
+          "detail": "Research/JC3Grab/VOCABULARY.md: | `righting_torque` | float | 1500 .. 4000 (med 3000, n=23) |  |"
+        },
+        {
+          "kind": "needle",
+          "file": "Research/challenge/card-T-10.md",
+          "need": "18 bikes + 5 boats, 0 aircraft",
+          "anchor": "",
+          "must_not": [],
+          "allow": {},
+          "why": "the n=23 rows are bikes and jet-skis, not aircraft (A4 refutation)",
+          "ok": true,
+          "detail": "Research/challenge/card-T-10.md: | A4 | `righting_torque` is \"only in `DriverLean`, n=23 **aircraft**\" ⇒ no land carrier | **BROKEN** — 18 bikes + 5 boats, 0 aircraft |"
+        },
+        {
+          "kind": "needle",
+          "file": "Research/JC3Grab/PHYSICS_LIMITS_REVIEW.md",
+          "need": "TYPE_SETUP_STABILIZATION",
+          "anchor": "",
+          "must_not": [],
+          "allow": {},
+          "why": "the stabilizer atom (type 23, +0x0B0) is the nearest StayUpright constraint",
+          "ok": true,
+          "detail": "Research/JC3Grab/PHYSICS_LIMITS_REVIEW.md: | 5 | `TYPE_BALL_SOCKET` | 23 | `TYPE_SETUP_STABILIZATION` |"
+        },
+        {
+          "kind": "absent",
+          "file": "Research/JC3Grab/VOCABULARY.md",
+          "need": "",
+          "anchor": "righting_torque",
+          "must_not": [
+            "upright",
+            "stayupright"
+          ],
+          "allow": {},
+          "why": "no upright/constraint member beside `righting_torque` - the atom supplies it",
+          "ok": true,
+          "detail": "Research/JC3Grab/VOCABULARY.md: anchor 'righting_torque' present, 0 hits of upright, stayupright"
+        }
+      ],
+      "why": "moved off `out`: `DriverLean.righting_torque` (1500..4000, 23 rows = 18 bikes + 5 jet-skis, 0 aircraft per `Research/challenge/card-T-10.md` A4) carries BmAK's 2000 as a land self-righting torque and the Havok `TYPE_SETUP_STABILIZATION` atom (+0x0B0, 419/419 hinges, `Research/JC3Grab/PHYSICS_LIMITS_REVIEW.md`) is the closest StayUpright constraint; a car module shipping `DriverLean` is UNKNOWN, so the build composes it (build card `tmp/freebuff/reports/air-control-closest-system-plan.md`)",
+      "split": ""
+    },
+    {
+      "id": "T-LG5",
+      "doc": "T-2b",
+      "where": "ledger",
+      "was": "out",
+      "now": "superseded",
+      "actual": "superseded",
+      "successors": [
+        "T-18"
+      ],
+      "decisions": [
+        {
+          "id": "D-2",
+          "resolved": true
+        }
+      ],
+      "feature": "LGT-2",
+      "evidence": [
+        {
+          "kind": "needle",
+          "file": "Research/JC3Grab/LIGHT_SYSTEM.md",
+          "need": "VEHLT_BattleModeLight -> HeadLight",
+          "anchor": "",
+          "must_not": [],
+          "allow": {},
+          "why": "the donor rig's 16 `VEHLT_BattleModeLight` entries are a light *type*, not a JC3 behaviour: LIGHT_SYSTEM.md §7a gives the JC3 `behavior` as `HeadLight`, the mapping T-18 uses",
+          "ok": true,
+          "detail": "Research/JC3Grab/LIGHT_SYSTEM.md: entry (VEHLT_BattleModeLight -> HeadLight) - that is LGT-2's battle-mode spotlight, a second entry on this recipe's part"
+        }
+      ],
+      "why": "split: the battle-mode spotlight is a donor light type (`VEHLT_BattleModeLight`) with no JC3 behaviour of its own - the fleet has none, so T-18 maps the lamps onto `HeadLight`; the forensics rig stays a named omission - proof `Research/JC3Grab/LIGHT_SYSTEM.md`",
+      "split": "battle-mode spotlight: 16 donor entries -> T-18's 4 `HeadLight` rows (T-L17, T-L18, T-L19, T-L20); forensics rig (12 entries) -> named omission"
+    },
+    {
+      "id": "T-HUD4",
+      "doc": "T-6",
+      "where": "t6",
+      "was": "out",
+      "now": "out",
+      "actual": "out",
+      "successors": [],
+      "decisions": [],
+      "feature": "ARM-1, HUD-1",
+      "evidence": [
+        {
+          "kind": "needle",
+          "file": "Research/JC3Grab/JC3_HUD_WEAPONS.md",
+          "need": "InitVehicleWeapons",
+          "anchor": "",
+          "must_not": [],
+          "allow": {},
+          "why": "the whole vehicle-HUD interface a JC3 entity can feed (G2-25)",
+          "ok": true,
+          "detail": "Research/JC3Grab/JC3_HUD_WEAPONS.md: `InitVehicleWeapons` takes **9 arguments** and `UpdateVehicleWeapons` **6**; between them they carry weapon id, name, infinite-ammo flag, magazine ammo, magazine size, inventory am"
+        },
+        {
+          "kind": "hud",
+          "file": "E:/Modding/_gamedata/JC3grab/hud/dec",
+          "need": "",
+          "anchor": "",
+          "must_not": [
+            "armour",
+            "armor"
+          ],
+          "allow": {
+            "armor": [
+              "chaos_reward_armory",
+              "\"armory\""
+            ]
+          },
+          "why": "no armour field anywhere in `ui/hud.gfx`, US spelling too - the only `armor` hits are the `CHAOS_REWARD_ARMORY` icon",
+          "ok": true,
+          "detail": "E:/Modding/_gamedata/JC3grab/hud/dec: 260 scripts read, 0 unexplained hits of armour, armor; explained: armor 9 all in the allow-list"
+        },
+        {
+          "kind": "needle",
+          "file": "Research/JC3Grab/DAMAGE_MODEL.md",
+          "need": "explosion_armor",
+          "anchor": "",
+          "must_not": [],
+          "allow": {},
+          "why": "JC3's armour is a per-channel number, not a second bar (G2-28)",
+          "ok": true,
+          "detail": "Research/JC3Grab/DAMAGE_MODEL.md: | `explosion_armor` @ strength | 0 @ 0 | 250 @ 50 | 250 @ 50 |"
+        }
+      ],
+      "why": "stays `out`: JC3's vehicle HUD has no armour field and its damage model has no armour bar to feed - proof `Research/JC3Grab/JC3_HUD_WEAPONS.md` (2 slots, cooldown, reticle, one lock-on POI) + `Research/JC3Grab/DAMAGE_MODEL.md`",
+      "split": ""
+    },
+    {
+      "id": "T-HUD6",
+      "doc": "T-6",
+      "where": "t6",
+      "was": "out",
+      "now": "out",
+      "actual": "out",
+      "successors": [],
+      "decisions": [],
+      "feature": "MOD-2, CAM-2",
+      "evidence": [
+        {
+          "kind": "hud",
+          "file": "E:/Modding/_gamedata/JC3grab/hud/dec",
+          "need": "",
+          "anchor": "",
+          "must_not": [
+            "zoom",
+            "battlemode",
+            "battle_mode"
+          ],
+          "allow": {},
+          "why": "no battle/zoom overlay in `ui/hud.gfx`",
+          "ok": true,
+          "detail": "E:/Modding/_gamedata/JC3grab/hud/dec: 260 scripts read, 0 unexplained hits of zoom, battlemode, battle_mode"
+        },
+        {
+          "kind": "needle",
+          "file": "Research/JC3Grab/TANKTURN.md",
+          "need": "named omission",
+          "anchor": "",
+          "must_not": [],
+          "allow": {},
+          "why": "and the mode itself has no turn-on-the-spot carrier (G2-21)",
+          "ok": true,
+          "detail": "Research/JC3Grab/TANKTURN.md: data: **MOD-2's turn-on-the-spot is a named omission**, carried by native code keyed to"
+        }
+      ],
+      "why": "stays `out`: no battle-mode or zoom overlay exists in the in-game HUD movie - `ui/hud.gfx` carries neither `zoom` nor `BattleMode`, and the mode's pivot is a named omission (`Research/JC3Grab/TANKTURN.md`)",
+      "split": ""
+    },
+    {
+      "id": "T-HUD7",
+      "doc": "T-6",
+      "where": "t6",
+      "was": "out",
+      "now": "out",
+      "actual": "out",
+      "successors": [],
+      "decisions": [],
+      "feature": "WPN-6",
+      "evidence": [
+        {
+          "kind": "needle",
+          "file": "Research/JC3Grab/TETHER.md",
+          "need": "Functional winch classes anywhere in the fleet: **0**",
+          "anchor": "",
+          "must_not": [],
+          "allow": {},
+          "why": "no winch exists at all, so no meter can be fed (G2-34)",
+          "ok": true,
+          "detail": "Research/JC3Grab/TETHER.md: - Functional winch classes anywhere in the fleet: **0**."
+        },
+        {
+          "kind": "hud",
+          "file": "E:/Modding/_gamedata/JC3grab/hud/dec",
+          "need": "",
+          "anchor": "",
+          "must_not": [
+            "winch"
+          ],
+          "allow": {},
+          "why": "and no winch widget in `ui/hud.gfx`",
+          "ok": true,
+          "detail": "E:/Modding/_gamedata/JC3grab/hud/dec: 260 scripts read, 0 unexplained hits of winch"
+        }
+      ],
+      "why": "stays `out`: WPN-6 has no carrier - `Functional winch classes anywhere in the fleet: **0**` (`Research/JC3Grab/TETHER.md`), and `ui/hud.gfx` has no winch widget either",
+      "split": ""
+    },
+    {
+      "id": "T-HUD8",
+      "doc": "T-6",
+      "where": "t6",
+      "was": "out",
+      "now": "out",
+      "actual": "out",
+      "successors": [],
+      "decisions": [],
+      "feature": "WPN-8",
+      "evidence": [
+        {
+          "kind": "hud",
+          "file": "E:/Modding/_gamedata/JC3grab/hud/dec",
+          "need": "",
+          "anchor": "",
+          "must_not": [
+            "energysystem",
+            "energy_charge",
+            "energycharge",
+            "energy"
+          ],
+          "allow": {
+            "energy": [
+              "such energy"
+            ]
+          },
+          "why": "no energy-system widget in `ui/hud.gfx` - `energy`'s only hit is the `such energy` joke string",
+          "ok": true,
+          "detail": "E:/Modding/_gamedata/JC3grab/hud/dec: 260 scripts read, 0 unexplained hits of energysystem, energy_charge, energycharge, energy; explained: energy 1 all in the allow-list"
+        },
+        {
+          "kind": "absent",
+          "file": "Research/JC3Grab/ENTITIES.md",
+          "need": "",
+          "anchor": "CMusicTrack",
+          "must_not": [
+            "sonar"
+          ],
+          "allow": {},
+          "why": "and no sonar class to drive one (WPN-8 absence)",
+          "ok": true,
+          "detail": "Research/JC3Grab/ENTITIES.md: anchor 'CMusicTrack' present, 0 hits of sonar"
+        }
+      ],
+      "why": "stays `out`: no energy-system widget in `ui/hud.gfx` and no sonar class in the fleet census (`Research/JC3Grab/ENTITIES.md`), so there is nothing to display",
+      "split": ""
+    },
+    {
+      "id": "T-HUD9",
+      "doc": "T-6",
+      "where": "t6",
+      "was": "out",
+      "now": "out",
+      "actual": "out",
+      "successors": [],
+      "decisions": [],
+      "feature": "HUD-2",
+      "evidence": [
+        {
+          "kind": "hud",
+          "file": "E:/Modding/_gamedata/JC3grab/hud/dec",
+          "need": "",
+          "anchor": "",
+          "must_not": [
+            "combo",
+            "medal",
+            "enemy_count",
+            "enemycount"
+          ],
+          "allow": {},
+          "why": "no combo/medal/enemy-count widget in `ui/hud.gfx`, camel-case spelling too",
+          "ok": true,
+          "detail": "E:/Modding/_gamedata/JC3grab/hud/dec: 260 scripts read, 0 unexplained hits of combo, medal, enemy_count, enemycount"
+        }
+      ],
+      "why": "stays `out`: `ui/hud.gfx` carries no combo, medal or enemy-count widget, and the vehicle HUD interface (`Research/JC3Grab/JC3_HUD_WEAPONS.md`) has no entry point for one",
+      "split": ""
+    },
+    {
+      "id": "T-HUD10",
+      "doc": "T-6",
+      "where": "t6",
+      "was": "out",
+      "now": "out",
+      "actual": "out",
+      "successors": [],
+      "decisions": [],
+      "feature": "HUD-2",
+      "evidence": [
+        {
+          "kind": "hud",
+          "file": "E:/Modding/_gamedata/JC3grab/hud/dec",
+          "need": "",
+          "anchor": "",
+          "must_not": [
+            "occupant",
+            "virus",
+            "forensic"
+          ],
+          "allow": {},
+          "why": "no occupant/virus/forensic widget in `ui/hud.gfx`",
+          "ok": true,
+          "detail": "E:/Modding/_gamedata/JC3grab/hud/dec: 260 scripts read, 0 unexplained hits of occupant, virus, forensic"
+        }
+      ],
+      "why": "stays `out`: no occupant, virus-upload or forensic-tracking widget in `ui/hud.gfx`, and no vehicle-HUD entry point for one (`Research/JC3Grab/JC3_HUD_WEAPONS.md`)",
+      "split": ""
+    },
+    {
+      "id": "T-CAM10",
+      "doc": "T-6",
+      "where": "t6",
+      "was": "out",
+      "now": "superseded",
+      "actual": "superseded",
+      "successors": [
+        "T-15"
+      ],
+      "decisions": [
+        {
+          "id": "D-2",
+          "resolved": true
+        }
+      ],
+      "feature": "CAM-2",
+      "evidence": [
+        {
+          "kind": "exists",
+          "file": "Builds/test-091/aaf/editor/entities/jc_cameras/vehicle_cameras/bat_base.ctunec",
+          "need": "",
+          "anchor": "",
+          "must_not": [],
+          "allow": {},
+          "why": "the delivered per-entity camera tune is a real file in the built tree (Batch F, test-091) - not a citation of this card's own row",
+          "ok": true,
+          "detail": "Builds/test-091/aaf/editor/entities/jc_cameras/vehicle_cameras/bat_base.ctunec: exists, 5,968 B"
+        }
+      ],
+      "why": "split: there is no battle-camera *member*, but a second per-entity `.ctunec` per variant is the carrier (G2X CAM-2, `bat_base.ctunec` built in test-091), so the row moves to T-15 under D-2 - proof `Builds/test-091`",
+      "split": "`BattleModeCamFOV` 60 -> T-15 (second `.ctunec` for the battle variant)"
+    },
+    {
+      "id": "T-HUD5",
+      "doc": "T-6",
+      "where": "t6",
+      "was": "blocked",
+      "now": "blocked",
+      "actual": "blocked",
+      "successors": [
+        "T-11",
+        "B-05"
+      ],
+      "decisions": [
+        {
+          "id": "D-7",
+          "resolved": true
+        }
+      ],
+      "feature": "HUD-2, WPN-12",
+      "evidence": [
+        {
+          "kind": "needle",
+          "file": "Research/JC3Grab/JC3_HUD_WEAPONS.md",
+          "need": "MCI_vehicle_weapons0",
+          "anchor": "",
+          "must_not": [],
+          "allow": {},
+          "why": "2 weapon slots, cooldown loader, 14 reticles (G2-25)",
+          "ok": true,
+          "detail": "Research/JC3Grab/JC3_HUD_WEAPONS.md: this.m_WeaponsArray = new Array(this.MCI_safe_area_bottom_right.MCI_vehicle_weapons0,this.MCI_safe_area_bottom_right.MCI_vehicle_weapons1);"
+        }
+      ],
+      "why": "stays `blocked` for a narrower reason, as the card's expected-outcome line says: G2-25 decoded the API the row needed (2 slots, `InitVehicleWeapons` / `UpdateVehicleWeapons`, cooldown), so what is missing is the entity's weapon component - T-11 / B-05, slots gated by D-7",
+      "split": ""
+    }
+  ],
+  "problems": []
+}

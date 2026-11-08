@@ -1,0 +1,1428 @@
+{
+ "schema": 1,
+ "generated_by": "Tools/scripts/g2x_gate.py --write",
+ "section": "GRAB_BACKLOG.md section 6, G2 exit gate (G2X)",
+ "readers": [
+  {
+   "label": "G2-10 weapons",
+   "command": "python Tools/scripts/jc3weapons.py --check",
+   "exit": 0,
+   "summary": "PASS: 25 ids, 197 extracted files, 24 shared tunes, md 1223 lines",
+   "ok": true
+  },
+  {
+   "label": "G2-11 wiring",
+   "command": "python Tools/scripts/jc3wiring.py --check",
+   "exit": 0,
+   "summary": "PASS: 53 entities, 88 weapons, 81 bound, 7 unbound, 193 seats, md 2045 lines",
+   "ok": true
+  },
+  {
+   "label": "G2-12 signature diff",
+   "command": "python Tools/scripts/jc3sigdiff.py --check",
+   "exit": 0,
+   "summary": "PASS: 566 -> 601 members, graph 450 -> 464 objects, 4 added / 1 removed, 19 part rows changed, 84 mesh pairs, 2 graph objects changed",
+   "ok": true
+  },
+  {
+   "label": "G2-13 turret",
+   "command": "python Tools/scripts/jc3turret.py --check",
+   "exit": 0,
+   "summary": "PASS: 8 samples, 92 points on 52 weapons, 85 aim-constraint rows, 3 mediumtank constraints",
+   "ok": true
+  },
+  {
+   "label": "G2-14 moving parts",
+   "command": "python Tools/scripts/jc3moving.py --check",
+   "exit": 0,
+   "summary": "PASS: 67 behaviours, 53 table rows (37 proven on CCar), 224 door rows",
+   "ok": true
+  },
+  {
+   "label": "G2-15 doors",
+   "command": "python Tools/scripts/jc3doors.py --check",
+   "exit": 0,
+   "summary": "PASS: 4 samples, 224 door rows / 220 hinged / X 60, both entry paths 21",
+   "ok": true
+  },
+  {
+   "label": "G2-16 EMP",
+   "command": "python Tools/scripts/jc3emp.py --check",
+   "exit": 0,
+   "summary": "PASS: 2 builds, 9 variants, 3 device parts, 2 EMP weapons, fleet CEMPWeapon 0",
+   "ok": true
+  },
+  {
+   "label": "G2-17 force pulse",
+   "command": "python Tools/scripts/jc3forcepulse.py --check",
+   "exit": 0,
+   "summary": "PASS: 307 pulses / 232 entities / 79 chassis, 31 members, 23 tunes, owners {'(none)': 14, 'CAirPlane': 18, 'CBoat': 35, 'CBulletWeaponBase': 29, 'CCar': 126, 'CHelicopter': 23, 'CMissileWeaponBase': 25, 'CMotorBike': 19, 'CRPGFireLeachWeapon': 6, 'CTrain': 12}, unowned 14, horn tunes 0, collision tunes 0",
+   "ok": true
+  },
+  {
+   "label": "G2-18 interaction",
+   "command": "python Tools/scripts/jc3interact.py --check",
+   "exit": 0,
+   "summary": "PASS: 85 objects (entry 29, exit 26, interaction 3, point 8, transition 12, trigger 7), transforms own 15 / inherited 70 / none 0, verdicts {'floating': 23, 'inside': 30, 'n/a (container origin)': 32}, stunt 3/32 active (64 welds), mesh 28940v/20000t, json match True",
+   "ok": true
+  },
+  {
+   "label": "G2-19 seat",
+   "command": "python Tools/scripts/jc3seat.py --check",
+   "exit": 0,
+   "summary": "PASS: 34 driver points | 40 pose classes (382 clip names) | 36 MOD selectors | seat boxes 4 | candidate v0300_car_kensington_sportsmuscle (10 mm from the hip), json match True, md match True",
+   "ok": true
+  },
+  {
+   "label": "G2-20 eject",
+   "command": "python Tools/scripts/jc3eject.py --check",
+   "exit": 0,
+   "summary": "PASS: 4832 exits in 232 graphs (61 names) | donor 26 exits, 7 speed-gated, 5 unconditional | launch members: exits 0, graph classes 2, vehicle modules 1 | BmAK eject props 19, json match True, md match True",
+   "ok": true
+  },
+  {
+   "label": "G2-21 tank turn",
+   "command": "python Tools/scripts/jc3tankturn.py --check",
+   "exit": 0,
+   "summary": "PASS: 12 tank builds / 145 player land_global, 4 card modules identical (0 tank-only / 0 non-tank-only members), 0 tank-only module types, 5 candidates refuted (27 non-tank builds share a tank tuple), 262 tank-unique values with 0 in driving modules, 9 name matches (0 script file types), vehicle class {'CCar': 12}",
+   "ok": true
+  },
+  {
+   "label": "G2-22/23 usage + nitro",
+   "command": "python Tools/scripts/jc3usage.py --check",
+   "exit": 0,
+   "summary": "PASS: 6045 modules in 232 caches, 225 EffectAttachments on 224 vehicles, 12 named usages (346 rows, 885 effect links re-decoded), ExtendedEffectUsages 0 usages, EngineNitro -> EngineNitro/dynamic_nitrous, 155 .epe Usage values / 12576 objects, 0 .effc refs in graphs, FX rows 57187",
+   "ok": true
+  },
+  {
+   "label": "G2-24 audio",
+   "command": "python Tools/scripts/jc3audio.py --check",
+   "exit": 0,
+   "summary": "PASS: 45 donor events in 3 banks, 257/257 vehicle events/tunes, 649 samples (22 looped, 1 rate), wave refs 0, LandAudio 2 members, weapons 4, horn 178 / radio 0, md match True",
+   "ok": true
+  },
+  {
+   "label": "G2-25 HUD weapons",
+   "command": "python Tools/scripts/jc3hudwpn.py --check",
+   "exit": 0,
+   "summary": "PASS: 260 scripts, InitVehicleWeapons 9 args / UpdateVehicleWeapons 6 args, 2 vehicle slots (E_NUM_WEAPON_SLOTS 7 is on-foot), 14 reticle shapes, lock-on POI 21 at 1.5 s, 0 heat parameters, 0 heat in bodies, 0 BmAK heat setters, 69 weapon icons, 5 WPN-12 rows (map/map/map/stated absence/partial)",
+   "ok": true
+  },
+  {
+   "label": "G2-26 rebel drop",
+   "command": "python Tools/scripts/jc3rebeldrop.py --check",
+   "exit": 0,
+   "summary": "PASS: 196 vanilla items / 591 tasks / 80 vehicle-bound / 185 resolved to .ee, 0 hash mismatches, 39+45+45 items added by the 3 mod variants, recipe hash 443190071 for v0300_car_kensington_sportsmuscle_batmobile",
+   "ok": true
+  },
+  {
+   "label": "G2-27 standalone",
+   "command": "python Tools/scripts/jc3standalone.py --check",
+   "exit": 0,
+   "summary": "PASS: 17 registration rows | registry records 251/922 index leaves (158/233 vehicles) | 101 spawned-by-path leaves unregistered | mod 20 .ee / 0 .toc, 20 vanilla paths | donor .ee 604 inner files, json match True, md match True",
+   "ok": true
+  },
+  {
+   "label": "G2-28 damage model",
+   "command": "python Tools/scripts/damage_predict.py --check",
+   "exit": 0,
+   "summary": "PASS: 9 arms x 3 vehicles, models H0, H1, H2, finite H0 27 / H1 27 / H2 19, never H1 0 / H2 8",
+   "ok": true
+  },
+  {
+   "label": "G2-29 traffic",
+   "command": "python Tools/scripts/jc3traffic.py --check",
+   "exit": 0,
+   "summary": "PASS: 11751 files scanned (7719 MB, A+B), 17 name the donor (Rebel Drop/entity registry/frontend/level rule/localisation/other/patch metadata/self/spawn table/task table), 86 spawn records (8 with a pool key), donor tag list of 13 tags, 31 traffic rules / 41 selectors, 1 match (`ambient,ground,car,liberated,-highend`), 10 AI behaviour trees",
+   "ok": true
+  },
+  {
+   "label": "G2-29 physics write",
+   "command": "python Tools/scripts/jc3hkx.py write --check",
+   "exit": 0,
+   "summary": "PASS: round trip identical (2/2 files, 54 hulls re-emitted) | remap 0 problems | scale 0 | replace 0 | hulls 54 compounds 22, json match True, md match True",
+   "ok": true
+  },
+  {
+   "label": "G2-31 water",
+   "command": "python Tools/scripts/jc3water.py --check",
+   "exit": 0,
+   "summary": "PASS: 232 entities, sink 189 / floating 8 / boat 35, donor will_sink 1 buoyancy 2 drag 100 (1 hull element), 35 boats base_buoyancy 0.1..1.45, 21 fleet-wide water/engine rows in one shared VehicleCommon, build water modules identical to the donor: True, 38 member paths scan as water-related",
+   "ok": true
+  },
+  {
+   "label": "G2-32 names",
+   "command": "python Tools/scripts/jc3strings.py --check",
+   "exit": 0,
+   "summary": "PASS: name 'KERNER SERPENTE R' in 11 languages (id D2B46B49), desc in 11 languages, item 3535039305, icon 18688 B, fleet 45/45 named 45/45 iconed, ui_localization resolves 0 of 2 keys, gfx references 0",
+   "ok": true
+  },
+  {
+   "label": "G2-33 lights",
+   "command": "python Tools/scripts/jc3lights.py --check",
+   "exit": 0,
+   "summary": "PASS: 3,217 light entries / 223 vehicles, 25 members, 9 behaviours, 393 presets (17 use 0, 34 inconsistent), hashes 3217/3217/3217 recomputed; binding 2,073 lit parts, 27 name misses, 6 on unlit parts; CarLight 11,367 blocks stride ['12'] slots ['6']; recipe 25 members",
+   "ok": true
+  },
+  {
+   "label": "G2-34 tether",
+   "command": "python Tools/scripts/jc3tether.py --check",
+   "exit": 0,
+   "summary": "PASS: 232 masses (donor 975, target 6000, 1 multi-body), bays 12 on 12 entities / 0 helicopters, hooks 33 on 3 entities, compound 1, rope/winch parts 40 (10 names) + 12 winch LODs, tether-ish module types 0/53, winch classes 0, index tether 335 (7 non-dialogue) / winch 0",
+   "ok": true
+  },
+  {
+   "label": "P0-2 feature census",
+   "command": "python Tools/scripts/jc3_feature_census.py --check",
+   "exit": 0,
+   "summary": "check ok: census matches the data (232 entities, 53 armed, 25 weapon ids)",
+   "ok": true
+  }
+ ],
+ "census": {
+  "command": "python Tools/scripts/jc3_feature_census.py --check",
+  "summary": "check ok: census matches the data (232 entities, 53 armed, 25 weapon ids)",
+  "ok": true
+ },
+ "features": [
+  {
+   "code": "APP-1",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/GEOMETRY.md"
+   ],
+   "needle": "56136",
+   "anchor": null,
+   "must_not": [],
+   "fact": "all 56,136 body meshes decode; material slots are counted per block (806,529)",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'56136' in Research/JC3Grab/GEOMETRY.md"
+  },
+  {
+   "code": "APP-2",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/GEOMETRY.md"
+   ],
+   "needle": "CarPaintMM",
+   "anchor": null,
+   "must_not": [],
+   "fact": "CarPaintMM blocks re-encode byte-exact, so paint is editable",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'CarPaintMM' in Research/JC3Grab/GEOMETRY.md"
+  },
+  {
+   "code": "APP-3",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/GEOMETRY.md"
+   ],
+   "needle": "Window",
+   "anchor": null,
+   "must_not": [],
+   "fact": "12,028 Window (glass) blocks decoded, canopy is a material switch",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'Window' in Research/JC3Grab/GEOMETRY.md"
+  },
+  {
+   "code": "APP-4",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/LIGHT_SYSTEM.md"
+   ],
+   "needle": "CarLight",
+   "anchor": null,
+   "must_not": [],
+   "fact": "CarLight block format (11,367 blocks) + the wheel-arch recipe with a source per member",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'CarLight' in Research/JC3Grab/LIGHT_SYSTEM.md"
+  },
+  {
+   "code": "APP-5",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/PARTS_TABLE.md"
+   ],
+   "needle": "11643",
+   "anchor": null,
+   "must_not": [],
+   "fact": "11,643 part rows, each with its own model: moving parts are separate meshes",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'11643' in Research/JC3Grab/PARTS_TABLE.md"
+  },
+  {
+   "code": "APP-6",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/TURRET.md"
+   ],
+   "needle": "179",
+   "anchor": null,
+   "must_not": [],
+   "fact": "turret yaw +-179 / cannon -5..20 reach the battle pose as part angles; two drop entries is the variant route",
+   "decision": "D-2",
+   "decision_state": "open",
+   "pass_": true,
+   "detail": "'179' in Research/JC3Grab/TURRET.md"
+  },
+  {
+   "code": "APP-7",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/DAMAGE_MODEL.md"
+   ],
+   "needle": "deform_scale",
+   "anchor": null,
+   "must_not": [],
+   "fact": "deform_scale is a real module switch (0 in the build = no crumple)",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'deform_scale' in Research/JC3Grab/DAMAGE_MODEL.md"
+  },
+  {
+   "code": "APP-8",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/REBELDROP.md"
+   ],
+   "needle": "45 items",
+   "anchor": null,
+   "must_not": [],
+   "fact": "the 3 shipped mod variants add 39+45+45 drop items, so extra entries are a solved path",
+   "decision": "D-5",
+   "decision_state": "open",
+   "pass_": true,
+   "detail": "'45 items' in Research/JC3Grab/REBELDROP.md"
+  },
+  {
+   "code": "DIM-1",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/FLEET.md"
+   ],
+   "needle": "wheelbase",
+   "anchor": null,
+   "must_not": [],
+   "fact": "per-vehicle geometry/handling table: body box, wheelbase, track",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'wheelbase' in Research/JC3Grab/FLEET.md"
+  },
+  {
+   "code": "DIM-2",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/PHYSICS.md"
+   ],
+   "needle": "land_global",
+   "anchor": null,
+   "must_not": [],
+   "fact": "station quads agree with land_global wheel data, so the wheel radius is a readable member",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'land_global' in Research/JC3Grab/PHYSICS.md"
+  },
+  {
+   "code": "DIM-3",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/TETHER.md"
+   ],
+   "needle": "975",
+   "anchor": null,
+   "must_not": [],
+   "fact": "232-mass census, donor 975; the unit is UNKNOWN, so 6 t is a class row, not a decode",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'975' in Research/JC3Grab/TETHER.md"
+  },
+  {
+   "code": "DIM-4",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/PHYSICS_WRITE.md"
+   ],
+   "needle": "54 hulls",
+   "anchor": null,
+   "must_not": [],
+   "fact": "the hull writer round-trips all 54 hulls byte-identically",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'54 hulls' in Research/JC3Grab/PHYSICS_WRITE.md"
+  },
+  {
+   "code": "ARM-1",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/DAMAGE_MODEL.md"
+   ],
+   "needle": "shotgun",
+   "anchor": null,
+   "must_not": [],
+   "fact": "the arm census sets the ARM-1 gate (shotgun 144/pull): the ceiling is a domain argument, not a member",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'shotgun' in Research/JC3Grab/DAMAGE_MODEL.md"
+  },
+  {
+   "code": "ARM-2",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/DAMAGE_MODEL.md"
+   ],
+   "needle": "2000",
+   "anchor": null,
+   "must_not": [],
+   "fact": "three health profiles with their channels; the build already carries the tank's 2000 HP",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'2000' in Research/JC3Grab/DAMAGE_MODEL.md"
+  },
+  {
+   "code": "ARM-3",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/DAMAGE_MODEL.md"
+   ],
+   "needle": "impact_damage_factor",
+   "anchor": null,
+   "must_not": [],
+   "fact": "the impact switch exists and ships at 0 in the build (shipped range 1..12)",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'impact_damage_factor' in Research/JC3Grab/DAMAGE_MODEL.md"
+  },
+  {
+   "code": "ARM-4",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/DAMAGE_MODEL.md"
+   ],
+   "needle": "Land_Wheel",
+   "anchor": null,
+   "must_not": [],
+   "fact": "part damage table with the Land_Wheel row (the build's one change: instantly_damaged_by_bullets 1->0)",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'Land_Wheel' in Research/JC3Grab/DAMAGE_MODEL.md"
+  },
+  {
+   "code": "ARM-5",
+   "kind": "vocab-scan",
+   "verdict": "absence",
+   "files": [
+    "Research/JC3Grab/VOCABULARY.md"
+   ],
+   "needle": null,
+   "anchor": "max_health",
+   "must_not": [
+    "regen",
+    "recover"
+   ],
+   "fact": "no health-regeneration member in the 52-type / 1,421-path vocabulary: ARM-5 is a named omission",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "no regen/recover in Research/JC3Grab/VOCABULARY.md (anchor 'max_health' present)"
+  },
+  {
+   "code": "ARM-6",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/USAGES.md"
+   ],
+   "needle": "OnExploded",
+   "anchor": null,
+   "must_not": [],
+   "fact": "OnExploded (2 vehicles) / Explosion (23) usage names exist: the death effect is selected by a usage key on the entity",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'OnExploded' in Research/JC3Grab/USAGES.md"
+  },
+  {
+   "code": "WPN-1",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/WEAPONS.md"
+   ],
+   "needle": "w602_mediumtank_canon",
+   "anchor": null,
+   "must_not": [],
+   "fact": "tank cannon tune, fully decoded (25 ids)",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'w602_mediumtank_canon' in Research/JC3Grab/WEAPONS.md"
+  },
+  {
+   "code": "WPN-2",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/WEAPONS.md"
+   ],
+   "needle": "w603_mediumtank_mgun",
+   "anchor": null,
+   "must_not": [],
+   "fact": "tank MG tune; barrel spin is a part behaviour (GatlingGun)",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'w603_mediumtank_mgun' in Research/JC3Grab/WEAPONS.md"
+  },
+  {
+   "code": "WPN-3",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/WEAPONS.md"
+   ],
+   "needle": "w618_sportsmuscle_missile",
+   "anchor": null,
+   "must_not": [],
+   "fact": "the donor chassis's own missile weapon, tune + wiring decoded",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'w618_sportsmuscle_missile' in Research/JC3Grab/WEAPONS.md"
+  },
+  {
+   "code": "WPN-4",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/EMP.md"
+   ],
+   "needle": "w702",
+   "anchor": null,
+   "must_not": [],
+   "fact": "CEMPWeapon w702/w503 exist, but neither tune carries an EMP field: the missile half is the effect",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'w702' in Research/JC3Grab/EMP.md"
+  },
+  {
+   "code": "WPN-5",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/EMP.md"
+   ],
+   "needle": "weapon-slot copy",
+   "anchor": null,
+   "must_not": [],
+   "fact": "the EMP burst is an entity-level CForcePulse copy, which a car can carry",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'weapon-slot copy' in Research/JC3Grab/EMP.md"
+  },
+  {
+   "code": "WPN-6",
+   "kind": "needle",
+   "verdict": "absence",
+   "files": [
+    "Research/JC3Grab/TETHER.md"
+   ],
+   "needle": "Functional winch classes anywhere in the fleet: **0**",
+   "anchor": null,
+   "must_not": [],
+   "fact": "rope/winch geometry ships on 4 entities (10 part names) but no winch/rope/tow module type and 0 winch classes: no part can pull; WPN-6 is a named omission",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'Functional winch classes anywhere in the fleet: **0**' in Research/JC3Grab/TETHER.md"
+  },
+  {
+   "code": "WPN-7",
+   "kind": "vocab-scan",
+   "verdict": "absence",
+   "files": [
+    "Research/JC3Grab/ENTITIES.md"
+   ],
+   "needle": null,
+   "anchor": "CBulletWeaponBase",
+   "must_not": [
+    "allegian",
+    "hacker",
+    "hijack"
+   ],
+   "fact": "no allegiance-switch class in the 103-class fleet census: named omission",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "no allegian/hacker/hijack in Research/JC3Grab/ENTITIES.md (anchor 'CBulletWeaponBase' present)"
+  },
+  {
+   "code": "WPN-8",
+   "kind": "vocab-scan",
+   "verdict": "absence",
+   "files": [
+    "Research/JC3Grab/ENTITIES.md"
+   ],
+   "needle": null,
+   "anchor": "CForcePulse",
+   "must_not": [
+    "sonar"
+   ],
+   "fact": "no sonar class in the 103-class census; CForcePulse is the shockwave half only",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "no sonar in Research/JC3Grab/ENTITIES.md (anchor 'CForcePulse' present)"
+  },
+  {
+   "code": "WPN-9",
+   "kind": "vocab-scan",
+   "verdict": "absence",
+   "files": [
+    "Research/JC3Grab/ENTITIES.md"
+   ],
+   "needle": null,
+   "anchor": "CPOI",
+   "must_not": [
+    "tracker",
+    "tracking"
+   ],
+   "fact": "no tracker class in the 103-class census (the only 'track' is CMusicTrack): named omission",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "no tracker/tracking in Research/JC3Grab/ENTITIES.md (anchor 'CPOI' present)"
+  },
+  {
+   "code": "WPN-10",
+   "kind": "vocab-scan",
+   "verdict": "absence",
+   "files": [
+    "Research/JC3Grab/VOCABULARY.md"
+   ],
+   "needle": null,
+   "anchor": "part_damage_types",
+   "must_not": [
+    "lethal",
+    "tranquil",
+    "incapacit"
+   ],
+   "fact": "no non-lethal flag in the member space: the riot-suppressor mode is a named omission",
+   "decision": "D-3",
+   "decision_state": "open",
+   "pass_": true,
+   "detail": "no lethal/tranquil/incapacit in Research/JC3Grab/VOCABULARY.md (anchor 'part_damage_types' present)"
+  },
+  {
+   "code": "WPN-11",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/USAGES.md"
+   ],
+   "needle": "nitro_boost",
+   "anchor": null,
+   "must_not": [],
+   "fact": "arcade.nitro_boost on 145/232 vehicles: the booster gadget is nitro",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'nitro_boost' in Research/JC3Grab/USAGES.md"
+  },
+  {
+   "code": "WPN-12",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/JC3_HUD_WEAPONS.md"
+   ],
+   "needle": "MCI_vehicle_weapons0",
+   "anchor": null,
+   "must_not": [],
+   "fact": "two weapon slots, reticle shapes, cooldown; heat is a stated absence",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'MCI_vehicle_weapons0' in Research/JC3Grab/JC3_HUD_WEAPONS.md"
+  },
+  {
+   "code": "HDL-1",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/VOCABULARY.md"
+   ],
+   "needle": "official_top_speed",
+   "anchor": null,
+   "must_not": [],
+   "fact": "vehicle_misc.official_top_speed is a readable member",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'official_top_speed' in Research/JC3Grab/VOCABULARY.md"
+  },
+  {
+   "code": "HDL-2",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/VOCABULARY.md"
+   ],
+   "needle": "LandEngine",
+   "anchor": null,
+   "must_not": [],
+   "fact": "LandEngine + Transmission modules carry the torque curve",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'LandEngine' in Research/JC3Grab/VOCABULARY.md"
+  },
+  {
+   "code": "HDL-3",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/VOCABULARY.md"
+   ],
+   "needle": "LandSteering",
+   "anchor": null,
+   "must_not": [],
+   "fact": "LandSteering / Brakes / Suspension / CustomLandGlobal.drift are readable",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'LandSteering' in Research/JC3Grab/VOCABULARY.md"
+  },
+  {
+   "code": "HDL-4",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/USAGES.md"
+   ],
+   "needle": "40 km/h",
+   "anchor": null,
+   "must_not": [],
+   "fact": "nitro_boost adds a flat km/h on top of torque and grip",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'40 km/h' in Research/JC3Grab/USAGES.md"
+  },
+  {
+   "code": "HDL-5",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/VOCABULARY.md"
+   ],
+   "needle": "suspension",
+   "anchor": null,
+   "must_not": [],
+   "fact": "Suspension module: length / min_length / strength / compression",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'suspension' in Research/JC3Grab/VOCABULARY.md"
+  },
+  {
+   "code": "HDL-6",
+   "kind": "vocab-scan",
+   "verdict": "absence",
+   "files": [
+    "Research/JC3Grab/VOCABULARY.md"
+   ],
+   "needle": null,
+   "anchor": "takeoff_pitch_damping",
+   "must_not": [
+    "air_control",
+    "upright"
+   ],
+   "fact": "land vehicles carry gravity_multiplier_* and takeoff_pitch_damping (n=145) but no yaw authority; righting_torque exists only in DriverLean (n=23 aircraft). Air control / self-righting = named omission (T-AC1, T-SR1)",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "no air_control/upright in Research/JC3Grab/VOCABULARY.md (anchor 'takeoff_pitch_damping' present)"
+  },
+  {
+   "code": "MOD-1",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/USAGES.md"
+   ],
+   "needle": "nitro_boost",
+   "anchor": null,
+   "must_not": [],
+   "fact": "pursuit mode is the default drive: arcade.nitro_boost (145/232) is the afterburner, the EMP burst is the entity copy (G2-16) and ram immunity is the switch (G2-28)",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'nitro_boost' in Research/JC3Grab/USAGES.md"
+  },
+  {
+   "code": "MOD-2",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/TANKTURN.md"
+   ],
+   "needle": "named omission",
+   "anchor": null,
+   "must_not": [],
+   "fact": "turret/cannon parts carry the weapons; turn-on-the-spot is a named omission; the second variant is the mode",
+   "decision": "D-2",
+   "decision_state": "open",
+   "pass_": true,
+   "detail": "'named omission' in Research/JC3Grab/TANKTURN.md"
+  },
+  {
+   "code": "MOD-3",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/EJECT.md"
+   ],
+   "needle": "moving.parachute",
+   "anchor": null,
+   "must_not": [],
+   "fact": "exit.driver.moving.parachute is the fast exit on 221/232 vehicles; the upward launch has no member",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'moving.parachute' in Research/JC3Grab/EJECT.md"
+  },
+  {
+   "code": "MOD-4",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/DOORS.md"
+   ],
+   "needle": "canopy",
+   "anchor": null,
+   "must_not": [],
+   "fact": "door behaviour + part index + limited hinge in the .physicsc: the canopy can open",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'canopy' in Research/JC3Grab/DOORS.md"
+  },
+  {
+   "code": "MOD-5",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/TRAFFIC.md"
+   ],
+   "needle": "ambient",
+   "anchor": null,
+   "must_not": [],
+   "fact": "the donor is civilian traffic (ambient selector); a standalone entity avoids NPC copies",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'ambient' in Research/JC3Grab/TRAFFIC.md"
+  },
+  {
+   "code": "AUD-1",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/JC3_AUDIO.md"
+   ],
+   "needle": "LandAudio",
+   "anchor": null,
+   "must_not": [],
+   "fact": "engine_running_sound attached effect + LandAudio.min_rpm/max_rpm (1,000/10,000)",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'LandAudio' in Research/JC3Grab/JC3_AUDIO.md"
+  },
+  {
+   "code": "AUD-2",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/JC3_AUDIO.md"
+   ],
+   "needle": "exhaust_upgrade_nitrous",
+   "anchor": null,
+   "must_not": [],
+   "fact": "nitro/burnout events on exhaust_upgrade_nitrous*; three samples already swapped",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'exhaust_upgrade_nitrous' in Research/JC3Grab/JC3_AUDIO.md"
+  },
+  {
+   "code": "AUD-3",
+   "kind": "needle",
+   "verdict": "absence",
+   "files": [
+    "Research/JC3Grab/JC3_AUDIO.md"
+   ],
+   "needle": "speedwind_sound_player",
+   "anchor": null,
+   "must_not": [],
+   "fact": "no cabin/interior effect on the donor; the nearest is speedwind_sound_player: named omission unless a bank swap adds one",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'speedwind_sound_player' in Research/JC3Grab/JC3_AUDIO.md"
+  },
+  {
+   "code": "AUD-4",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/JC3_AUDIO.md"
+   ],
+   "needle": "deferred with D-2",
+   "anchor": null,
+   "must_not": [],
+   "fact": "no mode-switch event exists in the donor; the transform sting exists only if a second variant ships",
+   "decision": "D-2",
+   "decision_state": "open",
+   "pass_": true,
+   "detail": "'deferred with D-2' in Research/JC3Grab/JC3_AUDIO.md"
+  },
+  {
+   "code": "AUD-5",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/JC3_AUDIO.md"
+   ],
+   "needle": "weapons.bank",
+   "anchor": null,
+   "must_not": [],
+   "fact": "weapon .ee SAttachedEffect + weapons.bank samples: per-weapon sound has a carrier",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'weapons.bank' in Research/JC3Grab/JC3_AUDIO.md"
+  },
+  {
+   "code": "AUD-6",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/JC3_AUDIO.md"
+   ],
+   "needle": "wheel_suspension_",
+   "anchor": null,
+   "must_not": [],
+   "fact": "JC3's own tyre/impact events are kept (BmAK has no impact bank)",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'wheel_suspension_' in Research/JC3Grab/JC3_AUDIO.md"
+  },
+  {
+   "code": "AUD-7",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/JC3_AUDIO.md"
+   ],
+   "needle": "horn",
+   "anchor": null,
+   "must_not": [],
+   "fact": "horn is a per-model SAttachedEffect (178) to delete; 0 radio objects in the fleet",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'horn' in Research/JC3Grab/JC3_AUDIO.md"
+  },
+  {
+   "code": "ANI-1",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/PARTS_TABLE.md"
+   ],
+   "needle": "wheel",
+   "anchor": null,
+   "must_not": [],
+   "fact": "wheel slots per part: spin and steer are part-level, already live in test-091",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'wheel' in Research/JC3Grab/PARTS_TABLE.md"
+  },
+  {
+   "code": "ANI-2",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/TURRET.md"
+   ],
+   "needle": "Cannon",
+   "anchor": null,
+   "must_not": [],
+   "fact": "Turret/Cannon parts with pivots, axes and limits on 8 vehicles",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'Cannon' in Research/JC3Grab/TURRET.md"
+  },
+  {
+   "code": "ANI-3",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/MOVING_PARTS.md"
+   ],
+   "needle": "GatlingGun",
+   "anchor": null,
+   "must_not": [],
+   "fact": "GatlingGun behaviour driven by weapon_rpm (racing boat driver-fired)",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'GatlingGun' in Research/JC3Grab/MOVING_PARTS.md"
+  },
+  {
+   "code": "ANI-4",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/MOVING_PARTS.md"
+   ],
+   "needle": "EngineRotatingPart",
+   "anchor": null,
+   "must_not": [],
+   "fact": "EngineRotatingPart driven by engine_rpm (v0506 tractor fan)",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'EngineRotatingPart' in Research/JC3Grab/MOVING_PARTS.md"
+  },
+  {
+   "code": "ANI-5",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/MOVING_PARTS.md"
+   ],
+   "needle": "AirBrake",
+   "anchor": null,
+   "must_not": [],
+   "fact": "AirBrake exists but is proven only on a CAirPlane: land use is a Q probe",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'AirBrake' in Research/JC3Grab/MOVING_PARTS.md"
+  },
+  {
+   "code": "ANI-6",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/DOORS.md"
+   ],
+   "needle": "MissileHatch",
+   "anchor": null,
+   "must_not": [],
+   "fact": "16 MissileHatch doors on the monorail missile car; the trigger is code-side",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'MissileHatch' in Research/JC3Grab/DOORS.md"
+  },
+  {
+   "code": "ANI-7",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/MOVING_PARTS.md"
+   ],
+   "needle": "SteeringWheel",
+   "anchor": null,
+   "must_not": [],
+   "fact": "SteeringWheel driven by steering_turn, proven on 9 chassis",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'SteeringWheel' in Research/JC3Grab/MOVING_PARTS.md"
+  },
+  {
+   "code": "ANI-8",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/DOORS.md"
+   ],
+   "needle": "canopy",
+   "anchor": null,
+   "must_not": [],
+   "fact": "the same door behaviour covers the canopy on entry/exit",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'canopy' in Research/JC3Grab/DOORS.md"
+  },
+  {
+   "code": "ANI-9",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/SEAT.md"
+   ],
+   "needle": "0.855",
+   "anchor": null,
+   "must_not": [],
+   "fact": "seat part candidate 0.855 m, 10 mm under the BmAK Driver hip; pose via rico_base",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'0.855' in Research/JC3Grab/SEAT.md"
+  },
+  {
+   "code": "WLD-1",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/REBELDROP.md"
+   ],
+   "needle": "hash_jenkins",
+   "anchor": null,
+   "must_not": [],
+   "fact": "Item.Name = jenkins hash of the entity leaf; the recipe for a Batmobile entry exists",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'hash_jenkins' in Research/JC3Grab/REBELDROP.md"
+  },
+  {
+   "code": "WLD-2",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/NAMES.md"
+   ],
+   "needle": "KERNER SERPENTE R",
+   "anchor": null,
+   "must_not": [],
+   "fact": "name/blurb pairs keyed by the leaf hash, 11 languages, plus the icon key rule",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'KERNER SERPENTE R' in Research/JC3Grab/NAMES.md"
+  },
+  {
+   "code": "WLD-3",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/INTERACTION.md"
+   ],
+   "needle": "entry.driver",
+   "anchor": null,
+   "must_not": [],
+   "fact": "85 entry/exit/point objects with their transforms; the Batmobile verdict per point",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'entry.driver' in Research/JC3Grab/INTERACTION.md"
+  },
+  {
+   "code": "WLD-4",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/INTERACTION.md"
+   ],
+   "needle": "stunt",
+   "anchor": null,
+   "must_not": [],
+   "fact": "3 active stunt-area triangle sets with their welds; point.stunt* objects decoded",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'stunt' in Research/JC3Grab/INTERACTION.md"
+  },
+  {
+   "code": "WLD-5",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/TETHER.md"
+   ],
+   "needle": "6000",
+   "anchor": null,
+   "must_not": [],
+   "fact": "mass is a readable member: donor 975, the build's 6 t class target 6,000 = 6.154x the donor, compared as a ratio because the unit is UNKNOWN",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'6000' in Research/JC3Grab/TETHER.md"
+  },
+  {
+   "code": "WLD-6",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/WATER.md"
+   ],
+   "needle": "will_sink",
+   "anchor": null,
+   "must_not": [],
+   "fact": "will_sink + buoyancy + the fleet-wide water-entry damage and 30 s engine shut-down",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'will_sink' in Research/JC3Grab/WATER.md"
+  },
+  {
+   "code": "WLD-7",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/TETHER.md"
+   ],
+   "needle": "Can a vehicle be carried",
+   "anchor": null,
+   "must_not": [],
+   "fact": "a vehicle can be carried by the 12 CVehicleCargoBay vehicles (cargo plane, transport boat, flatbed) and the donor's mass is 6.154x under the target; helicopter airlift is UNKNOWN (0 cargo bays on 23 helicopters)",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'Can a vehicle be carried' in Research/JC3Grab/TETHER.md"
+  },
+  {
+   "code": "WLD-8",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/TRAFFIC.md"
+   ],
+   "needle": "spawn_vehicle_defs",
+   "anchor": null,
+   "must_not": [],
+   "fact": "the donor's traffic record is in spawn_vehicle_defs.bin; a standalone leaf never enters it",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'spawn_vehicle_defs' in Research/JC3Grab/TRAFFIC.md"
+  },
+  {
+   "code": "LGT-1",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/LIGHT_SYSTEM.md"
+   ],
+   "needle": "VehicleDynamicLights",
+   "anchor": null,
+   "must_not": [],
+   "fact": "3,217 light entries + CarLight blocks + the wheel-arch recipe",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'VehicleDynamicLights' in Research/JC3Grab/LIGHT_SYSTEM.md"
+  },
+  {
+   "code": "LGT-2",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/LIGHT_SYSTEM.md"
+   ],
+   "needle": "VEHLT_BattleModeLight",
+   "anchor": null,
+   "must_not": [],
+   "fact": "the battle spotlight is the same socket's second behaviour value",
+   "decision": "D-2",
+   "decision_state": "open",
+   "pass_": true,
+   "detail": "'VEHLT_BattleModeLight' in Research/JC3Grab/LIGHT_SYSTEM.md"
+  },
+  {
+   "code": "FX-1",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/USAGES.md"
+   ],
+   "needle": "EngineNitro",
+   "anchor": null,
+   "must_not": [],
+   "fact": "EngineNitro usage -> dynamic_nitrous, 9 nitrous .effc paths: the flame has a slot",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'EngineNitro' in Research/JC3Grab/USAGES.md"
+  },
+  {
+   "code": "FX-2",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/SIGNATURE_DIFF.md"
+   ],
+   "needle": "muzzleflash",
+   "anchor": null,
+   "must_not": [],
+   "fact": "the armed Serpente's own muzzleflash .effc, paired to its 4 fire points",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'muzzleflash' in Research/JC3Grab/SIGNATURE_DIFF.md"
+  },
+  {
+   "code": "FX-3",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/VOCABULARY.md"
+   ],
+   "needle": "tire_effects",
+   "anchor": null,
+   "must_not": [],
+   "fact": "vehiclecommon.tire_effects (23 members): skid and smoke thresholds are readable",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'tire_effects' in Research/JC3Grab/VOCABULARY.md"
+  },
+  {
+   "code": "FX-4",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/USAGES.md"
+   ],
+   "needle": "Explosion",
+   "anchor": null,
+   "must_not": [],
+   "fact": "Explosion / OnExploded / OnPartExplode usages: the death effect is an entity attachment",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'Explosion' in Research/JC3Grab/USAGES.md"
+  },
+  {
+   "code": "CAM-1",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Working/Translation/T6_HUD_CAMERA.md"
+   ],
+   "needle": "car_base.ctune",
+   "anchor": null,
+   "must_not": [],
+   "fact": "car_base.ctune decoded: 13 T-CAM rows, chase camera built in test-091",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'car_base.ctune' in Working/Translation/T6_HUD_CAMERA.md"
+  },
+  {
+   "code": "CAM-2",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Working/Translation/T6_HUD_CAMERA.md"
+   ],
+   "needle": "T-CAM10",
+   "anchor": null,
+   "must_not": [],
+   "fact": "no battle-camera member (T-CAM10 out): the carrier is a second .ctune per variant",
+   "decision": "D-2",
+   "decision_state": "open",
+   "pass_": true,
+   "detail": "'T-CAM10' in Working/Translation/T6_HUD_CAMERA.md"
+  },
+  {
+   "code": "HUD-1",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Working/Translation/T6_HUD_CAMERA.md"
+   ],
+   "needle": "MCI_speedo",
+   "anchor": null,
+   "must_not": [],
+   "fact": "MCI_speedo, InitVehicleNitrous and the vehicle health bar all exist in hud.gfx",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'MCI_speedo' in Working/Translation/T6_HUD_CAMERA.md"
+  },
+  {
+   "code": "HUD-2",
+   "kind": "needle",
+   "verdict": "carrier",
+   "files": [
+    "Research/JC3Grab/JC3_HUD_WEAPONS.md"
+   ],
+   "needle": "MCI_vehicle_weapons0",
+   "anchor": null,
+   "must_not": [],
+   "fact": "2 weapon slots, 14 reticle shapes, one lock-on POI",
+   "decision": null,
+   "decision_state": null,
+   "pass_": true,
+   "detail": "'MCI_vehicle_weapons0' in Research/JC3Grab/JC3_HUD_WEAPONS.md"
+  }
+ ],
+ "summary": {
+  "codes": 75,
+  "carrier": 67,
+  "absence": 8,
+  "decision_gated": 7,
+  "decision_ids": [
+   "D-2",
+   "D-3",
+   "D-5"
+  ],
+  "decision_open": [
+   "D-2",
+   "D-3",
+   "D-5"
+  ],
+  "readers": 25,
+  "readers_green": 25,
+  "problems": 0,
+  "verdict": "PASS"
+ }
+}

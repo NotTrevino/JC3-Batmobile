@@ -1,0 +1,20 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-v01-file-gates-rc4.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-07 (rewritten from the 2026-11-06 brief by review 8399)
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/review-build-wave.md
+Phase V-01 on Builds/bm-RC4, the tree B-14 actually produced: copy v01_rc2.py to v01_rc4.py, add --check, and gate on these numbers, not on round ones.
+
+Fixed facts to verify (from tmp/freebuff/reports/build-d13-release-candidate-4.md):
+- aaf source tree 696 files; .toc 714 records; drop/ 9 files; .ee 11,225,534 B; .ee.toc 68,675 B; install.ps1 6,535 B; receipt.json 211,711 B schema 2.
+- 225 .toc records differ from the vanilla donor .ee; 26 remain at offset 0 (19 of them size-only @files.xml stubs); every offset-0 record must be byte-identical to vanilla.
+- internal records: root .epe offset 17,713,812 / 134,072 B; sportsmuscle.physicsc 340,368 B at 15,993,844 (sha256 0164936b928f821c058c5a154a93b7cadcdbb9baca7d44fb67cb8f18a9399323); batmobile_health_medium.vmodc 3,741 B at 23,252,584; lights module 7,105 B at 16,499,504; vehicle_parts, custom_land_global, land_engine also internal.
+- budgets: model 4,791.3 KB of 4,915; texture 5,380.9 KB of 7,065 (33 textures, hard_ok); allocator figure 4,648.0 KB is over its own sub-allocation and must be reported, not hidden.
+- aafdiff vs bm-RC2: 120 files = 20 merge-overlay + 2 stage + 98 base-lineage, 0 unexplained.
+- ledger 199 rows: 15 blocked, 145/216 evidenced, 35 edits over 16 rows; B-24's 15 handling values in t1_handling.json must match the 35 already in test-085.
+
+Also run spec_check.py, jc3parts.py check, jc3adf.py re-read of every edited module, ConvertProperty round trip of the merged .epe (7,084 -> 9,025 XML lines, re-export byte-identical), and a read-back of every edited value through the built .toc (slice by record offset/size, decode, do not read the aaf tree).
+
+Do NOT gate on t_boost_rows.py or t_vnf_six.py: both pin a 198-row ledger and RC4 has 199 (see 8396). Output Builds/bm-RC4/verify/files.md and report each gate with its number and the command that produced it.
+
+Updated by review 8399: rewritten for the real RC4 counts (696/714/9/225/26/120, model 4,791.3, texture 5,380.9) and told not to gate on the two 198-row pins.

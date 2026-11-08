@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/turret-joint-donor-rows.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-06
+The joint trace (tmp/freebuff/reports/turret-joint-trace.md) found that the B-04 manifest Working/Parts/bm_vehicle_parts.json has no joint member and the generator Tools/scripts/bm_parts.py hardcodes -1, so bm-RC2 ships a turret and cannon that cannot rotate. Before anyone fixes the generator, learn what a correct joint looks like: in the donor parts module of the medium tank (and one other vehicle with a hinged part), use Tools/scripts/jc3adf.py dump --paths and jc3parts.py to print the part rows for the turret and cannon: which member holds the joint index, how it points at the hkpLimitedHingeConstraintData, axis and limit fields, and the units of the limits (radians?). Compare with Research/JC3Grab/TURRET.md and MOVING_PARTS.md. Produce a field-by-field description of what bm_vehicle_parts.json would need for P-01 (yaw 120 deg) and P-02 (pitch 25 deg), with numbers converted from BmAK. Output Working/Parts/JOINT_FIELDS.md + Tools/scripts/joint_fields.py --check. Describe only; do not edit the manifest or the generator.

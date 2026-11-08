@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/installer-state-audit-and-stale-records.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+Establish the true state of the installer, because the records disagree. The ledger (GRAB_BACKLOG.md rows V-06-RC2, V-06-fix, install_v3, lines near 1999-2021) says install_v3 is not adopted and Rollback091 still fails, yet Tools/scripts/bm_rc4.py already renders Builds/bm-RC4/install.ps1 from Working/Installer/install_v3.ps1 and tmp/freebuff/reports/verify-v06-install-dry-run-rc4.md reports six passing cases. Build a table: for every Builds/*/install.ps1 and every generator (bm_rc.py, bm_rc2.py, bm_rc3.py, bm_rc4.py, _make_installer.py) say whether it contains Rollback091, the v3 guard strings, the snapshot-and-restore rollback, and the simulation root it accepts. Report which trees are safe and which must never be run. Write Tools/scripts/installer_audit.py (--write, --check, the check greps the files again), Working/Installer/INSTALLER_STATE.md/.json, and the replacement text for the three stale ledger rows (do not edit the ledger). Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

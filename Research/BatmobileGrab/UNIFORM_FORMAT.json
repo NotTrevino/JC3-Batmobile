@@ -1,0 +1,2465 @@
+{
+ "task": "G3-04e1 - on-disk format of the material uniform records",
+ "inputs": {
+  "upk": "E:/Games/Batman - Arkham Knight/BmGame/CookedPCConsole/CombinedShaderCache-PC-D3D-SM5.upk",
+  "bytes": 21268515,
+  "sha1_16": "c7b2759c9eddcc38"
+ },
+ "region": {
+  "container_run_end": 145440259,
+  "first_record": 145440773,
+  "prefix_bytes": 514,
+  "prefix_hex": "e71fbcf9be6f3b1bb211000000000000ddb65bb6dd3785a6691d15a2c1af9970a1b1f4101b000000000000006cab000040bd000000000000000000000000000000000000000000000100000000000000c00010000000020000000100000000000100ffff0200000001000100ffff000000000000ff030000ffff0000000000000000000000000000000000000200000001000000ffff0100000002000000ffff010001000000000000000000000000000000000000000000000000000000000000000000230000000000000000000000000038000000000000000000000000000000b5250000d3b22d2b34011340989aa71e376aabdc000000000000000000000000000000005f030000e30000007a6aad08000000000200000004000000bd1000000000000000000000f30b8c38bd10000000000000be1000000000000072e2694a04813ad7be10000000000000b3100000000000002e84c1471aeef7ebb310000000000000b910000000000000fcc4e1c5fb86401fb910000000000000dd0700000000000004000000bd1000000000000000000000f30b8c38bd10000000000000be1000000000000072e2694a43690ac8be10000000000000b3100000000000002e84c1471aeef7ebb310000000000000b910000000000000fcc4e1c539b7cb9eb910000000000000db07000000000000d3b22d2b34011340989aa71e376aabdc",
+  "candidates_scanned": 13486,
+  "header_candidates": 7278,
+  "region_bytes": 9893119,
+  "records_bytes": 764817,
+  "between_bytes": 9127700,
+  "tail_bytes": 88,
+  "file_bytes": 155333378,
+  "gap_min": 240,
+  "gap_max": 668192
+ },
+ "layout": {
+  "name_len": "i32 at +0, length of the name including its NUL",
+  "name": "u8[n] printable ASCII, NUL-terminated",
+  "guid": "u8[16] at +4+n, distinct per record",
+  "pad": "u8[16] at +20+n, 0 in every record",
+  "count": "u32 at +36+n, 1..64",
+  "entry": "32 B for the vector class: class FName (8) + parameter FName (8) + 4 x f32",
+  "span": "40 + n + 32 * count",
+  "length_prefix": "none",
+  "fixed_stride": "none"
+ },
+ "census": {
+  "records": 6966,
+  "entries": 9582,
+  "entries_decoded": 9582,
+  "strings_ok": 7278,
+  "pad_ok": 7278,
+  "spans_ok": 6966,
+  "guid_unique": 7278,
+  "guid_recur_min": 2,
+  "class_census": {
+   "FMaterialUniformExpressionVectorParameter": 9582
+  },
+  "class_number_census": {
+   "0": 9582
+  },
+  "param_number_census": {
+   "0": 9536,
+   "3": 21,
+   "2": 17,
+   "4": 6,
+   "5": 2
+  },
+  "stride_records": 592,
+  "stride_valid": {
+   "28": 0,
+   "32": 592,
+   "36": 0
+  },
+  "count_hist": {
+   "1": 5383,
+   "2": 991,
+   "3": 343,
+   "4": 152,
+   "5": 57,
+   "6": 15,
+   "7": 13,
+   "8": 5,
+   "9": 3,
+   "10": 2,
+   "13": 1,
+   "14": 1
+  },
+  "name_len_range": [
+   4,
+   72
+  ],
+  "span_range": [
+   77,
+   503
+  ],
+  "distinct_names": 6834
+ },
+ "leaves": {
+  "records": 312,
+  "tile_with_block_widths": 51,
+  "nested": 261,
+  "first_non_vector_class": {
+   "FMaterialUniformExpressionAppendVector": 206,
+   "FMaterialUniformExpressionFlipBookTextureParameter": 78,
+   "FMaterialUniformExpressionFoldedMath": 28
+  },
+  "first_stop_offset": 145495595,
+  "first_stop_entry_index": 3,
+  "first_stop_record": "Joker_Young_Shirt_MASTER_MAT",
+  "next_u32_plausible": 6966,
+  "first_stop_record_offset": 145495430,
+  "first_stop_class_word": 2041,
+  "first_stop_context": [
+   {
+    "at": 145495595,
+    "word": 2041,
+    "as_class": "FMaterialUniformExpressionAppendVector"
+   },
+   {
+    "at": 145495603,
+    "word": 2047,
+    "as_class": "FMaterialUniformExpressionFoldedMath"
+   },
+   {
+    "at": 145495611,
+    "word": 2047,
+    "as_class": "FMaterialUniformExpressionFoldedMath"
+   }
+  ],
+  "block_width_tiles_next_plausible": 33
+ },
+ "reconciliation": {
+  "structural": 6966,
+  "header_candidates": 7278,
+  "g3_04d": 6934,
+  "g3_04e": 6943,
+  "missed_by_g3_04d": [
+   "Grate_Steel_Liftable_MATGRATE_Church_Liftable_DEBUG_SUPERBRIGHT",
+   "911_ambulance_glass_mat",
+   "CAMEO_29-Penguin_PenguinStatue_MAT",
+   "_Grey_M",
+   "cgrays-volume",
+   "City_Building_Construction_Equipment_orange_netting_LOD2FADE_MAT",
+   "09 - Default",
+   "Bullet_Casing_S-UV_M1",
+   "Robin_ExplosivesVis-01_MAT",
+   "CAMEO_36-SolomonGrundy_Poster_MAT",
+   "Grapple_Point_Mines-Light_MAT",
+   "Material #11",
+   "20Dollars_material",
+   "Robin_ExplosivesVis-02_MAT",
+   "City_Building_Construction_Equipment_orange_netting_LODFADE_MAT",
+   "Gotham_Lighting_Floodlight_Container_Yard_01_Mat_Yellow_NoGlass",
+   "Robin_ExplosivesVis-03_MAT",
+   "Robin_ExplosivesVis-Sphere_MAT",
+   "GAMEPLAYONLY_Clocktower_Barbara_Newspaper_Clips_02_Flashback_DO_NOT_USE",
+   "Gotham_Lighting_Floodlight_Container_Yard_02_Yellow_LODBake1_Mat",
+   "3D_RainGlass_M",
+   "07 - Default",
+   "OBJ_Museum_Exhibits_T-Rex_02_MAT",
+   "Riddler_Arch_Support_Ferry-MAt",
+   "Riddler_Arch_Support_New-MAt",
+   "GAMEPLAYONLY_Clocktower_Barbara_Newspaper_Clips_Flashback_DO_NOT_USE",
+   "CAMEO_03-Azrael_MAT",
+   "Pyg_Obj_Curtains-MAT",
+   "CAMEO_29-Penguin_CobblepotManor_MAT",
+   "cgrays-cheap-volume",
+   "Gotham_Lighting_Floodlight_Container_Yard_02_Yellow_Dimmer_Mat",
+   "Gotham_Lighting_Floodlight_Container_Yard_01_Mat_NoGlass_LODBAKE1_Mat"
+  ],
+  "missed_by_g3_04e": [
+   "911_ambulance_glass_mat",
+   "CAMEO_29-Penguin_PenguinStatue_MAT",
+   "_Grey_M",
+   "cgrays-volume",
+   "09 - Default",
+   "Bullet_Casing_S-UV_M1",
+   "Robin_ExplosivesVis-01_MAT",
+   "CAMEO_36-SolomonGrundy_Poster_MAT",
+   "Grapple_Point_Mines-Light_MAT",
+   "Material #11",
+   "20Dollars_material",
+   "Robin_ExplosivesVis-02_MAT",
+   "Robin_ExplosivesVis-03_MAT",
+   "Robin_ExplosivesVis-Sphere_MAT",
+   "3D_RainGlass_M",
+   "07 - Default",
+   "OBJ_Museum_Exhibits_T-Rex_02_MAT",
+   "Riddler_Arch_Support_Ferry-MAt",
+   "Riddler_Arch_Support_New-MAt",
+   "CAMEO_03-Azrael_MAT",
+   "Pyg_Obj_Curtains-MAT",
+   "CAMEO_29-Penguin_CobblepotManor_MAT",
+   "cgrays-cheap-volume"
+  ]
+ },
+ "samples": [
+  {
+   "index": 53,
+   "offset": 145483525,
+   "name": "fx_SmokeAdditiveGlow_m",
+   "name_len": 23,
+   "guid": "c592eb3a18c9fd41a136c80f73261f28",
+   "count": 1,
+   "end": 145483620,
+   "span": 95,
+   "hex": "1700000066785f536d6f6b654164646974697665476c6f775f6d00c592eb3a18c9fd41a136c80f73261f2800000000000000000000000000000000010000000708000000000000170f0000000000000000000000000000000000000000803f",
+   "entries": [
+    {
+     "i": 0,
+     "at": 145483588,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 3863,
+     "param_name": "SelectionColor",
+     "param_number": 0,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "value_hex": "0000000000000000000000000000803f",
+     "width": 16
+    }
+   ],
+   "reparse_ok": true,
+   "strides": {
+    "28": true,
+    "32": true,
+    "36": true
+   },
+   "fields": {
+    "len_at": 145483525,
+    "len_bytes": "17000000",
+    "name_at": 145483529,
+    "name_bytes": "66785f536d6f6b654164646974697665476c6f775f6d00",
+    "guid_at": 145483552,
+    "guid_bytes": "c592eb3a18c9fd41a136c80f73261f28",
+    "pad_at": 145483568,
+    "pad_bytes": "00000000000000000000000000000000",
+    "count_at": 145483584,
+    "count_bytes": "01000000",
+    "entries_at": 145483588
+   }
+  },
+  {
+   "index": 165,
+   "offset": 145581876,
+   "name": "LightShaft_Side_MHideout_CustomB1_LigthtRay",
+   "name_len": 44,
+   "guid": "03573236754c1c44ad96a100b1113b2e",
+   "count": 1,
+   "end": 145581992,
+   "span": 116,
+   "hex": "2c0000004c6967687453686166745f536964655f4d486964656f75745f437573746f6d42315f4c69677468745261790003573236754c1c44ad96a100b1113b2e00000000000000000000000000000000010000000708000000000000170f0000000000000000000000000000000000000000803f",
+   "entries": [
+    {
+     "i": 0,
+     "at": 145581960,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 3863,
+     "param_name": "SelectionColor",
+     "param_number": 0,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "value_hex": "0000000000000000000000000000803f",
+     "width": 16
+    }
+   ],
+   "reparse_ok": true,
+   "strides": {
+    "28": true,
+    "32": true,
+    "36": true
+   },
+   "fields": {
+    "len_at": 145581876,
+    "len_bytes": "2c000000",
+    "name_at": 145581880,
+    "name_bytes": "4c6967687453686166745f536964655f4d486964656f75745f437573746f6d42315f4c696774687452617900",
+    "guid_at": 145581924,
+    "guid_bytes": "03573236754c1c44ad96a100b1113b2e",
+    "pad_at": 145581940,
+    "pad_bytes": "00000000000000000000000000000000",
+    "count_at": 145581956,
+    "count_bytes": "01000000",
+    "entries_at": 145581960
+   }
+  },
+  {
+   "index": 232,
+   "offset": 145646780,
+   "name": "Ice_Cracked_Tile_Reflections",
+   "name_len": 29,
+   "guid": "e2f2a043b6afca44963c1f192167112e",
+   "count": 3,
+   "end": 145646945,
+   "span": 165,
+   "hex": "1d0000004963655f437261636b65645f54696c655f5265666c656374696f6e7300e2f2a043b6afca44963c1f192167112e00000000000000000000000000000000030000000708000000000000170f0000000000000000000000000000000000000000803f0708000000000000be070000000000000000000000000000000000000000803f07080000000000002f0b0000000000000000803f0000803f0000803f0000803f",
+   "entries": [
+    {
+     "i": 0,
+     "at": 145646849,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 3863,
+     "param_name": "SelectionColor",
+     "param_number": 0,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "value_hex": "0000000000000000000000000000803f",
+     "width": 16
+    },
+    {
+     "i": 1,
+     "at": 145646881,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 1982,
+     "param_name": "Flat Color",
+     "param_number": 0,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "value_hex": "0000000000000000000000000000803f",
+     "width": 16
+    },
+    {
+     "i": 2,
+     "at": 145646913,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 2863,
+     "param_name": "MeshEmitterVertexColor",
+     "param_number": 0,
+     "value": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "value_hex": "0000803f0000803f0000803f0000803f",
+     "width": 16
+    }
+   ],
+   "reparse_ok": true,
+   "strides": {
+    "28": false,
+    "32": true,
+    "36": false
+   },
+   "fields": {
+    "len_at": 145646780,
+    "len_bytes": "1d000000",
+    "name_at": 145646784,
+    "name_bytes": "4963655f437261636b65645f54696c655f5265666c656374696f6e7300",
+    "guid_at": 145646813,
+    "guid_bytes": "e2f2a043b6afca44963c1f192167112e",
+    "pad_at": 145646829,
+    "pad_bytes": "00000000000000000000000000000000",
+    "count_at": 145646845,
+    "count_bytes": "03000000",
+    "entries_at": 145646849
+   }
+  },
+  {
+   "index": 603,
+   "offset": 146213786,
+   "name": "ORN_Gargoyles_Beast_Jokerfied_MAT",
+   "name_len": 34,
+   "guid": "1fc155bb95110b47893f955d555a7206",
+   "count": 1,
+   "end": 146213892,
+   "span": 106,
+   "hex": "220000004f524e5f476172676f796c65735f42656173745f4a6f6b6572666965645f4d4154001fc155bb95110b47893f955d555a720600000000000000000000000000000000010000000708000000000000170f0000000000000000000000000000000000000000803f",
+   "entries": [
+    {
+     "i": 0,
+     "at": 146213860,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 3863,
+     "param_name": "SelectionColor",
+     "param_number": 0,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "value_hex": "0000000000000000000000000000803f",
+     "width": 16
+    }
+   ],
+   "reparse_ok": true,
+   "strides": {
+    "28": true,
+    "32": true,
+    "36": true
+   },
+   "fields": {
+    "len_at": 146213786,
+    "len_bytes": "22000000",
+    "name_at": 146213790,
+    "name_bytes": "4f524e5f476172676f796c65735f42656173745f4a6f6b6572666965645f4d415400",
+    "guid_at": 146213824,
+    "guid_bytes": "1fc155bb95110b47893f955d555a7206",
+    "pad_at": 146213840,
+    "pad_bytes": "00000000000000000000000000000000",
+    "count_at": 146213856,
+    "count_bytes": "01000000",
+    "entries_at": 146213860
+   }
+  },
+  {
+   "index": 1312,
+   "offset": 147145908,
+   "name": "RiddlerCave_Dam_BridgeFloor_D_M",
+   "name_len": 32,
+   "guid": "9de104bb9a47fe4383bd410e1371ca79",
+   "count": 1,
+   "end": 147146012,
+   "span": 104,
+   "hex": "20000000526964646c6572436176655f44616d5f427269646765466c6f6f725f445f4d009de104bb9a47fe4383bd410e1371ca7900000000000000000000000000000000010000000708000000000000170f0000000000000000000000000000000000000000803f",
+   "entries": [
+    {
+     "i": 0,
+     "at": 147145980,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 3863,
+     "param_name": "SelectionColor",
+     "param_number": 0,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "value_hex": "0000000000000000000000000000803f",
+     "width": 16
+    }
+   ],
+   "reparse_ok": true,
+   "strides": {
+    "28": true,
+    "32": true,
+    "36": true
+   },
+   "fields": {
+    "len_at": 147145908,
+    "len_bytes": "20000000",
+    "name_at": 147145912,
+    "name_bytes": "526964646c6572436176655f44616d5f427269646765466c6f6f725f445f4d00",
+    "guid_at": 147145944,
+    "guid_bytes": "9de104bb9a47fe4383bd410e1371ca79",
+    "pad_at": 147145960,
+    "pad_bytes": "00000000000000000000000000000000",
+    "count_at": 147145976,
+    "count_bytes": "01000000",
+    "entries_at": 147145980
+   }
+  },
+  {
+   "index": 1712,
+   "offset": 147574543,
+   "name": "Wayne_Office_Painting_02_Parents_Wayne_Mat",
+   "name_len": 43,
+   "guid": "15cfae853845114982d4d2031aaf19be",
+   "count": 1,
+   "end": 147574658,
+   "span": 115,
+   "hex": "2b0000005761796e655f4f66666963655f5061696e74696e675f30325f506172656e74735f5761796e655f4d61740015cfae853845114982d4d2031aaf19be00000000000000000000000000000000010000000708000000000000170f0000000000000000000000000000000000000000803f",
+   "entries": [
+    {
+     "i": 0,
+     "at": 147574626,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 3863,
+     "param_name": "SelectionColor",
+     "param_number": 0,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "value_hex": "0000000000000000000000000000803f",
+     "width": 16
+    }
+   ],
+   "reparse_ok": true,
+   "strides": {
+    "28": true,
+    "32": true,
+    "36": true
+   },
+   "fields": {
+    "len_at": 147574543,
+    "len_bytes": "2b000000",
+    "name_at": 147574547,
+    "name_bytes": "5761796e655f4f66666963655f5061696e74696e675f30325f506172656e74735f5761796e655f4d617400",
+    "guid_at": 147574590,
+    "guid_bytes": "15cfae853845114982d4d2031aaf19be",
+    "pad_at": 147574606,
+    "pad_bytes": "00000000000000000000000000000000",
+    "count_at": 147574622,
+    "count_bytes": "01000000",
+    "entries_at": 147574626
+   }
+  },
+  {
+   "index": 1868,
+   "offset": 147749808,
+   "name": "OBJ_TV_FILMB1_Screens_M",
+   "name_len": 24,
+   "guid": "1b9aad1bca1d3343bee5b5f0dd8b53cc",
+   "count": 1,
+   "end": 147749904,
+   "span": 96,
+   "hex": "180000004f424a5f54565f46494c4d42315f53637265656e735f4d001b9aad1bca1d3343bee5b5f0dd8b53cc00000000000000000000000000000000010000000708000000000000170f0000000000000000000000000000000000000000803f",
+   "entries": [
+    {
+     "i": 0,
+     "at": 147749872,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 3863,
+     "param_name": "SelectionColor",
+     "param_number": 0,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "value_hex": "0000000000000000000000000000803f",
+     "width": 16
+    }
+   ],
+   "reparse_ok": true,
+   "strides": {
+    "28": true,
+    "32": true,
+    "36": true
+   },
+   "fields": {
+    "len_at": 147749808,
+    "len_bytes": "18000000",
+    "name_at": 147749812,
+    "name_bytes": "4f424a5f54565f46494c4d42315f53637265656e735f4d00",
+    "guid_at": 147749836,
+    "guid_bytes": "1b9aad1bca1d3343bee5b5f0dd8b53cc",
+    "pad_at": 147749852,
+    "pad_bytes": "00000000000000000000000000000000",
+    "count_at": 147749868,
+    "count_bytes": "01000000",
+    "entries_at": 147749872
+   }
+  },
+  {
+   "index": 1960,
+   "offset": 147873212,
+   "name": "CITY_Road_Tarmac_Base_01_MAT",
+   "name_len": 29,
+   "guid": "77986e61104be449ae6d8ee2b159180d",
+   "count": 1,
+   "end": 147873313,
+   "span": 101,
+   "hex": "1d000000434954595f526f61645f5461726d61635f426173655f30315f4d41540077986e61104be449ae6d8ee2b159180d00000000000000000000000000000000010000000708000000000000170f0000000000000000000000000000000000000000803f",
+   "entries": [
+    {
+     "i": 0,
+     "at": 147873281,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 3863,
+     "param_name": "SelectionColor",
+     "param_number": 0,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "value_hex": "0000000000000000000000000000803f",
+     "width": 16
+    }
+   ],
+   "reparse_ok": true,
+   "strides": {
+    "28": true,
+    "32": true,
+    "36": true
+   },
+   "fields": {
+    "len_at": 147873212,
+    "len_bytes": "1d000000",
+    "name_at": 147873216,
+    "name_bytes": "434954595f526f61645f5461726d61635f426173655f30315f4d415400",
+    "guid_at": 147873245,
+    "guid_bytes": "77986e61104be449ae6d8ee2b159180d",
+    "pad_at": 147873261,
+    "pad_bytes": "00000000000000000000000000000000",
+    "count_at": 147873277,
+    "count_bytes": "01000000",
+    "entries_at": 147873281
+   }
+  },
+  {
+   "index": 2645,
+   "offset": 149197951,
+   "name": "Ace_Crane_Details_Yellow_MAT",
+   "name_len": 29,
+   "guid": "e49a18b10ab58a4aa3bbc95fe8810b49",
+   "count": 1,
+   "end": 149198052,
+   "span": 101,
+   "hex": "1d0000004163655f4372616e655f44657461696c735f59656c6c6f775f4d415400e49a18b10ab58a4aa3bbc95fe8810b4900000000000000000000000000000000010000000708000000000000170f0000000000000000000000000000000000000000803f",
+   "entries": [
+    {
+     "i": 0,
+     "at": 149198020,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 3863,
+     "param_name": "SelectionColor",
+     "param_number": 0,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "value_hex": "0000000000000000000000000000803f",
+     "width": 16
+    }
+   ],
+   "reparse_ok": true,
+   "strides": {
+    "28": true,
+    "32": true,
+    "36": true
+   },
+   "fields": {
+    "len_at": 149197951,
+    "len_bytes": "1d000000",
+    "name_at": 149197955,
+    "name_bytes": "4163655f4372616e655f44657461696c735f59656c6c6f775f4d415400",
+    "guid_at": 149197984,
+    "guid_bytes": "e49a18b10ab58a4aa3bbc95fe8810b49",
+    "pad_at": 149198000,
+    "pad_bytes": "00000000000000000000000000000000",
+    "count_at": 149198016,
+    "count_bytes": "01000000",
+    "entries_at": 149198020
+   }
+  },
+  {
+   "index": 3037,
+   "offset": 150377873,
+   "name": "fx_SpotLightGlass_Green_intense_m",
+   "name_len": 34,
+   "guid": "436d2e29082baf459afb964581321f91",
+   "count": 1,
+   "end": 150377979,
+   "span": 106,
+   "hex": "2200000066785f53706f744c69676874476c6173735f477265656e5f696e74656e73655f6d00436d2e29082baf459afb964581321f9100000000000000000000000000000000010000000708000000000000170f0000000000000000000000000000000000000000803f",
+   "entries": [
+    {
+     "i": 0,
+     "at": 150377947,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 3863,
+     "param_name": "SelectionColor",
+     "param_number": 0,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "value_hex": "0000000000000000000000000000803f",
+     "width": 16
+    }
+   ],
+   "reparse_ok": true,
+   "strides": {
+    "28": true,
+    "32": true,
+    "36": true
+   },
+   "fields": {
+    "len_at": 150377873,
+    "len_bytes": "22000000",
+    "name_at": 150377877,
+    "name_bytes": "66785f53706f744c69676874476c6173735f477265656e5f696e74656e73655f6d00",
+    "guid_at": 150377911,
+    "guid_bytes": "436d2e29082baf459afb964581321f91",
+    "pad_at": 150377927,
+    "pad_bytes": "00000000000000000000000000000000",
+    "count_at": 150377943,
+    "count_bytes": "01000000",
+    "entries_at": 150377947
+   }
+  },
+  {
+   "index": 3077,
+   "offset": 150422577,
+   "name": "FilmB1_Blood_Master_MAT",
+   "name_len": 24,
+   "guid": "34484254a0ffae42858fcf9b21a0176d",
+   "count": 2,
+   "end": 150422705,
+   "span": 128,
+   "hex": "1800000046696c6d42315f426c6f6f645f4d61737465725f4d41540034484254a0ffae42858fcf9b21a0176d000000000000000000000000000000000200000007080000000000001e0c0000000000000000003f0000003f9a99993e0000803f07080000000000007603000000000000b558c03e00000000a691513b0000803f",
+   "entries": [
+    {
+     "i": 0,
+     "at": 150422641,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 3102,
+     "param_name": "NORMAL STRENGTH",
+     "param_number": 0,
+     "value": [
+      0.5,
+      0.5,
+      0.3,
+      1.0
+     ],
+     "value_hex": "0000003f0000003f9a99993e0000803f",
+     "width": 16
+    },
+    {
+     "i": 1,
+     "at": 150422673,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 886,
+     "param_name": "Colour",
+     "param_number": 0,
+     "value": [
+      0.375677,
+      0.0,
+      0.003198,
+      1.0
+     ],
+     "value_hex": "b558c03e00000000a691513b0000803f",
+     "width": 16
+    }
+   ],
+   "reparse_ok": true,
+   "strides": {
+    "28": false,
+    "32": true,
+    "36": false
+   },
+   "fields": {
+    "len_at": 150422577,
+    "len_bytes": "18000000",
+    "name_at": 150422581,
+    "name_bytes": "46696c6d42315f426c6f6f645f4d61737465725f4d415400",
+    "guid_at": 150422605,
+    "guid_bytes": "34484254a0ffae42858fcf9b21a0176d",
+    "pad_at": 150422621,
+    "pad_bytes": "00000000000000000000000000000000",
+    "count_at": 150422637,
+    "count_bytes": "02000000",
+    "entries_at": 150422641
+   }
+  },
+  {
+   "index": 3173,
+   "offset": 150552510,
+   "name": "CITY_Road_Pavement_02_MAT",
+   "name_len": 26,
+   "guid": "bd4933240db6004cb0c2eb103eb5ccfe",
+   "count": 1,
+   "end": 150552608,
+   "span": 98,
+   "hex": "1a000000434954595f526f61645f506176656d656e745f30325f4d415400bd4933240db6004cb0c2eb103eb5ccfe00000000000000000000000000000000010000000708000000000000170f0000000000000000000000000000000000000000803f",
+   "entries": [
+    {
+     "i": 0,
+     "at": 150552576,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 3863,
+     "param_name": "SelectionColor",
+     "param_number": 0,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "value_hex": "0000000000000000000000000000803f",
+     "width": 16
+    }
+   ],
+   "reparse_ok": true,
+   "strides": {
+    "28": true,
+    "32": true,
+    "36": true
+   },
+   "fields": {
+    "len_at": 150552510,
+    "len_bytes": "1a000000",
+    "name_at": 150552514,
+    "name_bytes": "434954595f526f61645f506176656d656e745f30325f4d415400",
+    "guid_at": 150552540,
+    "guid_bytes": "bd4933240db6004cb0c2eb103eb5ccfe",
+    "pad_at": 150552556,
+    "pad_bytes": "00000000000000000000000000000000",
+    "count_at": 150552572,
+    "count_bytes": "01000000",
+    "entries_at": 150552576
+   }
+  },
+  {
+   "index": 3672,
+   "offset": 151249238,
+   "name": "Bank_Doors_Revolving_MAT",
+   "name_len": 25,
+   "guid": "768c4e8fc742cb4b9e5032773dde346a",
+   "count": 1,
+   "end": 151249335,
+   "span": 97,
+   "hex": "1900000042616e6b5f446f6f72735f5265766f6c76696e675f4d415400768c4e8fc742cb4b9e5032773dde346a00000000000000000000000000000000010000000708000000000000170f0000000000000000000000000000000000000000803f",
+   "entries": [
+    {
+     "i": 0,
+     "at": 151249303,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 3863,
+     "param_name": "SelectionColor",
+     "param_number": 0,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "value_hex": "0000000000000000000000000000803f",
+     "width": 16
+    }
+   ],
+   "reparse_ok": true,
+   "strides": {
+    "28": true,
+    "32": true,
+    "36": true
+   },
+   "fields": {
+    "len_at": 151249238,
+    "len_bytes": "19000000",
+    "name_at": 151249242,
+    "name_bytes": "42616e6b5f446f6f72735f5265766f6c76696e675f4d415400",
+    "guid_at": 151249267,
+    "guid_bytes": "768c4e8fc742cb4b9e5032773dde346a",
+    "pad_at": 151249283,
+    "pad_bytes": "00000000000000000000000000000000",
+    "count_at": 151249299,
+    "count_bytes": "01000000",
+    "entries_at": 151249303
+   }
+  },
+  {
+   "index": 3747,
+   "offset": 151341677,
+   "name": "Halloween_Twigs_MAT",
+   "name_len": 20,
+   "guid": "57a0d9c7f6dd8243b0c1d4557d3eb57a",
+   "count": 1,
+   "end": 151341769,
+   "span": 92,
+   "hex": "1400000048616c6c6f7765656e5f54776967735f4d41540057a0d9c7f6dd8243b0c1d4557d3eb57a00000000000000000000000000000000010000000708000000000000170f0000000000000000000000000000000000000000803f",
+   "entries": [
+    {
+     "i": 0,
+     "at": 151341737,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 3863,
+     "param_name": "SelectionColor",
+     "param_number": 0,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "value_hex": "0000000000000000000000000000803f",
+     "width": 16
+    }
+   ],
+   "reparse_ok": true,
+   "strides": {
+    "28": true,
+    "32": true,
+    "36": true
+   },
+   "fields": {
+    "len_at": 151341677,
+    "len_bytes": "14000000",
+    "name_at": 151341681,
+    "name_bytes": "48616c6c6f7765656e5f54776967735f4d415400",
+    "guid_at": 151341701,
+    "guid_bytes": "57a0d9c7f6dd8243b0c1d4557d3eb57a",
+    "pad_at": 151341717,
+    "pad_bytes": "00000000000000000000000000000000",
+    "count_at": 151341733,
+    "count_bytes": "01000000",
+    "entries_at": 151341737
+   }
+  },
+  {
+   "index": 3860,
+   "offset": 151468413,
+   "name": "Cables_CableA_BM3_Mall_Less_Ref",
+   "name_len": 32,
+   "guid": "be81efd6076e6d418a98652dd37defef",
+   "count": 1,
+   "end": 151468517,
+   "span": 104,
+   "hex": "200000004361626c65735f4361626c65415f424d335f4d616c6c5f4c6573735f52656600be81efd6076e6d418a98652dd37defef00000000000000000000000000000000010000000708000000000000170f0000000000000000000000000000000000000000803f",
+   "entries": [
+    {
+     "i": 0,
+     "at": 151468485,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 3863,
+     "param_name": "SelectionColor",
+     "param_number": 0,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "value_hex": "0000000000000000000000000000803f",
+     "width": 16
+    }
+   ],
+   "reparse_ok": true,
+   "strides": {
+    "28": true,
+    "32": true,
+    "36": true
+   },
+   "fields": {
+    "len_at": 151468413,
+    "len_bytes": "20000000",
+    "name_at": 151468417,
+    "name_bytes": "4361626c65735f4361626c65415f424d335f4d616c6c5f4c6573735f52656600",
+    "guid_at": 151468449,
+    "guid_bytes": "be81efd6076e6d418a98652dd37defef",
+    "pad_at": 151468465,
+    "pad_bytes": "00000000000000000000000000000000",
+    "count_at": 151468481,
+    "count_bytes": "01000000",
+    "entries_at": 151468485
+   }
+  },
+  {
+   "index": 4085,
+   "offset": 151741220,
+   "name": "LIGHTS_Int_WallLight_Mat",
+   "name_len": 25,
+   "guid": "cad15b72f276874393263c8c627ff0f7",
+   "count": 2,
+   "end": 151741349,
+   "span": 129,
+   "hex": "190000004c49474854535f496e745f57616c6c4c696768745f4d617400cad15b72f276874393263c8c627ff0f700000000000000000000000000000000020000000708000000000000170f0000000000000000000000000000000000000000803f070800000000000076030000000000000000803f0000803f0000803f0000803f",
+   "entries": [
+    {
+     "i": 0,
+     "at": 151741285,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 3863,
+     "param_name": "SelectionColor",
+     "param_number": 0,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "value_hex": "0000000000000000000000000000803f",
+     "width": 16
+    },
+    {
+     "i": 1,
+     "at": 151741317,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 886,
+     "param_name": "Colour",
+     "param_number": 0,
+     "value": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "value_hex": "0000803f0000803f0000803f0000803f",
+     "width": 16
+    }
+   ],
+   "reparse_ok": true,
+   "strides": {
+    "28": false,
+    "32": true,
+    "36": false
+   },
+   "fields": {
+    "len_at": 151741220,
+    "len_bytes": "19000000",
+    "name_at": 151741224,
+    "name_bytes": "4c49474854535f496e745f57616c6c4c696768745f4d617400",
+    "guid_at": 151741249,
+    "guid_bytes": "cad15b72f276874393263c8c627ff0f7",
+    "pad_at": 151741265,
+    "pad_bytes": "00000000000000000000000000000000",
+    "count_at": 151741281,
+    "count_bytes": "02000000",
+    "entries_at": 151741285
+   }
+  },
+  {
+   "index": 4436,
+   "offset": 152223049,
+   "name": "RiddlerCaves_lift_floor",
+   "name_len": 24,
+   "guid": "0cad1d8e9edbfe49931e86308c9743cd",
+   "count": 1,
+   "end": 152223145,
+   "span": 96,
+   "hex": "18000000526964646c657243617665735f6c6966745f666c6f6f72000cad1d8e9edbfe49931e86308c9743cd00000000000000000000000000000000010000000708000000000000170f0000000000000000000000000000000000000000803f",
+   "entries": [
+    {
+     "i": 0,
+     "at": 152223113,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 3863,
+     "param_name": "SelectionColor",
+     "param_number": 0,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "value_hex": "0000000000000000000000000000803f",
+     "width": 16
+    }
+   ],
+   "reparse_ok": true,
+   "strides": {
+    "28": true,
+    "32": true,
+    "36": true
+   },
+   "fields": {
+    "len_at": 152223049,
+    "len_bytes": "18000000",
+    "name_at": 152223053,
+    "name_bytes": "526964646c657243617665735f6c6966745f666c6f6f7200",
+    "guid_at": 152223077,
+    "guid_bytes": "0cad1d8e9edbfe49931e86308c9743cd",
+    "pad_at": 152223093,
+    "pad_bytes": "00000000000000000000000000000000",
+    "count_at": 152223109,
+    "count_bytes": "01000000",
+    "entries_at": 152223113
+   }
+  },
+  {
+   "index": 4483,
+   "offset": 152281714,
+   "name": "CITY_Road_Pavement_03_MAT_4x4",
+   "name_len": 30,
+   "guid": "2a080cbd44138d4bab78dc48b0cba38d",
+   "count": 1,
+   "end": 152281816,
+   "span": 102,
+   "hex": "1e000000434954595f526f61645f506176656d656e745f30335f4d41545f347834002a080cbd44138d4bab78dc48b0cba38d00000000000000000000000000000000010000000708000000000000170f0000000000000000000000000000000000000000803f",
+   "entries": [
+    {
+     "i": 0,
+     "at": 152281784,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 3863,
+     "param_name": "SelectionColor",
+     "param_number": 0,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "value_hex": "0000000000000000000000000000803f",
+     "width": 16
+    }
+   ],
+   "reparse_ok": true,
+   "strides": {
+    "28": true,
+    "32": true,
+    "36": true
+   },
+   "fields": {
+    "len_at": 152281714,
+    "len_bytes": "1e000000",
+    "name_at": 152281718,
+    "name_bytes": "434954595f526f61645f506176656d656e745f30335f4d41545f34783400",
+    "guid_at": 152281748,
+    "guid_bytes": "2a080cbd44138d4bab78dc48b0cba38d",
+    "pad_at": 152281764,
+    "pad_bytes": "00000000000000000000000000000000",
+    "count_at": 152281780,
+    "count_bytes": "01000000",
+    "entries_at": 152281784
+   }
+  },
+  {
+   "index": 4800,
+   "offset": 152704391,
+   "name": "Stagg_Incubator_Skeleton_MAT",
+   "name_len": 29,
+   "guid": "b2be9fa60f0e4244bd8aeebb94bdc3dc",
+   "count": 1,
+   "end": 152704492,
+   "span": 101,
+   "hex": "1d00000053746167675f496e63756261746f725f536b656c65746f6e5f4d415400b2be9fa60f0e4244bd8aeebb94bdc3dc00000000000000000000000000000000010000000708000000000000170f0000000000000000000000000000000000000000803f",
+   "entries": [
+    {
+     "i": 0,
+     "at": 152704460,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 3863,
+     "param_name": "SelectionColor",
+     "param_number": 0,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "value_hex": "0000000000000000000000000000803f",
+     "width": 16
+    }
+   ],
+   "reparse_ok": true,
+   "strides": {
+    "28": true,
+    "32": true,
+    "36": true
+   },
+   "fields": {
+    "len_at": 152704391,
+    "len_bytes": "1d000000",
+    "name_at": 152704395,
+    "name_bytes": "53746167675f496e63756261746f725f536b656c65746f6e5f4d415400",
+    "guid_at": 152704424,
+    "guid_bytes": "b2be9fa60f0e4244bd8aeebb94bdc3dc",
+    "pad_at": 152704440,
+    "pad_bytes": "00000000000000000000000000000000",
+    "count_at": 152704456,
+    "count_bytes": "01000000",
+    "entries_at": 152704460
+   }
+  },
+  {
+   "index": 4844,
+   "offset": 152737204,
+   "name": "blackness_M",
+   "name_len": 12,
+   "guid": "feee68b6ac107f448d6957c5155deee5",
+   "count": 1,
+   "end": 152737288,
+   "span": 84,
+   "hex": "0c000000626c61636b6e6573735f4d00feee68b6ac107f448d6957c5155deee500000000000000000000000000000000010000000708000000000000170f0000000000000000000000000000000000000000803f",
+   "entries": [
+    {
+     "i": 0,
+     "at": 152737256,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 3863,
+     "param_name": "SelectionColor",
+     "param_number": 0,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "value_hex": "0000000000000000000000000000803f",
+     "width": 16
+    }
+   ],
+   "reparse_ok": true,
+   "strides": {
+    "28": true,
+    "32": true,
+    "36": true
+   },
+   "fields": {
+    "len_at": 152737204,
+    "len_bytes": "0c000000",
+    "name_at": 152737208,
+    "name_bytes": "626c61636b6e6573735f4d00",
+    "guid_at": 152737220,
+    "guid_bytes": "feee68b6ac107f448d6957c5155deee5",
+    "pad_at": 152737236,
+    "pad_bytes": "00000000000000000000000000000000",
+    "count_at": 152737252,
+    "count_bytes": "01000000",
+    "entries_at": 152737256
+   }
+  },
+  {
+   "index": 5072,
+   "offset": 153011852,
+   "name": "Hideout_CustomB1_Floor_Hi",
+   "name_len": 26,
+   "guid": "9daf9423d9f88c4aa8a6dc9eecc06472",
+   "count": 1,
+   "end": 153011950,
+   "span": 98,
+   "hex": "1a000000486964656f75745f437573746f6d42315f466c6f6f725f4869009daf9423d9f88c4aa8a6dc9eecc0647200000000000000000000000000000000010000000708000000000000170f0000000000000000000000000000000000000000803f",
+   "entries": [
+    {
+     "i": 0,
+     "at": 153011918,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 3863,
+     "param_name": "SelectionColor",
+     "param_number": 0,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "value_hex": "0000000000000000000000000000803f",
+     "width": 16
+    }
+   ],
+   "reparse_ok": true,
+   "strides": {
+    "28": true,
+    "32": true,
+    "36": true
+   },
+   "fields": {
+    "len_at": 153011852,
+    "len_bytes": "1a000000",
+    "name_at": 153011856,
+    "name_bytes": "486964656f75745f437573746f6d42315f466c6f6f725f486900",
+    "guid_at": 153011882,
+    "guid_bytes": "9daf9423d9f88c4aa8a6dc9eecc06472",
+    "pad_at": 153011898,
+    "pad_bytes": "00000000000000000000000000000000",
+    "count_at": 153011914,
+    "count_bytes": "01000000",
+    "entries_at": 153011918
+   }
+  },
+  {
+   "index": 5175,
+   "offset": 153121708,
+   "name": "Gordon_Hair_Master_Mat",
+   "name_len": 23,
+   "guid": "a2a0ee8b300d2c49a436ac85e7e11c43",
+   "count": 2,
+   "end": 153121835,
+   "span": 127,
+   "hex": "17000000476f72646f6e5f486169725f4d61737465725f4d617400a2a0ee8b300d2c49a436ac85e7e11c4300000000000000000000000000000000020000000708000000000000170f0000000000000000000000000000000000000000803f07080000000000008c00000000000000000000000000803f0000003f0000803f",
+   "entries": [
+    {
+     "i": 0,
+     "at": 153121771,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 3863,
+     "param_name": "SelectionColor",
+     "param_number": 0,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "value_hex": "0000000000000000000000000000803f",
+     "width": 16
+    },
+    {
+     "i": 1,
+     "at": 153121803,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 140,
+     "param_name": "Anisotropic_Direction",
+     "param_number": 0,
+     "value": [
+      0.0,
+      1.0,
+      0.5,
+      1.0
+     ],
+     "value_hex": "000000000000803f0000003f0000803f",
+     "width": 16
+    }
+   ],
+   "reparse_ok": true,
+   "strides": {
+    "28": false,
+    "32": true,
+    "36": false
+   },
+   "fields": {
+    "len_at": 153121708,
+    "len_bytes": "17000000",
+    "name_at": 153121712,
+    "name_bytes": "476f72646f6e5f486169725f4d61737465725f4d617400",
+    "guid_at": 153121735,
+    "guid_bytes": "a2a0ee8b300d2c49a436ac85e7e11c43",
+    "pad_at": 153121751,
+    "pad_bytes": "00000000000000000000000000000000",
+    "count_at": 153121767,
+    "count_bytes": "02000000",
+    "entries_at": 153121771
+   }
+  },
+  {
+   "index": 5319,
+   "offset": 153305026,
+   "name": "Fracture_Windows_MAT_Raining",
+   "name_len": 29,
+   "guid": "bdb5733a11903b4e9a9d24b58657196d",
+   "count": 3,
+   "end": 153305191,
+   "span": 165,
+   "hex": "1d00000046726163747572655f57696e646f77735f4d41545f5261696e696e6700bdb5733a11903b4e9a9d24b58657196d00000000000000000000000000000000030000000708000000000000170f0000000000000000000000000000000000000000803f07080000000000003c0a000000000000666626bf83c0eabf8fc2953f000000000708000000000000380a000000000000bc08433e21b09a3e6a4fe93dcdcc4c3d",
+   "entries": [
+    {
+     "i": 0,
+     "at": 153305095,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 3863,
+     "param_name": "SelectionColor",
+     "param_number": 0,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "value_hex": "0000000000000000000000000000803f",
+     "width": 16
+    },
+    {
+     "i": 1,
+     "at": 153305127,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 2620,
+     "param_name": "LightDirection",
+     "param_number": 0,
+     "value": [
+      -0.65,
+      -1.834,
+      1.17,
+      0.0
+     ],
+     "value_hex": "666626bf83c0eabf8fc2953f00000000",
+     "width": 16
+    },
+    {
+     "i": 2,
+     "at": 153305159,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 2616,
+     "param_name": "LightColor / A=Strength",
+     "param_number": 0,
+     "value": [
+      0.190463,
+      0.302125,
+      0.113921,
+      0.05
+     ],
+     "value_hex": "bc08433e21b09a3e6a4fe93dcdcc4c3d",
+     "width": 16
+    }
+   ],
+   "reparse_ok": true,
+   "strides": {
+    "28": false,
+    "32": true,
+    "36": false
+   },
+   "fields": {
+    "len_at": 153305026,
+    "len_bytes": "1d000000",
+    "name_at": 153305030,
+    "name_bytes": "46726163747572655f57696e646f77735f4d41545f5261696e696e6700",
+    "guid_at": 153305059,
+    "guid_bytes": "bdb5733a11903b4e9a9d24b58657196d",
+    "pad_at": 153305075,
+    "pad_bytes": "00000000000000000000000000000000",
+    "count_at": 153305091,
+    "count_bytes": "03000000",
+    "entries_at": 153305095
+   }
+  },
+  {
+   "index": 5596,
+   "offset": 153598160,
+   "name": "CITY_NODec_Wall_Rust02",
+   "name_len": 23,
+   "guid": "c9dd80f18de29b4a8f26a9830bd8d985",
+   "count": 1,
+   "end": 153598255,
+   "span": 95,
+   "hex": "17000000434954595f4e4f4465635f57616c6c5f52757374303200c9dd80f18de29b4a8f26a9830bd8d98500000000000000000000000000000000010000000708000000000000170f0000000000000000000000000000000000000000803f",
+   "entries": [
+    {
+     "i": 0,
+     "at": 153598223,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 3863,
+     "param_name": "SelectionColor",
+     "param_number": 0,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "value_hex": "0000000000000000000000000000803f",
+     "width": 16
+    }
+   ],
+   "reparse_ok": true,
+   "strides": {
+    "28": true,
+    "32": true,
+    "36": true
+   },
+   "fields": {
+    "len_at": 153598160,
+    "len_bytes": "17000000",
+    "name_at": 153598164,
+    "name_bytes": "434954595f4e4f4465635f57616c6c5f52757374303200",
+    "guid_at": 153598187,
+    "guid_bytes": "c9dd80f18de29b4a8f26a9830bd8d985",
+    "pad_at": 153598203,
+    "pad_bytes": "00000000000000000000000000000000",
+    "count_at": 153598219,
+    "count_bytes": "01000000",
+    "entries_at": 153598223
+   }
+  },
+  {
+   "index": 5677,
+   "offset": 153698316,
+   "name": "Flare_Ribbon_M",
+   "name_len": 15,
+   "guid": "90c342340fe9374698f0276277be42e1",
+   "count": 1,
+   "end": 153698403,
+   "span": 87,
+   "hex": "0f000000466c6172655f526962626f6e5f4d0090c342340fe9374698f0276277be42e100000000000000000000000000000000010000000708000000000000170f0000000000000000000000000000000000000000803f",
+   "entries": [
+    {
+     "i": 0,
+     "at": 153698371,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 3863,
+     "param_name": "SelectionColor",
+     "param_number": 0,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "value_hex": "0000000000000000000000000000803f",
+     "width": 16
+    }
+   ],
+   "reparse_ok": true,
+   "strides": {
+    "28": true,
+    "32": true,
+    "36": true
+   },
+   "fields": {
+    "len_at": 153698316,
+    "len_bytes": "0f000000",
+    "name_at": 153698320,
+    "name_bytes": "466c6172655f526962626f6e5f4d00",
+    "guid_at": 153698335,
+    "guid_bytes": "90c342340fe9374698f0276277be42e1",
+    "pad_at": 153698351,
+    "pad_bytes": "00000000000000000000000000000000",
+    "count_at": 153698367,
+    "count_bytes": "01000000",
+    "entries_at": 153698371
+   }
+  },
+  {
+   "index": 5781,
+   "offset": 153847003,
+   "name": "Ladders_MAT",
+   "name_len": 12,
+   "guid": "3287143bd3ddcb48bc49ecfa837601d8",
+   "count": 1,
+   "end": 153847087,
+   "span": 84,
+   "hex": "0c0000004c6164646572735f4d4154003287143bd3ddcb48bc49ecfa837601d800000000000000000000000000000000010000000708000000000000170f0000000000000000000000000000000000000000803f",
+   "entries": [
+    {
+     "i": 0,
+     "at": 153847055,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 3863,
+     "param_name": "SelectionColor",
+     "param_number": 0,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "value_hex": "0000000000000000000000000000803f",
+     "width": 16
+    }
+   ],
+   "reparse_ok": true,
+   "strides": {
+    "28": true,
+    "32": true,
+    "36": true
+   },
+   "fields": {
+    "len_at": 153847003,
+    "len_bytes": "0c000000",
+    "name_at": 153847007,
+    "name_bytes": "4c6164646572735f4d415400",
+    "guid_at": 153847019,
+    "guid_bytes": "3287143bd3ddcb48bc49ecfa837601d8",
+    "pad_at": 153847035,
+    "pad_bytes": "00000000000000000000000000000000",
+    "count_at": 153847051,
+    "count_bytes": "01000000",
+    "entries_at": 153847055
+   }
+  },
+  {
+   "index": 6067,
+   "offset": 154267195,
+   "name": "RHD_Line",
+   "name_len": 9,
+   "guid": "0c4e27c4bf4c454e9e9780e5f55f76a3",
+   "count": 1,
+   "end": 154267276,
+   "span": 81,
+   "hex": "090000005248445f4c696e65000c4e27c4bf4c454e9e9780e5f55f76a300000000000000000000000000000000010000000708000000000000170f0000000000000000000000000000000000000000803f",
+   "entries": [
+    {
+     "i": 0,
+     "at": 154267244,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 3863,
+     "param_name": "SelectionColor",
+     "param_number": 0,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "value_hex": "0000000000000000000000000000803f",
+     "width": 16
+    }
+   ],
+   "reparse_ok": true,
+   "strides": {
+    "28": true,
+    "32": true,
+    "36": true
+   },
+   "fields": {
+    "len_at": 154267195,
+    "len_bytes": "09000000",
+    "name_at": 154267199,
+    "name_bytes": "5248445f4c696e6500",
+    "guid_at": 154267208,
+    "guid_bytes": "0c4e27c4bf4c454e9e9780e5f55f76a3",
+    "pad_at": 154267224,
+    "pad_bytes": "00000000000000000000000000000000",
+    "count_at": 154267240,
+    "count_bytes": "01000000",
+    "entries_at": 154267244
+   }
+  },
+  {
+   "index": 6678,
+   "offset": 154947625,
+   "name": "Tubes_M",
+   "name_len": 8,
+   "guid": "8b8191c6aa55b04c993ac07cf8f681d9",
+   "count": 1,
+   "end": 154947705,
+   "span": 80,
+   "hex": "0800000054756265735f4d008b8191c6aa55b04c993ac07cf8f681d900000000000000000000000000000000010000000708000000000000170f0000000000000000000000000000000000000000803f",
+   "entries": [
+    {
+     "i": 0,
+     "at": 154947673,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 3863,
+     "param_name": "SelectionColor",
+     "param_number": 0,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "value_hex": "0000000000000000000000000000803f",
+     "width": 16
+    }
+   ],
+   "reparse_ok": true,
+   "strides": {
+    "28": true,
+    "32": true,
+    "36": true
+   },
+   "fields": {
+    "len_at": 154947625,
+    "len_bytes": "08000000",
+    "name_at": 154947629,
+    "name_bytes": "54756265735f4d00",
+    "guid_at": 154947637,
+    "guid_bytes": "8b8191c6aa55b04c993ac07cf8f681d9",
+    "pad_at": 154947653,
+    "pad_bytes": "00000000000000000000000000000000",
+    "count_at": 154947669,
+    "count_bytes": "01000000",
+    "entries_at": 154947673
+   }
+  },
+  {
+   "index": 6843,
+   "offset": 155166517,
+   "name": "OBJ_Medical_Theatre_Light_Glass_MAT",
+   "name_len": 36,
+   "guid": "ab7e235624bfe94f8a8bac59e51a86f7",
+   "count": 2,
+   "end": 155166657,
+   "span": 140,
+   "hex": "240000004f424a5f4d65646963616c5f546865617472655f4c696768745f476c6173735f4d415400ab7e235624bfe94f8a8bac59e51a86f700000000000000000000000000000000020000000708000000000000170f0000000000000000000000000000000000000000803f0708000000000000060c00000000000000000040000000400000803f0000803f",
+   "entries": [
+    {
+     "i": 0,
+     "at": 155166593,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 3863,
+     "param_name": "SelectionColor",
+     "param_number": 0,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "value_hex": "0000000000000000000000000000803f",
+     "width": 16
+    },
+    {
+     "i": 1,
+     "at": 155166625,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 3078,
+     "param_name": "None",
+     "param_number": 0,
+     "value": [
+      2.0,
+      2.0,
+      1.0,
+      1.0
+     ],
+     "value_hex": "00000040000000400000803f0000803f",
+     "width": 16
+    }
+   ],
+   "reparse_ok": true,
+   "strides": {
+    "28": false,
+    "32": true,
+    "36": false
+   },
+   "fields": {
+    "len_at": 155166517,
+    "len_bytes": "24000000",
+    "name_at": 155166521,
+    "name_bytes": "4f424a5f4d65646963616c5f546865617472655f4c696768745f476c6173735f4d415400",
+    "guid_at": 155166557,
+    "guid_bytes": "ab7e235624bfe94f8a8bac59e51a86f7",
+    "pad_at": 155166573,
+    "pad_bytes": "00000000000000000000000000000000",
+    "count_at": 155166589,
+    "count_bytes": "02000000",
+    "entries_at": 155166593
+   }
+  },
+  {
+   "index": 6887,
+   "offset": 155199904,
+   "name": "Hideout_Mall_FloorTile01_M",
+   "name_len": 27,
+   "guid": "21eeec454847d74ebfe6aaae8b85cdae",
+   "count": 1,
+   "end": 155200003,
+   "span": 99,
+   "hex": "1b000000486964656f75745f4d616c6c5f466c6f6f7254696c6530315f4d0021eeec454847d74ebfe6aaae8b85cdae00000000000000000000000000000000010000000708000000000000170f0000000000000000000000000000000000000000803f",
+   "entries": [
+    {
+     "i": 0,
+     "at": 155199971,
+     "class_id": 2055,
+     "class": "FMaterialUniformExpressionVectorParameter",
+     "class_number": 0,
+     "param_index": 3863,
+     "param_name": "SelectionColor",
+     "param_number": 0,
+     "value": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "value_hex": "0000000000000000000000000000803f",
+     "width": 16
+    }
+   ],
+   "reparse_ok": true,
+   "strides": {
+    "28": true,
+    "32": true,
+    "36": true
+   },
+   "fields": {
+    "len_at": 155199904,
+    "len_bytes": "1b000000",
+    "name_at": 155199908,
+    "name_bytes": "486964656f75745f4d616c6c5f466c6f6f7254696c6530315f4d00",
+    "guid_at": 155199935,
+    "guid_bytes": "21eeec454847d74ebfe6aaae8b85cdae",
+    "pad_at": 155199951,
+    "pad_bytes": "00000000000000000000000000000000",
+    "count_at": 155199967,
+    "count_bytes": "01000000",
+    "entries_at": 155199971
+   }
+  }
+ ],
+ "sample_seed": 20261104,
+ "anchor": {
+  "offset": 146546518,
+  "guid": "5e56a7942acfba4493fbad0c769a1976",
+  "count": 14,
+  "entries": [
+   {
+    "i": 0,
+    "at": 146546573,
+    "class_id": 2055,
+    "class": "FMaterialUniformExpressionVectorParameter",
+    "class_number": 0,
+    "param_index": 3863,
+    "param_name": "SelectionColor",
+    "param_number": 0,
+    "value": [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    "value_hex": "0000000000000000000000000000803f",
+    "width": 16
+   },
+   {
+    "i": 1,
+    "at": 146546605,
+    "class_id": 2055,
+    "class": "FMaterialUniformExpressionVectorParameter",
+    "class_number": 0,
+    "param_index": 1062,
+    "param_name": "Damage_Chapter",
+    "param_number": 0,
+    "value": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "value_hex": "00000000000000000000000000000000",
+    "width": 16
+   },
+   {
+    "i": 2,
+    "at": 146546637,
+    "class_id": 2055,
+    "class": "FMaterialUniformExpressionVectorParameter",
+    "class_number": 0,
+    "param_index": 3460,
+    "param_name": "Rain_Size_Multiplier",
+    "param_number": 0,
+    "value": [
+     1.0,
+     2.0,
+     0.0,
+     1.0
+    ],
+    "value_hex": "0000803f00000040000000000000803f",
+    "width": 16
+   },
+   {
+    "i": 3,
+    "at": 146546669,
+    "class_id": 2055,
+    "class": "FMaterialUniformExpressionVectorParameter",
+    "class_number": 0,
+    "param_index": 290,
+    "param_name": "Batman_Rain_Direction",
+    "param_number": 0,
+    "value": [
+     0.0,
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "value_hex": "0000000000000000000080bf00000000",
+    "width": 16
+   },
+   {
+    "i": 4,
+    "at": 146546701,
+    "class_id": 2055,
+    "class": "FMaterialUniformExpressionVectorParameter",
+    "class_number": 0,
+    "param_index": 2804,
+    "param_name": "Material0_BaseColour",
+    "param_number": 0,
+    "value": [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    "value_hex": "0000000000000000000000000000803f",
+    "width": 16
+   },
+   {
+    "i": 5,
+    "at": 146546733,
+    "class_id": 2055,
+    "class": "FMaterialUniformExpressionVectorParameter",
+    "class_number": 0,
+    "param_index": 2807,
+    "param_name": "Material1_Basecolour",
+    "param_number": 0,
+    "value": [
+     0.623595,
+     0.39245,
+     0.329779,
+     1.0
+    ],
+    "value_hex": "f4a31f3f3befc83edad8a83e0000803f",
+    "width": 16
+   },
+   {
+    "i": 6,
+    "at": 146546765,
+    "class_id": 2055,
+    "class": "FMaterialUniformExpressionVectorParameter",
+    "class_number": 0,
+    "param_index": 2813,
+    "param_name": "Material2_BaseColour",
+    "param_number": 0,
+    "value": [
+     0.423977,
+     0.609159,
+     0.752809,
+     1.0
+    ],
+    "value_hex": "7913d93ed3f11b3f17b8403f0000803f",
+    "width": 16
+   },
+   {
+    "i": 7,
+    "at": 146546797,
+    "class_id": 2055,
+    "class": "FMaterialUniformExpressionVectorParameter",
+    "class_number": 0,
+    "param_index": 2824,
+    "param_name": "Material3_BaseColour",
+    "param_number": 0,
+    "value": [
+     0.423977,
+     0.609159,
+     0.752809,
+     1.0
+    ],
+    "value_hex": "7913d93ed3f11b3f17b8403f0000803f",
+    "width": 16
+   },
+   {
+    "i": 8,
+    "at": 146546829,
+    "class_id": 2055,
+    "class": "FMaterialUniformExpressionVectorParameter",
+    "class_number": 0,
+    "param_index": 2823,
+    "param_name": "Material3_Anisotropic_thin_Colour",
+    "param_number": 0,
+    "value": [
+     0.674157,
+     0.647211,
+     0.375439,
+     1.0
+    ],
+    "value_hex": "93952c3f9daf253f9639c03e0000803f",
+    "width": 16
+   },
+   {
+    "i": 9,
+    "at": 146546861,
+    "class_id": 2055,
+    "class": "FMaterialUniformExpressionVectorParameter",
+    "class_number": 0,
+    "param_index": 2821,
+    "param_name": "Material3_Anisotropic_broad_Colour",
+    "param_number": 0,
+    "value": [
+     0.131219,
+     0.153623,
+     0.674157,
+     1.0
+    ],
+    "value_hex": "545e063e5b4f1d3e93952c3f0000803f",
+    "width": 16
+   },
+   {
+    "i": 10,
+    "at": 146546893,
+    "class_id": 2055,
+    "class": "FMaterialUniformExpressionVectorParameter",
+    "class_number": 0,
+    "param_index": 1067,
+    "param_name": "Damage_Dirt_Colour",
+    "param_number": 0,
+    "value": [
+     0.41573,
+     0.389493,
+     0.33165,
+     1.0
+    ],
+    "value_hex": "9bdad43ea26bc73e08cea93e0000803f",
+    "width": 16
+   },
+   {
+    "i": 11,
+    "at": 146546925,
+    "class_id": 2055,
+    "class": "FMaterialUniformExpressionVectorParameter",
+    "class_number": 0,
+    "param_index": 1283,
+    "param_name": "Diffuse_Adjust",
+    "param_number": 0,
+    "value": [
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "value_hex": "0000803f0000803f0000803f0000803f",
+    "width": 16
+   },
+   {
+    "i": 12,
+    "at": 146546957,
+    "class_id": 2055,
+    "class": "FMaterialUniformExpressionVectorParameter",
+    "class_number": 0,
+    "param_index": 2978,
+    "param_name": "Mud_Colour",
+    "param_number": 0,
+    "value": [
+     0.263175,
+     0.14198,
+     0.067725,
+     1.0
+    ],
+    "value_hex": "d6be863e4863113e31b38a3d0000803f",
+    "width": 16
+   },
+   {
+    "i": 13,
+    "at": 146546989,
+    "class_id": 2055,
+    "class": "FMaterialUniformExpressionVectorParameter",
+    "class_number": 0,
+    "param_index": 2973,
+    "param_name": "Mud2_Colour",
+    "param_number": 0,
+    "value": [
+     0.147998,
+     0.054592,
+     0.015175,
+     1.0
+    ],
+    "value_hex": "cb8c173e279c5f3d90a1783c0000803f",
+    "width": 16
+   }
+  ],
+  "cross_check": [
+   {
+    "parameter": "Damage_Chapter",
+    "record": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "decoded": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "match": true
+   },
+   {
+    "parameter": "Rain_Size_Multiplier",
+    "record": [
+     1.0,
+     2.0,
+     0.0,
+     1.0
+    ],
+    "decoded": [
+     1.0,
+     2.0,
+     0.0,
+     1.0
+    ],
+    "match": true
+   },
+   {
+    "parameter": "Batman_Rain_Direction",
+    "record": [
+     0.0,
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "decoded": [
+     0.0,
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "match": true
+   },
+   {
+    "parameter": "Material1_Basecolour",
+    "record": [
+     0.623595,
+     0.39245,
+     0.329779,
+     1.0
+    ],
+    "decoded": [
+     0.623595,
+     0.39245,
+     0.329779,
+     1.0
+    ],
+    "match": true
+   },
+   {
+    "parameter": "Material2_BaseColour",
+    "record": [
+     0.423977,
+     0.609159,
+     0.752809,
+     1.0
+    ],
+    "decoded": [
+     0.423977,
+     0.609159,
+     0.752809,
+     1.0
+    ],
+    "match": true
+   },
+   {
+    "parameter": "Material3_BaseColour",
+    "record": [
+     0.423977,
+     0.609159,
+     0.752809,
+     1.0
+    ],
+    "decoded": [
+     0.423977,
+     0.609159,
+     0.752809,
+     1.0
+    ],
+    "match": true
+   },
+   {
+    "parameter": "Material3_Anisotropic_thin_Colour",
+    "record": [
+     0.674157,
+     0.647211,
+     0.375439,
+     1.0
+    ],
+    "decoded": [
+     0.674157,
+     0.647211,
+     0.375439,
+     1.0
+    ],
+    "match": true
+   },
+   {
+    "parameter": "Material3_Anisotropic_broad_Colour",
+    "record": [
+     0.131219,
+     0.153623,
+     0.674157,
+     1.0
+    ],
+    "decoded": [
+     0.131219,
+     0.153623,
+     0.674157,
+     1.0
+    ],
+    "match": true
+   },
+   {
+    "parameter": "Damage_Dirt_Colour",
+    "record": [
+     0.41573,
+     0.389493,
+     0.33165,
+     1.0
+    ],
+    "decoded": [
+     0.41573,
+     0.389493,
+     0.33165,
+     1.0
+    ],
+    "match": true
+   },
+   {
+    "parameter": "Diffuse_Adjust",
+    "record": [
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "decoded": [
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "match": true
+   },
+   {
+    "parameter": "Mud_Colour",
+    "record": [
+     0.263175,
+     0.14198,
+     0.067725,
+     1.0
+    ],
+    "decoded": [
+     0.263175,
+     0.14198,
+     0.067725,
+     1.0
+    ],
+    "match": true
+   },
+   {
+    "parameter": "Mud2_Colour",
+    "record": [
+     0.147998,
+     0.054592,
+     0.015175,
+     1.0
+    ],
+    "decoded": [
+     0.147998,
+     0.054592,
+     0.015175,
+     1.0
+    ],
+    "match": true
+   }
+  ],
+  "block": {
+   "offset": 146547021,
+   "declared": 26,
+   "parsed": 14,
+   "entries": [
+    {
+     "i": 0,
+     "at": 146547025,
+     "class": "FMaterialUniformExpressionScalarParameter",
+     "parameter": "Damage_Scratches_All_Over"
+    },
+    {
+     "i": 1,
+     "at": 146547045,
+     "class": "FMaterialUniformExpressionScalarParameter",
+     "parameter": "Vector_Displacement_Multiplier"
+    },
+    {
+     "i": 2,
+     "at": 146547065,
+     "class": "FMaterialUniformExpressionScalarParameter",
+     "parameter": "Mud_Density"
+    },
+    {
+     "i": 3,
+     "at": 146547085,
+     "class": "FMaterialUniformExpressionScalarParameter",
+     "parameter": "Mud_Opacity"
+    },
+    {
+     "i": 4,
+     "at": 146547105,
+     "class": "FMaterialUniformExpressionScalarParameter",
+     "parameter": "Mud_Edges_Opacity"
+    },
+    {
+     "i": 5,
+     "at": 146547125,
+     "class": "FMaterialUniformExpressionScalarParameter",
+     "parameter": "Mud2_Opacity"
+    },
+    {
+     "i": 6,
+     "at": 146547145,
+     "class": "FMaterialUniformExpressionScalarParameter",
+     "parameter": "Rain_Constant"
+    },
+    {
+     "i": 7,
+     "at": 146547165,
+     "class": "FMaterialUniformExpressionScalarParameter",
+     "parameter": "Water_Trails_Activated"
+    },
+    {
+     "i": 8,
+     "at": 146547185,
+     "class": "FMaterialUniformExpressionScalarParameter",
+     "parameter": "MicroDetail_size"
+    },
+    {
+     "i": 9,
+     "at": 146547205,
+     "class": "FMaterialUniformExpressionScalarParameter",
+     "parameter": "MicroDetail_Material3_Size"
+    },
+    {
+     "i": 10,
+     "at": 146547225,
+     "class": "FMaterialUniformExpressionScalarParameter",
+     "parameter": "Damage_dirt"
+    },
+    {
+     "i": 11,
+     "at": 146547245,
+     "class": "FMaterialUniformExpressionFoldedMath",
+     "parameter": null
+    },
+    {
+     "i": 12,
+     "at": 146547253,
+     "class": "FMaterialUniformExpressionScalarParameter",
+     "parameter": "Damage_Scratches_All_Over"
+    },
+    {
+     "i": 13,
+     "at": 146547273,
+     "class": "FMaterialUniformExpressionScalarParameter",
+     "parameter": "Damage_dirt"
+    }
+   ],
+   "end": 146547293,
+   "stop": "not a class FName",
+   "stop_offset": 146547293,
+   "stop_word": 525058
+  },
+  "block_stop_detail": {
+   "offset": 146547293,
+   "word": 525058,
+   "reason": "not a class FName",
+   "bytes": "0203080000000000",
+   "resumes_at": 146547294,
+   "resumes": "FMaterialUniformExpressionScalarParameter, Damage_Dirt_Edges, value 1.0"
+  }
+ },
+ "checks": [
+  {
+   "check": "the record region starts after the last DXBC container",
+   "pass": true,
+   "detail": "container run ends 0x8ab3e03; first header at 0x8ab4005; 514 B between them (filler of the same kind as the inter-container gaps)"
+  },
+  {
+   "check": "the header predicate accepts 7,278 offsets and no two overlap in the proven set",
+   "pass": true,
+   "detail": "7278 header candidates, 6966 proven all-vector, 51 + 261 leave the shape; starts strictly increasing; last proven end 0x94232aa <= EOF 0x9423302"
+  },
+  {
+   "check": "string length words match the strings",
+   "pass": true,
+   "detail": "7278/7278: i32 n == len(name)+1, NUL at byte n-1, every name byte printable"
+  },
+  {
+   "check": "the 16 bytes after the guid are zero",
+   "pass": true,
+   "detail": "7278/7278 records have 16 zero bytes at +20+n"
+  },
+  {
+   "check": "the guids are distinct and each recurs in the file",
+   "pass": true,
+   "detail": "7278 distinct guids for 7278 records; each occurs at least 2 times"
+  },
+  {
+   "check": "the declared count fixes the span of every proven record",
+   "pass": true,
+   "detail": "6966/6966 proven records: span == 40 + n + 32*count; 9582 entries decoded from 9582 declared"
+  },
+  {
+   "check": "the entry counts sum to the decoded entries",
+   "pass": true,
+   "detail": "6966 proven records, 9582 entries, 764817 B of spans"
+  },
+  {
+   "check": "every proven entry is the same class and no reference is out of range",
+   "pass": true,
+   "detail": "class census {'FMaterialUniformExpressionVectorParameter': 9582}; 0 parameter indices out of the 5058-name table"
+  },
+  {
+   "check": "the u32 after every proven record is a plausible next-list count",
+   "pass": true,
+   "detail": "6966/6966 proven records are followed by a u32 <= 512 (this is the boundary oracle for the record's end)"
+  },
+  {
+   "check": "the region partitions into prefix, record spans, bytes outside records and tail",
+   "pass": true,
+   "detail": "514 B prefix + 764817 B record spans (7.7% of the 9893119 B region) + 9127700 B outside records + 88 B tail == 9893119 B; the header predicate was tested at all 13486 candidate offsets, so no further record header exists in that remainder under this layout"
+  },
+  {
+   "check": "the 30 sampled records re-parse from their own hex",
+   "pass": true,
+   "detail": "30/30 round-trip name, guid, count, parameters and values"
+  },
+  {
+   "check": "32 bytes is the only entry stride that resolves every class word",
+   "pass": true,
+   "detail": "over all 592 proven records with count >= 3: stride 32 valid 592, stride 28 valid 0, stride 36 valid 0"
+  },
+  {
+   "check": "G3-04d's 6,934 and G3-04e's 6,943 are these same headers through narrower rules",
+   "pass": true,
+   "detail": "re-running their acceptance rules over the 7,278 headers: 6934 (G3-04d regex + its width table), 6943 (G3-04e regex + 16-byte-only entries), 6966 structural"
+  },
+  {
+   "check": "the anchor record is found by guid and its values match G3-04c",
+   "pass": true,
+   "detail": "Batmobile_Worn at 0x8bc1f56, 14 entries, 12 vector defaults cross-checked, 0 mismatches"
+  },
+  {
+   "check": "the bytes after the record stop at one named field",
+   "pass": true,
+   "detail": "anchor block: 26 declared, 14 parsed, stop at 0x8bc225d on u32 0x80302 (not a class FName), resumes at 0x8bc225e as a well-formed entry"
+  }
+ ]
+}

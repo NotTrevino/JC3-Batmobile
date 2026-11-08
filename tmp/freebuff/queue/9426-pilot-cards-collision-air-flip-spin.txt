@@ -1,0 +1,7 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/pilot-cards-collision-air-flip-spin.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-merged-handling-cells.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-pilot-cards-refresh.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/side-boosters-flip.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-world-logic-water-flip-regen.md
+Write the pursuit special-situation cards into Working/Q/PILOT/ in CARD_FORMAT.md shape. C1_COLLISION.md: drive at 40 km/h into a kerb, a wall, and a traffic car front, side and back; observation is whether the hull stops on the impact side, and operator fact no crash damage means health in telemetry must not fall. C2_AIR.md: launch from a ramp and apply stick yaw in the air, predicted airborne rotation rate from brief 9123's report. C3_FLIP.md: drive off a ramp onto its roof or side, then stay idle; operator fact: the thrusters fire after the car has rested, so the card records the rest time to the first rotation using the telemetry rotation channel and compares with the delay chosen in brief 9124. C4_SIDEBOOST.md: left stick plus A fires side boosters, record the lateral impulse. C5_SPIN.md: stick at standstill, per Working/Q/HDL_SPIN_PREDICTION.json. Each card names the observation, pass rule and fix-card route. Done check: five files, a lint script finds each cited number in its source file.
+Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

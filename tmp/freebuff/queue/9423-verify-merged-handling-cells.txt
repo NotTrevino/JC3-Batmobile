@@ -1,0 +1,7 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-merged-handling-cells.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/merge-handling-extra-branches.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/v05-a9-boost-row.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-verify-files-wiring-audio.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-verify-geometry-predictions-install.md
+Offline verification of the merged Builds/bm-RC5 handling state. Read every handling, grip, boost, top-speed, suspension, drive and damage cell back through the final .toc using a script of your own that does not import rc5_*.py, and compare with each branch record's declared values. Then run python Tools/scripts/v05_driving.py --check and confirm that D-5 now predicts full lock in 0.25 s low speed and 0.091 s high speed (the operator ruling; the old RC4 times 0.80 and 0.60 must be gone) and that D-7 for A9 exists. Run the collision census Tools/scripts for V-02 and report boxes within 5 cm: expect three of three after 9141. List any prediction that moved against Working/Q/PREDICTIONS.md and regenerate that sheet only if the moved numbers come from derived formulas. Output tmp/freebuff/reports/hdl-verify-merged.md. Done check: counts of cells compared and cells matching are equal, or the mismatches are listed with branch names; exit codes of both checkers are quoted.
+Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

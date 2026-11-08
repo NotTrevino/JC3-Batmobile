@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/audio-event-6bb2c66e-bank-chase.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+Research/BatmobileGrab/AUDIO_BANKS.md (G3-14) found all ten BmAK banks in the install and names exactly one event with no located bank: 0x6BB2C66E. STATUS.md also says rows T-AU3 and T-AU5 were re-pinned to next because the JC3 event binding is the part still missing. Chase the event: search every bank listed in AUDIO_BANKS.md, AUDIO_BANKS2.md and AUDIO_FEATURES.md for the id and its name hash in both byte orders, search the BmAK packages for the string or hash that produces it with Tools/scripts/upk_read.py, and look at which feature code (AUD-1 to AUD-7) the neighbouring events belong to. Write Tools/scripts/audio_event_6bb2c66e.py (--write, --check) and Research/BatmobileGrab/AUDIO_EVENT_6BB2C66E.md stating the bank and event name if found, or every place searched and the single file or tool that would settle it. Then list, for T-AU3 and T-AU5, which events still lack a JC3 binding and why.

@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/no-crash-channel-audit.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/health-scale-ruling-1200-vs-36000.md
+Operator fact: crashes never damage, scratch or dent the Batmobile. Prove that every JC3 channel which could hurt a car is covered. List from Research/JC3Grab/DAMAGE_MECHANISMS.md and the vehicle_damage fields: impact (wall and vehicle), fall, fire, explosion splash, train, water, crush by script, mission kill zone, and the speed-based impact damage factor. For each channel say the member, the shipped value in Builds/bm-RC4, whether it hurts a car at all, and the value that makes the Batmobile immune except for the weapon hits that should kill it. Note which channels the hook (briefs 7982, 7986) would need because no data member exists. Also read tmp/freebuff/reports/collision-impact-effects-plan.md for deformation and sparks that must go with the damage. Output Tools/scripts/no_crash_audit.py (--write, --check), Working/Damage/no_crash_channels.md and .json, and the report. Mark any behaviour not shown by a file as UNKNOWN with the probe that decides it. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

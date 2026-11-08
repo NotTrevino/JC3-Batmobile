@@ -1,0 +1,1136 @@
+{
+ "block_hashes": {
+  "1338734832": 117,
+  "1562615418": 195,
+  "160885388": 201,
+  "2199516487": 487,
+  "2813794826": 1,
+  "3012430835": 930,
+  "522936798": 240,
+  "596852081": 192
+ },
+ "bmak_afterburner_systems": [
+  {
+   "emitters": 5,
+   "group": "afterburner-exhaust",
+   "kinds": {
+    "light": 1,
+    "mesh": 2,
+    "sprite": 2
+   },
+   "lifetime": [
+    0.15,
+    0.35
+   ],
+   "materials": [
+    "Engine.INST_JetExhaust",
+    "Engine.MAT_Fire_Dissipate"
+   ],
+   "name": "SideExhaust_Boost"
+  },
+  {
+   "emitters": 3,
+   "group": "afterburner-exhaust",
+   "kinds": {
+    "light": 1,
+    "sprite": 2
+   },
+   "lifetime": [
+    0.1,
+    0.4
+   ],
+   "materials": [
+    "Engine.Fire_Flames3",
+    "Engine.explosion_med_01"
+   ],
+   "name": "SideExhaust_Burst"
+  }
+ ],
+ "bmak_distortion_systems": [
+  {
+   "emitters": 15,
+   "group": "gel-rounds",
+   "lifetime": [
+    0.1,
+    1.0
+   ],
+   "materials": [
+    "Engine.Distort_s"
+   ],
+   "name": "Anti_firearm_gel_Miss_Px"
+  },
+  {
+   "emitters": 5,
+   "group": "muzzle-flash",
+   "lifetime": [
+    0.05,
+    1.0
+   ],
+   "materials": [
+    "Engine.steam"
+   ],
+   "name": "Batmobile_canonMuzzleflash_NV"
+  },
+  {
+   "emitters": 4,
+   "group": "muzzle-flash",
+   "lifetime": [
+    0.05,
+    1.0
+   ],
+   "materials": [
+    "Engine.steam"
+   ],
+   "name": "Batmobile_canonMuzzleflash"
+  },
+  {
+   "emitters": 7,
+   "group": "sonar",
+   "lifetime": [
+    1.0,
+    3.0
+   ],
+   "materials": [
+    "Materials.SeismicScan_Distortion"
+   ],
+   "name": "Batmobile_Seismic_Sonar"
+  },
+  {
+   "emitters": 10,
+   "group": "sonar",
+   "lifetime": [
+    1.0,
+    10.0
+   ],
+   "materials": [
+    "Materials.SeismicScan_Distortion"
+   ],
+   "name": "Batmobile_Seismic_Sonar_Charged"
+  },
+  {
+   "emitters": 10,
+   "group": "emp",
+   "lifetime": [
+    0.2,
+    1.0
+   ],
+   "materials": [
+    "Engine.AR_Distortion"
+   ],
+   "name": "EMP_Burst_Stage_01"
+  },
+  {
+   "emitters": 10,
+   "group": "emp",
+   "lifetime": [
+    0.2,
+    1.0
+   ],
+   "materials": [
+    "Engine.AR_Distortion"
+   ],
+   "name": "EMP_Burst_Stage_02"
+  },
+  {
+   "emitters": 10,
+   "group": "emp",
+   "lifetime": [
+    0.2,
+    1.0
+   ],
+   "materials": [
+    "Engine.AR_Distortion"
+   ],
+   "name": "EMP_Burst_Stage_03"
+  },
+  {
+   "emitters": 13,
+   "group": "emp",
+   "lifetime": [
+    0.2,
+    4.0
+   ],
+   "materials": [
+    "Engine.AR_Distortion",
+    "Engine.MAT_Distortion_MESH"
+   ],
+   "name": "EMP_Burst_Stage_04"
+  },
+  {
+   "emitters": 17,
+   "group": "afterburner-exhaust",
+   "lifetime": [
+    0.05,
+    1.5
+   ],
+   "materials": [
+    "Engine.Fire_Distortion"
+   ],
+   "name": "batmobileExhaust_burst"
+  },
+  {
+   "emitters": 14,
+   "group": "gel-rounds",
+   "lifetime": [
+    0.1,
+    1.0
+   ],
+   "materials": [
+    "Engine.Distort_s"
+   ],
+   "name": "Anti_firearm_gel_Miss"
+  },
+  {
+   "emitters": 6,
+   "group": "casings",
+   "lifetime": [
+    0.05,
+    1.1
+   ],
+   "materials": [
+    "Engine.steam"
+   ],
+   "name": "RiotSuppressor_BulletCasing"
+  },
+  {
+   "emitters": 9,
+   "group": "explosion",
+   "lifetime": [
+    0.2,
+    3.0
+   ],
+   "materials": [
+    "Engine.steam"
+   ],
+   "name": "Batmobil_Rocket_Explosion_Small"
+  },
+  {
+   "emitters": 14,
+   "group": "explosion",
+   "lifetime": [
+    0.1,
+    5.0
+   ],
+   "materials": [
+    "Engine.MAT_Distortion_MESH"
+   ],
+   "name": "Batmobile_Explosion"
+  },
+  {
+   "emitters": 11,
+   "group": "afterburner-exhaust",
+   "lifetime": [
+    0.05,
+    2.0
+   ],
+   "materials": [
+    "Engine.Distortion_mesh"
+   ],
+   "name": "Batwing_Booster_CINE"
+  },
+  {
+   "emitters": 11,
+   "group": "afterburner-exhaust",
+   "lifetime": [
+    0.3,
+    5.0
+   ],
+   "materials": [
+    "Shaders.Engine_Distortion"
+   ],
+   "name": "Batwing_Exhaust_P"
+  }
+ ],
+ "bmak_heat_steam": {
+  "distinct": 0,
+  "emitters": 0,
+  "lifetime": null,
+  "name": "heat-steam",
+  "note": "no system of that name ships in the 206; heat/steam is the HUD + audio side (G1-14 recorded the weapon generator heat, not a particle)",
+  "referenced": 0,
+  "rows": 0,
+  "spawn_rate": null,
+  "systems": 0
+ },
+ "candidates": [
+  {
+   "blocks": {
+    "2199516487": 2,
+    "3012430835": 8
+   },
+   "containers": 12,
+   "emitter_flags": [
+    1,
+    1,
+    3,
+    2,
+    3
+   ],
+   "emitters": 5,
+   "instantiators": 5,
+   "max_particles": [
+    10,
+    60,
+    3,
+    7,
+    100
+   ],
+   "output_buffer_size": [
+    41520
+   ],
+   "path": "effects/jc_vehicles/exhaust/car_speedrom_heater.effc",
+   "properties": [
+    20.0,
+    100.0
+   ],
+   "rows": 1943,
+   "size": 14703,
+   "template_flags": [
+    1,
+    1,
+    1,
+    0,
+    1
+   ],
+   "templates": 5,
+   "trim_index": [
+    14,
+    14,
+    65535,
+    14,
+    14
+   ]
+  },
+  {
+   "blocks": {
+    "3012430835": 4
+   },
+   "containers": 128,
+   "emitter_flags": [
+    0,
+    0
+   ],
+   "emitters": 2,
+   "instantiators": 2,
+   "max_particles": [
+    50,
+    50
+   ],
+   "output_buffer_size": [
+    11328
+   ],
+   "path": "effects/jc_vehicles/exhaust/car_cycle_base.effc",
+   "properties": [
+    -1.0,
+    50.0
+   ],
+   "rows": 779,
+   "size": 9695,
+   "template_flags": [
+    1,
+    1
+   ],
+   "templates": 2,
+   "trim_index": [
+    14,
+    14
+   ]
+  },
+  {
+   "blocks": {
+    "1562615418": 2,
+    "2199516487": 2,
+    "3012430835": 10,
+    "522936798": 2
+   },
+   "containers": 132,
+   "emitter_flags": [
+    3,
+    0,
+    2,
+    1,
+    3,
+    3,
+    0,
+    0
+   ],
+   "emitters": 8,
+   "instantiators": 8,
+   "max_particles": [
+    20,
+    5,
+    30,
+    20,
+    10,
+    1,
+    1,
+    1
+   ],
+   "output_buffer_size": [
+    12256
+   ],
+   "path": "effects/jc_vehicles/exhaust/car_cycle_base_nitrous.effc",
+   "properties": [
+    10.0,
+    500.0
+   ],
+   "rows": 1953,
+   "size": 15359,
+   "template_flags": [
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "templates": 8,
+   "trim_index": [
+    14,
+    14,
+    14,
+    14,
+    14,
+    65535,
+    65535,
+    65535
+   ]
+  },
+  {
+   "blocks": {
+    "2199516487": 2,
+    "3012430835": 20
+   },
+   "containers": 6,
+   "emitter_flags": [
+    2,
+    3,
+    3,
+    2,
+    3,
+    2,
+    3,
+    3,
+    1,
+    2,
+    3
+   ],
+   "emitters": 11,
+   "instantiators": 11,
+   "max_particles": [
+    64,
+    64,
+    20,
+    16,
+    16,
+    16,
+    16,
+    1,
+    100,
+    16,
+    16
+   ],
+   "output_buffer_size": [
+    40832
+   ],
+   "path": "effects/jc_vehicles/exhaust/jet_exhaust_base.effc",
+   "properties": [
+    20.0,
+    100.0
+   ],
+   "rows": 2822,
+   "size": 18927,
+   "template_flags": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "templates": 11,
+   "trim_index": [
+    14,
+    14,
+    14,
+    14,
+    14,
+    14,
+    14,
+    65535,
+    14,
+    14,
+    14
+   ]
+  },
+  {
+   "blocks": {
+    "2199516487": 2,
+    "3012430835": 12
+   },
+   "containers": 9,
+   "emitter_flags": [
+    2,
+    3,
+    3,
+    3,
+    3,
+    2,
+    3
+   ],
+   "emitters": 7,
+   "instantiators": 7,
+   "max_particles": [
+    10,
+    30,
+    16,
+    16,
+    1,
+    16,
+    16
+   ],
+   "output_buffer_size": [
+    12096
+   ],
+   "path": "effects/jc_vehicles/exhaust/jet_cargo_exhaust_base.effc",
+   "properties": [
+    -1.0,
+    500.0
+   ],
+   "rows": 1823,
+   "size": 14351,
+   "template_flags": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "templates": 7,
+   "trim_index": [
+    14,
+    14,
+    14,
+    14,
+    65535,
+    14,
+    14
+   ]
+  },
+  {
+   "blocks": {
+    "2199516487": 4,
+    "3012430835": 10
+   },
+   "containers": 2,
+   "emitter_flags": [
+    2,
+    3,
+    3,
+    3,
+    3,
+    2,
+    3
+   ],
+   "emitters": 7,
+   "instantiators": 7,
+   "max_particles": [
+    64,
+    64,
+    64,
+    20,
+    1,
+    16,
+    16
+   ],
+   "output_buffer_size": [
+    23376
+   ],
+   "path": "dlc/bavarium_sea_heist/effects/jc_vehicles/exhaust/rocketboat_jet_exhaust.effc",
+   "properties": [
+    20.0,
+    100.0
+   ],
+   "rows": 1628,
+   "size": 13727,
+   "template_flags": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "templates": 7,
+   "trim_index": [
+    14,
+    14,
+    65535,
+    14,
+    65535,
+    14,
+    14
+   ]
+  },
+  {
+   "blocks": {
+    "3012430835": 6
+   },
+   "containers": 34,
+   "emitter_flags": [
+    2,
+    2,
+    0
+   ],
+   "emitters": 3,
+   "instantiators": 3,
+   "max_particles": [
+    20,
+    100,
+    100
+   ],
+   "output_buffer_size": [
+    26432
+   ],
+   "path": "effects/jc_vehicles/exhaust/helicopter_base.effc",
+   "properties": [
+    20.0,
+    100.0
+   ],
+   "rows": 1116,
+   "size": 11215,
+   "template_flags": [
+    1,
+    1,
+    1
+   ],
+   "templates": 3,
+   "trim_index": [
+    14,
+    14,
+    14
+   ]
+  },
+  {
+   "blocks": {
+    "2199516487": 2,
+    "3012430835": 8
+   },
+   "containers": 192,
+   "emitter_flags": [
+    0,
+    1,
+    1,
+    1,
+    3
+   ],
+   "emitters": 5,
+   "instantiators": 5,
+   "max_particles": [
+    50,
+    50,
+    100,
+    100,
+    1
+   ],
+   "output_buffer_size": [
+    65920
+   ],
+   "path": "effects/jc_vehicles/damage/dmg_fire_engine.effc",
+   "properties": [
+    20.0,
+    500.0
+   ],
+   "rows": 2277,
+   "size": 15615,
+   "template_flags": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "templates": 5,
+   "trim_index": [
+    14,
+    14,
+    14,
+    14,
+    65535
+   ]
+  },
+  {
+   "blocks": {
+    "3012430835": 4
+   },
+   "containers": 65,
+   "emitter_flags": [
+    1,
+    1
+   ],
+   "emitters": 2,
+   "instantiators": 2,
+   "max_particles": [
+    200,
+    200
+   ],
+   "output_buffer_size": [
+    48128
+   ],
+   "path": "effects/jc_vehicles/traversal_air/rotor_wash_asphalt.effc",
+   "properties": [
+    20.0,
+    100.0
+   ],
+   "rows": 703,
+   "size": 9039,
+   "template_flags": [
+    1,
+    1
+   ],
+   "templates": 2,
+   "trim_index": [
+    14,
+    14
+   ]
+  },
+  {
+   "blocks": {
+    "3012430835": 8
+   },
+   "containers": 34,
+   "emitter_flags": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "emitters": 4,
+   "instantiators": 4,
+   "max_particles": [
+    86,
+    10,
+    20,
+    100
+   ],
+   "output_buffer_size": [
+    39264
+   ],
+   "path": "effects/trails/bavarium_trail_03.effc",
+   "properties": [
+    20.0,
+    500.0
+   ],
+   "rows": 1446,
+   "size": 11791,
+   "template_flags": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "templates": 4,
+   "trim_index": [
+    14,
+    14,
+    14,
+    14
+   ]
+  },
+  {
+   "blocks": {
+    "2199516487": 2,
+    "3012430835": 6
+   },
+   "containers": 145,
+   "emitter_flags": [
+    0,
+    3,
+    0,
+    2
+   ],
+   "emitters": 4,
+   "instantiators": 4,
+   "max_particles": [
+    14,
+    1,
+    20,
+    5
+   ],
+   "output_buffer_size": [
+    9520
+   ],
+   "path": "effects/fire/generic_fire_single_01.effc",
+   "properties": [
+    20.0,
+    100.0
+   ],
+   "rows": 1500,
+   "size": 11807,
+   "template_flags": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "templates": 4,
+   "trim_index": [
+    14,
+    65535,
+    14,
+    14
+   ]
+  },
+  {
+   "blocks": {
+    "1338734832": 2,
+    "1562615418": 2,
+    "2199516487": 4,
+    "2813794826": 2,
+    "3012430835": 82,
+    "522936798": 2,
+    "596852081": 2
+   },
+   "containers": 1,
+   "emitter_flags": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "emitters": 28,
+   "instantiators": 35,
+   "max_particles": [
+    10,
+    6,
+    1,
+    20,
+    51,
+    51,
+    200,
+    200,
+    20,
+    20,
+    1,
+    21,
+    56,
+    50,
+    20,
+    20,
+    100,
+    200,
+    6,
+    6,
+    1,
+    200,
+    3,
+    30,
+    1,
+    1,
+    1,
+    20
+   ],
+   "output_buffer_size": [
+    529600
+   ],
+   "path": "effects/jc_environments/structures/military/bavarium_refinery_explosion.effc",
+   "properties": [
+    20.0,
+    700.0
+   ],
+   "rows": 9026,
+   "size": 44335,
+   "template_flags": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "templates": 28,
+   "trim_index": [
+    14,
+    14,
+    14,
+    14,
+    14,
+    14,
+    14,
+    14,
+    14,
+    14,
+    14,
+    14,
+    14,
+    14,
+    14,
+    14,
+    14,
+    14,
+    14,
+    14,
+    14,
+    14,
+    65535,
+    65535,
+    14,
+    14,
+    65535,
+    14,
+    14,
+    65535,
+    65535,
+    65535,
+    65535,
+    65535,
+    14
+   ]
+  }
+ ],
+ "digest": "1635cca08e759db67408899656fb7f707a453328",
+ "effc_paths": 955,
+ "effc_rows_in_table": 25025,
+ "files_decoded": 955,
+ "path_hits": {
+  "afterburner": {
+   "n": 0,
+   "paths": []
+  },
+  "bavarium": {
+   "n": 82,
+   "paths": [
+    "bavarium_trail_01.effc",
+    "bavarium_trail_04.effc",
+    "bavarium_trail_water_01.effc",
+    "dlc/bavarium_sea_heist/effects/destruction/dlc_electrical_generator_broken_01.effc",
+    "dlc/bavarium_sea_heist/effects/destruction/dlc_electrical_generator_broken_spark_01.effc",
+    "dlc/bavarium_sea_heist/effects/jc_environments/dlc_boat_electricity_01.effc",
+    "dlc/bavarium_sea_heist/effects/jc_vehicles/dlc_dmg_burn_engine_rocketboat_01.effc",
+    "dlc/bavarium_sea_heist/effects/jc_vehicles/dlc_dmg_smoke_engine_rocketboat_01.effc",
+    "dlc/bavarium_sea_heist/effects/jc_vehicles/exhaust/rocketboat_jet_exhaust.effc",
+    "dlc/bavarium_sea_heist/effects/jc_vehicles/exp_corvette_blackhand_water.effc",
+    "dlc/bavarium_sea_heist/effects/jc_weapons/lightning_gun/anti_grav_buildup.effc",
+    "dlc/bavarium_sea_heist/effects/jc_weapons/lightning_gun/lightning_field_strike.effc"
+   ]
+  },
+  "distort": {
+   "n": 0,
+   "paths": []
+  },
+  "exhaust": {
+   "n": 39,
+   "paths": [
+    "dlc/bavarium_sea_heist/effects/jc_vehicles/exhaust/rocketboat_jet_exhaust.effc",
+    "dlc/mech_land_assault/effects/jc_vehicles/exhaust/dlc_angry_exhaust_grunt_drone.effc",
+    "dlc/mech_land_assault/effects/jc_vehicles/exhaust/dlc_dist_elite_rotor_drone.effc",
+    "dlc/mech_land_assault/effects/jc_vehicles/exhaust/dlc_dist_grunt_rotor_drone.effc",
+    "dlc/mech_land_assault/effects/jc_vehicles/exhaust/dlc_dist_transport_rotor_drone.effc",
+    "dlc/mech_land_assault/effects/jc_vehicles/exhaust/dlc_shield_exhaust_01.effc",
+    "dlc/sky_fortress/effects/jc_vehicles/exhaust/dlc_angry_exhaust_grunt_drone.effc",
+    "dlc/sky_fortress/effects/jc_vehicles/exhaust/dlc_dist_elite_rotor_drone.effc",
+    "dlc/sky_fortress/effects/jc_vehicles/exhaust/dlc_dist_grunt_rotor_drone.effc",
+    "dlc/sky_fortress/effects/jc_vehicles/exhaust/dlc_dist_transport_rotor_drone.effc",
+    "dlc/sky_fortress/effects/jc_vehicles/exhaust/dlc_shield_exhaust_01.effc",
+    "dlc/v0805_sportmech/effects/jc_vehicles/exhaust/double_mech_exhaust.effc"
+   ]
+  },
+  "fire": {
+   "n": 57,
+   "paths": [
+    "bonfire.effc",
+    "dlc/v0805_sportmech/effects/jc_weapons/muzzle_flash/sportmech_fire_rpg142_muzzleflash.effc",
+    "dmg_fire_spread_base.effc",
+    "effects/cinematic/dmg_fire_engine_plane_bottom.effc",
+    "effects/cinematic/dmg_fire_engine_plane_top.effc",
+    "effects/cinematic/dmg_fire_engine_plane_top_lblast.effc",
+    "effects/fire/bavarium_fire_spray_lg_01.effc",
+    "effects/fire/fire_barrel.effc",
+    "effects/fire/generic_fire_01.effc",
+    "effects/fire/generic_fire_single_01.effc",
+    "effects/fire/generic_fire_sm_01.effc",
+    "effects/fire/generic_fire_spherical_1m.effc"
+   ]
+  },
+  "haze": {
+   "n": 0,
+   "paths": []
+  },
+  "heat": {
+   "n": 1,
+   "paths": [
+    "effects/jc_vehicles/exhaust/car_speedrom_heater.effc"
+   ]
+  },
+  "jet": {
+   "n": 22,
+   "paths": [
+    "dlc/bavarium_sea_heist/effects/jc_vehicles/exhaust/rocketboat_jet_exhaust.effc",
+    "effects/jc_vehicles/damage/dmg_break_jet_aileron.effc",
+    "effects/jc_vehicles/damage/dmg_break_jet_wing.effc",
+    "effects/jc_vehicles/damage/dmg_fire_engine_jet.effc",
+    "effects/jc_vehicles/damage/dmg_jet_glassburst.effc",
+    "effects/jc_vehicles/damage/dmg_smoke_engine_jet.effc",
+    "effects/jc_vehicles/exhaust/jet_cargo_exhaust_base.effc",
+    "effects/jc_vehicles/exhaust/jet_exhaust_base.effc",
+    "effects/jc_vehicles/traversal_air/jet_wash_asphalt.effc",
+    "effects/jc_vehicles/traversal_air/jet_wash_default.effc",
+    "effects/jc_vehicles/traversal_air/jet_wash_dirt.effc",
+    "effects/jc_vehicles/traversal_air/jet_wash_grass.effc"
+   ]
+  },
+  "refract": {
+   "n": 0,
+   "paths": []
+  },
+  "rotor": {
+   "n": 28,
+   "paths": [
+    "dlc/mech_land_assault/effects/jc_vehicles/exhaust/dlc_dist_elite_rotor_drone.effc",
+    "dlc/mech_land_assault/effects/jc_vehicles/exhaust/dlc_dist_grunt_rotor_drone.effc",
+    "dlc/mech_land_assault/effects/jc_vehicles/exhaust/dlc_dist_transport_rotor_drone.effc",
+    "dlc/sky_fortress/effects/jc_vehicles/exhaust/dlc_dist_elite_rotor_drone.effc",
+    "dlc/sky_fortress/effects/jc_vehicles/exhaust/dlc_dist_grunt_rotor_drone.effc",
+    "dlc/sky_fortress/effects/jc_vehicles/exhaust/dlc_dist_transport_rotor_drone.effc",
+    "dmg_helicopter_rotorburst_adv_assault_01.effc",
+    "dmg_helicopter_rotorburst_heavy_rebel_rear_01.effc",
+    "effects/jc_vehicles/damage/dmg_helicopter_rotorburst_01.effc",
+    "effects/jc_vehicles/damage/dmg_helicopter_rotorburst_adv_assault_rebel_01.effc",
+    "effects/jc_vehicles/damage/dmg_helicopter_rotorburst_eubus_util_01.effc",
+    "effects/jc_vehicles/damage/dmg_helicopter_rotorburst_heavy_01.effc"
+   ]
+  },
+  "shimmer": {
+   "n": 0,
+   "paths": []
+  },
+  "smoke": {
+   "n": 29,
+   "paths": [
+    "dlc/bavarium_sea_heist/effects/jc_vehicles/dlc_dmg_smoke_engine_rocketboat_01.effc",
+    "dlc/mech_land_assault/effects/jc_vehicles/damage/dlc_exp_smoke_cloud_01.effc",
+    "dlc/sky_fortress/effects/jc_vehicles/damage/dlc_exp_smoke_cloud_01.effc",
+    "effects/jc_characters/skeleton_smoke.effc",
+    "effects/jc_characters/skramp_smoke.effc",
+    "effects/jc_environments/props/ac_vent_covered_smoke_01_slow.effc",
+    "effects/jc_vehicles/damage/dmg_break_smoke.effc",
+    "effects/jc_vehicles/damage/dmg_break_smoke_long.effc",
+    "effects/jc_vehicles/damage/dmg_helicopter_tail_break_heavy_smoke.effc",
+    "effects/jc_vehicles/damage/dmg_helicopter_tail_break_smoke.effc",
+    "effects/jc_vehicles/damage/dmg_smoke_engine.effc",
+    "effects/jc_vehicles/damage/dmg_smoke_engine_boat_01.effc"
+   ]
+  },
+  "steam": {
+   "n": 0,
+   "paths": []
+  },
+  "turbine": {
+   "n": 0,
+   "paths": []
+  },
+  "vapor": {
+   "n": 0,
+   "paths": []
+  },
+  "vapour": {
+   "n": 0,
+   "paths": []
+  },
+  "warp": {
+   "n": 0,
+   "paths": []
+  }
+ },
+ "string_examples": {},
+ "string_values": 0,
+ "trim_distortion": {
+  "blur": [
+   "effects/textures/t_explosiongrid_fumeblur_01_alpha_dif.tga.4_8ab.trim",
+   "effects/textures/t_explosiongrid_fumeblur_01_alpha_dif.tga.4_8bb.trim"
+  ],
+  "dist": [
+   "e_smoke02dist_alpha_dif.tga.1_1d.trim",
+   "effects/textures/e_smoke02dist_alpha_dif.tga.1_1d.trim"
+  ],
+  "refract": [
+   "effects/textures/t_blast_refraction_alpha_dif.tga.1_1d.trim",
+   "effects/textures/t_blast_refraction_alpha_dif_b.tga.1_1d.trim",
+   "t_blast_refraction_alpha_dif.tga.1_1d.trim"
+  ]
+ },
+ "trim_distortion_containers": {
+  "blur": {
+   "effects/textures/t_explosiongrid_fumeblur_01_alpha_dif.tga.4_8ab.trim": 104,
+   "effects/textures/t_explosiongrid_fumeblur_01_alpha_dif.tga.4_8bb.trim": 100
+  },
+  "dist": {
+   "e_smoke02dist_alpha_dif.tga.1_1d.trim": 1,
+   "effects/textures/e_smoke02dist_alpha_dif.tga.1_1d.trim": 624
+  },
+  "refract": {
+   "effects/textures/t_blast_refraction_alpha_dif.tga.1_1d.trim": 384,
+   "effects/textures/t_blast_refraction_alpha_dif_b.tga.1_1d.trim": 6,
+   "t_blast_refraction_alpha_dif.tga.1_1d.trim": 1
+  }
+ },
+ "trim_names": 208,
+ "trim_records": 25707,
+ "type_hashes": 53
+}

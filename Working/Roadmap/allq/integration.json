@@ -1,0 +1,757 @@
+{
+ "landmark": "L1",
+ "briefs": [
+  {
+   "key": "int-01",
+   "slug": "rc5-module-member-ownership-table",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "NEW-INT-12"
+   ],
+   "deps": [
+    "9100",
+    "9120",
+    "9121",
+    "9122",
+    "9123",
+    "9124"
+   ],
+   "body": "Five RC5 branches (handling, suspension, drive modes, air control, flip and water) all write members of the same land-vehicle module, and RC4 only ever resolved a two-branch case (Builds/bm-RC4/receipt.json key module_merges, reports/correction-8397-module-conflict.md). Before the merge exists, settle who owns what. Read the five branch reports, the branch records in Working/RC5/branches/, and the module member lists they cite. Build one table, member by member: owner branch, every other branch that touches it, and a stated rule for each contested member (operator facts in ROADMAP.md section 7 win over an older record; the lore value wins over a JC3 default). Write the generator Tools/scripts/rc5_member_owners.py with --write and --check; the output is Working/RC5/MEMBER_OWNERSHIP.json plus a readable .md. The check must exit non-zero if two branch records claim one member with no rule. Done when --check exits 0 and the report prints members total, contested members, and rule per contested member. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-02",
+   "slug": "rc5-per-branch-budget-running-total",
+   "est": 35,
+   "ingame": false,
+   "covers": [
+    "NEW-INT-11"
+   ],
+   "deps": [
+    "9100",
+    "9119",
+    "9179"
+   ],
+   "body": "RC4 closed with the Model budget at 4,791.3 of 4,915 KB (margin 123.7 KB) and the Texture budget between 5,380.9 and 5,855.8 of 7,065 KB; the allocator already sat over its own sub-allocation. RC5 adds a booster mesh, new vehicle roots, up to twelve textures, HUD graphics and flares. Run Tools/scripts/bm_budget.py once for every branch tree named in Working/RC5/branches/*.json, then compute the running total of RC4 base plus each branch delta, in merge order. Write Working/RC5/BUDGET_RUNNING.md: branch, delta in KB per budget, running total, remaining margin, and the first branch that would cross a limit (name its brief number). Do not fix anything; a crossing is reported with the numbers and the two cheapest items to shrink (cited by file). Done when the table has one row per branch record and the last row equals what a single budget run on a trial merge would give, or says why the trial merge was not possible. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-03",
+   "slug": "rc5-installer-identity-decision",
+   "est": 30,
+   "ingame": false,
+   "covers": [
+    "NEW-INT-14"
+   ],
+   "deps": [
+    "9100"
+   ],
+   "body": "Three documents disagree about which installer a test sitting uses: queue/held/8601 says to install bm-RC4 with install_v3.ps1, Working/Q/APPROVAL_REQUEST.md points at Builds/bm-RC4/install.ps1, and the RC2 installer had a Rollback091 defect that deleted files (reports/install-v3-guard-fix.md, reports/verify-v06-install-dry-run-rc4.md). Read those, plus Builds/bm-RC4/install.ps1 and install_v3.ps1. Decide, with the files as evidence, which installer RC5 must ship, and state the Rollback-after-install-over-install caveat in one paragraph with a command that reproduces it on a simulated dropzone copy only. Write the exact installer text 9190 must emit (paths relative to the tree, snapshot-by-diff kept, no Rollback091 anywhere: give the grep that proves count 0) and the six dry-run cases V-06 must repeat. Output reports/rc5-installer-identity-decision.md only; run no install script against a real folder. Done when the report names one installer, one grep, six cases. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-04",
+   "slug": "rc5-complete-flag-owner-table",
+   "est": 35,
+   "ingame": false,
+   "covers": [
+    "NEW-INT-13"
+   ],
+   "deps": [
+    "7946",
+    "9033"
+   ],
+   "body": "STAGES.md demands zero omitted items before BUILD exits, yet some RC5 items cannot be finished by building: the swap trigger (U1), engine behaviour, and anything that still lacks a carrier. The operator should see up front which receipt lines will stay in not_done. Using reports/rc4-not-done-owner-check.md, Builds/bm-RC4/receipt.json and the 15 blocked rows of Working/Translation/T_ROWS.jsonl, write Working/RC5/COMPLETE_FLAG.md: one row per item that may keep complete=false, with the owning brief number, the closest JC3 system and the remaining gap (never write that JC3 has no system), and the evidence that would close it. Add a second table of items that look unfinishable but have an owner who can finish them. Compromises are not proposed; each row either has a build route or a probe route. Done when every blocked row and every not_done line appears exactly once, and the counts match t_rows.py check output. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-05",
+   "slug": "rc5-merge-preflight-review",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "review"
+   ],
+   "deps": [
+    "int-01",
+    "int-02",
+    "int-03",
+    "int-04",
+    "9119",
+    "9179"
+   ],
+   "body": "Review before the merge. Read the reports of the member-ownership table, the running budget, the installer decision and the complete-flag table, together with reports/review-rc5-weapon-builds.md and reports/review-rc5-body-and-world-builds.md. Then re-read queue/9190-rc5-merge-release-candidate.txt, 9191, 9192 and 9193 (only those still not started; check that they are absent from tmp/freebuff/running and done). Rewrite any sentence the new facts make wrong: the installer name, the module conflict rule source, the budget margins, the expected not_done lines, and the AFTER lists if a report has been renamed. Keep each file's header lines intact and add a line \"Updated by preflight review\" naming what changed. Report as a table: file, old sentence, new sentence, evidence. If nothing needs changing for a file, write that explicitly. Done when each of the four briefs is listed and a grep for stale names in their bodies finds none. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-06",
+   "slug": "ledger-vs-build-reconcile-before-merge",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "NEW-INT-6",
+    "G3-20"
+   ],
+   "deps": [
+    "9033"
+   ],
+   "body": "RESET_FINDINGS section 3 names ledger drift from builds as a failure that was only closed per sub-batch. Write Tools/scripts/ledger_recon.py (--write, --check) that takes a build tree path as a parameter and, for each of the 199 rows of Working/Translation/T_ROWS.jsonl, reads the value back from that tree's own files (the .toc slices, the .epe, the module members) and records ledger value, built value, and verdict equal, different or absent-from-tree. Use the 9030 to 9033 apply reports for the expected cells. Run it on Builds/bm-RC4 and write Working/Translation/RECON_PRE_RC5.json and .md. Also close the open first-pass G3-20 file: one paragraph saying which of its 180 OPEN, 2 CORRECTED and 16 SUPPLIED keyword hits survive the later verified passes (LEDGER_G3B, C, E). Done when the verdict count sums to the ledger length and --check recomputes the same figures from the bytes. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-07",
+   "slug": "ledger-vs-build-reconcile-rc5",
+   "est": 35,
+   "ingame": false,
+   "covers": [
+    "NEW-INT-6"
+   ],
+   "deps": [
+    "9190",
+    "int-06"
+   ],
+   "body": "Repeat the ledger-to-build comparison on the merged candidate. Run Tools/scripts/ledger_recon.py against Builds/bm-RC5 and write Working/Translation/RECON_RC5.json and .md. Compare with Working/Translation/RECON_PRE_RC5.json row by row: rows that moved from absent to equal, from different to equal, and any that went the other way (a regression is listed first with the branch that owns the row). Then compare the receipt's not_done and its complete flag with the rows still absent or different: every such row must appear in not_done with an owner, and complete must be false while any remains. Do not edit the receipt; if it disagrees, write the exact discrepancy. Done when the report gives the four movement counts, the regression list (possibly empty), and one line stating whether the receipt flag is consistent with the ledger. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-08",
+   "slug": "loop-seam-recheck-merged-bank",
+   "est": 25,
+   "ingame": false,
+   "covers": [
+    "NEW-INT-15"
+   ],
+   "deps": [
+    "9150",
+    "9190"
+   ],
+   "body": "Brief 9150 may regenerate vehicles.bank or weapons.bank, which could undo the vehicles#279 loop-wrap repair from reports/rc5-loop279-wrap-build.md (three of three loops under -40 dBFS at the seam in Builds/bm-RC5-audio). Run the loop check from Builds/bm-RC5-audio/verify against the audio payload inside the merged Builds/bm-RC5, not against the branch tree. Report the seam level in dBFS for each of the three loops, the sha256 of each bank in the merged tree against the branch tree, and whether the merged bank still carries the repaired bytes. If a bank differs, say which brief produced the difference, and write the narrow rebuild step (inputs, output, check) as text in the report without building it. Done when three seam numbers and two hash comparisons are in the report and the verdict is stated as SURVIVED or LOST. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-09",
+   "slug": "status-prose-from-receipt",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "NEW-INT-7",
+    "NEW-INT-8"
+   ],
+   "deps": [
+    "9190",
+    "int-07"
+   ],
+   "body": "Tools/scripts/status_audit.py keeps literal prose (test-085 to 090 batches, a bm-RC4 section), so its --check stays green while the text ages; reports/stale-status-numbers.md explains this. Do not edit status_audit.py. Write Tools/scripts/status_rc5_section.py that renders an RC5 section from Builds/bm-RC5/receipt.json and the ledger counts (files, bytes, sha256 prefixes, complete flag, not_done count, V verdict table path) and a patch file Working/RC5/status_audit_patch.diff that would make status_audit.py call it. Also list, as unified diffs in the report and not applied, the stale lines in GRAB_BACKLOG.md section 0.7 (81,952 versus 81,953), section 3 (the test-091 dropzone sentence), and the section 12 placeholder rows V-01 to V-07 and Q-1 to Q-5. Add the same RC5 entries MODLOG.md lacks, as proposed text. Append your report to the AFTER line of queue/9193 if it has not started. Done when the script renders without error on the RC5 receipt. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-10",
+   "slug": "evidence-levels-file-vs-game",
+   "est": 25,
+   "ingame": false,
+   "covers": [
+    "NEW-INT-17"
+   ],
+   "deps": [
+    "9033"
+   ],
+   "body": "History: the Q re-test 5 reset happened because file-to-file checks passed while the game looked wrong (RESET_FINDINGS.md). Write Working/Q/EVIDENCE_LEVELS.md defining five evidence levels, in rising order: ledger value, built read-back from the tree, tool or gate check, hook telemetry from the running game, and screenshot or recording judged against a band. For each level give one example from this project, what it can prove, what it cannot, and the exact words a report must use (\"file evidence only\" versus \"behaviour verified\"). State the rule that a ledger row becomes behaviour-verified only at the telemetry or recording level and that VX (the desk gate) never claims it. List the three places that quote 0 rows behaviour-verified (STATUS.md and its generator) and how the wording would change. Cite GRAB_BACKLOG.md section 14 for the anti-goal. Done when the file exists, has five levels with examples that each cite a real path, and a grep for placeholders (TBD, XXX) finds none. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-11",
+   "slug": "verify-runner-for-any-candidate",
+   "est": 50,
+   "ingame": false,
+   "covers": [
+    "V-01",
+    "V-02",
+    "V-03",
+    "V-04",
+    "V-05",
+    "V-06"
+   ],
+   "deps": [
+    "9191",
+    "9192"
+   ],
+   "body": "The RC5 gates are copies tied to bm-RC5 names, which means every later candidate would need new copies. Write Tools/scripts/bm_vall.py taking a tree path and an output folder, which calls the V-01 file gates, V-02 geometry and poses, V-03 wiring, V-04 audio, V-05 predictions and V-06 install dry run (simulated dropzone under Builds only) from the RC5 copies used by briefs 9191 and 9192, reading ledger length and paths from the tree instead of constants. It prints one verdict line per gate and exits non-zero on any red. Prove it three ways: on Builds/bm-RC5 the verdicts equal those in reports/rc5-verify-files-wiring-audio.md and reports/rc5-verify-geometry-predictions-install.md; on Builds/bm-RC4 it shows the four known RC4 reds; and on a tree with an altered byte it fails the right gate. Do not edit the gate scripts. Done when all three runs are pasted in the report with their exit codes. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-12",
+   "slug": "repoint-q-briefs-to-rc5",
+   "est": 30,
+   "ingame": false,
+   "covers": [
+    "NEW-INT-19",
+    "NEW-INT-18"
+   ],
+   "deps": [
+    "9193",
+    "9199",
+    "int-03"
+   ],
+   "body": "Held and queued test briefs still name RC4 evidence. Edit, in place, queue/8600-q0-prove-pilot-cards.txt and queue/held/8601 through 8605 and 8699, but only those not present in tmp/freebuff/running or done. In each AFTER list, keep APPROVED_Q.txt first and replace the RC4 reports (verify-v07-gate-vx.md, review-pilot-cards.md) with rc5-gate-vx-approval-request.md and rc5-pilot-cards-refresh.md; in 8601 replace \"install bm-RC4 with install_v3.ps1\" by the installer and tree chosen in reports/rc5-installer-identity-decision.md. Use the sentence-level recommendation at the end of reports/rc5-gate-vx-approval-request.md for the other wording; add the fix-loop cap (one extra session per original session) to 8604. Do not remove the \"Updated by review\" lines; add an \"Updated by repoint\" line. Report a unified diff per file. Done when grep -l \"bm-RC4\" over those files lists none, except text that names RC4 as comparison history. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-13",
+   "slug": "operator-decision-sheet-one-page",
+   "est": 35,
+   "ingame": false,
+   "covers": [
+    "NEW-INT-1",
+    "NEW-INT-2",
+    "NEW-INT-3",
+    "NEW-INT-9",
+    "NEW-INT-10",
+    "NEW-INT-20",
+    "NEW-INT-22"
+   ],
+   "deps": [
+    "9199",
+    "int-03"
+   ],
+   "body": "Compress everything that only the operator can decide or supply into one page, Working/Q/OPERATOR_SHEET.md. Sources: section 5 of Working/Roadmap/integration.md, ROADMAP.md section 6, OPERATOR_PRIORITIES.md, tmp/freebuff/ESCALATE.txt, and Working/Q/PILOT/PROVE_CARDS.md section 1. Rules from the operator's memory apply: lore accuracy wins, so never include a compromise question; omit anything already ruled. Three blocks. Block A, pipeline: lane restart, the watchdog classifier access, NO_RESTOCK. Block B, calibration values the pilot needs and that are UNKNOWN in the repo (ENTER_KEY, SAVE_SLOT_CLICK, SERPENTE_SPAWN route, Rebel Drop keys, menu labels, airfield coordinates, windowed flag): for each, the file that uses it and the quickest way for the operator to give it, or the hook or console command that could read it instead. Block C, optional: Steam copy for BmSDK, the BmAK comparison drives. Done when each row has an owner file and a yes/no or a value slot. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-14",
+   "slug": "fix-similarity-deadlock-producer",
+   "est": 20,
+   "ingame": false,
+   "covers": [
+    "NEW-INT-4"
+   ],
+   "deps": [],
+   "body": "Queue 8906 waits on a producer, the file 8863-jeb-qwen-fair-test.txt, which the similarity guard moved to tmp/freebuff/low/too-similar, so 8906 can never start. Read 8863, 8906 and the neighbouring files in low/too-similar (8734 and the 8214 .orig). Rewrite the 8863 task in entirely new wording: same goal and done-check, new sentences, no shared openings or closing lines with any file in queue/ or done/. Save the rewrite at Working/Queue/rewrites/8863-rewrite.txt and compute its maximum pairwise word-trigram overlap against queue/*.txt with a short script you write at Tools/scripts/trigram_overlap.py; the overlap must be under 0.30. Then edit queue/8906 only if it still has a dead AFTER entry, replacing that entry with the report path of the rewrite. Do not move files in or out of low/. Done when the overlap number is in the report and 8906 has no AFTER entry that points at a missing producer. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-15",
+   "slug": "pilot-recording-with-obs-or-ffmpeg",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "automation"
+   ],
+   "deps": [],
+   "body": "The pilot must record gameplay with audio without a person pressing buttons. Search the machine read-only for OBS Studio (obs64.exe under Program Files, the user profile and E:/Modding/_tools; obs-websocket settings in the user's AppData) and for the ffmpeg already on PATH. Read Working/Q/PILOT/RECORD.md and SCREENSHOT.md to see what the cards do today. Write Working/Q/PILOT/RECORD_AUTO.md as a card in the CARD_FORMAT.md shape with two routes: route 1 is obs-websocket (version 5 request names start recording, stop recording, get status; cite the protocol document you fetched, or write UNKNOWN), route 2 is an ffmpeg capture of the game window plus the system audio device. Write Tools/scripts/pilot_record.py with start, stop, status and --dry-run printing the commands; after stop it runs ffprobe and fails if there is no audio stream or if the mean volume is below -50 dB. Test only with a 5 second capture of the desktop. Done when --dry-run and the 5 second capture both pass. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-16",
+   "slug": "pilot-quickstart-launch-and-console-spawn",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "automation"
+   ],
+   "deps": [],
+   "body": "Cold start and spawning are the slowest card steps. Read Working/Q/PILOT/LAUNCH.md and SPAWN_BATMOBILE.md, then the source and README of E:/Modding/_tools/jc3-console-thingy (the -quickstart argument, how the console is opened, which commands exist and how a vehicle is spawned). For each step the cards do by menu clicks, find out whether a console command or launch argument does it; quote the source file and line, or write UNKNOWN. Write Working/Q/PILOT/SPAWN_CONSOLE.md as a card in CARD_FORMAT.md shape, including how the Batmobile entity name is learned from Builds/bm-RC4/receipt.json (not guessed). Write Tools/scripts/pilot_launch.py that builds the Steam launch string and the spawn text and prints them with --dry-run; it must refuse to run unless tmp/freebuff/APPROVED_Q.txt exists, and must record the PID. Run only --dry-run. Done when the dry run prints both strings and every command in the card carries a source citation or the word UNKNOWN. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-17",
+   "slug": "telemetry-band-evaluator",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "automation"
+   ],
+   "deps": [
+    "7982"
+   ],
+   "body": "Once the hook of brief 7982 logs the occupied vehicle each second to telemetry.jsonl under %LOCALAPPDATA%/jc3-batmobile-hook, cards can be judged without screenshots. Read reports/hook-live-vehicle-readout.md for the record schema, then Working/Q/predictions.json and the V-05 bands. Write Tools/scripts/pilot_telemetry.py with --file, --card and --window options. It must compute from the records: peak speed, time from standstill to a speed, the circle radius from the position track, health change, and whether the vehicle name matches the Batmobile entity. It compares each with the band in predictions.json and prints PASS, FAIL or UNKNOWN (a field the hook marked unconfirmed is UNKNOWN, never PASS). Create a fixture with invented records at Working/Q/PILOT/fixtures/telemetry_SYNTHETIC.jsonl; the tool must stamp every verdict from it as SYNTHETIC and exit with code 3. Done when the fixture run shows all three outcomes and a real-named file with a missing field yields UNKNOWN. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-18",
+   "slug": "pilot-gamepad-step-mapping",
+   "est": 35,
+   "ingame": false,
+   "covers": [
+    "automation"
+   ],
+   "deps": [
+    "7983"
+   ],
+   "body": "The operator plays on an Xbox gamepad, and cards today press keyboard keys through the SendInput helper. Read reports/hook-gamepad-scoping.md (output of brief 7983), Working/Q/PILOT/CONTROLS.md and the key steps in the driving and combat card reports. Write Working/Q/PILOT/CONTROLS_PAD.md: for each key step in the cards, the gamepad action that matches (accelerate, brake, steer, boost, drive-mode toggle, eject hold, enter with Y, exit with LB, cannon on RT, Vulcan on RB, the mode-swap hold), the way the pilot would deliver it (hook command, virtual pad, or keyboard fallback), and its status: proven, designed, or UNKNOWN. Use the controls from the operator memory (inside the Batmobile BmAK controls win). Do not invent a hook command name; if 7983 gives none, write UNKNOWN and what 7983 would have to expose. Done when every key step that appears in any card is listed once and none has an empty status. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-19",
+   "slug": "pilot-orchestrator-dry-run",
+   "est": 50,
+   "ingame": false,
+   "covers": [
+    "automation"
+   ],
+   "deps": [
+    "int-15",
+    "int-16",
+    "int-17",
+    "int-18"
+   ],
+   "body": "Tie the pieces into one driver. Write Tools/scripts/pilot_run.py, a small state machine with the steps preflight (APPROVED_Q.txt present, game not running, saves backed up with um backup), launch with the quickstart argument, wait until telemetry records appear, spawn by console, drive a named card, record through pilot_record.py, evaluate with pilot_telemetry.py, write the RESULT line into a results file, and kill by exact PID. Each step has a timeout and an on-failure rule: after a stalled step the script stops, writes HANDOVER with the step name, and does nothing else (operator rule from brief 8606: stop and hand control to the operator, never improvise). Provide --dry-run that prints every step with the command it would execute, and --list-cards. Never imports anything that touches the game folder. Test --dry-run for the stock-vehicle proof and for one driving card. Done when both dry runs print all steps with their timeouts and the script exits 0, and a forced fake timeout in dry-run mode prints HANDOVER. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-20",
+   "slug": "pilot-cards-telemetry-first-rewrite",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "automation",
+    "NEW-INT-24"
+   ],
+   "deps": [
+    "int-17",
+    "int-18",
+    "9194",
+    "8608"
+   ],
+   "body": "Rewrite the observation part of each pilot card so it reads hook telemetry first and uses a screenshot only for what the hook cannot read (looks, paint, emissives). Create a new folder Working/Q/PILOT2/ and leave Working/Q/PILOT and the 9194 output untouched. Start from the 9194 refreshed cards and the keep, assist or manual recommendations in reports/pilot-card-lessons-from-q0.md. For every card write: the one observation, the telemetry field and the pilot_telemetry.py command that judges it, the band and its source report, the screenshot fallback, and the fix-card route on FAIL. Add Working/Q/RESULTS_TEMPLATE.md, FIXES_TEMPLATE.md and PROVE_LOG_TEMPLATE.md whose submit script (Tools/scripts/results_lint.py) rejects any field still holding a placeholder word. Finish with a table card by card: old observation, new observation, which evidence level from Working/Q/EVIDENCE_LEVELS.md. Done when results_lint.py passes a filled example and rejects a blank one. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-21",
+   "slug": "review-pilot-automation-group",
+   "est": 35,
+   "ingame": false,
+   "covers": [
+    "review"
+   ],
+   "deps": [
+    "int-15",
+    "int-16",
+    "int-17",
+    "int-18",
+    "int-19",
+    "int-20"
+   ],
+   "body": "Review of the pilot-automation briefs. Read the reports of the recording, launch and spawn, telemetry evaluator, gamepad mapping, orchestrator and telemetry-first cards briefs. Check three things with commands, not by trust: each script's --dry-run runs, each citation in the new cards points at a real file and line, and every command string in Working/Q/PILOT/SPAWN_CONSOLE.md and RECORD_AUTO.md appears in a source you can open. Then re-read the unstarted briefs that depend on them (the automated stock proof and the RC6 retest sittings in queue; find them by the words pilot_run.py) and rewrite sentences the findings make wrong, adding an \"Updated by pilot review\" line. List defects in order of how likely each would stop a small model mid-session. If the hook briefs 7981 to 7983 changed the telemetry path or schema, fix every mention. Done when each script has a run result pasted and every defect has an owner brief. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-22",
+   "slug": "automated-stock-serpente-proof",
+   "est": 50,
+   "ingame": true,
+   "covers": [
+    "automation",
+    "Q-0"
+   ],
+   "deps": [
+    "int-19",
+    "int-20",
+    "int-21",
+    "8600",
+    "7982",
+    "APPROVED_Q"
+   ],
+   "body": "In-game, operator supervising. Stock vehicle only; the Batmobile is not installed. Follow Working/Q/PILOT2/ with Tools/scripts/pilot_run.py: backup saves, quickstart launch, wait for telemetry records, console spawn of the stock Serpente, drive straight for ten seconds and brake, with the recording running. The single observation: three artifacts exist after the run, namely a telemetry.jsonl whose records show nonzero speed while the vehicle is the Serpente, an mp4 whose ffprobe shows an audio stream above -50 dB mean volume, and the PID kill confirmed by the process list. Pass only if all three exist; one missing artifact is FAIL for that artifact alone. If any step stalls, the script writes HANDOVER; stop, record it, and let the operator continue manually. On FAIL write a fix card per failed step naming the card file in PILOT2 to edit; do not edit the cards during the sitting. Record elapsed time per step for the comparison with reports/pilot-card-lessons-from-q0.md. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-23",
+   "slug": "pilot-automation-time-comparison",
+   "est": 25,
+   "ingame": false,
+   "covers": [
+    "automation"
+   ],
+   "deps": [
+    "int-22"
+   ],
+   "body": "Read the proof sitting report and compare the automated run with the manual baseline in reports/pilot-card-lessons-from-q0.md. Using the timestamps in the report, compute seconds per step for automated and baseline, mark every step where the operator had to step in, and recompute the expected duration of the three RC5 test sittings (Q-1 about 45 minutes, Q-2 about 40, Q-3 about 45 in Working/Q/APPROVAL_REQUEST.md, derived estimates) if the same savings hold. Give a keep, assist or manual verdict per card as a table; where a verdict differs from the one in the earlier lessons report, say why. Propose card edits as diffs inside the report only. Also write the exact JSON edit for Working/Roadmap/landmarks.json that adjusts the L0 game_days estimate to what the sitting showed, without applying it. Done when the table has one row per card of Working/Q/PILOT2 and the landmark edit is valid JSON. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-24",
+   "slug": "rc6-fix-triage-to-branch-plan",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "NEW-INT-23"
+   ],
+   "deps": [
+    "8604",
+    "8699"
+   ],
+   "body": "After the RC5 sittings, fix work arrives as FIXES.md cards and the 87xx briefs written by 8699. Turn them into a build plan for the next candidate, called RC6. Read Working/Q/RESULTS.md, FIXES.md, reports/q4-fix-loop-triage.md, reports/review-test-campaign.md and the done reports of the 87xx fix briefs (list them with ls). For each fix write one branch record in Working/RC6/branches/ in the format documented by reports/rc5-scaffold-and-merge-script.md: tree path, files owned, card or ledger row served, check command. Mark which ledger rows change value, which change mechanism, and which only need a re-test with no build. Where two fixes own one module member, apply Working/RC5/MEMBER_OWNERSHIP.json rules. Respect the cap: at most one extra session per original session before the operator decides (GRAB_BACKLOG.md section 9b Q-4). Done when every fix card appears in exactly one branch record or in a named no-build list, and the counts are stated. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-25",
+   "slug": "rc6-merge-script-from-rc5",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "NEW-INT-23"
+   ],
+   "deps": [
+    "int-24"
+   ],
+   "body": "Create Tools/scripts/bm_rc6.py by parameterising bm_rc5.py rather than copying names: base tree and branch folder are arguments, so RC7 will need no new copy. First prove the control: with zero branches and base Builds/bm-RC5 it must reproduce RC5's drop files byte for byte (compare sha256 of every file and show an aafdiff of zero changes), in a new private tree Builds/bm-RC6-control. Keep receipt schema 2 and derive not_done from branch records and open ledger rows. Add the refusal rule for two branches owning the same file without a merge rule. Document the argument list at the top of the report. Do not install anything and do not touch Builds/bm-RC5. Done when the control run prints zero differing files and the report quotes the sha256 comparison count equal to the number of drop files. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-26",
+   "slug": "rc6-merge-fix-branches",
+   "est": 50,
+   "ingame": false,
+   "covers": [
+    "NEW-INT-23"
+   ],
+   "deps": [
+    "int-25"
+   ],
+   "body": "Merge the RC6 branch records from Working/RC6/branches into Builds/bm-RC6 with Tools/scripts/bm_rc6.py --write, on top of Builds/bm-RC5. Resolve each overlapping member with the stated rule from Working/RC5/MEMBER_OWNERSHIP.json; list every conflict, its rule and the winner (silent last-writer-wins is not allowed). Run the per-branch checks, the model and texture budgets with margins against 4,915 and 7,065 KB, the .ee and .toc rebuild and the installer from the decision in reports/rc5-installer-identity-decision.md. Produce the diff versus RC5 per branch with aafdiff, and the receipt with complete true only when not_done is derived empty. Report file counts, record counts, budgets, conflict table, the diff, and which fix cards are NOT in the tree and why. No install script is run, and Builds/bm-RC5 stays unchanged: prove it with a sha256 listing before and after. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-27",
+   "slug": "rc6-verify-all-gates",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "V-01",
+    "V-02",
+    "V-03",
+    "V-04",
+    "V-05",
+    "V-06"
+   ],
+   "deps": [
+    "int-26",
+    "int-11"
+   ],
+   "body": "Run Tools/scripts/bm_vall.py on Builds/bm-RC6, writing its machine record under Builds/bm-RC6/verify. Report gate by gate in the table form of reports/rc5-verify-files-wiring-audio.md: figure, verdict, report path. Then answer three questions with numbers: which gates were red on RC5 and what they are now; which gates changed value between RC5 and RC6 without any branch claiming the change (a regression suspect: name the files); and whether the seam check on the merged bank still passes. Run Tools/scripts/ledger_recon.py on RC6 and compare with the RC5 record. Every red stays red and is named with its owning fix card; no gate is edited. A pass of the marginal gates (silhouette 99.9004 against limit 99.9, model margin) is reported with its margin, not just PASS. Done when the table covers all gates run in the RC5 verification and the regression-suspect list is present, even if empty. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-28",
+   "slug": "rc6-vx-and-retest-approval-request",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "V-07"
+   ],
+   "deps": [
+    "int-27"
+   ],
+   "body": "Gate VX for RC6, the same as reports/rc5-gate-vx-approval-request.md but narrower. Regenerate STATUS.md and BUILD_BATCHES with their generators and keep both --check runs green, append a MODLOG.md section for RC6, and write Working/Q/APPROVAL_REQUEST_RC6.md: files with sizes and sha256, the installer, every red or UNKNOWN with its proving file, and the open decisions. Because an earlier approval covered only install and Q-1 of one candidate, ask again for this candidate; do not create tmp/freebuff/APPROVED_Q.txt, and do not edit it if it exists. Add the retest plan: the failed checks of each RC5 sitting only, in sitting order, plus one regression check per passed check group, with the expected minutes taken from the proof-sitting timing report. State plainly what remains for RC7 if any check still fails, using the cap in GRAB_BACKLOG.md section 9b Q-4. Done when both generators pass --check and the request lists each failed RC5 check once. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-29",
+   "slug": "rc6-retest-looks-and-static",
+   "est": 45,
+   "ingame": true,
+   "covers": [
+    "Q-1"
+   ],
+   "deps": [
+    "int-28",
+    "int-22",
+    "8601",
+    "APPROVED_Q"
+   ],
+   "body": "In-game, operator supervising, on the RC6 install named in Working/Q/APPROVAL_REQUEST_RC6.md. Only the checks that failed or were blocked in reports/q1-session-static-looks.md, plus one regression pick from each check that passed. Use Working/Q/PILOT2 cards with Tools/scripts/pilot_run.py; save backups first and kill by PID at the end. The single observation per check is the one its card names; the pass rule is the card's band, and nothing is reinterpreted. Known gaps from the RC5 report that RC6 claims to fix must be judged against the fix card's own re-test line; gaps not claimed stay recorded as known gaps and are not failures. Fill Working/Q/RESULTS.md with check id, measured, band, verdict, timestamp, screenshot or recording path. On FAIL write a fix card in FIXES.md and do not retune on the spot. Add a MODLOG.md entry. Stop and hand over to the operator when any step stalls. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-30",
+   "slug": "rc6-retest-driving-takes",
+   "est": 50,
+   "ingame": true,
+   "covers": [
+    "Q-2"
+   ],
+   "deps": [
+    "int-29",
+    "8602"
+   ],
+   "body": "In-game, operator supervising, RC6 still installed from the previous sitting. Re-take only the airfield driving takes that failed or were blocked in reports/q2-session-driving-takes.md, three repeats each, then one regression take from every group that passed (use takes A2, A5, A6, A7, A9 first, then A1, A3, A4, in that order). Judge them through hook telemetry with Tools/scripts/pilot_telemetry.py against the V-05 bands regenerated for RC6, and record with audio via pilot_record.py. Observations: peak speed, time to speed, steering lock time, circle radius, landing. A telemetry field that the hook marks unconfirmed is UNKNOWN, not PASS, and a take that needs a screen judgement says so. Every FAIL gets a fix card naming the member most likely responsible; no retuning during the sitting. Record in RESULTS.md and note which ledger rows could move to behaviour-verified, without editing the ledger. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-31",
+   "slug": "rc6-retest-world-and-combat",
+   "est": 50,
+   "ingame": true,
+   "covers": [
+    "Q-3"
+   ],
+   "deps": [
+    "int-30",
+    "8603"
+   ],
+   "body": "In-game, operator supervising, RC6. Re-run the world and combat checks that failed or were blocked in reports/q3-session-world-and-combat.md, then one regression pick for each passed group: Rebel Drop entry, water teleport, flip recovery, heat and ram, the pursuit EMP missile (the only pursuit weapon), the EMP burst tap, and any battle-mode check whose gate has landed in RC6. A card whose build gate is absent from RC6 records BLOCKED, never FAIL. Judge with telemetry first and the screenshot only where the hook cannot read the value. Keep one variable per probe. Write results to Working/Q/RESULTS.md, fix cards to FIXES.md with the ledger row and the re-test line, and a MODLOG.md entry. Do not change builds during the sitting. Close by listing every check still FAIL after RC6 with its count of attempts, because the cap of one extra session per original session decides what happens next. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-32",
+   "slug": "rc6-results-and-next-cycle-decision",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "NEW-INT-23"
+   ],
+   "deps": [
+    "int-31",
+    "int-29",
+    "int-30"
+   ],
+   "body": "Read the three RC6 sitting reports and Working/Q/RESULTS.md. Produce the decision page for the operator: per check, RC5 result, RC6 result, number of attempts; the checks fixed, the checks regressed (list first), and the checks still failing. Apply the fix-loop cap from GRAB_BACKLOG.md section 9b Q-4: any original session that already received its one extra sitting goes to the operator for a decision, with the failure and the closest JC3 system plus gap, never a compromise proposal. For the rest, write the RC7 cycle as briefs in the report in the same structure as the RC6 cycle (triage, scaffold reuse, merge, verify, approval, retest), giving each a title, inputs and a done-check; do not create queue files. If no check fails, say the fix loop is empty and name the briefs that may now run. Done when every FAIL appears once under either 'next cycle' or 'operator decides', and the counts add up to the RESULTS.md totals. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-33",
+   "slug": "ledger-flips-from-test-results",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "NEW-INT-6"
+   ],
+   "deps": [
+    "int-32"
+   ],
+   "body": "Ledger rows may move to behaviour-verified only when a test sitting produced telemetry or a recording that meets the band. Read Working/Q/RESULTS.md, the RC5 and RC6 sitting reports, and Working/Q/EVIDENCE_LEVELS.md. For each row in Working/Translation/T_ROWS.jsonl that a PASS result names, apply the disposition change through the supported ledger tool (see Tools/scripts/t_rows.py usage; read it first) and add the evidence path of the result and the evidence level. Refuse rows whose result is UNKNOWN, SYNTHETIC or BLOCKED, and rows judged only by a screenshot where the card asked for telemetry. Back up T_ROWS.jsonl as Working/Translation/T_ROWS.pre-flip.jsonl first. After editing run t_rows.py check and status_audit.py --check. Report the rows flipped, the rows refused with the reason, and the new verified count against the 0 recorded in STATUS.md. Revert is a copy of the backup over the ledger. Done when both checks pass. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-34",
+   "slug": "qx-final-regression-sitting",
+   "est": 60,
+   "ingame": true,
+   "covers": [
+    "QX",
+    "Q-4"
+   ],
+   "deps": [
+    "int-32",
+    "int-33",
+    "APPROVED_Q"
+   ],
+   "body": "In-game, operator supervising, on the last candidate that the previous decision page named as the final one. One regression pass over every landmark's pass rule in Working/Roadmap/landmarks.json (field done-when is in ROADMAP.md section 3): looks, pursuit driving takes, EMP missile and burst, sound listening takes, damage and world, HUD and camera, battle mode, remaining gadgets, skins. For each landmark run only its card with the single observation it names, judged by telemetry where possible and by recording otherwise. Record PASS, FAIL, BLOCKED or UNKNOWN per landmark in Working/Q/QX_RESULTS.md with the artifact paths. A landmark whose build is absent is BLOCKED and named; it is not hidden. Fail means a fix card, never a retune. End with the process killed by PID and a MODLOG.md entry. If the sitting exceeds its time budget, stop and list the landmarks not reached. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-35",
+   "slug": "qx-gate-audit-named-omissions",
+   "est": 35,
+   "ingame": false,
+   "covers": [
+    "QX",
+    "NEW-INT-28"
+   ],
+   "deps": [
+    "int-34"
+   ],
+   "body": "Gate QX asks that every check passed or that each omission was accepted by the operator. Read Working/Q/QX_RESULTS.md, Working/Q/RESULTS.md and the receipt of the last candidate. Build Working/Q/QX_AUDIT.md: one row per check of every landmark, status, evidence path, and for each non-pass the line 'accepted by operator on <date>' only if a file under tmp/freebuff or Working shows the operator's own words, otherwise 'NOT ACCEPTED'. Add the honest omission list for release use (turn on the spot, battle audio, locked salvo, chapter damage states, flares, or whatever the receipt still lists; recount, do not copy from the Q-5 brief). The rule from the operator memory stands: lore accuracy wins, so a non-pass is not relabelled as acceptable. Done when the count of NOT ACCEPTED rows is stated, and it equals the number of rows without an operator-words file. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-36",
+   "slug": "mark-landmarks-l0-to-l3-done",
+   "est": 30,
+   "ingame": false,
+   "covers": [
+    "landmarks"
+   ],
+   "deps": [
+    "8607",
+    "9199",
+    "int-32"
+   ],
+   "body": "Update Working/Roadmap/landmarks.json for landmarks L0, L1, L2 and L3 only. Copy the file first to Working/Roadmap/landmarks.pre-mark.json. A landmark gets \"done\": true only when its done-when text in ROADMAP.md section 3 is met and a report proves it: L0 needs reports/l0-probe-triage.md and probe results; L1 needs reports/review-rc5-campaign.md and green gate lines in the VX request; L2 needs Q looks results; L3 needs the driving takes within their bands. Quote the proving line and path for each. For a landmark not yet proven, leave done false and instead update its remaining desk_days and game_days using the measured pace stated in ROADMAP.md section 2 and the sitting times, with the reason. Validate the file parses and that Tools/scripts/project_eta.py (read its usage first) still runs. Revert is copying the .pre-mark file back. Done when project_eta.py runs and the report lists each of the four landmarks with verdict and evidence. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-37",
+   "slug": "mark-landmarks-l4-to-l7-done",
+   "est": 30,
+   "ingame": false,
+   "covers": [
+    "landmarks"
+   ],
+   "deps": [
+    "int-36",
+    "int-34"
+   ],
+   "body": "Apply the same procedure to landmarks L4 (tracker and EMP missile, booster, burst), L5 (sound), L6 (damage and world) and L7 (HUD and camera) in Working/Roadmap/landmarks.json. First re-copy the current file to Working/Roadmap/landmarks.pre-mark2.json. Set \"done\": true only where Working/Q/QX_RESULTS.md and the sitting reports show PASS with an artifact path that exists (check that each path opens); a BLOCKED or UNKNOWN result keeps done false. For landmarks left open, rewrite desk_days and game_days from what the sittings showed and write the reason in a field named note (keep the existing keys unchanged). Also fill q_briefs for these landmarks with the actual in-game brief numbers that ran. Run Tools/scripts/project_eta.py afterwards and paste its summary. Done when the JSON parses, the ETA tool prints a completion estimate, and the report holds one line per landmark with the proving path. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-38",
+   "slug": "mark-landmarks-l8-to-l10-done",
+   "est": 30,
+   "ingame": false,
+   "covers": [
+    "landmarks"
+   ],
+   "deps": [
+    "int-37",
+    "int-35"
+   ],
+   "body": "Finish the marking for L8 (battle mode), L9 (remaining gadgets) and L10 (skins) in Working/Roadmap/landmarks.json, after saving a copy as Working/Roadmap/landmarks.pre-mark3.json. These landmarks depend on the mode swap, whose trigger is the highest-risk item; read the swap results in Working/Q/QX_RESULTS.md and the hook mode-swap report first. Done true only on PASS with existing artifacts. If a landmark stays open, rewrite its remaining days from the sitting data and list the named omissions from Working/Q/QX_AUDIT.md that keep it open. Do not change L11: that is decided by the release brief after the operator gate. Re-run Tools/scripts/project_eta.py and report the overall remaining days. Done when the file parses, the ETA tool runs, and the report contains a table of all twelve landmark ids with done flag and proving path or open reason. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-39",
+   "slug": "final-status-ledger-and-tracker-reconcile",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "STATUS",
+    "ledger"
+   ],
+   "deps": [
+    "int-35",
+    "int-33",
+    "int-38"
+   ],
+   "body": "Last reconciliation of the three ledgers that drifted apart (reports/stale-status-numbers.md): STATUS.md, Working/Translation/T_ROWS.jsonl and the GRAB_BACKLOG.md section 12 tracker. Run Tools/scripts/status_audit.py --write and keep --check green, then t_rows.py check. Recount from files: rows by disposition, verified count with evidence level, receipt not_done of the last candidate, texture and audio shortfalls. Update the section 12 rows V-01 to V-07 and Q-1 to Q-5 and the R rows so each states its report path and result, and remove prose numbers older than the receipt (use the diffs prepared in reports/status-prose-from-receipt.md). Add the missing RC5 and RC6 sections to MODLOG.md from the receipts and reports. Back up each edited file under Working/RC5/backup-final/ first so revert is a copy. Done when the three files agree on every figure you compare, and the report prints those figures side by side. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-40",
+   "slug": "release-path-and-asset-inventory",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "R-1",
+    "NEW-INT-25"
+   ],
+   "deps": [],
+   "body": "Prepare the pipeline-only release (toolkit rule R10: extracted mesh, textures, audio and particles may not be published). Inventory what is in the project. Part one: grep Tools/scripts and Tools/hook for hard-coded drive paths (E:/, E:\\\\, D:/, C:/Users) and write Working/Release/PATHS.csv with file, line, literal, and what the path stands for (a game folder, the project root, a tool folder, a temp folder). Part two: list every file under Research, Working and Builds that holds bytes or values extracted from a game, with size, and mark it WITHHELD or SAFE with the reason; Builds trees are WITHHELD as a rule. Part three: group the scripts needed to rebuild from the user's own copies into manifests of at most ten scripts each (extract, translate and build, verify and install), writing Working/Release/MANIFEST_A.txt, B and C. Note that Tools is untracked in git. Done when the CSV count of distinct literals is printed and every script appears in exactly one manifest or in an excluded list. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-41",
+   "slug": "release-config-layer-and-doctor",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "R-1",
+    "NEW-INT-25"
+   ],
+   "deps": [
+    "int-40"
+   ],
+   "body": "Build the path layer into a new private tree Builds/release-0001 (never into the game folder). Write jc3bm_paths.py there: it reads a user config file (INI, template jc3bm.example.ini with blank values and comments) and environment variables for the Arkham Knight folder, the Just Cause 3 folder, a tools folder, and a work folder; it never has a default pointing at a real drive path. Add doctor.py that checks each configured folder exists, lists the key files the pipeline reads (names from Working/Release/PATHS.csv), prints OK or a one-line fix per missing item, and never writes outside the work folder. Cite the Steam and GOG library discovery as optional hints only if you can show the source, otherwise leave it out. Test in an empty temp work folder with no config: doctor must exit non-zero with clear messages and no traceback. Done when both outputs are pasted, and a grep over Builds/release-0001 for E:/ and D:/ returns zero. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-42",
+   "slug": "release-port-extraction-scripts",
+   "est": 50,
+   "ingame": false,
+   "covers": [
+    "R-1",
+    "NEW-INT-25"
+   ],
+   "deps": [
+    "int-41"
+   ],
+   "body": "Port the first script group, Working/Release/MANIFEST_A.txt (the extraction and grab tools). For each script, copy it into Builds/release-0001/tools/ and replace every literal path with a call to jc3bm_paths.py using the PATHS.csv row as the purpose; do not edit the original under Tools/scripts. Where a script reads a project data file that is WITHHELD, make it take the file from the work folder and print a message telling the user which earlier step creates it. Keep the command line interface identical, including --write and --check. Run each ported script with --help and then with no config to prove it fails with the doctor message and no traceback; run its --check only when the inputs are SAFE. Write a table: script, literals replaced, --help result, no-config result. Done when the table covers every script in the manifest and a grep for drive letters in the ported group returns zero. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-43",
+   "slug": "release-port-translate-and-build",
+   "est": 50,
+   "ingame": false,
+   "covers": [
+    "R-1",
+    "NEW-INT-25"
+   ],
+   "deps": [
+    "int-41"
+   ],
+   "body": "Port Working/Release/MANIFEST_B.txt, the translation and build scripts, into the private release tree Builds/release-0001 by the same rules as the extraction group: configuration through jc3bm_paths.py, originals untouched, same command line options. Special care: the build scripts write whole trees, so each must write only inside the configured work folder and refuse a work folder that equals either game folder (add that guard and test it with a pretend folder). Scripts that embed tables of ledger values are data about the mod, not game bytes: keep them, but flag any table whose cells hold extracted byte payloads as WITHHELD in a list. Run --help for each and a no-config run for each. Report the guard test output, the flagged list and a table of script, literals replaced, results. Done when every manifest script is in the table and no drive-letter literal remains in the ported copies. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-44",
+   "slug": "release-port-verify-and-install",
+   "est": 50,
+   "ingame": false,
+   "covers": [
+    "R-1",
+    "NEW-INT-25"
+   ],
+   "deps": [
+    "int-41",
+    "int-11"
+   ],
+   "body": "Port Working/Release/MANIFEST_C.txt, the verification and installer tools, including bm_vall.py. Configure paths through jc3bm_paths.py in the copies under Builds/release-0001. The installer in the release must install from the user's own rebuilt tree into the user's configured game folder only after a snapshot; read the chosen installer in reports/rc5-installer-identity-decision.md and keep its snapshot-by-diff and Rollback behaviour, with the caveat for install over install documented in the script header. The release installer has a mandatory -WhatIf style dry run and refuses to run when the game process is alive. Test only against a simulated dropzone made inside the work folder. Report: the dry run output, the refusal when the pretend process check fails, a table of scripts with literals replaced, and a drive-letter grep returning zero. Done when the dry run and refusal are shown and the table is complete. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-45",
+   "slug": "release-data-classification-lint",
+   "est": 35,
+   "ingame": false,
+   "covers": [
+    "R-1",
+    "NEW-INT-26"
+   ],
+   "deps": [
+    "int-40"
+   ],
+   "body": "Decide which data files belong in the release and which do not, and prove it. Read Working/Release/PATHS.csv and the SAFE or WITHHELD marks from the inventory brief. Create the clean export folder Builds/release-0001/export as a candidate: scripts and edit specs only, no game bytes. Then lint it three ways. One: um publish check on the export folder (read um's own help first; if the command differs, quote the actual one). Two: a scan for files larger than 1 MB, for known game archive extensions (.arc, .ee, .tab, .toc, .bank, .ddsc, .rbm, .upk), and for hash-like blobs. Three: a scan of JSON and markdown for pasted extracted values beyond a numeric ledger cell. Write Working/Release/LINT.md with each hit and its fix. Do not delete anything from the originals; the export is built by copying. Done when all three scans report zero hits or each hit has an applied fix in the export, and the final file count and total size are printed. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-46",
+   "slug": "review-release-port-group",
+   "est": 30,
+   "ingame": false,
+   "covers": [
+    "review"
+   ],
+   "deps": [
+    "int-42",
+    "int-43",
+    "int-44",
+    "int-45"
+   ],
+   "body": "Review the release porting group. Read the reports of the extraction port, the translation and build port, the verify and install port, and the data lint. Independently re-run: a drive-letter grep over Builds/release-0001, the doctor with no config, one --help from each group, and the lint scan. Compare the number of scripts in Working/Release/MANIFEST_A.txt, B and C with the files actually in the release tree, and list scripts that depend on a module missing from the release tree (a static import scan is enough). Fix nothing in the tree; list each defect with the narrowest repair, and rewrite the unstarted release briefs (rebuild comparison, documentation, publish lint) where the findings change their inputs, adding an \"Updated by release review\" line. Done when each of the four reports has a re-run result in yours and the missing-module list is present. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-47",
+   "slug": "release-rebuild-from-game-copies",
+   "est": 55,
+   "ingame": false,
+   "covers": [
+    "R-1",
+    "NEW-INT-25"
+   ],
+   "deps": [
+    "int-46",
+    "int-32"
+   ],
+   "body": "Prove the package really rebuilds. Configure the release tree with a config file placed in a new work folder under Builds/release-rebuild-0001, pointing at the existing game installs as read-only inputs (the game folders themselves are never written; first record the sha256 of the main executable of each game before and after). Run the pipeline end to end through the ported scripts, in the order of the manifests, into the work folder. Then compare the drop files it produced with the drop files of the last candidate tree named in reports/rc6-results-and-next-cycle-decision.md: for each file, sha256 equal or different, and for different files the first differing record via aafdiff. Differences caused by timestamps are named as such. If a stage needs a file that only a developer machine has, record the missing input and stop at that stage rather than patching around it. Done when the comparison table, the before and after executable hashes (must be equal), and the stage where it stopped, if any, are in the report. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-48",
+   "slug": "release-readme-credits-and-disclosure",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "R-1",
+    "NEW-INT-28"
+   ],
+   "deps": [
+    "int-47",
+    "int-35",
+    "8605"
+   ],
+   "body": "Write the release documents inside Builds/release-0001/export: RELEASE.md, README.md and CREDITS.md. README gives the steps from the user's own copies of both games: install requirements, copy jc3bm.example.ini, fill folders, run doctor.py, run the pipeline stages in manifest order, verify, install with the dry run first, and how to undo. State plainly that no game files are included and that both games must be owned. Credits: Rocksteady and Warner Bros for Batman: Arkham Knight, Avalanche Studios for Just Cause 3, the jc3-console-thingy and BmSDK authors with their licences as found in the licence files of E:/Modding/_tools (quote each licence line you rely on). Add an AI-assistance disclosure sentence. RELEASE.md lists what is built and what is omitted, using the omission list in Working/Q/QX_AUDIT.md recounted from the receipt, and the complete flag exactly as the receipt states it. No feature is described as working unless QX_RESULTS.md says PASS. Done when every claim in README maps to a line in a result file listed at the end of the report. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-49",
+   "slug": "release-publish-check-and-fixes",
+   "est": 30,
+   "ingame": false,
+   "covers": [
+    "R-1",
+    "NEW-INT-26"
+   ],
+   "deps": [
+    "int-48"
+   ],
+   "body": "Run the publish lint on the finished export folder Builds/release-0001/export. Read um's help first, then run um publish check on that folder and quote the command and the full output. Fix findings only inside the export copy (never in the project originals): remove a flagged file, replace a path literal, correct a licence line. Re-run after each fix and keep a log of runs. Also run the three scans from Working/Release/LINT.md again and the drive-letter grep, since the documents were added. Zip nothing and upload nothing. Record the final file list with sizes and sha256 in Working/Release/FINAL_LIST.md. Done when the last run of the publish check shows no findings, or each remaining finding is named with the reason it cannot be removed and is left for the operator. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-50",
+   "slug": "kb-field-note-draft",
+   "est": 30,
+   "ingame": false,
+   "covers": [
+    "R-2"
+   ],
+   "deps": [
+    "int-49",
+    "8605"
+   ],
+   "body": "Draft the knowledge-base field note (R-2). Read um's help for the kb commands first, then use um kb new to create the note skeleton, fill it from the facts that survived the test campaign (what was learned about replacing a vehicle, the evidence levels, the pilot automation method, the failures that caused the 2026-11-02 reset), and run um kb check until it passes, quoting each run. Do not run um kb pr, and do not push or open anything: the pull request waits for the operator's yes. Every claim in the note cites a result file; if the campaign did not prove something, write UNKNOWN or leave it out. Note which parts of the note rely on BmAK-side facts and mark them by evidence level. Done when um kb check passes and the note path is printed, with a list of claims and their citations. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "int-51",
+   "slug": "release-operator-gate-and-l11",
+   "est": 30,
+   "ingame": false,
+   "covers": [
+    "NEW-INT-27",
+    "L11"
+   ],
+   "deps": [
+    "int-50",
+    "int-38",
+    "int-39"
+   ],
+   "body": "Prepare the final operator gate and the L11 mark. Write Working/Release/OPERATOR_GATE.md listing, with the exact command lines and no execution: git commit of the project (note that Tools is untracked and ~60 files differ; list what would be staged), the push, the publication of the export folder, the um kb pr command, each preceded by what it does and what it cannot undo. Ask three yes/no questions: publish the pipeline package, open the KB pull request, accept the receipt complete flag as stated. Then, in Working/Roadmap/landmarks.json, set L11 done true only if the file tmp/freebuff/APPROVED_RELEASE.txt exists (the operator writes it; never create it) and the previous release briefs passed; otherwise leave it false and write the JSON edit as text in the report. Copy landmarks.json to landmarks.pre-l11.json first. Done when the gate page exists, the L11 state is stated with the file check output, and project_eta.py still runs. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  }
+ ]
+}

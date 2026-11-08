@@ -1,0 +1,12 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/vulcan-capture-frame-timing.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+The operator recorded the Vulcan firing in Arkham Knight: C:/Users/User/Videos/Captures/Batman™_ Arkham Knight VulcanFire_10s-15s.mp4 (the fire window is about 10 s to 15 s). Operator facts: there is no overheat lockout; as it fires, the crosshairs spread and then turn red; the cool-down only brings the spread back, and firing is never interrupted.
+Measure from the video with ffprobe/ffmpeg (PTS-based, because the captures are VFR; see Research/BatmobileGrab/FOOTAGE.md for the method used before):
+- the time from trigger to the first visible spread;
+- the time to full spread;
+- the time until the crosshair turns red;
+- the cool-down time back to the narrow crosshair after release;
+- the rounds per second, from muzzle flashes.
+Save key frames as PNGs under E:/Modding/_BmAKgrab/footage/vulcan/ (outside the repo) and list them. Compare with the decoded InaccuracyVsTime curve (0/0.5/1.5/2.5 s -> 0/0/1.5/3.0) and HeatUpPerSecond 0.0, and say whether the curve explains the spread. Report the table and its HUD and weapon implications (Vulcan bloom HUD, T-WP rows). Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

@@ -1,0 +1,2988 @@
+{
+ "calls": [
+  {
+   "argument": 2,
+   "argument_at": 306,
+   "at": 301,
+   "end_parms_at": 308,
+   "name": "SetBatmanVsBatmobileCollisionMode"
+  },
+  {
+   "argument": 1,
+   "argument_at": 339,
+   "at": 334,
+   "end_parms_at": 341,
+   "name": "SetBatmanVsBatmobileCollisionMode"
+  }
+ ],
+ "card": "G3-01f - RVehicleBatmobile.DriverLeft: token decode, CFG, and which condition selects collision value 1 / 2",
+ "cfg": {
+  "edges": [
+   {
+    "body_at": 3,
+    "from": 0,
+    "label": "condition TRUE -> body (polarity oracle)",
+    "proven": true,
+    "to": "body"
+   },
+   {
+    "body_at": null,
+    "from": 0,
+    "label": "condition FALSE -> branch word 49 does not decode to a token start",
+    "proven": false,
+    "to": "UNKNOWN"
+   },
+   {
+    "body_at": 11,
+    "from": 3,
+    "label": "fallthrough",
+    "proven": true,
+    "to": 11
+   },
+   {
+    "body_at": 30,
+    "from": 11,
+    "label": "fallthrough",
+    "proven": true,
+    "to": 30
+   },
+   {
+    "body_at": null,
+    "from": 30,
+    "label": "branch word 81 does not decode to a token start",
+    "proven": false,
+    "to": "UNKNOWN"
+   },
+   {
+    "body_at": 53,
+    "from": 33,
+    "label": "fallthrough",
+    "proven": true,
+    "to": 53
+   },
+   {
+    "body_at": 67,
+    "from": 53,
+    "label": "fallthrough",
+    "proven": true,
+    "to": 67
+   },
+   {
+    "body_at": 146,
+    "from": 67,
+    "label": "fallthrough",
+    "proven": true,
+    "to": 146
+   },
+   {
+    "body_at": 213,
+    "from": 146,
+    "label": "fallthrough",
+    "proven": true,
+    "to": 213
+   },
+   {
+    "body_at": 219,
+    "from": 213,
+    "label": "fallthrough",
+    "proven": true,
+    "to": 219
+   },
+   {
+    "body_at": 228,
+    "from": 219,
+    "label": "condition TRUE -> body (polarity oracle)",
+    "proven": true,
+    "to": "body"
+   },
+   {
+    "body_at": null,
+    "from": 219,
+    "label": "condition FALSE -> branch word 352 does not decode to a token start",
+    "proven": false,
+    "to": "UNKNOWN"
+   },
+   {
+    "body_at": 248,
+    "from": 228,
+    "label": "fallthrough",
+    "proven": true,
+    "to": 248
+   },
+   {
+    "body_at": 301,
+    "from": 248,
+    "label": "condition TRUE -> body (polarity oracle)",
+    "proven": true,
+    "to": "body"
+   },
+   {
+    "body_at": null,
+    "from": 248,
+    "label": "condition FALSE -> branch word 436 does not decode to a token start",
+    "proven": false,
+    "to": "UNKNOWN"
+   },
+   {
+    "body_at": 309,
+    "from": 301,
+    "label": "fallthrough",
+    "proven": true,
+    "to": 309
+   },
+   {
+    "body_at": null,
+    "from": 309,
+    "label": "branch word 474 does not decode to a token start",
+    "proven": false,
+    "to": "UNKNOWN"
+   },
+   {
+    "body_at": 334,
+    "from": 312,
+    "label": "condition TRUE -> body (polarity oracle)",
+    "proven": true,
+    "to": "body"
+   },
+   {
+    "body_at": null,
+    "from": 312,
+    "label": "condition FALSE -> branch word 474 does not decode to a token start",
+    "proven": false,
+    "to": "UNKNOWN"
+   },
+   {
+    "body_at": 342,
+    "from": 334,
+    "label": "fallthrough",
+    "proven": true,
+    "to": 342
+   },
+   {
+    "body_at": 350,
+    "from": 342,
+    "label": "fallthrough",
+    "proven": true,
+    "to": 350
+   },
+   {
+    "body_at": 361,
+    "from": 350,
+    "label": "fallthrough",
+    "proven": true,
+    "to": 361
+   },
+   {
+    "body_at": 367,
+    "from": 361,
+    "label": "fallthrough",
+    "proven": true,
+    "to": 367
+   }
+  ],
+  "nodes": [
+   {
+    "at": 0,
+    "end": 3,
+    "kind": "JumpIfNot",
+    "meaning": "guard: 0x81 (unary) <Core.bWasRemoteDriving>"
+   },
+   {
+    "at": 3,
+    "end": 11,
+    "kind": "expr",
+    "meaning": "condition of the guard at 0"
+   },
+   {
+    "at": 11,
+    "end": 30,
+    "kind": "call",
+    "meaning": "Core.TriggerEventClass(.., Core.Driver, 1, ..) - then-block"
+   },
+   {
+    "at": 30,
+    "end": 33,
+    "kind": "Jump",
+    "meaning": "leaves the then-block (target UNKNOWN)"
+   },
+   {
+    "at": 33,
+    "end": 53,
+    "kind": "call",
+    "meaning": "Core.TriggerEventClass(.., Core.Driver, 3, ..) - else-block"
+   },
+   {
+    "at": 53,
+    "end": 67,
+    "kind": "Let",
+    "meaning": "Core.Driver.InteriorLightsSwitchedOn = 0"
+   },
+   {
+    "at": 67,
+    "end": 146,
+    "kind": "expr",
+    "meaning": "WorldInfo/GRI/FlagManager flag block -> SetGlobalFlag(\"Batman_Remote_Control_Batmobile\", false)"
+   },
+   {
+    "at": 146,
+    "end": 213,
+    "kind": "expr",
+    "meaning": "same chain -> SetGlobalFlag(\"Batman_In_Batmobile\", false)"
+   },
+   {
+    "at": 213,
+    "end": 219,
+    "kind": "call",
+    "meaning": "RemoveBatmobileBindsAndSetBatmanBinds()"
+   },
+   {
+    "at": 219,
+    "end": 228,
+    "kind": "JumpIfNot",
+    "meaning": "guard: <Core.IsVehicleAsleep>"
+   },
+   {
+    "at": 228,
+    "end": 248,
+    "kind": "LetBool",
+    "meaning": "Core.FakeRoadCollisionStatic = Core.UpdateFakeRoadCollision(true, 0.0)"
+   },
+   {
+    "at": 248,
+    "end": 301,
+    "kind": "JumpIfNot",
+    "meaning": "guard A - the winch/armoured condition (body: call with value 2)"
+   },
+   {
+    "at": 301,
+    "end": 309,
+    "kind": "call",
+    "meaning": "SetBatmanVsBatmobileCollisionMode(2)"
+   },
+   {
+    "at": 309,
+    "end": 312,
+    "kind": "Jump",
+    "meaning": "leaves guard A's body (target UNKNOWN)"
+   },
+   {
+    "at": 312,
+    "end": 334,
+    "kind": "JumpIfNot",
+    "meaning": "guard B - the armoured/asleep condition (body: call with value 1)"
+   },
+   {
+    "at": 334,
+    "end": 342,
+    "kind": "call",
+    "meaning": "SetBatmanVsBatmobileCollisionMode(1)"
+   },
+   {
+    "at": 342,
+    "end": 350,
+    "kind": "LetBool",
+    "meaning": "Core.bForceWheelspin = false"
+   },
+   {
+    "at": 350,
+    "end": 361,
+    "kind": "Let",
+    "meaning": "Core.WheelspinSmokeMomentum = 0.0"
+   },
+   {
+    "at": 361,
+    "end": 367,
+    "kind": "call",
+    "meaning": "Core.DriverLeft() [final function, no arguments]"
+   },
+   {
+    "at": 367,
+    "end": 368,
+    "kind": "Return",
+    "meaning": "return"
+   }
+  ]
+ },
+ "corpus": {
+  "branch_tokens": 69,
+  "functions_walked": 35,
+  "hits": {
+   "abs": 10,
+   "abs_payload": 12,
+   "abs_plus_payload": 2,
+   "expanded_abs": 10,
+   "expanded_rel": 10,
+   "expanded_rel_pos": 8,
+   "from_end": 7,
+   "from_end_minus": 4,
+   "rel_after": 9,
+   "rel_before": 6,
+   "rel_pos": 8
+  },
+  "jump_hits": {
+   "abs": 10,
+   "abs_payload": 12,
+   "abs_plus_payload": 2,
+   "expanded_abs": 10,
+   "expanded_rel": 10,
+   "expanded_rel_pos": 8,
+   "from_end": 7,
+   "from_end_minus": 4,
+   "rel_after": 9,
+   "rel_before": 6,
+   "rel_pos": 8
+  },
+  "jump_total": 57,
+  "per_kind": {
+   "Jump": 14,
+   "JumpIfNot": 43,
+   "Skip": 12
+  },
+  "skip_rule_ok": 12,
+  "skips": 12
+ },
+ "driverleft": {
+  "class": "Function",
+  "export": 7400,
+  "header_hex": "0000e71c0000eceeffff000000000102000071010000",
+  "label": "decoded (Startup.upk export 7400; script = payload[22:-16])",
+  "name_index": 19530,
+  "package": "Startup.upk",
+  "path": "RVehicleBatmobile.DriverLeft",
+  "payload_bytes": 406,
+  "refs": 28,
+  "script_bytes": 368,
+  "script_sha1": "70471c04b9526a2616e27c3c3830155112765efb",
+  "size_field": 369,
+  "token_count": 135,
+  "tokens": [
+   {
+    "at": 0,
+    "kind": "JumpIfNot",
+    "size": 3,
+    "word": 49
+   },
+   {
+    "at": 3,
+    "kind": "0x81",
+    "size": 1
+   },
+   {
+    "at": 4,
+    "kind": "0x2D",
+    "size": 1
+   },
+   {
+    "at": 5,
+    "form": "0x01",
+    "index": -1382,
+    "kind": "ref",
+    "object_class": "BoolProperty",
+    "path": "Core.bWasRemoteDriving",
+    "size": 5
+   },
+   {
+    "at": 10,
+    "kind": "EndFunctionParms",
+    "size": 1
+   },
+   {
+    "at": 11,
+    "index": -4563,
+    "kind": "FinalFunction",
+    "name": "Core.TriggerEventClass",
+    "size": 5
+   },
+   {
+    "at": 16,
+    "kind": "0x20",
+    "size": 1
+   },
+   {
+    "at": 17,
+    "kind": "0xF8",
+    "size": 1
+   },
+   {
+    "at": 18,
+    "kind": "Skip",
+    "size": 3,
+    "word": 0
+   },
+   {
+    "at": 21,
+    "form": "0x01",
+    "index": -5746,
+    "kind": "ref",
+    "object_class": "ObjectProperty",
+    "path": "Core.Driver",
+    "size": 5
+   },
+   {
+    "at": 26,
+    "kind": "IntOne",
+    "size": 1
+   },
+   {
+    "at": 27,
+    "kind": "0x4A",
+    "size": 1
+   },
+   {
+    "at": 28,
+    "kind": "0x4A",
+    "size": 1
+   },
+   {
+    "at": 29,
+    "kind": "EndFunctionParms",
+    "size": 1
+   },
+   {
+    "at": 30,
+    "kind": "Jump",
+    "size": 3,
+    "word": 81
+   },
+   {
+    "at": 33,
+    "index": -4563,
+    "kind": "FinalFunction",
+    "name": "Core.TriggerEventClass",
+    "size": 5
+   },
+   {
+    "at": 38,
+    "kind": "0x20",
+    "size": 1
+   },
+   {
+    "at": 39,
+    "kind": "0xF8",
+    "size": 1
+   },
+   {
+    "at": 40,
+    "kind": "Skip",
+    "size": 3,
+    "word": 0
+   },
+   {
+    "at": 43,
+    "form": "0x01",
+    "index": -5746,
+    "kind": "ref",
+    "object_class": "ObjectProperty",
+    "path": "Core.Driver",
+    "size": 5
+   },
+   {
+    "at": 48,
+    "kind": "0x2C",
+    "size": 1
+   },
+   {
+    "at": 49,
+    "kind": "0x03",
+    "size": 1
+   },
+   {
+    "at": 50,
+    "kind": "0x4A",
+    "size": 1
+   },
+   {
+    "at": 51,
+    "kind": "0x4A",
+    "size": 1
+   },
+   {
+    "at": 52,
+    "kind": "EndFunctionParms",
+    "size": 1
+   },
+   {
+    "at": 53,
+    "kind": "Let",
+    "size": 1
+   },
+   {
+    "at": 54,
+    "form": "0x01",
+    "index": -5746,
+    "kind": "ref",
+    "object_class": "ObjectProperty",
+    "path": "Core.Driver",
+    "size": 5
+   },
+   {
+    "at": 59,
+    "kind": "0x2A",
+    "size": 1
+   },
+   {
+    "at": 60,
+    "kind": "0x8C",
+    "size": 1
+   },
+   {
+    "at": 61,
+    "form": "0x01",
+    "index": -1581,
+    "kind": "ref",
+    "object_class": "ByteProperty",
+    "path": "Core.InteriorLightsSwitchedOn",
+    "size": 5
+   },
+   {
+    "at": 66,
+    "kind": "EndFunctionParms",
+    "size": 1
+   },
+   {
+    "at": 67,
+    "kind": "Context",
+    "size": 1
+   },
+   {
+    "at": 68,
+    "kind": "Context",
+    "size": 1
+   },
+   {
+    "at": 69,
+    "kind": "Context",
+    "size": 1
+   },
+   {
+    "at": 70,
+    "form": "0x01",
+    "index": -5702,
+    "kind": "ref",
+    "object_class": "ObjectProperty",
+    "path": "Core.WorldInfo",
+    "size": 5
+   },
+   {
+    "at": 75,
+    "kind": "0x09",
+    "size": 1
+   },
+   {
+    "at": 76,
+    "form": "0x00",
+    "index": -5749,
+    "kind": "ref",
+    "object_class": "ObjectProperty",
+    "path": "Core.GRI",
+    "size": 5
+   },
+   {
+    "at": 81,
+    "kind": "0x00",
+    "size": 1
+   },
+   {
+    "at": 82,
+    "form": "0x01",
+    "index": -5749,
+    "kind": "ref",
+    "object_class": "ObjectProperty",
+    "path": "Core.GRI",
+    "size": 5
+   },
+   {
+    "at": 87,
+    "kind": "0x09",
+    "size": 1
+   },
+   {
+    "at": 88,
+    "form": "0x00",
+    "index": -5377,
+    "kind": "ref",
+    "object_class": "ObjectProperty",
+    "path": "Core.FlagManager",
+    "size": 5
+   },
+   {
+    "at": 93,
+    "kind": "0x00",
+    "size": 1
+   },
+   {
+    "at": 94,
+    "form": "0x01",
+    "index": -5377,
+    "kind": "ref",
+    "object_class": "ObjectProperty",
+    "path": "Core.FlagManager",
+    "size": 5
+   },
+   {
+    "at": 99,
+    "kind": "0x2C",
+    "size": 1
+   },
+   {
+    "at": 100,
+    "form": "0x00",
+    "index": -995,
+    "kind": "ref",
+    "object_class": "BoolProperty",
+    "path": "Core.ReturnValue",
+    "size": 5
+   },
+   {
+    "at": 105,
+    "kind": "0x00",
+    "size": 1
+   },
+   {
+    "at": 106,
+    "index": -3470,
+    "kind": "FinalFunction",
+    "name": "Core.SetGlobalFlag",
+    "size": 5
+   },
+   {
+    "at": 111,
+    "kind": "StringConst",
+    "size": 33,
+    "value": "Batman_Remote_Control_Batmobile"
+   },
+   {
+    "at": 144,
+    "kind": "False",
+    "size": 1
+   },
+   {
+    "at": 145,
+    "kind": "EndFunctionParms",
+    "size": 1
+   },
+   {
+    "at": 146,
+    "kind": "Context",
+    "size": 1
+   },
+   {
+    "at": 147,
+    "kind": "Context",
+    "size": 1
+   },
+   {
+    "at": 148,
+    "kind": "Context",
+    "size": 1
+   },
+   {
+    "at": 149,
+    "form": "0x01",
+    "index": -5702,
+    "kind": "ref",
+    "object_class": "ObjectProperty",
+    "path": "Core.WorldInfo",
+    "size": 5
+   },
+   {
+    "at": 154,
+    "kind": "0x09",
+    "size": 1
+   },
+   {
+    "at": 155,
+    "form": "0x00",
+    "index": -5749,
+    "kind": "ref",
+    "object_class": "ObjectProperty",
+    "path": "Core.GRI",
+    "size": 5
+   },
+   {
+    "at": 160,
+    "kind": "0x00",
+    "size": 1
+   },
+   {
+    "at": 161,
+    "form": "0x01",
+    "index": -5749,
+    "kind": "ref",
+    "object_class": "ObjectProperty",
+    "path": "Core.GRI",
+    "size": 5
+   },
+   {
+    "at": 166,
+    "kind": "0x09",
+    "size": 1
+   },
+   {
+    "at": 167,
+    "form": "0x00",
+    "index": -5377,
+    "kind": "ref",
+    "object_class": "ObjectProperty",
+    "path": "Core.FlagManager",
+    "size": 5
+   },
+   {
+    "at": 172,
+    "kind": "0x00",
+    "size": 1
+   },
+   {
+    "at": 173,
+    "form": "0x01",
+    "index": -5377,
+    "kind": "ref",
+    "object_class": "ObjectProperty",
+    "path": "Core.FlagManager",
+    "size": 5
+   },
+   {
+    "at": 178,
+    "kind": "0x20",
+    "size": 1
+   },
+   {
+    "at": 179,
+    "form": "0x00",
+    "index": -995,
+    "kind": "ref",
+    "object_class": "BoolProperty",
+    "path": "Core.ReturnValue",
+    "size": 5
+   },
+   {
+    "at": 184,
+    "kind": "0x00",
+    "size": 1
+   },
+   {
+    "at": 185,
+    "index": -3470,
+    "kind": "FinalFunction",
+    "name": "Core.SetGlobalFlag",
+    "size": 5
+   },
+   {
+    "at": 190,
+    "kind": "StringConst",
+    "size": 21,
+    "value": "Batman_In_Batmobile"
+   },
+   {
+    "at": 211,
+    "kind": "False",
+    "size": 1
+   },
+   {
+    "at": 212,
+    "kind": "EndFunctionParms",
+    "size": 1
+   },
+   {
+    "at": 213,
+    "index": 56660,
+    "kind": "VirtualFunction",
+    "name": "RemoveBatmobileBindsAndSetBatmanBinds",
+    "size": 5
+   },
+   {
+    "at": 218,
+    "kind": "EndFunctionParms",
+    "size": 1
+   },
+   {
+    "at": 219,
+    "kind": "JumpIfNot",
+    "size": 3,
+    "word": 352
+   },
+   {
+    "at": 222,
+    "kind": "0x2D",
+    "size": 1
+   },
+   {
+    "at": 223,
+    "form": "0x01",
+    "index": -1498,
+    "kind": "ref",
+    "object_class": "BoolProperty",
+    "path": "Core.IsVehicleAsleep",
+    "size": 5
+   },
+   {
+    "at": 228,
+    "kind": "LetBool",
+    "size": 1
+   },
+   {
+    "at": 229,
+    "kind": "0x2D",
+    "size": 1
+   },
+   {
+    "at": 230,
+    "form": "0x01",
+    "index": -1361,
+    "kind": "ref",
+    "object_class": "BoolProperty",
+    "path": "Core.FakeRoadCollisionStatic",
+    "size": 5
+   },
+   {
+    "at": 235,
+    "kind": "True",
+    "size": 1
+   },
+   {
+    "at": 236,
+    "index": -4355,
+    "kind": "FinalFunction",
+    "name": "Core.UpdateFakeRoadCollision",
+    "size": 5
+   },
+   {
+    "at": 241,
+    "kind": "True",
+    "size": 1
+   },
+   {
+    "at": 242,
+    "kind": "FloatConst",
+    "size": 5,
+    "value": 0.0
+   },
+   {
+    "at": 247,
+    "kind": "EndFunctionParms",
+    "size": 1
+   },
+   {
+    "at": 248,
+    "kind": "JumpIfNot",
+    "size": 3,
+    "word": 436
+   },
+   {
+    "at": 251,
+    "kind": "0x82",
+    "size": 1
+   },
+   {
+    "at": 252,
+    "kind": "0x82",
+    "size": 1
+   },
+   {
+    "at": 253,
+    "kind": "0x2D",
+    "size": 1
+   },
+   {
+    "at": 254,
+    "form": "0x01",
+    "index": -1366,
+    "kind": "ref",
+    "object_class": "BoolProperty",
+    "path": "Core.ArmouredMode",
+    "size": 5
+   },
+   {
+    "at": 259,
+    "kind": "Skip",
+    "size": 3,
+    "word": 13
+   },
+   {
+    "at": 262,
+    "kind": "0x77",
+    "size": 1
+   },
+   {
+    "at": 263,
+    "form": "0x01",
+    "index": -5673,
+    "kind": "ref",
+    "object_class": "ObjectProperty",
+    "path": "Core.BatmobileWinch",
+    "size": 5
+   },
+   {
+    "at": 268,
+    "kind": "0x2A",
+    "size": 1
+   },
+   {
+    "at": 269,
+    "kind": "EndFunctionParms",
+    "size": 1
+   },
+   {
+    "at": 270,
+    "kind": "EndFunctionParms",
+    "size": 1
+   },
+   {
+    "at": 271,
+    "kind": "Skip",
+    "size": 3,
+    "word": 39
+   },
+   {
+    "at": 274,
+    "kind": "0x9B",
+    "size": 1
+   },
+   {
+    "at": 275,
+    "kind": "0x38",
+    "size": 1
+   },
+   {
+    "at": 276,
+    "kind": "0x3A",
+    "size": 1
+   },
+   {
+    "at": 277,
+    "kind": "Context",
+    "size": 1
+   },
+   {
+    "at": 278,
+    "form": "0x01",
+    "index": -5673,
+    "kind": "ref",
+    "object_class": "ObjectProperty",
+    "path": "Core.BatmobileWinch",
+    "size": 5
+   },
+   {
+    "at": 283,
+    "kind": "0x09",
+    "size": 1
+   },
+   {
+    "at": 284,
+    "form": "0x00",
+    "index": -1515,
+    "kind": "ref",
+    "object_class": "ByteProperty",
+    "path": "Core.WinchPullType",
+    "size": 5
+   },
+   {
+    "at": 289,
+    "kind": "0x00",
+    "size": 1
+   },
+   {
+    "at": 290,
+    "form": "0x01",
+    "index": -1515,
+    "kind": "ref",
+    "object_class": "ByteProperty",
+    "path": "Core.WinchPullType",
+    "size": 5
+   },
+   {
+    "at": 295,
+    "kind": "0x38",
+    "size": 1
+   },
+   {
+    "at": 296,
+    "kind": "0x3A",
+    "size": 1
+   },
+   {
+    "at": 297,
+    "kind": "ByteConst",
+    "size": 2,
+    "value": 0
+   },
+   {
+    "at": 299,
+    "kind": "EndFunctionParms",
+    "size": 1
+   },
+   {
+    "at": 300,
+    "kind": "EndFunctionParms",
+    "size": 1
+   },
+   {
+    "at": 301,
+    "index": 58517,
+    "kind": "VirtualFunction",
+    "name": "SetBatmanVsBatmobileCollisionMode",
+    "size": 5
+   },
+   {
+    "at": 306,
+    "kind": "ByteConst",
+    "size": 2,
+    "value": 2
+   },
+   {
+    "at": 308,
+    "kind": "EndFunctionParms",
+    "size": 1
+   },
+   {
+    "at": 309,
+    "kind": "Jump",
+    "size": 3,
+    "word": 474
+   },
+   {
+    "at": 312,
+    "kind": "JumpIfNot",
+    "size": 3,
+    "word": 474
+   },
+   {
+    "at": 315,
+    "kind": "0x82",
+    "size": 1
+   },
+   {
+    "at": 316,
+    "kind": "0x81",
+    "size": 1
+   },
+   {
+    "at": 317,
+    "kind": "0x2D",
+    "size": 1
+   },
+   {
+    "at": 318,
+    "form": "0x01",
+    "index": -1366,
+    "kind": "ref",
+    "object_class": "BoolProperty",
+    "path": "Core.ArmouredMode",
+    "size": 5
+   },
+   {
+    "at": 323,
+    "kind": "EndFunctionParms",
+    "size": 1
+   },
+   {
+    "at": 324,
+    "kind": "Skip",
+    "size": 3,
+    "word": 11
+   },
+   {
+    "at": 327,
+    "kind": "0x2D",
+    "size": 1
+   },
+   {
+    "at": 328,
+    "form": "0x01",
+    "index": -1498,
+    "kind": "ref",
+    "object_class": "BoolProperty",
+    "path": "Core.IsVehicleAsleep",
+    "size": 5
+   },
+   {
+    "at": 333,
+    "kind": "EndFunctionParms",
+    "size": 1
+   },
+   {
+    "at": 334,
+    "index": 58517,
+    "kind": "VirtualFunction",
+    "name": "SetBatmanVsBatmobileCollisionMode",
+    "size": 5
+   },
+   {
+    "at": 339,
+    "kind": "ByteConst",
+    "size": 2,
+    "value": 1
+   },
+   {
+    "at": 341,
+    "kind": "EndFunctionParms",
+    "size": 1
+   },
+   {
+    "at": 342,
+    "kind": "LetBool",
+    "size": 1
+   },
+   {
+    "at": 343,
+    "kind": "0x2D",
+    "size": 1
+   },
+   {
+    "at": 344,
+    "form": "0x01",
+    "index": -1494,
+    "kind": "ref",
+    "object_class": "BoolProperty",
+    "path": "Core.bForceWheelspin",
+    "size": 5
+   },
+   {
+    "at": 349,
+    "kind": "False",
+    "size": 1
+   },
+   {
+    "at": 350,
+    "kind": "Let",
+    "size": 1
+   },
+   {
+    "at": 351,
+    "form": "0x01",
+    "index": -3046,
+    "kind": "ref",
+    "object_class": "FloatProperty",
+    "path": "Core.WheelspinSmokeMomentum",
+    "size": 5
+   },
+   {
+    "at": 356,
+    "kind": "FloatConst",
+    "size": 5,
+    "value": 0.0
+   },
+   {
+    "at": 361,
+    "index": -4372,
+    "kind": "FinalFunction",
+    "name": "Core.DriverLeft",
+    "size": 5
+   },
+   {
+    "at": 366,
+    "kind": "EndFunctionParms",
+    "size": 1
+   },
+   {
+    "at": 367,
+    "kind": "Return",
+    "size": 1
+   }
+  ],
+  "trailer_hex": "0b000000020002004a4c000000000000"
+ },
+ "guards": {
+  "A": {
+   "body_byte_range": [
+    301,
+    309
+   ],
+   "body_call_at": 301,
+   "body_value": 2,
+   "cond_from": 251,
+   "cond_to": 301,
+   "condition": "0x82( 0x82( Core.ArmouredMode, 0x77( Core.BatmobileWinch, 0x2A ) ), Skip->301( 0x9B( Core.BatmobileWinch.WinchPullType, byte 0 ) ) )",
+   "condition_byte_range": [
+    251,
+    301
+   ],
+   "guard_at": 248,
+   "guard_shapes": [
+    [
+     251,
+     "0x82",
+     "outer boolean operator"
+    ],
+    [
+     252,
+     "0x82",
+     "inner boolean operator"
+    ],
+    [
+     253,
+     "0x2D",
+     "one-byte prefix token"
+    ],
+    [
+     254,
+     "ref",
+     "Core.ArmouredMode"
+    ],
+    [
+     259,
+     "Skip",
+     "word 13 -> target 271 (second operand of the outer 0x82)"
+    ],
+    [
+     262,
+     "0x77",
+     "binary operator (object vs 0x2A)"
+    ],
+    [
+     263,
+     "ref",
+     "Core.BatmobileWinch"
+    ],
+    [
+     268,
+     "0x2A",
+     "comparison operand"
+    ],
+    [
+     269,
+     "EndFunctionParms",
+     "closes 0x77"
+    ],
+    [
+     270,
+     "EndFunctionParms",
+     "closes the inner 0x82"
+    ],
+    [
+     271,
+     "Skip",
+     "word 39 -> target 301 (the body: call with value 2)"
+    ],
+    [
+     274,
+     "0x9B",
+     "binary comparison operator"
+    ],
+    [
+     277,
+     "Context",
+     "member access on the next reference"
+    ],
+    [
+     278,
+     "ref",
+     "Core.BatmobileWinch"
+    ],
+    [
+     284,
+     "ref",
+     "Core.WinchPullType (0x00 form)"
+    ],
+    [
+     290,
+     "ref",
+     "Core.WinchPullType (0x01 form)"
+    ],
+    [
+     297,
+     "ByteConst",
+     "value 0"
+    ],
+    [
+     299,
+     "EndFunctionParms",
+     "closes 0x9B"
+    ],
+    [
+     300,
+     "EndFunctionParms",
+     "closes the outer 0x82"
+    ]
+   ],
+   "label": "decoded",
+   "shapes": [
+    {
+     "at": 251,
+     "expect": "0x82",
+     "got": "0x82",
+     "meaning": "outer boolean operator",
+     "ok": true,
+     "path": null,
+     "value": null,
+     "word": null
+    },
+    {
+     "at": 252,
+     "expect": "0x82",
+     "got": "0x82",
+     "meaning": "inner boolean operator",
+     "ok": true,
+     "path": null,
+     "value": null,
+     "word": null
+    },
+    {
+     "at": 253,
+     "expect": "0x2D",
+     "got": "0x2D",
+     "meaning": "one-byte prefix token",
+     "ok": true,
+     "path": null,
+     "value": null,
+     "word": null
+    },
+    {
+     "at": 254,
+     "expect": "ref",
+     "got": "ref",
+     "meaning": "Core.ArmouredMode",
+     "ok": true,
+     "path": "Core.ArmouredMode",
+     "value": null,
+     "word": null
+    },
+    {
+     "at": 259,
+     "expect": "Skip",
+     "got": "Skip",
+     "meaning": "word 13 -> target 271 (second operand of the outer 0x82)",
+     "ok": true,
+     "path": null,
+     "value": null,
+     "word": 13
+    },
+    {
+     "at": 262,
+     "expect": "0x77",
+     "got": "0x77",
+     "meaning": "binary operator (object vs 0x2A)",
+     "ok": true,
+     "path": null,
+     "value": null,
+     "word": null
+    },
+    {
+     "at": 263,
+     "expect": "ref",
+     "got": "ref",
+     "meaning": "Core.BatmobileWinch",
+     "ok": true,
+     "path": "Core.BatmobileWinch",
+     "value": null,
+     "word": null
+    },
+    {
+     "at": 268,
+     "expect": "0x2A",
+     "got": "0x2A",
+     "meaning": "comparison operand",
+     "ok": true,
+     "path": null,
+     "value": null,
+     "word": null
+    },
+    {
+     "at": 269,
+     "expect": "EndFunctionParms",
+     "got": "EndFunctionParms",
+     "meaning": "closes 0x77",
+     "ok": true,
+     "path": null,
+     "value": null,
+     "word": null
+    },
+    {
+     "at": 270,
+     "expect": "EndFunctionParms",
+     "got": "EndFunctionParms",
+     "meaning": "closes the inner 0x82",
+     "ok": true,
+     "path": null,
+     "value": null,
+     "word": null
+    },
+    {
+     "at": 271,
+     "expect": "Skip",
+     "got": "Skip",
+     "meaning": "word 39 -> target 301 (the body: call with value 2)",
+     "ok": true,
+     "path": null,
+     "value": null,
+     "word": 39
+    },
+    {
+     "at": 274,
+     "expect": "0x9B",
+     "got": "0x9B",
+     "meaning": "binary comparison operator",
+     "ok": true,
+     "path": null,
+     "value": null,
+     "word": null
+    },
+    {
+     "at": 277,
+     "expect": "Context",
+     "got": "Context",
+     "meaning": "member access on the next reference",
+     "ok": true,
+     "path": null,
+     "value": null,
+     "word": null
+    },
+    {
+     "at": 278,
+     "expect": "ref",
+     "got": "ref",
+     "meaning": "Core.BatmobileWinch",
+     "ok": true,
+     "path": "Core.BatmobileWinch",
+     "value": null,
+     "word": null
+    },
+    {
+     "at": 284,
+     "expect": "ref",
+     "got": "ref",
+     "meaning": "Core.WinchPullType (0x00 form)",
+     "ok": true,
+     "path": "Core.WinchPullType",
+     "value": null,
+     "word": null
+    },
+    {
+     "at": 290,
+     "expect": "ref",
+     "got": "ref",
+     "meaning": "Core.WinchPullType (0x01 form)",
+     "ok": true,
+     "path": "Core.WinchPullType",
+     "value": null,
+     "word": null
+    },
+    {
+     "at": 297,
+     "expect": "ByteConst",
+     "got": "ByteConst",
+     "meaning": "value 0",
+     "ok": true,
+     "path": null,
+     "value": 0,
+     "word": null
+    },
+    {
+     "at": 299,
+     "expect": "EndFunctionParms",
+     "got": "EndFunctionParms",
+     "meaning": "closes 0x9B",
+     "ok": true,
+     "path": null,
+     "value": null,
+     "word": null
+    },
+    {
+     "at": 300,
+     "expect": "EndFunctionParms",
+     "got": "EndFunctionParms",
+     "meaning": "closes the outer 0x82",
+     "ok": true,
+     "path": null,
+     "value": null,
+     "word": null
+    }
+   ]
+  },
+  "B": {
+   "body_byte_range": [
+    334,
+    342
+   ],
+   "body_call_at": 334,
+   "body_value": 1,
+   "cond_from": 315,
+   "cond_to": 334,
+   "condition": "0x82( 0x81( Core.ArmouredMode ), Skip->334( Core.IsVehicleAsleep ) )",
+   "condition_byte_range": [
+    315,
+    334
+   ],
+   "guard_at": 312,
+   "guard_shapes": [
+    [
+     315,
+     "0x82",
+     "boolean operator"
+    ],
+    [
+     316,
+     "0x81",
+     "unary operator (negation: see the polarity card's ShowHealthBarIfNotMax case)"
+    ],
+    [
+     317,
+     "0x2D",
+     "one-byte prefix token"
+    ],
+    [
+     318,
+     "ref",
+     "Core.ArmouredMode"
+    ],
+    [
+     323,
+     "EndFunctionParms",
+     "closes 0x81"
+    ],
+    [
+     324,
+     "Skip",
+     "word 11 -> target 334 (the body: call with value 1)"
+    ],
+    [
+     327,
+     "0x2D",
+     "one-byte prefix token"
+    ],
+    [
+     328,
+     "ref",
+     "Core.IsVehicleAsleep"
+    ],
+    [
+     333,
+     "EndFunctionParms",
+     "closes 0x82"
+    ]
+   ],
+   "label": "decoded",
+   "shapes": [
+    {
+     "at": 315,
+     "expect": "0x82",
+     "got": "0x82",
+     "meaning": "boolean operator",
+     "ok": true,
+     "path": null,
+     "value": null,
+     "word": null
+    },
+    {
+     "at": 316,
+     "expect": "0x81",
+     "got": "0x81",
+     "meaning": "unary operator (negation: see the polarity card's ShowHealthBarIfNotMax case)",
+     "ok": true,
+     "path": null,
+     "value": null,
+     "word": null
+    },
+    {
+     "at": 317,
+     "expect": "0x2D",
+     "got": "0x2D",
+     "meaning": "one-byte prefix token",
+     "ok": true,
+     "path": null,
+     "value": null,
+     "word": null
+    },
+    {
+     "at": 318,
+     "expect": "ref",
+     "got": "ref",
+     "meaning": "Core.ArmouredMode",
+     "ok": true,
+     "path": "Core.ArmouredMode",
+     "value": null,
+     "word": null
+    },
+    {
+     "at": 323,
+     "expect": "EndFunctionParms",
+     "got": "EndFunctionParms",
+     "meaning": "closes 0x81",
+     "ok": true,
+     "path": null,
+     "value": null,
+     "word": null
+    },
+    {
+     "at": 324,
+     "expect": "Skip",
+     "got": "Skip",
+     "meaning": "word 11 -> target 334 (the body: call with value 1)",
+     "ok": true,
+     "path": null,
+     "value": null,
+     "word": 11
+    },
+    {
+     "at": 327,
+     "expect": "0x2D",
+     "got": "0x2D",
+     "meaning": "one-byte prefix token",
+     "ok": true,
+     "path": null,
+     "value": null,
+     "word": null
+    },
+    {
+     "at": 328,
+     "expect": "ref",
+     "got": "ref",
+     "meaning": "Core.IsVehicleAsleep",
+     "ok": true,
+     "path": "Core.IsVehicleAsleep",
+     "value": null,
+     "word": null
+    },
+    {
+     "at": 333,
+     "expect": "EndFunctionParms",
+     "got": "EndFunctionParms",
+     "meaning": "closes 0x82",
+     "ok": true,
+     "path": null,
+     "value": null,
+     "word": null
+    }
+   ]
+  }
+ },
+ "jumps": [
+  {
+   "at": 0,
+   "bases": {
+    "abs": {
+     "is_token_start": true,
+     "target": 49
+    },
+    "abs_payload": {
+     "is_token_start": true,
+     "target": 27
+    },
+    "abs_plus_payload": {
+     "is_token_start": false,
+     "target": 71
+    },
+    "expanded_abs": {
+     "is_token_start": true,
+     "target": 49
+    },
+    "expanded_rel": {
+     "is_token_start": true,
+     "target": 49
+    },
+    "expanded_rel_pos": {
+     "is_token_start": true,
+     "target": 49
+    },
+    "from_end": {
+     "is_token_start": false,
+     "target": 319
+    },
+    "from_end_minus": {
+     "is_token_start": true,
+     "target": 316
+    },
+    "rel_after": {
+     "is_token_start": true,
+     "target": 52
+    },
+    "rel_before": {
+     "is_token_start": false,
+     "target": -49
+    },
+    "rel_pos": {
+     "is_token_start": true,
+     "target": 49
+    }
+   },
+   "kind": "JumpIfNot",
+   "word": 49
+  },
+  {
+   "at": 30,
+   "bases": {
+    "abs": {
+     "is_token_start": true,
+     "target": 81
+    },
+    "abs_payload": {
+     "is_token_start": true,
+     "target": 59
+    },
+    "abs_plus_payload": {
+     "is_token_start": false,
+     "target": 103
+    },
+    "expanded_abs": {
+     "is_token_start": true,
+     "target": 81
+    },
+    "expanded_rel": {
+     "is_token_start": true,
+     "target": 81
+    },
+    "expanded_rel_pos": {
+     "is_token_start": true,
+     "target": 111
+    },
+    "from_end": {
+     "is_token_start": false,
+     "target": 287
+    },
+    "from_end_minus": {
+     "is_token_start": true,
+     "target": 284
+    },
+    "rel_after": {
+     "is_token_start": false,
+     "target": 114
+    },
+    "rel_before": {
+     "is_token_start": false,
+     "target": -51
+    },
+    "rel_pos": {
+     "is_token_start": true,
+     "target": 111
+    }
+   },
+   "kind": "Jump",
+   "word": 81
+  },
+  {
+   "at": 219,
+   "bases": {
+    "abs": {
+     "is_token_start": false,
+     "target": 352
+    },
+    "abs_payload": {
+     "is_token_start": false,
+     "target": 330
+    },
+    "abs_plus_payload": {
+     "is_token_start": false,
+     "target": 374
+    },
+    "expanded_abs": {
+     "is_token_start": false,
+     "target": null
+    },
+    "expanded_rel": {
+     "is_token_start": false,
+     "target": null
+    },
+    "expanded_rel_pos": {
+     "is_token_start": false,
+     "target": null
+    },
+    "from_end": {
+     "is_token_start": true,
+     "target": 16
+    },
+    "from_end_minus": {
+     "is_token_start": false,
+     "target": 13
+    },
+    "rel_after": {
+     "is_token_start": false,
+     "target": 574
+    },
+    "rel_before": {
+     "is_token_start": false,
+     "target": -133
+    },
+    "rel_pos": {
+     "is_token_start": false,
+     "target": 571
+    }
+   },
+   "kind": "JumpIfNot",
+   "word": 352
+  },
+  {
+   "at": 248,
+   "bases": {
+    "abs": {
+     "is_token_start": false,
+     "target": 436
+    },
+    "abs_payload": {
+     "is_token_start": false,
+     "target": 414
+    },
+    "abs_plus_payload": {
+     "is_token_start": false,
+     "target": 458
+    },
+    "expanded_abs": {
+     "is_token_start": false,
+     "target": null
+    },
+    "expanded_rel": {
+     "is_token_start": false,
+     "target": null
+    },
+    "expanded_rel_pos": {
+     "is_token_start": false,
+     "target": null
+    },
+    "from_end": {
+     "is_token_start": false,
+     "target": -68
+    },
+    "from_end_minus": {
+     "is_token_start": false,
+     "target": -71
+    },
+    "rel_after": {
+     "is_token_start": false,
+     "target": 687
+    },
+    "rel_before": {
+     "is_token_start": false,
+     "target": -188
+    },
+    "rel_pos": {
+     "is_token_start": false,
+     "target": 684
+    }
+   },
+   "kind": "JumpIfNot",
+   "word": 436
+  },
+  {
+   "at": 309,
+   "bases": {
+    "abs": {
+     "is_token_start": false,
+     "target": 474
+    },
+    "abs_payload": {
+     "is_token_start": false,
+     "target": 452
+    },
+    "abs_plus_payload": {
+     "is_token_start": false,
+     "target": 496
+    },
+    "expanded_abs": {
+     "is_token_start": false,
+     "target": null
+    },
+    "expanded_rel": {
+     "is_token_start": false,
+     "target": null
+    },
+    "expanded_rel_pos": {
+     "is_token_start": false,
+     "target": null
+    },
+    "from_end": {
+     "is_token_start": false,
+     "target": -106
+    },
+    "from_end_minus": {
+     "is_token_start": false,
+     "target": -109
+    },
+    "rel_after": {
+     "is_token_start": false,
+     "target": 786
+    },
+    "rel_before": {
+     "is_token_start": false,
+     "target": -165
+    },
+    "rel_pos": {
+     "is_token_start": false,
+     "target": 783
+    }
+   },
+   "kind": "Jump",
+   "word": 474
+  },
+  {
+   "at": 312,
+   "bases": {
+    "abs": {
+     "is_token_start": false,
+     "target": 474
+    },
+    "abs_payload": {
+     "is_token_start": false,
+     "target": 452
+    },
+    "abs_plus_payload": {
+     "is_token_start": false,
+     "target": 496
+    },
+    "expanded_abs": {
+     "is_token_start": false,
+     "target": null
+    },
+    "expanded_rel": {
+     "is_token_start": false,
+     "target": null
+    },
+    "expanded_rel_pos": {
+     "is_token_start": false,
+     "target": null
+    },
+    "from_end": {
+     "is_token_start": false,
+     "target": -106
+    },
+    "from_end_minus": {
+     "is_token_start": false,
+     "target": -109
+    },
+    "rel_after": {
+     "is_token_start": false,
+     "target": 789
+    },
+    "rel_before": {
+     "is_token_start": false,
+     "target": -162
+    },
+    "rel_pos": {
+     "is_token_start": false,
+     "target": 786
+    }
+   },
+   "kind": "JumpIfNot",
+   "word": 474
+  }
+ ],
+ "members": [
+  {
+   "home_package": "BmGame",
+   "import": {
+    "class_name": "ObjectProperty",
+    "class_package": "Core",
+    "index": -5673,
+    "name": "BatmobileWinch",
+    "number": 0,
+    "outer": -2192,
+    "row_offset": 3480552
+   },
+   "label": "decoded (Startup.upk import row at byte 3480552: class package 'Core', class 'ObjectProperty', outer -2192 = RVehicleBatmobileBase; then the property export and its class's property list in BmGame.upk)",
+   "name": "Core.BatmobileWinch",
+   "outer_chain": [
+    {
+     "class": "Class",
+     "index": -2192,
+     "kind": "import",
+     "name": "RVehicleBatmobileBase",
+     "outer": -5773,
+     "row_offset": 3383084
+    },
+    {
+     "class": "Package",
+     "index": -5773,
+     "kind": "import",
+     "name": "BmGame",
+     "outer": 0,
+     "row_offset": 3483352
+    }
+   ],
+   "outer_is_class": true,
+   "owning_class": "RVehicleBatmobileBase",
+   "owning_class_exports": [
+    10922
+   ],
+   "owning_class_index": -2192,
+   "owning_class_property_lists": [
+    {
+     "class_export": 10922,
+     "class_name": "RVehicleBatmobileBase",
+     "parsed_bytes": 0,
+     "property_tags": [],
+     "size": 3648,
+     "stop": "end",
+     "tags": 0
+    }
+   ],
+   "property_exports": [
+    {
+     "class": "ObjectProperty",
+     "export": 9858,
+     "offset": 16843671,
+     "outer_class": null,
+     "outer_index": 10922,
+     "outer_name": "RVehicleBatmobileBase",
+     "size": 34
+    }
+   ],
+   "verdict": "member"
+  },
+  {
+   "home_package": "BmGame",
+   "import": {
+    "class_name": "ByteProperty",
+    "class_package": "Core",
+    "index": -1515,
+    "name": "WinchPullType",
+    "number": 0,
+    "outer": -1709,
+    "row_offset": 3364128
+   },
+   "label": "decoded (Startup.upk import row at byte 3364128: class package 'Core', class 'ByteProperty', outer -1709 = RBatmobileWinch; then the property export and its class's property list in BmGame.upk)",
+   "name": "Core.WinchPullType",
+   "outer_chain": [
+    {
+     "class": "Class",
+     "index": -1709,
+     "kind": "import",
+     "name": "RBatmobileWinch",
+     "outer": -5773,
+     "row_offset": 3369560
+    },
+    {
+     "class": "Package",
+     "index": -5773,
+     "kind": "import",
+     "name": "BmGame",
+     "outer": 0,
+     "row_offset": 3483352
+    }
+   ],
+   "outer_is_class": true,
+   "owning_class": "RBatmobileWinch",
+   "owning_class_exports": [
+    48393
+   ],
+   "owning_class_index": -1709,
+   "owning_class_property_lists": [
+    {
+     "class_export": 48393,
+     "class_name": "RBatmobileWinch",
+     "parsed_bytes": 0,
+     "property_tags": [],
+     "size": 932,
+     "stop": "end",
+     "tags": 0
+    }
+   ],
+   "property_exports": [
+    {
+     "class": "ByteProperty",
+     "export": 47971,
+     "offset": 20083903,
+     "outer_class": null,
+     "outer_index": 48393,
+     "outer_name": "RBatmobileWinch",
+     "size": 34
+    }
+   ],
+   "verdict": "member"
+  },
+  {
+   "home_package": "BmGame",
+   "import": {
+    "class_name": "BoolProperty",
+    "class_package": "Core",
+    "index": -1366,
+    "name": "ArmouredMode",
+    "number": 0,
+    "outer": -2192,
+    "row_offset": 3359956
+   },
+   "label": "decoded (Startup.upk import row at byte 3359956: class package 'Core', class 'BoolProperty', outer -2192 = RVehicleBatmobileBase; then the property export and its class's property list in BmGame.upk)",
+   "name": "Core.ArmouredMode",
+   "outer_chain": [
+    {
+     "class": "Class",
+     "index": -2192,
+     "kind": "import",
+     "name": "RVehicleBatmobileBase",
+     "outer": -5773,
+     "row_offset": 3383084
+    },
+    {
+     "class": "Package",
+     "index": -5773,
+     "kind": "import",
+     "name": "BmGame",
+     "outer": 0,
+     "row_offset": 3483352
+    }
+   ],
+   "outer_is_class": true,
+   "owning_class": "RVehicleBatmobileBase",
+   "owning_class_exports": [
+    10922
+   ],
+   "owning_class_index": -2192,
+   "owning_class_property_lists": [
+    {
+     "class_export": 10922,
+     "class_name": "RVehicleBatmobileBase",
+     "parsed_bytes": 0,
+     "property_tags": [],
+     "size": 3648,
+     "stop": "end",
+     "tags": 0
+    }
+   ],
+   "property_exports": [
+    {
+     "class": "BoolProperty",
+     "export": 9983,
+     "offset": 16847557,
+     "outer_class": null,
+     "outer_index": 10922,
+     "outer_name": "RVehicleBatmobileBase",
+     "size": 30
+    },
+    {
+     "class": "BoolProperty",
+     "export": 129798,
+     "offset": 26723894,
+     "outer_class": null,
+     "outer_index": 129861,
+     "outer_name": "RVehicleNPCBatmobile",
+     "size": 30
+    }
+   ],
+   "verdict": "member"
+  },
+  {
+   "home_package": "Engine",
+   "import": {
+    "class_name": "BoolProperty",
+    "class_package": "Core",
+    "index": -1498,
+    "name": "IsVehicleAsleep",
+    "number": 0,
+    "outer": -2544,
+    "row_offset": 3363652
+   },
+   "label": "decoded (Startup.upk import row at byte 3363652: class package 'Core', class 'BoolProperty', outer -2544 = SVehicle; then the property export and its class's property list in Engine.upk)",
+   "name": "Core.IsVehicleAsleep",
+   "outer_chain": [
+    {
+     "class": "Class",
+     "index": -2544,
+     "kind": "import",
+     "name": "SVehicle",
+     "outer": -5786,
+     "row_offset": 3392940
+    },
+    {
+     "class": "Package",
+     "index": -5786,
+     "kind": "import",
+     "name": "Engine",
+     "outer": 0,
+     "row_offset": 3483716
+    }
+   ],
+   "outer_is_class": true,
+   "owning_class": "SVehicle",
+   "owning_class_exports": [
+    11159
+   ],
+   "owning_class_index": -2544,
+   "owning_class_property_lists": [
+    {
+     "class_export": 11159,
+     "class_name": "SVehicle",
+     "parsed_bytes": 0,
+     "property_tags": [],
+     "size": 669,
+     "stop": "end",
+     "tags": 0
+    }
+   ],
+   "property_exports": [
+    {
+     "class": "BoolProperty",
+     "export": 10971,
+     "offset": 4329499,
+     "outer_class": null,
+     "outer_index": 11159,
+     "outer_name": "SVehicle",
+     "size": 30
+    }
+   ],
+   "verdict": "member"
+  }
+ ],
+ "oracles": {
+  "containment_by_skip": {
+   "detail": {
+    "call_1_at": 334,
+    "call_2_at": 301,
+    "rule": "a Skip word resolved in the 9-byte-per-reference space lands on the byte after its enclosing expression; both land on the first byte of a selector call's argument list, so that call is the guarded body",
+    "skip_271_target": 301,
+    "skip_324_target": 334
+   },
+   "ok": true
+  },
+  "export_identity": {
+   "detail": {
+    "class": "Function",
+    "path": "RVehicleBatmobile.DriverLeft",
+    "payload_bytes": 406,
+    "script_bytes": 368,
+    "script_sha1": "70471c04b9526a2616e27c3c3830155112765efb"
+   },
+   "ok": true
+  },
+  "four_names_twice": {
+   "detail": {
+    "Core.ArmouredMode": {
+     "index": [
+      -1366
+     ],
+     "offsets": [
+      254,
+      318
+     ],
+     "twice": true
+    },
+    "Core.BatmobileWinch": {
+     "index": [
+      -5673
+     ],
+     "offsets": [
+      263,
+      278
+     ],
+     "twice": true
+    },
+    "Core.IsVehicleAsleep": {
+     "index": [
+      -1498
+     ],
+     "offsets": [
+      223,
+      328
+     ],
+     "twice": true
+    },
+    "Core.WinchPullType": {
+     "index": [
+      -1515
+     ],
+     "offsets": [
+      284,
+      290
+     ],
+     "twice": true
+    }
+   },
+   "ok": true
+  },
+  "guard_shapes": {
+   "detail": {
+    "A": true,
+    "B": true
+   },
+   "ok": true
+  },
+  "imports_are_members": {
+   "detail": {
+    "Core.ArmouredMode": {
+     "home_package": "BmGame",
+     "outer_is_class": true,
+     "owning_class": "RVehicleBatmobileBase",
+     "property_exports": [
+      [
+       9983,
+       "BoolProperty",
+       "RVehicleBatmobileBase"
+      ],
+      [
+       129798,
+       "BoolProperty",
+       "RVehicleNPCBatmobile"
+      ]
+     ],
+     "property_tags": [
+      []
+     ],
+     "verdict": "member"
+    },
+    "Core.BatmobileWinch": {
+     "home_package": "BmGame",
+     "outer_is_class": true,
+     "owning_class": "RVehicleBatmobileBase",
+     "property_exports": [
+      [
+       9858,
+       "ObjectProperty",
+       "RVehicleBatmobileBase"
+      ]
+     ],
+     "property_tags": [
+      []
+     ],
+     "verdict": "member"
+    },
+    "Core.IsVehicleAsleep": {
+     "home_package": "Engine",
+     "outer_is_class": true,
+     "owning_class": "SVehicle",
+     "property_exports": [
+      [
+       10971,
+       "BoolProperty",
+       "SVehicle"
+      ]
+     ],
+     "property_tags": [
+      []
+     ],
+     "verdict": "member"
+    },
+    "Core.WinchPullType": {
+     "home_package": "BmGame",
+     "outer_is_class": true,
+     "owning_class": "RBatmobileWinch",
+     "property_exports": [
+      [
+       47971,
+       "ByteProperty",
+       "RBatmobileWinch"
+      ]
+     ],
+     "property_tags": [
+      []
+     ],
+     "verdict": "member"
+    }
+   },
+   "ok": true
+  },
+  "jump_words_are_not_positions": {
+   "detail": {
+    "block_words_resolved_anywhere": [
+     219
+    ],
+    "corpus_hits_per_base": {
+     "abs": 10,
+     "abs_payload": 12,
+     "abs_plus_payload": 2,
+     "expanded_abs": 10,
+     "expanded_rel": 10,
+     "expanded_rel_pos": 8,
+     "from_end": 7,
+     "from_end_minus": 4,
+     "rel_after": 9,
+     "rel_before": 6,
+     "rel_pos": 8
+    },
+    "corpus_jump_tokens": 57,
+    "driverleft_jump_words": [
+     {
+      "at": 0,
+      "bases": {
+       "abs": 49,
+       "abs_payload": 27,
+       "abs_plus_payload": 71,
+       "expanded_abs": 49,
+       "expanded_rel": 49,
+       "expanded_rel_pos": 49,
+       "from_end": 319,
+       "from_end_minus": 316,
+       "rel_after": 52,
+       "rel_before": -49,
+       "rel_pos": 49
+      },
+      "kind": "JumpIfNot",
+      "word": 49
+     },
+     {
+      "at": 30,
+      "bases": {
+       "abs": 81,
+       "abs_payload": 59,
+       "abs_plus_payload": 103,
+       "expanded_abs": 81,
+       "expanded_rel": 81,
+       "expanded_rel_pos": 111,
+       "from_end": 287,
+       "from_end_minus": 284,
+       "rel_after": 114,
+       "rel_before": -51,
+       "rel_pos": 111
+      },
+      "kind": "Jump",
+      "word": 81
+     },
+     {
+      "at": 219,
+      "bases": {
+       "abs": 352,
+       "abs_payload": 330,
+       "abs_plus_payload": 374,
+       "expanded_abs": null,
+       "expanded_rel": null,
+       "expanded_rel_pos": null,
+       "from_end": 16,
+       "from_end_minus": 13,
+       "rel_after": 574,
+       "rel_before": -133,
+       "rel_pos": 571
+      },
+      "kind": "JumpIfNot",
+      "word": 352
+     },
+     {
+      "at": 248,
+      "bases": {
+       "abs": 436,
+       "abs_payload": 414,
+       "abs_plus_payload": 458,
+       "expanded_abs": null,
+       "expanded_rel": null,
+       "expanded_rel_pos": null,
+       "from_end": -68,
+       "from_end_minus": -71,
+       "rel_after": 687,
+       "rel_before": -188,
+       "rel_pos": 684
+      },
+      "kind": "JumpIfNot",
+      "word": 436
+     },
+     {
+      "at": 309,
+      "bases": {
+       "abs": 474,
+       "abs_payload": 452,
+       "abs_plus_payload": 496,
+       "expanded_abs": null,
+       "expanded_rel": null,
+       "expanded_rel_pos": null,
+       "from_end": -106,
+       "from_end_minus": -109,
+       "rel_after": 786,
+       "rel_before": -165,
+       "rel_pos": 783
+      },
+      "kind": "Jump",
+      "word": 474
+     },
+     {
+      "at": 312,
+      "bases": {
+       "abs": 474,
+       "abs_payload": 452,
+       "abs_plus_payload": 496,
+       "expanded_abs": null,
+       "expanded_rel": null,
+       "expanded_rel_pos": null,
+       "from_end": -106,
+       "from_end_minus": -109,
+       "rel_after": 789,
+       "rel_before": -162,
+       "rel_pos": 786
+      },
+      "kind": "JumpIfNot",
+      "word": 474
+     }
+    ],
+    "hits_per_base": {
+     "abs": 2,
+     "abs_payload": 2,
+     "abs_plus_payload": 0,
+     "expanded_abs": 2,
+     "expanded_rel": 2,
+     "expanded_rel_pos": 2,
+     "from_end": 1,
+     "from_end_minus": 2,
+     "rel_after": 1,
+     "rel_before": 0,
+     "rel_pos": 2
+    },
+    "rule": "a base counts as the encoding only if it resolves every word of the function; no base resolves more than 2 of the 6 here (the short words 49 and 81, at chance level), so no base is the encoding. Individual chance hits elsewhere are listed in `driverleft_jump_words` and are not evidence.",
+    "words_resolved_by_no_base": [
+     219,
+     248,
+     309,
+     312
+    ]
+   },
+   "ok": true
+  },
+  "mesh_table_crossref": {
+   "detail": {
+    "expected_sha1": "c2f6a2ee667c544876e5317a103072c44ea17788",
+    "mesh_table": {
+     "0": null,
+     "1": "BatmanCollisionMeshPursuitMode",
+     "2": "BatmanCollisionMeshBattleMode"
+    },
+    "recomputed_selector_sha1": "c2f6a2ee667c544876e5317a103072c44ea17788"
+   },
+   "ok": true
+  },
+  "no_prefix_sum_weight_model": {
+   "detail": {
+    "equations": [
+     {
+      "bytes": 61,
+      "calls": 1,
+      "contexts": 0,
+      "dw": 84,
+      "from": 248,
+      "refs": 5,
+      "to": 309
+     },
+     {
+      "bytes": 33,
+      "calls": 1,
+      "contexts": 0,
+      "dw": 38,
+      "from": 309,
+      "refs": 2,
+      "to": 342
+     }
+    ],
+    "solution": {
+     "consistent": false,
+     "implied": [
+      {
+       "extra_bytes": 23,
+       "per_ref": 4.6,
+       "refs": 5,
+       "span": [
+        248,
+        309
+       ]
+      },
+      {
+       "extra_bytes": 5,
+       "per_ref": 2.5,
+       "refs": 2,
+       "span": [
+        309,
+        342
+       ]
+      }
+     ],
+     "note": "no single per-token-weight prefix-sum model fits both spans"
+    }
+   },
+   "ok": true
+  },
+  "polarity_crossref": {
+   "detail": {
+    "cites_body_on_true": true,
+    "cites_decisive_tally": true,
+    "exists": true,
+    "file": "Research/BatmobileGrab/SELECTOR_POLARITY.md"
+   },
+   "ok": true
+  },
+  "refs_resolve": {
+   "detail": {
+    "refs": 28
+   },
+   "ok": true
+  },
+  "script_anchors": {
+   "detail": {
+    "name_index": 19530,
+    "name_table_entry": "DriverLeft",
+    "size_field": 369
+   },
+   "ok": true
+  },
+  "selector_calls": {
+   "detail": {
+    "calls": [
+     {
+      "argument": 2,
+      "argument_at": 306,
+      "at": 301,
+      "end_parms_at": 308,
+      "name": "SetBatmanVsBatmobileCollisionMode"
+     },
+     {
+      "argument": 1,
+      "argument_at": 339,
+      "at": 334,
+      "end_parms_at": 341,
+      "name": "SetBatmanVsBatmobileCollisionMode"
+     }
+    ],
+    "expected": {
+     "301": 2,
+     "334": 1
+    }
+   },
+   "ok": true
+  },
+  "selector_sha1": {
+   "detail": {
+    "expected": "c2f6a2ee667c544876e5317a103072c44ea17788",
+    "recomputed": "c2f6a2ee667c544876e5317a103072c44ea17788"
+   },
+   "ok": true
+  },
+  "skip_rule_corpus": {
+   "detail": {
+    "functions_walked": 35,
+    "resolved": 12,
+    "skips": 12
+   },
+   "ok": true
+  },
+  "skip_rule_exact": {
+   "detail": {
+    "skips": [
+     {
+      "at": 18,
+      "distance": 0,
+      "refs": 0,
+      "target": 21,
+      "weight_sum": 0,
+      "word": 0
+     },
+     {
+      "at": 40,
+      "distance": 0,
+      "refs": 0,
+      "target": 43,
+      "weight_sum": 0,
+      "word": 0
+     },
+     {
+      "at": 259,
+      "distance": 9,
+      "refs": 1,
+      "target": 271,
+      "weight_sum": 13,
+      "word": 13
+     },
+     {
+      "at": 271,
+      "distance": 27,
+      "refs": 3,
+      "target": 301,
+      "weight_sum": 39,
+      "word": 39
+     },
+     {
+      "at": 324,
+      "distance": 7,
+      "refs": 1,
+      "target": 334,
+      "weight_sum": 11,
+      "word": 11
+     }
+    ]
+   },
+   "ok": true
+  },
+  "statement_starts": {
+   "detail": {
+    "bad": [],
+    "rows": 20
+   },
+   "ok": true
+  },
+  "walk_closes": {
+   "detail": {
+    "consumed": 368,
+    "last": {
+     "at": 367,
+     "kind": "Return",
+     "size": 1
+    },
+    "script_bytes": 368,
+    "tokens": 135
+   },
+   "ok": true
+  }
+ },
+ "polarity": {
+  "cites_body_on_true": true,
+  "cites_decisive_tally": true,
+  "exists": true,
+  "file": "Research/BatmobileGrab/SELECTOR_POLARITY.md"
+ },
+ "prev_mesh_table": {
+  "0": null,
+  "1": "BatmanCollisionMeshPursuitMode",
+  "2": "BatmanCollisionMeshBattleMode"
+ },
+ "schema": 1,
+ "selector": {
+  "export": 10894,
+  "label": "decoded (re-read for the mesh table cross-check)",
+  "package": "BmGame.upk",
+  "path": "RVehicleBatmobileBase.SetBatmanVsBatmobileCollisionMode",
+  "script_bytes": 253,
+  "script_sha1": "c2f6a2ee667c544876e5317a103072c44ea17788"
+ },
+ "skips": [
+  {
+   "at": 18,
+   "distance": 0,
+   "refs_skipped": 0,
+   "target": 21,
+   "weight_sum": 0,
+   "word": 0
+  },
+  {
+   "at": 40,
+   "distance": 0,
+   "refs_skipped": 0,
+   "target": 43,
+   "weight_sum": 0,
+   "word": 0
+  },
+  {
+   "at": 259,
+   "distance": 9,
+   "refs_skipped": 1,
+   "target": 271,
+   "weight_sum": 13,
+   "word": 13
+  },
+  {
+   "at": 271,
+   "distance": 27,
+   "refs_skipped": 3,
+   "target": 301,
+   "weight_sum": 39,
+   "word": 39
+  },
+  {
+   "at": 324,
+   "distance": 7,
+   "refs_skipped": 1,
+   "target": 334,
+   "weight_sum": 11,
+   "word": 11
+  }
+ ],
+ "statements": [
+  {
+   "at": 0,
+   "is_token_start": true,
+   "kind": "JumpIfNot",
+   "matches": true,
+   "meaning": "guard: 0x81 (unary) <Core.bWasRemoteDriving>",
+   "walk_kind": "JumpIfNot"
+  },
+  {
+   "at": 3,
+   "is_token_start": true,
+   "kind": "expr",
+   "matches": true,
+   "meaning": "condition of the guard at 0",
+   "walk_kind": "0x81"
+  },
+  {
+   "at": 11,
+   "is_token_start": true,
+   "kind": "call",
+   "matches": true,
+   "meaning": "Core.TriggerEventClass(.., Core.Driver, 1, ..) - then-block",
+   "walk_kind": "FinalFunction"
+  },
+  {
+   "at": 30,
+   "is_token_start": true,
+   "kind": "Jump",
+   "matches": true,
+   "meaning": "leaves the then-block (target UNKNOWN)",
+   "walk_kind": "Jump"
+  },
+  {
+   "at": 33,
+   "is_token_start": true,
+   "kind": "call",
+   "matches": true,
+   "meaning": "Core.TriggerEventClass(.., Core.Driver, 3, ..) - else-block",
+   "walk_kind": "FinalFunction"
+  },
+  {
+   "at": 53,
+   "is_token_start": true,
+   "kind": "Let",
+   "matches": true,
+   "meaning": "Core.Driver.InteriorLightsSwitchedOn = 0",
+   "walk_kind": "Let"
+  },
+  {
+   "at": 67,
+   "is_token_start": true,
+   "kind": "expr",
+   "matches": true,
+   "meaning": "WorldInfo/GRI/FlagManager flag block -> SetGlobalFlag(\"Batman_Remote_Control_Batmobile\", false)",
+   "walk_kind": "Context"
+  },
+  {
+   "at": 146,
+   "is_token_start": true,
+   "kind": "expr",
+   "matches": true,
+   "meaning": "same chain -> SetGlobalFlag(\"Batman_In_Batmobile\", false)",
+   "walk_kind": "Context"
+  },
+  {
+   "at": 213,
+   "is_token_start": true,
+   "kind": "call",
+   "matches": true,
+   "meaning": "RemoveBatmobileBindsAndSetBatmanBinds()",
+   "walk_kind": "VirtualFunction"
+  },
+  {
+   "at": 219,
+   "is_token_start": true,
+   "kind": "JumpIfNot",
+   "matches": true,
+   "meaning": "guard: <Core.IsVehicleAsleep>",
+   "walk_kind": "JumpIfNot"
+  },
+  {
+   "at": 228,
+   "is_token_start": true,
+   "kind": "LetBool",
+   "matches": true,
+   "meaning": "Core.FakeRoadCollisionStatic = Core.UpdateFakeRoadCollision(true, 0.0)",
+   "walk_kind": "LetBool"
+  },
+  {
+   "at": 248,
+   "is_token_start": true,
+   "kind": "JumpIfNot",
+   "matches": true,
+   "meaning": "guard A - the winch/armoured condition (body: call with value 2)",
+   "walk_kind": "JumpIfNot"
+  },
+  {
+   "at": 301,
+   "is_token_start": true,
+   "kind": "call",
+   "matches": true,
+   "meaning": "SetBatmanVsBatmobileCollisionMode(2)",
+   "walk_kind": "VirtualFunction"
+  },
+  {
+   "at": 309,
+   "is_token_start": true,
+   "kind": "Jump",
+   "matches": true,
+   "meaning": "leaves guard A's body (target UNKNOWN)",
+   "walk_kind": "Jump"
+  },
+  {
+   "at": 312,
+   "is_token_start": true,
+   "kind": "JumpIfNot",
+   "matches": true,
+   "meaning": "guard B - the armoured/asleep condition (body: call with value 1)",
+   "walk_kind": "JumpIfNot"
+  },
+  {
+   "at": 334,
+   "is_token_start": true,
+   "kind": "call",
+   "matches": true,
+   "meaning": "SetBatmanVsBatmobileCollisionMode(1)",
+   "walk_kind": "VirtualFunction"
+  },
+  {
+   "at": 342,
+   "is_token_start": true,
+   "kind": "LetBool",
+   "matches": true,
+   "meaning": "Core.bForceWheelspin = false",
+   "walk_kind": "LetBool"
+  },
+  {
+   "at": 350,
+   "is_token_start": true,
+   "kind": "Let",
+   "matches": true,
+   "meaning": "Core.WheelspinSmokeMomentum = 0.0",
+   "walk_kind": "Let"
+  },
+  {
+   "at": 361,
+   "is_token_start": true,
+   "kind": "call",
+   "matches": true,
+   "meaning": "Core.DriverLeft() [final function, no arguments]",
+   "walk_kind": "FinalFunction"
+  },
+  {
+   "at": 367,
+   "is_token_start": true,
+   "kind": "Return",
+   "matches": true,
+   "meaning": "return",
+   "walk_kind": "Return"
+  }
+ ],
+ "weight_model": {
+  "equations": [
+   {
+    "bytes": 61,
+    "calls": 1,
+    "contexts": 0,
+    "dw": 84,
+    "from": 248,
+    "refs": 5,
+    "to": 309
+   },
+   {
+    "bytes": 33,
+    "calls": 1,
+    "contexts": 0,
+    "dw": 38,
+    "from": 309,
+    "refs": 2,
+    "to": 342
+   }
+  ],
+  "known_targets": [
+   [
+    248,
+    352
+   ],
+   [
+    309,
+    436
+   ],
+   [
+    342,
+    474
+   ]
+  ],
+  "label": "derived (targets from the guard structure at 248/309/342)",
+  "solution": {
+   "consistent": false,
+   "implied": [
+    {
+     "extra_bytes": 23,
+     "per_ref": 4.6,
+     "refs": 5,
+     "span": [
+      248,
+      309
+     ]
+    },
+    {
+     "extra_bytes": 5,
+     "per_ref": 2.5,
+     "refs": 2,
+     "span": [
+      309,
+      342
+     ]
+    }
+   ],
+   "note": "no single per-token-weight prefix-sum model fits both spans"
+  }
+ }
+}

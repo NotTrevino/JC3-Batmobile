@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/radar-setters-to-jc3-minimap-plan.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-08
+Read reports/G3-HUD-RADAR.md and Working/HUD/RADAR.md. The BmAK radar movie exposes 15 UC_* setters, an 80 px per unit mapping, a player-up rotation, and two parameters that are a dot count and an urgency threshold, not kinds. For each setter, name which JC3 minimap/HUD movie or script variable is the closest receiver (read Research/JC3Grab HUD notes and the SWF/gfx lists), how the value is fed (engine call, UI variable, entity data), and what the build must add so the BmAK radar behaviour is reproduced. Give a numbered setter table with columns: setter, BmAK meaning, closest JC3 receiver and file, build step, evidence (decoded / derived / UNKNOWN + file that settles it). Finish with the in-game check as a pilot-card sentence with a pass band.

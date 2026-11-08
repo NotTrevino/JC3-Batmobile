@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/wheel-grip-fleet-census.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+Rows T-R1 (arcade friction 1.0 to 3.0) and T-G5 (wheel friction_type 0 to 2) each rest on a single probe, not on a range. Build the census that gives them a domain. Use Tools/scripts/jc3fleet.py and the vehicle module data under Research/JC3Grab/ to list, for every land vehicle in the fleet, the wheel and tyre grip members: friction_type, arcade friction, slip values, handbrake friction factor and any lateral grip scale. Output Research/JC3Grab/GRIP_CENSUS.json plus a short GRIP_CENSUS.md giving per member the min, max, median, the donor car (Serpente, entity v0300 sportsmuscle debug) value, and which vehicles sit above 3.0. State for T-R1 and T-G5 whether the proposed value is inside, at the edge of, or beyond the fleet range, and what that predicts for tyre behaviour. Done check: the JSON vehicle count equals the fleet count printed by jc3fleet.py, and the script is rerunnable with --check giving the same hash. Report-only on game data; no edits to any Builds tree.
+Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

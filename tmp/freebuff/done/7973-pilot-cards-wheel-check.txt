@@ -1,0 +1,14 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/pilot-cards-wheel-check.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-08
+The operator ruled (2026-11-08) that piloting needs a web search for both games before the pilot cards are proven: the cards in E:/Modding/JC3-Batmobile/Working/Q/PILOT/ (LAUNCH, LOAD_SAVE, SPAWN_BATMOBILE, ENTER_EXIT, CONTROLS, AIRFIELD, SCREENSHOT, RECORD, KILL, PROVE_CARDS) were written from local study only. Agents will pilot under operator supervision; if piloting proves too slow, the operator drives by hand.
+
+For JC3 and for Batman: Arkham Knight, search for existing ways to do what each card does by hand, so the cards reuse them instead of reinventing them:
+- Launch flags and skipping intros (JC3 "-skipintro"-style switches, the Just Cause wiki "Modifying (JC3)" intro removal, BmAK launch options and BmLauncher).
+- Fast save loading and teleporting to a fixed spot (JC3 trainers with teleport and vehicle spawn, JC3MP's teleport/warp packages such as github.com/benank/jc3mp-warp and XONOSNET/jc3mp-xonosutils, the Rebel Drop beacon flow).
+- Reading the car's speed and position without guessing from screenshots (trainers, Cheat Engine tables, JC3MP scripts, speedometer mods).
+- Scripted input to a game window (virtual gamepad drivers such as ViGEmBus with vgamepad for Python, AutoHotkey, SendInput limits with DirectInput/XInput games).
+- Recording with audio (OBS command line and obs-websocket).
+- Any published AI-agent or bot that drives JC3 or Arkham Knight.
+For each card name the reusable tool (URL, licence, whether it needs Steam), what it replaces in the card, and the risk. Do not install or launch anything. Sections: Per-card findings, Cross-game tools, Recommended card changes (as proposals; do not edit the cards), UNKNOWNs. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

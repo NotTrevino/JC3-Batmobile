@@ -1,0 +1,13 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/jc3mp-runtime-platform-check.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+Wheel-reinvention check, JC3 side (operator asked for web search before more tool building). The project has six unsolved runtime problems listed in E:/Modding/JC3-Batmobile/ROADMAP.md section 4 (RB-4 mode swap at runtime, RB-5 input scoping, RB-6 HUD writing, RB-7 runtime oracle, RB-9 "when X do Y" logic such as water teleport, regen timer, flip thrusters). Just Cause 3: Multiplayer (JC3MP, https://just-cause.mp, Steam app 619910) ships a JavaScript scripting runtime. Claude already saw these members used in public packages (github.com/Paradigm-MP/SI-Script-Pack, github.com/benank/jc3mp-keypress, github.com/derbl4ck/jc3mp-minimap): WebUIWindow (CEF overlay, full viewport), jcmp.ui.HideHud / ShowHud, document.onkeydown inside a WebUI for key capture, vehicle.Destroy, vehicle.SetOccupant, vehicle.health, vehicle.angularVelocity (server-side set), jcmp.localPlayer.controlsEnabled, jcmp.localPlayer.SetAbilityEnabled.
+
+Settle with web evidence (cite every URL; UNKNOWN where nothing says):
+1. The full API member list: find the scripting-api-data repository or docs (just-cause.mp/docs, GitHub "scripting-api-data", nanos-world JC3MP). For Vehicle, NetworkVehicle, LocalPlayer, Player, WebUIWindow and jcmp.ui/jcmp.world: can a script create a vehicle by modelHash, read and set position, rotation, linearVelocity, angularVelocity and health, read the vehicle the local player is in, and read gamepad (not only keyboard) input?
+2. Does JC3MP load dropzone mods or let a server spawn a custom vehicle entity (.ee) by hash? Search forums, Discord logs, ModDB comments and GitHub issues.
+3. Is JC3MP still downloadable and runnable today? Does it need a Steam-owned JC3, or does it accept other installs? Note D:/Games/Just Cause 3 holds steam_api64.rne beside steam_api64.dll (read-only listing only; do not launch anything).
+4. Can a server run locally for one player (a private test server)?
+5. For each of RB-4, RB-5, RB-6, RB-7 and RB-9, state whether JC3MP would carry it, with which members, and what is still UNKNOWN.
+Read-only. Do not install, download executables, or launch any game. Report sections: Verdict, API table (member, read/write, side, source URL), Mod-loading evidence, Availability, Mapping to RB-4..RB-9, UNKNOWNs and the 5-minute experiment that would settle each. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

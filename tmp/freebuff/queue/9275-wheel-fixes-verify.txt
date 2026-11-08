@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/wheel-fixes-verify.md
+ONLY: freebuff
+EST: 25
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/wheel-tyre-fixes-build.md
+Verify Builds/bm-RC5-wheels from the built bytes. For each of the four wheels and each of the 5 LODs confirm the mesh is listed in the .lod, print the vertex radius against rim_radius and tyre radius (diameter must stay 1.366 m), confirm the brake disc material carries the emissive value planned, and count the faces per LOD against the BmAK counts in Research/BatmobileGrab/MESHES.md. Run Tools/scripts/bm_budget.py and print the model KB beside the headroom in Working/Appearance/BUDGET_RC5.md. Output Working/Appearance/WHEELS_VERIFY.md with a 4 by 5 grid of PASS or FAIL and the numbers behind each cell. Failures get fix cards in Working/Appearance/fixcards/wheels-<n>.md. Done check: the grid has 20 cells, none left blank, and the report states the final tyre-to-rim gap in millimetres. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

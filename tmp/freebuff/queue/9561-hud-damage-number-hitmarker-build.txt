@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hud-damage-number-hitmarker-build.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hud-bmak-unknowns-decode.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-hud-build.md
+Damage number and hit marker. From Research/BatmobileGrab/HUD_UNKNOWNS.md take the decoded setter signature (part, amount, duration, frames), and from Research/BatmobileGrab/HUD_SPEC.json the frame labels. Check ROADMAP.md section 7 before building: the operator says the Batmobile takes no crash damage and shows no damage stages, so decide whether numbers appear on the player's own vehicle at all; if the operator facts say they only appear on targets, build only that. Write the spec and a minimal implementation (hook overlay text draw or the gfx text tag edit proven in Builds/probe-L0/P3-hud-gfx) under Builds/hud-dmg/, with the screen position derived from Working/HUD/LAYOUT_1280x720.json or marked UNKNOWN. Done when the receipt lists each field's source and a check script confirms the parse. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

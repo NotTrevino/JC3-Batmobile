@@ -1,0 +1,1013 @@
+{
+ "schema": 1,
+ "generator": "Tools/scripts/t22_collision.py",
+ "card": "T-22",
+ "inputs": {
+  "bmak_physics": "Research/BatmobileGrab/PHYSICS.json (G1-13)",
+  "jc3_physicsc": "Builds/test-091/aaf/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle.physicsc (G2-8)",
+  "jc3_parts_module": "Builds/test-091/aaf/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_vehicle_parts.vmodc (G2-7)",
+  "parts_table": "Research/JC3Grab/PARTS_TABLE.jsonl (G2-7)",
+  "stations": "Working/TrueScale/stations.json",
+  "t8_parts": "Working/Translation/T8_PARTS.json (T-12, the new moving parts)",
+  "body_bbox": "Working/Appearance/build_parts/parts_manifest.json",
+  "drivable_asset": "Research/BatmobileGrab/COLLISION_WHERE.json (G3-16)"
+ },
+ "drivable_asset": {
+  "path": "Physics.Batmobile_V3_Physics",
+  "export": 158266,
+  "size": 194,
+  "bodies": 2,
+  "boxes": 3,
+  "constraints": 1,
+  "reached_from": "Batmobile.SVehicleMesh property offset 824",
+  "note": "the drivable car's rigid body, superseding the 32-body wreck census this card was closed on; plan in T22_REOPEN.md"
+ },
+ "bmak": {
+  "packages": 4,
+  "bodies": 32,
+  "layouts_identical": true,
+  "categories": {
+   "root placeholder": 1,
+   "wheel/suspension": 8,
+   "destruction debris": 18,
+   "turret": 1,
+   "cockpit": 1,
+   "door": 2,
+   "jet fin": 1
+  },
+  "largest": {
+   "bone": "SUSP1_Wheel_Rear_Left_Mesh",
+   "extents_cm": [
+    316.155,
+    63.418,
+    109.881
+   ],
+   "box_m": [
+    3.1615,
+    0.6342,
+    1.0988
+   ]
+  },
+  "spheres": 0,
+  "box_count": 32
+ },
+ "donor": {
+  "bytes": 340368,
+  "objects": 430,
+  "compounds": 22,
+  "hulls": 54,
+  "hulls_bound_to_a_part": 40,
+  "hulls_unbound": 14,
+  "parts": 42,
+  "parts_with_world_collision": 38,
+  "parts_without": [
+   "sportsmuscle_wheel_r_l",
+   "sportsmuscle_wheel_r_r",
+   "sportsmuscle_wheel_f_l",
+   "sportsmuscle_wheel_f_r"
+  ],
+  "hull_extent_range": [
+   400,
+   1776
+  ],
+  "hull_vertex_range": [
+   8,
+   36
+  ],
+  "hull_plane_range": [
+   5,
+   47
+  ],
+  "hull_radius_median": 0.01,
+  "hull_radius_min": 0.002436,
+  "hull_radius_max": 0.01,
+  "stations_in_file": 0
+ },
+ "donor_parts": [
+  {
+   "part_index": 0,
+   "part": "sportsmuscle_body",
+   "damage_type": "Land_Body",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 0,
+   "hulls": 1
+  },
+  {
+   "part_index": 1,
+   "part": "sportsmuscle_door_f_l",
+   "damage_type": "Land_Door",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 1,
+   "hulls": 1
+  },
+  {
+   "part_index": 2,
+   "part": "sportsmuscle_door_f_r",
+   "damage_type": "Land_Door",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 4,
+   "hulls": 1
+  },
+  {
+   "part_index": 3,
+   "part": "sportsmuscle_engine",
+   "damage_type": "Land_Engine",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 7,
+   "hulls": 1
+  },
+  {
+   "part_index": 4,
+   "part": "sportsmuscle_f_l_seat",
+   "damage_type": "Land_Seat",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 24,
+   "hulls": 1
+  },
+  {
+   "part_index": 5,
+   "part": "sportsmuscle_f_r_seat",
+   "damage_type": "Land_Seat",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 25,
+   "hulls": 1
+  },
+  {
+   "part_index": 6,
+   "part": "sportsmuscle_rear_bumper",
+   "damage_type": "Land_Bumper",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 26,
+   "hulls": 0
+  },
+  {
+   "part_index": 7,
+   "part": "sportsmuscle_steeringwheel",
+   "damage_type": "Land_Steering_Wheel",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 27,
+   "hulls": 1
+  },
+  {
+   "part_index": 8,
+   "part": "sportsmuscle_taillight_r_l",
+   "damage_type": "Land_Light",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 28,
+   "hulls": 1
+  },
+  {
+   "part_index": 9,
+   "part": "sportsmuscle_taillight_r_r",
+   "damage_type": "Land_Light",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 29,
+   "hulls": 1
+  },
+  {
+   "part_index": 10,
+   "part": "sportsmuscle_trunk",
+   "damage_type": "Land_Trunk",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 35,
+   "hulls": 1
+  },
+  {
+   "part_index": 11,
+   "part": "sportsmuscle_wheel_r_l",
+   "damage_type": "Land_Wheel",
+   "has_world_collision_shape": 0,
+   "world_collision_body_id": -1,
+   "hulls": 1
+  },
+  {
+   "part_index": 12,
+   "part": "sportsmuscle_wheel_r_r",
+   "damage_type": "Land_Wheel",
+   "has_world_collision_shape": 0,
+   "world_collision_body_id": -1,
+   "hulls": 1
+  },
+  {
+   "part_index": 13,
+   "part": "sportsmuscle_window_f",
+   "damage_type": "Land_Stunt_Window",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 39,
+   "hulls": 1
+  },
+  {
+   "part_index": 14,
+   "part": "sportsmuscle_window_r_l",
+   "damage_type": "Land_Window",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 40,
+   "hulls": 1
+  },
+  {
+   "part_index": 15,
+   "part": "sportsmuscle_window_r_r",
+   "damage_type": "Land_Window",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 41,
+   "hulls": 1
+  },
+  {
+   "part_index": 16,
+   "part": "sportsmuscle_door_f_l_window",
+   "damage_type": "Land_Window",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 2,
+   "hulls": 1
+  },
+  {
+   "part_index": 17,
+   "part": "sportsmuscle_l_mirror",
+   "damage_type": "Land_Wing_Mirror",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 3,
+   "hulls": 1
+  },
+  {
+   "part_index": 18,
+   "part": "sportsmuscle_door_f_r_window",
+   "damage_type": "Land_Window",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 5,
+   "hulls": 1
+  },
+  {
+   "part_index": 19,
+   "part": "sportsmuscle_r_mirror",
+   "damage_type": "Land_Wing_Mirror",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 6,
+   "hulls": 1
+  },
+  {
+   "part_index": 20,
+   "part": "sportsmuscle_fender_l",
+   "damage_type": "Land_Fender",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 8,
+   "hulls": 1
+  },
+  {
+   "part_index": 21,
+   "part": "sportsmuscle_fender_r",
+   "damage_type": "Land_Fender",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 12,
+   "hulls": 1
+  },
+  {
+   "part_index": 22,
+   "part": "sportsmuscle_front_bumper",
+   "damage_type": "Land_Bumper",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 16,
+   "hulls": 0
+  },
+  {
+   "part_index": 23,
+   "part": "sportsmuscle_grill",
+   "damage_type": "Land_Grill",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 18,
+   "hulls": 1
+  },
+  {
+   "part_index": 24,
+   "part": "sportsmuscle_hood",
+   "damage_type": "Land_Generic",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 19,
+   "hulls": 1
+  },
+  {
+   "part_index": 25,
+   "part": "sportsmuscle_hood_signature",
+   "damage_type": "Land_Hood",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 20,
+   "hulls": 1
+  },
+  {
+   "part_index": 26,
+   "part": "sportsmuscle_wheel_f_l",
+   "damage_type": "Land_Wheel",
+   "has_world_collision_shape": 0,
+   "world_collision_body_id": -1,
+   "hulls": 1
+  },
+  {
+   "part_index": 27,
+   "part": "sportsmuscle_wheel_f_r",
+   "damage_type": "Land_Wheel",
+   "has_world_collision_shape": 0,
+   "world_collision_body_id": -1,
+   "hulls": 1
+  },
+  {
+   "part_index": 28,
+   "part": "sportsmuscle_plate_r",
+   "damage_type": "Land_Generic",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 30,
+   "hulls": 1
+  },
+  {
+   "part_index": 29,
+   "part": "sportsmuscle_signal_r_l",
+   "damage_type": "Land_Light",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 31,
+   "hulls": 1
+  },
+  {
+   "part_index": 30,
+   "part": "sportsmuscle_signal_r_r",
+   "damage_type": "Land_Light",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 32,
+   "hulls": 1
+  },
+  {
+   "part_index": 31,
+   "part": "sportsmuscle_taillight_r_c",
+   "damage_type": "Land_Generic",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 33,
+   "hulls": 1
+  },
+  {
+   "part_index": 32,
+   "part": "sportsmuscle_trunk_window",
+   "damage_type": "Land_Stunt_Window",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 34,
+   "hulls": 1
+  },
+  {
+   "part_index": 33,
+   "part": "sportsmuscle_c_mirror",
+   "damage_type": "Boat_Antenna",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 38,
+   "hulls": 1
+  },
+  {
+   "part_index": 34,
+   "part": "sportsmuscle_headlight_f_l_01",
+   "damage_type": "Land_Light",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 9,
+   "hulls": 1
+  },
+  {
+   "part_index": 35,
+   "part": "sportsmuscle_headlight_f_l_02",
+   "damage_type": "Land_Light",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 10,
+   "hulls": 1
+  },
+  {
+   "part_index": 36,
+   "part": "sportsmuscle_signal_f_l",
+   "damage_type": "Land_Light",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 11,
+   "hulls": 1
+  },
+  {
+   "part_index": 37,
+   "part": "sportsmuscle_headlight_f_r_01",
+   "damage_type": "Land_Light",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 13,
+   "hulls": 1
+  },
+  {
+   "part_index": 38,
+   "part": "sportsmuscle_headlight_f_r_02",
+   "damage_type": "Land_Light",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 14,
+   "hulls": 1
+  },
+  {
+   "part_index": 39,
+   "part": "sportsmuscle_signal_f_r",
+   "damage_type": "Land_Light",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 15,
+   "hulls": 1
+  },
+  {
+   "part_index": 40,
+   "part": "sportsmuscle_plate_f",
+   "damage_type": "Land_Generic",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 17,
+   "hulls": 1
+  },
+  {
+   "part_index": 41,
+   "part": "sportsmuscle_missile_base_signature",
+   "damage_type": "Land_Generic",
+   "has_world_collision_shape": 1,
+   "world_collision_body_id": 21,
+   "hulls": 1
+  }
+ ],
+ "decomposition": {
+  "max_hulls": 54,
+  "hulls_per_part": 1,
+  "unbound_hull_instances": 14,
+  "new_hull": "UNKNOWN - a hull authored from a mesh needs the face table's unnamed 0/16/32/48-byte prefix (G2-30 \u00a76, UNKNOWN 1), so only an existing slot can be written; the object count (54) is fixed",
+  "parameters": {
+   "scale_k": "one uniform scale per hull - the only factor G2-30 proved. For a wheel it is the tyre diameter / the hull's longest axis; for any other part k_in (fits inside the box) and k_out (covers it) differ, and B-10 has to choose per part",
+   "translation": "the part's pivot (bat_assemble T(p), R2)",
+   "convex_radius": "donor radius x k (G2-30's scaled-hull case)"
+  },
+  "unbound_note": "the 14 unbound hull instances belong to the donor's two bumpers (no part index), so they are not free slots; the object count is fixed at 54 either way",
+  "tyre_diameter_m": 1.3654,
+  "tyre_basis": "2 x stations.json radius (TYRES.md \u00a71: the tread diameter is 2 x the contact radius by design)"
+ },
+ "hull_set": {
+  "body": {
+   "bbox_m": [
+    3.495,
+    2.271,
+    7.025
+   ],
+   "target_part": "sportsmuscle_body",
+   "donor_hull": {
+    "vertices": 36,
+    "planes": 47,
+    "extent": 1776,
+    "box_m": [
+     2.085,
+     1.212,
+     3.6788
+    ],
+    "radius": 0.01
+   },
+   "scale_k": 1.676259,
+   "scale_k_out": 1.909565,
+   "radius_after": 0.016763,
+   "box_after_m": [
+    3.495,
+    2.0316,
+    6.1666
+   ],
+   "folded_bones": [
+    "CockPit_Mesh"
+   ],
+   "note": "one hull (the donor's) covers the chassis; the fine shell is the hknpExternMeshShape, whose quantization frame is UNKNOWN (G2-30)"
+  },
+  "parts": [
+   {
+    "bone": "Rear_Door_BOTTOM",
+    "category": "door",
+    "box_m": [
+     0.2601,
+     1.5276,
+     0.7174
+    ],
+    "centre_cm": [
+     13.996,
+     1.491,
+     40.038
+    ],
+    "target_part": "sportsmuscle_door_f_l",
+    "target_part_index": 1,
+    "donor_hull": {
+     "vertices": 24,
+     "planes": 20,
+     "extent": 960,
+     "box_m": [
+      0.3871,
+      1.0451,
+      1.415
+     ],
+     "radius": 0.01
+    },
+    "scale_basis": "min(box axis / donor hull axis): k_in fits inside the box, k_out covers it - one uniform factor cannot match both",
+    "scale_k": 0.506995,
+    "scale_k_out": 1.461735,
+    "radius_after": 0.00507,
+    "box_after_m": [
+     0.1962,
+     0.5298,
+     0.7174
+    ],
+    "folded_bones": []
+   },
+   {
+    "bone": "Rear_Door_MIDDLE",
+    "category": "door",
+    "box_m": [
+     0.591,
+     1.9709,
+     0.3758
+    ],
+    "centre_cm": [
+     6.467,
+     -5.005,
+     -14.893
+    ],
+    "target_part": "sportsmuscle_door_f_r",
+    "target_part_index": 2,
+    "donor_hull": {
+     "vertices": 24,
+     "planes": 19,
+     "extent": 960,
+     "box_m": [
+      0.3878,
+      1.0477,
+      1.415
+     ],
+     "radius": 0.01
+    },
+    "scale_basis": "min(box axis / donor hull axis): k_in fits inside the box, k_out covers it - one uniform factor cannot match both",
+    "scale_k": 0.265582,
+    "scale_k_out": 1.881254,
+    "radius_after": 0.002656,
+    "box_after_m": [
+     0.103,
+     0.2782,
+     0.3758
+    ],
+    "folded_bones": []
+   },
+   {
+    "bone": "Wheel_Front_Left_Vis_Mesh",
+    "category": "wheel/suspension",
+    "box_m": [
+     0.9761,
+     0.5534,
+     1.0153
+    ],
+    "centre_cm": [
+     11.718,
+     -3.285,
+     -4.991
+    ],
+    "target_part": "sportsmuscle_wheel_f_l",
+    "target_part_index": 26,
+    "donor_hull": {
+     "vertices": 20,
+     "planes": 12,
+     "extent": 704,
+     "box_m": [
+      0.2958,
+      0.8225,
+      0.7822
+     ],
+     "radius": 0.01
+    },
+    "scale_basis": "tyre diameter / donor wheel hull's longest axis",
+    "scale_k": 1.660052,
+    "scale_k_out": 1.660052,
+    "radius_after": 0.016601,
+    "box_after_m": [
+     0.491,
+     1.3654,
+     1.2986
+    ],
+    "folded_bones": [
+     "SUSP2_Wheel_Front_Left_Mesh"
+    ]
+   },
+   {
+    "bone": "Wheel_Front_Right_Vis_Mesh",
+    "category": "wheel/suspension",
+    "box_m": [
+     0.9701,
+     0.5254,
+     1.0325
+    ],
+    "centre_cm": [
+     0.404,
+     -1.591,
+     0.384
+    ],
+    "target_part": "sportsmuscle_wheel_f_r",
+    "target_part_index": 27,
+    "donor_hull": {
+     "vertices": 20,
+     "planes": 12,
+     "extent": 704,
+     "box_m": [
+      0.2958,
+      0.8225,
+      0.7822
+     ],
+     "radius": 0.01
+    },
+    "scale_basis": "tyre diameter / donor wheel hull's longest axis",
+    "scale_k": 1.660052,
+    "scale_k_out": 1.660052,
+    "radius_after": 0.016601,
+    "box_after_m": [
+     0.491,
+     1.3654,
+     1.2986
+    ],
+    "folded_bones": [
+     "SUSP2_Wheel_Front_Right_Mesh"
+    ]
+   },
+   {
+    "bone": "Wheel_Back_Left_Vis_Mesh",
+    "category": "wheel/suspension",
+    "box_m": [
+     0.9899,
+     0.6057,
+     1.089
+    ],
+    "centre_cm": [
+     2.755,
+     1.781,
+     -9.909
+    ],
+    "target_part": "sportsmuscle_wheel_r_l",
+    "target_part_index": 11,
+    "donor_hull": {
+     "vertices": 20,
+     "planes": 12,
+     "extent": 704,
+     "box_m": [
+      0.2958,
+      0.8225,
+      0.7822
+     ],
+     "radius": 0.01
+    },
+    "scale_basis": "tyre diameter / donor wheel hull's longest axis",
+    "scale_k": 1.660052,
+    "scale_k_out": 1.660052,
+    "radius_after": 0.016601,
+    "box_after_m": [
+     0.491,
+     1.3654,
+     1.2986
+    ],
+    "folded_bones": [
+     "SUSP1_Wheel_Rear_Left_Mesh"
+    ]
+   },
+   {
+    "bone": "Wheel_Rear_Right_Vis_Mesh",
+    "category": "wheel/suspension",
+    "box_m": [
+     1.0661,
+     0.6481,
+     1.0603
+    ],
+    "centre_cm": [
+     0.059,
+     -1.273,
+     -2.678
+    ],
+    "target_part": "sportsmuscle_wheel_r_r",
+    "target_part_index": 12,
+    "donor_hull": {
+     "vertices": 20,
+     "planes": 12,
+     "extent": 704,
+     "box_m": [
+      0.2958,
+      0.8225,
+      0.7822
+     ],
+     "radius": 0.01
+    },
+    "scale_basis": "tyre diameter / donor wheel hull's longest axis",
+    "scale_k": 1.660052,
+    "scale_k_out": 1.660052,
+    "radius_after": 0.016601,
+    "box_after_m": [
+     0.491,
+     1.3654,
+     1.2986
+    ],
+    "folded_bones": [
+     "SUSP1_Wheel_Rear_Right_Mesh"
+    ]
+   }
+  ],
+  "unmapped": [
+   {
+    "bone": "Root",
+    "category": "root placeholder",
+    "box_m": [
+     0.303,
+     0.303,
+     0.303
+    ],
+    "reason": "the 30.3 cm origin cube is the wreck's root placeholder, not a part"
+   },
+   {
+    "bone": "Object001",
+    "category": "destruction debris",
+    "box_m": [
+     0.4027,
+     0.5107,
+     0.5038
+    ],
+    "reason": "a wreck debris fragment: RB_BodySetup of the destroyed asset, not a part of the driveable car"
+   },
+   {
+    "bone": "Main_Turret_00",
+    "category": "turret",
+    "box_m": [
+     1.1404,
+     0.6479,
+     0.7953
+    ],
+    "reason": "the turret is a T-8 part (`batmobile_turret`); the donor has no turret part and no free hull slot, so a new hull is needed"
+   },
+   {
+    "bone": "Object003_frag_007",
+    "category": "destruction debris",
+    "box_m": [
+     0.8965,
+     0.6302,
+     0.6576
+    ],
+    "reason": "a wreck debris fragment: RB_BodySetup of the destroyed asset, not a part of the driveable car"
+   },
+   {
+    "bone": "Object003_frag_008",
+    "category": "destruction debris",
+    "box_m": [
+     1.4495,
+     1.1145,
+     1.1724
+    ],
+    "reason": "a wreck debris fragment: RB_BodySetup of the destroyed asset, not a part of the driveable car"
+   },
+   {
+    "bone": "Object003_frag_017",
+    "category": "destruction debris",
+    "box_m": [
+     0.8982,
+     0.7549,
+     0.2654
+    ],
+    "reason": "a wreck debris fragment: RB_BodySetup of the destroyed asset, not a part of the driveable car"
+   },
+   {
+    "bone": "Object003_frag_023",
+    "category": "destruction debris",
+    "box_m": [
+     1.2856,
+     0.9431,
+     1.0182
+    ],
+    "reason": "a wreck debris fragment: RB_BodySetup of the destroyed asset, not a part of the driveable car"
+   },
+   {
+    "bone": "Object003_frag_024",
+    "category": "destruction debris",
+    "box_m": [
+     1.1799,
+     0.9269,
+     1.0209
+    ],
+    "reason": "a wreck debris fragment: RB_BodySetup of the destroyed asset, not a part of the driveable car"
+   },
+   {
+    "bone": "Object003_frag_025",
+    "category": "destruction debris",
+    "box_m": [
+     1.0467,
+     0.6116,
+     0.9038
+    ],
+    "reason": "a wreck debris fragment: RB_BodySetup of the destroyed asset, not a part of the driveable car"
+   },
+   {
+    "bone": "Object004_frag_002",
+    "category": "destruction debris",
+    "box_m": [
+     0.8227,
+     0.837,
+     0.7932
+    ],
+    "reason": "a wreck debris fragment: RB_BodySetup of the destroyed asset, not a part of the driveable car"
+   },
+   {
+    "bone": "Object004_frag_003",
+    "category": "destruction debris",
+    "box_m": [
+     0.6113,
+     0.4185,
+     0.6407
+    ],
+    "reason": "a wreck debris fragment: RB_BodySetup of the destroyed asset, not a part of the driveable car"
+   },
+   {
+    "bone": "Object004_frag_006",
+    "category": "destruction debris",
+    "box_m": [
+     0.9143,
+     0.7385,
+     0.6487
+    ],
+    "reason": "a wreck debris fragment: RB_BodySetup of the destroyed asset, not a part of the driveable car"
+   },
+   {
+    "bone": "Object004_frag_007",
+    "category": "destruction debris",
+    "box_m": [
+     0.8071,
+     0.6029,
+     0.6352
+    ],
+    "reason": "a wreck debris fragment: RB_BodySetup of the destroyed asset, not a part of the driveable car"
+   },
+   {
+    "bone": "Jet_Fins001",
+    "category": "jet fin",
+    "box_m": [
+     1.2911,
+     0.6119,
+     0.2871
+    ],
+    "reason": "the fin is cut into the T-8 aero-flap / jet parts; same missing slot"
+   },
+   {
+    "bone": "Object007",
+    "category": "destruction debris",
+    "box_m": [
+     1.3853,
+     0.7334,
+     0.2896
+    ],
+    "reason": "a wreck debris fragment: RB_BodySetup of the destroyed asset, not a part of the driveable car"
+   },
+   {
+    "bone": "Object",
+    "category": "destruction debris",
+    "box_m": [
+     0.701,
+     0.4161,
+     0.2741
+    ],
+    "reason": "a wreck debris fragment: RB_BodySetup of the destroyed asset, not a part of the driveable car"
+   },
+   {
+    "bone": "Object011",
+    "category": "destruction debris",
+    "box_m": [
+     1.4207,
+     0.9763,
+     0.4431
+    ],
+    "reason": "a wreck debris fragment: RB_BodySetup of the destroyed asset, not a part of the driveable car"
+   },
+   {
+    "bone": "Object013",
+    "category": "destruction debris",
+    "box_m": [
+     1.3059,
+     1.186,
+     0.5413
+    ],
+    "reason": "a wreck debris fragment: RB_BodySetup of the destroyed asset, not a part of the driveable car"
+   },
+   {
+    "bone": "Object009",
+    "category": "destruction debris",
+    "box_m": [
+     1.6612,
+     1.4182,
+     0.6294
+    ],
+    "reason": "a wreck debris fragment: RB_BodySetup of the destroyed asset, not a part of the driveable car"
+   },
+   {
+    "bone": "Object017",
+    "category": "destruction debris",
+    "box_m": [
+     0.7762,
+     0.7318,
+     0.2391
+    ],
+    "reason": "a wreck debris fragment: RB_BodySetup of the destroyed asset, not a part of the driveable car"
+   },
+   {
+    "bone": "Object015",
+    "category": "destruction debris",
+    "box_m": [
+     0.7833,
+     0.6564,
+     0.4204
+    ],
+    "reason": "a wreck debris fragment: RB_BodySetup of the destroyed asset, not a part of the driveable car"
+   }
+  ],
+  "mapped_bodies": 11,
+  "mapped_slots": 7,
+  "unmapped_bodies": 21
+ },
+ "bindings": {
+  "with_world_collision": 38,
+  "without": [
+   {
+    "part": "sportsmuscle_wheel_r_l",
+    "part_index": 11,
+    "world_collision_body_id": -1
+   },
+   {
+    "part": "sportsmuscle_wheel_r_r",
+    "part_index": 12,
+    "world_collision_body_id": -1
+   },
+   {
+    "part": "sportsmuscle_wheel_f_l",
+    "part_index": 26,
+    "world_collision_body_id": -1
+   },
+   {
+    "part": "sportsmuscle_wheel_f_r",
+    "part_index": 27,
+    "world_collision_body_id": -1
+   }
+  ],
+  "wheels": "both sides are sim-only: the donor's four wheels are the only parts with has_world_collision_shape 0 / world_collision_body_id -1"
+ },
+ "stations": {
+  "source": "Working/TrueScale/stations.json",
+  "corners": {
+   "f_l": {
+    "hub_true": [
+     -1.208,
+     0.7047,
+     -2.57
+    ],
+    "radius": 0.6829,
+    "tyre_width": 0.7325
+   },
+   "f_r": {
+    "hub_true": [
+     1.208,
+     0.7047,
+     -2.5699
+    ],
+    "radius": 0.6826,
+    "tyre_width": 0.7314
+   },
+   "r_l": {
+    "hub_true": [
+     -1.2845,
+     0.7027,
+     2.4589
+    ],
+    "radius": 0.6826,
+    "tyre_width": 0.7315
+   },
+   "r_r": {
+    "hub_true": [
+     1.2845,
+     0.7027,
+     2.4589
+    ],
+    "radius": 0.6827,
+    "tyre_width": 0.7318
+   }
+  },
+  "in_physicsc": 0,
+  "unchanged": "R3: no wheel/station row is touched; the quads live in the vmodc's base_wheel_hardpoint_positions + land_global, not in the physicsc (0 sets there)"
+ },
+ "rows": {
+  "T-P3": "| T-P3 | 32 wreck bodies (boxes) + the **drivable asset 2 bodies / 3 boxes** (`COLLISION_WHERE.md`: chassis 690.305x374.536x207.500 cm at (9, 0, 106.75), chassis 679.585x345.688x103.500 cm at (0, 0, 79); weapons pod 166.177x189.365x39.800 cm at (-30.5, -0, 93.25)) | `.physicsc` shapes | existing hull slots, uniform k per hull (G2-30) | **decoded (asset, 2026-11-07)**: the drivable rigid body is `Physics.Batmobile_V3_Physics` (BmGame.upk export 158266: 2 bodies, 3 boxes, 1 constraint, reached from `Batmobile.SVehicleMesh` property offset 824) - the hull set must be those 2 bodies, not the 11 of 32 wreck boxes G2-30 could reach; the built set still carries 62 donor bodies with body 0's single hull rewritten (bm-009/bm-RC2, B-10e), so 2 shapes are missing (T-22 reopened) | `T22_REOPEN.md` (plan) + `t22_reopen.py --check` |",
+  "T-CO2": "| T-CO2 | largest **wreck** box 316.15x63.42x109.88 cm; the drivable car's largest is the chassis box 690.305x374.536x207.500 cm | \u2014 | 1 cm = 0.01 m; JC3 hull space is metres | 3.1615x0.6342x1.0988 m fits one donor hull (longest hull axis 3.679 m) - a wreck wheel, not the car's collision | next: keep the wreck-set maximum and do not author it as the car; the car's target is T-P3's chassis body (690.305x374.536x207.500 cm) | decoded (COLLISION_WHERE) / measured (T-22) | `t22_reopen.py --check` |",
+  "T-CO3": "| T-CO3 | **no per-part world-collision flag**: the drivable asset is **2 bodies / 3 boxes + 1 constraint** (`COLLISION_WHERE.md`): one `Batmobile_Chassis` body and one `Batmobile_Rig_Weapons_Trans` body; the two Batman-vs-Batmobile meshes are separate components and the wreck has 32 bodies | `parts[].has_world_collision_shape` | donor carry (restated) | donor's: 38/42 = 1, the 4 wheels = 0 (`world_collision_body_id` -1); bm-RC2 has 61 parts, so the 42-part denominator is stale | next: keep the donor's flags and restate the reason - BmAK's 2 bodies prove the car has no per-part world bodies while the donor gives 38 parts their own, a declared difference; the chassis hull covers the wheels, so a player should not notice | decoded (asset) / measured (T-22) | `t22_collision.py --check` re-read at the RC2 part count |"
+ },
+ "prose_fix": {
+  "file": "Working/Translation/T2_TRANSLATION.md",
+  "old": "largest box extents `\\[[^\\]]*\\]` cm(?: \\(`[^`]*`\\))?",
+  "new": "largest box extents `[316.2, 63.4, 109.9]` cm"
+ },
+ "summary": {
+  "bodies": 32,
+  "mapped_to_a_slot": 7,
+  "mapped_bodies": 11,
+  "unmapped": 21,
+  "hull_slots": 54,
+  "parts_colliding": 38,
+  "rows": 3,
+  "drivable_bodies": 2,
+  "drivable_boxes": 3,
+  "dispositions": {
+   "T-P3": "next",
+   "T-CO2": "next",
+   "T-CO3": "next"
+  }
+ }
+}

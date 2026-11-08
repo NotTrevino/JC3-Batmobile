@@ -1,0 +1,3787 @@
+{
+ "counts": {
+  "UNKNOWN": 0,
+  "conflict": 9,
+  "holds": 21,
+  "not re-derivable": 25,
+  "open": 131,
+  "wrong card": 1,
+  "wrong value": 11
+ },
+ "inputs": {
+  "g3b_s2": 18,
+  "g3b_s3": 105,
+  "g3c": 93,
+  "ledger": 198,
+  "outside": 27,
+  "sources": 96
+ },
+ "missing_ids": [
+  "T-AB1",
+  "T-AB2",
+  "T-AB3",
+  "T-IN1",
+  "T-IN2",
+  "T-IN3",
+  "T-IN4",
+  "T-IN5"
+ ],
+ "oracles": {
+  "cited_line_names_row": {
+   "detail": [],
+   "ok": true
+  },
+  "conflict_split": {
+   "detail": {
+    "T-B3": [
+     "LEDGER_G3B.md:22",
+     "LEDGER_G3B.md:72"
+    ],
+    "T-B4": [
+     "LEDGER_G3B.md:23",
+     "LEDGER_G3B.md:73"
+    ],
+    "T-CO1": [
+     "LEDGER_G3B.md:33",
+     "LEDGER_G3B.md:127"
+    ],
+    "T-CO2": [
+     "LEDGER_G3B.md:34",
+     "LEDGER_G3B.md:128"
+    ],
+    "T-MA2": [
+     "LEDGER_G3B.md:26",
+     "LEDGER_G3B.md:92"
+    ],
+    "T-MA5": [
+     "LEDGER_G3B.md:29",
+     "LEDGER_G3B.md:95"
+    ],
+    "T-MA7": [
+     "LEDGER_G3B.md:30",
+     "LEDGER_G3B.md:97"
+    ],
+    "T-P3": [
+     "LEDGER_G3B.md:24",
+     "LEDGER_G3B.md:90"
+    ],
+    "T-WP11": [
+     "LEDGER_G3B.md:35",
+     "LEDGER_G3C.md:133"
+    ]
+   },
+   "ok": true
+  },
+  "conflicts_are_two_sided": {
+   "detail": {
+    "T-B3": [
+     "wrong card",
+     "open"
+    ],
+    "T-B4": [
+     "wrong card",
+     "open"
+    ],
+    "T-CO1": [
+     "wrong card",
+     "open"
+    ],
+    "T-CO2": [
+     "wrong card",
+     "open"
+    ],
+    "T-MA2": [
+     "wrong card",
+     "open"
+    ],
+    "T-MA5": [
+     "wrong card",
+     "open"
+    ],
+    "T-MA7": [
+     "wrong card",
+     "open"
+    ],
+    "T-P3": [
+     "wrong card",
+     "open"
+    ],
+    "T-WP11": [
+     "wrong card",
+     "holds"
+    ]
+   },
+   "ok": true
+  },
+  "counts_sum": {
+   "detail": {
+    "UNKNOWN": 0,
+    "conflict": 9,
+    "holds": 21,
+    "not re-derivable": 25,
+    "open": 131,
+    "wrong card": 1,
+    "wrong value": 11
+   },
+   "ok": true
+  },
+  "every_verdict_has_source": {
+   "detail": {
+    "without": []
+   },
+   "ok": true
+  },
+  "g3_11c_adds_no_ledger_row": {
+   "detail": {
+    "in_ledger": [],
+    "proposed": [
+     "T-AB1",
+     "T-AB2",
+     "T-AB3",
+     "T-IN1",
+     "T-IN2",
+     "T-IN3",
+     "T-IN4",
+     "T-IN5"
+    ]
+   },
+   "ok": true
+  },
+  "g3c_relations_known": {
+   "detail": [
+    "adjacent",
+    "agrees",
+    "confirms-open",
+    "different-member",
+    "differs",
+    "n/a",
+    "negative",
+    "supplies"
+   ],
+   "ok": true
+  },
+  "input_counts": {
+   "detail": {
+    "g3b_s2": 18,
+    "g3b_s3": 105,
+    "g3c": 93,
+    "ledger": 198,
+    "outside": 27,
+    "sources": 96
+   },
+   "ok": true
+  },
+  "row_count_198": {
+   "detail": {
+    "rows": 198,
+    "unique": 198
+   },
+   "ok": true
+  }
+ },
+ "rows": [
+  {
+   "dispo": "keep",
+   "doc": "T-1",
+   "id": "T-G1",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-G1",
+     "source": "LEDGER_G3B.md:42",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "not re-derivable",
+   "why": "LEDGER_SOURCES.md puts the row outside the seven; still OPEN in LEDGER_G3B.md:42"
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-1",
+   "id": "T-G2",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-G2",
+     "source": "LEDGER_G3B.md:43",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "not re-derivable",
+   "why": "LEDGER_SOURCES.md puts the row outside the seven; still OPEN in LEDGER_G3B.md:43"
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-1",
+   "id": "T-G3",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-G3",
+     "source": "LEDGER_G3B.md:44",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "not re-derivable",
+   "why": "LEDGER_SOURCES.md puts the row outside the seven; still OPEN in LEDGER_G3B.md:44"
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-1",
+   "id": "T-G4",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-G4",
+     "source": "LEDGER_G3B.md:45",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "not re-derivable",
+   "why": "LEDGER_SOURCES.md puts the row outside the seven; still OPEN in LEDGER_G3B.md:45"
+  },
+  {
+   "dispo": "edit",
+   "doc": "T-1",
+   "id": "T-G5",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-G5",
+     "source": "LEDGER_G3B.md:46",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "not re-derivable",
+   "why": "LEDGER_SOURCES.md puts the row outside the seven; still OPEN in LEDGER_G3B.md:46"
+  },
+  {
+   "dispo": "edit",
+   "doc": "T-1",
+   "id": "T-M1",
+   "sources": [
+    {
+     "evidence": "CORRECTED was right: 56 per-shape blocks, total 1627.097155, so there is no single rigid-body mass tag. The 6,000 kg proposal is a class choice, not a grab value.",
+     "part": "\u00a72",
+     "raw": "HOLDS",
+     "row": "T-M1",
+     "source": "LEDGER_G3B.md:19",
+     "verdict": "holds"
+    },
+    {
+     "evidence": "`PHYSICS_ROLES2.md:48` - total over all 56 blocks: **1627.097155**; `PHYSICS_ROLES2.md:54` - \\| 0x5970 \\| 800.0 \\|",
+     "part": "\u00a73",
+     "raw": "HOLDS",
+     "row": "T-M1",
+     "source": "LEDGER_G3B.md:47",
+     "verdict": "holds"
+    }
+   ],
+   "verdict": "holds",
+   "why": ""
+  },
+  {
+   "dispo": "edit",
+   "doc": "T-1",
+   "id": "T-M2",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-M2",
+     "source": "LEDGER_G3B.md:48",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-1",
+   "id": "T-M3",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-M3",
+     "source": "LEDGER_G3B.md:49",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "edit",
+   "doc": "T-1",
+   "id": "T-M4",
+   "sources": [
+    {
+     "evidence": "CORRECTED was right: the donor masses are per-hull (+0x28), and 25.0 appears 10 times - the wheel value the row quotes as its 'now'.",
+     "part": "\u00a72",
+     "raw": "HOLDS",
+     "row": "T-M4",
+     "source": "LEDGER_G3B.md:20",
+     "verdict": "holds"
+    },
+    {
+     "evidence": "`PHYSICS_ROLES2.md:49` - '25.0': 10",
+     "part": "\u00a73",
+     "raw": "HOLDS",
+     "row": "T-M4",
+     "source": "LEDGER_G3B.md:50",
+     "verdict": "holds"
+    }
+   ],
+   "verdict": "holds",
+   "why": ""
+  },
+  {
+   "dispo": "edit",
+   "doc": "T-1",
+   "id": "T-S1",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-S1",
+     "source": "LEDGER_G3B.md:51",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "edit",
+   "doc": "T-1",
+   "id": "T-S2",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-S2",
+     "source": "LEDGER_G3B.md:52",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-1",
+   "id": "T-S3",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-S3",
+     "source": "LEDGER_G3B.md:53",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-1",
+   "id": "T-S4",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-S4",
+     "source": "LEDGER_G3B.md:54",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-1",
+   "id": "T-S5",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-S5",
+     "source": "LEDGER_G3B.md:55",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "edit",
+   "doc": "T-1",
+   "id": "T-R1",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-R1",
+     "source": "LEDGER_G3B.md:56",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-1",
+   "id": "T-R2",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-R2",
+     "source": "LEDGER_G3B.md:57",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-1",
+   "id": "T-R3",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-R3",
+     "source": "LEDGER_G3B.md:58",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "edit",
+   "doc": "T-1",
+   "id": "T-ST1",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-ST1",
+     "source": "LEDGER_G3B.md:59",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-1",
+   "id": "T-ST2",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-ST2",
+     "source": "LEDGER_G3B.md:60",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-1",
+   "id": "T-ST3",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-ST3",
+     "source": "LEDGER_G3B.md:61",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-1",
+   "id": "T-ST4",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-ST4",
+     "source": "LEDGER_G3B.md:62",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-1",
+   "id": "T-ST5",
+   "sources": [
+    {
+     "evidence": "`CLASS_DEFAULTS.md:317` - `DriftCorrectionSteerSpeed` (RVehicleBatmobileBase) \\| FloatProperty \\| 1.0",
+     "part": "\u00a73",
+     "raw": "HOLDS",
+     "row": "T-ST5",
+     "source": "LEDGER_G3B.md:63",
+     "verdict": "holds"
+    }
+   ],
+   "verdict": "holds",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-1",
+   "id": "T-ST6",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-ST6",
+     "source": "LEDGER_G3B.md:64",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "edit",
+   "doc": "T-1",
+   "id": "T-E1",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-E1",
+     "source": "LEDGER_G3B.md:65",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-1",
+   "id": "T-E2",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-E2",
+     "source": "LEDGER_G3B.md:66",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "edit",
+   "doc": "T-1",
+   "id": "T-E3",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-E3",
+     "source": "LEDGER_G3B.md:67",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "edit",
+   "doc": "T-1",
+   "id": "T-E4",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-E4",
+     "source": "LEDGER_G3B.md:68",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-1",
+   "id": "T-E5",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-E5",
+     "source": "LEDGER_G3B.md:69",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-1",
+   "id": "T-B1",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-B1",
+     "source": "LEDGER_G3B.md:70",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-1",
+   "id": "T-B2",
+   "sources": [
+    {
+     "evidence": "the boost state bit the first pass cited is real and at the stated offset: bBoosting @2396 mask 0x1 (SAMPLER_FIELDS2.md:93).",
+     "part": "\u00a72",
+     "raw": "HOLDS",
+     "row": "T-B2",
+     "source": "LEDGER_G3B.md:21",
+     "verdict": "holds"
+    },
+    {
+     "evidence": "`SAMPLER_FIELDS2.md:93` - `RBatmobileBooster.bBoosting` \\| 2396 (0x95c) \\| `bit` \\| 1",
+     "part": "\u00a73",
+     "raw": "HOLDS",
+     "row": "T-B2",
+     "source": "LEDGER_G3B.md:71",
+     "verdict": "holds"
+    }
+   ],
+   "verdict": "holds",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-1",
+   "id": "T-B3",
+   "sources": [
+    {
+     "evidence": "no quoted line in this pass",
+     "part": "\u00a72",
+     "raw": "WRONG_CARD",
+     "row": "T-B3",
+     "source": "LEDGER_G3B.md:22",
+     "verdict": "wrong card"
+    },
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-B3",
+     "source": "LEDGER_G3B.md:72",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "conflict",
+   "why": "open; wrong card"
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-1",
+   "id": "T-B4",
+   "sources": [
+    {
+     "evidence": "no quoted line in this pass",
+     "part": "\u00a72",
+     "raw": "WRONG_CARD",
+     "row": "T-B4",
+     "source": "LEDGER_G3B.md:23",
+     "verdict": "wrong card"
+    },
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-B4",
+     "source": "LEDGER_G3B.md:73",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "conflict",
+   "why": "open; wrong card"
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-1",
+   "id": "T-A1",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-A1",
+     "source": "LEDGER_G3B.md:74",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "edit",
+   "doc": "T-1",
+   "id": "T-A2",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-A2",
+     "source": "LEDGER_G3B.md:75",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-1",
+   "id": "T-A3",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-A3",
+     "source": "LEDGER_G3B.md:76",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "edit",
+   "doc": "T-1",
+   "id": "T-A4",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-A4",
+     "source": "LEDGER_G3B.md:77",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "edit",
+   "doc": "T-1",
+   "id": "T-K1",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-K1",
+     "source": "LEDGER_G3B.md:78",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-1",
+   "id": "T-K2",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-K2",
+     "source": "LEDGER_G3B.md:79",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-1",
+   "id": "T-K3",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-K3",
+     "source": "LEDGER_G3B.md:80",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "epe",
+   "doc": "T-1",
+   "id": "T-L1",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-L1",
+     "source": "LEDGER_G3B.md:81",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "not re-derivable",
+   "why": "LEDGER_SOURCES.md puts the row outside the seven; still OPEN in LEDGER_G3B.md:81"
+  },
+  {
+   "dispo": "epe",
+   "doc": "T-1",
+   "id": "T-L2",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-L2",
+     "source": "LEDGER_G3B.md:82",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "not re-derivable",
+   "why": "LEDGER_SOURCES.md puts the row outside the seven; still OPEN in LEDGER_G3B.md:82"
+  },
+  {
+   "dispo": "epe",
+   "doc": "T-1",
+   "id": "T-L3",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-L3",
+     "source": "LEDGER_G3B.md:83",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "not re-derivable",
+   "why": "LEDGER_SOURCES.md puts the row outside the seven; still OPEN in LEDGER_G3B.md:83"
+  },
+  {
+   "dispo": "superseded",
+   "doc": "T-1",
+   "id": "T-L4",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-L4",
+     "source": "LEDGER_G3B.md:84",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "not re-derivable",
+   "why": "LEDGER_SOURCES.md puts the row outside the seven; still OPEN in LEDGER_G3B.md:84"
+  },
+  {
+   "dispo": "epe",
+   "doc": "T-1",
+   "id": "T-L5",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-L5",
+     "source": "LEDGER_G3B.md:85",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "not re-derivable",
+   "why": "LEDGER_SOURCES.md puts the row outside the seven; still OPEN in LEDGER_G3B.md:85"
+  },
+  {
+   "dispo": "epe",
+   "doc": "T-1",
+   "id": "T-L6",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-L6",
+     "source": "LEDGER_G3B.md:86",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "not re-derivable",
+   "why": "LEDGER_SOURCES.md puts the row outside the seven; still OPEN in LEDGER_G3B.md:86"
+  },
+  {
+   "dispo": "superseded",
+   "doc": "T-1",
+   "id": "T-L7",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-L7",
+     "source": "LEDGER_G3B.md:87",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "not re-derivable",
+   "why": "LEDGER_SOURCES.md puts the row outside the seven; still OPEN in LEDGER_G3B.md:87"
+  },
+  {
+   "dispo": "epe",
+   "doc": "T-1",
+   "id": "T-P1",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-P1",
+     "source": "LEDGER_G3B.md:88",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-1",
+   "id": "T-P2",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-P2",
+     "source": "LEDGER_G3B.md:89",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-1",
+   "id": "T-P3",
+   "sources": [
+    {
+     "evidence": "no quoted line in this pass",
+     "part": "\u00a72",
+     "raw": "WRONG_CARD",
+     "row": "T-P3",
+     "source": "LEDGER_G3B.md:24",
+     "verdict": "wrong card"
+    },
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-P3",
+     "source": "LEDGER_G3B.md:90",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "conflict",
+   "why": "open; wrong card"
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-2b",
+   "id": "T-MA1",
+   "sources": [
+    {
+     "evidence": "the card's only body base colour is the MIC override [0.025787, 0.025787, 0.03, 1] (COLOUR_PARAMS.md:69). The row's value is the *effective* [0.056738, 0.05158, 0.06], and the card says the combine rule is UNKNOWN (\u00a75, \u00a76.1) - so it cannot supply that number.",
+     "part": "\u00a72",
+     "raw": "WRONG_VALUE",
+     "row": "T-MA1",
+     "source": "LEDGER_G3B.md:25",
+     "verdict": "wrong value"
+    },
+    {
+     "evidence": "`COLOUR_PARAMS.md:69` - `Material0_BaseColour` \\| vector \\| [0.025787, 0.025787, 0.03, 1]",
+     "part": "\u00a73",
+     "raw": "WRONG_VALUE",
+     "row": "T-MA1",
+     "source": "LEDGER_G3B.md:91",
+     "verdict": "wrong value"
+    }
+   ],
+   "verdict": "wrong value",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-2b",
+   "id": "T-MA2",
+   "sources": [
+    {
+     "evidence": "no quoted line in this pass",
+     "part": "\u00a72",
+     "raw": "WRONG_CARD",
+     "row": "T-MA2",
+     "source": "LEDGER_G3B.md:26",
+     "verdict": "wrong card"
+    },
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-MA2",
+     "source": "LEDGER_G3B.md:92",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "conflict",
+   "why": "open; wrong card"
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-2b",
+   "id": "T-MA3",
+   "sources": [
+    {
+     "evidence": "same as T-MA1: authored override 0.025787/0.025787/0.03 is not the effective 0.056738/0.05158/0.06 the row states.",
+     "part": "\u00a72",
+     "raw": "WRONG_VALUE",
+     "row": "T-MA3",
+     "source": "LEDGER_G3B.md:27",
+     "verdict": "wrong value"
+    },
+    {
+     "evidence": "`COLOUR_PARAMS.md:69` - `Material0_BaseColour` \\| vector \\| [0.025787, 0.025787, 0.03, 1]",
+     "part": "\u00a73",
+     "raw": "WRONG_VALUE",
+     "row": "T-MA3",
+     "source": "LEDGER_G3B.md:93",
+     "verdict": "wrong value"
+    }
+   ],
+   "verdict": "wrong value",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-2b",
+   "id": "T-MA4",
+   "sources": [
+    {
+     "evidence": "the card has no gloss 0.45. It has Material0_Roughness 0.4 (MIC) / 0.25 (chain) and Material0_Reflectivity 0.2 / 0.25 - a different quantity and different numbers than the row's 'gloss 0.45'.",
+     "part": "\u00a72",
+     "raw": "WRONG_VALUE",
+     "row": "T-MA4",
+     "source": "LEDGER_G3B.md:28",
+     "verdict": "wrong value"
+    },
+    {
+     "evidence": "`COLOUR_PARAMS.md:25` - ## 2. Overrides carried by the chain's MICs (52)",
+     "part": "\u00a73",
+     "raw": "WRONG_VALUE",
+     "row": "T-MA4",
+     "source": "LEDGER_G3B.md:94",
+     "verdict": "wrong value"
+    }
+   ],
+   "verdict": "wrong value",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-2b",
+   "id": "T-MA5",
+   "sources": [
+    {
+     "evidence": "no quoted line in this pass",
+     "part": "\u00a72",
+     "raw": "WRONG_CARD",
+     "row": "T-MA5",
+     "source": "LEDGER_G3B.md:29",
+     "verdict": "wrong card"
+    },
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-MA5",
+     "source": "LEDGER_G3B.md:95",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "conflict",
+   "why": "open; wrong card"
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-2b",
+   "id": "T-MA6",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-MA6",
+     "source": "LEDGER_G3B.md:96",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-2b",
+   "id": "T-MA7",
+   "sources": [
+    {
+     "evidence": "no quoted line in this pass",
+     "part": "\u00a72",
+     "raw": "WRONG_CARD",
+     "row": "T-MA7",
+     "source": "LEDGER_G3B.md:30",
+     "verdict": "wrong card"
+    },
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-MA7",
+     "source": "LEDGER_G3B.md:97",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "conflict",
+   "why": "open; wrong card"
+  },
+  {
+   "dispo": "epe",
+   "doc": "T-2b",
+   "id": "T-PA1",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-PA1",
+     "source": "LEDGER_G3B.md:98",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "epe",
+   "doc": "T-2b",
+   "id": "T-PA2",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-PA2",
+     "source": "LEDGER_G3B.md:99",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "epe",
+   "doc": "T-2b",
+   "id": "T-PA3",
+   "sources": [
+    {
+     "evidence": "world body id = body entry +0x0C (PHYSICS_ROLES3.md:41); the per-part ids the row lists are the parts table in PHYSICS_ROLES.md \u00a72.",
+     "part": "\u00a72",
+     "raw": "HOLDS",
+     "row": "T-PA3",
+     "source": "LEDGER_G3B.md:31",
+     "verdict": "holds"
+    },
+    {
+     "evidence": "`PHYSICS_ROLES3.md:41` - \\| +0x0C \\| body id \\|",
+     "part": "\u00a73",
+     "raw": "HOLDS",
+     "row": "T-PA3",
+     "source": "LEDGER_G3B.md:100",
+     "verdict": "holds"
+    }
+   ],
+   "verdict": "holds",
+   "why": ""
+  },
+  {
+   "dispo": "epe",
+   "doc": "T-2b",
+   "id": "T-PA4",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-PA4",
+     "source": "LEDGER_G3B.md:101",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "epe",
+   "doc": "T-2b",
+   "id": "T-PA5",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-PA5",
+     "source": "LEDGER_G3B.md:102",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "epe",
+   "doc": "T-2b",
+   "id": "T-PA6",
+   "sources": [
+    {
+     "evidence": "11 records of 24 bytes with one body id each (PHYSICS_ROLES3.md:25 and \u00a71). G3-10d adds the partner reading: the constant 0 word is body 0 in 494/494 records, so 'one body id each' holds but the partner is no longer UNKNOWN.",
+     "part": "\u00a72",
+     "raw": "HOLDS",
+     "row": "T-PA6",
+     "source": "LEDGER_G3B.md:32",
+     "verdict": "holds"
+    },
+    {
+     "evidence": "`PHYSICS_ROLES3.md:25` - **Decoded negative:** the record is 24 bytes",
+     "part": "\u00a73",
+     "raw": "HOLDS",
+     "row": "T-PA6",
+     "source": "LEDGER_G3B.md:103",
+     "verdict": "holds"
+    }
+   ],
+   "verdict": "holds",
+   "why": ""
+  },
+  {
+   "dispo": "epe",
+   "doc": "T-2b",
+   "id": "T-PA7",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-PA7",
+     "source": "LEDGER_G3B.md:104",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "epe",
+   "doc": "T-2b",
+   "id": "T-PA8",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-PA8",
+     "source": "LEDGER_G3B.md:105",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-2b",
+   "id": "T-LG1",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-LG1",
+     "source": "LEDGER_G3B.md:106",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "not re-derivable",
+   "why": "LEDGER_SOURCES.md puts the row outside the seven; still OPEN in LEDGER_G3B.md:106"
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-2b",
+   "id": "T-LG2",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-LG2",
+     "source": "LEDGER_G3B.md:107",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "not re-derivable",
+   "why": "LEDGER_SOURCES.md puts the row outside the seven; still OPEN in LEDGER_G3B.md:107"
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-2b",
+   "id": "T-LG3",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-LG3",
+     "source": "LEDGER_G3B.md:108",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "not re-derivable",
+   "why": "LEDGER_SOURCES.md puts the row outside the seven; still OPEN in LEDGER_G3B.md:108"
+  },
+  {
+   "dispo": "superseded",
+   "doc": "T-2b",
+   "id": "T-LG4",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-LG4",
+     "source": "LEDGER_G3B.md:109",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "not re-derivable",
+   "why": "LEDGER_SOURCES.md puts the row outside the seven; still OPEN in LEDGER_G3B.md:109"
+  },
+  {
+   "dispo": "superseded",
+   "doc": "T-2b",
+   "id": "T-LG5",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-LG5",
+     "source": "LEDGER_G3B.md:110",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "not re-derivable",
+   "why": "LEDGER_SOURCES.md puts the row outside the seven; still OPEN in LEDGER_G3B.md:110"
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-2b",
+   "id": "T-LG6",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-LG6",
+     "source": "LEDGER_G3B.md:111",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "not re-derivable",
+   "why": "LEDGER_SOURCES.md puts the row outside the seven; still OPEN in LEDGER_G3B.md:111"
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-2b",
+   "id": "T-AU1",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-AU1",
+     "source": "LEDGER_G3B.md:112",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-2b",
+   "id": "T-AU2",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-AU2",
+     "source": "LEDGER_G3B.md:113",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "blocked",
+   "doc": "T-2b",
+   "id": "T-AU3",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-AU3",
+     "source": "LEDGER_G3B.md:114",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "edit",
+   "doc": "T-2b",
+   "id": "T-AU4",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-AU4",
+     "source": "LEDGER_G3B.md:115",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-2b",
+   "id": "T-FX1",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-FX1",
+     "source": "LEDGER_G3B.md:116",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-2b",
+   "id": "T-FX2",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-FX2",
+     "source": "LEDGER_G3B.md:117",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "blocked",
+   "doc": "T-2b",
+   "id": "T-FX3",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-FX3",
+     "source": "LEDGER_G3B.md:118",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "superseded",
+   "doc": "T-2b",
+   "id": "T-FX4",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-FX4",
+     "source": "LEDGER_G3B.md:119",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-2b",
+   "id": "T-FX5",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-FX5",
+     "source": "LEDGER_G3B.md:120",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-2b",
+   "id": "T-DM1",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-DM1",
+     "source": "LEDGER_G3B.md:121",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "not re-derivable",
+   "why": "LEDGER_SOURCES.md puts the row outside the seven; still OPEN in LEDGER_G3B.md:121"
+  },
+  {
+   "dispo": "edit",
+   "doc": "T-2b",
+   "id": "T-DM2",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-DM2",
+     "source": "LEDGER_G3B.md:122",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "not re-derivable",
+   "why": "LEDGER_SOURCES.md puts the row outside the seven; still OPEN in LEDGER_G3B.md:122"
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-2b",
+   "id": "T-DM3",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-DM3",
+     "source": "LEDGER_G3B.md:123",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "not re-derivable",
+   "why": "LEDGER_SOURCES.md puts the row outside the seven; still OPEN in LEDGER_G3B.md:123"
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-2b",
+   "id": "T-DM4",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-DM4",
+     "source": "LEDGER_G3B.md:124",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "not re-derivable",
+   "why": "LEDGER_SOURCES.md puts the row outside the seven; still OPEN in LEDGER_G3B.md:124"
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-2b",
+   "id": "T-DM5",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-DM5",
+     "source": "LEDGER_G3B.md:125",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "not re-derivable",
+   "why": "LEDGER_SOURCES.md puts the row outside the seven; still OPEN in LEDGER_G3B.md:125"
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-2b",
+   "id": "T-DM6",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-DM6",
+     "source": "LEDGER_G3B.md:126",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "not re-derivable",
+   "why": "LEDGER_SOURCES.md puts the row outside the seven; still OPEN in LEDGER_G3B.md:126"
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-2b",
+   "id": "T-CO1",
+   "sources": [
+    {
+     "evidence": "no quoted line in this pass",
+     "part": "\u00a72",
+     "raw": "WRONG_CARD",
+     "row": "T-CO1",
+     "source": "LEDGER_G3B.md:33",
+     "verdict": "wrong card"
+    },
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-CO1",
+     "source": "LEDGER_G3B.md:127",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "conflict",
+   "why": "open; wrong card"
+  },
+  {
+   "dispo": "next",
+   "doc": "T-2b",
+   "id": "T-CO2",
+   "sources": [
+    {
+     "evidence": "no quoted line in this pass",
+     "part": "\u00a72",
+     "raw": "WRONG_CARD",
+     "row": "T-CO2",
+     "source": "LEDGER_G3B.md:34",
+     "verdict": "wrong card"
+    },
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-CO2",
+     "source": "LEDGER_G3B.md:128",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "conflict",
+   "why": "open; wrong card"
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-2b",
+   "id": "T-CO3",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-CO3",
+     "source": "LEDGER_G3B.md:129",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "not re-derivable",
+   "why": "LEDGER_SOURCES.md puts the row outside the seven; still OPEN in LEDGER_G3B.md:129"
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-3",
+   "id": "T-G6",
+   "sources": [
+    {
+     "evidence": "`REMAINDER.md:1901`",
+     "part": "row index",
+     "raw": "OPEN/confirms-open",
+     "relation": "confirms-open",
+     "row": "T-G6",
+     "source": "LEDGER_G3C.md:78",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "blocked",
+   "doc": "T-3",
+   "id": "T-S6",
+   "sources": [
+    {
+     "evidence": "`DECODE_DEPTH.md:63`",
+     "part": "row index",
+     "raw": "OPEN/confirms-open",
+     "relation": "confirms-open",
+     "row": "T-S6",
+     "source": "LEDGER_G3C.md:79",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "blocked",
+   "doc": "T-3",
+   "id": "T-ST7",
+   "sources": [
+    {
+     "evidence": "`CLASS_DEFAULTS.md:317`",
+     "part": "row index",
+     "raw": "OPEN/adjacent",
+     "relation": "adjacent",
+     "row": "T-ST7",
+     "source": "LEDGER_G3C.md:80",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-3",
+   "id": "T-K4",
+   "sources": [
+    {
+     "evidence": "`CLASS_DEFAULTS.md:183`",
+     "part": "row index",
+     "raw": "QUOTED/differs",
+     "relation": "differs",
+     "row": "T-K4",
+     "source": "LEDGER_G3C.md:81",
+     "verdict": "wrong value"
+    }
+   ],
+   "verdict": "wrong value",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-3",
+   "id": "T-DR1",
+   "sources": [
+    {
+     "evidence": "`CLASS_DEFAULTS.md:317`",
+     "part": "row index",
+     "raw": "OPEN/adjacent",
+     "relation": "adjacent",
+     "row": "T-DR1",
+     "source": "LEDGER_G3C.md:82",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-3",
+   "id": "T-EF1",
+   "sources": [
+    {
+     "evidence": "`CLASS_DEFAULTS.md:164`",
+     "part": "row index",
+     "raw": "QUOTED/differs",
+     "relation": "differs",
+     "row": "T-EF1",
+     "source": "LEDGER_G3C.md:83",
+     "verdict": "wrong value"
+    }
+   ],
+   "verdict": "wrong value",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-3",
+   "id": "T-DM7",
+   "sources": [
+    {
+     "evidence": "`CLASS_DEFAULTS.md:257`",
+     "part": "row index",
+     "raw": "QUOTED/differs",
+     "relation": "differs",
+     "row": "T-DM7",
+     "source": "LEDGER_G3C.md:84",
+     "verdict": "wrong value"
+    }
+   ],
+   "verdict": "wrong value",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-3",
+   "id": "T-DM8",
+   "sources": [
+    {
+     "evidence": "`CLASS_DEFAULTS.md:255`",
+     "part": "row index",
+     "raw": "OPEN/adjacent",
+     "relation": "adjacent",
+     "row": "T-DM8",
+     "source": "LEDGER_G3C.md:85",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-3",
+   "id": "T-DM9",
+   "sources": [
+    {
+     "evidence": "`CLASS_DEFAULTS.md:353`",
+     "part": "row index",
+     "raw": "OPEN/adjacent",
+     "relation": "adjacent",
+     "row": "T-DM9",
+     "source": "LEDGER_G3C.md:86",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "epe",
+   "doc": "T-3",
+   "id": "T-FX6",
+   "sources": [
+    {
+     "evidence": "`CLASS_DEFAULTS.md:111`",
+     "part": "row index",
+     "raw": "QUOTED/agrees",
+     "relation": "agrees",
+     "row": "T-FX6",
+     "source": "LEDGER_G3C.md:87",
+     "verdict": "holds"
+    }
+   ],
+   "verdict": "holds",
+   "why": ""
+  },
+  {
+   "dispo": "blocked",
+   "doc": "T-3",
+   "id": "T-AU5",
+   "sources": [
+    {
+     "evidence": "`AUDIO_BANKS.md:200`",
+     "part": "row index",
+     "raw": "QUOTED/differs",
+     "relation": "differs",
+     "row": "T-AU5",
+     "source": "LEDGER_G3C.md:88",
+     "verdict": "wrong value"
+    }
+   ],
+   "verdict": "wrong value",
+   "why": ""
+  },
+  {
+   "dispo": "superseded",
+   "doc": "T-3",
+   "id": "T-W1",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/n/a",
+     "relation": "n/a",
+     "row": "T-W1",
+     "source": "LEDGER_G3C.md:89",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "superseded",
+   "doc": "T-3",
+   "id": "T-BM1",
+   "sources": [
+    {
+     "evidence": "`CLASS_DEFAULTS.md:242`",
+     "part": "row index",
+     "raw": "QUOTED/supplies",
+     "relation": "supplies",
+     "row": "T-BM1",
+     "source": "LEDGER_G3C.md:90",
+     "verdict": "holds"
+    }
+   ],
+   "verdict": "holds",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-3",
+   "id": "T-AC1",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/confirms-open",
+     "relation": "confirms-open",
+     "row": "T-AC1",
+     "source": "LEDGER_G3C.md:91",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-3",
+   "id": "T-RA1",
+   "sources": [
+    {
+     "evidence": "`CLASS_DEFAULTS.md:229`",
+     "part": "row index",
+     "raw": "QUOTED/differs",
+     "relation": "differs",
+     "row": "T-RA1",
+     "source": "LEDGER_G3C.md:92",
+     "verdict": "wrong value"
+    }
+   ],
+   "verdict": "wrong value",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-3",
+   "id": "T-SR1",
+   "sources": [
+    {
+     "evidence": "`CLASS_DEFAULTS.md:147`",
+     "part": "row index",
+     "raw": "QUOTED/differs",
+     "relation": "differs",
+     "row": "T-SR1",
+     "source": "LEDGER_G3C.md:93",
+     "verdict": "wrong value"
+    }
+   ],
+   "verdict": "wrong value",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-3",
+   "id": "T-PA9",
+   "sources": [
+    {
+     "evidence": "`CLASS_DEFAULTS.md:171`",
+     "part": "row index",
+     "raw": "QUOTED/supplies",
+     "relation": "supplies",
+     "row": "T-PA9",
+     "source": "LEDGER_G3C.md:94",
+     "verdict": "holds"
+    }
+   ],
+   "verdict": "holds",
+   "why": ""
+  },
+  {
+   "dispo": "epe",
+   "doc": "T-13",
+   "id": "T-FX7",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-FX7",
+     "source": "LEDGER_G3B.md:130",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "epe",
+   "doc": "T-13",
+   "id": "T-FX8",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-FX8",
+     "source": "LEDGER_G3B.md:131",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-13",
+   "id": "T-FX9",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-FX9",
+     "source": "LEDGER_G3B.md:132",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-13",
+   "id": "T-FX10",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-FX10",
+     "source": "LEDGER_G3B.md:133",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-13",
+   "id": "T-FX11",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-FX11",
+     "source": "LEDGER_G3B.md:134",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-13",
+   "id": "T-FX12",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-FX12",
+     "source": "LEDGER_G3B.md:135",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-13",
+   "id": "T-FX13",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-FX13",
+     "source": "LEDGER_G3B.md:136",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-13",
+   "id": "T-FX14",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-FX14",
+     "source": "LEDGER_G3B.md:137",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-13",
+   "id": "T-FX15",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-FX15",
+     "source": "LEDGER_G3B.md:138",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-13",
+   "id": "T-FX16",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-FX16",
+     "source": "LEDGER_G3B.md:139",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "epe",
+   "doc": "T-13",
+   "id": "T-FX17",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-FX17",
+     "source": "LEDGER_G3B.md:140",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "epe",
+   "doc": "T-13",
+   "id": "T-FX18",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-FX18",
+     "source": "LEDGER_G3B.md:141",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "epe",
+   "doc": "T-13",
+   "id": "T-FX19",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-FX19",
+     "source": "LEDGER_G3B.md:142",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-13",
+   "id": "T-FX20",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-FX20",
+     "source": "LEDGER_G3B.md:143",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "epe",
+   "doc": "T-13",
+   "id": "T-FX21",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-FX21",
+     "source": "LEDGER_G3B.md:144",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "epe",
+   "doc": "T-13",
+   "id": "T-FX22",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-FX22",
+     "source": "LEDGER_G3B.md:145",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "epe",
+   "doc": "T-13",
+   "id": "T-FX23",
+   "sources": [
+    {
+     "evidence": "\u2014",
+     "part": "\u00a73",
+     "raw": "OPEN",
+     "row": "T-FX23",
+     "source": "LEDGER_G3B.md:146",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-14",
+   "id": "T-L8",
+   "sources": [
+    {
+     "evidence": "`CLASS_DEFAULTS.md:263`",
+     "part": "row index",
+     "raw": "QUOTED/supplies",
+     "relation": "supplies",
+     "row": "T-L8",
+     "source": "LEDGER_G3C.md:95",
+     "verdict": "holds"
+    }
+   ],
+   "verdict": "holds",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-14",
+   "id": "T-L9",
+   "sources": [
+    {
+     "evidence": "`CLASS_DEFAULTS.md:263`",
+     "part": "row index",
+     "raw": "QUOTED/supplies",
+     "relation": "supplies",
+     "row": "T-L9",
+     "source": "LEDGER_G3C.md:96",
+     "verdict": "holds"
+    }
+   ],
+   "verdict": "holds",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-14",
+   "id": "T-L10",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/n/a",
+     "relation": "n/a",
+     "row": "T-L10",
+     "source": "LEDGER_G3C.md:97",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-14",
+   "id": "T-L11",
+   "sources": [
+    {
+     "evidence": "`CLASS_DEFAULTS.md:263`",
+     "part": "row index",
+     "raw": "OPEN/adjacent",
+     "relation": "adjacent",
+     "row": "T-L11",
+     "source": "LEDGER_G3C.md:98",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-14",
+   "id": "T-L12",
+   "sources": [
+    {
+     "evidence": "`CLASS_DEFAULTS.md:263`",
+     "part": "row index",
+     "raw": "OPEN/adjacent",
+     "relation": "adjacent",
+     "row": "T-L12",
+     "source": "LEDGER_G3C.md:99",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-14",
+   "id": "T-L13",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/n/a",
+     "relation": "n/a",
+     "row": "T-L13",
+     "source": "LEDGER_G3C.md:100",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-14",
+   "id": "T-L14",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/n/a",
+     "relation": "n/a",
+     "row": "T-L14",
+     "source": "LEDGER_G3C.md:101",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-14",
+   "id": "T-L15",
+   "sources": [
+    {
+     "evidence": "`CLASS_DEFAULTS.md:122`",
+     "part": "row index",
+     "raw": "QUOTED/supplies",
+     "relation": "supplies",
+     "row": "T-L15",
+     "source": "LEDGER_G3C.md:102",
+     "verdict": "holds"
+    }
+   ],
+   "verdict": "holds",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-14",
+   "id": "T-L16",
+   "sources": [
+    {
+     "evidence": "`CLASS_DEFAULTS.md:123`",
+     "part": "row index",
+     "raw": "QUOTED/supplies",
+     "relation": "supplies",
+     "row": "T-L16",
+     "source": "LEDGER_G3C.md:103",
+     "verdict": "holds"
+    }
+   ],
+   "verdict": "holds",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-14",
+   "id": "T-L17",
+   "sources": [
+    {
+     "evidence": "`CLASS_DEFAULTS.md:198`",
+     "part": "row index",
+     "raw": "QUOTED/supplies",
+     "relation": "supplies",
+     "row": "T-L17",
+     "source": "LEDGER_G3C.md:104",
+     "verdict": "holds"
+    }
+   ],
+   "verdict": "holds",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-14",
+   "id": "T-L18",
+   "sources": [
+    {
+     "evidence": "`CLASS_DEFAULTS.md:264`",
+     "part": "row index",
+     "raw": "QUOTED/supplies",
+     "relation": "supplies",
+     "row": "T-L18",
+     "source": "LEDGER_G3C.md:105",
+     "verdict": "holds"
+    }
+   ],
+   "verdict": "holds",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-14",
+   "id": "T-L19",
+   "sources": [
+    {
+     "evidence": "`CLASS_DEFAULTS.md:264`",
+     "part": "row index",
+     "raw": "QUOTED/supplies",
+     "relation": "supplies",
+     "row": "T-L19",
+     "source": "LEDGER_G3C.md:106",
+     "verdict": "holds"
+    }
+   ],
+   "verdict": "holds",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-14",
+   "id": "T-L20",
+   "sources": [
+    {
+     "evidence": "`CLASS_DEFAULTS.md:264`",
+     "part": "row index",
+     "raw": "OPEN/adjacent",
+     "relation": "adjacent",
+     "row": "T-L20",
+     "source": "LEDGER_G3C.md:107",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-14",
+   "id": "T-L21",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/n/a",
+     "relation": "n/a",
+     "row": "T-L21",
+     "source": "LEDGER_G3C.md:108",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-14",
+   "id": "T-L22",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/n/a",
+     "relation": "n/a",
+     "row": "T-L22",
+     "source": "LEDGER_G3C.md:109",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-14",
+   "id": "T-L23",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/n/a",
+     "relation": "n/a",
+     "row": "T-L23",
+     "source": "LEDGER_G3C.md:110",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-14",
+   "id": "T-L24",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/n/a",
+     "relation": "n/a",
+     "row": "T-L24",
+     "source": "LEDGER_G3C.md:111",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-14",
+   "id": "T-L25",
+   "sources": [
+    {
+     "evidence": "`CLASS_DEFAULTS.md:122`",
+     "part": "row index",
+     "raw": "OPEN/adjacent",
+     "relation": "adjacent",
+     "row": "T-L25",
+     "source": "LEDGER_G3C.md:112",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-14",
+   "id": "T-L26",
+   "sources": [
+    {
+     "evidence": "`REMAINDER.md:1127`",
+     "part": "row index",
+     "raw": "OPEN/adjacent",
+     "relation": "adjacent",
+     "row": "T-L26",
+     "source": "LEDGER_G3C.md:113",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-14",
+   "id": "T-L27",
+   "sources": [
+    {
+     "evidence": "`REMAINDER.md:1127`",
+     "part": "row index",
+     "raw": "OPEN/adjacent",
+     "relation": "adjacent",
+     "row": "T-L27",
+     "source": "LEDGER_G3C.md:114",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-14",
+   "id": "T-L28",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/n/a",
+     "relation": "n/a",
+     "row": "T-L28",
+     "source": "LEDGER_G3C.md:115",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-14",
+   "id": "T-L29",
+   "sources": [
+    {
+     "evidence": "`REMAINDER.md:1127`",
+     "part": "row index",
+     "raw": "OPEN/adjacent",
+     "relation": "adjacent",
+     "row": "T-L29",
+     "source": "LEDGER_G3C.md:116",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-14",
+   "id": "T-L30",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/n/a",
+     "relation": "n/a",
+     "row": "T-L30",
+     "source": "LEDGER_G3C.md:117",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-14",
+   "id": "T-L31",
+   "sources": [
+    {
+     "evidence": "`CLASS_DEFAULTS.md:123`",
+     "part": "row index",
+     "raw": "OPEN/adjacent",
+     "relation": "adjacent",
+     "row": "T-L31",
+     "source": "LEDGER_G3C.md:118",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-14",
+   "id": "T-L32",
+   "sources": [
+    {
+     "evidence": "`CLASS_DEFAULTS.md:123`",
+     "part": "row index",
+     "raw": "OPEN/adjacent",
+     "relation": "adjacent",
+     "row": "T-L32",
+     "source": "LEDGER_G3C.md:119",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-14",
+   "id": "T-L33",
+   "sources": [
+    {
+     "evidence": "`CLASS_DEFAULTS.md:123`",
+     "part": "row index",
+     "raw": "OPEN/adjacent",
+     "relation": "adjacent",
+     "row": "T-L33",
+     "source": "LEDGER_G3C.md:120",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-14",
+   "id": "T-L34",
+   "sources": [
+    {
+     "evidence": "`CLASS_DEFAULTS.md:123`",
+     "part": "row index",
+     "raw": "OPEN/adjacent",
+     "relation": "adjacent",
+     "row": "T-L34",
+     "source": "LEDGER_G3C.md:121",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-14",
+   "id": "T-L35",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/n/a",
+     "relation": "n/a",
+     "row": "T-L35",
+     "source": "LEDGER_G3C.md:122",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-7",
+   "id": "T-WP1",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/n/a",
+     "relation": "n/a",
+     "row": "T-WP1",
+     "source": "LEDGER_G3C.md:123",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-7",
+   "id": "T-WP2",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/n/a",
+     "relation": "n/a",
+     "row": "T-WP2",
+     "source": "LEDGER_G3C.md:124",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-7",
+   "id": "T-WP3",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/n/a",
+     "relation": "n/a",
+     "row": "T-WP3",
+     "source": "LEDGER_G3C.md:125",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "blocked",
+   "doc": "T-7",
+   "id": "T-WP4",
+   "sources": [
+    {
+     "evidence": "`REMAINDER.md:1778`",
+     "part": "row index",
+     "raw": "OPEN/negative",
+     "relation": "negative",
+     "row": "T-WP4",
+     "source": "LEDGER_G3C.md:126",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "blocked",
+   "doc": "T-7",
+   "id": "T-WP5",
+   "sources": [
+    {
+     "evidence": "`REMAINDER.md:1208`",
+     "part": "row index",
+     "raw": "OPEN/adjacent",
+     "relation": "adjacent",
+     "row": "T-WP5",
+     "source": "LEDGER_G3C.md:127",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-7",
+   "id": "T-WP6",
+   "sources": [
+    {
+     "evidence": "`REMAINDER.md:1209`",
+     "part": "row index",
+     "raw": "QUOTED/agrees",
+     "relation": "agrees",
+     "row": "T-WP6",
+     "source": "LEDGER_G3C.md:128",
+     "verdict": "holds"
+    }
+   ],
+   "verdict": "holds",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-7",
+   "id": "T-WP7",
+   "sources": [
+    {
+     "evidence": "`REMAINDER.md:1202`",
+     "part": "row index",
+     "raw": "QUOTED/agrees",
+     "relation": "agrees",
+     "row": "T-WP7",
+     "source": "LEDGER_G3C.md:129",
+     "verdict": "holds"
+    }
+   ],
+   "verdict": "holds",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-7",
+   "id": "T-WP8",
+   "sources": [
+    {
+     "evidence": "`AUDIO_BANKS.md:172`",
+     "part": "row index",
+     "raw": "OPEN/adjacent",
+     "relation": "adjacent",
+     "row": "T-WP8",
+     "source": "LEDGER_G3C.md:130",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-7",
+   "id": "T-WP9",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/n/a",
+     "relation": "n/a",
+     "row": "T-WP9",
+     "source": "LEDGER_G3C.md:131",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-7",
+   "id": "T-WP10",
+   "sources": [
+    {
+     "evidence": "`REMAINDER.md:1199`",
+     "part": "row index",
+     "raw": "OPEN/adjacent",
+     "relation": "adjacent",
+     "row": "T-WP10",
+     "source": "LEDGER_G3C.md:132",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-7",
+   "id": "T-WP11",
+   "sources": [
+    {
+     "evidence": "the row is JC3's `arcade.nitro_boost` block plus the gadget mesh; the sampler gives the boost *observable*, not the arcade values or the mesh.",
+     "part": "\u00a72",
+     "raw": "WRONG_CARD",
+     "row": "T-WP11",
+     "source": "LEDGER_G3B.md:35",
+     "verdict": "wrong card"
+    },
+    {
+     "evidence": "`REMAINDER.md:1211`",
+     "part": "row index",
+     "raw": "QUOTED/agrees",
+     "relation": "agrees",
+     "row": "T-WP11",
+     "source": "LEDGER_G3C.md:133",
+     "verdict": "holds"
+    }
+   ],
+   "verdict": "conflict",
+   "why": "holds; wrong card"
+  },
+  {
+   "dispo": "next",
+   "doc": "T-7",
+   "id": "T-WP12",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/n/a",
+     "relation": "n/a",
+     "row": "T-WP12",
+     "source": "LEDGER_G3C.md:134",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "blocked",
+   "doc": "T-7",
+   "id": "T-WP13",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/n/a",
+     "relation": "n/a",
+     "row": "T-WP13",
+     "source": "LEDGER_G3C.md:135",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-7",
+   "id": "T-WP14",
+   "sources": [
+    {
+     "evidence": "`REMAINDER.md:1199`",
+     "part": "row index",
+     "raw": "OPEN/adjacent",
+     "relation": "adjacent",
+     "row": "T-WP14",
+     "source": "LEDGER_G3C.md:136",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-20",
+   "id": "T-WLD1",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/n/a",
+     "relation": "n/a",
+     "row": "T-WLD1",
+     "source": "LEDGER_G3C.md:137",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-20",
+   "id": "T-WLD2",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/n/a",
+     "relation": "n/a",
+     "row": "T-WLD2",
+     "source": "LEDGER_G3C.md:138",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-20",
+   "id": "T-WLD3",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/n/a",
+     "relation": "n/a",
+     "row": "T-WLD3",
+     "source": "LEDGER_G3C.md:139",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "blocked",
+   "doc": "T-20",
+   "id": "T-WLD4",
+   "sources": [
+    {
+     "evidence": "`DECODE_DEPTH.md:28`",
+     "part": "row index",
+     "raw": "OPEN/negative",
+     "relation": "negative",
+     "row": "T-WLD4",
+     "source": "LEDGER_G3C.md:140",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-20",
+   "id": "T-WLD5",
+   "sources": [
+    {
+     "evidence": "`DECODE_DEPTH2.md:52`",
+     "part": "row index",
+     "raw": "OPEN/adjacent",
+     "relation": "adjacent",
+     "row": "T-WLD5",
+     "source": "LEDGER_G3C.md:141",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "blocked",
+   "doc": "T-20",
+   "id": "T-WLD6",
+   "sources": [
+    {
+     "evidence": "`DECODE_DEPTH.md:28`",
+     "part": "row index",
+     "raw": "OPEN/negative",
+     "relation": "negative",
+     "row": "T-WLD6",
+     "source": "LEDGER_G3C.md:142",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-20",
+   "id": "T-WLD7",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/n/a",
+     "relation": "n/a",
+     "row": "T-WLD7",
+     "source": "LEDGER_G3C.md:143",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "epe",
+   "doc": "T-20",
+   "id": "T-WLD8",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/n/a",
+     "relation": "n/a",
+     "row": "T-WLD8",
+     "source": "LEDGER_G3C.md:144",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "epe",
+   "doc": "T-20",
+   "id": "T-WLD9",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/n/a",
+     "relation": "n/a",
+     "row": "T-WLD9",
+     "source": "LEDGER_G3C.md:145",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "epe",
+   "doc": "T-20",
+   "id": "T-WLD10",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/n/a",
+     "relation": "n/a",
+     "row": "T-WLD10",
+     "source": "LEDGER_G3C.md:146",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "blocked",
+   "doc": "T-20",
+   "id": "T-WLD11",
+   "sources": [
+    {
+     "evidence": "`DECODE_DEPTH3.md:150`",
+     "part": "row index",
+     "raw": "OPEN/negative",
+     "relation": "negative",
+     "row": "T-WLD11",
+     "source": "LEDGER_G3C.md:147",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-20",
+   "id": "T-WLD12",
+   "sources": [
+    {
+     "evidence": "`DECODE_DEPTH.md:50`",
+     "part": "row index",
+     "raw": "OPEN/negative",
+     "relation": "negative",
+     "row": "T-WLD12",
+     "source": "LEDGER_G3C.md:148",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-20",
+   "id": "T-WLD13",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/n/a",
+     "relation": "n/a",
+     "row": "T-WLD13",
+     "source": "LEDGER_G3C.md:149",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-20",
+   "id": "T-WLD14",
+   "sources": [
+    {
+     "evidence": "`DECODE_DEPTH.md:22`",
+     "part": "row index",
+     "raw": "OPEN/adjacent",
+     "relation": "adjacent",
+     "row": "T-WLD14",
+     "source": "LEDGER_G3C.md:150",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-20",
+   "id": "T-WLD15",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/n/a",
+     "relation": "n/a",
+     "row": "T-WLD15",
+     "source": "LEDGER_G3C.md:151",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-20",
+   "id": "T-WLD16",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/n/a",
+     "relation": "n/a",
+     "row": "T-WLD16",
+     "source": "LEDGER_G3C.md:152",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-20",
+   "id": "T-WLD17",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/n/a",
+     "relation": "n/a",
+     "row": "T-WLD17",
+     "source": "LEDGER_G3C.md:153",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-20",
+   "id": "T-WLD18",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/n/a",
+     "relation": "n/a",
+     "row": "T-WLD18",
+     "source": "LEDGER_G3C.md:154",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-20",
+   "id": "T-WLD19",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/n/a",
+     "relation": "n/a",
+     "row": "T-WLD19",
+     "source": "LEDGER_G3C.md:155",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-15",
+   "id": "T-MD1",
+   "sources": [
+    {
+     "evidence": "the row's claim is exactly the card's: afterburner state is the booster bit @2396 mask 0x1 and the input byte is RPlayerInput+781.",
+     "part": "\u00a72",
+     "raw": "HOLDS",
+     "row": "T-MD1",
+     "source": "LEDGER_G3B.md:36",
+     "verdict": "holds"
+    },
+    {
+     "evidence": "`CLASS_DEFAULTS.md:265`",
+     "part": "row index",
+     "raw": "QUOTED/supplies",
+     "relation": "supplies",
+     "row": "T-MD1",
+     "source": "LEDGER_G3C.md:156",
+     "verdict": "holds"
+    }
+   ],
+   "verdict": "holds",
+   "why": ""
+  },
+  {
+   "dispo": "blocked",
+   "doc": "T-15",
+   "id": "T-MD2",
+   "sources": [
+    {
+     "evidence": "`REMAINDER.md:1848`",
+     "part": "row index",
+     "raw": "OPEN/negative",
+     "relation": "negative",
+     "row": "T-MD2",
+     "source": "LEDGER_G3C.md:157",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-15",
+   "id": "T-MD3",
+   "sources": [
+    {
+     "evidence": "`CLASS_DEFAULTS.md:206`",
+     "part": "row index",
+     "raw": "QUOTED/supplies",
+     "relation": "supplies",
+     "row": "T-MD3",
+     "source": "LEDGER_G3C.md:158",
+     "verdict": "holds"
+    }
+   ],
+   "verdict": "holds",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-15",
+   "id": "T-MD4",
+   "sources": [
+    {
+     "evidence": "`REMAINDER.md:1895`",
+     "part": "row index",
+     "raw": "OPEN/negative",
+     "relation": "negative",
+     "row": "T-MD4",
+     "source": "LEDGER_G3C.md:159",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-15",
+   "id": "T-MD5",
+   "sources": [
+    {
+     "evidence": "`REMAINDER.md:1895`",
+     "part": "row index",
+     "raw": "OPEN/negative",
+     "relation": "negative",
+     "row": "T-MD5",
+     "source": "LEDGER_G3C.md:160",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-15",
+   "id": "T-MD6",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/negative",
+     "relation": "negative",
+     "row": "T-MD6",
+     "source": "LEDGER_G3C.md:161",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-15",
+   "id": "T-MD7",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/negative",
+     "relation": "negative",
+     "row": "T-MD7",
+     "source": "LEDGER_G3C.md:162",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-15",
+   "id": "T-MD8",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/negative",
+     "relation": "negative",
+     "row": "T-MD8",
+     "source": "LEDGER_G3C.md:163",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-15",
+   "id": "T-MD9",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/n/a",
+     "relation": "n/a",
+     "row": "T-MD9",
+     "source": "LEDGER_G3C.md:164",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-15",
+   "id": "T-MD10",
+   "sources": [
+    {
+     "evidence": "`CLASS_DEFAULTS.md:242`",
+     "part": "row index",
+     "raw": "QUOTED/differs",
+     "relation": "differs",
+     "row": "T-MD10",
+     "source": "LEDGER_G3C.md:165",
+     "verdict": "wrong value"
+    }
+   ],
+   "verdict": "wrong value",
+   "why": ""
+  },
+  {
+   "dispo": "keep",
+   "doc": "T-15",
+   "id": "T-MD11",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/negative",
+     "relation": "negative",
+     "row": "T-MD11",
+     "source": "LEDGER_G3C.md:166",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-15",
+   "id": "T-MD12",
+   "sources": [
+    {
+     "evidence": "`CLASS_DEFAULTS.md:264`",
+     "part": "row index",
+     "raw": "QUOTED/supplies",
+     "relation": "supplies",
+     "row": "T-MD12",
+     "source": "LEDGER_G3C.md:167",
+     "verdict": "holds"
+    }
+   ],
+   "verdict": "holds",
+   "why": ""
+  },
+  {
+   "dispo": "out",
+   "doc": "T-15",
+   "id": "T-MD13",
+   "sources": [
+    {
+     "evidence": "`CLASS_DEFAULTS.md:243`",
+     "part": "row index",
+     "raw": "QUOTED/differs",
+     "relation": "differs",
+     "row": "T-MD13",
+     "source": "LEDGER_G3C.md:168",
+     "verdict": "wrong value"
+    }
+   ],
+   "verdict": "wrong value",
+   "why": ""
+  },
+  {
+   "dispo": "blocked",
+   "doc": "T-15",
+   "id": "T-MD14",
+   "sources": [
+    {
+     "evidence": "`CLASS_DEFAULTS.md:199`",
+     "part": "row index",
+     "raw": "QUOTED/different-member",
+     "relation": "different-member",
+     "row": "T-MD14",
+     "source": "LEDGER_G3C.md:169",
+     "verdict": "wrong card"
+    }
+   ],
+   "verdict": "wrong card",
+   "why": ""
+  },
+  {
+   "dispo": "next",
+   "doc": "T-15",
+   "id": "T-MD15",
+   "sources": [
+    {
+     "evidence": "-",
+     "part": "row index",
+     "raw": "OPEN/n/a",
+     "relation": "n/a",
+     "row": "T-MD15",
+     "source": "LEDGER_G3C.md:170",
+     "verdict": "open"
+    }
+   ],
+   "verdict": "open",
+   "why": ""
+  }
+ ]
+}

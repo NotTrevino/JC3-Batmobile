@@ -1,0 +1,614 @@
+{
+ "schema": 1,
+ "generator": "Tools/scripts/bm_collision.py",
+ "card": "B-10",
+ "inputs": {
+  "donor_physicsc": "Builds/test-091/aaf/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle.physicsc (the live build, G2-8)",
+  "donor_parts_module": "Builds/test-091/aaf/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_vehicle_parts.vmodc (G2-7)",
+  "t22_hull_set": "Working/Translation/t16_collision.json (T-22)",
+  "body_bbox": "Working/Appearance/build_parts/parts_manifest.json (`body_bbox_m`, B-02 / DIM-1)",
+  "stations": "Working/TrueScale/stations.json (T-G1; read for the wheel cross-check only, never written - R3)",
+  "writer": "Tools/scripts/jc3hkx.py (G2-30: hull_bytes, scale_hull, compound_aabb_edits, packfile_bytes, verify_written)"
+ },
+ "donor": {
+  "bytes": 340368,
+  "sha256": "1b90daefdc9660b4",
+  "objects": 430,
+  "hulls": 54,
+  "compounds": 22,
+  "instances": 112,
+  "hull_objects_unchanged": 49,
+  "station_sets": 0
+ },
+ "body": {
+  "bbox_m": {
+   "min": [
+    -1.748,
+    0.091,
+    -3.42
+   ],
+   "max": [
+    1.747,
+    2.362,
+    3.605
+   ],
+   "size": [
+    3.495,
+    2.271,
+    7.025
+   ]
+  },
+  "scale_k_per_axis": [
+   1.676257,
+   1.873759,
+   1.909565
+  ],
+  "translate_m": [
+   -0.0005,
+   -0.366422,
+   -1.126325
+  ],
+  "t22_uniform_k": 1.676259,
+  "t22_uniform_box_m": [
+   3.495,
+   2.0316,
+   6.1666
+  ],
+  "why_not_t22_uniform_k": "the uniform k fits inside the body (2.032 m in Y, 6.167 m in Z) - 0.239 m and 0.858 m short of DIM-1; the donor hull's aspect is not the body's",
+  "union_bbox_m": {
+   "min": [
+    -1.748,
+    0.091,
+    -3.42
+   ],
+   "max": [
+    1.747,
+    2.362,
+    3.605
+   ],
+   "size": [
+    3.495,
+    2.271,
+    7.025
+   ]
+  },
+  "deviation": {
+   "axes": [
+    {
+     "axis": "x",
+     "min_dev": -0.0,
+     "max_dev": -0.0,
+     "missing": 0.0
+    },
+    {
+     "axis": "y",
+     "min_dev": -0.0,
+     "max_dev": -0.0,
+     "missing": 0.0
+    },
+    {
+     "axis": "z",
+     "min_dev": -0.0,
+     "max_dev": 0.0,
+     "missing": 0.0
+    }
+   ],
+   "max_abs_dev_m": 0.0,
+   "max_missing_m": 0.0,
+   "within_tolerance": true
+  },
+  "plane_support_gap_m": 2.93e-07,
+  "frame": "the body part's transform is identity and the donor's chassis hull is the one hull bound to it, so its stored AABB is the car-space union of the hulls the body carries"
+ },
+ "hull_set": {
+  "written": [
+   {
+    "part": "sportsmuscle_body",
+    "part_index": 0,
+    "hull": "0x5250",
+    "method": "per-axis linear map to DIM-1's body bbox (`parts_manifest.body_bbox_m`), planes re-derived",
+    "vertices": 36,
+    "planes": 47,
+    "extent_bytes": 1776,
+    "box_before_m": {
+     "min": [
+      -1.0425,
+      0.2441,
+      -1.2012
+     ],
+     "max": [
+      1.0425,
+      1.4561,
+      2.4777
+     ],
+     "size": [
+      2.085,
+      1.212,
+      3.6788
+     ]
+    },
+    "scale_k": [
+     1.676257,
+     1.873759,
+     1.909565
+    ],
+    "translate_m": [
+     -0.0005,
+     -0.366422,
+     -1.126325
+    ],
+    "radius_before": 0.01,
+    "radius_after": 0.016763,
+    "box_after_m": {
+     "min": [
+      -1.748,
+      0.091,
+      -3.42
+     ],
+     "max": [
+      1.747,
+      2.362,
+      3.605
+     ],
+     "size": [
+      3.495,
+      2.271,
+      7.025
+     ]
+    },
+    "provenance": "derived: DIM-1 body bbox / the donor hull's own AABB; the writer is G2-30's `hull_bytes`, the map is exact for a convex polytope and `check --file` re-verifies unit planes, ranks, indices and convexity"
+   },
+   {
+    "part": "sportsmuscle_wheel_f_l",
+    "part_index": 26,
+    "hull": "0xb5d0",
+    "method": "`jc3hkx.scale_hull` (uniform, about the hull's own centre)",
+    "vertices": 20,
+    "planes": 12,
+    "extent_bytes": 704,
+    "box_before_m": {
+     "min": [
+      -0.1479,
+      -0.4112,
+      -0.3902
+     ],
+     "max": [
+      0.1479,
+      0.4113,
+      0.392
+     ],
+     "size": [
+      0.2958,
+      0.8225,
+      0.7822
+     ]
+    },
+    "scale_k": [
+     1.660052,
+     1.660052,
+     1.660052
+    ],
+    "translate_m": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "radius_before": 0.01,
+    "radius_after": 0.016601,
+    "box_after_m": {
+     "min": [
+      -0.2455,
+      -0.6826,
+      -0.6484
+     ],
+     "max": [
+      0.2455,
+      0.6828,
+      0.6502
+     ],
+     "size": [
+      0.491,
+      1.3654,
+      1.2986
+     ]
+    },
+    "provenance": "decoded (T-22): tyre diameter / the donor hull's height; placement untouched - the hull is centred on the wheel's own pivot"
+   },
+   {
+    "part": "sportsmuscle_wheel_f_r",
+    "part_index": 27,
+    "hull": "0xb910",
+    "method": "`jc3hkx.scale_hull` (uniform, about the hull's own centre)",
+    "vertices": 20,
+    "planes": 12,
+    "extent_bytes": 704,
+    "box_before_m": {
+     "min": [
+      -0.1479,
+      -0.4112,
+      -0.3902
+     ],
+     "max": [
+      0.1479,
+      0.4113,
+      0.392
+     ],
+     "size": [
+      0.2958,
+      0.8225,
+      0.7822
+     ]
+    },
+    "scale_k": [
+     1.660052,
+     1.660052,
+     1.660052
+    ],
+    "translate_m": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "radius_before": 0.01,
+    "radius_after": 0.016601,
+    "box_after_m": {
+     "min": [
+      -0.2455,
+      -0.6826,
+      -0.6484
+     ],
+     "max": [
+      0.2455,
+      0.6828,
+      0.6502
+     ],
+     "size": [
+      0.491,
+      1.3654,
+      1.2986
+     ]
+    },
+    "provenance": "decoded (T-22): tyre diameter / the donor hull's height; placement untouched - the hull is centred on the wheel's own pivot"
+   },
+   {
+    "part": "sportsmuscle_wheel_r_l",
+    "part_index": 11,
+    "hull": "0xfb40",
+    "method": "`jc3hkx.scale_hull` (uniform, about the hull's own centre)",
+    "vertices": 20,
+    "planes": 12,
+    "extent_bytes": 704,
+    "box_before_m": {
+     "min": [
+      -0.1479,
+      -0.4112,
+      -0.3902
+     ],
+     "max": [
+      0.1479,
+      0.4113,
+      0.392
+     ],
+     "size": [
+      0.2958,
+      0.8225,
+      0.7822
+     ]
+    },
+    "scale_k": [
+     1.660052,
+     1.660052,
+     1.660052
+    ],
+    "translate_m": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "radius_before": 0.01,
+    "radius_after": 0.016601,
+    "box_after_m": {
+     "min": [
+      -0.2455,
+      -0.6826,
+      -0.6484
+     ],
+     "max": [
+      0.2455,
+      0.6828,
+      0.6502
+     ],
+     "size": [
+      0.491,
+      1.3654,
+      1.2986
+     ]
+    },
+    "provenance": "decoded (T-22): tyre diameter / the donor hull's height; placement untouched - the hull is centred on the wheel's own pivot"
+   },
+   {
+    "part": "sportsmuscle_wheel_r_r",
+    "part_index": 12,
+    "hull": "0xfe80",
+    "method": "`jc3hkx.scale_hull` (uniform, about the hull's own centre)",
+    "vertices": 20,
+    "planes": 12,
+    "extent_bytes": 704,
+    "box_before_m": {
+     "min": [
+      -0.1479,
+      -0.4112,
+      -0.3902
+     ],
+     "max": [
+      0.1479,
+      0.4113,
+      0.392
+     ],
+     "size": [
+      0.2958,
+      0.8225,
+      0.7822
+     ]
+    },
+    "scale_k": [
+     1.660052,
+     1.660052,
+     1.660052
+    ],
+    "translate_m": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "radius_before": 0.01,
+    "radius_after": 0.016601,
+    "box_after_m": {
+     "min": [
+      -0.2455,
+      -0.6826,
+      -0.6484
+     ],
+     "max": [
+      0.2455,
+      0.6828,
+      0.6502
+     ],
+     "size": [
+      0.491,
+      1.3654,
+      1.2986
+     ]
+    },
+    "provenance": "decoded (T-22): tyre diameter / the donor hull's height; placement untouched - the hull is centred on the wheel's own pivot"
+   }
+  ],
+  "skipped": [
+   {
+    "part": "sportsmuscle_door_f_l",
+    "part_index": 1,
+    "hull": "0x59c0",
+    "box_m": {
+     "size": [
+      0.3871,
+      1.0451,
+      1.415
+     ]
+    },
+    "reason": "B-04 step 1 removes `door_f_l`/`door_f_r` and their `door_parts` entries, so no Batmobile part will carry this slot; scaling it would bind collision to a part that will not exist (R4)"
+   },
+   {
+    "part": "sportsmuscle_door_f_r",
+    "part_index": 2,
+    "hull": "0x6400",
+    "box_m": {
+     "size": [
+      0.3878,
+      1.0477,
+      1.415
+     ]
+    },
+    "reason": "B-04 step 1 removes `door_f_l`/`door_f_r` and their `door_parts` entries, so no Batmobile part will carry this slot; scaling it would bind collision to a part that will not exist (R4)"
+   }
+  ],
+  "written_count": 5,
+  "slots_in_t22": 7,
+  "unchanged_hulls": 49,
+  "wheels": [
+   {
+    "part": "sportsmuscle_wheel_f_l",
+    "station": "f_l",
+    "station_hub_m": [
+     -1.208,
+     0.7047,
+     -2.57
+    ],
+    "tyre_diameter_m": 1.3658,
+    "k": 1.660052
+   },
+   {
+    "part": "sportsmuscle_wheel_f_r",
+    "station": "f_r",
+    "station_hub_m": [
+     1.208,
+     0.7047,
+     -2.5699
+    ],
+    "tyre_diameter_m": 1.3652,
+    "k": 1.660052
+   },
+   {
+    "part": "sportsmuscle_wheel_r_l",
+    "station": "r_l",
+    "station_hub_m": [
+     -1.2845,
+     0.7027,
+     2.4589
+    ],
+    "tyre_diameter_m": 1.3652,
+    "k": 1.660052
+   },
+   {
+    "part": "sportsmuscle_wheel_r_r",
+    "station": "r_r",
+    "station_hub_m": [
+     1.2845,
+     0.7027,
+     2.4589
+    ],
+    "tyre_diameter_m": 1.3654,
+    "k": 1.660052
+   }
+  ]
+ },
+ "stations": {
+  "in_file_before": 0,
+  "in_file_after": 0,
+  "physics_system_data_identical": true,
+  "parts_module_sha256": "7335dfe71e95de1c",
+  "note": "R3: no station row, no `base_wheel_hardpoint_positions`, no parts module and no `land_global` value is written or moved; the wheel hulls keep their part-local centre so a wheel still spins about its own pivot"
+ },
+ "decomposition_tyre_m": 1.3654,
+ "envelope": {
+  "before": {
+   "stored": {
+    "min": [
+     -1.0548,
+     -0.5226,
+     -2.5915
+    ],
+    "max": [
+     1.045,
+     1.4561,
+     2.5236
+    ],
+    "size": [
+     2.0999,
+     1.9788,
+     5.1151
+    ]
+   },
+   "placed": {
+    "min": [
+     -1.0548,
+     -0.4112,
+     -2.5915
+    ],
+    "max": [
+     1.045,
+     1.4561,
+     2.5491
+    ],
+    "size": [
+     2.0999,
+     1.8673,
+     5.1406
+    ]
+   },
+   "frame": "`stored` = the hull AABBs as the file holds them; `placed` = instance basis/translation (jc3hkx.transform_aabb) then the part module's parent_space_offset chain.  Per-part frames are B-04's rows, so this is the donor's own envelope, not the car's - reported, never asserted."
+  },
+  "after": {
+   "stored": {
+    "min": [
+     -1.748,
+     -0.6826,
+     -3.42
+    ],
+    "max": [
+     1.747,
+     2.362,
+     3.605
+    ],
+    "size": [
+     3.495,
+     3.0446,
+     7.025
+    ]
+   },
+   "placed": {
+    "min": [
+     -1.748,
+     -0.6826,
+     -3.42
+    ],
+    "max": [
+     1.747,
+     2.362,
+     3.605
+    ],
+    "size": [
+     3.495,
+     3.0446,
+     7.025
+    ]
+   },
+   "frame": "`stored` = the hull AABBs as the file holds them; `placed` = instance basis/translation (jc3hkx.transform_aabb) then the part module's parent_space_offset chain.  Per-part frames are B-04's rows, so this is the donor's own envelope, not the car's - reported, never asserted."
+  }
+ },
+ "write": {
+  "bytes": 340368,
+  "objects": 430,
+  "edited_objects": 8,
+  "hulls_written": 5,
+  "compounds_updated": 3,
+  "problems": [],
+  "shape_violations": [],
+  "sha256": "192c12479d81da6e"
+ },
+ "checks": [
+  {
+   "name": "donor hulls re-emitted from their decoded values reproduce the source bytes",
+   "ok": true,
+   "detail": "54/54 hulls byte-identical"
+  },
+  {
+   "name": "the write re-reads clean (verify_written)",
+   "ok": true,
+   "detail": "0 problem(s)"
+  },
+  {
+   "name": "every shape invariant on the built file (`shape_checks`)",
+   "ok": true,
+   "detail": "0 violation(s), 54/54 convex, 22/22 unions"
+  },
+  {
+   "name": "object count and class list unchanged",
+   "ok": true,
+   "detail": "430 objects, 22 compounds, 112 instances"
+  },
+  {
+   "name": "only the written hulls and their ancestor compounds changed",
+   "ok": true,
+   "detail": "5 hulls + 3 ancestor compound(s)"
+  },
+  {
+   "name": "the body-entry data (hknpPhysicsSystemData) is byte-identical (R3)",
+   "ok": true,
+   "detail": "1 object(s), 20912 B"
+  },
+  {
+   "name": "the file carries no station quad before or after",
+   "ok": true,
+   "detail": "0 -> 0 station sets"
+  },
+  {
+   "name": "every plane of the written body hull is supported exactly",
+   "ok": true,
+   "detail": "max |max(n.v) + d| = 2.93e-07 m (float32), donor 1.75e-07 m"
+  },
+  {
+   "name": "hull union bbox within 5 cm of the body bbox (Done check 2)",
+   "ok": true,
+   "detail": "max |dev| 0.0000 m, missing 0.0000 m"
+  }
+ ],
+ "summary": {
+  "hulls_written": 5,
+  "compounds_updated": 3,
+  "body_bbox_dev_m": 0.0,
+  "within_tolerance": true,
+  "bytes_out": 340368,
+  "objects_out": 54,
+  "tolerance_m": 0.05
+ }
+}

@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/enter-exit-canopy-sequence-spec.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-entity-roots-and-slots.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-gamepad-scoping.md
+Specify entry, exit and canopy behaviour for the hook and the entity graph. Operator facts: enter with JC3 Y, exit with LB, and the canopy interior is visible. Read Research/BatmobileGrab/COCKPIT.md, ANIMATIONS.md (canopy clip, 0.433 s), reports/doors-canopy-trunk-plan.md, Research/JC3Grab/INTERACTION.md, SEAT.md, Working/Translation/T9_INTERACTION.md and Working/Q/PILOT/ENTER_EXIT.md. Write: the canopy opening on entry and on exit and which JC3 door or hatch behaviour carries it versus the hook; the seat pose (Driver socket, head height under the canopy); LB exit at speed in pursuit (the car breaks right) versus battle (straight), with the velocity values marked UNKNOWN-authored; entry from both sides. Output Working/Modes/enter_exit_spec.md with a step-by-step event list. Done-check: each step has a trigger, an owner (graph, hook or animation) and a pilot observation. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

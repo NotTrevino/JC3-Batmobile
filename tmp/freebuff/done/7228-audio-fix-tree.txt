@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/audio-fix-tree.md
+ONLY: freebuff
+EST: 60
+BRIEF: hand-written 2026-11-05
+Task 7221 derived (but did not apply) the fix for both RED V-04 gates (Builds/bm-RC1/verify/audio_diag.md). Apply it in a NEW private tree only: copy the audio manifest to Working/Audio/bm_bank_manifest_v2.json with the derived changes, build the bank into Builds/bm-004c with the existing Tools/scripts/bm_audio.py approach (never write into an existing Builds/bm-* tree, never run install.ps1, never touch the game). Then re-run the V-04 gates against bm-004c (v04_audio.py logic, via a new Tools/scripts/v04_audio_004c.py) and report loudness and loop-click results per sample, honestly, including any gate that is still red.
+Shared project rules: tmp/freebuff/INSTRUCTIONS.md.

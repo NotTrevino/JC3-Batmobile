@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/bmak-native-remainder-triage.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+Research/BatmobileGrab reports 925 BmAK exports as native or untagged, 768 of them 2-byte Package stubs; the other 157 are the real remainder (STATUS.md, G1 section; GRAB_BACKLOG.md G3-06). Using Tools/scripts/bmak_coverage.py and Research/BatmobileGrab/COVERAGE.json, list the 157 non-stub exports with package, export index, class, byte size and the nearest named neighbour, then rank them by whether any ledger row or BmAK feature code of GRAB_BACKLOG.md section 1 could depend on them (weapons, handling, audio, HUD, damage). For the top fifteen read the bytes with Tools/scripts/upk_read.py and say what they are: decoded, derived, or UNKNOWN with the tool that would settle it. Write Tools/scripts/bmak_native_triage.py (--write, --check) and Research/BatmobileGrab/NATIVE_TRIAGE.md. This closes the G1 percentage question: either the remainder is irrelevant to the Batmobile with evidence, or it becomes named cards.

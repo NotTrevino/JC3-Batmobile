@@ -1,0 +1,355 @@
+{
+ "schema": 1,
+ "card": "T-S6b",
+ "generator": "Tools/scripts/t_s6b_suspension.py",
+ "members": [
+  "antirollbar_strength",
+  "compression",
+  "direction[0]",
+  "direction[1]",
+  "direction[2]",
+  "hardpoint_offset_along_spring",
+  "lateral_tire_force_offset",
+  "length",
+  "longitudinal_tire_force_offset",
+  "max_length_offset",
+  "max_velocity_for_damp_clamp",
+  "min_length",
+  "offset[0]",
+  "offset[1]",
+  "offset[2]",
+  "raycast_offset",
+  "relaxation",
+  "strength",
+  "tire_drag_force_offset",
+  "wheel_hardpoint_offsets",
+  "wheel_index"
+ ],
+ "donor": {
+  "entity": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_civilian_01.ee",
+  "module": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/v0300_car_kensington_sportsmuscle_suspension.vmodc",
+  "mass_kg": 975,
+  "strength": 40,
+  "strength_r": 35,
+  "compression": 4,
+  "compression_r": 3,
+  "relaxation": 7,
+  "relaxation_r": 4,
+  "length": 0.25,
+  "length_r": 0.25,
+  "min_length": 0,
+  "max_length_offset": 0,
+  "hardpoint_offset": -0.0375000015,
+  "hardpoint_offset_r": -0.042857144,
+  "antiroll": 0,
+  "rows": 49
+ },
+ "oracle": {
+  "vehicles": 166,
+  "mass": {
+   "min": 50,
+   "median": 2000,
+   "max": 550000,
+   "over_3000kg": 65
+  },
+  "strength_values": [
+   4,
+   15,
+   20,
+   25,
+   30,
+   40,
+   45,
+   60,
+   80
+  ],
+  "per_mass": {
+   "pass": 164,
+   "fail": 2,
+   "worst_sag": 0.6131
+  },
+  "absolute_n": {
+   "pass": 0,
+   "fail": 166
+  },
+  "absolute_kn": {
+   "pass": 92,
+   "fail": 74
+  },
+  "per_mass_violations": [
+   {
+    "entity": "editor/entities/jc_vehicles/01_land/v0510_car_solar_modernroadster/v0510_car_solar_modernroadster_civilian_01.ee",
+    "mass": 1000,
+    "strength": 20,
+    "length": 0.119999997,
+    "sag": 0.1226,
+    "ratio": 1.0217
+   },
+   {
+    "entity": "editor/entities/jc_vehicles/01_land/v0510_car_solar_modernroadster/v0510_car_solar_modernroadster_debug.ee",
+    "mass": 1000,
+    "strength": 20,
+    "length": 0.119999997,
+    "sag": 0.1226,
+    "ratio": 1.0217
+   }
+  ],
+  "per_mass_worst_ratio": 1.0217,
+  "heavy": {
+   "entity": "editor/entities/jc_vehicles/01_land/v0005_car_autostraad_minetruck/v0005_car_autostraad_minetruck_commercial_01.ee",
+   "mass": 550000,
+   "strength": 30,
+   "length": 0.180000007,
+   "sag_per_mass": 0.0818,
+   "sag_absolute_n": 44962.5,
+   "sag_absolute_kn": 44.9625
+  },
+  "zeta": {
+   "min": 0.079,
+   "median": 0.198,
+   "max": 0.775
+  },
+  "freq_hz": {
+   "min": 0.318,
+   "median": 0.872,
+   "max": 1.424
+  }
+ },
+ "bmak_fields": [
+  {
+   "class": "RVehicleSimBatmobile",
+   "name": "BMWheelSuspensionStiffness",
+   "offset": 772,
+   "hex": "0x304",
+   "type": "float",
+   "kind": "FloatProperty"
+  },
+  {
+   "class": "RVehicleSimBatmobile",
+   "name": "BMWheelSuspensionDamping",
+   "offset": 776,
+   "hex": "0x308",
+   "type": "float",
+   "kind": "FloatProperty"
+  },
+  {
+   "class": "RVehicleSimBatmobile",
+   "name": "BMWheelSuspensionBias",
+   "offset": 780,
+   "hex": "0x30c",
+   "type": "float",
+   "kind": "FloatProperty"
+  },
+  {
+   "class": "RVehicleSimBatmobile",
+   "name": "BMFrontWheelSuspensionBias",
+   "offset": 784,
+   "hex": "0x310",
+   "type": "float",
+   "kind": "FloatProperty"
+  },
+  {
+   "class": "RVehicleSimBatmobile",
+   "name": "BMFrontWheelMaxDroop",
+   "offset": 788,
+   "hex": "0x314",
+   "type": "float",
+   "kind": "FloatProperty"
+  },
+  {
+   "class": "RVehicleSimBatmobile",
+   "name": "BMRearWheelMaxDroop",
+   "offset": 792,
+   "hex": "0x318",
+   "type": "float",
+   "kind": "FloatProperty"
+  },
+  {
+   "class": "RVehicleSimBatmobile",
+   "name": "PMWheelSuspensionStiffness",
+   "offset": 812,
+   "hex": "0x32c",
+   "type": "float",
+   "kind": "FloatProperty"
+  },
+  {
+   "class": "RVehicleSimBatmobile",
+   "name": "PMWheelSuspensionDamping",
+   "offset": 816,
+   "hex": "0x330",
+   "type": "float",
+   "kind": "FloatProperty"
+  },
+  {
+   "class": "RVehicleSimBatmobile",
+   "name": "PMWheelSuspensionBias",
+   "offset": 820,
+   "hex": "0x334",
+   "type": "float",
+   "kind": "FloatProperty"
+  },
+  {
+   "class": "RVehicleSimBatmobile",
+   "name": "PMFrontWheelSuspensionBias",
+   "offset": 824,
+   "hex": "0x338",
+   "type": "float",
+   "kind": "FloatProperty"
+  },
+  {
+   "class": "RVehicleSimBatmobile",
+   "name": "StationaryWheelSuspensionBias",
+   "offset": 828,
+   "hex": "0x33c",
+   "type": "float",
+   "kind": "FloatProperty"
+  },
+  {
+   "class": "RVehicleSimBatmobile",
+   "name": "MaxPMSuspensionSpeed",
+   "offset": 832,
+   "hex": "0x340",
+   "type": "float",
+   "kind": "FloatProperty"
+  },
+  {
+   "class": "RVehicleSimBatmobile",
+   "name": "PMFrontWheelMaxDroop",
+   "offset": 836,
+   "hex": "0x344",
+   "type": "float",
+   "kind": "FloatProperty"
+  },
+  {
+   "class": "RVehicleSimBatmobile",
+   "name": "PMRearWheelMaxDroop",
+   "offset": 840,
+   "hex": "0x348",
+   "type": "float",
+   "kind": "FloatProperty"
+  },
+  {
+   "class": "SVehicle",
+   "name": "ChassisMass",
+   "offset": 1688,
+   "hex": "0x698",
+   "type": "float",
+   "kind": "FloatProperty"
+  },
+  {
+   "class": "SVehicle",
+   "name": "StayUprightStiffness",
+   "offset": 1756,
+   "hex": "0x6dc",
+   "type": "float",
+   "kind": "FloatProperty"
+  },
+  {
+   "class": "SVehicle",
+   "name": "StayUprightDamping",
+   "offset": 1760,
+   "hex": "0x6e0",
+   "type": "float",
+   "kind": "FloatProperty"
+  },
+  {
+   "class": "SVehicle",
+   "name": "MassScale",
+   "offset": 2068,
+   "hex": "0x814",
+   "type": "float",
+   "kind": "FloatProperty"
+  }
+ ],
+ "field_map": [
+  {
+   "class": "RVehicleSimBatmobile",
+   "field": "BMWheelSuspensionStiffness",
+   "jc3": "front.strength / rear.strength",
+   "quantity": "spring rate",
+   "bridge": "strength_JC3 = k_BmAK / m   (derived: k = strength * mass)",
+   "label": "derived"
+  },
+  {
+   "class": "RVehicleSimBatmobile",
+   "field": "PMWheelSuspensionStiffness",
+   "jc3": "front.strength / rear.strength",
+   "quantity": "spring rate (pursuit mode)",
+   "bridge": "same as BMWheelSuspensionStiffness, per-mode value",
+   "label": "derived"
+  },
+  {
+   "class": "RVehicleSimBatmobile",
+   "field": "BMWheelSuspensionDamping",
+   "jc3": "front.compression + front.relaxation",
+   "quantity": "damper rate",
+   "bridge": "c_JC3 = c_BmAK / m; JC3 splits bump (compression) and rebound (relaxation), BmAK has one field",
+   "label": "derived"
+  },
+  {
+   "class": "RVehicleSimBatmobile",
+   "field": "BMWheelSuspensionBias",
+   "jc3": "front.hardpoint_offset_along_spring",
+   "quantity": "static rest offset along the spring axis",
+   "bridge": "sign/scale UNKNOWN",
+   "label": "derived member, UNKNOWN value bridge"
+  },
+  {
+   "class": "RVehicleSimBatmobile",
+   "field": "BMFrontWheelSuspensionBias",
+   "jc3": "front.hardpoint_offset_along_spring",
+   "quantity": "front rest offset",
+   "bridge": "sign/scale UNKNOWN",
+   "label": "derived member, UNKNOWN value bridge"
+  },
+  {
+   "class": "RVehicleSimBatmobile",
+   "field": "StationaryWheelSuspensionBias",
+   "jc3": "front.hardpoint_offset_along_spring",
+   "quantity": "rest offset when stationary",
+   "bridge": "UNKNOWN (no stationary variant in the JC3 module)",
+   "label": "UNKNOWN"
+  },
+  {
+   "class": "RVehicleSimBatmobile",
+   "field": "BMFrontWheelMaxDroop",
+   "jc3": "front.length - front.min_length",
+   "quantity": "downward travel limit",
+   "bridge": "JC3 has total travel only; max_length_offset would extend it and is 0",
+   "label": "derived member, UNKNOWN split"
+  },
+  {
+   "class": "RVehicleSimBatmobile",
+   "field": "BMRearWheelMaxDroop",
+   "jc3": "rear.length - rear.min_length",
+   "quantity": "downward travel limit",
+   "bridge": "same as front",
+   "label": "derived member, UNKNOWN split"
+  },
+  {
+   "class": "RVehicleSimBatmobile",
+   "field": "MaxPMSuspensionSpeed",
+   "jc3": "front.max_velocity_for_damp_clamp",
+   "quantity": "damper clamp speed",
+   "bridge": "same physical role (clamp the damper above a speed); scale UNKNOWN",
+   "label": "derived member, UNKNOWN value bridge"
+  },
+  {
+   "class": "SVehicle",
+   "field": "ChassisMass",
+   "jc3": "RigidBody.mass",
+   "quantity": "sprung mass",
+   "bridge": "the bridge's mass term; JC3 mass is kg (decoded), BmAK unit UNKNOWN",
+   "label": "decoded member, UNKNOWN value"
+  },
+  {
+   "class": "SVehicle",
+   "field": "StayUprightStiffness",
+   "jc3": "front.antirollbar_strength",
+   "quantity": "roll resistance",
+   "bridge": "NOT the same quantity: BmAK keeps the body upright, JC3 links the two wheels of an axle",
+   "label": "UNKNOWN"
+  }
+ ],
+ "labels": "decoded: module rows, mass, BmAK offsets; derived: mass-normalised unit, field map quantities; UNKNOWN: every BmAK value, bias sign, droop split"
+}

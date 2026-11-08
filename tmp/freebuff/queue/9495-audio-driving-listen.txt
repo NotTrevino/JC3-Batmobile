@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/audio-driving-listen.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/APPROVED_Q_FULL.txt, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/audio-standstill-listen.md
+Supervised driving listen, card AUDIO_DRIVE then AUDIO_BOOST from Working/Q/PILOT/. Drive 0 to 100 km/h on a straight road with audio recording on. Observations: pitch rises continuously with speed and rpm (operator question: bend or crossfade, record which is audible); gear-shift sounds occur in order; handbrake spin gives the creak loop; boost makes the nitro whine audible over wind and engine (row A2, test-060 never reported this). Pass rule: each observation yes or no with a timestamp in the recording. Compare recording levels with the whole-bed estimates in Working/Audio/mix_balance.json. On fail write a fix card naming layer, file and measured difference. Output tmp/freebuff/reports/audio-driving-listen.md. End by listing which sounds a human should confirm by ear, since a machine capture cannot judge pleasantness. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/checks-sweep-a.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-06
+Find out which of the repo's --check scripts are red today. List Tools/scripts/*.py whose names start with the letters a through g and that accept --check (grep for '--check' in the file). Run each with a 5-minute limit using `uv run --with numpy --with scipy --with pillow --with pefile --with capstone --with fsb5 python <script> --check`, and record exit code and the last two output lines. For every failure say whether it is a real failure, a missing dependency (name it), or a missing input file (name it). Output Working/Translation/CHECKS_SWEEP_A.md (a table) and Tools/scripts/checks_sweep.py that takes a letter range and prints the table. Do not fix anything; do not run scripts that write outside tmp/ or scratch.

@@ -1,0 +1,8 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/apply-keep-audit-fixes-systems.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-06
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/apply-keep-audit-fixes-handling.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/keep-audit-lights.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/keep-audit-audio-fx.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/keep-audit-damage-collision.md
+Reports keep-audit-lights, keep-audit-audio-fx and keep-audit-damage-collision list lights, events, effects and damage rows that are approximate or missing. Turn each into a ledger edit (new value, derivation) or a new card with a measurable done-line. Put the lights and audio items into the B-07 and B-11 batch plans in Working/Translation/BUILD_BATCHES.md, and the damage and collision items into B-09 and B-10. Re-pin and re-run the standing checks.
+
+Pin upkeep: if your edits change which rows are blocked or the in-scope row count, update WAITS and the in_scope == value in Tools/scripts/t_blocked.py (back it up first), run t_blocked.py --write then --check, and keep both passing before you finish.

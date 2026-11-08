@@ -1,0 +1,468 @@
+{
+ "image": {
+  "path": "E:\\Games\\Batman - Arkham Knight\\Binaries\\Win64\\BatmanAK.exe",
+  "size": 55101440,
+  "base": "0x140000000"
+ },
+ "natives": {
+  "trytochange": {
+   "name": "ARVehicleBatmobileBaseexecTryToChangeMode",
+   "present": true,
+   "entry_va": 5419714736,
+   "code_va": 5374246112,
+   "array_entries": 75,
+   "direct_calls_to_code": 0,
+   "name_pointer_refs": 1
+  },
+  "exit_set": {
+   "name": "ARVehicleBatmobileBaseexecSetBatmobileExit",
+   "present": true,
+   "entry_va": 5419714992,
+   "code_va": 5373681120,
+   "array_entries": 75,
+   "direct_calls_to_code": 0,
+   "name_pointer_refs": 1
+  },
+  "exit_check": {
+   "name": "ARVehicleBatmobileBaseexecCheckSpaceToGetOutOfBatmobile",
+   "present": true,
+   "entry_va": 5419714336,
+   "code_va": 5374250768,
+   "array_entries": 75,
+   "direct_calls_to_code": 0,
+   "name_pointer_refs": 1
+  },
+  "cockpit_check": {
+   "name": "ARVehicleBatmobileBaseexecCheckSpaceAboveBatmobileCockpit",
+   "present": true,
+   "entry_va": 5419714352,
+   "code_va": 5373682064,
+   "array_entries": 75,
+   "direct_calls_to_code": 0,
+   "name_pointer_refs": 1
+  },
+  "cockpit_open": {
+   "name": "ARVehicleBatmobileBaseexecIsCockpitOpen",
+   "present": true,
+   "entry_va": 5419714960,
+   "code_va": 5373681184,
+   "array_entries": 75,
+   "direct_calls_to_code": 0,
+   "name_pointer_refs": 1
+  },
+  "eject_up": {
+   "name": "ARVehicleBatmobileBaseexecModifyEjectUpLoc",
+   "present": true,
+   "entry_va": 5419714384,
+   "code_va": 5374250384,
+   "array_entries": 75,
+   "direct_calls_to_code": 0,
+   "name_pointer_refs": 1
+  },
+  "battle_active": {
+   "name": "ARVehicleBatmobileBaseexecIsInActiveBattleMode",
+   "present": true,
+   "entry_va": 5419715056,
+   "code_va": 5373680624,
+   "array_entries": 75,
+   "direct_calls_to_code": 0,
+   "name_pointer_refs": 1
+  },
+  "battle_factor": {
+   "name": "ARVehicleBatmobileBaseexecGetBattleModeFactor",
+   "present": true,
+   "entry_va": 5419715344,
+   "code_va": 5373680464,
+   "array_entries": 75,
+   "direct_calls_to_code": 0,
+   "name_pointer_refs": 1
+  },
+  "driving_move": {
+   "name": "ARPlayerControllerexecDrivingPlayerMove",
+   "present": true,
+   "entry_va": 5419671856,
+   "code_va": 5373960032,
+   "array_entries": 347,
+   "direct_calls_to_code": 0,
+   "name_pointer_refs": 1
+  },
+  "driving_rumble": {
+   "name": "ARPlayerControllerexecUpdateDrivingRumble",
+   "present": true,
+   "entry_va": 5419671840,
+   "code_va": 5373960336,
+   "array_entries": 347,
+   "direct_calls_to_code": 0,
+   "name_pointer_refs": 1
+  },
+  "pre_input": {
+   "name": "ARPlayerControllerexecPreProcessInput",
+   "present": true,
+   "entry_va": 5419674864,
+   "code_va": 5373944944,
+   "array_entries": 347,
+   "direct_calls_to_code": 0,
+   "name_pointer_refs": 1
+  },
+  "emp_dumb": {
+   "name": "ARBatmobileEMPMissileexecGetDumbFireTarget",
+   "present": true,
+   "entry_va": 5419718640,
+   "code_va": 5373688112,
+   "array_entries": 4,
+   "direct_calls_to_code": 0,
+   "name_pointer_refs": 1
+  },
+  "emp_lock": {
+   "name": "ARBatmobileEMPMissileexecSwitchLockOnTarget",
+   "present": true,
+   "entry_va": 5419718656,
+   "code_va": 5373687968,
+   "array_entries": 4,
+   "direct_calls_to_code": 0,
+   "name_pointer_refs": 1
+  },
+  "emp_origin": {
+   "name": "ARBatmobileEMPMissileexecGetAutoTargetOrigin",
+   "present": true,
+   "entry_va": 5419718608,
+   "code_va": 5373635872,
+   "array_entries": 4,
+   "direct_calls_to_code": 0,
+   "name_pointer_refs": 1
+  },
+  "emp_rotation": {
+   "name": "ARBatmobileEMPMissileexecGetAutoTargetRotation",
+   "present": true,
+   "entry_va": 5419718624,
+   "code_va": 5373635520,
+   "array_entries": 4,
+   "direct_calls_to_code": 0,
+   "name_pointer_refs": 1
+  }
+ },
+ "absent_or_present_names": {
+  "ToggleBattleMode": 0,
+  "EjectFromVehicle": 0,
+  "SelectVehicleWeapon": 0,
+  "ReleaseVehicleWeapon": 0,
+  "ExitVehicle": 0,
+  "BatmobileFireButton": 0,
+  "QuickGadgetB": 0,
+  "aLeftTrigger": 0,
+  "aLeftShoulder": 0,
+  "XboxTypeS_LeftTrigger": 2,
+  "XboxTypeS_LeftShoulder": 1,
+  "RBatmobileVehicleTracker": 0,
+  "RBatmobileMissileLauncher": 0,
+  "RBatmobileEMPMissile": 5,
+  "RPursuitModeMissileLauncher": 2
+ },
+ "mode_change": {
+  "thunk": 5374246112,
+  "thunk_targets": [
+   {
+    "at": 5374246184,
+    "op": "jmp",
+    "target": 5374246352,
+    "target_is_text": true
+   },
+   {
+    "at": 5374246224,
+    "op": "jmp",
+    "target": 5374246352,
+    "target_is_text": true
+   },
+   {
+    "at": 5374246288,
+    "op": "jmp",
+    "target": 5374246352,
+    "target_is_text": true
+   },
+   {
+    "at": 5374246302,
+    "op": "jmp",
+    "target": 5374246352,
+    "target_is_text": true
+   },
+   {
+    "at": 5374246394,
+    "op": "call",
+    "target": 5369118352,
+    "target_is_text": true
+   }
+  ],
+  "impl": 5369118352,
+  "impl_function": [
+   5369118352,
+   5369118667
+  ],
+  "impl_float_constants": [
+   {
+    "at": 5369118468,
+    "text": "0x140063f04: comiss xmm1, dword ptr [rip + 0x1b8ddd1]",
+    "const_va": 5398011100,
+    "value": -0.707
+   },
+   {
+    "at": 5369118498,
+    "text": "0x140063f22: comiss xmm1, dword ptr [rip + 0x1b6a9cf]",
+    "const_va": 5397866744,
+    "value": 0.707
+   }
+  ],
+  "impl_vtable_calls": [
+   {
+    "at": 5369118387,
+    "base": "rax",
+    "offset": 2720,
+    "slot": 340
+   },
+   {
+    "at": 5369118605,
+    "base": "rax",
+    "offset": 4384,
+    "slot": 548
+   },
+   {
+    "at": 5369118632,
+    "base": "rax",
+    "offset": 640,
+    "slot": 80
+   }
+  ],
+  "impl_direct_callers": [
+   {
+    "at": 5371152972,
+    "op": "call"
+   },
+   {
+    "at": 5371153049,
+    "op": "call"
+   },
+   {
+    "at": 5371153098,
+    "op": "call"
+   },
+   {
+    "at": 5371158366,
+    "op": "call"
+   },
+   {
+    "at": 5371158469,
+    "op": "call"
+   },
+   {
+    "at": 5374246394,
+    "op": "call"
+   }
+  ],
+  "callers": [
+   {
+    "call_at": 5371152972,
+    "in_function": [
+     5371151712,
+     5371159357
+    ],
+    "fname_constant": 576,
+    "window_before": [
+     "0x140254a13: call 0x140224a60",
+     "0x140254a18: mov r12, rax",
+     "0x140254a1b: inc r14d",
+     "0x140254a1e: add r13, 8",
+     "0x140254a22: cmp r14d, dword ptr [rdi + 0x190]",
+     "0x140254a29: jl 0x140254a02",
+     "0x140254a2b: mov eax, dword ptr [rdi + 0x11d8]",
+     "0x140254a31: bt eax, 0x10",
+     "0x140254a35: jae 0x140254a68",
+     "0x140254a37: mov qword ptr [rbp + 0x180], 0x240",
+     "0x140254a42: mov rdx, qword ptr [rbp + 0x180]",
+     "0x140254a49: mov rcx, rdi",
+     "0x140254a4c: call 0x140063e90"
+    ]
+   },
+   {
+    "call_at": 5371153049,
+    "in_function": [
+     5371151712,
+     5371159357
+    ],
+    "fname_constant": 576,
+    "window_before": [
+     "0x140254a55: or dword ptr [rbx + 0xd84], 0x80000000",
+     "0x140254a5f: or dword ptr [rbx + 0xd88], 8",
+     "0x140254a66: jmp 0x140254acf",
+     "0x140254a68: test dword ptr [r15 + 0x2bc], 0x40000",
+     "0x140254a73: jne 0x140254acf",
+     "0x140254a75: test byte ptr [rbx + 0xd7f], 1",
+     "0x140254a7c: je 0x140254ab5",
+     "0x140254a7e: bt eax, 0xf",
+     "0x140254a82: jb 0x140254ab5",
+     "0x140254a84: mov qword ptr [rbp + 0x180], 0x240",
+     "0x140254a8f: mov rdx, qword ptr [rbp + 0x180]",
+     "0x140254a96: mov rcx, rdi",
+     "0x140254a99: call 0x140063e90"
+    ]
+   },
+   {
+    "call_at": 5371153098,
+    "in_function": [
+     5371151712,
+     5371159357
+    ],
+    "fname_constant": 577,
+    "window_before": [
+     "0x140254a84: mov qword ptr [rbp + 0x180], 0x240",
+     "0x140254a8f: mov rdx, qword ptr [rbp + 0x180]",
+     "0x140254a96: mov rcx, rdi",
+     "0x140254a99: call 0x140063e90",
+     "0x140254a9e: test eax, eax",
+     "0x140254aa0: je 0x140254acf",
+     "0x140254aa2: or dword ptr [rbx + 0xd84], 0x80000000",
+     "0x140254aac: or dword ptr [rbx + 0xd88], 8",
+     "0x140254ab3: jmp 0x140254acf",
+     "0x140254ab5: mov qword ptr [rbp + 0x180], 0x241",
+     "0x140254ac0: mov rdx, qword ptr [rbp + 0x180]",
+     "0x140254ac7: mov rcx, rdi",
+     "0x140254aca: call 0x140063e90"
+    ]
+   },
+   {
+    "call_at": 5371158366,
+    "in_function": [
+     5371151712,
+     5371159357
+    ],
+    "fname_constant": 576,
+    "window_before": [
+     "0x140255f1b: je 0x1402560b2",
+     "0x140255f21: ucomiss xmm8, dword ptr [rbx + 0x1b1c]",
+     "0x140255f29: jne 0x1402560b2",
+     "0x140255f2f: and eax, 0xfffffffe",
+     "0x140255f32: mov dword ptr [rsi + 0x294], eax",
+     "0x140255f38: jmp 0x1402560b2",
+     "0x140255f3d: mov ecx, dword ptr [rdi + 0x11d8]",
+     "0x140255f43: bt ecx, 0x10",
+     "0x140255f47: jae 0x140255f7a",
+     "0x140255f49: mov rcx, rdi",
+     "0x140255f4c: mov qword ptr [rbp + 0x180], 0x240",
+     "0x140255f57: mov rdx, qword ptr [rbp + 0x180]",
+     "0x140255f5e: call 0x140063e90"
+    ]
+   },
+   {
+    "call_at": 5371158469,
+    "in_function": [
+     5371151712,
+     5371159357
+    ],
+    "fname_constant": 577,
+    "window_before": [
+     "0x140255f8d: je 0x140255fb0",
+     "0x140255f8f: bt ecx, 0xf",
+     "0x140255f93: jb 0x140255fb0",
+     "0x140255f95: test dword ptr [r15 + 0x2bc], 0x40000",
+     "0x140255fa0: jne 0x140255fca",
+     "0x140255fa2: mov rcx, rdi",
+     "0x140255fa5: test byte ptr [rbx + 0xd7f], 1",
+     "0x140255fac: je 0x140255fb3",
+     "0x140255fae: jmp 0x140255f4c",
+     "0x140255fb0: mov rcx, rdi",
+     "0x140255fb3: mov qword ptr [rbp + 0x180], 0x241",
+     "0x140255fbe: mov rdx, qword ptr [rbp + 0x180]",
+     "0x140255fc5: call 0x140063e90"
+    ]
+   }
+  ],
+  "name_constants": [
+   {
+    "name": "CinematicMode",
+    "string_va": 5412392384,
+    "lea_at": 5384829099,
+    "mov_edx_at": 5384829115,
+    "index": 569,
+    "lea": "0x140f5f8ab: lea rcx, [rip + 0x1a4950e]",
+    "mov": "0x140f5f8bb: mov edx, 0x239"
+   },
+   {
+    "name": "DrivingMode",
+    "string_va": 5412392416,
+    "lea_at": 5384829267,
+    "mov_edx_at": 5384829283,
+    "index": 573,
+    "lea": "0x140f5f953: lea rcx, [rip + 0x1a49486]",
+    "mov": "0x140f5f963: mov edx, 0x23d"
+   },
+   {
+    "name": "RadioMode",
+    "string_va": 5412392432,
+    "lea_at": 5384829309,
+    "mov_edx_at": 5384829325,
+    "index": 574,
+    "lea": "0x140f5f97d: lea rcx, [rip + 0x1a4946c]",
+    "mov": "0x140f5f98d: mov edx, 0x23e"
+   },
+   {
+    "name": "BattleMode",
+    "string_va": 5412392456,
+    "lea_at": 5384829393,
+    "mov_edx_at": 5384829409,
+    "index": 576,
+    "lea": "0x140f5f9d1: lea rcx, [rip + 0x1a49430]",
+    "mov": "0x140f5f9e1: mov edx, 0x240"
+   },
+   {
+    "name": "PursuitMode",
+    "string_va": 5412392472,
+    "lea_at": 5384829435,
+    "mov_edx_at": 5384829451,
+    "index": 577,
+    "lea": "0x140f5f9fb: lea rcx, [rip + 0x1a49416]",
+    "mov": "0x140f5fa0b: mov edx, 0x241"
+   }
+  ]
+ },
+ "driving_player_move": {
+  "thunk": 5373960032,
+  "thunk_targets": [
+   {
+    "at": 5373960099,
+    "op": "jmp",
+    "target": 5373960262,
+    "target_is_text": true
+   },
+   {
+    "at": 5373960141,
+    "op": "jmp",
+    "target": 5373960262,
+    "target_is_text": true
+   },
+   {
+    "at": 5373960198,
+    "op": "jmp",
+    "target": 5373960262,
+    "target_is_text": true
+   },
+   {
+    "at": 5373960213,
+    "op": "jmp",
+    "target": 5373960262,
+    "target_is_text": true
+   },
+   {
+    "at": 5373960319,
+    "op": "jmp",
+    "target": 5371151712,
+    "target_is_text": true
+   }
+  ],
+  "body": 5371151712,
+  "body_direct_callers": [
+   {
+    "at": 5373960319,
+    "op": "jmp"
+   }
+  ],
+  "body_names_in_image": null
+ }
+}

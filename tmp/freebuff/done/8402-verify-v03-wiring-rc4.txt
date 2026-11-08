@@ -1,0 +1,18 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-v03-wiring-rc4.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-07 (rewritten from the 2026-11-06 brief by review 8399)
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/review-build-wave.md
+Phase V-03 on Builds/bm-RC4: template v03_wiring_rc2.py, write v03_wiring_rc4.py, run it twice and diff the JSON to prove determinism. Output Builds/bm-RC4/verify/wiring.md and wiring.json; dangling must be 0 per category.
+
+What is actually in the tree (build values, from build-d05/d07/d13):
+- entity: 4 CCar roots (3 extra childless roots `_slot2/_slot3/_slot4` cloned from the donor root's members, forced T-WP13) x 2 weapon slots = 8 slots bound; a 3rd SelectVehicleWeapon index still has no member. A childless extra root has no shipped precedent — count the roots but do not call the binding proven.
+- `CForcePulse_EMP` and `CForcePulse_Sonar` exist as 2 objects, both at the graph origin; the chassis-centre offset is UNKNOWN, and build-d05 records 14 unowned pulses (G2-17). Neither pulse has a proven firing path.
+- 69 interaction objects were skipped for want of a named `world` member; the 15 point/trigger transforms that do have a named `world` are written (T-13R). Report 69 as declared stand-ins, not dangling.
+- weapons: 7 private .wtunec files overlaid and repointed in the .epe; 15 rows = 13 WPN codes + 2 decision rows (13 with a JC3 carrier, 1 named omission T-WP15, 1 blocked T-WP6); 46 of 164 aspects UNKNOWN.
+- effects: 30 distinct Effect hashes resolve to exactly one fleet .effc path, 30/30 present in the tree; T-17's 17 chosen paths all in vocabulary. The flame path is the donor's own.
+- Rebel Drop keys must resolve: 443190071, 1621485476, 4081821928. The donor leaf v0300_car_kensington_sportsmuscle_civilian_01 (3535039305) must have 0 refs left.
+- audio events: the built .fmod_guids re-emits 45/45 GUIDs, of which 24 resolve in the built banks; the 21 donor ones are B-26, not dangling (8393).
+- collision/health: physicsc and batmobile_health_medium.vmodc are internal and referenced by the .epe damage hash.
+
+Updated by review 8399: counts now name the 8 slots, 2 origin pulses, 69 skipped interaction objects, 30/30 effects, 7 tunes and the 3 Rebel Drop keys as the tree carries them.

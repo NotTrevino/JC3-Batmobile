@@ -1,0 +1,17 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/correction-8396-stale-checkers.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-07 by review 8399
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/review-build-wave.md
+Correction 7/9 — three checkers are red because their assumptions went stale, not because the build regressed. Fix the checks; do not weaken them.
+
+Evidence (run 2026-11-07):
+- Tools/scripts/v05_driving.py --check FAIL: T-ST7 was unblocked on 2026-11-06 (built t_to_full_steer_s 0.8 low / 0.6 high), so the script's "T-ST7 is blocked" precondition no longer holds and the turning circle must be re-derived.
+- Tools/scripts/t_boost_rows.py 20/21: it pins a 198-row ledger; the ledger now has 199 (145/216 evidenced, 15 blocked, 35 edits over 16 rows).
+- Tools/scripts/t_vnf_six.py AssertionError: hard-coded 198.
+
+Task: update the pins to 199 rows (read the count from the ledger file, do not hard-code it again), and re-derive the turning circle from the built values (0.8 s low / 0.6 s high, 55/20 deg steer) with the 2026-11-06 ruling's 0.25 s low / 0.091 s high as the failing band it is compared against. The T-ST7 red must remain visible until the driving take resolves it; a green check must mean "the derivation matches the built values", not "the lore goal is met". Print the count and the derived radius.
+
+Revert: git checkout of the three scripts; no build tree is touched.
+
+Updated by review 8399: all three reds confirmed verbatim; each is a stale assumption (198 vs 199 rows, T-ST7 status), so the fix is the checker, not the build.

@@ -1,0 +1,999 @@
+{
+ "trows": {
+  "T-AU3": {
+   "line": 73,
+   "dispo": "blocked",
+   "why": "10 banks are absent from the install",
+   "cells": [
+    "T-AU3",
+    "90 event rows in 10 absent banks",
+    "\u2014",
+    "\u2014",
+    "donor events",
+    "keep donor's banks for those 26 ids",
+    "blocked (absent)",
+    "\u2014"
+   ]
+  },
+  "T-S6": {
+   "line": 90,
+   "dispo": "blocked",
+   "why": "JC3 has no suspension bias/droop member or unit bridge for stiffness",
+   "cells": [
+    "T-S6",
+    "`SuspensionTravelUp` 30, `SuspensionTravelDown` 40, `BMRearWheelMaxDroop` 100 (cm); `BM/PMWheelSuspensionStiffness` 3000/750, `SuspensionDamping` 300, `SuspensionBias` 50, `FrontWheelSuspensionBias` 10, `PMWheelSuspensionBias` 20",
+    "none \u2014 `suspension.length/min_length` carry one stroke, and `strength/compression` carry one rate",
+    "\u2014",
+    "length 0.25, min 0, max offset 0 (T-S3); strength 45, compression 3.0 (T-S1/S2)",
+    "**blocked**: JC3 has no per-axle bias, no droop and no undamped-rate member, and the stiffness/damping pair has no unit bridge to `strength` (fleet 4\u201380). The stroke half is no longer blocked: as of Batch B4, T-S3 carries BmAK's 0.70 m (TravelUp 30 + TravelDown 40) directly, and T-S1/S2 keep the fleet's rate. That stroke is 3.9\u00d7 the heavy-class median (0.18 m) but inside its band (0.18 \u2026 0.75), so it is declared BmAK-first, not silent",
+    "blocked",
+    "needs a decoded JC3 suspension model; the row exists so the omission is explicit"
+   ]
+  },
+  "T-AU5": {
+   "line": 99,
+   "dispo": "blocked",
+   "why": "transformation/taser banks are absent from the install",
+   "cells": [
+    "T-AU5",
+    "`TransformationReverseDirection*` sounds, `TaserSound`, `VehicleSound`",
+    "audio banks in the entity graph",
+    "blocked",
+    "engine bank swapped (T-AU2)",
+    "**blocked**: these events have no JC3 bank and 10 BmAK banks are absent from the install (T-AU3)",
+    "blocked",
+    "needs the banks"
+   ]
+  }
+ },
+ "trows_sha": "8996b60a5370d932f437fd138d23dc15358d41e24e1026306d7b02172dc0e5f4",
+ "claims": [
+  "Engine.BML_Batmobile_Subjective",
+  "Engine.BML_Impacts",
+  "Engine.BML_Sonar",
+  "Engine.CHR_BatmanAlerts",
+  "Engine.CHR_BatmanDisruptor",
+  "Engine.UI_InGame",
+  "Engine.VEH_Tank_Heavy",
+  "Engine.VEH_Tank_Missiles",
+  "Engine.VFX_Tank_Explosion",
+  "Engine.OBJ_Rolling_Objects"
+ ],
+ "claim_md": [
+  {
+   "bank": "BML_Batmobile_Subjective",
+   "rows": 16,
+   "ids": 4,
+   "akbank_in": "Startup",
+   "bnk": "-",
+   "ascii": "-",
+   "verdict": "FOUND"
+  },
+  {
+   "bank": "BML_Impacts",
+   "rows": 4,
+   "ids": 1,
+   "akbank_in": "BmGame, StartupPatch",
+   "bnk": "-",
+   "ascii": "-",
+   "verdict": "FOUND"
+  },
+  {
+   "bank": "BML_Sonar",
+   "rows": 18,
+   "ids": 6,
+   "akbank_in": "BmGame",
+   "bnk": "-",
+   "ascii": "-",
+   "verdict": "FOUND"
+  },
+  {
+   "bank": "CHR_BatmanAlerts",
+   "rows": 3,
+   "ids": 1,
+   "akbank_in": "BmGame, StartupPatch",
+   "bnk": "-",
+   "ascii": "-",
+   "verdict": "FOUND"
+  },
+  {
+   "bank": "CHR_BatmanDisruptor",
+   "rows": 7,
+   "ids": 2,
+   "akbank_in": "BmGame, StartupPatch",
+   "bnk": "-",
+   "ascii": "-",
+   "verdict": "FOUND"
+  },
+  {
+   "bank": "UI_InGame",
+   "rows": 4,
+   "ids": 1,
+   "akbank_in": "BmGame, StartupPatch",
+   "bnk": "-",
+   "ascii": "-",
+   "verdict": "FOUND"
+  },
+  {
+   "bank": "VEH_Tank_Heavy",
+   "rows": 16,
+   "ids": 4,
+   "akbank_in": "Startup",
+   "bnk": "-",
+   "ascii": "-",
+   "verdict": "FOUND"
+  },
+  {
+   "bank": "VEH_Tank_Missiles",
+   "rows": 6,
+   "ids": 2,
+   "akbank_in": "Startup",
+   "bnk": "-",
+   "ascii": "-",
+   "verdict": "FOUND"
+  },
+  {
+   "bank": "VFX_Tank_Explosion",
+   "rows": 14,
+   "ids": 4,
+   "akbank_in": "BmGame, StartupPatch",
+   "bnk": "-",
+   "ascii": "-",
+   "verdict": "FOUND"
+  },
+  {
+   "bank": "OBJ_Rolling_Objects",
+   "rows": 2,
+   "ids": 1,
+   "akbank_in": "BmGame",
+   "bnk": "-",
+   "ascii": "-",
+   "verdict": "FOUND"
+  }
+ ],
+ "rows": 90,
+ "ids": 26,
+ "id_rows": [
+  {
+   "name": "Play_BML_Sonar_Turn_On",
+   "id": 49181569,
+   "hex": "0x02EE7381",
+   "bank_ref": "Engine.BML_Sonar",
+   "rows": 3,
+   "status": "missing-bank",
+   "carriers": [
+    "BmGame.BML_Sonar"
+   ],
+   "media_rows": 0
+  },
+  {
+   "name": "Stop_VEH_Tank_Heavy_Locked",
+   "id": 315650753,
+   "hex": "0x12D072C1",
+   "bank_ref": "Engine.VEH_Tank_Heavy",
+   "rows": 4,
+   "status": "missing-bank",
+   "carriers": [
+    "Startup.VEH_Tank_Heavy"
+   ],
+   "media_rows": 0
+  },
+  {
+   "name": "Play_BML_Sonar_Turn_Off",
+   "id": 643817677,
+   "hex": "0x265FE0CD",
+   "bank_ref": "Engine.BML_Sonar",
+   "rows": 3,
+   "status": "missing-bank",
+   "carriers": [
+    "BmGame.BML_Sonar"
+   ],
+   "media_rows": 0
+  },
+  {
+   "name": "Play_HUD_Missile_Lock",
+   "id": 659369386,
+   "hex": "0x274D2DAA",
+   "bank_ref": "Engine.UI_InGame",
+   "rows": 4,
+   "status": "missing-bank",
+   "carriers": [
+    "BmGame.UI_InGame",
+    "StartupPatch.UI_InGame"
+   ],
+   "media_rows": 0
+  },
+  {
+   "name": "Play_BML_Sonar_Rumble_Lp",
+   "id": 712485044,
+   "hex": "0x2A77A8B4",
+   "bank_ref": "Engine.BML_Sonar",
+   "rows": 3,
+   "status": "missing-bank",
+   "carriers": [
+    "BmGame.BML_Sonar"
+   ],
+   "media_rows": 0
+  },
+  {
+   "name": "Play_Batmobile_Destroyed",
+   "id": 892446165,
+   "hex": "0x3531A5D5",
+   "bank_ref": "Engine.BML_Impacts",
+   "rows": 4,
+   "status": "missing-bank",
+   "carriers": [
+    "BmGame.BML_Impacts",
+    "StartupPatch.BML_Impacts"
+   ],
+   "media_rows": 0
+  },
+  {
+   "name": "Play_Tank_Heavy_LockBeep",
+   "id": 961887160,
+   "hex": "0x39553BB8",
+   "bank_ref": "Engine.VEH_Tank_Heavy",
+   "rows": 4,
+   "status": "missing-bank",
+   "carriers": [
+    "Startup.VEH_Tank_Heavy"
+   ],
+   "media_rows": 0
+  },
+  {
+   "name": "Play_Explosion_2D",
+   "id": 1069878372,
+   "hex": "0x3FC50C64",
+   "bank_ref": "Engine.VFX_Tank_Explosion",
+   "rows": 4,
+   "status": "missing-bank",
+   "carriers": [
+    "BmGame.VFX_Tank_Explosion",
+    "StartupPatch.VFX_Tank_Explosion"
+   ],
+   "media_rows": 0
+  },
+  {
+   "name": "Stop_Batmobile_RocketTails",
+   "id": 1127528611,
+   "hex": "0x4334B8A3",
+   "bank_ref": "Engine.VEH_Tank_Missiles",
+   "rows": 3,
+   "status": "missing-bank",
+   "carriers": [
+    "Startup.VEH_Tank_Missiles"
+   ],
+   "media_rows": 0
+  },
+  {
+   "name": "Play_Batmobile_Tracker_Deploy",
+   "id": 1329071218,
+   "hex": "0x4F380472",
+   "bank_ref": "Engine.CHR_BatmanDisruptor",
+   "rows": 4,
+   "status": "missing-bank",
+   "carriers": [
+    "BmGame.CHR_BatmanDisruptor",
+    "StartupPatch.CHR_BatmanDisruptor"
+   ],
+   "media_rows": 0
+  },
+  {
+   "name": "Play_OBJ_Stagg_Battery_Roll",
+   "id": 1369863944,
+   "hex": "0x51A67708",
+   "bank_ref": "Engine.OBJ_Rolling_Objects",
+   "rows": 2,
+   "status": "missing-bank",
+   "carriers": [
+    "BmGame.OBJ_Rolling_Objects"
+   ],
+   "media_rows": 0
+  },
+  {
+   "name": "Play_BatSniperRifle_Vehicle_Tracking_Fire",
+   "id": 1806878318,
+   "hex": "0x6BB2C66E",
+   "bank_ref": "Engine.CHR_BatmanDisruptor",
+   "rows": 3,
+   "status": "missing-bank",
+   "carriers": [],
+   "media_rows": 0
+  },
+  {
+   "name": "Play_Batmobile_RocketTails",
+   "id": 1828898005,
+   "hex": "0x6D02C4D5",
+   "bank_ref": "Engine.VEH_Tank_Missiles",
+   "rows": 3,
+   "status": "missing-bank",
+   "carriers": [
+    "Startup.VEH_Tank_Missiles"
+   ],
+   "media_rows": 0
+  },
+  {
+   "name": "Play_Batmobile_Jump_Wind",
+   "id": 2027604797,
+   "hex": "0x78DACB3D",
+   "bank_ref": "Engine.BML_Batmobile_Subjective",
+   "rows": 4,
+   "status": "missing-bank",
+   "carriers": [
+    "Startup.BML_Batmobile_Subjective"
+   ],
+   "media_rows": 0
+  },
+  {
+   "name": "Stop_BML_Sonar_Rumble_Lp",
+   "id": 2203141822,
+   "hex": "0x835146BE",
+   "bank_ref": "Engine.BML_Sonar",
+   "rows": 3,
+   "status": "missing-bank",
+   "carriers": [
+    "BmGame.BML_Sonar"
+   ],
+   "media_rows": 0
+  },
+  {
+   "name": "Stop_VEH_Tank_Heavy_LockBeep",
+   "id": 2457403774,
+   "hex": "0x9279017E",
+   "bank_ref": "Engine.VEH_Tank_Heavy",
+   "rows": 4,
+   "status": "missing-bank",
+   "carriers": [
+    "Startup.VEH_Tank_Heavy"
+   ],
+   "media_rows": 0
+  },
+  {
+   "name": "Play_BML_Sonar_Pulse_Search",
+   "id": 2546725448,
+   "hex": "0x97CBF248",
+   "bank_ref": "Engine.BML_Sonar",
+   "rows": 3,
+   "status": "missing-bank",
+   "carriers": [
+    "BmGame.BML_Sonar"
+   ],
+   "media_rows": 0
+  },
+  {
+   "name": "Play_Batmobile_Jump_PreJump",
+   "id": 2814761114,
+   "hex": "0xA7C5D89A",
+   "bank_ref": "Engine.BML_Batmobile_Subjective",
+   "rows": 4,
+   "status": "missing-bank",
+   "carriers": [
+    "Startup.BML_Batmobile_Subjective"
+   ],
+   "media_rows": 0
+  },
+  {
+   "name": "Play_Batmobile_Immobiliser_Impact",
+   "id": 3175108099,
+   "hex": "0xBD404E03",
+   "bank_ref": "Engine.VFX_Tank_Explosion",
+   "rows": 3,
+   "status": "missing-bank",
+   "carriers": [
+    "BmGame.VFX_Tank_Explosion",
+    "StartupPatch.VFX_Tank_Explosion"
+   ],
+   "media_rows": 0
+  },
+  {
+   "name": "Play_Batmobile_Jump_Land",
+   "id": 3275980916,
+   "hex": "0xC3438074",
+   "bank_ref": "Engine.BML_Batmobile_Subjective",
+   "rows": 4,
+   "status": "missing-bank",
+   "carriers": [
+    "Startup.BML_Batmobile_Subjective"
+   ],
+   "media_rows": 0
+  },
+  {
+   "name": "Play_Batmobile_Jump_PreLand",
+   "id": 3457716797,
+   "hex": "0xCE18923D",
+   "bank_ref": "Engine.BML_Batmobile_Subjective",
+   "rows": 4,
+   "status": "missing-bank",
+   "carriers": [
+    "Startup.BML_Batmobile_Subjective"
+   ],
+   "media_rows": 0
+  },
+  {
+   "name": "Play_Tank_Explosion_Barrage_Sweetener",
+   "id": 3597863462,
+   "hex": "0xD6730A26",
+   "bank_ref": "Engine.VFX_Tank_Explosion",
+   "rows": 3,
+   "status": "missing-bank",
+   "carriers": [
+    "BmGame.VFX_Tank_Explosion",
+    "StartupPatch.VFX_Tank_Explosion"
+   ],
+   "media_rows": 0
+  },
+  {
+   "name": "Play_Batmobile_HeavyCannon_Explosion",
+   "id": 3712106838,
+   "hex": "0xDD424156",
+   "bank_ref": "Engine.VFX_Tank_Explosion",
+   "rows": 4,
+   "status": "missing-bank",
+   "carriers": [
+    "BmGame.VFX_Tank_Explosion",
+    "StartupPatch.VFX_Tank_Explosion"
+   ],
+   "media_rows": 0
+  },
+  {
+   "name": "Play_HUD_fail",
+   "id": 3735910016,
+   "hex": "0xDEAD7680",
+   "bank_ref": "Engine.CHR_BatmanAlerts",
+   "rows": 3,
+   "status": "missing-bank",
+   "carriers": [
+    "BmGame.CHR_BatmanAlerts",
+    "StartupPatch.CHR_BatmanAlerts"
+   ],
+   "media_rows": 0
+  },
+  {
+   "name": "Play_Tank_Heavy_Locked",
+   "id": 3992657295,
+   "hex": "0xEDFB1D8F",
+   "bank_ref": "Engine.VEH_Tank_Heavy",
+   "rows": 4,
+   "status": "missing-bank",
+   "carriers": [
+    "Startup.VEH_Tank_Heavy"
+   ],
+   "media_rows": 0
+  },
+  {
+   "name": "Play_BML_Sonar_Pulse_Full",
+   "id": 4291598355,
+   "hex": "0xFFCC9813",
+   "bank_ref": "Engine.BML_Sonar",
+   "rows": 3,
+   "status": "missing-bank",
+   "carriers": [
+    "BmGame.BML_Sonar"
+   ],
+   "media_rows": 0
+  }
+ ],
+ "bank_rows": [
+  {
+   "claim": "Engine.BML_Batmobile_Subjective",
+   "bank": "BML_Batmobile_Subjective",
+   "rows": 4,
+   "ids": 4,
+   "in_bank": 4,
+   "records": [
+    {
+     "package": "Startup",
+     "export": 7756,
+     "bytes": 712059,
+     "sha1": "9b057ac9612031a5",
+     "hirc_objects": 61,
+     "events": 12,
+     "carries_bkpk": false,
+     "by_type": {
+      "2": 21,
+      "3": 21,
+      "4": 12,
+      "5": 5,
+      "7": 2
+     }
+    }
+   ],
+   "md": {
+    "bank": "BML_Batmobile_Subjective",
+    "rows": 16,
+    "ids": 4,
+    "akbank_in": "Startup",
+    "bnk": "-",
+    "ascii": "-",
+    "verdict": "FOUND"
+   }
+  },
+  {
+   "claim": "Engine.BML_Impacts",
+   "bank": "BML_Impacts",
+   "rows": 1,
+   "ids": 1,
+   "in_bank": 1,
+   "records": [
+    {
+     "package": "BmGame",
+     "export": 131397,
+     "bytes": 2051795,
+     "sha1": "741cbf5d1cf135d7",
+     "hirc_objects": 118,
+     "events": 5,
+     "carries_bkpk": false,
+     "by_type": {
+      "14": 7,
+      "2": 81,
+      "3": 9,
+      "4": 5,
+      "5": 12,
+      "6": 1,
+      "7": 1,
+      "9": 2
+     }
+    },
+    {
+     "package": "StartupPatch",
+     "export": 7454,
+     "bytes": 2051795,
+     "sha1": "6b2ec42595ec1b56",
+     "hirc_objects": 118,
+     "events": 5,
+     "carries_bkpk": false,
+     "by_type": {
+      "14": 7,
+      "2": 81,
+      "3": 9,
+      "4": 5,
+      "5": 12,
+      "6": 1,
+      "7": 1,
+      "9": 2
+     }
+    }
+   ],
+   "md": {
+    "bank": "BML_Impacts",
+    "rows": 4,
+    "ids": 1,
+    "akbank_in": "BmGame, StartupPatch",
+    "bnk": "-",
+    "ascii": "-",
+    "verdict": "FOUND"
+   }
+  },
+  {
+   "claim": "Engine.BML_Sonar",
+   "bank": "BML_Sonar",
+   "rows": 6,
+   "ids": 6,
+   "in_bank": 6,
+   "records": [
+    {
+     "package": "BmGame",
+     "export": 131399,
+     "bytes": 355830,
+     "sha1": "3151382d4c24eb72",
+     "hirc_objects": 67,
+     "events": 7,
+     "carries_bkpk": true,
+     "by_type": {
+      "2": 31,
+      "3": 18,
+      "4": 7,
+      "5": 8,
+      "7": 1,
+      "9": 2
+     }
+    }
+   ],
+   "md": {
+    "bank": "BML_Sonar",
+    "rows": 18,
+    "ids": 6,
+    "akbank_in": "BmGame",
+    "bnk": "-",
+    "ascii": "-",
+    "verdict": "FOUND"
+   }
+  },
+  {
+   "claim": "Engine.CHR_BatmanAlerts",
+   "bank": "CHR_BatmanAlerts",
+   "rows": 1,
+   "ids": 1,
+   "in_bank": 1,
+   "records": [
+    {
+     "package": "BmGame",
+     "export": 131401,
+     "bytes": 97708,
+     "sha1": "11d952fd3078bff9",
+     "hirc_objects": 33,
+     "events": 6,
+     "carries_bkpk": false,
+     "by_type": {
+      "14": 1,
+      "2": 13,
+      "3": 6,
+      "4": 6,
+      "7": 4,
+      "9": 3
+     }
+    },
+    {
+     "package": "StartupPatch",
+     "export": 7457,
+     "bytes": 97708,
+     "sha1": "f9ad976d69bb4ac0",
+     "hirc_objects": 33,
+     "events": 6,
+     "carries_bkpk": false,
+     "by_type": {
+      "14": 1,
+      "2": 13,
+      "3": 6,
+      "4": 6,
+      "7": 4,
+      "9": 3
+     }
+    }
+   ],
+   "md": {
+    "bank": "CHR_BatmanAlerts",
+    "rows": 3,
+    "ids": 1,
+    "akbank_in": "BmGame, StartupPatch",
+    "bnk": "-",
+    "ascii": "-",
+    "verdict": "FOUND"
+   }
+  },
+  {
+   "claim": "Engine.CHR_BatmanDisruptor",
+   "bank": "CHR_BatmanDisruptor",
+   "rows": 2,
+   "ids": 2,
+   "in_bank": 1,
+   "records": [
+    {
+     "package": "BmGame",
+     "export": 131407,
+     "bytes": 453260,
+     "sha1": "0aa7842d470f483c",
+     "hirc_objects": 118,
+     "events": 17,
+     "carries_bkpk": true,
+     "by_type": {
+      "14": 2,
+      "2": 43,
+      "3": 44,
+      "4": 17,
+      "5": 7,
+      "7": 2,
+      "9": 3
+     }
+    },
+    {
+     "package": "StartupPatch",
+     "export": 7463,
+     "bytes": 453260,
+     "sha1": "410814e9ffb298a4",
+     "hirc_objects": 118,
+     "events": 17,
+     "carries_bkpk": true,
+     "by_type": {
+      "14": 2,
+      "2": 43,
+      "3": 44,
+      "4": 17,
+      "5": 7,
+      "7": 2,
+      "9": 3
+     }
+    }
+   ],
+   "md": {
+    "bank": "CHR_BatmanDisruptor",
+    "rows": 7,
+    "ids": 2,
+    "akbank_in": "BmGame, StartupPatch",
+    "bnk": "-",
+    "ascii": "-",
+    "verdict": "FOUND"
+   }
+  },
+  {
+   "claim": "Engine.UI_InGame",
+   "bank": "UI_InGame",
+   "rows": 1,
+   "ids": 1,
+   "in_bank": 1,
+   "records": [
+    {
+     "package": "BmGame",
+     "export": 131652,
+     "bytes": 2799217,
+     "sha1": "c3cf3424833ff09b",
+     "hirc_objects": 892,
+     "events": 219,
+     "carries_bkpk": true,
+     "by_type": {
+      "1": 12,
+      "14": 11,
+      "19": 3,
+      "2": 234,
+      "3": 314,
+      "4": 219,
+      "5": 22,
+      "6": 9,
+      "7": 34,
+      "9": 34
+     }
+    },
+    {
+     "package": "StartupPatch",
+     "export": 9950,
+     "bytes": 2799217,
+     "sha1": "329d62e16208a68f",
+     "hirc_objects": 892,
+     "events": 219,
+     "carries_bkpk": true,
+     "by_type": {
+      "1": 12,
+      "14": 11,
+      "19": 3,
+      "2": 234,
+      "3": 314,
+      "4": 219,
+      "5": 22,
+      "6": 9,
+      "7": 34,
+      "9": 34
+     }
+    }
+   ],
+   "md": {
+    "bank": "UI_InGame",
+    "rows": 4,
+    "ids": 1,
+    "akbank_in": "BmGame, StartupPatch",
+    "bnk": "-",
+    "ascii": "-",
+    "verdict": "FOUND"
+   }
+  },
+  {
+   "claim": "Engine.VEH_Tank_Heavy",
+   "bank": "VEH_Tank_Heavy",
+   "rows": 4,
+   "ids": 4,
+   "in_bank": 4,
+   "records": [
+    {
+     "package": "Startup",
+     "export": 10397,
+     "bytes": 1602466,
+     "sha1": "83559b49638306e2",
+     "hirc_objects": 163,
+     "events": 41,
+     "carries_bkpk": true,
+     "by_type": {
+      "14": 13,
+      "19": 1,
+      "2": 41,
+      "3": 49,
+      "4": 41,
+      "5": 5,
+      "6": 1,
+      "7": 5,
+      "9": 7
+     }
+    }
+   ],
+   "md": {
+    "bank": "VEH_Tank_Heavy",
+    "rows": 16,
+    "ids": 4,
+    "akbank_in": "Startup",
+    "bnk": "-",
+    "ascii": "-",
+    "verdict": "FOUND"
+   }
+  },
+  {
+   "claim": "Engine.VEH_Tank_Missiles",
+   "bank": "VEH_Tank_Missiles",
+   "rows": 2,
+   "ids": 2,
+   "in_bank": 2,
+   "records": [
+    {
+     "package": "Startup",
+     "export": 10398,
+     "bytes": 2752713,
+     "sha1": "fa9774828b810022",
+     "hirc_objects": 109,
+     "events": 12,
+     "carries_bkpk": false,
+     "by_type": {
+      "1": 4,
+      "14": 19,
+      "2": 41,
+      "3": 16,
+      "4": 12,
+      "5": 7,
+      "6": 2,
+      "7": 2,
+      "9": 6
+     }
+    }
+   ],
+   "md": {
+    "bank": "VEH_Tank_Missiles",
+    "rows": 6,
+    "ids": 2,
+    "akbank_in": "Startup",
+    "bnk": "-",
+    "ascii": "-",
+    "verdict": "FOUND"
+   }
+  },
+  {
+   "claim": "Engine.VFX_Tank_Explosion",
+   "bank": "VFX_Tank_Explosion",
+   "rows": 4,
+   "ids": 4,
+   "in_bank": 4,
+   "records": [
+    {
+     "package": "BmGame",
+     "export": 131672,
+     "bytes": 7456768,
+     "sha1": "b58e751f08ea987c",
+     "hirc_objects": 456,
+     "events": 22,
+     "carries_bkpk": false,
+     "by_type": {
+      "1": 8,
+      "14": 138,
+      "2": 196,
+      "3": 39,
+      "4": 22,
+      "5": 36,
+      "6": 6,
+      "7": 4,
+      "9": 7
+     }
+    },
+    {
+     "package": "StartupPatch",
+     "export": 9966,
+     "bytes": 7456768,
+     "sha1": "66680da11a0d06aa",
+     "hirc_objects": 456,
+     "events": 22,
+     "carries_bkpk": false,
+     "by_type": {
+      "1": 8,
+      "14": 138,
+      "2": 196,
+      "3": 39,
+      "4": 22,
+      "5": 36,
+      "6": 6,
+      "7": 4,
+      "9": 7
+     }
+    }
+   ],
+   "md": {
+    "bank": "VFX_Tank_Explosion",
+    "rows": 14,
+    "ids": 4,
+    "akbank_in": "BmGame, StartupPatch",
+    "bnk": "-",
+    "ascii": "-",
+    "verdict": "FOUND"
+   }
+  },
+  {
+   "claim": "Engine.OBJ_Rolling_Objects",
+   "bank": "OBJ_Rolling_Objects",
+   "rows": 1,
+   "ids": 1,
+   "in_bank": 1,
+   "records": [
+    {
+     "package": "BmGame",
+     "export": 131630,
+     "bytes": 516986,
+     "sha1": "29eb3bbe7652c5a4",
+     "hirc_objects": 56,
+     "events": 9,
+     "carries_bkpk": false,
+     "by_type": {
+      "14": 9,
+      "2": 20,
+      "3": 9,
+      "4": 9,
+      "5": 6,
+      "7": 3
+     }
+    }
+   ],
+   "md": {
+    "bank": "OBJ_Rolling_Objects",
+    "rows": 2,
+    "ids": 1,
+    "akbank_in": "BmGame",
+    "bnk": "-",
+    "ascii": "-",
+    "verdict": "FOUND"
+   }
+  }
+ ],
+ "not_found": [
+  {
+   "name": "Play_BatSniperRifle_Vehicle_Tracking_Fire",
+   "id": 1806878318,
+   "hex": "0x6BB2C66E",
+   "bank_ref": "Engine.CHR_BatmanDisruptor",
+   "rows": 3,
+   "status": "missing-bank",
+   "carriers": [],
+   "media_rows": 0
+  }
+ ],
+ "total_carried": 25,
+ "b2_answer": {
+  "banks": [],
+  "note": "no HIRC Event in any bank `AUDIO_BANKS.md` lists carries this id",
+  "searched": 117,
+  "searched_banks": 117,
+  "verdict": "UNKNOWN"
+ },
+ "b2_searched": 117,
+ "b2_counts": {
+  "banks_not_at_offset_zero": 24,
+  "banks_with_target": 0,
+  "declared_pairs": 12,
+  "declared_pairs_found": 11,
+  "declared_pairs_missing": [
+   "0x6BB2C66E"
+  ],
+  "event_ids_seen": 1101,
+  "exports_searched": 117,
+  "payloads_carrying_bkpk": 73
+ },
+ "au5": {
+  "families": [
+   "TransformationReverseDirection",
+   "TaserSound",
+   "VehicleSound"
+  ],
+  "map_hits": [],
+  "feature_hits": [],
+  "modes_fields": [
+   "| `TransformationReverseDirectionIntoPursuitModeSound` | 0x12dc | `AkEvent` | AkEvent ref | 62 | 60 | 191 | 60 | yes |",
+   "| `TransformationReverseDirectionIntoBattleModeSound` | 0x12e4 | `AkEvent` | AkEvent ref | 47 | 45 | 176 | 45 | yes |"
+  ],
+  "assets_AkVehicleSound": [
+   "| AkVehicleSound | 4 |",
+   "- **AkVehicleSound** (1): `VehicleSound`",
+   "- **AkVehicleSound** (1): `VehicleSound`",
+   "- **AkVehicleSound** (1): `VehicleSound`"
+  ]
+ },
+ "map_events": 361,
+ "feature_events": 361,
+ "media_rows_claim": 0,
+ "sha": {
+  "E:\\Modding\\JC3-Batmobile\\Research\\BatmobileGrab\\AUDIO_BANKS.md": "6199b51659e3a943",
+  "E:\\Modding\\JC3-Batmobile\\Research\\BatmobileGrab\\AUDIO_BANKS2.json": "9ee4b850a10d5d05",
+  "E:\\Modding\\JC3-Batmobile\\Research\\BatmobileGrab\\AUDIO_MAP.json": "94b1e73b61f0360c",
+  "E:\\Modding\\JC3-Batmobile\\Research\\BatmobileGrab\\AUDIO_FEATURES.json": "f820a340e22bb578"
+ }
+}

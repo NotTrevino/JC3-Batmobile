@@ -14,21 +14,23 @@ lengths or hashes move.
 This tool only writes candidates outside the repo.  It does not pack an `.ee`,
 edit a `.toc` or install anything.
 
-**WITHDRAWN (2026-10-22).** The emitted values are not the authored BmAK camera:
-`DrivingCamConfig1/2` carry `Min/MaxFreeCameraDistance = 400` cm (not 0), the sit offsets are
--3.0…-4.0 m, and JC3's FOV is vertical while UE3's 85/95 are horizontal. The old `7.0 m` /
-`85°` were hand-derived and the test-086 drive rejected them. `build` and `check` now fail closed;
-use `source` to print the authored configs and the open composition question. No candidate is
-emitted until the sit-offset/distance composition is decoded.
+**BATCH F (2026-10-23) — un-withdrawn with the decoded composition.** CAMERA.md §2b read the
+three natives in `BatmanAK.exe` and the composition is now arithmetic, not a guess
+(`bmak_camdecode.py --check`, 18/18): at rest the camera sits **7.00 m behind and 1.30 m above**
+the car's origin (sit [-300,0,-25] cm + boom 400 cm along forward, pivot 155 cm), additive, and
+JC3's FOV is vertical where UE3's 85/95 are horizontal (85 → 54.5, 95 → 63.1 ≈ 55 … 63).
+The emitted values are the T6 rows (T-CAM2/3/5/6/13), asserted field by field. `guard()` now
+fails closed on *wrong inputs* — the 400/400 cm chase config and a green composition check —
+instead of refusing outright.
 
 Usage:
     python Tools/scripts/bmak_camfile.py source
-    python Tools/scripts/bmak_camfile.py build      # refuses: CAM-1 withdrawn
-    python Tools/scripts/bmak_camfile.py check      # refuses: CAM-1 withdrawn
+    python Tools/scripts/bmak_camfile.py build   # emit the Batch F candidate
+    python Tools/scripts/bmak_camfile.py check   # rebuild into a temp dir and verify
 
 Outputs (default):
-    E:/Modding/_JC3cam_out/bat_base.ctunec
-    E:/Modding/_JC3cam_out/v0300_..._civilian_01.epe
+    E:/Modding/_gamedata/JC3cam_out/bat_base.ctunec
+    E:/Modding/_gamedata/JC3cam_out/v0300_..._civilian_01.epe
 """
 from __future__ import annotations
 
@@ -38,6 +40,7 @@ import json
 import os
 import shutil
 import struct
+import subprocess
 import sys
 import tempfile
 
@@ -53,21 +56,27 @@ DONOR_EPE = os.path.join(
     ROOT, "Builds/test-085/aaf/editor/entities/jc_vehicles/01_land/"
           "v0300_car_kensington_sportsmuscle/"
           "v0300_car_kensington_sportsmuscle_civilian_01.epe")
-OUT_DIR = r"E:/Modding/_JC3cam_out"
+OUT_DIR = r"E:/Modding/_gamedata/JC3cam_out"
 REPORT = os.path.join(ROOT, "Working/Camera/CAM_TUNE.json")
 
 OLD_REF = b"car_base.ctune"
 NEW_REF = b"bat_base.ctune"
 OUT_CTUNEC = "bat_base.ctunec"
 
-# T-CAM2..T-CAM6 from Working/Translation/T6_HUD_CAMERA.md.  `old` is asserted,
-# never assumed: a different source file fails loudly instead of shifting data.
+# Batch F (T_PLAN §4F), from the decoded composition in CAMERA.md §2b — the arithmetic
+# is reproduced by `bmak_camdecode.py --check` (18/18).  `old` is asserted, never assumed:
+# a different source file fails loudly instead of shifting data.
+#
+#   T-CAM5  rest camera = sit (-300,0,-25 cm) + boom 400 cm, pivot 155 cm
+#           -> 7.00 m behind, 1.30 m above the origin; LookAt = the 155 cm pivot
+#   T-CAM2  FOV is vertical in JC3: 85 h -> 54.5 v, 95 h -> 63.1 v (≈ 55 … 63)
+#   T-CAM3  interp completes at 3000 cm/s = 108 km/h
 EDITS = [
-    dict(member="CameraPosition", index=1, row="T-CAM5", old=2.0, new=2.4),
+    dict(member="CameraPosition", index=1, row="T-CAM5", old=2.0, new=1.3),
     dict(member="CameraPosition", index=2, row="T-CAM5", old=5.0, new=7.0),
-    dict(member="LookAtPoint", index=1, row="T-CAM5", old=1.25, new=1.7),
+    dict(member="LookAtPoint", index=1, row="T-CAM5", old=1.25, new=1.55),
     dict(member="FOV", index=0, row="T-CAM2", old=30.0, new=55.0),
-    dict(member="FOV", index=1, row="T-CAM2", old=55.0, new=85.0),
+    dict(member="FOV", index=1, row="T-CAM2", old=55.0, new=63.0),
     dict(member="FOVVelocityRange", index=1, row="T-CAM3", old=50.0, new=108.0),
     dict(member="RollWithVehicleAmount", index=None, row="T-CAM6", old=0.3, new=0.38),
     # T-CAM13: the occlusion ray starts 1.0 m up on a 1.41 m donor; the Batmobile
@@ -84,16 +93,23 @@ def source_configs() -> dict:
 
 
 def guard() -> None:
-    """Fail closed: the old hand-derived candidate is not a translation."""
+    """Fail closed unless the decoded composition behind these values is intact.
+
+    The candidate is a translation only while (a) the authored chase config is the
+    400/400 cm one the values were derived from, and (b) `bmak_camdecode.py --check`
+    still reproduces the sit + boom arithmetic from CAMERA.md §2b (18/18). Either
+    failing means the inputs moved and the emitted numbers would be stale.
+    """
     c1 = source_configs()["DrivingCamConfig1"]["values"]
     if (c1[9], c1[10]) != (400.0, 400.0):
-        raise SystemExit("CAM-1: CAMERA.json no longer matches the 400/400 cm chase config")
-    raise SystemExit(
-        "CAM-1 is WITHDRAWN. The authored chase config is DrivingCamConfig1: "
-        "sit [-300,0,-25]..[-400,0,-25] cm, Min/MaxFreeCameraDistance 400/400 cm, "
-        "pivot 155 cm, FOV 85/95 horizontal. The old 7.0 m / 85 deg values were "
-        "hand-derived and test-086 rejected them. Decode the sit-offset+distance "
-        "composition before emitting anything; see Research/BatmobileGrab/CAMERA.md.")
+        raise SystemExit("CAMERA.json no longer matches the 400/400 cm chase config")
+    r = subprocess.run([sys.executable, os.path.join(HERE, "bmak_camdecode.py"), "--check"],
+                       capture_output=True, text=True)
+    if r.returncode != 0:
+        raise SystemExit(
+            "bmak_camdecode.py --check failed: the composition behind the camera "
+            "values no longer reproduces, so nothing may be emitted.\n"
+            + (r.stdout + r.stderr)[-800:])
 
 
 def sha(blob: bytes) -> str:

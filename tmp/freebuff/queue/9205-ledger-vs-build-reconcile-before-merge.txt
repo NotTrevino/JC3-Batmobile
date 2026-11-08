@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/ledger-vs-build-reconcile-before-merge.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/review-v2-apply-wave.md
+RESET_FINDINGS section 3 names ledger drift from builds as a failure that was only closed per sub-batch. Write Tools/scripts/ledger_recon.py (--write, --check) that takes a build tree path as a parameter and, for each of the 199 rows of Working/Translation/T_ROWS.jsonl, reads the value back from that tree's own files (the .toc slices, the .epe, the module members) and records ledger value, built value, and verdict equal, different or absent-from-tree. Use the 9030 to 9033 apply reports for the expected cells. Run it on Builds/bm-RC4 and write Working/Translation/RECON_PRE_RC5.json and .md. Also close the open first-pass G3-20 file: one paragraph saying which of its 180 OPEN, 2 CORRECTED and 16 SUPPLIED keyword hits survive the later verified passes (LEDGER_G3B, C, E). Done when the verdict count sums to the ledger length and --check recomputes the same figures from the bytes. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

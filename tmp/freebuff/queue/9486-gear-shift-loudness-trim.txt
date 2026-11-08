@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/gear-shift-loudness-trim.md
+ONLY: freebuff
+EST: 25
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/engine-turbine-layers-build.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/audio-standstill-listen.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/audio-driving-listen.md
+After the engine and standstill listening reports, resolve the three gear-shift slots that measure +3.5 to +3.7 LU, outside the 1 LU gate, and row A-04. Read reports/audio-standstill-listen.md and reports/audio-driving-listen.md for what the listener heard. If shifts sounded wrong, set a gain offset per slot; if they sounded right, record that the gate deviation is accepted for the reason cited. Apply the choice to Tools/scripts/rc5_audio3.py (gain table only), rebuild Builds/bm-RC5-audio3, rerun --check and the loudness gate. Never edit a bm-RC4 tree. Write the decision, the old and new LU values, and the revert command in tmp/freebuff/reports/gear-shift-loudness-trim.md. Done check: all three shift slots are within 1 LU, or the report holds a sign-off line for an accepted deviation. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

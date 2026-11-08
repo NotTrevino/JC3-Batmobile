@@ -1,0 +1,613 @@
+{
+ "schema": 1,
+ "generated_by": "Tools/scripts/review_grab_class_defaults.py --write",
+ "review_of": "Research/BatmobileGrab/CLASS_DEFAULTS.md (G3-06b)",
+ "cdos": {
+  "subclass": {
+   "object": "BmScript.Default__RVehicleBatmobile",
+   "export": 7530,
+   "bytes": 978,
+   "tags_walked": 93,
+   "tags_claimed": 93,
+   "end": 976,
+   "stop": "eof",
+   "offsets_only_mine": [],
+   "offsets_only_card": [],
+   "value_mismatches": [],
+   "struct_nested_mismatches": [],
+   "type_name_mismatches": [],
+   "count_matches": true,
+   "end_matches": true
+  },
+  "base": {
+   "object": "BmGame.Default__RVehicleBatmobileBase",
+   "export": 10923,
+   "bytes": 3186,
+   "tags_walked": 181,
+   "tags_claimed": 181,
+   "end": 3184,
+   "stop": "eof",
+   "offsets_only_mine": [],
+   "offsets_only_card": [],
+   "value_mismatches": [],
+   "struct_nested_mismatches": [],
+   "type_name_mismatches": [],
+   "count_matches": true,
+   "end_matches": true
+  }
+ },
+ "picks": {
+  "float": {
+   "stream": "subclass",
+   "offset": 1688,
+   "type": "FloatProperty",
+   "tag_type_id": 4,
+   "payload_at": 784,
+   "header_hex": "04009806",
+   "payload_hex": "00005243",
+   "value": 210.0,
+   "claimed_type": "FloatProperty",
+   "claimed_value": 210.0,
+   "claimed_kind": "FloatProperty",
+   "claimed_source": "Engine\\SVehicle.g.cs:1229 (off 1688)",
+   "layout": {
+    "kind": "FloatProperty",
+    "offset": 1688,
+    "mask": null,
+    "line": 1229,
+    "class": "SVehicle",
+    "package": "Engine"
+   },
+   "layout_names_it": true,
+   "byte_ok": true
+  },
+  "bool": {
+   "stream": "base",
+   "offset": 1676,
+   "type": "BoolProperty",
+   "tag_type_id": 3,
+   "payload_at": 2956,
+   "header_hex": "03008c06",
+   "payload_hex": "00100004",
+   "value": 67112960,
+   "claimed_type": "BoolProperty",
+   "claimed_value": 67112960,
+   "claimed_kind": "BoolProperty",
+   "claimed_source": "Engine\\SVehicle.g.cs:968 (off 1676, mask 0x00000001)",
+   "layout": {
+    "kind": "BoolProperty",
+    "offset": 1676,
+    "mask": 4096,
+    "line": 1076,
+    "class": "SVehicle",
+    "package": "Engine"
+   },
+   "layout_names_it": true,
+   "masks": {
+    "bCanFlip": "0x1000",
+    "bIsBatmobile": "0x4000000"
+   },
+   "true_members": [
+    "bCanFlip",
+    "bIsBatmobile"
+   ],
+   "cited_mask_is_a_true_member": false,
+   "cited_mask": "0x00000001"
+  },
+  "object": {
+   "stream": "base",
+   "offset": 1764,
+   "type": "ObjectNCRProperty",
+   "tag_type_id": 16,
+   "payload_at": 3016,
+   "header_hex": "1000e406",
+   "payload_hex": "50a00200",
+   "value": 172112,
+   "claimed_type": "ObjectNCRProperty",
+   "claimed_value": 172112,
+   "claimed_kind": "ObjectProperty",
+   "claimed_source": "Engine\\SVehicle.g.cs:1322 (off 1764)",
+   "layout": {
+    "kind": "ObjectProperty",
+    "offset": 1764,
+    "mask": null,
+    "line": 1322,
+    "class": "SVehicle",
+    "package": "Engine"
+   },
+   "layout_names_it": true,
+   "ref_path": "Default__RVehicleBatmobileBase.MyStayUprightSetup",
+   "ref_class": "RB_StayUprightSetup",
+   "declared": "RB_StayUprightSetup",
+   "object_class_ok": true
+  },
+  "struct": {
+   "stream": "base",
+   "offset": 6596,
+   "type": "StructProperty",
+   "tag_type_id": 10,
+   "payload_at": 934,
+   "header_hex": "0a00c419",
+   "payload_hex": "0400000000000000040004000000003f",
+   "value": null,
+   "claimed_type": "StructProperty",
+   "claimed_value": {
+    "size": 272,
+    "props": [
+     {
+      "type": "FloatProperty",
+      "type_id": 4,
+      "offset": 0,
+      "value": 0.0,
+      "at": 4
+     },
+     {
+      "type": "FloatProperty",
+      "type_id": 4,
+      "offset": 4,
+      "value": 0.5,
+      "at": 12
+     },
+     {
+      "type": "VectorProperty",
+      "type_id": 11,
+      "offset": 8,
+      "value": [
+       0.0,
+       5.0,
+       5.0
+      ],
+      "at": 20
+     },
+     {
+      "type": "VectorProperty",
+      "type_id": 11,
+      "offset": 20,
+      "value": [
+       35.0,
+       35.0,
+       35.0
+      ],
+      "at": 36
+     },
+     {
+      "type": "VectorProperty",
+      "type_id": 11,
+      "offset": 32,
+      "value": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "at": 52
+     },
+     {
+      "type": "VectorProperty",
+      "type_id": 11,
+      "offset": 44,
+      "value": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "at": 68
+     },
+     {
+      "type": "VectorProperty",
+      "type_id": 11,
+      "offset": 56,
+      "value": [
+       150.0,
+       150.0,
+       150.0
+      ],
+      "at": 84
+     },
+     {
+      "type": "VectorProperty",
+      "type_id": 11,
+      "offset": 68,
+      "value": [
+       35.0,
+       35.0,
+       35.0
+      ],
+      "at": 100
+     },
+     {
+      "type": "VectorProperty",
+      "type_id": 11,
+      "offset": 80,
+      "value": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "at": 116
+     },
+     {
+      "type": "VectorProperty",
+      "type_id": 11,
+      "offset": 92,
+      "value": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "at": 132
+     },
+     {
+      "type": "FloatProperty",
+      "type_id": 4,
+      "offset": 104,
+      "value": 1.0,
+      "at": 148
+     },
+     {
+      "type": "FloatProperty",
+      "type_id": 4,
+      "offset": 108,
+      "value": 0.0,
+      "at": 156
+     },
+     {
+      "type": "FloatProperty",
+      "type_id": 4,
+      "offset": 112,
+      "value": 5.0,
+      "at": 164
+     },
+     {
+      "type": "FloatProperty",
+      "type_id": 4,
+      "offset": 116,
+      "value": 0.0,
+      "at": 172
+     },
+     {
+      "type": "StructProperty",
+      "type_id": 10,
+      "offset": 120,
+      "name": "AdvancedOptions",
+      "size": 50,
+      "array_index": 0,
+      "at": 196,
+      "props": [
+       {
+        "type": "BoolProperty",
+        "type_id": 3,
+        "offset": 0,
+        "value": false,
+        "at": 4,
+        "bits": 0
+       },
+       {
+        "type": "FloatProperty",
+        "type_id": 4,
+        "offset": 4,
+        "value": 0.0,
+        "at": 12
+       },
+       {
+        "type": "FloatProperty",
+        "type_id": 4,
+        "offset": 8,
+        "value": 0.0,
+        "at": 20
+       },
+       {
+        "type": "FloatProperty",
+        "type_id": 4,
+        "offset": 12,
+        "value": 2000.0,
+        "at": 28
+       },
+       {
+        "type": "FloatProperty",
+        "type_id": 4,
+        "offset": 16,
+        "value": 10000.0,
+        "at": 36
+       },
+       {
+        "type": "FloatProperty",
+        "type_id": 4,
+        "offset": 20,
+        "value": 0.10000000149011612,
+        "at": 44
+       }
+      ],
+      "nested": 6
+     },
+     {
+      "type": "BoolProperty",
+      "type_id": 3,
+      "offset": 144,
+      "value": false,
+      "at": 250,
+      "bits": 0
+     },
+     {
+      "type": "IntProperty",
+      "type_id": 2,
+      "offset": 148,
+      "value": 0,
+      "at": 258
+     },
+     {
+      "type": "FloatProperty",
+      "type_id": 4,
+      "offset": 152,
+      "value": 0.0,
+      "at": 266
+     }
+    ],
+    "nested": 18
+   },
+   "claimed_kind": "StructProperty",
+   "claimed_source": "BmGame\\RVehicleBatmobileBase.g.cs:7554 (off 6596)",
+   "layout": {
+    "kind": "StructProperty",
+    "offset": 6596,
+    "mask": null,
+    "line": 7554,
+    "class": "RVehicleBatmobileBase",
+    "package": "BmGame"
+   },
+   "layout_names_it": true,
+   "nested": 18,
+   "first_props": [
+    [
+     0,
+     0.0
+    ],
+    [
+     4,
+     0.5
+    ],
+    [
+     8,
+     [
+      0.0,
+      5.0,
+      5.0
+     ]
+    ]
+   ]
+  },
+  "int": {
+   "stream": "base",
+   "offset": 1144,
+   "type": "IntProperty",
+   "tag_type_id": 2,
+   "payload_at": 3084,
+   "header_hex": "02007804",
+   "payload_hex": "e8030000",
+   "value": 1000,
+   "claimed_type": "IntProperty",
+   "claimed_value": 1000,
+   "claimed_kind": "IntProperty",
+   "claimed_source": "Engine\\Pawn.g.cs:4771 (off 1144)",
+   "layout": {
+    "kind": "IntProperty",
+    "offset": 1144,
+    "mask": null,
+    "line": 4771,
+    "class": "Pawn",
+    "package": "Engine"
+   },
+   "layout_names_it": true
+  },
+  "vector": {
+   "stream": "base",
+   "offset": 4504,
+   "type": "VectorProperty",
+   "tag_type_id": 11,
+   "payload_at": 2916,
+   "header_hex": "0b009811",
+   "payload_hex": "0000c8430000964300007a44",
+   "value": [
+    400.0,
+    300.0,
+    1000.0
+   ],
+   "claimed_type": "VectorProperty",
+   "claimed_value": [
+    400.0,
+    300.0,
+    1000.0
+   ],
+   "claimed_kind": "StructProperty",
+   "claimed_source": "BmGame\\RVehicle.g.cs:4991 (off 4504)",
+   "layout": {
+    "kind": "StructProperty",
+    "offset": 4504,
+    "mask": null,
+    "line": 4991,
+    "class": "RVehicle",
+    "package": "BmGame"
+   },
+   "layout_names_it": true,
+   "printed_as": "StructProperty",
+   "tag_type_is_vector": true
+  }
+ },
+ "no_type": [
+  {
+   "offset": 5676,
+   "name": "RamDamageType",
+   "type": "ObjectNCRProperty",
+   "payload_index": 76614,
+   "ref_path": "RDmgType_Barge",
+   "ref_class": null,
+   "declared": "Class",
+   "layout": {
+    "kind": "ClassProperty",
+    "offset": 5676,
+    "mask": null,
+    "line": 6454,
+    "class": "RVehicleBatmobileBase",
+    "package": "BmGame"
+   },
+   "layout_names_it": true,
+   "offset_owners_in_chain": [
+    [
+     "RamDamageType",
+     "RVehicleBatmobileBase"
+    ]
+   ],
+   "name_unique_at_offset": true,
+   "oracle": {
+    "verdict": "no-type",
+    "declared": "Class",
+    "actual": null
+   },
+   "payload_hex": "462b0100"
+  },
+  {
+   "offset": 892,
+   "name": "InventoryManagerClass",
+   "type": "ObjectNCRProperty",
+   "payload_index": 89516,
+   "ref_path": "RInventoryManager",
+   "ref_class": null,
+   "declared": "Class",
+   "layout": {
+    "kind": "ClassProperty",
+    "offset": 892,
+    "mask": null,
+    "line": 3598,
+    "class": "Pawn",
+    "package": "Engine"
+   },
+   "layout_names_it": true,
+   "offset_owners_in_chain": [
+    [
+     "InventoryManagerClass",
+     "Pawn"
+    ]
+   ],
+   "name_unique_at_offset": true,
+   "oracle": {
+    "verdict": "no-type",
+    "declared": "Class",
+    "actual": null
+   },
+   "payload_hex": "ac5d0100"
+  }
+ ],
+ "labels": {
+  "bool_rows": 5,
+  "bool_rows_detail": [
+   {
+    "offset": 4568,
+    "name": "SelfDriveAllowBoost (1 of 32 bools in the word)",
+    "cited_mask": "0x2000",
+    "cited_member": "AbseilBlocked",
+    "cited_line": 4572,
+    "true_members": [
+     "SelfDriveAllowBoost"
+    ],
+    "true_masks": [
+     "0x400000"
+    ],
+    "cited_is_true": false,
+    "source": "BmGame\\RVehicleBatmobileBase.g.cs:4572 (off 4568, mask 0x00002000)"
+   },
+   {
+    "offset": 4576,
+    "name": "bAllowPMDodge (1 of 18 bools in the word)",
+    "cited_mask": "0x20",
+    "cited_member": "BlockThrottleUntilReleased",
+    "cited_line": 5076,
+    "true_members": [
+     "bAllowPMDodge"
+    ],
+    "true_masks": [
+     "0x800"
+    ],
+    "cited_is_true": false,
+    "source": "BmGame\\RVehicleBatmobileBase.g.cs:5076 (off 4576, mask 0x00000020)"
+   },
+   {
+    "offset": 1676,
+    "name": "bCanFlip, bIsBatmobile (2 of 28 bools in the word)",
+    "cited_mask": "0x1",
+    "cited_member": "EasyToPush",
+    "cited_line": 968,
+    "true_members": [
+     "bCanFlip",
+     "bIsBatmobile"
+    ],
+    "true_masks": [
+     "0x1000",
+     "0x4000000"
+    ],
+    "cited_is_true": false,
+    "source": "Engine\\SVehicle.g.cs:968 (off 1676, mask 0x00000001)"
+   },
+   {
+    "offset": 256,
+    "name": "bAICanStepUpOn, bCanStepUpOn, bReplicateMovement, bRouteBeginPlayEvenIfStatic, bStasis, bWaitForTickBeforeStasis (6 of 32 bools in the word)",
+    "cited_mask": "0x2",
+    "cited_member": "BoostDynamicTextureStreaming",
+    "cited_line": 6555,
+    "true_members": [
+     "bAICanStepUpOn",
+     "bCanStepUpOn",
+     "bReplicateMovement",
+     "bRouteBeginPlayEvenIfStatic",
+     "bStasis",
+     "bWaitForTickBeforeStasis"
+    ],
+    "true_masks": [
+     "0x1000000",
+     "0x800000",
+     "0x40000000",
+     "0x80000",
+     "0x800",
+     "0x1000"
+    ],
+    "cited_is_true": false,
+    "source": "Engine\\Actor.g.cs:6555 (off 256, mask 0x00000002)"
+   },
+   {
+    "offset": 264,
+    "name": "bBlockActors, bBlocksTeleport, bCanBeDamaged, bCanTeleport, bCollideActors, bCollideWorld, bMovable, bProjTarget, bShouldBaseAtStartup (9 of 32 bools in the word)",
+    "cited_mask": "0x2000",
+    "cited_member": "BlockRigidBody",
+    "cited_line": 7239,
+    "true_members": [
+     "bBlockActors",
+     "bBlocksTeleport",
+     "bCanBeDamaged",
+     "bCanTeleport",
+     "bCollideActors",
+     "bCollideWorld",
+     "bMovable",
+     "bProjTarget",
+     "bShouldBaseAtStartup"
+    ],
+    "true_masks": [
+     "0x80000",
+     "0x200000",
+     "0x40",
+     "0x200",
+     "0x8000",
+     "0x20000",
+     "0x10",
+     "0x100000",
+     "0x80"
+    ],
+    "cited_is_true": false,
+    "source": "Engine\\Actor.g.cs:7239 (off 264, mask 0x00002000)"
+   }
+  ],
+  "bool_rows_mislabelled": 5,
+  "rows_printing_the_layout_kind": 47,
+  "kind_incompatible_rows": [],
+  "note": "the value column of the .md table prints `kind` (the layout member's kind) beside the tag's own type in `tag_type`; the alias rows are the documented Vector/Guid and Object* spellings"
+ },
+ "problems": [],
+ "verdict": "minor issues"
+}

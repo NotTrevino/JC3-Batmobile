@@ -1,0 +1,1121 @@
+{
+ "task": "where do GetCameraTrackingOffset's three floats come from (installed exe)",
+ "exe": {
+  "path": "E:/Games/Batman - Arkham Knight/Binaries/Win64/BatmanAK.exe",
+  "bytes": 55101440,
+  "sha256": "4b81c4cd410e016223894985c3beecaf7c64d26a8ce805ce340b1c0b7101490a",
+  "image_base": 5368709120,
+  "timestamp": 1695068622,
+  "timestamp_hex": "0x6508B1CE",
+  "size_of_image": 71348224
+ },
+ "helper": {
+  "address": 5369023744,
+  "instructions": [
+   [
+    "mov",
+    "eax, dword ptr [rcx + 0x5f0]"
+   ],
+   [
+    "mov",
+    "dword ptr [rdx], eax"
+   ],
+   [
+    "mov",
+    "eax, dword ptr [rcx + 0x5f4]"
+   ],
+   [
+    "mov",
+    "dword ptr [rdx + 4], eax"
+   ],
+   [
+    "mov",
+    "eax, dword ptr [rcx + 0x5f8]"
+   ],
+   [
+    "mov",
+    "dword ptr [rdx + 8], eax"
+   ],
+   [
+    "mov",
+    "rax, rdx"
+   ],
+   [
+    "ret",
+    ""
+   ]
+  ],
+  "reads": [
+   "5f0",
+   "5f4",
+   "5f8"
+  ],
+  "listing": [
+   {
+    "address": 5369023744,
+    "mnemonic": "mov",
+    "op": "eax, dword ptr [rcx + 0x5f0]",
+    "text": "mov eax, dword ptr [rcx + 0x5f0]",
+    "rip": false
+   },
+   {
+    "address": 5369023750,
+    "mnemonic": "mov",
+    "op": "dword ptr [rdx], eax",
+    "text": "mov dword ptr [rdx], eax",
+    "rip": false
+   },
+   {
+    "address": 5369023752,
+    "mnemonic": "mov",
+    "op": "eax, dword ptr [rcx + 0x5f4]",
+    "text": "mov eax, dword ptr [rcx + 0x5f4]",
+    "rip": false
+   },
+   {
+    "address": 5369023758,
+    "mnemonic": "mov",
+    "op": "dword ptr [rdx + 4], eax",
+    "text": "mov dword ptr [rdx + 4], eax",
+    "rip": false
+   },
+   {
+    "address": 5369023761,
+    "mnemonic": "mov",
+    "op": "eax, dword ptr [rcx + 0x5f8]",
+    "text": "mov eax, dword ptr [rcx + 0x5f8]",
+    "rip": false
+   },
+   {
+    "address": 5369023767,
+    "mnemonic": "mov",
+    "op": "dword ptr [rdx + 8], eax",
+    "text": "mov dword ptr [rdx + 8], eax",
+    "rip": false
+   },
+   {
+    "address": 5369023770,
+    "mnemonic": "mov",
+    "op": "rax, rdx",
+    "text": "mov rax, rdx",
+    "rip": false
+   },
+   {
+    "address": 5369023773,
+    "mnemonic": "ret",
+    "op": "",
+    "text": "ret",
+    "rip": false
+   },
+   {
+    "address": 5369023774,
+    "mnemonic": "int3",
+    "op": "",
+    "text": "int3",
+    "rip": false
+   },
+   {
+    "address": 5369023775,
+    "mnemonic": "int3",
+    "op": "",
+    "text": "int3",
+    "rip": false
+   },
+   {
+    "address": 5369023776,
+    "mnemonic": "push",
+    "op": "rbx",
+    "text": "push rbx",
+    "rip": false
+   },
+   {
+    "address": 5369023778,
+    "mnemonic": "sub",
+    "op": "rsp, 0x20",
+    "text": "sub rsp, 0x20",
+    "rip": false
+   }
+  ]
+ },
+ "field": {
+  "hits": [
+   {
+    "class": "Vehicle",
+    "member": "ExitOffset",
+    "kind": "StructProperty",
+    "type": "Vector3",
+    "offset": 1520
+   }
+  ],
+  "chain": [
+   "RVehicleBatmobileBase",
+   "RVehicle",
+   "AkVehicle",
+   "SVehicle",
+   "Vehicle",
+   "Pawn",
+   "Actor",
+   "StateObject",
+   "GameObject",
+   "IGameObject"
+  ]
+ },
+ "callers": [
+  {
+   "call_va": "0x140122c74",
+   "start": 5369900148,
+   "instructions": 208,
+   "listing": [
+    {
+     "address": 5369900148,
+     "text": "call 0x14004cd00"
+    },
+    {
+     "address": 5369900153,
+     "text": "movss xmm4, dword ptr [rsp + 0x50]"
+    },
+    {
+     "address": 5369900159,
+     "text": "movss xmm5, dword ptr [rsp + 0x58]"
+    },
+    {
+     "address": 5369900165,
+     "text": "movss xmm7, dword ptr [rsp + 0x54]"
+    },
+    {
+     "address": 5369900171,
+     "text": "ucomiss xmm4, dword ptr [rip + 0x395f94e]"
+    },
+    {
+     "address": 5369900178,
+     "text": "jne 0x140122caa"
+    },
+    {
+     "address": 5369900180,
+     "text": "ucomiss xmm7, dword ptr [rip + 0x395f949]"
+    },
+    {
+     "address": 5369900187,
+     "text": "jne 0x140122caa"
+    },
+    {
+     "address": 5369900189,
+     "text": "ucomiss xmm5, dword ptr [rip + 0x395f944]"
+    },
+    {
+     "address": 5369900196,
+     "text": "je 0x140122d50"
+    },
+    {
+     "address": 5369900202,
+     "text": "mov rax, qword ptr [r15 + 0x38c]"
+    },
+    {
+     "address": 5369900209,
+     "text": "movaps xmm0, xmm4"
+    },
+    {
+     "address": 5369900212,
+     "text": "movaps xmm2, xmm4"
+    },
+    {
+     "address": 5369900215,
+     "text": "movaps xmm1, xmm5"
+    },
+    {
+     "address": 5369900218,
+     "text": "movaps xmm3, xmm7"
+    },
+    {
+     "address": 5369900221,
+     "text": "mulss xmm0, dword ptr [rax + 0xb0]"
+    },
+    {
+     "address": 5369900229,
+     "text": "mulss xmm2, dword ptr [rax + 0xb4]"
+    },
+    {
+     "address": 5369900237,
+     "text": "mulss xmm4, dword ptr [rax + 0xb8]"
+    },
+    {
+     "address": 5369900245,
+     "text": "mulss xmm1, dword ptr [rax + 0xd0]"
+    },
+    {
+     "address": 5369900253,
+     "text": "mulss xmm3, dword ptr [rax + 0xc0]"
+    },
+    {
+     "address": 5369900261,
+     "text": "addss xmm3, xmm0"
+    },
+    {
+     "address": 5369900265,
+     "text": "movaps xmm0, xmm7"
+    },
+    {
+     "address": 5369900268,
+     "text": "addss xmm3, xmm1"
+    },
+    {
+     "address": 5369900272,
+     "text": "mulss xmm0, dword ptr [rax + 0xc4]"
+    },
+    {
+     "address": 5369900280,
+     "text": "mulss xmm7, dword ptr [rax + 0xc8]"
+    },
+    {
+     "address": 5369900288,
+     "text": "movaps xmm1, xmm5"
+    },
+    {
+     "address": 5369900291,
+     "text": "addss xmm2, xmm0"
+    },
+    {
+     "address": 5369900295,
+     "text": "movss xmm0, dword ptr [rbp - 0x80]"
+    },
+    {
+     "address": 5369900300,
+     "text": "addss xmm4, xmm7"
+    },
+    {
+     "address": 5369900304,
+     "text": "mulss xmm1, dword ptr [rax + 0xd4]"
+    },
+    {
+     "address": 5369900312,
+     "text": "mulss xmm5, dword ptr [rax + 0xd8]"
+    },
+    {
+     "address": 5369900320,
+     "text": "addss xmm2, xmm1"
+    },
+    {
+     "address": 5369900324,
+     "text": "movss xmm1, dword ptr [rbp - 0x7c]"
+    },
+    {
+     "address": 5369900329,
+     "text": "addss xmm0, xmm3"
+    },
+    {
+     "address": 5369900333,
+     "text": "addss xmm1, xmm2"
+    },
+    {
+     "address": 5369900337,
+     "text": "addss xmm4, xmm5"
+    },
+    {
+     "address": 5369900341,
+     "text": "movss dword ptr [rbp - 0x80], xmm0"
+    },
+    {
+     "address": 5369900346,
+     "text": "mov r12d, dword ptr [rbp - 0x80]"
+    },
+    {
+     "address": 5369900350,
+     "text": "movss dword ptr [rbp - 0x7c], xmm1"
+    },
+    {
+     "address": 5369900355,
+     "text": "addss xmm6, xmm4"
+    },
+    {
+     "address": 5369900359,
+     "text": "mov r13d, dword ptr [rbp - 0x7c]"
+    },
+    {
+     "address": 5369900363,
+     "text": "movss dword ptr [rbp - 0x78], xmm6"
+    },
+    {
+     "address": 5369900368,
+     "text": "mov ebx, dword ptr [rbp - 0x78]"
+    },
+    {
+     "address": 5369900371,
+     "text": "lea r8, [rbp - 0x80]"
+    },
+    {
+     "address": 5369900375,
+     "text": "lea rdx, [rsp + 0x70]"
+    },
+    {
+     "address": 5369900380,
+     "text": "movaps xmm3, xmm8"
+    },
+    {
+     "address": 5369900384,
+     "text": "mov rcx, rdi"
+    },
+    {
+     "address": 5369900387,
+     "text": "call 0x14010c4c0"
+    },
+    {
+     "address": 5369900392,
+     "text": "test dword ptr [rdi + 0x694], 0x400000"
+    },
+    {
+     "address": 5369900402,
+     "text": "mov r15, qword ptr [rbp - 0x80]"
+    },
+    {
+     "address": 5369900406,
+     "text": "mov ecx, dword ptr [rax]"
+    },
+    {
+     "address": 5369900408,
+     "text": "mov r14d, dword ptr [rax + 8]"
+    },
+    {
+     "address": 5369900412,
+     "text": "mov dword ptr [rsp + 0x50], ecx"
+    },
+    {
+     "address": 5369900416,
+     "text": "mov ecx, dword ptr [rax + 4]"
+    },
+    {
+     "address": 5369900419,
+     "text": "mov dword ptr [rsp + 0x54], ecx"
+    },
+    {
+     "address": 5369900423,
+     "text": "je 0x140122e1b"
+    },
+    {
+     "address": 5369900429,
+     "text": "ucomiss xmm10, dword ptr [rdi + 0x541c]"
+    },
+    {
+     "address": 5369900437,
+     "text": "jne 0x140122dab"
+    },
+    {
+     "address": 5369900439,
+     "text": "ucomiss xmm10, dword ptr [rdi + 0x5420]"
+    },
+    {
+     "address": 5369900447,
+     "text": "jne 0x140122dab"
+    },
+    {
+     "address": 5369900449,
+     "text": "ucomiss xmm10, dword ptr [rdi + 0x5424]"
+    },
+    {
+     "address": 5369900457,
+     "text": "je 0x140122e07"
+    },
+    {
+     "address": 5369900459,
+     "text": "mov eax, dword ptr [rdi + 0x541c]"
+    },
+    {
+     "address": 5369900465,
+     "text": "lea r8, [rsp + 0x60]"
+    },
+    {
+     "address": 5369900470,
+     "text": "lea rdx, [rsp + 0x70]"
+    },
+    {
+     "address": 5369900475,
+     "text": "mov dword ptr [rsp + 0x70], eax"
+    },
+    {
+     "address": 5369900479,
+     "text": "mov eax, dword ptr [rdi + 0x5420]"
+    },
+    {
+     "address": 5369900485,
+     "text": "xor r9d, r9d"
+    },
+    {
+     "address": 5369900488,
+     "text": "mov dword ptr [rsp + 0x74], eax"
+    },
+    {
+     "address": 5369900492,
+     "text": "mov eax, dword ptr [rdi + 0x5424]"
+    },
+    {
+     "address": 5369900498,
+     "text": "mov rcx, rdi"
+    },
+    {
+     "address": 5369900501,
+     "text": "mov dword ptr [rsp + 0x78], eax"
+    },
+    {
+     "address": 5369900505,
+     "text": "xor eax, eax"
+    },
+    {
+     "address": 5369900507,
+     "text": "mov qword ptr [rsp + 0x60], r15"
+    },
+    {
+     "address": 5369900512,
+     "text": "mov qword ptr [rsp + 0x38], rax"
+    },
+    {
+     "address": 5369900517,
+     "text": "mov dword ptr [rsp + 0x30], 1"
+    },
+    {
+     "address": 5369900525,
+     "text": "mov byte ptr [rsp + 0x28], 0xff"
+    },
+    {
+     "address": 5369900530,
+     "text": "mov byte ptr [rsp + 0x20], 0xff"
+    },
+    {
+     "address": 5369900535,
+     "text": "mov dword ptr [rsp + 0x68], ebx"
+    },
+    {
+     "address": 5369900539,
+     "text": "mov qword ptr [rbp + 0x2c0], rax"
+    },
+    {
+     "address": 5369900546,
+     "text": "call 0x1408c7870"
+    },
+    {
+     "address": 5369900551,
+     "text": "mov dword ptr [rdi + 0x541c], r12d"
+    },
+    {
+     "address": 5369900558,
+     "text": "mov dword ptr [rdi + 0x5420], r13d"
+    },
+    {
+     "address": 5369900565,
+     "text": "mov dword ptr [rdi + 0x5424], ebx"
+    },
+    {
+     "address": 5369900571,
+     "text": "test dword ptr [rdi + 0x694], 0x800000"
+    },
+    {
+     "address": 5369900581,
+     "text": "mov r12, qword ptr [rsp + 0x50]"
+    },
+    {
+     "address": 5369900586,
+     "text": "je 0x140122ec1"
+    },
+    {
+     "address": 5369900592,
+     "text": "mov qword ptr [rsp + 0x60], r15"
+    },
+    {
+     "address": 5369900597,
+     "text": "xor r15d, r15d"
+    },
+    {
+     "address": 5369900600,
+     "text": "lea r8, [rsp + 0x70]"
+    },
+    {
+     "address": 5369900605,
+     "text": "mov eax, r15d"
+    },
+    {
+     "address": 5369900608,
+     "text": "lea rdx, [rsp + 0x60]"
+    },
+    {
+     "address": 5369900613,
+     "text": "mov r9b, 0xff"
+    },
+    {
+     "address": 5369900616,
+     "text": "mov qword ptr [rsp + 0x38], rax"
+    },
+    {
+     "address": 5369900621,
+     "text": "mov dword ptr [rsp + 0x30], r15d"
+    },
+    {
+     "address": 5369900626,
+     "text": "mov rcx, rdi"
+    },
+    {
+     "address": 5369900629,
+     "text": "mov byte ptr [rsp + 0x28], r15b"
+    },
+    {
+     "address": 5369900634,
+     "text": "mov qword ptr [rsp + 0x70], r12"
+    },
+    {
+     "address": 5369900639,
+     "text": "mov dword ptr [rsp + 0x78], r14d"
+    },
+    {
+     "address": 5369900644,
+     "text": "mov byte ptr [rsp + 0x20], 0xff"
+    },
+    {
+     "address": 5369900649,
+     "text": "mov dword ptr [rsp + 0x68], ebx"
+    },
+    {
+     "address": 5369900653,
+     "text": "mov qword ptr [rbp + 0x2c0], r15"
+    },
+    {
+     "address": 5369900660,
+     "text": "call 0x1408c7870"
+    },
+    {
+     "address": 5369900665,
+     "text": "mov eax, r15d"
+    },
+    {
+     "address": 5369900668,
+     "text": "lea r9d, [r15 + 4]"
+    },
+    {
+     "address": 5369900672,
+     "text": "movss xmm2, dword ptr [rip + 0x1b049d8]"
+    },
+    {
+     "address": 5369900680,
+     "text": "mov qword ptr [rsp + 0x40], rax"
+    },
+    {
+     "address": 5369900685,
+     "text": "mov dword ptr [rsp + 0x38], r15d"
+    },
+    {
+     "address": 5369900690,
+     "text": "mov byte ptr [rsp + 0x30], 0xff"
+    },
+    {
+     "address": 5369900695,
+     "text": "lea rdx, [rsp + 0x70]"
+    },
+    {
+     "address": 5369900700,
+     "text": "mov rcx, rdi"
+    },
+    {
+     "address": 5369900703,
+     "text": "mov byte ptr [rsp + 0x28], r15b"
+    },
+    {
+     "address": 5369900708,
+     "text": "mov byte ptr [rsp + 0x20], r15b"
+    },
+    {
+     "address": 5369900713,
+     "text": "mov qword ptr [rsp + 0x70], r12"
+    },
+    {
+     "address": 5369900718,
+     "text": "mov dword ptr [rsp + 0x78], r14d"
+    },
+    {
+     "address": 5369900723,
+     "text": "mov qword ptr [rbp + 0x2c0], r15"
+    },
+    {
+     "address": 5369900730,
+     "text": "call 0x1408c7870"
+    },
+    {
+     "address": 5369900735,
+     "text": "jmp 0x140122ec4"
+    },
+    {
+     "address": 5369900737,
+     "text": "xor r15d, r15d"
+    },
+    {
+     "address": 5369900740,
+     "text": "test dword ptr [rdi + 0x698], 0x1000"
+    },
+    {
+     "address": 5369900750,
+     "text": "mov eax, dword ptr [rsp + 0x50]"
+    },
+    {
+     "address": 5369900754,
+     "text": "movss xmm0, dword ptr [rbp - 0x80]"
+    },
+    {
+     "address": 5369900759,
+     "text": "movss xmm1, dword ptr [rbp - 0x7c]"
+    },
+    {
+     "address": 5369900764,
+     "text": "mov dword ptr [rdi + 0x4ea8], eax"
+    },
+    {
+     "address": 5369900770,
+     "text": "mov eax, dword ptr [rsp + 0x54]"
+    },
+    {
+     "address": 5369900774,
+     "text": "movaps xmm2, xmm13"
+    },
+    {
+     "address": 5369900778,
+     "text": "movss dword ptr [rsp + 0x70], xmm0"
+    },
+    {
+     "address": 5369900784,
+     "text": "movss dword ptr [rsp + 0x74], xmm1"
+    },
+    {
+     "address": 5369900790,
+     "text": "mov dword ptr [rdi + 0x4eac], eax"
+    },
+    {
+     "address": 5369900796,
+     "text": "mov eax, dword ptr [rsp + 0x70]"
+    },
+    {
+     "address": 5369900800,
+     "text": "mov dword ptr [rdi + 0x4eb0], r14d"
+    },
+    {
+     "address": 5369900807,
+     "text": "xorps xmm2, xmmword ptr [rip + 0x1a9e922]"
+    },
+    {
+     "address": 5369900814,
+     "text": "mov dword ptr [rbp - 0x60], eax"
+    },
+    {
+     "address": 5369900817,
+     "text": "mov eax, dword ptr [rsp + 0x74]"
+    },
+    {
+     "address": 5369900821,
+     "text": "mov qword ptr [rsp + 0x70], r12"
+    },
+    {
+     "address": 5369900826,
+     "text": "addss xmm2, xmm6"
+    },
+    {
+     "address": 5369900830,
+     "text": "movss dword ptr [rsp + 0x78], xmm2"
+    },
+    {
+     "address": 5369900836,
+     "text": "mov dword ptr [rbp - 0x5c], eax"
+    },
+    {
+     "address": 5369900839,
+     "text": "mov eax, dword ptr [rsp + 0x78]"
+    },
+    {
+     "address": 5369900843,
+     "text": "mov dword ptr [rsp + 0x78], r14d"
+    },
+    {
+     "address": 5369900848,
+     "text": "mov dword ptr [rbp - 0x58], eax"
+    },
+    {
+     "address": 5369900851,
+     "text": "mov eax, dword ptr [rsi + 0xd0]"
+    },
+    {
+     "address": 5369900857,
+     "text": "mov dword ptr [rbp + 0x78], eax"
+    },
+    {
+     "address": 5369900860,
+     "text": "mov ebx, dword ptr [rsi + 0xd4]"
+    },
+    {
+     "address": 5369900866,
+     "text": "mov dword ptr [rbp + 0x7c], ebx"
+    },
+    {
+     "address": 5369900869,
+     "text": "mov eax, dword ptr [rsi + 0xd8]"
+    },
+    {
+     "address": 5369900875,
+     "text": "mov dword ptr [rbp + 0x80], eax"
+    },
+    {
+     "address": 5369900881,
+     "text": "je 0x140122f88"
+    },
+    {
+     "address": 5369900883,
+     "text": "mov rdx, qword ptr [rip + 0x305339e]"
+    },
+    {
+     "address": 5369900890,
+     "text": "xor eax, eax"
+    },
+    {
+     "address": 5369900892,
+     "text": "lea r8, [rsp + 0x60]"
+    },
+    {
+     "address": 5369900897,
+     "text": "mov rcx, rdi"
+    },
+    {
+     "address": 5369900900,
+     "text": "mov qword ptr [rsp + 0x60], rax"
+    },
+    {
+     "address": 5369900905,
+     "text": "mov dword ptr [rsp + 0x68], eax"
+    },
+    {
+     "address": 5369900909,
+     "text": "call 0x140fa41f0"
+    },
+    {
+     "address": 5369900914,
+     "text": "mov rax, qword ptr [rsp + 0x60]"
+    },
+    {
+     "address": 5369900919,
+     "text": "mov qword ptr [rbp + 0x78], rax"
+    },
+    {
+     "address": 5369900923,
+     "text": "mov eax, dword ptr [rsp + 0x68]"
+    },
+    {
+     "address": 5369900927,
+     "text": "mov ebx, dword ptr [rbp + 0x7c]"
+    },
+    {
+     "address": 5369900930,
+     "text": "mov dword ptr [rbp + 0x80], eax"
+    },
+    {
+     "address": 5369900936,
+     "text": "lea r8, [rip + 0x395f651]"
+    },
+    {
+     "address": 5369900943,
+     "text": "lea rdx, [rbp + 0x78]"
+    },
+    {
+     "address": 5369900947,
+     "text": "lea rcx, [rbp - 0x50]"
+    },
+    {
+     "address": 5369900951,
+     "text": "call 0x14000db40"
+    },
+    {
+     "address": 5369900956,
+     "text": "lea r8, [rip + 0x395f63d]"
+    },
+    {
+     "address": 5369900963,
+     "text": "lea rdx, [rsp + 0x60]"
+    },
+    {
+     "address": 5369900968,
+     "text": "lea rcx, [rbp + 0x10]"
+    },
+    {
+     "address": 5369900972,
+     "text": "mov dword ptr [rsp + 0x60], r15d"
+    },
+    {
+     "address": 5369900977,
+     "text": "mov dword ptr [rsp + 0x64], ebx"
+    },
+    {
+     "address": 5369900981,
+     "text": "mov dword ptr [rsp + 0x68], r15d"
+    },
+    {
+     "address": 5369900986,
+     "text": "call 0x14000db40"
+    },
+    {
+     "address": 5369900991,
+     "text": "mov rsi, qword ptr [rbp + 0x90]"
+    },
+    {
+     "address": 5369900998,
+     "text": "movaps xmm0, xmmword ptr [rbp + 0x10]"
+    },
+    {
+     "address": 5369901002,
+     "text": "movaps xmm1, xmmword ptr [rbp + 0x20]"
+    },
+    {
+     "address": 5369901006,
+     "text": "movss xmm12, dword ptr [rip + 0x1a9e565]"
+    },
+    {
+     "address": 5369901015,
+     "text": "movaps xmmword ptr [rbp + 0x180], xmm0"
+    },
+    {
+     "address": 5369901022,
+     "text": "movaps xmm0, xmmword ptr [rbp + 0x30]"
+    },
+    {
+     "address": 5369901026,
+     "text": "movaps xmmword ptr [rbp + 0x190], xmm1"
+    },
+    {
+     "address": 5369901033,
+     "text": "movaps xmm1, xmmword ptr [rbp + 0x40]"
+    },
+    {
+     "address": 5369901037,
+     "text": "movaps xmmword ptr [rbp + 0x1a0], xmm0"
+    },
+    {
+     "address": 5369901044,
+     "text": "movaps xmmword ptr [rbp + 0x1b0], xmm1"
+    },
+    {
+     "address": 5369901051,
+     "text": "test rsi, rsi"
+    },
+    {
+     "address": 5369901054,
+     "text": "je 0x14012303e"
+    },
+    {
+     "address": 5369901056,
+     "text": "mov rax, qword ptr [rsi]"
+    },
+    {
+     "address": 5369901059,
+     "text": "mov rcx, rsi"
+    },
+    {
+     "address": 5369901062,
+     "text": "call qword ptr [rax + 0x1030]"
+    },
+    {
+     "address": 5369901068,
+     "text": "test eax, eax"
+    },
+    {
+     "address": 5369901070,
+     "text": "je 0x14012303e"
+    },
+    {
+     "address": 5369901072,
+     "text": "movss xmm15, dword ptr [rip + 0x1a9e4db]"
+    },
+    {
+     "address": 5369901081,
+     "text": "movaps xmm1, xmm8"
+    },
+    {
+     "address": 5369901085,
+     "text": "mulss xmm1, xmm15"
+    },
+    {
+     "address": 5369901090,
+     "text": "movaps xmm0, xmm1"
+    },
+    {
+     "address": 5369901093,
+     "text": "movss dword ptr [rbp + 0x50], xmm1"
+    },
+    {
+     "address": 5369901098,
+     "text": "addss xmm0, dword ptr [rdi + 0x5d40]"
+    },
+    {
+     "address": 5369901106,
+     "text": "comiss xmm0, xmm12"
+    },
+    {
+     "address": 5369901110,
+     "text": "jb 0x14012306b"
+    },
+    {
+     "address": 5369901112,
+     "text": "movaps xmm0, xmm12"
+    },
+    {
+     "address": 5369901116,
+     "text": "jmp 0x14012306b"
+    },
+    {
+     "address": 5369901118,
+     "text": "movss xmm15, dword ptr [rip + 0x1a9e4ad]"
+    },
+    {
+     "address": 5369901127,
+     "text": "movss xmm0, dword ptr [rdi + 0x5d40]"
+    },
+    {
+     "address": 5369901135,
+     "text": "movaps xmm1, xmm8"
+    },
+    {
+     "address": 5369901139,
+     "text": "mulss xmm1, xmm15"
+    },
+    {
+     "address": 5369901144,
+     "text": "subss xmm0, xmm1"
+    },
+    {
+     "address": 5369901148,
+     "text": "movss dword ptr [rbp + 0x50], xmm1"
+    },
+    {
+     "address": 5369901153,
+     "text": "comiss xmm0, xmm10"
+    },
+    {
+     "address": 5369901157,
+     "text": "ja 0x14012306b"
+    },
+    {
+     "address": 5369901159,
+     "text": "movaps xmm0, xmm10"
+    },
+    {
+     "address": 5369901163,
+     "text": "comiss xmm0, xmm12"
+    }
+   ]
+  },
+  {
+   "call_va": "0x1404be29c",
+   "start": 5373682332,
+   "instructions": 11,
+   "listing": [
+    {
+     "address": 5373682332,
+     "text": "call 0x14004cd00"
+    },
+    {
+     "address": 5373682337,
+     "text": "mov ecx, dword ptr [rax]"
+    },
+    {
+     "address": 5373682339,
+     "text": "mov dword ptr [rbx], ecx"
+    },
+    {
+     "address": 5373682341,
+     "text": "mov ecx, dword ptr [rax + 4]"
+    },
+    {
+     "address": 5373682344,
+     "text": "mov dword ptr [rbx + 4], ecx"
+    },
+    {
+     "address": 5373682347,
+     "text": "mov eax, dword ptr [rax + 8]"
+    },
+    {
+     "address": 5373682350,
+     "text": "mov dword ptr [rbx + 8], eax"
+    },
+    {
+     "address": 5373682353,
+     "text": "mov rbx, qword ptr [rsp + 0x40]"
+    },
+    {
+     "address": 5373682358,
+     "text": "add rsp, 0x30"
+    },
+    {
+     "address": 5373682362,
+     "text": "pop rdi"
+    },
+    {
+     "address": 5373682363,
+     "text": "ret"
+    }
+   ]
+  }
+ ],
+ "camera_md": {
+  "path": "Research/BatmobileGrab/CAMERA.md",
+  "digests_found": [],
+  "natives": {
+   "SetFreeCameraConfig": {
+    "address": 5369836672,
+    "head": "48895c2408574883",
+    "is_padding": false
+   },
+   "UpdateDrivingCamSettings": {
+    "address": 5369801984,
+    "head": "488bc45553574156",
+    "is_padding": false
+   },
+   "UpdateCameraPosition": {
+    "address": 5369828960,
+    "head": "488bc4f30f115820",
+    "is_padding": false
+   }
+  },
+  "records_build": false
+ },
+ "verdict": {
+  "source": "object field: contiguous Vector3 at [rcx+0x5F0], copied verbatim",
+  "field": "Vehicle.ExitOffset (StructProperty Vector3, offset 1520)",
+  "constant": "no - the helper loads no rip-relative operand",
+  "computation": "no - six mov instructions and a ret",
+  "build_same_as_camera_md": "UNKNOWN: CAMERA.md records no digest; the installed exe reproduces its 2b addresses and the helper shape"
+ },
+ "checks": [
+  {
+   "check": "the installed exe's identity is recorded (size, sha256, PE timestamp)",
+   "pass": true,
+   "detail": "55101440 B, sha256 4b81c4cd410e0162..., TimeDateStamp 0x6508B1CE"
+  },
+  {
+   "check": "the helper is the 8-instruction copy of [rcx+0x5F0..0x5F8] into [rdx..]",
+   "pass": true,
+   "detail": "8 instructions, reads ['5f0', '5f4', '5f8']"
+  },
+  {
+   "check": "the three floats are one object field, not a constant or a computation",
+   "pass": true,
+   "detail": "reads ['5f0', '5f4', '5f8']; rip-relative operands 0"
+  },
+  {
+   "check": "offset 1520 binds to Vehicle.ExitOffset and Vehicle is on the Batmobile chain",
+   "pass": true,
+   "detail": "hits [{'class': 'Vehicle', 'member': 'ExitOffset', 'kind': 'StructProperty', 'type': 'Vector3', 'offset': 1520}]; chain RVehicleBatmobileBase -> RVehicle -> AkVehicle -> SVehicle -> Vehicle -> Pawn -> Actor -> StateObject -> GameObject -> IGameObject"
+  },
+  {
+   "check": "the helper has exactly two call sites, one of them a short copy-out wrapper",
+   "pass": true,
+   "detail": "xrefs ['0x140122c74', '0x1404be29c']; caller instruction counts [208, 11]"
+  },
+  {
+   "check": "CAMERA.md's section 2b addresses still decode to function bodies here",
+   "pass": true,
+   "detail": "SetFreeCameraConfig 0x140113480 48895c2408574883; UpdateDrivingCamSettings 0x14010ad00 488bc45553574156; UpdateCameraPosition 0x140111660 488bc4f30f115820"
+  },
+  {
+   "check": "CAMERA.md records no digest matching this exe, so its build is UNKNOWN",
+   "pass": true,
+   "detail": "0 digests in CAMERA.md, none equal to 4b81c4cd410e0162..."
+  }
+ ]
+}

@@ -1,0 +1,1775 @@
+{
+ "schema": 1,
+ "task": "G3-20d",
+ "generated_by": "Tools/scripts/ledger_sources.py",
+ "ledger": "Working/Translation/LEDGER_G3B.json",
+ "ledger_counts": {
+  "HOLDS": 6,
+  "OPEN": 96,
+  "WRONG_VALUE": 3
+ },
+ "open_rows": 96,
+ "sources": {
+  "CHAIN.json": {
+   "name": "CHAIN.json",
+   "path": "Research/BatmobileGrab/CHAIN.json",
+   "exists": true,
+   "bytes": 326600,
+   "sha1_16": "a9f104d33b4a61d8",
+   "producer": "Tools/scripts/bmak_chain.py",
+   "reads": [
+    "the Batmobile's shipped objects (batmobile_grab.py's objects.jsonl): archetype property tags",
+    "Working/vendor/BmSDK/*.g.cs (the generated layout: Class.Prop -> offset) for the names",
+    "BmGame.upk / Engine.upk Default__<class> streams for values the archetype does not override",
+    "Research/BatmobileGrab/OFFSETS.json (336 offsets cross-checked, 0 conflicts)"
+   ],
+   "value_label": "grabbed",
+   "rule": "each field row carries `offset` (in the shipped object), `name` (SDK layout at that offset), `value` (the package bytes) and `named_by: sdk-layout`; a name at an offset with no property is reported `absent`, never zero-filled",
+   "derived_fields": [],
+   "assumed_fields": [],
+   "producer_mention": {
+    "mentioned": true,
+    "lines": [
+     27,
+     28,
+     46
+    ],
+    "writes": false
+   },
+   "first_line": "{",
+   "check": {
+    "cmd": "python Tools/scripts/bmak_chain.py --check",
+    "exit": 0,
+    "seconds": 1.2,
+    "tail": [
+     "PASS: chain record current (105 objects, 9225 named bindings, 336 cross-checked, 0 conflicts, 0 bool words left unnamed)"
+    ]
+   }
+  },
+  "VALUES.json": {
+   "name": "VALUES.json",
+   "path": "Research/BatmobileGrab/VALUES.json",
+   "exists": true,
+   "bytes": 1214,
+   "sha1_16": "ee2391db2beb2f20",
+   "producer": "Tools/scripts/grab_values.py",
+   "reads": [
+    "Working/Serpente/.../sportsmuscle_body_lod1.rbm block 6 (the vanilla paint template)",
+    "the BmAK paint material Material0_BaseColour + Diffuse_Adjust (batmobile grab)"
+   ],
+   "value_label": "grabbed + derived (one assumed composite)",
+   "rule": "gloss_cap, base_colour and the vanilla tint are grabbed (rbm block / material member); albedo_gain = vanilla paint luma 0.1837 / authored luma 0.0533 is DERIVED; effective_base_colour multiplies by the grabbed Diffuse_Adjust, but the engine's combine operator is UNKNOWN in COLOUR_PARAMS.md, so that composite is ASSUMED, not derived",
+   "derived_fields": [
+    "paint.albedo_gain"
+   ],
+   "assumed_fields": [
+    "paint.effective_base_colour"
+   ],
+   "producer_mention": {
+    "mentioned": true,
+    "lines": [
+     12,
+     30,
+     189
+    ],
+    "writes": false
+   },
+   "first_line": "{",
+   "assumed_rule": {
+    "file": "Research/BatmobileGrab/COLOUR_PARAMS.md",
+    "line": 228,
+    "quote": "whether and how they combine is UNKNOWN",
+    "present": true,
+    "line_text": "whether and how they combine is UNKNOWN (next item). G3-04b's `base x adjust`"
+   },
+   "check": {
+    "cmd": "python Tools/scripts/grab_values.py",
+    "exit": 0,
+    "seconds": 1.2,
+    "tail": [
+     " \"template\": {",
+     "  \"path\": \"Working\\\\Serpente\\\\aaf\\\\models\\\\jc_vehicles\\\\01_land\\\\v0300_car_kensington_sportsmuscle\\\\sportsmuscle_body_lod1.rbm\",",
+     "  \"block\": 6,",
+     "  \"sha1\": \"1e30c42edae1b59a\"",
+     " }",
+     "}"
+    ]
+   }
+  },
+  "VOCABULARY.md": {
+   "name": "VOCABULARY.md",
+   "path": "Research/JC3Grab/VOCABULARY.md",
+   "exists": true,
+   "bytes": 115283,
+   "sha1_16": "8175eb9d2a33ccd6",
+   "producer": "Tools/scripts/jc3grab.py",
+   "reads": [
+    "every JC3 vehicle `.ee` in the archives, its inner `.vmodc` decoded with Gibbed ConvertAdf",
+    "the decoded instance.member.path = value rows in E:/Modding/_gamedata/JC3grab"
+   ],
+   "value_label": "derived",
+   "rule": "ranges/counts are aggregates (min..max, n) over the decoded member values; the member VALUES are grabbed from the game's own named XML rows, the aggregate is DERIVED",
+   "derived_fields": [],
+   "assumed_fields": [],
+   "producer_mention": {
+    "mentioned": true,
+    "lines": [
+     23,
+     352,
+     354,
+     432
+    ],
+    "writes": true
+   },
+   "first_line": "# JC3 vehicle module vocabulary",
+   "check": {
+    "cmd": "python Tools/scripts/jc3grab.py check",
+    "exit": 0,
+    "seconds": 5.1,
+    "tail": [
+     "probe: 566 inner files, 30 modules decoded, 1 refused, mass=975, official_top_speed=250",
+     "check ok"
+    ]
+   }
+  },
+  "PARTS_TABLE.jsonl": {
+   "name": "PARTS_TABLE.jsonl",
+   "path": "Research/JC3Grab/PARTS_TABLE.jsonl",
+   "exists": true,
+   "bytes": 2758546,
+   "sha1_16": "33c8badb8e176902",
+   "producer": "Tools/scripts/jc3parts.py",
+   "reads": [
+    "the fleet's `*_vehicle_parts.vmodc` modules (decoded by jc3adf.py, 233 entities)",
+    "`DeformPoints` part names, the `.epe` part table in ENTITIES.md (cross-check)"
+   ],
+   "value_label": "grabbed",
+   "rule": "one row per entity; `parts[].body/ray/lights/deform/kid/parent` are module members read at their decoded positions, `n` is the DeformPoints string, `m` the model path",
+   "derived_fields": [],
+   "assumed_fields": [],
+   "producer_mention": {
+    "mentioned": true,
+    "lines": [
+     14,
+     177,
+     339,
+     340,
+     352
+    ],
+    "writes": false
+   },
+   "first_line": "{\"entity\":\"editor/entities/jc_vehicles/01_land/v0000_car_autostraad_oldjeep/v0000_car_autostraad_oldjeep_civilian_01.ee\",\"module\":\"oldjeep_vehicle_parts.vmodc\",\"parts\":[{\"i\":0,\"n\":\"oldjeep_body\",\"dt\":\"Land_Body\",\"b\":\"Non",
+   "check": {
+    "cmd": "python Tools/scripts/jc3parts.py check",
+    "exit": 0,
+    "seconds": 0.3,
+    "tail": [
+     "ok: 40 part indices agree between .epe and DeformPoints; 4 wheel points -> 4 wheel parts; 21 light points -> 12 parts",
+     "ok: donor table has 42 parts, names 42/42 with DeformPoints, lights 12 parts match, wheels 4 match, damage types 17 used",
+     "  note: ['Boat_Antenna'] not in this vehicle's VehicleDamage table (24 types) - the part falls back to Default damage"
+    ]
+   }
+  },
+  "FX_TABLE.jsonl": {
+   "name": "FX_TABLE.jsonl",
+   "path": "Research/JC3Grab/FX_TABLE.jsonl",
+   "exists": true,
+   "bytes": 28498853,
+   "sha1_16": "f6ed4d423c72cc26",
+   "producer": "Tools/scripts/jc3fx.py",
+   "reads": [
+    "every `.effc` / `.ctunec` / `.trim` in the game (inside `.ee` bundles and as archive entries)",
+    "the ADF v4 container read by jc3adf.py"
+   ],
+   "value_label": "grabbed",
+   "rule": "one row per file: container, path, ext, size, mount, root class, row/array census and a digest of the decoded rows; `check` re-reads the game and recomputes the digest",
+   "derived_fields": [],
+   "assumed_fields": [],
+   "producer_mention": {
+    "mentioned": true,
+    "lines": [
+     50
+    ],
+    "writes": false
+   },
+   "first_line": "{\"container\":\"dlc/bavarium_sea_heist/editor/entities/jc_characters/enemies/black_hand/blackhand_paratrooper/spawned_bh_paratrooper.ee\",\"source\":\"dlc/bavarium_sea_heist/editor/entities/jc_characters/enemies/black_hand/bla",
+   "check": {
+    "cmd": "python Tools/scripts/jc3fx.py check",
+    "exit": 0,
+    "seconds": 450.6,
+    "tail": [
+     "  35,000 files re-read",
+     "  40,000 files re-read",
+     "  45,000 files re-read",
+     "  50,000 files re-read",
+     "  55,000 files re-read",
+     "checked 57187 files | problems 0"
+    ]
+   }
+  },
+  "T3_FLEET.md": {
+   "name": "T3_FLEET.md",
+   "path": "Working/Translation/T3_FLEET.md",
+   "exists": true,
+   "bytes": 5405,
+   "sha1_16": "03787cb3005d25d3",
+   "producer": "Tools/scripts/t3_fleet.py",
+   "reads": [
+    "E:/Modding/_gamedata/JC3grab (the jc3grab.py decodes: RigidBody, VehicleDamage, Suspension, Brakes, LandGlobal, Engine members)"
+   ],
+   "value_label": "derived",
+   "rule": "each cell is n, the median and the p25..p75 band over the land fleet in a mass class (3-8 t, 6 t+); the member values are grabbed, the statistics are DERIVED",
+   "derived_fields": [],
+   "assumed_fields": [],
+   "producer_mention": {
+    "mentioned": true,
+    "lines": [
+     10,
+     26
+    ],
+    "writes": false
+   },
+   "first_line": "# Translation fleet evidence (heavy class)",
+   "check": {
+    "cmd": "python Tools/scripts/t3_fleet.py --check",
+    "exit": 0,
+    "seconds": 9.4,
+    "tail": [
+     "E:\\Modding\\JC3-Batmobile\\Working\\Translation\\T3_FLEET.md: 41 members over 156 vehicles",
+     "check ok"
+    ]
+   }
+  },
+  "FITS.md": {
+   "name": "FITS.md",
+   "path": "Working/Translation/FITS.md",
+   "exists": true,
+   "bytes": 3762,
+   "sha1_16": "7e637293cf63cbae",
+   "producer": "Tools/scripts/t1_fits.py",
+   "reads": [
+    "E:/Modding/_gamedata/JC3grab, one `<member>` and `rigid_body.mass` per land vehicle"
+   ],
+   "value_label": "derived",
+   "rule": "log-log least squares value = a * mass^b over the vehicles carrying both members, with R^2, n and the fleet min..max printed; a fit is DERIVED, and an R^2 near 0 is the file's own statement that the relation is not usable",
+   "derived_fields": [],
+   "assumed_fields": [],
+   "producer_mention": {
+    "mentioned": true,
+    "lines": [
+     14,
+     28,
+     185
+    ],
+    "writes": false
+   },
+   "first_line": "# JC3 fleet relationships (T-1 evidence)",
+   "check": {
+    "cmd": "python Tools/scripts/t1_fits.py -o tmp/freebuff/scratch/FITS_recheck.md",
+    "exit": 0,
+    "seconds": 4.1,
+    "tail": [
+     "FITS.md: 156 land vehicles, 19 members fitted, 5 usable (R2 >= 0.5) -> E:\\Modding\\JC3-Batmobile\\tmp\\freebuff\\scratch\\FITS_recheck.md"
+    ]
+   }
+  }
+ },
+ "row_classification": [
+  {
+   "id": "T-G1",
+   "doc": "T-1",
+   "now": "front z −2.570, rear z +2.459; x ±1.208 front / ±1.285 rear; y 0.7047",
+   "source": "mesh-measured body 7.026 × 3.495 × 2.271 m (§70)",
+   "open_with": "Working/Translation/stations.json + the §70 mesh measurement (not a G3 card)",
+   "target": "`land_global.base_wheel_hardpoint_positions[0..3]`",
+   "cells": [],
+   "verdict": "outside the seven",
+   "why": "the row cites no value from the seven pre-reset files",
+   "trusted": false,
+   "check_green": null
+  },
+  {
+   "id": "T-G2",
+   "doc": "T-1",
+   "now": "0.68275 / 0.68265",
+   "source": "tyre Ø 1.366 m (mesh)",
+   "open_with": "Working/Translation/stations.json + the §70 mesh measurement (not a G3 card)",
+   "target": "`land_global.front/rear_wheels.radius`",
+   "cells": [],
+   "verdict": "outside the seven",
+   "why": "the row cites no value from the seven pre-reset files",
+   "trusted": false,
+   "check_green": null
+  },
+  {
+   "id": "T-G3",
+   "doc": "T-1",
+   "now": "0.7319 / 0.7316",
+   "source": "tyre width 0.731 m",
+   "open_with": "Working/Translation/stations.json + the §70 mesh measurement (not a G3 card)",
+   "target": "`…wheels.width`",
+   "cells": [],
+   "verdict": "outside the seven",
+   "why": "the row cites no value from the seven pre-reset files",
+   "trusted": false,
+   "check_green": null
+  },
+  {
+   "id": "T-G4",
+   "doc": "T-1",
+   "now": "0.7037",
+   "source": "ride height (Batmobile 0.70 m hub y)",
+   "open_with": "Working/Translation/stations.json + the §70 mesh measurement (not a G3 card)",
+   "target": "`land_global.ground_clearance`",
+   "cells": [],
+   "verdict": "outside the seven",
+   "why": "the row cites no value from the seven pre-reset files",
+   "trusted": false,
+   "check_green": null
+  },
+  {
+   "id": "T-G5",
+   "doc": "T-1",
+   "now": "**0**",
+   "source": "— (JC3-side)",
+   "open_with": "Working/Translation/stations.json + the §70 mesh measurement (not a G3 card)",
+   "target": "`land_global.wheels_friction_type`",
+   "cells": [],
+   "verdict": "outside the seven",
+   "why": "the row cites no value from the seven pre-reset files",
+   "trusted": false,
+   "check_green": null
+  },
+  {
+   "id": "T-M2",
+   "doc": "T-1",
+   "now": "1.8 / 1.5 / 0.5",
+   "source": "— (**no absolute inertia tag**: `InertiaTensorMultiplier` [1, 1, 1] is neutral, so the sim scales an inertia the streams never store, `CHAIN.json`)",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (mass/inertia members) + Working/Translation/T3_FLEET.md",
+   "target": "`rigid_body.unit_inertia_yaw / pitch / roll`",
+   "cells": [
+    "CHAIN.json",
+    "T3_FLEET.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; T3_FLEET.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-M3",
+   "doc": "T-1",
+   "now": "MassOffset` returns nothing, `CHAIN.json`)",
+   "source": "— (**no centre-of-mass member anywhere**: chain grep `CoM",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (mass/inertia members) + Working/Translation/T3_FLEET.md",
+   "target": "CentreOfMass",
+   "cells": [
+    "CHAIN.json",
+    "T3_FLEET.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; T3_FLEET.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-S1",
+   "doc": "T-1",
+   "now": "**80 / 80**",
+   "source": "BmAK's rate pair exists and is named — `BMWheelSuspensionStiffness` **3000**, `BMWheelSuspensionDamping` **300** (archetype over all four cars, `CHAIN.json`) — but has **no unit bridge** to `strength`; that is T-S6's blocked row, so the fleet supplies the value here",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (SVehicleWheel/Suspension archetype) + Working/Translation/T3_FLEET.md",
+   "target": "`suspension.front/rear.strength`",
+   "cells": [
+    "CHAIN.json",
+    "T3_FLEET.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; T3_FLEET.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-S2",
+   "doc": "T-1",
+   "now": "2.5 / 5.0",
+   "source": "—",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (SVehicleWheel/Suspension archetype) + Working/Translation/T3_FLEET.md",
+   "target": "`suspension.*.compression / relaxation`",
+   "cells": [
+    "CHAIN.json",
+    "T3_FLEET.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; T3_FLEET.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-S3",
+   "doc": "T-1",
+   "now": "0.25",
+   "source": "`SVehicleWheel.SuspensionTravelUp` **30** + `SuspensionTravelDown` **40** (archetype, all four wheels; class default 10/20) → total stroke **70 cm = 0.70 m** — the same physical quantity in the same units (`CHAIN.json`; T-S6 already recorded the pair)",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (SVehicleWheel/Suspension archetype) + Working/Translation/T3_FLEET.md",
+   "target": "`suspension.*.length`",
+   "cells": [
+    "CHAIN.json",
+    "T3_FLEET.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; T3_FLEET.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-S4",
+   "doc": "T-1",
+   "now": "0",
+   "source": "—",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (SVehicleWheel/Suspension archetype) + Working/Translation/T3_FLEET.md",
+   "target": "`suspension.*.antirollbar_strength`",
+   "cells": [
+    "CHAIN.json",
+    "T3_FLEET.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; T3_FLEET.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-S5",
+   "doc": "T-1",
+   "now": "0.2",
+   "source": "—",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (SVehicleWheel/Suspension archetype) + Working/Translation/T3_FLEET.md",
+   "target": "`suspension.*.lateral_tire_force_offset`",
+   "cells": [
+    "CHAIN.json",
+    "VOCABULARY.md",
+    "T3_FLEET.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; VOCABULARY.md = derived; T3_FLEET.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-R1",
+   "doc": "T-1",
+   "now": "class",
+   "source": "— (**no friction tag anywhere**: `bmak_chain.py --grep 'Friction",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (absence scan) + Working/Translation/T3_FLEET.md",
+   "target": "Adhesion'` over the whole chain returns none, `CHAIN.json`)",
+   "cells": [
+    "CHAIN.json",
+    "T3_FLEET.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; T3_FLEET.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-R2",
+   "doc": "T-1",
+   "now": "0.1 / 0.1",
+   "source": "—",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (absence scan) + Working/Translation/T3_FLEET.md",
+   "target": "`…wheels.arcade_drag_multiplier`",
+   "cells": [
+    "CHAIN.json",
+    "T3_FLEET.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; T3_FLEET.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-R3",
+   "doc": "T-1",
+   "now": "0",
+   "source": "—",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (absence scan) + Working/Translation/T3_FLEET.md",
+   "target": "`…wheels.use_shape_cast`",
+   "cells": [
+    "CHAIN.json",
+    "T3_FLEET.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; T3_FLEET.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-ST1",
+   "doc": "T-1",
+   "now": "35° @ ≤30 km/h → 15° @ ≥296 km/h, falloff 2",
+   "source": "steering angle vs speed (above)",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (SVehicleWheel/Suspension archetype) + Working/Translation/T3_FLEET.md",
+   "target": "`land_steering.steer_angle_min_speed_deg`, `…_max_speed_deg`, `min_speed_kmph`, `max_speed_kmph`, `steer_curve_falloff`",
+   "cells": [
+    "CHAIN.json",
+    "T3_FLEET.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; T3_FLEET.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-ST2",
+   "doc": "T-1",
+   "now": "0.8 s",
+   "source": "720 °/s",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (SVehicleWheel/Suspension archetype) + Working/Translation/T3_FLEET.md",
+   "target": "`land_steering.t_to_full_steer_s`",
+   "cells": [
+    "CHAIN.json",
+    "T3_FLEET.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; T3_FLEET.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-ST3",
+   "doc": "T-1",
+   "now": "0.6 s",
+   "source": "—",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (SVehicleWheel/Suspension archetype) + Working/Translation/T3_FLEET.md",
+   "target": "`land_steering.max_speed_t_to_full_steer_s`",
+   "cells": [
+    "CHAIN.json",
+    "T3_FLEET.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; T3_FLEET.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-ST4",
+   "doc": "T-1",
+   "now": "3 / 3 / 3",
+   "source": "—",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (SVehicleWheel/Suspension archetype) + Working/Translation/T3_FLEET.md",
+   "target": "`land_steering.steer_input_power_pc/durango/orbis`",
+   "cells": [
+    "CHAIN.json",
+    "VOCABULARY.md",
+    "T3_FLEET.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; VOCABULARY.md = derived; T3_FLEET.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-ST6",
+   "doc": "T-1",
+   "now": "0.3",
+   "source": "BmAK's drift pair (`LatSlipFactor` 1.6, `HandbrakeLatSlipFactor` 1.5/1.1) is slip gain, and the chain has **no `*Align*` member at all** — there is no aligning-strength counterpart to translate (`CHAIN.json`)",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (SVehicleWheel/Suspension archetype) + Working/Translation/T3_FLEET.md",
+   "target": "`land_steering.wheel_drift_aligning_strength`",
+   "cells": [
+    "CHAIN.json",
+    "VOCABULARY.md",
+    "T3_FLEET.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; VOCABULARY.md = derived; T3_FLEET.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-E1",
+   "doc": "T-1",
+   "now": "1000 / 5000 / 7300",
+   "source": "torque falls with speed (above)",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (torque curve) + Working/Translation/FITS.md",
+   "target": "`land_engine.min_rpm / optimal_rpm / max_rpm`",
+   "cells": [
+    "CHAIN.json",
+    "FITS.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; FITS.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-E2",
+   "doc": "T-1",
+   "now": "1393.5",
+   "source": "torque curve scale, absolute",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (torque curve) + Working/Translation/FITS.md",
+   "target": "`land_engine.torque_factor_at_optimal_rpm`",
+   "cells": [
+    "CHAIN.json",
+    "FITS.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; FITS.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-E3",
+   "doc": "T-1",
+   "now": "0.86 / 0.84",
+   "source": "curve shape (fall from peak)",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (torque curve) + Working/Translation/FITS.md",
+   "target": "`…_at_min_rpm` / `…_at_max_rpm`",
+   "cells": [
+    "CHAIN.json",
+    "FITS.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; FITS.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-E4",
+   "doc": "T-1",
+   "now": "6 gears, 7000 rpm shifts, final 5.14",
+   "source": "0 → 75.6 km/h over the curve",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (torque curve) + Working/Translation/FITS.md",
+   "target": "`transmission.gears`, `gear_ratios`, `upshift_rpm`, `final_drive`",
+   "cells": [
+    "CHAIN.json",
+    "FITS.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; FITS.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-E5",
+   "doc": "T-1",
+   "now": "336.4",
+   "source": "wiki 209 mph (336 km/h) with afterburner",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (torque curve) + Working/Translation/FITS.md",
+   "target": "`vehicle_misc.official_top_speed`",
+   "cells": [
+    "CHAIN.json",
+    "FITS.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; FITS.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-B1",
+   "doc": "T-1",
+   "now": "**2.0** (already mid-band; the 2.5 in the old proposal was never in this build)",
+   "source": "boost/standard ratio 1.30 → 2.10",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (boost members) + Research/JC3Grab/TANKTURN.md",
+   "target": "`custom_land_global.arcade.nitro_boost.torque_multiplier`",
+   "cells": [
+    "CHAIN.json"
+   ],
+   "verdict": "grabbed",
+   "why": "CHAIN.json = grabbed",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-B3",
+   "doc": "T-1",
+   "now": "identity (absence proof)",
+   "source": "**absence now proven, and absence means identity**: `OFFSETS.json` (G1-1: 423/423 fields named) carries no `*grip*`/`*traction*` field anywhere, and `bmak_chain.py --grep 'Grip",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (boost members) + Research/JC3Grab/TANKTURN.md",
+   "target": "Traction'` over `RVehicle → RVehicleBatmobileBase → RVehicleSimCar → RVehicleSimBatmobile → SVehicleSimCar` returns none; the boost members that do exist are `BoostTorqueVSpeedCurve` (torque), `BoostDuration`/`BoostCooldown`, `DriftingBoostCooldown` — none touches grip, so BmAK boost is grip-neutral (`CHAIN.json`)",
+   "cells": [
+    "CHAIN.json"
+   ],
+   "verdict": "grabbed",
+   "why": "CHAIN.json = grabbed",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-B4",
+   "doc": "T-1",
+   "now": "Serpente defaults",
+   "source": "—",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (boost members) + Research/JC3Grab/TANKTURN.md",
+   "target": "`arcade.heat_boost.*`, `turbo_jump*`",
+   "cells": [
+    "CHAIN.json",
+    "VOCABULARY.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; VOCABULARY.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-A1",
+   "doc": "T-1",
+   "now": "6.63",
+   "source": "body cross-section 3.5 × 2.27 m (mesh)",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (aero members) + Working/Translation/T3_FLEET.md",
+   "target": "`land_aerodynamics.frontal_area`",
+   "cells": [
+    "CHAIN.json",
+    "T3_FLEET.md",
+    "FITS.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; T3_FLEET.md = derived; FITS.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-A2",
+   "doc": "T-1",
+   "now": "Downforce",
+   "source": "— (**no aero member anywhere**: chain grep `Drag",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (aero members) + Working/Translation/T3_FLEET.md",
+   "target": "Lift",
+   "cells": [
+    "CHAIN.json",
+    "T3_FLEET.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; T3_FLEET.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-A3",
+   "doc": "T-1",
+   "now": "2.0",
+   "source": "—",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (aero members) + Working/Translation/T3_FLEET.md",
+   "target": "`land_aerodynamics.top_speed_drag_coefficient`",
+   "cells": [
+    "CHAIN.json",
+    "T3_FLEET.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; T3_FLEET.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-A4",
+   "doc": "T-1",
+   "now": "−1.95",
+   "source": "— (no lift/downforce member either; the chain proof is T-A2's)",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (aero members) + Working/Translation/T3_FLEET.md",
+   "target": "`land_aerodynamics.lift_coefficient`",
+   "cells": [
+    "CHAIN.json",
+    "T3_FLEET.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; T3_FLEET.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-K1",
+   "doc": "T-1",
+   "now": "10,000 / 10,000",
+   "source": "`SVehicleSimCar.MaxBrakeTorque` **300** (archetype, all four sims) exists — but the bridge is disproven by magnitude, not assumed: 4 × 300 N·m over 6,000 kg × 0.683 m = **0.29 m/s²**, against the 3.5–3.8 m/s² we measure, so the member's scale is not JC3's (`CHAIN.json`)",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (brake members) + Working/Translation/T3_FLEET.md",
+   "target": "`brakes.front/rear.max_brake_torque`",
+   "cells": [
+    "CHAIN.json",
+    "T3_FLEET.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; T3_FLEET.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-K2",
+   "doc": "T-1",
+   "now": "Anti'` finds no wheel-lock or anti-lock member anywhere (`CHAIN.json`)",
+   "source": "**no brake-lock member — now proven exhaustively**: `bmak_chain.py` over the full chain (`RVehicle → RVehicleBatmobileBase → RVehicleSimCar → RVehicleSimBatmobile → SVehicleSimCar → SVehicle`) finds `MaxBrakeTorque` 300, `EbrakeTime` 0.75, `EBrakeBrakeForce` 640000, `Handbrake*`, **`HandBrakeOffTime` 0.3 s** (handbrake release time, `Default__RVehicleSimBatmobile`), `BlockThrottleUntilReleased` (throttle, not brake) and `BrakeSpinOut*`; `--grep 'Block",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (brake members) + Working/Translation/T3_FLEET.md",
+   "target": "Lock",
+   "cells": [
+    "CHAIN.json",
+    "T3_FLEET.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; T3_FLEET.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-K3",
+   "doc": "T-1",
+   "now": "1",
+   "source": "BmAK's handbrake members are `HandbrakeOnSpeed` 10000, `HandbrakeOffSpeed` 1.0, `HandbrakeLatSlipFactor` 1.5/1.1 and `HandBrakeOffTime` 0.3 — **none is a friction factor**, so there is nothing to translate here (`CHAIN.json`)",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (brake members) + Working/Translation/T3_FLEET.md",
+   "target": "`brakes.handbrake_friction_factor`",
+   "cells": [
+    "CHAIN.json",
+    "T3_FLEET.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; T3_FLEET.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-L1",
+   "doc": "T-1",
+   "now": "decoded",
+   "source": "`HeadLight1/2` (VEHLT_HeadLight)",
+   "open_with": "Research/BatmobileGrab/T14_LIGHTS.md + LIGHT_SYSTEM.md",
+   "target": "`Front_Left_Point` + `Front_Left_Volumetric` / right pair",
+   "cells": [],
+   "verdict": "outside the seven",
+   "why": "the row cites no value from the seven pre-reset files",
+   "trusted": false,
+   "check_green": null
+  },
+  {
+   "id": "T-L2",
+   "doc": "T-1",
+   "now": "derived",
+   "source": "`HeadLight1a…2c` (LensFlare only)",
+   "open_with": "Research/BatmobileGrab/T14_LIGHTS.md + LIGHT_SYSTEM.md",
+   "target": "same two presets, `radius` 10 (volumetric)",
+   "cells": [],
+   "verdict": "outside the seven",
+   "why": "the row cites no value from the seven pre-reset files",
+   "trusted": false,
+   "check_green": null
+  },
+  {
+   "id": "T-L3",
+   "doc": "T-1",
+   "now": "decoded",
+   "source": "`BrakeLightL/R` (VEHLT_TailLight)",
+   "open_with": "Research/BatmobileGrab/T14_LIGHTS.md + LIGHT_SYSTEM.md",
+   "target": "the **5 `TailLight` rows** — JC3 has no separate brake row; `Rear_Break` is in the graph but **no module row references it** (measured, `t2_lg2.py`)",
+   "cells": [],
+   "verdict": "outside the seven",
+   "why": "the row cites no value from the seven pre-reset files",
+   "trusted": false,
+   "check_green": null
+  },
+  {
+   "id": "T-L4",
+   "doc": "T-1",
+   "now": "superseded",
+   "source": "`LWheelLight`/`RWheelLight` (+top/bottom)",
+   "open_with": "Research/BatmobileGrab/T14_LIGHTS.md + LIGHT_SYSTEM.md",
+   "target": "**closed by T-18**: no preset exists, so a custom `preset_id 0` entry per arch (G2-33 §7); `T-L13`/`T-L14` carry it",
+   "cells": [],
+   "verdict": "outside the seven",
+   "why": "the row cites no value from the seven pre-reset files",
+   "trusted": false,
+   "check_green": null
+  },
+  {
+   "id": "T-L5",
+   "doc": "T-1",
+   "now": "decoded",
+   "source": "`BattleModeSpotLight`",
+   "open_with": "Research/BatmobileGrab/T14_LIGHTS.md + LIGHT_SYSTEM.md",
+   "target": "`Front_Secondary_Head` exists in the graph and is **unreferenced** — this rig has no secondary spot row (measured, `t2_lg2.py`)",
+   "cells": [],
+   "verdict": "outside the seven",
+   "why": "the row cites no value from the seven pre-reset files",
+   "trusted": false,
+   "check_green": null
+  },
+  {
+   "id": "T-L6",
+   "doc": "T-1",
+   "now": "decoded",
+   "source": "`Dashboard_Light`",
+   "open_with": "Research/BatmobileGrab/T14_LIGHTS.md + LIGHT_SYSTEM.md",
+   "target": "`Dash_Light`",
+   "cells": [],
+   "verdict": "outside the seven",
+   "why": "the row cites no value from the seven pre-reset files",
+   "trusted": false,
+   "check_green": null
+  },
+  {
+   "id": "T-L7",
+   "doc": "T-1",
+   "now": "superseded",
+   "source": "`BootLight`",
+   "open_with": "Research/BatmobileGrab/T14_LIGHTS.md + LIGHT_SYSTEM.md",
+   "target": "**corrected by T-18**: `Rear_Point` is not one of this rig's 22 objects, so the boot lamp is a custom `preset_id 0` entry (`T-L35`)",
+   "cells": [],
+   "verdict": "outside the seven",
+   "why": "the row cites no value from the seven pre-reset files",
+   "trusted": false,
+   "check_green": null
+  },
+  {
+   "id": "T-P1",
+   "doc": "T-1",
+   "now": "decoded",
+   "source": "body / doors / wheels / windows by bone name",
+   "open_with": "Research/BatmobileGrab/PARTS_TABLE.jsonl (+ t16_collision.json for T-P3)",
+   "target": "`CPartProp.name` + `part_index`",
+   "cells": [
+    "PARTS_TABLE.jsonl"
+   ],
+   "verdict": "grabbed",
+   "why": "PARTS_TABLE.jsonl = grabbed",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-P2",
+   "doc": "T-1",
+   "now": "**decoded** — 17 damage types across the donor's 42 parts; per-type health from `VehicleDamage` (`PARTS_TABLE.jsonl`)",
+   "source": "42 damage parts (health, damage type)",
+   "open_with": "Research/BatmobileGrab/PARTS_TABLE.jsonl (+ t16_collision.json for T-P3)",
+   "target": "`VehicleParts.parts[].damage_type` + `VehicleDamage.part_damage_types[]`",
+   "cells": [
+    "PARTS_TABLE.jsonl"
+   ],
+   "verdict": "grabbed",
+   "why": "PARTS_TABLE.jsonl = grabbed",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-P3",
+   "doc": "T-1",
+   "now": "written (G2-30): 11 driveable boxes map onto 7 donor hull slots; 21 are not driveable collision (18 destruction debris, 1 root placeholder, 1 turret, 1 jet fin); 11 T-8 parts have no slot",
+   "source": "32 collision bodies (boxes)",
+   "open_with": "Research/BatmobileGrab/PARTS_TABLE.jsonl (+ t16_collision.json for T-P3)",
+   "target": "`.physicsc` shapes",
+   "cells": [
+    "PARTS_TABLE.jsonl"
+   ],
+   "verdict": "grabbed",
+   "why": "PARTS_TABLE.jsonl = grabbed",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-MA2",
+   "doc": "T-2b",
+   "now": "28 Batmobile textures shipped",
+   "source": "`NEW_Batmobile_V2_BODY_D` 4096×2048",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (mass/inertia members) + Working/Translation/T3_FLEET.md",
+   "target": "`CarPaintMM` diffuse texture",
+   "cells": [
+    "CHAIN.json",
+    "T3_FLEET.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; T3_FLEET.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-MA5",
+   "doc": "T-2b",
+   "now": "tint = the authored paint colour (`VALUES.json` glass: `Material0_BaseColour` — the canopy has no colour parameters); opacity = the BmAK opacity map × the authored `Glass_Opacity` scalar (`factors.py`) — no tuned constant anywhere",
+   "source": "`Batmobile_Glass` (8 slots empty), `…GLASS_D/N/MASK` textures present",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (mass/inertia members) + Working/Translation/T3_FLEET.md",
+   "target": "`Window` block",
+   "cells": [
+    "CHAIN.json",
+    "VALUES.json",
+    "T3_FLEET.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; VALUES.json = grabbed + derived (one assumed composite); T3_FLEET.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-MA6",
+   "doc": "T-2b",
+   "now": "28",
+   "source": "405 textures grabbed, 38 bound to slots",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (mass/inertia members) + Working/Translation/T3_FLEET.md",
+   "target": "28 shipped",
+   "cells": [
+    "CHAIN.json",
+    "T3_FLEET.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; T3_FLEET.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-MA7",
+   "doc": "T-2b",
+   "now": "**10 tints**, all `specular_gloss` 0.45, `clear_coat` 1, `metallic` 1 (read from the shipped donor module in the build)",
+   "source": "`Palette` does not exist in UE3 vehicles",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (mass/inertia members) + Working/Translation/T3_FLEET.md",
+   "target": "`Palette.tints[]`",
+   "cells": [
+    "CHAIN.json",
+    "T3_FLEET.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; T3_FLEET.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-PA1",
+   "doc": "T-2b",
+   "now": "**6 `CPartProp`** in the built `.epe`: body, `taillight_r_l`, 4 wheels (measured, `t2_lg2.py`)",
+   "source": "wheel bones `SUSP1/2_*`, `*_Vis_Mesh`",
+   "open_with": "Research/BatmobileGrab/PARTS_TABLE.jsonl (+ t16_collision.json for T-P3)",
+   "target": "`CPartProp` `wheel_f_l/f_r/r_l/r_r`",
+   "cells": [
+    "PARTS_TABLE.jsonl"
+   ],
+   "verdict": "grabbed",
+   "why": "PARTS_TABLE.jsonl = grabbed",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-PA2",
+   "doc": "T-2b",
+   "now": "21 light points → **12 parts** (body ×2, both front lamps ×2 each, tail lamps, signals)",
+   "source": "3 parts carry lights (body + both front wheels)",
+   "open_with": "Research/BatmobileGrab/PARTS_TABLE.jsonl (+ t16_collision.json for T-P3)",
+   "target": "`DeformPoints.light_indices` → `points[].from_part`",
+   "cells": [
+    "PARTS_TABLE.jsonl"
+   ],
+   "verdict": "grabbed",
+   "why": "PARTS_TABLE.jsonl = grabbed",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-PA4",
+   "doc": "T-2b",
+   "now": "parts 11, 12, 26, 27 → slots 3, 2, 0, 1; 1 spoke, spins 1",
+   "source": "4 wheels",
+   "open_with": "Research/BatmobileGrab/PARTS_TABLE.jsonl (+ t16_collision.json for T-P3)",
+   "target": "`VehicleParts.wheel_parts[]`",
+   "cells": [
+    "PARTS_TABLE.jsonl"
+   ],
+   "verdict": "grabbed",
+   "why": "PARTS_TABLE.jsonl = grabbed",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-PA5",
+   "doc": "T-2b",
+   "now": "parts 1, 2, 25",
+   "source": "doors",
+   "open_with": "Research/BatmobileGrab/PARTS_TABLE.jsonl (+ t16_collision.json for T-P3)",
+   "target": "`VehicleParts.door_parts[]`",
+   "cells": [
+    "PARTS_TABLE.jsonl"
+   ],
+   "verdict": "grabbed",
+   "why": "PARTS_TABLE.jsonl = grabbed",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-PA7",
+   "doc": "T-2b",
+   "now": "20 parts skipped by the deform solver",
+   "source": "—",
+   "open_with": "Research/BatmobileGrab/PARTS_TABLE.jsonl (+ t16_collision.json for T-P3)",
+   "target": "`DeformPoints.non_deformable_parts_indices`",
+   "cells": [
+    "PARTS_TABLE.jsonl"
+   ],
+   "verdict": "grabbed",
+   "why": "PARTS_TABLE.jsonl = grabbed",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-PA8",
+   "doc": "T-2b",
+   "now": "—",
+   "source": "6 orphan sockets in the light rig (named in `VehicleLights`, absent from the mesh)",
+   "open_with": "Research/BatmobileGrab/PARTS_TABLE.jsonl (+ t16_collision.json for T-P3)",
+   "target": "—",
+   "cells": [
+    "PARTS_TABLE.jsonl"
+   ],
+   "verdict": "grabbed",
+   "why": "PARTS_TABLE.jsonl = grabbed",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-LG1",
+   "doc": "T-2b",
+   "now": "21 entries",
+   "source": "28 entries/rig, 4 rigs",
+   "open_with": "Research/BatmobileGrab/T14_LIGHTS.md + LIGHT_SYSTEM.md",
+   "target": "`VehicleDynamicLights.lights[]`",
+   "cells": [],
+   "verdict": "outside the seven",
+   "why": "the row cites no value from the seven pre-reset files",
+   "trusted": false,
+   "check_green": null
+  },
+  {
+   "id": "T-LG2",
+   "doc": "T-2b",
+   "now": "**21 rows / 22 objects**, exactly the donor's — measured in the built entity by `t2_lg2.py`",
+   "source": "22 `SVehicleLight` in the donor `.epe` (`ENTITIES.md`, vanilla entity)",
+   "open_with": "Research/BatmobileGrab/T14_LIGHTS.md + LIGHT_SYSTEM.md",
+   "target": "same",
+   "cells": [],
+   "verdict": "outside the seven",
+   "why": "the row cites no value from the seven pre-reset files",
+   "trusted": false,
+   "check_green": null
+  },
+  {
+   "id": "T-LG3",
+   "doc": "T-2b",
+   "now": "5 spot rows at `range` 30",
+   "source": "6 headlight-class entries per rig (2 primary + 4 flares/BattleMode/Forensics)",
+   "open_with": "Research/BatmobileGrab/T14_LIGHTS.md + LIGHT_SYSTEM.md",
+   "target": "2 primary + 1 secondary spot",
+   "cells": [],
+   "verdict": "outside the seven",
+   "why": "the row cites no value from the seven pre-reset files",
+   "trusted": false,
+   "check_green": null
+  },
+  {
+   "id": "T-LG4",
+   "doc": "T-2b",
+   "now": "absent",
+   "source": "`LWheelLight`/`RWheelLight` (under-glow)",
+   "open_with": "Research/BatmobileGrab/T14_LIGHTS.md + LIGHT_SYSTEM.md",
+   "target": "**no preset in JC3**",
+   "cells": [],
+   "verdict": "outside the seven",
+   "why": "the row cites no value from the seven pre-reset files",
+   "trusted": false,
+   "check_green": null
+  },
+  {
+   "id": "T-LG5",
+   "doc": "T-2b",
+   "now": "absent",
+   "source": "battle-mode/forensics rigs (16 + 12 entries)",
+   "open_with": "Research/BatmobileGrab/T14_LIGHTS.md + LIGHT_SYSTEM.md",
+   "target": "—",
+   "cells": [],
+   "verdict": "outside the seven",
+   "why": "the row cites no value from the seven pre-reset files",
+   "trusted": false,
+   "check_green": null
+  },
+  {
+   "id": "T-LG6",
+   "doc": "T-2b",
+   "now": "30 / 40 on the 5 spots; 2 / 10 on 16",
+   "source": "`range`/`angle` authored per entry",
+   "open_with": "Research/BatmobileGrab/T14_LIGHTS.md + LIGHT_SYSTEM.md",
+   "target": "`lights[].range` 0.1…50 (med 10), `angle` 10…50 (med 10)",
+   "cells": [],
+   "verdict": "outside the seven",
+   "why": "the row cites no value from the seven pre-reset files",
+   "trusted": false,
+   "check_green": null
+  },
+  {
+   "id": "T-AU1",
+   "doc": "T-2b",
+   "now": "`min_rpm` 1000, `max_rpm` 10000",
+   "source": "361 events / 447 media",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (aero members) + Working/Translation/T3_FLEET.md",
+   "target": "`LandAudio` module",
+   "cells": [
+    "CHAIN.json",
+    "T3_FLEET.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; T3_FLEET.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-AU2",
+   "doc": "T-2b",
+   "now": "210,781,376 B bank installed",
+   "source": "engine start/loop (decoded)",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (aero members) + Working/Translation/T3_FLEET.md",
+   "target": "`sound/fmod_banks/vehicles.bank`",
+   "cells": [
+    "CHAIN.json",
+    "T3_FLEET.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; T3_FLEET.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-AU3",
+   "doc": "T-2b",
+   "now": "donor events",
+   "source": "90 event rows in 10 absent banks",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (aero members) + Working/Translation/T3_FLEET.md",
+   "target": "—",
+   "cells": [
+    "CHAIN.json",
+    "T3_FLEET.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; T3_FLEET.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-AU4",
+   "doc": "T-2b",
+   "now": "**10000 vs engine 7300** — the two disagree in the build",
+   "source": "—",
+   "open_with": "Research/BatmobileGrab/CHAIN.json (aero members) + Working/Translation/T3_FLEET.md",
+   "target": "`LandAudio.max_rpm`",
+   "cells": [
+    "CHAIN.json",
+    "T3_FLEET.md"
+   ],
+   "verdict": "grabbed + derived",
+   "why": "CHAIN.json = grabbed; T3_FLEET.md = derived",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-FX1",
+   "doc": "T-2b",
+   "now": "present",
+   "source": "glass/lamp break VFX",
+   "open_with": "Research/JC3Grab/FX_TABLE.jsonl + FX.md",
+   "target": "`all_effects[].effect` = `window_break`, `taillight_break`, `electric_break`",
+   "cells": [
+    "FX_TABLE.jsonl"
+   ],
+   "verdict": "grabbed",
+   "why": "FX_TABLE.jsonl = grabbed",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-FX2",
+   "doc": "T-2b",
+   "now": "present",
+   "source": "engine/roof fire",
+   "open_with": "Research/JC3Grab/FX_TABLE.jsonl + FX.md",
+   "target": "`burn_engine`, `burn_roof`, `burn_base`",
+   "cells": [
+    "FX_TABLE.jsonl"
+   ],
+   "verdict": "grabbed",
+   "why": "FX_TABLE.jsonl = grabbed",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-FX3",
+   "doc": "T-2b",
+   "now": "absent",
+   "source": "exhaust/afterburner flame",
+   "open_with": "Research/JC3Grab/FX_TABLE.jsonl + FX.md",
+   "target": "**no usage slot** — the donor has exactly one usage (`HeadLights`)",
+   "cells": [
+    "FX_TABLE.jsonl"
+   ],
+   "verdict": "grabbed",
+   "why": "FX_TABLE.jsonl = grabbed",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-FX4",
+   "doc": "T-2b",
+   "now": "absent",
+   "source": "EMP / seismic / tyre smoke",
+   "open_with": "Research/JC3Grab/FX_TABLE.jsonl + FX.md",
+   "target": "names not in JC3's 17",
+   "cells": [
+    "FX_TABLE.jsonl"
+   ],
+   "verdict": "grabbed",
+   "why": "FX_TABLE.jsonl = grabbed",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-FX5",
+   "doc": "T-2b",
+   "now": "23 unreferenced by the 51 rows",
+   "source": "—",
+   "open_with": "Research/JC3Grab/FX_TABLE.jsonl + FX.md",
+   "target": "74 `.effc` in the donor `.ee`",
+   "cells": [
+    "FX_TABLE.jsonl"
+   ],
+   "verdict": "grabbed",
+   "why": "FX_TABLE.jsonl = grabbed",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-DM1",
+   "doc": "T-2b",
+   "now": "**2,000**",
+   "source": "`RVehicleBatmobile.Health` = **1,200** (3 archetypes)",
+   "open_with": "Research/BatmobileGrab/DAMAGE_MODEL.md + Research/JC3Grab/DAMAGE_MECHANISMS.md",
+   "target": "`VehicleDamage.max_health`",
+   "cells": [],
+   "verdict": "outside the seven",
+   "why": "the row cites no value from the seven pre-reset files",
+   "trusted": false,
+   "check_green": null
+  },
+  {
+   "id": "T-DM2",
+   "doc": "T-2b",
+   "now": "**100**",
+   "source": "—",
+   "open_with": "Research/BatmobileGrab/DAMAGE_MODEL.md + Research/JC3Grab/DAMAGE_MECHANISMS.md",
+   "target": "`bullet_armor_strength`",
+   "cells": [],
+   "verdict": "outside the seven",
+   "why": "the row cites no value from the seven pre-reset files",
+   "trusted": false,
+   "check_green": null
+  },
+  {
+   "id": "T-DM3",
+   "doc": "T-2b",
+   "now": "20",
+   "source": "—",
+   "open_with": "Research/BatmobileGrab/DAMAGE_MODEL.md + Research/JC3Grab/DAMAGE_MECHANISMS.md",
+   "target": "`bullet_heavy_armor_strength`",
+   "cells": [],
+   "verdict": "outside the seven",
+   "why": "the row cites no value from the seven pre-reset files",
+   "trusted": false,
+   "check_green": null
+  },
+  {
+   "id": "T-DM4",
+   "doc": "T-2b",
+   "now": "**4000 / 1050 / 250**",
+   "source": "—",
+   "open_with": "Research/BatmobileGrab/DAMAGE_MODEL.md + Research/JC3Grab/DAMAGE_MECHANISMS.md",
+   "target": "`explosion_threshold` / `smoke_threshold` / `burn_threshold`",
+   "cells": [],
+   "verdict": "outside the seven",
+   "why": "the row cites no value from the seven pre-reset files",
+   "trusted": false,
+   "check_green": null
+  },
+  {
+   "id": "T-DM5",
+   "doc": "T-2b",
+   "now": "**24 types** — `Land_Body` 1000, `Land_Wheel` 1020, `Land_Engine` 900, `Land_Window` 50, `Land_Light` 50, `Land_Grill` 200; the 42 parts now carry their type (17 distinct; `c_mirror` uses `Boat_Antenna`, which is not in the table and falls back to `Default`)",
+   "source": "32 per-bone bodies",
+   "open_with": "Research/BatmobileGrab/DAMAGE_MODEL.md + Research/JC3Grab/DAMAGE_MECHANISMS.md",
+   "target": "`part_damage_types[]` + `VehicleParts.parts[].damage_type`",
+   "cells": [],
+   "verdict": "outside the seven",
+   "why": "the row cites no value from the seven pre-reset files",
+   "trusted": false,
+   "check_green": null
+  },
+  {
+   "id": "T-DM6",
+   "doc": "T-2b",
+   "now": "**0** (T2_FACTS, build 083)",
+   "source": "—",
+   "open_with": "Research/BatmobileGrab/DAMAGE_MODEL.md + Research/JC3Grab/DAMAGE_MECHANISMS.md",
+   "target": "`deform_scale`",
+   "cells": [],
+   "verdict": "outside the seven",
+   "why": "the row cites no value from the seven pre-reset files",
+   "trusted": false,
+   "check_green": null
+  },
+  {
+   "id": "T-CO1",
+   "doc": "T-2b",
+   "now": "donor's shapes, stations moved",
+   "source": "32 boxes (bone, centre, extents)",
+   "open_with": "Research/BatmobileGrab/COLLISION_BOXES.md / COLLISION_CONVEX.md / SHAPES.md",
+   "target": "`.physicsc` collision shapes",
+   "cells": [],
+   "verdict": "outside the seven",
+   "why": "the row cites no value from the seven pre-reset files",
+   "trusted": false,
+   "check_green": null
+  },
+  {
+   "id": "T-CO2",
+   "doc": "T-2b",
+   "now": "3.1615x0.6342x1.0988 m fits one donor hull (longest hull axis 3.679 m)",
+   "source": "largest box 316.15x63.42x109.88 cm",
+   "open_with": "Research/BatmobileGrab/COLLISION_BOXES.md / COLLISION_CONVEX.md / SHAPES.md",
+   "target": "—",
+   "cells": [],
+   "verdict": "outside the seven",
+   "why": "the row cites no value from the seven pre-reset files",
+   "trusted": false,
+   "check_green": null
+  },
+  {
+   "id": "T-CO3",
+   "doc": "T-2b",
+   "now": "donor's: 38/42 = 1, the 4 wheels = 0 (`world_collision_body_id` -1)",
+   "source": "—",
+   "open_with": "Research/BatmobileGrab/COLLISION_BOXES.md / COLLISION_CONVEX.md / SHAPES.md",
+   "target": "`parts[].has_world_collision_shape`",
+   "cells": [],
+   "verdict": "outside the seven",
+   "why": "the row cites no value from the seven pre-reset files",
+   "trusted": false,
+   "check_green": null
+  },
+  {
+   "id": "T-FX7",
+   "doc": "T-13",
+   "now": "carried: the donor .ee lists the effect (FX_TABLE container set)",
+   "source": "G1-16 afterburner-exhaust: 12 systems / 5 names (Batwing_Booster_CINE, Batwing_Exhaust_P, SideExhaust_Boost...), 114 emitters, life 0.05..5.0 s",
+   "open_with": "Research/JC3Grab/FX_TABLE.jsonl + FX.md",
+   "target": "`effects/jc_vehicles/exhaust/car_cycle_base_dual_nitrous.effc` - 17 vehicles, 20,671 B, 337 arrays, 3161 rows",
+   "cells": [
+    "FX_TABLE.jsonl"
+   ],
+   "verdict": "grabbed",
+   "why": "FX_TABLE.jsonl = grabbed",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-FX8",
+   "doc": "T-13",
+   "now": "carried: the donor .ee lists the effect (FX_TABLE container set)",
+   "source": "G1-16 afterburner-exhaust: 12 systems / 5 names (Batwing_Booster_CINE, Batwing_Exhaust_P, SideExhaust_Boost...), 114 emitters, life 0.05..5.0 s",
+   "open_with": "Research/JC3Grab/FX_TABLE.jsonl + FX.md",
+   "target": "`effects/jc_vehicles/exhaust/car_cycle_base_dual.effc` - 17 vehicles, 12,127 B, 150 arrays, 1350 rows",
+   "cells": [
+    "FX_TABLE.jsonl"
+   ],
+   "verdict": "grabbed",
+   "why": "FX_TABLE.jsonl = grabbed",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-FX9",
+   "doc": "T-13",
+   "now": "absent on both sides",
+   "source": "G1-16 heat-steam: 0 systems (proven absent), 0 emitters",
+   "open_with": "Research/JC3Grab/FX_TABLE.jsonl + FX.md",
+   "target": "**no effect path** in the 955 distinct `.effc`",
+   "cells": [
+    "FX_TABLE.jsonl"
+   ],
+   "verdict": "grabbed",
+   "why": "FX_TABLE.jsonl = grabbed",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-FX10",
+   "doc": "T-13",
+   "now": "absent: the Batmobile carries no weapon until the T-11 clone",
+   "source": "G1-16 muzzle-flash: 21 systems, 2 of 6 names (Batmobile_canonMuzzleflash, Batmobile_canonMuzzleflash_NV), 117 emitters, life 0.05..2.0 s",
+   "open_with": "Research/JC3Grab/FX_TABLE.jsonl + FX.md",
+   "target": "`effects/jc_weapons/muzzle_flash/tank_canon_muzzleflash.effc` - 11 vehicles, 27,519 B, 604 arrays, 5331 rows",
+   "cells": [
+    "FX_TABLE.jsonl"
+   ],
+   "verdict": "grabbed",
+   "why": "FX_TABLE.jsonl = grabbed",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-FX11",
+   "doc": "T-13",
+   "now": "absent: the Batmobile carries no weapon until the T-11 clone",
+   "source": "G1-16 muzzle-flash: 21 systems / 6 names (Batmobile_Rocket_Muzzle, Batmobile_canonMuzzleflash, Batmobile_canonMuzzleflash_NV...), 117 emitters, life 0.05..2.0 s",
+   "open_with": "Research/JC3Grab/FX_TABLE.jsonl + FX.md",
+   "target": "`effects/jc_weapons/muzzle_flash/helicopter_minigun_muzzleflash.effc` - 15 vehicles, 16,079 B, 250 arrays, 2381 rows",
+   "cells": [
+    "FX_TABLE.jsonl"
+   ],
+   "verdict": "grabbed",
+   "why": "FX_TABLE.jsonl = grabbed",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-FX12",
+   "doc": "T-13",
+   "now": "no effect file: JC3 draws the tracer as a texture on the bullet",
+   "source": "G1-16 tracer: 16 systems / 4 names (Batmobile_Muzzleflash_NoTracer, Batmobile_Muzzleflash_NoTracer_Nv, Batmobile_Muzzleflash_Tracer...), 112 emitters, life 0.05..1.1 s",
+   "open_with": "Research/JC3Grab/FX_TABLE.jsonl + FX.md",
+   "target": "**no effect path** in the 955 distinct `.effc`",
+   "cells": [
+    "FX_TABLE.jsonl"
+   ],
+   "verdict": "grabbed",
+   "why": "FX_TABLE.jsonl = grabbed",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-FX13",
+   "doc": "T-13",
+   "now": "no vehicle-carried effect: no JC3 vehicle gun ejects casings",
+   "source": "G1-16 casings: 8 systems / 2 names (ChainGun_BulletCasing, RiotSuppressor_BulletCasing), 40 emitters, life 0.05..1.1 s",
+   "open_with": "Research/JC3Grab/FX_TABLE.jsonl + FX.md",
+   "target": "**no vehicle-carried effect**; non-vehicle matches: `effects/jc_weapons/shotgun/impacts/shell_eject_12ga.effc`, `effects/jc_weapons/shotgun/impacts/shell_eject_12ga_auto.effc`",
+   "cells": [
+    "FX_TABLE.jsonl"
+   ],
+   "verdict": "grabbed",
+   "why": "FX_TABLE.jsonl = grabbed",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-FX14",
+   "doc": "T-13",
+   "now": "absent: the missile slot is T-11/D-7",
+   "source": "G1-16 missile: 1 systems / 1 names (HydraMissile_P), 5 emitters, life 0.15..3.2 s",
+   "open_with": "Research/JC3Grab/FX_TABLE.jsonl + FX.md",
+   "target": "`effects/jc_weapons/missile/missile_trail_car.effc` - 2 vehicles, 11,199 B, 179 arrays, 1412 rows",
+   "cells": [
+    "FX_TABLE.jsonl"
+   ],
+   "verdict": "grabbed",
+   "why": "FX_TABLE.jsonl = grabbed",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-FX15",
+   "doc": "T-13",
+   "now": "absent: the Batmobile carries no cannon until T-11",
+   "source": "G1-16 cannon-impact: 18 systems / 5 names (Batmobile_HeavyCannon_Impact, Batmobile_HeavyCannon_Impact_Px, Impact_Body_UPGR...), 204 emitters, life 0.05..3.0 s",
+   "open_with": "Research/JC3Grab/FX_TABLE.jsonl + FX.md",
+   "target": "`effects/jc_weapons/tank_explosive/tank_explosive_default.effc` - 19 vehicles; 7 variants, 32,751 B, 594 arrays, 5906 rows",
+   "cells": [
+    "FX_TABLE.jsonl"
+   ],
+   "verdict": "grabbed",
+   "why": "FX_TABLE.jsonl = grabbed",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-FX16",
+   "doc": "T-13",
+   "now": "no effect file",
+   "source": "G1-16 projectile-trail: 18 systems / 6 names (Batmobile_CanonTrail, Batmobile_JokersRocket_Trail, Batmobile_Mud_Trail...), 53 emitters, life 0.035..500.0 s",
+   "open_with": "Research/JC3Grab/FX_TABLE.jsonl + FX.md",
+   "target": "**no effect path** in the 955 distinct `.effc`",
+   "cells": [
+    "FX_TABLE.jsonl"
+   ],
+   "verdict": "grabbed",
+   "why": "FX_TABLE.jsonl = grabbed",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-FX17",
+   "doc": "T-13",
+   "now": "carried: the donor .ee lists the effect (FX_TABLE container set)",
+   "source": "G1-16 tyre-surface: 16 systems, 4 of 6 names (Batmobile_Burnout_MUD, Batmobile_Burnout_MUD_NV, Batmobile_Burnout_Water...), 90 emitters, life 0.1..2.0 s",
+   "open_with": "Research/JC3Grab/FX_TABLE.jsonl + FX.md",
+   "target": "`effects/jc_vehicles/wheels/trail/dust_trail_asphalt.effc` - 161 vehicles; 6 variants, 6,559 B, 19 arrays, 160 rows",
+   "cells": [
+    "FX_TABLE.jsonl"
+   ],
+   "verdict": "grabbed",
+   "why": "FX_TABLE.jsonl = grabbed",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-FX18",
+   "doc": "T-13",
+   "now": "carried: the donor .ee lists the effect (FX_TABLE container set)",
+   "source": "G1-16 tyre-surface: 16 systems / 6 names (Batmobile_Burnout_MUD, Batmobile_Burnout_MUD_NV, Batmobile_Burnout_Water...), 90 emitters, life 0.1..2.0 s",
+   "open_with": "Research/JC3Grab/FX_TABLE.jsonl + FX.md",
+   "target": "`effects/jc_vehicles/collision/chassis_slide_default.effc` - 289 vehicles; 5 variants, 11,807 B, 145 arrays, 1188 rows",
+   "cells": [
+    "FX_TABLE.jsonl"
+   ],
+   "verdict": "grabbed",
+   "why": "FX_TABLE.jsonl = grabbed",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-FX19",
+   "doc": "T-13",
+   "now": "socket present, no BmAK system drives it",
+   "source": "G1-16 wall-scrape: 0 systems (proven absent), 0 emitters",
+   "open_with": "Research/JC3Grab/FX_TABLE.jsonl + FX.md",
+   "target": "`effects/trails/spark_trail_02_med.effc` - 298 vehicles; 3 variants, 8,495 B, 67 arrays, 641 rows",
+   "cells": [
+    "FX_TABLE.jsonl"
+   ],
+   "verdict": "grabbed",
+   "why": "FX_TABLE.jsonl = grabbed",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-FX20",
+   "doc": "T-13",
+   "now": "no BmAK system in the 206 and no JC3 effect",
+   "source": "no system in G1-16's 206",
+   "open_with": "Research/JC3Grab/FX_TABLE.jsonl + FX.md",
+   "target": "**no effect path** in the 955 distinct `.effc`",
+   "cells": [
+    "FX_TABLE.jsonl"
+   ],
+   "verdict": "grabbed",
+   "why": "FX_TABLE.jsonl = grabbed",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-FX21",
+   "doc": "T-13",
+   "now": "carried: the donor .ee lists the effect (FX_TABLE container set)",
+   "source": "G1-16 explosion: 11 systems / 3 names (Batmobil_Rocket_Explosion, Batmobil_Rocket_Explosion_Small, Batmobile_Explosion), 139 emitters, life 0.1..5.0 s",
+   "open_with": "Research/JC3Grab/FX_TABLE.jsonl + FX.md",
+   "target": "`effects/jc_vehicles/damage/exp_car_01.effc` - 126 vehicles, 34,895 B, 759 arrays, 6891 rows",
+   "cells": [
+    "FX_TABLE.jsonl"
+   ],
+   "verdict": "grabbed",
+   "why": "FX_TABLE.jsonl = grabbed",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-FX22",
+   "doc": "T-13",
+   "now": "carried: the donor .ee lists the effect (FX_TABLE container set)",
+   "source": "G1-16 vehicle-fire: 6 systems / 2 names (FireTrail_APC, FireTrail_Car), 57 emitters, life 0.5..3.0 s",
+   "open_with": "Research/JC3Grab/FX_TABLE.jsonl + FX.md",
+   "target": "`effects/jc_vehicles/damage/dmg_fire_engine.effc` - 192 vehicles; 3 variants, 15,615 B, 280 arrays, 2277 rows",
+   "cells": [
+    "FX_TABLE.jsonl"
+   ],
+   "verdict": "grabbed",
+   "why": "FX_TABLE.jsonl = grabbed",
+   "trusted": true,
+   "check_green": true
+  },
+  {
+   "id": "T-FX23",
+   "doc": "T-13",
+   "now": "carried: the donor .ee lists the effect (FX_TABLE container set)",
+   "source": "G1-16 vehicle-fire: 6 systems / 2 names (FireTrail_APC, FireTrail_Car), 57 emitters, life 0.5..3.0 s",
+   "open_with": "Research/JC3Grab/FX_TABLE.jsonl + FX.md",
+   "target": "`effects/jc_vehicles/damage/dmg_post_burn.effc` - 139 vehicles; 2 variants, 9,151 B, 75 arrays, 694 rows",
+   "cells": [
+    "FX_TABLE.jsonl"
+   ],
+   "verdict": "grabbed",
+   "why": "FX_TABLE.jsonl = grabbed",
+   "trusted": true,
+   "check_green": true
+  }
+ ],
+ "summary": {
+  "rows": 96,
+  "by_verdict": {
+   "grabbed": 33,
+   "grabbed + derived": 36,
+   "outside the seven": 27
+  },
+  "by_source": {
+   "CHAIN.json": 38,
+   "VALUES.json": 1,
+   "VOCABULARY.md": 4,
+   "PARTS_TABLE.jsonl": 9,
+   "FX_TABLE.jsonl": 22,
+   "T3_FLEET.md": 30,
+   "FITS.md": 6
+  },
+  "trusted": 69,
+  "checks_green": 7,
+  "checks_run": 7
+ },
+ "literals": [
+  {
+   "script": "Tools/scripts/grab_values.py",
+   "line": 34,
+   "text": "TEMPLATE_BLOCK = 6          # the body paint block the appearance specs use as their template"
+  },
+  {
+   "script": "Tools/scripts/grab_values.py",
+   "line": 121,
+   "text": "b = R.decode(data).blocks[TEMPLATE_BLOCK]"
+  },
+  {
+   "script": "Tools/scripts/t1_fits.py",
+   "line": 29,
+   "text": "TARGET_MASS = 4000.0"
+  }
+ ],
+ "notes": [
+  "every value is labelled from the producer's own text and the file it writes; a mapping whose producer does not mention the path fails the check",
+  "`--check` re-derives the classification, the mapping oracle and the file hashes; it does not re-run the producers' own checks (those are recorded from --write)",
+  "a fitted constant (FITS.md a/b) is DERIVED, not guessed: the fit, its inputs and its R^2 are all in the file and t1_fits.py regenerates it",
+  "one composite is neither: values.json's effective_base_colour applies a grabbed multiplier whose operator COLOUR_PARAMS.md marks UNKNOWN, so it is labelled ASSUMED and oracle `assumed_rules_cited` fails if that citation disappears"
+ ],
+ "unknowns": [
+  "VOCABULARY.md's per-member ranges are aggregates whose raw value rows live outside the repo (E:/Modding/_gamedata/JC3grab); the aggregate is re-derivable only where that data is present (jc3grab.py check)",
+  "no row in the seven files records a per-value hash, so 'file unchanged since the grab' rests on the producer's check, not on a value-level fingerprint"
+ ],
+ "oracles": {
+  "all_ok": true,
+  "checks": {
+   "all_seven_present": true,
+   "producers_named": true,
+   "no_guessed_source": true,
+   "row_count_matches_ledger": true,
+   "every_row_classified": true,
+   "every_row_has_verdict": true,
+   "every_source_has_rule": true,
+   "assumed_rules_cited": true
+  },
+  "producer_exits": {
+   "CHAIN.json": 0,
+   "VALUES.json": 0,
+   "VOCABULARY.md": 0,
+   "PARTS_TABLE.jsonl": 0,
+   "FX_TABLE.jsonl": 0,
+   "T3_FLEET.md": 0,
+   "FITS.md": 0
+  }
+ }
+}

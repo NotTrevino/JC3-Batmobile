@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/status-prose-from-receipt.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-merge-release-candidate.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/ledger-vs-build-reconcile-rc5.md
+Tools/scripts/status_audit.py keeps literal prose (test-085 to 090 batches, a bm-RC4 section), so its --check stays green while the text ages; reports/stale-status-numbers.md explains this. Do not edit status_audit.py. Write Tools/scripts/status_rc5_section.py that renders an RC5 section from Builds/bm-RC5/receipt.json and the ledger counts (files, bytes, sha256 prefixes, complete flag, not_done count, V verdict table path) and a patch file Working/RC5/status_audit_patch.diff that would make status_audit.py call it. Also list, as unified diffs in the report and not applied, the stale lines in GRAB_BACKLOG.md section 0.7 (81,952 versus 81,953), section 3 (the test-091 dropzone sentence), and the section 12 placeholder rows V-01 to V-07 and Q-1 to Q-5. Add the same RC5 entries MODLOG.md lacks, as proposed text. Append your report to the AFTER line of queue/9193 if it has not started. Done when the script renders without error on the RC5 receipt. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

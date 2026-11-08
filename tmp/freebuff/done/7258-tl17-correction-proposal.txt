@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/tl17-correction.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-06
+Write the correction for translation row T-L17 (light entry 11). Research/BatmobileGrab/LIGHT_ENTRY11.md says BmAK runs that light with the class-default white [255,255,255,0], not the built 0.6039/0.6039/0.9529. Find T-L17 in Working/Translation (T14_LIGHTS.md, t14_lights.json), work out what the JC3 light colour field expects (0..1 floats or 0..255) from Research/JC3Grab/LIGHT_SYSTEM.md, convert white correctly, and note whether intensity must change too. Put the proposed row edit as JSON text in Working/Translation/TL17_PROPOSAL.md; do not touch the row or the build. Report goes to the DONE path. Rules file: tmp/freebuff/INSTRUCTIONS.md.

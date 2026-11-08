@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-exit-enter-and-gating.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-exit-enter-canopy-build.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/keymap-versus-hook-routing.md
+Offline verification of the entry, exit and canopy module and of the control routing. Rebuild Builds/hook-mod-exit, replay the four traces from the brief that built it, and confirm the vehicle gating: with the in-our-Batmobile flag false, no module in Tools/hook/src reacts to LB, A, B or LT (grep for each button constant and read the guard). Compare the routing table in Working/Modes/keymap_vs_hook.md with what the code does, row by row. Check the canopy timing equals 0.433 s within one frame. Output Working/Modes/verify_exit_gating.md with PASS or FAIL per button row and per trace. Done-check: every row of the routing table has a result, and any code path that touches a button outside the gate is listed with file and line. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

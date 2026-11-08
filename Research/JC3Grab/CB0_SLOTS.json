@@ -1,0 +1,541 @@
+{
+ "headers": 961,
+ "family": [
+  "carpaintmm.fb.txt",
+  "carpaintmm_blend.fb.txt",
+  "carpaintmm_blend_effects.fb.txt",
+  "carpaintmm_blend_effects_stipple.fb.txt",
+  "carpaintmm_blend_stipple.fb.txt",
+  "carpaintmm_effects.fb.txt",
+  "carpaintmm_effects_stipple.fb.txt",
+  "carpaintmm_mask.fb.txt",
+  "carpaintmm_mask_effects.fb.txt",
+  "carpaintmm_mask_effects_stipple.fb.txt",
+  "carpaintmm_mask_stipple.fb.txt",
+  "carpaintmm_stipple.fb.txt"
+ ],
+ "dynamic_only": [
+  "carpaintrsm.fb.txt"
+ ],
+ "base": "carpaintmm.fb.txt",
+ "members": {
+  "CarPaintStaticMaterialParams": [
+   {
+    "type": "float4",
+    "name": "m_SpecularGloss",
+    "offset": 0,
+    "size": 16,
+    "unused": false
+   },
+   {
+    "type": "float4",
+    "name": "m_Metallic",
+    "offset": 16,
+    "size": 16,
+    "unused": false
+   },
+   {
+    "type": "float4",
+    "name": "m_ClearCoat",
+    "offset": 32,
+    "size": 16,
+    "unused": false
+   },
+   {
+    "type": "float4",
+    "name": "m_Emissive",
+    "offset": 48,
+    "size": 16,
+    "unused": false
+   },
+   {
+    "type": "float4",
+    "name": "m_DiffuseWrap",
+    "offset": 64,
+    "size": 16,
+    "unused": false
+   },
+   {
+    "type": "float4",
+    "name": "m_DirtParams",
+    "offset": 80,
+    "size": 16,
+    "unused": false
+   },
+   {
+    "type": "float4",
+    "name": "m_DirtBlend",
+    "offset": 96,
+    "size": 16,
+    "unused": false
+   },
+   {
+    "type": "float4",
+    "name": "m_DirtColor",
+    "offset": 112,
+    "size": 16,
+    "unused": false
+   },
+   {
+    "type": "float4",
+    "name": "m_DecalCount",
+    "offset": 128,
+    "size": 16,
+    "unused": true
+   },
+   {
+    "type": "float4",
+    "name": "m_DecalWidth",
+    "offset": 144,
+    "size": 16,
+    "unused": false
+   },
+   {
+    "type": "float4",
+    "name": "m_Decal1Color",
+    "offset": 160,
+    "size": 16,
+    "unused": false
+   },
+   {
+    "type": "float4",
+    "name": "m_Decal2Color",
+    "offset": 176,
+    "size": 16,
+    "unused": false
+   },
+   {
+    "type": "float4",
+    "name": "m_Decal3Color",
+    "offset": 192,
+    "size": 16,
+    "unused": false
+   },
+   {
+    "type": "float4",
+    "name": "m_Decal4Color",
+    "offset": 208,
+    "size": 16,
+    "unused": false
+   },
+   {
+    "type": "float4",
+    "name": "m_DecalBlend",
+    "offset": 224,
+    "size": 16,
+    "unused": false
+   },
+   {
+    "type": "float4",
+    "name": "m_Damage",
+    "offset": 240,
+    "size": 16,
+    "unused": false
+   },
+   {
+    "type": "float4",
+    "name": "m_DamageBlend",
+    "offset": 256,
+    "size": 16,
+    "unused": false
+   },
+   {
+    "type": "float4",
+    "name": "m_DamageColor",
+    "offset": 272,
+    "size": 16,
+    "unused": false
+   },
+   {
+    "type": "float",
+    "name": "SupportDecals",
+    "offset": 288,
+    "size": 4,
+    "unused": false
+   },
+   {
+    "type": "float",
+    "name": "SupportDmgBlend",
+    "offset": 292,
+    "size": 4,
+    "unused": false
+   },
+   {
+    "type": "float",
+    "name": "SupportLayered",
+    "offset": 296,
+    "size": 4,
+    "unused": false
+   },
+   {
+    "type": "float",
+    "name": "SupportOverlay",
+    "offset": 300,
+    "size": 4,
+    "unused": false
+   },
+   {
+    "type": "float",
+    "name": "SupportRotating",
+    "offset": 304,
+    "size": 4,
+    "unused": true
+   },
+   {
+    "type": "float",
+    "name": "SupportDirt",
+    "offset": 308,
+    "size": 4,
+    "unused": false
+   },
+   {
+    "type": "float",
+    "name": "SupportSoftTint",
+    "offset": 312,
+    "size": 4,
+    "unused": false
+   }
+  ],
+  "CarPaintDynamicMaterialParams": [
+   {
+    "type": "float4",
+    "name": "m_TintColorR",
+    "offset": 0,
+    "size": 16,
+    "unused": false
+   },
+   {
+    "type": "float4",
+    "name": "m_TintColorG",
+    "offset": 16,
+    "size": 16,
+    "unused": false
+   },
+   {
+    "type": "float4",
+    "name": "m_TintColorB",
+    "offset": 32,
+    "size": 16,
+    "unused": false
+   },
+   {
+    "type": "float4",
+    "name": "_unused",
+    "offset": 48,
+    "size": 16,
+    "unused": true
+   },
+   {
+    "type": "float",
+    "name": "m_SpecularGlossOverride",
+    "offset": 64,
+    "size": 4,
+    "unused": false
+   },
+   {
+    "type": "float",
+    "name": "m_MetallicOverride",
+    "offset": 68,
+    "size": 4,
+    "unused": false
+   },
+   {
+    "type": "float",
+    "name": "m_ClearCoatOverride",
+    "offset": 72,
+    "size": 4,
+    "unused": false
+   }
+  ],
+  "CarPaintDynamicObjectParams": [
+   {
+    "type": "float4",
+    "name": "m_DecalIndex",
+    "offset": 0,
+    "size": 16,
+    "unused": false
+   },
+   {
+    "type": "float",
+    "name": "m_DirtAmount",
+    "offset": 16,
+    "size": 4,
+    "unused": false
+   }
+  ],
+  "RBIInfo": [
+   {
+    "type": "row_major",
+    "name": "float4x4",
+    "offset": 0,
+    "size": 64,
+    "unused": true
+   },
+   {
+    "type": "row_major",
+    "name": "float4x4",
+    "offset": 64,
+    "size": 64,
+    "unused": true
+   },
+   {
+    "type": "float4",
+    "name": "ModelDiffuseColor",
+    "offset": 128,
+    "size": 16,
+    "unused": false
+   },
+   {
+    "type": "float4",
+    "name": "ModelAmbientColor",
+    "offset": 144,
+    "size": 16,
+    "unused": true
+   },
+   {
+    "type": "float4",
+    "name": "ModelSpecularColor",
+    "offset": 160,
+    "size": 16,
+    "unused": true
+   },
+   {
+    "type": "float4",
+    "name": "ModelEmissiveColor",
+    "offset": 176,
+    "size": 16,
+    "unused": true
+   },
+   {
+    "type": "float4",
+    "name": "ModelDebugColor",
+    "offset": 192,
+    "size": 16,
+    "unused": true
+   }
+  ]
+ },
+ "agreement": {
+  "CarPaintStaticMaterialParams": {
+   "declared": 12,
+   "agree": 12,
+   "disagree": []
+  },
+  "CarPaintDynamicMaterialParams": {
+   "declared": 12,
+   "agree": 12,
+   "disagree": []
+  },
+  "CarPaintDynamicObjectParams": {
+   "declared": 12,
+   "agree": 12,
+   "disagree": []
+  },
+  "RBIInfo": {
+   "declared": 12,
+   "agree": 12,
+   "disagree": []
+  }
+ },
+ "binds": {
+  "CarPaintStaticMaterialParams": {
+   "values": [
+    "cb2"
+   ],
+   "by_file": {
+    "carpaintmm.fb.txt": "cb2",
+    "carpaintmm_blend.fb.txt": "cb2",
+    "carpaintmm_blend_effects.fb.txt": "cb2",
+    "carpaintmm_blend_effects_stipple.fb.txt": "cb2",
+    "carpaintmm_blend_stipple.fb.txt": "cb2",
+    "carpaintmm_effects.fb.txt": "cb2",
+    "carpaintmm_effects_stipple.fb.txt": "cb2",
+    "carpaintmm_mask.fb.txt": "cb2",
+    "carpaintmm_mask_effects.fb.txt": "cb2",
+    "carpaintmm_mask_effects_stipple.fb.txt": "cb2",
+    "carpaintmm_mask_stipple.fb.txt": "cb2",
+    "carpaintmm_stipple.fb.txt": "cb2"
+   },
+   "consistent": true
+  },
+  "CarPaintDynamicMaterialParams": {
+   "values": [
+    "cb6"
+   ],
+   "by_file": {
+    "carpaintmm.fb.txt": "cb6",
+    "carpaintmm_blend.fb.txt": "cb6",
+    "carpaintmm_blend_effects.fb.txt": "cb6",
+    "carpaintmm_blend_effects_stipple.fb.txt": "cb6",
+    "carpaintmm_blend_stipple.fb.txt": "cb6",
+    "carpaintmm_effects.fb.txt": "cb6",
+    "carpaintmm_effects_stipple.fb.txt": "cb6",
+    "carpaintmm_mask.fb.txt": "cb6",
+    "carpaintmm_mask_effects.fb.txt": "cb6",
+    "carpaintmm_mask_effects_stipple.fb.txt": "cb6",
+    "carpaintmm_mask_stipple.fb.txt": "cb6",
+    "carpaintmm_stipple.fb.txt": "cb6"
+   },
+   "consistent": true
+  },
+  "CarPaintDynamicObjectParams": {
+   "values": [
+    "cb7"
+   ],
+   "by_file": {
+    "carpaintmm.fb.txt": "cb7",
+    "carpaintmm_blend.fb.txt": "cb7",
+    "carpaintmm_blend_effects.fb.txt": "cb7",
+    "carpaintmm_blend_effects_stipple.fb.txt": "cb7",
+    "carpaintmm_blend_stipple.fb.txt": "cb7",
+    "carpaintmm_effects.fb.txt": "cb7",
+    "carpaintmm_effects_stipple.fb.txt": "cb7",
+    "carpaintmm_mask.fb.txt": "cb7",
+    "carpaintmm_mask_effects.fb.txt": "cb7",
+    "carpaintmm_mask_effects_stipple.fb.txt": "cb7",
+    "carpaintmm_mask_stipple.fb.txt": "cb7",
+    "carpaintmm_stipple.fb.txt": "cb7"
+   },
+   "consistent": true
+  },
+  "RBIInfo": {
+   "values": [
+    "cb8"
+   ],
+   "by_file": {
+    "carpaintmm.fb.txt": "cb8",
+    "carpaintmm_blend.fb.txt": "cb8",
+    "carpaintmm_blend_effects.fb.txt": "cb8",
+    "carpaintmm_blend_effects_stipple.fb.txt": "cb8",
+    "carpaintmm_blend_stipple.fb.txt": "cb8",
+    "carpaintmm_effects.fb.txt": "cb8",
+    "carpaintmm_effects_stipple.fb.txt": "cb8",
+    "carpaintmm_mask.fb.txt": "cb8",
+    "carpaintmm_mask_effects.fb.txt": "cb8",
+    "carpaintmm_mask_effects_stipple.fb.txt": "cb8",
+    "carpaintmm_mask_stipple.fb.txt": "cb8",
+    "carpaintmm_stipple.fb.txt": "cb8"
+   },
+   "consistent": true
+  }
+ },
+ "rbm": {
+  "files": 163,
+  "blocks": 399,
+  "sizes": {
+   "static": [
+    288
+   ],
+   "support": [
+    28
+   ],
+   "dynamic": [
+    76
+   ]
+  },
+  "skipped": [
+   {
+    "file": "sportsmuscle_missile_base_signature_lod1.rbm",
+    "error": "block 1 is GeneralMkIII, which this codec does not parse (need its serializer to know where it ends)"
+   },
+   {
+    "file": "sportsmuscle_missile_base_signature_lod2.rbm",
+    "error": "block 1 is GeneralMkIII, which this codec does not parse (need its serializer to know where it ends)"
+   },
+   {
+    "file": "sportsmuscle_missile_base_signature_lod3.rbm",
+    "error": "block 1 is GeneralMkIII, which this codec does not parse (need its serializer to know where it ends)"
+   }
+  ]
+ },
+ "arkham": {
+  "records": 6943,
+  "reported_6934": 6934,
+  "extra_here": 9,
+  "card_oracles": "17/17",
+  "entries": 9553,
+  "entry_bytes": 32,
+  "region_bytes": 9893119,
+  "file_bytes": 155333378,
+  "names": [
+   "SelectionColor",
+   "Damage_Chapter",
+   "Rain_Size_Multiplier",
+   "Batman_Rain_Direction",
+   "Material0_BaseColour",
+   "Material1_Basecolour",
+   "Material2_BaseColour",
+   "Material3_BaseColour",
+   "Material3_Anisotropic_thin_Colour",
+   "Material3_Anisotropic_broad_Colour",
+   "Damage_Dirt_Colour",
+   "Diffuse_Adjust",
+   "Mud_Colour",
+   "Mud2_Colour"
+  ],
+  "distinct_names": 14,
+  "name_pool": 5058,
+  "slot_field": false,
+  "matched_params": [],
+  "matched_count": 0,
+  "named_records": 0,
+  "slot_agree": true
+ },
+ "sizes": {
+  "static": 288,
+  "support": 28,
+  "dynamic": 76
+ },
+ "oracles": [
+  {
+   "key": "O1-headers-parse",
+   "ok": true,
+   "evidence": "961 .fb.txt parsed, 12 declare CarPaintStaticMaterialParams, 1 declare the dynamic cbuffer only (carpaintrsm.fb.txt)"
+  },
+  {
+   "key": "O2-bind-numbers",
+   "ok": true,
+   "evidence": "CarPaintStaticMaterialParams -> cb2; CarPaintDynamicMaterialParams -> cb6; CarPaintDynamicObjectParams -> cb7; RBIInfo -> cb8"
+  },
+  {
+   "key": "O3-member-tables-agree",
+   "ok": true,
+   "evidence": "CarPaintStaticMaterialParams 12/12; CarPaintDynamicMaterialParams 12/12; CarPaintDynamicObjectParams 12/12; RBIInfo 12/12"
+  },
+  {
+   "key": "O4-sizes-match-the-rbm-block",
+   "ok": true,
+   "evidence": "header cb2 316 = 288+28, cb6 76, cb7 20; 399 CarPaintMM blocks in 163 .rbm files, sizes static [288] support [28] dynamic [76]"
+  },
+  {
+   "key": "O5-no-paint-cbuffer-in-cb0",
+   "ok": true,
+   "evidence": "paint cbuffers bind to cb2/cb6/cb7/cb8; no family member uses cb0 for them"
+  },
+  {
+   "key": "O6-arkham-records-carry-no-offset",
+   "ok": true,
+   "evidence": "6943 records (G3-04d reported 6934: 60-char name cap, +9 here), 9553 entries x 32 B = (class FName, parameter FName, RGBA) and no slot field; card oracles 17/17"
+  },
+  {
+   "key": "O7-arkham-names-do-not-resolve",
+   "ok": true,
+   "evidence": "14 distinct names in the fully decoded record vs 32 JC3 paint member names; matched: none"
+  },
+  {
+   "key": "O8-tint-members",
+   "ok": true,
+   "evidence": "m_TintColorR@0(16), m_TintColorG@16(16), m_TintColorB@32(16)"
+  },
+  {
+   "key": "O9-albedo-texture-binding",
+   "ok": true,
+   "evidence": "DiffuseSampler -> s0 and DiffuseMap -> t0 in all 12"
+  },
+  {
+   "key": "O10-md-recomputed",
+   "ok": true,
+   "evidence": "--check rebuilds this document from the files and compares it"
+  }
+ ]
+}

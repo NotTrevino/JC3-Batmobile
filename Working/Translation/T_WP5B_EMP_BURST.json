@@ -1,0 +1,841 @@
+{
+ "archetype": {
+  "class": "RBatmobileEMP",
+  "name": "Batmobile_EMP_Burst",
+  "rows": [
+   {
+    "declaring": "RBatmobileEMP",
+    "member": "ChargeParticle",
+    "offset": 2416,
+    "type": "ObjectNCRProperty",
+    "value": "Batmobile_EMP_Burst.ChargeParticle0"
+   },
+   {
+    "declaring": "RBatmobileEMP",
+    "member": "FireParticle",
+    "offset": 2440,
+    "ref_classes": [
+     "ParticleSystem",
+     "ParticleSystem",
+     "ParticleSystem",
+     "ParticleSystem"
+    ],
+    "type": "ArrayProperty",
+    "value": [
+     "EMPs.EMP_Burst_Stage_01",
+     "EMPs.EMP_Burst_Stage_02",
+     "EMPs.EMP_Burst_Stage_03",
+     "EMPs.EMP_Burst_Stage_04"
+    ]
+   },
+   {
+    "declaring": "RBatmobileEMP",
+    "member": "EMPFireSwitch",
+    "offset": 2472,
+    "ref_classes": [
+     "AkSwitchName",
+     "AkSwitchName",
+     "AkSwitchName",
+     "AkSwitchName"
+    ],
+    "type": "ArrayProperty",
+    "value": [
+     "Ww_Batmobile_Weapon_Level.Batmobile_Weapon_LVL1",
+     "Ww_Batmobile_Weapon_Level.Batmobile_Weapon_LVL2",
+     "Ww_Batmobile_Weapon_Level.Batmobile_Weapon_LVL3",
+     "Ww_Batmobile_Weapon_Level.Batmobile_Weapon_LVL4"
+    ]
+   },
+   {
+    "declaring": "RBatmobileEMP",
+    "member": "ImpulseComponent",
+    "offset": 2496,
+    "type": "ObjectNCRProperty",
+    "value": "Batmobile_EMP_Burst.ImpulseComponent0"
+   },
+   {
+    "declaring": "RVehicleWeapon",
+    "member": "WeaponCoolDown",
+    "offset": 2096,
+    "type": "FloatProperty",
+    "value": 2.0
+   },
+   {
+    "declaring": "RVehicleWeapon",
+    "member": "FireStartEvent",
+    "offset": 2176,
+    "type": "ObjectNCRProperty",
+    "value": "Engine.Play_Batmobile_EMP"
+   },
+   {
+    "declaring": "RVehicleWeapon",
+    "member": "IndividualFireEvent",
+    "offset": 2200,
+    "type": "ObjectNCRProperty",
+    "value": "Engine.Play_Batmobile_EMP"
+   },
+   {
+    "declaring": "RVehicleWeapon",
+    "member": "MaterialToUpdateWhenPresent",
+    "offset": 2232,
+    "type": "ObjectNCRProperty",
+    "value": "Material_MASTERS.Batmobile_V3_Wheel_EMP_MAT_INST"
+   },
+   {
+    "declaring": "RVehicleWeapon",
+    "member": "MaterialOriginalToUpdateWhenPresent",
+    "offset": 2240,
+    "type": "ObjectNCRProperty",
+    "value": "Material_MASTERS.Batmobile_V3_Wheel_V2_MAT"
+   },
+   {
+    "declaring": "RVehicleWeapon",
+    "member": "MaterialIndexToUpdateWhenPresent",
+    "offset": 2348,
+    "type": "IntProperty",
+    "value": 0
+   },
+   {
+    "declaring": "RInventoryGadget",
+    "member": "Mesh",
+    "offset": 792,
+    "type": "ObjectNCRProperty",
+    "value": "Batmobile_EMP_Burst.GadgetMesh"
+   },
+   {
+    "declaring": "?",
+    "member": "(offset 360)",
+    "offset": 360,
+    "type": "NameProperty",
+    "value": "RBatmobileEMP"
+   }
+  ],
+  "size": 167,
+  "tags": 12
+ },
+ "archetype_numbers": {
+  "charge_particle": "Batmobile_EMP_Burst.ChargeParticle0",
+  "cooldown_s": 2.0,
+  "fire_particle_refs": [
+   "EMPs.EMP_Burst_Stage_01",
+   "EMPs.EMP_Burst_Stage_02",
+   "EMPs.EMP_Burst_Stage_03",
+   "EMPs.EMP_Burst_Stage_04"
+  ],
+  "fire_start_event": "Engine.Play_Batmobile_EMP",
+  "fire_switch_refs": [
+   "Ww_Batmobile_Weapon_Level.Batmobile_Weapon_LVL1",
+   "Ww_Batmobile_Weapon_Level.Batmobile_Weapon_LVL2",
+   "Ww_Batmobile_Weapon_Level.Batmobile_Weapon_LVL3",
+   "Ww_Batmobile_Weapon_Level.Batmobile_Weapon_LVL4"
+  ],
+  "impulse_component": "Batmobile_EMP_Burst.ImpulseComponent0",
+  "individual_fire_event": "Engine.Play_Batmobile_EMP",
+  "material_emp": "Material_MASTERS.Batmobile_V3_Wheel_EMP_MAT_INST",
+  "material_index": 0,
+  "material_original": "Material_MASTERS.Batmobile_V3_Wheel_V2_MAT",
+  "mesh": "Batmobile_EMP_Burst.GadgetMesh",
+  "tag": "RBatmobileEMP"
+ },
+ "base_class": {
+  "DisabledByEMP": {
+   "class": "RVehicleBatmobileBase",
+   "kind": "BoolProperty",
+   "offset": 4568,
+   "source": null,
+   "value": false
+  },
+  "VulnerableToEMP": {
+   "class": "RVehicleBatmobileBase",
+   "kind": "BoolProperty",
+   "offset": 4568,
+   "source": null,
+   "value": false
+  }
+ },
+ "charge": {
+  "class": "ParticleSystemComponent",
+  "name": "ChargeParticle0",
+  "rows": [
+   {
+    "declaring": "?",
+    "member": "(offset 540)",
+    "offset": 540,
+    "type": "ObjectNCRProperty",
+    "value": "Particles.EMP_Burst_Charge"
+   },
+   {
+    "declaring": "?",
+    "member": "(offset 664)",
+    "offset": 664,
+    "type": "BoolProperty",
+    "value": true
+   },
+   {
+    "declaring": "?",
+    "member": "ReplacementPrimitive",
+    "offset": 316,
+    "type": "ObjectProperty",
+    "value": null
+   },
+   {
+    "declaring": "?",
+    "member": "(offset 364)",
+    "offset": 364,
+    "type": "FloatProperty",
+    "value": 0.37592700123786926
+   },
+   {
+    "declaring": "?",
+    "member": "(offset 372)",
+    "offset": 372,
+    "type": "FloatProperty",
+    "value": 67108864.0
+   }
+  ],
+  "size": 62,
+  "tags": 5
+ },
+ "charge_numbers": {
+  "bool_664": true,
+  "float_364": 0.37592700123786926,
+  "particle": "Particles.EMP_Burst_Charge"
+ },
+ "class_members": [
+  {
+   "kind": "FloatProperty",
+   "member": "Range",
+   "offset": 2396,
+   "type": "float"
+  },
+  {
+   "kind": "ArrayProperty",
+   "member": "DisableEnemyDuration",
+   "offset": 2400,
+   "type": "float"
+  },
+  {
+   "kind": "ComponentProperty",
+   "member": "ChargeParticle",
+   "offset": 2416,
+   "type": "ParticleSystemComponent"
+  },
+  {
+   "kind": "ArrayProperty",
+   "member": "PowerLevelChargeTime",
+   "offset": 2424,
+   "type": "float"
+  },
+  {
+   "kind": "ArrayProperty",
+   "member": "FireParticle",
+   "offset": 2440,
+   "type": "ParticleSystem"
+  },
+  {
+   "kind": "ArrayProperty",
+   "member": "EMPFireSound",
+   "offset": 2456,
+   "type": "AkEvent"
+  },
+  {
+   "kind": "ArrayProperty",
+   "member": "EMPFireSwitch",
+   "offset": 2472,
+   "type": "AkSwitchName"
+  },
+  {
+   "kind": "ObjectProperty",
+   "member": "EMPFFWaveForm",
+   "offset": 2488,
+   "type": "ForceFeedbackWaveform"
+  },
+  {
+   "kind": "ComponentProperty",
+   "member": "ImpulseComponent",
+   "offset": 2496,
+   "type": "RB_RadialImpulseComponent"
+  },
+  {
+   "kind": "FloatProperty",
+   "member": "ChargeStartTime",
+   "offset": 2504,
+   "type": "float"
+  },
+  {
+   "kind": "BoolProperty",
+   "member": "ChargingEMP",
+   "offset": 2508,
+   "type": "bool"
+  },
+  {
+   "kind": "BoolProperty",
+   "member": "bButtonPressed",
+   "offset": 2508,
+   "type": "bool"
+  },
+  {
+   "kind": "ArrayProperty",
+   "member": "EMPImpulse",
+   "offset": 2512,
+   "type": "float"
+  },
+  {
+   "kind": "ArrayProperty",
+   "member": "EMPVehicleImpulse",
+   "offset": 2528,
+   "type": "float"
+  },
+  {
+   "kind": "IntProperty",
+   "member": "PowerLevel",
+   "offset": 2544,
+   "type": "int"
+  },
+  {
+   "kind": "IntProperty",
+   "member": "MaxPowerLevel",
+   "offset": 2548,
+   "type": "int"
+  }
+ ],
+ "config": [
+  {
+   "file": "BmGame/Config/BmGame.ini",
+   "key": "DefaultBattleKeyMap",
+   "line": 4025,
+   "section": "BmGame.RGameInfo",
+   "value": "(Ability=\"$GFxUI.KeyboardControls.EMPBlast\",PrimaryKeyName=\"$PC.Keys.Three\",SecondaryKeyName=\"$PC.Keys.LeftControl\",Command=\"ExitAgilityMode | BlockBreaker | SelectVehicleWeapon 1 | OnRelease ReleaseVehicleWeapon 1 | Cover | DetonateGel | HoldForLineLaunchStop | SecondaryFireGadget | OnRelease SecondaryFireReleased | DebugMenuNumber 3\", Icon=\"CI_UnTagVehicle,CI_UnTagVehicle_m,CI_TagVehicle,CI_BatmobileRiddlerSwitch,CI_FlipBatmobile,CI_BatmobileRiddlerSwitch,CI_BatmobileEMPLv1,CI_BatmobileEMPLv1_m,CI_BatmobileEMPLv2,CI_BatmobileEMPLv2_m\")"
+  },
+  {
+   "file": "BmGame/Config/BmGame.ini",
+   "key": "pBatmobileEMPLv1",
+   "line": 6729,
+   "section": "Engine.PlayerTags",
+   "value": "Tap {PAD_B}"
+  },
+  {
+   "file": "BmGame/Config/BmGame.ini",
+   "key": "pBatmobileEMPLv1_m",
+   "line": 6730,
+   "section": "Engine.PlayerTags",
+   "value": "{PAD_B} Tap"
+  },
+  {
+   "file": "BmGame/Config/BmGame.ini",
+   "key": "pBatmobileEMPLv2",
+   "line": 6731,
+   "section": "Engine.PlayerTags",
+   "value": "Hold {PAD_B}"
+  },
+  {
+   "file": "BmGame/Config/BmGame.ini",
+   "key": "pBatmobileEMPLv2_m",
+   "line": 6732,
+   "section": "Engine.PlayerTags",
+   "value": "{PAD_B} Hold"
+  },
+  {
+   "file": "BmGame/Config/BmGame.ini",
+   "key": "kBatmobileEMPLv1",
+   "line": 6949,
+   "section": "Engine.PlayerTags",
+   "value": "Tap [3]"
+  },
+  {
+   "file": "BmGame/Config/BmGame.ini",
+   "key": "kBatmobileEMPLv1_m",
+   "line": 6950,
+   "section": "Engine.PlayerTags",
+   "value": "Tap [3]"
+  },
+  {
+   "file": "BmGame/Config/BmGame.ini",
+   "key": "kBatmobileEMPLv2",
+   "line": 6951,
+   "section": "Engine.PlayerTags",
+   "value": "Tap [3]"
+  },
+  {
+   "file": "BmGame/Config/BmGame.ini",
+   "key": "kBatmobileEMPLv2_m",
+   "line": 6952,
+   "section": "Engine.PlayerTags",
+   "value": "Tap [3]"
+  },
+  {
+   "file": "BmGame/Config/DefaultGame.ini",
+   "key": "pBatmobileEMPLv1",
+   "line": 1458,
+   "section": "Engine.PlayerTags",
+   "value": "Tap {PAD_B}"
+  },
+  {
+   "file": "BmGame/Config/DefaultGame.ini",
+   "key": "pBatmobileEMPLv1_m",
+   "line": 1459,
+   "section": "Engine.PlayerTags",
+   "value": "{PAD_B} Tap"
+  },
+  {
+   "file": "BmGame/Config/DefaultGame.ini",
+   "key": "pBatmobileEMPLv2",
+   "line": 1460,
+   "section": "Engine.PlayerTags",
+   "value": "Hold {PAD_B}"
+  },
+  {
+   "file": "BmGame/Config/DefaultGame.ini",
+   "key": "pBatmobileEMPLv2_m",
+   "line": 1461,
+   "section": "Engine.PlayerTags",
+   "value": "{PAD_B} Hold"
+  },
+  {
+   "file": "BmGame/Config/PC/PCGame.ini",
+   "key": "DefaultBattleKeyMap",
+   "line": 156,
+   "section": "BmGame.RGameInfo",
+   "value": "(Ability=\"$GFxUI.KeyboardControls.EMPBlast\",PrimaryKeyName=\"$PC.Keys.Three\",SecondaryKeyName=\"$PC.Keys.LeftControl\",Command=\"ExitAgilityMode | BlockBreaker | SelectVehicleWeapon 1 | OnRelease ReleaseVehicleWeapon 1 | Cover | DetonateGel | HoldForLineLaunchStop | SecondaryFireGadget | OnRelease SecondaryFireReleased | DebugMenuNumber 3\", Icon=\"CI_UnTagVehicle,CI_UnTagVehicle_m,CI_TagVehicle,CI_BatmobileRiddlerSwitch,CI_FlipBatmobile,CI_BatmobileRiddlerSwitch,CI_BatmobileEMPLv1,CI_BatmobileEMPLv1_m,CI_BatmobileEMPLv2,CI_BatmobileEMPLv2_m\")"
+  },
+  {
+   "file": "BmGame/Config/PC/PCGame.ini",
+   "key": "kBatmobileEMPLv1",
+   "line": 366,
+   "section": "Engine.PlayerTags",
+   "value": "Tap [3]"
+  },
+  {
+   "file": "BmGame/Config/PC/PCGame.ini",
+   "key": "kBatmobileEMPLv1_m",
+   "line": 367,
+   "section": "Engine.PlayerTags",
+   "value": "Tap [3]"
+  },
+  {
+   "file": "BmGame/Config/PC/PCGame.ini",
+   "key": "kBatmobileEMPLv2",
+   "line": 368,
+   "section": "Engine.PlayerTags",
+   "value": "Tap [3]"
+  },
+  {
+   "file": "BmGame/Config/PC/PCGame.ini",
+   "key": "kBatmobileEMPLv2_m",
+   "line": 369,
+   "section": "Engine.PlayerTags",
+   "value": "Tap [3]"
+  }
+ ],
+ "default_object": {
+  "class": "RBatmobileEMP",
+  "name": "Default__RBatmobileEMP",
+  "rows": [
+   {
+    "declaring": "RBatmobileEMP",
+    "member": "Range",
+    "offset": 2396,
+    "type": "FloatProperty",
+    "value": 7500.0
+   },
+   {
+    "declaring": "RBatmobileEMP",
+    "member": "DisableEnemyDuration",
+    "offset": 2400,
+    "type": "ArrayProperty",
+    "value": [
+     2.0,
+     4.0,
+     8.0,
+     12.0
+    ]
+   },
+   {
+    "declaring": "RBatmobileEMP",
+    "member": "ChargeParticle",
+    "offset": 2416,
+    "type": "ObjectNCRProperty",
+    "value": "Default__RBatmobileEMP.ChargeParticle0"
+   },
+   {
+    "declaring": "RBatmobileEMP",
+    "member": "PowerLevelChargeTime",
+    "offset": 2424,
+    "type": "ArrayProperty",
+    "value": [
+     0.0,
+     0.5,
+     1.0,
+     1.5
+    ]
+   },
+   {
+    "declaring": "RBatmobileEMP",
+    "member": "EMPFFWaveForm",
+    "offset": 2488,
+    "type": "ObjectNCRProperty",
+    "value": "Default__RBatmobileEMP.EMPForceFeedbackWaveform"
+   },
+   {
+    "declaring": "RBatmobileEMP",
+    "member": "ImpulseComponent",
+    "offset": 2496,
+    "type": "ObjectNCRProperty",
+    "value": "Default__RBatmobileEMP.ImpulseComponent0"
+   },
+   {
+    "declaring": "RBatmobileEMP",
+    "member": "EMPImpulse",
+    "offset": 2512,
+    "type": "ArrayProperty",
+    "value": [
+     5000.0
+    ]
+   },
+   {
+    "declaring": "RBatmobileEMP",
+    "member": "EMPVehicleImpulse",
+    "offset": 2528,
+    "type": "ArrayProperty",
+    "value": [
+     20000.0
+    ]
+   },
+   {
+    "declaring": "RVehicleWeapon",
+    "member": "TempName",
+    "offset": 2068,
+    "type": "StrProperty",
+    "value": "EMP Burst"
+   },
+   {
+    "declaring": "RVehicleWeapon",
+    "member": "ContinuousFire",
+    "offset": 2084,
+    "type": "BoolProperty",
+    "value": true
+   },
+   {
+    "declaring": "RVehicleWeapon",
+    "member": "WeaponCoolDown",
+    "offset": 2096,
+    "type": "FloatProperty",
+    "value": 10.0
+   },
+   {
+    "declaring": "RVehicleWeapon",
+    "member": "PowerConsumption",
+    "offset": 2360,
+    "type": "FloatProperty",
+    "value": 1.0
+   },
+   {
+    "declaring": "RInventoryGadget",
+    "member": "GadgetType",
+    "offset": 785,
+    "type": "ByteProperty",
+    "value": "GA_BatmobileWeapon_EMPBurst"
+   },
+   {
+    "declaring": "RInventoryGadget",
+    "member": "Mesh",
+    "offset": 792,
+    "type": "ObjectNCRProperty",
+    "value": "Default__RBatmobileEMP.GadgetMesh"
+   },
+   {
+    "declaring": "?",
+    "member": "TickGroup",
+    "offset": 290,
+    "type": "ByteProperty",
+    "value": "TG_PreAsyncWork"
+   }
+  ],
+  "size": 276,
+  "tags": 15
+ },
+ "impulse": {
+  "class": "RB_RadialImpulseComponent",
+  "name": "ImpulseComponent0",
+  "rows": [
+   {
+    "declaring": "?",
+    "member": "ImpulseFalloff",
+    "offset": 540,
+    "type": "ByteProperty",
+    "value": "RIF_Constant"
+   },
+   {
+    "declaring": "?",
+    "member": "(offset 544)",
+    "offset": 544,
+    "type": "FloatProperty",
+    "value": 15000.0
+   },
+   {
+    "declaring": "?",
+    "member": "(offset 564)",
+    "offset": 564,
+    "type": "ObjectNCRProperty",
+    "value": "Core.RDmgType_Explosion"
+   },
+   {
+    "declaring": "?",
+    "member": "ReplacementPrimitive",
+    "offset": 316,
+    "type": "ObjectProperty",
+    "value": null
+   },
+   {
+    "declaring": "?",
+    "member": "(offset 364)",
+    "offset": 364,
+    "type": "FloatProperty",
+    "value": 0.2468947470188141
+   }
+  ],
+  "size": 82,
+  "tags": 5
+ },
+ "impulse_numbers": {
+  "damage_type": "Core.RDmgType_Explosion",
+  "falloff": "RIF_Constant",
+  "float_220": 15000.0
+ },
+ "jc3": {
+  "emp_tune": {
+   "AIDamage": 100,
+   "AIDamageRadius": 25.0,
+   "AIDamageRadiusMin": 1.0,
+   "AIDamageRadiusPercentageMax": 1.0,
+   "PlayerDamage": 100,
+   "PlayerDamageRadius": 25.0,
+   "PlayerDamageRadiusMin": 1.0,
+   "PlayerDamageRadiusPercentageMax": 1.0
+  },
+  "fleet": {
+   "cemp": 0,
+   "components": 88
+  },
+  "fp_census": {
+   "chassis": 79,
+   "entities": 232,
+   "objects": 307
+  },
+  "fp_emp_tune": null,
+  "fp_owners": {
+   "(none)": 14,
+   "CAirPlane": 18,
+   "CBoat": 35,
+   "CBulletWeaponBase": 29,
+   "CCar": 126,
+   "CHelicopter": 23,
+   "CMissileWeaponBase": 25,
+   "CMotorBike": 19,
+   "CRPGFireLeachWeapon": 6,
+   "CTrain": 12
+  },
+  "fp_totals": {
+   "chassis": 79,
+   "entities_with_pulses": 232,
+   "graphs": 232,
+   "horn_entities": 178,
+   "multi_pulse_entities": 41,
+   "objects": 307,
+   "other_ref_list": [
+    {
+     "class": "CGraphScriptGameObject",
+     "entity": "editor/entities/jc_vehicles/02_air/v4603_plane_urga_cargotransport/v4603_plane_urga_cargotransport_mm340.ee",
+     "member": "id:65424AC6",
+     "object": "GraphScript",
+     "oid": "875B9AD5=FFFF75FD"
+    }
+   ],
+   "other_refs": 1,
+   "pointer_classes": {
+    "id:06A05F33": {
+     "(unresolved)": 15
+    },
+    "id:73D4D940": {
+     "CEntityObject": 10
+    },
+    "id:7FD59340": {
+     "(unresolved)": 2
+    },
+    "id:D3DDD766": {
+     "CMaterialEffectTable": 45
+    }
+   },
+   "root_classes": {
+    "(none)": 19,
+    "CAirPlane": 18,
+    "CBoat": 35,
+    "CCar": 125,
+    "CHelicopter": 23,
+    "CTrain": 12
+   },
+   "world_missing": 0
+  },
+  "fp_tune_count": 23,
+  "fp_tune_groups": [
+   "explosions",
+   "other",
+   "structures",
+   "vehicles",
+   "weapons"
+  ],
+  "fp_unowned": 14,
+  "material_tables": [
+   {
+    "class": "CMaterialEffectTable",
+    "name": "emp_flatbed_table"
+   }
+  ],
+  "plain_tune": {
+   "AIDamage": 500,
+   "AIDamageRadius": 5.0,
+   "AIDamageRadiusMin": 0.0,
+   "AIDamageRadiusPercentageMax": 0.0,
+   "PlayerDamage": 500,
+   "PlayerDamageRadius": 5.0,
+   "PlayerDamageRadiusMin": 0.0,
+   "PlayerDamageRadiusPercentageMax": 0.0
+  },
+  "pulses": [
+   {
+    "name": "CForcePulse",
+    "props": {
+     "id:060AAA81": "20",
+     "id:06A05F33": "",
+     "id:1AF6FDF0": "00000000",
+     "id:24872388": "100",
+     "id:2849C306": "0",
+     "id:34303F77": "0",
+     "id:4912FC04": "1",
+     "id:530046B3": "10",
+     "id:57F1B4E1": "0.1",
+     "id:593FCDBF": "",
+     "id:5AF29116": "1",
+     "id:6B47B5C3": "0",
+     "id:71446B1A": "",
+     "id:74896A12": "0",
+     "id:7FD59340": "",
+     "id:831DAB81": "0",
+     "id:879640EA": "",
+     "id:9865E7F2": "100",
+     "id:9BD6FA33": "",
+     "id:A1B0DAF9": "2",
+     "id:AE6F7EFF": "0",
+     "id:CF4F7880": "0",
+     "id:D04059E6": "-1128945961",
+     "id:D3DDD766": "00000000",
+     "id:F39EC6EA": "0.1"
+    },
+    "settings": null
+   },
+   {
+    "name": "EMP",
+    "props": {
+     "id:060AAA81": "20",
+     "id:06A05F33": "5FED74E7=FFFF7F53",
+     "id:1AF6FDF0": "00000000",
+     "id:24872388": "100",
+     "id:2849C306": "0",
+     "id:34303F77": "0",
+     "id:4912FC04": "0",
+     "id:530046B3": "10",
+     "id:57F1B4E1": "0.1",
+     "id:593FCDBF": "",
+     "id:5AF29116": "1",
+     "id:6B47B5C3": "0",
+     "id:71446B1A": "",
+     "id:74896A12": "0",
+     "id:7FD59340": "",
+     "id:831DAB81": "0",
+     "id:879640EA": "",
+     "id:9865E7F2": "100",
+     "id:9BD6FA33": "",
+     "id:A1B0DAF9": "2",
+     "id:AE6F7EFF": "1",
+     "id:CF4F7880": "1",
+     "id:D04059E6": "-1128945961",
+     "id:D3DDD766": "EE5AEE78=FFFFD9E6",
+     "id:F39EC6EA": "0.1"
+    },
+    "settings": null
+   }
+  ],
+  "truck_entity": "editor/entities/jc_vehicles/01_land/v0505_car_solar_oldtruck/v0505_car_solar_oldtruck_rebel_emp_01.ee",
+  "truck_weapon_classes": [],
+  "use_item": [
+   {
+    "class": "CInteractionGraphEntry",
+    "enabled": "1",
+    "name": "entry.use_item",
+    "prompt": "ui_activate_emp",
+    "state": "S_STUNT_USE_ITEM_VEHICLE"
+   },
+   {
+    "class": "CInteractionTrigger",
+    "enabled": "1",
+    "links": [
+     "6D433019=FFFF8C71",
+     "E880D61A=0000CAE5"
+    ],
+    "name": "trigger.use_item",
+    "xyz": [
+     0.0,
+     1.3507,
+     2.396
+    ]
+   }
+  ],
+  "weapons": [
+   {
+    "class": "CEMPWeapon",
+    "material_table": null,
+    "name": "w702_emp",
+    "tune": "editor/entities/jc_weapons/00_shared/autoaim_tuning/autoaim_assault_rifle.wtune",
+    "weapon_id": "702",
+    "weapon_type": "6"
+   },
+   {
+    "class": "CEMPWeapon",
+    "material_table": null,
+    "name": "w503_turret_emp",
+    "tune": "editor/entities/jc_weapons/00_shared/autoaim_tuning/autoaim_assault_rifle.wtune",
+    "weapon_id": "503",
+    "weapon_type": "2"
+   }
+  ]
+ },
+ "numbers": {
+  "charge_particle_default": "Default__RBatmobileEMP.ChargeParticle0",
+  "cooldown_default_s": 10.0,
+  "disable_enemy_duration_s": [
+   2.0,
+   4.0,
+   8.0,
+   12.0
+  ],
+  "emp_impulse": [
+   5000.0
+  ],
+  "emp_vehicle_impulse": [
+   20000.0
+  ],
+  "fire_particles": null,
+  "fire_switch_own": null,
+  "gadget_type": "GA_BatmobileWeapon_EMPBurst",
+  "power_consumption": 1.0,
+  "power_level_charge_time_s": [
+   0.0,
+   0.5,
+   1.0,
+   1.5
+  ],
+  "range_m": 75.0,
+  "range_uu": 7500.0,
+  "temp_name": "EMP Burst"
+ }
+}

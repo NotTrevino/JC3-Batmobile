@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/install-v3-guard-fix.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-05
+A review (tmp/freebuff/reports/install-v2-review.md) found two defects in Working/Installer/install_v2.ps1: the -GameDir guard is a bare string prefix test (a sibling folder named like the dropzone passes), and Rollback deletes whatever paths the manifest lists, even outside the dropzone. Write Working/Installer/install_v3.ps1 with its generator Tools/scripts/install_v3.py (--write/--check) that resolves full canonical paths, requires the target to be inside the dropzone root by path-component comparison, and makes Rollback refuse any manifest path that resolves outside the root. Re-run the reviewer's two bypass tests on copies under E:\Modding\_dropzone_sim_rc2_v3* only and show both now refuse; re-run the three scenarios (differ / identical / absent) and show sha256-identical rollback. Never run against a real game or dropzone path. Shared project rules: tmp/freebuff/INSTRUCTIONS.md.

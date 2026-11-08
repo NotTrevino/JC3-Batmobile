@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/chase-G3-01b-boxes-u4.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-03
+G3-01b wanted the StaticMesh Bounds of the Batmobile's two collision meshes (BmGame.upk exports 175973 and 175974) as a second check on its box extents, but found no Bounds struct in their tagged properties. Find where UE3 serialises a cooked StaticMesh's bounds - the native data after the tagged properties (FStaticMeshRenderData / an FBoxSphereBounds of origin, extent, radius) - locate those seven floats in both exports, and compare them with the box extents. Read reports/G3-01b-boxes.md and its outputs first; write a new script of your own and do not edit G3-01b's files. If the files cannot answer it, say exactly what blocks it. Rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md section 3. Report at the DONE path with STATUS resolved / partial / blocked.

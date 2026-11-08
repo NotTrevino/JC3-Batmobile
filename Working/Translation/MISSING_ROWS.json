@@ -1,0 +1,493 @@
+{
+ "schema": 1,
+ "generator": "missing_rows.py",
+ "subjects": [
+  "ALB-2",
+  "T-13"
+ ],
+ "gap": {
+  "ledger": "Working/Translation/T_ROWS.jsonl",
+  "ledger_rows": 198,
+  "ledger_sha256": "8996b60a5370d932f437fd138d23dc15358d41e24e1026306d7b02172dc0e5f4",
+  "proposed_ids_absent": [
+   "T-AB1",
+   "T-AB2",
+   "T-AB3",
+   "T-IN1",
+   "T-IN2",
+   "T-IN3",
+   "T-IN4",
+   "T-IN5"
+  ],
+  "doc_T13_rows": 17,
+  "doc_T13_fx_rows": 17,
+  "audit_T13_tiers": {
+   "TRANSLATED": 2,
+   "GUESSED": 0,
+   "NOT_TRANSLATED": 15
+  },
+  "doc_T13i_rows": 0,
+  "interaction_mentions": [
+   "T-WLD8"
+  ],
+  "albedo_mentions": [],
+  "note": "the only ledger rows that mention the interaction placement are T-20 rows that point at it (T-WLD8); no row carries its values, and no row carries the ALB-2 gain at all"
+ },
+ "alb2": {
+  "card": "ALB-2",
+  "title": "paint albedo gain",
+  "log": {
+   "section": "MODLOG §107",
+   "gain_line": 5488,
+   "bytes_line": 5489
+  },
+  "literal_gain": 4.0,
+  "gain_now": 3.4476,
+  "byte_lit": "0x837d86",
+  "byte_now": "0x7a757e",
+  "bound": {
+   "solid_7a757e": 58,
+   "solid_837d86": 0
+  },
+  "values": [
+   {
+    "value": "base colour [0.02579, 0.02579, 0.03, 1.0]",
+    "kind": "decoded",
+    "source": "`Research/BatmobileGrab/VALUES.json` paint.base_colour, whose own source string names `Material0_BaseColour` on the MIC via the parent chain (G1-11 / bm_colchain). Material0_BaseColour on Batmobile_V3_Mainbody_NEW_MIC (via parent chain), x Diffuse_Adjust [2.2, 2.0, 2.0]"
+   },
+   {
+    "value": "Diffuse_Adjust [2.2, 2.0, 2.0]",
+    "kind": "decoded",
+    "source": "`Research/BatmobileGrab/VALUES.json` paint.source.base_colour - the multiplier is recorded there as the derivation input"
+   },
+   {
+    "value": "effective colour [0.056738, 0.05158, 0.06]",
+    "kind": "derived",
+    "source": "base x Diffuse_Adjust, 6 dp - `Tools/scripts/grab_values.py` (`paint.effective_base_colour`)"
+   },
+   {
+    "value": "sRGB EOTF: 12.92c if c<=0.0031308 else 1.055c^(1/2.4)-0.055",
+    "kind": "literal",
+    "source": "Tools/scripts/factors.py:178 - hand-written in `srgb8()`, not read from any file (the standard's piecewise transfer)"
+   },
+   {
+    "value": "PAINT_ALBEDO_GAIN = 4",
+    "kind": "literal",
+    "source": "`MODLOG.md`:5488 (§107) - the one hand-entered number of ALB-2, chosen after measuring test-080 (body 12/16 luma vs grass 85; reference car 22/22 vs road 12)"
+   },
+   {
+    "value": "albedo byte 0x837d86 (from 0x434045)",
+    "kind": "derived",
+    "source": "srgb8(effective x 4) - reproduces the byte pair `MODLOG.md`:5489 records"
+   },
+   {
+    "value": "gain now in force 3.4476",
+    "kind": "decoded",
+    "source": "`Research/BatmobileGrab/VALUES.json` paint.albedo_gain - vanilla paint tint luma 0.1837 / BmAK authored paint luma 0.0533 (GRB-6) (GRB-6 replaced the hand-set gain)"
+   },
+   {
+    "value": "albedo byte now built 0x7a757e",
+    "kind": "derived",
+    "source": "srgb8(effective x 3.4476)"
+   },
+   {
+    "value": "built bindings: solid_7a757e in 58 RBM file(s), solid_837d86 in 0",
+    "kind": "decoded",
+    "source": "byte scan of `Builds/bm-RC1/aaf` - the paint slot of the shipped materials names the current solid; the ALB-2 one is bound by no RBM and survives only in the packaging lists (@files.xml)"
+   }
+  ]
+ },
+ "t13": {
+  "card": "T-13",
+  "title": "interaction placement",
+  "doc": "Working/Translation/T9_INTERACTION.md",
+  "grab_digest": "da864a28edcbcbff",
+  "grab_file": "Research/JC3Grab/INTERACTION.json",
+  "grab_digests": {
+   "build": "da864a28edcbcbff",
+   "current": "a08510e57dd54a7f",
+   "reconciled": false
+  },
+  "mesh": {
+   "bbox": [
+    [
+     -1.7531,
+     0.0783,
+     -3.4218
+    ],
+    [
+     1.7508,
+     2.3667,
+     3.6093
+    ]
+   ],
+   "file": "Working/TrueScale/body_lod1.rbm",
+   "triangles": 20000,
+   "vertices": 28940
+  },
+  "counts": {
+   "by_role": {
+    "driver": 29,
+    "hood": 9,
+    "passenger": 25,
+    "seat.driver": 1,
+    "seat.passenger1": 1,
+    "seat.stunt": 1,
+    "stunt": 19
+   },
+   "dropped_D9": 6,
+   "in_band": 77,
+   "objects": 85,
+   "placed": 77,
+   "socket": 1,
+   "unknown": 1
+  },
+  "decision": {
+   "applied": "hijack objects (*pull.out*, *pulled.out*) dropped",
+   "id": "D-9",
+   "status": "resolved 2026-10-28 (user): no"
+  },
+  "band": [
+   0.05,
+   0.3
+  ],
+  "margin": 0.06,
+  "side_clearance": 0.1,
+  "stations": {
+   "side_y": 1.15,
+   "side_z": -0.95,
+   "roof_z": -0.5,
+   "hood_z": -2.14
+  },
+  "driver": [
+   -0.0025,
+   0.8647,
+   -1.0654
+  ],
+  "gaps": {
+   "front_area": 0.048,
+   "main_area": 0.1474
+  },
+  "anchors": {
+   "hood": {
+    "area": "front_area",
+    "donor_gap_m": 0.048,
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "surface": [
+     0.0005,
+     1.3606,
+     -2.14
+    ]
+   },
+   "left": {
+    "donor_gap_m": null,
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "station_m": [
+     1.15,
+     -0.95
+    ],
+    "surface": [
+     -1.471,
+     1.15,
+     -0.95
+    ]
+   },
+   "right": {
+    "donor_gap_m": null,
+    "normal": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "station_m": [
+     1.15,
+     -0.95
+    ],
+    "surface": [
+     1.462,
+     1.15,
+     -0.95
+    ]
+   },
+   "roof": {
+    "area": "main_area",
+    "donor_gap_m": 0.1474,
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "surface": [
+     0.0005,
+     2.0811,
+     -0.5
+    ]
+   }
+  },
+  "clearances": {
+   "hood": [
+    0.1659
+   ],
+   "left": [
+    0.1
+   ],
+   "right": [
+    0.1124
+   ],
+   "roof": [
+    0.1656
+   ]
+  },
+  "kinds": {
+   "hood": [
+    "decoded (donor stunt-area gap 0.048 m, band floor applied)"
+   ],
+   "left": [
+    "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)"
+   ],
+   "right": [
+    "chosen (band midpoint; donor side clearance not decoded - UNKNOWN)"
+   ],
+   "roof": [
+    "decoded (donor stunt-area gap 0.1474 m, band floor applied)"
+   ]
+  },
+  "objects": 85,
+  "placed": 77,
+  "dropped": 6,
+  "socket": 1,
+  "unknown": 1,
+  "in_band": 77,
+  "values": [
+   {
+    "value": "grab digests: build da864a28edcbcbff, file now a08510e57dd54a7f",
+    "kind": "decoded",
+    "source": "`Working/Translation/t9_interaction.json` source_digest (recorded at build time) vs `Research/JC3Grab/INTERACTION.json` digest (regenerated 2026-11-02); reconciled here on the inputs used - 85 objects and the two donor gaps agree"
+   },
+   {
+    "value": "clearance band 0.05..0.3 m",
+    "kind": "literal",
+    "source": "the card's Done rule (`GRAB_BACKLOG.md` T-13: \"nearest hull triangle >= 0.05 m and <= 0.3 m\"), encoded at Tools/scripts/t9_interaction.py:50"
+   },
+   {
+    "value": "donor stunt-area gaps: front_area 0.048 m, main_area 0.1474 m",
+    "kind": "decoded",
+    "source": "`Research/JC3Grab/INTERACTION.json` stunt_areas.areas[*].center_gap_m (grab digest a08510e57dd54a7f, G2-18) - the only donor clearances any decoded file carries"
+   },
+   {
+    "value": "SIDE_MARGIN = 0.06 m",
+    "kind": "literal",
+    "source": "Tools/scripts/t9_interaction.py:51 - band floor + 10 mm so a re-measure stays above 0.05"
+   },
+   {
+    "value": "hood clearance 0.1659 m (target 0.06)",
+    "kind": "derived",
+    "source": "target = max(donor gap 0.048, SIDE_MARGIN 0.06), then the normal offset is solved so the nearest hull triangle is exactly that far away (`solve_offset`, 4 mm tolerance)"
+   },
+   {
+    "value": "roof clearance 0.1656 m (target 0.1474)",
+    "kind": "derived",
+    "source": "same rule with the main_area gap 0.1474 m"
+   },
+   {
+    "value": "SIDE_CLEARANCE = 0.1 m (chosen, not decoded)",
+    "kind": "literal",
+    "source": "Tools/scripts/t9_interaction.py:52 - the donor's side clearance is in no decoded file (G2-18 decoded only the three stunt areas), so the value sits inside the card band and is labelled chosen in `Working/Translation/T9_INTERACTION.md` §2 and §6"
+   },
+   {
+    "value": "side clearance as solved: left 0.1 m, right 0.1124 m",
+    "kind": "derived",
+    "source": "the chosen 0.1 m pushed along the anchor normal and re-measured against the hull (target 0.10, solved offset [0.1124])"
+   },
+   {
+    "value": "stations: SIDE_Y 1.15, SIDE_Z -0.95, ROOF_Z -0.5, HOOD_Z -2.14",
+    "kind": "literal",
+    "source": "Tools/scripts/t9_interaction.py:53, Tools/scripts/t9_interaction.py:54, Tools/scripts/t9_interaction.py:55, Tools/scripts/t9_interaction.py:56 - each chosen inside a decoded range: the tub y 0.676..2.029 and the `Driver` z in `COCKPIT.md` §2/§3, and the front-deck z of G2-18's front_area centre"
+   },
+   {
+    "value": "anchor surfaces: hood [0.0005, 1.3606, -2.14], roof [0.0005, 2.0811, -0.5], left [-1.471, 1.15, -0.95], right [1.462, 1.15, -0.95]",
+    "kind": "derived",
+    "source": "ray cast against `Working/TrueScale/body_lod1.rbm` (20000 triangles, 28940 vertices, bbox [-1.7531, 0.0783, -3.4218]..[1.7508, 2.3667, 3.6093]): topmost body hit on a vertical ray at (x, z), first hit on a horizontal ray at (y, z) - `top_hit`/`side_hit` in `Tools/scripts/t9_interaction.py`"
+   },
+   {
+    "value": "Driver socket [-0.0025, 0.8647, -1.0654] m, forward (0, 0, -1)",
+    "kind": "decoded",
+    "source": "`Research/BatmobileGrab/COCKPIT.md` §2 `Driver` socket: bone `Batmobile_Chassis`, (121.9658, 0.25, 84.25) cm in the bone frame through the one `bat_assemble` transform (G1-19, `grab_cockpit.py`)"
+   },
+   {
+    "value": "UP_COS = cos(20.0)",
+    "kind": "literal",
+    "source": "Tools/scripts/t9_interaction.py:57 - the card's \"normals within 20 deg of up\", a card constant, not a game number"
+   },
+   {
+    "value": "85 objects: 77 placed, 6 dropped, 1 socket, 1 unknown, 77 in band",
+    "kind": "derived",
+    "source": "`classify()` in `Tools/scripts/t9_interaction.py` applied to the 85 donor objects of `Research/JC3Grab/INTERACTION.json`, then the band/inside test against the hull"
+   },
+   {
+    "value": "D-9 = no: hijack objects dropped (['exit.driver.pulled.out', 'entry.driver.pull.out.onground.no.door', 'entry.passenger1.pull.out.onground', 'exit.passenger1.pulled.out', 'entry.passenger1.pull.out.onground.no.door', 'entry.driver.pull.out.onground'])",
+    "kind": "decision",
+    "source": "`Working/Translation/t9_interaction.json` decision block - \"resolved 2026-10-28 (user): no\"; user decision 2026-10-28, `GRAB_BACKLOG.md` §D-9"
+   },
+   {
+    "value": "transform rule: pos = anchor surface + normal x clearance; forward (0,0,-1) on hood/roof, (-normal.x,0,0) on the sides; yaw = atan2(forward.x, -forward.z)",
+    "kind": "derived",
+    "source": "`Working/Translation/T9_INTERACTION.md` §2 (frame) and §6 (yaw convention) - verified here for all 77 placed objects"
+   },
+   {
+    "value": "seat.passenger1: no transform",
+    "kind": "unknown",
+    "source": "`COCKPIT.md` §1 - one cockpit tub, one seat, so there is no passenger-seat location to place it on"
+   }
+  ]
+ },
+ "rows": [
+  {
+   "id": "T-AB1",
+   "doc": "T-2b",
+   "section": "1. Appearance - 185 materials, 405 textures, 19 slots",
+   "cells": [
+    "T-AB1",
+    "BmAK authors the paint for a rain-wet night scene (linear luma 0.0533); on JC3's shaded side it is the darkest object in a bright scene",
+    "the generated solid albedo `s0` of every paint block",
+    "linear colour x `PAINT_ALBEDO_GAIN` **before** sRGB encoding",
+    "0x43/0x40/0x45 (test-079/080, gain 1.0)",
+    "0x83/0x7d/0x86 (gain 4, test-081)",
+    "literal",
+    "daylight screenshot: body luma above the road (MODLOG §107 measured 12/16 vs grass 85; reference 22/22 vs road 12)"
+   ],
+   "dispo": "superseded",
+   "superseded_by": "GRB-6",
+   "why": "GRB-6 removed the hand-set gain: VALUES.json now carries 3.4476, the vanilla paint luma / authored paint luma ratio, and factors.py reads only that file"
+  },
+  {
+   "id": "T-AB2",
+   "doc": "T-2b",
+   "section": "1. Appearance - 185 materials, 405 textures, 19 slots",
+   "cells": [
+    "T-AB2",
+    "authored paint colour `Material0_BaseColour` = [0.02579, 0.02579, 0.03] linear x `Diffuse_Adjust` [2.2, 2.0, 2.0]",
+    "the paint colour the gain and the sRGB encode are applied to",
+    "x `Diffuse_Adjust`, then x gain, then sRGB encode",
+    "effective [0.056738, 0.05158, 0.06]",
+    "unchanged: the same effective colour, now scaled by the derived gain",
+    "decoded",
+    "074/078/079/080/081 all encode from this colour; the gain is the only variable that ever moved"
+   ],
+   "dispo": "keep",
+   "why": "the input colour is decoded and unchanged; only the gain applied to it moved (T-AB1) - the build carries it"
+  },
+  {
+   "id": "T-AB3",
+   "doc": "T-2b",
+   "section": "1. Appearance - 185 materials, 405 textures, 19 slots",
+   "cells": [
+    "T-AB3",
+    "the authored colour is a night value; the 8-bit sRGB albedo is what the engine samples",
+    "`CarPaintMM` s0 Diffuse of the 17 body blocks",
+    "srgb8(effective x gain)",
+    "0x837d86 (ALB-2)",
+    "0x7a757e (58 RBM files bind it; solid_837d86 is bound by no RBM, only by the packaging lists)",
+    "derived",
+    "noon screenshot: paint readable, not black (078 failed), not grey (ALB-2's over-correction)"
+   ],
+   "dispo": "superseded",
+   "superseded_by": "GRB-6",
+   "why": "the built materials now name solid_7a757e (58 files); solid_837d86 is a stale texture in the same build - a row stating the ALB-2 byte would describe an unused file"
+  },
+  {
+   "id": "T-IN1",
+   "doc": "T-13i",
+   "section": "5. The Done rule",
+   "cells": [
+    "T-IN1",
+    "every donor interaction object sits on the Serpente shell; the gap to the skin is the quantity that has to survive the body swap",
+    "the 77 placed `entry/exit/transition/point/trigger/seat` objects of the Batmobile `.epe`",
+    "nearest hull triangle >= 0.05 m and <= 0.3 m, point outside the hull",
+    "0 rows in the ledger; the rule lives only in `Working/Translation/T9_INTERACTION.md` §5",
+    "77/77 placed objects inside the band, 0 inside the hull",
+    "literal",
+    "Q-1 #3: Rico enters from both sides; re-measure the 77 transforms against body_lod1"
+   ],
+   "dispo": "epe",
+   "why": "the placement is an entity-graph edit (77 transforms in the `.epe`, written by B-05); the band is the card's Done rule"
+  },
+  {
+   "id": "T-IN2",
+   "doc": "T-13i",
+   "section": "2. Method",
+   "cells": [
+    "T-IN2",
+    "G2-18 decoded the donor's gap to the shell for the three stunt areas only: front_area 0.048 m, main_area 0.1474 m",
+    "hood anchors (`*hood*`) and roof anchors (`*stunt*`)",
+    "target = max(donor gap, 0.06 m), then solve the normal offset against the hull",
+    "no ledger row; the numbers exist only in `Working/Translation/T9_INTERACTION.md` §2",
+    "hood 0.1659 m, roof 0.1656 m",
+    "decoded + derived",
+    "hood/roof objects read 0.0573/0.1453 m from the hull and stay in band (`Working/Translation/T9_INTERACTION.md` §4)"
+   ],
+   "dispo": "epe",
+   "why": "donor-decoded clearances, solved onto the Batmobile shell; written by B-05"
+  },
+  {
+   "id": "T-IN3",
+   "doc": "T-13i",
+   "section": "2. Method",
+   "cells": [
+    "T-IN3",
+    "the donor's side clearance is in no decoded file (G2-18 decoded the stunt areas only)",
+    "left/right cockpit-side anchors at y 1.15, z -0.95",
+    "a chosen 0.1 m inside the band, pushed along the surface normal",
+    "no ledger row; labelled chosen in `Working/Translation/T9_INTERACTION.md` §2/§6",
+    "left 0.1 m, right 0.1124 m (chosen, not decoded)",
+    "literal",
+    "side objects read ~0.097/0.100 m from the hull and stay in band"
+   ],
+   "dispo": "epe",
+   "why": "the only unsourced number of the placement, declared as chosen; B-05 writes it"
+  },
+  {
+   "id": "T-IN4",
+   "doc": "T-13i",
+   "section": "1. Decision applied",
+   "cells": [
+    "T-IN4",
+    "the Serpente's 85 interaction objects include hijack and passenger-seat objects the Batmobile has no place for",
+    "`interaction.seat.driver` (the `Driver` socket) and 6 hijack objects",
+    "D-9 = no: `*pull.out*`/`*pulled.out*` dropped; the seat uses the decoded socket [-0.0025, 0.8647, -1.0654] m",
+    "no ledger row; `Working/Translation/T9_INTERACTION.md` records the decision and the socket",
+    "6 dropped, 1 socket, 1 UNKNOWN (`seat.passenger1`, one-seat cockpit)",
+    "decision + decoded",
+    "hijack interactions absent in game; the seated pose starts at the socket (COCKPIT.md §2)"
+   ],
+   "dispo": "epe",
+   "why": "user decision 2026-10-28 (D-9) plus the CAP-19 socket; B-05 writes the graph"
+  },
+  {
+   "id": "T-IN5",
+   "doc": "T-13i",
+   "section": "4. Every object",
+   "cells": [
+    "T-IN5",
+    "the donor objects carry world positions that are mostly inherited container origins (70 of 85), so they are placed by role, not copied",
+    "each placed object's transform (pos, forward, up, yaw)",
+    "pos = anchor surface + normal x clearance; forward (0,0,-1) on hood/roof, (-normal.x,0,0) on the sides; yaw = atan2(forward.x, -forward.z)",
+    "no ledger row; the rule is prose in `Working/Translation/T9_INTERACTION.md` §2/§6",
+    "77 transforms re-derived and checked",
+    "derived",
+    "every transform re-derives from its anchor at 4 dp (`missing_rows.py --check`)"
+   ],
+   "dispo": "epe",
+   "why": "the placement rule, not a single value; recorded so a later edit cannot move an anchor silently"
+  }
+ ],
+ "ledger_untouched": true
+}

@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/vulcan-spin-casings-tracer-fx.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-effect-writer-payloads.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-cannon-vulcan-riot-pods.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/vulcan-bloom-curve-extract.md
+Vulcan payloads that no shipped brief covers: barrel spin-up, ejected casings, and the tracer (ledger rows T-FX10 to T-FX16, RC4 receipt flag tracer_unchanged). Read tmp/freebuff/reports/vulcan-spinup-and-heat-plan.md, tracer-width-and-ribbon-units.md and the barrel-spin part row T-12 in T_ROWS.jsonl. Operator fact: the Vulcan has no heat lockout, so there is no overheat effect; only the red crosshair, which the HUD brief owns. Build private effect copies with Tools/scripts/effc_writer.py, and bind the barrel spin to the fire state through the 9172 moving-part mechanism if the plan allows. Script Tools/scripts/rc5_fx_vulcan.py (--write, --check), tree Builds/bm-RC5-fxvulcan. Done-check: --check lists spin-up time, casing effect, tracer width and length with sources, and shows no overheat asset. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

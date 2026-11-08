@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hud-radar-bmak-values.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-06
+There is a report from an earlier lane called G3-HUD-RADAR (tmp/freebuff/reports/G3-HUD-RADAR.md) that nobody has re-checked. Open it and pick the radar/minimap numbers it states (radius, range, icon sizes, update rate - whichever it actually gives). For each, find the value in the BmAK HUD data through Tools/scripts/bmak_hud.py or Research/BatmobileGrab/HUD.json and say whether the report's number is the same, differs, or has no source in the files. Then say which of those values the JC3 side can carry, using Research/JC3Grab/JC3_HUD_WEAPONS.md or the vehicle HUD script list. Make a short table in Working/Translation/HUD_RADAR_RECHECK.md and keep any script you write (Tools/scripts/hud_radar_recheck.py with --check). Everything else about the repo is in tmp/freebuff/INSTRUCTIONS.md.

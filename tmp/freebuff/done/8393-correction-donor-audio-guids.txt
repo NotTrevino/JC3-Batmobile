@@ -1,0 +1,14 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/correction-8393-donor-audio-guids.md
+ONLY: freebuff
+EST: 65
+BRIEF: hand-written 2026-11-07 by review 8399
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/review-build-wave.md
+Correction 4/9 — 21 of 45 audio GUIDs still resolve to donor banks, and one vehicle loop is measurably red.
+
+Evidence: build-d09 §5 and §6; the RC carries vehicles.bank 210,781,376 B and weapons.bank 177,586,080 B only. 45 GUIDs pinned: vehicles 24/24 resolved, character 2/2 donor, effects 19/19 donor -> 24/45. `events.json` names each of the 21 with status/mapped_slot/in_fmod_guids. Loop wrap is 2/3, not 3/3: vehicles#279 wrap -28.27 dBFS on the record / -39.68 on the payload against the -40 dBFS rule and its own p99 of -46.01; weapons#408 is fixed (+0.00 LU, -61.21 dBFS).
+
+Task: this is B-26's mechanism gap, not a tuning miss — effects.bank and character.bank are shared by every vehicle and no per-entity bank/override is decoded. Either (a) decode and prove a per-entity override (SDynamicAttachedEffect per entity or equivalent) and ship the 21, or (b) write the card's proof-of-absence: list each of the 21 GUIDs, the bank it lives in, and every mechanism searched with its negative result. Separately, fix or declare vehicles#279: if the payload's last-sample/first-sample step cannot be smoothed without changing the vanilla timbre, record it as a named loop compromise with the -39.68 figure and do not report 3/3 anywhere.
+
+Revert: Working/Audio/bm_bank_manifest_rc4.json, Builds/bm-RC4-audio; bm_audio.py's hook is behaviour-neutral with SOURCE_FIXES empty (DERIVED_FIELD_DIFFS 0).
+
+Updated by review 8399: 24/45 is the measured split, vehicles#279 is a real -39.68 dBFS red, and the 21 need B-26's undecoded override rather than another bake.

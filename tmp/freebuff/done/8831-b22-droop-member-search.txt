@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/b22-droop-member-search.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-08
+Start from the B-22 row in GRAB_BACKLOG.md and the section 7 and section 9 rows of tmp/freebuff/reports/suspension-unit-bridge.md, which name BMRearWheelMaxDroop 100 cm and SuspensionTravelUp 30 cm. Search Research/ and Working/ for any member, key or table field that carries a droop, bump or rebound length, and record each hit as a file path with a line number. Write the hits to Working/Prep/b22_droop_members.json with the fields query, hit_path, hit_line, quoted_text and verdict, where verdict is FOUND, NOT_FOUND or UNKNOWN. Any term with no hit stays UNKNOWN and the report must name the decode file that would settle it. Do not change Research/specs/B-22.md or the GRAB_BACKLOG.md row. Do not open any game install, GOG folder or save file.

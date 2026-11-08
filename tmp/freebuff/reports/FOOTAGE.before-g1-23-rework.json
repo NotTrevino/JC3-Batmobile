@@ -1,0 +1,1430 @@
+{
+ "answered": [
+  {
+   "array_count": null,
+   "array_points": null,
+   "decoded": true,
+   "example_field": "RBatmobileCannon.ComboFiringInterval",
+   "example_value": 0.1379999965429306,
+   "matches": 5,
+   "pattern": "(FiringInterval|FireInterval|WeaponCoolDown|ReloadTime)",
+   "quantity": "fire rate / cooldown"
+  },
+  {
+   "array_count": null,
+   "array_points": null,
+   "decoded": true,
+   "example_field": "Projectile.Damage",
+   "example_value": 75.0,
+   "matches": 6,
+   "pattern": "(\\.Damage$|DamageRadius|ChainGunDamage|UpgradedDamage|TurretShotDamage)",
+   "quantity": "damage"
+  },
+  {
+   "array_count": null,
+   "array_points": null,
+   "decoded": true,
+   "example_field": "Projectile.DamageRadius",
+   "example_value": 0.0,
+   "matches": 3,
+   "pattern": "(DamageRadius|LethalRadius|ChargeMaxDamageRadius)",
+   "quantity": "damage / lethal radius"
+  },
+  {
+   "array_count": null,
+   "array_points": null,
+   "decoded": true,
+   "example_field": "RBatmobileCannon.RiotSuppressorRange",
+   "example_value": 8000.0,
+   "matches": 3,
+   "pattern": "(LethalRange|LockOnRange|RiotSuppressorRange)",
+   "quantity": "range"
+  },
+  {
+   "array_count": null,
+   "array_points": null,
+   "decoded": true,
+   "example_field": "RBatmobileHeavyCannon.BothUpgradesProjectileArchetype",
+   "example_value": 5198,
+   "matches": 6,
+   "pattern": "(MissileClass|ProjectileArchetype)",
+   "quantity": "projectile archetype"
+  },
+  {
+   "array_count": null,
+   "array_points": null,
+   "decoded": true,
+   "example_field": "Projectile.MaxSpeed",
+   "example_value": 48000.0,
+   "matches": 5,
+   "pattern": "(Projectile\\.Speed|MaxSpeed|AccelRate|InitialAcceleration|ChainGunMaxSpinSpeed)",
+   "quantity": "speed / acceleration"
+  },
+  {
+   "array_count": null,
+   "array_points": null,
+   "decoded": true,
+   "example_field": "RBatmobileMissile.ForceExplodeProxDist",
+   "example_value": 100.0,
+   "matches": 5,
+   "pattern": "(Homing|ForceExplodeProxDist)",
+   "quantity": "homing / flight"
+  },
+  {
+   "array_count": null,
+   "array_points": null,
+   "decoded": true,
+   "example_field": "HeatBarSize",
+   "example_value": [
+    0.125,
+    0.03
+   ],
+   "matches": 4,
+   "pattern": "(HeatBarStart|HeatBarSize|HeatUpPerSecond|OverheatOffValue)",
+   "quantity": "heat bar"
+  },
+  {
+   "array_count": 4,
+   "array_points": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     0.5,
+     0.0
+    ],
+    [
+     1.5,
+     1.5
+    ],
+    [
+     2.5,
+     3.0
+    ]
+   ],
+   "decoded": true,
+   "example_field": "InaccuracyVsTime",
+   "example_value": null,
+   "matches": 4,
+   "pattern": "(InaccuracyVsTime)",
+   "quantity": "inaccuracy-vs-time"
+  },
+  {
+   "array_count": null,
+   "array_points": null,
+   "decoded": true,
+   "example_field": "RBatmobileHeavyCannon.ChargeUpTime",
+   "example_value": 2.5,
+   "matches": 2,
+   "pattern": "(ChargeUpTime|ChargingScreenShake)",
+   "quantity": "charge"
+  },
+  {
+   "array_count": null,
+   "array_points": null,
+   "decoded": true,
+   "example_field": "RBatmobileMissileLauncher.MaxTargets",
+   "example_value": 8,
+   "matches": 4,
+   "pattern": "(MaxTargets|MissileNumberParameter|NumFakeTargetReps)",
+   "quantity": "salvo / targets"
+  },
+  {
+   "array_count": 2,
+   "array_points": null,
+   "decoded": false,
+   "example_field": "MissileLaunchSockets",
+   "example_value": null,
+   "matches": 2,
+   "pattern": "(MissileSockets|MissileLaunchSockets)",
+   "quantity": "launch sockets"
+  },
+  {
+   "array_count": null,
+   "array_points": null,
+   "decoded": true,
+   "example_field": "RBatmobileEMPMissile.CivilianMissileLockOnDuration",
+   "example_value": 1.0,
+   "matches": 4,
+   "pattern": "(LockOnTime|MissileLockOnDuration|CivilianMissileLockOnDuration)",
+   "quantity": "lock time"
+  },
+  {
+   "array_count": null,
+   "array_points": null,
+   "decoded": true,
+   "example_field": "RBatmobileCannon.RiotSuppressorLockOnAngle",
+   "example_value": 7.5,
+   "matches": 3,
+   "pattern": "(LockOnAngle)",
+   "quantity": "lock angle"
+  },
+  {
+   "array_count": null,
+   "array_points": null,
+   "decoded": true,
+   "example_field": "Projectile.MomentumTransfer",
+   "example_value": 66666.671875,
+   "matches": 6,
+   "pattern": "(MomentumTransfer|RecoilImpulse|ImpactMomentum|ImpulseComponent)",
+   "quantity": "impulse / momentum"
+  },
+  {
+   "array_count": null,
+   "array_points": null,
+   "decoded": false,
+   "example_field": "BlastScreenShake",
+   "example_value": null,
+   "matches": 5,
+   "pattern": "ScreenShake$",
+   "quantity": "screen shakes"
+  },
+  {
+   "array_count": 2,
+   "array_points": null,
+   "decoded": false,
+   "example_field": "BonesToHideWhenNotPresent",
+   "example_value": null,
+   "matches": 1,
+   "pattern": "(BonesToHideWhenNotPresent)",
+   "quantity": "bones to hide"
+  },
+  {
+   "array_count": null,
+   "array_points": null,
+   "decoded": true,
+   "example_field": "RBasicProjectile.ProjectileMesh",
+   "example_value": 5471,
+   "matches": 5,
+   "pattern": "(ProjectileMesh|ProjectileTrail|RocketTrail|\\.Mesh$|\\.Trail$)",
+   "quantity": "mesh / trail"
+  },
+  {
+   "array_count": null,
+   "array_points": null,
+   "decoded": true,
+   "example_field": "RBasicProjectile.ImpactExplosion",
+   "example_value": 5041,
+   "matches": 7,
+   "pattern": "(FireFX|MuzzleFlash|ImpactExplosion|ExplosionTemplate)",
+   "quantity": "fire / impact FX"
+  },
+  {
+   "array_count": null,
+   "array_points": null,
+   "decoded": true,
+   "example_field": "RBasicProjectile.ImpactExplosionSound",
+   "example_value": 120,
+   "matches": 34,
+   "pattern": "(Sound|Event)$",
+   "quantity": "audio"
+  }
+ ],
+ "captures_dir": "C:\\Users\\User\\Videos\\Captures",
+ "checks": [
+  {
+   "detail": "5/5 present",
+   "name": "all five Arkham Knight captures are present at the recorded path",
+   "pass": true
+  },
+  {
+   "detail": [
+    "1920x1080"
+   ],
+   "name": "every capture is 1920x1080 (the recorded geometry)",
+   "pass": true
+  },
+  {
+   "detail": "189 frames / 6.4s, 202 frames / 7.2s, 267 frames / 8.9s, 1352 frames / 49.2s, 1096 frames / 40.0s",
+   "name": "the captures are nominal 60 fps but variable-framerate (why PTS is used)",
+   "pass": true
+  },
+  {
+   "detail": [
+    "inaccuracy-vs-heat",
+    "projectile lifetime"
+   ],
+   "name": "WEAPONS.json still reports exactly the two zero quantities",
+   "pass": true
+  },
+  {
+   "detail": "0.0",
+   "name": "HeatUpPerSecond still ships 0.0 across the cannon objects",
+   "pass": true
+  },
+  {
+   "detail": "[(0.0, 0.0), (0.5, 0.0), (1.5, 1.5), (2.5, 3.0)]",
+   "name": "the InaccuracyVsTime curve is decoded and matches the recorded points",
+   "pass": true
+  },
+  {
+   "detail": "0.10000000149011612",
+   "name": "InaccuracyAngle still reads 0.1 (the base spread the curve grows from)",
+   "pass": true
+  },
+  {
+   "detail": "True",
+   "name": "DAMAGE_RULES.md still names ShouldRadialDamageHit as native",
+   "pass": true
+  },
+  {
+   "detail": "[1200, 1200, 1200]",
+   "name": "Health still reads 1200 in every OFFSETS.json package",
+   "pass": true
+  },
+  {
+   "detail": "0 found",
+   "name": "no tank weapon/shell object in the grab",
+   "pass": true
+  },
+  {
+   "detail": "3 samples over 3 clips",
+   "name": "three ramp jumps are measured (one sample per jump, three for the gap)",
+   "pass": true
+  },
+  {
+   "detail": "0.012, 0.015, 0.006",
+   "name": "every air sample snapped to a frame within 0.05 s",
+   "pass": true
+  },
+  {
+   "detail": "min 1.183 max 1.251",
+   "name": "the air samples agree within 0.1 s of each other",
+   "pass": true
+  },
+  {
+   "detail": "[1.2514, 1.1832, 1.2]",
+   "name": "the Batmobile is airborne for over a second in every sample (air control has a window)",
+   "pass": true
+  },
+  {
+   "detail": "1.251 / 1.183 / 1.200 s",
+   "name": "the F-6 row quotes the samples it carries (R11)",
+   "pass": true
+  },
+  {
+   "detail": "1 air row(s)",
+   "name": "the air-control rows are MEASURED, not UNKNOWN (the corrected premise)",
+   "pass": true
+  },
+  {
+   "detail": "61",
+   "name": "MODES.json still reports 61 not-serialised fields",
+   "pass": true
+  },
+  {
+   "detail": "5",
+   "name": "MODES.json still reports 5 undocumented units",
+   "pass": true
+  },
+  {
+   "detail": "72 rows",
+   "name": "every row is RESOLVED, MEASURED, or UNKNOWN with a reason",
+   "pass": true
+  },
+  {
+   "detail": "1 measured row(s)",
+   "name": "every MEASURED row carries >= 3 samples",
+   "pass": true
+  },
+  {
+   "detail": "1 measured row(s) against 20 file-answered quantities",
+   "name": "no footage-measured row duplicates a quantity the files answer (R4)",
+   "pass": true
+  },
+  {
+   "detail": "2 resolved row(s)",
+   "name": "every file-resolved row cites a machine source, never footage (R4)",
+   "pass": true
+  },
+  {
+   "detail": "72 = 5 card quantities + 61 mode fields + 1 measured + 5 units",
+   "name": "the row count ties back to the three source records",
+   "pass": true
+  },
+  {
+   "detail": "0 candidate(s); 1 known non-AK (frame-verified), 1818 3ds Max tooltip clips",
+   "name": "no Arkham Knight footage inside the workspace (captures stay outside)",
+   "pass": true
+  },
+  {
+   "detail": "1 file(s)",
+   "name": "the known non-AK take is still accounted for",
+   "pass": true
+  },
+  {
+   "detail": "0 samples; 1 Vulcan capture(s)",
+   "name": "no measured sample comes from the Vulcan capture (muzzle out of frame)",
+   "pass": true
+  },
+  {
+   "detail": "5 native(s), unaccounted: none",
+   "name": "every native entry point in DAMAGE_RULES.md is a row or explicitly out of scope",
+   "pass": true
+  }
+ ],
+ "decision": "2026-10-26 - user corrections: `HeatUpPerSecond` 0.0 is the answer (no overheat, bloom is time-based), and the Batmobile does go airborne off ramps and ledges, so the air-control rows are reachable; captures in C:\\Users\\User\\Videos\\Captures",
+ "file_values": {
+  "chain_gun_overheat_sound": -148,
+  "heat_up_per_second": 0.0,
+  "heatbar_size": [
+   0.125,
+   0.03
+  ],
+  "heatbar_start": [
+   0.79,
+   0.68
+  ],
+  "inaccuracy_angle": 0.10000000149011612,
+  "inaccuracy_curve": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    0.5,
+    0.0
+   ],
+   [
+    1.5,
+    1.5
+   ],
+   [
+    2.5,
+    3.0
+   ]
+  ],
+  "overheat_off_value": 0.25
+ },
+ "generated_by": "grab_footage_gaps.py",
+ "natives_md": [
+  "CanBatmobileDoImpactDamage",
+  "GetDamageMod",
+  "SetArmouredMode",
+  "SetDamageLevel",
+  "ShouldRadialDamageHit"
+ ],
+ "natives_out_of_scope": {
+  "CanBatmobileDoImpactDamage": "native gate that `CalculateAndStoreImpactDamage` does not reference (DAMAGE_RULES.md \u00a73.3) - whether an impact is allowed at all is decided elsewhere, and there is no number to measure",
+  "GetDamageMod": "native encounter multiplier read by `TakeDamage` (DAMAGE_RULES.md \u00a73.1 step 3) - `ARM-2`'s hits-to-kill depends on its return value, which is not in the grab and no tank shell lands on the car in the captures: UNKNOWN",
+  "SetArmouredMode": "native setter - switches the armoured-mode flag; the number it enables is `ArmourModeDamageReduction`, already a G1-21 row",
+  "SetDamageLevel": "native setter - stores the damage level the caller computed; it carries no value of its own"
+ },
+ "reasons": {
+  "FILE-VALUE": "the machine sources answer it; no footage is used (R4)",
+  "MEASURED": "closed by footage in this record, >= 3 samples",
+  "NATIVE": "the deciding code is native to the executable, not in the grab (`DAMAGE_RULES.md` - only footage could show the behaviour)",
+  "NOT-IN-CLIP": "measurable in principle, but the event is not in the available clips",
+  "UNDOCUMENTED": "the value exists but its unit is unnamed; no clip in the set disambiguates it",
+  "VALUE-NATIVE": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+  "WRONG-SCOPE": "a declared field another card owns (camera family, T-CAM rows); listed so the `BattleMode*` prefix is complete, not measured here"
+ },
+ "rows": [
+  {
+   "card": "G1-08 / G1-09",
+   "file_side": "`(LifeSpan|Lifetime)` matches **0** fields across the 62 weapon objects - no projectile carries a lifetime; WEAPONS.md \u00a74 records the absence per projectile and claims no class default",
+   "gap": "projectile lifetime (flight time from muzzle to impact)",
+   "id": "F-1",
+   "note": "the Vulcan capture's impacts are distant and no projectile is in frame",
+   "reason": "measurable in principle, but the event is not in the available clips",
+   "reason_code": "NOT-IN-CLIP",
+   "samples": [],
+   "source": "WEAPONS.json field_index",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-08",
+   "file_side": "`(InaccuracyVsHeat)` matches **0** fields and no heat term is configured: `HeatUpPerSecond` is **0.0**, so nothing in this object drives a heat axis. The bloom is *time*-based: `InaccuracyAngle` **0.1** plus `InaccuracyVsTime` = (0 s, 0.0), (0.5 s, 0.0), (1.5 s, 1.5), (2.5 s, 3.0), linear - the curve ships values, and the reticle bloom over the capture's firing sequence is consistent with a time-driven curve (no footage number is used on it)",
+   "gap": "inaccuracy-vs-heat (spread growth as the Vulcan heats)",
+   "id": "F-2",
+   "note": "",
+   "reason": "the machine sources answer it; no footage is used (R4)",
+   "reason_code": "FILE-VALUE",
+   "samples": [],
+   "source": "WEAPONS.json field_index + InaccuracyVsTime.Points + user note",
+   "status": "RESOLVED"
+  },
+  {
+   "card": "G1-08",
+   "file_side": "**no per-second heat is configured.** `HeatUpPerSecond` = **0.0** in 1 of 1 cannon objects, with `OverheatOffValue` = 0.25 and a `ChainGunOverheatSound` reference on the same object - so an overheat path is wired, but this field adds no heat per second. Whether another input (a per-shot add in native code) exists is **not** excluded by the grab. The *observed* outcome, in play the gun fires seemingly forever, is your 2026-10-26 note; the causal path from these files is UNKNOWN.",
+   "gap": "Vulcan time-to-overheat from cold",
+   "id": "F-3",
+   "note": "",
+   "reason": "the machine sources answer it; no footage is used (R4)",
+   "reason_code": "FILE-VALUE",
+   "samples": [],
+   "source": "WEAPONS.json objects[] + user note",
+   "status": "RESOLVED"
+  },
+  {
+   "card": "G1-14",
+   "file_side": "native function - `ShouldRadialDamageHit` is **named as native** in the record, so the decision is in the executable, not in any tagged object",
+   "gap": "how a radial hit is decided (`ShouldRadialDamageHit`)",
+   "id": "F-4",
+   "note": "",
+   "reason": "the deciding code is native to the executable, not in the grab (`DAMAGE_RULES.md` - only footage could show the behaviour)",
+   "reason_code": "NATIVE",
+   "samples": [],
+   "source": "DAMAGE_RULES.md \u00a74",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-14 / ARM-2",
+   "file_side": "`RVehicleBatmobile.Health` = **[1200, 1200, 1200]** (IntProperty, 3 packages) but the grab holds **0** tank weapon or shell objects - the incoming damage lives in the enemy packages, so shells to kill is 1200 / (a number these files do not carry); no tank is hit in the captures",
+   "gap": "tank shells to destroy the Batmobile",
+   "id": "F-5",
+   "note": "",
+   "reason": "measurable in principle, but the event is not in the available clips",
+   "reason_code": "NOT-IN-CLIP",
+   "samples": [],
+   "source": "OFFSETS.json + objects.jsonl",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "**measured: 1.212 s mean** across three ramp jumps (1.251 / 1.183 / 1.200 s), 37-38 unique frames each at the captures' ~31 fps cadence. That is the *airborne window* and nothing more: the samples time the car between leaving the ramp and touching ground, so they do not show that pitch/yaw input changes the attitude - the clips' names (`air steer up/down/right`) are the only evidence for steering, and `bUsedAirControlDuringJump` is a member name, not an observation (R5). `AirControlTimeInAir`, `AirControlInterpTime` and the six `AirControl*` torque factors have **no value in the files** (MODES.json: declared, not serialised in any archetype or class default), so steering authority stays UNKNOWN from the files and from this record; what is measured is that the car is airborne for over a second per jump, and the value that runs in that window is a native default",
+   "gap": "time airborne on a ramp/ledge jump (the observable for the air-control window)",
+   "id": "F-6",
+   "note": "",
+   "reason": "closed by footage in this record, >= 3 samples",
+   "reason_code": "MEASURED",
+   "samples": [
+    {
+     "air_time_s": 1.2514,
+     "clip": "Batman\u2122_ Arkham Knight Air steer up 2-5s.mp4",
+     "end_visual_s": 4.467,
+     "first_air_frame": 97,
+     "first_air_pts": 3.2039,
+     "first_contact_frame": 133,
+     "first_contact_pts": 4.4553,
+     "frames_airborne": 37,
+     "frames_total": 189,
+     "missing": false,
+     "nominal_60fps_frames": 75.1,
+     "role": "ramp jump, pitch up",
+     "snap_error_s": 0.011699999999999378,
+     "start_visual_s": 3.2
+    },
+    {
+     "air_time_s": 1.1832,
+     "clip": "Batman\u2122_ Arkham Knight Air steer down 2-5s.mp4",
+     "end_visual_s": 4.467,
+     "first_air_frame": 96,
+     "first_air_pts": 3.2849,
+     "first_contact_frame": 133,
+     "first_contact_pts": 4.4681,
+     "frames_airborne": 38,
+     "frames_total": 202,
+     "missing": false,
+     "nominal_60fps_frames": 71.0,
+     "role": "ramp jump, pitch down",
+     "snap_error_s": 0.015099999999999891,
+     "start_visual_s": 3.3
+    },
+    {
+     "air_time_s": 1.2,
+     "clip": "Batman\u2122_ Arkham Knight Air steer right 3-6s.mp4",
+     "end_visual_s": 6.2,
+     "first_air_frame": 149,
+     "first_air_pts": 5.0056,
+     "first_contact_frame": 186,
+     "first_contact_pts": 6.2055,
+     "frames_airborne": 38,
+     "frames_total": 267,
+     "missing": false,
+     "nominal_60fps_frames": 72.0,
+     "role": "ramp jump, yaw right",
+     "snap_error_s": 0.0055670000000001,
+     "start_visual_s": 5.0
+    }
+   ],
+   "source": "captures (PTS) + WEAPONS/MODES absence",
+   "status": "MEASURED"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `Pawn` at 0x448 as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "AirControl",
+   "id": "F-7",
+   "note": "reachable: ramps/ledges launch the car (air time measured in F-6)",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `R3rdPersonCamera` at 0x3df4 as `FFreeCameraConfig`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "BattleModeCamConfig",
+   "id": "F-8",
+   "note": "camera family",
+   "reason": "a declared field another card owns (camera family, T-CAM rows); listed so the `BattleMode*` prefix is complete, not measured here",
+   "reason_code": "WRONG-SCOPE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `R3rdPersonCamera` at 0x3e9c as `FFreeCameraConfig`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "BattleModeWinchCamConfig",
+   "id": "F-9",
+   "note": "camera family",
+   "reason": "a declared field another card owns (camera family, T-CAM rows); listed so the `BattleMode*` prefix is complete, not measured here",
+   "reason_code": "WRONG-SCOPE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `R3rdPersonCamera` at 0x3f44 as `FFreeCameraConfig`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "BattleModeAbseilingCamConfig",
+   "id": "F-10",
+   "note": "camera family",
+   "reason": "a declared field another card owns (camera family, T-CAM rows); listed so the `BattleMode*` prefix is complete, not measured here",
+   "reason_code": "WRONG-SCOPE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `R3rdPersonCamera` at 0x4fd0 as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "BattleModeCamFOV",
+   "id": "F-11",
+   "note": "camera family",
+   "reason": "a declared field another card owns (camera family, T-CAM rows); listed so the `BattleMode*` prefix is complete, not measured here",
+   "reason_code": "WRONG-SCOPE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `R3rdPersonCamera` at 0x4fd4 as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "BattleModeWinchCamFOV",
+   "id": "F-12",
+   "note": "camera family",
+   "reason": "a declared field another card owns (camera family, T-CAM rows); listed so the `BattleMode*` prefix is complete, not measured here",
+   "reason_code": "WRONG-SCOPE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `R3rdPersonCamera` at 0x4fdc as `Vector3`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "BattleModeHeadOffset",
+   "id": "F-13",
+   "note": "camera family",
+   "reason": "a declared field another card owns (camera family, T-CAM rows); listed so the `BattleMode*` prefix is complete, not measured here",
+   "reason_code": "WRONG-SCOPE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `R3rdPersonCamera` at 0x4ff8 as `Vector3`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "BattleModeWinchHeadOffset",
+   "id": "F-14",
+   "note": "camera family",
+   "reason": "a declared field another card owns (camera family, T-CAM rows); listed so the `BattleMode*` prefix is complete, not measured here",
+   "reason_code": "WRONG-SCOPE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `R3rdPersonCamera` at 0x5034 as `Rotator`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "BattleModeAbseilingExtraCameraRot",
+   "id": "F-15",
+   "note": "camera family",
+   "reason": "a declared field another card owns (camera family, T-CAM rows); listed so the `BattleMode*` prefix is complete, not measured here",
+   "reason_code": "WRONG-SCOPE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleBatmobileBase` at 0x11e4 as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "StrafeCooldown",
+   "id": "F-16",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleBatmobileBase` at 0x11ec as `Vector3`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "StrafeRight",
+   "id": "F-17",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleBatmobileBase` at 0x11f8 as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "StrafeForce",
+   "id": "F-18",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleBatmobileBase` at 0x11fc as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "StrafeTorque",
+   "id": "F-19",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleBatmobileBase` at 0x1200 as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "StrafeDuration",
+   "id": "F-20",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleBatmobileBase` at 0x1204 as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "StrafeTime",
+   "id": "F-21",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleBatmobileBase` at 0x1208 as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "StrafeFwdCorrectionForce",
+   "id": "F-22",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleBatmobileBase` at 0x1494 as `AnimNodeSequence`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "TransformationAnimNode",
+   "id": "F-23",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleBatmobileBase` at 0x14e4 as `RVehicle`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "StrafeTarget",
+   "id": "F-24",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleBatmobileBase` at 0x1758 as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "ImpactRoadAssistTimer",
+   "id": "F-25",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleBatmobileBase` at 0x176c as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "ImpactRoadAssistMaxAngle",
+   "id": "F-26",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleBatmobileBase` at 0x1770 as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "ImpactRoadAssistAngVelocityTime",
+   "id": "F-27",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleBatmobileBase` at 0x1774 as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "ImpactRoadAssistSteeringFactor",
+   "id": "F-28",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleBatmobileBase` at 0x1778 as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "ImpactRoadAssistLookAheadTime",
+   "id": "F-29",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleBatmobileBase` at 0x193c as `FName`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "BattleModeTransformationAnimName",
+   "id": "F-30",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleBatmobileBase` at 0x1994 as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "BattleModeWidth",
+   "id": "F-31",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleBatmobileBase` at 0x1998 as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "BattleModeLength",
+   "id": "F-32",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleBatmobileBase` at 0x199c as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "BattleModeHeight",
+   "id": "F-33",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleBatmobileBase` at 0x1a60 as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "JumpRampUpwardForce",
+   "id": "F-34",
+   "note": "reachable: ramps/ledges launch the car (air time measured in F-6)",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleBatmobileBase` at 0x1ccc as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "ImpactShakeAbandonedVehicleFactor",
+   "id": "F-35",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleBatmobileBase` at 0x1cd0 as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "ImpactShakeDestructiblesFactor",
+   "id": "F-36",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleBatmobileBase` at 0x1cd4 as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "ImpactShakeCoolDown",
+   "id": "F-37",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleBatmobileBase` at 0x1eb4 as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "BattleModeSpeedDelta",
+   "id": "F-38",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleSimBatmobile` at 0x268 as `FInterpCurveFloat`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "TurnOnSpotSteeringSpeedCurve",
+   "id": "F-39",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleSimBatmobile` at 0x294 as `bool`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "BattleModeMoving",
+   "id": "F-40",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleSimBatmobile` at 0x2cc as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "BattleModeMaxSteering",
+   "id": "F-41",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleSimBatmobile` at 0x2d0 as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "BattleModeRearWheelTorquePower",
+   "id": "F-42",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleSimBatmobile` at 0x2dc as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "BattleModeEngineBrakingFactor",
+   "id": "F-43",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleSimBatmobile` at 0x2e4 as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "BattleModeFrontThrottle",
+   "id": "F-44",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleSimBatmobile` at 0x2e8 as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "BattleModeRearThrottle",
+   "id": "F-45",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleSimBatmobile` at 0x2f0 as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "BattleModeMaxSpeed",
+   "id": "F-46",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleSimBatmobile` at 0x2fc as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "BattleModeStopAndTurnAngleMoving",
+   "id": "F-47",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleSimBatmobile` at 0x31c as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "BattleModeTrailingSteerFactorTurnOnSpot",
+   "id": "F-48",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleSimBatmobile` at 0x354 as `AnimNodeSequence`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "TransformationAnimNode",
+   "id": "F-49",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleSimBatmobile` at 0x370 as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "BattleModeUprightTorqueFactor",
+   "id": "F-50",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleSimBatmobile` at 0x374 as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "BattleModeUprightMaxTorque",
+   "id": "F-51",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleSimBatmobile` at 0x384 as `Rotator`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "TransformationRotation",
+   "id": "F-52",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleSimBatmobile` at 0x398 as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "TransformationTurnOnSpotSpeed",
+   "id": "F-53",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleSimBatmobile` at 0x39c as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "TransformationTurnFactor",
+   "id": "F-54",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleSimBatmobile` at 0x3c4 as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "BattleModeSteerBiasRate",
+   "id": "F-55",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleSimBatmobile` at 0x4ac as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "AirControlPitchTorqueFactorMax",
+   "id": "F-56",
+   "note": "reachable: ramps/ledges launch the car (air time measured in F-6)",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleSimBatmobile` at 0x4b0 as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "AirControlYawTorqueFactorMin",
+   "id": "F-57",
+   "note": "reachable: ramps/ledges launch the car (air time measured in F-6)",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleSimBatmobile` at 0x4b4 as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "AirControlPitchTorqueFactorMin",
+   "id": "F-58",
+   "note": "reachable: ramps/ledges launch the car (air time measured in F-6)",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleSimBatmobile` at 0x4b8 as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "AirControlInterpTime",
+   "id": "F-59",
+   "note": "reachable: ramps/ledges launch the car (air time measured in F-6)",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleSimBatmobile` at 0x4bc as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "AirControlTimeInAir",
+   "id": "F-60",
+   "note": "reachable: ramps/ledges launch the car (air time measured in F-6)",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleSimBatmobile` at 0x4c0 as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "BattleModeSlopeFactor",
+   "id": "F-61",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `RVehicleSimCar` at 0x17c as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "AirControlTurnTorque",
+   "id": "F-62",
+   "note": "reachable: ramps/ledges launch the car (air time measured in F-6)",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `SVehicle` at 0x6d4 as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "StayUprightRollResistAngle",
+   "id": "F-63",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `SVehicle` at 0x6d8 as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "StayUprightPitchResistAngle",
+   "id": "F-64",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `SVehicle` at 0x6dc as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "StayUprightStiffness",
+   "id": "F-65",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `SVehicle` at 0x6e0 as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "StayUprightDamping",
+   "id": "F-66",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared on `SVehicleWheel` at 0x320 as `float`, **not serialised** in any of the four archetypes or their class defaults - no file value exists (MODES.md, 61 fields carry no value)",
+   "gap": "BattleModeSteerBias",
+   "id": "F-67",
+   "note": "",
+   "reason": "a native/engine parameter with no on-screen unit; behaviour is observable, the number is not",
+   "reason_code": "VALUE-NATIVE",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared `float` on `Pawn`, not serialised; the name does not say what the number counts, so MODES.md marks it `undocumented` and does not guess",
+   "gap": "unit of `AirControl`",
+   "id": "F-68",
+   "note": "",
+   "reason": "the value exists but its unit is unnamed; no clip in the set disambiguates it",
+   "reason_code": "UNDOCUMENTED",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared `int` on `RVehicleBatmobileBase`, serialised, value 0; the name does not say what the number counts, so MODES.md marks it `undocumented` and does not guess",
+   "gap": "unit of `BattleModeYawOffset`",
+   "id": "F-69",
+   "note": "",
+   "reason": "the value exists but its unit is unnamed; no clip in the set disambiguates it",
+   "reason_code": "UNDOCUMENTED",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared `int` on `RVehicleBatmobileBase`, serialised, value 0; the name does not say what the number counts, so MODES.md marks it `undocumented` and does not guess",
+   "gap": "unit of `ArmourModeDamageReduction`",
+   "id": "F-70",
+   "note": "",
+   "reason": "the value exists but its unit is unnamed; no clip in the set disambiguates it",
+   "reason_code": "UNDOCUMENTED",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared `float` on `RVehicleSimBatmobile`, serialised, value 10.0; the name does not say what the number counts, so MODES.md marks it `undocumented` and does not guess",
+   "gap": "unit of `BattleModeThrottleSpeed`",
+   "id": "F-71",
+   "note": "",
+   "reason": "the value exists but its unit is unnamed; no clip in the set disambiguates it",
+   "reason_code": "UNDOCUMENTED",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  },
+  {
+   "card": "G1-21",
+   "file_side": "declared `float` on `RVehicleSimBatmobile`, not serialised; the name does not say what the number counts, so MODES.md marks it `undocumented` and does not guess",
+   "gap": "unit of `BattleModeSteerBiasRate`",
+   "id": "F-72",
+   "note": "",
+   "reason": "the value exists but its unit is unnamed; no clip in the set disambiguates it",
+   "reason_code": "UNDOCUMENTED",
+   "samples": [],
+   "source": "MODES.json",
+   "status": "UNKNOWN"
+  }
+ ],
+ "schema": 2,
+ "sources": [
+  {
+   "bytes": 9768200,
+   "duration_s": 6.388,
+   "exists": true,
+   "file": "Batman\u2122_ Arkham Knight Air steer up 2-5s.mp4",
+   "frames": 189,
+   "height": 1080,
+   "kind": "air",
+   "nominal_fps": "60000/1001",
+   "path": "C:\\Users\\User\\Videos\\Captures\\Batman\u2122_ Arkham Knight Air steer up 2-5s.mp4",
+   "role": "ramp jump, pitch up",
+   "width": 1920
+  },
+  {
+   "bytes": 10542413,
+   "duration_s": 7.153,
+   "exists": true,
+   "file": "Batman\u2122_ Arkham Knight Air steer down 2-5s.mp4",
+   "frames": 202,
+   "height": 1080,
+   "kind": "air",
+   "nominal_fps": "60/1",
+   "path": "C:\\Users\\User\\Videos\\Captures\\Batman\u2122_ Arkham Knight Air steer down 2-5s.mp4",
+   "role": "ramp jump, pitch down",
+   "width": 1920
+  },
+  {
+   "bytes": 13284785,
+   "duration_s": 8.882,
+   "exists": true,
+   "file": "Batman\u2122_ Arkham Knight Air steer right 3-6s.mp4",
+   "frames": 267,
+   "height": 1080,
+   "kind": "air",
+   "nominal_fps": "60/1",
+   "path": "C:\\Users\\User\\Videos\\Captures\\Batman\u2122_ Arkham Knight Air steer right 3-6s.mp4",
+   "role": "ramp jump, yaw right",
+   "width": 1920
+  },
+  {
+   "bytes": 60384855,
+   "duration_s": 49.213,
+   "exists": true,
+   "file": "Batman\u2122_ Arkham Knight VulcanFire_10s-15s.mp4",
+   "frames": 1352,
+   "height": 1080,
+   "kind": "vulcan",
+   "nominal_fps": "60000/1001",
+   "path": "C:\\Users\\User\\Videos\\Captures\\Batman\u2122_ Arkham Knight VulcanFire_10s-15s.mp4",
+   "role": "battle mode, lock and Vulcan fire",
+   "width": 1920
+  },
+  {
+   "bytes": 49507899,
+   "duration_s": 40.042,
+   "exists": true,
+   "file": "Batman\u2122_ Arkham Knight Battlemode entry_6-20s. Movement 20-29s Boost 30-38s.mp4",
+   "frames": 1096,
+   "height": 1080,
+   "kind": "battlemode",
+   "nominal_fps": "60/1",
+   "path": "C:\\Users\\User\\Videos\\Captures\\Batman\u2122_ Arkham Knight Battlemode entry_6-20s. Movement 20-29s Boost 30-38s.mp4",
+   "role": "battle-mode entry, movement and boost",
+   "width": 1920
+  }
+ ],
+ "summary": {
+  "air_time_max_s": 1.2514,
+  "air_time_mean_s": 1.2115,
+  "air_time_min_s": 1.1832,
+  "answered_by_files": 20,
+  "answered_decoded": 17,
+  "by_reason": {
+   "FILE-VALUE": 2,
+   "MEASURED": 1,
+   "NATIVE": 1,
+   "NOT-IN-CLIP": 2,
+   "UNDOCUMENTED": 5,
+   "VALUE-NATIVE": 53,
+   "WRONG-SCOPE": 8
+  },
+  "measured": 1,
+  "measured_samples": 3,
+  "resolved_by_files": 2,
+  "rows": 72,
+  "video_files": 0,
+  "video_known_non_ak": 1,
+  "video_tooltips": 1818
+ },
+ "vulcan_note": "the lock reticle and the target are in frame and the muzzle is not, so no fire interval is claimed from the capture - `ComboFiringInterval` 0.138 s stays a file value (R4)"
+}

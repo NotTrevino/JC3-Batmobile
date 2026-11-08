@@ -1,0 +1,60 @@
+{
+  "_comment": [
+    "Machine-readable output of T1_TRANSLATION.md, for the T-5 build.",
+    "Every entry names its T-1 row, the module, the member path inside that module, the value",
+    "test-083 actually holds (read from current.json) and the translated target.",
+    "'old' values are asserted by Tools/scripts/t1_apply.py --check, so a silent build drift",
+    "fails instead of being overwritten.",
+    "kind: number = edit a member; probe = one-variable experiment, not tuning;",
+    "categorical/epe = needs .epe or part work and is NOT part of a numeric build."
+  ],
+  "source": {
+    "table": "Working/Translation/T1_TRANSLATION.md",
+    "build": "Builds/test-083/aaf",
+    "current": "Working/Translation/current.json"
+  },
+  "edits": [
+    { "row": "T-M1", "kind": "number", "module": "RigidBody", "member": "mass", "old": 4000, "new": 6000, "conf": "assumed", "why": "class: armored transport 6000 kg is the only 7 m-class vehicle" },
+    { "row": "T-M2", "kind": "number", "module": "RigidBody", "member": "unit_inertia_yaw", "old": 1.79999995, "new": 4.0, "conf": "class", "why": "armored transport 4.0; class median 2.48 at 3-6 t; the build carries the Serpente's 1.8" },
+    { "row": "T-M2", "kind": "number", "module": "RigidBody", "member": "unit_inertia_pitch", "old": 1.5, "new": 2.6, "conf": "class", "why": "same ratio as yaw" },
+    { "row": "T-M2", "kind": "number", "module": "RigidBody", "member": "unit_inertia_roll", "old": 0.5, "new": 1.2, "conf": "class", "why": "same ratio as yaw" },
+    { "row": "T-M4", "kind": "number", "module": "LandGlobal", "member": "front_wheels.mass", "old": 25, "new": 75, "conf": "class", "why": "armored transport 75; 25 kg is a supercar wheel" },
+    { "row": "T-M4", "kind": "number", "module": "LandGlobal", "member": "rear_wheels.mass", "old": 75, "new": 150, "conf": "class", "why": "twice the front, like the fleet's rear-heavy setups (old truck 200)" },
+    { "row": "T-S1", "kind": "number", "module": "Suspension", "member": "front.strength", "old": 80, "new": 45, "conf": "class", "why": "fleet median 30, band 4-80; 80 is the stiffest vehicle in the game" },
+    { "row": "T-S1", "kind": "number", "module": "Suspension", "member": "rear.strength", "old": 80, "new": 45, "conf": "class", "why": "same" },
+    { "row": "T-S2", "kind": "number", "module": "Suspension", "member": "front.compression", "old": 2.5, "new": 3.0, "conf": "class", "why": "armored transport 2.5/5, old truck 2.5/5; 3.0 for the heavier mass" },
+    { "row": "T-S2", "kind": "number", "module": "Suspension", "member": "rear.compression", "old": 2.5, "new": 3.0, "conf": "class", "why": "same" },
+    { "row": "T-R1", "kind": "number", "module": "LandGlobal", "member": "front_wheels.arcade_friction_multiplier", "old": 1, "new": 3.0, "conf": "class", "why": "fleet median 3.0 in every mass class; the understeer row" },
+    { "row": "T-R1", "kind": "number", "module": "LandGlobal", "member": "rear_wheels.arcade_friction_multiplier", "old": 1, "new": 3.0, "conf": "class", "why": "same" },
+    { "row": "T-G5", "kind": "probe", "module": "LandGlobal", "member": "wheels_friction_type", "old": 0, "new": 2, "conf": "class", "why": "heavy class uses 2 (17 of 26 above 6 t); enum semantics unknown, so this is a probe, not a tuning value" },
+    { "row": "T-ST1", "kind": "number", "module": "LandSteering", "member": "steer_angle_min_speed_deg", "old": 35, "new": 55, "conf": "derived", "why": "BmAK 60 deg at 0 km/h, 55 deg through 21-40 km/h" },
+    { "row": "T-ST1", "kind": "number", "module": "LandSteering", "member": "steer_angle_max_speed_deg", "old": 15, "new": 20, "conf": "derived", "why": "BmAK 20 deg at 72 km/h" },
+    { "row": "T-ST1", "kind": "number", "module": "LandSteering", "member": "min_speed_kmph", "old": 30, "new": 20, "conf": "derived", "why": "BmAK holds 55 deg to ~21 km/h" },
+    { "row": "T-ST1", "kind": "number", "module": "LandSteering", "member": "max_speed_kmph", "old": 296.032013, "new": 72, "conf": "derived", "why": "BmAK reaches its minimum lock at 72 km/h; the build spread it to 296" },
+    { "row": "T-ST1", "kind": "number", "module": "LandSteering", "member": "steer_curve_falloff", "old": 2, "new": 1.5, "conf": "derived", "why": "shape between the BmAK breakpoints (55 at 40, 30 at 47, 20 at 72)" },
+    { "row": "T-E1", "kind": "number", "module": "LandEngine", "member": "min_rpm", "old": 1000, "new": 800, "conf": "derived", "why": "heavy class: armored transport 500/3000/4000" },
+    { "row": "T-E1", "kind": "number", "module": "LandEngine", "member": "optimal_rpm", "old": 5000, "new": 2800, "conf": "derived", "why": "fleet fit 2120 rpm at 6 t; armored transport 3000" },
+    { "row": "T-E1", "kind": "number", "module": "LandEngine", "member": "max_rpm", "old": 7300, "new": 4500, "conf": "derived", "why": "armored transport 4000" },
+    { "row": "T-E3", "kind": "number", "module": "LandEngine", "member": "torque_factor_at_min_rpm", "old": 0.860000014, "new": 1.0, "conf": "derived", "why": "BmAK torque peaks at zero speed and falls 200->105 across the band" },
+    { "row": "T-E3", "kind": "number", "module": "LandEngine", "member": "torque_factor_at_max_rpm", "old": 0.839999974, "new": 0.65, "conf": "derived", "why": "same curve: 105/200 = 0.525 at 75.6 km/h, softened to 0.65 for JC3's flatter band" },
+    { "row": "T-E4", "kind": "number", "module": "Transmission", "member": "gears", "old": 6, "new": 5, "conf": "derived", "why": "armored transport 5 gears; shift point follows T-E1" },
+    { "row": "T-E4", "kind": "number", "module": "Transmission", "member": "upshift_rpm[0]", "old": 7000, "new": 4200, "conf": "derived", "why": "just under the new 4500 max_rpm" },
+    { "row": "T-E4", "kind": "number", "module": "Transmission", "member": "upshift_rpm[1]", "old": 7000, "new": 4200, "conf": "derived", "why": "same" },
+    { "row": "T-E4", "kind": "number", "module": "Transmission", "member": "upshift_rpm[2]", "old": 7000, "new": 4200, "conf": "derived", "why": "same" },
+    { "row": "T-E4", "kind": "number", "module": "Transmission", "member": "upshift_rpm[3]", "old": 7000, "new": 4200, "conf": "derived", "why": "same" },
+    { "row": "T-E4", "kind": "number", "module": "Transmission", "member": "upshift_rpm[4]", "old": 7000, "new": 4200, "conf": "derived", "why": "same" },
+    { "row": "T-A2", "kind": "number", "module": "LandAerodynamics", "member": "drag_coefficient", "old": 0.139340296, "new": 0.55, "conf": "class", "why": "fleet fit 0.57 at 4 t; 0.139 is a supercar Cd on a 7 m body" },
+    { "row": "T-A4", "kind": "number", "module": "LandAerodynamics", "member": "lift_coefficient", "old": -1.95000005, "new": -0.3, "conf": "class", "why": "armored transport -0.3, old truck -0.1; -1.95 is downforce art" },
+    { "row": "T-K1", "kind": "number", "module": "Brakes", "member": "front.max_brake_torque", "old": 10000, "new": 5000, "conf": "class", "why": "class median 5000 at 3-6 t; armored transport 2500" },
+    { "row": "T-K1", "kind": "number", "module": "Brakes", "member": "rear.max_brake_torque", "old": 10000, "new": 5000, "conf": "class", "why": "same" },
+    { "row": "T-AU4", "kind": "number", "module": "LandAudio", "member": "max_rpm", "old": 10000, "new": 4500, "conf": "derived", "why": "LandAudio.max_rpm disagreed with the engine's 7300 in 083; it follows T-E1's 4500 so the pitch stops climbing at the shift point" },
+    { "row": "T-DM2", "kind": "number", "module": "VehicleDamage", "member": "bullet_armor_strength", "old": 100, "new": 99, "conf": "decoded", "why": "the fleet maximum is 99 over 233 vehicles; 100 was one above every shipped value" }
+  ],
+  "not_numeric": [
+    { "row": "T-0", "kind": "decision", "value": "keep v0300 as donor", "why": "shape is already ours; donor supplies wiring" },
+    { "row": "T-ST2", "kind": "no-change", "value": "t_to_full_steer_s 0.8", "why": "BmAK 720 deg/s is outside the JC3 family (fleet min 0.5 s); withdrawn as a target" },
+    { "row": "T-L1..T-L7", "kind": "epe", "value": "22 SVehicleLight presets mapped from BmAK bones", "why": "an .epe edit, not a module value; wheel lights have no JC3 preset" },
+    { "row": "T-P2", "kind": "no-change", "value": "VehicleDamage.part_damage_types[]", "why": "G2-7 solved: the 24 types decode for all 233 vehicles and the donor's 42 parts carry theirs" },
+    { "row": "T-P3", "kind": "blocked", "value": ".physicsc shapes", "why": "G2-8 read side solved (18,865 hulls); writing a .physicsc is still unproven" }
+  ]
+}

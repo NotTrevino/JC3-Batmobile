@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/immobiliser-launch-payload-build-plan.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-08
+Read reports/T-WP4d.md (it corrects T-WP4c): the Immobiliser is RBatmobileEMPMissile; both payload pointers on Batmobile_EMP_Missile_Launcher (offsets 2492 and 2428) resolve to Batmobile_EMPMissile_Projectile_ForCars (export 5116); the impact sound and Damage 60.0 sit on a projectile archetype that no export in the four packages uses; the tracker's bInstantFire is UNKNOWN. Write the build plan for the Immobiliser: which projectile archetype the launcher must point at, what is copied into the ForCars archetype (impact sound, damage, disable effect) and from where, how the BmAK lock-and-fire behaviour maps onto bInstantFire and the AutoAim tune, and the check that proves the pointers after the edit. Name every UNKNOWN with the file that settles it and write the in-game check as a pilot-card sentence with a pass band.

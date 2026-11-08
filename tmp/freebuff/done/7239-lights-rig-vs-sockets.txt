@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/lights-rig-vs-sockets.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-05
+Builds/bm-RC2 carries the rewritten lights module (B-07: 18 entries). Using Tools/scripts/bm_lightrig.py logic and Research/BatmobileGrab/LIGHT_SOCKETS.md, check for each of the 18 built entries that its socket name exists on the built model/parts module, and that the colour and intensity equal the BmAK values in LIGHTS.md (36 rig components). List each entry with socket, built colour, BmAK colour, equal yes/no. Output Builds/bm-RC2/verify/lights_vs_bmak.md + Tools/scripts/v_lights_rc2.py --check. Read-only on the build. Rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md section 3 (test ban stays; never guess; label decoded/derived/UNKNOWN). Report at the DONE path: STATUS first, files, verbatim commands, UNKNOWNs.

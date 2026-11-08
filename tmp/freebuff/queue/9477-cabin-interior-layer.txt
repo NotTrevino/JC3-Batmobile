@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/cabin-interior-layer.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/review-audio-spike-and-route.md
+The AUX_InBatmobile cabin layer (9 events, 22 WEMs, 35 rows including RainDensity and Speed RTPC; Research/BatmobileGrab/AUDIO_FEATURES.md and Working/Translation/T12_AUDIO.md row A-11). Closest JC3 system: the speedwind sound player, which is a character-bank GUID; the gap is a per-vehicle interior mix. Build the cabin set into Builds/bm-RC5-audio3: events, loops, one-shots, plus a rule table that selects them from camera mode (cockpit versus chase) and weather. Read the camera and interior cues from reports on the camera system if present, else state UNKNOWN and propose the probe. Use the route chosen in audio-route-decision.md. Extend rc5_audio3.py --check with loudness and loop-seam gates. Done check: every one of the 35 rows is built or has a reason, and the interior mix peak stays below the engine bed peak by the BmAK ratio. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

@@ -1,0 +1,115 @@
+# B-09 — Private health module and damage types
+
+**STATUS: deferred**
+
+`GRAB_BACKLOG.md` §12 records this as `blocked: …` (§0.3's status word); this report's STATUS line
+says `deferred`, the word the report contract asks for. Same state: the card is **not** done, nothing
+was written into a build, and the two blockers are exact and evidenced below.
+
+Card (`GRAB_BACKLOG.md` §8):
+
+```
+#### B-09 · Private health module and damage types (old DMG-2/DMG-3)   S · deps: B-04, T-14 · serves: ARM-1…6
+Do: copy `lave_health_medium.vmodc` to a private path, apply `t10_damage_edits.json`, repoint
+the `.epe` `damage` reference; part damage types per T-14.
+Done: `damage_audit.py` green; `damage_predict.py --root <build>` prints the T-14 table.
+```
+
+## THE BLOCKERS (exact)
+
+**Blocker 1 — the card's second Done command does not exist in the tool.**
+`Tools/scripts/damage_predict.py` accepts `[--write] [--check] [dump]` and nothing else; there is no
+`--root`, and its data sources are hard-coded to `Builds/test-091` (`t1_current.dump`). So
+`damage_predict.py --root <build>` cannot run on any build as written:
+
+```
+$ python Tools/scripts/damage_predict.py --root Builds/bm-002
+usage: damage_predict.py [-h] [--write] [--check] [{dump}]
+damage_predict.py: error: argument cmd: invalid choice: 'Builds/bm-002' (choose from dump)
+```
+
+Making that command exist means teaching a 900-line, 52 KB analysis tool (whose `--check` compares
+three recorded artefacts) to decode an arbitrary build root — a tool change of its own, not a value
+edit. It was not invented inside this card.
+
+**Blocker 2 — `t10_damage_edits.json` is a two-module edit; the card names one module.**
+The card says "copy `lave_health_medium.vmodc` …, apply `t10_damage_edits.json`". Measured:
+
+| module | bytes | exported XML | contains |
+|---|---|---|---|
+| `editor/entities/jc_vehicles/00_shared/modules/health/lave_health_medium.vmodc` | 3,741 | 43,437 B | `VehicleDamage`: `max_health`, `bullet_armor`/`_strength`, `bullet_heavy_*`, `fire_*`, `explosion_*`, `melee_*`, `impact_*`, `part_damage_types`, `deform_scale`, `impact_damage_factor`, … — **`skew_health` 0 occurrences** |
+| `…/v0300_car_kensington_sportsmuscle/modules/default/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc` | 3,399 | — | the **only** bm-002 module containing `skew_health` (the ARM-4 rows `front_wheels_damage.skew_health` 200 → 400, `rear_wheels_damage.skew_health` 200 → 400) |
+
+So the ARM-4 half of T-14's edit list is a *per-vehicle* module edit, and the VehicleDamage half is
+the shared health module. Applying the whole list to the private health copy is impossible (the
+members are not there), and applying the other half silently would be an edit the card does not
+authorise — `Working/Damage/bm_damage.json` would have to name two modules and a `.toc` change for
+each.
+
+## What was measured instead (and is directly reusable)
+
+**1. The `.epe` `damage` reference is decoded — repointing is a recipe, not a guess.**
+
+```
+$ python -  (rbmhdr.hash_jenkins over five candidate strings, target = root CCar `damage` = 670155287)
+0x27f1c217 == 0x27f1c217? True   editor/entities/jc_vehicles/00_shared/modules/health/lave_health_medium.vmodc
+0xfa6c1bba == 0x27f1c217? False  editor/entities/jc_vehicles/00_shared/modules/health/lave_health_medium
+0x3c8cee6f == 0x27f1c217? False  jc_vehicles/00_shared/modules/health/lave_health_medium
+0x10d35110 == 0x27f1c217? False  lave_health_medium
+target = 670155287
+```
+
+So "repoint the `.epe` `damage` reference" = write `hash_jenkins("<new module path>")` into that int;
+the full path with `editor/` and the `.vmodc` suffix is the string the game hashes.
+
+**2. The health module is readable and writable by both converters.**
+`Gibbed.JustCause3.ConvertAdf --e` (original) and `Tools/Gibbed-patched/…ConvertAdf --e` both export
+it to the same 43,437 B XML (exit 0), so the value edit path exists (B-04's proven XML round trip),
+unlike the `*_vehicle_parts` modules that fail the original converter (MODLOG §98).
+
+**3. The card's first Done command is green on the current build (the baseline it must keep).**
+
+```
+$ python Tools/scripts/damage_audit.py --build Builds/bm-002
+… npc_explosion_threshold               4000    500..4000        700  inside
+smoke_threshold                       1050    200..1050        200  inside
+vulnerable_duration_s                    5      5..5             5  inside
+vulnerable_explosion_threshold         100     10..100          35  inside
+weapon_deform_threshold                  0      0..0             0  inside
+
+29 members, 5 outside the shipped range, 5 declared switches
+check ok
+EXIT=0
+```
+
+## Done criteria, as run
+
+| # | criterion | result |
+|---|---|---|
+| 1 | `damage_audit.py` green | **green on the current build** (quoted above, `29 members … check ok`, exit 0) — it is the *unmodified* bm-002, so it does not yet prove a B-09 output |
+| 2 | `damage_predict.py --root <build>` prints the T-14 table | **cannot run** — there is no `--root` option (blocker 1) |
+
+## Files changed by this session
+
+| file | change |
+|---|---|
+| `MODLOG.md` | `## B-09 start — intended change (2026-10-31)`: the intent, the four measurements and the two blockers, appended before any other change |
+| `GRAB_BACKLOG.md` §12 | the `B-09` row: `blocked: …` with both blockers and the evidence |
+| `tmp/freebuff/reports/B-09.md` | this report |
+| `tmp/b05/health.xml`, `tmp/b05/health_p.xml` | the two converter exports (scratch) |
+
+Nothing else: no `Tools/scripts/bm_damage.py` (a generator whose card cannot be verified would be a
+500-line speculation — AGENTS.md prefers the experiment), no `Working/Damage/bm_damage.json`, no
+private module copy, no `.epe` edit, no `Builds/bm-003/`, no game file touched (the shared
+`lave_health_medium.vmodc` was only read), no dropzone write, no launch, no git.
+
+## The shortest path to closing it
+
+1. Add `--root <build>` to `damage_predict.py` (decode the build's `VehicleDamage` with the same
+   `t1_current` path `damage_audit.py --build` already uses) so Done criterion 2 exists.
+2. Then `Tools/scripts/bm_damage.py` can do the rest in one pass, all pieces already proven:
+   copy the health module to `…/00_shared/modules/health/batmobile_health_medium.vmodc`, apply the
+   `VehicleDamage` rows of `t10_damage_edits.json` plus the wheels rows in the per-vehicle
+   `custom_land_global.vmodc`, repoint the `.epe` `damage` int to
+   `hash_jenkins("editor/entities/jc_vehicles/00_shared/modules/health/batmobile_health_medium.vmodc")`,
+   add the new module's `.toc` record, and stage `Builds/bm-003` from `bm-002`.

@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hud-layout-refit-coordinates.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hud-bmak-unknowns-decode.md
+BmAK HUD placement is authored for a 1024 by 720 stage (the cluster maths used 1024 by 768); the target is a 1280 by 720 viewport and also fractions of the viewport for the hook overlay. Derive the coordinates once. From Working/HUD/CLUSTER.json, Research/BatmobileGrab/HUD_SPEC.json and Research/BatmobileGrab/HUD_UNKNOWNS.md, produce Working/HUD/LAYOUT_1280x720.json: for each element (health bar, boost meter, cooldown gauge, radar, weapon slots, reticle, lock marker) give pixel x, y, width, height at 1280 by 720, the same as fractions, and the scaling rule used (letterbox, stretch, or anchor-to-edge) with the evidence for it. Add Tools/scripts/hud_layout.py --check that recomputes every row. Done when the check exits 0 and the health bar lands near the (32.8, 55.7) target of hud-radar-dash-plans-v2.md. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

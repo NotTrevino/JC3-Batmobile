@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-drive-and-eject-modules.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-battle-drive-module-build.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-eject-module-build.md
+Offline verification of the battle drive and eject modules. Rebuild Builds/hook-mod-drive and Builds/hook-mod-eject from clean copies and run their unit tests. Then cross-check the numbers: every constant used by battle_drive must trace to a row of Working/Modes/battle_handling_values.json, turn_on_spot_recipe.json or yaw_to_camera_params.json; eject levels must match eject_params.json (1300 cm up-distance, 7.649 m kick, 3.7333 s). Compute and store predicted observables the pilot will check: speed cap in km/h, turn rate on the spot, heading lag to the camera, and eject apex height per level. Output Working/Modes/verify_drive_eject.md and predictions.json. Done-check: each prediction cites the source row, and a mismatch between code and spec is listed under FAIL with its file and line. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

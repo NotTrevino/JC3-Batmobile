@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/review-G3-02j.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-04
+Review G3-02j (E:/Modding/JC3-Batmobile/Research/BatmobileGrab/EJECT_VELOCITY.md). It says the eject's velocity call is (0,0,0) on the car mesh, which is a stop, and that Batman's launch is done by TriggerSpecialMove. Decode the argument vector of the SetRBLinearVelocity call in the bytecode and say whether the three components are literals or expressions; check which object the call is made on (car mesh or Batman's); and find the TriggerSpecialMove call and the move name or enum it passes. Rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md section 3. Write the report at the DONE path with a VERDICT line (holds / minor issues / needs rework) first, then each claim you re-read, the bytes or command output you saw, and what you could not check.

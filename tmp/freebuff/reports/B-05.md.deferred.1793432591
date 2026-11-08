@@ -1,0 +1,239 @@
+# B-05 · Entity graph (`.epe`) — card report
+
+**STATUS: deferred**
+
+Date: 2026-10-31, third pass on this card. Card: `GRAB_BACKLOG.md` §8
+`#### B-05 · Entity graph (`.epe`)   L · deps: B-04, T-11, T-13, T-14, T-18` — Do: 1. `CPartProp` per
+new part; 2. weapon components + `SWeaponPoint`s per T-11; 3. `SVehicleLight` per T-18; 4. interaction
+objects per `t9_interaction.json`; 5. root `health`/`invulnerable` per T-14; 6. keep the camera
+reference. Out: `Working/Entity/bm_epe_edits.json` + the `.epe` in the build. Done: `ConvertProperty`
+round-trips the built `.epe` to identical XML; every weapon point, light and part name resolves;
+`.epe` object count = base + planned additions.
+
+All five deps are `done`. The blocker is **not** a missing dep and **not** a broken tool: the `.epe`
+round-trips byte-identically, the weapon donor now exists, and 4 of the 6 Do steps have values in a
+recorded file. It is that the card's third Done criterion is `base + planned additions`, and the
+planned additions are exactly the three sets no recorded file defines: step 1's prop count, step 2's
+`T-WP3`/`T-WP4` point objects, and step 3's 6 new lights. No partial `.epe` was written (a graph with
+a guessed addition set is worse than none and every later card stages on it).
+
+This pass also **withdraws one claim** from the previous record: the base graph's 6 `CPartProp` are
+not "34 props dropped by the §101/§102 repair". They are the deliberate 5-part shipped-mod mirror
+(MODLOG §46) plus the test-083 probe prop (§113). See "Correction to the record" below.
+
+---
+
+## Files changed
+
+| file | change |
+|---|---|
+| `MODLOG.md` | + `## B-05 start — intended change (2026-10-31, execution session, review-lane)` and + `## B-05 — deferred (2026-10-31, third pass): …` |
+| `GRAB_BACKLOG.md` | the **B-05 line only** in §12, rewritten; **status stays `blocked`** (not `done`). No other line, and no other row, was touched; line count unchanged (1399) |
+
+Nothing else. No `Tools/scripts/bm_entity.py`, no `Working/Entity/`, no `Builds/bm-005`, no build,
+no module, no game file. Scratch only under `tmp/b05c/` (`base.xml`, `rt.epe`), which holds nothing
+that is not re-derivable. Nothing under `D:\Games` or `E:\Games` was read or written, no game was
+launched, nothing was committed.
+
+---
+
+## Done criteria, with the commands and their outputs
+
+### Done 1 — "`ConvertProperty` round-trips the built `.epe` to identical XML"
+
+**Not run on a built file: there is no built `.epe` this card produced.** Run on the base the card
+would edit (`Builds/bm-009/aaf/…/v0300_car_kensington_sportsmuscle_civilian_01.epe`), the mechanism
+is proven end to end:
+
+```
+$ ls -l Builds/bm-009/aaf/editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_civilian_01.epe
+-rw-r--r-- 1 User 197121 105430 Oct 31 01:08 Builds/bm-009/aaf/editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_civilian_01.epe
+$ sha256sum "$EPE"
+1778816d26ce5505e43079a7fed57745380361f24f4394c3ecd184d40c41cf96 *Builds/bm-009/aaf/…/_civilian_01.epe
+$ ./Tools/Gibbed/Gibbed.JustCause3.ConvertProperty.exe --e "$EPE" tmp/b05c/base.xml
+export exit=0
+-rw-r--r-- 1 User 197121 426535  tmp/b05c/base.xml
+$ ./Tools/Gibbed/Gibbed.JustCause3.ConvertProperty.exe --i tmp/b05c/base.xml tmp/b05c/rt.epe
+import exit=0
+-rw-r--r-- 1 User 197121 105430  tmp/b05c/rt.epe
+$ sha256sum tmp/b05c/rt.epe "$EPE"
+1778816d26ce5505e43079a7fed57745380361f24f4394c3ecd184d40c41cf96 *tmp/b05c/rt.epe
+1778816d26ce5505e43079a7fed57745380361f24f4394c3ecd184d40c41cf96 *Builds/bm-009/aaf/…/_civilian_01.epe
+```
+
+So Done 1 is achievable the moment a graph exists; it is not what blocks the card. (Base choice:
+`bm-009`, not `bm-002`, because bm-009 already repoints the root `damage` hash at B-09's private
+health module — starting from bm-002 would silently undo B-09. Verified: root `damage` =
+`1928726201` in the base.)
+
+### Done 2 — "every weapon point, light and part name resolves (script check)"
+
+**Cannot pass, because there is nothing to resolve.** The base graph carries **0** weapon objects, so
+step 2's outputs do not exist, and no script can check them. Measured on the base:
+
+```
+objects 416   classes 44
+  CInteractionGraphParentIsUpRightCondition 41
+  CInteractionGraphEntry 29
+  SAttachedEffect 27
+  CInteractionGraphNodeAboveWaterCondition 27
+  CInteractionGraphExit 26
+  ...
+  SVehicleLight 22
+CPartProp:
+    sportsmuscle_body part_index 0 members 8
+    sportsmuscle_wheel_r_r part_index 12 members 8
+    sportsmuscle_wheel_r_l part_index 11 members 8
+    sportsmuscle_wheel_f_r part_index 27 members 8
+    sportsmuscle_wheel_f_l part_index 26 members 8
+    sportsmuscle_taillight_r_l part_index 8 members 8
+SVehicleLight objects 22   (each: slots 29, named 18, positional 11)
+CCar 1 health 100 invuln 0 damage 1928726201
+weapon classes: 0 0        # any class matching *Weapon*, and SWeaponPoint
+bat_base.ctune 1   car_base.ctune 0
+```
+
+Steps that *can* be resolved today: the 22 shipped light names (they exist, hash-verified by the
+module side), the 6 prop names, and all 59 part names in B-04's module. What is missing is exactly
+the object set steps 2 and 3 would add.
+
+### Done 3 — "`.epe` object count = base + planned additions"
+
+**The right-hand side is undefined**, which is the card's real blocker:
+
+* base = **416** objects (measured above, and independently by `jc3wiring.parse_epe`).
+* step 1 adds **19 props** (card literal) or **0** (spec L-3's narrowed reading) — undecided, see B1.
+* step 2 adds **2 components + 1 point each** from the tank template, but `T-WP3` asks for **4 more
+  points** and `T-WP4` for **1 more point plus a `CForcePulse` copy**, and no file says what objects
+  those are — see B2.
+* step 3 adds **6 lights** — as clones of a parent nobody names — see B3.
+* step 4 adds **0** objects (it edits 64 existing matrices) — see B4 for the 13 it cannot edit.
+* steps 5/6 add **0**.
+
+So the total is somewhere between 0 and 30+ objects depending on three decisions, and the card's own
+Done criterion is the arithmetic of those decisions.
+
+---
+
+## Blockers (each with the measurement behind it)
+
+### B1 — step 1: 19 `CPartProp` or 0, and no file decides
+
+The previous §12 row said the base's 6 props are "the §101/§102 `.epe` repair" dropping 34 of the
+donor's 40. That is **wrong** and is withdrawn:
+
+* MODLOG §46 (test-029): "custom 5-part `.epe`, DaBaby mirror. Kept body idx 0 + wheels 26/27/11/12"
+  → 105,302 B, 5 props, *by design*.
+* MODLOG §113 (test-083, LGT-1 probe): one `CPartProp` **appended** on purpose
+  (`sportsmuscle_taillight_r_l`, `part_index` 8, +128 B) → 105,430 B, 6 props. That is the file on
+  disk (`105430` B, verified above).
+
+Whether a part needs a prop at all is undecided by the code and the data. The only census available
+(the R10 wiring cache, 295 graphs, read-only) splits both ways:
+
+```
+graphs 295
+graphs with 0 CPartProp: 12
+graphs with >=1 CPartProp: 283
+prop-count distribution (top): [(56,17),(48,15),(52,15),(0,12),(44,9),(42,9),(40,9),(60,8),(24,8),(65,7)]
+  v0201_car_capstone_mediumtank_military_01.ee.xml  346 objects  42 props  max part_index 41
+  v0300_car_kensington_sportsmuscle_civilian_01.ee.xml 450 objects 40 props  max part_index 40
+  v0300_car_kensington_sportsmuscle_signature_preorder.ee.xml 464 objects 41 props
+max: v4603_plane_urga_cargotransport_military_cargo_tank.ee.xml 861 objects 161 props
+```
+
+283/295 carry props (including the donor and the tank T-11 names), 12 do not (small weapon entities
+such as `w618_sportsmuscle_missile`, 10 objects). The shipped working mod ships the 5-part graph. Both
+readings are measured; neither is *decided*. Adding 19 props is the card's literal text; adding none
+is the spec's narrowing (L-3, "no measured consumer"). The choice changes Done 3 by 19.
+
+### B2 — step 2: the tank template exists, but `T-WP3`/`T-WP4` name no objects
+
+The previous blocker ("no schema, no donor") is **lifted** — the tank's own graph is in the R10 cache:
+
+```
+v0201_car_capstone_mediumtank_military_01.ee.xml: 346 objects
+  CBulletWeaponBase w603_mediumtank_mgun  weapon_id 603  weapon_type 2  67 members
+      children: SEffects / SWeaponPoint fire_position_0 type 2
+        world 1,0,0,0, 0,1,0,0, 0,0,1,0, 0.247,0.485,-2.018,1
+  CBulletWeaponBase w602_mediumtank_canon weapon_id 602  weapon_type 2  67 members
+      children: SEffects / SWeaponPoint fire_position_0 type 2 / CLightWeaponComponent warning_light
+        world 1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0.3739014,-5.817383,1
+  SWeaponPoint total: 2
+base root: mounted_weapon = 00000000, id:00568A74 = 00000000, id:851CAABE = 00000000
+```
+
+That is a correct-provenance donor for `T-WP1` (`main_weapon` → the cannon) and `T-WP2`
+(`id:00568A74` → the mgun), and the root's three slot members already exist as null object ids, so
+wiring them is a value write, not a member add. (The APC template must **not** be used: its component
+carries w206-specific values — `models/…/w206_…_body.model_xml`,
+`…/w206_…_grip_point.wtune`, `autoaim_assault_rifle.wtune`, `50CalBulletImpact`, strings `Heavy` /
+`MountedVehicle` — cloning it would put an M2 on the Batmobile.)
+
+What is missing is `T-WP3` ("4 `SWeaponPoint`s at the donor's own fire points, parented to the pod
+parts") and `T-WP4` ("`SWeaponPoint` at `BattleModeSpotLight` with the -20 deg pitch + a `CForcePulse`
+copy"). T-11's `structural` rows are prose with no member values (verified: `t7_weapons_edits.json`
+`structural[]` = 6 rows of `{row, kind, what, note}`); no component, object name, `type`, parent or
+`world` for those 5 points is recorded anywhere, and neither template shows more than one point per
+component. Writing them would be object-structure invention (R4).
+
+### B3 — step 3: 6 new lights with 11 undecoded slots each, no clone parent named
+
+Every one of the 22 shipped `SVehicleLight` objects has **29 slots: 18 named, 11 positional** `id:*`
+(measured; e.g. `Front_Left_Point` named = `diffuse enabled falloff_start is_shadow_caster
+min_luminosity multiplier name name_hash near_cap preset_id radius spot_angle spot_inner_angle
+volume_intensity volumetric_mode tags _class _object_id`). T-18's 6 `custom` rows target
+`sportsmuscle_wheel_f_l_arch`, `sportsmuscle_wheel_f_r_arch`, `headlight_battle_left`,
+`headlight_battle_right`, `sportsmuscle_wheel_f_l_arch_battle`, `boot_light`, all at `preset_id` 0,
+and each carries its values (`diffuse`, `range`, `angle`) but **no clone parent**. The 11 positional
+slots can only be inherited from a sibling a row names; naming them is a T-18 provenance decision,
+not a B-05 measurement.
+
+### B4 — step 4: 13 of 77 placed rows have no matrix member to write
+
+`t9_interaction.json`: 85 rows, dispositions `placed` 77 / `dropped (D-9)` 6 / `socket` 1 /
+`unknown` 1. Of the 77 placed rows, **64** name objects that carry a `mat` member
+(`CInteractionGraphEntry` 25, `CInteractionGraphExit` 24, `CInteractionGraphPointNode` 8,
+`CInteractionTrigger` 7). The other 13 name classes with **no matrix member at all**: 12
+`CInteractionGraphTransition` (a transition is a link between states) and 1 `CInteraction`. The
+earlier "84/84 names exist in the graph" census was true but not sufficient: name existence is not a
+writable member, so "interaction objects moved per `t9_interaction.json`" can only be honoured for 64
+rows plus the one socket row already correct.
+
+### Steps 5 and 6 — ready, measured, no work
+
+* Root: `health` 100, `invulnerable` 0 (T-14's decision B keeps both; the 36,000 is B-09's module),
+  `damage` = `1928726201` (B-09's private module hash). Step 5 is an assertion.
+* Camera: `bat_base.ctune` ×1, `car_base.ctune` ×0 (test-091's CAM-1 reference is already in the base
+  and only has to survive). Step 6 is an assertion.
+
+---
+
+## Why not ship the subset that is ready
+
+The buildable subset (64 interaction matrices + 22 light member sets + steps 5/6 assertions) passes
+Done 1 by construction and changes the graph the whole B phase stages on. B-06 points weapon
+components at this graph, B-07 rewrites the lights module against it, V-03 checks the wiring, and
+`Q-1` tests it. A graph with interactions moved but no weapon components — or with 6 of 18 light
+targets cloned from siblings nobody named — would be exactly the half-built entity the previous three
+passes refused, and it would carry no check that could fail on the parts that are guessed.
+
+## What the next session needs (no new game data required)
+
+1. Record the step-1 decision (19 props, or 0 and a note that props are not a load requirement) as a
+   §11 decision or a T-row. That fixes Done 3's left-hand side.
+2. Name the clone parent for each of the 6 custom lights (one field per row in the edit spec).
+3. Decide which component owns `T-WP3`'s 4 pod points and `T-WP4`'s point (a pod weapon component, or
+   children of the cannon), or narrow T-11's rows to the two the tank template supports.
+
+After those three, `bm_entity.py` is a mechanical write: 64 matrices + 22 light member sets + 2
+components + 4 root pointers, `ConvertProperty --i`, `eetoc patch`, three Done checks and the tamper
+tests the other B cards ran. The tooling precedents all exist (`bmak_cambuild.py` for the
+pack-and-`.toc` shape, `bm_health.py` for the staged tree, `jc3wiring.parse_epe` for the reader).
+
+## Checks not run (stated as limitations, not as passes)
+
+* Done 2 and Done 3 — no built `.epe` (see above). They are **not** reported as passing.
+* `jc3parts.py check`, `aafdiff`, budget — not applicable without a build.
+* Tamper test on a `--check` mode — there is no `bm_entity.py` and no `--check` to tamper; nothing was
+  built to tamper with.

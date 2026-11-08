@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/glass-cb1-decode-and-probe-build.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-live-vehicle-readout.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-texture-rows.md
+Settle the canopy glass parameters one variable at a time. Read tmp/freebuff/reports/windscreen-and-glass-plan.md (sections 0 and 7), app-glass-layers.md, the Window block of Working/Appearance/build, and the 7982 hook readout report for any way to read material members. Decode the cb1 member order (SpecGloss, SpecFresnel, DiffuseRougness, PropertyMap t3) from the Research/JC3Grab shader notes, then list which BmAK glass scalar maps to which member, labelling the unproven ones. Operator fact: the interior is visible through the canopy and the screens glow. Build three probe variants of the Window block in Builds/bm-RC5-glassprobe/a, /b and /c, each differing from the baseline in exactly one member (tint opacity, then SpecFresnel, then alpha multiplier), with script Tools/scripts/rc5_glassprobe.py (--write, --check). Done check: each variant differs from the baseline in only the named member, proven by a binary diff printed in the report, and the decode table is complete. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

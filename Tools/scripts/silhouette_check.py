@@ -5,12 +5,14 @@ Why this exists: BUD-1's oracle is "decimation holes drop below 0.3% of the silh
 SAME orthographic frame - so the number is a geometry fact, not a screenshot judgement.
 
     python Tools/scripts/silhouette_check.py Working/Appearance/build/body_lod1.rbm
+    python Tools/scripts/silhouette_check.py --manifest Working/Appearance/build_parts/parts_manifest.json
 
 Source: the NON-WHEEL body of Batmobile_V2.pskx - the same bone classification bat_assemble uses to
 split body from wheels (classify -> round parts -> the N largest anchor the wheels -> other round
 parts inside a wheel join it), through the same transform (to_jc3_rot, scale 0.01). The face count
-is asserted against the 214,737 body faces MODLOG #106 measured, so the split cannot silently
-diverge from the build's. The frame is FIXED (source bbox + 2% margin, side view), so two builds
+is asserted against the 215,893 body faces the current build classification measures, so the split
+cannot silently diverge from the build's. With --manifest every B-02 part is added back at its
+pivot before rasterizing. The frame is FIXED (source bbox + 2% margin, side view), so two builds
 measured against the same source are directly comparable pixel for pixel.
 
 Reports: source/ours silhouette pixels, coverage, holes (source has, we don't) and extra (we have,
@@ -139,25 +141,54 @@ def boundary_share(tris):
 def main():
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("rbm", help="the decimated body lod1 to measure")
+    ap.add_argument("rbm", nargs="?", help="the decimated body lod1 to measure")
+    ap.add_argument("--manifest", help="parts_manifest.json: measure body + every B-02 part at its pivot")
     ap.add_argument("--size", type=int, default=2400, help="frame width in px")
     ap.add_argument("--save", metavar="DIR", help="write source/ours/hole masks as PNGs")
     a = ap.parse_args()
+    if not a.rbm and not a.manifest:
+        ap.error("give an RBM or --manifest")
 
     Pp, W, F, _mats = P.read_pskx(PSKX)
     src = body_tris(Pp, W, F)
     if len(src) != BODY_FACES:
         raise SystemExit(f"body split gives {len(src):,} faces, the build's classification gives "
                          f"{BODY_FACES:,} - the split has drifted from the build's")
-    # the build translates the car to the vanilla ground/centre (stations.json, written by
-    # bat_assemble.main()); the RBM vertices carry it, so the source must too or every edge of
-    # every plate shows a shift-induced gap and the tear count means nothing.
-    stations = os.path.join(os.path.dirname(os.path.abspath(a.rbm)), "stations.json")
-    if os.path.exists(stations):
-        off = np.asarray(json.load(open(stations, encoding="utf-8"))["offset"], np.float64)
+    if a.manifest:
+        man = json.load(open(a.manifest, encoding="utf-8"))
+        bad = [k for k, v in (man.get("checks") or {}).items() if not v]
+        if bad:
+            raise SystemExit("parts manifest checks fail: " + ", ".join(bad))
+        base = os.path.dirname(os.path.abspath(a.manifest))
+        entries = {e["name"]: e for e in man["entries"]}
+        missing = [n for n in man["silhouette_parts"] if n not in entries]
+        if missing:
+            raise SystemExit("manifest has no entry for " + ", ".join(missing))
+        face_sum = sum(entries[n]["faces_lod0"] for n in man["silhouette_parts"])
+        if face_sum != BODY_FACES:
+            raise SystemExit(f"manifest body+parts faces {face_sum:,} != source body {BODY_FACES:,}")
+        off = np.asarray(man["offset"], np.float64)
         src = src + off
-        print(f"applied the build's own offset {off.tolist()} to the source")
-    ours = np.concatenate([PR.block_triangles(b) for b in R.decode(open(a.rbm, "rb").read()).blocks])
+        print(f"applied the manifest offset {off.tolist()} to the source")
+        pieces = []
+        for n in man["silhouette_parts"]:
+            e = entries[n]
+            raw = open(os.path.join(base, e["lod_files"][0]), "rb").read()
+            tri = np.concatenate([PR.block_triangles(b) for b in R.decode(raw).blocks])
+            pieces.append(tri + np.asarray(e["pivot_m"], np.float64))
+        ours = np.concatenate(pieces)
+        print(f"reassembled {len(man['silhouette_parts'])} body/part LOD1 meshes; "
+              f"{sum(entries[n]['faces_lod0'] for n in man['silhouette_parts']):,} source faces")
+    else:
+        # the build translates the car to the vanilla ground/centre (stations.json, written by
+        # bat_assemble.main()); the RBM vertices carry it, so the source must too or every edge of
+        # every plate shows a shift-induced gap and the tear count means nothing.
+        stations = os.path.join(os.path.dirname(os.path.abspath(a.rbm)), "stations.json")
+        if os.path.exists(stations):
+            off = np.asarray(json.load(open(stations, encoding="utf-8"))["offset"], np.float64)
+            src = src + off
+            print(f"applied the build's own offset {off.tolist()} to the source")
+        ours = np.concatenate([PR.block_triangles(b) for b in R.decode(open(a.rbm, "rb").read()).blocks])
     ours = ours[np.linalg.norm(np.cross(ours[:, 1] - ours[:, 0], ours[:, 2] - ours[:, 0]), axis=1) > 1e-9]
 
     pts = src.reshape(-1, 3)[:, [2, 1]]
@@ -178,6 +209,14 @@ def main():
     print(f"of which interior tears (>=3 px inside the outline)  {tears.sum():,} px = "
           f"{100.0 * tears.sum() / S.sum():.3f}%")
     print(f"extra        {extra.sum():,} px = {100.0 * extra.sum() / S.sum():.3f}% of the source silhouette")
+    # BUD-1's oracle is quoted on GROSS holes ("decimation holes drop below 0.3% of the
+    # silhouette"); `coverage` above is NET, i.e. holes netted against the extra pixels. Print
+    # both so a reader cannot mistake one for the other. Report only: B-02's Done is coverage.
+    cov = O.sum() / S.sum()
+    gross = 100.0 * holes.sum() / S.sum()
+    print(f"BUD-1 oracle   gross holes {gross:.3f}% of the source silhouette vs 0.3% = "
+          f"{'OVER' if gross > 0.3 else 'under'}; coverage {cov:.4f} above is NET "
+          f"(holes netted against {100.0 * extra.sum() / S.sum():.3f}% extra)")
     print(f"boundary edges   source {100 * boundary_share(src):.0f}%   ours {100 * boundary_share(ours):.0f}%")
     if a.save:
         os.makedirs(a.save, exist_ok=True)

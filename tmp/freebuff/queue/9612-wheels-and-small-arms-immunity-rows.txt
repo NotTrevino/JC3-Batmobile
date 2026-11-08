@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/wheels-and-small-arms-immunity-rows.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/attacker-set-and-hits-to-kill.md
+Close the immunity rows. Wheels: front_wheels_damage and rear_wheels_damage skew_health is 400 at its ceiling, labelled not proven unbreakable. Small arms: option A (the invulnerable int32 at epe+1167) is unproven on the vehicle root, option B uses channel armour. From Working/Translation/T10_DAMAGE.md sections 1, 2 and 7, Research/JC3Grab/DAMAGE_MECHANISMS.md and the attacker table of d08, decide which option carries each immunity on the RC5 tree, with member paths, old and new values and the hits-to-kill it implies. If tyres can still burst, find the nearest member that stops it (tyre health, puncture speed, wheel detach), or write a capability card for the hook. Output Tools/scripts/immunity_rows.py (--write, --check), Working/Damage/immunity_rows.json and a report with a prediction for each row that the damage test cards will read. Do not edit the damage tree. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

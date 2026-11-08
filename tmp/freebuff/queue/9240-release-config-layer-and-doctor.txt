@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/release-config-layer-and-doctor.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/release-path-and-asset-inventory.md
+Build the path layer into a new private tree Builds/release-0001 (never into the game folder). Write jc3bm_paths.py there: it reads a user config file (INI, template jc3bm.example.ini with blank values and comments) and environment variables for the Arkham Knight folder, the Just Cause 3 folder, a tools folder, and a work folder; it never has a default pointing at a real drive path. Add doctor.py that checks each configured folder exists, lists the key files the pipeline reads (names from Working/Release/PATHS.csv), prints OK or a one-line fix per missing item, and never writes outside the work folder. Cite the Steam and GOG library discovery as optional hints only if you can show the source, otherwise leave it out. Test in an empty temp work folder with no config: doctor must exit non-zero with clear messages and no traceback. Done when both outputs are pasted, and a grep over Builds/release-0001 for E:/ and D:/ returns zero. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

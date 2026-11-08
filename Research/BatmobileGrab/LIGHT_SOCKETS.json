@@ -1,0 +1,2777 @@
+{
+ "task": "re-check LIGHTS.md's socket -> bone step against the cooked skeletal mesh",
+ "inputs": {
+  "lights": "Research/BatmobileGrab/LIGHTS.json",
+  "skins": "Research/BatmobileGrab/SKINS.json",
+  "bones": "Research/BatmobileGrab/BONES.json",
+  "bones_count": 180
+ },
+ "mode": {
+  "chosen": "raw",
+  "median_raw_cm": 0.0,
+  "median_world_cm": 312.4,
+  "tolerance_cm": 1.0,
+  "rule": "the interpretation with the smaller median error is the one LIGHTS recorded; both medians are printed"
+ },
+ "by_package": {
+  "Playable_BatmobileFunhouse_SF": {
+   "entries": 28,
+   "ok": 0,
+   "missing": 2,
+   "bone_mismatch": 0,
+   "bone_not_in_rig": 0,
+   "over_tol": 0,
+   "no_table": 26
+  },
+  "Playable_BatmobileJoker_SF": {
+   "entries": 17,
+   "ok": 0,
+   "missing": 0,
+   "bone_mismatch": 0,
+   "bone_not_in_rig": 0,
+   "over_tol": 0,
+   "no_table": 17
+  },
+  "Playable_BatmobileMK2_SF": {
+   "entries": 28,
+   "ok": 0,
+   "missing": 2,
+   "bone_mismatch": 0,
+   "bone_not_in_rig": 0,
+   "over_tol": 0,
+   "no_table": 26
+  },
+  "Playable_Batmobile_SF": {
+   "entries": 28,
+   "ok": 26,
+   "missing": 2,
+   "bone_mismatch": 0,
+   "bone_not_in_rig": 0,
+   "over_tol": 0,
+   "no_table": 0
+  }
+ },
+ "missing": [
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "owner": "Batmobile_Funhouse_Archetypes.Vehicle",
+   "socket": "HeadLight1c",
+   "light_bone": null,
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": true,
+   "recorded": null,
+   "table": null,
+   "status": "socket missing from the cooked mesh"
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "owner": "Batmobile_Funhouse_Archetypes.Vehicle",
+   "socket": "HeadLight2c",
+   "light_bone": null,
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": true,
+   "recorded": null,
+   "table": null,
+   "status": "socket missing from the cooked mesh"
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "owner": "Batmobile_Mk2_Archetypes.Vehicle",
+   "socket": "HeadLight1c",
+   "light_bone": null,
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": true,
+   "recorded": null,
+   "table": null,
+   "status": "socket missing from the cooked mesh"
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "owner": "Batmobile_Mk2_Archetypes.Vehicle",
+   "socket": "HeadLight2c",
+   "light_bone": null,
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": true,
+   "recorded": null,
+   "table": null,
+   "status": "socket missing from the cooked mesh"
+  },
+  {
+   "package": "Playable_Batmobile_SF",
+   "owner": "Batmobile_Archetypes.Vehicle",
+   "socket": "HeadLight1c",
+   "light_bone": null,
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": true,
+   "recorded": null,
+   "table": null,
+   "status": "socket missing from the cooked mesh"
+  },
+  {
+   "package": "Playable_Batmobile_SF",
+   "owner": "Batmobile_Archetypes.Vehicle",
+   "socket": "HeadLight2c",
+   "light_bone": null,
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": true,
+   "recorded": null,
+   "table": null,
+   "status": "socket missing from the cooked mesh"
+  }
+ ],
+ "bone_mismatch": [],
+ "bone_not_in_rig": [],
+ "over_tolerance": [],
+ "no_table": [
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "socket": "HeadLight1",
+   "type": "VEHLT_HeadLight",
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "socket": "HeadLight2",
+   "type": "VEHLT_HeadLight",
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "socket": "ChainGunMuzzle",
+   "type": null,
+   "light_bone": "Batmobile_Rig_Weapons_Machine_Gun_01",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "socket": "HeadLight1",
+   "type": null,
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "socket": "HeadLight2",
+   "type": null,
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "socket": "LWheelLight",
+   "type": "VEHLT_HeadLight",
+   "light_bone": "Wheel_Frnt_Left_Disc",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "socket": "RWheelLight",
+   "type": "VEHLT_HeadLight",
+   "light_bone": "Wheel_Frnt_Right_Disc",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "socket": "BrakeLightL",
+   "type": "VEHLT_TailLight",
+   "light_bone": "SUSP2_Wheel_Rear_Left",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "socket": "BrakeLightR",
+   "type": "VEHLT_TailLight",
+   "light_bone": "SUSP2_Wheel_Rear_Right",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "socket": "BattleModeSpotLight",
+   "type": "VEHLT_BattleModeLight",
+   "light_bone": "Batmobile_Rig_Weapons_Drone_Decoder",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "socket": "HeadLight1",
+   "type": "VEHLT_BattleModeLight",
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "socket": "HeadLight2",
+   "type": "VEHLT_BattleModeLight",
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "socket": "LWheelLight",
+   "type": "VEHLT_BattleModeLight",
+   "light_bone": "Wheel_Frnt_Left_Disc",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "socket": "BattleModeSpotLight",
+   "type": "VEHLT_ForensicsLight",
+   "light_bone": "Batmobile_Rig_Weapons_Drone_Decoder",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "socket": "HeadLight1",
+   "type": "VEHLT_ForensicsLight",
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "socket": "HeadLight2",
+   "type": "VEHLT_ForensicsLight",
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "socket": "Dashboard_Light",
+   "type": "VEHLT_Interior",
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "socket": "HeadLight1a",
+   "type": "VEHLT_HeadLight",
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "socket": "HeadLight2a",
+   "type": "VEHLT_HeadLight",
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "socket": "HeadLight1b",
+   "type": "VEHLT_HeadLight",
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "socket": "HeadLight2b",
+   "type": "VEHLT_HeadLight",
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "socket": "RWheelLight_top",
+   "type": "VEHLT_HeadLight",
+   "light_bone": "Wheel_Frnt_Right_Disc",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "socket": "RWheelLight_bottom",
+   "type": "VEHLT_HeadLight",
+   "light_bone": "Wheel_Frnt_Right_Disc",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "socket": "LWheelLight_top",
+   "type": "VEHLT_HeadLight",
+   "light_bone": "Wheel_Frnt_Left_Disc",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "socket": "LWheelLight_bottom",
+   "type": "VEHLT_HeadLight",
+   "light_bone": "Wheel_Frnt_Left_Disc",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "socket": "BootLight",
+   "type": "VEHLT_BootLight",
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "socket": "HeadLight1",
+   "type": "VEHLT_HeadLight",
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "socket": "HeadLight2",
+   "type": "VEHLT_HeadLight",
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "socket": "ChainGunMuzzle",
+   "type": null,
+   "light_bone": "Batmobile_Rig_Weapons_Machine_Gun_01",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "socket": "HeadLight1",
+   "type": null,
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "socket": "HeadLight2",
+   "type": null,
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "socket": "LWheelLight",
+   "type": "VEHLT_HeadLight",
+   "light_bone": "Wheel_Frnt_Left_Disc",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "socket": "RWheelLight",
+   "type": "VEHLT_HeadLight",
+   "light_bone": "Wheel_Frnt_Right_Disc",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "socket": "BrakeLightL",
+   "type": "VEHLT_TailLight",
+   "light_bone": "SUSP2_Wheel_Rear_Left",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "socket": "BrakeLightR",
+   "type": "VEHLT_TailLight",
+   "light_bone": "SUSP2_Wheel_Rear_Right",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "socket": "BattleModeSpotLight",
+   "type": "VEHLT_BattleModeLight",
+   "light_bone": "Batmobile_Rig_Weapons_Drone_Decoder",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "socket": "HeadLight1",
+   "type": "VEHLT_BattleModeLight",
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "socket": "HeadLight2",
+   "type": "VEHLT_BattleModeLight",
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "socket": "LWheelLight",
+   "type": "VEHLT_BattleModeLight",
+   "light_bone": "Wheel_Frnt_Left_Disc",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "socket": "BattleModeSpotLight",
+   "type": "VEHLT_ForensicsLight",
+   "light_bone": "Batmobile_Rig_Weapons_Drone_Decoder",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "socket": "HeadLight1",
+   "type": "VEHLT_ForensicsLight",
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "socket": "HeadLight2",
+   "type": "VEHLT_ForensicsLight",
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "socket": "Dashboard",
+   "type": "VEHLT_Interior",
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "socket": "HeadLight1",
+   "type": "VEHLT_HeadLight",
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "socket": "HeadLight2",
+   "type": "VEHLT_HeadLight",
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "socket": "ChainGunMuzzle",
+   "type": null,
+   "light_bone": "Batmobile_Rig_Weapons_Machine_Gun_01",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "socket": "HeadLight1",
+   "type": null,
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "socket": "HeadLight2",
+   "type": null,
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "socket": "LWheelLight",
+   "type": "VEHLT_HeadLight",
+   "light_bone": "Wheel_Frnt_Left_Disc",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "socket": "RWheelLight",
+   "type": "VEHLT_HeadLight",
+   "light_bone": "Wheel_Frnt_Right_Disc",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "socket": "BrakeLightL",
+   "type": "VEHLT_TailLight",
+   "light_bone": "SUSP2_Wheel_Rear_Left",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "socket": "BrakeLightR",
+   "type": "VEHLT_TailLight",
+   "light_bone": "SUSP2_Wheel_Rear_Right",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "socket": "BattleModeSpotLight",
+   "type": "VEHLT_BattleModeLight",
+   "light_bone": "Batmobile_Rig_Weapons_Drone_Decoder",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "socket": "HeadLight1",
+   "type": "VEHLT_BattleModeLight",
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "socket": "HeadLight2",
+   "type": "VEHLT_BattleModeLight",
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "socket": "LWheelLight",
+   "type": "VEHLT_BattleModeLight",
+   "light_bone": "Wheel_Frnt_Left_Disc",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "socket": "BattleModeSpotLight",
+   "type": "VEHLT_ForensicsLight",
+   "light_bone": "Batmobile_Rig_Weapons_Drone_Decoder",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "socket": "HeadLight1",
+   "type": "VEHLT_ForensicsLight",
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "socket": "HeadLight2",
+   "type": "VEHLT_ForensicsLight",
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "socket": "Dashboard_Light",
+   "type": "VEHLT_Interior",
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "socket": "HeadLight1a",
+   "type": "VEHLT_HeadLight",
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "socket": "HeadLight2a",
+   "type": "VEHLT_HeadLight",
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "socket": "HeadLight1b",
+   "type": "VEHLT_HeadLight",
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "socket": "HeadLight2b",
+   "type": "VEHLT_HeadLight",
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "socket": "RWheelLight_top",
+   "type": "VEHLT_HeadLight",
+   "light_bone": "Wheel_Frnt_Right_Disc",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "socket": "RWheelLight_bottom",
+   "type": "VEHLT_HeadLight",
+   "light_bone": "Wheel_Frnt_Right_Disc",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "socket": "LWheelLight_top",
+   "type": "VEHLT_HeadLight",
+   "light_bone": "Wheel_Frnt_Left_Disc",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "socket": "LWheelLight_bottom",
+   "type": "VEHLT_HeadLight",
+   "light_bone": "Wheel_Frnt_Left_Disc",
+   "orphan_socket": false
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "socket": "BootLight",
+   "type": "VEHLT_BootLight",
+   "light_bone": "Batmobile_Chassis",
+   "orphan_socket": false
+  }
+ ],
+ "conflicts": [
+  {
+   "socket": "HeadLight1",
+   "tables": {
+    "Batmobile_Chassis": [
+     "jokerfied",
+     "mk2"
+    ],
+    "Winch_DOOR_Mesh": [
+     "playable",
+     "standard"
+    ]
+   },
+   "locations": {
+    "jokerfied": [
+     320.68,
+     38.578,
+     51.0
+    ],
+    "mk2": [
+     320.68,
+     38.578,
+     51.0
+    ],
+    "playable": [
+     21.287,
+     45.193,
+     -44.25
+    ],
+    "standard": [
+     21.287,
+     45.193,
+     -44.25
+    ]
+   },
+   "lights": {
+    "Batmobile_Chassis": [
+     "Playable_BatmobileFunhouse_SF",
+     "Playable_BatmobileJoker_SF",
+     "Playable_BatmobileMK2_SF"
+    ],
+    "Winch_DOOR_Mesh": [
+     "Playable_Batmobile_SF"
+    ]
+   }
+  },
+  {
+   "socket": "HeadLight1a",
+   "tables": {
+    "Batmobile_Chassis": [
+     "jokerfied",
+     "mk2"
+    ],
+    "Winch_DOOR_Mesh": [
+     "playable",
+     "standard"
+    ]
+   },
+   "locations": {
+    "jokerfied": [
+     311.264,
+     45.266,
+     67.0
+    ],
+    "mk2": [
+     311.264,
+     45.266,
+     67.0
+    ],
+    "playable": [
+     24.295,
+     42.017,
+     -52.5
+    ],
+    "standard": [
+     24.295,
+     42.017,
+     -52.5
+    ]
+   },
+   "lights": {
+    "Batmobile_Chassis": [
+     "Playable_BatmobileFunhouse_SF",
+     "Playable_BatmobileMK2_SF"
+    ],
+    "Winch_DOOR_Mesh": [
+     "Playable_Batmobile_SF"
+    ]
+   }
+  },
+  {
+   "socket": "HeadLight1b",
+   "tables": {
+    "Batmobile_Chassis": [
+     "jokerfied",
+     "mk2"
+    ],
+    "Winch_DOOR_Mesh": [
+     "playable",
+     "standard"
+    ]
+   },
+   "locations": {
+    "jokerfied": [
+     316.323,
+     41.714,
+     58.75
+    ],
+    "mk2": [
+     316.323,
+     41.714,
+     58.75
+    ],
+    "playable": [
+     28.217,
+     38.295,
+     -61.0
+    ],
+    "standard": [
+     28.217,
+     38.295,
+     -61.0
+    ]
+   },
+   "lights": {
+    "Batmobile_Chassis": [
+     "Playable_BatmobileFunhouse_SF",
+     "Playable_BatmobileMK2_SF"
+    ],
+    "Winch_DOOR_Mesh": [
+     "Playable_Batmobile_SF"
+    ]
+   }
+  },
+  {
+   "socket": "HeadLight2",
+   "tables": {
+    "Batmobile_Chassis": [
+     "jokerfied",
+     "mk2"
+    ],
+    "Winch_DOOR_Mesh": [
+     "playable",
+     "standard"
+    ]
+   },
+   "locations": {
+    "jokerfied": [
+     319.194,
+     -38.495,
+     51.0
+    ],
+    "mk2": [
+     319.194,
+     -38.495,
+     51.0
+    ],
+    "playable": [
+     28.217,
+     -38.593,
+     -61.0
+    ],
+    "standard": [
+     28.217,
+     -38.593,
+     -61.0
+    ]
+   },
+   "lights": {
+    "Batmobile_Chassis": [
+     "Playable_BatmobileFunhouse_SF",
+     "Playable_BatmobileJoker_SF",
+     "Playable_BatmobileMK2_SF"
+    ],
+    "Winch_DOOR_Mesh": [
+     "Playable_Batmobile_SF"
+    ]
+   }
+  },
+  {
+   "socket": "HeadLight2a",
+   "tables": {
+    "Batmobile_Chassis": [
+     "jokerfied",
+     "mk2"
+    ],
+    "Winch_DOOR_Mesh": [
+     "playable",
+     "standard"
+    ]
+   },
+   "locations": {
+    "jokerfied": [
+     311.419,
+     -44.789,
+     67.0
+    ],
+    "mk2": [
+     311.419,
+     -44.789,
+     67.0
+    ],
+    "playable": [
+     21.287,
+     -44.769,
+     -44.25
+    ],
+    "standard": [
+     21.287,
+     -44.769,
+     -44.25
+    ]
+   },
+   "lights": {
+    "Batmobile_Chassis": [
+     "Playable_BatmobileFunhouse_SF",
+     "Playable_BatmobileMK2_SF"
+    ],
+    "Winch_DOOR_Mesh": [
+     "Playable_Batmobile_SF"
+    ]
+   }
+  },
+  {
+   "socket": "HeadLight2b",
+   "tables": {
+    "Batmobile_Chassis": [
+     "jokerfied",
+     "mk2"
+    ],
+    "Winch_DOOR_Mesh": [
+     "playable",
+     "standard"
+    ]
+   },
+   "locations": {
+    "jokerfied": [
+     314.919,
+     -41.464,
+     58.75
+    ],
+    "mk2": [
+     314.919,
+     -41.464,
+     58.75
+    ],
+    "playable": [
+     24.295,
+     -41.631,
+     -52.5
+    ],
+    "standard": [
+     24.295,
+     -41.631,
+     -52.5
+    ]
+   },
+   "lights": {
+    "Batmobile_Chassis": [
+     "Playable_BatmobileFunhouse_SF",
+     "Playable_BatmobileMK2_SF"
+    ],
+    "Winch_DOOR_Mesh": [
+     "Playable_Batmobile_SF"
+    ]
+   }
+  }
+ ],
+ "rows": [
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "owner": "Batmobile_Funhouse_Archetypes.Vehicle",
+   "socket": "HeadLight1",
+   "light_bone": "Batmobile_Chassis",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    320.680481,
+    38.577576,
+    51.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "owner": "Batmobile_Funhouse_Archetypes.Vehicle",
+   "socket": "HeadLight2",
+   "light_bone": "Batmobile_Chassis",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    319.194489,
+    -38.495255,
+    51.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "owner": "Batmobile_Funhouse_Archetypes.Vehicle",
+   "socket": "ChainGunMuzzle",
+   "light_bone": "Batmobile_Rig_Weapons_Machine_Gun_01",
+   "type": null,
+   "orphan_socket": false,
+   "recorded": [
+    97.662842,
+    0.0,
+    -6.74938
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "owner": "Batmobile_Funhouse_Archetypes.Vehicle",
+   "socket": "HeadLight1",
+   "light_bone": "Batmobile_Chassis",
+   "type": null,
+   "orphan_socket": false,
+   "recorded": [
+    320.680481,
+    38.577576,
+    51.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "owner": "Batmobile_Funhouse_Archetypes.Vehicle",
+   "socket": "HeadLight2",
+   "light_bone": "Batmobile_Chassis",
+   "type": null,
+   "orphan_socket": false,
+   "recorded": [
+    319.194489,
+    -38.495255,
+    51.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "owner": "Batmobile_Funhouse_Archetypes.Vehicle",
+   "socket": "LWheelLight",
+   "light_bone": "Wheel_Frnt_Left_Disc",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    -0.349729,
+    50.689182,
+    26.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "owner": "Batmobile_Funhouse_Archetypes.Vehicle",
+   "socket": "RWheelLight",
+   "light_bone": "Wheel_Frnt_Right_Disc",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    0.380923,
+    46.332195,
+    25.7519
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "owner": "Batmobile_Funhouse_Archetypes.Vehicle",
+   "socket": "BrakeLightL",
+   "light_bone": "SUSP2_Wheel_Rear_Left",
+   "type": "VEHLT_TailLight",
+   "orphan_socket": false,
+   "recorded": [
+    -273.688568,
+    -40.901966,
+    -15.193807
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "owner": "Batmobile_Funhouse_Archetypes.Vehicle",
+   "socket": "BrakeLightR",
+   "light_bone": "SUSP2_Wheel_Rear_Right",
+   "type": "VEHLT_TailLight",
+   "orphan_socket": false,
+   "recorded": [
+    272.574463,
+    -40.842842,
+    -14.440631
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "owner": "Batmobile_Funhouse_Archetypes.Vehicle",
+   "socket": "BattleModeSpotLight",
+   "light_bone": "Batmobile_Rig_Weapons_Drone_Decoder",
+   "type": "VEHLT_BattleModeLight",
+   "orphan_socket": false,
+   "recorded": [
+    14.650226,
+    0.0,
+    2.499828
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "owner": "Batmobile_Funhouse_Archetypes.Vehicle",
+   "socket": "HeadLight1",
+   "light_bone": "Batmobile_Chassis",
+   "type": "VEHLT_BattleModeLight",
+   "orphan_socket": false,
+   "recorded": [
+    320.680481,
+    38.577576,
+    51.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "owner": "Batmobile_Funhouse_Archetypes.Vehicle",
+   "socket": "HeadLight2",
+   "light_bone": "Batmobile_Chassis",
+   "type": "VEHLT_BattleModeLight",
+   "orphan_socket": false,
+   "recorded": [
+    319.194489,
+    -38.495255,
+    51.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "owner": "Batmobile_Funhouse_Archetypes.Vehicle",
+   "socket": "LWheelLight",
+   "light_bone": "Wheel_Frnt_Left_Disc",
+   "type": "VEHLT_BattleModeLight",
+   "orphan_socket": false,
+   "recorded": [
+    -0.349729,
+    50.689182,
+    26.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "owner": "Batmobile_Funhouse_Archetypes.Vehicle",
+   "socket": "BattleModeSpotLight",
+   "light_bone": "Batmobile_Rig_Weapons_Drone_Decoder",
+   "type": "VEHLT_ForensicsLight",
+   "orphan_socket": false,
+   "recorded": [
+    14.650226,
+    0.0,
+    2.499828
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "owner": "Batmobile_Funhouse_Archetypes.Vehicle",
+   "socket": "HeadLight1",
+   "light_bone": "Batmobile_Chassis",
+   "type": "VEHLT_ForensicsLight",
+   "orphan_socket": false,
+   "recorded": [
+    320.680481,
+    38.577576,
+    51.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "owner": "Batmobile_Funhouse_Archetypes.Vehicle",
+   "socket": "HeadLight2",
+   "light_bone": "Batmobile_Chassis",
+   "type": "VEHLT_ForensicsLight",
+   "orphan_socket": false,
+   "recorded": [
+    319.194489,
+    -38.495255,
+    51.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "owner": "Batmobile_Funhouse_Archetypes.Vehicle",
+   "socket": "Dashboard_Light",
+   "light_bone": "Batmobile_Chassis",
+   "type": "VEHLT_Interior",
+   "orphan_socket": false,
+   "recorded": [
+    182.950577,
+    0.0,
+    144.249832
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "owner": "Batmobile_Funhouse_Archetypes.Vehicle",
+   "socket": "HeadLight1a",
+   "light_bone": "Batmobile_Chassis",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    311.264343,
+    45.2658,
+    67.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "owner": "Batmobile_Funhouse_Archetypes.Vehicle",
+   "socket": "HeadLight2a",
+   "light_bone": "Batmobile_Chassis",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    311.418518,
+    -44.789246,
+    67.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "owner": "Batmobile_Funhouse_Archetypes.Vehicle",
+   "socket": "HeadLight1b",
+   "light_bone": "Batmobile_Chassis",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    316.322937,
+    41.71352,
+    58.75
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "owner": "Batmobile_Funhouse_Archetypes.Vehicle",
+   "socket": "HeadLight1c",
+   "light_bone": null,
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": true,
+   "recorded": null,
+   "table": null,
+   "status": "socket missing from the cooked mesh"
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "owner": "Batmobile_Funhouse_Archetypes.Vehicle",
+   "socket": "HeadLight2b",
+   "light_bone": "Batmobile_Chassis",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    314.919037,
+    -41.464466,
+    58.75
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "owner": "Batmobile_Funhouse_Archetypes.Vehicle",
+   "socket": "HeadLight2c",
+   "light_bone": null,
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": true,
+   "recorded": null,
+   "table": null,
+   "status": "socket missing from the cooked mesh"
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "owner": "Batmobile_Funhouse_Archetypes.Vehicle",
+   "socket": "RWheelLight_top",
+   "light_bone": "Wheel_Frnt_Right_Disc",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    0.380923,
+    40.638508,
+    40.000805
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "owner": "Batmobile_Funhouse_Archetypes.Vehicle",
+   "socket": "RWheelLight_bottom",
+   "light_bone": "Wheel_Frnt_Right_Disc",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    0.347289,
+    53.81432,
+    10.002043
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "owner": "Batmobile_Funhouse_Archetypes.Vehicle",
+   "socket": "LWheelLight_top",
+   "light_bone": "Wheel_Frnt_Left_Disc",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    -0.118559,
+    40.599998,
+    40.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "owner": "Batmobile_Funhouse_Archetypes.Vehicle",
+   "socket": "LWheelLight_bottom",
+   "light_bone": "Wheel_Frnt_Left_Disc",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    -0.292692,
+    56.499176,
+    10.5
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "owner": "Batmobile_Funhouse_Archetypes.Vehicle",
+   "socket": "BootLight",
+   "light_bone": "Batmobile_Chassis",
+   "type": "VEHLT_BootLight",
+   "orphan_socket": false,
+   "recorded": [
+    -174.496429,
+    2.009974,
+    197.75
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "owner": "Batmobile_Joker_Archetypes.Vehicle",
+   "socket": "HeadLight1",
+   "light_bone": "Batmobile_Chassis",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    320.680481,
+    38.577576,
+    51.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "owner": "Batmobile_Joker_Archetypes.Vehicle",
+   "socket": "HeadLight2",
+   "light_bone": "Batmobile_Chassis",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    319.194489,
+    -38.495255,
+    51.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "owner": "Batmobile_Joker_Archetypes.Vehicle",
+   "socket": "ChainGunMuzzle",
+   "light_bone": "Batmobile_Rig_Weapons_Machine_Gun_01",
+   "type": null,
+   "orphan_socket": false,
+   "recorded": [
+    97.662842,
+    0.0,
+    -6.74938
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "owner": "Batmobile_Joker_Archetypes.Vehicle",
+   "socket": "HeadLight1",
+   "light_bone": "Batmobile_Chassis",
+   "type": null,
+   "orphan_socket": false,
+   "recorded": [
+    320.680481,
+    38.577576,
+    51.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "owner": "Batmobile_Joker_Archetypes.Vehicle",
+   "socket": "HeadLight2",
+   "light_bone": "Batmobile_Chassis",
+   "type": null,
+   "orphan_socket": false,
+   "recorded": [
+    319.194489,
+    -38.495255,
+    51.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "owner": "Batmobile_Joker_Archetypes.Vehicle",
+   "socket": "LWheelLight",
+   "light_bone": "Wheel_Frnt_Left_Disc",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    -0.349729,
+    50.689182,
+    26.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "owner": "Batmobile_Joker_Archetypes.Vehicle",
+   "socket": "RWheelLight",
+   "light_bone": "Wheel_Frnt_Right_Disc",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    0.380923,
+    46.332195,
+    25.7519
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "owner": "Batmobile_Joker_Archetypes.Vehicle",
+   "socket": "BrakeLightL",
+   "light_bone": "SUSP2_Wheel_Rear_Left",
+   "type": "VEHLT_TailLight",
+   "orphan_socket": false,
+   "recorded": [
+    -273.688568,
+    -40.901966,
+    -15.193807
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "owner": "Batmobile_Joker_Archetypes.Vehicle",
+   "socket": "BrakeLightR",
+   "light_bone": "SUSP2_Wheel_Rear_Right",
+   "type": "VEHLT_TailLight",
+   "orphan_socket": false,
+   "recorded": [
+    272.574463,
+    -40.842842,
+    -14.440631
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "owner": "Batmobile_Joker_Archetypes.Vehicle",
+   "socket": "BattleModeSpotLight",
+   "light_bone": "Batmobile_Rig_Weapons_Drone_Decoder",
+   "type": "VEHLT_BattleModeLight",
+   "orphan_socket": false,
+   "recorded": [
+    14.650226,
+    0.0,
+    2.499828
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "owner": "Batmobile_Joker_Archetypes.Vehicle",
+   "socket": "HeadLight1",
+   "light_bone": "Batmobile_Chassis",
+   "type": "VEHLT_BattleModeLight",
+   "orphan_socket": false,
+   "recorded": [
+    320.680481,
+    38.577576,
+    51.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "owner": "Batmobile_Joker_Archetypes.Vehicle",
+   "socket": "HeadLight2",
+   "light_bone": "Batmobile_Chassis",
+   "type": "VEHLT_BattleModeLight",
+   "orphan_socket": false,
+   "recorded": [
+    319.194489,
+    -38.495255,
+    51.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "owner": "Batmobile_Joker_Archetypes.Vehicle",
+   "socket": "LWheelLight",
+   "light_bone": "Wheel_Frnt_Left_Disc",
+   "type": "VEHLT_BattleModeLight",
+   "orphan_socket": false,
+   "recorded": [
+    -0.349729,
+    50.689182,
+    26.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "owner": "Batmobile_Joker_Archetypes.Vehicle",
+   "socket": "BattleModeSpotLight",
+   "light_bone": "Batmobile_Rig_Weapons_Drone_Decoder",
+   "type": "VEHLT_ForensicsLight",
+   "orphan_socket": false,
+   "recorded": [
+    14.650226,
+    0.0,
+    2.499828
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "owner": "Batmobile_Joker_Archetypes.Vehicle",
+   "socket": "HeadLight1",
+   "light_bone": "Batmobile_Chassis",
+   "type": "VEHLT_ForensicsLight",
+   "orphan_socket": false,
+   "recorded": [
+    320.680481,
+    38.577576,
+    51.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "owner": "Batmobile_Joker_Archetypes.Vehicle",
+   "socket": "HeadLight2",
+   "light_bone": "Batmobile_Chassis",
+   "type": "VEHLT_ForensicsLight",
+   "orphan_socket": false,
+   "recorded": [
+    319.194489,
+    -38.495255,
+    51.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "owner": "Batmobile_Joker_Archetypes.Vehicle",
+   "socket": "Dashboard",
+   "light_bone": "Batmobile_Chassis",
+   "type": "VEHLT_Interior",
+   "orphan_socket": false,
+   "recorded": [
+    189.167694,
+    0.0,
+    145.749985
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "owner": "Batmobile_Mk2_Archetypes.Vehicle",
+   "socket": "HeadLight1",
+   "light_bone": "Batmobile_Chassis",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    320.680481,
+    38.577576,
+    51.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "owner": "Batmobile_Mk2_Archetypes.Vehicle",
+   "socket": "HeadLight2",
+   "light_bone": "Batmobile_Chassis",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    319.194489,
+    -38.495255,
+    51.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "owner": "Batmobile_Mk2_Archetypes.Vehicle",
+   "socket": "ChainGunMuzzle",
+   "light_bone": "Batmobile_Rig_Weapons_Machine_Gun_01",
+   "type": null,
+   "orphan_socket": false,
+   "recorded": [
+    97.662842,
+    0.0,
+    -6.74938
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "owner": "Batmobile_Mk2_Archetypes.Vehicle",
+   "socket": "HeadLight1",
+   "light_bone": "Batmobile_Chassis",
+   "type": null,
+   "orphan_socket": false,
+   "recorded": [
+    320.680481,
+    38.577576,
+    51.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "owner": "Batmobile_Mk2_Archetypes.Vehicle",
+   "socket": "HeadLight2",
+   "light_bone": "Batmobile_Chassis",
+   "type": null,
+   "orphan_socket": false,
+   "recorded": [
+    319.194489,
+    -38.495255,
+    51.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "owner": "Batmobile_Mk2_Archetypes.Vehicle",
+   "socket": "LWheelLight",
+   "light_bone": "Wheel_Frnt_Left_Disc",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    -0.349729,
+    50.689182,
+    26.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "owner": "Batmobile_Mk2_Archetypes.Vehicle",
+   "socket": "RWheelLight",
+   "light_bone": "Wheel_Frnt_Right_Disc",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    0.380923,
+    46.332195,
+    25.7519
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "owner": "Batmobile_Mk2_Archetypes.Vehicle",
+   "socket": "BrakeLightL",
+   "light_bone": "SUSP2_Wheel_Rear_Left",
+   "type": "VEHLT_TailLight",
+   "orphan_socket": false,
+   "recorded": [
+    -273.688568,
+    -40.901966,
+    -15.193807
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "owner": "Batmobile_Mk2_Archetypes.Vehicle",
+   "socket": "BrakeLightR",
+   "light_bone": "SUSP2_Wheel_Rear_Right",
+   "type": "VEHLT_TailLight",
+   "orphan_socket": false,
+   "recorded": [
+    272.574463,
+    -40.842842,
+    -14.440631
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "owner": "Batmobile_Mk2_Archetypes.Vehicle",
+   "socket": "BattleModeSpotLight",
+   "light_bone": "Batmobile_Rig_Weapons_Drone_Decoder",
+   "type": "VEHLT_BattleModeLight",
+   "orphan_socket": false,
+   "recorded": [
+    14.650226,
+    0.0,
+    2.499828
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "owner": "Batmobile_Mk2_Archetypes.Vehicle",
+   "socket": "HeadLight1",
+   "light_bone": "Batmobile_Chassis",
+   "type": "VEHLT_BattleModeLight",
+   "orphan_socket": false,
+   "recorded": [
+    320.680481,
+    38.577576,
+    51.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "owner": "Batmobile_Mk2_Archetypes.Vehicle",
+   "socket": "HeadLight2",
+   "light_bone": "Batmobile_Chassis",
+   "type": "VEHLT_BattleModeLight",
+   "orphan_socket": false,
+   "recorded": [
+    319.194489,
+    -38.495255,
+    51.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "owner": "Batmobile_Mk2_Archetypes.Vehicle",
+   "socket": "LWheelLight",
+   "light_bone": "Wheel_Frnt_Left_Disc",
+   "type": "VEHLT_BattleModeLight",
+   "orphan_socket": false,
+   "recorded": [
+    -0.349729,
+    50.689182,
+    26.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "owner": "Batmobile_Mk2_Archetypes.Vehicle",
+   "socket": "BattleModeSpotLight",
+   "light_bone": "Batmobile_Rig_Weapons_Drone_Decoder",
+   "type": "VEHLT_ForensicsLight",
+   "orphan_socket": false,
+   "recorded": [
+    14.650226,
+    0.0,
+    2.499828
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "owner": "Batmobile_Mk2_Archetypes.Vehicle",
+   "socket": "HeadLight1",
+   "light_bone": "Batmobile_Chassis",
+   "type": "VEHLT_ForensicsLight",
+   "orphan_socket": false,
+   "recorded": [
+    320.680481,
+    38.577576,
+    51.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "owner": "Batmobile_Mk2_Archetypes.Vehicle",
+   "socket": "HeadLight2",
+   "light_bone": "Batmobile_Chassis",
+   "type": "VEHLT_ForensicsLight",
+   "orphan_socket": false,
+   "recorded": [
+    319.194489,
+    -38.495255,
+    51.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "owner": "Batmobile_Mk2_Archetypes.Vehicle",
+   "socket": "Dashboard_Light",
+   "light_bone": "Batmobile_Chassis",
+   "type": "VEHLT_Interior",
+   "orphan_socket": false,
+   "recorded": [
+    182.950577,
+    0.0,
+    144.249832
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "owner": "Batmobile_Mk2_Archetypes.Vehicle",
+   "socket": "HeadLight1a",
+   "light_bone": "Batmobile_Chassis",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    311.264343,
+    45.2658,
+    67.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "owner": "Batmobile_Mk2_Archetypes.Vehicle",
+   "socket": "HeadLight2a",
+   "light_bone": "Batmobile_Chassis",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    311.418518,
+    -44.789246,
+    67.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "owner": "Batmobile_Mk2_Archetypes.Vehicle",
+   "socket": "HeadLight1b",
+   "light_bone": "Batmobile_Chassis",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    316.322937,
+    41.71352,
+    58.75
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "owner": "Batmobile_Mk2_Archetypes.Vehicle",
+   "socket": "HeadLight1c",
+   "light_bone": null,
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": true,
+   "recorded": null,
+   "table": null,
+   "status": "socket missing from the cooked mesh"
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "owner": "Batmobile_Mk2_Archetypes.Vehicle",
+   "socket": "HeadLight2b",
+   "light_bone": "Batmobile_Chassis",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    314.919037,
+    -41.464466,
+    58.75
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "owner": "Batmobile_Mk2_Archetypes.Vehicle",
+   "socket": "HeadLight2c",
+   "light_bone": null,
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": true,
+   "recorded": null,
+   "table": null,
+   "status": "socket missing from the cooked mesh"
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "owner": "Batmobile_Mk2_Archetypes.Vehicle",
+   "socket": "RWheelLight_top",
+   "light_bone": "Wheel_Frnt_Right_Disc",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    0.380923,
+    40.638508,
+    40.000805
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "owner": "Batmobile_Mk2_Archetypes.Vehicle",
+   "socket": "RWheelLight_bottom",
+   "light_bone": "Wheel_Frnt_Right_Disc",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    0.347289,
+    53.81432,
+    10.002043
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "owner": "Batmobile_Mk2_Archetypes.Vehicle",
+   "socket": "LWheelLight_top",
+   "light_bone": "Wheel_Frnt_Left_Disc",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    -0.118559,
+    40.599998,
+    40.0
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "owner": "Batmobile_Mk2_Archetypes.Vehicle",
+   "socket": "LWheelLight_bottom",
+   "light_bone": "Wheel_Frnt_Left_Disc",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    -0.292692,
+    56.499176,
+    10.5
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "owner": "Batmobile_Mk2_Archetypes.Vehicle",
+   "socket": "BootLight",
+   "light_bone": "Batmobile_Chassis",
+   "type": "VEHLT_BootLight",
+   "orphan_socket": false,
+   "recorded": [
+    -174.496429,
+    2.009974,
+    197.75
+   ],
+   "table": null,
+   "status": "no socket table decoded for this package"
+  },
+  {
+   "package": "Playable_Batmobile_SF",
+   "owner": "Batmobile_Archetypes.Vehicle",
+   "socket": "HeadLight1",
+   "light_bone": "Winch_DOOR_Mesh",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    21.286633,
+    45.192657,
+    -44.25
+   ],
+   "table": "playable",
+   "socket_bone": "Winch_DOOR_Mesh",
+   "location_uu": [
+    21.286633,
+    45.192657,
+    -44.25
+   ],
+   "bone_in_180": true,
+   "bone_agrees": true,
+   "world_cm": [
+    313.138,
+    45.215,
+    67.181
+   ],
+   "status": "ok",
+   "delta_cm": 0.0
+  },
+  {
+   "package": "Playable_Batmobile_SF",
+   "owner": "Batmobile_Archetypes.Vehicle",
+   "socket": "HeadLight2",
+   "light_bone": "Winch_DOOR_Mesh",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    28.216906,
+    -38.593201,
+    -61.0
+   ],
+   "table": "playable",
+   "socket_bone": "Winch_DOOR_Mesh",
+   "location_uu": [
+    28.216906,
+    -38.593201,
+    -61.0
+   ],
+   "bone_in_180": true,
+   "bone_agrees": true,
+   "world_cm": [
+    320.062,
+    -38.571,
+    50.432
+   ],
+   "status": "ok",
+   "delta_cm": 0.0
+  },
+  {
+   "package": "Playable_Batmobile_SF",
+   "owner": "Batmobile_Archetypes.Vehicle",
+   "socket": "ChainGunMuzzle",
+   "light_bone": "Batmobile_Rig_Weapons_Machine_Gun_01",
+   "type": null,
+   "orphan_socket": false,
+   "recorded": [
+    97.662842,
+    0.0,
+    -6.74938
+   ],
+   "table": "playable",
+   "socket_bone": "Batmobile_Rig_Weapons_Machine_Gun_01",
+   "location_uu": [
+    97.662842,
+    0.0,
+    -6.74938
+   ],
+   "bone_in_180": true,
+   "bone_agrees": true,
+   "world_cm": [
+    32.117,
+    40.726,
+    152.943
+   ],
+   "status": "ok",
+   "delta_cm": 0.0
+  },
+  {
+   "package": "Playable_Batmobile_SF",
+   "owner": "Batmobile_Archetypes.Vehicle",
+   "socket": "HeadLight1",
+   "light_bone": "Winch_DOOR_Mesh",
+   "type": null,
+   "orphan_socket": false,
+   "recorded": [
+    21.286633,
+    45.192657,
+    -44.25
+   ],
+   "table": "playable",
+   "socket_bone": "Winch_DOOR_Mesh",
+   "location_uu": [
+    21.286633,
+    45.192657,
+    -44.25
+   ],
+   "bone_in_180": true,
+   "bone_agrees": true,
+   "world_cm": [
+    313.138,
+    45.215,
+    67.181
+   ],
+   "status": "ok",
+   "delta_cm": 0.0
+  },
+  {
+   "package": "Playable_Batmobile_SF",
+   "owner": "Batmobile_Archetypes.Vehicle",
+   "socket": "HeadLight2",
+   "light_bone": "Winch_DOOR_Mesh",
+   "type": null,
+   "orphan_socket": false,
+   "recorded": [
+    28.216906,
+    -38.593201,
+    -61.0
+   ],
+   "table": "playable",
+   "socket_bone": "Winch_DOOR_Mesh",
+   "location_uu": [
+    28.216906,
+    -38.593201,
+    -61.0
+   ],
+   "bone_in_180": true,
+   "bone_agrees": true,
+   "world_cm": [
+    320.062,
+    -38.571,
+    50.432
+   ],
+   "status": "ok",
+   "delta_cm": 0.0
+  },
+  {
+   "package": "Playable_Batmobile_SF",
+   "owner": "Batmobile_Archetypes.Vehicle",
+   "socket": "LWheelLight",
+   "light_bone": "Wheel_Frnt_Left_Disc",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    -0.349729,
+    50.689182,
+    26.0
+   ],
+   "table": "playable",
+   "socket_bone": "Wheel_Frnt_Left_Disc",
+   "location_uu": [
+    -0.349729,
+    50.689182,
+    26.0
+   ],
+   "bone_in_180": true,
+   "bone_agrees": true,
+   "world_cm": [
+    323.112,
+    121.462,
+    94.044
+   ],
+   "status": "ok",
+   "delta_cm": 0.0
+  },
+  {
+   "package": "Playable_Batmobile_SF",
+   "owner": "Batmobile_Archetypes.Vehicle",
+   "socket": "RWheelLight",
+   "light_bone": "Wheel_Frnt_Right_Disc",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    0.380923,
+    46.332195,
+    25.7519
+   ],
+   "table": "playable",
+   "socket_bone": "Wheel_Frnt_Right_Disc",
+   "location_uu": [
+    0.380923,
+    46.332195,
+    25.7519
+   ],
+   "bone_in_180": true,
+   "bone_agrees": true,
+   "world_cm": [
+    318.758,
+    -121.452,
+    93.804
+   ],
+   "status": "ok",
+   "delta_cm": 0.0
+  },
+  {
+   "package": "Playable_Batmobile_SF",
+   "owner": "Batmobile_Archetypes.Vehicle",
+   "socket": "BrakeLightL",
+   "light_bone": "SUSP2_Wheel_Rear_Left",
+   "type": "VEHLT_TailLight",
+   "orphan_socket": false,
+   "recorded": [
+    -273.688568,
+    -40.901966,
+    -15.193807
+   ],
+   "table": "playable",
+   "socket_bone": "SUSP2_Wheel_Rear_Left",
+   "location_uu": [
+    -273.688568,
+    -40.901966,
+    -15.193807
+   ],
+   "bone_in_180": true,
+   "bone_agrees": true,
+   "world_cm": [
+    -322.449,
+    47.667,
+    140.155
+   ],
+   "status": "ok",
+   "delta_cm": 0.0
+  },
+  {
+   "package": "Playable_Batmobile_SF",
+   "owner": "Batmobile_Archetypes.Vehicle",
+   "socket": "BrakeLightR",
+   "light_bone": "SUSP2_Wheel_Rear_Right",
+   "type": "VEHLT_TailLight",
+   "orphan_socket": false,
+   "recorded": [
+    272.574463,
+    -40.842842,
+    -14.440631
+   ],
+   "table": "playable",
+   "socket_bone": "SUSP2_Wheel_Rear_Right",
+   "location_uu": [
+    272.574463,
+    -40.842842,
+    -14.440631
+   ],
+   "bone_in_180": true,
+   "bone_agrees": true,
+   "world_cm": [
+    -317.486,
+    -47.673,
+    71.16
+   ],
+   "status": "ok",
+   "delta_cm": 0.0
+  },
+  {
+   "package": "Playable_Batmobile_SF",
+   "owner": "Batmobile_Archetypes.Vehicle",
+   "socket": "BattleModeSpotLight",
+   "light_bone": "Batmobile_Rig_Weapons_Drone_Decoder",
+   "type": "VEHLT_BattleModeLight",
+   "orphan_socket": false,
+   "recorded": [
+    14.650226,
+    0.0,
+    2.499828
+   ],
+   "table": "playable",
+   "socket_bone": "Batmobile_Rig_Weapons_Drone_Decoder",
+   "location_uu": [
+    14.650226,
+    0.0,
+    2.499828
+   ],
+   "bone_in_180": true,
+   "bone_agrees": true,
+   "world_cm": [
+    22.067,
+    -0.038,
+    181.232
+   ],
+   "status": "ok",
+   "delta_cm": 0.0
+  },
+  {
+   "package": "Playable_Batmobile_SF",
+   "owner": "Batmobile_Archetypes.Vehicle",
+   "socket": "HeadLight1",
+   "light_bone": "Winch_DOOR_Mesh",
+   "type": "VEHLT_BattleModeLight",
+   "orphan_socket": false,
+   "recorded": [
+    21.286633,
+    45.192657,
+    -44.25
+   ],
+   "table": "playable",
+   "socket_bone": "Winch_DOOR_Mesh",
+   "location_uu": [
+    21.286633,
+    45.192657,
+    -44.25
+   ],
+   "bone_in_180": true,
+   "bone_agrees": true,
+   "world_cm": [
+    313.138,
+    45.215,
+    67.181
+   ],
+   "status": "ok",
+   "delta_cm": 0.0
+  },
+  {
+   "package": "Playable_Batmobile_SF",
+   "owner": "Batmobile_Archetypes.Vehicle",
+   "socket": "HeadLight2",
+   "light_bone": "Winch_DOOR_Mesh",
+   "type": "VEHLT_BattleModeLight",
+   "orphan_socket": false,
+   "recorded": [
+    28.216906,
+    -38.593201,
+    -61.0
+   ],
+   "table": "playable",
+   "socket_bone": "Winch_DOOR_Mesh",
+   "location_uu": [
+    28.216906,
+    -38.593201,
+    -61.0
+   ],
+   "bone_in_180": true,
+   "bone_agrees": true,
+   "world_cm": [
+    320.062,
+    -38.571,
+    50.432
+   ],
+   "status": "ok",
+   "delta_cm": 0.0
+  },
+  {
+   "package": "Playable_Batmobile_SF",
+   "owner": "Batmobile_Archetypes.Vehicle",
+   "socket": "LWheelLight",
+   "light_bone": "Wheel_Frnt_Left_Disc",
+   "type": "VEHLT_BattleModeLight",
+   "orphan_socket": false,
+   "recorded": [
+    -0.349729,
+    50.689182,
+    26.0
+   ],
+   "table": "playable",
+   "socket_bone": "Wheel_Frnt_Left_Disc",
+   "location_uu": [
+    -0.349729,
+    50.689182,
+    26.0
+   ],
+   "bone_in_180": true,
+   "bone_agrees": true,
+   "world_cm": [
+    323.112,
+    121.462,
+    94.044
+   ],
+   "status": "ok",
+   "delta_cm": 0.0
+  },
+  {
+   "package": "Playable_Batmobile_SF",
+   "owner": "Batmobile_Archetypes.Vehicle",
+   "socket": "BattleModeSpotLight",
+   "light_bone": "Batmobile_Rig_Weapons_Drone_Decoder",
+   "type": "VEHLT_ForensicsLight",
+   "orphan_socket": false,
+   "recorded": [
+    14.650226,
+    0.0,
+    2.499828
+   ],
+   "table": "playable",
+   "socket_bone": "Batmobile_Rig_Weapons_Drone_Decoder",
+   "location_uu": [
+    14.650226,
+    0.0,
+    2.499828
+   ],
+   "bone_in_180": true,
+   "bone_agrees": true,
+   "world_cm": [
+    22.067,
+    -0.038,
+    181.232
+   ],
+   "status": "ok",
+   "delta_cm": 0.0
+  },
+  {
+   "package": "Playable_Batmobile_SF",
+   "owner": "Batmobile_Archetypes.Vehicle",
+   "socket": "HeadLight1",
+   "light_bone": "Winch_DOOR_Mesh",
+   "type": "VEHLT_ForensicsLight",
+   "orphan_socket": false,
+   "recorded": [
+    21.286633,
+    45.192657,
+    -44.25
+   ],
+   "table": "playable",
+   "socket_bone": "Winch_DOOR_Mesh",
+   "location_uu": [
+    21.286633,
+    45.192657,
+    -44.25
+   ],
+   "bone_in_180": true,
+   "bone_agrees": true,
+   "world_cm": [
+    313.138,
+    45.215,
+    67.181
+   ],
+   "status": "ok",
+   "delta_cm": 0.0
+  },
+  {
+   "package": "Playable_Batmobile_SF",
+   "owner": "Batmobile_Archetypes.Vehicle",
+   "socket": "HeadLight2",
+   "light_bone": "Winch_DOOR_Mesh",
+   "type": "VEHLT_ForensicsLight",
+   "orphan_socket": false,
+   "recorded": [
+    28.216906,
+    -38.593201,
+    -61.0
+   ],
+   "table": "playable",
+   "socket_bone": "Winch_DOOR_Mesh",
+   "location_uu": [
+    28.216906,
+    -38.593201,
+    -61.0
+   ],
+   "bone_in_180": true,
+   "bone_agrees": true,
+   "world_cm": [
+    320.062,
+    -38.571,
+    50.432
+   ],
+   "status": "ok",
+   "delta_cm": 0.0
+  },
+  {
+   "package": "Playable_Batmobile_SF",
+   "owner": "Batmobile_Archetypes.Vehicle",
+   "socket": "Dashboard_Light",
+   "light_bone": "Batmobile_Chassis",
+   "type": "VEHLT_Interior",
+   "orphan_socket": false,
+   "recorded": [
+    182.950577,
+    0.0,
+    144.249832
+   ],
+   "table": "playable",
+   "socket_bone": "Batmobile_Chassis",
+   "location_uu": [
+    182.950577,
+    0.0,
+    144.249832
+   ],
+   "bone_in_180": true,
+   "bone_agrees": true,
+   "world_cm": [
+    182.951,
+    -0.007,
+    144.25
+   ],
+   "status": "ok",
+   "delta_cm": 0.0
+  },
+  {
+   "package": "Playable_Batmobile_SF",
+   "owner": "Batmobile_Archetypes.Vehicle",
+   "socket": "HeadLight1a",
+   "light_bone": "Winch_DOOR_Mesh",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    24.295439,
+    42.017044,
+    -52.5
+   ],
+   "table": "playable",
+   "socket_bone": "Winch_DOOR_Mesh",
+   "location_uu": [
+    24.295439,
+    42.017044,
+    -52.5
+   ],
+   "bone_in_180": true,
+   "bone_agrees": true,
+   "world_cm": [
+    316.146,
+    42.039,
+    58.931
+   ],
+   "status": "ok",
+   "delta_cm": 0.0
+  },
+  {
+   "package": "Playable_Batmobile_SF",
+   "owner": "Batmobile_Archetypes.Vehicle",
+   "socket": "HeadLight2a",
+   "light_bone": "Winch_DOOR_Mesh",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    21.286633,
+    -44.76918,
+    -44.25
+   ],
+   "table": "playable",
+   "socket_bone": "Winch_DOOR_Mesh",
+   "location_uu": [
+    21.286633,
+    -44.76918,
+    -44.25
+   ],
+   "bone_in_180": true,
+   "bone_agrees": true,
+   "world_cm": [
+    313.131,
+    -44.747,
+    67.182
+   ],
+   "status": "ok",
+   "delta_cm": 0.0
+  },
+  {
+   "package": "Playable_Batmobile_SF",
+   "owner": "Batmobile_Archetypes.Vehicle",
+   "socket": "HeadLight1b",
+   "light_bone": "Winch_DOOR_Mesh",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    28.216906,
+    38.295086,
+    -61.0
+   ],
+   "table": "playable",
+   "socket_bone": "Winch_DOOR_Mesh",
+   "location_uu": [
+    28.216906,
+    38.295086,
+    -61.0
+   ],
+   "bone_in_180": true,
+   "bone_agrees": true,
+   "world_cm": [
+    320.068,
+    38.317,
+    50.431
+   ],
+   "status": "ok",
+   "delta_cm": 0.0
+  },
+  {
+   "package": "Playable_Batmobile_SF",
+   "owner": "Batmobile_Archetypes.Vehicle",
+   "socket": "HeadLight1c",
+   "light_bone": null,
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": true,
+   "recorded": null,
+   "table": null,
+   "status": "socket missing from the cooked mesh"
+  },
+  {
+   "package": "Playable_Batmobile_SF",
+   "owner": "Batmobile_Archetypes.Vehicle",
+   "socket": "HeadLight2b",
+   "light_bone": "Winch_DOOR_Mesh",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    24.295439,
+    -41.631226,
+    -52.5
+   ],
+   "table": "playable",
+   "socket_bone": "Winch_DOOR_Mesh",
+   "location_uu": [
+    24.295439,
+    -41.631226,
+    -52.5
+   ],
+   "bone_in_180": true,
+   "bone_agrees": true,
+   "world_cm": [
+    316.14,
+    -41.609,
+    58.932
+   ],
+   "status": "ok",
+   "delta_cm": 0.0
+  },
+  {
+   "package": "Playable_Batmobile_SF",
+   "owner": "Batmobile_Archetypes.Vehicle",
+   "socket": "HeadLight2c",
+   "light_bone": null,
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": true,
+   "recorded": null,
+   "table": null,
+   "status": "socket missing from the cooked mesh"
+  },
+  {
+   "package": "Playable_Batmobile_SF",
+   "owner": "Batmobile_Archetypes.Vehicle",
+   "socket": "RWheelLight_top",
+   "light_bone": "Wheel_Frnt_Right_Disc",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    0.380923,
+    40.638508,
+    40.000805
+   ],
+   "table": "playable",
+   "socket_bone": "Wheel_Frnt_Right_Disc",
+   "location_uu": [
+    0.380923,
+    40.638508,
+    40.000805
+   ],
+   "bone_in_180": true,
+   "bone_agrees": true,
+   "world_cm": [
+    313.06,
+    -121.45,
+    108.052
+   ],
+   "status": "ok",
+   "delta_cm": 0.0
+  },
+  {
+   "package": "Playable_Batmobile_SF",
+   "owner": "Batmobile_Archetypes.Vehicle",
+   "socket": "RWheelLight_bottom",
+   "light_bone": "Wheel_Frnt_Right_Disc",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    0.347289,
+    53.81432,
+    10.002043
+   ],
+   "table": "playable",
+   "socket_bone": "Wheel_Frnt_Right_Disc",
+   "location_uu": [
+    0.347289,
+    53.81432,
+    10.002043
+   ],
+   "bone_in_180": true,
+   "bone_agrees": true,
+   "world_cm": [
+    326.245,
+    -121.421,
+    78.057
+   ],
+   "status": "ok",
+   "delta_cm": 0.0
+  },
+  {
+   "package": "Playable_Batmobile_SF",
+   "owner": "Batmobile_Archetypes.Vehicle",
+   "socket": "LWheelLight_top",
+   "light_bone": "Wheel_Frnt_Left_Disc",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    -0.118559,
+    40.599998,
+    40.0
+   ],
+   "table": "playable",
+   "socket_bone": "Wheel_Frnt_Left_Disc",
+   "location_uu": [
+    -0.118559,
+    40.599998,
+    40.0
+   ],
+   "bone_in_180": true,
+   "bone_agrees": true,
+   "world_cm": [
+    313.023,
+    121.231,
+    108.045
+   ],
+   "status": "ok",
+   "delta_cm": 0.0
+  },
+  {
+   "package": "Playable_Batmobile_SF",
+   "owner": "Batmobile_Archetypes.Vehicle",
+   "socket": "LWheelLight_bottom",
+   "light_bone": "Wheel_Frnt_Left_Disc",
+   "type": "VEHLT_HeadLight",
+   "orphan_socket": false,
+   "recorded": [
+    -0.292692,
+    56.499176,
+    10.5
+   ],
+   "table": "playable",
+   "socket_bone": "Wheel_Frnt_Left_Disc",
+   "location_uu": [
+    -0.292692,
+    56.499176,
+    10.5
+   ],
+   "bone_in_180": true,
+   "bone_agrees": true,
+   "world_cm": [
+    328.922,
+    121.404,
+    78.544
+   ],
+   "status": "ok",
+   "delta_cm": 0.0
+  },
+  {
+   "package": "Playable_Batmobile_SF",
+   "owner": "Batmobile_Archetypes.Vehicle",
+   "socket": "BootLight",
+   "light_bone": "Batmobile_Chassis",
+   "type": "VEHLT_BootLight",
+   "orphan_socket": false,
+   "recorded": [
+    -174.496429,
+    2.009974,
+    197.75
+   ],
+   "table": "playable",
+   "socket_bone": "Batmobile_Chassis",
+   "location_uu": [
+    -174.496429,
+    2.009974,
+    197.75
+   ],
+   "bone_in_180": true,
+   "bone_agrees": true,
+   "world_cm": [
+    -174.496,
+    2.017,
+    197.75
+   ],
+   "status": "ok",
+   "delta_cm": 0.0
+  }
+ ],
+ "checks": [
+  {
+   "check": "the 101 light entries and 21 distinct sockets parse",
+   "pass": true,
+   "detail": "101 entries, 21 sockets, 4 vehicles"
+  },
+  {
+   "check": "every entry either resolves in its own package's socket table or is listed",
+   "pass": true,
+   "detail": "101 rows = 26 scored + 6 socket missing + 69 no table + 0 bone-not-in-rig"
+  },
+  {
+   "check": "every resolved row compares its cooked BoneName with the bone LIGHTS chose",
+   "pass": true,
+   "detail": "26 resolved, 26 agree, 0 disagree (disagreements tabulated below)"
+  },
+  {
+   "check": "every socket bone is one of BONES.json's 180",
+   "pass": true,
+   "detail": "bones 180; sockets outside the rig: 0 []"
+  },
+  {
+   "check": "both position interpretations are measured and the smaller-median one is chosen",
+   "pass": true,
+   "detail": "mode=raw (median raw 0.000 cm, world 312.400 cm); 0 entries over 1.0 cm under the chosen mode (tabulated below)"
+  },
+  {
+   "check": "no row is scored against another package's mesh",
+   "pass": true,
+   "detail": "26 scored rows, all from their own package's table; 69 rows have no table for their package"
+  },
+  {
+   "check": "all six orphan-flagged rows are unresolved and listed",
+   "pass": true,
+   "detail": "6 orphan-flagged: 6 missing from their own mesh, 0 unverifiable (no table)"
+  },
+  {
+   "check": "cross-mesh socket tables are compared, not silently merged",
+   "pass": true,
+   "detail": "6 socket names carry different parent bones in different cooked meshes: ['HeadLight1', 'HeadLight1a', 'HeadLight1b', 'HeadLight2', 'HeadLight2a', 'HeadLight2b']"
+  }
+ ]
+}

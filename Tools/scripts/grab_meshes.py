@@ -17,7 +17,7 @@ bytes must equal the `.pskx` header's, and LOD0's per-material faces must equal 
 (they were measured through umodel's material assignment).
 
 Writes `Research/BatmobileGrab/MESHES.json` + `MESHES.md`. Extracted geometry goes to
-`E:\Modding\_BmAKgrab\meshes\` - outside the repo, per the project rule.
+`E:\Modding\_gamedata\BmAKgrab\meshes\` - outside the repo, per the project rule.
 
 Usage:
     python Tools/scripts/grab_meshes.py --write
@@ -41,7 +41,7 @@ import upk_read as U         # noqa: E402
 OUT = os.path.join(ROOT, "Research", "BatmobileGrab")
 GAME = r"E:\Games\Batman - Arkham Knight\BmGame\CookedPCConsole"
 UMODEL = r"C:\Users\User\source\repos\UEViewer\umodel.exe"
-MESH_OUT = r"E:\Modding\_BmAKgrab\meshes"
+MESH_OUT = r"E:\Modding\_gamedata\BmAKgrab\meshes"
 SECTION_SIZE = 13
 
 

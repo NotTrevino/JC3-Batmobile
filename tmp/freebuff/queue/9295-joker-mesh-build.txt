@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/joker-mesh-build.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/mk2-mesh-build.md
+Build the Jokerfied body geometry using the script written for MK2. Read Working/Skins/SKIN_SCOPE.md, Research/BatmobileGrab/VARIANTS.md (the Joker has 40 bones, 64 sockets and a 28 entry light rig) and SKINS.md, then run Tools/scripts/rc5_skin.py --skin joker --write after fixing whatever the MK2 report says broke. Handle the bone differences: either add the extra bones to a private skeleton, or bake their influence into the nearest bone, with the evidence of which choice keeps the BmAK silhouette. Output Builds/bm-RC5-skin-joker; register a branch record under Working/RC5/branches/. Reuse base meshes as references where identical. Keep to the model budget ledger. Done check: 5 LODs of body meshes and every differing part read back, bone count and weights validated (no vertex without a weight, no more than four influences), and model KB printed beside the headroom. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

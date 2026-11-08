@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/fev-event-clone-prototype.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/fev-fsb5-format-spec.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/fsb5-add-sample-prototype.md
+The previous ruling was that FEV events cannot be authored because the graph is not shipped. Test that ruling instead of inheriting it. Using Research/JC3Grab/BANK_FORMAT_SPEC.md and the event JSON from JC3_AUDIO_EVENTS.json, find in a copy of vehicles.bank the smallest event (a one-shot with one layer, one sound definition, one wave bank entry). Prototype Tools/scripts/fev_edit.py that clones that event record under a new name and id, appends a sound definition pointing at the sample added by fsb5_rw.py, and rewrites every dependent count, offset and name-table entry. Work in Builds/aud-spike/ only. The report must say plainly for each step whether it was done, partly done, or blocked, and name what blocks it (e.g. a hash table, a cross-reference list). Done check: the edited bank reparses with the Universal Modder tools or the repo parser, the new event is listed, and a diff shows only intended chunks changed. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

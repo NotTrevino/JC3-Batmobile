@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/audit-paint-plan-colour-numbers.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-08
+Audit reports/paint-gaps-closest-system-plan.md and reports/colour-bmak-wet-look.md. For each colour or material number (base 0.025787 / 0.025787 / 0.03, roughness 0.4, reflectivity 0.2, metalness 1.0, clear coat 1.0, wet multipliers 0.6 / 0.6 / 1.6 / 0.75) find the BmAK source, then the JC3 slot the plan puts it into, and check the conversion arithmetic (gamma, scale, units). Output a table: value, BmAK source, JC3 slot and offset, converted value, recomputed value, MATCH / MISMATCH / UNSOURCED. List corrections; do not edit the plans.

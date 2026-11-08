@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/bm-moving-yaw-toward-aim.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-08
+Begin with tmp/freebuff/reports/four-wheel-drive-and-spin-in-place-build-plan.md, tmp/freebuff/reports/G3-02l.md and tmp/freebuff/reports/G3-08c.md, since each already mentions a camera-facing heading; write down what each one settles and what it leaves open. Next, decode from the BmAK script and defaults (the battle-mode tick and the driving-mode member set, located through Research/BatmobileGrab/objects.jsonl) which member or event turns the car's heading toward the aim direction while it is moving. Record whether the input is the stick, the camera yaw, or a fixed rate, and give each with its unit and source offset. Leave the stationary pivot out, because tmp/freebuff/reports/tank-pivot-values-for-battle-mode-turn-plan.md already settles it; only state whether moving mode keeps or drops the pivot. Any value whose source path you cannot cite is UNKNOWN, with the search you ran.
+Player fact from the operator (who has played BmAK), 2026-11-08: in battle mode, driving forward with no steering input still swings the nose toward where the camera points. Treat this as the behaviour to reproduce; the task is to find the data that makes it so and the closest JC3 mechanism, not to question whether it happens.

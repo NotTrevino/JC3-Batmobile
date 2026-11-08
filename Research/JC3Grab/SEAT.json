@@ -1,0 +1,1445 @@
+{
+ "card": "G2-19",
+ "generated_by": "Tools/scripts/jc3seat.py --write",
+ "card_inputs": {
+  "jc_statemachine/vehicles/": 0,
+  "jc_skeletons/vehicles/": 0,
+  "jc_statemachine/": 142,
+  "jc_skeletons/": 3,
+  "vehicle .ban clips": 7,
+  "rico/vehicle .ban clips": 2
+ },
+ "state_machine": {
+  "files": {
+   "animations/jc_statemachine/main_characters/rico/rico_base.afsmb": 327108,
+   "animations/jc_statemachine/main_characters/rico/rico_base.asb": 2614188
+  },
+  "strings": {
+   "animations/jc_statemachine/main_characters/rico/rico_base.afsmb": 1619,
+   "animations/jc_statemachine/main_characters/rico/rico_base.asb": 6538
+  }
+ },
+ "clips": {
+  "bike": {
+   "count": 12,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/bike/rico_vehi_atv_reel_geton_dir0.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/rico_vehi_atv_reel_geton_dir120l.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/rico_vehi_atv_reel_geton_dir120r.ban"
+   ]
+  },
+  "bike/add/head": {
+   "count": 1,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/bike/add/head/rico_vehi_standardbike_idle_exist_add_head.ban"
+   ]
+  },
+  "bike/add/larm": {
+   "count": 1,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/bike/add/larm/rico_vehi_standardbike_idle_exist_add_larm.ban"
+   ]
+  },
+  "bike/add/rarm": {
+   "count": 2,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/bike/add/rarm/rico_vehi_standardbike_slow_noaim_mid_add_rarm.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/add/rarm/rico_vehi_standardbike_slow_noaim_rpg_mid_add_rarm.ban"
+   ]
+  },
+  "bike/add/torso": {
+   "count": 1,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/bike/add/torso/rico_vehi_standardbike_idle_exist_add_torso.ban"
+   ]
+  },
+  "bike/arms": {
+   "count": 14,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/bike/arms/rico_vehi_atv_getoff_lft_noncombat_arms.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/arms/rico_vehi_atv_getoff_lft_rev_arms.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/arms/rico_vehi_atv_getoff_lft_rifle_arms.ban"
+   ]
+  },
+  "bike/fast/larm": {
+   "count": 4,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/bike/fast/larm/rico_vehi_standardbike_fast_unarmed_left_to_mid_add_larm.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/fast/larm/rico_vehi_standardbike_fast_unarmed_mid_to_left_add_larm.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/fast/larm/rico_vehi_standardbike_fast_unarmed_mid_to_right_add_larm.ban"
+   ]
+  },
+  "bike/fast/lower": {
+   "count": 8,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/bike/fast/lower/rico_vehi_atv_fast_to_slow_lower.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/fast/lower/rico_vehi_atv_fast_unarmed_basepose_lower.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/fast/lower/rico_vehi_moped_fast_to_slow_lower.ban"
+   ]
+  },
+  "bike/fast/noarms": {
+   "count": 4,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/bike/fast/noarms/rico_vehi_standardbike_fast_unarmed_left_to_mid_add_noarms.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/fast/noarms/rico_vehi_standardbike_fast_unarmed_mid_to_left_add_noarms.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/fast/noarms/rico_vehi_standardbike_fast_unarmed_mid_to_right_add_noarms.ban"
+   ]
+  },
+  "bike/fast/rarm": {
+   "count": 4,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/bike/fast/rarm/rico_vehi_standardbike_fast_unarmed_left_to_mid_add_rarm.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/fast/rarm/rico_vehi_standardbike_fast_unarmed_mid_to_left_add_rarm.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/fast/rarm/rico_vehi_standardbike_fast_unarmed_mid_to_right_add_rarm.ban"
+   ]
+  },
+  "bike/fast/upper": {
+   "count": 8,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/bike/fast/upper/rico_vehi_atv_fast_to_slow_upper.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/fast/upper/rico_vehi_atv_fast_unarmed_basepose_upper.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/fast/upper/rico_vehi_moped_fast_to_slow_upper.ban"
+   ]
+  },
+  "bike/hands": {
+   "count": 14,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/bike/hands/rico_vehi_atv_getoff_lft_noncombat_hands.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/hands/rico_vehi_atv_getoff_lft_rev_hands.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/hands/rico_vehi_atv_getoff_lft_rifle_hands.ban"
+   ]
+  },
+  "bike/hijack": {
+   "count": 3,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/bike/hijack/rico_vehi_atv_reel_hijack_kick.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/hijack/rico_vehi_standardbike_grnd_hijack.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/hijack/rico_vehi_standardbike_reel_hijack_kick.ban"
+   ]
+  },
+  "bike/noarms": {
+   "count": 3,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/bike/noarms/rico_vehi_atv_getoff_lft_noncombat_noarms.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/noarms/rico_vehi_atv_geton_lft_noncombat_noarms.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/noarms/rico_vehi_bike_geton_lft_noncombat_noarms.ban"
+   ]
+  },
+  "bike/reverse/lower": {
+   "count": 4,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/bike/reverse/lower/rico_vehi_atv_reverse_unarmed_lft_lower.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/reverse/lower/rico_vehi_moped_reverse_unarmed_lft_lower.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/reverse/lower/rico_vehi_sportbike_reverse_unarmed_lft_lower.ban"
+   ]
+  },
+  "bike/reverse/upper": {
+   "count": 4,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/bike/reverse/upper/rico_vehi_atv_reverse_unarmed_lft_upper.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/reverse/upper/rico_vehi_moped_reverse_unarmed_lft_upper.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/reverse/upper/rico_vehi_sportbike_reverse_unarmed_lft_upper.ban"
+   ]
+  },
+  "bike/slow/larm": {
+   "count": 6,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/bike/slow/larm/rico_vehi_standardbike_slow_lean_bwd_to_fwd_add_larm.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/slow/larm/rico_vehi_standardbike_slow_lean_fwd_to_bwd_add_larm.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/slow/larm/rico_vehi_standardbike_slow_unarmed_left_to_mid_add_larm.ban"
+   ]
+  },
+  "bike/slow/lower": {
+   "count": 20,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/bike/slow/lower/rico_vehi_atv_slow_aim_mid_lower.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/slow/lower/rico_vehi_atv_slow_aim_rpg_mid_lower.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/slow/lower/rico_vehi_atv_slow_to_fast_lower.ban"
+   ]
+  },
+  "bike/slow/noarms": {
+   "count": 6,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/bike/slow/noarms/rico_vehi_standardbike_slow_lean_bwd_to_fwd_add_noarms.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/slow/noarms/rico_vehi_standardbike_slow_lean_fwd_to_bwd_add_noarms.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/slow/noarms/rico_vehi_standardbike_slow_unarmed_left_to_mid_add_noarms.ban"
+   ]
+  },
+  "bike/slow/rarm": {
+   "count": 6,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/bike/slow/rarm/rico_vehi_standardbike_slow_lean_bwd_to_fwd_add_rarm.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/slow/rarm/rico_vehi_standardbike_slow_lean_fwd_to_bwd_add_rarm.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/slow/rarm/rico_vehi_standardbike_slow_unarmed_left_to_mid_add_rarm.ban"
+   ]
+  },
+  "bike/slow/upper": {
+   "count": 19,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/bike/slow/upper/rico_vehi_atv_slow_aim_mid_upper.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/slow/upper/rico_vehi_atv_slow_aim_rpg_mid_upper.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/slow/upper/rico_vehi_atv_slow_to_fast_upper.ban"
+   ]
+  },
+  "bike/stand/lower": {
+   "count": 8,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/bike/stand/lower/rico_vehi_atv_stand_to_slow_lower.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/stand/lower/rico_vehi_atv_stand_unarmed_basepose_lower.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/stand/lower/rico_vehi_moped_stand_to_slow_lower.ban"
+   ]
+  },
+  "bike/stand/upper": {
+   "count": 8,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/bike/stand/upper/rico_vehi_atv_stand_to_slow_upper.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/stand/upper/rico_vehi_atv_stand_unarmed_basepose_upper.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/stand/upper/rico_vehi_moped_stand_to_slow_upper.ban"
+   ]
+  },
+  "bike/stationary/arms": {
+   "count": 4,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/bike/stationary/arms/rico_vehi_standardbike_exit_lft_noncombat_arms.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/stationary/arms/rico_vehi_standardbike_exit_lft_rev_arms.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/stationary/arms/rico_vehi_standardbike_exit_lft_rifle_arms.ban"
+   ]
+  },
+  "bike/stationary/hands": {
+   "count": 4,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/bike/stationary/hands/rico_vehi_standardbike_exit_lft_noncombat_hands.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/stationary/hands/rico_vehi_standardbike_exit_lft_rev_hands.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/stationary/hands/rico_vehi_standardbike_exit_lft_rifle_hands.ban"
+   ]
+  },
+  "bike/stationary/lower": {
+   "count": 20,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/bike/stationary/lower/rico_vehi_atv_aim_mid_to_idle_aim_lower.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/stationary/lower/rico_vehi_atv_idle_aim_lower.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/stationary/lower/rico_vehi_atv_idle_aim_to_idle_left_lower.ban"
+   ]
+  },
+  "bike/stationary/noarms": {
+   "count": 1,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/bike/stationary/noarms/rico_vehi_standardbike_exit_lft_noncombat_noarms.ban"
+   ]
+  },
+  "bike/stationary/upper": {
+   "count": 12,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/bike/stationary/upper/rico_vehi_atv_idle_aim_to_idle_left_upper.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/stationary/upper/rico_vehi_atv_idle_lft_to_mid_upper.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bike/stationary/upper/rico_vehi_atv_idle_upper.ban"
+   ]
+  },
+  "boat": {
+   "count": 33,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/boat/rico_vehi_boat_cabin_drive_left_to_right.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/boat/rico_vehi_boat_cabin_driver_idle.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/boat/rico_vehi_boat_cabin_driver_to_para.ban"
+   ]
+  },
+  "bus": {
+   "count": 8,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/bus/rico_vehi_bus_driver_to_rollout.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bus/rico_vehi_bus_driver_to_std.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/bus/rico_vehi_bus_driver_to_stunt.ban"
+   ]
+  },
+  "car": {
+   "count": 2,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/car/rico_vehi_car_driver_to_rollout.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/car/rico_vehi_car_std_to_turret.ban"
+   ]
+  },
+  "car/circuit": {
+   "count": 9,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/car/circuit/rico_vehi_car_circuit_drive_left_to_right.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/car/circuit/rico_vehi_car_circuit_driver_to_rollout.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/car/circuit/rico_vehi_car_circuit_driver_to_std.ban"
+   ]
+  },
+  "car/high": {
+   "count": 4,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/car/high/rico_vehi_car_high_driver_to_std.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/car/high/rico_vehi_car_high_driver_to_stunt.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/car/high/rico_vehi_car_high_mov_prehijack.ban"
+   ]
+  },
+  "car/low": {
+   "count": 23,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/car/low/rico_vehi_car_low_drive_left_to_right.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/car/low/rico_vehi_car_low_driver_to_parachute.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/car/low/rico_vehi_car_low_driver_to_rollout.ban"
+   ]
+  },
+  "car/med": {
+   "count": 35,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/car/med/rico_vehi_car_med_drive_left_to_right.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/car/med/rico_vehi_car_med_driver_to_passenger.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/car/med/rico_vehi_car_med_driver_to_std.ban"
+   ]
+  },
+  "helicopter": {
+   "count": 28,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/helicopter/rico_vehi_heli_assault_driver_to_hang.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/helicopter/rico_vehi_heli_assault_driver_to_newhang.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/helicopter/rico_vehi_heli_assault_driver_to_std.ban"
+   ]
+  },
+  "plane": {
+   "count": 17,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/plane/rico_vehi_plane_cargo_driver_to_fall.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/plane/rico_vehi_plane_cargo_driverside_to_driver.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/plane/rico_vehi_plane_cargo_stunt_side_to_driver.ban"
+   ]
+  },
+  "stunt": {
+   "count": 2,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/stunt/rico_vehi_stnt_jump_land.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/stunt/rico_vehi_stnt_jump_vehi.ban"
+   ]
+  },
+  "tank": {
+   "count": 10,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/tank/rico_vehi_tank_apc_driver_to_fall_left.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/tank/rico_vehi_tank_driver_idle.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/tank/rico_vehi_tank_driver_to_stunt.ban"
+   ]
+  },
+  "tractor": {
+   "count": 10,
+   "sample": [
+    "animations/jc_characters/main_characters/rico/vehicle/tractor/rico_vehi_tractor_drive_left_to_right.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/tractor/rico_vehi_tractor_driver_to_std.ban",
+    "animations/jc_characters/main_characters/rico/vehicle/tractor/rico_vehi_tractor_reel_geton_dir0.ban"
+   ]
+  }
+ },
+ "selectors": {
+  "mods": {
+   "ATV": 4,
+   "BACK": 0,
+   "BIKE": 1,
+   "BOAT": 21,
+   "BOAT_CABIN": 28,
+   "BOAT_FORWARD": 1,
+   "BOAT_PATROL": 5,
+   "BOAT_SPY": 8,
+   "BUS": 19,
+   "BUTTON": 2,
+   "CARGO": 14,
+   "CAR_ENTER_MOUNTED_WEAPON_FROM_STATIONARY_STUNT": 1,
+   "CAR_EXIT_MOUNTED_WEAPON": 1,
+   "CAR_MOUNTED_WEAPON_PARA": 0,
+   "CIRCUIT": 13,
+   "CIRCUIT_RIGHT": 6,
+   "HELI": 7,
+   "HELI_ASSAULT": 20,
+   "HELI_ASSAULT_RIGHT": 14,
+   "HELI_EXIT_FALL": 1,
+   "HIGH": 7,
+   "JET": 21,
+   "JETSKI": 6,
+   "JET_BEHIND": 2,
+   "LOW": 41,
+   "LOW_RIGHT": 1,
+   "MED": 4,
+   "MINE": 7,
+   "REAR_MOUNTED": 1,
+   "RIGHT": 3,
+   "SPORTBIKE": 1,
+   "TANK": 24,
+   "TANK_EXIT_FALL": 1,
+   "TRACTOR": 8,
+   "TRACTOR_RIGHT": 1,
+   "VAN": 1
+  },
+  "seats": [
+   "PPC_ARRIVED_AT_DRIVER_SEAT",
+   "PPC_IS_CURRENT_VEHICLES_DRIVER_SEAT_OCCUPIED",
+   "PPC_IS_CURRENT_VEHICLES_SHOTGUN_SEAT_OCCUPIED",
+   "PPC_IS_ENTRY_NODE_DRIVER_SEAT_OCCUPIED",
+   "PPC_IS_ENTRY_NODE_GUNNER_2_DETACHED_SEAT_OCCUPIED",
+   "PPC_IS_ENTRY_NODE_GUNNER_2_SEAT_OCCUPIED",
+   "PPC_IS_ENTRY_NODE_GUNNER_DETACHED_SEAT_OCCUPIED",
+   "PPC_IS_ENTRY_NODE_GUNNER_SEAT_OCCUPIED",
+   "PPC_IS_ENTRY_NODE_SHOTGUN_SEAT_OCCUPIED"
+  ],
+  "ik": [
+   "PPikt.driving.left.foot",
+   "PPikt.driving.left.hand",
+   "PPikt.driving.right.foot",
+   "PPikt.driving.right.hand"
+  ],
+  "enter": [
+   "ACT_ENTER_VEHICLE",
+   "ACT_ENTER_VEHICLE_CARGO_BAY",
+   "ACT_ENTER_VEHICLE_MOUNTED_WEAPON",
+   "ACT_ENTER_VEHICLE_STUNT_JUMP"
+  ],
+  "exit": [
+   "PACT_EXIT_VEHICLE"
+  ],
+  "states": [
+   "S_BAY_DRIVER_DOOR_TO_BAY_P1_VEHICLE",
+   "S_BAY_DRIVER_DOOR_TO_BAY_P2_VEHICLE",
+   "S_BAY_DRIVER_DOOR_TO_DRIVER_VEHICLE",
+   "S_BAY_STUNT_DOOR_TO_BAY_P1_VEHICLE",
+   "S_BAY_STUNT_DOOR_TO_BAY_P2_VEHICLE",
+   "S_BAY_STUNT_DOOR_TO_BAY_STUNT_HATCH_VEHICLE",
+   "S_BAY_STUNT_HATCH_TO_BAY_STUNT_DOOR_VEHICLE",
+   "S_BAY_STUNT_HATCH_TO_BAY_STUNT_SIDE_P2_VEHICLE",
+   "S_BAY_STUNT_HATCH_TO_BAY_STUNT_SIDE_VEHICLE",
+   "S_BAY_STUNT_SIDE_OPEN_DOOR_VEHICLE",
+   "S_BAY_STUNT_SIDE_PLANT_EXPLOSIVE_VEHICLE",
+   "S_BAY_STUNT_SIDE_TO_BAY_STUNT_HATCH_VEHICLE",
+   "S_BAY_STUNT_SIDE_TRIGGER_EXPLOSIVE_VEHICLE",
+   "S_DRIVER_DOWN_TO_HANG_POINT_VEHICLE",
+   "S_DRIVER_DOWN_TO_HANG_POINT_VEHICLE2",
+   "S_DRIVER_SIDE_ENTER_VEHICLE",
+   "S_DRIVER_SIDE_OPEN_DOOR_VEHICLE",
+   "S_DRIVER_SIDE_PLANT_EXPLOSIVE_VEHICLE",
+   "S_DRIVER_SIDE_PULL_OUT_OCCUPANT_VEHICLE",
+   "S_DRIVER_SIDE_STUMBLE_TO_STUNT_VEHICLE",
+   "S_DRIVER_SIDE_TO_HANG_VEHICLE",
+   "S_DRIVER_SIDE_TO_HANG_VEHICLE2",
+   "S_DRIVER_SIDE_TRIGGER_EXPLOSIVE_VEHICLE",
+   "S_DRIVER_TO_BAY_DRIVER_DOOR_VEHICLE",
+   "S_DRIVER_TO_PASSENGER_EXIT_VEHICLE",
+   "S_DRIVER_TO_SPINNING_MOUNTED_WEAPON_VEHICLE",
+   "S_DRIVER_TO_STUNT_SIDE_P2_VEHICLE",
+   "S_DRIVER_TO_STUNT_SIDE_VEHICLE",
+   "S_DRIVER_UP_TO_STUNT_AREA_VEHICLE",
+   "S_DRIVER_UP_TO_STUNT_AREA_VEHICLE_P2",
+   "S_ENTERED_DRIVER_NO_DOOR_VEHICLE",
+   "S_ENTERED_DRIVER_VEHICLE",
+   "S_ENTER_BAY_TO_BAY_DRIVER_DOOR_VEHICLE",
+   "S_ENTER_BAY_TO_BAY_STUNT_DOOR_VEHICLE",
+   "S_ENTER_DRIVER_NO_DOOR_VEHICLE",
+   "S_ENTER_DRIVER_SIDE_VEHICLE",
+   "S_ENTER_DRIVER_VEHICLE",
+   "S_ENTER_FROM_WATER_LINE_DRIVER_SIDE_VEHICLE_P1",
+   "S_ENTER_FROM_WATER_LINE_DRIVER_SIDE_VEHICLE_P2",
+   "S_ENTER_FROM_WATER_LINE_ON_GROUND_VEHICLE_P1",
+   "S_ENTER_FROM_WATER_LINE_ON_GROUND_VEHICLE_P2",
+   "S_ENTER_FROM_WATER_LINE_PASSENGER_SIDE_VEHICLE_P1",
+   "S_ENTER_FROM_WATER_LINE_PASSENGER_SIDE_VEHICLE_P2",
+   "S_ENTER_LINE_DRIVER_SIDE_VEHICLE_P1",
+   "S_ENTER_LINE_DRIVER_SIDE_VEHICLE_P2",
+   "S_ENTER_LINE_ON_GROUND_VEHICLE_P1",
+   "S_ENTER_LINE_ON_GROUND_VEHICLE_P2",
+   "S_ENTER_LINE_TO_SPINNING_MOUNTED_WEAPON_VEHICLE_P1",
+   "S_ENTER_LINE_TO_SPINNING_MOUNTED_WEAPON_VEHICLE_P2",
+   "S_ENTER_ON_GROUND_THROW_OUT_NO_DOOR_VEHICLE",
+   "S_ENTER_ON_GROUND_THROW_OUT_VEHICLE",
+   "S_ENTER_ON_GROUND_UNLOCK_VEHICLE",
+   "S_ENTER_PASSENGER_NO_DOOR_VEHICLE",
+   "S_ENTER_PASSENGER_ON_GROUND_THROW_OUT_NO_DOOR_VEHICLE",
+   "S_ENTER_PASSENGER_ON_GROUND_THROW_OUT_VEHICLE",
+   "S_ENTER_PASSENGER_ON_GROUND_UNLOCK_VEHICLE",
+   "S_ENTER_PASSENGER_SIDE_VEHICLE",
+   "S_ENTER_PASSENGER_VEHICLE",
+   "S_ENTER_STUNT_TO_BAY_STUNT_SIDE_CLOSE_VEHICLE",
+   "S_ENTER_STUNT_TO_BAY_STUNT_SIDE_FAR_VEHICLE",
+   "S_ENTER_STUNT_TO_DRIVER_ON_GROUND_VEHICLE",
+   "S_ENTER_STUNT_TO_DRIVER_SIDE_CLOSE_VEHICLE",
+   "S_ENTER_STUNT_TO_DRIVER_SIDE_FAR_VEHICLE",
+   "S_ENTER_STUNT_TO_DRIVER_SIDE_VEHICLE",
+   "S_ENTER_STUNT_TO_DRIVER_VEHICLE",
+   "S_ENTER_STUNT_TO_SPINNING_MOUNTED_WEAPON_VEHICLE",
+   "S_ENTER_STUNT_TO_STUNT_SIDE_CLOSE_VEHICLE",
+   "S_ENTER_STUNT_TO_STUNT_SIDE_FAR_VEHICLE",
+   "S_ENTER_STUNT_TO_STUNT_SIDE_VEHICLE",
+   "S_ENTER_STUNT_TO_TRANS_ENTER_VEHICLE_P1",
+   "S_ENTER_VEHICLE_FIXED_MOUNTED_WEAPON",
+   "S_EXIT_DRIVER_VEHICLE_IN_WATER",
+   "S_EXIT_DRIVER_VEHICLE_IN_WATER_DETATCHED",
+   "S_EXIT_DRIVER_VEHICLE_UPSIDE_DOWN",
+   "S_EXIT_DRIVER_VEHICLE_UPSIDE_DOWN_DETATCHED",
+   "S_EXIT_PASSENGER_VEHICLE_UPSIDE_DOWN",
+   "S_EXIT_SPINNING_MOUNTED_VEHICLE_IN_WATER",
+   "S_EXIT_SPINNING_MOUNTED_VEHICLE_IN_WATER_DETATCHED",
+   "S_EXIT_TO_STUNT_P2_VEHICLE",
+   "S_EXIT_TO_STUNT_VEHICLE",
+   "S_EXIT_VEHICLE",
+   "S_EXIT_VEHICLE_DETATCHED",
+   "S_EXIT_VEHICLE_PARA",
+   "S_EXIT_VEHICLE_PARA_DETACHED",
+   "S_EXIT_VEHICLE_TO_FALL",
+   "S_EXIT_VEHICLE_TO_FALL_DETATCHED",
+   "S_FORWARD_TO_REVERSE_DRIVER_VEHICLE",
+   "S_HANG_TO_DRIVERSIDE_VEHICLE",
+   "S_HANG_TO_DRIVERSIDE_VEHICLE2",
+   "S_HANG_TO_STUNT_VEHICLE",
+   "S_IDLE_DRIVER_VEHICLE",
+   "S_IDLE_PASSENGER_VEHICLE",
+   "S_IDLE_VEHICLE_SPINNING_MOUNTED_WEAPON",
+   "S_JC_HITREACT_FLY_BACKWARD_VEHICLE",
+   "S_JC_HITREACT_FLY_BACKWARD_VEHICLE_P2",
+   "S_JC_HITREACT_FLY_FORWARD_VEHICLE",
+   "S_JC_HITREACT_FLY_FORWARD_VEHICLE_P2",
+   "S_JC_HITREACT_FLY_LEFT_VEHICLE",
+   "S_JC_HITREACT_FLY_LEFT_VEHICLE_P2",
+   "S_JC_HITREACT_FLY_RIGHT_VEHICLE",
+   "S_JC_HITREACT_FLY_RIGHT_VEHICLE_P2",
+   "S_JUMP_TO_STUNT_VEHICLE",
+   "S_ON_GROUND_ENTER_VEHICLE",
+   "S_ON_GROUND_THROW_OUT_VEHICLE",
+   "S_ON_GROUND_TO_DRIVER_SIDE_VEHICLE",
+   "S_ON_GROUND_TO_ENTER_DRIVER_SIDE_VEHICLE",
+   "S_PASS1_TO_DRIVER_VEHICLE",
+   "S_PASS1_TO_SPINNING_MOUNTED_WEAPON_VEHICLE",
+   "S_PASSENGER_ON_GROUND_ENTER_VEHICLE",
+   "S_PASSENGER_ON_GROUND_THROW_OUT_VEHICLE",
+   "S_PASSENGER_ON_GROUND_TO_ENTER_SIDE_VEHICLE",
+   "S_PASSENGER_ON_GROUND_TO_SIDE_VEHICLE",
+   "S_PASSENGER_SIDE_ENTER_VEHICLE",
+   "S_PASSENGER_SIDE_OPEN_DOOR_VEHICLE",
+   "S_PASSENGER_SIDE_PLANT_EXPLOSIVE_VEHICLE",
+   "S_PASSENGER_SIDE_PULL_OUT_OCCUPANT_VEHICLE",
+   "S_PASSENGER_SIDE_STUMBLE_TO_STUNT_VEHICLE",
+   "S_PASSENGER_SIDE_TO_HANG_VEHICLE",
+   "S_PASSENGER_SIDE_TO_HANG_VEHICLE2",
+   "S_PASSENGER_SIDE_TRIGGER_EXPLOSIVE_VEHICLE",
+   "S_PULL_UP_OVER_EDGE_CLOSE_VEHICLE",
+   "S_PULL_UP_OVER_EDGE_CLOSE_VEHICLE_P2",
+   "S_PULL_UP_OVER_EDGE_FAR_VEHICLE",
+   "S_PULL_UP_OVER_EDGE_FAR_VEHICLE_P2",
+   "S_PULL_UP_TO_STUNT_CLOSE_VEHICLE",
+   "S_PULL_UP_TO_STUNT_CLOSE_VEHICLE_P2",
+   "S_PULL_UP_TO_STUNT_FAR_VEHICLE",
+   "S_PULL_UP_TO_STUNT_FAR_VEHICLE_P2",
+   "S_REVERSE_DRIVER_VEHICLE",
+   "S_REVERSE_TO_FORWARD_DRIVER_VEHICLE",
+   "S_ROLL_OUT_EXIT_VEHICLE",
+   "S_ROLL_OUT_EXIT_VEHICLE_DETATCHED",
+   "S_SPINNING_MOUNTED_WEAPON_TO_PASS1_VEHICLE",
+   "S_SPINNING_MOUNTED_WEAPON_TO_STUNT_SIDE_VEHICLE",
+   "S_SPINNING_MOUNTED_WEAPON_TO_STUNT_VEHICLE",
+   "S_SPINNING_MOUNTED_WEAPON_TO_STUNT_VEHICLE_P2",
+   "S_STEP_OVER_EDGE_WATER_VEHICLE_P2",
+   "S_STEP_OVER_HIGH_EDGE_VEHICLE_P1",
+   "S_STEP_OVER_HIGH_EDGE_VEHICLE_P2",
+   "S_STEP_OVER_HIGH_EDGE_WATER_VEHICLE_P1",
+   "S_STEP_OVER_HIGH_TO_STUNT_VEHICLE_P1",
+   "S_STEP_OVER_HIGH_TO_STUNT_VEHICLE_P2",
+   "S_STEP_OVER_HIGH_WATER_TO_STUNT_VEHICLE_P1",
+   "S_STEP_OVER_LOW_EDGE_VEHICLE_P1",
+   "S_STEP_OVER_LOW_EDGE_VEHICLE_P2",
+   "S_STEP_OVER_LOW_EDGE_WATER_VEHICLE_P1",
+   "S_STEP_OVER_LOW_TO_STUNT_VEHICLE_P1",
+   "S_STEP_OVER_LOW_TO_STUNT_VEHICLE_P2",
+   "S_STEP_OVER_LOW_WATER_TO_STUNT_VEHICLE_P1",
+   "S_STEP_OVER_WATER_TO_STUNT_VEHICLE_P2",
+   "S_STUNT_BACKFLIP_JUMP_EXIT_VEHICLE",
+   "S_STUNT_BACKFLIP_JUMP_EXIT_VEHICLE_DETACHED",
+   "S_STUNT_EXIT_VEHICLE",
+   "S_STUNT_EXIT_VEHICLE_P2",
+   "S_STUNT_EXIT_VEHICLE_TOO_STEEP",
+   "S_STUNT_EXIT_VEHICLE_TOO_STEEP_DETACHED",
+   "S_STUNT_SIDE_OPEN_DOOR_VEHICLE",
+   "S_STUNT_SIDE_PLANT_EXPLOSIVE_VEHICLE",
+   "S_STUNT_SIDE_TO_DRIVER_ON_GROUND_VEHICLE",
+   "S_STUNT_SIDE_TO_DRIVER_SIDE_VEHICLE",
+   "S_STUNT_SIDE_TO_DRIVER_VEHICLE",
+   "S_STUNT_SIDE_TRIGGER_EXPLOSIVE_VEHICLE",
+   "S_STUNT_TO_DRIVER_ON_GROUND_VEHICLE",
+   "S_STUNT_TO_DRIVER_SIDE_CLOSE_VEHICLE",
+   "S_STUNT_TO_DRIVER_SIDE_FAR_VEHICLE",
+   "S_STUNT_TO_DRIVER_SIDE_VEHICLE",
+   "S_STUNT_TO_DRIVER_VEHICLE",
+   "S_STUNT_TO_FREEFALL_EXIT_VEHICLE_ATTACHED",
+   "S_STUNT_TO_FREEFALL_EXIT_VEHICLE_DETACHED",
+   "S_STUNT_TO_HANG_JUMP_VEHICLE",
+   "S_STUNT_TO_HANG_VEHICLE2",
+   "S_STUNT_TO_JUMP_VEHICLE_TO_VEHICLE",
+   "S_STUNT_TO_SPINNING_MOUNTED_WEAPON_VEHICLE",
+   "S_STUNT_TO_STUNT_SIDE_VEHICLE",
+   "S_STUNT_TO_TRANS_ENTER_VEHICLE_P2",
+   "S_STUNT_USE_ITEM_DONE_VEHICLE",
+   "S_STUNT_USE_ITEM_PROGRESS_FAIL_VEHICLE",
+   "S_STUNT_USE_ITEM_PROGRESS_START_VEHICLE",
+   "S_STUNT_USE_ITEM_PROGRESS_SUCCESS_VEHICLE",
+   "S_STUNT_USE_ITEM_PROGRESS_VEHICLE",
+   "S_STUNT_USE_ITEM_VEHICLE",
+   "S_VEHICLE_FIXED_MOUNTED_WEAPON",
+   "S_VEHICLE_FIXED_MOUNTED_WEAPON_DONE"
+  ]
+ },
+ "points": {
+  "count": 34,
+  "rows": [
+   {
+    "name": "interaction.seat.driver",
+    "class": "CInteraction",
+    "depth": 1,
+    "parent": "context",
+    "state": null,
+    "enabled": null,
+    "serpente_m": [
+     6.246567e-05,
+     0.0,
+     0.0
+    ],
+    "batmobile_m": [
+     0.0006,
+     0.091,
+     0.1154
+    ],
+    "world_source": "inherited",
+    "verdict": "n/a (container origin)"
+   },
+   {
+    "name": "entry.driver",
+    "class": "CInteractionGraphEntry",
+    "depth": 2,
+    "parent": "graph",
+    "state": "S_ENTER_DRIVER_VEHICLE",
+    "enabled": "1",
+    "serpente_m": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "batmobile_m": [
+     0.0005,
+     0.091,
+     0.1154
+    ],
+    "world_source": "inherited",
+    "verdict": "n/a (container origin)"
+   },
+   {
+    "name": "point.driver",
+    "class": "CInteractionGraphPointNode",
+    "depth": 2,
+    "parent": "graph",
+    "state": null,
+    "enabled": "1",
+    "serpente_m": [
+     -0.44,
+     0.34,
+     0.2
+    ],
+    "batmobile_m": [
+     -0.5776,
+     0.5976,
+     0.3916
+    ],
+    "world_source": "own",
+    "verdict": "inside"
+   },
+   {
+    "name": "exit.driver.default",
+    "class": "CInteractionGraphExit",
+    "depth": 3,
+    "parent": "point.driver",
+    "state": "S_EXIT_VEHICLE",
+    "enabled": "1",
+    "serpente_m": [
+     -0.44,
+     0.34,
+     0.2
+    ],
+    "batmobile_m": [
+     -0.5776,
+     0.5976,
+     0.3916
+    ],
+    "world_source": "inherited",
+    "verdict": "inside"
+   },
+   {
+    "name": "exit.ai.driver.default",
+    "class": "CInteractionGraphExit",
+    "depth": 3,
+    "parent": "point.driver",
+    "state": "S_EXIT_VEHICLE",
+    "enabled": "1",
+    "serpente_m": [
+     -0.44,
+     0.34,
+     0.2
+    ],
+    "batmobile_m": [
+     -0.5776,
+     0.5976,
+     0.3916
+    ],
+    "world_source": "inherited",
+    "verdict": "inside"
+   },
+   {
+    "name": "exit.ai.driver.to.hood",
+    "class": "CInteractionGraphExit",
+    "depth": 3,
+    "parent": "point.driver",
+    "state": "S_EXIT_DRIVER_TO_HOOD_VEHICLE",
+    "enabled": "1",
+    "serpente_m": [
+     -0.44,
+     0.34,
+     0.2
+    ],
+    "batmobile_m": [
+     -0.5776,
+     0.5976,
+     0.3916
+    ],
+    "world_source": "inherited",
+    "verdict": "inside"
+   },
+   {
+    "name": "exit.driver.roll.out",
+    "class": "CInteractionGraphExit",
+    "depth": 3,
+    "parent": "point.driver",
+    "state": "S_ROLL_OUT_EXIT_VEHICLE",
+    "enabled": "1",
+    "serpente_m": [
+     -0.44,
+     0.34,
+     0.2
+    ],
+    "batmobile_m": [
+     -0.5776,
+     0.5976,
+     0.3916
+    ],
+    "world_source": "inherited",
+    "verdict": "inside"
+   },
+   {
+    "name": "exit.driver.moving.parachute",
+    "class": "CInteractionGraphExit",
+    "depth": 3,
+    "parent": "point.driver",
+    "state": "S_EXIT_VEHICLE_PARA",
+    "enabled": "1",
+    "serpente_m": [
+     -0.44,
+     0.34,
+     0.2
+    ],
+    "batmobile_m": [
+     -0.5776,
+     0.5976,
+     0.3916
+    ],
+    "world_source": "inherited",
+    "verdict": "inside"
+   },
+   {
+    "name": "exit.ai.driver.default90R",
+    "class": "CInteractionGraphExit",
+    "depth": 3,
+    "parent": "point.driver",
+    "state": "S_EXIT_VEHICLE_90R",
+    "enabled": "1",
+    "serpente_m": [
+     -0.44,
+     0.34,
+     0.2
+    ],
+    "batmobile_m": [
+     -0.5776,
+     0.5976,
+     0.3916
+    ],
+    "world_source": "inherited",
+    "verdict": "inside"
+   },
+   {
+    "name": "exit.driver.pushed.out",
+    "class": "CInteractionGraphExit",
+    "depth": 3,
+    "parent": "point.driver",
+    "state": "S_PUSHED_OUT_VEHICLE",
+    "enabled": "1",
+    "serpente_m": [
+     -0.44,
+     0.34,
+     0.2
+    ],
+    "batmobile_m": [
+     -0.5776,
+     0.5976,
+     0.3916
+    ],
+    "world_source": "inherited",
+    "verdict": "inside"
+   },
+   {
+    "name": "exit.ai.driver.default90L",
+    "class": "CInteractionGraphExit",
+    "depth": 3,
+    "parent": "point.driver",
+    "state": "S_EXIT_VEHICLE_90L",
+    "enabled": "1",
+    "serpente_m": [
+     -0.44,
+     0.34,
+     0.2
+    ],
+    "batmobile_m": [
+     -0.5776,
+     0.5976,
+     0.3916
+    ],
+    "world_source": "inherited",
+    "verdict": "inside"
+   },
+   {
+    "name": "exit.driver.to.fall",
+    "class": "CInteractionGraphExit",
+    "depth": 3,
+    "parent": "point.driver",
+    "state": "S_EXIT_VEHICLE_TO_FALL",
+    "enabled": "1",
+    "serpente_m": [
+     -0.44,
+     0.34,
+     0.2
+    ],
+    "batmobile_m": [
+     -0.5776,
+     0.5976,
+     0.3916
+    ],
+    "world_source": "inherited",
+    "verdict": "inside"
+   },
+   {
+    "name": "exit.ai.driver.default180",
+    "class": "CInteractionGraphExit",
+    "depth": 3,
+    "parent": "point.driver",
+    "state": "S_EXIT_VEHICLE_180",
+    "enabled": "1",
+    "serpente_m": [
+     -0.44,
+     0.34,
+     0.2
+    ],
+    "batmobile_m": [
+     -0.5776,
+     0.5976,
+     0.3916
+    ],
+    "world_source": "inherited",
+    "verdict": "inside"
+   },
+   {
+    "name": "exit.driver.to.swim",
+    "class": "CInteractionGraphExit",
+    "depth": 3,
+    "parent": "point.driver",
+    "state": "S_EXIT_DRIVER_VEHICLE_IN_WATER",
+    "enabled": "1",
+    "serpente_m": [
+     -0.44,
+     0.34,
+     0.2
+    ],
+    "batmobile_m": [
+     -0.5776,
+     0.5976,
+     0.3916
+    ],
+    "world_source": "inherited",
+    "verdict": "inside"
+   },
+   {
+    "name": "exit.ai.driver.default0",
+    "class": "CInteractionGraphExit",
+    "depth": 3,
+    "parent": "point.driver",
+    "state": "S_EXIT_VEHICLE_0",
+    "enabled": "1",
+    "serpente_m": [
+     -0.44,
+     0.34,
+     0.2
+    ],
+    "batmobile_m": [
+     -0.5776,
+     0.5976,
+     0.3916
+    ],
+    "world_source": "inherited",
+    "verdict": "inside"
+   },
+   {
+    "name": "exit.driver.pulled.out",
+    "class": "CInteractionGraphExit",
+    "depth": 3,
+    "parent": "point.driver",
+    "state": "S_PULLED_OUT_VEHICLE",
+    "enabled": "1",
+    "serpente_m": [
+     -0.44,
+     0.34,
+     0.2
+    ],
+    "batmobile_m": [
+     -0.5776,
+     0.5976,
+     0.3916
+    ],
+    "world_source": "inherited",
+    "verdict": "inside"
+   },
+   {
+    "name": "exit.driver.upside.down",
+    "class": "CInteractionGraphExit",
+    "depth": 3,
+    "parent": "point.driver",
+    "state": "S_EXIT_DRIVER_VEHICLE_UPSIDE_DOWN",
+    "enabled": "1",
+    "serpente_m": [
+     -0.44,
+     0.34,
+     0.2
+    ],
+    "batmobile_m": [
+     -0.5776,
+     0.5976,
+     0.3916
+    ],
+    "world_source": "inherited",
+    "verdict": "inside"
+   },
+   {
+    "name": "entry.driver.pull.out.onground.no.door",
+    "class": "CInteractionGraphEntry",
+    "depth": 2,
+    "parent": "graph",
+    "state": "S_ENTER_ON_GROUND_THROW_OUT_NO_DOOR_VEHICLE",
+    "enabled": "1",
+    "serpente_m": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "batmobile_m": [
+     0.0005,
+     0.091,
+     0.1154
+    ],
+    "world_source": "inherited",
+    "verdict": "n/a (container origin)"
+   },
+   {
+    "name": "entry.stunt.to.driver.side.enter.vehicle2",
+    "class": "CInteractionGraphEntry",
+    "depth": 2,
+    "parent": "graph",
+    "state": "S_ENTER_STUNT_TO_DRIVER_SIDE_VEHICLE",
+    "enabled": "1",
+    "serpente_m": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "batmobile_m": [
+     0.0005,
+     0.091,
+     0.1154
+    ],
+    "world_source": "inherited",
+    "verdict": "n/a (container origin)"
+   },
+   {
+    "name": "entry.stunt.to.driver.side.enter.vehicle3",
+    "class": "CInteractionGraphEntry",
+    "depth": 2,
+    "parent": "graph",
+    "state": "S_ENTER_STUNT_TO_DRIVER_SIDE_VEHICLE",
+    "enabled": "1",
+    "serpente_m": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "batmobile_m": [
+     0.0005,
+     0.091,
+     0.1154
+    ],
+    "world_source": "inherited",
+    "verdict": "n/a (container origin)"
+   },
+   {
+    "name": "entry.driver.locked.onground",
+    "class": "CInteractionGraphEntry",
+    "depth": 2,
+    "parent": "graph",
+    "state": "S_ENTER_ON_GROUND_UNLOCK_VEHICLE",
+    "enabled": "1",
+    "serpente_m": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "batmobile_m": [
+     0.0005,
+     0.091,
+     0.1154
+    ],
+    "world_source": "inherited",
+    "verdict": "n/a (container origin)"
+   },
+   {
+    "name": "transition.driver",
+    "class": "CInteractionGraphTransition",
+    "depth": 3,
+    "parent": "point.passenger1",
+    "state": null,
+    "enabled": "1",
+    "serpente_m": [
+     0.4421713,
+     0.34,
+     0.2
+    ],
+    "batmobile_m": [
+     0.5815,
+     0.5976,
+     0.3916
+    ],
+    "world_source": "inherited",
+    "verdict": "inside"
+   },
+   {
+    "name": "point.driver.onground",
+    "class": "CInteractionGraphPointNode",
+    "depth": 2,
+    "parent": "graph",
+    "state": null,
+    "enabled": "1",
+    "serpente_m": [
+     -1.33,
+     0.0,
+     0.77
+    ],
+    "batmobile_m": [
+     -1.747,
+     0.091,
+     1.1787
+    ],
+    "world_source": "own",
+    "verdict": "floating"
+   },
+   {
+    "name": "transition.driver",
+    "class": "CInteractionGraphTransition",
+    "depth": 3,
+    "parent": "point.driver.onground",
+    "state": null,
+    "enabled": "1",
+    "serpente_m": [
+     -1.33,
+     0.0,
+     0.77
+    ],
+    "batmobile_m": [
+     -1.747,
+     0.091,
+     1.1787
+    ],
+    "world_source": "inherited",
+    "verdict": "floating"
+   },
+   {
+    "name": "transition.driver.side",
+    "class": "CInteractionGraphTransition",
+    "depth": 3,
+    "parent": "point.driver.onground",
+    "state": null,
+    "enabled": "1",
+    "serpente_m": [
+     -1.33,
+     0.0,
+     0.77
+    ],
+    "batmobile_m": [
+     -1.747,
+     0.091,
+     1.1787
+    ],
+    "world_source": "inherited",
+    "verdict": "floating"
+   },
+   {
+    "name": "entry.driver.pull.out.onground",
+    "class": "CInteractionGraphEntry",
+    "depth": 2,
+    "parent": "graph",
+    "state": "S_ENTER_ON_GROUND_THROW_OUT_VEHICLE",
+    "enabled": "1",
+    "serpente_m": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "batmobile_m": [
+     0.0005,
+     0.091,
+     0.1154
+    ],
+    "world_source": "inherited",
+    "verdict": "n/a (container origin)"
+   },
+   {
+    "name": "entry.stunt.to.driver.side.enter.vehicle",
+    "class": "CInteractionGraphEntry",
+    "depth": 2,
+    "parent": "graph",
+    "state": "S_ENTER_STUNT_TO_TRANS_ENTER_VEHICLE_P1",
+    "enabled": "1",
+    "serpente_m": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "batmobile_m": [
+     0.0005,
+     0.091,
+     0.1154
+    ],
+    "world_source": "inherited",
+    "verdict": "n/a (container origin)"
+   },
+   {
+    "name": "entry.ai.driver.left",
+    "class": "CInteractionGraphEntry",
+    "depth": 2,
+    "parent": "graph",
+    "state": "S_ENTER_DRIVER_VEHICLE",
+    "enabled": "1",
+    "serpente_m": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "batmobile_m": [
+     0.0005,
+     0.091,
+     0.1154
+    ],
+    "world_source": "inherited",
+    "verdict": "n/a (container origin)"
+   },
+   {
+    "name": "entry.driver.side.fast",
+    "class": "CInteractionGraphEntry",
+    "depth": 2,
+    "parent": "graph",
+    "state": "S_ON_GROUND_TO_ENTER_DRIVER_SIDE_VEHICLE",
+    "enabled": "1",
+    "serpente_m": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "batmobile_m": [
+     0.0005,
+     0.091,
+     0.1154
+    ],
+    "world_source": "inherited",
+    "verdict": "n/a (container origin)"
+   },
+   {
+    "name": "point.driver.side",
+    "class": "CInteractionGraphPointNode",
+    "depth": 2,
+    "parent": "graph",
+    "state": null,
+    "enabled": "1",
+    "serpente_m": [
+     -0.26,
+     1.47,
+     0.37
+    ],
+    "batmobile_m": [
+     -0.3411,
+     2.2812,
+     0.6264
+    ],
+    "world_source": "own",
+    "verdict": "floating"
+   },
+   {
+    "name": "transition.driver",
+    "class": "CInteractionGraphTransition",
+    "depth": 3,
+    "parent": "point.driver.side",
+    "state": null,
+    "enabled": "1",
+    "serpente_m": [
+     -0.26,
+     1.47,
+     0.37
+    ],
+    "batmobile_m": [
+     -0.3411,
+     2.2812,
+     0.6264
+    ],
+    "world_source": "inherited",
+    "verdict": "floating"
+   },
+   {
+    "name": "entry.driver.no.door",
+    "class": "CInteractionGraphEntry",
+    "depth": 2,
+    "parent": "graph",
+    "state": "S_ENTER_DRIVER_NO_DOOR_VEHICLE",
+    "enabled": "1",
+    "serpente_m": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "batmobile_m": [
+     0.0005,
+     0.091,
+     0.1154
+    ],
+    "world_source": "inherited",
+    "verdict": "n/a (container origin)"
+   },
+   {
+    "name": "trigger.driver",
+    "class": "CInteractionTrigger",
+    "depth": 1,
+    "parent": "context",
+    "state": null,
+    "enabled": null,
+    "serpente_m": [
+     -1.48,
+     -0.117,
+     0.287
+    ],
+    "batmobile_m": [
+     -1.9441,
+     -0.0833,
+     0.5118
+    ],
+    "world_source": "own",
+    "verdict": "floating"
+   },
+   {
+    "name": "trigger.driver.fast",
+    "class": "CInteractionTrigger",
+    "depth": 1,
+    "parent": "context",
+    "state": null,
+    "enabled": null,
+    "serpente_m": [
+     -1.620605,
+     -0.1606445,
+     0.8964844
+    ],
+    "batmobile_m": [
+     -2.1288,
+     -0.1484,
+     1.3534
+    ],
+    "world_source": "own",
+    "verdict": "floating"
+   }
+  ],
+  "by_prefix": {
+   "entry": 10,
+   "exit": 14,
+   "interaction": 1,
+   "point": 3,
+   "transition": 4,
+   "trigger": 2
+  }
+ },
+ "seats": [
+  {
+   "vehicle": "v0300_car_kensington_sportsmuscle",
+   "entity": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_civilian_01.ee",
+   "part": "sportsmuscle_f_l_seat",
+   "part_class": "Land_Seat",
+   "index": 4,
+   "shapes": 2,
+   "box_m": [
+    [
+     -0.7207,
+     0.3632,
+     -0.2089
+    ],
+    [
+     -0.1602,
+     1.3469,
+     0.5955
+    ]
+   ],
+   "size_m": [
+    0.5605,
+    0.9837,
+    0.8044
+   ],
+   "centre_m": [
+    -0.4404,
+    0.8551,
+    0.1933
+   ],
+   "hulls": 4,
+   "file": "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle.physicsc"
+  },
+  {
+   "vehicle": "v0300_car_kensington_sportsmuscle",
+   "entity": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_civilian_01.ee",
+   "part": "sportsmuscle_f_r_seat",
+   "part_class": "Land_Seat",
+   "index": 5,
+   "shapes": 2,
+   "box_m": [
+    [
+     0.1271,
+     0.3631,
+     -0.2089
+    ],
+    [
+     0.6859,
+     1.3469,
+     0.5955
+    ]
+   ],
+   "size_m": [
+    0.5588,
+    0.9838,
+    0.8044
+   ],
+   "centre_m": [
+    0.4065,
+    0.855,
+    0.1933
+   ],
+   "hulls": 4,
+   "file": "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle.physicsc"
+  },
+  {
+   "vehicle": "v0401_car_mugello_racingsupercar",
+   "entity": "editor/entities/jc_vehicles/01_land/v0401_car_mugello_racingsupercar/v0401_car_mugello_racingsupercar_civilian_01.ee",
+   "error": "no seat hull",
+   "hulls": 0
+  },
+  {
+   "vehicle": "v0003_car_autostraad_racinghothatch",
+   "entity": "editor/entities/jc_vehicles/01_land/v0003_car_autostraad_racinghothatch/v0003_car_autostraad_racinghothatch_civilian_01.ee",
+   "part": "racinghothatch_seats",
+   "part_class": "Land_Seat",
+   "index": 22,
+   "shapes": 2,
+   "box_m": [
+    [
+     -0.7834,
+     0.4449,
+     -0.3434
+    ],
+    [
+     0.7705,
+     1.3433,
+     1.4398
+    ]
+   ],
+   "size_m": [
+    1.5539,
+    0.8984,
+    1.7832
+   ],
+   "centre_m": [
+    -0.0064,
+    0.8941,
+    0.5482
+   ],
+   "hulls": 2,
+   "file": "models/jc_vehicles/01_land/v0003_car_autostraad_racinghothatch/racinghothatch.physicsc"
+  },
+  {
+   "vehicle": "v0201_car_capstone_mediumtank",
+   "entity": "editor/entities/jc_vehicles/01_land/v0201_car_capstone_mediumtank/v0201_car_capstone_mediumtank_debug.ee",
+   "part": "mediumtank_hatch",
+   "part_class": "Land_Door",
+   "index": 39,
+   "shapes": 2,
+   "box_m": [
+    [
+     -0.8526,
+     2.7777,
+     0.7345
+    ],
+    [
+     -0.1363,
+     2.9797,
+     1.5227
+    ]
+   ],
+   "size_m": [
+    0.7163,
+    0.202,
+    0.7882
+   ],
+   "centre_m": [
+    -0.4945,
+    2.8787,
+    1.1286
+   ],
+   "hulls": 2,
+   "file": "models/jc_vehicles/01_land/v0201_car_capstone_mediumtank/mediumtank.physicsc"
+  }
+ ],
+ "driver_socket": {
+  "socket": "Driver",
+  "bone": "Batmobile_Chassis",
+  "part_hint": "body",
+  "position_m": [
+   -0.002546,
+   0.864732,
+   -1.06536
+  ],
+  "forward_jc3": [
+   3.9e-05,
+   -0.0,
+   -1.0
+  ]
+ },
+ "cockpit": {
+  "hip_m": [
+   -0.0025,
+   0.8647,
+   -1.0654
+  ],
+  "cushion_top_m": 0.8407
+ },
+ "candidate": {
+  "hip_y_m": 0.864732,
+  "nearest": {
+   "vehicle": "v0300_car_kensington_sportsmuscle",
+   "part": "sportsmuscle_f_l_seat",
+   "seat_y_m": 0.8551,
+   "delta_m": 0.0096
+  }
+ }
+}

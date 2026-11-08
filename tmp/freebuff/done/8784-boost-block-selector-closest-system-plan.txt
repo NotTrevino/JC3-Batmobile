@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/boost-block-selector-closest-system-plan.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-08
+Read reports/T-MD14b.md. It found three parallel boost blocks on one module (nitro_boost at offset 120, nitro_boost_upgraded at 132, heat_boost at 144, 12 B each) and no runtime selector, and it concluded Pursuit/Battle cannot be expressed. The project rule is that a gap is closed by the build. Design the selector: which of the three blocks can carry BmAK Pursuit values and which Battle values, what existing trigger flips between nitro, upgraded nitro and heat boost in JC3 (search Research/JC3Grab and the fleet scan for the state that selects a block), what the build adds if none exists (a second entity, a gadget-driven switch, a script event), and the numbers from the BmAK mode table. Evidence level per step, UNKNOWN with the settling file, and a pilot-card sentence with a pass band.

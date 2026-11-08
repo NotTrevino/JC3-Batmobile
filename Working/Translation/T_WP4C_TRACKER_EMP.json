@@ -1,0 +1,1642 @@
+{
+ "archetype": {
+  "Batmobile_Booster": {
+   "Actor.Tag": [
+    "0x0168",
+    "NameProperty",
+    "\"RBatmobileBooster\""
+   ],
+   "RInventoryGadget.Mesh": [
+    "0x0318",
+    "ObjectNCRProperty",
+    "`Batmobile_Booster.GadgetMesh`"
+   ]
+  },
+  "Batmobile_EMP_Missile_Launcher": {
+   "Actor.Tag": [
+    "0x0168",
+    "NameProperty",
+    "\"RBatmobileEMPMissile\""
+   ],
+   "MissileLaunchSockets": [
+    "0x0A0C",
+    "ArrayProperty",
+    "array, 2 items, 8 B each - payload not decoded"
+   ],
+   "RBatmobileEMPMissile.CantFireOnPenguinVanDialogue": [
+    "0x09E4",
+    "ObjectNCRProperty",
+    "`Conversation.Main_Ch03_S24_Cityx_Pt3_Callcar`"
+   ],
+   "RBatmobileEMPMissile.CivilianMissileLockOnDuration": [
+    "0x0A04",
+    "FloatProperty",
+    "1.0"
+   ],
+   "RBatmobileEMPMissile.LauncherAnimNodeName": [
+    "0x0A1C",
+    "NameProperty",
+    "\"PursuitMissileAnim\""
+   ],
+   "RBatmobileEMPMissile.LoseLockXBonus": [
+    "0x0A50",
+    "FloatProperty",
+    "600.0"
+   ],
+   "RBatmobileEMPMissile.LoseLockYBonus": [
+    "0x0A54",
+    "FloatProperty",
+    "800.0"
+   ],
+   "RBatmobileEMPMissile.MissileLockOnDuration": [
+    "0x0A00",
+    "FloatProperty",
+    "2.0"
+   ],
+   "RBatmobileEMPMissile.ProjectileForCarsArchetype": [
+    "0x09BC",
+    "ObjectNCRProperty",
+    "`Projectiles.Batmobile_EMPMissile_Projectile_ForCars`"
+   ],
+   "RBatmobileEMPMissile.UntagWarningEvent": [
+    "0x09CC",
+    "ObjectNCRProperty",
+    "`Ww_CHR_BatmanAlerts.Play_HUD_fail`"
+   ],
+   "RInventoryGadget.Mesh": [
+    "0x0318",
+    "ObjectNCRProperty",
+    "`Batmobile_EMP_Missile_Launcher.GadgetMesh`"
+   ],
+   "RPursuitModeMissileLauncher.LaunchRotationOffset": [
+    "0x0994",
+    "RotatorProperty",
+    "[-3640, 0, 0]"
+   ],
+   "RPursuitModeMissileLauncher.LaunchSocketName": [
+    "0x0984",
+    "NameProperty",
+    "\"BattleModeSpotLight\""
+   ],
+   "RPursuitModeMissileLauncher.ProjectileArchetype": [
+    "0x097C",
+    "ObjectNCRProperty",
+    "`Projectiles.Batmobile_EMPMissile_Projectile_ForCars`"
+   ],
+   "RPursuitModeMissileLauncher.bInstantFire": [
+    "0x09A0",
+    "BoolProperty",
+    "true"
+   ],
+   "RVehicleWeapon.IndividualFireEvent": [
+    "0x0898",
+    "ObjectNCRProperty",
+    "`Engine.Play_Batmobile_ApRocket_Fire`"
+   ],
+   "RVehicleWeapon.LockOnBeepProportionParam": [
+    "0x08D0",
+    "ObjectNCRProperty",
+    "`Ww_Parameters.BML_AP_Rocket_Lock`"
+   ],
+   "RVehicleWeapon.LockOnBeepSound": [
+    "0x08C8",
+    "ObjectNCRProperty",
+    "`Engine.Play_Batmobile_ApRocket_Lock_Beep`"
+   ],
+   "RVehicleWeapon.LockOnBeepSoundOff": [
+    "0x08E8",
+    "ObjectNCRProperty",
+    "`Engine.Stop_Batmobile_ApRocket_Lock_Beep`"
+   ],
+   "RVehicleWeapon.LockedOnSound": [
+    "0x08D8",
+    "ObjectNCRProperty",
+    "`Engine.Play_Batmobile_ApRocket_Locked`"
+   ],
+   "RVehicleWeapon.LockedOnSoundOff": [
+    "0x08E0",
+    "ObjectNCRProperty",
+    "`Engine.Stop_Batmobile_ApRocket_Locked`"
+   ]
+  },
+  "Vehicle_Tracker": {
+   "Actor.Tag": [
+    "0x0168",
+    "NameProperty",
+    "\"RBatmobileVehicleTracker\""
+   ],
+   "RInventoryGadget.Mesh": [
+    "0x0318",
+    "ObjectNCRProperty",
+    "`Vehicle_Tracker.GadgetMesh`"
+   ],
+   "RPursuitModeMissileLauncher.LaunchRotationOffset": [
+    "0x0994",
+    "RotatorProperty",
+    "[5461, 0, 0]"
+   ],
+   "RPursuitModeMissileLauncher.LaunchSocketName": [
+    "0x0984",
+    "NameProperty",
+    "\"BattleModeSpotLight\""
+   ],
+   "RPursuitModeMissileLauncher.ProjectileArchetype": [
+    "0x097C",
+    "ObjectNCRProperty",
+    "`Projectiles.Batmobile_Tracker_Projectile`"
+   ],
+   "RVehicleWeapon.FireStartEvent": [
+    "0x0880",
+    "ObjectNCRProperty",
+    "`ww_chr_batmandisruptor.Play_BatSniperRifle_Vehicle_Tracking_Fire`"
+   ],
+   "RVehicleWeapon.IndividualFireEvent": [
+    "0x0898",
+    "ObjectNCRProperty",
+    "`ww_chr_batmandisruptor.Play_BatSniperRifle_Vehicle_Tracking_Fire`"
+   ]
+  },
+  "tracker_projectile": {
+   "Projectile.CylinderComponent": [
+    "0x02C0",
+    "ObjectNCRProperty",
+    "`Batmobile_Heavy_Cannon_BodyShot_Projectile.CollisionCylinder`"
+   ],
+   "Projectile.Damage": [
+    "0x02D8",
+    "FloatProperty",
+    "75.0"
+   ],
+   "Projectile.DamageRadius": [
+    "0x02DC",
+    "FloatProperty",
+    "0.0"
+   ],
+   "Projectile.MaxSpeed": [
+    "0x02A0",
+    "FloatProperty",
+    "48000.0"
+   ],
+   "Projectile.MomentumTransfer": [
+    "0x02E0",
+    "FloatProperty",
+    "66666.671875"
+   ],
+   "Projectile.MyDamageType": [
+    "0x02C8",
+    "ObjectNCRProperty",
+    "`Core.RDmgType_BatmobileCannon`"
+   ],
+   "Projectile.Speed": [
+    "0x029C",
+    "FloatProperty",
+    "40000.0"
+   ],
+   "RBatmobileMissile.AccelRate": [
+    "0x0428",
+    "FloatProperty",
+    "40000.0"
+   ],
+   "RBatmobileMissile.ExlposionSound": [
+    "0x03C8",
+    "ObjectNCRProperty",
+    "`Ww_VFX_Tank_Explosion.Play_Batmobile_Immobiliser_Impact`"
+   ],
+   "RBatmobileMissile.ExplosionTemplate": [
+    "0x03C0",
+    "ObjectNCRProperty",
+    "`Rocket.Batmobil_Rocket_Explosion`"
+   ],
+   "RBatmobileMissile.ForceExplodeProxDist": [
+    "0x043C",
+    "FloatProperty",
+    "100.0"
+   ],
+   "RBatmobileMissile.HomingDelay": [
+    "0x0424",
+    "FloatProperty",
+    "0.20000000298023224"
+   ],
+   "RBatmobileMissile.HomingLoop": [
+    "0x03F8",
+    "ObjectNCRProperty",
+    "`Engine.Play_Batmobile_ApRocket_Flight`"
+   ],
+   "RBatmobileMissile.HomingLoopOff": [
+    "0x03F0",
+    "ObjectNCRProperty",
+    "`Ww_VEH_Tank_Missiles.Stop_Batmobile_RocketTails`"
+   ],
+   "RBatmobileMissile.HomingLoopOn": [
+    "0x03E8",
+    "ObjectNCRProperty",
+    "`Engine.Play_Batmobile_ApRocket_Flight`"
+   ],
+   "RBatmobileMissile.InitialLoop": [
+    "0x03E0",
+    "ObjectNCRProperty",
+    "`Engine.Play_Batmobile_ApRocket_Up`"
+   ],
+   "RBatmobileMissile.InitialLoopOn": [
+    "0x03D0",
+    "ObjectNCRProperty",
+    "`Ww_VEH_Tank_Missiles.Play_Batmobile_RocketTails`"
+   ],
+   "RBatmobileMissile.Mesh": [
+    "0x0418",
+    "ObjectNCRProperty",
+    "`Batmobile_EMPMissile_Projectile.Mesh0`"
+   ],
+   "RBatmobileMissile.Trail": [
+    "0x0410",
+    "ObjectNCRProperty",
+    "`Batmobile_EMPMissile_Projectile.RocketTrail`"
+   ]
+  }
+ },
+ "classes": {
+  "RBatmobileBooster": {
+   "fields": [
+    {
+     "name": "bBoosting",
+     "offset": 2396
+    },
+    {
+     "name": "bWarming",
+     "offset": 2396
+    }
+   ],
+   "functions": [],
+   "size": 2400,
+   "super": "RVehicleWeapon"
+  },
+  "RBatmobileEMPMissile": {
+   "enums": [
+    [
+     "EMissileAnimState",
+     [
+      "EMAS_Down = 0",
+      "EMAS_GoingUp = 1",
+      "EMAS_Up = 2",
+      "EMAS_GoingDown = 3",
+      "EMAS_MAX = 4"
+     ]
+    ]
+   ],
+   "fields": [
+    {
+     "name": "LockOnTarget",
+     "offset": 2468
+    },
+    {
+     "name": "LastLockTarget",
+     "offset": 2476
+    },
+    {
+     "name": "TagTarget",
+     "offset": 2484
+    },
+    {
+     "name": "ProjectileForCarsArchetype",
+     "offset": 2492
+    },
+    {
+     "name": "ExplosionEvent",
+     "offset": 2500
+    },
+    {
+     "name": "UntagWarningEvent",
+     "offset": 2508
+    },
+    {
+     "name": "MissileAnimNode",
+     "offset": 2516
+    },
+    {
+     "name": "PursuitMissileBlendNode",
+     "offset": 2524
+    },
+    {
+     "name": "CantFireOnPenguinVanDialogue",
+     "offset": 2532
+    },
+    {
+     "name": "LockOnTime",
+     "offset": 2540
+    },
+    {
+     "name": "MaxDamageAngle",
+     "offset": 2544
+    },
+    {
+     "name": "SinWave1Param",
+     "offset": 2548
+    },
+    {
+     "name": "SinWave2Param",
+     "offset": 2552
+    },
+    {
+     "name": "AngleDamageFactor",
+     "offset": 2556
+    },
+    {
+     "name": "MissileLockOnDuration",
+     "offset": 2560
+    },
+    {
+     "name": "CivilianMissileLockOnDuration",
+     "offset": 2564
+    },
+    {
+     "name": "CurrentDamageFactor",
+     "offset": 2568
+    },
+    {
+     "name": "MissileLaunchSockets",
+     "offset": 2572
+    },
+    {
+     "name": "LauncherAnimNodeName",
+     "offset": 2588
+    },
+    {
+     "name": "LauncherBlendNodeName",
+     "offset": 2596
+    },
+    {
+     "name": "CurrentLaunchSocket",
+     "offset": 2604
+    },
+    {
+     "name": "MissileAnimState",
+     "offset": 2605
+    },
+    {
+     "name": "bTryingToAcquireNewTarget",
+     "offset": 2608
+    },
+    {
+     "name": "PromoteUntagPromptTime",
+     "offset": 2612
+    },
+    {
+     "name": "YTargetRange",
+     "offset": 2616
+    },
+    {
+     "name": "YTargetRangeMax",
+     "offset": 2620
+    },
+    {
+     "name": "ZTargetRange",
+     "offset": 2624
+    },
+    {
+     "name": "TunnelYTargetRange",
+     "offset": 2628
+    },
+    {
+     "name": "TunnelYTargetRangeMax",
+     "offset": 2632
+    },
+    {
+     "name": "TunnelZTargetRange",
+     "offset": 2636
+    },
+    {
+     "name": "LoseLockXBonus",
+     "offset": 2640
+    },
+    {
+     "name": "LoseLockYBonus",
+     "offset": 2644
+    },
+    {
+     "name": "LoseLockZBonus",
+     "offset": 2648
+    },
+    {
+     "name": "AngleAimFactor",
+     "offset": 2652
+    },
+    {
+     "name": "TargetScreenLoc",
+     "offset": 2656
+    },
+    {
+     "name": "LoseLockTime",
+     "offset": 2668
+    }
+   ],
+   "functions": [
+    "GetAutoTargetOrigin",
+    "GetAutoTargetRotation",
+    "NotifyOwnerDamaged",
+    "DriverLeft",
+    "GetAdditionalHelpPrompt",
+    "GetDumbFireTarget",
+    "SwitchLockOnTarget",
+    "OnProjectileSpawned",
+    "CalculateDamageFactor",
+    "GetTarget",
+    "ProjectileHitActor",
+    "AcquireNewLock",
+    "SetLockOnTarget",
+    "FireMissile",
+    "CanDisableTick",
+    "GetDrivingLookRotation",
+    "UpdateTagTarget",
+    "UnTagTarget",
+    "BattleModeFireButtonPressed",
+    "TagNewTarget",
+    "ButtonReleased",
+    "PreRender",
+    "UpdateAnimState",
+    "Tick",
+    "CheckAutoTarget",
+    "GivenTo"
+   ],
+   "native_functions": [
+    "FireMissile",
+    "GetTarget",
+    "ProjectileHitActor",
+    "Tick"
+   ],
+   "own_first_offset": [
+    "RPursuitModeMissileLauncher",
+    2468
+   ],
+   "size": 2672,
+   "super": "RPursuitModeMissileLauncher"
+  },
+  "RBatmobileVehicleTracker": {
+   "fields": [],
+   "functions": [
+    "ReadyToFire",
+    "CheckAutoTarget",
+    "ProjectileHitActor"
+   ],
+   "own_fields": 0,
+   "size": 2468,
+   "super": "RPursuitModeMissileLauncher"
+  },
+  "RPursuitModeMissileLauncher": {
+   "fields": [
+    {
+     "name": "FireBlendNode",
+     "offset": 2396
+    },
+    {
+     "name": "FireAnimNode",
+     "offset": 2404
+    },
+    {
+     "name": "SwivelController",
+     "offset": 2412
+    },
+    {
+     "name": "CurrentTarget",
+     "offset": 2420
+    },
+    {
+     "name": "ProjectileArchetype",
+     "offset": 2428
+    },
+    {
+     "name": "LaunchSocketName",
+     "offset": 2436
+    },
+    {
+     "name": "AutoTargetAngle",
+     "offset": 2444
+    },
+    {
+     "name": "Range",
+     "offset": 2448
+    },
+    {
+     "name": "LaunchRotationOffset",
+     "offset": 2452
+    },
+    {
+     "name": "bInstantFire",
+     "offset": 2464
+    }
+   ],
+   "functions": [
+    "ModifyLaunchRotation",
+    "OnProjectileSpawned",
+    "FireBatTracker",
+    "GetTarget",
+    "FireWeapon",
+    "GivenTo"
+   ],
+   "size": 2468,
+   "super": "RVehicleWeapon"
+  },
+  "RVehicleBatmobileBase": {
+   "emp_state": [
+    {
+     "name": "DisabledByEMP",
+     "offset": 4568
+    },
+    {
+     "name": "VulnerableToEMP",
+     "offset": 4568
+    },
+    {
+     "name": "EMPRepairable",
+     "offset": 4572
+    },
+    {
+     "name": "EMPMaterial",
+     "offset": 5508
+    },
+    {
+     "name": "EMPMaterialIndex",
+     "offset": 5936
+    }
+   ],
+   "size": 8352
+  }
+ },
+ "jc3": {
+  "emp_tune": {
+   "AIDamage": "100",
+   "AIDamageRadius": "25",
+   "PlayerDamage": "100",
+   "PlayerDamageRadius": "25",
+   "PlayerDamageRadiusMin": "1",
+   "PlayerDamageRadiusPercentageMax": "1"
+  },
+  "hack": {
+   "allegiance": 0,
+   "hack_files": 2
+  },
+  "owners": {
+   "CBulletWeaponBase": 29,
+   "CCar": 126,
+   "CMissileWeaponBase": 25
+  },
+  "plain_blast": {
+   "PlayerDamage": "500",
+   "PlayerDamageRadius": "5"
+  },
+  "pulses_total": "307",
+  "sockets": {
+   "Afterburner": {
+    "bone": "JetSMove",
+    "bone_parent": "Batmobile_Chassis_Mesh",
+    "part_hint": "jet",
+    "pos": [
+     "-0.010",
+     "0.538",
+     "3.393"
+    ],
+    "socket": "Afterburner"
+   },
+   "Afterburner_Front": {
+    "bone": "Batmobile_Chassis_Mesh",
+    "bone_parent": "Batmobile_Chassis",
+    "part_hint": "body",
+    "pos": [
+     "-0.000",
+     "0.690",
+     "-2.930"
+    ],
+    "socket": "Afterburner_Front"
+   }
+  }
+ },
+ "samples": {
+  "anim_states": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "emp_firing_true": 0,
+  "files": [
+   "samples-20261103T084831Z.jsonl",
+   "samples-20261103T085330Z.jsonl",
+   "samples-20261103T085631Z.jsonl",
+   "samples-20261103T113755Z.jsonl",
+   "samples-20261103T114350Z.jsonl",
+   "samples-20261103T115320Z.jsonl",
+   "samples-20261103T120003Z.jsonl"
+  ],
+  "lines": 1122,
+  "lock_changes": 233,
+  "lock_max": 1.0,
+  "lock_targets": [
+   "RVehicleCar:RVehicleCar_120",
+   "RVehicleCar:RVehicleCar_137",
+   "RVehicleCar:RVehicleCar_14",
+   "RVehicleCar:RVehicleCar_165",
+   "RVehicleCar:RVehicleCar_206",
+   "RVehicleCar:RVehicleCar_25",
+   "RVehicleCar:RVehicleCar_82"
+  ],
+  "tag_changes": 50,
+  "tag_cleared": 24,
+  "tag_set": 26,
+  "tag_targets": [
+   "RVehicleCar:RVehicleCar_108",
+   "RVehicleCar:RVehicleCar_120",
+   "RVehicleCar:RVehicleCar_137",
+   "RVehicleCar:RVehicleCar_14",
+   "RVehicleCar:RVehicleCar_17",
+   "RVehicleCar:RVehicleCar_19",
+   "RVehicleCar:RVehicleCar_206",
+   "RVehicleCar:RVehicleCar_212",
+   "RVehicleCar:RVehicleCar_216",
+   "RVehicleCar:RVehicleCar_229",
+   "RVehicleCar:RVehicleCar_25",
+   "RVehicleCar:RVehicleCar_28",
+   "RVehicleCar:RVehicleCar_31",
+   "RVehicleCar:RVehicleCar_36",
+   "RVehicleCar:RVehicleCar_4",
+   "RVehicleCar:RVehicleCar_65",
+   "RVehicleCar:RVehicleCar_82"
+  ],
+  "tracker_firing_true": 0
+ },
+ "weapons_rows": {
+  "Actor.CollisionComponent": [
+   "0x00B4",
+   "ObjectNCRProperty",
+   "`Batmobile_Heavy_Cannon_BodyShot_Projectile.CollisionCylinder`"
+  ],
+  "Actor.DefaultAkAudible": [
+   "0x007C",
+   "ObjectNCRProperty",
+   "`Batmobile_Heavy_Cannon_BodyShot_Projectile.DefaultAkAudible_`"
+  ],
+  "Actor.Tag": [
+   "0x0168",
+   "NameProperty",
+   "\"RBatmobileAllegianceSwitcher\""
+  ],
+  "BlastScreenShake": [
+   "0x0B1C",
+   "StructProperty",
+   "struct, 4 props, 66 B"
+  ],
+  "BonesToHideWhenNotPresent": [
+   "0x0914",
+   "ArrayProperty",
+   "array, 2 items, 8 B each - payload not decoded"
+  ],
+  "ChainGunScreenShake": [
+   "0x0BA4",
+   "StructProperty",
+   "struct, 7 props, 112 B"
+  ],
+  "ChainGunScreenShake.AdvancedOptions": [
+   "0x0078",
+   "StructProperty",
+   "struct, 1 props, 10 B"
+  ],
+  "ChargingScreenShake": [
+   "0x0A60",
+   "StructProperty",
+   "struct, 5 props, 66 B"
+  ],
+  "CollisionFilter": [
+   "0x011F",
+   "ByteProperty",
+   "\"COF_Projectile\""
+  ],
+  "EMPFireSwitch": [
+   "0x09A8",
+   "ArrayProperty",
+   "array, 4 items, 4 B each - payload not decoded"
+  ],
+  "FireParticle": [
+   "0x0988",
+   "ArrayProperty",
+   "array, 4 items, 4 B each - payload not decoded"
+  ],
+  "FireScreenShake": [
+   "0x09C4",
+   "StructProperty",
+   "struct, 7 props, 112 B"
+  ],
+  "FireScreenShake.AdvancedOptions": [
+   "0x0078",
+   "StructProperty",
+   "struct, 1 props, 10 B"
+  ],
+  "HackerEffect": [
+   "0x09B0",
+   "ArrayProperty",
+   "array, 6 items, 4 B each - payload not decoded"
+  ],
+  "HeatBarSize": [
+   "0x0A90",
+   "StructProperty",
+   "[0.125, 0.03]"
+  ],
+  "HeatBarStart": [
+   "0x0A88",
+   "StructProperty",
+   "[0.79, 0.68]"
+  ],
+  "ImpulseFalloff": [
+   "0x021C",
+   "ByteProperty",
+   "\"RIF_Constant\""
+  ],
+  "InaccuracyVsTime": [
+   "0x0C4C",
+   "StructProperty",
+   "struct, 1 props, 274 B"
+  ],
+  "InaccuracyVsTime.Points": [
+   "0x0000",
+   "ArrayProperty",
+   "array, 4 items: [0.0, 0.0, 0.0, 0.0, \"CIM_Linear\"]; [0.5, 0.0, 0.0, 0.0, \"CIM_Linear\"]; [1.5, 1.5, 0.0, 0.0, \"CIM_Linear\"]; [2.5, 3.0, 0.0, 0.0, \"CIM_Linear\"]"
+  ],
+  "InaccuracyVsTimeUpgrade": [
+   "0x0C68",
+   "StructProperty",
+   "struct, 1 props, 274 B"
+  ],
+  "InaccuracyVsTimeUpgrade.Points": [
+   "0x0000",
+   "ArrayProperty",
+   "array, 4 items: [0.0, 0.0, 0.0, 0.0, \"CIM_Linear\"]; [1.0, 0.0, 0.0, 0.0, \"CIM_Linear\"]; [3.0, 1.5, 0.0, 0.0, \"CIM_Linear\"]; [5.0, 3.0, 0.0, 0.0, \"CIM_Linear\"]"
+  ],
+  "LightingChannels": [
+   "0x0200",
+   "StructProperty",
+   "struct, 1 props, 31 B"
+  ],
+  "MaxTargetsPerLevel": [
+   "0x0A20",
+   "ArrayProperty",
+   "array, 1 items, 4 B each - payload not decoded"
+  ],
+  "MissileLaunchSockets": [
+   "0x0A0C",
+   "ArrayProperty",
+   "array, 2 items, 8 B each - payload not decoded"
+  ],
+  "MissileSockets": [
+   "0x0A30",
+   "ArrayProperty",
+   "array, 10 items, 8 B each - payload not decoded"
+  ],
+  "Projectile.CylinderComponent": [
+   "0x02C0",
+   "ObjectNCRProperty",
+   "`Batmobile_Heavy_Cannon_BodyShot_Projectile.CollisionCylinder`"
+  ],
+  "Projectile.Damage": [
+   "0x02D8",
+   "FloatProperty",
+   "75.0"
+  ],
+  "Projectile.DamageRadius": [
+   "0x02DC",
+   "FloatProperty",
+   "0.0"
+  ],
+  "Projectile.MaxSpeed": [
+   "0x02A0",
+   "FloatProperty",
+   "48000.0"
+  ],
+  "Projectile.MomentumTransfer": [
+   "0x02E0",
+   "FloatProperty",
+   "66666.671875"
+  ],
+  "Projectile.MyDamageType": [
+   "0x02C8",
+   "ObjectNCRProperty",
+   "`Core.RDmgType_BatmobileCannon`"
+  ],
+  "Projectile.Speed": [
+   "0x029C",
+   "FloatProperty",
+   "40000.0"
+  ],
+  "RBasicProjectile.ImpactExplosion": [
+   "0x0364",
+   "ObjectNCRProperty",
+   "`Cannon_Upgrades.Impact_Body_UPGR`"
+  ],
+  "RBasicProjectile.ImpactExplosionSound": [
+   "0x037C",
+   "ObjectNCRProperty",
+   "`Ww_VFX_Tank_Explosion.Play_Batmobile_HeavyCannon_Explosion`"
+  ],
+  "RBasicProjectile.InitialAcceleration": [
+   "0x0358",
+   "VectorProperty",
+   "[0.0, 0.0, -1000.0]"
+  ],
+  "RBasicProjectile.MuzzleFlashOverride": [
+   "0x0374",
+   "ObjectNCRProperty",
+   "`Cannon_Upgrades.Muzzle_Body_UPGR`"
+  ],
+  "RBasicProjectile.PassThroughDestructibleEffect": [
+   "0x036C",
+   "ObjectNCRProperty",
+   "`Particles.Batmobile_HeavyCannon_Impact`"
+  ],
+  "RBasicProjectile.ProjectileMesh": [
+   "0x0348",
+   "ObjectNCRProperty",
+   "`Batmobile_Heavy_Cannon_BodyShot_Projectile.Mesh0`"
+  ],
+  "RBasicProjectile.ProjectileTrail": [
+   "0x0350",
+   "ObjectNCRProperty",
+   "`Batmobile_Heavy_Cannon_BodyShot_Projectile.RocketTrail`"
+  ],
+  "RBasicProjectile.TurretShotDamage": [
+   "0x03B0",
+   "IntProperty",
+   "110"
+  ],
+  "RBatmobileAllegianceSwitcher.BatmobileHackerEffect": [
+   "0x0968",
+   "ObjectNCRProperty",
+   "`Particles.DroneHacker_Beam`"
+  ],
+  "RBatmobileAllegianceSwitcher.BatmobileHackerEffectHvyTank": [
+   "0x0978",
+   "ObjectNCRProperty",
+   "`Particles.CobraHacker_Beam`"
+  ],
+  "RBatmobileAllegianceSwitcher.BeamPositionalSound": [
+   "0x09A0",
+   "ObjectNCRProperty",
+   "`Engine.Play_Batmobile_DroneHacker_Loop`"
+  ],
+  "RBatmobileAllegianceSwitcher.DroneHackerMaterial": [
+   "0x0988",
+   "ObjectNCRProperty",
+   "`Materials.DroneHacker_Beam_INST`"
+  ],
+  "RBatmobileAllegianceSwitcher.HackingSound": [
+   "0x0998",
+   "ObjectNCRProperty",
+   "`Engine.Play_Batmobile_DroneHacker_Fire`"
+  ],
+  "RBatmobileAllegianceSwitcher.NotEnoughEnergyThought": [
+   "0x09A8",
+   "ObjectNCRProperty",
+   "`Lines.Char_Batman_Misc_Cobra_Barrage_Energy_B_01`"
+  ],
+  "RBatmobileAllegianceSwitcher.SuccessfulHackEffect": [
+   "0x0970",
+   "ObjectNCRProperty",
+   "`Particles.DroneHacker_Success`"
+  ],
+  "RBatmobileAllegianceSwitcher.SuccessfulHackEffectHvyTank": [
+   "0x0980",
+   "ObjectNCRProperty",
+   "`Particles.CobraHacker_Success`"
+  ],
+  "RBatmobileAllegianceSwitcher.SucessfullHackSound": [
+   "0x0990",
+   "ObjectNCRProperty",
+   "`Engine.Play_Batmobile_DroneHacker_Hacked`"
+  ],
+  "RBatmobileCannon.ChainGunCooledSound": [
+   "0x09D0",
+   "ObjectNCRProperty",
+   "`Engine.Play_Minigun_Cooled`"
+  ],
+  "RBatmobileCannon.ChainGunDamage": [
+   "0x0B64",
+   "IntProperty",
+   "40"
+  ],
+  "RBatmobileCannon.ChainGunLoopingShells": [
+   "0x09A8",
+   "ObjectNCRProperty",
+   "`Particles.ChainGun_BulletCasing`"
+  ],
+  "RBatmobileCannon.ChainGunMaxSpinSpeed": [
+   "0x0A98",
+   "FloatProperty",
+   "1440.0"
+  ],
+  "RBatmobileCannon.ChainGunOverheatSound": [
+   "0x09C8",
+   "ObjectNCRProperty",
+   "`Engine.Play_Minigun_Overheat`"
+  ],
+  "RBatmobileCannon.ChainGunShells": [
+   "0x0A30",
+   "ObjectNCRProperty",
+   "`Batmobile_Cannon_V2.ChainGunShells0`"
+  ],
+  "RBatmobileCannon.ChainGunShellsSocket": [
+   "0x0B84",
+   "NameProperty",
+   "\"ChainGunShells\""
+  ],
+  "RBatmobileCannon.ChainGunSpinAccel": [
+   "0x0A9C",
+   "FloatProperty",
+   "2500.0"
+  ],
+  "RBatmobileCannon.ChainGunSpinDecel": [
+   "0x0AA0",
+   "FloatProperty",
+   "2000.0"
+  ],
+  "RBatmobileCannon.ChainGunTracerSystem": [
+   "0x09A0",
+   "ObjectNCRProperty",
+   "`Particles.Batmobile_Muzzleflash_Tracer`"
+  ],
+  "RBatmobileCannon.ComboFireLoopingEvent": [
+   "0x0A08",
+   "ObjectNCRProperty",
+   "`Engine.Play_Minigun_Combo_Fire`"
+  ],
+  "RBatmobileCannon.ComboFiringInterval": [
+   "0x0B58",
+   "FloatProperty",
+   "0.1379999965429306"
+  ],
+  "RBatmobileCannon.EnterComboSound": [
+   "0x0A10",
+   "ObjectNCRProperty",
+   "`Engine.Play_Minigun_Combo_Trans_In`"
+  ],
+  "RBatmobileCannon.ExitComboSound": [
+   "0x0A18",
+   "ObjectNCRProperty",
+   "`Engine.Play_Minigun_Combo_Trans_Out`"
+  ],
+  "RBatmobileCannon.GunFX": [
+   "0x0978",
+   "ObjectNCRProperty",
+   "`Particles.Batmobile_Muzzleflash_NoTracer`"
+  ],
+  "RBatmobileCannon.HeatUpPerSecond": [
+   "0x0A78",
+   "FloatProperty",
+   "0.0"
+  ],
+  "RBatmobileCannon.ImpactMomentum": [
+   "0x0A68",
+   "FloatProperty",
+   "60000.0"
+  ],
+  "RBatmobileCannon.InaccuracyAngle": [
+   "0x0A70",
+   "FloatProperty",
+   "0.10000000149011612"
+  ],
+  "RBatmobileCannon.MaxTurretPitch": [
+   "0x0B60",
+   "FloatProperty",
+   "18.0"
+  ],
+  "RBatmobileCannon.MinTurretPitch": [
+   "0x0B5C",
+   "FloatProperty",
+   "0.0"
+  ],
+  "RBatmobileCannon.OverheatOffValue": [
+   "0x0A80",
+   "FloatProperty",
+   "0.25"
+  ],
+  "RBatmobileCannon.RecoilImpulse": [
+   "0x0A6C",
+   "FloatProperty",
+   "400.0"
+  ],
+  "RBatmobileCannon.RiotSuppressorFiringInterval": [
+   "0x0AB4",
+   "FloatProperty",
+   "0.75"
+  ],
+  "RBatmobileCannon.RiotSuppressorHitSound": [
+   "0x09C0",
+   "ObjectNCRProperty",
+   "`Engine.Play_RiotSupressor_Impacts`"
+  ],
+  "RBatmobileCannon.RiotSuppressorImpactEffect": [
+   "0x0988",
+   "ObjectNCRProperty",
+   "`Riot_Suppressor.Anti_firearm_gel_Miss`"
+  ],
+  "RBatmobileCannon.RiotSuppressorIndividualFireEvent": [
+   "0x09B8",
+   "ObjectNCRProperty",
+   "`Engine.Play_RiotSuppressor_Bolt`"
+  ],
+  "RBatmobileCannon.RiotSuppressorLockOnAngle": [
+   "0x0AAC",
+   "FloatProperty",
+   "7.5"
+  ],
+  "RBatmobileCannon.RiotSuppressorRange": [
+   "0x0AB0",
+   "FloatProperty",
+   "8000.0"
+  ],
+  "RBatmobileCannon.RiotSuppressorShell": [
+   "0x09B0",
+   "ObjectNCRProperty",
+   "`Particles.RiotSuppressor_BulletCasing`"
+  ],
+  "RBatmobileCannon.RiotSuppressorShellsSocket": [
+   "0x0B8C",
+   "NameProperty",
+   "\"RiotSuppressorShells\""
+  ],
+  "RBatmobileCannon.RiotSuppressorTracerSystem": [
+   "0x0998",
+   "ObjectNCRProperty",
+   "`Particles.Batmobile_RiotSuppressor_Tracer`"
+  ],
+  "RBatmobileCannon.RiotSuppressorVillainImpulse": [
+   "0x0AB8",
+   "FloatProperty",
+   "6000.0"
+  ],
+  "RBatmobileCannon.UpgradedDamage": [
+   "0x0B68",
+   "IntProperty",
+   "50"
+  ],
+  "RBatmobileEMP.ChargeParticle": [
+   "0x0970",
+   "ObjectNCRProperty",
+   "`Batmobile_EMP_Burst.ChargeParticle0`"
+  ],
+  "RBatmobileEMP.ImpulseComponent": [
+   "0x09C0",
+   "ObjectNCRProperty",
+   "`Batmobile_EMP_Burst.ImpulseComponent0`"
+  ],
+  "RBatmobileEMPMissile.CantFireOnPenguinVanDialogue": [
+   "0x09E4",
+   "ObjectNCRProperty",
+   "`Conversation.Main_Ch03_S24_Cityx_Pt3_Callcar`"
+  ],
+  "RBatmobileEMPMissile.CivilianMissileLockOnDuration": [
+   "0x0A04",
+   "FloatProperty",
+   "1.0"
+  ],
+  "RBatmobileEMPMissile.LauncherAnimNodeName": [
+   "0x0A1C",
+   "NameProperty",
+   "\"PursuitMissileAnim\""
+  ],
+  "RBatmobileEMPMissile.LoseLockXBonus": [
+   "0x0A50",
+   "FloatProperty",
+   "600.0"
+  ],
+  "RBatmobileEMPMissile.LoseLockYBonus": [
+   "0x0A54",
+   "FloatProperty",
+   "800.0"
+  ],
+  "RBatmobileEMPMissile.MissileLockOnDuration": [
+   "0x0A00",
+   "FloatProperty",
+   "2.0"
+  ],
+  "RBatmobileEMPMissile.ProjectileForCarsArchetype": [
+   "0x09BC",
+   "ObjectNCRProperty",
+   "`Projectiles.Batmobile_EMPMissile_Projectile_ForCars`"
+  ],
+  "RBatmobileEMPMissile.UntagWarningEvent": [
+   "0x09CC",
+   "ObjectNCRProperty",
+   "`Ww_CHR_BatmanAlerts.Play_HUD_fail`"
+  ],
+  "RBatmobileHeavyCannon.BothUpgradesProjectileArchetype": [
+   "0x0974",
+   "ObjectNCRProperty",
+   "`Projectiles.Batmobile_Heavy_Cannon_Fully_Upgraded_Projectile`"
+  ],
+  "RBatmobileHeavyCannon.ChaingunAimOffset": [
+   "0x0B0C",
+   "VectorProperty",
+   "[0.0, 0.0, -50.0]"
+  ],
+  "RBatmobileHeavyCannon.ChargeMaxDamageRadius": [
+   "0x0B04",
+   "FloatProperty",
+   "0.0"
+  ],
+  "RBatmobileHeavyCannon.ChargeUpTime": [
+   "0x0B00",
+   "FloatProperty",
+   "2.5"
+  ],
+  "RBatmobileHeavyCannon.FireFX": [
+   "0x097C",
+   "ObjectNCRProperty",
+   "`Particles.Batmobile_canonMuzzleflash`"
+  ],
+  "RBatmobileHeavyCannon.FirePitchOffset": [
+   "0x09A4",
+   "IntProperty",
+   "350"
+  ],
+  "RBatmobileHeavyCannon.FireSound": [
+   "0x0984",
+   "ObjectNCRProperty",
+   "`Engine.Play_BML_HeavyCannon_Fire`"
+  ],
+  "RBatmobileHeavyCannon.LockOnAngle": [
+   "0x09B0",
+   "FloatProperty",
+   "15.0"
+  ],
+  "RBatmobileHeavyCannon.LockOnTimeMax": [
+   "0x09BC",
+   "FloatProperty",
+   "6.0"
+  ],
+  "RBatmobileHeavyCannon.LockOnTimeMin": [
+   "0x09B8",
+   "FloatProperty",
+   "0.5"
+  ],
+  "RBatmobileHeavyCannon.ProjectileArchetype": [
+   "0x095C",
+   "ObjectNCRProperty",
+   "`Projectiles.Batmobile_Heavy_Cannon_Primary_Projectile`"
+  ],
+  "RBatmobileHeavyCannon.RecoilImpulse": [
+   "0x099C",
+   "FloatProperty",
+   "15000.0"
+  ],
+  "RBatmobileHeavyCannon.UpgradedBodyShotProjectileArchetype": [
+   "0x0964",
+   "ObjectNCRProperty",
+   "`Projectiles.Batmobile_Heavy_Cannon_BodyShot_Projectile`"
+  ],
+  "RBatmobileHeavyCannon.UpgradedHeadShotProjectileArchetype": [
+   "0x096C",
+   "ObjectNCRProperty",
+   "`Projectiles.Batmobile_Heavy_Cannon_HeadShot_Projectile`"
+  ],
+  "RBatmobileMissile.AccelRate": [
+   "0x0428",
+   "FloatProperty",
+   "40000.0"
+  ],
+  "RBatmobileMissile.ExlposionSound": [
+   "0x03C8",
+   "ObjectNCRProperty",
+   "`Ww_VFX_Tank_Explosion.Play_Batmobile_Immobiliser_Impact`"
+  ],
+  "RBatmobileMissile.ExplosionTemplate": [
+   "0x03C0",
+   "ObjectNCRProperty",
+   "`Rocket.Batmobil_Rocket_Explosion`"
+  ],
+  "RBatmobileMissile.ForceExplodeProxDist": [
+   "0x043C",
+   "FloatProperty",
+   "100.0"
+  ],
+  "RBatmobileMissile.HomingDelay": [
+   "0x0424",
+   "FloatProperty",
+   "0.20000000298023224"
+  ],
+  "RBatmobileMissile.HomingLoop": [
+   "0x03F8",
+   "ObjectNCRProperty",
+   "`Engine.Play_Batmobile_ApRocket_Flight`"
+  ],
+  "RBatmobileMissile.HomingLoopOff": [
+   "0x03F0",
+   "ObjectNCRProperty",
+   "`Ww_VEH_Tank_Missiles.Stop_Batmobile_RocketTails`"
+  ],
+  "RBatmobileMissile.HomingLoopOn": [
+   "0x03E8",
+   "ObjectNCRProperty",
+   "`Engine.Play_Batmobile_ApRocket_Flight`"
+  ],
+  "RBatmobileMissile.InitialLoop": [
+   "0x03E0",
+   "ObjectNCRProperty",
+   "`Engine.Play_Batmobile_ApRocket_Up`"
+  ],
+  "RBatmobileMissile.InitialLoopOn": [
+   "0x03D0",
+   "ObjectNCRProperty",
+   "`Ww_VEH_Tank_Missiles.Play_Batmobile_RocketTails`"
+  ],
+  "RBatmobileMissile.Mesh": [
+   "0x0418",
+   "ObjectNCRProperty",
+   "`Batmobile_EMPMissile_Projectile.Mesh0`"
+  ],
+  "RBatmobileMissile.Trail": [
+   "0x0410",
+   "ObjectNCRProperty",
+   "`Batmobile_EMPMissile_Projectile.RocketTrail`"
+  ],
+  "RBatmobileMissileLauncher.FinalExplosionSweetener": [
+   "0x09D4",
+   "ObjectNCRProperty",
+   "`Ww_VFX_Tank_Explosion.Play_Tank_Explosion_Barrage_Sweetener`"
+  ],
+  "RBatmobileMissileLauncher.FireFX": [
+   "0x099C",
+   "ObjectNCRProperty",
+   "`Rocket.Batmobile_Rocket_Muzzle`"
+  ],
+  "RBatmobileMissileLauncher.FireInterval": [
+   "0x098C",
+   "FloatProperty",
+   "0.5"
+  ],
+  "RBatmobileMissileLauncher.InvalidHeavyTankAngleThought": [
+   "0x09EC",
+   "ObjectNCRProperty",
+   "`Lines.Char_Batman_Misc_Cobra_Barrage_01`"
+  ],
+  "RBatmobileMissileLauncher.LastTargetSwitchName": [
+   "0x09C4",
+   "ObjectNCRProperty",
+   "`Ww_Batmobile_Target.Batmobile_Target_Last`"
+  ],
+  "RBatmobileMissileLauncher.LockOnAngle": [
+   "0x0980",
+   "FloatProperty",
+   "40.0"
+  ],
+  "RBatmobileMissileLauncher.LockOnRange": [
+   "0x0984",
+   "FloatProperty",
+   "12000.0"
+  ],
+  "RBatmobileMissileLauncher.LockOnSound": [
+   "0x09A4",
+   "ObjectNCRProperty",
+   "`Engine.Play_RiotSuppressor_Select`"
+  ],
+  "RBatmobileMissileLauncher.MaxTargets": [
+   "0x095C",
+   "IntProperty",
+   "8"
+  ],
+  "RBatmobileMissileLauncher.MissileClass": [
+   "0x0994",
+   "ObjectNCRProperty",
+   "`Projectiles.Batmobile_Missile_Projectile`"
+  ],
+  "RBatmobileMissileLauncher.MissileFFWaveForm": [
+   "0x09DC",
+   "ObjectNCRProperty",
+   "`Default__RBatmobileMissileLauncherJoker.MissileForceFeedbackWaveform`"
+  ],
+  "RBatmobileMissileLauncher.MissileNumberParameter": [
+   "0x09CC",
+   "ObjectNCRProperty",
+   "`Ww_Parameters.BML_NumberOfTargets`"
+  ],
+  "RBatmobileMissileLauncher.NotEnoughEnergyThought": [
+   "0x09E4",
+   "ObjectNCRProperty",
+   "`Lines.Char_Batman_Misc_Cobra_Barrage_Energy_01`"
+  ],
+  "RBatmobileMissileLauncher.TargetSwitchName": [
+   "0x09BC",
+   "ObjectNCRProperty",
+   "`Ww_Batmobile_Target.Batmobile_Target`"
+  ],
+  "RBatmobileMissileLauncherJoker.MaxPostTapTargets": [
+   "0x0A6C",
+   "IntProperty",
+   "12"
+  ],
+  "RBatmobileMissileLauncherJoker.NewHydraFX": [
+   "0x0A74",
+   "ObjectNCRProperty",
+   "`JokerA2.HydraMissile_P`"
+  ],
+  "RBatmobileMissileLauncherJoker.NewHydraPFX": [
+   "0x0A7C",
+   "ObjectNCRProperty",
+   "`Batmobile_JokerMissile_Launcher.NewHydraPFX1`"
+  ],
+  "RBatmobileMissileLauncherJoker.NumFakeTargetReps": [
+   "0x0A68",
+   "IntProperty",
+   "1"
+  ],
+  "RBatmobileSonar.BasicScanEffect": [
+   "0x0A48",
+   "ObjectNCRProperty",
+   "`Engine.Tire_Track_Pulse_P`"
+  ],
+  "RBatmobileSonar.BasicScanSound": [
+   "0x0A50",
+   "ObjectNCRProperty",
+   "`Engine.Play_BML_Sonar_Forensics_Pulse`"
+  ],
+  "RBatmobileSonar.BlastParticle": [
+   "0x0A38",
+   "ObjectNCRProperty",
+   "`Particles.Batmobile_Seismic_Sonar_Charged`"
+  ],
+  "RBatmobileSonar.BlastSound": [
+   "0x0A40",
+   "ObjectNCRProperty",
+   "`Ww_BML_Sonar.Play_BML_Sonar_Pulse_Full`"
+  ],
+  "RBatmobileSonar.ChargeStartSound": [
+   "0x0A28",
+   "ObjectNCRProperty",
+   "`Ww_BML_Sonar.Play_BML_Sonar_Rumble_Lp`"
+  ],
+  "RBatmobileSonar.ChargeStopSound": [
+   "0x0A30",
+   "ObjectNCRProperty",
+   "`Ww_BML_Sonar.Stop_BML_Sonar_Rumble_Lp`"
+  ],
+  "RBatmobileSonar.ScanParticle": [
+   "0x0A10",
+   "ObjectNCRProperty",
+   "`Particles.Batmobile_Seismic_Sonar`"
+  ],
+  "RBatmobileSonar.ScanSound": [
+   "0x0A18",
+   "ObjectNCRProperty",
+   "`Ww_BML_Sonar.Play_BML_Sonar_Pulse_Search`"
+  ],
+  "RBatmobileSonar.ScannerOffSound": [
+   "0x0A78",
+   "ObjectNCRProperty",
+   "`Ww_BML_Sonar.Play_BML_Sonar_Turn_Off`"
+  ],
+  "RBatmobileSonar.ScannerOnSound": [
+   "0x0A70",
+   "ObjectNCRProperty",
+   "`Ww_BML_Sonar.Play_BML_Sonar_Turn_On`"
+  ],
+  "RBatmobileWinch.BatmobileHidePointClass": [
+   "0x0A08",
+   "ObjectNCRProperty",
+   "`BmScript.RHidePoint_Batmobile`"
+  ],
+  "RBatmobileWinch.BeamElectricityComp": [
+   "0x0A20",
+   "ObjectNCRProperty",
+   "`Batmobile_Winch.BeamElectricityComp0`"
+  ],
+  "RBatmobileWinch.FireEffect": [
+   "0x0990",
+   "ObjectNCRProperty",
+   "`Winch.Winch_Muzzle`"
+  ],
+  "RBatmobileWinch.FireElectricityComp": [
+   "0x0A28",
+   "ObjectNCRProperty",
+   "`Batmobile_Winch.FireElectricityComp0`"
+  ],
+  "RBatmobileWinch.FireSound": [
+   "0x09A0",
+   "ObjectNCRProperty",
+   "`Engine.Play_BML_WinchFire`"
+  ],
+  "RBatmobileWinch.ImpactEffect": [
+   "0x0998",
+   "ObjectNCRProperty",
+   "`VFX_Batmobile.winch_latched`"
+  ],
+  "RBatmobileWinch.ImpactSound": [
+   "0x09A8",
+   "ObjectNCRProperty",
+   "`Engine.Play_BML_Winch_Attatch`"
+  ],
+  "RBatmobileWinch.ProjectileRope": [
+   "0x0A18",
+   "ObjectNCRProperty",
+   "`Batmobile_Winch.RopeComponent0`"
+  ],
+  "RBatmobileWinch.ReleaseSound": [
+   "0x09B0",
+   "ObjectNCRProperty",
+   "`Engine.Play_BML_WinchDetach`"
+  ],
+  "RBatmobileWinch.StubRope": [
+   "0x0A10",
+   "ObjectNCRProperty",
+   "`Batmobile_Winch.RopeComponent1`"
+  ],
+  "RBatmobileWinch.TensionStartSound": [
+   "0x09B8",
+   "ObjectNCRProperty",
+   "`Engine.Play_BML_Winch_Cable_Tension`"
+  ],
+  "RBatmobileWinch.WinchLoopingSound": [
+   "0x09D0",
+   "ObjectNCRProperty",
+   "`Engine.Play_BML_Winch_Cable`"
+  ],
+  "RInventoryGadget.Mesh": [
+   "0x0318",
+   "ObjectNCRProperty",
+   "`Drone_Hacker.GadgetMesh`"
+  ],
+  "RInventoryGadget.TargetClass": [
+   "0x04B4",
+   "NameProperty",
+   "\"BatmobileMissileLauncherJoker\""
+  ],
+  "RProjectile.ImpactExplosionFlameTrail": [
+   "0x0328",
+   "ObjectNCRProperty",
+   "`Damage_States.FireTrail_APC`"
+  ],
+  "RProjectile.ImpactRadialImpulseComponent": [
+   "0x0330",
+   "ObjectNCRProperty",
+   "`Batmobile_Heavy_Cannon_BodyShot_Projectile.ImpulseComponent0`"
+  ],
+  "RPursuitModeMissileLauncher.LaunchRotationOffset": [
+   "0x0994",
+   "RotatorProperty",
+   "[-3640, 0, 0]"
+  ],
+  "RPursuitModeMissileLauncher.LaunchSocketName": [
+   "0x0984",
+   "NameProperty",
+   "\"BattleModeSpotLight\""
+  ],
+  "RPursuitModeMissileLauncher.ProjectileArchetype": [
+   "0x097C",
+   "ObjectNCRProperty",
+   "`Projectiles.Batmobile_EMPMissile_Projectile_ForCars`"
+  ],
+  "RPursuitModeMissileLauncher.bInstantFire": [
+   "0x09A0",
+   "BoolProperty",
+   "true"
+  ],
+  "RVehicleWeapon.CursorAccel": [
+   "0x085C",
+   "FloatProperty",
+   "18.0"
+  ],
+  "RVehicleWeapon.CursorDecel": [
+   "0x0860",
+   "FloatProperty",
+   "24.0"
+  ],
+  "RVehicleWeapon.CursorReturnDelay": [
+   "0x0868",
+   "FloatProperty",
+   "0.15000000596046448"
+  ],
+  "RVehicleWeapon.CursorReturnFactor": [
+   "0x0864",
+   "FloatProperty",
+   "10.0"
+  ],
+  "RVehicleWeapon.CursorSpeed": [
+   "0x0858",
+   "FloatProperty",
+   "10.0"
+  ],
+  "RVehicleWeapon.FireLoopingEvent": [
+   "0x0890",
+   "ObjectNCRProperty",
+   "`Engine.Play_Minigun_Fire`"
+  ],
+  "RVehicleWeapon.FireStartEvent": [
+   "0x0880",
+   "ObjectNCRProperty",
+   "`Engine.Play_Batmobile_EMP`"
+  ],
+  "RVehicleWeapon.FiringInterval": [
+   "0x0828",
+   "FloatProperty",
+   "0.1379999965429306"
+  ],
+  "RVehicleWeapon.IndividualFireEvent": [
+   "0x0898",
+   "ObjectNCRProperty",
+   "`Engine.Play_Batmobile_EMP`"
+  ],
+  "RVehicleWeapon.LethalRadius": [
+   "0x08FC",
+   "FloatProperty",
+   "175.0"
+  ],
+  "RVehicleWeapon.LethalRange": [
+   "0x0900",
+   "FloatProperty",
+   "12000.0"
+  ],
+  "RVehicleWeapon.LockOnBeepProportionParam": [
+   "0x08D0",
+   "ObjectNCRProperty",
+   "`Ww_Parameters.BML_AP_Rocket_Lock`"
+  ],
+  "RVehicleWeapon.LockOnBeepSound": [
+   "0x08C8",
+   "ObjectNCRProperty",
+   "`Engine.Play_Batmobile_ApRocket_Lock_Beep`"
+  ],
+  "RVehicleWeapon.LockOnBeepSoundOff": [
+   "0x08E8",
+   "ObjectNCRProperty",
+   "`Engine.Stop_Batmobile_ApRocket_Lock_Beep`"
+  ],
+  "RVehicleWeapon.LockedOnSound": [
+   "0x08D8",
+   "ObjectNCRProperty",
+   "`Engine.Play_Batmobile_ApRocket_Locked`"
+  ],
+  "RVehicleWeapon.LockedOnSoundOff": [
+   "0x08E0",
+   "ObjectNCRProperty",
+   "`Engine.Stop_Batmobile_ApRocket_Locked`"
+  ],
+  "RVehicleWeapon.MaterialIndexToUpdateWhenPresent": [
+   "0x092C",
+   "IntProperty",
+   "0"
+  ],
+  "RVehicleWeapon.MaterialOriginalToUpdateWhenPresent": [
+   "0x08C0",
+   "ObjectNCRProperty",
+   "`Material_MASTERS.Batmobile_V3_Wheel_V2_MAT`"
+  ],
+  "RVehicleWeapon.MaterialToUpdateWhenPresent": [
+   "0x08B8",
+   "ObjectNCRProperty",
+   "`Material_MASTERS.Batmobile_V3_Wheel_EMP_MAT_INST`"
+  ],
+  "RVehicleWeapon.OverrideCamera": [
+   "0x0930",
+   "NameProperty",
+   "\"CustomCamera\""
+  ],
+  "RVehicleWeapon.PowerConsumption": [
+   "0x0938",
+   "FloatProperty",
+   "0.0"
+  ],
+  "RVehicleWeapon.ReloadSound": [
+   "0x08A0",
+   "ObjectNCRProperty",
+   "`Engine.Play_BML_HeavyCannon_Reload`"
+  ],
+  "RVehicleWeapon.ReloadSoundDuration": [
+   "0x08F0",
+   "FloatProperty",
+   "0.4000000059604645"
+  ],
+  "RVehicleWeapon.TempName": [
+   "0x0814",
+   "StrProperty",
+   "\"Chain Gun\""
+  ],
+  "RVehicleWeapon.WeaponCoolDown": [
+   "0x0830",
+   "FloatProperty",
+   "1.0"
+  ],
+  "RVehicleWeapon.WeaponHitEvent": [
+   "0x08A8",
+   "ObjectNCRProperty",
+   "`Engine.Play_BulletImpact_HitBeep`"
+  ],
+  "ReplacementPrimitive": [
+   "0x013C",
+   "ObjectProperty",
+   "0"
+  ],
+  "RiotSuppressorFireScreenShake": [
+   "0x0ABC",
+   "StructProperty",
+   "struct, 7 props, 112 B"
+  ],
+  "RiotSuppressorFireScreenShake.AdvancedOptions": [
+   "0x0078",
+   "StructProperty",
+   "struct, 1 props, 10 B"
+  ]
+ }
+}

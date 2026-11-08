@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-rc5-damage-tree.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-health-explosion-no-crash.md
+Offline read-back of Builds/bm-RC5-damage after brief 9171. Run Tools/scripts/rc5_damage.py --check, then recompute from the built bytes, with Tools/scripts/damage_predict.py --root, the hits-to-kill of the nine BmAK arms on the three vehicle archetypes and compare them with Working/Damage/health_scale_ruling.md and attacker_table.json. Confirm four absences by reading the built entity and module rows: no smoke or burn threshold below zero-health, no part damage type that detaches or swaps a mesh, impact_damage_factor 0 (incoming), and deform_scale 0. Confirm the explosion route rows exist and the occupant kill is either present or listed as a hook item pointing at Builds/hook-0008-death. Compare the branch record under Working/RC5/branches/ with the files on disk (counts and sha256). Write Tools/scripts/verify_rc5_damage.py (--write, --check), Builds/bm-RC5-damage/verify/readback.md and the report. Every mismatch becomes a row with owner and a proposed fix; no tree is edited. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/paint-gaps-closest-system-plan.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-06
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/colour-bmak-wet-look.md
+The colour report (colour-bmak-wet-look.md) decoded the look (base 0.025787 / 0.025787 / 0.03, roughness 0.4, reflectivity 0.2, metalness 1.0, clear coat 1.0, wet multipliers 0.6 / 0.6 / 1.6 / 0.75) but labelled reflectivity, the wet family, the edge mask and the anisotropic ramps "not carriable". Replace that with closest-system answers: for each of those four, find the nearest JC3 mechanism (clearcoat and gloss combinations, texture channel bakes, the weather wetness system, an extra material layer, additional geometry shells for edge highlights) and write the build recipe that reproduces the BmAK result with the numbers: where each BmAK value goes, what is baked, and what is measured on the built texture to prove it. The screenshot the operator supplied (dark charcoal, satin, wet street) is the visual reference only.

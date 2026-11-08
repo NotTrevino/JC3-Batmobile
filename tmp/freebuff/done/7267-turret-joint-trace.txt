@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/turret-joint-trace.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-06
+The range check on bm-RC2 (Builds/bm-RC2/verify/turret_ranges.md, task 7261) found that the built parts module has no joint for the turret (P-01) or the cannon (P-02), although Working/Translation/T8_PARTS.md has rows for both with BmAK-matching ranges. Trace why. Follow the chain row -> Working/Parts/bm_vehicle_parts.json (B-04 manifest) -> Tools/scripts/bm_parts.py -> the built module in Builds/bm-RC2: at which step do the two joints disappear (never in the manifest, dropped by the generator, or removed by a later step such as bm_rc.py cleanup)? Quote the manifest entries for P-01/P-02 if they exist and the generator lines that handle joints. Also state whether any other part with a row lost its joint the same way. Output Builds/bm-RC2/verify/joint_trace.md and Tools/scripts/v_joint_trace.py --check; no edits to manifests or builds.

@@ -1,0 +1,940 @@
+{
+ "anchors": [
+  {
+   "branch_sites": 0,
+   "call_sites": 0,
+   "chain": [
+    "0x140201d30..0x140201d4e",
+    "0x140201d4e..0x140201dc8",
+    "0x140201dc8..0x140201dd3"
+   ],
+   "chain_bytes": 163,
+   "chain_last": "0x140201dd2 ret ",
+   "chunk": "0x140201d4e..0x140201dc8",
+   "chunk_bytes": 122,
+   "claimed_body": "0x140201d4e..0x140201dc8",
+   "claimed_bytes": 122,
+   "complete": true,
+   "name": "part_list_walk",
+   "real_entry": "0x140201d30",
+   "va": "0x140201d4e"
+  },
+  {
+   "branch_sites": 3,
+   "call_sites": 3,
+   "chain": [
+    "0x140201de0..0x140201e2c",
+    "0x140201e2c..0x140201ebd",
+    "0x140201ebd..0x1402020d1",
+    "0x1402020d1..0x14020216e",
+    "0x14020216e..0x14020218f"
+   ],
+   "chain_bytes": 943,
+   "chain_last": "0x14020218e ret ",
+   "chunk": "0x140201de0..0x140201e2c",
+   "chunk_bytes": 76,
+   "claimed_body": "0x140201de0..0x140201e2c",
+   "claimed_bytes": 76,
+   "complete": true,
+   "name": "part_node_update",
+   "real_entry": "0x140201de0",
+   "va": "0x140201de0"
+  },
+  {
+   "branch_sites": 0,
+   "call_sites": 0,
+   "chain": [
+    "0x140201de0..0x140201e2c",
+    "0x140201e2c..0x140201ebd",
+    "0x140201ebd..0x1402020d1",
+    "0x1402020d1..0x14020216e",
+    "0x14020216e..0x14020218f"
+   ],
+   "chain_bytes": 943,
+   "chain_last": "0x14020218e ret ",
+   "chunk": "0x1402020d1..0x14020216e",
+   "chunk_bytes": 157,
+   "claimed_body": "0x1402020d1..0x14020216e",
+   "claimed_bytes": 157,
+   "complete": true,
+   "name": "raycast_body_read",
+   "real_entry": "0x140201de0",
+   "va": "0x1402020d1"
+  },
+  {
+   "branch_sites": 4,
+   "call_sites": 4,
+   "chain": [
+    "0x141505490..0x1415054b6",
+    "0x1415054b6..0x14150554e",
+    "0x14150554e..0x141505589"
+   ],
+   "chain_bytes": 249,
+   "chain_last": "0x141505584 jmp 0x141464f40",
+   "chunk": "0x141505490..0x1415054b6",
+   "chunk_bytes": 38,
+   "claimed_body": "0x141505490..0x1415054b6",
+   "claimed_bytes": 38,
+   "complete": true,
+   "name": "body_slot_query",
+   "real_entry": "0x141505490",
+   "va": "0x141505490"
+  },
+  {
+   "branch_sites": 4,
+   "call_sites": 4,
+   "chain": [
+    "0x1415140f0..0x141514140",
+    "0x141514140..0x1415141da",
+    "0x1415141da..0x14151426c"
+   ],
+   "chain_bytes": 380,
+   "chain_last": "0x14151426b ret ",
+   "chunk": "0x1415140f0..0x141514140",
+   "chunk_bytes": 80,
+   "claimed_body": "0x1415140f0..0x141514140",
+   "claimed_bytes": 80,
+   "complete": true,
+   "name": "body_slot_use",
+   "real_entry": "0x1415140f0",
+   "va": "0x1415140f0"
+  },
+  {
+   "branch_sites": 2,
+   "call_sites": 2,
+   "chain": [
+    "0x140222ef0..0x14022302b"
+   ],
+   "chain_bytes": 315,
+   "chain_last": "0x14022302a ret ",
+   "chunk": "0x140222ef0..0x14022302b",
+   "chunk_bytes": 315,
+   "claimed_body": "0x140222ef0..0x14022302b",
+   "claimed_bytes": 315,
+   "complete": true,
+   "name": "body_slot_enum",
+   "real_entry": "0x140222ef0",
+   "va": "0x140222ef0"
+  }
+ ],
+ "claims": [
+  {
+   "base": "rbx",
+   "claim": "next pointer of the part list",
+   "disp": "0x0",
+   "group": "part_node",
+   "guard": null,
+   "offset": "0x0",
+   "prov_at": "0x140201d64",
+   "prov_text": "mov rbx, qword ptr [rsi + rax]",
+   "real": "0x140201d74",
+   "real_base": "rbx",
+   "real_text": "mov rax, qword ptr [rbx]",
+   "rw": "r",
+   "size": 8,
+   "src": "0x140201d4e",
+   "src_text": "mov qword ptr [rsp + 0x30], rbx",
+   "verdict": "MIS-CITED"
+  },
+  {
+   "base": "rbx",
+   "claim": "byte gate tested before the walk recurses",
+   "disp": "0x2d",
+   "group": "part_node",
+   "guard": null,
+   "offset": "0x2d",
+   "prov_at": "0x140201d64",
+   "prov_text": "mov rbx, qword ptr [rsi + rax]",
+   "real": "0x140201d68",
+   "real_base": "rbx",
+   "real_text": "cmp byte ptr [rbx + 0x2d], 0",
+   "rw": "r",
+   "size": 1,
+   "src": "0x140201d60",
+   "src_text": "mov rax, qword ptr [rbp + 8]",
+   "verdict": "MIS-CITED"
+  },
+  {
+   "base": "rax",
+   "claim": "byte gate that stops the walk",
+   "disp": "0x46",
+   "group": "part_node",
+   "guard": null,
+   "offset": "0x46",
+   "prov_at": "0x140201d74",
+   "prov_text": "mov rax, qword ptr [rbx]",
+   "real": null,
+   "real_base": null,
+   "real_text": null,
+   "rw": "r",
+   "size": 1,
+   "src": "0x140201d80",
+   "src_text": "cmp byte ptr [rax + 0x46], 0",
+   "verdict": "CONFIRMED"
+  },
+  {
+   "base": "rcx",
+   "claim": "byte flag (0 -> skip the node update)",
+   "disp": "0x100",
+   "group": "part_node",
+   "guard": "O4.b100",
+   "offset": "0x100",
+   "prov_at": null,
+   "prov_text": "(no write: entry argument)",
+   "real": null,
+   "real_base": null,
+   "real_text": null,
+   "rw": "r",
+   "size": 1,
+   "src": "0x140201e05",
+   "src_text": "cmp byte ptr [rcx + 0x100], 0",
+   "verdict": "CONFIRMED"
+  },
+  {
+   "base": "rcx",
+   "claim": "second byte flag",
+   "disp": "0x101",
+   "group": "part_node",
+   "guard": "O4.b101",
+   "offset": "0x101",
+   "prov_at": null,
+   "prov_text": "(no write: entry argument)",
+   "real": null,
+   "real_base": null,
+   "real_text": null,
+   "rw": "r",
+   "size": 1,
+   "src": "0x140201e18",
+   "src_text": "cmp byte ptr [rcx + 0x101], 0",
+   "verdict": "CONFIRMED"
+  },
+  {
+   "base": "rsi",
+   "claim": "byte written to 0 when the raycast body is dropped",
+   "disp": "0x102",
+   "group": "part_node",
+   "guard": null,
+   "offset": "0x102",
+   "prov_at": "0x140222f0d",
+   "prov_text": "mov rsi, rcx",
+   "real": null,
+   "real_base": null,
+   "real_text": null,
+   "rw": "w",
+   "size": 1,
+   "src": "0x140222fe1",
+   "src_text": "mov byte ptr [rsi + 0x102], 0",
+   "verdict": "CONFIRMED"
+  },
+  {
+   "base": "rbx",
+   "claim": "dword tested in the list walk",
+   "disp": "0x104",
+   "group": "part_node",
+   "guard": null,
+   "offset": "0x104",
+   "prov_at": "0x140201d64",
+   "prov_text": "mov rbx, qword ptr [rsi + rax]",
+   "real": null,
+   "real_base": null,
+   "real_text": null,
+   "rw": "r",
+   "size": 4,
+   "src": "0x140201d9d",
+   "src_text": "cmp dword ptr [rbx + 0x104], 0",
+   "verdict": "CONFIRMED"
+  },
+  {
+   "base": "rcx",
+   "claim": "runtime part record pointer",
+   "disp": "0x140",
+   "group": "part_node",
+   "guard": "O4.rec140",
+   "offset": "0x140",
+   "prov_at": null,
+   "prov_text": "(no write: entry argument)",
+   "real": null,
+   "real_base": null,
+   "real_text": null,
+   "rw": "r",
+   "size": 8,
+   "src": "0x140201e25",
+   "src_text": "mov r8, qword ptr [rcx + 0x140]",
+   "verdict": "CONFIRMED"
+  },
+  {
+   "base": "rbx",
+   "claim": "world object pointer",
+   "disp": "0x150",
+   "group": "part_node",
+   "guard": "O6.world150*",
+   "offset": "0x150",
+   "prov_at": "0x140201e0f",
+   "prov_text": "mov rbx, rcx",
+   "real": null,
+   "real_base": null,
+   "real_text": null,
+   "rw": "r",
+   "size": 8,
+   "src": "0x140201f83",
+   "src_text": "mov rdi, qword ptr [rbx + 0x150]",
+   "verdict": "CONFIRMED"
+  },
+  {
+   "base": "rbx",
+   "claim": "raycast world object pointer",
+   "disp": "0x158",
+   "group": "part_node",
+   "guard": "O5.load158",
+   "offset": "0x158",
+   "prov_at": "0x140201e0f",
+   "prov_text": "mov rbx, rcx",
+   "real": null,
+   "real_base": null,
+   "real_text": null,
+   "rw": "r",
+   "size": 8,
+   "src": "0x1402020d1",
+   "src_text": "mov rdi, qword ptr [rbx + 0x158]",
+   "verdict": "CONFIRMED"
+  },
+  {
+   "base": "rbx",
+   "claim": "float multiplied into the 0x120/0x124/0x128 reads",
+   "disp": "0x170",
+   "group": "part_node",
+   "guard": null,
+   "offset": "0x170",
+   "prov_at": "0x140201e0f",
+   "prov_text": "mov rbx, rcx",
+   "real": null,
+   "real_base": null,
+   "real_text": null,
+   "rw": "r",
+   "size": 4,
+   "src": "0x140201fa5",
+   "src_text": "movss xmm2, dword ptr [rbx + 0x170]",
+   "verdict": "CONFIRMED"
+  },
+  {
+   "base": "rbx",
+   "claim": "float written back",
+   "disp": "0x178",
+   "group": "part_node",
+   "guard": null,
+   "offset": "0x178",
+   "prov_at": "0x140201e0f",
+   "prov_text": "mov rbx, rcx",
+   "real": null,
+   "real_base": null,
+   "real_text": null,
+   "rw": "w",
+   "size": 4,
+   "src": "0x140202017",
+   "src_text": "mov dword ptr [rbx + 0x178], eax",
+   "verdict": "CONFIRMED"
+  },
+  {
+   "base": "rbx",
+   "claim": "float written back",
+   "disp": "0x17c",
+   "group": "part_node",
+   "guard": null,
+   "offset": "0x17c",
+   "prov_at": "0x140201e0f",
+   "prov_text": "mov rbx, rcx",
+   "real": null,
+   "real_base": null,
+   "real_text": null,
+   "rw": "w",
+   "size": 4,
+   "src": "0x14020202a",
+   "src_text": "mov dword ptr [rbx + 0x17c], eax",
+   "verdict": "CONFIRMED"
+  },
+  {
+   "base": "rdi",
+   "claim": "body-slot array base",
+   "disp": "0x60",
+   "group": "physics_world",
+   "guard": "O5.add60",
+   "offset": "0x60",
+   "prov_at": "0x1402020d1",
+   "prov_text": "mov rdi, qword ptr [rbx + 0x158]",
+   "real": null,
+   "real_base": null,
+   "real_text": null,
+   "rw": "r",
+   "size": 8,
+   "src": "0x14020210b",
+   "src_text": "add rcx, qword ptr [rdi + 0x60]",
+   "verdict": "CONFIRMED"
+  },
+  {
+   "base": "rdi",
+   "claim": "body-slot count (int32, loop bound)",
+   "disp": "0x68",
+   "group": "physics_world",
+   "guard": "O6.count68",
+   "offset": "0x68",
+   "prov_at": "0x140222f10",
+   "prov_text": "mov rdi, qword ptr [rcx + 0x150]",
+   "real": null,
+   "real_base": null,
+   "real_text": null,
+   "rw": "r",
+   "size": 4,
+   "src": "0x140222f39",
+   "src_text": "mov ebx, dword ptr [rdi + 0x68]",
+   "verdict": "CONFIRMED"
+  },
+  {
+   "base": "rcx",
+   "claim": "row 0 of a 3x4 (0x30) / 3x4+ (0x40) float4 pair",
+   "disp": "0x0",
+   "group": "body_slot",
+   "guard": null,
+   "offset": "0x0",
+   "prov_at": "0x14151410c",
+   "prov_text": "mov rsi, rcx",
+   "real": "0x1415141fc",
+   "real_base": "rsi",
+   "real_text": "mulps xmm0, xmmword ptr [rsi]",
+   "rw": "r",
+   "size": 16,
+   "src": "0x141514123",
+   "src_text": "movaps xmmword ptr [r11 - 0x28], xmm0",
+   "verdict": "MIS-CITED"
+  },
+  {
+   "base": "rcx",
+   "claim": "flags dword; bit 3 and bit 0 tested",
+   "disp": "0xc",
+   "group": "body_slot",
+   "guard": "O3.flags",
+   "offset": "0xc",
+   "prov_at": null,
+   "prov_text": "(no write: entry argument)",
+   "real": "0x141514102",
+   "real_base": "rcx",
+   "real_text": "mov ebp, dword ptr [rcx + 0xc]",
+   "rw": "r",
+   "size": 4,
+   "src": "0x141514128",
+   "src_text": "test bpl, 8",
+   "verdict": "MIS-CITED"
+  },
+  {
+   "base": "rcx",
+   "claim": "float4 copied out (transform row?)",
+   "disp": "0x30",
+   "group": "body_slot",
+   "guard": "O3.f30",
+   "offset": "0x30",
+   "prov_at": null,
+   "prov_text": "(no write: entry argument)",
+   "real": null,
+   "real_base": null,
+   "real_text": null,
+   "rw": "r",
+   "size": 16,
+   "src": "0x14151411f",
+   "src_text": "movaps xmm0, xmmword ptr [rcx + 0x30]",
+   "verdict": "CONFIRMED"
+  },
+  {
+   "base": "rcx",
+   "claim": "float4 copied out (transform row?)",
+   "disp": "0x40",
+   "group": "body_slot",
+   "guard": "O3.f40",
+   "offset": "0x40",
+   "prov_at": null,
+   "prov_text": "(no write: entry argument)",
+   "real": null,
+   "real_base": null,
+   "real_text": null,
+   "rw": "r",
+   "size": 16,
+   "src": "0x141514105",
+   "src_text": "movaps xmm2, xmmword ptr [rcx + 0x40]",
+   "verdict": "CONFIRMED"
+  },
+  {
+   "base": "rcx",
+   "claim": "shape pointer",
+   "disp": "0x50",
+   "group": "body_slot",
+   "guard": "O3.shape",
+   "offset": "0x50",
+   "prov_at": null,
+   "prov_text": "(no write: entry argument)",
+   "real": null,
+   "real_base": null,
+   "real_text": null,
+   "rw": "r",
+   "size": 8,
+   "src": "0x1415140fe",
+   "src_text": "mov rax, qword ptr [rcx + 0x50]",
+   "verdict": "CONFIRMED"
+  },
+  {
+   "base": "indexed",
+   "claim": "byte tested per slot in the enumeration (free/occupied)",
+   "disp": "0x60",
+   "group": "body_slot",
+   "guard": "O6.flag60",
+   "offset": "0x60",
+   "prov_at": "0x140222f84",
+   "prov_text": "shl rcx, 7",
+   "real": null,
+   "real_base": null,
+   "real_text": null,
+   "rw": "r",
+   "size": 1,
+   "src": "0x140222f8c",
+   "src_text": "cmp byte ptr [rcx + rax + 0x60], 0",
+   "verdict": "CONFIRMED"
+  },
+  {
+   "base": "rax",
+   "claim": "byte flag (bit 0 tested)",
+   "disp": "0x10",
+   "group": "shape",
+   "guard": null,
+   "offset": "0x10",
+   "prov_at": "0x1415140fe",
+   "prov_text": "mov rax, qword ptr [rcx + 0x50]",
+   "real": null,
+   "real_base": null,
+   "real_text": null,
+   "rw": "r",
+   "size": 1,
+   "src": "0x14151413c",
+   "src_text": "test byte ptr [rax + 0x10], 1",
+   "verdict": "CONFIRMED"
+  },
+  {
+   "base": "rax",
+   "claim": "byte compared to 1",
+   "disp": "0x13",
+   "group": "shape",
+   "guard": null,
+   "offset": "0x13",
+   "prov_at": "0x1415140fe",
+   "prov_text": "mov rax, qword ptr [rcx + 0x50]",
+   "real": null,
+   "real_base": null,
+   "real_text": null,
+   "rw": "r",
+   "size": 1,
+   "src": "0x141514132",
+   "src_text": "cmp byte ptr [rax + 0x13], 1",
+   "verdict": "CONFIRMED"
+  },
+  {
+   "base": "rax",
+   "claim": "float read at the crash address (0.001-tolerance test follows)",
+   "disp": "0x14",
+   "group": "shape",
+   "guard": "O3.shape_radius",
+   "offset": "0x14",
+   "prov_at": "0x1415140fe",
+   "prov_text": "mov rax, qword ptr [rcx + 0x50]",
+   "real": null,
+   "real_base": null,
+   "real_text": null,
+   "rw": "r",
+   "size": 4,
+   "src": "0x14151410f",
+   "src_text": "movss xmm0, dword ptr [rax + 0x14]",
+   "verdict": "CONFIRMED"
+  },
+  {
+   "base": "rax",
+   "claim": "float read with [record+0x170]",
+   "disp": "0x120",
+   "group": "runtime_part_record",
+   "guard": null,
+   "offset": "0x120",
+   "prov_at": "0x140201fb1",
+   "prov_text": "mov rax, qword ptr [rbx + 0x140]",
+   "real": null,
+   "real_base": null,
+   "real_text": null,
+   "rw": "r",
+   "size": 4,
+   "src": "0x140201ff8",
+   "src_text": "mulss xmm0, dword ptr [rax + 0x120]",
+   "verdict": "CONFIRMED"
+  },
+  {
+   "base": "rax",
+   "claim": "float read with [record+0x170]",
+   "disp": "0x124",
+   "group": "runtime_part_record",
+   "guard": null,
+   "offset": "0x124",
+   "prov_at": "0x140201fb1",
+   "prov_text": "mov rax, qword ptr [rbx + 0x140]",
+   "real": null,
+   "real_base": null,
+   "real_text": null,
+   "rw": "r",
+   "size": 4,
+   "src": "0x140201fe8",
+   "src_text": "movss xmm1, dword ptr [rax + 0x124]",
+   "verdict": "CONFIRMED"
+  },
+  {
+   "base": "rax",
+   "claim": "float read with [record+0x170]",
+   "disp": "0x128",
+   "group": "runtime_part_record",
+   "guard": null,
+   "offset": "0x128",
+   "prov_at": "0x140201fb1",
+   "prov_text": "mov rax, qword ptr [rbx + 0x140]",
+   "real": null,
+   "real_base": null,
+   "real_text": null,
+   "rw": "r",
+   "size": 4,
+   "src": "0x140201ff0",
+   "src_text": "movss xmm3, dword ptr [rax + 0x128]",
+   "verdict": "CONFIRMED"
+  }
+ ],
+ "counts": {
+  "blind_rows": 11,
+  "claims": 27,
+  "confirmed": 23,
+  "miscited": 4,
+  "unguarded": 14,
+  "unsupported": 0
+ },
+ "exe": "D:/Games/Just Cause 3/JustCause3.exe",
+ "findings": [
+  {
+   "claim": "the chain is 0x1402020d1 -> 0x141505490 -> 0x1415140f0 (section 5 step 6)",
+   "evidence": "raycast chunk calls query: True; query body calls slot_use: False; slot_query's real callees: 0x1414387a0, 0x141513fa0, 0x141514070, qword ptr [rax + 0xf0]; slot_use's callers: 0x141409152, 0x1414387e5, 0x141438a22, 0x141439558",
+   "id": "C1",
+   "verdict": "REFUTED"
+  },
+  {
+   "claim": "body_slot +0x0c flags dword: bit 3 and bit 0 tested",
+   "evidence": "bits of the dword loaded from [rcx+0x0c] actually tested in the slot_use chunk chain: bit 3, bit 5 (test bpl,8 at 0x141514128; shr ebp,5 at 0x141514151 then not/and 1); the same shr-5 test is in slot_query at 0x14150550b",
+   "id": "C2",
+   "verdict": "REFUTED (partly)"
+  },
+  {
+   "claim": "shape +0x14 float read at the crash address (0.001-tolerance test follows)",
+   "evidence": "no instruction in the slot_use chunk chain references 0x142343bb0 (hits: none). The 4x0.001 constant is loaded at 0x1402020f4 (movaps [rip+...] -> 0x142343bb0, 16-aligned and bit-exact) in the *raycast* chunk and copied to its argument block at 0x140202107. shape+0x14 is instead passed as a float argument (0x141514119) and subtracted from a coordinate at 0x14151422d (subss), inside an AABB expansion.",
+   "id": "C3",
+   "verdict": "REFUTED (parenthetical)"
+  },
+  {
+   "claim": "recipe: \"For a handle h (int16, < 0 means none)\"",
+   "evidence": "the runtime record (node+0x140) holds two int16 handles read as `word ptr [r8 + 0x100]` and `[r8 + 0x102]` (0x140201e35 movzx eax, word ptr [r8 + 0x100]; 0x140201e55 movzx eax, word ptr [r8 + 0x102]); a negative value is replaced by the sentinel 0x7fff (0x140201e30) and the slot lookup is skipped when the word equals 0x7fff (cmp ...,si at 0x140201f75/0x140201f7a and 0x1402020c7). A sampler should test `h == 0x7fff`, not `h < 0`.",
+   "id": "C5",
+   "verdict": "IMPRECISE"
+  },
+  {
+   "claim": "body_slot +0x00 row 0 of a 3x4, cited at 0x141514123",
+   "evidence": "0x141514123 is `movaps xmmword ptr [r11 - 0x28], xmm0` - a store to the stack frame (r11=rsp), not a slot read. The offset is real: `mulps xmm0, xmmword ptr [rsi]` at 0x1415141fc (rsi = the slot, `mov rsi, rcx`) and the setter 0x1513fa0 writes [rcx]/[rcx+0x10]/[rcx+0x20]/[rcx+0x30] at 0x141513fc0, 0x141513fd9, 0x141513fea, 0x141513ff5.",
+   "id": "C6",
+   "verdict": "MIS-CITED (offset real, citation wrong)"
+  }
+ ],
+ "generated_by": "Tools/scripts/jc3_runtime_layout_review.py --write",
+ "guards": [
+  {
+   "disp": "0x30",
+   "disps_present": [
+    "0xc",
+    "0x30",
+    "0x40",
+    "0x50"
+   ],
+   "leg": "O3.f30",
+   "wrong_offsets_that_still_pass": [
+    "0xc",
+    "0x40",
+    "0x50"
+   ]
+  },
+  {
+   "disp": "0x40",
+   "disps_present": [
+    "0xc",
+    "0x30",
+    "0x40",
+    "0x50"
+   ],
+   "leg": "O3.f40",
+   "wrong_offsets_that_still_pass": [
+    "0xc",
+    "0x30",
+    "0x50"
+   ]
+  },
+  {
+   "disp": "0xc",
+   "disps_present": [
+    "0xc",
+    "0x30",
+    "0x40",
+    "0x50"
+   ],
+   "leg": "O3.flags",
+   "wrong_offsets_that_still_pass": [
+    "0x30",
+    "0x40",
+    "0x50"
+   ]
+  },
+  {
+   "disp": "0x50",
+   "disps_present": [
+    "0xc",
+    "0x30",
+    "0x40",
+    "0x50"
+   ],
+   "leg": "O3.shape",
+   "wrong_offsets_that_still_pass": [
+    "0xc",
+    "0x30",
+    "0x40"
+   ]
+  },
+  {
+   "disp": "0x14",
+   "disps_present": [
+    "0x10",
+    "0x13",
+    "0x14"
+   ],
+   "leg": "O3.shape_radius",
+   "wrong_offsets_that_still_pass": [
+    "0x10",
+    "0x13"
+   ]
+  },
+  {
+   "disp": "0x100",
+   "disps_present": [
+    "0x100",
+    "0x101",
+    "0x140"
+   ],
+   "leg": "O4.b100",
+   "wrong_offsets_that_still_pass": [
+    "0x101",
+    "0x140"
+   ]
+  },
+  {
+   "disp": "0x101",
+   "disps_present": [
+    "0x100",
+    "0x101",
+    "0x140"
+   ],
+   "leg": "O4.b101",
+   "wrong_offsets_that_still_pass": [
+    "0x100",
+    "0x140"
+   ]
+  },
+  {
+   "disp": "0x140",
+   "disps_present": [
+    "0x100",
+    "0x101",
+    "0x140"
+   ],
+   "leg": "O4.rec140",
+   "wrong_offsets_that_still_pass": [
+    "0x100",
+    "0x101"
+   ]
+  },
+  {
+   "disp": "0x60",
+   "disps_present": [
+    "0x0",
+    "0x60"
+   ],
+   "leg": "O5.add60",
+   "wrong_offsets_that_still_pass": []
+  },
+  {
+   "disp": "0x158",
+   "disps_present": [
+    "0x0",
+    "0x18",
+    "0x100",
+    "0x158"
+   ],
+   "leg": "O5.load158",
+   "wrong_offsets_that_still_pass": []
+  },
+  {
+   "disp": "0x60",
+   "disps_present": [
+    "0x60",
+    "0x68"
+   ],
+   "leg": "O6.base60",
+   "wrong_offsets_that_still_pass": [
+    "0x68"
+   ]
+  },
+  {
+   "disp": "0x68",
+   "disps_present": [
+    "0x60",
+    "0x68"
+   ],
+   "leg": "O6.count68",
+   "wrong_offsets_that_still_pass": [
+    "0x60"
+   ]
+  },
+  {
+   "disp": "0x60",
+   "disps_present": [
+    "(indexed operand, exact string match)"
+   ],
+   "leg": "O6.flag60",
+   "wrong_offsets_that_still_pass": []
+  },
+  {
+   "disp": "0x150",
+   "disps_present": [
+    "0x60",
+    "0x150"
+   ],
+   "leg": "O6.world150*",
+   "wrong_offsets_that_still_pass": [
+    "0x60"
+   ]
+  }
+ ],
+ "image": {
+  "base": "0x140000000",
+  "chunks": 188670,
+  "section_table": [
+   {
+    "name": ".text",
+    "va": "0x140001000",
+    "vsize": "0x22a0cff"
+   },
+   {
+    "name": ".rdata",
+    "va": "0x1422a2000",
+    "vsize": "0xa9693a"
+   },
+   {
+    "name": ".data",
+    "va": "0x142d39000",
+    "vsize": "0x26f518"
+   },
+   {
+    "name": ".pdata",
+    "va": "0x142fa9000",
+    "vsize": "0x228be8"
+   },
+   {
+    "name": ".tls",
+    "va": "0x1431d2000",
+    "vsize": "0x1851"
+   },
+   {
+    "name": ".rsrc",
+    "va": "0x1431d4000",
+    "vsize": "0x4480"
+   },
+   {
+    "name": ".reloc",
+    "va": "0x1431d9000",
+    "vsize": "0x675de"
+   }
+  ],
+  "sections": 7,
+  "sha256": "a53c2d6b2837f45d97244fc096e68f27ba9036e0582a0d9aada2e2f222dac293",
+  "size": 51083264
+ },
+ "oracles": [
+  {
+   "evidence": "sha256 a53c2d6b2837f45d..., 51083264 B, base 0x140000000, 7 sections, 188670 .pdata chunks",
+   "key": "P1-image",
+   "ok": true
+  },
+  {
+   "evidence": "27/27 cited addresses are instruction boundaries in a .pdata chunk; 23 CONFIRMED, 4 MIS-CITED, 0 UNSUPPORTED",
+   "key": "P2-cited-instructions",
+   "ok": true
+  },
+  {
+   "evidence": "at 0x14151410f: movss xmm0, dword ptr [rax + 0x14]",
+   "key": "O2-crash-instruction",
+   "ok": true
+  },
+  {
+   "evidence": "rcx+0x50/0x0c/0x40/0x30 and rax+0x14 present in the chunk",
+   "key": "O3-slot-use",
+   "ok": true
+  },
+  {
+   "evidence": "rcx+0x100/0x101/0x140 present, cookie 0x2b992ddfa232",
+   "key": "O4-node-update",
+   "ok": true
+  },
+  {
+   "evidence": "rbx+0x158 load, shl 7, add [rdi+0x60], 0.001 vector",
+   "key": "O5-raycast-read",
+   "ok": true
+  },
+  {
+   "evidence": "rcx+0x150, rdi+0x68, rdi+0x60, [rcx+rax+0x60], lea .data",
+   "key": "O6-slot-enum",
+   "ok": true
+  },
+  {
+   "evidence": "0x142343bb0 = 6f 12 83 3a 6f 12 83 3a 6f 12 83 3a 6f 12 83 3a",
+   "key": "O7-tolerance-vector",
+   "ok": true
+  },
+  {
+   "evidence": "slot_use 4, slot_query 4, node_update 3 calls",
+   "key": "O8-call-verification",
+   "ok": true
+  },
+  {
+   "evidence": "the document's 8 predicates re-implemented here still evaluate as documented (this is what makes the blindness numbers below meaningful)",
+   "key": "P3-oracle-fidelity",
+   "ok": true
+  },
+  {
+   "evidence": "anchor extents recomputed: part_list_walk 122B/163B, part_node_update 76B/943B, raycast_body_read 157B/943B, body_slot_query 38B/249B, body_slot_use 80B/380B, body_slot_enum 315B/315B",
+   "key": "P4-chunks-vs-functions",
+   "ok": true
+  }
+ ],
+ "unknowns": [
+  {
+   "what": "what slot+0x30 and slot+0x40 are semantically",
+   "why": "decoded only as: +0x40 is the vector whose x/y/z broadcast and multiply the 3x4 rows at +0x00/+0x10/+0x20 (0x1415141f8..0x141514203); +0x30 is stored to the shadow-argument slot [r11-0x28] for the call at 0x141514199. Whether they are min/max of a local AABB or a query vector is not proven by any instruction in the chain: no min/max compare exists. Where it would be found: the callee 0x141516b40's first uses of its 4th stack argument."
+  },
+  {
+   "what": "whether node+0x150 and node+0x158 are the same world object",
+   "why": "both are used identically (slot array at +0x60, stride 128, vtbl call [rax+0x20] compared to 8) but no instruction compares or copies the two pointers. Where it would be found: a setter of node+0x150/+0x158."
+  },
+  {
+   "what": "where the runtime record's int16 handles (+0x100/+0x102) are written",
+   "why": "the record is read at 0x140201e35/0x140201e55 and consumed for the slot lookup, but no instruction in the reviewed chunk chains writes them, so the transfer named in the document's UNKNOWN 5 is still open. Where it would be found: writers of word ptr [x+0x100]/[x+0x102] where x = [part+0x140]."
+  }
+ ]
+}

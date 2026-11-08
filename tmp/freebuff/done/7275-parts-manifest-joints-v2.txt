@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/parts-manifest-joints-v2.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-06
+Working/Parts/JOINT_FIELDS.md says exactly which fields a joint needs (donor indices tank 2/0 and APC 15/14, P-01 -1.047198..1.047198 rad, P-02 -0.087266..0.349066 rad, next index 11). Produce the corrected parts manifest as a NEW file Working/Parts/bm_vehicle_parts_v2.json (copy of bm_vehicle_parts.json plus the joint members for P-01 and P-02, nothing else changed), and a new generator copy Tools/scripts/bm_parts_v2.py that reads it and no longer writes -1 for those two parts (copy bm_parts.py, never edit the original). Build the parts module into a NEW private tree Builds/bm-RC3-parts (not any existing Builds tree), then read it back with Tools/scripts/jc3adf.py dump --paths and jc3parts.py check and show the P-01/P-02 joint rows now hold the right indices and limits and that every other part row is byte-identical to the one in bm-RC2. Offline only; no install, no game.

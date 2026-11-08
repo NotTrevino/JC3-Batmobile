@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/skin-leaf-census-and-entry-plan.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/skins-entity-plan.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rebase-world-rows-on-debug-leaf.md
+Skins (MK2, Jokerfied, Funhouse) need extra Rebel Drop entries, and each entry needs its own vanilla unregistered leaf to hijack, because a new entity path does not spawn. Read tmp/freebuff/reports/skins-entity-plan.md, standalone-spawn-census-check.md, Research/JC3Grab/STANDALONE.md section 4.1 and Research/BatmobileGrab/VARIANTS.md. Find at least three more vanilla leaves that match the properties of the proven _debug leaf (unregistered in traffic, in the same entity folder style, never referenced by a mission, no vehicle spawn definition) and rank them with the proof for each property. Write per-skin rows: leaf path and hash, .ee/.toc names, item record fields, string pair keys, icon name. Output Tools/scripts/skin_leaf_census.py (--write, --check), Working/World/skin_leaves.md/.json. The proof must come from file reads that the check repeats; a leaf that fails any property is listed and rejected, not hidden. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

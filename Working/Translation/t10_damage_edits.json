@@ -1,0 +1,440 @@
+{
+ "arm4_wheels": {
+  "broken_wheel_members": 4,
+  "edits": [
+   {
+    "action": "edit",
+    "from": 200,
+    "member": "front_wheels_damage.skew_health",
+    "to": 400
+   },
+   {
+    "action": "edit",
+    "from": 200,
+    "member": "rear_wheels_damage.skew_health",
+    "to": 400
+   }
+  ],
+  "note": "`skew_health` is the only wheel-damage **health** member with a shipped range (200..400) and it is now at the maximum (400) on both axles; the other 4 wheel-damage members with ranges are the broken-wheel fractions (0.5..0.75, 0.6..0.8), which move a broken wheel, not its health. **No off switch exists on either side**: JC3's vocabulary has 6 `wheels_damage` rows and 0 hits for `bWheel`/`indestruct`, and the 92 distinct wheel-named members in BmAK's SDK binding (122 entries) include 0 damage, health, broken or destruct fields. So ARM-4 lands at the fleet ceiling, not proven unbreakable; the broken-wheel fractions stay at the build's values.",
+  "target": 400
+ },
+ "arm5_regen": {
+  "bmak_member": "RVehicleBatmobileBase.HealthRecoverRate (TArray<float> @ +8220)",
+  "bmak_value": "UNKNOWN - no archetype overrides it; the native CDO is not shipped",
+  "jcs_member": null,
+  "verdict": "named omission: JC3's VehicleDamage has no recovery member (0 hits for recover/regen over the 52-type vocabulary), so there is nothing to write; BmAK's rate is awarded per experience event, not a per-second regen"
+ },
+ "arm6_death": {
+  "bmak_datasource": "none decoded: G1-14 covers incoming-damage rules, not the death effect or sound; no destroyed-state effect path exists in the Batmobile packages' record",
+  "jcs_rows": "owned by T-17 (effects) and T-16 (audio)",
+  "verdict": "named omission with owner: T-14 writes no death-look row because the BmAK side has no decoded effect/sound path to translate"
+ },
+ "bmak": {
+  "health": 1200,
+  "heavy_cannon_damage": 50.0,
+  "heavy_cannon_hits": 24,
+  "source": "DAMAGE_RULES.json (G1-14); ArmourModeDamageReduction ships 0 (CHAIN.json)",
+  "tank_shell_damage": 1500.0
+ },
+ "card": "T-14",
+ "checks": {
+  "arm2_tolerance_pct": 20.0,
+  "arm2_within_20pct": {
+   "H0": true,
+   "H1": false,
+   "H2": true
+  },
+  "small_arms_no_visible_loss": {
+   "H0": false,
+   "H1": true,
+   "H2": true
+  },
+  "visible_loss_pct": 5.0
+ },
+ "decision": {
+  "chosen": "B: armour channels + max_health scale, invulnerable stays 0",
+  "invulnerable_now": 0,
+  "max_health_chosen": 36000,
+  "max_health_for_ratio": {
+   "H0": 36000,
+   "H1": 18000,
+   "H2": 35750
+  },
+  "option_a_gate": "cannot-be-damaged gate, whole-vehicle **if honoured** - unproven for a vehicle root: nothing in the shipped vehicle fleet uses it and the evidence for 1 comes from `CDamageController` props (`DAMAGE_MECHANISMS.md` section 4)",
+  "rejected": "A: CCar.invulnerable = 1",
+  "row": "T-DM9",
+  "why": "A has no decoded arithmetic: if the gate is honoured it stops the tank cannon too, so ARM-2's 24-hit ratio cannot exist, and its whole-vehicle scope is unproven for a vehicle root (DAMAGE_MECHANISMS.md section 4). B's hits come from the decoded channels and the health model."
+ },
+ "done": {
+  "arm1": "H1/H2 pass; H0 fails (16.667 % of the pool >= 5 %); pending Q1-DM-B",
+  "arm2": "H0/H2 pass; H1 fails (48 hits vs 24, +100.00 %); pending Q1-DM-A"
+ },
+ "generated_by": "Tools/scripts/t10_damage.py",
+ "options": {
+  "A_invulnerable": {
+   "arm2": "Fails if the gate applies: 'never' is not 24 hits; the gate's scope is UNKNOWN for a vehicle root",
+   "rule": "cannot-be-damaged gate, whole-vehicle **if honoured** - unproven for a vehicle root: nothing in the shipped vehicle fleet uses it and the evidence for 1 comes from `CDamageController` props (`DAMAGE_MECHANISMS.md` section 4)",
+   "setting": "CCar.invulnerable = 1",
+   "table": {
+    "assault_rifle": "never, if the gate applies (unproven for a vehicle root)",
+    "grenade": "never, if the gate applies (unproven for a vehicle root)",
+    "heli_mg": "never, if the gate applies (unproven for a vehicle root)",
+    "heli_missile": "never, if the gate applies (unproven for a vehicle root)",
+    "machine_gun": "never, if the gate applies (unproven for a vehicle root)",
+    "pistol": "never, if the gate applies (unproven for a vehicle root)",
+    "rpg": "never, if the gate applies (unproven for a vehicle root)",
+    "shotgun": "never, if the gate applies (unproven for a vehicle root)",
+    "tank_cannon": "never, if the gate applies (unproven for a vehicle root)"
+   }
+  },
+  "B_channels": {
+   "arm2_deviation_pct": {
+    "H0": 0.0,
+    "H1": 100.0,
+    "H2": 4.17
+   },
+   "max_health_for_ratio": {
+    "H0": 36000,
+    "H1": 18000,
+    "H2": 35750
+   },
+   "per_hit_explosion": {
+    "H0": 1500.0,
+    "H1": 750.0,
+    "H2": 1500.0
+   },
+   "setting": "max_health 36000, invulnerable 0, channels as T-DM2",
+   "small_arms_pool_loss_pct_200_rounds": {
+    "H0": 16.6667,
+    "H1": 0.1667,
+    "H2": null
+   },
+   "table": {
+    "assault_rifle": {
+     "H0": 1125,
+     "H1": 112500,
+     "H2": null,
+     "armor": 5000,
+     "channel": "bullet",
+     "damage": 32.0,
+     "strength": 99
+    },
+    "grenade": {
+     "H0": 36,
+     "H1": 36,
+     "H2": 36,
+     "armor": 0,
+     "channel": "unknown",
+     "damage": 1012.500018,
+     "strength": 0
+    },
+    "heli_mg": {
+     "H0": 1440,
+     "H1": 144000,
+     "H2": null,
+     "armor": 5000,
+     "channel": "bullet",
+     "damage": 25.0,
+     "strength": 99
+    },
+    "heli_missile": {
+     "H0": 24,
+     "H1": 24,
+     "H2": 24,
+     "armor": 0,
+     "channel": "unknown",
+     "damage": 1500.0,
+     "strength": 0
+    },
+    "machine_gun": {
+     "H0": 1286,
+     "H1": 128572,
+     "H2": null,
+     "armor": 5000,
+     "channel": "bullet",
+     "damage": 28.0,
+     "strength": 99
+    },
+    "pistol": {
+     "H0": 1200,
+     "H1": 120000,
+     "H2": null,
+     "armor": 5000,
+     "channel": "bullet",
+     "damage": 30.0,
+     "strength": 99
+    },
+    "rpg": {
+     "H0": 24,
+     "H1": 48,
+     "H2": 25,
+     "armor": 250,
+     "channel": "explosion",
+     "damage": 1500.0,
+     "strength": 50
+    },
+    "shotgun": {
+     "H0": 250,
+     "H1": 25000,
+     "H2": 285,
+     "armor": 5000,
+     "channel": "bullet",
+     "damage": 144.000002,
+     "strength": 99
+    },
+    "tank_cannon": {
+     "H0": 24,
+     "H1": 48,
+     "H2": 25,
+     "armor": 250,
+     "channel": "explosion",
+     "damage": 1500.0,
+     "strength": 50
+    }
+   }
+  }
+ },
+ "pending": [
+  {
+   "code": "ARM-1",
+   "criterion": "< 5 %",
+   "model": "H0",
+   "probe": "Q1-DM-B",
+   "resolution": "H0 ignores the armour members; the fleet census says armour is used, and Q1-DM-B tests the bullet gate",
+   "value": 16.6667
+  },
+  {
+   "code": "ARM-2",
+   "criterion": "±20 % of 24 hits",
+   "model": "H1",
+   "probe": "Q1-DM-A",
+   "resolution": "H1 needs max_health 18000 for the 24-hit ratio; Q1-DM-A decides percentage vs threshold",
+   "value": 48
+  }
+ ],
+ "rows": [
+  {
+   "action": "edit",
+   "domain": "500..4000",
+   "from": 2000,
+   "id": "T-DM1",
+   "ledger_dispo": "next",
+   "member": "max_health",
+   "source": "DAMAGE_MODEL.json arm_targets.max_health_needed",
+   "to": 36000,
+   "why": "ARM-2 at the BmAK ratio: 24 heavy-cannon hits x 1500.0 shell damage = 36000 (the H0 answer; H2 needs 35750, H1 18000). 36000 is outside the shipped 500..4000 domain, so it is a declared switch, not a translated value, and it is **pending Q1-DM-A**: if the percentage gate ships, the value is 18000."
+  },
+  {
+   "action": "keep",
+   "domain": "0..5000 @ 0..99",
+   "from": "5000 @ 99",
+   "id": "T-DM2",
+   "ledger_dispo": "edit",
+   "member": "bullet_armor / bullet_armor_strength",
+   "source": "VOCABULARY.md VehicleDamage",
+   "to": "5000 @ 99",
+   "why": "already the fleet maximum on both members (armour 5000, strength 99); with max_health 36000 small arms take 0.17 % of the pool per 200 rounds under H1, 16.67 % under H0, and nothing under H2"
+  },
+  {
+   "action": "keep",
+   "domain": "0..100 @ 0..50",
+   "from": "5 @ 20",
+   "id": "T-DM3",
+   "ledger_dispo": "keep",
+   "member": "bullet_heavy_armor / bullet_heavy_armor_strength",
+   "source": "VOCABULARY.md VehicleDamage",
+   "to": "5 @ 20",
+   "why": "unchanged: the per-channel split ARM-1 needs is the bullet / bullet_heavy pair, and no G2-11 weapon component is decoded into bullet_heavy yet (UNKNOWN -> no row)"
+  },
+  {
+   "action": "keep",
+   "domain": "500..4000 / 500..4000 / 200..1050",
+   "from": "4000 / 4000 / 1050",
+   "id": "T-DM4",
+   "ledger_dispo": "keep",
+   "member": "explosion_threshold / npc_explosion_threshold / smoke_threshold",
+   "source": "VOCABULARY.md VehicleDamage",
+   "to": "same",
+   "why": "per-hit damage thresholds, independent of the health pool: 36000 does not move them"
+  },
+  {
+   "action": "keep",
+   "domain": "fleet",
+   "from": "24 types",
+   "id": "T-DM5",
+   "ledger_dispo": "keep",
+   "member": "part_damage_types (24) + the part join",
+   "source": "current.json",
+   "to": "24 types",
+   "why": "carried from the donor; the wheel members below are the only part rows T-14 touches"
+  },
+  {
+   "action": "keep",
+   "domain": "1..2 (declared switch)",
+   "from": 0,
+   "id": "T-DM6",
+   "ledger_dispo": "keep",
+   "member": "deform_scale",
+   "source": "Working/Translation/damage_switches.json",
+   "to": 0,
+   "why": "cosmetic off switch (no panel crumple), already declared in damage_switches.json"
+  },
+  {
+   "action": "out",
+   "domain": "-",
+   "from": "-",
+   "id": "T-DM7",
+   "ledger_dispo": "out",
+   "member": "outgoing ram damage",
+   "source": "Research/JC3Grab/DAMAGE_MODEL.md",
+   "to": "-",
+   "why": "unchanged: G2-28 found no outgoing ram-damage member; the only impact member is incoming (impact_damage_factor)"
+  },
+  {
+   "action": "keep",
+   "domain": "1..12 (declared switch)",
+   "from": 0,
+   "id": "T-DM8",
+   "ledger_dispo": "keep",
+   "member": "impact_damage_factor",
+   "source": "Working/Translation/damage_switches.json",
+   "to": 0,
+   "why": "incoming collision damage off (BmAK: ramming does not scratch it); declared switch"
+  },
+  {
+   "action": "decide",
+   "domain": "invulnerable 0 (decoded); channels as T-DM2",
+   "from": "invulnerable 0 (root, decoded from the build's .epe)",
+   "id": "T-DM9",
+   "ledger_dispo": "next",
+   "member": "CCar.invulnerable / the armour channels",
+   "source": "DAMAGE_MECHANISMS.md + DAMAGE_MODEL.json",
+   "to": "invulnerable stays 0; ARM-1 and ARM-2 carried by channels + max_health",
+   "why": "option B chosen. Option A sets invulnerable = 1, whose whole-vehicle scope is whole-vehicle only if honoured and is unproven for a vehicle root (DAMAGE_MECHANISMS.md section 4); under it the tank cannon reads 'never' and ARM-2's 24-hit ratio cannot exist. Under B the ratio deviation is H0 0.00 %, H1 100.00 %, H2 4.17 %; the 36000 scale is pending Q1-DM-A (18000 under H1)."
+  }
+ ],
+ "schema": 1,
+ "switch_file": {
+  "declared": [
+   "deform_scale",
+   "impact_armor",
+   "impact_damage_factor",
+   "max_health",
+   "melee_armor",
+   "melee_armor_strength"
+  ],
+  "declared_count": 6,
+  "done_clause": "PARTIAL: 6 declarations, 1 pending (`max_health` 36000) until a build carries it",
+  "pending": {
+   "max_health": 36000
+  },
+  "pending_why": "36000 is out of domain and must be declared when a build carries it; declaring it now would fail the audit against the current build, which still ships 2000",
+  "stale_declarations": [
+   "bullet_armor_strength"
+  ],
+  "why": "T-DM2 moved it 100 -> 99, which is inside the shipped 0..99, so the declaration is no longer a switch; damage_audit.py fails while it stays"
+ },
+ "table_before": {
+  "assault_rifle": {
+   "H0": 63,
+   "H1": 6250,
+   "H2": null,
+   "armor": 5000,
+   "channel": "bullet",
+   "component": "direct",
+   "damage": 32.0,
+   "strength": 99
+  },
+  "grenade": {
+   "H0": 2,
+   "H1": 2,
+   "H2": 2,
+   "armor": 0,
+   "channel": "unknown",
+   "component": "direct",
+   "damage": 1012.500018,
+   "strength": 0
+  },
+  "heli_mg": {
+   "H0": 80,
+   "H1": 8000,
+   "H2": null,
+   "armor": 5000,
+   "channel": "bullet",
+   "component": "direct",
+   "damage": 25.0,
+   "strength": 99
+  },
+  "heli_missile": {
+   "H0": 2,
+   "H1": 2,
+   "H2": 2,
+   "armor": 0,
+   "channel": "unknown",
+   "component": "direct",
+   "damage": 1500.0,
+   "strength": 0
+  },
+  "machine_gun": {
+   "H0": 72,
+   "H1": 7143,
+   "H2": null,
+   "armor": 5000,
+   "channel": "bullet",
+   "component": "direct",
+   "damage": 28.0,
+   "strength": 99
+  },
+  "pistol": {
+   "H0": 67,
+   "H1": 6667,
+   "H2": null,
+   "armor": 5000,
+   "channel": "bullet",
+   "component": "direct",
+   "damage": 30.0,
+   "strength": 99
+  },
+  "rpg": {
+   "H0": 2,
+   "H1": 3,
+   "H2": 2,
+   "armor": 250,
+   "channel": "explosion",
+   "component": "blast",
+   "damage": 1500.0,
+   "strength": 50
+  },
+  "shotgun": {
+   "H0": 14,
+   "H1": 1389,
+   "H2": 49,
+   "armor": 5000,
+   "channel": "bullet",
+   "component": "direct",
+   "damage": 144.000002,
+   "strength": 99
+  },
+  "tank_cannon": {
+   "H0": 2,
+   "H1": 3,
+   "H2": 2,
+   "armor": 250,
+   "channel": "explosion",
+   "component": "blast",
+   "damage": 1500.0,
+   "strength": 50
+  }
+ },
+ "vocab": {
+  "fleet_max_health": 4000,
+  "hits_at_fleet_max_health": {
+   "H0": 3,
+   "H1": 6,
+   "H2": 3
+  },
+  "pistol_h1_damage_per_round": 0.3,
+  "types": 52,
+  "wheels_damage_rows": 6
+ }
+}

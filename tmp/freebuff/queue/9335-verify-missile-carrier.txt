@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-missile-carrier.md
+ONLY: freebuff
+EST: 25
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/missile-carrier-reclone.md
+Independent read-back of the missile carrier rebuild. Run the --check mode of Tools/scripts/rc5_missile_carrier.py, then, without trusting it, re-read Builds/bm-RC5-mcarrier with Tools/scripts/jc3weapons.py --check --root on that tree. Confirm for both missile weapons: component class name, tune file name, w618 fire-block values unchanged versus the donor, guidance members (turning speed 300 with random 60, acceleration 30 to 65, random 2 to 5), AutoAim cone and MaxAimDistance 120 m, and that no object id dangles (compare with the dangling-reference method of the R wave report rc5-dangling-fire-refs.md). Output tmp/freebuff/reports/verify-missile-carrier.md with PASS or FAIL per item and the first failing byte offset or member. Done-check: the report has one line per item and the exit status of both check commands is quoted. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

@@ -1,0 +1,51 @@
+# Smart search tool + calibration — DEFERRED
+
+## STATUS
+
+**STATUS: deferred (chase_candidates not done)**
+
+The prerequisite is not satisfied, so nothing was built, wired or calibrated. Re-checked
+2026-10-29 00:52 (this is the second check; the first, at 00:46, found neither file).
+
+## Evidence
+
+| prerequisite item | state |
+|---|---|
+| `tmp/freebuff/reports/chase-candidates.md` with `STATUS: done` | **absent** — `find . -iname "*chase*candidat*"` returns only `tmp/freebuff/running/L1__030-chase-candidates.txt` and the new script |
+| `Tools/scripts/chase/chase_candidates.py` | **exists** (20,458 B, mtime 00:47) but the card is still running: its own run marker says `DONE: .../tmp/freebuff/reports/chase-candidates.md`, i.e. the report is that card's final deliverable and has not been written yet |
+| `E:/Modding/_BmAKgrab/chase/candidates.jsonl` | **absent** (`ls` exit 2) — the all-open-rows scan has not produced its output file yet |
+| single-member mode | **absent**: `python Tools/scripts/chase/chase_candidates.py --help` lists only `--write`, `--check`, `--list-rows` |
+| `Tools/scripts/chase/chase_judge.py` | present (4,296 B) and unchanged; stage two is ready, stage one is not finished |
+
+So the tree is mid-flight: the search script is being authored under the `chase-candidates` card
+(marker `tmp/freebuff/running/L1__030-chase-candidates.txt`, which also carries this card's marker
+`tmp/freebuff/running/L3__035-smart-search.txt`). The gate this card names — a `chase-candidates.md`
+report with `STATUS: done` — cannot be met while that card is still open, and building on a
+half-written `chase_candidates.py` would either collide with its author or lock in a shape the card
+is still changing (`parse_footage` / `plan_rows` / `scan` exist; the CLI surface is still
+`--write/--check/--list-rows` only).
+
+## What was NOT done (deliberately)
+
+- No `--member/--owner/--offset/--type/--routes/--out` single-member mode added to
+  `chase_candidates.py` (that file is being written by another card right now).
+- No `Tools/scripts/chase/smart_search.py`; no judge cache under
+  `E:/Modding/_BmAKgrab/chase/cache/`; no `/health` probe of the local server.
+- No `E:/Modding/_BmAKgrab/chase/calib.jsonl`, no `Tools/scripts/chase/chase_calibrate.py`, no
+  prompt revisions in `chase_judge.py`, no calibration runs, no recall/precision/unparsable/speed
+  numbers.
+- No `MODLOG.md` entry — there is no build and no scores to append.
+- Nothing under `D:/Games` or `E:/Games` touched, no game launched, no git action, no edits to
+  `FOOTAGE.md`, the chase files or `GRAB_BACKLOG.md`.
+
+## What unblocks it
+
+1. Let the `chase-candidates` card finish: `Tools/scripts/chase/chase_candidates.py` complete,
+   `E:/Modding/_BmAKgrab/chase/candidates.jsonl` written, and
+   `tmp/freebuff/reports/chase-candidates.md` present with `STATUS: done`.
+2. Re-run this card. The single-member mode can then wrap the finished `plan_rows`/`scan` internals
+   instead of duplicating them, `smart_search.py` can call the same builder for one row, and the
+   calibration (`calib.jsonl` from the G1 readers + the chase FOUND rows + 10 negative controls)
+   can score a tool whose candidate producer is stable.
+
+Nothing in this report asserts a behaviour of the chase stage: it has no finished producer yet.

@@ -1,0 +1,77 @@
+{
+ "_comment": "Batch B2: four of test-087's six values, re-sourced behaviour-first on 2026-10-23. Each edit carries the BmAK behaviour and the take that can fail (rule R1) before it may be packed; the batch table is T_PLAN.md section 4, Batch B2.",
+ "source": "T_PLAN.md section 4 Batch B2 + Working/Translation/T1_TRANSLATION.md sections 6/8/10",
+ "base_build": "Builds/test-085 (the build to roll back to)",
+ "status": "cleared-for-build: behaviour and take named for every value; rows stay `next` until their take passes (R4)",
+ "edits": [
+  {
+   "row": "T-B3",
+   "kind": "number",
+   "module": "CustomLandGlobal",
+   "member": "arcade.nitro_boost.grip_multiplier",
+   "old": 5.67999983,
+   "new": 2.0,
+   "conf": "decoded (donor)",
+   "behaviour": "none: BmAK has no grip or traction member under boost (OFFSETS.json has no grip field; the boost evidence is BoostTorqueVSpeedCurve, torque only)",
+   "take": "A9 0-100 with and without boost: boost improves 0-100, no grip snap on engage",
+   "why": "donor's shipped value; also the fleet maximum (1.2..2, n=145). Build 5.68 was outside every shipped range for this member - an undeclared out-of-domain value (R3), not a translation"
+  },
+  {
+   "row": "T-B2",
+   "kind": "number",
+   "module": "CustomLandGlobal",
+   "member": "arcade.nitro_boost.extra_top_speed",
+   "old": 50.4599991,
+   "new": 40.0,
+   "conf": "decoded (donor)",
+   "behaviour": "boost extends the torque band 2100 -> 3000 cm/s at the same torque floor (75.6 -> 108 km/h, +32.4 km/h; ratios x1.30 -> x2.10) - a bound, not a number",
+   "take": "A2 airfield top-speed run, boost off then on: terminal speed rises while boosting, delta recorded",
+   "why": "donor's shipped value, inside the domain 30..60 and above the curve's +32.4 km/h band; the fleet median (40, n=145) agrees but is not the citation; build 50.46 has no source"
+  },
+  {
+   "row": "T-K2",
+   "kind": "number",
+   "module": "Brakes",
+   "member": "front.min_time_to_block",
+   "old": 5,
+   "new": 1.0,
+   "conf": "decoded (donor)",
+   "behaviour": "none: no brake-lock member and no anti-lock behaviour in the streams (BmAK brake members: MaxBrakeTorque, EbrakeTime, EBrakeBrakeForce, Handbrake*, BlockThrottleUntilReleased)",
+   "take": "A5 braking 100 -> 0 on tarmac, full stop: stop distance <= ~100 m (3.5-3.8 m/s2), no lock-up",
+   "why": "donor's shipped value; fleet median -1 reads as the unused sentinel, land IQR -1..1 (n=271). Build 5 had no source (Batch C disproved 'vanilla Serpente = 5')"
+  },
+  {
+   "row": "T-K2",
+   "kind": "number",
+   "module": "Brakes",
+   "member": "rear.min_time_to_block",
+   "old": 5,
+   "new": 1.0,
+   "conf": "decoded (donor)",
+   "behaviour": "same as front: no BmAK member, no anti-lock behaviour",
+   "take": "A5 braking 100 -> 0 on tarmac, full stop",
+   "why": "donor's shipped value; same as front"
+  }
+ ],
+ "withdrawn": [
+  {
+   "row": "T-ST5",
+   "module": "LandSteering",
+   "member": "countersteer_speed_factor",
+   "old": 2,
+   "proposed": 3.0,
+   "conf": "class",
+   "why": "rejected under rule R2: BmAK has no countersteer gain (it has the rate - T-ST7 - and the drift pair), and the row carries a behaviour, so a 6 t fleet median would out-vote it. The build's 2.0 is the donor's shipped value; gate A7 runs against the live build"
+  },
+  {
+   "row": "T-ST5",
+   "module": "LandSteering",
+   "member": "steer_in_speed_factor",
+   "old": 1.5,
+   "proposed": 2.0,
+   "conf": "class",
+   "why": "same as countersteer_speed_factor: rejected under R2, donor's shipped 1.5 stands; gate A7"
+  }
+ ],
+ "not_numeric": []
+}

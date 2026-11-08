@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/G2-last.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-05
+G2 last entry. STATUS.md says 81,952 of 81,953 JC3 archive entries are named, so exactly one is not. Find it in Research/JC3Grab/INDEX.json (INDEX.jsonl has the same rows): print its hash, archive, size and any field that identifies it. Then try to name it only by evidence: the extension or magic bytes of its payload, which archive and neighbouring entries it sits between, and whether any .ee/.toc/.adf in E:/Modding/_gamedata/JC3grab references its hash (Tools/names/README.md describes the name tables; use Tools/names scripts, do not edit them). A name counts only if hash_jenkins(name) equals the entry hash (oracle). If no name reproduces the hash, say UNKNOWN with every source searched and hit counts. Output Research/JC3Grab/LAST_ENTRY.md and Tools/scripts/jc3_last_entry.py (--write/--check). Rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md section 3-4.

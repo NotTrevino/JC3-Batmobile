@@ -1,0 +1,6731 @@
+{
+ "schema": 1,
+ "generated_by": "bmak_damage.py",
+ "package": "E:\\Games\\Batman - Arkham Knight\\BmGame\\CookedPCConsole\\BmGame.upk",
+ "function_export_layout": {
+  "prefix_u16": 0,
+  "next": 2,
+  "super": 6,
+  "children": 10,
+  "line": 14,
+  "script_size_field": 18,
+  "script": 22,
+  "script_size": "len - 38",
+  "pre_name_word": "size - 12",
+  "name_index": "size - 8",
+  "name_number": "size - 4",
+  "note": "UEViewer stops after `Children` for GAME_Batman4 (UnTypeinfo.h); the script bytes past that point are unclaimed until this pass."
+ },
+ "anchors": {
+  "A_super_is_parent_take_damage": true,
+  "A_children_is_first_param": true,
+  "B_script_size_is_len_plus_one": true,
+  "C_thinnest_script_is_return": true,
+  "D_name_word_is_own_name": true,
+  "E_native_parm_refs_own_properties": true,
+  "F_final_function_token_is_call": true
+ },
+ "exe_exec_strings": {
+  "RVehicleBatmobileBase.TakeDamage": 3,
+  "RVehicleBatmobileBase.TakeRadiusDamageFromWeapon": 0,
+  "RVehicleBatmobileBase.TakesDamageFromRam": 0,
+  "RVehicleBatmobileBase.ShouldRadialDamageHit": 1,
+  "RVehicleBatmobileBase.CanBatmobileDoImpactDamage": 1,
+  "RVehicleBatmobileBase.CalculateAndStoreImpactDamage": 0,
+  "RVehicleBatmobileBase.SetDamageLevel": 3,
+  "RVehicleBatmobileBase.SetArmouredMode": 2,
+  "RVehicleBatmobileBase.DrainWeaponGeneratorForDamage": 0,
+  "RVehicleBatmobileBase.ExperienceAwarded": 0,
+  "RVehicleBatmobileBase.LoadHealth": 0,
+  "RVehicleBatmobileBase.GiveMaxEnergy": 0,
+  "RVehicleBatmobileBase.OnModifyHealth": 0,
+  "RVehicleCombatManager.GetDamageMod": 1
+ },
+ "functions": {
+  "RVehicleBatmobileBase.TakeDamage": {
+   "path": "RVehicleBatmobileBase.TakeDamage",
+   "index": 10436,
+   "size": 2066,
+   "script_bytes": 2028,
+   "script_sha1": "b00acfae06bd5bcf95606c6273f73fc70bc199d5",
+   "script_raw": "Working\\vendor\\BmAKgrab\\scripts\\RVehicleBatmobileBase_TakeDamage.hex",
+   "fields": {
+    "next": 10419,
+    "super": -2500,
+    "children": 10435,
+    "line": 3041,
+    "script_size_field": 2029,
+    "pre_name_word": 149506,
+    "name_index": 76032,
+    "name_number": 0
+   },
+   "native_parm_descriptors": 0,
+   "native_parm_bytes": 0,
+   "refs": [
+    {
+     "at": 11,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DamageType",
+     "kind": "ClassProperty",
+     "own_property": false
+    },
+    {
+     "at": 36,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.EventInstigator",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 57,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicle.SelfDriveMode",
+     "kind": "ByteProperty",
+     "own_property": true
+    },
+    {
+     "at": 82,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.OldHealth",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 93,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.NotifyController",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 98,
+     "token": "EX_DynamicCast",
+     "ref": "RPlayerController",
+     "kind": null,
+     "own_property": false
+    },
+    {
+     "at": 112,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.ArmouredMode",
+     "kind": "BoolProperty",
+     "own_property": true
+    },
+    {
+     "at": 118,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DamageAmount",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 125,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DamageAmount",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 133,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.ArmourModeDamageReduction",
+     "kind": "IntProperty",
+     "own_property": true
+    },
+    {
+     "at": 144,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DamageAmount",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 154,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DamageAmount",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 180,
+     "token": "EX_LocalVariable",
+     "ref": "RGameInfo.VehicleCombatManager",
+     "kind": "ObjectProperty",
+     "own_property": true
+    },
+    {
+     "at": 186,
+     "token": "EX_InstanceVariable",
+     "ref": "RGameInfo.VehicleCombatManager",
+     "kind": "ObjectProperty",
+     "own_property": true
+    },
+    {
+     "at": 192,
+     "token": "EX_LocalVariable",
+     "ref": "GetDamageMod.ReturnValue",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 198,
+     "token": "EX_FinalFunction",
+     "ref": "RVehicleCombatManager.GetDamageMod",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 204,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.HitNumber",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 217,
+     "token": "EX_VirtualFunction",
+     "ref": "GridSample.Weight",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 247,
+     "token": "EX_LocalVariable",
+     "ref": "GetPC.ReturnValue",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 248,
+     "token": "EX_VirtualFunction",
+     "ref": "AddSoloChild.NewAEC",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 253,
+     "token": "EX_FinalFunction",
+     "ref": "RGameInfo.GetPC",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 279,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DamageType",
+     "kind": "ClassProperty",
+     "own_property": false
+    },
+    {
+     "at": 294,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DamageCauser",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 305,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DamageAmount",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 323,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DamageAmount",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 358,
+     "token": "EX_LocalVariable",
+     "ref": "GetPC.ReturnValue",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 359,
+     "token": "EX_VirtualFunction",
+     "ref": "AddSoloChild.NewAEC",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 364,
+     "token": "EX_FinalFunction",
+     "ref": "RGameInfo.GetPC",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 371,
+     "token": "EX_LocalVariable",
+     "ref": "InCinematicMode.ReturnValue",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 377,
+     "token": "EX_FinalFunction",
+     "ref": "RPlayerControllerBase.InCinematicMode",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 389,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DamageType",
+     "kind": "ClassProperty",
+     "own_property": false
+    },
+    {
+     "at": 404,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DamageCauser",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 415,
+     "token": "EX_DynamicCast",
+     "ref": "RPlayerController",
+     "kind": null,
+     "own_property": false
+    },
+    {
+     "at": 432,
+     "token": "EX_VirtualFunction",
+     "ref": "RHelicopterBase.bIsAggro",
+     "kind": "BoolProperty",
+     "own_property": true
+    },
+    {
+     "at": 444,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.Momentum",
+     "kind": "StructProperty",
+     "own_property": false
+    },
+    {
+     "at": 447,
+     "token": "EX_LocalVariable",
+     "ref": "GetQuickThrowFailedAnim.ReturnValue",
+     "kind": "StructProperty",
+     "own_property": false
+    },
+    {
+     "at": 448,
+     "token": "EX_LocalVariable",
+     "ref": "GFxMovieHudMenu.Quit",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 470,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.ArmouredMode",
+     "kind": "BoolProperty",
+     "own_property": true
+    },
+    {
+     "at": 502,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DamageType",
+     "kind": "ClassProperty",
+     "own_property": false
+    },
+    {
+     "at": 511,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.Momentum",
+     "kind": "StructProperty",
+     "own_property": false
+    },
+    {
+     "at": 514,
+     "token": "EX_LocalVariable",
+     "ref": "RemovePropSkeletal.PawnDied",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 540,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.Momentum",
+     "kind": "StructProperty",
+     "own_property": false
+    },
+    {
+     "at": 545,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.HitLocation",
+     "kind": "StructProperty",
+     "own_property": false
+    },
+    {
+     "at": 554,
+     "token": "EX_FinalFunction",
+     "ref": "RVehicle.UnStickTyres",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 571,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DamageType",
+     "kind": "ClassProperty",
+     "own_property": false
+    },
+    {
+     "at": 587,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DamageType",
+     "kind": "ClassProperty",
+     "own_property": false
+    },
+    {
+     "at": 601,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DamageAmount",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 604,
+     "token": "EX_LocalVariable",
+     "ref": "RemovePropSkeletal.PawnDied",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 605,
+     "token": "EX_LocalVariable",
+     "ref": "GFxMovieHudMenu.SetupResolution",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 614,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.NotifyController",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 617,
+     "token": "EX_LocalVariable",
+     "ref": "AnimAccumulatorSkeletonConstants.LeftGundummyIndexChain",
+     "kind": "ArrayProperty",
+     "own_property": false
+    },
+    {
+     "at": 618,
+     "token": "EX_LocalVariable",
+     "ref": "Start.ReturnValue",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 626,
+     "token": "EX_FinalFunction",
+     "ref": "RPlayerController.AddScreenShake",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 631,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.ExplosiveImpactScreenShake",
+     "kind": "StructProperty",
+     "own_property": true
+    },
+    {
+     "at": 634,
+     "token": "EX_LocalVariable",
+     "ref": "RemovePropSkeletal.PawnDied",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 647,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.ExplosiveImpactSound",
+     "kind": "ObjectProperty",
+     "own_property": true
+    },
+    {
+     "at": 659,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.ExplosiveImpactSound",
+     "kind": "ObjectProperty",
+     "own_property": true
+    },
+    {
+     "at": 671,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.NotifyController",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 679,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.NotifyController",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 682,
+     "token": "EX_LocalVariable",
+     "ref": "RGameInfo.IsBMBLInRange",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 683,
+     "token": "EX_LocalVariable",
+     "ref": "RemoveSoloChild.RemAEC",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 691,
+     "token": "EX_VirtualFunction",
+     "ref": "RHelicopterBase.new_lineofsight",
+     "kind": "BoolProperty",
+     "own_property": true
+    },
+    {
+     "at": 696,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DamageAmount",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 701,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.EventInstigator",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 706,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.HitLocation",
+     "kind": "StructProperty",
+     "own_property": false
+    },
+    {
+     "at": 711,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.Momentum",
+     "kind": "StructProperty",
+     "own_property": false
+    },
+    {
+     "at": 716,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DamageType",
+     "kind": "ClassProperty",
+     "own_property": false
+    },
+    {
+     "at": 721,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.HitInfo",
+     "kind": "StructProperty",
+     "own_property": false
+    },
+    {
+     "at": 726,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DamageCauser",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 734,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.NotifyController",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 740,
+     "token": "EX_LocalVariable",
+     "ref": "RPlayerController.LastDamageType",
+     "kind": "ClassProperty",
+     "own_property": true
+    },
+    {
+     "at": 746,
+     "token": "EX_InstanceVariable",
+     "ref": "RPlayerController.LastDamageType",
+     "kind": "ClassProperty",
+     "own_property": true
+    },
+    {
+     "at": 751,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DamageType",
+     "kind": "ClassProperty",
+     "own_property": false
+    },
+    {
+     "at": 760,
+     "token": "EX_DynamicCast",
+     "ref": "RProjectile",
+     "kind": null,
+     "own_property": false
+    },
+    {
+     "at": 765,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DamageCauser",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 776,
+     "token": "EX_DynamicCast",
+     "ref": "RTankMissile",
+     "kind": null,
+     "own_property": false
+    },
+    {
+     "at": 781,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DamageCauser",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 790,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.NotifyController",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 796,
+     "token": "EX_LocalVariable",
+     "ref": "RPlayerController.NumBatmobileMissileHits",
+     "kind": "IntProperty",
+     "own_property": true
+    },
+    {
+     "at": 802,
+     "token": "EX_InstanceVariable",
+     "ref": "RPlayerController.NumBatmobileMissileHits",
+     "kind": "IntProperty",
+     "own_property": true
+    },
+    {
+     "at": 813,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.NotifyController",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 819,
+     "token": "EX_LocalVariable",
+     "ref": "RPlayerController.NumBatmobileMissileHits",
+     "kind": "IntProperty",
+     "own_property": true
+    },
+    {
+     "at": 825,
+     "token": "EX_InstanceVariable",
+     "ref": "RPlayerController.NumBatmobileMissileHits",
+     "kind": "IntProperty",
+     "own_property": true
+    },
+    {
+     "at": 854,
+     "token": "EX_LocalVariable",
+     "ref": "RGameInfoBase.PersistentData",
+     "kind": "ObjectProperty",
+     "own_property": true
+    },
+    {
+     "at": 860,
+     "token": "EX_InstanceVariable",
+     "ref": "RGameInfoBase.PersistentData",
+     "kind": "ObjectProperty",
+     "own_property": true
+    },
+    {
+     "at": 863,
+     "token": "EX_LocalVariable",
+     "ref": "SetSideStoryDiscoveryState.MapIconIndex",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 864,
+     "token": "EX_LocalVariable",
+     "ref": "AlertInstance.SightLevel",
+     "kind": "FloatProperty",
+     "own_property": true
+    },
+    {
+     "at": 872,
+     "token": "EX_FinalFunction",
+     "ref": "RPersistentData.AutoActivateTutorial",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 885,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.NotifyController",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 891,
+     "token": "EX_LocalVariable",
+     "ref": "RPlayerController.NumBatmobileCannonHits",
+     "kind": "IntProperty",
+     "own_property": true
+    },
+    {
+     "at": 897,
+     "token": "EX_InstanceVariable",
+     "ref": "RPlayerController.NumBatmobileCannonHits",
+     "kind": "IntProperty",
+     "own_property": true
+    },
+    {
+     "at": 908,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.NotifyController",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 914,
+     "token": "EX_LocalVariable",
+     "ref": "RPlayerController.NumBatmobileCannonHits",
+     "kind": "IntProperty",
+     "own_property": true
+    },
+    {
+     "at": 920,
+     "token": "EX_InstanceVariable",
+     "ref": "RPlayerController.NumBatmobileCannonHits",
+     "kind": "IntProperty",
+     "own_property": true
+    },
+    {
+     "at": 949,
+     "token": "EX_LocalVariable",
+     "ref": "RGameInfoBase.PersistentData",
+     "kind": "ObjectProperty",
+     "own_property": true
+    },
+    {
+     "at": 955,
+     "token": "EX_InstanceVariable",
+     "ref": "RGameInfoBase.PersistentData",
+     "kind": "ObjectProperty",
+     "own_property": true
+    },
+    {
+     "at": 958,
+     "token": "EX_LocalVariable",
+     "ref": "SetSideStoryDiscoveryState.MapIconIndex",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 959,
+     "token": "EX_LocalVariable",
+     "ref": "AlertInstance.SightLevel",
+     "kind": "FloatProperty",
+     "own_property": true
+    },
+    {
+     "at": 967,
+     "token": "EX_FinalFunction",
+     "ref": "RPersistentData.AutoActivateTutorial",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 980,
+     "token": "EX_DynamicCast",
+     "ref": "RVehicleHeavyTank",
+     "kind": null,
+     "own_property": false
+    },
+    {
+     "at": 986,
+     "token": "EX_DynamicCast",
+     "ref": "RProjectile",
+     "kind": null,
+     "own_property": false
+    },
+    {
+     "at": 991,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DamageCauser",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 1009,
+     "token": "EX_LocalVariable",
+     "ref": "RVehicleHeavyTank.Cloudburst",
+     "kind": "ComponentProperty",
+     "own_property": true
+    },
+    {
+     "at": 1015,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleHeavyTank.Cloudburst",
+     "kind": "ComponentProperty",
+     "own_property": true
+    },
+    {
+     "at": 1044,
+     "token": "EX_LocalVariable",
+     "ref": "RGameInfo.VehicleCombatManager",
+     "kind": "ObjectProperty",
+     "own_property": true
+    },
+    {
+     "at": 1050,
+     "token": "EX_InstanceVariable",
+     "ref": "RGameInfo.VehicleCombatManager",
+     "kind": "ObjectProperty",
+     "own_property": true
+    },
+    {
+     "at": 1056,
+     "token": "EX_LocalVariable",
+     "ref": "RVehicleCombatManager.bDamagedByCloudburstTank",
+     "kind": "BoolProperty",
+     "own_property": true
+    },
+    {
+     "at": 1063,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleCombatManager.bDamagedByCloudburstTank",
+     "kind": "BoolProperty",
+     "own_property": true
+    },
+    {
+     "at": 1076,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.NotifyController",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 1082,
+     "token": "EX_LocalVariable",
+     "ref": "RPlayerController.HUDPrompt",
+     "kind": "ObjectProperty",
+     "own_property": true
+    },
+    {
+     "at": 1088,
+     "token": "EX_InstanceVariable",
+     "ref": "RPlayerController.HUDPrompt",
+     "kind": "ObjectProperty",
+     "own_property": true
+    },
+    {
+     "at": 1094,
+     "token": "EX_LocalVariable",
+     "ref": "RHUDPrompt.FromKismet",
+     "kind": "ObjectProperty",
+     "own_property": true
+    },
+    {
+     "at": 1100,
+     "token": "EX_InstanceVariable",
+     "ref": "RHUDPrompt.FromKismet",
+     "kind": "ObjectProperty",
+     "own_property": true
+    },
+    {
+     "at": 1115,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.NotifyController",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 1121,
+     "token": "EX_LocalVariable",
+     "ref": "RPlayerController.HUDPrompt",
+     "kind": "ObjectProperty",
+     "own_property": true
+    },
+    {
+     "at": 1127,
+     "token": "EX_InstanceVariable",
+     "ref": "RPlayerController.HUDPrompt",
+     "kind": "ObjectProperty",
+     "own_property": true
+    },
+    {
+     "at": 1133,
+     "token": "EX_LocalVariable",
+     "ref": "RHUDPrompt.FromKismet",
+     "kind": "ObjectProperty",
+     "own_property": true
+    },
+    {
+     "at": 1139,
+     "token": "EX_InstanceVariable",
+     "ref": "RHUDPrompt.FromKismet",
+     "kind": "ObjectProperty",
+     "own_property": true
+    },
+    {
+     "at": 1177,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.NotifyController",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 1183,
+     "token": "EX_LocalVariable",
+     "ref": "RPlayerController.ModularHud",
+     "kind": "ObjectProperty",
+     "own_property": true
+    },
+    {
+     "at": 1189,
+     "token": "EX_InstanceVariable",
+     "ref": "RPlayerController.ModularHud",
+     "kind": "ObjectProperty",
+     "own_property": true
+    },
+    {
+     "at": 1192,
+     "token": "EX_InstanceVariable",
+     "ref": "GetClosestPointOnRacingLineToPoint.OutPoint",
+     "kind": "StructProperty",
+     "own_property": false
+    },
+    {
+     "at": 1193,
+     "token": "EX_LocalVariable",
+     "ref": "AlertInstance.VisibilityCategory",
+     "kind": "Enum",
+     "own_property": true
+    },
+    {
+     "at": 1201,
+     "token": "EX_VirtualFunction",
+     "ref": "VillainAttackNotifyTriggered.VillainPawn",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 1209,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.OriginalDamageAmount",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 1214,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DamageAmount",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 1223,
+     "token": "EX_DynamicCast",
+     "ref": "RCommandBeaconBase",
+     "kind": null,
+     "own_property": false
+    },
+    {
+     "at": 1228,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DamageCauser",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 1235,
+     "token": "EX_FinalFunction",
+     "ref": "RVehicleBatmobileBase.DrainWeaponGeneratorForDamage",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 1240,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.HitNumber",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 1247,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.LastDamageCauser",
+     "kind": "ObjectProperty",
+     "own_property": true
+    },
+    {
+     "at": 1252,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DamageCauser",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 1258,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.OldHealth",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 1273,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DamageAmount",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 1278,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.EventInstigator",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 1283,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.HitLocation",
+     "kind": "StructProperty",
+     "own_property": false
+    },
+    {
+     "at": 1288,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.Momentum",
+     "kind": "StructProperty",
+     "own_property": false
+    },
+    {
+     "at": 1293,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DamageType",
+     "kind": "ClassProperty",
+     "own_property": false
+    },
+    {
+     "at": 1298,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.HitInfo",
+     "kind": "StructProperty",
+     "own_property": false
+    },
+    {
+     "at": 1303,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DamageCauser",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 1313,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.bEmergencyWeaponGenerator",
+     "kind": "BoolProperty",
+     "own_property": true
+    },
+    {
+     "at": 1319,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.QuarterHealth",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 1326,
+     "token": "EX_DynamicCast",
+     "ref": "RVehicleBatmobileBase",
+     "kind": null,
+     "own_property": false
+    },
+    {
+     "at": 1361,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.QuarterHealth",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 1371,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.OldHealth",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 1376,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.QuarterHealth",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 1384,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.WeaponGeneratorPower",
+     "kind": "FloatProperty",
+     "own_property": true
+    },
+    {
+     "at": 1390,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.WeaponGeneratorPower",
+     "kind": "FloatProperty",
+     "own_property": true
+    },
+    {
+     "at": 1393,
+     "token": "EX_LocalVariable",
+     "ref": "RemovePropSkeletal.PawnDied",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 1394,
+     "token": "EX_LocalVariable",
+     "ref": "GFxMovieHudMenu.SetupResolution",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 1401,
+     "token": "EX_VirtualFunction",
+     "ref": "MissingCheckinFinished.bInterrupted",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 1407,
+     "token": "EX_VirtualFunction",
+     "ref": "ExitMove.I",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 1414,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DamageAmount",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 1419,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.HitLocation",
+     "kind": "StructProperty",
+     "own_property": false
+    },
+    {
+     "at": 1424,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DamageType",
+     "kind": "ClassProperty",
+     "own_property": false
+    },
+    {
+     "at": 1430,
+     "token": "EX_VirtualFunction",
+     "ref": "NotifyFinished.FinishedAction",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 1453,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DamageAmount",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 1480,
+     "token": "EX_ObjectConst",
+     "ref": "RVehicleWeapon",
+     "kind": null,
+     "own_property": false
+    },
+    {
+     "at": 1485,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.Weap",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 1494,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.Weap",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 1497,
+     "token": "EX_LocalVariable",
+     "ref": "RVehicle.RoadObstacleExtraBounds",
+     "kind": "StructProperty",
+     "own_property": true
+    },
+    {
+     "at": 1498,
+     "token": "EX_LocalVariable",
+     "ref": "Default__AkAudioBeacon",
+     "kind": "AkAudioBeacon",
+     "own_property": false
+    },
+    {
+     "at": 1506,
+     "token": "EX_VirtualFunction",
+     "ref": "RHelicopterBase.PitchAndRollMultiplier",
+     "kind": "FloatProperty",
+     "own_property": true
+    },
+    {
+     "at": 1533,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.bIsJokerfiedBatmobile",
+     "kind": "BoolProperty",
+     "own_property": true
+    },
+    {
+     "at": 1545,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.DisableUnderAttackWarning",
+     "kind": "BoolProperty",
+     "own_property": true
+    },
+    {
+     "at": 1556,
+     "token": "EX_DynamicCast",
+     "ref": "RCommandBeaconBase",
+     "kind": null,
+     "own_property": false
+    },
+    {
+     "at": 1561,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DamageCauser",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 1590,
+     "token": "EX_LocalVariable",
+     "ref": "GetPC.ReturnValue",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 1591,
+     "token": "EX_VirtualFunction",
+     "ref": "AddSoloChild.NewAEC",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 1596,
+     "token": "EX_FinalFunction",
+     "ref": "RGameInfo.GetPC",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 1600,
+     "token": "EX_LocalVariable",
+     "ref": "RVehicle.SelfDriveThrottleMin",
+     "kind": "FloatProperty",
+     "own_property": true
+    },
+    {
+     "at": 1609,
+     "token": "EX_VirtualFunction",
+     "ref": "RBMRoomAIState.IsInAnAttackState",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 1616,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.VCM",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 1641,
+     "token": "EX_LocalVariable",
+     "ref": "RGameInfo.VehicleCombatManager",
+     "kind": "ObjectProperty",
+     "own_property": true
+    },
+    {
+     "at": 1647,
+     "token": "EX_InstanceVariable",
+     "ref": "RGameInfo.VehicleCombatManager",
+     "kind": "ObjectProperty",
+     "own_property": true
+    },
+    {
+     "at": 1660,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.VCM",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 1666,
+     "token": "EX_LocalVariable",
+     "ref": "GetCurrentEncounterType.ReturnValue",
+     "kind": "ByteProperty",
+     "own_property": false
+    },
+    {
+     "at": 1672,
+     "token": "EX_FinalFunction",
+     "ref": "RVehicleCombatManager.GetCurrentEncounterType",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 1690,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.VCM",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 1696,
+     "token": "EX_LocalVariable",
+     "ref": "GetCurrentEncounterType.ReturnValue",
+     "kind": "ByteProperty",
+     "own_property": false
+    },
+    {
+     "at": 1702,
+     "token": "EX_FinalFunction",
+     "ref": "RVehicleCombatManager.GetCurrentEncounterType",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 1732,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.VCM",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 1735,
+     "token": "EX_LocalVariable",
+     "ref": "RPawnJokerHallucination.CanBeSeenByBatman",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 1736,
+     "token": "EX_LocalVariable",
+     "ref": "RemoveGroupChild.RemAEC",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 1744,
+     "token": "EX_FinalFunction",
+     "ref": "RVehicleCombatManager.PlayCommanderBark",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 1756,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DamageCauser",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 1776,
+     "token": "EX_LocalVariable",
+     "ref": "GetWeaponPickupTransitionName.bSlidePickup",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 1781,
+     "token": "EX_LocalVariable",
+     "ref": "GetWeaponPickupTransitionName.bSlidePickup",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 1815,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.LowHealthWarningLevel",
+     "kind": "IntProperty",
+     "own_property": true
+    },
+    {
+     "at": 1825,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.OldHealth",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 1830,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.LowHealthWarningLevel",
+     "kind": "IntProperty",
+     "own_property": true
+    },
+    {
+     "at": 1840,
+     "token": "EX_DynamicCast",
+     "ref": "RPlayerController",
+     "kind": null,
+     "own_property": false
+    },
+    {
+     "at": 1851,
+     "token": "EX_LocalVariable",
+     "ref": "RPlayerController.ModularHud",
+     "kind": "ObjectProperty",
+     "own_property": true
+    },
+    {
+     "at": 1857,
+     "token": "EX_InstanceVariable",
+     "ref": "RPlayerController.ModularHud",
+     "kind": "ObjectProperty",
+     "own_property": true
+    },
+    {
+     "at": 1863,
+     "token": "EX_LocalVariable",
+     "ref": "RGFxMovieModularHud.StoryModeModule",
+     "kind": "ObjectProperty",
+     "own_property": true
+    },
+    {
+     "at": 1869,
+     "token": "EX_InstanceVariable",
+     "ref": "RGFxMovieModularHud.StoryModeModule",
+     "kind": "ObjectProperty",
+     "own_property": true
+    },
+    {
+     "at": 1872,
+     "token": "EX_LocalVariable",
+     "ref": "RBMAIController.TakeElectricityDamage",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 1873,
+     "token": "EX_LocalVariable",
+     "ref": "MenuClose.Player",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 1881,
+     "token": "EX_FinalFunction",
+     "ref": "RHudModuleStoryMode.SetOneShotWarningMessage",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 1914,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.OriginalDamageAmount",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 1922,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.Idx",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 1932,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.Idx",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 1945,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DmgEvt",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 1956,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.Idx",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 1970,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DmgEvt",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 1978,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DmgEvt",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 1981,
+     "token": "EX_LocalVariable",
+     "ref": "PlayBarkPassenger.leader",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 1982,
+     "token": "EX_LocalVariable",
+     "ref": "GetParentOfClass.TestClass",
+     "kind": "ClassProperty",
+     "own_property": false
+    },
+    {
+     "at": 1996,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DamageCauser",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 2001,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.DamageType",
+     "kind": "ClassProperty",
+     "own_property": false
+    },
+    {
+     "at": 2006,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.OriginalDamageAmount",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 2011,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.HitLocation",
+     "kind": "StructProperty",
+     "own_property": false
+    },
+    {
+     "at": 2018,
+     "token": "EX_LocalVariable",
+     "ref": "TakeDamage.Idx",
+     "kind": "IntProperty",
+     "own_property": false
+    }
+   ],
+   "constants": [
+    {
+     "at": 486,
+     "kind": "float",
+     "value": 1000.0
+    },
+    {
+     "at": 1773,
+     "kind": "float",
+     "value": 0.5
+    },
+    {
+     "at": 1791,
+     "kind": "float",
+     "value": 1.0
+    }
+   ],
+   "verdict": "script",
+   "exec_strings_in_exe": 3
+  },
+  "RVehicleBatmobileBase.TakeRadiusDamageFromWeapon": {
+   "path": "RVehicleBatmobileBase.TakeRadiusDamageFromWeapon",
+   "index": 10416,
+   "size": 326,
+   "script_bytes": 288,
+   "script_sha1": "b05295b1a5371efaa0b93a9770f45a542427cd78",
+   "script_raw": "Working\\vendor\\BmAKgrab\\scripts\\RVehicleBatmobileBase_TakeRadiusDamageFromWeapon.hex",
+   "fields": {
+    "next": 10400,
+    "super": -1635,
+    "children": 10415,
+    "line": 425,
+    "script_size_field": 289,
+    "pre_name_word": 8538114,
+    "name_index": 76161,
+    "name_number": 0
+   },
+   "native_parm_descriptors": 0,
+   "native_parm_bytes": 0,
+   "refs": [
+    {
+     "at": 13,
+     "token": "EX_FinalFunction",
+     "ref": "RVehicleBatmobileBase.ShouldRadialDamageHit",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 18,
+     "token": "EX_LocalVariable",
+     "ref": "TakeRadiusDamageFromWeapon.HurtOrigin",
+     "kind": "StructProperty",
+     "own_property": false
+    },
+    {
+     "at": 23,
+     "token": "EX_LocalVariable",
+     "ref": "TakeRadiusDamageFromWeapon.DamageRadius",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 33,
+     "token": "EX_VirtualFunction",
+     "ref": "RAEC_Casualty_Sub_Tyger.AssignCasualty",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 38,
+     "token": "EX_LocalVariable",
+     "ref": "TakeRadiusDamageFromWeapon.ColRadius",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 43,
+     "token": "EX_LocalVariable",
+     "ref": "TakeRadiusDamageFromWeapon.ColHeight",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 50,
+     "token": "EX_LocalVariable",
+     "ref": "TakeRadiusDamageFromWeapon.Dir",
+     "kind": "StructProperty",
+     "own_property": false
+    },
+    {
+     "at": 61,
+     "token": "EX_LocalVariable",
+     "ref": "TakeRadiusDamageFromWeapon.HurtOrigin",
+     "kind": "StructProperty",
+     "own_property": false
+    },
+    {
+     "at": 68,
+     "token": "EX_LocalVariable",
+     "ref": "TakeRadiusDamageFromWeapon.Dist",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 74,
+     "token": "EX_LocalVariable",
+     "ref": "TakeRadiusDamageFromWeapon.Dir",
+     "kind": "StructProperty",
+     "own_property": false
+    },
+    {
+     "at": 81,
+     "token": "EX_LocalVariable",
+     "ref": "TakeRadiusDamageFromWeapon.Dir",
+     "kind": "StructProperty",
+     "own_property": false
+    },
+    {
+     "at": 87,
+     "token": "EX_LocalVariable",
+     "ref": "TakeRadiusDamageFromWeapon.Dir",
+     "kind": "StructProperty",
+     "own_property": false
+    },
+    {
+     "at": 94,
+     "token": "EX_LocalVariable",
+     "ref": "TakeRadiusDamageFromWeapon.Dist",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 101,
+     "token": "EX_LocalVariable",
+     "ref": "TakeRadiusDamageFromWeapon.Dist",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 107,
+     "token": "EX_LocalVariable",
+     "ref": "TakeRadiusDamageFromWeapon.ColRadius",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 110,
+     "token": "EX_LocalVariable",
+     "ref": "RemovePropSkeletal.PawnDied",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 111,
+     "token": "EX_LocalVariable",
+     "ref": "GFxMovieHudMenu.SetupResolution",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 129,
+     "token": "EX_LocalVariable",
+     "ref": "TakeRadiusDamageFromWeapon.Dist",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 132,
+     "token": "EX_LocalVariable",
+     "ref": "RemovePropSkeletal.PawnDied",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 133,
+     "token": "EX_LocalVariable",
+     "ref": "GFxMovieHudMenu.SetupResolution",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 141,
+     "token": "EX_LocalVariable",
+     "ref": "TakeRadiusDamageFromWeapon.Reduce",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 148,
+     "token": "EX_LocalVariable",
+     "ref": "TakeRadiusDamageFromWeapon.Dir",
+     "kind": "StructProperty",
+     "own_property": false
+    },
+    {
+     "at": 169,
+     "token": "EX_LocalVariable",
+     "ref": "TakeRadiusDamageFromWeapon.Reduce",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 172,
+     "token": "EX_LocalVariable",
+     "ref": "RemovePropSkeletal.PawnDied",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 173,
+     "token": "EX_LocalVariable",
+     "ref": "GFxMovieHudMenu.SetupResolution",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 187,
+     "token": "EX_LocalVariable",
+     "ref": "TakeRadiusDamageFromWeapon.Reduce",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 199,
+     "token": "EX_LocalVariable",
+     "ref": "TakeRadiusDamageFromWeapon.BaseDamage",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 203,
+     "token": "EX_LocalVariable",
+     "ref": "RCharacterDefine.SkinType",
+     "kind": "ByteProperty",
+     "own_property": true
+    },
+    {
+     "at": 210,
+     "token": "EX_LocalVariable",
+     "ref": "TakeRadiusDamageFromWeapon.Reduce",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 221,
+     "token": "EX_LocalVariable",
+     "ref": "TakeRadiusDamageFromWeapon.BaseDamage",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 224,
+     "token": "EX_LocalVariable",
+     "ref": "RemovePropSkeletal.PawnDied",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 241,
+     "token": "EX_LocalVariable",
+     "ref": "TakeRadiusDamageFromWeapon.InstigatedBy",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 246,
+     "token": "EX_LocalVariable",
+     "ref": "TakeRadiusDamageFromWeapon.BaseDamage",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 251,
+     "token": "EX_LocalVariable",
+     "ref": "TakeRadiusDamageFromWeapon.DamageRadius",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 256,
+     "token": "EX_LocalVariable",
+     "ref": "TakeRadiusDamageFromWeapon.DamageType",
+     "kind": "ClassProperty",
+     "own_property": false
+    },
+    {
+     "at": 261,
+     "token": "EX_LocalVariable",
+     "ref": "TakeRadiusDamageFromWeapon.Momentum",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 266,
+     "token": "EX_LocalVariable",
+     "ref": "TakeRadiusDamageFromWeapon.HurtOrigin",
+     "kind": "StructProperty",
+     "own_property": false
+    },
+    {
+     "at": 272,
+     "token": "EX_LocalVariable",
+     "ref": "TakeRadiusDamageFromWeapon.DamageCauser",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 277,
+     "token": "EX_LocalVariable",
+     "ref": "TakeRadiusDamageFromWeapon.DamageFalloffExponent",
+     "kind": "FloatProperty",
+     "own_property": false
+    }
+   ],
+   "constants": [
+    {
+     "at": 3,
+     "kind": "float",
+     "value": 1.0
+    },
+    {
+     "at": 119,
+     "kind": "float",
+     "value": 0.0
+    },
+    {
+     "at": 159,
+     "kind": "float",
+     "value": 1500.0
+    },
+    {
+     "at": 192,
+     "kind": "float",
+     "value": 0.1
+    }
+   ],
+   "verdict": "script",
+   "exec_strings_in_exe": 0
+  },
+  "RVehicleBatmobileBase.TakesDamageFromRam": {
+   "path": "RVehicleBatmobileBase.TakesDamageFromRam",
+   "index": 10595,
+   "size": 45,
+   "script_bytes": 7,
+   "script_sha1": "1aa78f331a90f55e8fb9f173dcc80128458f4030",
+   "script_raw": "Working\\vendor\\BmAKgrab\\scripts\\RVehicleBatmobileBase_TakesDamageFromRam.hex",
+   "fields": {
+    "next": 10591,
+    "super": 0,
+    "children": 10594,
+    "line": 12,
+    "script_size_field": 8,
+    "pre_name_word": 131075,
+    "name_index": 76162,
+    "name_number": 0
+   },
+   "native_parm_descriptors": 0,
+   "native_parm_bytes": 0,
+   "refs": [],
+   "constants": [],
+   "verdict": "script",
+   "exec_strings_in_exe": 0
+  },
+  "RVehicleBatmobileBase.ShouldRadialDamageHit": {
+   "path": "RVehicleBatmobileBase.ShouldRadialDamageHit",
+   "index": 10903,
+   "size": 48,
+   "script_bytes": 10,
+   "script_sha1": "76d9caeac55ee7af3feccab928e56f04f075128c",
+   "script_raw": "Working\\vendor\\BmAKgrab\\scripts\\RVehicleBatmobileBase_ShouldRadialDamageHit.hex",
+   "fields": {
+    "next": 10899,
+    "super": 0,
+    "children": 10902,
+    "line": 19,
+    "script_size_field": 11,
+    "pre_name_word": 132097,
+    "name_index": 71675,
+    "name_number": 0
+   },
+   "native_parm_descriptors": 2,
+   "native_parm_bytes": 10,
+   "refs": [
+    {
+     "at": 0,
+     "token": "PropRef(native-parm)",
+     "ref": "ShouldRadialDamageHit.DamageLocation",
+     "kind": "StructProperty",
+     "own_property": false
+    },
+    {
+     "at": 5,
+     "token": "PropRef(native-parm)",
+     "ref": "ShouldRadialDamageHit.DamageRadius",
+     "kind": "FloatProperty",
+     "own_property": false
+    }
+   ],
+   "constants": [],
+   "verdict": "native",
+   "exec_strings_in_exe": 1
+  },
+  "RVehicleBatmobileBase.CanBatmobileDoImpactDamage": {
+   "path": "RVehicleBatmobileBase.CanBatmobileDoImpactDamage",
+   "index": 10604,
+   "size": 43,
+   "script_bytes": 5,
+   "script_sha1": "6014694cae308c1dad2620fb4218014ccb442628",
+   "script_raw": "Working\\vendor\\BmAKgrab\\scripts\\RVehicleBatmobileBase_CanBatmobileDoImpactDamage.hex",
+   "fields": {
+    "next": 10601,
+    "super": 0,
+    "children": 10603,
+    "line": 10,
+    "script_size_field": 6,
+    "pre_name_word": 132097,
+    "name_index": 14967,
+    "name_number": 0
+   },
+   "native_parm_descriptors": 1,
+   "native_parm_bytes": 5,
+   "refs": [
+    {
+     "at": 0,
+     "token": "PropRef(native-parm)",
+     "ref": "CanBatmobileDoImpactDamage.OtherVehicle",
+     "kind": "ObjectProperty",
+     "own_property": false
+    }
+   ],
+   "constants": [],
+   "verdict": "native",
+   "exec_strings_in_exe": 1
+  },
+  "RVehicleBatmobileBase.CalculateAndStoreImpactDamage": {
+   "path": "RVehicleBatmobileBase.CalculateAndStoreImpactDamage",
+   "index": 10656,
+   "size": 1570,
+   "script_bytes": 1532,
+   "script_sha1": "1154b84d27a8548d4fa21c15dd17421721a9c7ed",
+   "script_raw": "Working\\vendor\\BmAKgrab\\scripts\\RVehicleBatmobileBase_CalculateAndStoreImpactDamage.hex",
+   "fields": {
+    "next": 10636,
+    "super": 0,
+    "children": 10655,
+    "line": 2405,
+    "script_size_field": 1533,
+    "pre_name_word": 8519683,
+    "name_index": 14641,
+    "name_number": 0
+   },
+   "native_parm_descriptors": 0,
+   "native_parm_bytes": 0,
+   "refs": [
+    {
+     "at": 1,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.CurrentDamageNum",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 12,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.I",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 22,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.I",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 28,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.DamageNumbers",
+     "kind": "ArrayProperty",
+     "own_property": true
+    },
+    {
+     "at": 42,
+     "token": "EX_LocalVariable",
+     "ref": "RVehicleBatmobileBase.FloatingDamageNumber",
+     "kind": "ScriptStruct",
+     "own_property": true
+    },
+    {
+     "at": 50,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.I",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 55,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.DamageNumbers",
+     "kind": "ArrayProperty",
+     "own_property": true
+    },
+    {
+     "at": 60,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.OtherVeh",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 68,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.FoundAtAll",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 82,
+     "token": "EX_LocalVariable",
+     "ref": "RVehicleBatmobileBase.FloatingDamageNumber",
+     "kind": "ScriptStruct",
+     "own_property": true
+    },
+    {
+     "at": 90,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.I",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 95,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.DamageNumbers",
+     "kind": "ArrayProperty",
+     "own_property": true
+    },
+    {
+     "at": 98,
+     "token": "EX_LocalVariable",
+     "ref": "RemovePropSkeletal.PawnDied",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 107,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.CurrentDamageNum",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 112,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.I",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 121,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.I",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 134,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.CurrentDamageNum",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 146,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.CurrentDamageNum",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 152,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.DamageNumbers",
+     "kind": "ArrayProperty",
+     "own_property": true
+    },
+    {
+     "at": 159,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.DamageNumbers",
+     "kind": "ArrayProperty",
+     "own_property": true
+    },
+    {
+     "at": 166,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.DamageNumbers",
+     "kind": "ArrayProperty",
+     "own_property": true
+    },
+    {
+     "at": 178,
+     "token": "EX_LocalVariable",
+     "ref": "RVehicleBatmobileBase.FloatingDamageNumber",
+     "kind": "ScriptStruct",
+     "own_property": true
+    },
+    {
+     "at": 186,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.CurrentDamageNum",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 191,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.DamageNumbers",
+     "kind": "ArrayProperty",
+     "own_property": true
+    },
+    {
+     "at": 194,
+     "token": "EX_LocalVariable",
+     "ref": "RemovePropSkeletal.PawnDied",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 206,
+     "token": "EX_LocalVariable",
+     "ref": "RVehicleBatmobileBase.FloatingDamageNumber",
+     "kind": "ScriptStruct",
+     "own_property": true
+    },
+    {
+     "at": 214,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.CurrentDamageNum",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 219,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.DamageNumbers",
+     "kind": "ArrayProperty",
+     "own_property": true
+    },
+    {
+     "at": 224,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.OtherVeh",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 234,
+     "token": "EX_LocalVariable",
+     "ref": "RVehicleBatmobileBase.FloatingDamageNumber",
+     "kind": "ScriptStruct",
+     "own_property": true
+    },
+    {
+     "at": 242,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.CurrentDamageNum",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 247,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.DamageNumbers",
+     "kind": "ArrayProperty",
+     "own_property": true
+    },
+    {
+     "at": 252,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.ImpactPosition",
+     "kind": "StructProperty",
+     "own_property": false
+    },
+    {
+     "at": 263,
+     "token": "EX_LocalVariable",
+     "ref": "RVehicleBatmobileBase.FloatingDamageNumber",
+     "kind": "ScriptStruct",
+     "own_property": true
+    },
+    {
+     "at": 271,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.CurrentDamageNum",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 276,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.DamageNumbers",
+     "kind": "ArrayProperty",
+     "own_property": true
+    },
+    {
+     "at": 282,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.ArmouredMode",
+     "kind": "BoolProperty",
+     "own_property": true
+    },
+    {
+     "at": 292,
+     "token": "EX_DynamicCast",
+     "ref": "RVehicleSimBatmobile",
+     "kind": null,
+     "own_property": false
+    },
+    {
+     "at": 303,
+     "token": "EX_LocalVariable",
+     "ref": "RVehicleSimBatmobile.bBoosting",
+     "kind": "BoolProperty",
+     "own_property": true
+    },
+    {
+     "at": 310,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleSimBatmobile.bBoosting",
+     "kind": "BoolProperty",
+     "own_property": true
+    },
+    {
+     "at": 320,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.OtherVeh",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 326,
+     "token": "EX_LocalVariable",
+     "ref": "RVehicle.HeavyArmouredVehicle",
+     "kind": "BoolProperty",
+     "own_property": true
+    },
+    {
+     "at": 333,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicle.HeavyArmouredVehicle",
+     "kind": "BoolProperty",
+     "own_property": true
+    },
+    {
+     "at": 346,
+     "token": "EX_LocalVariable",
+     "ref": "RVehicleBatmobileBase.FloatingDamageNumber",
+     "kind": "ScriptStruct",
+     "own_property": true
+    },
+    {
+     "at": 354,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.CurrentDamageNum",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 359,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.DamageNumbers",
+     "kind": "ArrayProperty",
+     "own_property": true
+    },
+    {
+     "at": 370,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.CurrentStrafeCooldown",
+     "kind": "FloatProperty",
+     "own_property": true
+    },
+    {
+     "at": 374,
+     "token": "EX_LocalVariable",
+     "ref": "Props.Props",
+     "kind": "StructProperty",
+     "own_property": false
+    },
+    {
+     "at": 382,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.StrafeCooldown",
+     "kind": "FloatProperty",
+     "own_property": true
+    },
+    {
+     "at": 385,
+     "token": "EX_LocalVariable",
+     "ref": "RemovePropSkeletal.PawnDied",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 386,
+     "token": "EX_LocalVariable",
+     "ref": "GFxMovieHudMenu.SetupResolution",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 400,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.FoundAtAll",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 413,
+     "token": "EX_LocalVariable",
+     "ref": "RVehicleBatmobileBase.FloatingDamageNumber",
+     "kind": "ScriptStruct",
+     "own_property": true
+    },
+    {
+     "at": 421,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.CurrentDamageNum",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 426,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.DamageNumbers",
+     "kind": "ArrayProperty",
+     "own_property": true
+    },
+    {
+     "at": 433,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.Right",
+     "kind": "StructProperty",
+     "own_property": false
+    },
+    {
+     "at": 469,
+     "token": "EX_LocalVariable",
+     "ref": "RVehicleBatmobileBase.FloatingDamageNumber",
+     "kind": "ScriptStruct",
+     "own_property": true
+    },
+    {
+     "at": 477,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.CurrentDamageNum",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 482,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.DamageNumbers",
+     "kind": "ArrayProperty",
+     "own_property": true
+    },
+    {
+     "at": 488,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.Right",
+     "kind": "StructProperty",
+     "own_property": false
+    },
+    {
+     "at": 493,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.StafeImpactImpulse",
+     "kind": "FloatProperty",
+     "own_property": true
+    },
+    {
+     "at": 504,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.Right",
+     "kind": "StructProperty",
+     "own_property": false
+    },
+    {
+     "at": 510,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.ImpactPosition",
+     "kind": "StructProperty",
+     "own_property": false
+    },
+    {
+     "at": 533,
+     "token": "EX_LocalVariable",
+     "ref": "RVehicleBatmobileBase.FloatingDamageNumber",
+     "kind": "ScriptStruct",
+     "own_property": true
+    },
+    {
+     "at": 541,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.CurrentDamageNum",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 546,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.DamageNumbers",
+     "kind": "ArrayProperty",
+     "own_property": true
+    },
+    {
+     "at": 556,
+     "token": "EX_LocalVariable",
+     "ref": "RVehicleBatmobileBase.FloatingDamageNumber",
+     "kind": "ScriptStruct",
+     "own_property": true
+    },
+    {
+     "at": 564,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.CurrentDamageNum",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 569,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.DamageNumbers",
+     "kind": "ArrayProperty",
+     "own_property": true
+    },
+    {
+     "at": 576,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.OtherMass",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 584,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.OtherVeh",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 628,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.MassFactor",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 640,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.OtherMass",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 652,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.OtherMass",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 660,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.Speed",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 665,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.MassFactor",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 679,
+     "token": "EX_LocalVariable",
+     "ref": "RVehicleBatmobileBase.FloatingDamageNumber",
+     "kind": "ScriptStruct",
+     "own_property": true
+    },
+    {
+     "at": 687,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.CurrentDamageNum",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 692,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.DamageNumbers",
+     "kind": "ArrayProperty",
+     "own_property": true
+    },
+    {
+     "at": 698,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.Speed",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 703,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.ImpactStrafeMod",
+     "kind": "FloatProperty",
+     "own_property": true
+    },
+    {
+     "at": 720,
+     "token": "EX_LocalVariable",
+     "ref": "RVehicleBatmobileBase.FloatingDamageNumber",
+     "kind": "ScriptStruct",
+     "own_property": true
+    },
+    {
+     "at": 728,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.CurrentDamageNum",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 733,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.DamageNumbers",
+     "kind": "ArrayProperty",
+     "own_property": true
+    },
+    {
+     "at": 739,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.Speed",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 744,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.ImpactBoostMod",
+     "kind": "FloatProperty",
+     "own_property": true
+    },
+    {
+     "at": 754,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.OtherVeh",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 760,
+     "token": "EX_LocalVariable",
+     "ref": "RVehicle.CivilianVehicle",
+     "kind": "BoolProperty",
+     "own_property": true
+    },
+    {
+     "at": 767,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicle.CivilianVehicle",
+     "kind": "BoolProperty",
+     "own_property": true
+    },
+    {
+     "at": 773,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.Speed",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 778,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.ImpactCivilianVehicleMod",
+     "kind": "FloatProperty",
+     "own_property": true
+    },
+    {
+     "at": 788,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.Speed",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 791,
+     "token": "EX_LocalVariable",
+     "ref": "RemovePropSkeletal.PawnDied",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 805,
+     "token": "EX_DynamicCast",
+     "ref": "RVehicleWalkerBase",
+     "kind": null,
+     "own_property": false
+    },
+    {
+     "at": 810,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.OtherVeh",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 820,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.Facing",
+     "kind": "StructProperty",
+     "own_property": false
+    },
+    {
+     "at": 838,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.ImpactPosition",
+     "kind": "StructProperty",
+     "own_property": false
+    },
+    {
+     "at": 849,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.Facing",
+     "kind": "StructProperty",
+     "own_property": false
+    },
+    {
+     "at": 853,
+     "token": "EX_LocalVariable",
+     "ref": "RPawnCombat.FindClosestCombatPawnFromList",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 887,
+     "token": "EX_LocalVariable",
+     "ref": "IsChallengeMode.ReturnValue",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 893,
+     "token": "EX_FinalFunction",
+     "ref": "RGameInfo.IsChallengeMode",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 904,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.Facing",
+     "kind": "StructProperty",
+     "own_property": false
+    },
+    {
+     "at": 912,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.OtherVeh",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 938,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.Speed",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 954,
+     "token": "EX_LocalVariable",
+     "ref": "RVehicleBatmobileBase.FloatingDamageNumber",
+     "kind": "ScriptStruct",
+     "own_property": true
+    },
+    {
+     "at": 962,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.CurrentDamageNum",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 967,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.DamageNumbers",
+     "kind": "ArrayProperty",
+     "own_property": true
+    },
+    {
+     "at": 972,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.Speed",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 988,
+     "token": "EX_LocalVariable",
+     "ref": "RVehicleBatmobileBase.FloatingDamageNumber",
+     "kind": "ScriptStruct",
+     "own_property": true
+    },
+    {
+     "at": 996,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.CurrentDamageNum",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 1001,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.DamageNumbers",
+     "kind": "ArrayProperty",
+     "own_property": true
+    },
+    {
+     "at": 1012,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.OtherVeh",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 1018,
+     "token": "EX_LocalVariable",
+     "ref": "RVehicle.bHasAPCStyleWeakSpot",
+     "kind": "BoolProperty",
+     "own_property": true
+    },
+    {
+     "at": 1025,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicle.bHasAPCStyleWeakSpot",
+     "kind": "BoolProperty",
+     "own_property": true
+    },
+    {
+     "at": 1035,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.OtherVeh",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 1041,
+     "token": "EX_LocalVariable",
+     "ref": "DoesImpactHitWeakSpot.ReturnValue",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 1047,
+     "token": "EX_VirtualFunction",
+     "ref": "GetDeathMovieVariationIndex.current_play_count",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 1052,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.ImpactPosition",
+     "kind": "StructProperty",
+     "own_property": false
+    },
+    {
+     "at": 1064,
+     "token": "EX_LocalVariable",
+     "ref": "RVehicleBatmobileBase.FloatingDamageNumber",
+     "kind": "ScriptStruct",
+     "own_property": true
+    },
+    {
+     "at": 1072,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.CurrentDamageNum",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 1077,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.DamageNumbers",
+     "kind": "ArrayProperty",
+     "own_property": true
+    },
+    {
+     "at": 1084,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.OtherCar",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 1089,
+     "token": "EX_DynamicCast",
+     "ref": "RVehicleCar",
+     "kind": null,
+     "own_property": false
+    },
+    {
+     "at": 1094,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.OtherVeh",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 1103,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.OtherCar",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 1111,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.OtherCar",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 1114,
+     "token": "EX_LocalVariable",
+     "ref": "RPersistentData.Riddler_IndexX",
+     "kind": "ByteProperty",
+     "own_property": true
+    },
+    {
+     "at": 1115,
+     "token": "EX_LocalVariable",
+     "ref": "AlertInstance.bGlanceable",
+     "kind": "BoolProperty",
+     "own_property": true
+    },
+    {
+     "at": 1123,
+     "token": "EX_FinalFunction",
+     "ref": "RVehicleCar.RemoveWeakSpot",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 1130,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.OtherCar",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 1133,
+     "token": "EX_LocalVariable",
+     "ref": "RGFxMovie.OnLoadedPackage",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 1134,
+     "token": "EX_LocalVariable",
+     "ref": "AlertInstance.AlertInstigator",
+     "kind": "ObjectProperty",
+     "own_property": true
+    },
+    {
+     "at": 1166,
+     "token": "EX_LocalVariable",
+     "ref": "RVehicleBatmobileBase.FloatingDamageNumber",
+     "kind": "ScriptStruct",
+     "own_property": true
+    },
+    {
+     "at": 1174,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.CurrentDamageNum",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 1179,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.DamageNumbers",
+     "kind": "ArrayProperty",
+     "own_property": true
+    },
+    {
+     "at": 1185,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.MinDamageSpeed",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 1190,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.BattleModeImpactMinDamageSpeed",
+     "kind": "FloatProperty",
+     "own_property": true
+    },
+    {
+     "at": 1196,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.MaxDamageSpeed",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 1201,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.BattleModeImpactMaxDamageSpeed",
+     "kind": "FloatProperty",
+     "own_property": true
+    },
+    {
+     "at": 1207,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.MaxDamagePow",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 1212,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.BattleModeImpactMaxDamagePow",
+     "kind": "FloatProperty",
+     "own_property": true
+    },
+    {
+     "at": 1221,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.MinDamageSpeed",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 1226,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.ImpactMinDamageSpeed",
+     "kind": "FloatProperty",
+     "own_property": true
+    },
+    {
+     "at": 1232,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.MaxDamageSpeed",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 1237,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.ImpactMaxDamageSpeed",
+     "kind": "FloatProperty",
+     "own_property": true
+    },
+    {
+     "at": 1243,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.MaxDamagePow",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 1248,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.ImpactMaxDamagePow",
+     "kind": "FloatProperty",
+     "own_property": true
+    },
+    {
+     "at": 1261,
+     "token": "EX_LocalVariable",
+     "ref": "RVehicleBatmobileBase.FloatingDamageNumber",
+     "kind": "ScriptStruct",
+     "own_property": true
+    },
+    {
+     "at": 1269,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.CurrentDamageNum",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 1274,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.DamageNumbers",
+     "kind": "ArrayProperty",
+     "own_property": true
+    },
+    {
+     "at": 1279,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.MinDamageSpeed",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 1288,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.SpeedFactor",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 1298,
+     "token": "EX_LocalVariable",
+     "ref": "RVehicleBatmobileBase.FloatingDamageNumber",
+     "kind": "ScriptStruct",
+     "own_property": true
+    },
+    {
+     "at": 1306,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.CurrentDamageNum",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 1311,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.DamageNumbers",
+     "kind": "ArrayProperty",
+     "own_property": true
+    },
+    {
+     "at": 1316,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.MinDamageSpeed",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 1323,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.SpeedFactor",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 1329,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.MaxDamageSpeed",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 1334,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.MinDamageSpeed",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 1345,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.SpeedFactor",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 1348,
+     "token": "EX_LocalVariable",
+     "ref": "RemovePropSkeletal.PawnDied",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 1357,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.SpeedFactor",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 1360,
+     "token": "EX_LocalVariable",
+     "ref": "RemovePropSkeletal.PawnDied",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 1368,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.SpeedFactor",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 1378,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.SpeedFactor",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 1383,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.MaxDamagePow",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 1390,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.Damage",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 1396,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.SpeedFactor",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 1401,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.ImpactMaxDamage",
+     "kind": "FloatProperty",
+     "own_property": true
+    },
+    {
+     "at": 1415,
+     "token": "EX_LocalVariable",
+     "ref": "RVehicleBatmobileBase.FloatingDamageNumber",
+     "kind": "ScriptStruct",
+     "own_property": true
+    },
+    {
+     "at": 1423,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.CurrentDamageNum",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 1428,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.DamageNumbers",
+     "kind": "ArrayProperty",
+     "own_property": true
+    },
+    {
+     "at": 1434,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.Damage",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 1437,
+     "token": "EX_LocalVariable",
+     "ref": "RemovePropSkeletal.PawnDied",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 1446,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.NewDamage",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 1453,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.Damage",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 1459,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.ExtraDamageFromThisCollision",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 1465,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.NewDamage",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 1474,
+     "token": "EX_LocalVariable",
+     "ref": "RVehicleBatmobileBase.FloatingDamageNumber",
+     "kind": "ScriptStruct",
+     "own_property": true
+    },
+    {
+     "at": 1482,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.CurrentDamageNum",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 1487,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.DamageNumbers",
+     "kind": "ArrayProperty",
+     "own_property": true
+    },
+    {
+     "at": 1498,
+     "token": "EX_LocalVariable",
+     "ref": "RVehicleBatmobileBase.FloatingDamageNumber",
+     "kind": "ScriptStruct",
+     "own_property": true
+    },
+    {
+     "at": 1506,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.CurrentDamageNum",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 1511,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.DamageNumbers",
+     "kind": "ArrayProperty",
+     "own_property": true
+    },
+    {
+     "at": 1516,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.NewDamage",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 1522,
+     "token": "EX_LocalVariable",
+     "ref": "CalculateAndStoreImpactDamage.ExtraDamageFromThisCollision",
+     "kind": "IntProperty",
+     "own_property": false
+    }
+   ],
+   "constants": [
+    {
+     "at": 6,
+     "kind": "int",
+     "value": -1
+    },
+    {
+     "at": 139,
+     "kind": "int",
+     "value": -1
+    },
+    {
+     "at": 522,
+     "kind": "float",
+     "value": 0.0
+    },
+    {
+     "at": 930,
+     "kind": "float",
+     "value": -0.707
+    },
+    {
+     "at": 943,
+     "kind": "float",
+     "value": 0.1
+    },
+    {
+     "at": 1144,
+     "kind": "float",
+     "value": 2.0
+    }
+   ],
+   "verdict": "script",
+   "exec_strings_in_exe": 0
+  },
+  "RVehicleBatmobileBase.SetDamageLevel": {
+   "path": "RVehicleBatmobileBase.SetDamageLevel",
+   "index": 10114,
+   "size": 48,
+   "script_bytes": 10,
+   "script_sha1": "d56aacbd35cecae1d64bbdc7a78389ecd7656eb2",
+   "script_raw": "Working\\vendor\\BmAKgrab\\scripts\\RVehicleBatmobileBase_SetDamageLevel.hex",
+   "fields": {
+    "next": 10111,
+    "super": 0,
+    "children": 10113,
+    "line": 19,
+    "script_size_field": 11,
+    "pre_name_word": 140289,
+    "name_index": 70004,
+    "name_number": 0
+   },
+   "native_parm_descriptors": 2,
+   "native_parm_bytes": 10,
+   "refs": [
+    {
+     "at": 0,
+     "token": "PropRef(native-parm)",
+     "ref": "SetDamageLevel.PlayerBatmobileName",
+     "kind": "NameProperty",
+     "own_property": false
+    },
+    {
+     "at": 5,
+     "token": "PropRef(native-parm)",
+     "ref": "SetDamageLevel.NewDamageLevel",
+     "kind": "IntProperty",
+     "own_property": false
+    }
+   ],
+   "constants": [],
+   "verdict": "native",
+   "exec_strings_in_exe": 3
+  },
+  "RVehicleBatmobileBase.SetArmouredMode": {
+   "path": "RVehicleBatmobileBase.SetArmouredMode",
+   "index": 10562,
+   "size": 43,
+   "script_bytes": 5,
+   "script_sha1": "c8f059212b7b50bfc773ad13bcd3d98c8985f306",
+   "script_raw": "Working\\vendor\\BmAKgrab\\scripts\\RVehicleBatmobileBase_SetArmouredMode.hex",
+   "fields": {
+    "next": 10560,
+    "super": 0,
+    "children": 10561,
+    "line": 10,
+    "script_size_field": 6,
+    "pre_name_word": 132097,
+    "name_index": 69716,
+    "name_number": 0
+   },
+   "native_parm_descriptors": 1,
+   "native_parm_bytes": 5,
+   "refs": [
+    {
+     "at": 0,
+     "token": "PropRef(native-parm)",
+     "ref": "SetArmouredMode.OnOrOff",
+     "kind": "BoolProperty",
+     "own_property": false
+    }
+   ],
+   "constants": [],
+   "verdict": "native",
+   "exec_strings_in_exe": 2
+  },
+  "RVehicleBatmobileBase.DrainWeaponGeneratorForDamage": {
+   "path": "RVehicleBatmobileBase.DrainWeaponGeneratorForDamage",
+   "index": 10231,
+   "size": 360,
+   "script_bytes": 322,
+   "script_sha1": "1bcee99ec38ec9a7c71575e903a5bf682e213bff",
+   "script_raw": "Working\\vendor\\BmAKgrab\\scripts\\RVehicleBatmobileBase_DrainWeaponGeneratorForDamage.hex",
+   "fields": {
+    "next": 10225,
+    "super": 0,
+    "children": 10230,
+    "line": 467,
+    "script_size_field": 323,
+    "pre_name_word": 131075,
+    "name_index": 27457,
+    "name_number": 0
+   },
+   "native_parm_descriptors": 0,
+   "native_parm_bytes": 0,
+   "refs": [
+    {
+     "at": 1,
+     "token": "EX_LocalVariable",
+     "ref": "DrainWeaponGeneratorForDamage.OldPower",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 6,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.WeaponGeneratorPower",
+     "kind": "FloatProperty",
+     "own_property": true
+    },
+    {
+     "at": 16,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.bIsJokerfiedBatmobile",
+     "kind": "BoolProperty",
+     "own_property": true
+    },
+    {
+     "at": 25,
+     "token": "EX_LocalVariable",
+     "ref": "DrainWeaponGeneratorForDamage.HitNumber",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 36,
+     "token": "EX_LocalVariable",
+     "ref": "DrainWeaponGeneratorForDamage.Difficulty",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 61,
+     "token": "EX_LocalVariable",
+     "ref": "GetDifficulty.ReturnValue",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 67,
+     "token": "EX_FinalFunction",
+     "ref": "RGameInfo.GetDifficulty",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 74,
+     "token": "EX_LocalVariable",
+     "ref": "DrainWeaponGeneratorForDamage.BankedPower",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 83,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.WeaponGeneratorPower",
+     "kind": "FloatProperty",
+     "own_property": true
+    },
+    {
+     "at": 89,
+     "token": "EX_LocalVariable",
+     "ref": "DrainWeaponGeneratorForDamage.Remainder",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 95,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.WeaponGeneratorPower",
+     "kind": "FloatProperty",
+     "own_property": true
+    },
+    {
+     "at": 100,
+     "token": "EX_LocalVariable",
+     "ref": "DrainWeaponGeneratorForDamage.BankedPower",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 110,
+     "token": "EX_LocalVariable",
+     "ref": "DrainWeaponGeneratorForDamage.Difficulty",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 122,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.bWeaponGeneratorShielding",
+     "kind": "BoolProperty",
+     "own_property": true
+    },
+    {
+     "at": 128,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.WeaponGeneratorPower",
+     "kind": "FloatProperty",
+     "own_property": true
+    },
+    {
+     "at": 133,
+     "token": "EX_LocalVariable",
+     "ref": "DrainWeaponGeneratorForDamage.BankedPower",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 142,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.WeaponGeneratorPower",
+     "kind": "FloatProperty",
+     "own_property": true
+    },
+    {
+     "at": 146,
+     "token": "EX_LocalVariable",
+     "ref": "Props.Props",
+     "kind": "StructProperty",
+     "own_property": false
+    },
+    {
+     "at": 154,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.WeaponGeneratorPower",
+     "kind": "FloatProperty",
+     "own_property": true
+    },
+    {
+     "at": 157,
+     "token": "EX_LocalVariable",
+     "ref": "RemovePropSkeletal.PawnDied",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 173,
+     "token": "EX_LocalVariable",
+     "ref": "DrainWeaponGeneratorForDamage.Remainder",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 185,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.WeaponGeneratorPower",
+     "kind": "FloatProperty",
+     "own_property": true
+    },
+    {
+     "at": 190,
+     "token": "EX_LocalVariable",
+     "ref": "DrainWeaponGeneratorForDamage.BankedPower",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 203,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.bWeaponGeneratorShielding",
+     "kind": "BoolProperty",
+     "own_property": true
+    },
+    {
+     "at": 213,
+     "token": "EX_LocalVariable",
+     "ref": "DrainWeaponGeneratorForDamage.BankedPower",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 216,
+     "token": "EX_LocalVariable",
+     "ref": "RemovePropSkeletal.PawnDied",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 217,
+     "token": "EX_LocalVariable",
+     "ref": "GFxMovieHudMenu.SetupResolution",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 225,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.WeaponGeneratorPower",
+     "kind": "FloatProperty",
+     "own_property": true
+    },
+    {
+     "at": 231,
+     "token": "EX_LocalVariable",
+     "ref": "DrainWeaponGeneratorForDamage.BankedPower",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 234,
+     "token": "EX_LocalVariable",
+     "ref": "RemovePropSkeletal.PawnDied",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 235,
+     "token": "EX_LocalVariable",
+     "ref": "GFxMovieHudMenu.SetupResolution",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 246,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.WeaponGeneratorPower",
+     "kind": "FloatProperty",
+     "own_property": true
+    },
+    {
+     "at": 249,
+     "token": "EX_LocalVariable",
+     "ref": "RemovePropSkeletal.PawnDied",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 250,
+     "token": "EX_LocalVariable",
+     "ref": "GFxMovieHudMenu.SetupResolution",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 256,
+     "token": "EX_VirtualFunction",
+     "ref": "MissingCheckinFinished.bInterrupted",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 266,
+     "token": "EX_LocalVariable",
+     "ref": "DrainWeaponGeneratorForDamage.OldPower",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 269,
+     "token": "EX_LocalVariable",
+     "ref": "RemovePropSkeletal.PawnDied",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 278,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.WeaponUnavailableReason",
+     "kind": "ByteProperty",
+     "own_property": true
+    },
+    {
+     "at": 285,
+     "token": "EX_FinalFunction",
+     "ref": "RVehicleBatmobileBase.IncSteamEffect",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 288,
+     "token": "EX_LocalVariable",
+     "ref": "RemovePropSkeletal.PawnDied",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 297,
+     "token": "EX_DynamicCast",
+     "ref": "RBatmobileCannon",
+     "kind": null,
+     "own_property": false
+    },
+    {
+     "at": 302,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.CurrentWeapon",
+     "kind": "ObjectProperty",
+     "own_property": true
+    },
+    {
+     "at": 305,
+     "token": "EX_LocalVariable",
+     "ref": "RPersistentData.ClearActiveMapTrail",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 306,
+     "token": "EX_LocalVariable",
+     "ref": "AlertInstance.bVisible",
+     "kind": "BoolProperty",
+     "own_property": true
+    },
+    {
+     "at": 314,
+     "token": "EX_FinalFunction",
+     "ref": "RBatmobileCannon.OverHeat",
+     "kind": "Function",
+     "own_property": true
+    }
+   ],
+   "constants": [
+    {
+     "at": 178,
+     "kind": "float",
+     "value": 0.05
+    }
+   ],
+   "verdict": "script",
+   "exec_strings_in_exe": 0
+  },
+  "RVehicleBatmobileBase.ExperienceAwarded": {
+   "path": "RVehicleBatmobileBase.ExperienceAwarded",
+   "index": 10862,
+   "size": 218,
+   "script_bytes": 180,
+   "script_sha1": "5246ad973ccd5c9eb82b7f71af91da1f3cb3230c",
+   "script_raw": "Working\\vendor\\BmAKgrab\\scripts\\RVehicleBatmobileBase_ExperienceAwarded.hex",
+   "fields": {
+    "next": 10857,
+    "super": 0,
+    "children": 10861,
+    "line": 273,
+    "script_size_field": 181,
+    "pre_name_word": 131074,
+    "name_index": 32152,
+    "name_number": 0
+   },
+   "native_parm_descriptors": 0,
+   "native_parm_bytes": 0,
+   "refs": [
+    {
+     "at": 4,
+     "token": "EX_LocalVariable",
+     "ref": "ExperienceAwarded.TeethXpAwarded",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 9,
+     "token": "EX_LocalVariable",
+     "ref": "ExperienceAwarded.XpAwarded",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 22,
+     "token": "EX_LocalVariable",
+     "ref": "ExperienceAwarded.XpAwarded",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 27,
+     "token": "EX_LocalVariable",
+     "ref": "ExperienceAwarded.TeethXpAwarded",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 33,
+     "token": "EX_LocalVariable",
+     "ref": "ExperienceAwarded.HealthRecovery",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 59,
+     "token": "EX_LocalVariable",
+     "ref": "GetDifficulty.ReturnValue",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 65,
+     "token": "EX_FinalFunction",
+     "ref": "RGameInfo.GetDifficulty",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 71,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.HealthRecoverRate",
+     "kind": "ArrayProperty",
+     "own_property": true
+    },
+    {
+     "at": 77,
+     "token": "EX_LocalVariable",
+     "ref": "ExperienceAwarded.XpAwarded",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 82,
+     "token": "EX_LocalVariable",
+     "ref": "ExperienceAwarded.TeethXpAwarded",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 89,
+     "token": "EX_LocalVariable",
+     "ref": "ExperienceAwarded.HealthToRecover",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 100,
+     "token": "EX_LocalVariable",
+     "ref": "ExperienceAwarded.XpAwarded",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 105,
+     "token": "EX_LocalVariable",
+     "ref": "ExperienceAwarded.HealthRecovery",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 114,
+     "token": "EX_LocalVariable",
+     "ref": "ExperienceAwarded.HealthToRecover",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 126,
+     "token": "EX_LocalVariable",
+     "ref": "ExperienceAwarded.TeethXpAwarded",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 131,
+     "token": "EX_LocalVariable",
+     "ref": "ExperienceAwarded.HealthRecovery",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 135,
+     "token": "EX_LocalVariable",
+     "ref": "RPawnCombat.FindClosestCombatPawnFromList",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 159,
+     "token": "EX_LocalVariable",
+     "ref": "ExperienceAwarded.HealthToRecover",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 165,
+     "token": "EX_VirtualFunction",
+     "ref": "IsAlreadyDoingJob.ReturnValue",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 172,
+     "token": "EX_VirtualFunction",
+     "ref": "NotifyFinished.FinishedAction",
+     "kind": "ObjectProperty",
+     "own_property": false
+    }
+   ],
+   "constants": [],
+   "verdict": "script",
+   "exec_strings_in_exe": 0
+  },
+  "RVehicleBatmobileBase.LoadHealth": {
+   "path": "RVehicleBatmobileBase.LoadHealth",
+   "index": 10365,
+   "size": 357,
+   "script_bytes": 319,
+   "script_sha1": "3fa1e72bcc14514bca40fc250f547c4dc399fd57",
+   "script_raw": "Working\\vendor\\BmAKgrab\\scripts\\RVehicleBatmobileBase_LoadHealth.hex",
+   "fields": {
+    "next": 10362,
+    "super": 0,
+    "children": 10364,
+    "line": 500,
+    "script_size_field": 320,
+    "pre_name_word": 131074,
+    "name_index": 48638,
+    "name_number": 0
+   },
+   "native_parm_descriptors": 0,
+   "native_parm_bytes": 0,
+   "refs": [
+    {
+     "at": 24,
+     "token": "EX_LocalVariable",
+     "ref": "IsChallengeMode.ReturnValue",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 30,
+     "token": "EX_FinalFunction",
+     "ref": "RGameInfo.IsChallengeMode",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 38,
+     "token": "EX_LocalVariable",
+     "ref": "LoadHealth.SavedHealth",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 64,
+     "token": "EX_LocalVariable",
+     "ref": "RGameInfoBase.PersistentData",
+     "kind": "ObjectProperty",
+     "own_property": true
+    },
+    {
+     "at": 70,
+     "token": "EX_InstanceVariable",
+     "ref": "RGameInfoBase.PersistentData",
+     "kind": "ObjectProperty",
+     "own_property": true
+    },
+    {
+     "at": 76,
+     "token": "EX_LocalVariable",
+     "ref": "RPersistentData.BatmobileHealth",
+     "kind": "IntProperty",
+     "own_property": true
+    },
+    {
+     "at": 82,
+     "token": "EX_InstanceVariable",
+     "ref": "RPersistentData.BatmobileHealth",
+     "kind": "IntProperty",
+     "own_property": true
+    },
+    {
+     "at": 112,
+     "token": "EX_LocalVariable",
+     "ref": "RGameRI.PersistentOptions",
+     "kind": "ObjectProperty",
+     "own_property": true
+    },
+    {
+     "at": 118,
+     "token": "EX_InstanceVariable",
+     "ref": "RGameRI.PersistentOptions",
+     "kind": "ObjectProperty",
+     "own_property": true
+    },
+    {
+     "at": 124,
+     "token": "EX_LocalVariable",
+     "ref": "RPersistentOptions.DDA_DeathsInRoom",
+     "kind": "IntProperty",
+     "own_property": true
+    },
+    {
+     "at": 130,
+     "token": "EX_InstanceVariable",
+     "ref": "RPersistentOptions.DDA_DeathsInRoom",
+     "kind": "IntProperty",
+     "own_property": true
+    },
+    {
+     "at": 138,
+     "token": "EX_LocalVariable",
+     "ref": "LoadHealth.SavedHealth",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 144,
+     "token": "EX_LocalVariable",
+     "ref": "LoadHealth.SavedHealth",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 150,
+     "token": "EX_DynamicCast",
+     "ref": "RVehicleBatmobileBase",
+     "kind": null,
+     "own_property": false
+    },
+    {
+     "at": 177,
+     "token": "EX_LocalVariable",
+     "ref": "LoadHealth.SavedHealth",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 194,
+     "token": "EX_LocalVariable",
+     "ref": "LoadHealth.SavedHealth",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 199,
+     "token": "EX_VirtualFunction",
+     "ref": "IsAlreadyDoingJob.ReturnValue",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 230,
+     "token": "EX_LocalVariable",
+     "ref": "IsChallengeMode.ReturnValue",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 236,
+     "token": "EX_FinalFunction",
+     "ref": "RGameInfo.IsChallengeMode",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 244,
+     "token": "EX_LocalVariable",
+     "ref": "LoadHealth.SavedEnergy",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 270,
+     "token": "EX_LocalVariable",
+     "ref": "RGameInfoBase.PersistentData",
+     "kind": "ObjectProperty",
+     "own_property": true
+    },
+    {
+     "at": 276,
+     "token": "EX_InstanceVariable",
+     "ref": "RGameInfoBase.PersistentData",
+     "kind": "ObjectProperty",
+     "own_property": true
+    },
+    {
+     "at": 282,
+     "token": "EX_LocalVariable",
+     "ref": "RPersistentData.BatmobileEnergy",
+     "kind": "FloatProperty",
+     "own_property": true
+    },
+    {
+     "at": 288,
+     "token": "EX_InstanceVariable",
+     "ref": "RPersistentData.BatmobileEnergy",
+     "kind": "FloatProperty",
+     "own_property": true
+    },
+    {
+     "at": 297,
+     "token": "EX_LocalVariable",
+     "ref": "LoadHealth.SavedEnergy",
+     "kind": "FloatProperty",
+     "own_property": false
+    },
+    {
+     "at": 300,
+     "token": "EX_LocalVariable",
+     "ref": "RemovePropSkeletal.PawnDied",
+     "kind": "BoolProperty",
+     "own_property": false
+    },
+    {
+     "at": 301,
+     "token": "EX_LocalVariable",
+     "ref": "GFxMovieHudMenu.SetupResolution",
+     "kind": "Function",
+     "own_property": true
+    },
+    {
+     "at": 308,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.WeaponGeneratorPower",
+     "kind": "FloatProperty",
+     "own_property": true
+    },
+    {
+     "at": 313,
+     "token": "EX_LocalVariable",
+     "ref": "LoadHealth.SavedEnergy",
+     "kind": "FloatProperty",
+     "own_property": false
+    }
+   ],
+   "constants": [
+    {
+     "at": 182,
+     "kind": "int",
+     "value": 9999999
+    }
+   ],
+   "verdict": "script",
+   "exec_strings_in_exe": 0
+  },
+  "RVehicleBatmobileBase.GiveMaxEnergy": {
+   "path": "RVehicleBatmobileBase.GiveMaxEnergy",
+   "index": 10369,
+   "size": 62,
+   "script_bytes": 24,
+   "script_sha1": "61cd49d3af44befbcbc37b96d82f92b02d9db0d6",
+   "script_raw": "Working\\vendor\\BmAKgrab\\scripts\\RVehicleBatmobileBase_GiveMaxEnergy.hex",
+   "fields": {
+    "next": 10368,
+    "super": 0,
+    "children": 0,
+    "line": 37,
+    "script_size_field": 25,
+    "pre_name_word": 131074,
+    "name_index": 40328,
+    "name_number": 0
+   },
+   "native_parm_descriptors": 0,
+   "native_parm_bytes": 0,
+   "refs": [
+    {
+     "at": 1,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.WeaponGeneratorPower",
+     "kind": "FloatProperty",
+     "own_property": true
+    },
+    {
+     "at": 7,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.CurrentGeneratorLevel",
+     "kind": "IntProperty",
+     "own_property": true
+    },
+    {
+     "at": 12,
+     "token": "EX_InstanceVariable",
+     "ref": "RVehicleBatmobileBase.MaxWeaponGeneratorPower",
+     "kind": "ArrayProperty",
+     "own_property": true
+    },
+    {
+     "at": 17,
+     "token": "EX_VirtualFunction",
+     "ref": "MissingCheckinFinished.bInterrupted",
+     "kind": "BoolProperty",
+     "own_property": false
+    }
+   ],
+   "constants": [],
+   "verdict": "script",
+   "exec_strings_in_exe": 0
+  },
+  "RVehicleBatmobileBase.OnModifyHealth": {
+   "path": "RVehicleBatmobileBase.OnModifyHealth",
+   "index": 10898,
+   "size": 154,
+   "script_bytes": 116,
+   "script_sha1": "25d1c65f0b096822b238424102b6f49d9018f867",
+   "script_raw": "Working\\vendor\\BmAKgrab\\scripts\\RVehicleBatmobileBase_OnModifyHealth.hex",
+   "fields": {
+    "next": 10896,
+    "super": -1580,
+    "children": 10897,
+    "line": 181,
+    "script_size_field": 117,
+    "pre_name_word": 131330,
+    "name_index": 55517,
+    "name_number": 0
+   },
+   "native_parm_descriptors": 0,
+   "native_parm_bytes": 0,
+   "refs": [
+    {
+     "at": 4,
+     "token": "EX_LocalVariable",
+     "ref": "OnModifyHealth.Action",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 31,
+     "token": "EX_LocalVariable",
+     "ref": "OnModifyHealth.Action",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 48,
+     "token": "EX_VirtualFunction",
+     "ref": "NotifyFinished.FinishedAction",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 63,
+     "token": "EX_LocalVariable",
+     "ref": "OnModifyHealth.Action",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 73,
+     "token": "EX_LocalVariable",
+     "ref": "OnModifyHealth.Action",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 92,
+     "token": "EX_DynamicCast",
+     "ref": "RPlayerController",
+     "kind": null,
+     "own_property": false
+    },
+    {
+     "at": 109,
+     "token": "EX_FinalFunction",
+     "ref": "RPlayerController.InstantUpdateHealth",
+     "kind": "Function",
+     "own_property": true
+    }
+   ],
+   "constants": [],
+   "verdict": "script",
+   "exec_strings_in_exe": 0
+  },
+  "RVehicleCombatManager.GetDamageMod": {
+   "path": "RVehicleCombatManager.GetDamageMod",
+   "index": 12762,
+   "size": 58,
+   "script_bytes": 20,
+   "script_sha1": "e24d4e2fdc19d6a5784b071f8282d511b83cec9c",
+   "script_raw": "Working\\vendor\\BmAKgrab\\scripts\\RVehicleCombatManager_GetDamageMod.hex",
+   "fields": {
+    "next": 12757,
+    "super": 0,
+    "children": 12761,
+    "line": 33,
+    "script_size_field": 21,
+    "pre_name_word": 4342785,
+    "name_index": 38318,
+    "name_number": 0
+   },
+   "native_parm_descriptors": 3,
+   "native_parm_bytes": 15,
+   "refs": [
+    {
+     "at": 5,
+     "token": "PropRef(native-parm)",
+     "ref": "GetDamageMod.DamagedActor",
+     "kind": "ObjectProperty",
+     "own_property": false
+    },
+    {
+     "at": 10,
+     "token": "PropRef(native-parm)",
+     "ref": "GetDamageMod.HitNumber",
+     "kind": "IntProperty",
+     "own_property": false
+    },
+    {
+     "at": 15,
+     "token": "PropRef(native-parm)",
+     "ref": "GetDamageMod.IncrementCurrentAttackHits",
+     "kind": "BoolProperty",
+     "own_property": false
+    }
+   ],
+   "constants": [],
+   "verdict": "native",
+   "exec_strings_in_exe": 1
+  }
+ },
+ "damage_values": [
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_Heavy_Cannon_BodyShot_Projectile",
+   "name": "Projectile.Damage",
+   "type": "FloatProperty",
+   "value": 75.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_Heavy_Cannon_BodyShot_Projectile",
+   "name": "RBasicProjectile.ImpactExplosion",
+   "type": "ObjectNCRProperty",
+   "value": 5041,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_Heavy_Cannon_BodyShot_Projectile",
+   "name": "RProjectile.ImpactRadialImpulseComponent",
+   "type": "ObjectNCRProperty",
+   "value": 5190,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_Heavy_Cannon_Fully_Upgraded_Projectile",
+   "name": "Projectile.Damage",
+   "type": "FloatProperty",
+   "value": 75.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_Heavy_Cannon_Fully_Upgraded_Projectile",
+   "name": "RBasicProjectile.ImpactExplosion",
+   "type": "ObjectNCRProperty",
+   "value": 5042,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_Heavy_Cannon_Fully_Upgraded_Projectile",
+   "name": "RBasicProjectile.TurretShotDamage",
+   "type": "IntProperty",
+   "value": 110,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_Heavy_Cannon_Fully_Upgraded_Projectile",
+   "name": "RProjectile.ImpactRadialImpulseComponent",
+   "type": "ObjectNCRProperty",
+   "value": 5191,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_Heavy_Cannon_HeadShot_Projectile",
+   "name": "RBasicProjectile.ImpactExplosion",
+   "type": "ObjectNCRProperty",
+   "value": 5043,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_Heavy_Cannon_HeadShot_Projectile",
+   "name": "RBasicProjectile.TurretShotDamage",
+   "type": "IntProperty",
+   "value": 110,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_Heavy_Cannon_HeadShot_Projectile",
+   "name": "RProjectile.ImpactRadialImpulseComponent",
+   "type": "ObjectNCRProperty",
+   "value": 5192,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_Heavy_Cannon_Primary_Projectile",
+   "name": "Projectile.Damage",
+   "type": "FloatProperty",
+   "value": 50.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_Heavy_Cannon_Primary_Projectile",
+   "name": "Projectile.DamageRadius",
+   "type": "FloatProperty",
+   "value": 0.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_Heavy_Cannon_Primary_Projectile",
+   "name": "Projectile.MyDamageType",
+   "type": "ObjectNCRProperty",
+   "value": -104,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_Heavy_Cannon_Primary_Projectile",
+   "name": "RBasicProjectile.ImpactExplosion",
+   "type": "ObjectNCRProperty",
+   "value": 5033,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_Heavy_Cannon_Primary_Projectile",
+   "name": "RBasicProjectile.ImpactExplosionSound",
+   "type": "ObjectNCRProperty",
+   "value": 120,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_Heavy_Cannon_Primary_Projectile",
+   "name": "RBasicProjectile.TurretShotDamage",
+   "type": "IntProperty",
+   "value": 75,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_Heavy_Cannon_Primary_Projectile",
+   "name": "RProjectile.ImpactRadialImpulseComponent",
+   "type": "ObjectNCRProperty",
+   "value": 14,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileJoker_SF.Batmobile_JokerHeavy_Cannon_Projectile",
+   "name": "Projectile.Damage",
+   "type": "FloatProperty",
+   "value": 250.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileJoker_SF.Batmobile_JokerHeavy_Cannon_Projectile",
+   "name": "Projectile.DamageRadius",
+   "type": "FloatProperty",
+   "value": 350.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileJoker_SF.Batmobile_JokerHeavy_Cannon_Projectile",
+   "name": "Projectile.MyDamageType",
+   "type": "ObjectNCRProperty",
+   "value": -113,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileJoker_SF.Batmobile_JokerHeavy_Cannon_Projectile",
+   "name": "RBasicProjectile.ImpactExplosion",
+   "type": "ObjectNCRProperty",
+   "value": -543,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileJoker_SF.Batmobile_JokerHeavy_Cannon_Projectile",
+   "name": "RBasicProjectile.ImpactExplosionSound",
+   "type": "ObjectNCRProperty",
+   "value": 252,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileJoker_SF.Batmobile_JokerHeavy_Cannon_Projectile",
+   "name": "RProjectile.ImpactRadialImpulseComponent",
+   "type": "ObjectNCRProperty",
+   "value": 3121,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_Heavy_Cannon_BodyShot_Projectile",
+   "name": "Projectile.Damage",
+   "type": "FloatProperty",
+   "value": 75.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_Heavy_Cannon_BodyShot_Projectile",
+   "name": "RBasicProjectile.ImpactExplosion",
+   "type": "ObjectNCRProperty",
+   "value": 5001,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_Heavy_Cannon_BodyShot_Projectile",
+   "name": "RProjectile.ImpactRadialImpulseComponent",
+   "type": "ObjectNCRProperty",
+   "value": 5151,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_Heavy_Cannon_Fully_Upgraded_Projectile",
+   "name": "Projectile.Damage",
+   "type": "FloatProperty",
+   "value": 75.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_Heavy_Cannon_Fully_Upgraded_Projectile",
+   "name": "RBasicProjectile.ImpactExplosion",
+   "type": "ObjectNCRProperty",
+   "value": 5002,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_Heavy_Cannon_Fully_Upgraded_Projectile",
+   "name": "RBasicProjectile.TurretShotDamage",
+   "type": "IntProperty",
+   "value": 110,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_Heavy_Cannon_Fully_Upgraded_Projectile",
+   "name": "RProjectile.ImpactRadialImpulseComponent",
+   "type": "ObjectNCRProperty",
+   "value": 5152,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_Heavy_Cannon_HeadShot_Projectile",
+   "name": "RBasicProjectile.ImpactExplosion",
+   "type": "ObjectNCRProperty",
+   "value": 5003,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_Heavy_Cannon_HeadShot_Projectile",
+   "name": "RBasicProjectile.TurretShotDamage",
+   "type": "IntProperty",
+   "value": 110,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_Heavy_Cannon_HeadShot_Projectile",
+   "name": "RProjectile.ImpactRadialImpulseComponent",
+   "type": "ObjectNCRProperty",
+   "value": 5153,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_Heavy_Cannon_Primary_Projectile",
+   "name": "Projectile.Damage",
+   "type": "FloatProperty",
+   "value": 50.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_Heavy_Cannon_Primary_Projectile",
+   "name": "Projectile.DamageRadius",
+   "type": "FloatProperty",
+   "value": 0.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_Heavy_Cannon_Primary_Projectile",
+   "name": "Projectile.MyDamageType",
+   "type": "ObjectNCRProperty",
+   "value": -121,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_Heavy_Cannon_Primary_Projectile",
+   "name": "RBasicProjectile.ImpactExplosion",
+   "type": "ObjectNCRProperty",
+   "value": 4993,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_Heavy_Cannon_Primary_Projectile",
+   "name": "RBasicProjectile.ImpactExplosionSound",
+   "type": "ObjectNCRProperty",
+   "value": 121,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_Heavy_Cannon_Primary_Projectile",
+   "name": "RBasicProjectile.TurretShotDamage",
+   "type": "IntProperty",
+   "value": 75,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_Heavy_Cannon_Primary_Projectile",
+   "name": "RProjectile.ImpactRadialImpulseComponent",
+   "type": "ObjectNCRProperty",
+   "value": 14,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_Batmobile_SF.Batmobile_Heavy_Cannon_BodyShot_Projectile",
+   "name": "Projectile.Damage",
+   "type": "FloatProperty",
+   "value": 75.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_Batmobile_SF.Batmobile_Heavy_Cannon_BodyShot_Projectile",
+   "name": "RBasicProjectile.ImpactExplosion",
+   "type": "ObjectNCRProperty",
+   "value": 4950,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_Batmobile_SF.Batmobile_Heavy_Cannon_BodyShot_Projectile",
+   "name": "RProjectile.ImpactRadialImpulseComponent",
+   "type": "ObjectNCRProperty",
+   "value": 5100,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_Batmobile_SF.Batmobile_Heavy_Cannon_Fully_Upgraded_Projectile",
+   "name": "Projectile.Damage",
+   "type": "FloatProperty",
+   "value": 75.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_Batmobile_SF.Batmobile_Heavy_Cannon_Fully_Upgraded_Projectile",
+   "name": "RBasicProjectile.ImpactExplosion",
+   "type": "ObjectNCRProperty",
+   "value": 4951,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_Batmobile_SF.Batmobile_Heavy_Cannon_Fully_Upgraded_Projectile",
+   "name": "RBasicProjectile.TurretShotDamage",
+   "type": "IntProperty",
+   "value": 110,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_Batmobile_SF.Batmobile_Heavy_Cannon_Fully_Upgraded_Projectile",
+   "name": "RProjectile.ImpactRadialImpulseComponent",
+   "type": "ObjectNCRProperty",
+   "value": 5101,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_Batmobile_SF.Batmobile_Heavy_Cannon_HeadShot_Projectile",
+   "name": "RBasicProjectile.ImpactExplosion",
+   "type": "ObjectNCRProperty",
+   "value": 4952,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_Batmobile_SF.Batmobile_Heavy_Cannon_HeadShot_Projectile",
+   "name": "RBasicProjectile.TurretShotDamage",
+   "type": "IntProperty",
+   "value": 110,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_Batmobile_SF.Batmobile_Heavy_Cannon_HeadShot_Projectile",
+   "name": "RProjectile.ImpactRadialImpulseComponent",
+   "type": "ObjectNCRProperty",
+   "value": 5102,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_Batmobile_SF.Batmobile_Heavy_Cannon_Primary_Projectile",
+   "name": "Projectile.Damage",
+   "type": "FloatProperty",
+   "value": 50.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_Batmobile_SF.Batmobile_Heavy_Cannon_Primary_Projectile",
+   "name": "Projectile.DamageRadius",
+   "type": "FloatProperty",
+   "value": 0.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_Batmobile_SF.Batmobile_Heavy_Cannon_Primary_Projectile",
+   "name": "Projectile.MyDamageType",
+   "type": "ObjectNCRProperty",
+   "value": -121,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_Batmobile_SF.Batmobile_Heavy_Cannon_Primary_Projectile",
+   "name": "RBasicProjectile.ImpactExplosion",
+   "type": "ObjectNCRProperty",
+   "value": 4942,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_Batmobile_SF.Batmobile_Heavy_Cannon_Primary_Projectile",
+   "name": "RBasicProjectile.ImpactExplosionSound",
+   "type": "ObjectNCRProperty",
+   "value": 122,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_Batmobile_SF.Batmobile_Heavy_Cannon_Primary_Projectile",
+   "name": "RBasicProjectile.TurretShotDamage",
+   "type": "IntProperty",
+   "value": 75,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBasicProjectile",
+   "archetype": "Playable_Batmobile_SF.Batmobile_Heavy_Cannon_Primary_Projectile",
+   "name": "RProjectile.ImpactRadialImpulseComponent",
+   "type": "ObjectNCRProperty",
+   "value": 14,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileCannon",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_Cannon_V2",
+   "name": "RBatmobileCannon.ChainGunDamage",
+   "type": "IntProperty",
+   "value": 40,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileCannon",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_Cannon_V2",
+   "name": "RBatmobileCannon.ImpactMomentum",
+   "type": "FloatProperty",
+   "value": 60000.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileCannon",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_Cannon_V2",
+   "name": "RBatmobileCannon.RiotSuppressorImpactEffect",
+   "type": "ObjectNCRProperty",
+   "value": 5065,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileCannon",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_Cannon_V2",
+   "name": "RBatmobileCannon.UpgradedDamage",
+   "type": "IntProperty",
+   "value": 50,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileCannon",
+   "archetype": "Playable_BatmobileJoker_SF.Batmobile_Cannon_V2",
+   "name": "RBatmobileCannon.ChainGunDamage",
+   "type": "IntProperty",
+   "value": 40,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileCannon",
+   "archetype": "Playable_BatmobileJoker_SF.Batmobile_Cannon_V2",
+   "name": "RBatmobileCannon.ImpactMomentum",
+   "type": "FloatProperty",
+   "value": 60000.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileCannon",
+   "archetype": "Playable_BatmobileJoker_SF.Batmobile_Cannon_V2",
+   "name": "RBatmobileCannon.RiotSuppressorImpactEffect",
+   "type": "ObjectNCRProperty",
+   "value": 2930,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileCannon",
+   "archetype": "Playable_BatmobileJoker_SF.Batmobile_Cannon_V2",
+   "name": "RBatmobileCannon.UpgradedDamage",
+   "type": "IntProperty",
+   "value": 50,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileCannon",
+   "archetype": "Playable_BatmobileJoker_SF.Batmobile_JokerCannon_V2",
+   "name": "RBatmobileCannon.ChainGunDamage",
+   "type": "IntProperty",
+   "value": 999,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileCannon",
+   "archetype": "Playable_BatmobileJoker_SF.Batmobile_JokerCannon_V2",
+   "name": "RBatmobileCannon.ImpactMomentum",
+   "type": "FloatProperty",
+   "value": 2000.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileCannon",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_Cannon_V2",
+   "name": "RBatmobileCannon.ChainGunDamage",
+   "type": "IntProperty",
+   "value": 40,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileCannon",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_Cannon_V2",
+   "name": "RBatmobileCannon.ImpactMomentum",
+   "type": "FloatProperty",
+   "value": 60000.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileCannon",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_Cannon_V2",
+   "name": "RBatmobileCannon.RiotSuppressorImpactEffect",
+   "type": "ObjectNCRProperty",
+   "value": 5025,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileCannon",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_Cannon_V2",
+   "name": "RBatmobileCannon.UpgradedDamage",
+   "type": "IntProperty",
+   "value": 50,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileCannon",
+   "archetype": "Playable_Batmobile_SF.Batmobile_Cannon_V2",
+   "name": "RBatmobileCannon.ChainGunDamage",
+   "type": "IntProperty",
+   "value": 40,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileCannon",
+   "archetype": "Playable_Batmobile_SF.Batmobile_Cannon_V2",
+   "name": "RBatmobileCannon.ImpactMomentum",
+   "type": "FloatProperty",
+   "value": 60000.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileCannon",
+   "archetype": "Playable_Batmobile_SF.Batmobile_Cannon_V2",
+   "name": "RBatmobileCannon.RiotSuppressorImpactEffect",
+   "type": "ObjectNCRProperty",
+   "value": 4974,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileCannon",
+   "archetype": "Playable_Batmobile_SF.Batmobile_Cannon_V2",
+   "name": "RBatmobileCannon.UpgradedDamage",
+   "type": "IntProperty",
+   "value": 50,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileHeavyCannon",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_Heavy_Cannon_Primary",
+   "name": "RBatmobileHeavyCannon.ChargeMaxDamageRadius",
+   "type": "FloatProperty",
+   "value": 0.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileHeavyCannon",
+   "archetype": "Playable_BatmobileJoker_SF.Batmobile_JokerHeavy_Cannon",
+   "name": "RBatmobileHeavyCannon.ChargeMaxDamageRadius",
+   "type": "FloatProperty",
+   "value": 0.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileHeavyCannon",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_Heavy_Cannon_Primary",
+   "name": "RBatmobileHeavyCannon.ChargeMaxDamageRadius",
+   "type": "FloatProperty",
+   "value": 0.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileHeavyCannon",
+   "archetype": "Playable_Batmobile_SF.Batmobile_Heavy_Cannon_Primary",
+   "name": "RBatmobileHeavyCannon.ChargeMaxDamageRadius",
+   "type": "FloatProperty",
+   "value": 0.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_EMPMissile_Projectile",
+   "name": "Projectile.Damage",
+   "type": "FloatProperty",
+   "value": 60.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_EMPMissile_Projectile",
+   "name": "Projectile.DamageRadius",
+   "type": "FloatProperty",
+   "value": 0.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_EMPMissile_Projectile",
+   "name": "Projectile.MyDamageType",
+   "type": "ObjectNCRProperty",
+   "value": -104,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_EMPMissile_Projectile",
+   "name": "RBatmobileMissile.ExplosionTemplate",
+   "type": "ObjectNCRProperty",
+   "value": 5067,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_EMPMissile_Projectile",
+   "name": "RProjectile.ImpactExplosionFlameTrail",
+   "type": "ObjectNCRProperty",
+   "value": 5075,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_EMPMissile_Projectile",
+   "name": "RProjectile.ImpactRadialImpulseComponent",
+   "type": "ObjectNCRProperty",
+   "value": 13,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_EMPMissile_Projectile_ForCars",
+   "name": "RBatmobileMissile.ExplosionTemplate",
+   "type": "ObjectNCRProperty",
+   "value": 5068,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_EMPMissile_Projectile_ForCars",
+   "name": "RProjectile.ImpactExplosionFlameTrail",
+   "type": "ObjectNCRProperty",
+   "value": 5076,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_EMPMissile_Projectile_ForCars",
+   "name": "RProjectile.ImpactRadialImpulseComponent",
+   "type": "ObjectNCRProperty",
+   "value": 5189,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_Missile_Projectile",
+   "name": "Projectile.Damage",
+   "type": "FloatProperty",
+   "value": 250.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_Missile_Projectile",
+   "name": "Projectile.DamageRadius",
+   "type": "FloatProperty",
+   "value": 0.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_Missile_Projectile",
+   "name": "Projectile.MyDamageType",
+   "type": "ObjectNCRProperty",
+   "value": -105,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_Missile_Projectile",
+   "name": "RBatmobileMissile.ExplosionTemplate",
+   "type": "ObjectNCRProperty",
+   "value": 5067,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_Missile_Projectile",
+   "name": "RProjectile.ImpactRadialImpulseComponent",
+   "type": "ObjectNCRProperty",
+   "value": 5193,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_Tracker_Projectile",
+   "name": "Projectile.DamageRadius",
+   "type": "FloatProperty",
+   "value": 0.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_Tracker_Projectile",
+   "name": "Projectile.MyDamageType",
+   "type": "ObjectNCRProperty",
+   "value": 0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_Tracker_Projectile",
+   "name": "RProjectile.ImpactRadialImpulseComponent",
+   "type": "ObjectNCRProperty",
+   "value": 5194,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileJoker_SF.Batmobile_JokerMissile_Projectile",
+   "name": "Projectile.Damage",
+   "type": "FloatProperty",
+   "value": 250.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileJoker_SF.Batmobile_JokerMissile_Projectile",
+   "name": "Projectile.DamageRadius",
+   "type": "FloatProperty",
+   "value": 300.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileJoker_SF.Batmobile_JokerMissile_Projectile",
+   "name": "Projectile.MyDamageType",
+   "type": "ObjectNCRProperty",
+   "value": -115,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileJoker_SF.Batmobile_JokerMissile_Projectile",
+   "name": "RBatmobileMissile.ExplosionTemplate",
+   "type": "ObjectNCRProperty",
+   "value": 2932,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileJoker_SF.Batmobile_JokerMissile_Projectile",
+   "name": "RProjectile.ImpactRadialImpulseComponent",
+   "type": "ObjectNCRProperty",
+   "value": 3122,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_EMPMissile_Projectile",
+   "name": "Projectile.Damage",
+   "type": "FloatProperty",
+   "value": 60.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_EMPMissile_Projectile",
+   "name": "Projectile.DamageRadius",
+   "type": "FloatProperty",
+   "value": 0.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_EMPMissile_Projectile",
+   "name": "Projectile.MyDamageType",
+   "type": "ObjectNCRProperty",
+   "value": -121,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_EMPMissile_Projectile",
+   "name": "RBatmobileMissile.ExplosionTemplate",
+   "type": "ObjectNCRProperty",
+   "value": 5027,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_EMPMissile_Projectile",
+   "name": "RProjectile.ImpactExplosionFlameTrail",
+   "type": "ObjectNCRProperty",
+   "value": 5035,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_EMPMissile_Projectile",
+   "name": "RProjectile.ImpactRadialImpulseComponent",
+   "type": "ObjectNCRProperty",
+   "value": 13,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_EMPMissile_Projectile_ForCars",
+   "name": "RBatmobileMissile.ExplosionTemplate",
+   "type": "ObjectNCRProperty",
+   "value": 5028,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_EMPMissile_Projectile_ForCars",
+   "name": "RProjectile.ImpactExplosionFlameTrail",
+   "type": "ObjectNCRProperty",
+   "value": 5036,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_EMPMissile_Projectile_ForCars",
+   "name": "RProjectile.ImpactRadialImpulseComponent",
+   "type": "ObjectNCRProperty",
+   "value": 5150,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_Missile_Projectile",
+   "name": "Projectile.Damage",
+   "type": "FloatProperty",
+   "value": 250.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_Missile_Projectile",
+   "name": "Projectile.DamageRadius",
+   "type": "FloatProperty",
+   "value": 0.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_Missile_Projectile",
+   "name": "Projectile.MyDamageType",
+   "type": "ObjectNCRProperty",
+   "value": -122,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_Missile_Projectile",
+   "name": "RBatmobileMissile.ExplosionTemplate",
+   "type": "ObjectNCRProperty",
+   "value": 5027,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_Missile_Projectile",
+   "name": "RProjectile.ImpactRadialImpulseComponent",
+   "type": "ObjectNCRProperty",
+   "value": 5154,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_Tracker_Projectile",
+   "name": "Projectile.DamageRadius",
+   "type": "FloatProperty",
+   "value": 0.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_Tracker_Projectile",
+   "name": "Projectile.MyDamageType",
+   "type": "ObjectNCRProperty",
+   "value": 0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_Tracker_Projectile",
+   "name": "RProjectile.ImpactRadialImpulseComponent",
+   "type": "ObjectNCRProperty",
+   "value": 5155,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_Batmobile_SF.Batmobile_EMPMissile_Projectile",
+   "name": "Projectile.Damage",
+   "type": "FloatProperty",
+   "value": 60.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_Batmobile_SF.Batmobile_EMPMissile_Projectile",
+   "name": "Projectile.DamageRadius",
+   "type": "FloatProperty",
+   "value": 0.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_Batmobile_SF.Batmobile_EMPMissile_Projectile",
+   "name": "Projectile.MyDamageType",
+   "type": "ObjectNCRProperty",
+   "value": -121,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_Batmobile_SF.Batmobile_EMPMissile_Projectile",
+   "name": "RBatmobileMissile.ExplosionTemplate",
+   "type": "ObjectNCRProperty",
+   "value": 4976,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_Batmobile_SF.Batmobile_EMPMissile_Projectile",
+   "name": "RProjectile.ImpactExplosionFlameTrail",
+   "type": "ObjectNCRProperty",
+   "value": 4984,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_Batmobile_SF.Batmobile_EMPMissile_Projectile",
+   "name": "RProjectile.ImpactRadialImpulseComponent",
+   "type": "ObjectNCRProperty",
+   "value": 13,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_Batmobile_SF.Batmobile_EMPMissile_Projectile_ForCars",
+   "name": "RBatmobileMissile.ExplosionTemplate",
+   "type": "ObjectNCRProperty",
+   "value": 4977,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_Batmobile_SF.Batmobile_EMPMissile_Projectile_ForCars",
+   "name": "RProjectile.ImpactExplosionFlameTrail",
+   "type": "ObjectNCRProperty",
+   "value": 4985,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_Batmobile_SF.Batmobile_EMPMissile_Projectile_ForCars",
+   "name": "RProjectile.ImpactRadialImpulseComponent",
+   "type": "ObjectNCRProperty",
+   "value": 5099,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_Batmobile_SF.Batmobile_Missile_Projectile",
+   "name": "Projectile.Damage",
+   "type": "FloatProperty",
+   "value": 250.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_Batmobile_SF.Batmobile_Missile_Projectile",
+   "name": "Projectile.DamageRadius",
+   "type": "FloatProperty",
+   "value": 0.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_Batmobile_SF.Batmobile_Missile_Projectile",
+   "name": "Projectile.MyDamageType",
+   "type": "ObjectNCRProperty",
+   "value": -122,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_Batmobile_SF.Batmobile_Missile_Projectile",
+   "name": "RBatmobileMissile.ExplosionTemplate",
+   "type": "ObjectNCRProperty",
+   "value": 4976,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_Batmobile_SF.Batmobile_Missile_Projectile",
+   "name": "RProjectile.ImpactRadialImpulseComponent",
+   "type": "ObjectNCRProperty",
+   "value": 5103,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_Batmobile_SF.Batmobile_Tracker_Projectile",
+   "name": "Projectile.DamageRadius",
+   "type": "FloatProperty",
+   "value": 0.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_Batmobile_SF.Batmobile_Tracker_Projectile",
+   "name": "Projectile.MyDamageType",
+   "type": "ObjectNCRProperty",
+   "value": 0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissile",
+   "archetype": "Playable_Batmobile_SF.Batmobile_Tracker_Projectile",
+   "name": "RProjectile.ImpactRadialImpulseComponent",
+   "type": "ObjectNCRProperty",
+   "value": 5104,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissileLauncher",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_Missile_Launcher",
+   "name": "RBatmobileMissileLauncher.FinalExplosionSweetener",
+   "type": "ObjectNCRProperty",
+   "value": 123,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissileLauncher",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_Missile_Launcher",
+   "name": "RBatmobileMissileLauncher.FinalExplosionSweetener",
+   "type": "ObjectNCRProperty",
+   "value": 124,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileMissileLauncher",
+   "archetype": "Playable_Batmobile_SF.Batmobile_Missile_Launcher",
+   "name": "RBatmobileMissileLauncher.FinalExplosionSweetener",
+   "type": "ObjectNCRProperty",
+   "value": 125,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileWinch",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_Winch",
+   "name": "RBatmobileWinch.ImpactEffect",
+   "type": "ObjectNCRProperty",
+   "value": 5072,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileWinch",
+   "archetype": "Playable_BatmobileFunhouse_SF.Batmobile_Winch",
+   "name": "RBatmobileWinch.ImpactSound",
+   "type": "ObjectNCRProperty",
+   "value": -65,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileWinch",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_Winch",
+   "name": "RBatmobileWinch.ImpactEffect",
+   "type": "ObjectNCRProperty",
+   "value": 5032,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileWinch",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_Winch",
+   "name": "RBatmobileWinch.ImpactSound",
+   "type": "ObjectNCRProperty",
+   "value": -56,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileWinch",
+   "archetype": "Playable_Batmobile_SF.Batmobile_Winch",
+   "name": "RBatmobileWinch.ImpactEffect",
+   "type": "ObjectNCRProperty",
+   "value": 4981,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RBatmobileWinch",
+   "archetype": "Playable_Batmobile_SF.Batmobile_Winch",
+   "name": "RBatmobileWinch.ImpactSound",
+   "type": "ObjectNCRProperty",
+   "value": -56,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileFunhouse_SF.BatmobileFunhouse",
+   "name": "DeathExplosionSoundArray",
+   "type": "ArrayProperty",
+   "value": null,
+   "named_by": "stream"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileFunhouse_SF.BatmobileFunhouse",
+   "name": "ExplosiveImpactScreenShake",
+   "type": "StructProperty",
+   "value": null,
+   "named_by": "stream"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileFunhouse_SF.BatmobileFunhouse",
+   "name": "ImpactShake",
+   "type": "StructProperty",
+   "value": null,
+   "named_by": "stream"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileFunhouse_SF.BatmobileFunhouse",
+   "name": "Pawn.Health",
+   "type": "IntProperty",
+   "value": 1200,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileFunhouse_SF.BatmobileFunhouse",
+   "name": "RVehicle.VisualDamageComp",
+   "type": "ObjectNCRProperty",
+   "value": 5369,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileFunhouse_SF.BatmobileFunhouse",
+   "name": "RVehicleBatmobileBase.AfterburnerSystem",
+   "type": "ObjectNCRProperty",
+   "value": 5094,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileFunhouse_SF.BatmobileFunhouse",
+   "name": "RVehicleBatmobileBase.AfterburnerWarmupSystem",
+   "type": "ObjectNCRProperty",
+   "value": 5095,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileFunhouse_SF.BatmobileFunhouse",
+   "name": "RVehicleBatmobileBase.ArmourModeDamageReduction",
+   "type": "IntProperty",
+   "value": 0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileFunhouse_SF.BatmobileFunhouse",
+   "name": "RVehicleBatmobileBase.BattleModeImpactMaxDamagePow",
+   "type": "FloatProperty",
+   "value": 0.5,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileFunhouse_SF.BatmobileFunhouse",
+   "name": "RVehicleBatmobileBase.BattleModeImpactMaxDamageSpeed",
+   "type": "FloatProperty",
+   "value": 540.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileFunhouse_SF.BatmobileFunhouse",
+   "name": "RVehicleBatmobileBase.BattleModeImpactMinDamageSpeed",
+   "type": "FloatProperty",
+   "value": 120.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileFunhouse_SF.BatmobileFunhouse",
+   "name": "RVehicleBatmobileBase.DeathExplosion",
+   "type": "ObjectNCRProperty",
+   "value": 5077,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileFunhouse_SF.BatmobileFunhouse",
+   "name": "RVehicleBatmobileBase.ImpactBoostMod",
+   "type": "FloatProperty",
+   "value": 2.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileFunhouse_SF.BatmobileFunhouse",
+   "name": "RVehicleBatmobileBase.ImpactMaxDamageSpeed",
+   "type": "FloatProperty",
+   "value": 150.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileFunhouse_SF.BatmobileFunhouse",
+   "name": "RVehicleBatmobileBase.ImpactMinDamageSpeed",
+   "type": "FloatProperty",
+   "value": 20.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileFunhouse_SF.BatmobileFunhouse",
+   "name": "RVehicleBatmobileBase.ImpactRoadAssistAngleStrength",
+   "type": "FloatProperty",
+   "value": 2000.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileFunhouse_SF.BatmobileFunhouse",
+   "name": "RVehicleBatmobileBase.ImpactRoadAssistEnemyDuration",
+   "type": "FloatProperty",
+   "value": 0.3330000042915344,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileFunhouse_SF.BatmobileFunhouse",
+   "name": "RVehicleBatmobileBase.ImpactRoadAssistFactor",
+   "type": "FloatProperty",
+   "value": 90000.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileFunhouse_SF.BatmobileFunhouse",
+   "name": "RVehicleBatmobileBase.ImpactRoadAssistMaxTorque",
+   "type": "FloatProperty",
+   "value": 30000.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileFunhouse_SF.BatmobileFunhouse",
+   "name": "RVehicleBatmobileBase.ImpactRoadAssistSceneryDuration",
+   "type": "FloatProperty",
+   "value": 0.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileFunhouse_SF.BatmobileFunhouse",
+   "name": "RVehicleBatmobileBase.ImpactShakeForceFactor",
+   "type": "FloatProperty",
+   "value": 0.013330000452697277,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileFunhouse_SF.BatmobileFunhouse",
+   "name": "RVehicleBatmobileBase.ImpactShakeVehicleFactor",
+   "type": "FloatProperty",
+   "value": 1.5,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileFunhouse_SF.BatmobileFunhouse",
+   "name": "RVehicleBatmobileBase.ImpactStrafeMod",
+   "type": "FloatProperty",
+   "value": 2.25,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileFunhouse_SF.BatmobileFunhouse",
+   "name": "RVehicleBatmobileBase.KillFlipTorque",
+   "type": "FloatProperty",
+   "value": -200.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileFunhouse_SF.BatmobileFunhouse",
+   "name": "RVehicleBatmobileBase.KillFlipTorqueDuration",
+   "type": "FloatProperty",
+   "value": 0.5,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileFunhouse_SF.BatmobileFunhouse",
+   "name": "RVehicleBatmobileBase.KillKeepyUpFactor",
+   "type": "FloatProperty",
+   "value": 10.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileFunhouse_SF.BatmobileFunhouse",
+   "name": "RVehicleBatmobileBase.KillKeepyUpFactorDuration",
+   "type": "FloatProperty",
+   "value": 0.75,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileJoker_SF.JokersBatmobile",
+   "name": "DeathExplosionSoundArray",
+   "type": "ArrayProperty",
+   "value": null,
+   "named_by": "stream"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileJoker_SF.JokersBatmobile",
+   "name": "ExplosiveImpactScreenShake",
+   "type": "StructProperty",
+   "value": null,
+   "named_by": "stream"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileJoker_SF.JokersBatmobile",
+   "name": "ImpactShake",
+   "type": "StructProperty",
+   "value": null,
+   "named_by": "stream"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileJoker_SF.JokersBatmobile",
+   "name": "RVehicle.VisualDamageComp",
+   "type": "ObjectNCRProperty",
+   "value": 3183,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileJoker_SF.JokersBatmobile",
+   "name": "RVehicleBatmobileBase.AfterburnerSystem",
+   "type": "ObjectNCRProperty",
+   "value": 2944,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileJoker_SF.JokersBatmobile",
+   "name": "RVehicleBatmobileBase.AfterburnerWarmupSystem",
+   "type": "ObjectNCRProperty",
+   "value": 2945,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileJoker_SF.JokersBatmobile",
+   "name": "RVehicleBatmobileBase.BattleModeImpactMaxDamagePow",
+   "type": "FloatProperty",
+   "value": 0.6660000085830688,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileJoker_SF.JokersBatmobile",
+   "name": "RVehicleBatmobileBase.BattleModeImpactMaxDamageSpeed",
+   "type": "FloatProperty",
+   "value": 540.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileJoker_SF.JokersBatmobile",
+   "name": "RVehicleBatmobileBase.BattleModeImpactMinDamageSpeed",
+   "type": "FloatProperty",
+   "value": 120.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileJoker_SF.JokersBatmobile",
+   "name": "RVehicleBatmobileBase.DeathExplosion",
+   "type": "ObjectNCRProperty",
+   "value": 2941,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileJoker_SF.JokersBatmobile",
+   "name": "RVehicleBatmobileBase.ImpactMaxDamageSpeed",
+   "type": "FloatProperty",
+   "value": 180.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileJoker_SF.JokersBatmobile",
+   "name": "RVehicleBatmobileBase.ImpactMinDamageSpeed",
+   "type": "FloatProperty",
+   "value": 40.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileJoker_SF.JokersBatmobile",
+   "name": "RVehicleBatmobileBase.ImpactRoadAssistAngleStrength",
+   "type": "FloatProperty",
+   "value": 2000.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileJoker_SF.JokersBatmobile",
+   "name": "RVehicleBatmobileBase.ImpactRoadAssistEnemyDuration",
+   "type": "FloatProperty",
+   "value": 0.75,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileJoker_SF.JokersBatmobile",
+   "name": "RVehicleBatmobileBase.ImpactRoadAssistFactor",
+   "type": "FloatProperty",
+   "value": 90000.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileJoker_SF.JokersBatmobile",
+   "name": "RVehicleBatmobileBase.ImpactRoadAssistMaxTorque",
+   "type": "FloatProperty",
+   "value": 30000.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileJoker_SF.JokersBatmobile",
+   "name": "RVehicleBatmobileBase.ImpactRoadAssistSceneryDuration",
+   "type": "FloatProperty",
+   "value": 0.33000001311302185,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileJoker_SF.JokersBatmobile",
+   "name": "RVehicleBatmobileBase.ImpactShakeForceFactor",
+   "type": "FloatProperty",
+   "value": 0.013330000452697277,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileJoker_SF.JokersBatmobile",
+   "name": "RVehicleBatmobileBase.ImpactShakeVehicleFactor",
+   "type": "FloatProperty",
+   "value": 1.5,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileJoker_SF.JokersBatmobile",
+   "name": "RVehicleBatmobileBase.ImpactStrafeMod",
+   "type": "FloatProperty",
+   "value": 0.800000011920929,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileJoker_SF.JokersBatmobile",
+   "name": "RVehicleBatmobileBase.KillFlipTorque",
+   "type": "FloatProperty",
+   "value": -400.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileJoker_SF.JokersBatmobile",
+   "name": "RVehicleBatmobileBase.KillFlipTorqueDuration",
+   "type": "FloatProperty",
+   "value": 0.75,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileJoker_SF.JokersBatmobile",
+   "name": "RVehicleBatmobileBase.KillKeepyUpFactor",
+   "type": "FloatProperty",
+   "value": 10.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileJoker_SF.JokersBatmobile",
+   "name": "RVehicleBatmobileBase.KillKeepyUpFactorDuration",
+   "type": "FloatProperty",
+   "value": 0.75,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileJoker_SF.JokersBatmobile",
+   "name": "RVehicleBatmobileBase.WeaponGeneratorKillBonus",
+   "type": "FloatProperty",
+   "value": 0.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileJoker_SF.JokersBatmobile",
+   "name": "RVehicleBatmobileBase.WeaponGeneratorThugKillBonus",
+   "type": "FloatProperty",
+   "value": 0.029999999329447746,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_MK2",
+   "name": "DeathExplosionSoundArray",
+   "type": "ArrayProperty",
+   "value": null,
+   "named_by": "stream"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_MK2",
+   "name": "ExplosiveImpactScreenShake",
+   "type": "StructProperty",
+   "value": null,
+   "named_by": "stream"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_MK2",
+   "name": "ImpactShake",
+   "type": "StructProperty",
+   "value": null,
+   "named_by": "stream"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_MK2",
+   "name": "Pawn.Health",
+   "type": "IntProperty",
+   "value": 1200,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_MK2",
+   "name": "RVehicle.VisualDamageComp",
+   "type": "ObjectNCRProperty",
+   "value": 5334,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_MK2",
+   "name": "RVehicleBatmobileBase.AfterburnerSystem",
+   "type": "ObjectNCRProperty",
+   "value": 5054,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_MK2",
+   "name": "RVehicleBatmobileBase.AfterburnerWarmupSystem",
+   "type": "ObjectNCRProperty",
+   "value": 5055,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_MK2",
+   "name": "RVehicleBatmobileBase.ArmourModeDamageReduction",
+   "type": "IntProperty",
+   "value": 0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_MK2",
+   "name": "RVehicleBatmobileBase.BattleModeImpactMaxDamagePow",
+   "type": "FloatProperty",
+   "value": 0.5,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_MK2",
+   "name": "RVehicleBatmobileBase.BattleModeImpactMaxDamageSpeed",
+   "type": "FloatProperty",
+   "value": 540.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_MK2",
+   "name": "RVehicleBatmobileBase.BattleModeImpactMinDamageSpeed",
+   "type": "FloatProperty",
+   "value": 120.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_MK2",
+   "name": "RVehicleBatmobileBase.DeathExplosion",
+   "type": "ObjectNCRProperty",
+   "value": 5037,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_MK2",
+   "name": "RVehicleBatmobileBase.ImpactBoostMod",
+   "type": "FloatProperty",
+   "value": 2.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_MK2",
+   "name": "RVehicleBatmobileBase.ImpactMaxDamageSpeed",
+   "type": "FloatProperty",
+   "value": 150.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_MK2",
+   "name": "RVehicleBatmobileBase.ImpactMinDamageSpeed",
+   "type": "FloatProperty",
+   "value": 20.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_MK2",
+   "name": "RVehicleBatmobileBase.ImpactRoadAssistAngleStrength",
+   "type": "FloatProperty",
+   "value": 2000.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_MK2",
+   "name": "RVehicleBatmobileBase.ImpactRoadAssistEnemyDuration",
+   "type": "FloatProperty",
+   "value": 0.3330000042915344,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_MK2",
+   "name": "RVehicleBatmobileBase.ImpactRoadAssistFactor",
+   "type": "FloatProperty",
+   "value": 90000.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_MK2",
+   "name": "RVehicleBatmobileBase.ImpactRoadAssistMaxTorque",
+   "type": "FloatProperty",
+   "value": 30000.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_MK2",
+   "name": "RVehicleBatmobileBase.ImpactRoadAssistSceneryDuration",
+   "type": "FloatProperty",
+   "value": 0.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_MK2",
+   "name": "RVehicleBatmobileBase.ImpactShakeForceFactor",
+   "type": "FloatProperty",
+   "value": 0.013330000452697277,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_MK2",
+   "name": "RVehicleBatmobileBase.ImpactShakeVehicleFactor",
+   "type": "FloatProperty",
+   "value": 1.5,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_MK2",
+   "name": "RVehicleBatmobileBase.ImpactStrafeMod",
+   "type": "FloatProperty",
+   "value": 2.25,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_MK2",
+   "name": "RVehicleBatmobileBase.KillFlipTorque",
+   "type": "FloatProperty",
+   "value": -200.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_MK2",
+   "name": "RVehicleBatmobileBase.KillFlipTorqueDuration",
+   "type": "FloatProperty",
+   "value": 0.5,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_MK2",
+   "name": "RVehicleBatmobileBase.KillKeepyUpFactor",
+   "type": "FloatProperty",
+   "value": 10.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_BatmobileMK2_SF.Batmobile_MK2",
+   "name": "RVehicleBatmobileBase.KillKeepyUpFactorDuration",
+   "type": "FloatProperty",
+   "value": 0.75,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_Batmobile_SF.Batmobile",
+   "name": "DeathExplosionSoundArray",
+   "type": "ArrayProperty",
+   "value": null,
+   "named_by": "stream"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_Batmobile_SF.Batmobile",
+   "name": "ExplosiveImpactScreenShake",
+   "type": "StructProperty",
+   "value": null,
+   "named_by": "stream"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_Batmobile_SF.Batmobile",
+   "name": "ImpactShake",
+   "type": "StructProperty",
+   "value": null,
+   "named_by": "stream"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_Batmobile_SF.Batmobile",
+   "name": "Pawn.Health",
+   "type": "IntProperty",
+   "value": 1200,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_Batmobile_SF.Batmobile",
+   "name": "RVehicle.VisualDamageComp",
+   "type": "ObjectNCRProperty",
+   "value": 5283,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_Batmobile_SF.Batmobile",
+   "name": "RVehicleBatmobileBase.AfterburnerSystem",
+   "type": "ObjectNCRProperty",
+   "value": 4993,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_Batmobile_SF.Batmobile",
+   "name": "RVehicleBatmobileBase.AfterburnerWarmupSystem",
+   "type": "ObjectNCRProperty",
+   "value": 4994,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_Batmobile_SF.Batmobile",
+   "name": "RVehicleBatmobileBase.ArmourModeDamageReduction",
+   "type": "IntProperty",
+   "value": 0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_Batmobile_SF.Batmobile",
+   "name": "RVehicleBatmobileBase.BattleModeImpactMaxDamagePow",
+   "type": "FloatProperty",
+   "value": 0.5,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_Batmobile_SF.Batmobile",
+   "name": "RVehicleBatmobileBase.BattleModeImpactMaxDamageSpeed",
+   "type": "FloatProperty",
+   "value": 540.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_Batmobile_SF.Batmobile",
+   "name": "RVehicleBatmobileBase.BattleModeImpactMinDamageSpeed",
+   "type": "FloatProperty",
+   "value": 120.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_Batmobile_SF.Batmobile",
+   "name": "RVehicleBatmobileBase.DeathExplosion",
+   "type": "ObjectNCRProperty",
+   "value": 4986,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_Batmobile_SF.Batmobile",
+   "name": "RVehicleBatmobileBase.ImpactBoostMod",
+   "type": "FloatProperty",
+   "value": 2.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_Batmobile_SF.Batmobile",
+   "name": "RVehicleBatmobileBase.ImpactMaxDamageSpeed",
+   "type": "FloatProperty",
+   "value": 150.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_Batmobile_SF.Batmobile",
+   "name": "RVehicleBatmobileBase.ImpactMinDamageSpeed",
+   "type": "FloatProperty",
+   "value": 20.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_Batmobile_SF.Batmobile",
+   "name": "RVehicleBatmobileBase.ImpactRoadAssistAngleStrength",
+   "type": "FloatProperty",
+   "value": 2000.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_Batmobile_SF.Batmobile",
+   "name": "RVehicleBatmobileBase.ImpactRoadAssistEnemyDuration",
+   "type": "FloatProperty",
+   "value": 0.3330000042915344,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_Batmobile_SF.Batmobile",
+   "name": "RVehicleBatmobileBase.ImpactRoadAssistFactor",
+   "type": "FloatProperty",
+   "value": 90000.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_Batmobile_SF.Batmobile",
+   "name": "RVehicleBatmobileBase.ImpactRoadAssistMaxTorque",
+   "type": "FloatProperty",
+   "value": 30000.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_Batmobile_SF.Batmobile",
+   "name": "RVehicleBatmobileBase.ImpactRoadAssistSceneryDuration",
+   "type": "FloatProperty",
+   "value": 0.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_Batmobile_SF.Batmobile",
+   "name": "RVehicleBatmobileBase.ImpactShakeForceFactor",
+   "type": "FloatProperty",
+   "value": 0.013330000452697277,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_Batmobile_SF.Batmobile",
+   "name": "RVehicleBatmobileBase.ImpactShakeVehicleFactor",
+   "type": "FloatProperty",
+   "value": 1.5,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_Batmobile_SF.Batmobile",
+   "name": "RVehicleBatmobileBase.ImpactStrafeMod",
+   "type": "FloatProperty",
+   "value": 2.25,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_Batmobile_SF.Batmobile",
+   "name": "RVehicleBatmobileBase.KillFlipTorque",
+   "type": "FloatProperty",
+   "value": -200.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_Batmobile_SF.Batmobile",
+   "name": "RVehicleBatmobileBase.KillFlipTorqueDuration",
+   "type": "FloatProperty",
+   "value": 0.5,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_Batmobile_SF.Batmobile",
+   "name": "RVehicleBatmobileBase.KillKeepyUpFactor",
+   "type": "FloatProperty",
+   "value": 10.0,
+   "named_by": "sdk-layout"
+  },
+  {
+   "class": "RVehicleBatmobile",
+   "archetype": "Playable_Batmobile_SF.Batmobile",
+   "name": "RVehicleBatmobileBase.KillKeepyUpFactorDuration",
+   "type": "FloatProperty",
+   "value": 0.75,
+   "named_by": "sdk-layout"
+  }
+ ],
+ "regeneration": {
+  "bm_sdk_symbols": {
+   "OnModifyHealth": 6,
+   "HealDamage": 6,
+   "GetMaxHealth": 6,
+   "Healer": 4,
+   "RestoreAnimSetsToDefault": 3,
+   "RestoreOldRopeLengthIfShorter": 3,
+   "DebugRestoreAmmo": 3,
+   "GiveMaxHealth": 3,
+   "HealthUpdated": 3,
+   "LoadHealth": 3,
+   "RestoreStopThreshold": 3,
+   "SeqAct_ModifyHealth": 2,
+   "bReplicateHealthToAll": 2,
+   "Health": 2,
+   "HealthMax": 2,
+   "MaxHealth": 2,
+   "EMPRepairable": 2,
+   "LowHealthWarningLevel": 2,
+   "HealthRecoverRate": 2
+  },
+  "bmgame_names": [
+   "AEC_RestoreJammer",
+   "AggressivelyDeactivateCinematicModeAndRestoreAllHud",
+   "AudioRestoreFadedOutFromPause",
+   "BaseHealthInverse",
+   "BatmobileHealth",
+   "BombHealth",
+   "BuildChaseNodePathForTreeFailRecoverWorkaround",
+   "CMod_Neg_DecreasedHealth",
+   "CMod_Pos_ReplenishingHealth",
+   "CachedFunction_SetHealth",
+   "CachedFunction_SetHealthBar",
+   "CachedFunction_SetHealthLevel",
+   "CachedFunction_SetHealthValue",
+   "CachedFunction_TurnOffHealthBar",
+   "Cached_SetHealthBarVisible",
+   "Cached_SetHealthLevel",
+   "Cached_ShakeHealthBar",
+   "CanRecoverFromStunned",
+   "CanReplenishHealth",
+   "CapeHitReaction_Recover",
+   "CurrHealth",
+   "CurrentHealth",
+   "CurrentHealthBarValue",
+   "CurrentHealthCritical",
+   "CurrentHealthProportion",
+   "CurrentHealthTitle",
+   "DPPL_Recovered",
+   "DXI_HealthBar_PostCombatSummaryFinished",
+   "DebugRestoreAmmo",
+   "Default__RAEC_Search_Sub_RestoreRECedGear",
+   "Default__RBMAIAction_RestoreJammer",
+   "Default__RBMAIAction_RestoreMines",
+   "Default__RBMAIAction_RestoreSpecial",
+   "Default__RBMAIAction_RestoreThermal",
+   "Default__RHudModuleHealthBar",
+   "Default__RSeqAct_CheckPlayerHealth",
+   "Default__RSeqAct_RepairFractureWall",
+   "Default__RSeqAct_RestoreBeams",
+   "Default__RSeqAct_RestoreHealth",
+   "Default__RSeqAct_RestoreVibrationStateForDeathMovie",
+   "Default__RSeqAct_SetPawnHealthMultiplier",
+   "Default__RSeqEvent_HealthDroppedBelow",
+   "DoCasualtyPostRecoverAssignment",
+   "DontShowHealth",
+   "EDT_EnemyHealth",
+   "EMPRepairable",
+   "EmergencyActionRecoveryMaxTime",
+   "EmergencyActionRecoveryTime",
+   "ExceedingHealth",
+   "ExtraHealth",
+   "FE_RestoreDefaultGamma",
+   "FE_RestoreSettingsFromSave",
+   "FE_RestoreVibrationSettingsFromSave",
+   "FV_EVENT_MD_CasRecover",
+   "FV_EVENT_MD_PostCasRecover",
+   "FixedInPlaceHealth",
+   "FlashHealthBarIfLowerThan",
+   "FullyRestoreAmmo",
+   "GetHealth",
+   "GetHealthForBeatdown",
+   "GetMaxHealth",
+   "GetPawnHealthMultiplier",
+   "GetRestoreActionClass",
+   "GiveMaxHealth",
+   "HealDamage",
+   "Healer",
+   "Health",
+   "HealthBarBossName",
+   "HealthBarFlashThreshold",
+   "HealthBarHealth",
+   "HealthBarModule",
+   "HealthBarVisible",
+   "HealthLevel",
+   "HealthLoss",
+   "HealthMax",
+   "HealthMod",
+   "HealthMultiplier",
+   "HealthPct",
+   "HealthPercentage",
+   "HealthProp",
+   "HealthRecoverRate",
+   "HealthRecovery",
+   "HealthRemaining",
+   "HealthStatus",
+   "HealthThreshold",
+   "HealthToRecover",
+   "HealthToRemovePerHit",
+   "HealthToRestore",
+   "HealthUpdated",
+   "HealthUpgrades",
+   "HideHealthBar",
+   "HideHealthBarIfMax",
+   "HitReactionRecoverAnimName",
+   "HudModuleHealth",
+   "HudModuleHealthBarClass",
+   "InitHealthBar",
+   "InitialHealth",
+   "InstantUpdateHealth",
+   "IsMaxHealth",
+   "JammerRestored",
+   "JokerHealthy",
+   "JokerHealthy_Overworld",
+   "JokerSick_StageHealthy",
+   "KOHealthRegainAmount",
+   "KillAndRestoreMemorySave",
+   "LastHealthBarValueSentWasBatmobile",
+   "LoadHealth",
+   "LowHealthWarningLevel",
+   "MaxHealth",
+   "MaxHealthPct",
+   "MissileVolleyMaxHealth",
+   "MovieInfoToRestoreWhenJammingCeases",
+   "MovieShowBoolToRestoreWhenJammingCeases",
+   "NeedToRestoreHudWhenFinished",
+   "NewHealth",
+   "NextStageHealth",
+   "OldHealth",
+   "OldHealthPct",
+   "OnModifyHealth",
+   "OnlyShowHealthBarWhenNoFollowers",
+   "OtherPlayerHealthBarValue",
+   "OverrideVehicleHealth",
+   "PDVer_BatmobileHealth",
+   "PDVer_PoisonedHealthBar",
+   "PDVer_RemoveOldHealthBarStuff",
+   "PawnHealthMultiplier",
+   "PeriodBeforeHideHealthBar",
+   "PlayCasualtyRecoverLine",
+   "Play_BML_LowHealth",
+   "Play_UI_Batman_Health_Low",
+   "PlayerHealth",
+   "PlayerHealthPct",
+   "PlayerHealth_UI",
+   "PlayerRestoredToLife",
+   "QuarterHealth",
+   "RAEC_Search_Sub_RestoreRECedGear",
+   "RBMAIAction_RestoreJammer",
+   "RBMAIAction_RestoreMines",
+   "RBMAIAction_RestoreSpecial",
+   "RBMAIAction_RestoreThermal",
+   "RHudModuleHealthBar",
+   "RSeqAct_CheckPlayerHealth",
+   "RSeqAct_RepairFractureWall",
+   "RSeqAct_RestoreBeams",
+   "RSeqAct_RestoreHealth",
+   "RSeqAct_RestoreVibrationStateForDeathMovie",
+   "RSeqAct_SetPawnHealthMultiplier",
+   "RSeqEvent_HealthDroppedBelow",
+   "Recover",
+   "RecoverFromExplosion",
+   "RecoverFromRebound",
+   "RecoverHitPoint",
+   "RecoverMove",
+   "RecoverMoveAfterGrab",
+   "RecoverMoveStance",
+   "RecoverTime",
+   "RecoverWeaponStance",
+   "RecoverZoom",
+   "RecoveredFromBeingBlinded",
+   "RecoveredFromREC",
+   "RecoveryTime",
+   "RepairAllParts",
+   "ResetPawnHealthMultiplier",
+   "RestoreAction",
+   "RestoreAmmo",
+   "RestoreAmount",
+   "RestoreAnimID",
+   "RestoreArmour",
+   "RestoreArmourProportional",
+   "RestoreBeam",
+   "RestoreCachedHelpText",
+   "RestoreDisruptorDisabledEquipment",
+   "RestoreFinished",
+   "RestoreFocus",
+   "RestoreHealth",
+   "RestoreHealthAndArmour",
+   "RestoreIncreasedCombatPower",
+   "RestoreInteractions",
+   "RestoreInvestigateMovieIfNecessary",
+   "RestoreJammer",
+   "RestoreMaterialsForXray",
+   "RestoreMenuState",
+   "RestoreMines",
+   "RestoreOldRopeLengthIfShorter",
+   "RestorePlayerCharacter",
+   "RestorePosition",
+   "RestorePoweredUpState",
+   "RestoreProportion",
+   "RestoreSavedMatineePos",
+   "RestoreSavedYaw",
+   "RestoreStance",
+   "RestoreStopThreshold",
+   "RestoreSuppressAIEvent",
+   "RestoreThermal",
+   "RestoreUIPrompts",
+   "RestoredSavedPos",
+   "RopeHealth",
+   "SavedHealth",
+   "SeqAct_ModifyHealth",
+   "SetHealth",
+   "SetHealthBar",
+   "SetHealthBarVisible",
+   "SetHealthLevel",
+   "SetHealthLevelAuto",
+   "SetHealthTitle",
+   "SetHealthValue",
+   "SetOtherPlayerHealth",
+   "SetPawnHealthMultiplier",
+   "SetRecoveryTime",
+   "ShakeHealthBar",
+   "ShowHealth",
+   "ShowHealthAndArmour",
+   "ShowHealthBar",
+   "ShowHealthBarIfNotMax",
+   "ShowHealthBarWhenTracked",
+   "StartHealth",
+   "StartingHealth",
+   "TargetHealth",
+   "TargetRecover",
+   "TimeSinceDisplayedHealthBar",
+   "TimeSinceDisplayedOtherPlayerHealthBar",
+   "TotalCombatHealth",
+   "TotalPlayerHealth",
+   "TurnOffHealthBar",
+   "UC_RestoreInitialValues",
+   "UpdateHealthBar",
+   "UpdateHealthBarVisibility",
+   "UpdateHealthMultiplayer",
+   "UpdateHealthStats",
+   "UpdateMaximumHealthAndArmour",
+   "UpdateReplenishingHealth",
+   "VDEC_HealthZero",
+   "VehicleAsBombHealth",
+   "WantHealthBarVisible",
+   "XI_HealthBar_PostCombatSummaryFinished",
+   "audioHealth",
+   "bAllowHealthBarInCine",
+   "bBeatdownCountEqualsHealth",
+   "bHealthBarRequested",
+   "bHealthModifierActive",
+   "bLowHealthWarning",
+   "bPlayingLowHealthWarning",
+   "bRecoveredFromInterrupt",
+   "bRegenerateChildren",
+   "bReplenishHealth",
+   "bRestoreFracturedEvents",
+   "bRestoreXrayWhenFlashFinished",
+   "bSetHealth",
+   "bShowHealthBar",
+   "bShowThoughtsHealth",
+   "bTriggeredRecoveryLine",
+   "eRCDS_Recover",
+   "eRCDS_TriggerRecoverLine",
+   "fCurrentHealthProportion",
+   "iOtherPlayerHealth",
+   "iOtherPlayerMaxHealth",
+   "intHealth",
+   "newFakeHealth",
+   "sentryHealth",
+   "takedownResponseBarkFlags_ThugRecover"
+  ]
+ },
+ "field_references": {
+  "RVehicleBatmobileBase.HealthRecoverRate": {
+   "export": 9565,
+   "read_by": [
+    "RVehicleBatmobileBase.ExperienceAwarded"
+   ]
+  },
+  "RVehicleBatmobileBase.ArmourModeDamageReduction": {
+   "export": 9734,
+   "read_by": [
+    "RVehicleBatmobileBase.TakeDamage"
+   ]
+  },
+  "RVehicleBatmobileBase.LowHealthWarningLevel": {
+   "export": 9577,
+   "read_by": [
+    "RVehicleBatmobileBase.TakeDamage"
+   ]
+  },
+  "RVehicleBatmobileBase.WeaponGeneratorPower": {
+   "export": 9614,
+   "read_by": [
+    "Primed.ReadyToFire",
+    "RVehicleWeapon.UsedWeaponDone",
+    "RVehicleWeapon.GetDisplayedRechargeTime",
+    "RVehicleBatmobileBase.TriggerWeaponGeneratorBonus",
+    "RVehicleBatmobileBase.DrainWeaponGeneratorForDamage",
+    "RVehicleBatmobileBase.SpendWeaponPower",
+    "RVehicleBatmobileBase.GeneratorPowerUpdated",
+    "RVehicleBatmobileBase.PostBeginPlay",
+    "RVehicleBatmobileBase.LoadHealth",
+    "RVehicleBatmobileBase.GiveMaxEnergy",
+    "RVehicleBatmobileBase.TakeDamage",
+    "RBatmobileAllegianceSwitcher.FireWeapon",
+    "RBatmobileAllegianceSwitcher.ReadyToFire",
+    "RBatmobileEMP.StartChargingEMP",
+    "RBatmobileEMP.FireEMP",
+    "RBatmobileEMP.ReadyToFire",
+    "RBatmobileHeavyCannon.FireWeapon",
+    "RBatmobileMissileLauncher.TargetNewMissile",
+    "Firing.BeginState",
+    "RBatmobileMissileLauncher.GetDisplayedRechargeTime",
+    "RBatmobileMissileLauncher.ReadyToFire",
+    "RBatmobileWinch.DoStopWinch",
+    "DrivingMode.PreRender",
+    "DrivingMode.DrawWeaponPowerLevel",
+    "RPlayerControllerCombat.GetHighestPriorityBatmobileTutorial"
+   ]
+  },
+  "RVehicleBatmobileBase.ArmouredMode": {
+   "export": 9983,
+   "read_by": [
+    "RVehicleBatmobileBase.IsInBattleMode",
+    "RVehicleBatmobileBase.TakeDamage",
+    "RVehicleBatmobileBase.DoImpactEffects",
+    "RVehicleBatmobileBase.FlipVehicle",
+    "RVehicleBatmobileBase.CalculateAndStoreImpactDamage",
+    "RVehicleNPC.RigidBodyCollision",
+    "RBMPawnAI.PossibleCarCollisionWarning",
+    "RGameInfo.ContentBeaconsUpdateNearby",
+    "RPawnPlayer.PossessedBy",
+    "RPawnVillain.RegisterPairedAnimsets",
+    "RForensicsInvestigator.TriggerInvestigateEvent",
+    "RSkeletalMeshActor.MatineeSetFaceFXRegister",
+    "Holstered.PlayerTick",
+    "RBatmobileEMPMissile.GetAdditionalHelpPrompt",
+    "RBatmobileWinch.IsBatmobileInWinchTargetLimits",
+    "RBatmobileWinch.IsBatmobileInWinchSecondaryTargetLimits",
+    "RRope2Component.TriggerRopeCutEvent",
+    "RPlayerController.Live_CheckNpAvail",
+    "RPlayerController.ShowDownloadUI",
+    "RPlayerController.TurnToObjectiveForMissionWheel",
+    "RPlayerController.OpenHelpManual",
+    "DrivingMode.PlayerTickDuringAsync",
+    "DrivingMode.PreRender",
+    "DrivingMode.GetHelpPrompt",
+    "DrivingMode.StartRun",
+    "DrivingMode.EndRun",
+    "DrivingMode.FirePursuitMissile",
+    "DrivingMode.SecondaryFireVehicleWeapon",
+    "DrivingMode.CanGlideAttack",
+    "DrivingMode.MovePMTarget",
+    "DrivingMode.ToggleBattleMode",
+    "DrivingMode.GetPlayerViewPointForLOSTrigger",
+    "DrivingMode.BatmobileFireButton",
+    "DrivingMode.BatmobileSonarPressed",
+    "RPlayerControllerCombat.GetHighestPriorityBatmobileTutorial",
+    "RPlayerControllerCombat.ShowTutorial",
+    "RPlayerControllerCombat.MovePerformed",
+    "RSeqAct_HelpText.GetLine",
+    "RSpecialMoveInstance_DriveCar.UpdatePlayerAnims",
+    "RVehicleBehaviour_Wander.Tick",
+    "RVehicleHeavyTank.RigidBodyCollision"
+   ]
+  }
+ },
+ "missing": []
+}

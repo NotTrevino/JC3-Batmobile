@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/smart-search-recall-diagnosis.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-06
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/jeb-vs-qwen-calibration.md
+jeb-vs-qwen-calibration.md shows both judges at 0/20 positive recall (Qwen 1/8 on found rows). Work out why. For each of the 38 calibration cases read the stored record (calib_runs, field reach / reach_sources from smart_search --expect) and classify the miss: (a) SEARCH miss - the known value appears in no candidate snippet, (b) WINDOW miss - the value is in the candidate source but outside the snippet window, (c) JUDGE miss - the literal is in a snippet and the judge refused, (d) PROMPT miss - the chase_judge.PROMPT rules (offset-table, stack-local, per-frame) wrongly reject a true default. Count each class from the stored files, show 3 worked examples per class with the exact snippet text, then propose and TEST one change per dominant class on the stored candidates (search window size or route, snippet trimming, prompt wording) re-running the judge on that case set only. Report recall and false positives before/after. Only keep a change that holds 0 false positives on the 10 negatives. Back up any file before editing. No game launch.

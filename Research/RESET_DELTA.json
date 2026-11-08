@@ -1,0 +1,3080 @@
+{
+ "baseline": {
+  "mtime_iso": "2026-11-03T06:31:57",
+  "path": "Research/RESET_STATUS.md",
+  "sha256_16": "25de510abc022455"
+ },
+ "baseline_items": {
+  "R-1": {
+   "cards": [
+    "G3-01",
+    "G3-01b",
+    "G3-01c",
+    "G3-01d",
+    "G3-01e",
+    "G3-10",
+    "G3-10b"
+   ],
+   "question": "find BmAK's drivable collision: package, class, shape.",
+   "unknowns": [
+    "Which collision body the JC3 side pairs with each BmAK hull: `G3-10b` leaves the constraint axes, the partner body of each constraint and the inertia block UNKNOWN."
+   ],
+   "verdict": "PARTIAL"
+  },
+  "R-2": {
+   "cards": [
+    "G3-02",
+    "G3-02b",
+    "G3-02c",
+    "G3-02d",
+    "G3-02e",
+    "G3-02f",
+    "G3-08"
+   ],
+   "question": "grab `BmInput.ini` and the Batmobile input path; grab JC3's vehicle input model (for D-11).",
+   "unknowns": [
+    "The name of the float compared against `\u00b10.707`, and which entity state it measures.",
+    "Whether JC3 exposes the three actions D-11 needs (battle toggle, immobilizer, eject) for a car module: `INPUT.md` gives per-action verdicts, not a mapping."
+   ],
+   "verdict": "PARTIAL"
+  },
+  "R-3": {
+   "cards": [
+    "G3-07",
+    "G3-07a"
+   ],
+   "question": "build a runtime oracle. Measure in game which resources the drop loaded, and where collision and mesh actually sit, before touching physics again.",
+   "unknowns": [
+    "Whether the game reads the built `.physicsc` at all \u2014 the reset's question 1 in \u00a74 is still unanswered, and no output distinguishes the built file from the vanilla one.",
+    "Whether the physics frame equals the render frame for the spawned entity in game.",
+    "What the remaining 41 Serpente part bodies contribute at runtime."
+   ],
+   "verdict": "PARTIAL"
+  },
+  "R-4": {
+   "cards": [
+    "G3-03",
+    "G3-04",
+    "G3-04b",
+    "G3-04c",
+    "G3-09",
+    "G3-09b"
+   ],
+   "question": "decode both renderers' colour pipelines far enough to state whether an exact conversion exists (and, if not, what the closest mapping depends on).",
+   "unknowns": [
+    "How the BmAK master combines its decoded parameters (the expression bodies are stripped).",
+    "Which instruction fills the `CarPaintMM` dynamic float4s, and which of them is the tint.",
+    "JC3's exposure/tonemap values, and what the closest defensible BmAK\u2192JC3 mapping depends on."
+   ],
+   "verdict": "PARTIAL"
+  },
+  "R-5": {
+   "cards": [
+    "G3-11",
+    "G3-11b",
+    "G3-20"
+   ],
+   "question": "reconcile `T_ROWS.jsonl` against the built files: for every row, translated / not / guessed, with the evidence.",
+   "unknowns": [
+    "None for the classification itself; what remains is the G3-sourcing layer (G3-20)."
+   ],
+   "verdict": "PARTIAL"
+  },
+  "R-6": {
+   "cards": [
+    "G3-05",
+    "G3-05b",
+    "G3-06",
+    "G3-12",
+    "G3-12b",
+    "G3-19"
+   ],
+   "question": "decode the 925 untagged objects that touch the vehicle (handling, upright, visual damage, materials).",
+   "unknowns": [
+    "The 97 class-default *values* (the CDO is readable; the name\u2192offset pairing is not done).",
+    "The 6 CDO component payloads past the 512 MiB decode budget.",
+    "The `.ddsc` tail table meaning and the `.pfxc` trailing blob."
+   ],
+   "verdict": "PARTIAL"
+  }
+ },
+ "card": "G3-21e",
+ "corrections": [
+  {
+   "effect": "baseline and report items mentioning the EM ejection part are excluded",
+   "id": "C-1",
+   "what": "the 'EM ejection part' open item is dropped - only the eject mechanic matters, and its mapping to JC3 is task G3-08b"
+  },
+  {
+   "effect": "blocked reports close nothing; their UNKNOWNs are listed apart",
+   "id": "C-2",
+   "what": "a blocked report (STATUS: blocked, its gate missing) counts as no evidence at all"
+  }
+ ],
+ "counts": {
+  "attached": 70,
+  "blocked": 4,
+  "c1_dropped_bullets": 0,
+  "c2_blocked": 4,
+  "newer_than_baseline": 117,
+  "per_item": {
+   "R-1": 23,
+   "R-2": 12,
+   "R-3": 4,
+   "R-4": 6,
+   "R-5": 13,
+   "R-6": 12
+  },
+  "reports_total": 325,
+  "unattached": 47
+ },
+ "digest": "f1f34785dec816b5",
+ "dropped_baseline_unknowns": {
+  "R-1": [],
+  "R-2": [],
+  "R-3": [],
+  "R-4": [],
+  "R-5": [],
+  "R-6": []
+ },
+ "generator": "Tools/scripts/reset_delta.py",
+ "method": {
+  "attachment": "the card family in the report's file name must be a card the baseline lists under R-n; prefixes review-/rework-/audit-/chase-/polish-/reverify- are stripped, the longest card name wins, and a name that matches no card is left unattached",
+  "closed": "a baseline UNKNOWN whose content words appear (coverage >= 0.5) in the report body outside its own UNKNOWN section",
+  "cutoff": "a report is in the delta when its mtime is later than the baseline's mtime (both printed, to the second)",
+  "evidence": "only STATUS: done and STATUS: partial are evidence",
+  "opened": "a bullet of the report's UNKNOWN section that matches no baseline UNKNOWN of the item (coverage < 0.5)",
+  "status": "the report's own `STATUS:` line, quoted; its first word is the kind"
+ },
+ "rows": [
+  {
+   "blocked": false,
+   "closed": [
+    {
+     "baseline": "Which collision body the JC3 side pairs with each BmAK hull: `G3-10b` leaves the constraint axes, the partner body of each constraint and the inertia block UNKNOWN.",
+     "coverage": 0.6,
+     "restated_unknown": 0.0
+    }
+   ],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card family `g3-10`",
+   "item": "R-1",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-03T06:37:51",
+   "not_closed": [],
+   "opened": [],
+   "path": "tmp/freebuff/reports/G3-10c.md",
+   "question": "find BmAK's drivable collision: package, class, shape.",
+   "report": "G3-10c.md",
+   "status": "partial",
+   "status_line": "STATUS: **partial.** Three of the four questions are answered from the bytes; the inertia tensor is",
+   "supporting": false,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": false,
+   "how": "card family `g3-10`",
+   "item": "R-1",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-03T07:29:32",
+   "not_closed": [
+    {
+     "baseline": "Which collision body the JC3 side pairs with each BmAK hull: `G3-10b` leaves the constraint axes, the partner body of each constraint and the inertia block UNKNOWN.",
+     "coverage": 0.67,
+     "restated_unknown": 0.27
+    }
+   ],
+   "opened": [
+    "**The best candidate is not noise.** Triple 4-5-6 follows the *direction* of the box-inertia tensor at mean cos **0.966** (others 0.78\u20130.86), and its per-axis implied scale agrees within ~33 % inside a body \u2014 i.e. the three components do scale together, as one packed vector would.",
+    "**The oracle cannot certify it.** The hull is not a box, so `I` from its AABB is off by ~30 % per axis. A 33 % residual is therefore inside the oracle's own error: a true packed inertia and a wrong-but-correlated triple are indistinguishable here. Slot 7 is the one strongly monotone slot (\u03c1(mass) **0.87**, \u03c1(Ixx/Iyy/Izz) 0.92/0.94/0.89), which is what a shared scale/exponent inside the block looks like \u2014 but its position, base and exponent are not identified, so it is recorded as a hint, not used."
+   ],
+   "path": "tmp/freebuff/reports/G3-10d.md",
+   "question": "find BmAK's drivable collision: package, class, shape.",
+   "report": "G3-10d.md",
+   "status": "other",
+   "status_line": "STATUS: **split.** The constraint partner is decoded far enough to name it, with a geometric",
+   "supporting": false,
+   "unknowns": [
+    "**The best candidate is not noise.** Triple 4-5-6 follows the *direction* of the box-inertia tensor at mean cos **0.966** (others 0.78\u20130.86), and its per-axis implied scale agrees within ~33 % inside a body \u2014 i.e. the three components do scale together, as one packed vector would.",
+    "**The oracle cannot certify it.** The hull is not a box, so `I` from its AABB is off by ~30 % per axis. A 33 % residual is therefore inside the oracle's own error: a true packed inertia and a wrong-but-correlated triple are indistinguishable here. Slot 7 is the one strongly monotone slot (\u03c1(mass) **0.87**, \u03c1(Ixx/Iyy/Izz) 0.92/0.94/0.89), which is what a shared scale/exponent inside the block looks like \u2014 but its position, base and exponent are not identified, so it is recorded as a hint, not used."
+   ],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": false,
+   "how": "card `G3-10b`",
+   "item": "R-1",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-03T07:34:04",
+   "not_closed": [
+    {
+     "baseline": "Which collision body the JC3 side pairs with each BmAK hull: `G3-10b` leaves the constraint axes, the partner body of each constraint and the inertia block UNKNOWN.",
+     "coverage": 0.47,
+     "restated_unknown": 0.27
+    }
+   ],
+   "opened": [
+    "**Which tail value is really a limit.** Not resolved here either. The tail window overlaps the atom transforms, so separating a limit field from transform bytes needs the `hkpLimitedHingeConstraintData` / `hkpRagdollConstraintData` layout, or a round trip against a constraint whose angle is known from the `.ee` entity. The 32 values outside the transforms are angle-plausible but unproven.",
+    "**The partner body.** Confirmed absent from the cinfo (donor + fleet) and from the pointer graph; where it lives is still unknown. G3-10c points at the body table's `+0x20` graph or the `.ee` constraint list; neither is decoded.",
+    "**Whether `+0x28` is a mass in kg.** The card labels the unit a hypothesis and this review does not test it; only \"positive and authored\" is re-derived.",
+    "**Fleet depth.** 40 raw files, not the 232-file `hkx/out` corpus (summaries only) \u2014 unchanged from the card, and the reason the fleet invariants are 40-file invariants."
+   ],
+   "path": "tmp/freebuff/reports/review-G3-10b.md",
+   "question": "find BmAK's drivable collision: package, class, shape.",
+   "report": "review-G3-10b.md",
+   "status": "other",
+   "status_line": "",
+   "supporting": true,
+   "unknowns": [
+    "**Which tail value is really a limit.** Not resolved here either. The tail window overlaps the atom transforms, so separating a limit field from transform bytes needs the `hkpLimitedHingeConstraintData` / `hkpRagdollConstraintData` layout, or a round trip against a constraint whose angle is known from the `.ee` entity. The 32 values outside the transforms are angle-plausible but unproven.",
+    "**The partner body.** Confirmed absent from the cinfo (donor + fleet) and from the pointer graph; where it lives is still unknown. G3-10c points at the body table's `+0x20` graph or the `.ee` constraint list; neither is decoded.",
+    "**Whether `+0x28` is a mass in kg.** The card labels the unit a hypothesis and this review does not test it; only \"positive and authored\" is re-derived.",
+    "**Fleet depth.** 40 raw files, not the 232-file `hkx/out` corpus (summaries only) \u2014 unchanged from the card, and the reason the fleet invariants are 40-file invariants."
+   ],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card family `g3-10`",
+   "item": "R-1",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-03T07:45:33",
+   "not_closed": [
+    {
+     "baseline": "Which collision body the JC3 side pairs with each BmAK hull: `G3-10b` leaves the constraint axes, the partner body of each constraint and the inertia block UNKNOWN.",
+     "coverage": 0.33,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/G3-10e.md",
+   "question": "find BmAK's drivable collision: package, class, shape.",
+   "report": "G3-10e.md",
+   "status": "done",
+   "status_line": "STATUS: done.**",
+   "supporting": false,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [
+    {
+     "baseline": "Which collision body the JC3 side pairs with each BmAK hull: `G3-10b` leaves the constraint axes, the partner body of each constraint and the inertia block UNKNOWN.",
+     "coverage": 0.6,
+     "restated_unknown": 0.0
+    }
+   ],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card family `g3-10`",
+   "item": "R-1",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-03T08:03:55",
+   "not_closed": [],
+   "opened": [],
+   "path": "tmp/freebuff/reports/review-G3-10d.md",
+   "question": "find BmAK's drivable collision: package, class, shape.",
+   "report": "review-G3-10d.md",
+   "status": "done",
+   "status_line": "STATUS: done.** `review_g310d.py --check` exits 0 (18/18 oracles, md+json byte-identical to a",
+   "supporting": false,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card family `g3-10`",
+   "item": "R-1",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-03T08:34:41",
+   "not_closed": [
+    {
+     "baseline": "Which collision body the JC3 side pairs with each BmAK hull: `G3-10b` leaves the constraint axes, the partner body of each constraint and the inertia block UNKNOWN.",
+     "coverage": 0.27,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/G3-10f.md",
+   "question": "find BmAK's drivable collision: package, class, shape.",
+   "report": "G3-10f.md",
+   "status": "done",
+   "status_line": "STATUS: done \u2014 both of G3-10's open points are now decoded and proved. **There is no second raycast id space**: every part's `ray` value is an index into the physics system's body-entry array (`hknpPhysicsSystemData+0x40`, 96-byte entries), 42/42 donor rays select an entry and 6309/6309 fleet-wide; the 42..59 window is exactly the body entries whose shape is an `hknpExternMeshShape`, i.e. the body table's order. **A static compound is a body's shape or a child of another compound** (1480/1480 fleet-wide, never orphaned) and its children are `hknpConvexPolytopeShape` objects that are *not* in the body table and carry no part index; the donor's two compounds belong to `front_bumper` (body 16) and `rear_bumper` (body 26), 7 children each. The one thing the fleet does **not** support as an invariant is reported as a rate, not an assertion: the `CPfxPartIndexProperty` number equals the parts-module index in 5466/6696 parts (121 files) and is a permutation of its range in 50/121 files.",
+   "supporting": false,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card family `g3-10`",
+   "item": "R-1",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-03T08:37:47",
+   "not_closed": [
+    {
+     "baseline": "Which collision body the JC3 side pairs with each BmAK hull: `G3-10b` leaves the constraint axes, the partner body of each constraint and the inertia block UNKNOWN.",
+     "coverage": 0.33,
+     "restated_unknown": 0.2
+    }
+   ],
+   "opened": [
+    "**The true second body of a constraint.** Tried: both id words of the cinfo (one is always 0, the other is the recorded body - 494/494), a size-matched parallel array anywhere in the data section (absent in all 50 files), both pivot frames in world and body-local space (the same point in 482/484, and the two readings are indistinguishable on the records that can tell them apart), the .epe parent link (right joints, wrong geometry), and the nearest-hull fit (ambiguous in 98 records). Where it would be found: a body-side constraint array (the 96-byte body entry resolves to a shape and a property node and nothing that indexes the cinfo list) or a Havok 2014 `hknpConstraintCinfo` layout, which this tree does not contain.",
+    "**Whether the constant 0 at `+0x04` is a body id or a flag.** It is 0 in all 494 shipped records, so the bytes cannot separate the readings.",
+    "**Why body 0 fits so well.** 113 of 228 records put the pivot within 5 cm of the chassis hull - what a hinge to the chassis looks like, and also what a large central hull looks like for any joint near the mid-line. The oracle cannot separate those two.",
+    "**Runtime meaning.** No game was launched or attached to; every number is a file fact."
+   ],
+   "path": "tmp/freebuff/reports/G3-10g.md",
+   "question": "find BmAK's drivable collision: package, class, shape.",
+   "report": "G3-10g.md",
+   "status": "done",
+   "status_line": "STATUS: done",
+   "supporting": false,
+   "unknowns": [
+    "**The true second body of a constraint.** Tried: both id words of the cinfo (one is always 0, the other is the recorded body - 494/494), a size-matched parallel array anywhere in the data section (absent in all 50 files), both pivot frames in world and body-local space (the same point in 482/484, and the two readings are indistinguishable on the records that can tell them apart), the .epe parent link (right joints, wrong geometry), and the nearest-hull fit (ambiguous in 98 records). Where it would be found: a body-side constraint array (the 96-byte body entry resolves to a shape and a property node and nothing that indexes the cinfo list) or a Havok 2014 `hknpConstraintCinfo` layout, which this tree does not contain.",
+    "**Whether the constant 0 at `+0x04` is a body id or a flag.** It is 0 in all 494 shipped records, so the bytes cannot separate the readings.",
+    "**Why body 0 fits so well.** 113 of 228 records put the pivot within 5 cm of the chassis hull - what a hinge to the chassis looks like, and also what a large central hull looks like for any joint near the mid-line. The oracle cannot separate those two.",
+    "**Runtime meaning.** No game was launched or attached to; every number is a file fact."
+   ],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card family `g3-10`",
+   "item": "R-1",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-03T09:34:37",
+   "not_closed": [
+    {
+     "baseline": "Which collision body the JC3 side pairs with each BmAK hull: `G3-10b` leaves the constraint axes, the partner body of each constraint and the inertia block UNKNOWN.",
+     "coverage": 0.33,
+     "restated_unknown": 0.13
+    }
+   ],
+   "opened": [
+    "**What fills an invalid `bodyB` at simulation time.** Tried: the class registry (no enum), every `imul reg, reg, 0x18` in the image (24, none reading both body offsets), the 5,647 `add reg, 0x18` functions (25 also test the sentinel, all container code), the four `+0xc` sentinel sites (all skip or detach, none substitutes `0`), and cross-references to the class-name strings and registry record (loader only). Where it would be found: `hknpPhysicsSystem::addConstraint` / `hknpConstraint::create(cinfo)` in the `havok_common-2014.1.0.3.2.3.1039349` tree the strings name \u2014 no name-bearing reference to it exists in this image.",
+    "**Whether the hypothesis itself holds.** The record does not store a second body, so \"world id 0\" can only be a runtime substitution, which is not decoded. G3-10g's 49.6% fit for body 0 is compatible with it and is not evidence for it.",
+    "**Why every shipped constraint has an invalid second body.** Not attempted: the 50 fleet files are vehicle physics assets whose constraints come from the .epe part tree (G3-10g H3); whether the cooker or the exporter writes the invalid marker is outside this card."
+   ],
+   "path": "tmp/freebuff/reports/G3-10h.md",
+   "question": "find BmAK's drivable collision: package, class, shape.",
+   "report": "G3-10h.md",
+   "status": "done",
+   "status_line": "STATUS: done",
+   "supporting": false,
+   "unknowns": [
+    "**What fills an invalid `bodyB` at simulation time.** Tried: the class registry (no enum), every `imul reg, reg, 0x18` in the image (24, none reading both body offsets), the 5,647 `add reg, 0x18` functions (25 also test the sentinel, all container code), the four `+0xc` sentinel sites (all skip or detach, none substitutes `0`), and cross-references to the class-name strings and registry record (loader only). Where it would be found: `hknpPhysicsSystem::addConstraint` / `hknpConstraint::create(cinfo)` in the `havok_common-2014.1.0.3.2.3.1039349` tree the strings name \u2014 no name-bearing reference to it exists in this image.",
+    "**Whether the hypothesis itself holds.** The record does not store a second body, so \"world id 0\" can only be a runtime substitution, which is not decoded. G3-10g's 49.6% fit for body 0 is compatible with it and is not evidence for it.",
+    "**Why every shipped constraint has an invalid second body.** Not attempted: the 50 fleet files are vehicle physics assets whose constraints come from the .epe part tree (G3-10g H3); whether the cooker or the exporter writes the invalid marker is outside this card."
+   ],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card family `g3-10`",
+   "item": "R-1",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-04T11:06:25",
+   "not_closed": [
+    {
+     "baseline": "Which collision body the JC3 side pairs with each BmAK hull: `G3-10b` leaves the constraint axes, the partner body of each constraint and the inertia block UNKNOWN.",
+     "coverage": 0.27,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [
+    "**Who dispatches the cinfo loop.** The walker has 0 direct `call`/`jmp` targets in `.text` and its address occurs in no qword slot; the single non-`.pdata` slot is `0x142c16158`, an `(RVA, int)` pair `(0x141569d00, -1)` inside a `.rdata` table whose owner was not identified (tried: whole-`.text` call/jmp scan, qword and RVA slot search across all sections, `.pdata` cross-check, the following `(RVA, int)` table entries).  Where it would be found: the packfile/resource loader that instantiates `hknpPhysicsSystemData` objects.",
+    "**Whether the guard is the only consumer in practice.** The \"494 rejected / 0 survive\" figure is derived from the stored ids plus the assumption that the data object carries the file's ids unchanged.  No rewrite was found (`0x141569d00` copies the record; `0x141557a30` copies the ids verbatim), but a loader-side rewrite performed elsewhere in the image was not proven absent for every possible path.",
+    "**Whether the 494 sentinel records are inert by design.** Whether the fleet files are templates whose joints are rebuilt by game code (as at `0x140280530`) or constraints the game never adds through this path is not decidable statically without a live-world check, which this task's rules forbid."
+   ],
+   "path": "tmp/freebuff/reports/G3-10i.md",
+   "question": "find BmAK's drivable collision: package, class, shape.",
+   "report": "G3-10i.md",
+   "status": "done",
+   "status_line": "STATUS: done - the runtime substitutes **none** of the three candidates.  In `JustCause3.exe`",
+   "supporting": false,
+   "unknowns": [
+    "**Who dispatches the cinfo loop.** The walker has 0 direct `call`/`jmp` targets in `.text` and its address occurs in no qword slot; the single non-`.pdata` slot is `0x142c16158`, an `(RVA, int)` pair `(0x141569d00, -1)` inside a `.rdata` table whose owner was not identified (tried: whole-`.text` call/jmp scan, qword and RVA slot search across all sections, `.pdata` cross-check, the following `(RVA, int)` table entries).  Where it would be found: the packfile/resource loader that instantiates `hknpPhysicsSystemData` objects.",
+    "**Whether the guard is the only consumer in practice.** The \"494 rejected / 0 survive\" figure is derived from the stored ids plus the assumption that the data object carries the file's ids unchanged.  No rewrite was found (`0x141569d00` copies the record; `0x141557a30` copies the ids verbatim), but a loader-side rewrite performed elsewhere in the image was not proven absent for every possible path.",
+    "**Whether the 494 sentinel records are inert by design.** Whether the fleet files are templates whose joints are rebuilt by game code (as at `0x140280530`) or constraints the game never adds through this path is not decidable statically without a live-world check, which this task's rules forbid."
+   ],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": false,
+   "how": "card family `g3-10`",
+   "item": "R-1",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-04T12:17:10",
+   "not_closed": [
+    {
+     "baseline": "Which collision body the JC3 side pairs with each BmAK hull: `G3-10b` leaves the constraint axes, the partner body of each constraint and the inertia block UNKNOWN.",
+     "coverage": 0.27,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/review-G3-10e.md",
+   "question": "find BmAK's drivable collision: package, class, shape.",
+   "report": "review-G3-10e.md",
+   "status": "other",
+   "status_line": "",
+   "supporting": false,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": false,
+   "how": "card `G3-01b`",
+   "item": "R-1",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-04T12:45:42",
+   "not_closed": [
+    {
+     "baseline": "Which collision body the JC3 side pairs with each BmAK hull: `G3-10b` leaves the constraint axes, the partner body of each constraint and the inertia block UNKNOWN.",
+     "coverage": 0.2,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/chase-G3-01b-boxes-u2.md",
+   "question": "find BmAK's drivable collision: package, class, shape.",
+   "report": "chase-G3-01b-boxes-u2.md",
+   "status": "other",
+   "status_line": "STATUS: resolved**",
+   "supporting": true,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card `G3-01e`",
+   "item": "R-1",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-04T13:59:24",
+   "not_closed": [
+    {
+     "baseline": "Which collision body the JC3 side pairs with each BmAK hull: `G3-10b` leaves the constraint axes, the partner body of each constraint and the inertia block UNKNOWN.",
+     "coverage": 0.2,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/review-G3-01e-fix.md",
+   "question": "find BmAK's drivable collision: package, class, shape.",
+   "report": "review-G3-01e-fix.md",
+   "status": "done",
+   "status_line": "STATUS: done",
+   "supporting": false,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": false,
+   "how": "card `G3-01b`",
+   "item": "R-1",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-04T15:03:01",
+   "not_closed": [
+    {
+     "baseline": "Which collision body the JC3 side pairs with each BmAK hull: `G3-10b` leaves the constraint axes, the partner body of each constraint and the inertia block UNKNOWN.",
+     "coverage": 0.33,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/chase-G3-01b-boxes-u4.md",
+   "question": "find BmAK's drivable collision: package, class, shape.",
+   "report": "chase-G3-01b-boxes-u4.md",
+   "status": "other",
+   "status_line": "STATUS: resolved**",
+   "supporting": true,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card `G3-01b`",
+   "item": "R-1",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-04T15:16:59",
+   "not_closed": [
+    {
+     "baseline": "Which collision body the JC3 side pairs with each BmAK hull: `G3-10b` leaves the constraint axes, the partner body of each constraint and the inertia block UNKNOWN.",
+     "coverage": 0.13,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/chase-G3-01b-boxes-u3.md",
+   "question": "find BmAK's drivable collision: package, class, shape.",
+   "report": "chase-G3-01b-boxes-u3.md",
+   "status": "partial",
+   "status_line": "STATUS: partial** \u2014 the *layout* of the 64-byte `TM` is settled (decoded + oracle), the",
+   "supporting": true,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": false,
+   "how": "card `G3-01b`",
+   "item": "R-1",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-04T15:18:31",
+   "not_closed": [
+    {
+     "baseline": "Which collision body the JC3 side pairs with each BmAK hull: `G3-10b` leaves the constraint axes, the partner body of each constraint and the inertia block UNKNOWN.",
+     "coverage": 0.13,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/chase-G3-01b-boxes-u5.md",
+   "question": "find BmAK's drivable collision: package, class, shape.",
+   "report": "chase-G3-01b-boxes-u5.md",
+   "status": "other",
+   "status_line": "STATUS: resolved**",
+   "supporting": true,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": false,
+   "how": "card family `g3-10`",
+   "item": "R-1",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-04T21:45:41",
+   "not_closed": [
+    {
+     "baseline": "Which collision body the JC3 side pairs with each BmAK hull: `G3-10b` leaves the constraint axes, the partner body of each constraint and the inertia block UNKNOWN.",
+     "coverage": 0.67,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/review-G3-10c.md",
+   "question": "find BmAK's drivable collision: package, class, shape.",
+   "report": "review-G3-10c.md",
+   "status": "other",
+   "status_line": "",
+   "supporting": false,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card `G3-01`",
+   "item": "R-1",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-04T22:36:10",
+   "not_closed": [
+    {
+     "baseline": "Which collision body the JC3 side pairs with each BmAK hull: `G3-10b` leaves the constraint axes, the partner body of each constraint and the inertia block UNKNOWN.",
+     "coverage": 0.2,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/AUDIT-G3-01.md",
+   "question": "find BmAK's drivable collision: package, class, shape.",
+   "report": "AUDIT-G3-01.md",
+   "status": "done",
+   "status_line": "STATUS: done",
+   "supporting": true,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card `G3-01b`",
+   "item": "R-1",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-04T22:36:45",
+   "not_closed": [
+    {
+     "baseline": "Which collision body the JC3 side pairs with each BmAK hull: `G3-10b` leaves the constraint axes, the partner body of each constraint and the inertia block UNKNOWN.",
+     "coverage": 0.4,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/AUDIT-G3-01b.md",
+   "question": "find BmAK's drivable collision: package, class, shape.",
+   "report": "AUDIT-G3-01b.md",
+   "status": "done",
+   "status_line": "STATUS: done**",
+   "supporting": true,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": false,
+   "how": "card family `g3-10`",
+   "item": "R-1",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-04T22:40:15",
+   "not_closed": [
+    {
+     "baseline": "Which collision body the JC3 side pairs with each BmAK hull: `G3-10b` leaves the constraint axes, the partner body of each constraint and the inertia block UNKNOWN.",
+     "coverage": 0.47,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/review-G3-10h.md",
+   "question": "find BmAK's drivable collision: package, class, shape.",
+   "report": "review-G3-10h.md",
+   "status": "other",
+   "status_line": "",
+   "supporting": false,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": false,
+   "how": "card family `g3-10`",
+   "item": "R-1",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-04T22:57:30",
+   "not_closed": [
+    {
+     "baseline": "Which collision body the JC3 side pairs with each BmAK hull: `G3-10b` leaves the constraint axes, the partner body of each constraint and the inertia block UNKNOWN.",
+     "coverage": 0.33,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/review-G3-10f.md",
+   "question": "find BmAK's drivable collision: package, class, shape.",
+   "report": "review-G3-10f.md",
+   "status": "other",
+   "status_line": "",
+   "supporting": false,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card family `g3-10`",
+   "item": "R-1",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-05T01:52:33",
+   "not_closed": [
+    {
+     "baseline": "Which collision body the JC3 side pairs with each BmAK hull: `G3-10b` leaves the constraint axes, the partner body of each constraint and the inertia block UNKNOWN.",
+     "coverage": 0.2,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/review-G3-10i.md",
+   "question": "find BmAK's drivable collision: package, class, shape.",
+   "report": "review-G3-10i.md",
+   "status": "done",
+   "status_line": "STATUS: done.  Static only \u2014 `D:/Games/Just Cause 3/JustCause3.exe` (51,083,264 B, sha256",
+   "supporting": false,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [
+    {
+     "baseline": "Which collision body the JC3 side pairs with each BmAK hull: `G3-10b` leaves the constraint axes, the partner body of each constraint and the inertia block UNKNOWN.",
+     "coverage": 0.6,
+     "restated_unknown": 0.0
+    }
+   ],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card family `g3-10`",
+   "item": "R-1",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-05T02:15:00",
+   "not_closed": [],
+   "opened": [],
+   "path": "tmp/freebuff/reports/G3-10k.md",
+   "question": "find BmAK's drivable collision: package, class, shape.",
+   "report": "G3-10k.md",
+   "status": "done",
+   "status_line": "STATUS: done (the tensor's **home** and its **packed form** are decoded; the brief's box",
+   "supporting": false,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card family `g3-01`",
+   "item": "R-1",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-05T02:15:46",
+   "not_closed": [
+    {
+     "baseline": "Which collision body the JC3 side pairs with each BmAK hull: `G3-10b` leaves the constraint axes, the partner body of each constraint and the inertia block UNKNOWN.",
+     "coverage": 0.27,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/G3-01f.md",
+   "question": "find BmAK's drivable collision: package, class, shape.",
+   "report": "G3-01f.md",
+   "status": "done",
+   "status_line": "STATUS: **done** \u2014 `RVehicleBatmobile.DriverLeft` (`Startup.upk` export 7400) walks to its last byte as",
+   "supporting": true,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": false,
+   "how": "card family `g3-02`",
+   "item": "R-2",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-03T08:14:21",
+   "not_closed": [
+    {
+     "baseline": "The name of the float compared against `\u00b10.707`, and which entity state it measures.",
+     "coverage": 0.12,
+     "restated_unknown": 0.12
+    },
+    {
+     "baseline": "Whether JC3 exposes the three actions D-11 needs (battle toggle, immobilizer, eject) for a car module: `INPUT.md` gives per-action verdicts, not a mapping.",
+     "coverage": 0.31,
+     "restated_unknown": 0.12
+    }
+   ],
+   "opened": [
+    "**The merged effective binding set.** `PCInput.ini`/`DefaultInput.ini` use `.Bindings=` (leading dot), `BaseInput.ini` uses `Bindings=`; no file states the operator or precedence. Tried: parsed every line and both operator spellings. Would be in: the engine config loader.",
+    "**Whether `aBaseY`/`aStrafe`/`aBaseX`/`aTurn` are read by vehicle code.** They exist as `RPlayerInput`/`Core` properties, but no decoded body shows a vehicle class reading them. Would be in: `RVehicleBatmobileBase` / `RVehicleSimBatmobile` bytecode property reads.",
+    "**Whether `[Engine.DebugCameraInput]` rows apply in a normal driving frame.** Six of the 20 generic rows live there. Would be in: the PlayerInput class switch.",
+    "**How pursuit/battle mode is toggled by any input.** No chain binding names it; only the runtime rebind lead above. Would be in: the keybinds `SetPursuitModeKeyBinds` installs.",
+    "**`BmInput.ini` is not in the chain** (it has an `[IniVersion]` block). It carries the same vehicle tokens on the same gamepad lines (`:166-186`) and no keyboard vehicle binding, so the answer is unchanged if that file were the one loaded \u2014 checked, not assumed.",
+    "**`BmGame.upk` name lookups are not re-derived here.** The package is compressed (a raw substring search for `BatmobileFireButton` returns 0 \u2014 see \u00a77), so the export-level matches are quoted from CONTROLS.md/CONTROLS_CONSUMERS.md and only the quotations are machine-checked."
+   ],
+   "path": "tmp/freebuff/reports/G3-02h.md",
+   "question": "grab `BmInput.ini` and the Batmobile input path; grab JC3's vehicle input model (for D-11).",
+   "report": "G3-02h.md",
+   "status": "other",
+   "status_line": "",
+   "supporting": true,
+   "unknowns": [
+    "**The merged effective binding set.** `PCInput.ini`/`DefaultInput.ini` use `.Bindings=` (leading dot), `BaseInput.ini` uses `Bindings=`; no file states the operator or precedence. Tried: parsed every line and both operator spellings. Would be in: the engine config loader.",
+    "**Whether `aBaseY`/`aStrafe`/`aBaseX`/`aTurn` are read by vehicle code.** They exist as `RPlayerInput`/`Core` properties, but no decoded body shows a vehicle class reading them. Would be in: `RVehicleBatmobileBase` / `RVehicleSimBatmobile` bytecode property reads.",
+    "**Whether `[Engine.DebugCameraInput]` rows apply in a normal driving frame.** Six of the 20 generic rows live there. Would be in: the PlayerInput class switch.",
+    "**How pursuit/battle mode is toggled by any input.** No chain binding names it; only the runtime rebind lead above. Would be in: the keybinds `SetPursuitModeKeyBinds` installs.",
+    "**`BmInput.ini` is not in the chain** (it has an `[IniVersion]` block). It carries the same vehicle tokens on the same gamepad lines (`:166-186`) and no keyboard vehicle binding, so the answer is unchanged if that file were the one loaded \u2014 checked, not assumed.",
+    "**`BmGame.upk` name lookups are not re-derived here.** The package is compressed (a raw substring search for `BatmobileFireButton` returns 0 \u2014 see \u00a77), so the export-level matches are quoted from CONTROLS.md/CONTROLS_CONSUMERS.md and only the quotations are machine-checked."
+   ],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card family `g3-02`",
+   "item": "R-2",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-03T08:16:10",
+   "not_closed": [
+    {
+     "baseline": "The name of the float compared against `\u00b10.707`, and which entity state it measures.",
+     "coverage": 0.25,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "Whether JC3 exposes the three actions D-11 needs (battle toggle, immobilizer, eject) for a car module: `INPUT.md` gives per-action verdicts, not a mapping.",
+     "coverage": 0.12,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/G3-02g.md",
+   "question": "grab `BmInput.ini` and the Batmobile input path; grab JC3's vehicle input model (for D-11).",
+   "report": "G3-02g.md",
+   "status": "done",
+   "status_line": "STATUS: done \u2014 the merge rule for array `Bindings` is established from this install: plain lines append, `-` removes the entry whose **whole struct** (canonicalised) matches, `.` appends (append and replace-if-identical are the same function on this data), and the chain is applied `BaseInput \u2192 DefaultInput \u2192 UserInput \u2192 PCInput`. Under that rule the replay reproduces `BmInput.ini` \u2014 the engine's own merged output \u2014 366/366 entries in order; the other 6 candidate rules fail. The effective gamepad table is produced: 22 gamepad inputs, 13 carrying Batmobile/vehicle tokens.",
+   "supporting": true,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": false,
+   "how": "card family `g3-02`",
+   "item": "R-2",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-03T08:22:31",
+   "not_closed": [
+    {
+     "baseline": "The name of the float compared against `\u00b10.707`, and which entity state it measures.",
+     "coverage": 0.25,
+     "restated_unknown": 0.25
+    },
+    {
+     "baseline": "Whether JC3 exposes the three actions D-11 needs (battle toggle, immobilizer, eject) for a car module: `INPUT.md` gives per-action verdicts, not a mapping.",
+     "coverage": 0.19,
+     "restated_unknown": 0.12
+    }
+   ],
+   "opened": [
+    "**Control flow.** No jumps/branches are resolved: `EjectFromVehicle` still has 385 of 1297 bytes unexplained, `IsBatmobileFireButtonHeld` 188 of 574. So \"the body contains `DriverLeave(true)`\" is decoded; \"this is the path an eject takes on a given frame\" is not. Would be in: a full UE3 expression/statement decoder with jump targets.",
+    "**Virtual dispatch.** `DriverLeave`, `BattleModeFireButtonPressed`, `ButtonPressed`, `TriggerBoost`, `TriggerSpecialMove`, `ReadyToFire`/`IsFiring` are `0x1B` names. The candidate lists in the note are exports that share the name, not proof of the receiver. Would be in: the engine's vtable/state resolution, or a decoded `EX_Context` giving the receiver object.",
+    "**`EX_Context` windows.** 6 argument lists stop inside one (offsets listed in the note: `EjectFromVehicle`@241/@281, `IsBatmobileFireButtonHeld`@44, \u2026). Those tokens are `object-expression + skip offset + expression`, so no fixed width applies; the tokens after the gap are not attributed to an argument.",
+    "**Unnamed tokens.** `0x4a`, `0x2b`, `0x2d`, `0xd8`, `0x23`, `0x24` are not in the repo's token table. Widths for the first four are decided by the terminator search and marked `*`; `0xd8` and one `0x2b` occurrence (at `EjectFromVehicle` 1243) had no candidate width at all and stay gaps. Would be in: a complete `EExprToken` enum for this build (version 863).",
+    "**What the weapon indices mean.** `1`/`2`/`3` are decoded as integers; which weapon class each selects (and the objects behind `*PrimaryWeapon`/`SecondaryWeapon`) is not resolved here.",
+    "**Binding \u2192 body choice.** `DefaultInput.ini` names commands; whether a command executes the state body or the `RPlayerController` sibling is engine dispatch, not stored in the package (the siblings are 1-byte stubs, which points at the state body but does not prove it)."
+   ],
+   "path": "tmp/freebuff/reports/G3-02i.md",
+   "question": "grab `BmInput.ini` and the Batmobile input path; grab JC3's vehicle input model (for D-11).",
+   "report": "G3-02i.md",
+   "status": "other",
+   "status_line": "",
+   "supporting": true,
+   "unknowns": [
+    "**Control flow.** No jumps/branches are resolved: `EjectFromVehicle` still has 385 of 1297 bytes unexplained, `IsBatmobileFireButtonHeld` 188 of 574. So \"the body contains `DriverLeave(true)`\" is decoded; \"this is the path an eject takes on a given frame\" is not. Would be in: a full UE3 expression/statement decoder with jump targets.",
+    "**Virtual dispatch.** `DriverLeave`, `BattleModeFireButtonPressed`, `ButtonPressed`, `TriggerBoost`, `TriggerSpecialMove`, `ReadyToFire`/`IsFiring` are `0x1B` names. The candidate lists in the note are exports that share the name, not proof of the receiver. Would be in: the engine's vtable/state resolution, or a decoded `EX_Context` giving the receiver object.",
+    "**`EX_Context` windows.** 6 argument lists stop inside one (offsets listed in the note: `EjectFromVehicle`@241/@281, `IsBatmobileFireButtonHeld`@44, \u2026). Those tokens are `object-expression + skip offset + expression`, so no fixed width applies; the tokens after the gap are not attributed to an argument.",
+    "**Unnamed tokens.** `0x4a`, `0x2b`, `0x2d`, `0xd8`, `0x23`, `0x24` are not in the repo's token table. Widths for the first four are decided by the terminator search and marked `*`; `0xd8` and one `0x2b` occurrence (at `EjectFromVehicle` 1243) had no candidate width at all and stay gaps. Would be in: a complete `EExprToken` enum for this build (version 863).",
+    "**What the weapon indices mean.** `1`/`2`/`3` are decoded as integers; which weapon class each selects (and the objects behind `*PrimaryWeapon`/`SecondaryWeapon`) is not resolved here.",
+    "**Binding \u2192 body choice.** `DefaultInput.ini` names commands; whether a command executes the state body or the `RPlayerController` sibling is engine dispatch, not stored in the package (the siblings are 1-byte stubs, which points at the state body but does not prove it)."
+   ],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card family `g3-02`",
+   "item": "R-2",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-03T08:50:38",
+   "not_closed": [
+    {
+     "baseline": "The name of the float compared against `\u00b10.707`, and which entity state it measures.",
+     "coverage": 0.0,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "Whether JC3 exposes the three actions D-11 needs (battle toggle, immobilizer, eject) for a car module: `INPUT.md` gives per-action verdicts, not a mapping.",
+     "coverage": 0.19,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/G3-02j.md",
+   "question": "grab `BmInput.ini` and the Batmobile input path; grab JC3's vehicle input model (for D-11).",
+   "report": "G3-02j.md",
+   "status": "done",
+   "status_line": "STATUS: DONE** for the two things the card asks for (the vector + the object it is",
+   "supporting": true,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card family `g3-02`",
+   "item": "R-2",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-04T11:13:58",
+   "not_closed": [
+    {
+     "baseline": "The name of the float compared against `\u00b10.707`, and which entity state it measures.",
+     "coverage": 0.25,
+     "restated_unknown": 0.12
+    },
+    {
+     "baseline": "Whether JC3 exposes the three actions D-11 needs (battle toggle, immobilizer, eject) for a car module: `INPUT.md` gives per-action verdicts, not a mapping.",
+     "coverage": 0.25,
+     "restated_unknown": 0.06
+    }
+   ],
+   "opened": [
+    "The **name** of field 108: the tag is a simple property and stores no FName. The content is identified by the census above.",
+    "The **per-frame** root-translation curve: the keyframe block (28,812 bytes after the tag stream, which ends at 860 of the export's 29,672) is zip-compressed; its format is not decoded. Only the total and the mean are given. The `AnimZip_LinearMotion` struct at field 992 (`true`, `[313.805267, 10.643361, 58.19133]`, `[531.536682, -43.152721, -18.314209]`, a 16-byte rotation blob) is recorded verbatim in the JSON, not interpreted.",
+    "Which of the two animations plays on a given eject: `AnimName` is an array and the parent body calls `PickRandomAnim`; the selection logic is not decoded.",
+    "The `0x4a` third argument: a one-byte token whose meaning is not established (G3-02j reports it too). It is read as `ForceReplicateToClient` only because that is the forwarding body's third parameter name."
+   ],
+   "path": "tmp/freebuff/reports/G3-02k.md",
+   "question": "grab `BmInput.ini` and the Batmobile input path; grab JC3's vehicle input model (for D-11).",
+   "report": "G3-02k.md",
+   "status": "done",
+   "status_line": "STATUS: DONE.** The `TriggerSpecialMove` call in `DrivingMode.EjectFromVehicle` is decoded:",
+   "supporting": true,
+   "unknowns": [
+    "The **name** of field 108: the tag is a simple property and stores no FName. The content is identified by the census above.",
+    "The **per-frame** root-translation curve: the keyframe block (28,812 bytes after the tag stream, which ends at 860 of the export's 29,672) is zip-compressed; its format is not decoded. Only the total and the mean are given. The `AnimZip_LinearMotion` struct at field 992 (`true`, `[313.805267, 10.643361, 58.19133]`, `[531.536682, -43.152721, -18.314209]`, a 16-byte rotation blob) is recorded verbatim in the JSON, not interpreted.",
+    "Which of the two animations plays on a given eject: `AnimName` is an array and the parent body calls `PickRandomAnim`; the selection logic is not decoded.",
+    "The `0x4a` third argument: a one-byte token whose meaning is not established (G3-02j reports it too). It is read as `ForceReplicateToClient` only because that is the forwarding body's third parameter name."
+   ],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card `G3-02f`",
+   "item": "R-2",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-04T14:04:16",
+   "not_closed": [
+    {
+     "baseline": "The name of the float compared against `\u00b10.707`, and which entity state it measures.",
+     "coverage": 0.38,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "Whether JC3 exposes the three actions D-11 needs (battle toggle, immobilizer, eject) for a car module: `INPUT.md` gives per-action verdicts, not a mapping.",
+     "coverage": 0.06,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/review-G3-02f.md",
+   "question": "grab `BmInput.ini` and the Batmobile input path; grab JC3's vehicle input model (for D-11).",
+   "report": "review-G3-02f.md",
+   "status": "done",
+   "status_line": "STATUS: done",
+   "supporting": true,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": false,
+   "how": "card family `g3-02`",
+   "item": "R-2",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-04T21:47:23",
+   "not_closed": [
+    {
+     "baseline": "The name of the float compared against `\u00b10.707`, and which entity state it measures.",
+     "coverage": 0.25,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "Whether JC3 exposes the three actions D-11 needs (battle toggle, immobilizer, eject) for a car module: `INPUT.md` gives per-action verdicts, not a mapping.",
+     "coverage": 0.25,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/review-G3-02j.md",
+   "question": "grab `BmInput.ini` and the Batmobile input path; grab JC3's vehicle input model (for D-11).",
+   "report": "review-G3-02j.md",
+   "status": "other",
+   "status_line": "",
+   "supporting": true,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": false,
+   "how": "card family `g3-02`",
+   "item": "R-2",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-04T21:48:04",
+   "not_closed": [
+    {
+     "baseline": "The name of the float compared against `\u00b10.707`, and which entity state it measures.",
+     "coverage": 0.12,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "Whether JC3 exposes the three actions D-11 needs (battle toggle, immobilizer, eject) for a car module: `INPUT.md` gives per-action verdicts, not a mapping.",
+     "coverage": 0.31,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/review-G3-02h.md",
+   "question": "grab `BmInput.ini` and the Batmobile input path; grab JC3's vehicle input model (for D-11).",
+   "report": "review-G3-02h.md",
+   "status": "other",
+   "status_line": "",
+   "supporting": true,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card family `g3-02`",
+   "item": "R-2",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-04T22:48:42",
+   "not_closed": [
+    {
+     "baseline": "The name of the float compared against `\u00b10.707`, and which entity state it measures.",
+     "coverage": 0.38,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "Whether JC3 exposes the three actions D-11 needs (battle toggle, immobilizer, eject) for a car module: `INPUT.md` gives per-action verdicts, not a mapping.",
+     "coverage": 0.12,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/AUDIT-G3-02chain.md",
+   "question": "grab `BmInput.ini` and the Batmobile input path; grab JC3's vehicle input model (for D-11).",
+   "report": "AUDIT-G3-02chain.md",
+   "status": "done",
+   "status_line": "STATUS: done**",
+   "supporting": true,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": false,
+   "how": "card family `g3-02`",
+   "item": "R-2",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-04T22:52:48",
+   "not_closed": [
+    {
+     "baseline": "The name of the float compared against `\u00b10.707`, and which entity state it measures.",
+     "coverage": 0.5,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "Whether JC3 exposes the three actions D-11 needs (battle toggle, immobilizer, eject) for a car module: `INPUT.md` gives per-action verdicts, not a mapping.",
+     "coverage": 0.25,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/review-G3-02g.md",
+   "question": "grab `BmInput.ini` and the Batmobile input path; grab JC3's vehicle input model (for D-11).",
+   "report": "review-G3-02g.md",
+   "status": "other",
+   "status_line": "",
+   "supporting": true,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": false,
+   "how": "card family `g3-02`",
+   "item": "R-2",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-04T22:57:41",
+   "not_closed": [
+    {
+     "baseline": "The name of the float compared against `\u00b10.707`, and which entity state it measures.",
+     "coverage": 0.5,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "Whether JC3 exposes the three actions D-11 needs (battle toggle, immobilizer, eject) for a car module: `INPUT.md` gives per-action verdicts, not a mapping.",
+     "coverage": 0.19,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/review-G3-02k.md",
+   "question": "grab `BmInput.ini` and the Batmobile input path; grab JC3's vehicle input model (for D-11).",
+   "report": "review-G3-02k.md",
+   "status": "other",
+   "status_line": "",
+   "supporting": true,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": false,
+   "how": "card family `g3-02`",
+   "item": "R-2",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-04T23:42:45",
+   "not_closed": [
+    {
+     "baseline": "The name of the float compared against `\u00b10.707`, and which entity state it measures.",
+     "coverage": 0.38,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "Whether JC3 exposes the three actions D-11 needs (battle toggle, immobilizer, eject) for a car module: `INPUT.md` gives per-action verdicts, not a mapping.",
+     "coverage": 0.19,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/review-G3-02i.md",
+   "question": "grab `BmInput.ini` and the Batmobile input path; grab JC3's vehicle input model (for D-11).",
+   "report": "review-G3-02i.md",
+   "status": "other",
+   "status_line": "",
+   "supporting": true,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": false,
+   "how": "card `G3-07a`",
+   "item": "R-3",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-03T08:07:22",
+   "not_closed": [
+    {
+     "baseline": "Whether the game reads the built `.physicsc` at all \u2014 the reset's question 1 in \u00a74 is still unanswered, and no output distinguishes the built file from the vanilla one.",
+     "coverage": 0.29,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "Whether the physics frame equals the render frame for the spawned entity in game.",
+     "coverage": 0.5,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "What the remaining 41 Serpente part bodies contribute at runtime.",
+     "coverage": 0.17,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/review-G3-07a.md",
+   "question": "build a runtime oracle. Measure in game which resources the drop loaded, and where collision and mesh actually sit, before touching physics again.",
+   "report": "review-G3-07a.md",
+   "status": "other",
+   "status_line": "",
+   "supporting": false,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": true,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": false,
+   "how": "card family `g3-07`",
+   "item": "R-3",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-05T02:36:43",
+   "not_closed": [
+    {
+     "baseline": "Whether the game reads the built `.physicsc` at all \u2014 the reset's question 1 in \u00a74 is still unanswered, and no output distinguishes the built file from the vanilla one.",
+     "coverage": 0.29,
+     "restated_unknown": 0.07
+    },
+    {
+     "baseline": "Whether the physics frame equals the render frame for the spawned entity in game.",
+     "coverage": 0.12,
+     "restated_unknown": 0.12
+    },
+    {
+     "baseline": "What the remaining 41 Serpente part bodies contribute at runtime.",
+     "coverage": 0.17,
+     "restated_unknown": 0.33
+    }
+   ],
+   "opened": [
+    "**Every part of the deliverable** - the remaining UNKNOWN list, the per-UNKNOWN sampler specs (address, expected value per hypothesis, refuting value) and the consistency check against the decoded offsets: all depend on G3-07c's results, which do not exist yet.",
+    "**Whether G3-07c will even produce RUNTIME_LAYOUT4.md under that name** - that is what its brief says, but it is unclaimed, so the name is a plan, not a file."
+   ],
+   "path": "tmp/freebuff/reports/G3-07d.md",
+   "question": "build a runtime oracle. Measure in game which resources the drop loaded, and where collision and mesh actually sit, before touching physics again.",
+   "report": "G3-07d.md",
+   "status": "blocked",
+   "status_line": "STATUS: blocked - the task's precondition is not met: `E:/Modding/JC3-Batmobile/tmp/freebuff/reports/G3-07c.md` does not exist, and neither does its other required input `Research/JC3Grab/RUNTIME_LAYOUT4.md`. Per the brief (\"Start only after ... exists (if not, write STATUS: blocked and stop)\") nothing was specified and no script was written.",
+   "supporting": true,
+   "unknowns": [
+    "**Every part of the deliverable** - the remaining UNKNOWN list, the per-UNKNOWN sampler specs (address, expected value per hypothesis, refuting value) and the consistency check against the decoded offsets: all depend on G3-07c's results, which do not exist yet.",
+    "**Whether G3-07c will even produce RUNTIME_LAYOUT4.md under that name** - that is what its brief says, but it is unclaimed, so the name is a plan, not a file."
+   ],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": true,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": false,
+   "how": "card family `g3-07`",
+   "item": "R-3",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-05T02:40:19",
+   "not_closed": [
+    {
+     "baseline": "Whether the game reads the built `.physicsc` at all \u2014 the reset's question 1 in \u00a74 is still unanswered, and no output distinguishes the built file from the vanilla one.",
+     "coverage": 0.21,
+     "restated_unknown": 0.14
+    },
+    {
+     "baseline": "Whether the physics frame equals the render frame for the spawned entity in game.",
+     "coverage": 0.0,
+     "restated_unknown": 0.12
+    },
+    {
+     "baseline": "What the remaining 41 Serpente part bodies contribute at runtime.",
+     "coverage": 0.0,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [
+    "**Every candidate store instruction** \u2014 UNKNOWN, not searched. There is no writer list to start from, so there is nothing to walk and no address to cite. It would be found by the three steps above.",
+    "**Whether a global/container store exists at all** \u2014 UNKNOWN. `RUNTIME_LAYOUT3.md` \u00a77 UNKNOWN 1 says none was found statically; this card was meant to re-test that from the writer side and did not run.",
+    "**The identity of `RUNTIME_LAYOUT4.md`** \u2014 UNKNOWN. No such file was produced; `RUNTIME_LAYOUT3A.md` is the newest layout document and this task did not treat it as a substitute, because the brief names `4` and a substitution would be a guess."
+   ],
+   "path": "tmp/freebuff/reports/G3-07f.md",
+   "question": "build a runtime oracle. Measure in game which resources the drop loaded, and where collision and mesh actually sit, before touching physics again.",
+   "report": "G3-07f.md",
+   "status": "blocked",
+   "status_line": "STATUS: blocked \u2014 the gate `tmp/freebuff/reports/G3-07e.md` does not exist, and the input",
+   "supporting": true,
+   "unknowns": [
+    "**Every candidate store instruction** \u2014 UNKNOWN, not searched. There is no writer list to start from, so there is nothing to walk and no address to cite. It would be found by the three steps above.",
+    "**Whether a global/container store exists at all** \u2014 UNKNOWN. `RUNTIME_LAYOUT3.md` \u00a77 UNKNOWN 1 says none was found statically; this card was meant to re-test that from the writer side and did not run.",
+    "**The identity of `RUNTIME_LAYOUT4.md`** \u2014 UNKNOWN. No such file was produced; `RUNTIME_LAYOUT3A.md` is the newest layout document and this task did not treat it as a substitute, because the brief names `4` and a substitution would be a guess."
+   ],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card family `g3-07`",
+   "item": "R-3",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-05T02:52:24",
+   "not_closed": [
+    {
+     "baseline": "Whether the game reads the built `.physicsc` at all \u2014 the reset's question 1 in \u00a74 is still unanswered, and no output distinguishes the built file from the vanilla one.",
+     "coverage": 0.36,
+     "restated_unknown": 0.07
+    },
+    {
+     "baseline": "Whether the physics frame equals the render frame for the spawned entity in game.",
+     "coverage": 0.12,
+     "restated_unknown": 0.12
+    },
+    {
+     "baseline": "What the remaining 41 Serpente part bodies contribute at runtime.",
+     "coverage": 0.17,
+     "restated_unknown": 0.17
+    }
+   ],
+   "opened": [
+    "**Which function fills the node's `+0x150` and `+0x158` (RUNTIME_LAYOUT3 UNKNOWN 2).** Tried: the 33 reader functions of \u00a73/\u00a75 and their 54 direct callers (166 `call`/`jmp` edges), every `CS_AC_WRITE` operand at the two displacements in them (15 hits, all byte/dword/float4/stack), plus the whole-image census (1,953 writes; 344 functions write both offsets, 166 with 8 B). Not answered because no writer in the searched set stores the pointer width. Where it would be found: the image-wide both-offset 8-byte writers, starting with `0x1400a9690` (`[rbx+0x158] <- rdx`, `[rbx+0x150] <- rdx`), once a caller path from a part container to it exists \u2014 that linking is task 7121, out of scope here by the brief.",
+    "**Whether one of the \u00a75 \"readers\" is the same class as \u00a73's readers.** They are grouped by the displacement only; the read widths differ (byte at `0x158` in `0x14034e4a0`/`0x14037a900`/ `0x1409ac840` vs qword in \u00a73). Class identity would need the vtable or the constructor, neither of which this card decodes. Stated, not guessed.",
+    "**Whether the raycast path uses `+0x150` or `+0x158`.** Unchanged: the two are never compared in any function this card or \u00a75 sees."
+   ],
+   "path": "tmp/freebuff/reports/G3-07e.md",
+   "question": "build a runtime oracle. Measure in game which resources the drop loaded, and where collision and mesh actually sit, before touching physics again.",
+   "report": "G3-07e.md",
+   "status": "done",
+   "status_line": "STATUS: done",
+   "supporting": true,
+   "unknowns": [
+    "**Which function fills the node's `+0x150` and `+0x158` (RUNTIME_LAYOUT3 UNKNOWN 2).** Tried: the 33 reader functions of \u00a73/\u00a75 and their 54 direct callers (166 `call`/`jmp` edges), every `CS_AC_WRITE` operand at the two displacements in them (15 hits, all byte/dword/float4/stack), plus the whole-image census (1,953 writes; 344 functions write both offsets, 166 with 8 B). Not answered because no writer in the searched set stores the pointer width. Where it would be found: the image-wide both-offset 8-byte writers, starting with `0x1400a9690` (`[rbx+0x158] <- rdx`, `[rbx+0x150] <- rdx`), once a caller path from a part container to it exists \u2014 that linking is task 7121, out of scope here by the brief.",
+    "**Whether one of the \u00a75 \"readers\" is the same class as \u00a73's readers.** They are grouped by the displacement only; the read widths differ (byte at `0x158` in `0x14034e4a0`/`0x14037a900`/ `0x1409ac840` vs qword in \u00a73). Class identity would need the vtable or the constructor, neither of which this card decodes. Stated, not guessed.",
+    "**Whether the raycast path uses `+0x150` or `+0x158`.** Unchanged: the two are never compared in any function this card or \u00a75 sees."
+   ],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card family `g3-09`",
+   "item": "R-4",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-03T08:06:41",
+   "not_closed": [
+    {
+     "baseline": "How the BmAK master combines its decoded parameters (the expression bodies are stripped).",
+     "coverage": 0.12,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "Which instruction fills the `CarPaintMM` dynamic float4s, and which of them is the tint.",
+     "coverage": 0.33,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "JC3's exposure/tonemap values, and what the closest defensible BmAK\u2192JC3 mapping depends on.",
+     "coverage": 0.12,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/G3-09c.md",
+   "question": "decode both renderers' colour pipelines far enough to state whether an exact conversion exists (and, if not, what the closest mapping depends on).",
+   "report": "G3-09c.md",
+   "status": "done",
+   "status_line": "STATUS: done \u2014 the 15 constants are **not** zero: as `u32` they are small integers (0\u202610; 14 of 15 tuples have a non-zero word), as `f32` they are denormals, and the code that consumes them reads every field with `movsxd` and uses the fourth dword as an index into the **15-entry vertex-semantic table** `POSITION \u2026 VOID` at `0x142dceff0`. The block is a set of **vertex-element declarations (20-byte records)**, not a colour parameter block, so G3-09b's exclusion of this call as the tint writer survives \u2014 but its stated reason (\"all zeros\") is refuted and replaced.",
+   "supporting": true,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card family `g3-04`",
+   "item": "R-4",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-03T08:56:50",
+   "not_closed": [
+    {
+     "baseline": "How the BmAK master combines its decoded parameters (the expression bodies are stripped).",
+     "coverage": 0.25,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "Which instruction fills the `CarPaintMM` dynamic float4s, and which of them is the tint.",
+     "coverage": 0.0,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "JC3's exposure/tonemap values, and what the closest defensible BmAK\u2192JC3 mapping depends on.",
+     "coverage": 0.12,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/G3-04d.md",
+   "question": "decode both renderers' colour pipelines far enough to state whether an exact conversion exists (and, if not, what the closest mapping depends on).",
+   "report": "G3-04d.md",
+   "status": "partial",
+   "status_line": "STATUS: partial",
+   "supporting": true,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card family `g3-09`",
+   "item": "R-4",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-04T14:14:11",
+   "not_closed": [
+    {
+     "baseline": "How the BmAK master combines its decoded parameters (the expression bodies are stripped).",
+     "coverage": 0.25,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "Which instruction fills the `CarPaintMM` dynamic float4s, and which of them is the tint.",
+     "coverage": 0.33,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "JC3's exposure/tonemap values, and what the closest defensible BmAK\u2192JC3 mapping depends on.",
+     "coverage": 0.12,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/review-G3-09c.md",
+   "question": "decode both renderers' colour pipelines far enough to state whether an exact conversion exists (and, if not, what the closest mapping depends on).",
+   "report": "review-G3-09c.md",
+   "status": "done",
+   "status_line": "STATUS: done",
+   "supporting": true,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": false,
+   "how": "card family `g3-04`",
+   "item": "R-4",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-04T22:50:36",
+   "not_closed": [
+    {
+     "baseline": "How the BmAK master combines its decoded parameters (the expression bodies are stripped).",
+     "coverage": 0.0,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "Which instruction fills the `CarPaintMM` dynamic float4s, and which of them is the tint.",
+     "coverage": 0.0,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "JC3's exposure/tonemap values, and what the closest defensible BmAK\u2192JC3 mapping depends on.",
+     "coverage": 0.0,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/review-G3-04d.md",
+   "question": "decode both renderers' colour pipelines far enough to state whether an exact conversion exists (and, if not, what the closest mapping depends on).",
+   "report": "review-G3-04d.md",
+   "status": "other",
+   "status_line": "",
+   "supporting": true,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": false,
+   "how": "card family `g3-04`",
+   "item": "R-4",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-05T02:01:46",
+   "not_closed": [
+    {
+     "baseline": "How the BmAK master combines its decoded parameters (the expression bodies are stripped).",
+     "coverage": 0.38,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "Which instruction fills the `CarPaintMM` dynamic float4s, and which of them is the tint.",
+     "coverage": 0.33,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "JC3's exposure/tonemap values, and what the closest defensible BmAK\u2192JC3 mapping depends on.",
+     "coverage": 0.12,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/G3-04e.md",
+   "question": "decode both renderers' colour pipelines far enough to state whether an exact conversion exists (and, if not, what the closest mapping depends on).",
+   "report": "G3-04e.md",
+   "status": "other",
+   "status_line": "",
+   "supporting": true,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [
+    {
+     "baseline": "Which instruction fills the `CarPaintMM` dynamic float4s, and which of them is the tint.",
+     "coverage": 0.5,
+     "restated_unknown": 0.17
+    }
+   ],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card family `g3-09`",
+   "item": "R-4",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-05T02:11:50",
+   "not_closed": [
+    {
+     "baseline": "How the BmAK master combines its decoded parameters (the expression bodies are stripped).",
+     "coverage": 0.12,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "JC3's exposure/tonemap values, and what the closest defensible BmAK\u2192JC3 mapping depends on.",
+     "coverage": 0.12,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [
+    "**What writes the palette into `cb6`.** No file names the binding \u2014 the `.rbm`, the `.epe` and the palette module do not (G3-09 scanned all 566 inner files; G3-04e showed `cb6` is the right buffer). Engine code or a runtime write; a live constant-buffer dump would answer it.",
+    "**Whether `tint_r/g/b` reach the shader verbatim.** The three vectors are separate colours on disk (in shared palettes `tint_g` \u2260 `tint_r`), matching the header's three members, but the multiply chain is in the SHEX, which is not on disk.",
+    "**The 156 entities with no `Palette`.** No file ties them to a tint table; their paint must come from material defaults.",
+    "**The `.rbm` side across cars.** Only one car's `models/` tree is extracted (`v0300_car_kensington_sportsmuscle`, 272 files, 394 `CarPaintMM` blocks), so the cross-car oracle exists only at entity-graph level.",
+    "**Why car-specific palettes all use hash `2930093752`.** Measured, not explained; it is not the Jenkins hash of any tint name seen (the same names carry other hashes in shared palettes)."
+   ],
+   "path": "tmp/freebuff/reports/G3-09d.md",
+   "question": "decode both renderers' colour pipelines far enough to state whether an exact conversion exists (and, if not, what the closest mapping depends on).",
+   "report": "G3-09d.md",
+   "status": "done",
+   "status_line": "STATUS: done",
+   "supporting": true,
+   "unknowns": [
+    "**What writes the palette into `cb6`.** No file names the binding \u2014 the `.rbm`, the `.epe` and the palette module do not (G3-09 scanned all 566 inner files; G3-04e showed `cb6` is the right buffer). Engine code or a runtime write; a live constant-buffer dump would answer it.",
+    "**Whether `tint_r/g/b` reach the shader verbatim.** The three vectors are separate colours on disk (in shared palettes `tint_g` \u2260 `tint_r`), matching the header's three members, but the multiply chain is in the SHEX, which is not on disk.",
+    "**The 156 entities with no `Palette`.** No file ties them to a tint table; their paint must come from material defaults.",
+    "**The `.rbm` side across cars.** Only one car's `models/` tree is extracted (`v0300_car_kensington_sportsmuscle`, 272 files, 394 `CarPaintMM` blocks), so the cross-car oracle exists only at entity-graph level.",
+    "**Why car-specific palettes all use hash `2930093752`.** Measured, not explained; it is not the Jenkins hash of any tint name seen (the same names carry other hashes in shared palettes)."
+   ],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card `G3-20`",
+   "item": "R-5",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-03T06:41:04",
+   "not_closed": [
+    {
+     "baseline": "None for the classification itself; what remains is the G3-sourcing layer (G3-20).",
+     "coverage": 0.29,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/G3-20.md",
+   "question": "reconcile `T_ROWS.jsonl` against the built files: for every row, translated / not / guessed, with the evidence.",
+   "report": "G3-20.md",
+   "status": "done",
+   "status_line": "STATUS: DONE, with a scope limit that is the main finding (see *What this card does not claim*).",
+   "supporting": true,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card family `g3-20`",
+   "item": "R-5",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-03T07:37:08",
+   "not_closed": [
+    {
+     "baseline": "None for the classification itself; what remains is the G3-sourcing layer (G3-20).",
+     "coverage": 0.0,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/G3-20b.md",
+   "question": "reconcile `T_ROWS.jsonl` against the built files: for every row, translated / not / guessed, with the evidence.",
+   "report": "G3-20b.md",
+   "status": "partial",
+   "status_line": "STATUS: **partial.** Every row of groups T-1, T-2b and T-13 (105 rows) now has either a quoted card",
+   "supporting": false,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card family `g3-20`",
+   "item": "R-5",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-03T07:40:00",
+   "not_closed": [
+    {
+     "baseline": "None for the classification itself; what remains is the G3-sourcing layer (G3-20).",
+     "coverage": 0.29,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/G3-20c.md",
+   "question": "reconcile `T_ROWS.jsonl` against the built files: for every row, translated / not / guessed, with the evidence.",
+   "report": "G3-20c.md",
+   "status": "done",
+   "status_line": "STATUS: done",
+   "supporting": false,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card family `g3-11`",
+   "item": "R-5",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-03T08:26:22",
+   "not_closed": [
+    {
+     "baseline": "None for the classification itself; what remains is the G3-sourcing layer (G3-20).",
+     "coverage": 0.29,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/G3-11c.md",
+   "question": "reconcile `T_ROWS.jsonl` against the built files: for every row, translated / not / guessed, with the evidence.",
+   "report": "G3-11c.md",
+   "status": "done",
+   "status_line": "STATUS: done \u2014 the two gaps are real and now have a row proposal. **ALB-2** used exactly one hand-entered number (`PAINT_ALBEDO_GAIN = 4`, `MODLOG.md`:5488) over a *decoded* effective paint colour, and that literal is **already superseded**: `VALUES.json` now carries a derived gain `3.4476` (GRB-6), so the ALB-2 byte `0x837d86` is bound by **0** built RBMs while `0x7a757e` is bound by 58. **T-13** used the card's 0.05\u20130.30 m band (literal), two donor clearances decoded from `INTERACTION.json` (0.048 / 0.1474 m), two **chosen** 0.10 m side clearances, ray-cast anchors on `body_lod1.rbm`, the decoded `Driver` socket, and the user's D-9 decision. Eight proposed rows (`T-AB1\u2026T-AB3`, `T-IN1\u2026T-IN5`) carry every one of those values with its source; `T_ROWS.jsonl` was not touched (sha256 unchanged, 198 rows), and no value was decided by me.",
+   "supporting": true,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": false,
+   "how": "card family `g3-11`",
+   "item": "R-5",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-03T08:30:08",
+   "not_closed": [
+    {
+     "baseline": "None for the classification itself; what remains is the G3-sourcing layer (G3-20).",
+     "coverage": 0.0,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [
+    "**The built `.epe`'s own ids.** T-PA3's `world_collision_body_id` / `raycast_body_id` values are the donor part table's. Tried: the `.physicsc` (no part->body field decoded) and T-22's artifact. Would be in: the built entity graph (`CPartProp` / parts module).",
+    "**Which BmAK box maps to which JC3 hull.** G3-10 decodes hull\u2192part (98/112 wired) but not body-entry\u2192compound, so \"11 onto 7\" is a count match, not a map. Would be in: the `hknpPhysicsSystemData` body-entry fields (G2-30 UNKNOWN 4).",
+    "**\"11 T-8 parts have no slot.\"** Tried: the ledger row and T-22. Would be in: `T8_PARTS.json` joined to the hull slots.",
+    "**The 0x4C bool word** on the BmAK boxes (G3-01b UNKNOWN), so its use as a collision flag cannot be checked.",
+    "**Why three build groups change `hknpPhysicsSystemData`.** The bytes differ; which field moved (hardpoint position vs another body-entry field) is not decoded \u2014 `jc3hkx.stations` finds no quad set in any file, so the station reading there is UNKNOWN."
+   ],
+   "path": "tmp/freebuff/reports/G3-11d.md",
+   "question": "reconcile `T_ROWS.jsonl` against the built files: for every row, translated / not / guessed, with the evidence.",
+   "report": "G3-11d.md",
+   "status": "other",
+   "status_line": "",
+   "supporting": true,
+   "unknowns": [
+    "**The built `.epe`'s own ids.** T-PA3's `world_collision_body_id` / `raycast_body_id` values are the donor part table's. Tried: the `.physicsc` (no part->body field decoded) and T-22's artifact. Would be in: the built entity graph (`CPartProp` / parts module).",
+    "**Which BmAK box maps to which JC3 hull.** G3-10 decodes hull\u2192part (98/112 wired) but not body-entry\u2192compound, so \"11 onto 7\" is a count match, not a map. Would be in: the `hknpPhysicsSystemData` body-entry fields (G2-30 UNKNOWN 4).",
+    "**\"11 T-8 parts have no slot.\"** Tried: the ledger row and T-22. Would be in: `T8_PARTS.json` joined to the hull slots.",
+    "**The 0x4C bool word** on the BmAK boxes (G3-01b UNKNOWN), so its use as a collision flag cannot be checked.",
+    "**Why three build groups change `hknpPhysicsSystemData`.** The bytes differ; which field moved (hardpoint position vs another body-entry field) is not decoded \u2014 `jc3hkx.stations` finds no quad set in any file, so the station reading there is UNKNOWN."
+   ],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": false,
+   "how": "card family `g3-20`",
+   "item": "R-5",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-03T08:40:09",
+   "not_closed": [
+    {
+     "baseline": "None for the classification itself; what remains is the G3-sourcing layer (G3-20).",
+     "coverage": 0.14,
+     "restated_unknown": 0.14
+    }
+   ],
+   "opened": [
+    "**The 27 outside-the-seven rows.** Their values sit in `stations.json`, the \u00a770 mesh measurement, `T14_LIGHTS.md` / `LIGHT_SYSTEM.md`, `DAMAGE_MODEL.md` and `t16_collision.json`. Tried: the ledger's `open_with` per row and the seven files (none cite them). Would be in those files' own producers, which this card's scope excludes. (For the three collision rows, `G3-11d` has since checked them against the decoded `.physicsc`: T-CO3 matches, T-CO1/T-CO2 do not.)",
+    "**Per-value fingerprints.** None of the seven records a hash per value, so \"unchanged since the grab\" rests on the producer's `--check`, not on a value-level digest. Would be in an added digest column per row.",
+    "**`VOCABULARY.md` aggregates without the raw rows.** The min/median/max are only re-derivable where `E:/Modding/_gamedata/JC3grab` exists; on a machine without it the file is trusted on its producer's recorded check, not re-derived.",
+    "**The assumed paint composite.** `effective_base_colour` cannot be verified against the package: `COLOUR_PARAMS.md` reports the combine operator as UNKNOWN (944/944 zero slots). Tried: the material chain and `VALUES.json`'s own source note. Would be in a decoded material graph, which the cooker stripped."
+   ],
+   "path": "tmp/freebuff/reports/G3-20d.md",
+   "question": "reconcile `T_ROWS.jsonl` against the built files: for every row, translated / not / guessed, with the evidence.",
+   "report": "G3-20d.md",
+   "status": "other",
+   "status_line": "",
+   "supporting": false,
+   "unknowns": [
+    "**The 27 outside-the-seven rows.** Their values sit in `stations.json`, the \u00a770 mesh measurement, `T14_LIGHTS.md` / `LIGHT_SYSTEM.md`, `DAMAGE_MODEL.md` and `t16_collision.json`. Tried: the ledger's `open_with` per row and the seven files (none cite them). Would be in those files' own producers, which this card's scope excludes. (For the three collision rows, `G3-11d` has since checked them against the decoded `.physicsc`: T-CO3 matches, T-CO1/T-CO2 do not.)",
+    "**Per-value fingerprints.** None of the seven records a hash per value, so \"unchanged since the grab\" rests on the producer's `--check`, not on a value-level digest. Would be in an added digest column per row.",
+    "**`VOCABULARY.md` aggregates without the raw rows.** The min/median/max are only re-derivable where `E:/Modding/_gamedata/JC3grab` exists; on a machine without it the file is trusted on its producer's recorded check, not re-derived.",
+    "**The assumed paint composite.** `effective_base_colour` cannot be verified against the package: `COLOUR_PARAMS.md` reports the combine operator as UNKNOWN (944/944 zero slots). Tried: the material chain and `VALUES.json`'s own source note. Would be in a decoded material graph, which the cooker stripped."
+   ],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": false,
+   "how": "card family `g3-20`",
+   "item": "R-5",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-04T12:57:32",
+   "not_closed": [
+    {
+     "baseline": "None for the classification itself; what remains is the G3-sourcing layer (G3-20).",
+     "coverage": 0.29,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/review-G3-20b.md",
+   "question": "reconcile `T_ROWS.jsonl` against the built files: for every row, translated / not / guessed, with the evidence.",
+   "report": "review-G3-20b.md",
+   "status": "other",
+   "status_line": "",
+   "supporting": false,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card family `g3-20`",
+   "item": "R-5",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-04T13:47:36",
+   "not_closed": [
+    {
+     "baseline": "None for the classification itself; what remains is the G3-sourcing layer (G3-20).",
+     "coverage": 0.43,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/review-G3-20c.md",
+   "question": "reconcile `T_ROWS.jsonl` against the built files: for every row, translated / not / guessed, with the evidence.",
+   "report": "review-G3-20c.md",
+   "status": "done",
+   "status_line": "STATUS: done",
+   "supporting": false,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": false,
+   "how": "card family `g3-11`",
+   "item": "R-5",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-04T22:41:11",
+   "not_closed": [
+    {
+     "baseline": "None for the classification itself; what remains is the G3-sourcing layer (G3-20).",
+     "coverage": 0.29,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/review-G3-11c.md",
+   "question": "reconcile `T_ROWS.jsonl` against the built files: for every row, translated / not / guessed, with the evidence.",
+   "report": "review-G3-11c.md",
+   "status": "other",
+   "status_line": "",
+   "supporting": true,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": false,
+   "how": "card `G3-20`",
+   "item": "R-5",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-04T22:43:40",
+   "not_closed": [
+    {
+     "baseline": "None for the classification itself; what remains is the G3-sourcing layer (G3-20).",
+     "coverage": 0.14,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/review-G3-20.md",
+   "question": "reconcile `T_ROWS.jsonl` against the built files: for every row, translated / not / guessed, with the evidence.",
+   "report": "review-G3-20.md",
+   "status": "other",
+   "status_line": "",
+   "supporting": true,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": false,
+   "how": "card family `g3-20`",
+   "item": "R-5",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-04T22:52:44",
+   "not_closed": [
+    {
+     "baseline": "None for the classification itself; what remains is the G3-sourcing layer (G3-20).",
+     "coverage": 0.57,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/review-G3-20d.md",
+   "question": "reconcile `T_ROWS.jsonl` against the built files: for every row, translated / not / guessed, with the evidence.",
+   "report": "review-G3-20d.md",
+   "status": "other",
+   "status_line": "",
+   "supporting": false,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": false,
+   "how": "card family `g3-11`",
+   "item": "R-5",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-04T22:55:34",
+   "not_closed": [
+    {
+     "baseline": "None for the classification itself; what remains is the G3-sourcing layer (G3-20).",
+     "coverage": 0.14,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/review-G3-11d.md",
+   "question": "reconcile `T_ROWS.jsonl` against the built files: for every row, translated / not / guessed, with the evidence.",
+   "report": "review-G3-11d.md",
+   "status": "other",
+   "status_line": "",
+   "supporting": true,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card family `g3-20`",
+   "item": "R-5",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-05T02:38:08",
+   "not_closed": [
+    {
+     "baseline": "None for the classification itself; what remains is the G3-sourcing layer (G3-20).",
+     "coverage": 0.29,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/G3-20e.md",
+   "question": "reconcile `T_ROWS.jsonl` against the built files: for every row, translated / not / guessed, with the evidence.",
+   "report": "G3-20e.md",
+   "status": "done",
+   "status_line": "STATUS: done \u2014 all 198 rows of `T_ROWS.jsonl` now carry one verdict, taken verbatim from the",
+   "supporting": false,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card `G3-19`",
+   "item": "R-6",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-03T06:41:59",
+   "not_closed": [
+    {
+     "baseline": "The 97 class-default *values* (the CDO is readable; the name\u2192offset pairing is not done).",
+     "coverage": 0.33,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "The 6 CDO component payloads past the 512 MiB decode budget.",
+     "coverage": 0.0,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "The `.ddsc` tail table meaning and the `.pfxc` trailing blob.",
+     "coverage": 0.14,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/G3-19.md",
+   "question": "decode the 925 untagged objects that touch the vehicle (handling, upright, visual damage, materials).",
+   "report": "G3-19.md",
+   "status": "done",
+   "status_line": "STATUS: DONE \u2014 1 of 4 FULL, 3 of 4 FULL except one named block payload (the \"or name the exact",
+   "supporting": true,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [
+    {
+     "baseline": "The 97 class-default *values* (the CDO is readable; the name\u2192offset pairing is not done).",
+     "coverage": 0.67,
+     "restated_unknown": 0.0
+    }
+   ],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card family `g3-06`",
+   "item": "R-6",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-03T07:04:22",
+   "not_closed": [
+    {
+     "baseline": "The 6 CDO component payloads past the 512 MiB decode budget.",
+     "coverage": 0.2,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "The `.ddsc` tail table meaning and the `.pfxc` trailing blob.",
+     "coverage": 0.14,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/G3-06b.md",
+   "question": "decode the 925 untagged objects that touch the vehicle (handling, upright, visual damage, materials).",
+   "report": "G3-06b.md",
+   "status": "done",
+   "status_line": "STATUS: done.** The card's question is answered with bytes. `Default__RVehicleBatmobile`",
+   "supporting": true,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card family `g3-12`",
+   "item": "R-6",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-03T08:29:17",
+   "not_closed": [
+    {
+     "baseline": "The 97 class-default *values* (the CDO is readable; the name\u2192offset pairing is not done).",
+     "coverage": 0.33,
+     "restated_unknown": 0.33
+    },
+    {
+     "baseline": "The 6 CDO component payloads past the 512 MiB decode budget.",
+     "coverage": 0.0,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "The `.ddsc` tail table meaning and the `.pfxc` trailing blob.",
+     "coverage": 0.86,
+     "restated_unknown": 0.57
+    }
+   ],
+   "opened": [
+    ".ddsc` record tag `0x01000010` (78/78 records): it is not the block size (format 71 blocks are 8 bytes) and not per-record varying. Tried: u16/u32 reads at every record offset against level, size and offset. It is a constant; the table closes without reading it.",
+    ".ddsc` u32 at 0x28 = 16 (116/116): not the block size, not a floor on mip size (format 71's 1x1 mips are 8 bytes). Meaning UNKNOWN.",
+    ".ddsc` byte at 0x06 (values 0, 5, 6, 8, 9): not a function of (format id, width) - format 77 at width 1024 carries both 5 and 9. Meaning UNKNOWN.",
+    ".ddsc` flags at 0x12 (0, 1, 8, 9): two files with the same format, width and mip counts (77, 1024, 11/11) carry 0 and 8, so it is not a function of those. Meaning UNKNOWN.",
+    "**why** a `.ddsc` stores the small mips and lists the large ones as absent: the identity proves what the table is, not the exporter's reason. No byte states it, and testing it means loading the game, which the reset forbids.",
+    ".pfxc` face code byte (5th field of each face record: 123/127/102/121/120): record offset and corner count are proven, the code is per-file and unnamed.",
+    ".pfxc` global fixup section field (always 2): decoded value, unnamed.",
+    "whether a `.pfxc` is honoured for debris collision in game: not testable under the reset."
+   ],
+   "path": "tmp/freebuff/reports/G3-12d.md",
+   "question": "decode the 925 untagged objects that touch the vehicle (handling, upright, visual damage, materials).",
+   "report": "G3-12d.md",
+   "status": "done",
+   "status_line": "STATUS: done",
+   "supporting": true,
+   "unknowns": [
+    ".ddsc` record tag `0x01000010` (78/78 records): it is not the block size (format 71 blocks are 8 bytes) and not per-record varying. Tried: u16/u32 reads at every record offset against level, size and offset. It is a constant; the table closes without reading it.",
+    ".ddsc` u32 at 0x28 = 16 (116/116): not the block size, not a floor on mip size (format 71's 1x1 mips are 8 bytes). Meaning UNKNOWN.",
+    ".ddsc` byte at 0x06 (values 0, 5, 6, 8, 9): not a function of (format id, width) - format 77 at width 1024 carries both 5 and 9. Meaning UNKNOWN.",
+    ".ddsc` flags at 0x12 (0, 1, 8, 9): two files with the same format, width and mip counts (77, 1024, 11/11) carry 0 and 8, so it is not a function of those. Meaning UNKNOWN.",
+    "**why** a `.ddsc` stores the small mips and lists the large ones as absent: the identity proves what the table is, not the exporter's reason. No byte states it, and testing it means loading the game, which the reset forbids.",
+    ".pfxc` face code byte (5th field of each face record: 123/127/102/121/120): record offset and corner count are proven, the code is per-file and unnamed.",
+    ".pfxc` global fixup section field (always 2): decoded value, unnamed.",
+    "whether a `.pfxc` is honoured for debris collision in game: not testable under the reset."
+   ],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [
+    {
+     "baseline": "The `.ddsc` tail table meaning and the `.pfxc` trailing blob.",
+     "coverage": 0.71,
+     "restated_unknown": 0.0
+    }
+   ],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card family `g3-12`",
+   "item": "R-6",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-03T08:48:13",
+   "not_closed": [
+    {
+     "baseline": "The 97 class-default *values* (the CDO is readable; the name\u2192offset pairing is not done).",
+     "coverage": 0.33,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "The 6 CDO component payloads past the 512 MiB decode budget.",
+     "coverage": 0.2,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/G3-12c.md",
+   "question": "decode the 925 untagged objects that touch the vehicle (handling, upright, visual damage, materials).",
+   "report": "G3-12c.md",
+   "status": "done",
+   "status_line": "STATUS: done",
+   "supporting": true,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [
+    {
+     "baseline": "The 97 class-default *values* (the CDO is readable; the name\u2192offset pairing is not done).",
+     "coverage": 0.5,
+     "restated_unknown": 0.0
+    }
+   ],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card family `g3-12`",
+   "item": "R-6",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-03T09:32:50",
+   "not_closed": [
+    {
+     "baseline": "The 6 CDO component payloads past the 512 MiB decode budget.",
+     "coverage": 0.2,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "The `.ddsc` tail table meaning and the `.pfxc` trailing blob.",
+     "coverage": 0.14,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/G3-12e.md",
+   "question": "decode the 925 untagged objects that touch the vehicle (handling, upright, visual damage, materials).",
+   "report": "G3-12e.md",
+   "status": "done",
+   "status_line": "STATUS: done",
+   "supporting": true,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [
+    {
+     "baseline": "The `.ddsc` tail table meaning and the `.pfxc` trailing blob.",
+     "coverage": 0.57,
+     "restated_unknown": 0.0
+    }
+   ],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card family `g3-19`",
+   "item": "R-6",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-04T12:24:54",
+   "not_closed": [
+    {
+     "baseline": "The 97 class-default *values* (the CDO is readable; the name\u2192offset pairing is not done).",
+     "coverage": 0.0,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "The 6 CDO component payloads past the 512 MiB decode budget.",
+     "coverage": 0.4,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/G3-19b.md",
+   "question": "decode the 925 untagged objects that touch the vehicle (handling, upright, visual damage, materials).",
+   "report": "G3-19b.md",
+   "status": "done",
+   "status_line": "STATUS: done",
+   "supporting": false,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": true,
+   "how": "card `G3-19`",
+   "item": "R-6",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-04T14:08:53",
+   "not_closed": [
+    {
+     "baseline": "The 97 class-default *values* (the CDO is readable; the name\u2192offset pairing is not done).",
+     "coverage": 0.17,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "The 6 CDO component payloads past the 512 MiB decode budget.",
+     "coverage": 0.0,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "The `.ddsc` tail table meaning and the `.pfxc` trailing blob.",
+     "coverage": 0.29,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/review-G3-19.md",
+   "question": "decode the 925 untagged objects that touch the vehicle (handling, upright, visual damage, materials).",
+   "report": "review-G3-19.md",
+   "status": "done",
+   "status_line": "STATUS: done",
+   "supporting": true,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": false,
+   "how": "card family `g3-06`",
+   "item": "R-6",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-04T21:38:28",
+   "not_closed": [
+    {
+     "baseline": "The 97 class-default *values* (the CDO is readable; the name\u2192offset pairing is not done).",
+     "coverage": 0.67,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "The 6 CDO component payloads past the 512 MiB decode budget.",
+     "coverage": 0.2,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "The `.ddsc` tail table meaning and the `.pfxc` trailing blob.",
+     "coverage": 0.29,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/review-G3-06b.md",
+   "question": "decode the 925 untagged objects that touch the vehicle (handling, upright, visual damage, materials).",
+   "report": "review-G3-06b.md",
+   "status": "other",
+   "status_line": "",
+   "supporting": true,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": false,
+   "how": "card family `g3-12`",
+   "item": "R-6",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-04T21:51:39",
+   "not_closed": [
+    {
+     "baseline": "The 97 class-default *values* (the CDO is readable; the name\u2192offset pairing is not done).",
+     "coverage": 0.5,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "The 6 CDO component payloads past the 512 MiB decode budget.",
+     "coverage": 0.4,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "The `.ddsc` tail table meaning and the `.pfxc` trailing blob.",
+     "coverage": 0.14,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/review-G3-12e.md",
+   "question": "decode the 925 untagged objects that touch the vehicle (handling, upright, visual damage, materials).",
+   "report": "review-G3-12e.md",
+   "status": "other",
+   "status_line": "",
+   "supporting": true,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": false,
+   "how": "card family `g3-12`",
+   "item": "R-6",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-04T22:47:08",
+   "not_closed": [
+    {
+     "baseline": "The 97 class-default *values* (the CDO is readable; the name\u2192offset pairing is not done).",
+     "coverage": 0.33,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "The 6 CDO component payloads past the 512 MiB decode budget.",
+     "coverage": 0.2,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "The `.ddsc` tail table meaning and the `.pfxc` trailing blob.",
+     "coverage": 0.57,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/review-G3-12c.md",
+   "question": "decode the 925 untagged objects that touch the vehicle (handling, upright, visual damage, materials).",
+   "report": "review-G3-12c.md",
+   "status": "other",
+   "status_line": "",
+   "supporting": true,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": false,
+   "how": "card family `g3-12`",
+   "item": "R-6",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-04T22:54:06",
+   "not_closed": [
+    {
+     "baseline": "The 97 class-default *values* (the CDO is readable; the name\u2192offset pairing is not done).",
+     "coverage": 0.33,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "The 6 CDO component payloads past the 512 MiB decode budget.",
+     "coverage": 0.0,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "The `.ddsc` tail table meaning and the `.pfxc` trailing blob.",
+     "coverage": 0.86,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/review-G3-12d.md",
+   "question": "decode the 925 untagged objects that touch the vehicle (handling, upright, visual damage, materials).",
+   "report": "review-G3-12d.md",
+   "status": "other",
+   "status_line": "",
+   "supporting": true,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  },
+  {
+   "blocked": false,
+   "closed": [],
+   "dropped_unknowns": [],
+   "evidence": false,
+   "how": "card family `g3-19`",
+   "item": "R-6",
+   "matched_baseline_unknown": [],
+   "mtime": "2026-11-04T23:52:25",
+   "not_closed": [
+    {
+     "baseline": "The 97 class-default *values* (the CDO is readable; the name\u2192offset pairing is not done).",
+     "coverage": 0.5,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "The 6 CDO component payloads past the 512 MiB decode budget.",
+     "coverage": 0.2,
+     "restated_unknown": 0.0
+    },
+    {
+     "baseline": "The `.ddsc` tail table meaning and the `.pfxc` trailing blob.",
+     "coverage": 0.43,
+     "restated_unknown": 0.0
+    }
+   ],
+   "opened": [],
+   "path": "tmp/freebuff/reports/review-G3-19b.md",
+   "question": "decode the 925 untagged objects that touch the vehicle (handling, upright, visual damage, materials).",
+   "report": "review-G3-19b.md",
+   "status": "other",
+   "status_line": "",
+   "supporting": false,
+   "unknowns": [],
+   "verdict_before": "PARTIAL"
+  }
+ ],
+ "schema": 1,
+ "unattached": [
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-05T02:26:14",
+   "path": "tmp/freebuff/reports/B-10d.md",
+   "report": "B-10d.md",
+   "status": "done",
+   "status_line": "STATUS: done - the three collision scripts read **no** 316 cm wreck constant (it survives only in ledger row T-CO2), but they do build the body hull from the **render mesh bbox** (3.495 x 2.271 x 7.025 m), not the drivable chassis box (6.903 x 3.745 x 2.075 m); a corrected script writes the same hull set with the chassis box as the body target, 10/10 oracles, `--check` exit 0.",
+   "unknowns": [
+    "**Chassis box rotation / frame handedness.** COLLISION_GEOM records the box TM as not decoded, so the AABB above is exact only if the rotation is identity. It would be settled by the `FKBoxElem` layout (G3-06 native layouts), then re-running this script.",
+    "**One box or two.** 169750 carries box 0 (690.305 x 374.536 x 207.5) and box 1 (679.585 x 345.688 x 103.5 cm, centre z 79.0); this run uses box 0 only. Using box 1 would trim 29 cm of width and 104 cm of height - a design decision, not a decoding one.",
+    "**Why T-CO2 ever cited a wheel box.** The ledger row's source text is the only place the 316 cm constant survives; the reason it was picked is not recorded in any file this run read, and it is a ledger-repair question (G3-20d), not a build one.",
+    "**Whether the chassis box is the right collision source at all.** It is the decoded BmAK drivable box, but B-10's render-bbox choice was itself made against a Done rule (hull union within 5 cm of the body bbox); the two rules now conflict by 25 cm in width and 20 cm in height, so a decision is needed before the next build."
+   ],
+   "why": "no card family `b-10` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-04T13:26:17",
+   "path": "tmp/freebuff/reports/BMAK-PHYSICS-word12.md",
+   "report": "BMAK-PHYSICS-word12.md",
+   "status": "done",
+   "status_line": "STATUS: done \u2014 resolved.** The word is **a name index into the package's own name table**,",
+   "unknowns": [],
+   "why": "no card family `bmak-` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-03T09:14:50",
+   "path": "tmp/freebuff/reports/CAMERA-helper.md",
+   "report": "CAMERA-helper.md",
+   "status": "done",
+   "status_line": "STATUS: done",
+   "unknowns": [],
+   "why": "no card family `camera-` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-04T22:28:00",
+   "path": "tmp/freebuff/reports/CDO-payloads.md",
+   "report": "CDO-payloads.md",
+   "status": "done",
+   "status_line": "STATUS: done.** The six children of `Default__RVehicleBatmobile` that",
+   "unknowns": [],
+   "why": "no card family `cdo-` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-04T22:14:01",
+   "path": "tmp/freebuff/reports/COLLISION-polarity.md",
+   "report": "COLLISION-polarity.md",
+   "status": "done",
+   "status_line": "STATUS: **done** \u2014 the polarity was tested on six Functions in the same package, **6 of 6 agree (4 of 4",
+   "unknowns": [],
+   "why": "no card family `collision-` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-04T21:42:03",
+   "path": "tmp/freebuff/reports/COLOUR-palette.md",
+   "report": "COLOUR-palette.md",
+   "status": "done",
+   "status_line": "STATUS: done.** `0x6187A56B` is verified at `0x266` in the archived `.epe` (and in the loose",
+   "unknowns": [
+    "**Which tint a spawn selects, and whether that tint reaches the CarPaintMM dynamic float4s.** The `.epe` names the module, not an index; every palette record has `occurrence = 100`. Where it would be found: the vehicle/material code in the executable, or a runtime constant dump.",
+    "**Any write-back between the palette's numbers and the paint blocks'** `(0.4, 1, 1)` override triple. No file maps one to the other.",
+    "**Whether other vehicles reuse the same palette path hash.** One entity measured here."
+   ],
+   "why": "no card family `colour-` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-04T21:28:41",
+   "path": "tmp/freebuff/reports/COLOUR-tint.md",
+   "report": "COLOUR-tint.md",
+   "status": "partial",
+   "status_line": "STATUS: partial** \u2014 the constant-buffer update and the field offsets are decoded from the",
+   "unknowns": [
+    "**Who writes block `+0x168`.** The writer has one caller, the block constructor; no other direct call in the image passes a 76-byte struct into that field. Tried: all callers of `0x140289a80` and `0x140289b20` (1 each), xrefs to the block constructor, an immediate search for the CarPaintMM block hash `0x483304D6` (0 hits in `.text` \u2014 the block type is selected by a vtable, not by a hash compare), a disp8 triple-store sweep (1,340 hits) and a disp32 sweep at `+0x168/+0x178/+0x188` (363 hits) \u2014 neither is specific enough to be evidence. Where it would be found: the CarPaint block object is handed to the render/material system and updated through its own interface; the next step is a virtual-call-aware walk from the block vtable, which this card does not have an oracle for.",
+    "**Shader-side meaning of the three float4s.** They are uploaded as `m_TintColorR/G/B` but carry a 3\u00d73-looking basis (`0.14, 0.19, 0.25, 1`, etc.); the shader body is not on disk (`COLOUR.md` \u00a76.1).",
+    "**Palette \u2192 tint.** `COLOUR.md` \u00a74 already showed no asset names the palette; this card does not reach the palette record either.",
+    "**On-screen colour.** Out of scope by the brief and not attempted."
+   ],
+   "why": "no card family `colour-` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-04T23:14:29",
+   "path": "tmp/freebuff/reports/COLOUR-vecdefaults.md",
+   "report": "COLOUR-vecdefaults.md",
+   "status": "done",
+   "status_line": "STATUS: **done** \u2014 the review is upheld on the bytes: `Playable_Batmobile_SF.upk` holds **87**",
+   "unknowns": [],
+   "why": "no card family `colour-` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-04T22:03:20",
+   "path": "tmp/freebuff/reports/CONFIG-refresh.md",
+   "report": "CONFIG-refresh.md",
+   "status": "done",
+   "status_line": "STATUS: **done** \u2014 the check was run, the three files and all 41 changed rows are named and classified, the",
+   "unknowns": [
+    "**Identity of the removed uncategorised row in `BmSystemSettings.ini`.** Tried: `counts.rows` and `rows_in_no_category` deltas, category counts, containment cooked-only/pair counts, byte arithmetic (\u22481,425 B line, `[SystemSettings]`, between old lines 141 and 240). Blocked by: the published artifact keeps only the 1,894 categorised/highlight rows out of 20,961, and no pre-change copy of the file exists. Would be found in a pre-02:37 copy of `BmSystemSettings.ini`.",
+    "**What changed inside `BmInput.ini`.** Tried: 165 published category rows (unchanged), 14 vehicle-keyword lines (unchanged), 366 `Bindings=` lines (unchanged; merge oracle still 366/366), highlight rows (none for this file), byte size and line count (unchanged), containment counts (61/58/57/4/1/21, unchanged). Blocked by: no pre-change bytes. Would be found in a pre-02:37 copy; it is not in the `Bindings` array.",
+    "**What changed inside `BmEngine.ini`.** Tried: 92 published category rows and 33 highlight rows (identical), file bytes/lines (identical), containment value-equal (+1 only). Blocked by: the remaining ~1,470 of its ~1,573 rows are not in the artifact. Would be found in a pre-20:05 copy.",
+    "**Whether any other uncategorised row changed** in `BmSystemSettings.ini` (beyond the two CSM rows and the removed line). Same blocker; the byte arithmetic is only consistent with \"one ~1,425 B line removed and no other edit\", which is consistent but not proof.",
+    "**Why the three files are being rewritten** (01:33 \u2192 02:37 \u2192 20:05). Hypothesis: engine write-back on exit (format normalisation toward the base file, rows added and removed), but no process was observed, no file records it, and I did not run the game. Not to be quoted as fact.",
+    "**The review's 20,966-row state** cannot be reproduced: no bytes from it were preserved. The measured current state is 20,960 rows, and the per-row reconciliation to 20,966 is UNKNOWN."
+   ],
+   "why": "no card family `config-` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-04T22:08:58",
+   "path": "tmp/freebuff/reports/CONTROLS-0xd8.md",
+   "report": "CONTROLS-0xd8.md",
+   "status": "done",
+   "status_line": "STATUS: done",
+   "unknowns": [
+    "which part of the angle the test \"means\" (pitch alone vs pitch+roll combined): `ZPlane.Z` is the total tilt of the up axis; splitting pitch from roll needs the other elements (and is not needed for the gate).",
+    "why the `-0.707` branch exists (`BatmobileStuckTimeFlip >= BatmobileStuckTime` exemption): the two timer fields are decoded by name, but their writers and tick logic are not decoded here.",
+    "FPlane`'s X/Y/Z members are not named by the dump (only `W` at +12); the `Z` name for +8 is derived from the struct size and the `W` offset, cross-checked by the .text row reads (0xd0/0xd4/0xd8)."
+   ],
+   "why": "no card family `controls-0xd8` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-04T23:22:45",
+   "path": "tmp/freebuff/reports/DRIVERLEFT-regions.md",
+   "report": "DRIVERLEFT-regions.md",
+   "status": "done",
+   "status_line": "STATUS: **done** \u2014 `DriverLeft` (`Startup.upk` export 7400) decodes to 368 B and **28** property",
+   "unknowns": [],
+   "why": "no card family `driverleft-` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-05T02:34:46",
+   "path": "tmp/freebuff/reports/G2-last.md",
+   "report": "G2-last.md",
+   "status": "done",
+   "status_line": "STATUS: done - the single unnamed archive entry is `patch_win64/game4` hash **`016DE9D1`** at +618637312, 84,720 B (16-byte prefix + one-sample FSB5 bank, token `1606523576`); 243,341 evidence-based candidate paths all fail `hash_jenkins(name) == 016DE9D1`, so its name is **UNKNOWN**, with every source searched and its hit count recorded.",
+   "unknowns": [
+    "**The name itself.** 243,341 candidates fail the hash oracle. What would close it: the original FMOD project for the Arabic `mm320` session (the token is its source file name), a newer Gibbed filelist or JCMR dictionary carrying the take, or an executable string naming it.",
+    "**The name table's 4 leading u32 fields** (68699 / 239296 / 83322 / 4 in this file). The single string is decoded and is the token; the field semantics are not decoded, and no naming test depends on them.",
+    "**Why the take exists in the patch mount at all.** The record is `patch`-only and its two neighbours are Arabic `mm320` takes; nothing decoded says which session or line it belongs to, so \"an Arabic mm320 line\" is a bracket, not an identification."
+   ],
+   "why": "no card family `g2-` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-04T22:38:08",
+   "path": "tmp/freebuff/reports/G3-04e1.md",
+   "report": "G3-04e1.md",
+   "status": "done",
+   "status_line": "STATUS: done",
+   "unknowns": [],
+   "why": "no card family `g3-04e1` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": false,
+   "mtime": "2026-11-04T21:36:32",
+   "path": "tmp/freebuff/reports/G3-07b1.md",
+   "report": "G3-07b1.md",
+   "status": "other",
+   "status_line": "",
+   "unknowns": [],
+   "why": "no card family `g3-07b1` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-04T21:04:09",
+   "path": "tmp/freebuff/reports/G3-07b2.md",
+   "report": "G3-07b2.md",
+   "status": "done",
+   "status_line": "STATUS: done** \u2014 the scan is complete, the new script's `--check` passes 8/8 oracles and",
+   "unknowns": [
+    "**The either/or itself.** One function (`0x1415140f0`) classifies both offsets; the only other accepted consumer (`0x141505820`) copies them without classifying. Tried: the full `shl 7` seed family (893 sites), `imul \u2026,0x80`, S2 seeds, and interprocedural argument taint to a fixpoint. Where a second classifying consumer would be: a reader that gets the slot pointer from a parent record rather than computing `handle*128`, which this taint does not follow.",
+    "**Whether `+0x40` is a position or a scale/extent vector.** It is used both as a broadcast against the three rows (a per-axis scale reading) and as a point through `0x14119fa30` (a position reading); the two are consistent with either. Proving it needs the shape virtual method called at `0x141514218` (`[rax + 0x30]` on the shape vtable), whose target is resolved at run time \u2014 out of reach for static analysis here.",
+    "**`+0x30` after the copy.** The consumer copies it to `[r11 - 0x28]`, reloads it at `0x1415141c0` and adds one float4 (`0x1415141cd`), after which the frame slot is not read again on that path; no bound comparison uses it.",
+    "**The 421 rejected reads.** They belong to other 128-byte-stride records that also use `shl 7`; the fingerprint separates them from body slots, but no stronger oracle was built, so they are reported as rejected, not as contradictions.",
+    "**The slot's writer for `+0x00\u2026+0x3f` from world data.** `0x141513fa0` copies a 4x4 in from `rdx`; who fills that source (and whether it is world or local) is not traced here \u2014 that is the neighbouring call-chain card's subject, which this one deliberately does not depend on."
+   ],
+   "why": "no card family `g3-07b2` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-03T07:25:04",
+   "path": "tmp/freebuff/reports/G3-14.md",
+   "report": "G3-14.md",
+   "status": "done",
+   "status_line": "STATUS: DONE.** `grab_audio_banks.py --check` exits 0 (md + json byte-identical to a fresh",
+   "unknowns": [
+    "**Per-event membership of the 90 rows.** Decoded: each bank's total HIRC Event count. Not decoded: whether a given `event_id` (e.g. `0xC3438074` `Play_Batmobile_Jump_Land`) is one of those events, and its target tree. Tried: bank-level HIRC object counting only. Where it would be found: the same payloads, by FNV-1(lower-case name) matching the `AkEvent` id against HIRC type-0x04 object ids \u2014 the payloads are already extracted by this tool.",
+    "**Which named bank each hash-named `.bnk` holds.** Wwise bank files carry a 32-bit id, not a name. Tried: file-name match, ASCII name search inside every `.bnk`, `BKHD` id listing. Not needed for the verdicts (the referenced banks are present as exports), but unresolved. Where it would be found: a `SoundbanksInfo`-style manifest \u2014 none under the install root.",
+    "**What the 14 `BKPK`-magic `.bnk` files are.** 14 of 15 `.bnk` files start `BKPK`, not `BKHD`; the HIRC block is not at the layout this tool parses, so no event count is claimed for them. Tried: magic, `BKHD` locate, `HIRC` locate. Where it would be found: a Wwise `BKPK` container description (no local reference; not in `E:/Modding/_tools/BmSDK-AK`).",
+    "**Full-package verification of every carrier.** The prefix parse is checked on all 4,145 packages (the name table must end exactly at `import_offset`), and the `upk_read` comparison is run on the six smallest carriers only \u2014 a full `Package()` open of the other 2,319 carriers, including `BmGame.upk` (214 MB file) and `Startup.upk` (434 MB), exceeds this card's budget. Where it would be found: the same oracle over all carriers, given the time.",
+    "**Whether the events are actually triggerable in BmAK at runtime.** Every count above is a file fact. Nothing here observes the game loading a bank (out of scope: no game attach)."
+   ],
+   "why": "no card family `g3-14` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-05T02:37:56",
+   "path": "tmp/freebuff/reports/G3-14b.md",
+   "report": "G3-14b.md",
+   "status": "done",
+   "status_line": "STATUS: done",
+   "unknowns": [
+    "**Which bank holds `0x6BB2C66E`.** Tried: HIRC Event (`0x04`) sets and a raw little-endian u32 search over all 117 `AkBank` exports `AUDIO_BANKS.md` lists (1,101 Event ids, 117 distinct banks, four packages). Found in none, so the id's home is outside the referenced set. Where it would be found: a `Ww_*` bank inside a level package (the install has 34,497 `AkBank` exports), a `BKPK` blob inside a `DLG_*` payload or one of the 15 `BKPK` `.bnk` files (a container this toolkit does not parse), or a Wwise `SoundbanksInfo` manifest, which is not in the install. Not an \"absent bank\" claim: 10 of the 10 claimed banks were found present.",
+    "**Whether the event plays.** The HIRC action list is not followed into `CAkActionPlay` / `AkBankSourceData`, so the media behind any searched event is not verified here (same gap the review left).",
+    "**`STATUS.md` / `COVERAGE.md` still carry the stale sentence.** The patch is a file on disk by instruction (\"write the exact patch ... do not edit either script\"); applying it and re-running both generators is the follow-up step."
+   ],
+   "why": "no card family `g3-14` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-04T15:09:01",
+   "path": "tmp/freebuff/reports/G3-21b.md",
+   "report": "G3-21b.md",
+   "status": "done",
+   "status_line": "STATUS: done**",
+   "unknowns": [],
+   "why": "no card family `g3-21` in the baseline tables"
+  },
+  {
+   "blocked": true,
+   "dropped_unknowns": [],
+   "evidence": false,
+   "mtime": "2026-11-05T02:32:17",
+   "path": "tmp/freebuff/reports/G3-21c.md",
+   "report": "G3-21c.md",
+   "status": "blocked",
+   "status_line": "STATUS: blocked \u2014 the gate `tmp/freebuff/reports/G3-20e.md` does not exist, so the brief's",
+   "unknowns": [
+    "**Whether any of R-1..R-6 changed since the snapshot** \u2014 UNKNOWN, not assessed. The gate file is missing and the brief forbids starting without it. It would be found by the refresh in the three steps above, over the 118 newer reports.",
+    "**What G3-20e is meant to supply** \u2014 UNKNOWN here. The card name suggests the G3-20 series (per-row G3 sourcing for R-5), but no report exists to read, and this task did not infer one."
+   ],
+   "why": "no card family `g3-21` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-04T23:29:23",
+   "path": "tmp/freebuff/reports/GADGET-params.md",
+   "report": "GADGET-params.md",
+   "status": "done",
+   "status_line": "STATUS: **done** \u2014 the 48 remote-gadget parameters are located (`BmScript.RBatmobileRemoteBm`,",
+   "unknowns": [],
+   "why": "no card family `gadget-` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-04T22:26:52",
+   "path": "tmp/freebuff/reports/INPUT-d11.md",
+   "report": "INPUT-d11.md",
+   "status": "done",
+   "status_line": "STATUS: done",
+   "unknowns": [],
+   "why": "no card family `input-d11` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-04T12:15:25",
+   "path": "tmp/freebuff/reports/JC3-armor-step.md",
+   "report": "JC3-armor-step.md",
+   "status": "partial",
+   "status_line": "STATUS: partial",
+   "unknowns": [],
+   "why": "no card family `jc3-` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-04T11:55:48",
+   "path": "tmp/freebuff/reports/JC3-door-angles.md",
+   "report": "JC3-door-angles.md",
+   "status": "done",
+   "status_line": "STATUS: done",
+   "unknowns": [
+    "**What drives a door.** The parts module stores no open rate, no animation curve and no interaction for the part; the entity containers hold no animation member (G2-15 \u00a74). The open range is the authored hinge limit, not a measured swing. Where a code-side driver would be is not in these files.",
+    "**Meaning of the constraint record's +0x0C u32.** It is 0x7fffffff in all 1086 records, decoded as a constant, but no Havok 2014 header in this project names the field (it may be a second-body index / world anchor, but that is not proven here).",
+    "**Field names inside the 24 B record.** The stride, the typed `+0x00` pointer and the constant tail are decoded by pattern (stride fits the array, pointer resolves to a `*ConstraintData`, `+0x08` tracks part body ids), not from a header. Only the pointer and `+0x08` are used.",
+    "**Why four parts' body ids differ from their record's body u32** (vintagesports door_f_l/door_f_r/hood, oldbus_trunk). The hinge is still the one the module's `constraint_index` names (pivot mirrors the opposite door, limits equal), but the two numberings are not one space and the body enumeration is not decoded. Record `+0x08` was therefore used as a cross-check (330/334) and not as the lookup key.",
+    "**Frame space of the hinge axis/pivot** (body-local vs parent). Comparing pivots to part centroids is not consistent fleet-wide, so no such comparison is claimed or used as an oracle.",
+    "**Which frame column is the joint's free axis.** G3-10e \u00a72 leaves that UNKNOWN; the axis column in the outputs is frame A row 0, the convention G2-15 used.",
+    "**Open range of the four hinge-less rows** (`constraint_index` -1): no hinge exists, so no range is authored in the files.",
+    "**Vehicles outside `INDEX.json`'s 233 `jc_vehicles` bundles.** Nothing else was scanned; a vehicle absent from the index is absent from the outputs."
+   ],
+   "why": "no card family `jc3-` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-04T11:10:30",
+   "path": "tmp/freebuff/reports/JC3-stations-hinges.md",
+   "report": "JC3-stations-hinges.md",
+   "status": "done",
+   "status_line": "STATUS: done",
+   "unknowns": [
+    "**The 96-byte entry's Havok type name.** No Havok 2014.1 header or type library exists in this project, so the entry is reported by its decoded shape only. Where it would be found: a Havok 2014.1 type library or the packfile's own type section, which `jc3hkx` does not parse.",
+    "**The meaning of the `u16` at +0x40** (`1` in some files, `255` in others) and of the two zero `u32` at +0x30, beyond the repeated id and the `0x7fffffff` sentinel.",
+    "**What the other N\u22124 entries of the table stand for** (all `(0, 0, 0)`) and why the wheel ids differ per file (39-42, 34-37, 23/24/37/38, 40-43, 41-44, 33-36).",
+    "**Which body panels the hinges are.** Decoded: pivots, limits (door-like pairs), object class. Not decoded: a name per hinge. A rendered pose or a per-hinge name in a module would settle it.",
+    "**Whether the wheels are simulated as hinges or raycasts.** No wheel constraint object exists in the six files; a raycast model would live in run-time vehicle data, which is not in `.physicsc`."
+   ],
+   "why": "no card family `jc3-` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-04T11:41:21",
+   "path": "tmp/freebuff/reports/JC3-turret-limits.md",
+   "report": "JC3-turret-limits.md",
+   "status": "done",
+   "status_line": "STATUS: done",
+   "unknowns": [],
+   "why": "no card family `jc3-` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-04T22:23:16",
+   "path": "tmp/freebuff/reports/LEDGER-g3src.md",
+   "report": "LEDGER-g3src.md",
+   "status": "done",
+   "status_line": "STATUS: done",
+   "unknowns": [],
+   "why": "no card family `ledger-g3` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-04T22:22:16",
+   "path": "tmp/freebuff/reports/LEDGER-provenance.md",
+   "report": "LEDGER-provenance.md",
+   "status": "done",
+   "status_line": "STATUS: done.** Every one of the 85 TRANSLATED rows in `LEDGER_AUDIT.md` is now joined to the",
+   "unknowns": [],
+   "why": "no card family `ledger-` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-03T09:20:41",
+   "path": "tmp/freebuff/reports/LIGHTS-sockets.md",
+   "report": "LIGHTS-sockets.md",
+   "status": "done",
+   "status_line": "STATUS: DONE.** `Tools/scripts/bmak_light_sockets.py --write` and `--check` both exit 0, **8/8",
+   "unknowns": [],
+   "why": "no card family `lights-` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-03T09:07:03",
+   "path": "tmp/freebuff/reports/MECHANICS-names.md",
+   "report": "MECHANICS-names.md",
+   "status": "done",
+   "status_line": "STATUS: done",
+   "unknowns": [],
+   "why": "no card family `mechanics-` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-04T23:36:47",
+   "path": "tmp/freebuff/reports/PHYSICS-axes.md",
+   "report": "PHYSICS-axes.md",
+   "status": "done",
+   "status_line": "STATUS: done.** The card's three oracles were run over all 419 hinges; none of the six candidate",
+   "unknowns": [],
+   "why": "no card family `physics-` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-04T22:17:23",
+   "path": "tmp/freebuff/reports/PHYSICS-inertia.md",
+   "report": "PHYSICS-inertia.md",
+   "status": "done",
+   "status_line": "STATUS: done",
+   "unknowns": [],
+   "why": "no card family `physics-` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-04T23:10:07",
+   "path": "tmp/freebuff/reports/SAMPLER-offline.md",
+   "report": "SAMPLER-offline.md",
+   "status": "done",
+   "status_line": "STATUS: **done** - and the answer is **no: all three stay UNKNOWN**, for reasons that are counted, not",
+   "unknowns": [],
+   "why": "no card family `sampler-` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-05T02:21:08",
+   "path": "tmp/freebuff/reports/T-MD14.md",
+   "report": "T-MD14.md",
+   "status": "done",
+   "status_line": "STATUS: done - the 30 BmAK battle-mode events are listed and each has a nearest JC3 vehicle event that a donor module really references (GUID + bank/ordinal + role); no row claims a trigger, because no module field references a battle-mode event.",
+   "unknowns": [
+    "**Which BmAK event the battle-mode control would play.** No decoded file maps an input action to an event id; the 30 names are the media, not the trigger.  It would be found in the BmAK blueprint/`AkComponent` graph, which the grab does not include.",
+    "**Whether the JC3 door pair is actually audible on the Batmobile.** It is a function match (the only decoded mechanical open/close a donor vehicle module fires), not an audition: G2-24 \u00a75 shows the bank stores no event->tune->sample edge, and the Batmobile canopy is a different mechanism from a car door.",
+    "**A per-mode audio graph.** JC3 ships one variant graph; giving battle mode its own bed needs a second variant (D-2), which this card does not decide."
+   ],
+   "why": "no card family `t-md14` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-05T02:31:33",
+   "path": "tmp/freebuff/reports/T-ST7.md",
+   "report": "T-ST7.md",
+   "status": "done",
+   "status_line": "STATUS: done",
+   "unknowns": [],
+   "why": "no card family `t-st7` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-05T02:26:57",
+   "path": "tmp/freebuff/reports/T-WLD11.md",
+   "report": "T-WLD11.md",
+   "status": "done",
+   "status_line": "STATUS: done (both repairs decided by oracle: **re-index not supported**, **move UNKNOWN**;",
+   "unknowns": [
+    "**O-1 re-index \u2192 not supported.** Only **15 of 135** donor points pass (outside the shell, inside the band, on an up-facing face) anywhere on the Batmobile, and **0 of 3** areas can be rebuilt from them within one edge length (\u2264 0.30 m) of each vertex. The decisive reason is geometric, not statistical: the highest donor point is y **1.5242 m** while the Batmobile roof surface reads y **2.0811 m** (deck y 1.3612 m), so no existing point can lift `main_area` onto the roof it is supposed to cover.",
+    "**O-2 move \u2192 UNKNOWN.** The move itself is encodable (the 22 targets are ray-castable, the part bindings resolve \u2014 B-04 keeps indices 0/24/25 \u2014 and 6 positions are shared by two areas, so both copies must move together), but which field the runtime trusts \u2014 the stored `vertices3D_local` or a recomputation from `DeformPoints` \u2014 is **not decoded anywhere in the entity, the geom sidecar or the build's modules**. Writing a value blind would be a guess. So the row stays **UNKNOWN**, but now for one named, testable reason instead of an unexplained \"blocked\": a probe that re-reads the module after an edit tells us which field wins. The earlier task in this session, **G3-10k**, is also finished and passing (`Tools/scripts/jc3_inertia2.py --check` \u2192 `CHECK PASS`, report at `tmp/freebuff/reports/G3-10k.md`).",
+    "Tools/scripts/t_wld11.py` \u2014 new tool, `--write` / `--check` / `dump areas|points|candidates`. Reads the donor entity (`StuntAreas`, `DeformPoints`), the donor geometry sidecar, the Batmobile body mesh, `stations.json` and the B-04 part table; computes the donor tolerance, the per-vertex measurement in both frames (stored and G2-18's map), the full 135-point table, and both oracles. `--check` re-derives the JSON and the note, compares both byte-for-byte, re-runs the oracles and fails if the verdict moved.",
+    "Working/Translation/T_WLD11_AREAS.md` \u2014 generated note: verdict, the two decoded facts, the donor tolerance, per-area/per-vertex tables with both frames and the nearest-vertex distance, all 135 `deform_points` with names/parts/positions, the oracles, UNKNOWNs.",
+    "Working/Translation/t_wld11_areas.json` \u2014 the same measurements as data (22 vertices, 135 points, both oracles, input hashes).",
+    "tmp/freebuff/reports/T-WLD11.md` \u2014 this report. Not touched: `Working/Entity/bm_epe_edits.json`, `Working/Translation/T_ROWS.jsonl` (and its `.bak-b13`), `T15_WORLD.md`/`t15_world.json`, any `Builds/` file, any game install. | value | label | |---|---| | 135 `DeformPoints`, 3 active `StuntAreas` in 32 slots, 64 weld rows | decoded (donor `.ee.json`, module rows) | | the build ships `sportsmuscle_stunt_areas.vmodc` + `sportsmuscle_vehicle_deform.vmodc` | decoded (`Builds/bm-009/aaf/models/...`, both present) | | `vertices3D_local[j] == points[deform_points[j]].start_transform[12..14]`, delta 0.0 m over 22 vertices | decoded (bit-exact comparison) | | areas bind indices 76/87/110/28/11/65, 89/70/58/42/108/25, 53/99/81/132/116/35/10/63/48/32; 22/22 exist | decoded | | donor tolerance band 0.0388\u20130.1578 m (median 0.1056), min up-cosine 0.7529 | derived (22 bound points \u2192 donor shell, exact point-triangle distance) | | Batmobile body y: roof 2.0811 m (z \u22120.5), deck 1.3612 m (z \u22122.14) | derived (ray cast down on `body_lod1.rbm`) | | stored frame: 0/22 in band on a standing face, 11/22 inside the shell, gaps 0.0002\u20130.0813 m | derived | | mapped frame: 4/22 in band, 0/22 inside, gaps 0.1236\u20130.5880 m | derived | | pool of donor points that pass on the Batmobile: 15/135; 0/3 areas re-buildable | derived (O-1) | | 6 positions shared by two areas; part indices 0/24/25 in B-04's kept range | decoded | | runtime precedence between `vertices3D_local` and `DeformPoints` | **UNKNOWN** | 1. Reading the brief's material and the toolchain: ``` $ cd /e/Modding/JC3-Batmobile && ls -la Working/Translation/ ... Working/Appearance/build_parts (... 80 .rbm parts incl. body_lod1.rbm, assembly.json, T15_WORLD.md 18256 B, t15_world.json 42666 B) $ ls /e/Modding/_gamedata/JC3grab/ audio b13 ... entities ... geom ... hkx ... phys ... ``` 2. The donor entity's shape \u2014 deform points carry stunt names and part bindings: ``` $ uv run --with numpy python tmp/freebuff/scratch/wld11_probe1.py deform points: 135 index range 0 134 sample: [(0, {'name': 'grill'}, [-6.31228177e-05, 0.611966372, -2.48016548]), ...] slots 32 declared 3 0 front_area 24 6 4 [76, 87, 110, 28, 11, 65] 1 front_signature_area 25 6 4 [89, 70, 58, 42, 108, 25] 2 main_area 0 10 8 [53, 99, 81, 132, 116, 35, 10, 63, 48, 32] front_area vertices (16, 3) ... |V - P| per vertex: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0] main_area ... |V - P| per vertex: [0.0, 0.0, ... 0.0] ``` (the areas' `vertices3D_local` are the bound deform points, exactly \u2014 the fact that decides what a repair can be) 3. Donor tolerance and both frames: ``` $ uv run --with numpy python tmp/freebuff/scratch/wld11_probe2.py deform points 135 fields ['from_part', 'from_part_hash', 'from_part_index', 'has_custom_end', 'name', 'name_hash', 'shape_key', 'skinned_to_part', 'skinned_to_part_hash', 'skinned_to_part_index'] areas [('front_area', 0, 'sportsmuscle_hood', 6, [76, 87, 110, 28, 11, 65]), ...] donor shell verts 70302 tris 75508 bbox [-1.062, -0.429, -2.57] [1.061, 1.511, 2.564] bat verts 38443 tris 32124 bbox [-1.751, 0.087, -3.422] [1.746, 2.363, 3.605] -- donor area clearance (donor deform point -> donor shell) front_area tri [0.1056, 0.1056, 0.1578, 0.1219, 0.1219, 0.1568] main_area tri [0.1056, 0.0885, 0.0999, 0.0733, 0.0389, 0.0388, 0.0716, 0.0901, 0.0742, 0.1056] donor gap: min 0.0388 med 0.1056 p95 0.1578 max 0.1578 -- batmobile clearance, G2-18 normalised map front_area tri [0.3593, 0.3581, 0.1237, 0.1597, 0.1586, 0.1236] main_area tri [0.3593, 0.5873, 0.4481, 0.2301, 0.477, 0.4761, 0.2371, 0.4509, 0.5874, 0.3581] all 135 mapped: min 0.0007 med 0.2359 max 0.5874  count<=0.03: 15 count<=0.05: 22 ``` 4. Signed side and the build's module inventory: ``` $ uv run --with numpy python tmp/freebuff/scratch/wld11_probe3.py front_area  batraw d [0.0566, 0.056, 0.0219, 0.0347, 0.0348, 0.0219] inside [True, True, False, False, False, False] main_area   batraw d [0.0566, 0.0807, 0.0002, 0.0393, 0.051, 0.0508, 0.0395, 0.0003, 0.0813, 0.056] inside [True, True, False, False, True, True, False, True, True, True] raw: min 0.0002 max 0.4498  outside 80 inside 55  <=0.158 outside 64 map: min 0.0007 max 0.5874  outside 119 inside 16  <=0.158 outside 31 $ find Builds/bm-009 -iname '*stunt*' -o -iname '*deform*' Builds/bm-009/aaf/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_stunt_areas.vmodc Builds/bm-009/aaf/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_vehicle_deform.vmodc ``` 5. The shipped tool, write and check: ``` $ cd /e/Modding/JC3-Batmobile && uv run --with numpy python Tools/scripts/t_wld11.py --write areas 3  vertices 22  indices exist 22/22 stored pass 0  mapped pass 4  inside stored 11  inside mapped 0 O-1 FAIL  pool 15 verdict UNKNOWN  digest 9b05cd103890ce6b $ uv run --with numpy python Tools/scripts/t_wld11.py --check json identical True  md identical True areas 3  vertices 22  O-1 pass False  O-2 pass False CHECK PASS ``` 6. Per-area hit counts and the O-2 invariants, read back from the shipped JSON: ``` $ uv run python -c \"...\" O2 {\"cache_vs_list_m\": 0.0, \"part_binding_resolves\": true, \"pass\": false, \"positions_shared_by_two_areas\": 6} counts {\"area_vertices\": 22, \"indices_exist\": 22, \"mapped_inside\": 0, \"mapped_pass\": 4, \"points_ok_on_batmobile\": 15, \"stored_inside\": 11, \"stored_pass\": 0} mapped range 0.1236 0.588 stored range 0.0002 0.0813 per-area [('front_area', 0, 2, 0.0, 6, 1.8431), ('front_signature_area', 0, 2, 0.0, 6, 1.8431), ('main_area', 0, 0, 0.0, 10, 1.9038)] o1 areas [('front_area', 0, 6, False), ('front_signature_area', 0, 6, False), ('main_area', 0, 10, False)] ```",
+    "**Distance from each bound point to the nearest Batmobile body vertex** \u2014 per-vertex column in `T_WLD11_AREAS.md` \u00a73 (exact point-triangle distance is the same table's `stored gap`; the nearest-vertex figure is reported alongside because the brief asked for it).",
+    "**Which donor `deform_points` indices exist and where** \u2014 \u00a74 lists all 135 with name, part binding and position; all 22 bound indices exist.",
+    "**Oracle from the donor's own tolerance** \u2014 \u00a72: band 0.0388\u20130.1578 m above the donor skin, standing face (cos \u2265 0.7071). Applied to the Batmobile: 0/22 stored, 4/22 mapped.",
+    "**Re-index vs move** \u2014 re-index **not supported** (O-1: 0/3 areas, 15/135 usable points, highest point below the roof); move **UNKNOWN** (O-2: cache/list precedence not decoded).",
+    "**Outputs** \u2014 `Working/Translation/T_WLD11_AREAS.md`, `Tools/scripts/t_wld11.py` (`--write`/`--check`), both regenerated and checked above. 1. **Runtime precedence between `vertices3D_local` and `DeformPoints`.** Tried: the donor entity rows (both fields agree bit-exactly), the entity `.bin`, the geom sidecar, the build's `sportsmuscle_stunt_areas.vmodc` and `sportsmuscle_vehicle_deform.vmodc`, and the whole `Builds/bm-009` tree for any statement of precedence (none). It would be settled by an in-game probe: edit one point's `start_transform`, re-read the surface (Q-1 #3). 2. **Whether `DeformPoints` also drives deformation/skinning.** The points carry `from_part`/`skinned_to_part` and `shape_key`/`has_custom_end`; nothing in the tree says whether moving one deforms geometry. It would be settled by the same probe, watching the mesh as well as the standing surface. 3. **Whether the areas are validated at runtime** against the list (a stale cache is exactly the state a move would create). Not decoded; same probe. 4. **The band's edges are a 22-point sample** of authoring intent, not a per-vertex guarantee. The band is the tightest measured evidence available and is used as such (the tool prints the min/median/max, so a wider sample would move it, not the verdict's structure)."
+   ],
+   "why": "no card family `t-wld11` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-05T02:17:05",
+   "path": "tmp/freebuff/reports/T-WP13.md",
+   "report": "T-WP13.md",
+   "status": "done",
+   "status_line": "STATUS: done",
+   "unknowns": [
+    "**What the third `SelectVehicleWeapon` index selects.** The literal 3 is decoded; the object behind it is not in the state body, and no fleet root carries a third driver property. Where: the native `RPlayerController.SelectVehicleWeapon` body, absent from the decoded packages.",
+    "**Whether a vehicle consumes `NEXT_WEAPON`/`PREV_WEAPON`.** Both exist on the keyboard with on-foot scope; no file maps them to a vehicle state (INPUT.md \u00a7\"UNKNOWN\", G3-08).",
+    "**A per-mode slot table.** No file splits weapons by battle/pursuit mode.",
+    "**The `id:851CAABE` / `id:00568A74` semantic names.** The properties are decoded by hash id; the fleet binds weapons through them but no file names them `PrimaryWeapon`/`SecondaryWeapon` (that mapping is DRIVINGMODE.md's name-match note, not a decoded member name)."
+   ],
+   "why": "no card family `t-wp13` in the baseline tables"
+  },
+  {
+   "blocked": true,
+   "dropped_unknowns": [],
+   "evidence": false,
+   "mtime": "2026-11-05T02:33:03",
+   "path": "tmp/freebuff/reports/V-RC2.md",
+   "report": "V-RC2.md",
+   "status": "blocked",
+   "status_line": "STATUS: blocked \u2014 the gate `tmp/freebuff/reports/B-RC2.md` does not exist, and there is no",
+   "unknowns": [
+    "**Every gate result** \u2014 UNKNOWN, not run. There is no RC2 artifact, so V-01/V-02/V-03 have no input. It would be found by the three steps above once the build card lands.",
+    "**Whether RC2 changes any Q-1/Q-2 predicted result, and which input diff causes it** \u2014 UNKNOWN. No RC2 input tree exists, so no diff can be cited; asserting a delta would be a guess.",
+    "**Whether `Builds/bm-RC2` is meant to be created by this card** \u2014 UNKNOWN, and deliberately not assumed: the brief says build into a new private tree for a *build* task, while this card is verification and explicitly says to start only after the build report exists."
+   ],
+   "why": "no card family `v-rc2` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-03T09:09:55",
+   "path": "tmp/freebuff/reports/WEAPONS-bools.md",
+   "report": "WEAPONS-bools.md",
+   "status": "done",
+   "status_line": "STATUS: done",
+   "unknowns": [],
+   "why": "no card family `weapons-` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-03T09:04:22",
+   "path": "tmp/freebuff/reports/reverify-BMAK-PHYSICS.md",
+   "report": "reverify-BMAK-PHYSICS.md",
+   "status": "done",
+   "status_line": "STATUS: done",
+   "unknowns": [],
+   "why": "no card family `bmak-` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-04T13:12:35",
+   "path": "tmp/freebuff/reports/reverify-BONES.md",
+   "report": "reverify-BONES.md",
+   "status": "done",
+   "status_line": "STATUS: done \u2014 VERDICT: **the cooked mesh agrees with `BONES.md` on every bone name, every parent index, the bone count and all three LOD triangle counts.** The PSKX export is faithful for those quantities. It is *not* evidence about the PSKX vertex/wedge/weight data, which this export does not contain in a form decoded here.",
+   "unknowns": [],
+   "why": "no card family `bones` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-03T07:56:48",
+   "path": "tmp/freebuff/reports/reverify-TYRES.md",
+   "report": "reverify-TYRES.md",
+   "status": "done",
+   "status_line": "STATUS: done \u2014 `TYRES.md`'s four wheel numbers are **measured from the mesh**, not read from the game: the cooked wheel components store a 64.0 (0.640 m) `WheelRadius` and **no `WheelWidth` at all**, and none of the 274 `CLASS_DEFAULTS.json` tags is a wheel radius / width / suspension value.",
+   "unknowns": [],
+   "why": "no card family `tyres` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": false,
+   "mtime": "2026-11-04T10:58:58",
+   "path": "tmp/freebuff/reports/review-DAMAGE_RULES.md",
+   "report": "review-DAMAGE_RULES.md",
+   "status": "other",
+   "status_line": "",
+   "unknowns": [
+    "**Opcode semantics above `0x7f`.** `0x90`, `0x91`, `0x93`, `0xb1` are decoded only as parm-list operators (each operand list closed by `0x16`, nesting balances exactly). Which of `0x90`/`0x91` is multiply and which is divide is not established: the note's token table stops at `0x2e`, no local file documents the rest, and a runnable oracle (the game's VM) is outside the read-only inputs. The \u00a73.1 conclusion does not depend on it because the reduction ships as 0.",
+    "**`0x07`'s jump-offset base.** Neither \"absolute script offset\" (207) nor \"relative to the end of the instruction\" (318) lands on a statement start in `TakeDamage`; a corpus test is meaningless without a full statement parser, and this audit did not build one. The gate relation holds under both bases (both targets are past the guarded statement), but the base itself is UNKNOWN.",
+    "**The trailer's own fields** (the 7 bytes before the `FName`): length, constant tail and effect on the body boundary are decoded, the field meanings are not. The 145 exports with a 17-byte trailer are counted, not explained.",
+    "**`Next` / `SuperField`** are checked for resolution and class (0 or a `UField`-subclass export; negative = import), not by walking the `UField` chain in order.",
+    "**The third `execTakeDamage` hit** is a prefix match inside `execTakeDamageFromChainGun`; whether that string is a registration of a different function or a duplicate table entry was not resolved, and it does not affect the native-vs-script verdict."
+   ],
+   "why": "no card family `damage_rules` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": true,
+   "mtime": "2026-11-03T07:49:15",
+   "path": "tmp/freebuff/reports/review-G3-14.md",
+   "report": "review-G3-14.md",
+   "status": "done",
+   "status_line": "STATUS: done.** The claim holds at bank level and G3-14's refutation of \"10 banks absent\" is",
+   "unknowns": [
+    "**Which bank owns `0x6BB2C66E`.** Tried: full HIRC event-id search of the 20 exports named by 14 referenced banks in `BmGame`/`Startup`/`StartupPatch`/`Engine` (in `--check`); raw-byte search of every `.bnk` under the install and a full-name search inside `CHR_BatmanDisruptor`'s `STID` (exploratory, this session, not reproduced by `--check` - no hit in either). Not tried: the 15 other referenced banks (level packages), and a name-table (`ww_chr_batmandisruptor`) scan of all 4,145 packages. Where it would be found: that scan, or a `SoundbanksInfo` manifest (none under the install root).",
+    "**What each event plays.** Event ids are declared by the bank; their action lists were not followed into `CAkActionPlay`/`AkBankSourceData`, so no media id is claimed per event here.",
+    "**The other seven claimed-missing banks.** Not re-read by this tool; their FOUND verdicts are `grab_audio_banks.py`'s, whose `--check` passes but is not independent of itself.",
+    "**Runtime playability.** Every statement above is a file fact. Nothing observes the game loading a bank; out of scope (no attach)."
+   ],
+   "why": "no card family `g3-14` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": false,
+   "mtime": "2026-11-04T22:42:25",
+   "path": "tmp/freebuff/reports/review-G3-21.md",
+   "report": "review-G3-21.md",
+   "status": "other",
+   "status_line": "",
+   "unknowns": [],
+   "why": "no card family `g3-21` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": false,
+   "mtime": "2026-11-04T23:47:02",
+   "path": "tmp/freebuff/reports/review-G3-21b.md",
+   "report": "review-G3-21b.md",
+   "status": "other",
+   "status_line": "",
+   "unknowns": [],
+   "why": "no card family `g3-21` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": false,
+   "mtime": "2026-11-04T12:00:29",
+   "path": "tmp/freebuff/reports/review-JC3-EJECT.md",
+   "report": "review-JC3-EJECT.md",
+   "status": "other",
+   "status_line": "",
+   "unknowns": [],
+   "why": "no card family `jc3-` in the baseline tables"
+  },
+  {
+   "blocked": false,
+   "dropped_unknowns": [],
+   "evidence": false,
+   "mtime": "2026-11-04T13:22:39",
+   "path": "tmp/freebuff/reports/review-JC3-SEAT.md",
+   "report": "review-JC3-SEAT.md",
+   "status": "other",
+   "status_line": "",
+   "unknowns": [
+    "**Whether the engine reads `CInteractionGraph.modifier`.** No native code, no schema, no doc in this repo ties that member to the `.asb` lookup. The case here is the value vocabulary (identical `MOD_*` tokens on both sides) plus one token per seat group in the one two-seat file. A 5-minute experiment: change the Serpente's `MOD_LOW` to `MOD_MED` in an installed build and watch whether the idle seated pose changes from `car/low` to `car/med` (the `med` set is 35 clips with visibly different arms). That is a phase-Q look, not a file read.",
+    "**Which family the Batmobile actually plays in game.** Unchanged from the card: needs the same look. The card's \"watch whether the hands land on the yoke\" probe is still the right one, and now it has a predicted answer (`car/low`).",
+    "**The seat height rows** (\u00a73 of the card) were not re-measured here; this review covers the interaction object, the transform and the class field only."
+   ],
+   "why": "no card family `jc3-` in the baseline tables"
+  }
+ ]
+}

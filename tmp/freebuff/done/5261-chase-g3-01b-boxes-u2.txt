@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/chase-G3-01b-boxes-u2.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-03
+In the BmAK aggregate geometry G3-01b decoded, a u32 0 sits right before the convex-element count (byte 244 of export 169750, byte 126 of 169751). Which element type's count is that zero? No sphere or sphyl element exists in the bodies decoded so far, so find one: search the cooked packages for a PhysicsAsset or StaticMesh body that does contain spheres or capsules, decode its aggregate, and see which count is non-zero there. That fixes the element order. Read reports/G3-01b-boxes.md and its outputs first; write a new script of your own and do not edit G3-01b's files. If the files cannot answer it, say exactly what blocks it. Rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md section 3. Report at the DONE path with STATUS resolved / partial / blocked.

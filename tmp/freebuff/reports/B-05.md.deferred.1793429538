@@ -1,0 +1,120 @@
+# B-05 · Entity graph (`.epe`) — report
+
+**STATUS: deferred** (not done; not faked). Card: `GRAB_BACKLOG.md` §8
+`#### B-05 · Entity graph (`.epe`)   L · deps: B-04, T-11, T-13, T-14, T-18`.
+All five deps are `done` in §12. §12's `B-05` row now reads
+`blocked: …` with this report and the MODLOG section as evidence.
+
+Session note: three driver lanes work this tree at once (`tmp/freebuff/keeper.log`). B-11 was closed
+by a sibling lane while this lane was verifying it (its §12 row and report already exist). This lane
+own B-05 only: it measured the card's real scope and wrote **no** build artefact.
+
+## Files changed by this session
+
+| file | change |
+|---|---|
+| `GRAB_BACKLOG.md` §12 | the single `B-05` row: `doing: …` → `blocked: …` (B-09/B-11 rows untouched) |
+| `MODLOG.md` | appended `## B-05 start — intended change (2026-10-31, measurement session)` and `## B-05 — deferred: …` |
+| `tmp/b05b/live.xml`, `tmp/b05b/rt.epe`, `tmp/b05b/rt.xml`, `tmp/b05b/parts_resolve.txt` | probe exports/imports (outside the build tree) |
+| `tmp/freebuff/reports/B-05.md` | this report |
+
+**Not written, on purpose:** `Tools/scripts/bm_entity.py`, `Working/Entity/bm_epe_edits.json`,
+`Builds/bm-003/`, any `.epe`. A graph carrying only the steps whose values exist would be a
+half-built entity (the earlier lanes' reason too), and nothing can prove it offline.
+
+## Done criterion 1 — `ConvertProperty` round-trips the built `.epe` to identical XML
+
+There is **no built `.epe`**, so the criterion cannot be met. The *mechanic* is proven on the base
+graph this build would have started from:
+
+```
+$ ./Tools/Gibbed/Gibbed.JustCause3.ConvertProperty.exe --e "<bm-002 aaf>/editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_civilian_01.epe" tmp/b05b/live.xml
+exit=0
+
+$ ./Tools/Gibbed/Gibbed.JustCause3.ConvertProperty.exe --i tmp/b05b/live.xml tmp/b05b/rt.epe
+import exit=0
+cf49315a1050f99db17d0c4c529c632374fab44826574af86e0e4d451fd6f484 *tmp/b05b/rt.epe
+cf49315a1050f99db17d0c4c529c632374fab44826574af86e0e4d451fd6f484 *Builds/bm-002/aaf/editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_civilian_01.epe
+
+$ ./Tools/Gibbed/Gibbed.JustCause3.ConvertProperty.exe --e tmp/b05b/rt.epe tmp/b05b/rt.xml
+reexport exit=0
+xml identical True 426534 426534
+```
+
+## Done criterion 2 — every weapon point, light and part name resolves
+
+Cannot pass: there are no weapon points and no new lights, because the values for them are not in the
+repository (see the blocker below). The part-name half *was* run against B-04's built module:
+
+```
+B-04 parts module: 59 parts, 59 distinct names
+CPartProp objects: 6 resolve: 6 / 6
+   part_index  0  sportsmuscle_body            resolves
+   part_index 12  sportsmuscle_wheel_r_r       resolves
+   part_index 11  sportsmuscle_wheel_r_l       resolves
+   part_index 27  sportsmuscle_wheel_f_r       resolves
+   part_index 26  sportsmuscle_wheel_f_l       resolves
+   part_index  8  sportsmuscle_taillight_r_l   resolves
+parts with no CPartProp: 53
+```
+
+`53 of 59 parts carry no property object` — the measurement that dominates this card.
+
+## Done criterion 3 — `.epe` object count = base + planned additions
+
+Cannot pass: there is no defensible planned-addition list until the weapon and light objects exist.
+What was measured instead, on the graph every phase-B build inherits from test-091:
+
+```
+class                        vanilla  live  delta
+CPartProp                           40     6    -34
+totals 450 416
+live .epe bytes 105430        # MODLOG §101/§102 recorded the repair as 109,526 -> 105,430 B
+```
+
+`450 − 416 = 34 = 40 − 6`, and the only class that differs is `CPartProp`: the §101 `.epe` repair
+dropped 34 of the donor's 40 part props, and bm-001 → bm-002 → bm-009 have carried that loss since.
+Fleet check (`E:\Modding\_JC3grab\detail`, 232 graphs): the `CPartProp` count equals the entity's
+part count in **232/232** (cargo plane 161/161, fishing boat 103/103, …); the donor itself is the one
+exception at 40/42.
+
+## Exact blockers
+
+1. **Step 2 (weapons) has prose, not values.** `t7_weapons_edits.json` `structural` = six
+   `{"row","kind":"entity","what","note"}` rows (`"root main_weapon -> the cannon clone"`), no
+   members. The tank's `CBulletWeaponBase w602_mediumtank_canon` / `w603_mediumtank_mgun` carry
+   ~44 **unnamed (Jenkins-hashed)** members whose values matter; the detail caches keep only 6 named
+   values per object, and the only extracted weapon graph in the tree is the APC's, whose unnamed
+   members are w206-specific (`models/jc_weapons/04_mounted/w206_…`, `50CalBulletImpact`,
+   `autoaim_assault_rifle`, `Fire` effect 1687852927). Cloning that template would ship an M2's
+   effects on a 60 mm cannon — an R4 violation. B-06 (private `w6xx` copies) is later and `todo`.
+2. **Step 3 (lights) needs 6 new `SVehicleLight` objects.** The graph holds 22 (16 + 6 lists); T-18's
+   6 custom entries are `preset_id 0` objects whose 11 positional slots no file decodes (MODLOG
+   §102d), so writing them is invention.
+3. **Step 1 is a repair, not 19 inserts.** 32 of the 34 dropped props must come back (the two
+   `door_f_*` ones name parts B-04 deleted) plus props for B-04's 19 new parts = 51 objects. All
+   values are in hand (`_JC3grab/detail` + `Working/Parts/bm_vehicle_parts.json`), so this is the
+   one step that is ready to build.
+4. **Steps 4/5/6 are ready as written**: `t9_interaction.json` 85 objects / 84 transforms / 77
+   placed / 6 hijack objects dropped; root `health` 100 `invulnerable` 0 stays per T-14 (36,000 is
+   B-09's module); `CarCameraRef` + `bat_base.ctune` untouched.
+
+## What the next session needs, in order
+
+1. Extract `v0201_car_capstone_mediumtank_military_01` with `jc3detail` (archive
+   `archives_win64/game35` — the recipe B-05's census used for the APC) and export its `.epe`; that
+   supplies both weapon components and their points with provenance.
+2. Decide the 11 unnamed `SVehicleLight` slots, or clone shipped objects for the 6 custom lamps with
+   the clone's source named per row.
+3. Write `Tools/scripts/bm_entity.py` (`--write` / `--check`) whose `--check` *is* the three Done
+   criteria, plus a whole-graph gate worth having first: `CPartProp` count == part count (fails today
+   at 6 vs 59 and would have caught the §101 regression).
+4. Tamper test on that `--check` (a CPartProp name, a light `preset_id`, an object count, a `.toc`
+   record), then pack with `eetoc --internal` and stage `Builds/bm-003` on bm-002.
+
+## Hard rules observed
+
+No game launched; nothing written under `D:\Games` or `E:\Games` (the only reference to `D:\Games` is
+the read-only dropzone probe inside the B-11 receipt, not this card); no git commit or push; no
+secrets; every number above comes from a command in this report or the MODLOG section; no value was
+invented — the two missing input classes are recorded as blockers rather than guessed.

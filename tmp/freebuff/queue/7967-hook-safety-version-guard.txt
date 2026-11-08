@@ -1,0 +1,12 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-safety-version-guard.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-08
+Safety for the native hook before any supervised launch. Write the policy and the code sketch for Tools/hook/:
+- refuse to activate unless JustCause3.exe's sha256 equals a53c2d6b2837f45d97244fc096e68f27ba9036e0582a0d9aada2e2f222dac293 (the 2025-12-17 build that jc3-console-thingy v1.1 targets);
+- a kill switch file (%LOCALAPPDATA%/jc3-batmobile-hook/DISABLE) checked at load;
+- every write to game memory behind a per-module flag, off by default;
+- crash handling that logs and unhooks;
+- the install and undo receipt format, matching the Builds/ receipts;
+- save backup before a modded launch (um backup) as a pilot-card step.
+Check what jc3-console-thingy already does for crash safety (E:/Modding/_tools/jc3-console-thingy/src). Report the policy, the code sketch, and what the scaffold brief 7981 should add. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

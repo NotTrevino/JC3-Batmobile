@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/yoke-turbine-lore-reconcile.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-08
+Requirements ANI-4 (turbine fan) and ANI-7 (steering yoke) in GRAB_BACKLOG.md section 1.8 may describe parts the Arkham Knight Batmobile does not have. Working/Translation/P13_STEERING.md says no yoke asset or bone appears in 324 packages, and P-05 says a jet bone exists with no engine_rpm binding (reports/jet-part-bone-driver.md). Re-verify offline: search Research/BatmobileGrab/BONES.md, ANIMATIONS.md, MESHES.json and COCKPIT.md for the bone and animation names, and list what actually exists for each. The lore rule says never invent a part. Verdict per requirement: keep, rewrite to the real BmAK mechanism, or drop with the grep evidence. Output Working/Modes/ani4_ani7_verdict.md. Done-check: each verdict cites a bone or file hit count, and a final table says which parts the moving-parts brief 9172 must or must not build. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

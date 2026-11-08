@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/G3-21d.md
+ONLY: freebuff
+EST: 20
+BRIEF: hand-written 2026-11-05
+G3-21d, reset status refresh, second send (the first, G3-21c, was blocked because it started before its gate was met; the gate E:/Modding/JC3-Batmobile/tmp/freebuff/reports/G3-20e.md now exists). Read Research/RESET_STATUS.md, its generator Tools/scripts/reset_status.py, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/G3-21c.md (the blocked report, for what was already tried) and every report in tmp/freebuff/reports newer than RESET_STATUS.md. For each of R-1..R-6 say whether any evidence changed since that snapshot (new report path, newly decoded, still UNKNOWN). Do not run reset_status.py --write (it overwrites): copy it to Tools/scripts/reset_status2.py with only the output path changed to Research/RESET_STATUS2.md, run it, quote command and output, diff the two files. Rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md section 3-4.

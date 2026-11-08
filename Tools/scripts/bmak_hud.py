@@ -1,4 +1,9 @@
-"""Grab Batman: Arkham Knight's HUD movies (Scaleform GFx) out of the cooked packages.
+"""Grab the two legacy HUD movies (Scaleform GFx) out of the cooked packages.
+
+**This is not the HUD inventory.** `TARGETS` is the hand-written two-movie list that the first
+pass mistook for the HUD; the game runs 25 `RHudModule*` classes and 19 HUD movies. Use
+`bmak_hud_inventory.py` (roster from the engine, 19 movies, every `UC_*` setter) as the authority;
+this script is kept only so its size/hash check of the original two carves keeps passing.
 
 The original Batmobile grab only opened `Playable_Batmobile_SF.upk`, which carries geometry,
 materials and audio but **no HUD**. The HUD is elsewhere:
@@ -34,7 +39,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from upk_read import Package  # noqa: E402
 
 GAME = Path(os.environ.get("BMAK_GAME", r"E:/Games/Batman - Arkham Knight"))
-OUT = Path(os.environ.get("BMAK_HUD_OUT", r"E:/Modding/_BmAK_grab/hud"))
+OUT = Path(os.environ.get("BMAK_HUD_OUT", r"E:/Modding/_gamedata/BmAKgrab_early/hud"))
 HERE = Path(__file__).resolve().parents[2]
 TABLE = HERE / "Research" / "BatmobileGrab" / "HUD.json"
 

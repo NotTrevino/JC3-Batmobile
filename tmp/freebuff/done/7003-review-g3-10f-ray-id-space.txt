@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/review-G3-10f.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-04
+Review G3-10f (E:/Modding/JC3-Batmobile/Research/JC3Grab/PHYSICS_ROLES5.md). It claims the raycast mesh uses one id space that indexes the body-entry array (42 of 42) and that static-compound references are decoded. Pick three different donor .physicsc files and recompute: for every raycast id, does it fall inside the body-entry array bounds, and does the entry it lands on have the role the report assigns? Then take two static-compound references and follow them to the part bodies they name, quoting offsets. The earlier G3-10d claim 'partner = body 0' was refuted by impossible records, so look especially for an assumption in 10f that would fail the same way. Rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md section 3. Write the report at the DONE path with a VERDICT line (holds / minor issues / needs rework) first, then each claim you re-read, the bytes or command output you saw, and what you could not check.

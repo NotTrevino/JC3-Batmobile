@@ -28,7 +28,7 @@ Usage:
   python jc3parts.py wiring
   python jc3parts.py check
 
-Raw JC3 decodes stay outside the repo (default E:/Modding/_JC3grab).
+Raw JC3 decodes stay outside the repo (default E:/Modding/_gamedata/JC3grab).
 """
 from __future__ import annotations
 
@@ -43,7 +43,7 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
 CURRENT = os.path.join(ROOT, "Working", "Translation", "current.json")
 ENTITIES = os.path.join(ROOT, "Research", "JC3Grab", "ENTITIES.md")
 

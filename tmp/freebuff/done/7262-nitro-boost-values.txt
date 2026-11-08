@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/nitro-boost-values.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-06
+The BmAK afterburner/boost versus the JC3 donor nitro (Research/JC3Grab/USAGES.md section 6: torque x2, grip x2, 15,000 N push, 0.2 s blend, +40 km/h). Using Research/BatmobileGrab (CONFIG.md, MECHANICS.md, SAMPLER_FIELDS2.md for the booster fields) list every BmAK boost value that is readable from files (thrust, duration, recharge, speed cap) and, for each, the translation row that covers it in Working/Translation (grep boost, afterburner). Say which BmAK values have no row. Output Working/Translation/BOOST_COVERAGE.md + Tools/scripts/t_boost_coverage.py --check; no row edits; report at the DONE path.

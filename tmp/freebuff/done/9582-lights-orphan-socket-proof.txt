@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/lights-orphan-socket-proof.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-08
+Prove whether the sockets HeadLight1c and HeadLight2c exist in the shipped Batmobile mesh. Read the B-25 card in GRAB_BACKLOG.md lines 1587 to 1607, Research/BatmobileGrab/LIGHT_SOCKETS.md and reports/LIGHTS-sockets.md. Search every geometry and socket list: the decoded RBM/model dumps in Working/Appearance/build_lights/lights_manifest.json, the BmAK socket list and the JC3 donor mesh socket lists. For each of the two names report: present or absent, in which file and at what offset, and which flare entry rows (T-L28, T-L30) point at them. Output Working/Lights/ORPHAN_SOCKETS.md with a yes or no and evidence, plus a short note on what this means for the body-hosted light pattern. Done when both names have a definite answer or UNKNOWN with the files searched listed. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

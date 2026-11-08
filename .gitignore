@@ -8,7 +8,8 @@
 # These are extension patterns rather than path rules so that a stray copy dropped
 # anywhere in the tree is still caught, not just one inside a known folder.
 *.ee
-*.ee.toc         # entity container table of contents, shipped beside the .ee
+# entity container table of contents, shipped beside the .ee
+*.ee.toc
 *.epe
 *.rbm
 *.lod
@@ -31,12 +32,18 @@
 *.rtpc
 *.pskx
 *.psk
-*.btc            # Bink video, JC3 and most other Source-derived engines
-*.ban            # animation container
-*.asb            # animation state machine (aaf/animations)
-*.afsmb          # animation state machine body
-*.bsk            # skeleton (aaf/animations/jc_skeletons)
-*.trim           # extracted texture trim data
+# Bink video, JC3 and most other Source-derived engines
+*.btc
+# animation container
+*.ban
+# animation state machine (aaf/animations)
+*.asb
+# animation state machine body
+*.afsmb
+# skeleton (aaf/animations/jc_skeletons)
+*.bsk
+# extracted texture trim data
+*.trim
 *.wem
 *.atlas
 *.filelist
@@ -100,7 +107,15 @@ xinput9_1_0.dll
 # --- donors, extracted trees and build output --------------------------------
 # Every one of these is either game content or a build artifact. None is ours to ship.
 Original/
-Working/
+Working/*
+!Working/Roadmap/
+!Working/Translation/
+!Working/Q/
+!Working/RTTI/
+Working/**/*.png
+Working/**/*.jpg
+Working/**/*.xml
+Working/Roadmap/allq/src/
 Builds/
 Backups/
 Logs/
@@ -150,3 +165,69 @@ venv/
 
 # --- local agent scratch -----------------------------------------------------
 AGENTS.local.md
+
+
+# ---- 2026-11-08: public-repo hardening (Claude) ----
+# JC3 game formats that were missing
+*.effc
+*.ctunec
+*.blo
+*.nl
+*.fl
+*.sarc
+*.tab
+*.arc
+*.wavc
+*.fsb
+*.bank
+*.gfx
+*.swf
+*.upk
+*.u
+*.umap
+# binaries, saves, keymaps, debug symbols
+*.dll
+*.pdb
+*.sgd
+*.sgd_*
+*.bin
+*.wav
+*.ogg
+*.mp4
+*.mkv
+# runtime noise from the lanes
+*.pid
+*.out
+*.err
+*.log
+tmp/freebuff/screen-*.txt
+tmp/freebuff/sent-bodies.jsonl
+tmp/freebuff/hours-*.json*
+tmp/freebuff/wallet-*
+tmp/freebuff/picker-*.txt
+tmp/freebuff/running/
+tmp/freebuff/scratch/
+tmp/freebuff/old-logs/
+tmp/freebuff/logs/
+tmp/freebuff/backups/
+tmp/freebuff/smartsearch/
+tmp/freebuff/APPROVED_Q*.txt
+tmp/freebuff/NEEDS_OPERATOR.md
+# local backups
+*.bak
+*.bak-*
+*.bak[0-9]*
+Backups/
+# outreach drafts stay private
+Working/Outreach/
+# build scratch holds converted game modules (ADF -> XML): keep only the pipeline records
+tmp/*
+!tmp/freebuff/
+*.asi
+*.toc
+tmp/freebuff/**/*.xml
+*.gsc
+tmp/freebuff/probe/
+tmp/freebuff/bmsdk-port/
+tmp/freebuff/bmsdk-gog/
+*save-backup*/

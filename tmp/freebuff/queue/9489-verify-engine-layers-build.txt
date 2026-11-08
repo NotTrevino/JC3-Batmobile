@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-engine-layers-build.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/engine-turbine-layers-build.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/engine-start-stop-transition.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/afterburner-burnout-layers.md
+Offline gate for the engine family in Builds/bm-RC5-audio3 (layers, start and stop, afterburner and burnout). Run rc5_audio3.py --check, then copy the V-04 gate script from reports/verify-v04-audio-rc4.md and extend it: decode every new sample, compare length with the plan, loudness within 1 LU of the source, loop seam at or below minus 40 dBFS, and tail trim not clipping. Add a layer-sum check: simulate the crossfade table at 21 evenly spaced rpm values and confirm total gain never jumps more than 2 LU between neighbouring points. Report pass or fail per layer in tmp/freebuff/reports/verify-engine-layers-build.md and write machine-readable results to Builds/bm-RC5-audio3/verify/engine.json. Done check: counts of passed and failed layers, with each failure naming the layer and measured value. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

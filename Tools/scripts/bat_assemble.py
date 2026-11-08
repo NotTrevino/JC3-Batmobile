@@ -6,7 +6,9 @@ moved the physics stations to suit -- the visual/physics split behind the 047 ji
 
 Here there is exactly one transform T for every asset:
     T(p) = to_jc3(p) * scale + offset          scale = 0.01: the PSKX is already in real cm
-                                                (tyre Ø ≈ 1.42 m vs the 1.40 m reference)
+                                                (tyre Ø 1.366 m tread-to-tread, measured from the
+                                                mesh — Research/BatmobileGrab/TYRES.md; the
+                                                1.40 m reference is the wiki estimate, 2.4% out)
     offset: track centred on X = 0, tyres' lowest point on the JC3 ground (`--ground`),
             wheelbase midpoint on the Serpente's (`--center-z`), so the car stays centred
             where the vanilla physics expects it.
@@ -35,6 +37,7 @@ import shutil
 import struct
 import sys
 import tempfile
+from collections import Counter
 
 import numpy as np
 
@@ -52,6 +55,179 @@ TM = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(TM)
 
 CORNERS = ("f_l", "f_r", "r_l", "r_r")
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+
+def load_part_spec(path):
+    """T8_PARTS.json: geometry-only part roots and pivots for the B-02 split."""
+    doc = json.load(open(path, encoding="utf-8"))
+    # B-02 wrote this file at schema 1; T-12 regenerated the same path at schema 2 with the
+    # behaviour rows beside an unchanged `parts` block (now back at 1). The geometry block is the
+    # input here and its structure is validated below, so a layout bump must not break the rebuild.
+    if doc.get("schema") not in (1, 2):
+        raise SystemExit(f"part spec {path}: schema {doc.get('schema')}, expected 1 or 2")
+    parts = doc.get("parts") or []
+    if not parts:
+        raise SystemExit(f"part spec {path}: no parts")
+    seen = set()
+    for p in parts:
+        name = p.get("name")
+        if not name or name in seen:
+            raise SystemExit(f"part spec {path}: missing or duplicate part name {name!r}")
+        seen.add(name)
+        if not p.get("pivot_bone"):
+            raise SystemExit(f"part spec {path}: {name} has no pivot_bone")
+        if not p.get("bone_roots") and not p.get("bone_prefixes"):
+            raise SystemExit(f"part spec {path}: {name} has no bone_roots/bone_prefixes")
+    for p in parts:
+        parent = p.get("parent")
+        if parent not in (None, "body") and parent not in seen:
+            raise SystemExit(f"part spec {path}: {p['name']} parent {parent!r} is not a part")
+    return doc
+
+
+def part_bone_map(bones, spec):
+    """bone index -> T8 part name, using the nearest declared root in the parent chain."""
+    names = [b[0] for b in bones]
+    parents = [b[1] for b in bones]
+    roots = {}
+    prefixes = []
+    for p in spec["parts"]:
+        for r in p.get("bone_roots") or []:
+            if r in roots:
+                raise SystemExit(f"bone root {r} declared by both {roots[r]} and {p['name']}")
+            roots[r] = p["name"]
+        for q in p.get("bone_prefixes") or []:
+            prefixes.append((q, p["name"]))
+    prefixes.sort(key=lambda x: -len(x[0]))
+    missing = [r for r in roots if r not in names]
+    if missing:
+        raise SystemExit("part roots not in BONES: " + ", ".join(sorted(missing)))
+    out = {}
+    for i, name in enumerate(names):
+        part = None
+        for prefix, pname in prefixes:
+            if name.startswith(prefix):
+                part = pname
+                break
+        if part is None:
+            j, seen = i, set()
+            while j not in seen:
+                seen.add(j)
+                if names[j] in roots:
+                    part = roots[names[j]]
+                    break
+                if parents[j] == j:
+                    break
+                j = parents[j]
+        out[i] = part
+    for p in spec["parts"]:
+        pi = next(i for i, name in enumerate(names) if name == p["pivot_bone"])
+        if out[pi] != p["name"]:
+            raise SystemExit(f"pivot {p['pivot_bone']} belongs to {out[pi]}, not {p['name']}")
+    counts = Counter(v for v in out.values() if v)
+    empty = [p["name"] for p in spec["parts"] if counts[p["name"]] == 0]
+    if empty:
+        raise SystemExit("parts with no bones: " + ", ".join(empty))
+    return out
+
+
+def assign_parts(face_part, W, F, Wt, bones, part_of):
+    """Close the B-02 seams on every body face: summed weight, then the documented
+    part-level vertex vote for the three-bone 1.0/1.0/1.0 ties.  Wheel faces keep the
+    existing dynamic wheel split; only the non-wheel body is cut here."""
+    npts, nb = int(W["p"].max()) + 1, len(bones)
+    acc = np.zeros((npts, nb), np.float32)
+    np.add.at(acc, (Wt["p"].astype(np.int64), Wt["b"].astype(np.int64)), Wt["w"])
+    total = acc.sum(1)
+    if not np.allclose(total, 1.0, atol=1e-4):
+        raise SystemExit("point weights do not sum to 1 (max error %.3g)"
+                         % float(np.max(np.abs(total - 1.0))))
+    owner = acc.argmax(1).astype(np.int32)
+    maxw = acc.max(1)
+    bad = (np.count_nonzero(acc == maxw[:, None], axis=1) > 1) | (maxw < 0.5)
+    owner[bad] = -1
+    if np.any(owner < 0):
+        raise SystemExit("%d points have no unique >= 0.5 owner" % int((owner < 0).sum()))
+
+    face_pts = W["p"][F["w"]].astype(np.int64)
+    face_owner = owner[face_pts]
+    same = ((face_owner[:, 0] == face_owner[:, 1]) &
+            (face_owner[:, 1] == face_owner[:, 2]) &
+            (face_owner[:, 0] >= 0))
+    split = ~same
+    body_ids = np.nonzero(face_part == "body")[0]
+    stats = {
+        "body_faces": int(len(body_ids)),
+        "split_faces_total": int(split.sum()),
+        "split_faces_body": int(split[body_ids].sum()),
+        "part_unique": 0,
+        "weight_resolved": 0,
+        "ties": 0,
+        "ties_by_part": {},
+        "cross_part": 0,
+        "unresolved": 0,
+        "body_only": 0,
+    }
+    for fi in body_ids:
+        own = face_owner[fi]
+        cand = sorted(int(b) for b in np.unique(own) if b >= 0)
+        dst = sorted({part_of[b] or "body" for b in cand})
+        if dst == ["body"]:
+            if split[fi]:
+                stats["body_only"] += 1
+            continue
+        sums = {b: float(acc[face_pts[fi], b].sum()) for b in cand}
+        top = max(sums.values())
+        win = [b for b, v in sums.items() if v >= top - 1e-6]
+        if len(dst) == 1:
+            face_part[fi] = dst[0]
+            if split[fi]:
+                if len(win) > 1:
+                    stats["ties"] += 1
+                    stats["ties_by_part"][dst[0]] = stats["ties_by_part"].get(dst[0], 0) + 1
+                else:
+                    stats["part_unique"] += 1
+            continue
+        stats["cross_part"] += int(split[fi])
+        # The review's rule is BONE-level: a unique largest summed bone weight wins; only a
+        # bone-weight tie (the 31 rigid 1.0/1.0/1.0 faces) uses the part-level vertex vote.
+        if len(win) == 1:
+            dest = part_of[win[0]] or "body"
+            if dest != "body":
+                face_part[fi] = dest
+            if split[fi]:
+                stats["weight_resolved"] += 1
+            continue
+        votes = Counter(part_of[int(b)] or "body" for b in own)
+        vmax = max(votes.values())
+        vwin = [p for p, v in votes.items() if v == vmax]
+        if len(vwin) != 1:
+            stats["unresolved"] += 1
+            raise SystemExit("face %d: part-level vertex vote is tied (%s)" % (fi, votes))
+        dest = vwin[0]
+        if dest != "body":
+            face_part[fi] = dest
+        stats["ties"] += 1
+        stats["ties_by_part"][dest] = stats["ties_by_part"].get(dest, 0) + 1
+    return stats
+
+
+def split_budgets(body_faces, part_faces, budgets):
+    """Split each body LOD budget by source-face share, with a 20-tri floor per part."""
+    total = body_faces + sum(part_faces.values())
+    if total <= 0:
+        raise SystemExit("no body faces to budget")
+    out = {"body": []}
+    for p in part_faces:
+        out[p] = []
+    for b in budgets:
+        alloc = {p: max(20, int(round(b * n / total))) for p, n in part_faces.items()}
+        body = max(20, b - sum(alloc.values()))
+        out["body"].append(body)
+        for p in alloc:
+            out[p].append(alloc[p])
+    return out
 
 
 def to_jc3_rot(Pp):
@@ -59,6 +235,10 @@ def to_jc3_rot(Pp):
     rotation (det +1): (-y, z, -x). The old to_jc3 (y, z, -x) is a reflection; the rig's own
     Left/Right bone labels show it mirrored the car (MODLOG §73)."""
     return np.stack([-Pp[:, 1], Pp[:, 2], -Pp[:, 0]], 1)
+
+
+def pivot_point(world_cm, scale, offset):
+    return to_jc3_rot(np.asarray(world_cm, dtype=np.float64).reshape(1, 3))[0] * scale + offset
 
 
 def mesh_chain(V0, UV0, tris, budgets, build, label, out_dir, name):
@@ -184,6 +364,7 @@ def verify_blocks(raw, parts):
 def body_chain(Vw, UVw, groups, budgets, a, out_dir):
     """Body LODs with one block per KIND: 'paint' -> plain CarPaintMM, 'glass' -> Window.
     Each kind is decimated separately; a LOD's budget is split by face share (floors: 100, 5%)."""
+    stats = []
     total = sum(len(t) for t in groups.values())
     # face share, floored at 5% of the LOD budget (capped at the source faces) so a small but very
     # visible kind -- the curved canopy glass -- is not reduced to a few hundred facets
@@ -211,6 +392,11 @@ def body_chain(Vw, UVw, groups, budgets, a, out_dir):
         lo, hi = allv.min(0), allv.max(0)
         print(f"  body lod{i + 1}: " + " + ".join(f"{k} {len(lods[k][i][2])} tris" for k in lods)
               + f"  {hi[0]-lo[0]:.3f} x {hi[1]-lo[1]:.3f} x {hi[2]-lo[2]:.3f} m  VERIFY PASS ({len(m.blocks)} blocks)")
+        stats.append({"lod": i + 1, "triangles": sum(len(lods[k][i][2]) for k in lods),
+                      "vertices": sum(len(lods[k][i][0]) for k in lods),
+                      "blocks": len(m.blocks), "bbox_m": [np.round(lo, 4).tolist(),
+                                                         np.round(hi, 4).tolist()]})
+    return stats
 
 
 def tex_bytes(dims, cap, kind):
@@ -315,6 +501,7 @@ def part_chain(V0, UV0, groups, budgets, container_template, out_dir, name):
         s = max(min(len(t), 20), int(b * len(t) / total))
         return max(s, min(len(t), int(0.05 * b))) if glass else s
     lods = [decimated_lods(V0, UV0, t, [share(t, b, g) for b in budgets]) for _, t, _, g in groups]
+    stats = []
     for i in range(len(budgets)):
         m = R.decode(open(container_template, "rb").read())
         m.blocks, parts, allv = [], [], []
@@ -336,6 +523,10 @@ def part_chain(V0, UV0, groups, budgets, container_template, out_dir, name):
         lo, hi = allv.min(0), allv.max(0)
         print(f"  {name} lod{i + 1}: {len(m.blocks)} blocks, {sum(len(p[1]) for p in parts)} tris  "
               f"{hi[0]-lo[0]:.3f} x {hi[1]-lo[1]:.3f} x {hi[2]-lo[2]:.3f} m  VERIFY PASS")
+        stats.append({"lod": i + 1, "triangles": sum(len(p[1]) for p in parts),
+                      "vertices": sum(len(p[0]) for p in parts), "blocks": len(m.blocks),
+                      "bbox_m": [np.round(lo, 4).tolist(), np.round(hi, 4).tolist()]})
+    return stats
 
 
 def main():
@@ -373,6 +564,12 @@ def main():
                     help="a vanilla RBM with a Window block (sportsmuscle_door_f_l_window_lod1.rbm)")
     ap.add_argument("--src-dir", required=True, help="asset folder with .props.txt dumps and .tga textures")
     ap.add_argument("--dry-run", action="store_true", help="stations + transform only, no meshes")
+    ap.add_argument("--parts", metavar="T8_PARTS.json",
+                    help="B-02: split the non-wheel body into geometry parts from this spec")
+    ap.add_argument("--bones", default=os.path.join(ROOT, "Research", "BatmobileGrab", "BONES.json"),
+                    help="BONES.json used for the B-02 part pivots (default: research copy)")
+    ap.add_argument("--parts-tris", default=None,
+                    help="optional 5 LOD budgets for body+parts total; default: --body-tris")
     a = ap.parse_args()
     os.makedirs(a.out, exist_ok=True)
 
@@ -380,6 +577,19 @@ def main():
     Pp, W, F, mats = P.read_pskx(a.pskx)
     bones, Wt = PX.skeleton(a.pskx)
     fb = PX.face_bones(Pp, W, F, Wt, len(bones))
+    parts_doc, part_of, bdoc = None, None, None
+    if a.parts:
+        parts_doc = load_part_spec(a.parts)
+        part_of = part_bone_map(bones, parts_doc)
+        bdoc = json.load(open(a.bones, encoding="utf-8"))
+        bnames = [b["name"] for b in bdoc["bones"]]
+        if bnames != [b[0] for b in bones]:
+            raise SystemExit("BONES.json bone order differs from the PSKX REFSKELT")
+        if len(bdoc["bones"]) != len(bones):
+            raise SystemExit("BONES.json has %d bones, PSKX has %d"
+                             % (len(bdoc["bones"]), len(bones)))
+        print("B-02 parts: %d " % len(parts_doc["parts"])
+              + ", ".join(p["name"] for p in parts_doc["parts"]))
     nwheels = int(re.search(r'name="number_of_wheels"[^>]*offset-in-file[^>]*>(\d+)<',
                             open(a.land_xml, encoding="utf-8-sig").read()).group(1))
 
@@ -472,6 +682,7 @@ def main():
                                   "tyre_width": round(float(hubs[c][2]), 4),
                                   "tyre_bone": hubs[c][3]}
     body_faces = face_part == "body"
+    body_source_faces = int(body_faces.sum())
     allv = Vw[np.unique(tris[body_faces])]
     blo, bhi = allv.min(0), allv.max(0)
     stations["body_bbox"] = [np.round(blo, 3).tolist(), np.round(bhi, 3).tolist()]
@@ -480,6 +691,40 @@ def main():
     for c, s in stations["corners"].items():
         print(f"  {c}: hub {s['hub_true']}  radius {s['radius']:.3f}  width {s['tyre_width']:.3f}  ({s['tyre_bone']})")
     json.dump(stations, open(os.path.join(a.out, "stations.json"), "w"), indent=2)
+
+    # ---- B-02: cut the non-wheel body into the T8 geometry parts.  Body bbox above is the
+    #      pre-cut body, so the silhouette reference does not shrink when the parts leave it.
+    split_stats, part_pivots, part_face_counts = None, {}, None
+    if parts_doc:
+        split_stats = assign_parts(face_part, W, F, Wt, bones, part_of)
+        if split_stats["body_faces"] != body_source_faces:
+            raise SystemExit("B-02 split changed the body face count: %d -> %d"
+                             % (body_source_faces, split_stats["body_faces"]))
+        if split_stats["unresolved"]:
+            raise SystemExit("B-02: %d split faces have no part decision"
+                             % split_stats["unresolved"])
+        counts = Counter(face_part)
+        part_face_counts = counts
+        for p in parts_doc["parts"]:
+            if counts[p["name"]] == 0:
+                raise SystemExit("B-02 part %s owns no faces" % p["name"])
+            bone = next(b for b in bdoc["bones"] if b["name"] == p["pivot_bone"])
+            part_pivots[p["name"]] = (pivot_point(bone["bind"]["world_position_cm"], a.scale, offset),
+                                      p["pivot_bone"])
+        body_plus = counts["body"] + sum(counts[p["name"]] for p in parts_doc["parts"])
+        if body_plus != body_source_faces:
+            raise SystemExit("B-02 lost/duplicated faces: %d body+parts vs %d source"
+                             % (body_plus, body_source_faces))
+        print("B-02 cut: %d body faces -> %d body + %d parts; split %d (body), "
+              "%d unique-part, %d weight, %d ties, %d unresolved"
+              % (body_source_faces, counts["body"], body_source_faces - counts["body"],
+                 split_stats["split_faces_body"], split_stats["part_unique"],
+                 split_stats["weight_resolved"], split_stats["ties"], split_stats["unresolved"]))
+        print("B-02 tie fallback: " + ", ".join("%s %d" % (k, v) for k, v in
+                                                sorted(split_stats["ties_by_part"].items())))
+        for p in parts_doc["parts"]:
+            print("  %-28s %6d faces  pivot %s" % (p["name"], counts[p["name"]],
+                                                    np.round(part_pivots[p["name"]][0], 3).tolist()))
 
     # ---- materials: the FULL BmAK interface of each material -> a JC3 block spec (factors.py).
     #      Every JC3 input is set by a rule and tagged; an unhandled BmAK factor fails the run (§79).
@@ -557,15 +802,21 @@ def main():
         key = base + ("_a" if t.get("alpha_tga") else "")
         return vfs_of[key + ("_msk" if slot in ("s2", "s3") else "")]
 
+    plan_parts = ["body"] + ["wheel_" + c for c in CORNERS]
+    if parts_doc:
+        plan_parts += [p["name"] for p in parts_doc["parts"]]
     plan = {part: [{"material": mats[mi], "mat_index": int(mi), "block": specs[mats[mi]]["block"]}
                    for mi in np.unique(F["m"][face_part == part])]
-            for part in ["body"] + ["wheel_" + c for c in CORNERS]}
+            for part in plan_parts}
+    empty = [p for p, v in plan.items() if not v]
+    if empty:
+        raise SystemExit("parts with no materials: " + ", ".join(empty))
     json.dump({"plan": plan, "textures": tex_files}, open(os.path.join(a.out, "assembly.json"), "w"), indent=2)
     if a.dry_run:
         return
 
     # ---- meshes: one block per material, EVERY CarPaintMM input written from the spec
-    def maker(m):
+    def maker(m, plain_block):
         spec = specs[m]
 
         def make(v, uv, I, N):
@@ -575,7 +826,7 @@ def main():
                     if s in spec["textures"]:
                         blk.textures[i] = slot_path(m, s)
                 return blk, 7, 40
-            blk = P.build_rbm_plain(a.body_template, a.colour_block, v, uv, I, N).blocks[0]
+            blk = P.build_rbm_plain(a.body_template, plain_block, v, uv, I, N).blocks[0]
             inp = spec["inputs"]
             blk.static_params = struct.pack("<72f", *[x for n in FX.STATIC for x in inp["static." + n]["value"]])
             blk.static_support = struct.pack("<7f", *[inp["support." + n]["value"] for n in FX.SUPPORT])
@@ -588,15 +839,41 @@ def main():
             return blk, 4, 24
         return make
 
+    body_budgets = [int(x) for x in a.body_tris.split(",")]
+    part_budgets = {}
+    if parts_doc:
+        if a.parts_tris:
+            total_budgets = [int(x) for x in a.parts_tris.split(",")]
+            if len(total_budgets) != 5:
+                raise SystemExit("--parts-tris needs five comma-separated budgets")
+        else:
+            total_budgets = body_budgets
+        part_budgets = split_budgets(part_face_counts["body"],
+                                     {p["name"]: part_face_counts[p["name"]]
+                                      for p in parts_doc["parts"]}, total_budgets)
+        print("B-02 LOD budgets: body " + str(part_budgets["body"]))
+        for p in parts_doc["parts"]:
+            print("  %-28s %s" % (p["name"], part_budgets[p["name"]]))
+        body_budgets = part_budgets["body"]
+
+    part_stats = {}
     for part in plan:
+        plain_block = a.body_block if part == "body" else a.colour_block
         if part == "body":
-            V0, budgets, container = Vw, [int(x) for x in a.body_tris.split(",")], a.body_template
+            V0, budgets, container = Vw, body_budgets, a.body_template
+        elif parts_doc and part in part_pivots:
+            V0, budgets, container = Vw - part_pivots[part][0], part_budgets[part], a.body_template
+            plain_block = a.body_block
         else:
             V0 = Vw - np.array(stations["corners"][part[6:]]["hardpoint"])
             budgets, container = [int(x) for x in a.wheel_tris.split(",")], a.wheel_template
-        groups = [(it["material"], tris[(face_part == part) & (F["m"] == it["mat_index"])], maker(it["material"]),
-                   it["block"] == "Window") for it in plan[part]]
-        part_chain(V0, UVw, groups, budgets, container, a.out, part)
+        groups = [(it["material"], tris[(face_part == part) & (F["m"] == it["mat_index"])],
+                   maker(it["material"], plain_block), it["block"] == "Window")
+                  for it in plan[part]]
+        # One block per material, for the body and every part. The old two-block body
+        # (all paint merged into block 6) cannot carry the 16 materials the split keeps and
+        # fails spec_check; the per-material chain is the one build_bud1 was measured with.
+        part_stats[part] = part_chain(V0, UVw, groups, budgets, container, a.out, part)
 
     # ---- model budget guard: every LOD of the bound parts counts (consistent with 063/065
     #      rendering); over the game's Vehicle model hard cap the whole vehicle would vanish (§76)
@@ -608,6 +885,77 @@ def main():
           f"(Model HARD {hard_kb:.0f} KB x{a.budget_safety:g}; old x0.9 guard = {hard_kb * 0.9:.0f} KB)")
     if model_kb > cap_kb:
         raise SystemExit("MODEL BUDGET EXCEEDED: lower --body-tris / --wheel-tris")
+
+    if parts_doc:
+        entries = []
+        for part in plan:
+            if part == "body":
+                pivot, pivot_bone, parent, kind = np.zeros(3), None, None, "body"
+            elif part in part_pivots:
+                pivot, pivot_bone = part_pivots[part]
+                parent = next(p["parent"] for p in parts_doc["parts"] if p["name"] == part)
+                kind = "part"
+            else:
+                c = part[6:]
+                pivot = np.array(stations["corners"][c]["hardpoint"], dtype=np.float64)
+                pivot_bone = stations["corners"][c]["tyre_bone"]
+                parent, kind = "body", "wheel"
+            st = part_stats[part]
+            entries.append({
+                "name": part,
+                "kind": kind,
+                "parent": parent,
+                "pivot_bone": pivot_bone,
+                "pivot_m": [round(float(x), 6) for x in pivot],
+                "faces_lod0": int(part_face_counts[part]),
+                "faces_per_lod": [x["triangles"] for x in st],
+                "vertices_per_lod": [x["vertices"] for x in st],
+                "blocks_per_lod": [x["blocks"] for x in st],
+                "lod_files": [f"{part}_lod{x['lod']}.rbm" for x in st],
+                "materials": [x["material"] for x in plan[part]],
+            })
+        silhouette_parts = ["body"] + [p["name"] for p in parts_doc["parts"]]
+        body_plus = sum(e["faces_lod0"] for e in entries if e["name"] in silhouette_parts)
+        weapon_parts = {"batmobile_turret", "batmobile_cannon", "batmobile_machine_gun",
+                        "batmobile_riot_suppressor", "batmobile_missile_pod_l",
+                        "batmobile_missile_pod_r"}
+        checks = {
+            "all_faces_accounted": sum(e["faces_lod0"] for e in entries) == len(F),
+            "body_plus_parts_215893": body_plus == body_source_faces,
+            "no_lost_body_faces": body_plus == 215_893,
+            "part_count_11": len(parts_doc["parts"]) == 11,
+            "ties_31": split_stats["ties"] == 31,
+            "all_ties_weapon": all(k in weapon_parts for k in split_stats["ties_by_part"]),
+            "unresolved_0": split_stats["unresolved"] == 0,
+            "five_lods_each": all(len(e["faces_per_lod"]) == 5 for e in entries),
+            "lod_files_exist": all(os.path.exists(os.path.join(a.out, f))
+                                   for e in entries for f in e["lod_files"]),
+            "pivots_finite": all(np.isfinite(e["pivot_m"]).all() for e in entries),
+            "model_budget_green": model_kb <= cap_kb,
+        }
+        manifest = {
+            "schema": 1,
+            "generator": "bat_assemble.py --parts",
+            "parts_spec": os.path.relpath(a.parts, ROOT),
+            "source": os.path.relpath(a.pskx, ROOT),
+            "output": os.path.relpath(a.out, ROOT),
+            "scale": a.scale,
+            "offset": [round(float(x), 9) for x in offset],
+            "body_bbox_m": stations["body_bbox"],
+            "split": split_stats,
+            "silhouette_parts": silhouette_parts,
+            "entries": entries,
+            "budget": {"model_kb": round(model_kb, 1), "cap_kb": round(cap_kb, 1),
+                       "hard_kb": round(hard_kb, 1)},
+            "checks": checks,
+        }
+        path = os.path.join(a.out, "parts_manifest.json")
+        json.dump(manifest, open(path, "w", encoding="utf-8"), indent=2)
+        print("B-02 manifest -> %s" % path)
+        for k, v in checks.items():
+            print("  %-28s %s" % (k, "PASS" if v else "FAIL"))
+        if not all(checks.values()):
+            raise SystemExit("B-02 manifest checks failed")
     # palette: no block carries SUPPORT_PALETTE_FILE any more -- every block's tint colours are its
     # own BmAK colours (spec dynamic.TintColor*), so the vehicle palette no longer recolours the car
     stale = os.path.join(a.out, "palette_true.vmodc")

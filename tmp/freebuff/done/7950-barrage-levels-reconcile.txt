@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/barrage-levels-reconcile.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-08
+Operator fact: the battle-mode missile barrage auto-fires once lock is complete, and the lock count scales with upgrade level: 1 bar = 1 target, 2 bars = 4, 3 bars = 7, 4 bars = 10. Reconcile this with the decoded weapon data in Research/BatmobileGrab/WEAPONS.md, the missile launcher archetype values (MaxTargets, lock counts, upgrade arrays), and reports/lock-hold-salvo* or T_WP3B_LOCKON.md. Does the data hold a 1/4/7/10 table, and where? What decides auto-fire? Note that MissileLockOnDuration 2.0 s may belong to the pursuit circle (memory note). Report: value table with sources, agreements, contradictions (keep both), and the value the build should use for a fully upgraded car. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/test-parts-motion-turret-hatches.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/APPROVED_Q_FULL.txt, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/review-before-modes-testing.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/test-mode-hold-transform.md
+In-game test, operator supervising. Run card Working/Q/PILOT/PARTS_MOTION.md in battle mode. Observations: the turret follows the camera through its full range and the traverse time for 180 degrees is inside the prediction; the cannon pitch reaches the limits in Working/Modes/turret_limits.md; the Vulcan spins while firing; the missile hatches open when the missile fires and close after; wheels spin and steer with the car. One screenshot per part. Pass: each part moves, within the angle and time of the verify_joints report. If a joint fails to load or a part is frozen, record the constraint index shown in the hook log and write a fix card under Working/Q/PILOT/fix/ naming the part, then stop. Report to tmp/freebuff/reports/modes-test-parts.md. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

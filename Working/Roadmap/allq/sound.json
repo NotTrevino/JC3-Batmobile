@@ -1,0 +1,736 @@
+{
+ "landmark": "L5",
+ "briefs": [
+  {
+   "key": "aud-01",
+   "slug": "locate-unbanked-batmobile-events",
+   "est": 30,
+   "ingame": false,
+   "covers": [
+    "NEW-AUD-3",
+    "T-AU5"
+   ],
+   "deps": [
+    "7979"
+   ],
+   "body": "Three BmAK event families have no known bank: TransformationReverseDirection*, TaserSound and VehicleSound (row T-AU5 in Working/Translation/T_ROWS.jsonl). Earlier scans opened only four Playable_Batmobile packages. Use the wider package reader from reports/bmak-banks-media-regrab.md (Tools/scripts/bmak_audio_regrab.py and Research/BatmobileGrab/AUDIO_BANKS.json) to search every cooked package for the three Wwise name hashes, and for their FNV hash forms. Report per name: bank, package, event id, media ids, WAV path under E:/Modding/_BmAKgrab/audio_regrab/ once extracted. Extract and decode any bank you find that the regrab did not cover. If a name truly appears in no bank, say UNKNOWN with the list of packages searched. Output: Research/BatmobileGrab/AUDIO_UNBANKED.json and a short report. Done check: every one of the three names carries either a bank plus decoded WAV count or an explicit UNKNOWN row; read-only on the game install. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-02",
+   "slug": "bind-26-events-to-jc3-slots",
+   "est": 50,
+   "ingame": false,
+   "covers": [
+    "NEW-AUD-2",
+    "T-AU3"
+   ],
+   "deps": [
+    "7979"
+   ],
+   "body": "Row T-AU3 needs each of the 26 BmAK event ids (10 banks, 90 rows; Working/Translation/AU_BLOCKED_RETEST.md and T_AU3B.md) bound to a JC3 target. The media now exists as WAVs: Research/BatmobileGrab/AUDIO_REGRAB.json. For every event, name the closest JC3 event or usage from Research/JC3Grab/JC3_AUDIO_EVENTS.json and USAGES.md, then state the gap in one sentence; the phrase 'JC3 has no system' is forbidden, name the closest system instead. Record two columns: carrier available through a same-length sample swap (slot, frames, mono or stereo) and what would need a new event. Include duration ratios so a later builder knows the stretch needed. Output: Working/Translation/AU_BINDINGS.json (one object per event id) and AU_BINDINGS.md. Done check: 26 of 26 ids present, each with carrier, gap and the WAV list; a script line counts rows. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-03",
+   "slug": "decode-vehicle-audio-objects",
+   "est": 30,
+   "ingame": false,
+   "covers": [
+    "G3-06e"
+   ],
+   "deps": [],
+   "body": "Ledger row G3-06e is still todo: the Batmobile blueprint holds four AkVehicleSound objects and one AkDialogueComponent that nothing has decoded. Locate them in the BmAK dump (Research/BatmobileGrab/objects.jsonl and the per-class notes in BMSDK_OFFSETS.json), read every property: referenced AkEvents, RTPC names, attenuation, trigger conditions, which socket or component owns each. Resolve each event reference to the id used in AUDIO_MAP.json so the object becomes a table of when the sound fires. Output Research/BatmobileGrab/VEHICLE_AUDIO_OBJECTS.json plus a markdown table. Note anything that answers the open question of how the RPM parameter reaches the engine event. Done check: the five objects listed with all property values, zero unresolved event references without an UNKNOWN label, and the ledger line G3-06e text ready for a hand-edit but not applied. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-04",
+   "slug": "fev-fsb5-format-spec",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "NEW-AUD-5"
+   ],
+   "deps": [],
+   "body": "Foundation for building sounds the game does not already own. Write a precise byte-level specification of the JC3 bank container using only the shipped files: the RIFF 'FEV ' chunks (FMT version 56 build 50) and the embedded FSB5 v1 sample section, per Research/JC3Grab/JC3_AUDIO.md and the Tools/scripts parser that produced JC3_AUDIO_EVENTS.json. Take Builds/bm-RC4-audio's vehicles.bank as the exemplar. Document each chunk: tag, offset, size, field table, which fields hold sample counts, name table offsets, per-sample header layout (frequency, channels, loop points, data offset), codec flag, and which fields would change if one sample were appended. Mark each field decoded or UNKNOWN with the evidence. Output Research/JC3Grab/BANK_FORMAT_SPEC.md and a parser self-test Tools/scripts/bank_spec_check.py that reparses all 5 swapped banks and prints chunk sums. Done check: the sums add to file size for every bank tested. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-05",
+   "slug": "fsb5-roundtrip-writer",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "NEW-AUD-5"
+   ],
+   "deps": [
+    "aud-04"
+   ],
+   "body": "Build the first half of an FSB5 authoring tool. Write Tools/scripts/fsb5_rw.py with a reader and a writer for the FSB5 block inside the JC3 banks, following Research/JC3Grab/BANK_FORMAT_SPEC.md. Required behaviour: parse the block, re-serialise it unchanged, and prove byte identity on the FSB5 section of vehicles.bank, weapons.bank and at least two more banks in the dropzone copies under Builds/. Then add a rebuild mode that takes the same sample set from WAV files and emits a block of identical layout; compare it structurally with the original. Work only on copies inside a new tree Builds/aud-spike/. Report any codec the writer cannot encode (PCM, ADPCM, Vorbis, other) with the sample counts per codec. Done check: command 'python Tools/scripts/fsb5_rw.py --check' prints identical for all banks, and the codec table lists every sample class. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-06",
+   "slug": "fsb5-add-sample-prototype",
+   "est": 50,
+   "ingame": false,
+   "covers": [
+    "NEW-AUD-5"
+   ],
+   "deps": [
+    "aud-05"
+   ],
+   "body": "Extend the writer from fsb5_rw.py so a sample can be appended instead of swapped. Choose the simplest codec that the shipped banks already use for vehicle loops; encode one mono WAV (the turbine donor named in reports/engine-sound-turbine-priority.md, media 0x330DC554 under E:/Modding/_BmAKgrab/audio_regrab/wav) with loop points. Append it to a copy of vehicles.bank in Builds/aud-spike/, fix the sample table, name table, data offsets, chunk sizes and the RIFF length, then reparse the result with Tools/scripts/bank_spec_check.py and with the vgmstream-cli binary in Tools/vgmstream-win64 to confirm that the new sample decodes to the same audio. The new sample is not yet reachable from an event; say so. Done check: reparse shows sample count plus one, existing 649 payload hashes unchanged, vgmstream decodes the appended sample, and the report lists every field touched. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-07",
+   "slug": "fev-event-clone-prototype",
+   "est": 55,
+   "ingame": false,
+   "covers": [
+    "NEW-AUD-5"
+   ],
+   "deps": [
+    "aud-04",
+    "aud-06"
+   ],
+   "body": "The previous ruling was that FEV events cannot be authored because the graph is not shipped. Test that ruling instead of inheriting it. Using Research/JC3Grab/BANK_FORMAT_SPEC.md and the event JSON from JC3_AUDIO_EVENTS.json, find in a copy of vehicles.bank the smallest event (a one-shot with one layer, one sound definition, one wave bank entry). Prototype Tools/scripts/fev_edit.py that clones that event record under a new name and id, appends a sound definition pointing at the sample added by fsb5_rw.py, and rewrites every dependent count, offset and name-table entry. Work in Builds/aud-spike/ only. The report must say plainly for each step whether it was done, partly done, or blocked, and name what blocks it (e.g. a hash table, a cross-reference list). Done check: the edited bank reparses with the Universal Modder tools or the repo parser, the new event is listed, and a diff shows only intended chunks changed. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-08",
+   "slug": "verify-audio-spike-roundtrips",
+   "est": 25,
+   "ingame": false,
+   "covers": [
+    "NEW-AUD-5"
+   ],
+   "deps": [
+    "aud-05",
+    "aud-06",
+    "aud-07"
+   ],
+   "body": "Offline verification of everything produced by the bank authoring spike, with no game launch. Run Tools/scripts/fsb5_rw.py --check, bank_spec_check.py and fev_edit.py --check against Builds/aud-spike/. For each artifact confirm: unchanged banks are byte identical to the originals, the appended-sample bank has only the fields named in its report changed, the cloned-event bank parses and lists the new event, and total size changes are accounted for. Then try one independent reader (the Universal Modder bank tools or Fmod Bank Tools CLI if present under E:/Modding/_tools or Tools/) on the edited banks and report whether it accepts them. Write tmp/freebuff/reports/verify-audio-spike-roundtrips.md with a pass or fail line per check and a final verdict phrased as one of: authoring works, partial, impossible with evidence. Done check: every check line carries a command and its output. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-09",
+   "slug": "fmod-hook-surface-static",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "NEW-AUD-5"
+   ],
+   "deps": [
+    "7974"
+   ],
+   "body": "Second route to unauthored sounds: play them from the native hook instead of from banks. Static research only. The game ships D:/Games/Just Cause 3/fmod_studio_F.dll, an FMOD Studio 1.x runtime (exports such as FMOD_System_Create and FMOD_Studio_System_Create, per reports/jc3-community-writers-check.md). Dump its export table and the game exe's imports of it, then find how the exe holds the system handle: look at jc3-console-thingy sources in E:/Modding/_tools/jc3-console-thingy and Tools/jc3-console-thingy-src for audio hints, plus exe RTTI strings. Answer: which exported call creates a sound from a file or memory, which plays it, how to reach the game's own FMOD system pointer from inside the process, and which channel group to use for engine sounds. Mark each answer decoded or UNKNOWN. Output tmp/freebuff/reports/fmod-hook-surface-static.md and Research/JC3Grab/FMOD_HOOK_SURFACE.json. Done check: export names with ordinals listed and each question answered or labelled UNKNOWN with the experiment to settle it. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-10",
+   "slug": "hook-audio-module-play-wav",
+   "est": 55,
+   "ingame": false,
+   "covers": [
+    "NEW-AUD-5"
+   ],
+   "deps": [
+    "7981",
+    "aud-09"
+   ],
+   "body": "Add an audio module to the native hook scaffold in Tools/hook/ (created by the logging-only DLL brief). Follow Research/JC3Grab/FMOD_HOOK_SURFACE.json for the call surface. The module should expose three functions: obtain the game's FMOD system pointer, load a WAV or raw sample from a path with loop points, and start or stop playback on a named channel with volume and playback frequency. Keep every pointer use guarded and log-only on failure; honour the version guard of the safety brief 7967 so an unknown exe build disables the module. Write a text command file the hook polls, such as 'play <name>', so tests need no recompile. Build to Builds/hook-audio-0001/ with a receipt (hashes, build command, what was not tested). Nothing is installed into the game folder. Done check: the DLL compiles, an offline unit harness that mocks FMOD calls passes, and the receipt lists untested live behaviours. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-11",
+   "slug": "hook-rpm-driven-engine-synth",
+   "est": 55,
+   "ingame": false,
+   "covers": [
+    "AUD-1",
+    "NEW-AUD-7"
+   ],
+   "deps": [
+    "7982",
+    "aud-10"
+   ],
+   "body": "Use the hook to supply what a same-length bank swap cannot: pitch that bends with RPM and a crossfade between layers. Extend the audio module in Tools/hook/ so each frame it reads the live vehicle readout from the telemetry work (rpm, speed, throttle, gear, per the telemetry report) and drives a set of looping sounds: playback frequency from rpm_norm, volume from a table of crossfade windows. Input tables come from reports/engine-sound-turbine-priority.md (five turbine beds first, V8 double last) and BmAK RTPC curves in Research/BatmobileGrab/AUDIO_FEATURES.md. Put the curve table in a JSON file the hook reloads, not in code. Also mute the donor engine layers only if the safety plan allows it. Build to Builds/hook-audio-0002/ with a receipt. Done check: mock-harness replay of a recorded rpm sweep produces monotonic pitch and layer volumes that sum within 1 LU of the BmAK reference curve. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-12",
+   "slug": "verify-hook-audio-offline",
+   "est": 25,
+   "ingame": false,
+   "covers": [
+    "NEW-AUD-5",
+    "NEW-AUD-7"
+   ],
+   "deps": [
+    "aud-10",
+    "aud-11"
+   ],
+   "body": "Offline gate for the hook audio builds, no game. Rebuild Builds/hook-audio-0001 and hook-audio-0002 from source into scratch folders and compare hashes with their receipts. Run the mock harness for three scenarios: idle for 10 s, a full rpm sweep, and a missing sound file. Check that the missing file path logs and continues, that pointer-guard failures disable only audio, and that the exe version guard is honoured (feed it a wrong version string). Confirm the curve JSON reload picks up an edit. Also confirm no file is written into D:/Games/Just Cause 3 and the DLL imports only expected modules (dumpbin or a Python PE reader). Write tmp/freebuff/reports/verify-hook-audio-offline.md with one pass or fail line per check. Done check: all lines pass, or each failure names its fix card in the report. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-13",
+   "slug": "banklist-extra-bank-static",
+   "est": 35,
+   "ingame": false,
+   "covers": [
+    "NEW-AUD-5"
+   ],
+   "deps": [
+    "aud-04"
+   ],
+   "body": "Static check of whether JC3 can be told about an additional bank. The loader list is master.banklist (26 lines, 434 bytes, see Research/JC3Grab/JC3_AUDIO.md section 10). Read how entries are written, which are loaded at startup or on demand, whether entries map to the bank files in the dropzone or only to archived ones, and whether a duplicate event name across two banks resolves to the first or last loaded. Search exe strings and jc3-console-thingy sources for banklist handling. State what happens if a new bank file with a new name is placed beside the others and added to the list, as a prediction labelled by confidence, plus the single cheapest in-game experiment. Output tmp/freebuff/reports/banklist-extra-bank-static.md. Done check: the banklist grammar written out, the loader behaviour for duplicates marked decoded or UNKNOWN, and the experiment given as a pilot-card outline. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-14",
+   "slug": "audio-route-first-listen",
+   "est": 40,
+   "ingame": true,
+   "covers": [
+    "NEW-AUD-4",
+    "NEW-AUD-5"
+   ],
+   "deps": [
+    "APPROVED_Q",
+    "aud-08",
+    "aud-12",
+    "aud-13",
+    "8606"
+   ],
+   "body": "Supervised in-game session, the first time any BmAK-derived sound is heard. Follow the pilot cards in Working/Q/PILOT/ (LAUNCH, SPAWN_BATMOBILE, CONTROLS, KILL). Run three listening probes, one variable each. Probe A: place the extra bank from Builds/aud-spike plus the banklist line; does the game start and does the new event exist (console log or hook log)? Probe B: with the hook audio module from Builds/hook-audio-0001, issue 'play turbine_loop' at standstill; is it audible at all? Probe C: on the Batmobile from the RC4 probe, record 20 s with the audio device capture enabled (um win record WITH audio, not --no-audio). Pass rule: each probe has one observation, yes or no, from log plus recording. On failure write a fix card naming the probe; do not retry blindly. Output tmp/freebuff/reports/audio-route-first-listen.md. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-15",
+   "slug": "per-entity-effect-binding-test",
+   "est": 40,
+   "ingame": true,
+   "covers": [
+    "NEW-AUD-4",
+    "B-26"
+   ],
+   "deps": [
+    "APPROVED_Q",
+    "9150",
+    "aud-14"
+   ],
+   "body": "The five-minute experiment of row NEW-AUD-4: is a per-entity SAttachedEffect pointing at a private bank honoured, or does a loose effects bank change every vehicle? Use the RC5 audio tree Builds/bm-RC5-audio2 built by the 9150 brief and the pilot cards in Working/Q/PILOT/. Spawn the Batmobile, then one stock vehicle that uses the same donor GUID (name chosen from .fmod_guids), and listen to the same event on both, recording with audio. Observation: do the two vehicles sound different? Pass rule: Batmobile plays the BmAK-derived sound and the stock vehicle keeps its original. If both change, the route is global; write the decision into the report with the matching fix card (private entity-level bank, or the hook route from aud-14). Done check: one yes or no line, plus the recording path and the two GUIDs used. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-16",
+   "slug": "review-audio-spike-and-route",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "NEW-AUD-5",
+    "B-26"
+   ],
+   "deps": [
+    "aud-01",
+    "aud-02",
+    "aud-03",
+    "aud-08",
+    "aud-12",
+    "aud-13",
+    "aud-14",
+    "aud-15"
+   ],
+   "body": "Decision brief and review of the first audio group. Re-read the reports of the tool spikes (verify-audio-spike-roundtrips, verify-hook-audio-offline, audio-route-first-listen, per-entity-effect-binding-test, banklist-extra-bank-static) and the binding tables Working/Translation/AU_BINDINGS.json and Research/BatmobileGrab/VEHICLE_AUDIO_OBJECTS.json. Choose per sound family which route carries it: authored bank (FSB5 plus FEV edit), extra bank via banklist, hook playback, or same-size swap in place. Rule: lore accuracy wins, so a family is routed, never dropped; if two routes work prefer the one with fewer game-file changes. Write tmp/freebuff/reports/audio-route-decision.md with a table family, route, evidence, risk. Then edit the not-yet-started queue briefs in tmp/freebuff/queue whose keys start with the audio build set (engine layers, start/stop, afterburner, battle, cabin, weapons, gadgets, lock beeps, tyres, death) to name the chosen route. Done check: every family has a route row and each edited queue file lists the change. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-17",
+   "slug": "engine-turbine-layers-build",
+   "est": 60,
+   "ingame": false,
+   "covers": [
+    "AUD-1",
+    "NEW-AUD-7",
+    "T-AU4"
+   ],
+   "deps": [
+    "aud-16",
+    "9150"
+   ],
+   "body": "Build the BmAK engine layer set, turbine whine first (operator 2026-11-08: the engine identity leans turbine). Inputs: reports/audio-route-decision.md for the route, reports/engine-audio-layers-plan.md section 6.1, reports/engine-sound-turbine-priority.md for slot order, and the layer list in Research/BatmobileGrab/AUDIO_FEATURES.md (11 RPM layers MK1, 9 MK2, 5 non-RPM). Create new tree Builds/bm-RC5-audio3 with script Tools/scripts/rc5_audio3.py (--write, --check). Include pitch bend by RPM and the crossfade windows, using the route-decision mechanism, and set LandAudio max_rpm from 10000 to 4500 only as row T-AU4 specifies. Every loop must keep a seam under minus 40 dBFS and loudness within 1 LU of source. Record a branch record in Working/RC5/branches/ in the format of reports/rc5-scaffold-and-merge-script.md. Do not edit a bm-RC4 tree. Done check: script --check passes and the report counts layers built out of 25. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-18",
+   "slug": "engine-start-stop-transition",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "NEW-AUD-8",
+    "AUD-1"
+   ],
+   "deps": [
+    "aud-17"
+   ],
+   "body": "Add the engine start and shutdown behaviour to Builds/bm-RC5-audio3. BmAK plays Play_Batmobile_Engine_Transition_In with a Startup RTPC (0 crank, 1 run) per reports/idle-and-startup-plan.md; the trigger in JC3 is entering the vehicle and leaving it, plus the burnout handoff. Use the chosen route from audio-route-decision.md to bind crank, run-up and shutdown to those two moments (hook state or donor start and shutdown slots). Convert the BmAK source media to the required format and keep loudness inside 1 LU. Update rc5_audio3.py and its --check, add an entry to the branch record. Do not touch banks in any game folder. Done check: --check passes, the report gives the event, media, frames and loudness of each transition, and a table shows which BmAK start or stop events remain unbuilt, if any. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-19",
+   "slug": "afterburner-burnout-layers",
+   "est": 50,
+   "ingame": false,
+   "covers": [
+    "AUD-2",
+    "NEW-AUD-10"
+   ],
+   "deps": [
+    "aud-17",
+    "7983"
+   ],
+   "body": "Afterburner and burnout audio. Source: BML_Burnout (31 rows, 10 events, 141 WEMs) in Research/BatmobileGrab/AUDIO_FEATURES.md and reports/afterburner-effects-audio-plan.md. Timing facts from the operator: boost lasts 2.0 s and cooldown 12.0 s per element; boost is a pursuit-only input, mapped on the Xbox pad by the gamepad scoping report (reports/hook-gamepad-scoping.md) which also resolves the tag-to-button question left UNKNOWN. Build the start, loop, stop, blip and recharge layers into Builds/bm-RC5-audio3 using the route in audio-route-decision.md, fix the nitro start slot that measures minus 1.59 LU, and add a gain table keyed to boost state. Extend rc5_audio3.py --check with timing and loudness checks. Done check: --check passes, every BML_Burnout event is either built or listed with a reason, and the nitro start loudness is within 1 LU. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-20",
+   "slug": "battle-mode-audio-set",
+   "est": 60,
+   "ingame": false,
+   "covers": [
+    "AUD-4",
+    "NEW-AUD-11",
+    "NEW-AUD-12"
+   ],
+   "deps": [
+    "aud-16",
+    "7984",
+    "aud-01"
+   ],
+   "body": "Build the battle-mode sound set into Builds/bm-RC5-audio3: the Play_BattleMode_In_A..F and Out_A..H transform stingers, Play_BattlemodeEngine, the cool ticks, persistent idles and the steering bed Play_Batmobile_Steering_Bed (0xD28CAFB1), per reports/battle-audio-switch-event.md. The mode swap exists as a two-entity pair or hook swap per the mode prototype (reports/hook-mode-swap-prototype.md); bind the stingers to the swap's start and end, in order gear by gear over the 2 s transform, and the engine set to the battle entity. The operator rule is lore fidelity, so do not use the interim EngineNitro-style compromise unless Claude relays an approval. Use the route in audio-route-decision.md. Include the TransformationReverseDirection events if aud-01 found a bank. Extend --check. Done check: 30 battle events each marked built or reasoned, loudness inside 1 LU, and a trigger table naming the state that fires each. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-21",
+   "slug": "cabin-interior-layer",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "AUD-3"
+   ],
+   "deps": [
+    "aud-16"
+   ],
+   "body": "The AUX_InBatmobile cabin layer (9 events, 22 WEMs, 35 rows including RainDensity and Speed RTPC; Research/BatmobileGrab/AUDIO_FEATURES.md and Working/Translation/T12_AUDIO.md row A-11). Closest JC3 system: the speedwind sound player, which is a character-bank GUID; the gap is a per-vehicle interior mix. Build the cabin set into Builds/bm-RC5-audio3: events, loops, one-shots, plus a rule table that selects them from camera mode (cockpit versus chase) and weather. Read the camera and interior cues from reports on the camera system if present, else state UNKNOWN and propose the probe. Use the route chosen in audio-route-decision.md. Extend rc5_audio3.py --check with loudness and loop-seam gates. Done check: every one of the 35 rows is built or has a reason, and the interior mix peak stays below the engine bed peak by the BmAK ratio. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-22",
+   "slug": "weapon-audio-set",
+   "est": 55,
+   "ingame": false,
+   "covers": [
+    "AUD-5"
+   ],
+   "deps": [
+    "aud-02",
+    "aud-16",
+    "9110"
+   ],
+   "body": "Weapon sounds for the RC5 weapon builds. Rows W-01..W-07 in Working/Translation/T12_AUDIO.md: cannon fire and reload, missile launch and RocketTails, Vulcan spin-up, loop and tail, tank heavy shells. The BmAK media now exists (Research/BatmobileGrab/AUDIO_REGRAB.json, banks VEH_Tank_Heavy and VEH_Tank_Missiles). Use the bindings in Working/Translation/AU_BINDINGS.json and the weapon build outputs of brief 9110 for the fire events they define. Build each as in the route table into Builds/bm-RC5-audio3, including the Vulcan tail and the 20 ms timing from reports/vulcan-capture-frame-timing.md. Pursuit fires only the EMP missile; battle mode carries cannon, Vulcan and barrage, per reports/weapons-per-mode-redesign.md. Extend --check. Done check: every weapon row built or reasoned, loudness inside 1 LU, and a mode-by-weapon table mapping event to trigger. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-23",
+   "slug": "gadget-audio-sonar-tracker-emp",
+   "est": 50,
+   "ingame": false,
+   "covers": [
+    "NEW-AUD-14",
+    "NEW-AUD-15"
+   ],
+   "deps": [
+    "aud-02",
+    "9109",
+    "9103",
+    "9107"
+   ],
+   "body": "Gadget audio. Sonar: BML_Sonar (six events) paired with the sonar pulse build of brief 9109. Tracker: deploy plus fire (JC3 twin Play_Disruptor_Vehicle_Tracking_Fire 0x8EA6FCA0; BmAK name 0x6BB2C66E) per Research/BatmobileGrab/AUDIO_EVENT_6BB2C66E.md and brief 9103. EMP: the Immobiliser impact and burst of brief 9107. Also settle NEW-AUD-15: search AUDIO_FEATURES for winch and SAM-hack/hacker sound; state lore-absent when no event exists (operator fact: the SAM hack exists in the lore, so check the gameplay-facts notes in Research/BatmobileGrab). Build the confirmed sounds into Builds/bm-RC5-audio3 with the route from audio-route-decision.md. Done check: per gadget a trigger row (state, event, media, loudness), plus an explicit present, absent or UNKNOWN verdict for winch, hack and EMP, and --check passes. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-24",
+   "slug": "lock-beeps-and-warning-alerts",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "NEW-AUD-13",
+    "NEW-AUD-18"
+   ],
+   "deps": [
+    "aud-02",
+    "9105"
+   ],
+   "body": "Lock-on and warning sounds. Events: Play_HUD_Missile_Lock, Play_Tank_Heavy_LockBeep and LockBeep Locked (VEH_Tank_Heavy), Play_HUD_fail 0xDEAD7680 and the weapon-warning alert referenced by FBatmobileWeaponWarningContainer (reports/horn-and-siren-plan.md). The lock timing and diamond are covered by brief 9105 and player facts in memory (lock diamond behaviour). Decode the beep intervals from the WAVs (Research/BatmobileGrab/AUDIO_REGRAB.json), derive the beep rate versus lock progress, and write a trigger table: progress fraction to beep period, locked tone, failure tone. Build the sounds into Builds/bm-RC5-audio3 via the chosen route, and leave the JC3 lock-duration member as UNKNOWN unless 9105 names it. Done check: table of beep period against lock fraction, every listed event built or reasoned, --check passes. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-25",
+   "slug": "tyre-skid-impact-layers",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "AUD-6",
+    "NEW-AUD-16"
+   ],
+   "deps": [
+    "aud-02",
+    "aud-16"
+   ],
+   "body": "Tyres, skids and impacts: BML_Tyres, the Drift and BML_Slide RTPC, and BML_Impacts (16 rows, WAVs now available through Research/BatmobileGrab/AUDIO_REGRAB.json, 71 distinct media). JC3 keeps ground_roughness, TireDestroyed and dynamic_break vanilla in rows A-09 and A-16..A-22 of Working/Translation/T12_AUDIO.md. Pick the closest JC3 skid slot per surface and decide, with the player fact check in OPERATOR_PRIORITIES.md section on skids, whether BmAK drift has a tyre screech or only pitch change (record UNKNOWN if no source). Build the chosen layers and impact one-shots into Builds/bm-RC5-audio3 by the audio-route-decision route, with surface selection from the surface-fx work of brief 9174. Extend --check. Done check: each BML_Tyres and BML_Impacts row built or reasoned, a table of RTPC to JC3 parameter, loudness inside 1 LU. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-26",
+   "slug": "death-explosion-audio",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "NEW-AUD-17"
+   ],
+   "deps": [
+    "aud-02",
+    "9171"
+   ],
+   "body": "Death explosion sound. BmAK event Play_Batmobile_Destroyed 0x3531A5D5 (BML_Impacts) and the DeathExplosionSoundArr found in brief 7953's carrier report; the operator fact is an instant explosion at zero health with no warning smoke, and passengers die. JC3's closest system is the explosion event d167a490 and fire_post_explosion, which sit in the shared effects bank. Build the BmAK sound into Builds/bm-RC5-audio3 using the route in audio-route-decision.md and wire it to the health-zero path made by brief 9171, ensuring no other vehicle's explosion changes (per the per-entity test result in per-entity-effect-binding-test.md). Verify the media is trimmed with its tail intact. Done check: event bound, media loudness within 1 LU, trigger row names the health event, and --check passes. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-27",
+   "slug": "horn-silence-and-radio-verify",
+   "est": 25,
+   "ingame": false,
+   "covers": [
+    "AUD-7"
+   ],
+   "deps": [
+    "9150"
+   ],
+   "body": "Horn row A-13 says the Batmobile has no horn (three proofs in reports/horn-and-siren-plan.md) and decided to remove the horn object fd69c63c, which 178 vehicles carry. Check the RC5 results rather than the plan. Read Builds/bm-RC5-audio2 and the entity files from brief 9101 to see whether the horn object is gone from the Batmobile entity only, and that no other vehicle entity was edited. List the radio usage too (JC3 radio: 0 of 232). Write the check as Tools/scripts/horn_check.py (--check): exit code 0 when the Batmobile entity has no horn object and every stock vehicle sample matches its original hash. If the object remains, create the fix by editing the 9150 tree's script, not the bm-RC4 tree. Done check: script prints OK with counts, and the report cites the entity file path. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-28",
+   "slug": "voice-lines-scope-inventory",
+   "est": 30,
+   "ingame": false,
+   "covers": [
+    "NEW-AUD-19"
+   ],
+   "deps": [
+    "7979"
+   ],
+   "body": "Voice lines: 28 rows, 20 events, 91 WEMs in Research/BatmobileGrab/AUDIO_FEATURES.md, of which 24 streamed lines carry no bytes on disk. Inventory them by trigger: which fire while driving (Oracle or Alfred calls, alerts from CHR_BatmanAlerts), which fire only in story missions, which are streamed and where the streamed files might live (search the BmAK install by wem id; do not guess). The lore rule is fidelity, so a line is either built or listed as lore-absent with proof; nothing is silently omitted. For each line that fires in free driving, give the trigger and a JC3 hook point. Output Working/Translation/VOICE_LINES.json and tmp/freebuff/reports/voice-lines-scope-inventory.md. Done check: 28 of 28 rows classified, streamed ones carry a located file path or UNKNOWN, and the report states which lines would need a hook trigger. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-29",
+   "slug": "water-jump-sink-audio-dispositions",
+   "est": 30,
+   "ingame": false,
+   "covers": [
+    "NEW-AUD-21"
+   ],
+   "deps": [
+    "9124",
+    "7986"
+   ],
+   "body": "Rows A-03, A-08, A-10, A-12 and A-23 of Working/Translation/T12_AUDIO.md (water, sinking, turbo-jump, jump-wind) were waiting on decisions D-8 and D-10. Operator facts: the Batmobile never swims, entering water teleports it to land, the engine does not fail. Read the water/flip results in brief 9124 and the hook world-logic report (reports/hook-world-logic-water-flip-regen.md) and decide per row: kept vanilla, built, or removed, citing the fact that applies. For any jump or hop sound the BmAK banks hold (Subjective bank has jump events, see AUDIO_REGRAB.json), bind it through the audio route. Output an updated disposition table Working/Translation/AUDIO_DISPOSITIONS.json and a report. Done check: five of five rows carry a disposition with evidence, none left blocked. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-30",
+   "slug": "gear-shift-loudness-trim",
+   "est": 25,
+   "ingame": false,
+   "covers": [
+    "NEW-AUD-9"
+   ],
+   "deps": [
+    "aud-17",
+    "aud-38",
+    "aud-39"
+   ],
+   "body": "After the engine and standstill listening reports, resolve the three gear-shift slots that measure +3.5 to +3.7 LU, outside the 1 LU gate, and row A-04. Read reports/audio-standstill-listen.md and reports/audio-driving-listen.md for what the listener heard. If shifts sounded wrong, set a gain offset per slot; if they sounded right, record that the gate deviation is accepted for the reason cited. Apply the choice to Tools/scripts/rc5_audio3.py (gain table only), rebuild Builds/bm-RC5-audio3, rerun --check and the loudness gate. Never edit a bm-RC4 tree. Write the decision, the old and new LU values, and the revert command in tmp/freebuff/reports/gear-shift-loudness-trim.md. Done check: all three shift slots are within 1 LU, or the report holds a sign-off line for an accepted deviation. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-31",
+   "slug": "unnamed-donor-guids-ranking",
+   "est": 30,
+   "ingame": false,
+   "covers": [
+    "NEW-AUD-20"
+   ],
+   "deps": [
+    "9150"
+   ],
+   "body": "Prepare the listening audit of the 22 unnamed donor GUIDs D-01..D-22 listed in Working/Translation/T12_AUDIO.md. Offline, rank them by audibility: the usage names in Research/JC3Grab/USAGES.md, sample duration, loudness and whether the event plays when the engine is running or only on damage. Group them into listening sessions of at most six, each with a trigger scenario a pilot can produce (idle, drive, boost, shoot, crash). Write the ranking to Working/Translation/UNNAMED_GUIDS_PLAN.json and the audition list into Working/Q/PILOT/AUDIO_GUIDS.md in the card shape of Working/Q/PILOT/CARD_FORMAT.md (GOAL, PRE-CONDITIONS, STEPS with DO and SEE, PASS, FAIL route). Done check: 22 of 22 GUIDs assigned to a session, each card validates against CARD_FORMAT.md, and no card needs a decision from the pilot. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-32",
+   "slug": "review-audio-build-group",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "AUD-1",
+    "AUD-2",
+    "AUD-3",
+    "AUD-4",
+    "AUD-5",
+    "AUD-6"
+   ],
+   "deps": [
+    "aud-17",
+    "aud-18",
+    "aud-19",
+    "aud-20",
+    "aud-21",
+    "aud-22",
+    "aud-23",
+    "aud-24",
+    "aud-25",
+    "aud-26"
+   ],
+   "body": "Review of the audio build group. Re-read the reports of the engine, start/stop, afterburner, battle, cabin, weapon, gadget, lock beep, tyre and death builds and the branch records they added under Working/RC5/branches/. Check three things: whether any report changed a fact that later briefs assumed (route, trigger names, file paths), whether any two builds touched the same slot or event (list conflicts, name the winner), and whether the total bank size and event count fit the loose-bank limits recorded in Builds/bm-004/receipt.json. Edit the briefs not yet started (verification, pilot card and listening briefs for audio in tmp/freebuff/queue) to match, noting each edit in the report. Write tmp/freebuff/reports/review-audio-build-group.md with a conflicts table and a list of edited queue files. Done check: zero unresolved slot conflicts or each has a named owner. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-33",
+   "slug": "verify-engine-layers-build",
+   "est": 30,
+   "ingame": false,
+   "covers": [
+    "AUD-1",
+    "NEW-AUD-8",
+    "AUD-2"
+   ],
+   "deps": [
+    "aud-17",
+    "aud-18",
+    "aud-19"
+   ],
+   "body": "Offline gate for the engine family in Builds/bm-RC5-audio3 (layers, start and stop, afterburner and burnout). Run rc5_audio3.py --check, then copy the V-04 gate script from reports/verify-v04-audio-rc4.md and extend it: decode every new sample, compare length with the plan, loudness within 1 LU of the source, loop seam at or below minus 40 dBFS, and tail trim not clipping. Add a layer-sum check: simulate the crossfade table at 21 evenly spaced rpm values and confirm total gain never jumps more than 2 LU between neighbouring points. Report pass or fail per layer in tmp/freebuff/reports/verify-engine-layers-build.md and write machine-readable results to Builds/bm-RC5-audio3/verify/engine.json. Done check: counts of passed and failed layers, with each failure naming the layer and measured value. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-34",
+   "slug": "verify-sets-battle-weapons-fx",
+   "est": 30,
+   "ingame": false,
+   "covers": [
+    "AUD-3",
+    "AUD-4",
+    "AUD-5",
+    "AUD-6",
+    "NEW-AUD-13",
+    "NEW-AUD-14",
+    "NEW-AUD-17"
+   ],
+   "deps": [
+    "aud-20",
+    "aud-21",
+    "aud-22",
+    "aud-23",
+    "aud-24",
+    "aud-25",
+    "aud-26"
+   ],
+   "body": "Offline gate for the battle, cabin, weapon, gadget, lock beep, tyre and death sets in Builds/bm-RC5-audio3. Reuse the extended V-04 script from verify-engine-layers-build, run it over each family, and add three checks: every trigger table row names an existing state or event; no two families bind the same slot; every event id resolves in the manifest. Cross-check against the BmAK event lists in Research/BatmobileGrab/AUDIO_FEATURES.md, counting how many of 361 events and 447 media ended up built, reasoned omissions, or UNKNOWN. Write results to Builds/bm-RC5-audio3/verify/sets.json and the narrative to tmp/freebuff/reports/verify-sets-battle-weapons-fx.md. Done check: totals sum to 361 events, every failed check names its fix, and a final line states the coverage percentage. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-35",
+   "slug": "audio-mix-balance-static",
+   "est": 35,
+   "ingame": false,
+   "covers": [
+    "NEW-AUD-22"
+   ],
+   "deps": [
+    "aud-33",
+    "aud-34"
+   ],
+   "body": "Only per-slot loudness is gated today. Write a whole-bed estimate for the Batmobile in four scenes: idle, 100 km/h cruise, boost, and battle-mode firing. Use the manifest of Builds/bm-RC5-audio3 for which layers play, their LUFS, and the BmAK reference ratios (engine to wind, engine to weapon) from the Wwise bus data in Research/BatmobileGrab/AUDIO_FEATURES.md. Sum loudness per scene, compare against the BmAK reference ratios, and flag layers that mask turbine whine above 3 LU. Output Working/Audio/mix_balance.json and a short report with a table scene, layer, level, flag. Where the donor game's own engine, wind and tyre sounds are still playing (from shared banks), include them using the JC3 levels in JC3_AUDIO_EVENTS.json. Done check: four scenes tabulated, flagged layers have a proposed gain change written but not applied. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-36",
+   "slug": "audio-branch-records-and-merge",
+   "est": 35,
+   "ingame": false,
+   "covers": [
+    "B-11",
+    "AUD-1"
+   ],
+   "deps": [
+    "aud-33",
+    "aud-34",
+    "9190"
+   ],
+   "body": "Hand the audio trees to the RC5 merge. Read how brief 9190 merges branches (reports/rc5-scaffold-and-merge-script.md) and the merge result. Make sure the branch records for Builds/bm-RC5-audio3 (and, if the route needs it, the hook audio build and the extra bank file) are registered under Working/RC5/branches/ with correct file lists, install targets, rollback notes, and size totals (the loose banks are 210,781,376 B plus 177,586,080 B today; report the new total). Check that merging audio2 and audio3 does not give two versions of one bank file; if so, write a merge rule. Run the merge script in its dry-run mode and the installer rehearsal against a scratch folder, never the game folder. Output tmp/freebuff/reports/audio-branch-records-and-merge.md. Done check: dry run lists each audio file once, rollback restores the original hashes in the scratch copy. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-37",
+   "slug": "audio-pilot-cards",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "Q-1",
+    "NEW-AUD-23",
+    "NEW-AUD-24"
+   ],
+   "deps": [
+    "9194",
+    "aud-16"
+   ],
+   "body": "Write the audio pilot cards in the format of Working/Q/PILOT/CARD_FORMAT.md, using the refreshed set from brief 9194. Working/Q/PILOT/ has no audio card at present. Create these cards, each with one observation and one pass rule: AUDIO_STANDSTILL (enter, start-up sound, idle, rev sweep at standstill), AUDIO_DRIVE (0 to 100 km/h with pitch and shift), AUDIO_BOOST (afterburner hit), AUDIO_BATTLE (LT transform stingers, steering bed), AUDIO_WEAPONS (fire, lock beeps, missile), AUDIO_FX (cabin, tyres, impact, death), AUDIO_INSTALL (copy loose banks, rollback). Include the recording command with audio (um win record without --no-audio) and the spectrogram check script path Tools/scripts for reading a recording's levels. Cite the predictions in Working/Q/PREDICTIONS_ALL.md Q1-8. Done check: seven card files exist, each passes the CARD_FORMAT validator or checklist and holds a fix-card route on fail. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-38",
+   "slug": "audio-standstill-listen",
+   "est": 45,
+   "ingame": true,
+   "covers": [
+    "Q-1",
+    "NEW-AUD-6",
+    "NEW-AUD-23",
+    "NEW-AUD-24"
+   ],
+   "deps": [
+    "APPROVED_Q",
+    "aud-37",
+    "aud-36",
+    "9193"
+   ],
+   "body": "Supervised listening session at standstill using cards AUDIO_INSTALL and AUDIO_STANDSTILL (Working/Q/PILOT/). Install the RC5 audio files with the install card, then spawn the Batmobile. Observations, one per card step: the start-up sound plays on entry; idle is the turbine whine, not the donor V8 (the operator leans turbine); a rev sweep bends in pitch; doors make the cockpit sounds; the horn is silent. Also answer NEW-AUD-6: which sample family the engine_running_sound tune plays, by muting layers one at a time with the hook command file if available. Record with audio for at least 20 s per step and check for loop gaps. Pass rule per step: yes or no. On fail write the fix card naming the layer and file. Output tmp/freebuff/reports/audio-standstill-listen.md. Roll back the banks at the end with the install card. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-39",
+   "slug": "audio-driving-listen",
+   "est": 45,
+   "ingame": true,
+   "covers": [
+    "Q-2",
+    "NEW-AUD-24"
+   ],
+   "deps": [
+    "APPROVED_Q",
+    "aud-38"
+   ],
+   "body": "Supervised driving listen, card AUDIO_DRIVE then AUDIO_BOOST from Working/Q/PILOT/. Drive 0 to 100 km/h on a straight road with audio recording on. Observations: pitch rises continuously with speed and rpm (operator question: bend or crossfade, record which is audible); gear-shift sounds occur in order; handbrake spin gives the creak loop; boost makes the nitro whine audible over wind and engine (row A2, test-060 never reported this). Pass rule: each observation yes or no with a timestamp in the recording. Compare recording levels with the whole-bed estimates in Working/Audio/mix_balance.json. On fail write a fix card naming layer, file and measured difference. Output tmp/freebuff/reports/audio-driving-listen.md. End by listing which sounds a human should confirm by ear, since a machine capture cannot judge pleasantness. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-40",
+   "slug": "audio-battle-mode-listen",
+   "est": 40,
+   "ingame": true,
+   "covers": [
+    "AUD-4",
+    "Q-3"
+   ],
+   "deps": [
+    "APPROVED_Q",
+    "aud-39",
+    "7984"
+   ],
+   "body": "Supervised battle-mode listening with card AUDIO_BATTLE (Working/Q/PILOT/). Hold LT to transform; record with audio. Observations: the In stingers play gear by gear over about 2 s; the battle engine replaces the pursuit engine bed; the steering bed is audible while turning on the spot; releasing LT plays the Out stingers and returns the pursuit engine. Pass rule: each yes or no with timestamps, and the stinger count heard versus the 6 In and 8 Out events built (reports/battle-audio-switch-event.md). If the swap itself fails, stop and cite the mode-swap report rather than fixing audio. On fail write a fix card naming the event and trigger. Output tmp/freebuff/reports/audio-battle-mode-listen.md. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-41",
+   "slug": "audio-weapons-gadgets-listen",
+   "est": 45,
+   "ingame": true,
+   "covers": [
+    "AUD-5",
+    "NEW-AUD-13",
+    "NEW-AUD-14",
+    "Q-3"
+   ],
+   "deps": [
+    "APPROVED_Q",
+    "aud-39",
+    "9119"
+   ],
+   "body": "Supervised listening for weapons and gadgets with cards AUDIO_WEAPONS and AUDIO_FX (weapon part) in Working/Q/PILOT/. Pursuit: fire the EMP missile, deploy the tracker and hear its fire event, trigger sonar. Battle: fire cannon, Vulcan (spin-up, loop, tail), and barrage; hold a lock and listen for the beep rate to rise and the locked tone. Pass rule: each yes or no with the recording timestamp, plus the beep period measured from the recording against the table in the lock-beeps report. On fail write a fix card naming the event and file. Also note whether stock vehicles' weapons are unchanged (spawn one and fire it). Output tmp/freebuff/reports/audio-weapons-gadgets-listen.md. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-42",
+   "slug": "audio-cabin-tyre-death-listen",
+   "est": 40,
+   "ingame": true,
+   "covers": [
+    "AUD-3",
+    "AUD-6",
+    "NEW-AUD-17",
+    "Q-3"
+   ],
+   "deps": [
+    "APPROVED_Q",
+    "aud-39"
+   ],
+   "body": "Supervised listening for ambience and damage with card AUDIO_FX (Working/Q/PILOT/). Observations: cockpit camera changes the cabin bed versus chase; rain changes it; drifting produces the chosen skid sound; a wall impact plays an impact one-shot; running health to zero produces the BmAK explosion sound instantly, and a stock vehicle exploded beside it still sounds stock. Recording with audio for each. Pass rule: yes or no per item. On fail write a fix card naming the event and the file in Builds/bm-RC5-audio3. Output tmp/freebuff/reports/audio-cabin-tyre-death-listen.md. Mark the cabin item UNKNOWN if the camera mode cannot be switched by the cards. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-43",
+   "slug": "audio-donor-guids-listen",
+   "est": 45,
+   "ingame": true,
+   "covers": [
+    "NEW-AUD-20",
+    "T-16"
+   ],
+   "deps": [
+    "APPROVED_Q",
+    "aud-31",
+    "aud-39"
+   ],
+   "body": "Audition of the 22 unnamed donor GUIDs using the cards in Working/Q/PILOT/AUDIO_GUIDS.md from the unnamed-donor-guids-ranking work. Session by session, mute or solo each GUID using the hook command file or a test bank variant, trigger its scenario, and record. Observation per GUID: audible on the Batmobile, yes or no, and a two-word description if yes. Pass rule: all 22 have an observation; audible ones then get a disposition: replaced by a BmAK sound, or kept vanilla with the reason. Finish with the table that closes row T-16. Output tmp/freebuff/reports/audio-donor-guids-listen.md and update the proposed values in a new file Working/Translation/DONOR_GUIDS_FINAL.json (do not edit T12_AUDIO.md). Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-44",
+   "slug": "audio-listen-fix-cards",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "V-04",
+    "AUD-1",
+    "AUD-4"
+   ],
+   "deps": [
+    "aud-38",
+    "aud-39",
+    "aud-40",
+    "aud-41",
+    "aud-42",
+    "aud-43"
+   ],
+   "body": "Collect every failed observation and fix card from the six audio listening reports (standstill, driving, battle mode, weapons and gadgets, cabin/tyre/death, donor GUIDs). Group the failures by cause: wrong slot, loudness, loop seam, trigger not firing, route not honoured. For each group make the fix in Tools/scripts/rc5_audio3.py or the hook curve JSON, rebuild Builds/bm-RC5-audio3, rerun the gates of the two verify briefs, and write a new retest card in Working/Q/PILOT/ naming the single observation to repeat. Do not change items that passed. Update the V-04 status text in a proposal file, not in the tracker. Output tmp/freebuff/reports/audio-listen-fix-cards.md with failure, cause, fix, retest card. Done check: every failed observation maps to a fix or a stated UNKNOWN, and the gates pass again. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-45",
+   "slug": "audio-fix-retest",
+   "est": 35,
+   "ingame": true,
+   "covers": [
+    "V-04"
+   ],
+   "deps": [
+    "APPROVED_Q",
+    "aud-44"
+   ],
+   "body": "Supervised retest of only the observations that failed earlier, using the retest cards written by the audio-listen-fix-cards work. Install the rebuilt audio files with the install card, run each retest card, record with audio, and report yes or no per observation. Pass rule: all previously failed observations now pass and none of the passed ones regress (spot check two). If something still fails, write another fix card naming the file and stop after this round; do not loop more than once without handing the result back for Claude. Roll back the banks at the end. Output tmp/freebuff/reports/audio-fix-retest.md. Done check: the V-04 gate recorded as green or each remaining red item named with evidence. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-46",
+   "slug": "audio-compromise-signoff-list",
+   "est": 30,
+   "ingame": false,
+   "covers": [
+    "T-AU3",
+    "T-AU5"
+   ],
+   "deps": [
+    "aud-45",
+    "aud-16",
+    "aud-28",
+    "aud-29"
+   ],
+   "body": "Prepare the audio compromise list for approval by the user through Claude. Read all audio reports, the FEV authoring verdict, the voice line inventory and the disposition tables. List every place where the build does not reach full BmAK fidelity: name the sound, the BmAK reference, what JC3 plays, the closest system and the gap, and what would close it. Lore fidelity is the rule, so write each item as a recommendation with a proposed fix route; never phrase it as a question to the operator. Output Working/Translation/COMPROMISES_AUDIO.md in the layout of COMPROMISES_T.md lines 45-46, and a short summary of counts. Done check: every audio row of T12_AUDIO.md is either marked complete, or appears in the list with route and evidence, and the counts sum to 53 plus the new rows. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "aud-47",
+   "slug": "audio-release-notes-and-ledger",
+   "est": 35,
+   "ingame": false,
+   "covers": [
+    "NEW-AUD-25",
+    "NEW-AUD-26"
+   ],
+   "deps": [
+    "aud-46",
+    "aud-36"
+   ],
+   "body": "Release documentation for sound plus ledger hygiene. Draft the audio section for the release notes: what is BmAK-derived versus donor, which files are installed (loose banks, extra bank, hook DLL audio module), total sizes from the branch records, how to install and roll back, and the known limits. Write it to Working/Release/AUDIO_NOTES.md. Then list ledger fixes as a proposal, not applied: STATUS.md line about event 0x6BB2C66E still saying UNKNOWN when reports/audio-event-6bb2c66e-bank-chase.md located it; the AUDIO_FEATURES media-0 rows made stale by AUDIO_REGRAB.json; any row flips from the audio verify and listen reports. Check whether the record-inconsistency brief 7947 already lists these before adding. Output tmp/freebuff/reports/audio-release-notes-and-ledger.md. Done check: notes cite file sizes from receipts, and the ledger proposal gives old text, new text and file line for each fix. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  }
+ ]
+}

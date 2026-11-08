@@ -1,0 +1,4528 @@
+{
+ "generated_by": "Tools/scripts/ledger_audit.py (--write)",
+ "card": "GRB-G3-11 ledger reconciliation",
+ "inputs": {
+  "ledger": {
+   "path": "Working/Translation/T_ROWS.jsonl",
+   "rows": 198,
+   "sha256": "8996b60a5370d932f437fd138d23dc15358d41e24e1026306d7b02172dc0e5f4"
+  },
+  "build": {
+   "path": "Builds/bm-RC1",
+   "receipt_sha256": "4bfe337ccab65c3ec326759fb2324547ff9651d41598445fba45c9d68d26cb0f",
+   "aaf_files": 633,
+   "adf_files": 50,
+   "adf_rows": 21680,
+   "adf_ai_excluded": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/ai/v0300_car_kensington_sportsmuscle_ai.vmodc",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/ai/v0300_car_kensington_sportsmuscle_brakes_ai.vmodc",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/ai/v0300_car_kensington_sportsmuscle_land_aerodynamics_ai.vmodc",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/ai/v0300_car_kensington_sportsmuscle_land_global_ai.vmodc",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/ai/v0300_car_kensington_sportsmuscle_land_steering_ai.vmodc"
+   ],
+   "parts": "61 parts",
+   "epe": "467 RTPC nodes / 7322 properties (name hashes unresolved)",
+   "receipt_steps": 17
+  }
+ },
+ "rules": {
+  "member_match": "segments (split on '.' after removing [...] and '/') overlap as a contiguous slice, either direction",
+  "value_match": "|built - row| <= max(1e-9, 1e-4*|row|); 1-digit tokens ignored; strings exact",
+  "string_match": "token >= 8 chars with '/' or '_' found as ASCII bytes",
+  "guessed": "value or string found AND the row carries one of by hand, hand-set, hand set, chosen, assum, unsourced, estimate, approx, guess, tuned, not law, probe, picked, eyeball, trial",
+  "not_translated": "no evidence; dispo out/superseded = declared, next/blocked = not built, otherwise no match"
+ },
+ "counts": {
+  "rows": 198,
+  "verdicts": {
+   "TRANSLATED": 85,
+   "GUESSED": 7,
+   "NOT TRANSLATED": 106
+  },
+  "tiers": {
+   "value": 48,
+   "none": 99,
+   "member": 7,
+   "string": 44
+  },
+  "by_doc": {
+   "T-1": {
+    "TRANSLATED": 23,
+    "GUESSED": 7,
+    "NOT TRANSLATED": 19
+   },
+   "T-2b": {
+    "TRANSLATED": 14,
+    "GUESSED": 0,
+    "NOT TRANSLATED": 25
+   },
+   "T-3": {
+    "TRANSLATED": 6,
+    "GUESSED": 0,
+    "NOT TRANSLATED": 11
+   },
+   "T-13": {
+    "TRANSLATED": 2,
+    "GUESSED": 0,
+    "NOT TRANSLATED": 15
+   },
+   "T-14": {
+    "TRANSLATED": 28,
+    "GUESSED": 0,
+    "NOT TRANSLATED": 0
+   },
+   "T-7": {
+    "TRANSLATED": 4,
+    "GUESSED": 0,
+    "NOT TRANSLATED": 10
+   },
+   "T-20": {
+    "TRANSLATED": 7,
+    "GUESSED": 0,
+    "NOT TRANSLATED": 12
+   },
+   "T-15": {
+    "TRANSLATED": 1,
+    "GUESSED": 0,
+    "NOT TRANSLATED": 14
+   }
+  }
+ },
+ "rows": [
+  {
+   "id": "T-G1",
+   "doc": "T-1",
+   "section": "2. Geometry — decoded, no judgement needed",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_global.vmodc:base_wheel_hardpoint_positions.position = 0.7046999931335449 (row says 0.7047)",
+   "hints": [
+    "land_global.base_wheel_hardpoint_positions",
+    "stations.json"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_global.vmodc:base_wheel_hardpoint_positions.position = 0.7046999931335449 (row says 0.7047)",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_global.vmodc:base_wheel_hardpoint_positions.position = -2.569999933242798 (row says -2.570)",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_global.vmodc:base_wheel_hardpoint_positions.position = 1.2079999446868896 (row says 1.208)",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_global.vmodc:base_wheel_hardpoint_positions.position = 0.7046999931335449 (row says 0.7047)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_global.vmodc:base_wheel_hardpoint_positions.position = -1.2079999446868896",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_global.vmodc:base_wheel_hardpoint_positions.position = 0.7046999931335449",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_global.vmodc:base_wheel_hardpoint_positions.position = -2.569999933242798",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_global.vmodc:base_wheel_hardpoint_positions.position = 1.2079999446868896"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-G2",
+   "doc": "T-1",
+   "section": "2. Geometry — decoded, no judgement needed",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_global.vmodc:rear_wheels.radius = 0.6826500296592712 (row says 0.68265)",
+   "hints": [
+    "land_global.front.rear_wheels.radius"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_global.vmodc:rear_wheels.radius = 0.6826500296592712 (row says 0.68265)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_cameras/character_cameras/collision/no_plyr_vehicle_collision.ctunec:radius = 0.25",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/v0300_car_kensington_sportsmuscle_buoyancy.vmodc:radius = 0.550000011920929",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_global.vmodc:rear_wheels.radius = 0.6826500296592712"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-G3",
+   "doc": "T-1",
+   "section": "2. Geometry — decoded, no judgement needed",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=keep, 0 member hint(s))",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "prose claim: no member and no token to check",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-G4",
+   "doc": "T-1",
+   "section": "2. Geometry — decoded, no judgement needed",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "GUESSED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_global.vmodc:ground_clearance = 0.7037000060081482 (row says 0.7037)",
+   "hints": [
+    "land_global.ground_clearance"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_global.vmodc:ground_clearance = 0.7037000060081482 (row says 0.7037)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_global.vmodc:ground_clearance = 0.7037000060081482"
+   ],
+   "string_hits": [],
+   "provenance_markers": [
+    "assum"
+   ],
+   "receipt_mentions": [],
+   "notes": [
+    "provenance markers: assum"
+   ]
+  },
+  {
+   "id": "T-G5",
+   "doc": "T-1",
+   "section": "2. Geometry — decoded, no judgement needed",
+   "dispo": "edit",
+   "edits": 1,
+   "verdict": "GUESSED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_global.vmodc:wheels_friction_type = 2 (row says 2)",
+   "hints": [
+    "land_global.wheels_friction_type"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_global.vmodc:wheels_friction_type = 2 (row says 2)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_global.vmodc:wheels_friction_type = 2"
+   ],
+   "string_hits": [],
+   "provenance_markers": [
+    "probe"
+   ],
+   "receipt_mentions": [],
+   "notes": [
+    "provenance markers: probe"
+   ]
+  },
+  {
+   "id": "T-M1",
+   "doc": "T-1",
+   "section": "3. Mass and inertia — no BmAK tag (G1-1 complete), class evidence only",
+   "dispo": "edit",
+   "edits": 1,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_rigid_body.vmodc:mass = 6000.0 (row says 6000)",
+   "hints": [
+    "chain.json",
+    "rigid_body.mass",
+    "t3_fleet.md"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_rigid_body.vmodc:mass = 6000.0 (row says 6000)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_rigid_body.vmodc:mass = 6000.0"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-M2",
+   "doc": "T-1",
+   "section": "3. Mass and inertia — no BmAK tag (G1-1 complete), class evidence only",
+   "dispo": "edit",
+   "edits": 3,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=edit, 1 member hint(s))",
+   "hints": [
+    "chain.json"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [
+    "not law"
+   ],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found",
+    "provenance markers: not law"
+   ]
+  },
+  {
+   "id": "T-M3",
+   "doc": "T-1",
+   "section": "3. Mass and inertia — no BmAK tag (G1-1 complete), class evidence only",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_rigid_body.vmodc:center_of_mass_bias = -0.30000001192092896 (row says -0.3)",
+   "hints": [
+    "chain.json",
+    "rigid_body.center_of_mass_bias"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_rigid_body.vmodc:center_of_mass_bias = -0.30000001192092896 (row says -0.3)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_rigid_body.vmodc:center_of_mass_bias = -0.30000001192092896"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-M4",
+   "doc": "T-1",
+   "section": "3. Mass and inertia — no BmAK tag (G1-1 complete), class evidence only",
+   "dispo": "edit",
+   "edits": 2,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_global.vmodc:rear_wheels.mass = 150.0 (row says 150)",
+   "hints": [
+    "chain.json",
+    "land_global.front.rear_wheels.mass"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_global.vmodc:rear_wheels.mass = 150.0 (row says 150)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_global.vmodc:rear_wheels.mass = 150.0",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_rigid_body.vmodc:mass = 6000.0"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-S1",
+   "doc": "T-1",
+   "section": "4. Suspension — the fleet has no law; stay inside the band",
+   "dispo": "edit",
+   "edits": 2,
+   "verdict": "GUESSED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_suspension.vmodc:rear.strength = 45.0 (row says 45)",
+   "hints": [
+    "chain.json",
+    "suspension.front.rear.strength"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_suspension.vmodc:rear.strength = 45.0 (row says 45)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_suspension.vmodc:rear.strength = 45.0"
+   ],
+   "string_hits": [],
+   "provenance_markers": [
+    "by hand"
+   ],
+   "receipt_mentions": [],
+   "notes": [
+    "provenance markers: by hand"
+   ]
+  },
+  {
+   "id": "T-S2",
+   "doc": "T-1",
+   "section": "4. Suspension — the fleet has no law; stay inside the band",
+   "dispo": "edit",
+   "edits": 2,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=edit, 0 member hint(s))",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "prose claim: no member and no token to check",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-S3",
+   "doc": "T-1",
+   "section": "4. Suspension — the fleet has no law; stay inside the band",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=next (not built); no member among 3 row member(s) and no carried token in the aaf",
+   "hints": [
+    "svehiclewheel.suspensiontravelup",
+    "chain.json",
+    "suspension.length"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [
+    "assum"
+   ],
+   "receipt_mentions": [],
+   "notes": [
+    "provenance markers: assum"
+   ]
+  },
+  {
+   "id": "T-S4",
+   "doc": "T-1",
+   "section": "4. Suspension — the fleet has no law; stay inside the band",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=keep, 1 member hint(s))",
+   "hints": [
+    "suspension.antirollbar_strength"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found"
+   ]
+  },
+  {
+   "id": "T-S5",
+   "doc": "T-1",
+   "section": "4. Suspension — the fleet has no law; stay inside the band",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=keep, 3 member hint(s))",
+   "hints": [
+    "suspension.lateral_tire_force_offset",
+    "t3_fleet.md",
+    "vocabulary.md"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found"
+   ]
+  },
+  {
+   "id": "T-R1",
+   "doc": "T-1",
+   "section": "5. Grip — the row the understeer lives on",
+   "dispo": "edit",
+   "edits": 2,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_global.vmodc:rear_wheels.arcade_friction_multiplier = 3.0 (row says 3.0)",
+   "hints": [
+    "chain.json",
+    "land_global.front.rear_wheels.arcade_friction_multiplier"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_global.vmodc:rear_wheels.arcade_friction_multiplier = 3.0 (row says 3.0)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_global.vmodc:rear_wheels.arcade_friction_multiplier = 3.0"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-R2",
+   "doc": "T-1",
+   "section": "5. Grip — the row the understeer lives on",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=keep, 0 member hint(s))",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-R3",
+   "doc": "T-1",
+   "section": "5. Grip — the row the understeer lives on",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=keep, 0 member hint(s))",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-ST1",
+   "doc": "T-1",
+   "section": "6. Steering — BmAK's numbers exist, and the fleet says two of them are out of family",
+   "dispo": "edit",
+   "edits": 5,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_steering.vmodc:steer_angle_min_speed_deg = 55.0 (row says 55)",
+   "hints": [
+    "land_steering.steer_angle_min_speed_deg"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_steering.vmodc:steer_angle_min_speed_deg = 55.0 (row says 55)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_steering.vmodc:steer_angle_min_speed_deg = 55.0"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-ST2",
+   "doc": "T-1",
+   "section": "6. Steering — BmAK's numbers exist, and the fleet says two of them are out of family",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_steering.vmodc:t_to_full_steer_s = 0.800000011920929 (row says 0.8)",
+   "hints": [
+    "land_steering.t_to_full_steer_s"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_steering.vmodc:t_to_full_steer_s = 0.800000011920929 (row says 0.8)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_steering.vmodc:t_to_full_steer_s = 0.800000011920929"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-ST3",
+   "doc": "T-1",
+   "section": "6. Steering — BmAK's numbers exist, and the fleet says two of them are out of family",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_steering.vmodc:max_speed_t_to_full_steer_s = 0.6000000238418579 (row says 0.6)",
+   "hints": [
+    "land_steering.max_speed_t_to_full_steer_s"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_steering.vmodc:max_speed_t_to_full_steer_s = 0.6000000238418579 (row says 0.6)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_steering.vmodc:max_speed_t_to_full_steer_s = 0.6000000238418579"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-ST4",
+   "doc": "T-1",
+   "section": "6. Steering — BmAK's numbers exist, and the fleet says two of them are out of family",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_steering.vmodc:steer_input_power_pc = 3.0 (row says 3)",
+   "hints": [
+    "land_steering.steer_input_power_pc.durango.orbis",
+    "vocabulary.md"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_steering.vmodc:steer_input_power_pc = 3.0 (row says 3)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_steering.vmodc:steer_input_power_pc = 3.0"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-ST5",
+   "doc": "T-1",
+   "section": "6. Steering — BmAK's numbers exist, and the fleet says two of them are out of family",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_steering.vmodc:countersteer_speed_factor = 1.0 (row says 1.0)",
+   "hints": [
+    "bmak_chain.py",
+    "chain.json",
+    "land_steering.countersteer_speed_factor"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_steering.vmodc:countersteer_speed_factor = 1.0 (row says 1.0)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_steering.vmodc:countersteer_speed_factor = 1.0"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "built ahead of the ledger (dispo says not built)"
+   ]
+  },
+  {
+   "id": "T-ST6",
+   "doc": "T-1",
+   "section": "6. Steering — BmAK's numbers exist, and the fleet says two of them are out of family",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_steering.vmodc:wheel_drift_aligning_strength = 0.30000001192092896 (row says 0.3)",
+   "hints": [
+    "chain.json",
+    "land_steering.wheel_drift_aligning_strength",
+    "vocabulary.md"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_steering.vmodc:wheel_drift_aligning_strength = 0.30000001192092896 (row says 0.3)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_steering.vmodc:wheel_drift_aligning_strength = 0.30000001192092896"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-E1",
+   "doc": "T-1",
+   "section": "7. Engine and transmission",
+   "dispo": "edit",
+   "edits": 3,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=edit, 0 member hint(s))",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "prose claim: no member and no token to check",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-E2",
+   "doc": "T-1",
+   "section": "7. Engine and transmission",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_engine.vmodc:torque_factor_at_optimal_rpm = 1393.5245361328125 (row says 1393.5)",
+   "hints": [
+    "land_engine.torque_factor_at_optimal_rpm",
+    "fits.md"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_engine.vmodc:torque_factor_at_optimal_rpm = 1393.5245361328125 (row says 1393.5)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_engine.vmodc:torque_factor_at_optimal_rpm = 1393.5245361328125"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-E3",
+   "doc": "T-1",
+   "section": "7. Engine and transmission",
+   "dispo": "edit",
+   "edits": 2,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=edit, 0 member hint(s))",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-E4",
+   "doc": "T-1",
+   "section": "7. Engine and transmission",
+   "dispo": "edit",
+   "edits": 6,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_transmission.vmodc:gears = 5 (row says 5)",
+   "hints": [
+    "transmission.gears"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_transmission.vmodc:gears = 5 (row says 5)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_transmission.vmodc:gears = 5"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-E5",
+   "doc": "T-1",
+   "section": "7. Engine and transmission",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "GUESSED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_vehicle_misc.vmodc:official_top_speed = 336.3999938964844 (row says 336.4)",
+   "hints": [
+    "vehicle_misc.official_top_speed",
+    "transmission.top_speed"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_vehicle_misc.vmodc:official_top_speed = 336.3999938964844 (row says 336.4)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_transmission.vmodc:top_speed = 437.32000732421875",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_vehicle_misc.vmodc:official_top_speed = 336.3999938964844"
+   ],
+   "string_hits": [],
+   "provenance_markers": [
+    "assum"
+   ],
+   "receipt_mentions": [],
+   "notes": [
+    "provenance markers: assum"
+   ]
+  },
+  {
+   "id": "T-B1",
+   "doc": "T-1",
+   "section": "8. Boost — BmAK gives a *ratio*, not a multiplier",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc:arcade.nitro_boost.torque_multiplier = 2.0 (row says 2.0)",
+   "hints": [
+    "custom_land_global.arcade.nitro_boost.torque_multiplier"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc:arcade.nitro_boost.torque_multiplier = 2.0 (row says 2.0)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc:arcade.nitro_boost.torque_multiplier = 2.0"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-B2",
+   "doc": "T-1",
+   "section": "8. Boost — BmAK gives a *ratio*, not a multiplier",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc:arcade.nitro_boost.extra_top_speed = 43.20000076293945 (row says 43.2)",
+   "hints": [
+    "camera.md",
+    "bmak_chain.py",
+    "chain.json",
+    "arcade.nitro_boost.extra_top_speed"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc:arcade.nitro_boost.extra_top_speed = 43.20000076293945 (row says 43.2)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc:arcade.nitro_boost.extra_top_speed = 43.20000076293945"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "built ahead of the ledger (dispo says not built)"
+   ]
+  },
+  {
+   "id": "T-B3",
+   "doc": "T-1",
+   "section": "8. Boost — BmAK gives a *ratio*, not a multiplier",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "GUESSED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc:arcade.nitro_boost.grip_multiplier = 1.0 (row says 1)",
+   "hints": [
+    "offsets.json",
+    "chain.json",
+    "arcade.nitro_boost.grip_multiplier"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc:arcade.nitro_boost.grip_multiplier = 1.0 (row says 1)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc:arcade.nitro_boost.grip_multiplier = 1.0"
+   ],
+   "string_hits": [],
+   "provenance_markers": [
+    "unsourced"
+   ],
+   "receipt_mentions": [],
+   "notes": [
+    "provenance markers: unsourced"
+   ]
+  },
+  {
+   "id": "T-B4",
+   "doc": "T-1",
+   "section": "8. Boost — BmAK gives a *ratio*, not a multiplier",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "member",
+   "evidence": "member present, no row number matches: editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc:arcade.heat_boost.torque_multiplier = 2.0 (+4 more member(s))",
+   "hints": [
+    "arcade.heat_boost",
+    "vocabulary.md"
+   ],
+   "value_hits": [],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc:arcade.heat_boost.torque_multiplier = 2.0",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc:arcade.heat_boost.grip_multiplier = 4.260000228881836",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc:arcade.heat_boost.push_force = 0.0",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc:arcade.heat_boost.boost_blend_time = 0.0"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found"
+   ]
+  },
+  {
+   "id": "T-A1",
+   "doc": "T-1",
+   "section": "9. Aerodynamics — the one fit the fleet actually supports",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "member",
+   "evidence": "member present, no row number matches: editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_aerodynamics.vmodc:frontal_area = 6.634666919708252",
+   "hints": [
+    "land_aerodynamics.frontal_area",
+    "t3_fleet.md",
+    "fits.md"
+   ],
+   "value_hits": [],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_aerodynamics.vmodc:frontal_area = 6.634666919708252"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found"
+   ]
+  },
+  {
+   "id": "T-A2",
+   "doc": "T-1",
+   "section": "9. Aerodynamics — the one fit the fleet actually supports",
+   "dispo": "edit",
+   "edits": 1,
+   "verdict": "GUESSED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_aerodynamics.vmodc:drag_coefficient = 0.550000011920929 (row says 0.55)",
+   "hints": [
+    "chain.json",
+    "land_aerodynamics.drag_coefficient"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_aerodynamics.vmodc:drag_coefficient = 0.550000011920929 (row says 0.55)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_aerodynamics.vmodc:drag_coefficient = 0.550000011920929"
+   ],
+   "string_hits": [],
+   "provenance_markers": [
+    "by hand",
+    "not law"
+   ],
+   "receipt_mentions": [],
+   "notes": [
+    "provenance markers: by hand, not law"
+   ]
+  },
+  {
+   "id": "T-A3",
+   "doc": "T-1",
+   "section": "9. Aerodynamics — the one fit the fleet actually supports",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_aerodynamics.vmodc:top_speed_drag_coefficient = 2.0 (row says 2.0)",
+   "hints": [
+    "land_aerodynamics.top_speed_drag_coefficient"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_aerodynamics.vmodc:top_speed_drag_coefficient = 2.0 (row says 2.0)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_aerodynamics.vmodc:top_speed_drag_coefficient = 2.0"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-A4",
+   "doc": "T-1",
+   "section": "9. Aerodynamics — the one fit the fleet actually supports",
+   "dispo": "edit",
+   "edits": 1,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_aerodynamics.vmodc:lift_coefficient = -0.30000001192092896 (row says -0.3)",
+   "hints": [
+    "land_aerodynamics.lift_coefficient"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_aerodynamics.vmodc:lift_coefficient = -0.30000001192092896 (row says -0.3)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_aerodynamics.vmodc:lift_coefficient = -0.30000001192092896"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-K1",
+   "doc": "T-1",
+   "section": "10. Brakes",
+   "dispo": "edit",
+   "edits": 2,
+   "verdict": "GUESSED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_brakes.vmodc:rear.max_brake_torque = 5000.0 (row says 5000)",
+   "hints": [
+    "svehiclesimcar.maxbraketorque",
+    "chain.json",
+    "brakes.front.rear.max_brake_torque"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_brakes.vmodc:rear.max_brake_torque = 5000.0 (row says 5000)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_brakes.vmodc:rear.max_brake_torque = 5000.0"
+   ],
+   "string_hits": [],
+   "provenance_markers": [
+    "assum"
+   ],
+   "receipt_mentions": [],
+   "notes": [
+    "provenance markers: assum"
+   ]
+  },
+  {
+   "id": "T-K2",
+   "doc": "T-1",
+   "section": "10. Brakes",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=next (not built); no member among 4 row member(s) and no carried token in the aaf",
+   "hints": [
+    "bmak_chain.py",
+    "chain.json",
+    "brakes.min_time_to_block",
+    "vocabulary.md"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [
+    "guess"
+   ],
+   "receipt_mentions": [],
+   "notes": [
+    "provenance markers: guess"
+   ]
+  },
+  {
+   "id": "T-K3",
+   "doc": "T-1",
+   "section": "10. Brakes",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_brakes.vmodc:handbrake_friction_factor = 1.0 (row says 1.0)",
+   "hints": [
+    "chain.json",
+    "brakes.handbrake_friction_factor"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_brakes.vmodc:handbrake_friction_factor = 1.0 (row says 1.0)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_brakes.vmodc:handbrake_friction_factor = 1.0"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-L1",
+   "doc": "T-1",
+   "section": "12. Lights — categorical, 28 BmAK entries → 22 JC3 presets",
+   "dispo": "epe",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x35CC: 'Front_Left_Point'",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x35CC: 'Front_Left_Point'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x47AC: 'Front_Left_Volumetric'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-L2",
+   "doc": "T-1",
+   "section": "12. Lights — categorical, 28 BmAK entries → 22 JC3 presets",
+   "dispo": "epe",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=epe, 0 member hint(s))",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "prose claim: no member and no token to check",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-L3",
+   "doc": "T-1",
+   "section": "12. Lights — categorical, 28 BmAK entries → 22 JC3 presets",
+   "dispo": "epe",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x2CF9: 'Rear_Break'",
+   "hints": [
+    "t2_lg2.py"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x2CF9: 'Rear_Break'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-L4",
+   "doc": "T-1",
+   "section": "12. Lights — categorical, 28 BmAK entries → 22 JC3 presets",
+   "dispo": "superseded",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=superseded (declared not built): closed by T-18: no JC3 wheel preset exists, so the lamp is a custom `preset_id 0` entry (G2-33 §7 recipe, `Research/JC3G",
+   "hints": [
+    "t14_lights.md",
+    "research.jc3grab.light_system.md"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-L5",
+   "doc": "T-1",
+   "section": "12. Lights — categorical, 28 BmAK entries → 22 JC3 presets",
+   "dispo": "epe",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x4F28: 'Front_Secondary_Head'",
+   "hints": [
+    "t2_lg2.py"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x4F28: 'Front_Secondary_Head'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-L6",
+   "doc": "T-1",
+   "section": "12. Lights — categorical, 28 BmAK entries → 22 JC3 presets",
+   "dispo": "epe",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x50AC: 'Dash_Light'",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x50AC: 'Dash_Light'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-L7",
+   "doc": "T-1",
+   "section": "12. Lights — categorical, 28 BmAK entries → 22 JC3 presets",
+   "dispo": "superseded",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=superseded (declared not built): corrected by T-18: `Rear_Point` is not one of the 22 objects this rig's graph instantiates, so the boot lamp is a custom",
+   "hints": [
+    "t14_lights.md"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-P1",
+   "doc": "T-1",
+   "section": "13. Parts and damage — decoded, shapes excepted",
+   "dispo": "epe",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=epe, 1 member hint(s))",
+   "hints": [
+    "cpartprop.name"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found"
+   ]
+  },
+  {
+   "id": "T-P2",
+   "doc": "T-1",
+   "section": "13. Parts and damage — decoded, shapes excepted",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "member",
+   "evidence": "member present, no row number matches: editor/entities/jc_vehicles/00_shared/modules/health/lave_health_medium.vmodc:part_damage_types.type.string = 'Default' (+614 more member(s))",
+   "hints": [
+    "vehicleparts.parts.damage_type",
+    "vehicledamage.part_damage_types",
+    "parts_table.jsonl"
+   ],
+   "value_hits": [],
+   "member_hits": [
+    "editor/entities/jc_vehicles/00_shared/modules/health/lave_health_medium.vmodc:part_damage_types.type.string = 'Default'",
+    "editor/entities/jc_vehicles/00_shared/modules/health/lave_health_medium.vmodc:part_damage_types.type.hash = 3681480222",
+    "editor/entities/jc_vehicles/00_shared/modules/health/lave_health_medium.vmodc:part_damage_types.initial_health = 50",
+    "editor/entities/jc_vehicles/00_shared/modules/health/lave_health_medium.vmodc:part_damage_types.damaged_health = 30"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found"
+   ]
+  },
+  {
+   "id": "T-P3",
+   "doc": "T-1",
+   "section": "13. Parts and damage — decoded, shapes excepted",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=next (not built); no member among 1 row member(s) and no carried token in the aaf",
+   "hints": [
+    "t16_collision.json"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-MA1",
+   "doc": "T-2b",
+   "section": "1. Appearance — 185 materials, 405 textures, 19 slots",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=keep, 1 member hint(s))",
+   "hints": [
+    "verify_install.py"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found"
+   ]
+  },
+  {
+   "id": "T-MA2",
+   "doc": "T-2b",
+   "section": "1. Appearance — 185 materials, 405 textures, 19 slots",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=keep, 1 member hint(s))",
+   "hints": [
+    "slots.json"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found"
+   ]
+  },
+  {
+   "id": "T-MA3",
+   "doc": "T-2b",
+   "section": "1. Appearance — 185 materials, 405 textures, 19 slots",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=keep, 1 member hint(s))",
+   "hints": [
+    "values.json"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found"
+   ]
+  },
+  {
+   "id": "T-MA4",
+   "doc": "T-2b",
+   "section": "1. Appearance — 185 materials, 405 textures, 19 slots",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=keep, 0 member hint(s))",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "prose claim: no member and no token to check",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-MA5",
+   "doc": "T-2b",
+   "section": "1. Appearance — 185 materials, 405 textures, 19 slots",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=keep, 2 member hint(s))",
+   "hints": [
+    "values.json",
+    "factors.py"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [
+    "tuned"
+   ],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found",
+    "provenance markers: tuned"
+   ]
+  },
+  {
+   "id": "T-MA6",
+   "doc": "T-2b",
+   "section": "1. Appearance — 185 materials, 405 textures, 19 slots",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=keep, 0 member hint(s))",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "prose claim: no member and no token to check",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-MA7",
+   "doc": "T-2b",
+   "section": "1. Appearance — 185 materials, 405 textures, 19 slots",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_palette.vmodc:tints.specular_gloss = 0.44999998807907104 (row says 0.45)",
+   "hints": [
+    "palette.tints"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_palette.vmodc:tints.specular_gloss = 0.44999998807907104 (row says 0.45)",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_palette.vmodc:tints.specular_gloss = 0.44999998807907104 (row says 0.45)",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_palette.vmodc:tints.specular_gloss = 0.44999998807907104 (row says 0.45)",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_palette.vmodc:tints.specular_gloss = 0.44999998807907104 (row says 0.45)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_palette.vmodc:tints.name.string = 'White'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_palette.vmodc:tints.name.hash = 2930093752",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_palette.vmodc:tints.occurrence = 100",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_palette.vmodc:tints.tint_r.r = 0.05000000074505806"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-PA1",
+   "doc": "T-2b",
+   "section": "2. Assembly — parts, sockets, hardpoints",
+   "dispo": "epe",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1D75: 'taillight_r_l'",
+   "hints": [
+    "t2_lg2.py"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1D75: 'taillight_r_l'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-PA2",
+   "doc": "T-2b",
+   "section": "2. Assembly — parts, sockets, hardpoints",
+   "dispo": "epe",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_vehicle_deform.vmodc:light_indices = 12 (row says 12)",
+   "hints": [
+    "deformpoints.light_indices",
+    "points.from_part"
+   ],
+   "value_hits": [
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_vehicle_deform.vmodc:light_indices = 12 (row says 12)"
+   ],
+   "member_hits": [
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_vehicle_deform.vmodc:points.from_part = 'sportsmuscle_grill'",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_vehicle_deform.vmodc:points.from_part = 'sportsmuscle_plate_r'",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_vehicle_deform.vmodc:points.from_part = 'sportsmuscle_door_f_l'",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_vehicle_deform.vmodc:points.from_part = 'sportsmuscle_rear_bumper'"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-PA3",
+   "doc": "T-2b",
+   "section": "2. Assembly — parts, sockets, hardpoints",
+   "dispo": "epe",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:parts.world_collision_body_id = 0 (row says 0)",
+   "hints": [
+    "parts.world_collision_body_id",
+    "parts_table.jsonl"
+   ],
+   "value_hits": [
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:parts.world_collision_body_id = 0 (row says 0)",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:parts.world_collision_body_id = 1 (row says 1)",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:parts.world_collision_body_id = 7 (row says 7)",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:parts.world_collision_body_id = -1 (row says -1)"
+   ],
+   "member_hits": [
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:parts.world_collision_body_id = 0",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:parts.world_collision_body_id = 1",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:parts.world_collision_body_id = 4",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:parts.world_collision_body_id = 7"
+   ],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x13F91: 'door_f_l'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-PA4",
+   "doc": "T-2b",
+   "section": "2. Assembly — parts, sockets, hardpoints",
+   "dispo": "epe",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:wheel_parts.part_index = 11 (row says 11)",
+   "hints": [
+    "vehicleparts.wheel_parts"
+   ],
+   "value_hits": [
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:wheel_parts.part_index = 11 (row says 11)",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:wheel_parts.part_index = 12 (row says 12)",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:wheel_parts.part_index = 26 (row says 26)",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:wheel_parts.part_index = 27 (row says 27)"
+   ],
+   "member_hits": [
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:wheel_parts.part_index = 11",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:wheel_parts.wheel_slot = 3",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:wheel_parts.number_of_spokes = 1",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:wheel_parts.spins = 1"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-PA5",
+   "doc": "T-2b",
+   "section": "2. Assembly — parts, sockets, hardpoints",
+   "dispo": "epe",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:door_parts.part_index = 25 (row says 25)",
+   "hints": [
+    "vehicleparts.door_parts"
+   ],
+   "value_hits": [
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:door_parts.part_index = 25 (row says 25)"
+   ],
+   "member_hits": [
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:door_parts.part_index = 25"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-PA6",
+   "doc": "T-2b",
+   "section": "2. Assembly — parts, sockets, hardpoints",
+   "dispo": "epe",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "member",
+   "evidence": "member present, no row number matches: models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_vehicle_deform.vmodc:constraint_indices = 14 (+10 more member(s))",
+   "hints": [
+    "deformpoints.constraint_indices"
+   ],
+   "value_hits": [],
+   "member_hits": [
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_vehicle_deform.vmodc:constraint_indices = 14",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_vehicle_deform.vmodc:constraint_indices = 26",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_vehicle_deform.vmodc:constraint_indices = 30",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_vehicle_deform.vmodc:constraint_indices = 50"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found"
+   ]
+  },
+  {
+   "id": "T-PA7",
+   "doc": "T-2b",
+   "section": "2. Assembly — parts, sockets, hardpoints",
+   "dispo": "epe",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "member",
+   "evidence": "member present, no row number matches: models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_vehicle_deform.vmodc:non_deformable_parts_indices = 5 (+19 more member(s))",
+   "hints": [
+    "deformpoints.non_deformable_parts_indices"
+   ],
+   "value_hits": [],
+   "member_hits": [
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_vehicle_deform.vmodc:non_deformable_parts_indices = 5",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_vehicle_deform.vmodc:non_deformable_parts_indices = 6",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_vehicle_deform.vmodc:non_deformable_parts_indices = 8",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_vehicle_deform.vmodc:non_deformable_parts_indices = 13"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found"
+   ]
+  },
+  {
+   "id": "T-PA8",
+   "doc": "T-2b",
+   "section": "2. Assembly — parts, sockets, hardpoints",
+   "dispo": "epe",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=epe, 1 member hint(s))",
+   "hints": [
+    "lights.json"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found"
+   ]
+  },
+  {
+   "id": "T-LG1",
+   "doc": "T-2b",
+   "section": "3. Lights — 101 BmAK entries, 21 JC3 rows, mismatch resolved",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "member",
+   "evidence": "member present, no row number matches: editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/generated/batmobile/v0300_car_kensington_sportsmuscle_lights.vmodc:lights.behavior = 'HeadLight' (+449 more member(s))",
+   "hints": [
+    "vehicledynamiclights.lights"
+   ],
+   "value_hits": [],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/generated/batmobile/v0300_car_kensington_sportsmuscle_lights.vmodc:lights.behavior = 'HeadLight'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/generated/batmobile/v0300_car_kensington_sportsmuscle_lights.vmodc:lights.behavior_hash = 3460580079",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/generated/batmobile/v0300_car_kensington_sportsmuscle_lights.vmodc:lights.part = 'sportsmuscle_body'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/generated/batmobile/v0300_car_kensington_sportsmuscle_lights.vmodc:lights.part_hash = 3076414876"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found"
+   ]
+  },
+  {
+   "id": "T-LG2",
+   "doc": "T-2b",
+   "section": "3. Lights — 101 BmAK entries, 21 JC3 rows, mismatch resolved",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x4F28: 'Front_Secondary_Head'",
+   "hints": [
+    "entities.md",
+    "t2_lg2.py"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x4F28: 'Front_Secondary_Head'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x2CF9: 'Rear_Break'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-LG3",
+   "doc": "T-2b",
+   "section": "3. Lights — 101 BmAK entries, 21 JC3 rows, mismatch resolved",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=keep, 0 member hint(s))",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "prose claim: no member and no token to check",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-LG4",
+   "doc": "T-2b",
+   "section": "3. Lights — 101 BmAK entries, 21 JC3 rows, mismatch resolved",
+   "dispo": "superseded",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=superseded (declared not built): closed by T-18: the absent preset is replaced by a custom `preset_id 0` entry on a new `sportsmuscle_wheel_f_*_arch` par",
+   "hints": [
+    "t14_lights.md"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-LG5",
+   "doc": "T-2b",
+   "section": "3. Lights — 101 BmAK entries, 21 JC3 rows, mismatch resolved",
+   "dispo": "superseded",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=superseded (declared not built): split: the battle-mode spotlight is a donor light type (`VEHLT_BattleModeLight`) with no JC3 behaviour of its own - the ",
+   "hints": [
+    "research.jc3grab.light_system.md"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-LG6",
+   "doc": "T-2b",
+   "section": "3. Lights — 101 BmAK entries, 21 JC3 rows, mismatch resolved",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/generated/batmobile/v0300_car_kensington_sportsmuscle_lights.vmodc:lights.range = 2.0 (row says 2)",
+   "hints": [
+    "lights.range"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/generated/batmobile/v0300_car_kensington_sportsmuscle_lights.vmodc:lights.range = 2.0 (row says 2)",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/generated/batmobile/v0300_car_kensington_sportsmuscle_lights.vmodc:lights.range = 2.0 (row says 2)",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/generated/batmobile/v0300_car_kensington_sportsmuscle_lights.vmodc:lights.range = 30.0 (row says 30)",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/generated/batmobile/v0300_car_kensington_sportsmuscle_lights.vmodc:lights.range = 2.0 (row says 2)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/generated/batmobile/v0300_car_kensington_sportsmuscle_lights.vmodc:lights.range = 2.0",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/generated/batmobile/v0300_car_kensington_sportsmuscle_lights.vmodc:lights.range = 2.0",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/generated/batmobile/v0300_car_kensington_sportsmuscle_lights.vmodc:lights.range = 30.0",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/generated/batmobile/v0300_car_kensington_sportsmuscle_lights.vmodc:lights.range = 2.0"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-AU1",
+   "doc": "T-2b",
+   "section": "4. Audio — the one subsystem JC3 does not expose in the entity",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=keep, 0 member hint(s))",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "prose claim: no member and no token to check",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-AU2",
+   "doc": "T-2b",
+   "section": "4. Audio — the one subsystem JC3 does not expose in the entity",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=keep, 0 member hint(s))",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-AU3",
+   "doc": "T-2b",
+   "section": "4. Audio — the one subsystem JC3 does not expose in the entity",
+   "dispo": "blocked",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=blocked (not built); no member among 0 row member(s) and no carried token in the aaf",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-AU4",
+   "doc": "T-2b",
+   "section": "4. Audio — the one subsystem JC3 does not expose in the entity",
+   "dispo": "edit",
+   "edits": 1,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_audio.vmodc:max_rpm = 4500.0 (row says 4500)",
+   "hints": [
+    "landaudio.max_rpm",
+    "landengine.max_rpm"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_audio.vmodc:max_rpm = 4500.0 (row says 4500)",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_engine.vmodc:max_rpm = 4500.0 (row says 4500)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_audio.vmodc:max_rpm = 4500.0",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_engine.vmodc:max_rpm = 4500.0"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-FX1",
+   "doc": "T-2b",
+   "section": "5. Effects — 51 rows in the build, 17 names in the game",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/generated/v0300_car_kensington_sportsmuscle_effect_attachments.vmodc:all_effects.effect.string = 'window_break' (row text)",
+   "hints": [
+    "all_effects.effect"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/generated/v0300_car_kensington_sportsmuscle_effect_attachments.vmodc:all_effects.effect.string = 'window_break' (row text)",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/generated/v0300_car_kensington_sportsmuscle_effect_attachments.vmodc:all_effects.effect.string = 'window_break' (row text)",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/generated/v0300_car_kensington_sportsmuscle_effect_attachments.vmodc:all_effects.effect.string = 'electric_break' (row text)",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/generated/v0300_car_kensington_sportsmuscle_effect_attachments.vmodc:all_effects.effect.string = 'electric_break' (row text)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/generated/v0300_car_kensington_sportsmuscle_effect_attachments.vmodc:all_effects.effect.string = 'burn_roof'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/generated/v0300_car_kensington_sportsmuscle_effect_attachments.vmodc:all_effects.effect.hash = 1752342301",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/generated/v0300_car_kensington_sportsmuscle_effect_attachments.vmodc:all_effects.effect.string = 'burn_base'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/generated/v0300_car_kensington_sportsmuscle_effect_attachments.vmodc:all_effects.effect.hash = 3343329694"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-FX2",
+   "doc": "T-2b",
+   "section": "5. Effects — 51 rows in the build, 17 names in the game",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x74A8: 'burn_engine'",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x74A8: 'burn_engine'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x7F84: 'burn_roof'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0xBF64: 'burn_base'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-FX3",
+   "doc": "T-2b",
+   "section": "5. Effects — 51 rows in the build, 17 names in the game",
+   "dispo": "blocked",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=blocked (not built); no member among 0 row member(s) and no carried token in the aaf",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-FX4",
+   "doc": "T-2b",
+   "section": "5. Effects — 51 rows in the build, 17 names in the game",
+   "dispo": "superseded",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=superseded (declared not built): split: the EMP *effect* has a carrier (`CForcePulse`, G2-16) but the weapon-slot copy does not, so the EMP/Immobilizer h",
+   "hints": [
+    "research.jc3grab.emp.md",
+    "research.jc3grab.entities.md"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-FX5",
+   "doc": "T-2b",
+   "section": "5. Effects — 51 rows in the build, 17 names in the game",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=keep, 0 member hint(s))",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "prose claim: no member and no token to check",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-DM1",
+   "doc": "T-2b",
+   "section": "6. Damage — decoded for all 233 vehicles, including the 24 types the parts module hides",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/00_shared/modules/health/lave_health_medium.vmodc:max_health = 700 (row says 700)",
+   "hints": [
+    "rvehiclebatmobile.health",
+    "vehicledamage.max_health"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/00_shared/modules/health/lave_health_medium.vmodc:max_health = 700 (row says 700)",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile_health_medium.vmodc:max_health = 36000 (row says 36000)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/00_shared/modules/health/lave_health_medium.vmodc:max_health = 700",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile_health_medium.vmodc:max_health = 36000"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "built ahead of the ledger (dispo says not built)"
+   ]
+  },
+  {
+   "id": "T-DM2",
+   "doc": "T-2b",
+   "section": "6. Damage — decoded for all 233 vehicles, including the 24 types the parts module hides",
+   "dispo": "edit",
+   "edits": 1,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=edit, 0 member hint(s))",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-DM3",
+   "doc": "T-2b",
+   "section": "6. Damage — decoded for all 233 vehicles, including the 24 types the parts module hides",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=keep, 0 member hint(s))",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-DM4",
+   "doc": "T-2b",
+   "section": "6. Damage — decoded for all 233 vehicles, including the 24 types the parts module hides",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=keep, 0 member hint(s))",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-DM5",
+   "doc": "T-2b",
+   "section": "6. Damage — decoded for all 233 vehicles, including the 24 types the parts module hides",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:parts.damage_type.string = 'Land_Body' (row text)",
+   "hints": [
+    "vehicleparts.parts.damage_type"
+   ],
+   "value_hits": [
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:parts.damage_type.string = 'Land_Body' (row text)",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:parts.damage_type.string = 'Land_Engine' (row text)",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:parts.damage_type.string = 'Land_Light' (row text)",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:parts.damage_type.string = 'Land_Light' (row text)"
+   ],
+   "member_hits": [
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:parts.damage_type.string = 'Land_Body'",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:parts.damage_type.hash = 934577878",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:parts.damage_type.string = 'Land_Door'",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:parts.damage_type.hash = 1675990137"
+   ],
+   "string_hits": [
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_c_mirror.lod@0x4A: 'c_mirror'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-DM6",
+   "doc": "T-2b",
+   "section": "6. Damage — decoded for all 233 vehicles, including the 24 types the parts module hides",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=keep, 0 member hint(s))",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-CO1",
+   "doc": "T-2b",
+   "section": "7. Collision — 128 BmAK boxes, and a JC3 chassis we already moved",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=keep, 1 member hint(s))",
+   "hints": [
+    "shapes.md"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found"
+   ]
+  },
+  {
+   "id": "T-CO2",
+   "doc": "T-2b",
+   "section": "7. Collision — 128 BmAK boxes, and a JC3 chassis we already moved",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=next (not built); no member among 1 row member(s) and no carried token in the aaf",
+   "hints": [
+    "t16_collision.json"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-CO3",
+   "doc": "T-2b",
+   "section": "7. Collision — 128 BmAK boxes, and a JC3 chassis we already moved",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:parts.has_world_collision_shape = 1 (row says 1)",
+   "hints": [
+    "parts.has_world_collision_shape",
+    "t16_collision.json"
+   ],
+   "value_hits": [
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:parts.has_world_collision_shape = 1 (row says 1)",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:parts.has_world_collision_shape = 1 (row says 1)",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:parts.has_world_collision_shape = 1 (row says 1)",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:parts.has_world_collision_shape = 1 (row says 1)"
+   ],
+   "member_hits": [
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:parts.has_world_collision_shape = 1",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:parts.has_world_collision_shape = 1",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:parts.has_world_collision_shape = 1",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:parts.has_world_collision_shape = 1"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-G6",
+   "doc": "T-3",
+   "section": "1. The rows",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_global.vmodc:rear_wheels.radius = 0.6826500296592712 (row says 0.68265)",
+   "hints": [
+    "svehiclewheel.wheelradius",
+    "land_global.front.rear_wheels.radius"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_global.vmodc:rear_wheels.radius = 0.6826500296592712 (row says 0.68265)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_cameras/character_cameras/collision/no_plyr_vehicle_collision.ctunec:radius = 0.25",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/v0300_car_kensington_sportsmuscle_buoyancy.vmodc:radius = 0.550000011920929",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_global.vmodc:rear_wheels.radius = 0.6826500296592712"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-S6",
+   "doc": "T-3",
+   "section": "1. The rows",
+   "dispo": "blocked",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=blocked (not built); no member among 1 row member(s) and no carried token in the aaf",
+   "hints": [
+    "suspension.length.min_length"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-ST7",
+   "doc": "T-3",
+   "section": "1. The rows",
+   "dispo": "blocked",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_steering.vmodc:t_to_full_steer_s = 0.800000011920929 (row says 0.8)",
+   "hints": [
+    "land_steering.t_to_full_steer_s"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_steering.vmodc:t_to_full_steer_s = 0.800000011920929 (row says 0.8)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_land_steering.vmodc:t_to_full_steer_s = 0.800000011920929"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "built ahead of the ledger (dispo says not built)"
+   ]
+  },
+  {
+   "id": "T-K4",
+   "doc": "T-3",
+   "section": "1. The rows",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_brakes.vmodc:rear.handbrake = 1 (row says 1)",
+   "hints": [
+    "brakes.front.rear.handbrake"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_brakes.vmodc:rear.handbrake = 1 (row says 1)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_brakes.vmodc:rear.handbrake = 1"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-DR1",
+   "doc": "T-3",
+   "section": "1. The rows",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc:drift.drift_entry_slip_angle = 20.0 (row says 20)",
+   "hints": [
+    "custom_land_global.drift",
+    "vocabulary.md",
+    "t3_fleet.md"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc:drift.drift_entry_slip_angle = 20.0 (row says 20)",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc:drift.max_drift_angle_deg = 45.0 (row says 45)",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc:drift.drift_yaw_vel_damp = 0.019999999552965164 (row says 0.02)",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc:drift.overdrift_yaw_vel_damp = 0.029999999329447746 (row says 0.03)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc:drift.drift_entry_slip_angle = 20.0",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc:drift.drift_exit_slip_angle = 2.0",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc:drift.max_drift_angle_deg = 45.0",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc:drift.drift_limit_spread_angle_deg = 15.0"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-EF1",
+   "doc": "T-3",
+   "section": "1. The rows",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/00_shared/modules/vehicle_common.vmodc:tire_effects.min_skid_velocity_for_skid_ms = 0.5 (row says 0.5)",
+   "hints": [
+    "vehiclecommon.tire_effects"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/00_shared/modules/vehicle_common.vmodc:tire_effects.min_skid_velocity_for_skid_ms = 0.5 (row says 0.5)",
+    "editor/entities/jc_vehicles/00_shared/modules/vehicle_common.vmodc:tire_effects.slip_angle_to_peak_to_skid = 0.800000011920929 (row says 0.8)",
+    "editor/entities/jc_vehicles/00_shared/modules/vehicle_common.vmodc:tire_effects.slip_ratio_to_peak_to_spin = 0.5 (row says 0.5)",
+    "editor/entities/jc_vehicles/00_shared/modules/vehicle_common.vmodc:tire_effects.slip_velocity_scale = 0.25 (row says 0.25)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/00_shared/modules/vehicle_common.vmodc:tire_effects.min_slip_velocity_notyre_eff = 2.0",
+    "editor/entities/jc_vehicles/00_shared/modules/vehicle_common.vmodc:tire_effects.max_slip_velocity_notyre_eff = 10.0",
+    "editor/entities/jc_vehicles/00_shared/modules/vehicle_common.vmodc:tire_effects.min_spin_velocity_roll_effect = 20.0",
+    "editor/entities/jc_vehicles/00_shared/modules/vehicle_common.vmodc:tire_effects.min_slip_velocity_for_spin_ms = 1.0"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-DM7",
+   "doc": "T-3",
+   "section": "1. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=out (declared not built): stays `out`: G2-28 found no outgoing ram damage - its chain is hit -> own health and the only impact member is `impact_d",
+   "hints": [
+    "research.jc3grab.damage_model.md",
+    "research.jc3grab.forcepulse.md"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-DM8",
+   "doc": "T-3",
+   "section": "1. The rows",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "member",
+   "evidence": "member present, no row number matches: editor/entities/jc_vehicles/00_shared/modules/health/lave_health_medium.vmodc:impact_damage_factor = 1.0 (+1 more member(s))",
+   "hints": [
+    "hud.md",
+    "vehicledamage.impact_damage_factor",
+    "damage_switches.json"
+   ],
+   "value_hits": [],
+   "member_hits": [
+    "editor/entities/jc_vehicles/00_shared/modules/health/lave_health_medium.vmodc:impact_damage_factor = 1.0",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile_health_medium.vmodc:impact_damage_factor = 0.0"
+   ],
+   "string_hits": [],
+   "provenance_markers": [
+    "hand-set"
+   ],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found",
+    "provenance markers: hand-set"
+   ]
+  },
+  {
+   "id": "T-DM9",
+   "doc": "T-3",
+   "section": "1. The rows",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=next (not built); no member among 2 row member(s) and no carried token in the aaf",
+   "hints": [
+    "ccar.invulnerable",
+    "research.jc3grab.damage_mechanisms.md"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [
+    "probe"
+   ],
+   "receipt_mentions": [],
+   "notes": [
+    "provenance markers: probe"
+   ]
+  },
+  {
+   "id": "T-FX6",
+   "doc": "T-3",
+   "section": "1. The rows",
+   "dispo": "epe",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=epe, 0 member hint(s))",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-AU5",
+   "doc": "T-3",
+   "section": "1. The rows",
+   "dispo": "blocked",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=blocked (not built); no member among 0 row member(s) and no carried token in the aaf",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-W1",
+   "doc": "T-3",
+   "section": "1. The rows",
+   "dispo": "superseded",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0xEB4A: 'w618_sportsmuscle_missile'",
+   "hints": [
+    "research.jc3grab.weapons.md",
+    "weapon_wiring.md"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0xEB4A: 'w618_sportsmuscle_missile'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-BM1",
+   "doc": "T-3",
+   "section": "1. The rows",
+   "dispo": "superseded",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=superseded (declared not built): split: the mode scalars/curves and `ArmourModeDamageReduction` go to T-15 (gated by D-2), the transformation pose to T-1",
+   "hints": [
+    "research.jc3grab.tankturn.md"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-AC1",
+   "doc": "T-3",
+   "section": "1. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=out (declared not built): stays `out`, re-checked as the card asks: `gravity_multiplier_*` and `takeoff_pitch_damping` do exist (145 land vehicles",
+   "hints": [
+    "research.jc3grab.vocabulary.md"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-RA1",
+   "doc": "T-3",
+   "section": "1. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=out (declared not built): stays `out`: no ram-assist, dodge, shove or kill-flip member anywhere in the 52-type / 1,421-path vocabulary (`Research/",
+   "hints": [
+    "research.jc3grab.vocabulary.md"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-SR1",
+   "doc": "T-3",
+   "section": "1. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=out (declared not built): stays `out`: `righting_torque` exists but only in `DriverLean` on 23 aircraft and the donor has none, so there is no lan",
+   "hints": [
+    "research.jc3grab.vocabulary.md"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-PA9",
+   "doc": "T-3",
+   "section": "1. The rows",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=keep, 1 member hint(s))",
+   "hints": [
+    "entities.md"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found"
+   ]
+  },
+  {
+   "id": "T-FX7",
+   "doc": "T-13",
+   "section": "2. The rows",
+   "dispo": "epe",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=epe, 0 member hint(s))",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-FX8",
+   "doc": "T-13",
+   "section": "2. The rows",
+   "dispo": "epe",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=epe, 0 member hint(s))",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-FX9",
+   "doc": "T-13",
+   "section": "2. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=out (declared not built): no heat haze: G1-16 heat-steam is 0 systems and FX_TABLE has 0 haze paths in 955",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-FX10",
+   "doc": "T-13",
+   "section": "2. The rows",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=next (not built); no member among 0 row member(s) and no carried token in the aaf",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-FX11",
+   "doc": "T-13",
+   "section": "2. The rows",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=next (not built); no member among 0 row member(s) and no carried token in the aaf",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-FX12",
+   "doc": "T-13",
+   "section": "2. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=out (declared not built): no tracer .effc (0 of 955): the tracer is a WeaponTuning texture member (G2-10), carried by the weapon clone",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-FX13",
+   "doc": "T-13",
+   "section": "2. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=out (declared not built): no vehicle carries a casing/shell effect; ChainGun_BulletCasing has no JC3 carrier",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-FX14",
+   "doc": "T-13",
+   "section": "2. The rows",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=next (not built); no member among 0 row member(s) and no carried token in the aaf",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-FX15",
+   "doc": "T-13",
+   "section": "2. The rows",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=next (not built); no member among 0 row member(s) and no carried token in the aaf",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-FX16",
+   "doc": "T-13",
+   "section": "2. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=out (declared not built): no cannon-round trail effect exists (0 of 955); the round shows as the tracer (T-FX12)",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-FX17",
+   "doc": "T-13",
+   "section": "2. The rows",
+   "dispo": "epe",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1D09: 'wheel_f_l'",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1D09: 'wheel_f_l'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-FX18",
+   "doc": "T-13",
+   "section": "2. The rows",
+   "dispo": "epe",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=epe, 0 member hint(s))",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-FX19",
+   "doc": "T-13",
+   "section": "2. The rows",
+   "dispo": "epe",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=epe, 0 member hint(s))",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-FX20",
+   "doc": "T-13",
+   "section": "2. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=out (declared not built): no brake-trail effect path (0 of 955) and no BrakeLightTrail system in G1-16's 206; T-FX6 keeps the donor's own",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-FX21",
+   "doc": "T-13",
+   "section": "2. The rows",
+   "dispo": "epe",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x53EF: 'car_explosion_medium'",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x53EF: 'car_explosion_medium'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-FX22",
+   "doc": "T-13",
+   "section": "2. The rows",
+   "dispo": "epe",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=epe, 0 member hint(s))",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-FX23",
+   "doc": "T-13",
+   "section": "2. The rows",
+   "dispo": "epe",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=epe, 0 member hint(s))",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-L8",
+   "doc": "T-14",
+   "section": "3. The rows",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x2B5C: 'Sport_Muscle_Headlight_Point_Left'",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x2B5C: 'Sport_Muscle_Headlight_Point_Left'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x29CC: 'Sport_Muscle_Headlight_Volume_Left'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1B44: 'sportsmuscle_body'",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_headlight_f_l_01.lod@0x3D: 'sportsmuscle_headlight_f_l_01'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "built ahead of the ledger (dispo says not built)",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-L9",
+   "doc": "T-14",
+   "section": "3. The rows",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x2FEC: 'Sport_Muscle_Headlight_Point_Right'",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x2FEC: 'Sport_Muscle_Headlight_Point_Right'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x282C: 'Sport_Muscle_Headlight_Volume_Right'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1B44: 'sportsmuscle_body'",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_headlight_f_r_01.lod@0x3D: 'sportsmuscle_headlight_f_r_01'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "built ahead of the ledger (dispo says not built)",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-L10",
+   "doc": "T-14",
+   "section": "3. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1B44: 'sportsmuscle_body'",
+   "hints": [
+    "research.jc3grab.light_system.json",
+    "module.behaviors",
+    "research.jc3grab.light_system.md"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1B44: 'sportsmuscle_body'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-L11",
+   "doc": "T-14",
+   "section": "3. The rows",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x35CC: 'Front_Left_Point'",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x35CC: 'Front_Left_Point'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x47AC: 'Front_Left_Volumetric'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1B44: 'sportsmuscle_body'",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_headlight_f_l_02.lod@0x3D: 'sportsmuscle_headlight_f_l_02'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "built ahead of the ledger (dispo says not built)",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-L12",
+   "doc": "T-14",
+   "section": "3. The rows",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x3770: 'Front_Right_Point'",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x3770: 'Front_Right_Point'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x492C: 'Front_Right_Volumetric'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1B44: 'sportsmuscle_body'",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_headlight_f_r_02.lod@0x3D: 'sportsmuscle_headlight_f_r_02'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "built ahead of the ledger (dispo says not built)",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-L13",
+   "doc": "T-14",
+   "section": "3. The rows",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x3638: 'sportsmuscle_wheel_f_l_arch'",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x3638: 'sportsmuscle_wheel_f_l_arch'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1CFC: 'sportsmuscle_wheel_f_l'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "built ahead of the ledger (dispo says not built)",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-L14",
+   "doc": "T-14",
+   "section": "3. The rows",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x41F8: 'sportsmuscle_wheel_f_r_arch'",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x41F8: 'sportsmuscle_wheel_f_r_arch'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1C84: 'sportsmuscle_wheel_f_r'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "built ahead of the ledger (dispo says not built)",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-L15",
+   "doc": "T-14",
+   "section": "3. The rows",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x2E6C: 'Sport_Muscle_Rear_Break_Left'",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x2E6C: 'Sport_Muscle_Rear_Break_Left'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1B44: 'sportsmuscle_body'",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_signal_r_l.lod@0x3D: 'sportsmuscle_signal_r_l'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "built ahead of the ledger (dispo says not built)",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-L16",
+   "doc": "T-14",
+   "section": "3. The rows",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x2CEC: 'Sport_Muscle_Rear_Break_Right'",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x2CEC: 'Sport_Muscle_Rear_Break_Right'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1B44: 'sportsmuscle_body'",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_signal_r_r.lod@0x3D: 'sportsmuscle_signal_r_r'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "built ahead of the ledger (dispo says not built)",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-L17",
+   "doc": "T-14",
+   "section": "3. The rows",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x4F28: 'Front_Secondary_Head'",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x4F28: 'Front_Secondary_Head'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1B44: 'sportsmuscle_body'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "built ahead of the ledger (dispo says not built)",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-L18",
+   "doc": "T-14",
+   "section": "3. The rows",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x4388: 'headlight_battle_left'",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x4388: 'headlight_battle_left'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1B44: 'sportsmuscle_body'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "built ahead of the ledger (dispo says not built)",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-L19",
+   "doc": "T-14",
+   "section": "3. The rows",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x3938: 'headlight_battle_right'",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x3938: 'headlight_battle_right'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1B44: 'sportsmuscle_body'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "built ahead of the ledger (dispo says not built)",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-L20",
+   "doc": "T-14",
+   "section": "3. The rows",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x4DE8: 'sportsmuscle_wheel_f_l_arch_battle'",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x4DE8: 'sportsmuscle_wheel_f_l_arch_battle'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1CFC: 'sportsmuscle_wheel_f_l'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "built ahead of the ledger (dispo says not built)",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-L21",
+   "doc": "T-14",
+   "section": "3. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1B44: 'sportsmuscle_body'",
+   "hints": [
+    "research.batmobilegrab.lights.json",
+    "research.jc3grab.light_system.md"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1B44: 'sportsmuscle_body'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-L22",
+   "doc": "T-14",
+   "section": "3. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1B44: 'sportsmuscle_body'",
+   "hints": [
+    "research.batmobilegrab.lights.json",
+    "research.jc3grab.light_system.md"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1B44: 'sportsmuscle_body'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-L23",
+   "doc": "T-14",
+   "section": "3. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1B44: 'sportsmuscle_body'",
+   "hints": [
+    "research.batmobilegrab.lights.json",
+    "research.jc3grab.light_system.md"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1B44: 'sportsmuscle_body'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-L24",
+   "doc": "T-14",
+   "section": "3. The rows",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x50AC: 'Dash_Light'",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x50AC: 'Dash_Light'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1B44: 'sportsmuscle_body'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "built ahead of the ledger (dispo says not built)",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-L25",
+   "doc": "T-14",
+   "section": "3. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x29CC: 'Sport_Muscle_Headlight_Volume_Left'",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x29CC: 'Sport_Muscle_Headlight_Volume_Left'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1B44: 'sportsmuscle_body'",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_headlight_f_l_01.lod@0x3D: 'sportsmuscle_headlight_f_l_01'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-L26",
+   "doc": "T-14",
+   "section": "3. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x282C: 'Sport_Muscle_Headlight_Volume_Right'",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x282C: 'Sport_Muscle_Headlight_Volume_Right'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1B44: 'sportsmuscle_body'",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_headlight_f_r_01.lod@0x3D: 'sportsmuscle_headlight_f_r_01'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-L27",
+   "doc": "T-14",
+   "section": "3. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x29CC: 'Sport_Muscle_Headlight_Volume_Left'",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x29CC: 'Sport_Muscle_Headlight_Volume_Left'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1B44: 'sportsmuscle_body'",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_headlight_f_l_01.lod@0x3D: 'sportsmuscle_headlight_f_l_01'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-L28",
+   "doc": "T-14",
+   "section": "3. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1B44: 'sportsmuscle_body'",
+   "hints": [
+    "research.batmobilegrab.lights.json",
+    "research.batmobilegrab.lights.md"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1B44: 'sportsmuscle_body'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-L29",
+   "doc": "T-14",
+   "section": "3. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x282C: 'Sport_Muscle_Headlight_Volume_Right'",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x282C: 'Sport_Muscle_Headlight_Volume_Right'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1B44: 'sportsmuscle_body'",
+    "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_headlight_f_r_01.lod@0x3D: 'sportsmuscle_headlight_f_r_01'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-L30",
+   "doc": "T-14",
+   "section": "3. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1B44: 'sportsmuscle_body'",
+   "hints": [
+    "research.batmobilegrab.lights.json",
+    "research.batmobilegrab.lights.md"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1B44: 'sportsmuscle_body'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-L31",
+   "doc": "T-14",
+   "section": "3. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x41F8: 'sportsmuscle_wheel_f_r_arch'",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x41F8: 'sportsmuscle_wheel_f_r_arch'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1C84: 'sportsmuscle_wheel_f_r'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-L32",
+   "doc": "T-14",
+   "section": "3. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x41F8: 'sportsmuscle_wheel_f_r_arch'",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x41F8: 'sportsmuscle_wheel_f_r_arch'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1C84: 'sportsmuscle_wheel_f_r'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-L33",
+   "doc": "T-14",
+   "section": "3. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x3638: 'sportsmuscle_wheel_f_l_arch'",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x3638: 'sportsmuscle_wheel_f_l_arch'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1CFC: 'sportsmuscle_wheel_f_l'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-L34",
+   "doc": "T-14",
+   "section": "3. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x3638: 'sportsmuscle_wheel_f_l_arch'",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x3638: 'sportsmuscle_wheel_f_l_arch'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1CFC: 'sportsmuscle_wheel_f_l'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-L35",
+   "doc": "T-14",
+   "section": "3. The rows",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x5268: 'boot_light'",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x5268: 'boot_light'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1B44: 'sportsmuscle_body'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "built ahead of the ledger (dispo says not built)",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-WP1",
+   "doc": "T-7",
+   "section": "3. The rows",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0xFB38: 'w602_mediumtank_canon'",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0xFB38: 'w602_mediumtank_canon'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "built ahead of the ledger (dispo says not built)",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-WP2",
+   "doc": "T-7",
+   "section": "3. The rows",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0xDB02: 'w603_mediumtank_mgun'",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0xDB02: 'w603_mediumtank_mgun'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "built ahead of the ledger (dispo says not built)",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-WP3",
+   "doc": "T-7",
+   "section": "3. The rows",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0xEB4A: 'w618_sportsmuscle_missile'",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0xEB4A: 'w618_sportsmuscle_missile'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "built ahead of the ledger (dispo says not built)",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-WP4",
+   "doc": "T-7",
+   "section": "3. The rows",
+   "dispo": "blocked",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=blocked (not built); no member among 0 row member(s) and no carried token in the aaf",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-WP5",
+   "doc": "T-7",
+   "section": "3. The rows",
+   "dispo": "blocked",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=blocked (not built); no member among 1 row member(s) and no carried token in the aaf",
+   "hints": [
+    "truck_emp.ftune"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-WP6",
+   "doc": "T-7",
+   "section": "3. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=out (declared not built): named omission: 0 functional winch classes in the fleet - rope/winch geometry on 4 entities but no winch/tow/rope module",
+   "hints": [
+    "rbatmobilewinch.fireeffect",
+    "rbatmobilewinch.impacteffect",
+    "rbatmobilewinch.firesound",
+    "rbatmobilewinch.impactsound",
+    "research.jc3grab.tether.md"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-WP7",
+   "doc": "T-7",
+   "section": "3. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=out (declared not built): named omission: no allegiance-switch class in the 103-class fleet census (`allegian`/`hacker`/`hijack` appear nowhere); ",
+   "hints": [
+    "rbatmobileallegianceswitcher.batmobilehackereffect",
+    "rbatmobileallegianceswitcher.successfulhackeffect",
+    "rbatmobileallegianceswitcher.batmobilehackereffecthvytank",
+    "rbatmobileallegianceswitcher.successfulhackeffecthvytank",
+    "rbatmobileallegianceswitcher.dronehackermaterial",
+    "research.jc3grab.entities.md"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-WP8",
+   "doc": "T-7",
+   "section": "3. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=out (declared not built): named omission: no sonar class in the 103-class census; `CForcePulse` is the shockwave half only, which is T-WP5; proof ",
+   "hints": [
+    "rbatmobilesonar.scanparticle",
+    "research.jc3grab.entities.md"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-WP9",
+   "doc": "T-7",
+   "section": "3. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=out (declared not built): named omission: no tracker class in the 103-class census, the only 'track' is `CMusicTrack`; proof `Research/JC3Grab/ENT",
+   "hints": [
+    "rpursuitmodemissilelauncher.projectilearchetype",
+    "rpursuitmodemissilelauncher.launchsocketname",
+    "rpursuitmodemissilelauncher.launchrotationoffset",
+    "rvehicleweapon.firestartevent",
+    "rvehicleweapon.individualfireevent",
+    "research.jc3grab.entities.md"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-WP10",
+   "doc": "T-7",
+   "section": "3. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=out (declared not built): named omission under D-3: no non-lethal flag, damage type or weapon mode in the 52-type / 1,421-path vocabulary; proof `",
+   "hints": [
+    "rbatmobilecannon.gunfx",
+    "rbatmobilecannon.riotsuppressorimpacteffect",
+    "rbatmobilecannon.riotsuppressortracersystem",
+    "rbatmobilecannon.chainguntracersystem",
+    "research.jc3grab.vocabulary.md"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-WP11",
+   "doc": "T-7",
+   "section": "3. The rows",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc:arcade.nitro_boost.boost_blend_time = 0.20000000298023224 (row says 0.2)",
+   "hints": [
+    "arcade.nitro_boost"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc:arcade.nitro_boost.boost_blend_time = 0.20000000298023224 (row says 0.2)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc:arcade.nitro_boost.torque_multiplier = 2.0",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc:arcade.nitro_boost.grip_multiplier = 1.0",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc:arcade.nitro_boost.push_force = 15000.0",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc:arcade.nitro_boost.boost_blend_time = 0.20000000298023224"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-WP12",
+   "doc": "T-7",
+   "section": "3. The rows",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=next (not built); no member among 0 row member(s) and no carried token in the aaf",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-WP13",
+   "doc": "T-7",
+   "section": "3. The rows",
+   "dispo": "blocked",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=blocked (not built); no member among 0 row member(s) and no carried token in the aaf",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-WP14",
+   "doc": "T-7",
+   "section": "3. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=out (declared not built): D-3 resolved 2026-10-28 (user): accept JC3 lethality, no toggle - the row is the decision record, and the riot suppresso",
+   "hints": [
+    "research.jc3grab.vocabulary.md",
+    "research.jc3grab.g2x.json"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-WLD1",
+   "doc": "T-20",
+   "section": "2. The rows",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=next (not built); no member among 1 row member(s) and no carried token in the aaf",
+   "hints": [
+    "profile.item.onlinec"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-WLD2",
+   "doc": "T-20",
+   "section": "2. The rows",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=next (not built); no member among 2 row member(s) and no carried token in the aaf",
+   "hints": [
+    "task.onlinec",
+    "item.onlinec"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-WLD3",
+   "doc": "T-20",
+   "section": "2. The rows",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=next (not built); no member among 0 row member(s) and no carried token in the aaf",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-WLD4",
+   "doc": "T-20",
+   "section": "2. The rows",
+   "dispo": "blocked",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=blocked (not built); no member among 2 row member(s) and no carried token in the aaf",
+   "hints": [
+    "profile.online.stringlookup",
+    "jc3strings.py"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-WLD5",
+   "doc": "T-20",
+   "section": "2. The rows",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=next (not built); no member among 0 row member(s) and no carried token in the aaf",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-WLD6",
+   "doc": "T-20",
+   "section": "2. The rows",
+   "dispo": "blocked",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=blocked (not built); no member among 0 row member(s) and no carried token in the aaf",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [
+    "tuned"
+   ],
+   "receipt_mentions": [],
+   "notes": [
+    "provenance markers: tuned",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-WLD7",
+   "doc": "T-20",
+   "section": "2. The rows",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=keep, 0 member hint(s))",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "prose claim: no member and no token to check",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-WLD8",
+   "doc": "T-20",
+   "section": "2. The rows",
+   "dispo": "epe",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=epe, 0 member hint(s))",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "prose claim: no member and no token to check",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-WLD9",
+   "doc": "T-20",
+   "section": "2. The rows",
+   "dispo": "epe",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x157E0: 'S_EXIT_DRIVER_VEHICLE_IN_WATER'",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x157E0: 'S_EXIT_DRIVER_VEHICLE_IN_WATER'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-WLD10",
+   "doc": "T-20",
+   "section": "2. The rows",
+   "dispo": "epe",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x12D3C: 'point.stunt'",
+   "hints": [
+    "point.stunt"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x12D3C: 'point.stunt'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-WLD11",
+   "doc": "T-20",
+   "section": "2. The rows",
+   "dispo": "blocked",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "string",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1A608: 'front_area'",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1A608: 'front_area'",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x12D58: 'main_area'"
+   ],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "built ahead of the ledger (dispo says not built)",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-WLD12",
+   "doc": "T-20",
+   "section": "2. The rows",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_rigid_body.vmodc:mass = 6000.0 (row says 6000)",
+   "hints": [
+    "rigid_body.mass"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_rigid_body.vmodc:mass = 6000.0 (row says 6000)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_rigid_body.vmodc:mass = 6000.0"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "built ahead of the ledger (dispo says not built)"
+   ]
+  },
+  {
+   "id": "T-WLD13",
+   "doc": "T-20",
+   "section": "2. The rows",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/generated/v0300_car_kensington_sportsmuscle_water_interaction.vmodc:will_sink = 1 (row says 1)",
+   "hints": [
+    "waterinteraction.will_sink"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/generated/v0300_car_kensington_sportsmuscle_water_interaction.vmodc:will_sink = 1 (row says 1)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/generated/v0300_car_kensington_sportsmuscle_water_interaction.vmodc:will_sink = 1"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-WLD14",
+   "doc": "T-20",
+   "section": "2. The rows",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/00_shared/modules/vehicle_common.vmodc:car_common.engine_shut_down_delay_s = 30.0 (row says 30)",
+   "hints": [
+    "vehicle_damage.min_water_entry_ms",
+    "car_common.engine_shut_down_delay_s"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/00_shared/modules/vehicle_common.vmodc:car_common.engine_shut_down_delay_s = 30.0 (row says 30)",
+    "editor/entities/jc_vehicles/00_shared/modules/vehicle_common.vmodc:vehicle_damage.min_water_entry_ms = 10.0 (row says 10)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/00_shared/modules/vehicle_common.vmodc:car_common.engine_shut_down_delay_s = 30.0",
+    "editor/entities/jc_vehicles/00_shared/modules/vehicle_common.vmodc:vehicle_damage.min_water_entry_ms = 10.0"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-WLD15",
+   "doc": "T-20",
+   "section": "2. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=out (declared not built): no vehicle-side tether/winch member exists (`winch` = [], 335 tether paths are dialogue/UI); the car supplies its mass a",
+   "hints": [
+    "tether.json"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-WLD16",
+   "doc": "T-20",
+   "section": "2. The rows",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_rigid_body.vmodc:mass = 6000.0 (row says 6000)",
+   "hints": [
+    "rigid_body.mass"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_rigid_body.vmodc:mass = 6000.0 (row says 6000)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_rigid_body.vmodc:mass = 6000.0"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-WLD17",
+   "doc": "T-20",
+   "section": "2. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=out (declared not built): 0 of 23 helicopters carries a CVehicleCargoBay, so no helicopter can airlift any car (G2-34)",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-WLD18",
+   "doc": "T-20",
+   "section": "2. The rows",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=keep, 1 member hint(s))",
+   "hints": [
+    "settings.spawn_vehicle_defs.bin"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found"
+   ]
+  },
+  {
+   "id": "T-WLD19",
+   "doc": "T-20",
+   "section": "2. The rows",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=keep, 0 member hint(s))",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-MD1",
+   "doc": "T-15",
+   "section": "2. The rows",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc:arcade.nitro_boost.boost_blend_time = 0.20000000298023224 (row says 0.2)",
+   "hints": [
+    "arcade.nitro_boost",
+    "custom_land_global.arcade.nitro_boost"
+   ],
+   "value_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc:arcade.nitro_boost.boost_blend_time = 0.20000000298023224 (row says 0.2)"
+   ],
+   "member_hits": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc:arcade.nitro_boost.torque_multiplier = 2.0",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc:arcade.nitro_boost.grip_multiplier = 1.0",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc:arcade.nitro_boost.push_force = 15000.0",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_custom_land_global.vmodc:arcade.nitro_boost.boost_blend_time = 0.20000000298023224"
+   ],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "built ahead of the ledger (dispo says not built)"
+   ]
+  },
+  {
+   "id": "T-MD2",
+   "doc": "T-15",
+   "section": "2. The rows",
+   "dispo": "blocked",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=blocked (not built); no member among 0 row member(s) and no carried token in the aaf",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-MD3",
+   "doc": "T-15",
+   "section": "2. The rows",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=keep, 0 member hint(s))",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-MD4",
+   "doc": "T-15",
+   "section": "2. The rows",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=keep, 2 member hint(s))",
+   "hints": [
+    "objects.jsonl",
+    "modes.json"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "ledger claims built but no evidence found"
+   ]
+  },
+  {
+   "id": "T-MD5",
+   "doc": "T-15",
+   "section": "2. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=out (declared not built): `BattleModeVSpeedCurve` 0->60, 600->40, 1200->30 needs a mode switch a hybrid does not have; the points are recorded for",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-MD6",
+   "doc": "T-15",
+   "section": "2. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=out (declared not built): `TurningModeMaxSpeed` 600 cm/s = 21.6 km/h is a mode-only cap and no JC3 member carries one",
+   "hints": [
+    "vocabulary.md"
+   ],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": []
+  },
+  {
+   "id": "T-MD7",
+   "doc": "T-15",
+   "section": "2. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=out (declared not built): the six battle drive/slip factors are mode deltas on the handling rows; a hybrid has one handling set (T-M1/T-S1/T-E3/T-",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-MD8",
+   "doc": "T-15",
+   "section": "2. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=out (declared not built): turn-on-the-spot: G2-21 refuted 5 candidates and found 0 tank-only members, so the pivot has no data carrier (named omis",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-MD9",
+   "doc": "T-15",
+   "section": "2. The rows",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=next (not built); no member among 0 row member(s) and no carried token in the aaf",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-MD10",
+   "doc": "T-15",
+   "section": "2. The rows",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=keep, 0 member hint(s))",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "prose claim: no member and no token to check",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-MD11",
+   "doc": "T-15",
+   "section": "2. The rows",
+   "dispo": "keep",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no member/value/token match in the aaf (dispo=keep, 0 member hint(s))",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "prose claim: no member and no token to check",
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-MD12",
+   "doc": "T-15",
+   "section": "2. The rows",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=next (not built); no member among 0 row member(s) and no carried token in the aaf",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-MD13",
+   "doc": "T-15",
+   "section": "2. The rows",
+   "dispo": "out",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=out (declared not built): `TransformationAnimNode` is serialised in no package, so only T-12's end pose exists - the animated transformation is a ",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-MD14",
+   "doc": "T-15",
+   "section": "2. The rows",
+   "dispo": "blocked",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=blocked (not built); no member among 0 row member(s) and no carried token in the aaf",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  },
+  {
+   "id": "T-MD15",
+   "doc": "T-15",
+   "section": "2. The rows",
+   "dispo": "next",
+   "edits": 0,
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "ledger dispo=next (not built); no member among 0 row member(s) and no carried token in the aaf",
+   "hints": [],
+   "value_hits": [],
+   "member_hits": [],
+   "string_hits": [],
+   "provenance_markers": [],
+   "receipt_mentions": [],
+   "notes": [
+    "row names no dotted member (prose target)"
+   ]
+  }
+ ]
+}

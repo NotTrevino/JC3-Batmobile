@@ -1,0 +1,371 @@
+{
+ "all_rip_ops": [
+  {
+   "at": "0x140201df7",
+   "fn": "0x140201de0",
+   "sec": ".data",
+   "target": "0x142e15310",
+   "text": "mov rax, qword ptr [rip + 0x2c13512]"
+  },
+  {
+   "at": "0x140201f53",
+   "fn": "0x140201ebd",
+   "sec": ".rdata",
+   "target": "0x1422bc208",
+   "text": "movss xmm1, dword ptr [rip + 0x20ba2ad]"
+  },
+  {
+   "at": "0x140202010",
+   "fn": "0x140201ebd",
+   "sec": ".rdata",
+   "target": "0x142343bb0",
+   "text": "movaps xmm0, xmmword ptr [rip + 0x2141b99]"
+  },
+  {
+   "at": "0x1402020f4",
+   "fn": "0x1402020d1",
+   "sec": ".rdata",
+   "target": "0x142343bb0",
+   "text": "movaps xmm0, xmmword ptr [rip + 0x2141ab5]"
+  },
+  {
+   "at": "0x140222f52",
+   "fn": "0x140222ef0",
+   "sec": ".data",
+   "target": "0x142dad020",
+   "text": "lea rdx, [rip + 0x2b8a0c7]"
+  },
+  {
+   "at": "0x140223002",
+   "fn": "0x140222ef0",
+   "sec": ".data",
+   "target": "0x142dad020",
+   "text": "mov rax, qword ptr [rip + 0x2b8a017]"
+  },
+  {
+   "at": "0x14022300c",
+   "fn": "0x140222ef0",
+   "sec": ".data",
+   "target": "0x142dad020",
+   "text": "lea rcx, [rip + 0x2b8a00d]"
+  },
+  {
+   "at": "0x140223092",
+   "fn": "0x140223030",
+   "sec": ".data",
+   "target": "0x142dad020",
+   "text": "lea rdx, [rip + 0x2b89f87]"
+  },
+  {
+   "at": "0x140223142",
+   "fn": "0x140223030",
+   "sec": ".data",
+   "target": "0x142dad020",
+   "text": "mov rax, qword ptr [rip + 0x2b89ed7]"
+  },
+  {
+   "at": "0x14022314c",
+   "fn": "0x140223030",
+   "sec": ".data",
+   "target": "0x142dad020",
+   "text": "lea rcx, [rip + 0x2b89ecd]"
+  }
+ ],
+ "base": "0x140000000",
+ "caller_tree": {
+  "0x140201ebd": {
+   "anchor": "slot_query",
+   "depth": 1,
+   "via": [
+    "0x14020208a"
+   ]
+  },
+  "0x1402020d1": {
+   "anchor": "slot_query",
+   "depth": 1,
+   "via": [
+    "0x140202130"
+   ]
+  },
+  "0x140222ef0": {
+   "anchor": "slot_query",
+   "depth": 1,
+   "via": [
+    "0x140222fdc"
+   ]
+  },
+  "0x140223030": {
+   "anchor": "slot_query",
+   "depth": 1,
+   "via": [
+    "0x14022311c"
+   ]
+  },
+  "0x1402373f0": {
+   "anchor": "slot_enum",
+   "depth": 1,
+   "via": [
+    "0x140237401"
+   ]
+  },
+  "0x140237410": {
+   "anchor": null,
+   "depth": 2,
+   "via": [
+    "0x140237421"
+   ]
+  },
+  "0x140240980": {
+   "anchor": "node_update",
+   "depth": 1,
+   "via": [
+    "0x1402409bf"
+   ]
+  },
+  "0x1402409e0": {
+   "anchor": "slot_enum",
+   "depth": 1,
+   "via": [
+    "0x140240a26"
+   ]
+  },
+  "0x140240a40": {
+   "anchor": null,
+   "depth": 2,
+   "via": [
+    "0x140240a86"
+   ]
+  },
+  "0x14024b68e": {
+   "anchor": "node_update",
+   "depth": 1,
+   "via": [
+    "0x14024b6d0"
+   ]
+  },
+  "0x14024b6f2": {
+   "anchor": null,
+   "depth": 2,
+   "via": [
+    "0x14024b6fa"
+   ]
+  },
+  "0x140f5771e": {
+   "anchor": "node_update",
+   "depth": 1,
+   "via": [
+    "0x140f577da"
+   ]
+  },
+  "0x14140910f": {
+   "anchor": "slot_use",
+   "depth": 1,
+   "via": [
+    "0x141409152"
+   ]
+  },
+  "0x1414387c9": {
+   "anchor": "slot_use",
+   "depth": 1,
+   "via": [
+    "0x1414387e5"
+   ]
+  },
+  "0x1414389b7": {
+   "anchor": "slot_use",
+   "depth": 1,
+   "via": [
+    "0x141438a22"
+   ]
+  },
+  "0x14143950f": {
+   "anchor": "slot_use",
+   "depth": 1,
+   "via": [
+    "0x141439558"
+   ]
+  }
+ },
+ "card": "GRB-G3-07b",
+ "data_obj": {
+  "as_float_int": [
+   52.079925537109375,
+   1
+  ],
+  "bytes": "d8 51 50 42 01 00 00 00 00 00 00 00 00 00 00 00",
+  "va": "0x142dad020"
+ },
+ "data_ops": [
+  {
+   "at": "0x140222f52",
+   "fn": "0x140222ef0",
+   "sec": ".data",
+   "target": "0x142dad020",
+   "text": "lea rdx, [rip + 0x2b8a0c7]"
+  },
+  {
+   "at": "0x140223002",
+   "fn": "0x140222ef0",
+   "sec": ".data",
+   "target": "0x142dad020",
+   "text": "mov rax, qword ptr [rip + 0x2b8a017]"
+  },
+  {
+   "at": "0x14022300c",
+   "fn": "0x140222ef0",
+   "sec": ".data",
+   "target": "0x142dad020",
+   "text": "lea rcx, [rip + 0x2b8a00d]"
+  },
+  {
+   "at": "0x140223092",
+   "fn": "0x140223030",
+   "sec": ".data",
+   "target": "0x142dad020",
+   "text": "lea rdx, [rip + 0x2b89f87]"
+  },
+  {
+   "at": "0x140223142",
+   "fn": "0x140223030",
+   "sec": ".data",
+   "target": "0x142dad020",
+   "text": "mov rax, qword ptr [rip + 0x2b89ed7]"
+  },
+  {
+   "at": "0x14022314c",
+   "fn": "0x140223030",
+   "sec": ".data",
+   "target": "0x142dad020",
+   "text": "lea rcx, [rip + 0x2b89ecd]"
+  }
+ ],
+ "depth": 3,
+ "exe": "D:/Games/Just Cause 3/JustCause3.exe",
+ "float4": [
+  {
+   "dst": "xmm2",
+   "fn": "0x1415140f0",
+   "load_at": "0x141514105",
+   "offset": "0x40",
+   "text": "movaps xmm2, xmmword ptr [rcx + 0x40]",
+   "window": []
+  },
+  {
+   "dst": "xmm0",
+   "fn": "0x1415140f0",
+   "load_at": "0x14151411f",
+   "offset": "0x30",
+   "text": "movaps xmm0, xmmword ptr [rcx + 0x30]",
+   "window": []
+  }
+ ],
+ "float4_verdict": "the two float4s are copied to the stack and consumed outside the function; neither transform nor AABB is proved by this body",
+ "globals": [
+  {
+   "fn": "0x140201de0",
+   "global": "0x142e15310",
+   "ins": "0x140201df7",
+   "node_fields_read": [],
+   "reg": "rax",
+   "text": "mov rax, qword ptr [rip + 0x2c13512]"
+  },
+  {
+   "fn": "0x140222ef0",
+   "global": "0x142dad020",
+   "ins": "0x140223002",
+   "node_fields_read": [],
+   "reg": "rax",
+   "text": "mov rax, qword ptr [rip + 0x2b8a017]"
+  },
+  {
+   "fn": "0x140223030",
+   "global": "0x142dad020",
+   "ins": "0x140223142",
+   "node_fields_read": [],
+   "reg": "rax",
+   "text": "mov rax, qword ptr [rip + 0x2b89ed7]"
+  }
+ ],
+ "hash_imms": {},
+ "oracles": [
+  {
+   "evidence": "base 0x140000000, 7 sections, 188670 .pdata functions, .text 0x140001000/0x22a0cff B, .pdata 0x142fa9000",
+   "key": "O1-O1-image",
+   "ok": true
+  },
+  {
+   "evidence": "at 0x14151410f: movss xmm0, dword ptr [rax + 0x14]",
+   "key": "O1-O2-crash-instruction",
+   "ok": true
+  },
+  {
+   "evidence": "0x1415140f0 (80 B): rcx+0x50 shape=True, rcx+0x0c flags=True, rcx+0x40=True, rcx+0x30=True, rax+0x14=True",
+   "key": "O1-O3-slot-use",
+   "ok": true
+  },
+  {
+   "evidence": "0x140201de0 (76 B): rcx+0x100=True, rcx+0x101=True, rcx+0x140=True; stack cookie at 0x142e15310 = 0x2b992ddfa232 (.data)",
+   "key": "O1-O4-node-update",
+   "ok": true
+  },
+  {
+   "evidence": "0x1402020d1 (157 B): [rbx+0x158]=True, shl ...,7=True, add [rdi+0x60]=True; 0x142343bb0 = 0.00100000005, 0.00100000005, 0.00100000005, 0.00100000005 (bit-exact 4x float32(0.001))",
+   "key": "O1-O5-raycast-read",
+   "ok": true
+  },
+  {
+   "evidence": "0x140222ef0 (315 B): rcx+0x150=True, rdi+0x68 count=True, rdi+0x60 base=True, [rcx+rax+0x60] flag=True, lea 0x142dad020=True (holds (52.079925537109375, 1))",
+   "key": "O1-O6-slot-enum",
+   "ok": true
+  },
+  {
+   "evidence": "0x142343bb0 == 4x float32(0.001) bit for bit (bytes 6f 12 83 3a 6f 12 83 3a 6f 12 83 3a 6f 12 83 3a)",
+   "key": "O1-O7-tolerance-vector",
+   "ok": true
+  },
+  {
+   "evidence": "verified call sites: slot_use 4, slot_query 4, node_update 3, part_list 0 (byte scan accepted only at an instruction boundary)",
+   "key": "O1-O8-call-verification",
+   "ok": true
+  },
+  {
+   "evidence": "6 RIP-relative .data operand(s) in 22 reachable functions, one address 0x142dad020 (the stack cookie 0x142e15310 excluded); 0 read a decoded node field off it -> the part tree root is NOT proved statically",
+   "key": "O2-root",
+   "ok": true
+  },
+  {
+   "evidence": "slot_use 0x1415140f0: float4 copies at 0x141514105, 0x14151411f; arithmetic in the body: none -> the two float4s are copied to the stack and consumed outside the function; neither transform nor AABB is proved by this body",
+   "key": "O3-float4",
+   "ok": true
+  },
+  {
+   "evidence": "mixing immediates 0x9E3779B9 / murmur3 / moremur occur in 0 .text functions (a byte scan of all 36 MB, verified at the instruction boundary)",
+   "key": "O4-hash",
+   "ok": true
+  }
+ ],
+ "root_hits": [],
+ "sha256": "a53c2d6b2837f45d97244fc096e68f27ba9036e0582a0d9aada2e2f222dac293",
+ "unknowns": [
+  {
+   "what": "the entity/vehicle list root (a global that leads to a spawned vehicle)",
+   "why": "no anchor in MODLOG reaches it and no self-validating structure exists in the file image: the part node is reached from its parent, never from a global that the static image proves. Tried: verified callers of the four anchors (0x201de0 3, 0x1505490 4, 0x15140f0 4, 0x201d4e 0) and every `.data` operand they touch; the only `.data` object on the chain is 0x142dad020, passed by `lea` as an argument and holding (52.079925537109375, 1) - a value block, not a root pointer. Where it would be: a read-only probe that scans `.data` for a pointer whose target holds the part list's node layout (+0x150/+0x158 non-null)."
+  },
+  {
+   "what": "which slot field is the world transform and which is the AABB",
+   "why": "0x1415140f0 copies +0x40 and +0x30 as float4s and 0x140201ebd builds a 3x4 from node +0xc8..+0xf8, but no instruction in the anchors writes them back into an AABB or compares min/max, so 'transform' vs 'bounds' is a reading, not a decode."
+  },
+  {
+   "what": "the render-instance transform",
+   "why": "the anchors are physics-side only; no anchor dereferences a render instance. Tried: the call graph of the four anchors (all bodies' `.data` operands listed). Where it would be: the draw/instance path, which no MODLOG dump names."
+  },
+  {
+   "what": "the loaded-resource table (path hashes)",
+   "why": "not on any anchor's path; the only hash-keyed structure the project has decoded is the `.epe` palette reference (0x6187A56B at 0x266), which is asset-side. A static search for it would need a name list and an xref method this card does not have a self-validating oracle for."
+  },
+  {
+   "what": "whether a slot handle is global or per-world",
+   "why": "0x140222ef0 enumerates handles 0..count-1 of ONE world and writes them into a caller buffer; the transfer to the parts' +0x100/+0x102 fields is not in that function."
+  }
+ ]
+}

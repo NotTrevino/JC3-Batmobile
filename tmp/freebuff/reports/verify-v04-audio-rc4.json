@@ -1,0 +1,898 @@
+{
+ "schema": 1,
+ "card": "V-04",
+ "build": "Builds/bm-RC4",
+ "inputs": {
+  "banks": "Builds/bm-RC4/drop/sound/fmod_banks",
+  "receipt": "Builds/bm-RC4/receipt.json",
+  "receipt_sha256": "781cf30bbaed3875a7cf3028426c69b8d1b718ea2f8465971751073516e2320a",
+  "manifest": "Working/Audio/bm_bank_manifest_rc4.json",
+  "manifest_sha256": "c7bcbdd7f24b1463e806f06a42f607abbe1b416c962d58197c9e78500513fb59"
+ },
+ "banks": [
+  {
+   "path": "sound/fmod_banks/vehicles.bank",
+   "bytes": 210781376,
+   "sha256": "aab92ca03f8cbbfe150ff73b298f5b9bf042655c63a61b1b340ae1d3072dfcf6",
+   "receipt_bytes": 210781376,
+   "receipt_sha256": "aab92ca03f8cbbfe150ff73b298f5b9bf042655c63a61b1b340ae1d3072dfcf6",
+   "match": true
+  },
+  {
+   "path": "sound/fmod_banks/weapons.bank",
+   "bytes": 177586080,
+   "sha256": "d05b74ed9111ecad7093d24087ba7669f6fd5d121cdaf432f6a12812922e016a",
+   "receipt_bytes": 177586080,
+   "receipt_sha256": "d05b74ed9111ecad7093d24087ba7669f6fd5d121cdaf432f6a12812922e016a",
+   "match": true
+  }
+ ],
+ "thresholds": {
+  "click_dbfs": -40.0,
+  "loudness_lu": 1.0,
+  "tail_silence_s": 0.01
+ },
+ "gates": {
+  "decode": true,
+  "length": true,
+  "loudness": true,
+  "loop": false,
+  "tail": true
+ },
+ "counts": {
+  "slots": 5,
+  "loop_samples": 3,
+  "loop_pass": 2,
+  "loudness_pass": 5
+ },
+ "rows": [
+  {
+   "slot": "vehicles#7",
+   "bank": "vehicles",
+   "index": 7,
+   "name": "jc3_veh_door_tank_open_03",
+   "row": "A-06",
+   "event_guid": "500e1421-3174-f54c-8b9a-c8c0c74a5baa",
+   "frames": 29954,
+   "frames_span": 29954,
+   "delta_span": 0,
+   "lufs_built": -21.85,
+   "lufs_vanilla": -21.85,
+   "delta_lu": 0.0,
+   "loudness_ok": true,
+   "decode_ok": true,
+   "built_sha256": "4e4399b5925980b8833c6ccb079ec3697938334d800121158ab5a504fde975fb",
+   "vanilla_sha256": "c4af616db8c9c44a6c54934ec7c0d7feda1d797a7e0d01531cb2fe9ebd4cf266",
+   "tail_silence_s": 0.0,
+   "tail_ok": null,
+   "interior_p99_dbfs": -22.27,
+   "seam_record_dbfs": null,
+   "seam_payload_dbfs": null,
+   "vanilla_seam_dbfs": -62.35,
+   "header_shift_frames": null,
+   "loop_ok": null,
+   "verdict": "one-shot"
+  },
+  {
+   "slot": "vehicles#98",
+   "bank": "vehicles",
+   "index": 98,
+   "name": "jc3_veh_door_tank_close_01",
+   "row": "A-07",
+   "event_guid": "f58a18f7-719a-c64a-8e71-8da234d84ef9",
+   "frames": 24933,
+   "frames_span": 24933,
+   "delta_span": 0,
+   "lufs_built": -11.02,
+   "lufs_vanilla": -11.02,
+   "delta_lu": 0.0,
+   "loudness_ok": true,
+   "decode_ok": true,
+   "built_sha256": "2c767822f84b92baaafda979a1b6ed86b9c85a56c55fba80c98c21035633a68c",
+   "vanilla_sha256": "19d9a833822e1a2bdc33a65c760c8463edc3591b5d6d30f659c281106988bee4",
+   "tail_silence_s": 0.0,
+   "tail_ok": null,
+   "interior_p99_dbfs": -10.42,
+   "seam_record_dbfs": null,
+   "seam_payload_dbfs": null,
+   "vanilla_seam_dbfs": -67.39,
+   "header_shift_frames": null,
+   "loop_ok": null,
+   "verdict": "one-shot"
+  },
+  {
+   "slot": "vehicles#151",
+   "bank": "vehicles",
+   "index": 151,
+   "name": "jc3_veh_land_premium_nitro_loop",
+   "row": "A-02",
+   "event_guid": "f74ea43b-a8ac-4548-ad27-b92fd40a516d",
+   "frames": 154818,
+   "frames_span": 154818,
+   "delta_span": 0,
+   "lufs_built": -10.33,
+   "lufs_vanilla": -10.33,
+   "delta_lu": 0.0,
+   "loudness_ok": true,
+   "decode_ok": true,
+   "built_sha256": "90cb6779f4026bcead24257c0cd070d801e05a2ecb9f1a270dfb2c764552adc7",
+   "vanilla_sha256": "04d3297f55e391ac2754240ef703c51502e105f3156964350105f570aea18d37",
+   "tail_silence_s": 0.0,
+   "tail_ok": true,
+   "interior_p99_dbfs": -10.99,
+   "seam_record_dbfs": -18.18,
+   "seam_payload_dbfs": -8.67,
+   "vanilla_seam_dbfs": -17.24,
+   "header_shift_frames": 30,
+   "loop_ok": true,
+   "verdict": "pass: above -40 dBFS but inside the payload's own step distribution"
+  },
+  {
+   "slot": "vehicles#279",
+   "bank": "vehicles",
+   "index": 279,
+   "name": "jc3_veh_lave_chassis_spin_creaks_loop_fast",
+   "row": "A-05",
+   "event_guid": "1f867af8-6e96-9c4f-81dc-9cd7ae7969bb",
+   "frames": 336000,
+   "frames_span": 336000,
+   "delta_span": 0,
+   "lufs_built": -20.45,
+   "lufs_vanilla": -20.25,
+   "delta_lu": -0.2,
+   "loudness_ok": true,
+   "decode_ok": true,
+   "built_sha256": "d2ce4892b9807d625daa994537d6dab3f917f1eeac337a24b96ee7b101d6968a",
+   "vanilla_sha256": "0a0ae18ec37657052e6ecae65467e5d8fd8f7940f290412c0a079490dd518261",
+   "tail_silence_s": 0.0,
+   "tail_ok": true,
+   "interior_p99_dbfs": -46.07,
+   "seam_record_dbfs": -24.96,
+   "seam_payload_dbfs": -38.03,
+   "vanilla_seam_dbfs": -41.24,
+   "header_shift_frames": 16,
+   "loop_ok": false,
+   "verdict": "FAIL: click at the only available loop boundary"
+  },
+  {
+   "slot": "weapons#408",
+   "bank": "weapons",
+   "index": 408,
+   "name": "jc3_wpn_minigun_fire_close_loop_04",
+   "row": "W-03",
+   "event_guid": null,
+   "frames": 160337,
+   "frames_span": 160337,
+   "delta_span": 0,
+   "lufs_built": -5.3,
+   "lufs_vanilla": -5.3,
+   "delta_lu": 0.0,
+   "loudness_ok": true,
+   "decode_ok": true,
+   "built_sha256": "7af76750c7876870a52fef838feab214bf4e913d15eb551c060be23cca186885",
+   "vanilla_sha256": "328756dd731f5c58a03adfc3569cc997c09921f48a96276d20f723fb0dcb2716",
+   "tail_silence_s": 0.0,
+   "tail_ok": true,
+   "interior_p99_dbfs": -11.54,
+   "seam_record_dbfs": -55.74,
+   "seam_payload_dbfs": -39.48,
+   "vanilla_seam_dbfs": -11.13,
+   "header_shift_frames": 23,
+   "loop_ok": true,
+   "verdict": "pass: below the -40 dBFS threshold"
+  }
+ ],
+ "events": {
+  "source": "Working/Audio/jc3_event_roles.json",
+  "sha256": "38a53dde4b263c60be6a9e4a789a47a6759fa53dc722d763ce919ff558be62e3",
+  "total": 45,
+  "per_bank": {
+   "vehicles": 24,
+   "character": 2,
+   "effects": 19
+  },
+  "in_fmod_guids": 45,
+  "resolved": 24,
+  "donor_bank_not_built": 21,
+  "missing_in_built_bank": []
+ },
+ "event_rows": [
+  {
+   "guid": "{249a34b0-7997-424c-9f26-7b7eb0725e9c}",
+   "bank": "vehicles",
+   "epe": "",
+   "markers": [
+    "TLNBD",
+    "TRNSCTRO"
+   ],
+   "in_fmod_guids": true,
+   "event_present": true,
+   "tune_present": true,
+   "status": "resolved in the built bank",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{a5d32c2e-6107-6045-bee4-c912599dacef}",
+   "bank": "vehicles",
+   "epe": "exhaust_upgrade_tjump",
+   "markers": [
+    "TRNSCTRO"
+   ],
+   "in_fmod_guids": true,
+   "event_present": true,
+   "tune_present": true,
+   "status": "resolved in the built bank",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{fd69c63c-84e6-fa43-b067-7eae99a59ce1}",
+   "bank": "vehicles",
+   "epe": "horn",
+   "markers": [
+    "CTRO",
+    "LISTp",
+    "TRANTRNBQ",
+    "TRNSLCNT"
+   ],
+   "in_fmod_guids": true,
+   "event_present": true,
+   "tune_present": true,
+   "status": "resolved in the built bank",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{30d9ab54-baf7-5e44-ad67-22a72de44ad3}",
+   "bank": "vehicles",
+   "epe": "",
+   "markers": [
+    "TLNBD",
+    "TRNSCTRO"
+   ],
+   "in_fmod_guids": true,
+   "event_present": true,
+   "tune_present": true,
+   "status": "resolved in the built bank",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{3e448c6d-61c1-5844-867d-06d741b7dd24}",
+   "bank": "vehicles",
+   "epe": "",
+   "markers": [
+    "TLNBD",
+    "TRNSCTRO"
+   ],
+   "in_fmod_guids": true,
+   "event_present": true,
+   "tune_present": true,
+   "status": "resolved in the built bank",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{fe79719b-76fd-fb41-aed9-34ca185f5f4e}",
+   "bank": "vehicles",
+   "epe": "",
+   "markers": [
+    "TRNSCTRO"
+   ],
+   "in_fmod_guids": true,
+   "event_present": true,
+   "tune_present": true,
+   "status": "resolved in the built bank",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{aaf215ac-f374-ba46-9ebf-241263187d1c}",
+   "bank": "vehicles",
+   "epe": "",
+   "markers": [
+    "CTRO",
+    "LISTp",
+    "TLNBB",
+    "TRANTRNBQ",
+    "TRNSLCNT"
+   ],
+   "in_fmod_guids": true,
+   "event_present": true,
+   "tune_present": true,
+   "status": "resolved in the built bank",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{54dbc78f-6b87-bf40-b8ec-722de700572d}",
+   "bank": "vehicles",
+   "epe": "",
+   "markers": [
+    "TLNBD",
+    "TRNSCTRO"
+   ],
+   "in_fmod_guids": true,
+   "event_present": true,
+   "tune_present": true,
+   "status": "resolved in the built bank",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{f74ea43b-a8ac-4548-ad27-b92fd40a516d}",
+   "bank": "vehicles",
+   "epe": "AOE_air",
+   "markers": [
+    "CTRO4",
+    "EarlyStop",
+    "LISTp",
+    "TRANTRNBQ",
+    "TRNSLCNT",
+    "ouOU"
+   ],
+   "in_fmod_guids": true,
+   "event_present": true,
+   "tune_present": true,
+   "status": "resolved in the built bank",
+   "mapped_slot": "vehicles#151 (jc3_veh_land_premium_nitro_loop)"
+  },
+  {
+   "guid": "{5a579b55-5cbc-b646-9d31-28d88292853b}",
+   "bank": "vehicles",
+   "epe": "",
+   "markers": [
+    "CTRO",
+    "LISTp",
+    "TLNBB",
+    "TRANTRNBQ",
+    "TRNSLCNT"
+   ],
+   "in_fmod_guids": true,
+   "event_present": true,
+   "tune_present": true,
+   "status": "resolved in the built bank",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{24d39df9-5b95-2648-a33e-d4c19a70df1a}",
+   "bank": "vehicles",
+   "epe": "",
+   "markers": [
+    "TRNSCTRO"
+   ],
+   "in_fmod_guids": true,
+   "event_present": true,
+   "tune_present": true,
+   "status": "resolved in the built bank",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{100cbd8f-9b9f-8749-b853-632b33d167e9}",
+   "bank": "vehicles",
+   "epe": "ground_roughness_sound_attached",
+   "markers": [
+    "CTRO",
+    "LISTp",
+    "TRANTRNBQ",
+    "TRNSLCNT"
+   ],
+   "in_fmod_guids": true,
+   "event_present": true,
+   "tune_present": true,
+   "status": "resolved in the built bank",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{40beca2e-743c-664b-8e96-c09e3049346a}",
+   "bank": "vehicles",
+   "epe": "",
+   "markers": [
+    "TLNBD",
+    "TRNSCTRO"
+   ],
+   "in_fmod_guids": true,
+   "event_present": true,
+   "tune_present": true,
+   "status": "resolved in the built bank",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{500e1421-3174-f54c-8b9a-c8c0c74a5baa}",
+   "bank": "vehicles",
+   "epe": "dynamic_headlight",
+   "markers": [
+    "TLNBD",
+    "TRNSCTRO"
+   ],
+   "in_fmod_guids": true,
+   "event_present": true,
+   "tune_present": true,
+   "status": "resolved in the built bank",
+   "mapped_slot": "vehicles#7 (jc3_veh_door_tank_open_03)"
+  },
+  {
+   "guid": "{0738b38a-2b66-dd4d-8804-f35759b6227d}",
+   "bank": "vehicles",
+   "epe": "",
+   "markers": [
+    "TRNSCTRO"
+   ],
+   "in_fmod_guids": true,
+   "event_present": true,
+   "tune_present": true,
+   "status": "resolved in the built bank",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{3f6d8338-69e6-314f-9205-665aedd19b71}",
+   "bank": "vehicles",
+   "epe": "",
+   "markers": [
+    "TLNBD",
+    "TRNSCTRO"
+   ],
+   "in_fmod_guids": true,
+   "event_present": true,
+   "tune_present": true,
+   "status": "resolved in the built bank",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{b38ac356-c78e-d447-867d-992db0b56c97}",
+   "bank": "vehicles",
+   "epe": "",
+   "markers": [
+    "CTRO",
+    "LISTp",
+    "TLNBB",
+    "TRANTRNBQ",
+    "TRNSLCNT"
+   ],
+   "in_fmod_guids": true,
+   "event_present": true,
+   "tune_present": true,
+   "status": "resolved in the built bank",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{1f867af8-6e96-9c4f-81dc-9cd7ae7969bb}",
+   "bank": "vehicles",
+   "epe": "chassis_spinning_sound",
+   "markers": [
+    "CTRO",
+    "LISTp",
+    "TRANTRNBQ",
+    "TRNSLCNT"
+   ],
+   "in_fmod_guids": true,
+   "event_present": true,
+   "tune_present": true,
+   "status": "resolved in the built bank",
+   "mapped_slot": "vehicles#279 (jc3_veh_lave_chassis_spin_creaks_loop_fast)"
+  },
+  {
+   "guid": "{905be2e5-2544-8045-a10b-6034fd27ff11}",
+   "bank": "vehicles",
+   "epe": "damage_fire_right",
+   "markers": [
+    "CTROd",
+    "LISTp",
+    "Start",
+    "TRANTRNBQ",
+    "TRNSLCNT",
+    "running",
+    "shutdown"
+   ],
+   "in_fmod_guids": true,
+   "event_present": true,
+   "tune_present": true,
+   "status": "resolved in the built bank",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{f58a18f7-719a-c64a-8e71-8da234d84ef9}",
+   "bank": "vehicles",
+   "epe": "DoorClosingEnd",
+   "markers": [
+    "TLNBD",
+    "TRNSCTRO"
+   ],
+   "in_fmod_guids": true,
+   "event_present": true,
+   "tune_present": true,
+   "status": "resolved in the built bank",
+   "mapped_slot": "vehicles#98 (jc3_veh_door_tank_close_01)"
+  },
+  {
+   "guid": "{8ffcfde3-ab6f-3040-b43b-fc353312c6e4}",
+   "bank": "vehicles",
+   "epe": "",
+   "markers": [
+    "CTRO",
+    "LISTp",
+    "TLNBB",
+    "TRANTRNBQ",
+    "TRNSLCNT"
+   ],
+   "in_fmod_guids": true,
+   "event_present": true,
+   "tune_present": true,
+   "status": "resolved in the built bank",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{491adddf-c649-2248-9407-c7f4cce4a084}",
+   "bank": "vehicles",
+   "epe": "",
+   "markers": [
+    "TRNSCTRO"
+   ],
+   "in_fmod_guids": true,
+   "event_present": true,
+   "tune_present": true,
+   "status": "resolved in the built bank",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{68fec033-7c41-be46-9a15-443f84a6f209}",
+   "bank": "vehicles",
+   "epe": "",
+   "markers": [
+    "TRNSCTRO"
+   ],
+   "in_fmod_guids": true,
+   "event_present": true,
+   "tune_present": true,
+   "status": "resolved in the built bank",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{fcd1c7f8-8e09-1b4b-91fd-6f813819cad9}",
+   "bank": "vehicles",
+   "epe": "",
+   "markers": [
+    "CTRO",
+    "LISTp",
+    "TLNBB",
+    "TRANTRNBQ",
+    "TRNSLCNT"
+   ],
+   "in_fmod_guids": true,
+   "event_present": true,
+   "tune_present": true,
+   "status": "resolved in the built bank",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{d87e18de-2eb5-d243-a398-7fb69ccf6638}",
+   "bank": "character",
+   "epe": "dynamic_burn_roof",
+   "markers": [
+    "CTRO",
+    "LISTp",
+    "TLNBB",
+    "TRANTRNBQ",
+    "TRNSLCNT"
+   ],
+   "in_fmod_guids": true,
+   "event_present": null,
+   "tune_present": null,
+   "status": "donor bank 'character' not built - B-26 (per-entity bank override)",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{d8a4e0fb-2270-9a45-9b07-998820fbb487}",
+   "bank": "character",
+   "epe": "",
+   "markers": [
+    "CTRO",
+    "LISTp",
+    "TLNBB",
+    "TRANTRNBQ",
+    "TRNSLCNT"
+   ],
+   "in_fmod_guids": true,
+   "event_present": null,
+   "tune_present": null,
+   "status": "donor bank 'character' not built - B-26 (per-entity bank override)",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{5e3f7a6d-81a9-1a40-ae0c-871a65a9b50c}",
+   "bank": "effects",
+   "epe": "",
+   "markers": [
+    "TLNBt",
+    "TRNSCTRO"
+   ],
+   "in_fmod_guids": true,
+   "event_present": null,
+   "tune_present": null,
+   "status": "donor bank 'effects' not built - B-26 (per-entity bank override)",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{7bcce25f-c1ef-3142-941f-ba3108eaf3d2}",
+   "bank": "effects",
+   "epe": "",
+   "markers": [
+    "CTRO",
+    "LISTp",
+    "TLNBB",
+    "TRANTRNBQ",
+    "TRNSLCNT"
+   ],
+   "in_fmod_guids": true,
+   "event_present": null,
+   "tune_present": null,
+   "status": "donor bank 'effects' not built - B-26 (per-entity bank override)",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{b6467bf6-a5e6-064e-b95a-de72922d2c4a}",
+   "bank": "effects",
+   "epe": "",
+   "markers": [
+    "TRNSCTRO"
+   ],
+   "in_fmod_guids": true,
+   "event_present": null,
+   "tune_present": null,
+   "status": "donor bank 'effects' not built - B-26 (per-entity bank override)",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{a61f100e-e793-b04b-92a9-506c5f467283}",
+   "bank": "effects",
+   "epe": "",
+   "markers": [
+    "Pl_Fr",
+    "TLNBD",
+    "TRNSCTRO"
+   ],
+   "in_fmod_guids": true,
+   "event_present": null,
+   "tune_present": null,
+   "status": "donor bank 'effects' not built - B-26 (per-entity bank override)",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{fd665c9f-629f-c944-9b4a-17965cec1509}",
+   "bank": "effects",
+   "epe": "dynamic_break_window",
+   "markers": [
+    "TRNSCTRO"
+   ],
+   "in_fmod_guids": true,
+   "event_present": null,
+   "tune_present": null,
+   "status": "donor bank 'effects' not built - B-26 (per-entity bank override)",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{4eb19c73-dc19-f748-b679-75bb183e0408}",
+   "bank": "effects",
+   "epe": "",
+   "markers": [
+    "CTRO",
+    "LISTp",
+    "TLNBt",
+    "TRANTRNBQ",
+    "TRNSLCNT"
+   ],
+   "in_fmod_guids": true,
+   "event_present": null,
+   "tune_present": null,
+   "status": "donor bank 'effects' not built - B-26 (per-entity bank override)",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{94ad2147-2ce3-1f4c-bd51-ff324dba3de5}",
+   "bank": "effects",
+   "epe": "",
+   "markers": [
+    "TLNBD",
+    "TRNSCTRO"
+   ],
+   "in_fmod_guids": true,
+   "event_present": null,
+   "tune_present": null,
+   "status": "donor bank 'effects' not built - B-26 (per-entity bank override)",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{77009170-11ad-a949-a478-f9358d245bb7}",
+   "bank": "effects",
+   "epe": "dynamic_break_light_on",
+   "markers": [
+    "TRNSCTRO"
+   ],
+   "in_fmod_guids": true,
+   "event_present": null,
+   "tune_present": null,
+   "status": "donor bank 'effects' not built - B-26 (per-entity bank override)",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{78a954b8-920f-1d4c-b1b4-03eacb16b90f}",
+   "bank": "effects",
+   "epe": "",
+   "markers": [
+    "TLNBt",
+    "TRNSCTRO"
+   ],
+   "in_fmod_guids": true,
+   "event_present": null,
+   "tune_present": null,
+   "status": "donor bank 'effects' not built - B-26 (per-entity bank override)",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{844fb573-5a8d-8a4e-b989-5276030657cc}",
+   "bank": "effects",
+   "epe": "fire_post_explosion",
+   "markers": [
+    "LLIST",
+    "TLNBD",
+    "TRNSCTRO"
+   ],
+   "in_fmod_guids": true,
+   "event_present": null,
+   "tune_present": null,
+   "status": "donor bank 'effects' not built - B-26 (per-entity bank override)",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{deca52af-98bc-6349-b6a4-1a16df3f62f8}",
+   "bank": "effects",
+   "epe": "",
+   "markers": [
+    "TLNBD",
+    "TRNSCTRO"
+   ],
+   "in_fmod_guids": true,
+   "event_present": null,
+   "tune_present": null,
+   "status": "donor bank 'effects' not built - B-26 (per-entity bank override)",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{d167a490-2252-4b4c-8662-8dcb27901f0c}",
+   "bank": "effects",
+   "epe": "",
+   "markers": [
+    "TRNSCTRO",
+    "TeLIST"
+   ],
+   "in_fmod_guids": true,
+   "event_present": null,
+   "tune_present": null,
+   "status": "donor bank 'effects' not built - B-26 (per-entity bank override)",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{8bd22a32-bc56-dd46-9131-28279f02686e}",
+   "bank": "effects",
+   "epe": "dynamic_trail_large",
+   "markers": [
+    "K2zZh",
+    "TLNBD",
+    "TRNSCTRO"
+   ],
+   "in_fmod_guids": true,
+   "event_present": null,
+   "tune_present": null,
+   "status": "donor bank 'effects' not built - B-26 (per-entity bank override)",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{f04a7623-759b-c342-970c-8b6e0d401154}",
+   "bank": "effects",
+   "epe": "",
+   "markers": [
+    "TRNSCTRO"
+   ],
+   "in_fmod_guids": true,
+   "event_present": null,
+   "tune_present": null,
+   "status": "donor bank 'effects' not built - B-26 (per-entity bank override)",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{1f4a53c2-bf65-e445-bff0-abef23484ae4}",
+   "bank": "effects",
+   "epe": "",
+   "markers": [
+    "TRNSCTRO"
+   ],
+   "in_fmod_guids": true,
+   "event_present": null,
+   "tune_present": null,
+   "status": "donor bank 'effects' not built - B-26 (per-entity bank override)",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{55d6b34f-fc0c-5a4c-928a-6d9f494ecccb}",
+   "bank": "effects",
+   "epe": "",
+   "markers": [
+    "TLNBD",
+    "TRNSCTRO"
+   ],
+   "in_fmod_guids": true,
+   "event_present": null,
+   "tune_present": null,
+   "status": "donor bank 'effects' not built - B-26 (per-entity bank override)",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{650d4611-9965-024c-9daf-ce3e1f15ddb9}",
+   "bank": "effects",
+   "epe": "",
+   "markers": [
+    "TLNBD",
+    "TRNSCTRO"
+   ],
+   "in_fmod_guids": true,
+   "event_present": null,
+   "tune_present": null,
+   "status": "donor bank 'effects' not built - B-26 (per-entity bank override)",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{09fa9fa3-218e-3041-9029-b69b82b63768}",
+   "bank": "effects",
+   "epe": "",
+   "markers": [
+    "TLNBt",
+    "TRNSCTRO"
+   ],
+   "in_fmod_guids": true,
+   "event_present": null,
+   "tune_present": null,
+   "status": "donor bank 'effects' not built - B-26 (per-entity bank override)",
+   "mapped_slot": null
+  },
+  {
+   "guid": "{db007316-ebd7-ae4a-a849-612ef7c87ee6}",
+   "bank": "effects",
+   "epe": "",
+   "markers": [
+    "CTRO",
+    "LISTp",
+    "TLNBB",
+    "TRANTRNBQ",
+    "TRNSLCNT"
+   ],
+   "in_fmod_guids": true,
+   "event_present": null,
+   "tune_present": null,
+   "status": "donor bank 'effects' not built - B-26 (per-entity bank override)",
+   "mapped_slot": null
+  }
+ ],
+ "provenance": {
+  "vehicles#279": {
+   "tree": "Builds/bm-004c/banks",
+   "record_dbfs": -28.27,
+   "payload_dbfs": -39.68,
+   "header_shift_frames": 16,
+   "interior_p99_dbfs": -46.01,
+   "json_record_dbfs": -28.27,
+   "json_payload_dbfs": -39.68,
+   "json_p99_dbfs": -46.01,
+   "reproduces_json": true,
+   "decoded_sha256": "e1f4e6824c544eeb388ceab3d2fb8168a6209818dbea6d542fe7961c5638398f",
+   "json_built_sha256": "e1f4e6824c544eeb388ceab3d2fb8168a6209818dbea6d542fe7961c5638398f",
+   "sha_matches_json": true
+  },
+  "weapons#408": {
+   "tree": "Builds/bm-004c/banks",
+   "record_dbfs": -61.21,
+   "payload_dbfs": -50.75,
+   "header_shift_frames": 23,
+   "interior_p99_dbfs": -11.54,
+   "json_record_dbfs": -61.21,
+   "json_payload_dbfs": -50.75,
+   "json_p99_dbfs": -11.54,
+   "reproduces_json": true,
+   "decoded_sha256": "b303070f59734b18ec87e0ccf075706a6542b3606eebfffa051ab8dd45578896",
+   "json_built_sha256": "b303070f59734b18ec87e0ccf075706a6542b3606eebfffa051ab8dd45578896",
+   "sha_matches_json": true
+  }
+ }
+}

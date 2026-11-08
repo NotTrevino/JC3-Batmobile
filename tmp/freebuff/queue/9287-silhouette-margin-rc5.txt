@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/silhouette-margin-rc5.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-merge-release-candidate.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/seam-repair-verify.md
+Recompute the silhouette gate on the merged Builds/bm-RC5. RC4 passed 99.9004 percent against the 99.9 limit by 0.0004 points; RC5 adds the booster ring (9106), the tracker launcher (9103), flares, arch lamps and seam fixes. Run Tools/scripts/v02a_rc4.py (or its RC5 copy if the 9190 report names one) with the BmAK reference, print the percentage per LOD and the worst view, and compare with the limit. If it passes by less than 0.01 points or fails, write the smallest recovery options (LOD1 to LOD3 hole closing, vertex nudges) with predicted gain each, in the order that costs the least model KB. Output Working/Appearance/SILHOUETTE_RC5.md. Do not change any tree. Done check: percentage printed from the run, margin stated in points, and a ranked recovery list whenever the margin is below 0.01. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

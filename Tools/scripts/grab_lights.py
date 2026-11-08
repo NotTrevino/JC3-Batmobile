@@ -1,4 +1,4 @@
-"""grab_lights.py - the BmAK VehicleLights rig -> a JC3 VehicleDynamicLight plan (GRB-8).
+"""grab_lights.py - the BmAK VehicleLights rig -> a JC3 VehicleDynamicLight plan (GRB-8, G1-17).
 
 Input is the grab (`grab_model.py lights`): every repeated `VehicleLights` struct on each
 `RVehicleBatmobile`, with the enum light type the cooker kept (`VEHLT_HeadLight`, ...), the SOCKET it
@@ -15,9 +15,22 @@ and writes
     Research/BatmobileGrab/LIGHTS.json   one entry per light, with its JC3 destination
     Research/BatmobileGrab/LIGHTS.md     the same as a review table + dispositions
 
+G1-17 adds the light *values*: colour, intensity, radius, cone angles, falloff and the cast-shadow
+flags of every component, plus the lens-flare colour. A cooked component serialises only what
+differs from its archetype and the tag carries no name - only (type, struct offset, value) - so
+
+  * the **name** of a field comes from the BmSDK class dump (`BMSDK_OFFSETS.json`: same number
+    space as the tag offset, bools by their bit mask),
+  * the **value** a component does not serialise comes from the next link of its chain: its
+    archetype (export record word 6; `BmScript` ships no file, so those are recorded as gaps), then
+    `Default__<class>` in `Engine.upk` / `BmGame.upk`, which both ship, and
+  * `FColor` is read as B,G,R,A - UE3's memory layout for it (UEViewer `UnCore.h`: "Since UE3, FColor
+    has different memory layout - BGRA").
+
 Nothing is invented. A light whose socket does not exist in the shipped mesh is reported as
 `orphan-socket`; a JC3 anchor that the assembled model does not have yet is reported as
-`needs-lig-bone` rather than written as if it worked.
+`needs-lig-bone` rather than written as if it worked; a field no shipped object serialises is
+reported with that reason instead of a number.
 
 Usage:
     python Tools/scripts/grab_lights.py --write
@@ -28,19 +41,37 @@ import collections
 import json
 import os
 import re
+import struct
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
 sys.path.insert(0, HERE)
-import grab_model          # noqa: E402
-import pskx_parts as PX    # noqa: E402
+import bmsdk_offsets as BMS   # noqa: E402  (name + bit mask of a cooked offset)
+import grab_model             # noqa: E402
+import pskx_parts as PX       # noqa: E402
+import upk_read as U          # noqa: E402
 
 OUT = os.path.join(ROOT, "Research", "BatmobileGrab")
 MESH = os.path.join(ROOT, "Working", "Appearance", "grab", "Playable_Batmobile_SF",
                     "SkeletalMesh3", "Batmobile_V2.pskx")
 VANILLA = os.path.join(ROOT, "Working", "Lights", "serpente_lights.xml")
 ASSEMBLY = os.path.join(ROOT, "Working", "Assembled", "assembly.json")
+GAME = os.path.join("E:\\Games", "Batman - Arkham Knight", "BmGame", "CookedPCConsole")
+ENGINE = os.path.join(GAME, "Engine.upk")
+BMGAME = os.path.join(GAME, "BmGame.upk")
+OBJECTS = os.path.join(OUT, "objects.jsonl")          # grab schema 6, the components live here
+SDK_JSON = os.path.join(OUT, "BMSDK_OFFSETS.json")    # BmSDK-AK class dump, G1-1
+
+# G1-17: the fields the card asks for, per component kind. A lens flare has no brightness; its
+# only strength field is `MinStrength`, and its colour is `SourceColor` (FLinearColor), not the
+# light's `LightColor` (FColor).
+FLARE_CLASS = "LensFlareComponent"
+LIGHT_FIELDS = ("LightColor", "Brightness", "Radius", "InnerConeAngle", "OuterConeAngle",
+                "FalloffExponent", "CastShadows", "CastDynamicShadows")
+FLARE_FIELDS = ("SourceColor", "Radius", "MinStrength")
+COLOUR_FIELD = {FLARE_CLASS: "SourceColor"}
+INTENSITY_FIELD = {FLARE_CLASS: "MinStrength"}
 
 # BmAK type enum -> (JC3 behavior, disposition). The enum names are read from the ByteProperty FNames,
 # so this table is the whole mapping; an unknown value is an error, not a silent fallback.
@@ -160,6 +191,258 @@ def part_node(part):
     return part[len("sportsmuscle_"):] if part.startswith("sportsmuscle_") else part
 
 
+# --------------------------------------------------------------------------- G1-17: light values
+
+_SDK = None
+_PKGS = {}
+_ROWS = None
+
+
+def sdk():
+    """The BmSDK class dump: class -> {properties with offsets, kinds and bool bit masks}."""
+    global _SDK
+    if _SDK is None:
+        _SDK = json.load(open(SDK_JSON, encoding="utf-8"))
+    return _SDK
+
+
+def package(path):
+    if path not in _PKGS:
+        _PKGS[path] = U.Package(path)
+    return _PKGS[path]
+
+
+def grab_rows():
+    """(package, export index) -> the grab's record for that object."""
+    global _ROWS
+    if _ROWS is None:
+        _ROWS = {}
+        with open(OBJECTS, encoding="utf-8") as fh:
+            for line in fh:
+                r = json.loads(line)
+                _ROWS[(r["package"], r["index"])] = r
+    return _ROWS
+
+
+def supers(cls):
+    """`cls` then every base class, from the dump (SpotLight -> PointLight -> Light -> ...)."""
+    chain, seen = [cls], set()
+    while chain[-1] not in seen:
+        seen.add(chain[-1])
+        c = sdk()["classes"].get(chain[-1])
+        if not c or not c.get("super"):
+            break
+        chain.append(c["super"])
+    return chain
+
+
+def prop_at(cls, offset, kind):
+    """The dump's property at `offset` in `cls` or a base class, with the same slot kind."""
+    for c in supers(cls):
+        for p in sdk()["classes"].get(c, {}).get("properties", []):
+            if p["offset"] == offset and BMS.same_kind(p["kind"], kind):
+                return dict(p, owner=c)
+    return None
+
+
+def bools_at(cls, offset):
+    """Every bool packed into the word at `offset`, with the bit mask that tells them apart."""
+    out = {}
+    for c in supers(cls):
+        for p in sdk()["classes"].get(c, {}).get("properties", []):
+            if p["kind"] == "BoolProperty" and p["offset"] == offset and p.get("mask"):
+                out.setdefault(p["name"], p["mask"])
+    return out
+
+
+def fcolor(raw):
+    """Four serialised FColor bytes -> [R, G, B, A]. UE3 stores FColor B,G,R,A in memory
+    (UEViewer, `UnCore.h`: "Since UE3, FColor has different memory layout - BGRA")."""
+    if not raw or len(raw) != 8:
+        return None
+    b, g, r, a = (int(raw[i:i + 2], 16) for i in (0, 2, 4, 6))
+    return [r, g, b, a]
+
+
+def field_value(tag, name):
+    """The decoded value of one tag; None when the tag carries nothing readable for that name."""
+    t = tag.get("type")
+    if name == "LightColor":
+        return fcolor(tag.get("raw"))
+    if name == "SourceColor":
+        f = tag.get("floats") or []
+        return [round(v, 6) for v in f[:4]] if len(f) >= 4 else None
+    if t in ("FloatProperty", "IntProperty", "ByteProperty", "VectorProperty", "RotatorProperty",
+             "GuidProperty", "NameProperty", "StrProperty", "ObjectProperty",
+             "ObjectNCRProperty", "ClassProperty"):
+        return tag.get("value")
+    return None
+
+
+def fields_from(tags, cls, want):
+    """{property: value} for the wanted fields of one object, named from the tag or the layout."""
+    out = {}
+    for tag in tags or []:
+        if tag.get("type") == "BoolProperty":
+            bits = tag.get("bits")
+            if bits is None:
+                continue
+            for name, mask in bools_at(cls, tag["offset"]).items():
+                if name in want:
+                    out[name] = bool(bits & mask)
+            continue
+        name = tag.get("name")
+        if not name:
+            prop = prop_at(cls, tag["offset"], tag["type"])
+            if not prop:
+                continue
+            name = prop["name"]
+        if name in want:
+            out[name] = field_value(tag, name)
+    return out
+
+
+def default_object(cls):
+    """`Default__<cls>`: Engine classes keep theirs in `Engine.upk`, the R* ones in `BmGame.upk`.
+    Both ship in the install (unlike `BmScript`, which carries no file)."""
+    for path in (ENGINE, BMGAME):
+        pkg = package(path)
+        i = pkg.find("Default__" + cls)
+        if i is not None and i > 0:
+            return path, i, pkg
+    return None, None, None
+
+
+def class_defaults(cls, want):
+    """{property: (value, source)} from the class-default chain: the class, then each base class.
+    A property no `Default__` serialises keeps its native (compiled-in) default, which no shipped
+    file carries - it stays out of the result and is reported as such by the caller."""
+    out = {}
+    for c in supers(cls):
+        path, i, pkg = default_object(c)
+        if not i:
+            continue
+        tags, _end, _why = U.best_walk(pkg, pkg.data(i))
+        for name, value in fields_from(tags, c, want).items():
+            out.setdefault(name, (value, "class default: `Default__%s` (%s)"
+                                  % (c, os.path.basename(path))))
+    return out
+
+
+def archetype_ref(pkg, index):
+    """Word 6 of the 72-byte export record: the archetype this object was instanced from.
+
+    0 for the light archetypes in the vehicle packages (they inherit straight from the class
+    default), an export index for a local archetype, and a negative (import) index for the five
+    `XrayLightComponent` instances, whose chain bottoms out in `BmScript` - a package with no file
+    in the install.  Measured against `XrayLightComponent`, whose import resolves to
+    `BmScript.Default__RVehicleBatmobile.XrayLightComponent`, a component of the vehicle's CDO.
+    """
+    ints = struct.unpack_from("<11i", pkg.image, pkg.export_offset + (index - 1) * 72)
+    return ints[5]
+
+
+def archetype_target(pkg, index):
+    """(package name, object path) behind a negative archetype index; the root of the import chain
+    is the package the archetype lives in."""
+    names, root, seen = [], None, set()
+    while index and index not in seen:
+        seen.add(index)
+        if index > 0:
+            if pkg.object_class(index) == "Package":
+                root = pkg.object_name(index)
+            break
+        imp = pkg.imports[-index - 1]
+        names.append(imp["name"])
+        if not imp["outer"]:
+            root = imp["name"]
+            names.pop()
+            break
+        index = imp["outer"]
+    return root, ".".join(reversed(names))
+
+
+def find_path(pkg, path):
+    """The export whose resolved path is `path` ("Outer.Inner.Name"), or None."""
+    return next((i for i in range(1, pkg.export_count + 1) if pkg.object_path(i) == path), None)
+
+
+def resolve_component(package_name, comp):
+    """(values, sources, gaps) for one component: itself, then its archetype chain, then the class
+    defaults.  Every field keeps the first source that carried it; a field no link ships is None
+    with the reason, never a guess."""
+    cls = comp.get("class")
+    want = FLARE_FIELDS if cls == FLARE_CLASS else LIGHT_FIELDS
+    values, sources, gaps = {}, {}, []
+    queue, seen = [(package_name, comp.get("index"), "component")], set()
+    while queue:
+        pk_name, idx, label = queue.pop(0)
+        if idx is None or (pk_name, idx) in seen:
+            continue
+        seen.add((pk_name, idx))
+        row = grab_rows().get((pk_name, idx))
+        if row is None:
+            gaps.append("no grab row for %s.%s" % (pk_name, idx))
+            continue
+        for name, value in fields_from(row["tags"], row["class"] or cls, want).items():
+            values.setdefault(name, value)
+            sources.setdefault(name, label)
+        pkg_path = os.path.join(GAME, pk_name + ".upk")
+        if not os.path.exists(pkg_path):
+            continue
+        pkg = package(pkg_path)
+        ref = archetype_ref(pkg, idx)
+        if not ref:
+            continue
+        if ref > 0:
+            queue.append((pk_name, ref, "archetype `%s`" % pkg.object_path(ref)))
+            continue
+        root, path = archetype_target(pkg, ref)
+        apath = os.path.join(GAME, str(root) + ".upk")
+        if root and os.path.exists(apath):
+            apkg = package(apath)
+            ai = find_path(apkg, path)
+            if ai:
+                queue.append((root, ai, "archetype `%s.%s` (%s.upk)" % (root, path, root)))
+            else:
+                gaps.append("archetype `%s.%s` is not an export of %s.upk" % (root, path, root))
+        else:
+            gaps.append("archetype `%s.%s` - no `%s.upk` ships" % (root, path, root))
+    for name, (value, source) in class_defaults(cls, want).items():
+        values.setdefault(name, value)
+        sources.setdefault(name, source)
+    for name in want:
+        values.setdefault(name, None)
+        sources.setdefault(name, "not serialised anywhere in the install (native default)")
+    return values, sources, gaps
+
+
+def component_record(package_name, comp):
+    """One component as G1-17 reports it: every field, where each value came from, and the
+    colour/intensity pair the Done-when is checked on."""
+    cls = comp.get("class")
+    values, sources, gaps = resolve_component(package_name, comp)
+    colour, intensity = COLOUR_FIELD.get(cls, "LightColor"), INTENSITY_FIELD.get(cls, "Brightness")
+    return {
+        "class": cls, "path": comp.get("path"), "index": comp.get("index"),
+        "fields": values, "field_sources": sources, "gaps": gaps,
+        "colour": {"field": colour, "value": values.get(colour), "source": sources.get(colour)},
+        "intensity": {"field": intensity, "value": values.get(intensity),
+                      "source": sources.get(intensity)},
+    }
+
+
+def source_kind(source):
+    s = source or ""
+    if s == "component":
+        return "component"
+    if s.startswith("archetype"):
+        return "archetype"
+    if s.startswith("class default"):
+        return "class default"
+    return "not shipped"
+
+
 def build():
     g = grab_model.Grab()
     lights = g.lights()
@@ -175,7 +458,9 @@ def build():
         for c in x["components"]:
             cls = c.get("class") or "?"
             dest, disp = COMPONENTS.get(cls, ("UNHANDLED", "UNHANDLED"))
-            comps.append({"class": cls, "path": c.get("path"), "jc3": dest, "disposition": disp})
+            rec = component_record(x["package"], c)
+            rec.update({"jc3": dest, "disposition": disp})
+            comps.append(rec)
             if disp == "UNHANDLED":
                 problems.append("%s: component class %s has no disposition" % (x["socket"], cls))
         typ = x.get("type")
@@ -219,9 +504,20 @@ def build():
             "components": comps,
         }
         v["entries"].append(entry)
+    all_comps = [c for v in vehicles.values() for e in v["entries"] for c in e["components"]]
     summary = {
         "entries": sum(len(v["entries"]) for v in vehicles.values()),
         "vehicles": len(vehicles),
+        "components": len(all_comps),
+        "components_with_colour": sum(1 for c in all_comps if c["colour"]["value"] is not None),
+        "components_with_intensity": sum(1 for c in all_comps
+                                         if c["intensity"]["value"] is not None),
+        "colour_sources": dict(collections.Counter(source_kind(c["colour"]["source"])
+                                                    for c in all_comps)),
+        "intensity_sources": dict(collections.Counter(source_kind(c["intensity"]["source"])
+                                                      for c in all_comps)),
+        "component_gaps": sum(len(c["gaps"]) for c in all_comps),
+        "by_component_class": dict(collections.Counter(c["class"] for c in all_comps)),
         "orphan_sockets": sum(1 for v in vehicles.values() for e in v["entries"] if e["orphan_socket"]),
         "missing_bones": sum(1 for v in vehicles.values() for e in v["entries"]
                              if e["bone"] and e["bone_in_rig"] is False),
@@ -234,7 +530,7 @@ def build():
         "by_part": dict(collections.Counter(e["jc3_part"] for v in vehicles.values()
                                             for e in v["entries"])),
     }
-    return {"schema": 1, "generated_by": "grab_lights.py",
+    return {"schema": 2, "generated_by": "grab_lights.py",
             "skeleton": os.path.relpath(MESH, ROOT), "vanilla": ref_note,
             "jc3_fields": list(JC3_FIELDS), "vanilla_by_behavior": ref,
             "vehicles": list(vehicles.values()), "summary": summary, "problems": problems}
@@ -252,9 +548,11 @@ def write_md(doc):
          "bone node yet, which is why every entry is `needs-lig-bone` (LGT-1).", "",
          "## Summary", "",
          "| fact | value |", "|---|---|"]
-    for k in ("entries", "vehicles", "orphan_sockets", "missing_bones"):
+    for k in ("entries", "vehicles", "orphan_sockets", "missing_bones", "components",
+              "components_with_colour", "components_with_intensity", "component_gaps"):
         L.append("| %s | **%s** |" % (k, s[k]))
-    for k in ("by_type", "by_behavior", "by_disposition", "by_part"):
+    for k in ("by_type", "by_behavior", "by_disposition", "by_part", "by_component_class",
+              "colour_sources", "intensity_sources"):
         L.append("| %s | %s |" % (k, ", ".join("%s=%s" % i for i in sorted(s[k].items()))))
     L += ["", "Vanilla reference: %s" % doc["vanilla"], "",
           "## Problems", ""]
@@ -285,6 +583,48 @@ def write_md(doc):
                 ("`%s`" % e["jc3_anchor"].replace("|", chr(92) + "|")) if e["jc3_anchor"] else "-",
                 comps or "-"))
         L.append("")
+    L += ["## Component light values (G1-17)", "",
+          "A cooked component serialises only what differs from its archetype, and the tag carries no",
+          "name - just (type, struct offset, value). Names come from the BmSDK class dump",
+          "(`BMSDK_OFFSETS.json`: the offsets the running game linked, bools by their bit mask); values",
+          "come from the component itself, then its archetype, then `Default__<class>` in `Engine.upk` /",
+          "`BmGame.upk` (both ship). `FColor` is read B,G,R,A - UE3's memory layout for it.",
+          "`-` means no shipped object serialises that field: the value is the native default, which is",
+          "compiled into the executable and appears in no file.",
+          "A lens flare is not a light: it has no `Brightness`, its colour is the FLinearColor",
+          "`SourceColor`, and its only strength field `MinStrength` ships nowhere (checked:",
+          "`Default__LensFlareComponent` carries only `PerInstanceRandom`, and no shipped class derives",
+          "from `LensFlareComponent`), so its intensity column is a stated gap, not a number.", "",
+          "| package | socket | type | component | colour [R,G,B,A] | colour from | intensity |"
+          " intensity from | radius | inner cone | outer cone | falloff | CastShadows |"
+          " CastDynamicShadows |", "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
+
+    def fmt(v):
+        if v is None:
+            return "-"
+        if isinstance(v, float):
+            return round(v, 4)
+        return v
+
+    for v in doc["vehicles"]:
+        for e in v["entries"]:
+            for c in e["components"]:
+                f = c["fields"]
+                L.append("| %s | `%s` | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s |" % (
+                    v["package"], e["socket"], e["type"] or "-", c["class"],
+                    fmt(f.get("LightColor") or f.get("SourceColor")),
+                    (c["colour"]["source"] or "-").replace("class default: ", "CDO "),
+                    fmt(f.get("Brightness") if c["class"] != FLARE_CLASS else f.get("MinStrength")),
+                    (c["intensity"]["source"] or "-").replace("class default: ", "CDO "),
+                    fmt(f.get("Radius")), fmt(f.get("InnerConeAngle")),
+                    fmt(f.get("OuterConeAngle")), fmt(f.get("FalloffExponent")),
+                    fmt(f.get("CastShadows")), fmt(f.get("CastDynamicShadows"))))
+    L.append("")
+    gaps = [(c, g) for v in doc["vehicles"] for e in v["entries"] for c in e["components"]
+            for g in c["gaps"]]
+    L += ["### Gaps in the component chain", ""]
+    L += ["- `%s` (%s): %s" % (c["path"], c["class"], g) for c, g in gaps] or ["none."]
+    L.append("")
     open(os.path.join(OUT, "LIGHTS.md"), "w", encoding="utf-8").write("\n".join(L))
     return os.path.join(OUT, "LIGHTS.md")
 
@@ -321,6 +661,37 @@ def main():
             fail.append("an entry targets a part the shipped .epe does not have")
         if not doc["vanilla_by_behavior"]:
             fail.append("vanilla reference values are missing")
+        if doc["schema"] != 2:
+            fail.append("schema %s != 2" % doc["schema"])
+        # G1-17: the 28 `Batmobile` rig entries - every component needs a colour, and every light
+        # an intensity, each with the source that carried it (component / archetype / class default).
+        rig = next((v for v in doc["vehicles"] if v["package"] == "Playable_Batmobile_SF"), None)
+        entries = rig["entries"] if rig else []
+        if len(entries) != 28:
+            fail.append("expected the 28 Batmobile rig entries, got %d" % len(entries))
+        checked = 0
+        for e in entries:
+            for c in e["components"]:
+                checked += 1
+                if c["colour"]["value"] is None:
+                    fail.append("%s/%s %s: colour %s is %s"
+                                % (e["socket"], c["index"], c["class"], c["colour"]["field"],
+                                   c["field_sources"].get(c["colour"]["field"])))
+                if c["class"] == FLARE_CLASS:
+                    # A lens flare has no brightness: its only strength field is `MinStrength`,
+                    # which no shipped object serialises (checked: `Default__LensFlareComponent`
+                    # carries only PerInstanceRandom, and no shipped class derives from it).
+                    # The record keeps the field with that reason; the colour is what matters here.
+                    if c["intensity"]["source"] is None:
+                        fail.append("%s/%s %s: no source for %s"
+                                    % (e["socket"], c["index"], c["class"],
+                                       c["intensity"]["field"]))
+                elif c["intensity"]["value"] is None:
+                    fail.append("%s/%s %s: intensity %s is %s"
+                                % (e["socket"], c["index"], c["class"], c["intensity"]["field"],
+                                   c["field_sources"].get(c["intensity"]["field"])))
+                for cgap in c["gaps"]:
+                    fail.append("%s/%s %s: %s" % (e["socket"], c["index"], c["class"], cgap))
         if fail:
             print("FAIL")
             for f in fail:
@@ -328,6 +699,7 @@ def main():
             return 1
         print("OK: %d entries / %d rigs, %d orphan sockets, 0 missing bones"
               % (s["entries"], s["vehicles"], s["orphan_sockets"]))
+        print("OK: %d Batmobile-rig components carry colour and intensity (schema 2)" % checked)
     return 0
 
 

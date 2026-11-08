@@ -1,0 +1,894 @@
+{
+ "class": {
+  "class_export": 4062,
+  "class_size": 128,
+  "super_index": 3119,
+  "super_name": "PrimitiveComponent",
+  "properties": [
+   {
+    "index": 4048,
+    "name": "bForceGreenWhenSelected",
+    "class": "BoolProperty",
+    "size": 30,
+    "next": 0,
+    "data_hex": "000000000000010000000000000000000000e44400000000000000000000"
+   },
+   {
+    "index": 4049,
+    "name": "bAlwaysRenderIfSelected",
+    "class": "BoolProperty",
+    "size": 30,
+    "next": 4048,
+    "data_hex": "0000d00f0000010000000100000000000000e44400000000000000000000"
+   },
+   {
+    "index": 4050,
+    "name": "bDrawNonColliding",
+    "class": "BoolProperty",
+    "size": 30,
+    "next": 4049,
+    "data_hex": "0000d10f0000010000000100000000000000e44400000000000000000000"
+   },
+   {
+    "index": 4051,
+    "name": "bDrawBoundingBox",
+    "class": "BoolProperty",
+    "size": 30,
+    "next": 4050,
+    "data_hex": "0000d20f0000010000000100000000000000e44400000000000000000000"
+   },
+   {
+    "index": 4052,
+    "name": "CylinderColor",
+    "class": "StructProperty",
+    "size": 34,
+    "next": 4051,
+    "data_hex": "0000d30f0000010000000100000001000000061c000000000000000000006affffff"
+   },
+   {
+    "index": 4053,
+    "name": "AABBScale",
+    "class": "FloatProperty",
+    "size": 30,
+    "next": 4052,
+    "data_hex": "0000d40f0000010000000500000001000000061c00000000000000000000"
+   },
+   {
+    "index": 4054,
+    "name": "CollisionRadius",
+    "class": "FloatProperty",
+    "size": 30,
+    "next": 4053,
+    "data_hex": "0000d50f0000010000000500000001000000061c00000000000000000000"
+   },
+   {
+    "index": 4055,
+    "name": "CollisionHeight",
+    "class": "FloatProperty",
+    "size": 30,
+    "next": 4054,
+    "data_hex": "0000d60f0000010000000500000001000000061c00000000000000000000"
+   },
+   {
+    "index": 4058,
+    "name": "SetCylinderSize",
+    "class": "Function",
+    "size": 48,
+    "next": 4055,
+    "data_hex": "0000d70f000000000000d90f0000130000000b00000029d90f000029d80f00000b00000001040200b958000000000000"
+   },
+   {
+    "index": 4061,
+    "name": "GetExtent",
+    "class": "Function",
+    "size": 115,
+    "next": 4058,
+    "data_hex": "0000da0f000000000000dc0f0000860000004e0000000f35b4ffffff4cffffff000100db0f000001d60f00000f35b3ffffff4cffffff000100db0f000001d60f00000f35b2ffffff4cffffff000100db0f000001d70f00000400db0f0000043adc0f0000000000030082003832000000000000"
+   }
+  ]
+ },
+ "chain": [
+  "GetExtent",
+  "SetCylinderSize",
+  "CollisionHeight",
+  "CollisionRadius",
+  "AABBScale",
+  "CylinderColor",
+  "bDrawBoundingBox",
+  "bDrawNonColliding",
+  "bAlwaysRenderIfSelected",
+  "bForceGreenWhenSelected"
+ ],
+ "chain_problems": [],
+ "cdo": {
+  "export": 4063,
+  "tags": [
+   {
+    "type": "FloatProperty",
+    "type_id": 4,
+    "offset": 540,
+    "value": 22.0,
+    "at": 4
+   },
+   {
+    "type": "FloatProperty",
+    "type_id": 4,
+    "offset": 544,
+    "value": 22.0,
+    "at": 12
+   },
+   {
+    "type": "FloatProperty",
+    "type_id": 4,
+    "offset": 548,
+    "value": 1.0,
+    "at": 20
+   },
+   {
+    "type": "StructProperty",
+    "type_id": 10,
+    "offset": 552,
+    "name": "CylinderColor",
+    "size": 4,
+    "array_index": 0,
+    "at": 44,
+    "raw": "9d95dfff",
+    "floats": []
+   },
+   {
+    "type": "BoolProperty",
+    "type_id": 3,
+    "offset": 556,
+    "value": true,
+    "at": 52,
+    "bits": 9
+   },
+   {
+    "type": "ObjectProperty",
+    "type_id": 5,
+    "offset": 316,
+    "name": "ReplacementPrimitive",
+    "size": 4,
+    "array_index": 0,
+    "at": 76,
+    "value": 0,
+    "ref": null
+   },
+   {
+    "type": "FloatProperty",
+    "type_id": 4,
+    "offset": 364,
+    "value": 0.6479690074920654,
+    "at": 84
+   },
+   {
+    "type": "BoolProperty",
+    "type_id": 3,
+    "offset": 476,
+    "value": true,
+    "at": 92,
+    "bits": 49152
+   },
+   {
+    "type": "BoolProperty",
+    "type_id": 3,
+    "offset": 480,
+    "value": true,
+    "at": 100,
+    "bits": 34725888
+   },
+   {
+    "type": "BoolProperty",
+    "type_id": 3,
+    "offset": 484,
+    "value": true,
+    "at": 108,
+    "bits": 285372962
+   }
+  ],
+  "size": 114,
+  "walk_start": 0,
+  "parsed": 114,
+  "tail": ""
+ },
+ "ancestors": [
+  {
+   "name": "PrimitiveComponent",
+   "class_export": 3119,
+   "cdo_export": 3120,
+   "max_offset": 528,
+   "offsets": [
+    316,
+    360,
+    364,
+    368,
+    372,
+    376,
+    424,
+    428,
+    476,
+    480,
+    484,
+    488,
+    500,
+    504,
+    516,
+    525,
+    527,
+    528
+   ],
+   "floats": [
+    [
+     360,
+     1.0
+    ],
+    [
+     364,
+     0.3731803297996521
+    ],
+    [
+     368,
+     -1.0
+    ],
+    [
+     372,
+     9999999827968.0
+    ],
+    [
+     376,
+     1.0
+    ],
+    [
+     424,
+     1.0
+    ]
+   ],
+   "size": 225,
+   "tags": 18,
+   "end": 223
+  },
+  {
+   "name": "ActorComponent",
+   "class_export": 2634,
+   "cdo_export": 2635,
+   "max_offset": 120,
+   "offsets": [
+    120
+   ],
+   "floats": [],
+   "size": 30,
+   "tags": 1,
+   "end": 28
+  }
+ ],
+ "ancestor_max": 528,
+ "pairing": {
+  "mapping": {
+   "540": "CollisionHeight",
+   "544": "CollisionRadius",
+   "548": "AABBScale"
+  },
+  "chain_floats": [
+   "CollisionHeight",
+   "CollisionRadius",
+   "AABBScale"
+  ],
+  "own_float_offsets": [
+   540,
+   544,
+   548
+  ],
+  "float_offsets_all": [
+   364,
+   540,
+   544,
+   548
+  ],
+  "struct_off": 552,
+  "struct_names": [
+   "CylinderColor"
+  ],
+  "struct_size": 4,
+  "bool_off": 556,
+  "chain_ascending": true,
+  "class_block": [
+   540,
+   560,
+   20
+  ],
+  "notes": [
+   "the class's 3 FloatProperty members paired with its 3 own float slots (540, 544, 548), ascending slot order = chain order"
+  ],
+  "values": {
+   "540": 22.0,
+   "544": 22.0,
+   "548": 1.0,
+   "364": 0.6479690074920654
+  }
+ },
+ "fleet": {
+  "packages": [
+   {
+    "package": "Engine.upk",
+    "objects": 37,
+    "walked_to_last_byte": 37,
+    "serialised": {
+     "540": [
+      22.0,
+      50.0,
+      78.0,
+      40.0,
+      58.0,
+      20.0,
+      200.0,
+      80.0,
+      72.0,
+      73.0,
+      80.0,
+      92.0,
+      0.0,
+      50.0,
+      78.0,
+      80.0
+     ],
+     "544": [
+      22.0,
+      50.0,
+      34.0,
+      40.0,
+      48.0,
+      30.0,
+      60.0,
+      40.0,
+      30.0,
+      50.0,
+      40.0,
+      40.0,
+      0.0,
+      50.0,
+      34.0,
+      40.0
+     ],
+     "548": [
+      1.0
+     ]
+    },
+    "both_540_544": 16,
+    "radius_slot_smaller": 10
+   },
+   {
+    "package": "Startup.upk",
+    "objects": 71,
+    "walked_to_last_byte": 71,
+    "serialised": {
+     "540": [
+      59.0,
+      200.0
+     ],
+     "544": [
+      150.0,
+      100.0,
+      67.0,
+      200.0
+     ],
+     "548": [
+      0.4000000059604645
+     ]
+    },
+    "both_540_544": 2,
+    "radius_slot_smaller": 0
+   },
+   {
+    "package": "BmGame.upk",
+    "objects": 161,
+    "walked_to_last_byte": 161,
+    "serialised": {
+     "540": [
+      93.0,
+      0.0,
+      300.0,
+      95.0,
+      0.0,
+      50.0,
+      16.0,
+      50.0,
+      200.0,
+      60.0,
+      100.0,
+      32.0,
+      50.0,
+      5.0,
+      10.0,
+      12.0,
+      32.0,
+      32.0,
+      50.0,
+      64.0,
+      40.0,
+      93.0,
+      12.0,
+      50.0,
+      32.0,
+      50.0,
+      50.0,
+      10.0,
+      50.0,
+      32.0,
+      3000.0,
+      78.0,
+      78.0,
+      200.0,
+      550.0,
+      30.0
+     ],
+     "544": [
+      10.0,
+      0.0,
+      50.0,
+      40.0,
+      0.0,
+      40.0,
+      50.0,
+      16.0,
+      50.0,
+      320.0,
+      40.0,
+      200.0,
+      32.0,
+      120.0,
+      5.0,
+      300.0,
+      12.0,
+      150.0,
+      300.0,
+      300.0,
+      40.0,
+      60.0,
+      10.0,
+      12.0,
+      50.0,
+      150.0,
+      50.0,
+      50.0,
+      10.0,
+      40.0,
+      50.0,
+      600.0,
+      175.0,
+      175.0,
+      200.0,
+      650.0,
+      50.0
+     ],
+     "548": [
+      2.0,
+      2.0
+     ]
+    },
+    "both_540_544": 36,
+    "radius_slot_smaller": 8
+   },
+   {
+    "package": "Playable_Batmobile_SF.upk",
+    "objects": 11,
+    "walked_to_last_byte": 11,
+    "serialised": {
+     "540": [],
+     "544": [],
+     "548": []
+    },
+    "both_540_544": 0,
+    "radius_slot_smaller": 0
+   }
+  ],
+  "objects": 280,
+  "walked_to_last_byte": 280,
+  "both_540_544": 54,
+  "radius_slot_smaller": 18,
+  "d548_values": [
+   1.0,
+   0.4000000059604645,
+   2.0,
+   2.0
+  ],
+  "d548_all_one": false
+ },
+ "exe": {
+  "available": true,
+  "sites": {
+   "0x21c": 166,
+   "0x220": 170
+  },
+  "windows": 95,
+  "same_base": 88,
+  "triples": [],
+  "notes": [
+   "displacements are the member offsets decoded from the packages"
+  ]
+ },
+ "cylinders": [
+  {
+   "role": "Startup template FrontCollisionCylinder",
+   "package": "Startup.upk",
+   "export": 82147,
+   "which": "front",
+   "name": "FrontCollisionCylinder",
+   "class": "CylinderComponent",
+   "outer": "BmScript.Default__RVehicleBatmobile",
+   "size": 46,
+   "walk_start": 12,
+   "tags": [
+    {
+     "type": "ObjectProperty",
+     "type_id": 5,
+     "offset": 316,
+     "name": "ReplacementPrimitive",
+     "size": 4,
+     "array_index": 0,
+     "at": 32,
+     "value": 0,
+     "ref": null
+    },
+    {
+     "type": "FloatProperty",
+     "type_id": 4,
+     "offset": 364,
+     "value": 0.999786376953125,
+     "at": 40
+    }
+   ],
+   "parsed": 46,
+   "tail": "",
+   "stop": "eof"
+  },
+  {
+   "role": "Startup template RearCollisionCylinder",
+   "package": "Startup.upk",
+   "export": 82148,
+   "which": "rear",
+   "name": "RearCollisionCylinder",
+   "class": "CylinderComponent",
+   "outer": "BmScript.Default__RVehicleBatmobile",
+   "size": 46,
+   "walk_start": 12,
+   "tags": [
+    {
+     "type": "ObjectProperty",
+     "type_id": 5,
+     "offset": 316,
+     "name": "ReplacementPrimitive",
+     "size": 4,
+     "array_index": 0,
+     "at": 32,
+     "value": 0,
+     "ref": null
+    },
+    {
+     "type": "FloatProperty",
+     "type_id": 4,
+     "offset": 364,
+     "value": 0.6011841297149658,
+     "at": 40
+    }
+   ],
+   "parsed": 46,
+   "tail": "",
+   "stop": "eof"
+  },
+  {
+   "role": "BmGame base FrontCollisionCylinder",
+   "package": "BmGame.upk",
+   "export": 142597,
+   "which": "front",
+   "name": "FrontCollisionCylinder",
+   "class": "CylinderComponent",
+   "outer": "Default__RVehicleBatmobileBase",
+   "size": 137,
+   "walk_start": 12,
+   "tags": [
+    {
+     "type": "FloatProperty",
+     "type_id": 4,
+     "offset": 540,
+     "value": 78.0,
+     "at": 16
+    },
+    {
+     "type": "FloatProperty",
+     "type_id": 4,
+     "offset": 544,
+     "value": 175.0,
+     "at": 24
+    },
+    {
+     "type": "ObjectProperty",
+     "type_id": 5,
+     "offset": 316,
+     "name": "ReplacementPrimitive",
+     "size": 4,
+     "array_index": 0,
+     "at": 48,
+     "value": 0,
+     "ref": null
+    },
+    {
+     "type": "FloatProperty",
+     "type_id": 4,
+     "offset": 364,
+     "value": 0.4289071261882782,
+     "at": 56
+    },
+    {
+     "type": "VectorProperty",
+     "type_id": 11,
+     "offset": 400,
+     "value": [
+      100.0,
+      0.0,
+      0.0
+     ],
+     "at": 64
+    },
+    {
+     "type": "BoolProperty",
+     "type_id": 3,
+     "offset": 484,
+     "value": true,
+     "at": 80,
+     "bits": 285884962
+    },
+    {
+     "type": "StructProperty",
+     "type_id": 10,
+     "offset": 512,
+     "name": "LightingChannels",
+     "size": 31,
+     "array_index": 0,
+     "at": 104,
+     "props": [
+      {
+       "type": "ByteProperty",
+       "type_id": 1,
+       "offset": 257,
+       "name": "*",
+       "size": 0,
+       "array_index": 0,
+       "at": 20,
+       "value": null
+      }
+     ],
+     "nested": 1
+    }
+   ],
+   "parsed": 137,
+   "tail": "",
+   "stop": "eof"
+  },
+  {
+   "role": "BmGame base RearCollisionCylinder",
+   "package": "BmGame.upk",
+   "export": 142598,
+   "which": "rear",
+   "name": "RearCollisionCylinder",
+   "class": "CylinderComponent",
+   "outer": "Default__RVehicleBatmobileBase",
+   "size": 137,
+   "walk_start": 12,
+   "tags": [
+    {
+     "type": "FloatProperty",
+     "type_id": 4,
+     "offset": 540,
+     "value": 78.0,
+     "at": 16
+    },
+    {
+     "type": "FloatProperty",
+     "type_id": 4,
+     "offset": 544,
+     "value": 175.0,
+     "at": 24
+    },
+    {
+     "type": "ObjectProperty",
+     "type_id": 5,
+     "offset": 316,
+     "name": "ReplacementPrimitive",
+     "size": 4,
+     "array_index": 0,
+     "at": 48,
+     "value": 0,
+     "ref": null
+    },
+    {
+     "type": "FloatProperty",
+     "type_id": 4,
+     "offset": 364,
+     "value": 0.7062898874282837,
+     "at": 56
+    },
+    {
+     "type": "VectorProperty",
+     "type_id": 11,
+     "offset": 400,
+     "value": [
+      -200.0,
+      0.0,
+      0.0
+     ],
+     "at": 64
+    },
+    {
+     "type": "BoolProperty",
+     "type_id": 3,
+     "offset": 484,
+     "value": true,
+     "at": 80,
+     "bits": 285884962
+    },
+    {
+     "type": "StructProperty",
+     "type_id": 10,
+     "offset": 512,
+     "name": "LightingChannels",
+     "size": 31,
+     "array_index": 0,
+     "at": 104,
+     "props": [
+      {
+       "type": "ByteProperty",
+       "type_id": 1,
+       "offset": 257,
+       "name": "*",
+       "size": 0,
+       "array_index": 0,
+       "at": 20,
+       "value": null
+      }
+     ],
+     "nested": 1
+    }
+   ],
+   "parsed": 137,
+   "tail": "",
+   "stop": "eof"
+  },
+  {
+   "role": "Playable instance FrontCollisionCylinder",
+   "package": "Playable_Batmobile_SF.upk",
+   "export": 277,
+   "which": "front",
+   "name": "FrontCollisionCylinder",
+   "class": "CylinderComponent",
+   "outer": "Vehicle.Batmobile",
+   "size": 38,
+   "walk_start": 4,
+   "tags": [
+    {
+     "type": "ObjectProperty",
+     "type_id": 5,
+     "offset": 316,
+     "name": "ReplacementPrimitive",
+     "size": 4,
+     "array_index": 0,
+     "at": 24,
+     "value": 0,
+     "ref": null
+    },
+    {
+     "type": "FloatProperty",
+     "type_id": 4,
+     "offset": 364,
+     "value": 0.6867885589599609,
+     "at": 32
+    }
+   ],
+   "parsed": 38,
+   "tail": "",
+   "stop": "eof"
+  },
+  {
+   "role": "Playable instance RearCollisionCylinder",
+   "package": "Playable_Batmobile_SF.upk",
+   "export": 278,
+   "which": "rear",
+   "name": "RearCollisionCylinder",
+   "class": "CylinderComponent",
+   "outer": "Vehicle.Batmobile",
+   "size": 38,
+   "walk_start": 4,
+   "tags": [
+    {
+     "type": "ObjectProperty",
+     "type_id": 5,
+     "offset": 316,
+     "name": "ReplacementPrimitive",
+     "size": 4,
+     "array_index": 0,
+     "at": 24,
+     "value": 0,
+     "ref": null
+    },
+    {
+     "type": "FloatProperty",
+     "type_id": 4,
+     "offset": 364,
+     "value": 0.020416881889104843,
+     "at": 32
+    }
+   ],
+   "parsed": 38,
+   "tail": "",
+   "stop": "eof"
+  }
+ ],
+ "values": {
+  "540": [
+   {
+    "object": "BmGame base FrontCollisionCylinder",
+    "value": 78.0
+   },
+   {
+    "object": "BmGame base RearCollisionCylinder",
+    "value": 78.0
+   }
+  ],
+  "544": [
+   {
+    "object": "BmGame base FrontCollisionCylinder",
+    "value": 175.0
+   },
+   {
+    "object": "BmGame base RearCollisionCylinder",
+    "value": 175.0
+   }
+  ]
+ },
+ "checks": [
+  {
+   "check": "Engine.upk holds the class export and its ten members, typed",
+   "pass": true,
+   "detail": "export 4062, super PrimitiveComponent; {'BoolProperty': 4, 'StructProperty': 1, 'FloatProperty': 3, 'Function': 2}"
+  },
+  {
+   "check": "the member linked list covers all ten and ends at 0",
+   "pass": true,
+   "detail": "GetExtent -> SetCylinderSize -> CollisionHeight -> CollisionRadius -> AABBScale -> CylinderColor -> bDrawBoundingBox -> bDrawNonColliding -> bAlwaysRenderIfSelected -> bForceGreenWhenSelected -> 0"
+  },
+  {
+   "check": "the default object walks from byte 0 to its last byte, carrying the class's 3 floats, its struct and its one bool word",
+   "pass": true,
+   "detail": "start 0, 10 tags, 114/114 bytes parsed, tail '', floats [540, 544, 548, 364], own bool word(s) at [556]"
+  },
+  {
+   "check": "no ancestor class serialises anything at or above 540",
+   "pass": true,
+   "detail": "PrimitiveComponent max 528; ActorComponent max 120"
+  },
+  {
+   "check": "the class's own float slots are exactly 540, 544 and 548",
+   "pass": true,
+   "detail": "own slots [540, 544, 548], all float tags [364, 540, 544, 548], ancestor max 528"
+  },
+  {
+   "check": "the chain ascends with the offset (struct 552 and bool word 556 above the floats)",
+   "pass": true,
+   "detail": "struct ['CylinderColor'] at 552, bool word at 556, floats end at 548; chain floats at chain positions [2, 3, 4], struct at [5]"
+  },
+  {
+   "check": "the class block 540..559 is fully packed (3 floats + struct + bool word)",
+   "pass": true,
+   "detail": "block [540, 560, 20] (start, end, bytes)"
+  },
+  {
+   "check": "both asked offsets are named",
+   "pass": true,
+   "detail": "540 = CollisionHeight; 544 = CollisionRadius"
+  },
+  {
+   "check": "the Batmobile's base templates carry 78.0 at 540 and 175.0 at 544",
+   "pass": true,
+   "detail": "540: [('BmGame', 78.0), ('BmGame', 78.0)]; 544: [('BmGame', 175.0), ('BmGame', 175.0)]"
+  }
+ ]
+}

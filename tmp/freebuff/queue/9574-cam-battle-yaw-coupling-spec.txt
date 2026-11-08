@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/cam-battle-yaw-coupling-spec.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-drive-modes-and-yaw.md
+Operator fact (memory bmak-gameplay-facts): in battle mode the nose swings toward where the camera points. Camera-side specification. Read reports/rc5-drive-modes-and-yaw.md from brief 9122, the camera yaw members in Working/Camera/CAM_REF.md and Research/BatmobileGrab/CAMERA.md. State where the yaw target comes from (camera forward vector), how the hook or the handling tune receives it, the rate at which the nose follows (use the decoded battle yaw rate, otherwise UNKNOWN), and what a pilot observes. Output Working/Camera/YAW_COUPLING.md including the camera quantity the hook must read and the exact observation for a test card. Done when the quantity, source symbol or UNKNOWN, rate and observation are each stated with a citation. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

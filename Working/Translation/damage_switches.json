@@ -1,0 +1,41 @@
+{
+ "_comment": "Out-of-domain VehicleDamage values that are deliberate switches, not translations. damage_audit.py fails on any out-of-domain value that is not declared here, and on any declaration that no longer matches the build. Rows: POSTMORTEM_DAMAGE.md section 8 (R3).",
+ "source": "Working/Translation/POSTMORTEM_DAMAGE.md",
+ "switches": {
+  "impact_damage_factor": {
+   "value": 0,
+   "row": "T-DM8",
+   "why": "multiplied into incoming collision damage; 0 is the off switch that reproduces 'ramming does not scratch it'. Shipped range is 1..12, so it is a switch, not a value. Do not 'correct' it toward the fleet median: that is exactly test-087."
+  },
+  "impact_armor": {
+   "value": 5000,
+   "row": "T-DM8",
+   "why": "kept from the pre-085 block as a belt-and-braces cap. Inert while impact_damage_factor is 0; the shipped range is 0..5. Remove it when the damage model is decoded."
+  },
+  "deform_scale": {
+   "value": 0,
+   "row": "T-DM6",
+   "why": "cosmetic switch: no panel crumple on the Batmobile. Shipped range is 1..2, so this is a declared deviation, not a translated value."
+  },
+  "melee_armor": {
+   "value": 5000,
+   "row": "T-DM9",
+   "why": "no shipped vehicle uses melee armour (fleet 0..0); carried from the pre-085 invulnerability block. Inert unless something melees a car."
+  },
+  "melee_armor_strength": {
+   "value": 100,
+   "row": "T-DM9",
+   "why": "pairs with melee_armor 5000; fleet range is 0..0, so it is a declared deviation."
+  },
+  "max_health": {
+   "value": 36000,
+   "row": "T-DM1",
+   "why": "ARM-2 at the BmAK ratio: 24 heavy-cannon hits x 1500.0 shell damage = 36000 (the H0 answer; H2 needs 35750, H1 18000). The shipped domain is 500..4000, so this is a declared switch, not a translated value, and it is pending Q1-DM-A: if the percentage gate ships, the value is 18000. Written by B-09 into the private health module only (R7).",
+   "builds": [
+    "bm-009",
+    "bm-RC2"
+   ]
+  }
+ },
+ "_t14": "T-14 (2026-10-29): removed the `bullet_armor_strength` declaration - T-DM2's 99 is inside the shipped 0..99. `max_health` 36000 stays pending until a build carries it (see Working/Translation/t10_damage_edits.json)."
+}

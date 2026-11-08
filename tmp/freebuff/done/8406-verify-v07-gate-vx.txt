@@ -1,0 +1,20 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-v07-gate-vx.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-07 (rewritten from the 2026-11-06 brief by review 8399)
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-v06-install-dry-run-rc4.md
+Phase V-07, the gate VX. Regenerate STATUS.md (status_audit.py --write and --check), write the MODLOG section VX with every verify result, and write Working/Q/APPROVAL_REQUEST.md for the operator: what would be installed (9 drop files), expected session number/length, the Q-PILOT cards, and every check still red or UNKNOWN. Do not create tmp/freebuff/APPROVED_Q.txt; only the operator (or Claude on the operator's word) writes it.
+
+STATUS regenerates to 145/216 evidenced, 15 blocked (11 ledger + 4 T6), 109 queued, 8 out, 8 superseded. t23_closeout.py --check is green (11/11 decisions).
+
+Disclose, with the file that proves each:
+- v05_driving.py red (T-ST7 unblocked), t_boost_rows.py 20/21 and t_vnf_six.py AssertionError (198-row pins vs a 199-row ledger) — 8396.
+- receipt.complete = false: 12 of 23 texture rows unfaithful (4 chapter masks + 8 missing pixel sets) — 8392.
+- collision gate false: 6.1 cm placement, 2 of 3 BmAK boxes with no shape, 1 constraint omitted — 8390.
+- 21 of 45 audio GUIDs still donor (B-26) — 8393.
+- D-08 wheel skew_health rows not carried (D-10 won the module conflict) — 8397.
+- B-12/D-2 mode pair not merged into the RC; B-25/B-26 cards with no payload; B-17..B-20 no-payload; T-MD8/T-MD14 named omissions — 8398.
+- T-E5 336.4 is an assumed label, not measured — 8391.
+- runtime untested: load, Rebel Drop leaf 1621485476, every Q take.
+
+Updated by review 8399: the gate now discloses the RC's recorded reds from the receipt instead of the pre-build list, and names each correction brief that owns the gap.

@@ -1,0 +1,167 @@
+{
+ "card": "G2-last",
+ "generator": "Tools/scripts/jc3_last_entry.py",
+ "entry": {
+  "archive": "patch_win64/game4",
+  "hash": 23980497,
+  "offset": 618637312,
+  "size": 84720,
+  "tab": "D:/Games/Just Cause 3\\patch_win64\\game4.tab",
+  "entries": 4453,
+  "named": 4452
+ },
+ "payload": {
+  "magic_hex": "E04A0100",
+  "prefix_u32": 84704,
+  "prefix_zeros": true,
+  "is_fsb5": true,
+  "head_hex": "e04a01000000000000000000000000004653423501000000010000003c00000028000000404a01000f00000001000000",
+  "fsb5_version": 1,
+  "samples": 1,
+  "sample_header_bytes": 60,
+  "name_table_bytes": 40,
+  "data_bytes": 84544,
+  "name_table_hex": "5b0c0100c0a603007a45010004000000313630363532333537360000000000000000000000000000",
+  "name_table_ascii": "[.......zE......1606523576..............",
+  "name_table_strings": [
+   "1606523576"
+  ],
+  "name_table_fields": [
+   68699,
+   239296,
+   83322,
+   4
+  ],
+  "name_table_field_semantics": "UNKNOWN - the 4 u32 fields ahead of the single string are not decoded (the corpus's other FSB5 name tables are not needed for the naming test)",
+  "token": 1606523576,
+  "first_name": "1606523576",
+  "first_name_len": 10,
+  "declared_bytes_check": {
+   "payload_len_from_prefix": 84704,
+   "size_minus_prefix": 84704,
+   "match": true
+  }
+ },
+ "neighbours": {
+  "prev": {
+   "path": "sound/dialogue/ara/mission_mm320_dial_gameplay_090.wavc",
+   "hash": "5567C6E5",
+   "archive": "patch_win64/game4",
+   "mount": "patch",
+   "offset": 618592256,
+   "size": 44368,
+   "source": "jcmr-dictionary"
+  },
+  "next": {
+   "path": "sound/dialogue/ara/mission_mm320_dial_gameplay_start05.wavc",
+   "hash": "CB7DBEA9",
+   "archive": "patch_win64/game4",
+   "mount": "patch",
+   "offset": 618723328,
+   "size": 141040,
+   "source": "jcmr-dictionary"
+  },
+  "align": 2048,
+  "prev_end": 618636624,
+  "end": 618722032,
+  "pad_before": 688,
+  "pad_after": 1296,
+  "aligned_before": true,
+  "aligned_after": true,
+  "slot_bytes": 86704
+ },
+ "candidates": {
+  "tried": 243341,
+  "hits": [],
+  "families": [
+   {
+    "family": "every known .wavc basename x every dialogue language",
+    "basenames": 14849,
+    "languages": 11,
+    "attempts": 163339,
+    "hits": 0
+   },
+   {
+    "family": "numeric takes 0..9999 (widths [1, 2, 3, 4]) of the bracket basenames",
+    "anchors": [
+     [
+      "ara",
+      "mission_mm320_dial_gameplay_090"
+     ],
+     [
+      "ara",
+      "mission_mm320_dial_gameplay_start05"
+     ]
+    ],
+    "attempts": 80002,
+    "hits": 0
+   }
+  ],
+  "distinct_basenames": 14849,
+  "languages": [
+   "ara",
+   "bra",
+   "eng",
+   "fre",
+   "ger",
+   "ita",
+   "jap",
+   "mex",
+   "pol",
+   "rus",
+   "spa"
+  ]
+ },
+ "references": {
+  "root": "E:/Modding/_gamedata/JC3grab",
+  "scanned": 39,
+  "bytes": 70050136,
+  "hits": [],
+  "truncated": false,
+  "exts": [
+   ".ee",
+   ".toc",
+   ".adf"
+  ],
+  "max_depth": 3,
+  "seconds": 0.24
+ },
+ "checks": [
+  {
+   "key": "O1-one-unnamed-record",
+   "ok": true,
+   "evidence": "INDEX.json: 81953 tab entries, 81952 named, unnamed_entries=1; the tab-vs-index diff over 88 archives leaves 1 record(s)"
+  },
+  {
+   "key": "O2-identity",
+   "ok": true,
+   "evidence": "INDEX.json's unnamed_magic lists ['E04A0100'] once in patch_win64/game4 and unnamed_sample_sizes lists 84720, which is the record found here (016DE9D1 at +618637312, 84720 B); the payload's first four bytes are E04A0100"
+  },
+  {
+   "key": "O3-payload-decoded",
+   "ok": true,
+   "evidence": "16-byte prefix u32 84704 = size - 16 (True), 12 zero bytes True, then FSB5 v1, 1 sample(s), sample headers 60 B, name table 40 B, data 84544 B"
+  },
+  {
+   "key": "O4-bracket-is-exact",
+   "ok": true,
+   "evidence": "the record starts where sound/dialogue/ara/mission_mm320_dial_gameplay_090.wavc ends (+618592256, 44368 B) rounded up to 0x800 (pad 688 B), and the next record starts where it ends (+618722032) rounded up too (pad 1296 B): the aligned slot before sound/dialogue/ara/mission_mm320_dial_gameplay_start05.wavc holds only this record"
+  },
+  {
+   "key": "O5-no-name-reproduces-the-hash",
+   "ok": true,
+   "evidence": "243341 candidate paths tried (every known .wavc basename x every dialogue language: 163339; numeric takes 0..9999 (widths [1, 2, 3, 4]) of the bracket basenames: 80002) against 016DE9D1: 0 hit(s)"
+  },
+  {
+   "key": "O6-token-is-an-orphan",
+   "ok": true,
+   "evidence": "the FSB5 name table carries exactly the strings ['1606523576'] (token 1606523576); no named path in the index contains that take id, so there is no cross-language sibling to borrow a basename from"
+  },
+  {
+   "key": "O7-references",
+   "ok": true,
+   "evidence": "39 .ee/.toc/.adf file(s), 70.1 MB scanned under E:/Modding/_gamedata/JC3grab (depth <= 3, complete): 0 hit(s)"
+  }
+ ],
+ "verdict": "UNKNOWN - no candidate reproduces the hash"
+}

@@ -1,0 +1,22 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-v06-install-dry-run-rc4.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-07 (rewritten from the 2026-11-06 brief by review 8399)
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-v05-predictions-rc4.md
+Phase V-06 on Builds/bm-RC4, simulated dropzone only (dropzone_sim.py; never D:/Games or E:/Games). Output Builds/bm-RC4/verify/dropzone_sim.md with each case's exit code.
+
+The artifact under test: install.ps1 6,535 B, sha256 df23485d65f358e14ea8d0b5037d42f0, rendered from Working/Installer/install_v3.ps1. Sim root must normalise to E:/Modding/_dropzone_sim_rc4; any other root prints REFUSED and exits 2.
+
+Cases and expected results:
+1. Status: 0 writes.
+2. -WhatIf: lists exactly the receipt's 9 drop files with their sha256, writes 0 files.
+3. Install on an empty sim root: copies exactly those 9, Verify green 9/9.
+4. Install on a sim root that already holds the build (the RC2 failure case): snapshots every existing target to <GameDir>/snapshot/..., Verify green, no byte changed.
+5. Pre-existing decoy (profile/item.onlinec from another build): Install snapshots it, Verify 9/9, Rollback restores the decoy byte-for-byte and removes only the 8 files that did not exist.
+6. Guard negative: -GameDir E:/Modding/not_the_sim -> REFUSED ..., exit 2, nothing written.
+
+Two environment facts to re-prove rather than assume: hashing must use System.Security.Cryptography.SHA256 because this host's PowerShell 5.1 has no Get-FileHash (module load failure, and the RC2 code path aborted Install before snapshotting, after which Rollback deleted the decoy); and Get-Parts must split Windows paths with the IO.Path separator API, not a regex.
+
+Report drop/ = 9 files, receipt schema 2, and the .ee sha256 a233c93dcbbe0732b48a448e5818e296 (11,225,534 B) / .toc cde0678e2fb710bad98b223854ea4ae3 (68,675 B).
+
+Updated by review 8399: gives the real installer hash/size, the 9-file receipt set, the sim path, the decoy case and the two host defects the RC had to fix.

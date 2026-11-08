@@ -1,0 +1,3949 @@
+{
+ "schema": 1,
+ "generator": "grab_sockets.py",
+ "verdict": "65/65 Batmobile_V2 sockets placed; 61/65 inside the body box +0.5 m. The four HangFromRope anchors are 2.446 m above the box by design. GRB-8 has 6 orphan light references (2 in Batmobile); 6 HeadLight* sockets ride Winch_DOOR_Mesh. Required anchors 13/13.",
+ "inputs": {
+  "package": "Playable_Batmobile_SF",
+  "bones_json": "E:\\Modding\\JC3-Batmobile\\Research\\BatmobileGrab\\BONES.json",
+  "bones_sha256": "f807aea510db3d3d989c17ccde4166ffe6d9132bcad77e5345828ac1cbc369c9",
+  "grab_json": "E:\\Modding\\JC3-Batmobile\\Research\\BatmobileGrab\\grab.json",
+  "grab_sha256": "fa3d465e4352bec2cd86d4a4f8540b56ca6a8337a50e44afa29da1c833880b58",
+  "objects_jsonl": "E:\\Modding\\JC3-Batmobile\\Research\\BatmobileGrab\\objects.jsonl",
+  "objects_sha256": "9e33cc17d14ac82994560d5a353de799fbd55d377790e0dc6b28f613610ef7f0",
+  "lights_json": "E:\\Modding\\JC3-Batmobile\\Research\\BatmobileGrab\\LIGHTS.json",
+  "lights_sha256": "23385faebf1bfca3b2dc7e424bd352353cdde143c301b9b4688e4cb03bf449bf",
+  "stations": "E:\\Modding\\JC3-Batmobile\\Working\\TrueScale\\stations.json",
+  "stations_sha256": "deb01833a8b373f87c956f17c71655cdaf74cd23b848991a7962e32b33c4acc2"
+ },
+ "convention": {
+  "socket_source": "SkeletalMeshSocket objects, Playable_Batmobile_SF",
+  "rotator": "UE3 FRotator (Pitch, Yaw, Roll), 65536 = 360 degrees; null = identity",
+  "relative_location": "centimetres in the bone's local frame",
+  "bone_frame": "BONES.json bind world (PSK: X length, Y width, Z up)",
+  "world_position": "bone pivot + qrot(bone q, relative location, inverse=True)",
+  "jc3_transform": "bat_assemble.to_jc3_rot(p) * 0.01 + offset",
+  "forward": "socket local +X through socket rot * bone bind rot * JC3 rotation",
+  "up": "socket local +Y through the same rotations",
+  "body_box": "Working/TrueScale/stations.json body_bbox, expanded by 0.5 m"
+ },
+ "counts": {
+  "sockets": 65,
+  "placed": 65,
+  "bones_found": 65,
+  "inside_body_box": 61,
+  "outside_body_box": 4,
+  "door_bound": 6,
+  "missing_locations": 1,
+  "missing_rotations": 26,
+  "by_part": {
+   "body": 26,
+   "jet": 1,
+   "weapons": 14,
+   "wheel_f_l": 5,
+   "wheel_f_r": 5,
+   "wheel_r_l": 4,
+   "wheel_r_r": 4,
+   "winch_door": 6
+  },
+  "by_role": {
+   "afterburner": 2,
+   "audio": 1,
+   "battery": 1,
+   "cockpit": 2,
+   "dashboard": 1,
+   "driver": 2,
+   "exhaust": 2,
+   "fx": 1,
+   "light": 10,
+   "mine": 8,
+   "missile": 2,
+   "muzzle": 3,
+   "other": 4,
+   "rope_anchor": 4,
+   "shells": 2,
+   "sparks": 2,
+   "tail_light": 4,
+   "vent": 2,
+   "wheel_light": 6,
+   "winch": 2,
+   "zapper": 4
+  },
+  "required_anchors": 13,
+  "required_present": 13,
+  "grb8_orphan_refs": 6,
+  "grb8_orphan_refs_this_package": 2
+ },
+ "body_box": {
+  "min_m": [
+   -1.747,
+   0.091,
+   -3.42
+  ],
+  "max_m": [
+   1.748,
+   2.362,
+   3.605
+  ],
+  "expanded_by_m": 0.5,
+  "expanded_min_m": [
+   -2.247,
+   -0.409,
+   -3.92
+  ],
+  "expanded_max_m": [
+   2.248,
+   2.862,
+   4.105
+  ],
+  "outliers": [
+   {
+    "socket": "HangFromRope_Front_Left",
+    "bone": "Wheel_Front_Left",
+    "position_m": [
+     -1.578173,
+     5.307708,
+     -2.594158
+    ],
+    "outside_by_m": 2.445708,
+    "axes": [
+     "y"
+    ]
+   },
+   {
+    "socket": "HangFromRope_Front_Right",
+    "bone": "Wheel_Front_Right",
+    "position_m": [
+     1.592772,
+     5.307662,
+     -2.591002
+    ],
+    "outside_by_m": 2.445662,
+    "axes": [
+     "y"
+    ]
+   },
+   {
+    "socket": "HangFromRope_Rear_Left",
+    "bone": "Wheel_Rear_Left",
+    "position_m": [
+     -1.577472,
+     5.307723,
+     2.286396
+    ],
+    "outside_by_m": 2.445723,
+    "axes": [
+     "y"
+    ]
+   },
+   {
+    "socket": "HangFromRope_Rear_Right",
+    "bone": "Wheel_Rear_Right",
+    "position_m": [
+     1.596377,
+     5.307681,
+     2.275759
+    ],
+    "outside_by_m": 2.445681,
+    "axes": [
+     "y"
+    ]
+   }
+  ]
+ },
+ "required_anchors": {
+  "names": [
+   "Driver",
+   "CannonMuzzle",
+   "ChainGunMuzzle",
+   "RiotSuppressorMuzzle",
+   "MissileL",
+   "MissileR",
+   "Afterburner",
+   "Afterburner_Front",
+   "WinchOrigin",
+   "BattleModeSpotLight",
+   "BootLight",
+   "Dashboard_Light",
+   "Headlight_Centre"
+  ],
+  "present": [
+   "Driver",
+   "CannonMuzzle",
+   "ChainGunMuzzle",
+   "RiotSuppressorMuzzle",
+   "MissileL",
+   "MissileR",
+   "Afterburner",
+   "Afterburner_Front",
+   "WinchOrigin",
+   "BattleModeSpotLight",
+   "BootLight",
+   "Dashboard_Light",
+   "Headlight_Centre"
+  ],
+  "missing": []
+ },
+ "orphan_light_refs": [
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "owner": "Batmobile_Funhouse_Archetypes.Vehicle",
+   "socket": "HeadLight1c",
+   "type": "VEHLT_HeadLight",
+   "behavior": "HeadLight",
+   "reason": "socket name is not a SkeletalMeshSocket in the shipped mesh"
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "owner": "Batmobile_Funhouse_Archetypes.Vehicle",
+   "socket": "HeadLight2c",
+   "type": "VEHLT_HeadLight",
+   "behavior": "HeadLight",
+   "reason": "socket name is not a SkeletalMeshSocket in the shipped mesh"
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "owner": "Batmobile_Mk2_Archetypes.Vehicle",
+   "socket": "HeadLight1c",
+   "type": "VEHLT_HeadLight",
+   "behavior": "HeadLight",
+   "reason": "socket name is not a SkeletalMeshSocket in the shipped mesh"
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "owner": "Batmobile_Mk2_Archetypes.Vehicle",
+   "socket": "HeadLight2c",
+   "type": "VEHLT_HeadLight",
+   "behavior": "HeadLight",
+   "reason": "socket name is not a SkeletalMeshSocket in the shipped mesh"
+  },
+  {
+   "package": "Playable_Batmobile_SF",
+   "owner": "Batmobile_Archetypes.Vehicle",
+   "socket": "HeadLight1c",
+   "type": "VEHLT_HeadLight",
+   "behavior": "HeadLight",
+   "reason": "socket name is not a SkeletalMeshSocket in the shipped mesh"
+  },
+  {
+   "package": "Playable_Batmobile_SF",
+   "owner": "Batmobile_Archetypes.Vehicle",
+   "socket": "HeadLight2c",
+   "type": "VEHLT_HeadLight",
+   "behavior": "HeadLight",
+   "reason": "socket name is not a SkeletalMeshSocket in the shipped mesh"
+  }
+ ],
+ "door_bound": [
+  {
+   "socket": "HeadLight1",
+   "bone": "Winch_DOOR_Mesh",
+   "part_hint": "winch_door",
+   "position_m": [
+    -0.452191,
+    0.694048,
+    -2.977011
+   ]
+  },
+  {
+   "socket": "HeadLight1a",
+   "bone": "Winch_DOOR_Mesh",
+   "part_hint": "winch_door",
+   "position_m": [
+    -0.420437,
+    0.611548,
+    -3.007102
+   ]
+  },
+  {
+   "socket": "HeadLight1b",
+   "bone": "Winch_DOOR_Mesh",
+   "part_hint": "winch_door",
+   "position_m": [
+    -0.383221,
+    0.526548,
+    -3.046319
+   ]
+  },
+  {
+   "socket": "HeadLight2",
+   "bone": "Winch_DOOR_Mesh",
+   "part_hint": "winch_door",
+   "position_m": [
+    0.385662,
+    0.526543,
+    -3.04638
+   ]
+  },
+  {
+   "socket": "HeadLight2a",
+   "bone": "Winch_DOOR_Mesh",
+   "part_hint": "winch_door",
+   "position_m": [
+    0.447428,
+    0.694042,
+    -2.977082
+   ]
+  },
+  {
+   "socket": "HeadLight2b",
+   "bone": "Winch_DOOR_Mesh",
+   "part_hint": "winch_door",
+   "position_m": [
+    0.416045,
+    0.611543,
+    -3.007167
+   ]
+  }
+ ],
+ "sockets": [
+  {
+   "socket": "Afterburner",
+   "bone": "JetSMove",
+   "bone_parent": "Batmobile_Chassis_Mesh",
+   "part_hint": "jet",
+   "role": "afterburner",
+   "relative_location_cm": [
+    -205.056992,
+    0.970673,
+    -0.499941
+   ],
+   "relative_rotation_raw": [
+    32768,
+    -32768,
+    0
+   ],
+   "relative_rotation_deg": [
+    180.0,
+    -180.0,
+    0.0
+   ],
+   "relative_rotation_quat": [
+    -1.0,
+    -0.0,
+    -0.0,
+    0.0
+   ],
+   "bone_position_m": [
+    4.8e-05,
+    0.542762,
+    1.342607
+   ],
+   "position_m": [
+    -0.009578,
+    0.537762,
+    3.393177
+   ],
+   "forward_jc3": [
+    -3.9e-05,
+    0.0,
+    -1.0
+   ],
+   "up_jc3": [
+    1.0,
+    3e-06,
+    -3.9e-05
+   ],
+   "right_jc3": [
+    3e-06,
+    -1.0,
+    -0.0
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "Afterburner_Front",
+   "bone": "Batmobile_Chassis_Mesh",
+   "bone_parent": "Batmobile_Chassis",
+   "part_hint": "body",
+   "role": "afterburner",
+   "relative_location_cm": [
+    308.462463,
+    0.0,
+    66.75
+   ],
+   "relative_rotation_raw": [
+    0,
+    32768,
+    0
+   ],
+   "relative_rotation_deg": [
+    0.0,
+    180.0,
+    0.0
+   ],
+   "relative_rotation_quat": [
+    0.0,
+    -0.0,
+    1.0,
+    0.0
+   ],
+   "bone_position_m": [
+    -0.0,
+    0.022231,
+    0.154297
+   ],
+   "position_m": [
+    -0.00012,
+    0.689732,
+    -2.930327
+   ],
+   "forward_jc3": [
+    -3.9e-05,
+    -0.0,
+    1.0
+   ],
+   "up_jc3": [
+    1.0,
+    -3e-06,
+    3.9e-05
+   ],
+   "right_jc3": [
+    3e-06,
+    1.0,
+    0.0
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "BatterySocket",
+   "bone": "Batmobile_Chassis",
+   "bone_parent": "Batmobile_Chassis",
+   "part_hint": "body",
+   "role": "battery",
+   "relative_location_cm": [
+    -49.772812,
+    -143.366592,
+    119.0
+   ],
+   "relative_rotation_raw": [
+    0,
+    -16222,
+    0
+   ],
+   "relative_rotation_deg": [
+    0.0,
+    -89.1101,
+    0.0
+   ],
+   "relative_rotation_quat": [
+    -0.0,
+    0.0,
+    -0.70159428,
+    0.71257664
+   ],
+   "bone_position_m": [
+    -0.0,
+    0.022231,
+    0.154297
+   ],
+   "position_m": [
+    1.433689,
+    1.212227,
+    0.651969
+   ],
+   "forward_jc3": [
+    0.99988,
+    -0.0,
+    -0.015492
+   ],
+   "up_jc3": [
+    -0.015492,
+    -3e-06,
+    -0.99988
+   ],
+   "right_jc3": [
+    0.0,
+    1.0,
+    -3e-06
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "BattleModeSpotLight",
+   "bone": "Batmobile_Rig_Weapons_Drone_Decoder",
+   "bone_parent": "Batmobile_Rig_Weapons_Drone_Decoder_Arm",
+   "part_hint": "weapons",
+   "role": "light",
+   "relative_location_cm": [
+    14.650226,
+    0.0,
+    2.499828
+   ],
+   "relative_rotation_raw": null,
+   "relative_rotation_deg": null,
+   "relative_rotation_quat": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "bone_position_m": [
+    0.000378,
+    1.809569,
+    0.080132
+   ],
+   "position_m": [
+    0.000378,
+    1.834583,
+    -0.066368
+   ],
+   "forward_jc3": [
+    3.9e-05,
+    -0.000108,
+    -1.0
+   ],
+   "up_jc3": [
+    -1.0,
+    -0.000217,
+    -3.9e-05
+   ],
+   "right_jc3": [
+    -0.000217,
+    1.0,
+    -0.000108
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": true
+  },
+  {
+   "socket": "BootLight",
+   "bone": "Batmobile_Chassis",
+   "bone_parent": "Batmobile_Chassis",
+   "part_hint": "body",
+   "role": "light",
+   "relative_location_cm": [
+    -174.496429,
+    2.009974,
+    197.75
+   ],
+   "relative_rotation_raw": null,
+   "relative_rotation_deg": null,
+   "relative_rotation_quat": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "bone_position_m": [
+    -0.0,
+    0.022231,
+    0.154297
+   ],
+   "position_m": [
+    -0.020025,
+    1.999731,
+    1.899263
+   ],
+   "forward_jc3": [
+    3.9e-05,
+    -0.0,
+    -1.0
+   ],
+   "up_jc3": [
+    -1.0,
+    -3e-06,
+    -3.9e-05
+   ],
+   "right_jc3": [
+    -3e-06,
+    1.0,
+    -0.0
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": true
+  },
+  {
+   "socket": "BrakeLightL",
+   "bone": "SUSP2_Wheel_Rear_Left",
+   "bone_parent": "SUSP1_Wheel_Rear_Left",
+   "part_hint": "wheel_r_l",
+   "role": "tail_light",
+   "relative_location_cm": [
+    -273.688568,
+    -40.901966,
+    -15.193807
+   ],
+   "relative_rotation_raw": [
+    0,
+    32768,
+    -16384
+   ],
+   "relative_rotation_deg": [
+    0.0,
+    180.0,
+    -90.0
+   ],
+   "relative_rotation_quat": [
+    0.0,
+    0.70710678,
+    0.70710678,
+    0.0
+   ],
+   "bone_position_m": [
+    -0.885411,
+    1.227036,
+    0.644712
+   ],
+   "position_m": [
+    -0.476118,
+    0.728881,
+    3.340124
+   ],
+   "forward_jc3": [
+    0.126948,
+    -0.000103,
+    0.991909
+   ],
+   "up_jc3": [
+    2e-05,
+    1.0,
+    0.000101
+   ],
+   "right_jc3": [
+    -0.991909,
+    7e-06,
+    0.126948
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "BrakeLightR",
+   "bone": "SUSP2_Wheel_Rear_Right",
+   "bone_parent": "SUSP1_Wheel_Rear_Right",
+   "part_hint": "wheel_r_r",
+   "role": "tail_light",
+   "relative_location_cm": [
+    272.574463,
+    -40.842842,
+    -14.440631
+   ],
+   "relative_rotation_raw": [
+    0,
+    0,
+    -16384
+   ],
+   "relative_rotation_deg": [
+    0.0,
+    0.0,
+    -90.0
+   ],
+   "relative_rotation_quat": [
+    0.70710678,
+    0.0,
+    0.0,
+    0.70710678
+   ],
+   "bone_position_m": [
+    0.885425,
+    1.227093,
+    0.644566
+   ],
+   "position_m": [
+    0.477262,
+    0.733826,
+    3.329234
+   ],
+   "forward_jc3": [
+    -0.128425,
+    9.7e-05,
+    0.991719
+   ],
+   "up_jc3": [
+    -2e-06,
+    -1.0,
+    9.8e-05
+   ],
+   "right_jc3": [
+    0.991719,
+    1e-05,
+    0.128425
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "BrakeTrailL",
+   "bone": "SUSP2_Wheel_Rear_Left",
+   "bone_parent": "SUSP1_Wheel_Rear_Left",
+   "part_hint": "wheel_r_l",
+   "role": "tail_light",
+   "relative_location_cm": [
+    -165.196121,
+    -40.549103,
+    -16.280621
+   ],
+   "relative_rotation_raw": [
+    0,
+    32768,
+    -16384
+   ],
+   "relative_rotation_deg": [
+    0.0,
+    180.0,
+    -90.0
+   ],
+   "relative_rotation_quat": [
+    0.0,
+    0.70710678,
+    0.70710678,
+    0.0
+   ],
+   "bone_position_m": [
+    -0.885411,
+    1.227036,
+    0.644712
+   ],
+   "position_m": [
+    -0.479756,
+    0.85583,
+    2.262598
+   ],
+   "forward_jc3": [
+    0.126948,
+    -0.000103,
+    0.991909
+   ],
+   "up_jc3": [
+    2e-05,
+    1.0,
+    0.000101
+   ],
+   "right_jc3": [
+    -0.991909,
+    7e-06,
+    0.126948
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "BrakeTrailR",
+   "bone": "SUSP2_Wheel_Rear_Right",
+   "bone_parent": "SUSP1_Wheel_Rear_Right",
+   "part_hint": "wheel_r_r",
+   "role": "tail_light",
+   "relative_location_cm": [
+    165.861435,
+    -37.488396,
+    -19.97352
+   ],
+   "relative_rotation_raw": [
+    0,
+    0,
+    -16384
+   ],
+   "relative_rotation_deg": [
+    0.0,
+    0.0,
+    -90.0
+   ],
+   "relative_rotation_quat": [
+    0.70710678,
+    0.0,
+    0.0,
+    0.70710678
+   ],
+   "bone_position_m": [
+    0.885425,
+    1.227093,
+    0.644566
+   ],
+   "position_m": [
+    0.510702,
+    0.816001,
+    2.263832
+   ],
+   "forward_jc3": [
+    -0.128425,
+    9.7e-05,
+    0.991719
+   ],
+   "up_jc3": [
+    -2e-06,
+    -1.0,
+    9.8e-05
+   ],
+   "right_jc3": [
+    0.991719,
+    1e-05,
+    0.128425
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "CannonMuzzle",
+   "bone": "Batmobile_Rig_Weapons_Heavy_Cannon_Barrrel_02",
+   "bone_parent": "Batmobile_Rig_Weapons_Heavy_Cannon_Barrel_01",
+   "part_hint": "weapons",
+   "role": "muzzle",
+   "relative_location_cm": [
+    47.354469,
+    0.0,
+    0.0
+   ],
+   "relative_rotation_raw": null,
+   "relative_rotation_deg": null,
+   "relative_rotation_quat": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "bone_position_m": [
+    0.000358,
+    1.702446,
+    0.0176
+   ],
+   "position_m": [
+    0.000339,
+    1.702497,
+    -0.455945
+   ],
+   "forward_jc3": [
+    3.9e-05,
+    -0.000108,
+    -1.0
+   ],
+   "up_jc3": [
+    -1.0,
+    -0.000217,
+    -3.9e-05
+   ],
+   "right_jc3": [
+    -0.000217,
+    1.0,
+    -0.000108
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": true
+  },
+  {
+   "socket": "ChainGunMuzzle",
+   "bone": "Batmobile_Rig_Weapons_Machine_Gun_01",
+   "bone_parent": "Batmobile_Rig_Weapons_Machine_Gun_Root",
+   "part_hint": "weapons",
+   "role": "muzzle",
+   "relative_location_cm": [
+    97.662842,
+    0.0,
+    -6.74938
+   ],
+   "relative_rotation_raw": null,
+   "relative_rotation_deg": null,
+   "relative_rotation_quat": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "bone_position_m": [
+    -0.407315,
+    1.619257,
+    0.809753
+   ],
+   "position_m": [
+    -0.407368,
+    1.551869,
+    -0.166883
+   ],
+   "forward_jc3": [
+    3.9e-05,
+    -0.000108,
+    -1.0
+   ],
+   "up_jc3": [
+    -1.0,
+    -0.000217,
+    -3.9e-05
+   ],
+   "right_jc3": [
+    -0.000217,
+    1.0,
+    -0.000108
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": true
+  },
+  {
+   "socket": "ChainGunShells",
+   "bone": "Batmobile_Rig_Weapons_Machine_Gun_01",
+   "bone_parent": "Batmobile_Rig_Weapons_Machine_Gun_Root",
+   "part_hint": "weapons",
+   "role": "shells",
+   "relative_location_cm": [
+    0.0,
+    16.589752,
+    -1e-06
+   ],
+   "relative_rotation_raw": [
+    0,
+    0,
+    32768
+   ],
+   "relative_rotation_deg": [
+    0.0,
+    0.0,
+    180.0
+   ],
+   "relative_rotation_quat": [
+    -1.0,
+    -0.0,
+    0.0,
+    0.0
+   ],
+   "bone_position_m": [
+    -0.407315,
+    1.619257,
+    0.809753
+   ],
+   "position_m": [
+    -0.573213,
+    1.619293,
+    0.809759
+   ],
+   "forward_jc3": [
+    -3.9e-05,
+    0.000108,
+    -1.0
+   ],
+   "up_jc3": [
+    1.0,
+    0.000217,
+    -3.9e-05
+   ],
+   "right_jc3": [
+    0.000217,
+    -1.0,
+    -0.000108
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "CockpitRain",
+   "bone": "Batmobile_Chassis",
+   "bone_parent": "Batmobile_Chassis",
+   "part_hint": "body",
+   "role": "cockpit",
+   "relative_location_cm": [
+    143.951996,
+    0.0,
+    194.25
+   ],
+   "relative_rotation_raw": null,
+   "relative_rotation_deg": null,
+   "relative_rotation_quat": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "bone_position_m": [
+    -0.0,
+    0.022231,
+    0.154297
+   ],
+   "position_m": [
+    -5.1e-05,
+    1.964732,
+    -1.285222
+   ],
+   "forward_jc3": [
+    3.9e-05,
+    -0.0,
+    -1.0
+   ],
+   "up_jc3": [
+    -1.0,
+    -3e-06,
+    -3.9e-05
+   ],
+   "right_jc3": [
+    -3e-06,
+    1.0,
+    -0.0
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": true
+  },
+  {
+   "socket": "Cockpit_Hologram",
+   "bone": "Batmobile_Chassis",
+   "bone_parent": "Batmobile_Chassis",
+   "part_hint": "body",
+   "role": "cockpit",
+   "relative_location_cm": [
+    180.314041,
+    -0.291713,
+    163.869644
+   ],
+   "relative_rotation_raw": [
+    135,
+    16540,
+    14024
+   ],
+   "relative_rotation_deg": [
+    0.7416,
+    90.8569,
+    77.0361
+   ],
+   "relative_rotation_quat": [
+    -0.4334373,
+    -0.44718367,
+    0.55453045,
+    0.55195548
+   ],
+   "bone_position_m": [
+    -0.0,
+    0.022231,
+    0.154297
+   ],
+   "position_m": [
+    0.002851,
+    1.660928,
+    -1.648843
+   ],
+   "forward_jc3": [
+    -0.999804,
+    0.012981,
+    0.014946
+   ],
+   "up_jc3": [
+    -0.009296,
+    -0.97443,
+    0.224498
+   ],
+   "right_jc3": [
+    0.017478,
+    0.224315,
+    0.97436
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "Dashboard",
+   "bone": "Batmobile_Chassis",
+   "bone_parent": "Batmobile_Chassis",
+   "part_hint": "body",
+   "role": "dashboard",
+   "relative_location_cm": [
+    189.167694,
+    0.0,
+    145.749985
+   ],
+   "relative_rotation_raw": [
+    0,
+    32768,
+    0
+   ],
+   "relative_rotation_deg": [
+    0.0,
+    180.0,
+    0.0
+   ],
+   "relative_rotation_quat": [
+    0.0,
+    -0.0,
+    1.0,
+    0.0
+   ],
+   "bone_position_m": [
+    -0.0,
+    0.022231,
+    0.154297
+   ],
+   "position_m": [
+    -7e-05,
+    1.479732,
+    -1.737379
+   ],
+   "forward_jc3": [
+    -3.9e-05,
+    -0.0,
+    1.0
+   ],
+   "up_jc3": [
+    1.0,
+    -3e-06,
+    3.9e-05
+   ],
+   "right_jc3": [
+    3e-06,
+    1.0,
+    0.0
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "Dashboard_Light",
+   "bone": "Batmobile_Chassis",
+   "bone_parent": "Batmobile_Chassis",
+   "part_hint": "body",
+   "role": "light",
+   "relative_location_cm": [
+    182.950577,
+    0.0,
+    144.249832
+   ],
+   "relative_rotation_raw": [
+    27306,
+    0,
+    0
+   ],
+   "relative_rotation_deg": [
+    149.9963,
+    0.0,
+    0.0
+   ],
+   "relative_rotation_quat": [
+    0.0,
+    -0.96591755,
+    0.0,
+    0.25884991
+   ],
+   "bone_position_m": [
+    -0.0,
+    0.022231,
+    0.154297
+   ],
+   "position_m": [
+    -6.8e-05,
+    1.46473,
+    -1.675208
+   ],
+   "forward_jc3": [
+    3.9e-05,
+    0.500055,
+    0.865993
+   ],
+   "up_jc3": [
+    -1.0,
+    2.2e-05,
+    3.2e-05
+   ],
+   "right_jc3": [
+    -3e-06,
+    -0.865993,
+    0.500055
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "Driver",
+   "bone": "Batmobile_Chassis",
+   "bone_parent": "Batmobile_Chassis",
+   "part_hint": "body",
+   "role": "driver",
+   "relative_location_cm": [
+    121.965767,
+    0.25,
+    84.249992
+   ],
+   "relative_rotation_raw": null,
+   "relative_rotation_deg": null,
+   "relative_rotation_quat": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "bone_position_m": [
+    -0.0,
+    0.022231,
+    0.154297
+   ],
+   "position_m": [
+    -0.002546,
+    0.864732,
+    -1.06536
+   ],
+   "forward_jc3": [
+    3.9e-05,
+    -0.0,
+    -1.0
+   ],
+   "up_jc3": [
+    -1.0,
+    -3e-06,
+    -3.9e-05
+   ],
+   "right_jc3": [
+    -3e-06,
+    1.0,
+    -0.0
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": true
+  },
+  {
+   "socket": "DriverAnimOrigin",
+   "bone": "Batmobile_Chassis",
+   "bone_parent": "Batmobile_Chassis",
+   "part_hint": "body",
+   "role": "driver",
+   "relative_location_cm": null,
+   "relative_rotation_raw": null,
+   "relative_rotation_deg": null,
+   "relative_rotation_quat": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "bone_position_m": [
+    -0.0,
+    0.022231,
+    0.154297
+   ],
+   "position_m": [
+    -0.0,
+    0.022231,
+    0.154297
+   ],
+   "forward_jc3": [
+    3.9e-05,
+    -0.0,
+    -1.0
+   ],
+   "up_jc3": [
+    -1.0,
+    -3e-06,
+    -3.9e-05
+   ],
+   "right_jc3": [
+    -3e-06,
+    1.0,
+    -0.0
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": true,
+   "rotation_missing": true
+  },
+  {
+   "socket": "FearGasTrail2L",
+   "bone": "Batmobile_Chassis",
+   "bone_parent": "Batmobile_Chassis",
+   "part_hint": "body",
+   "role": "other",
+   "relative_location_cm": [
+    -221.61467,
+    -63.149616,
+    186.5
+   ],
+   "relative_rotation_raw": [
+    0,
+    32768,
+    0
+   ],
+   "relative_rotation_deg": [
+    0.0,
+    180.0,
+    0.0
+   ],
+   "relative_rotation_quat": [
+    0.0,
+    -0.0,
+    1.0,
+    0.0
+   ],
+   "bone_position_m": [
+    -0.0,
+    0.022231,
+    0.154297
+   ],
+   "position_m": [
+    0.631589,
+    1.887229,
+    2.370419
+   ],
+   "forward_jc3": [
+    -3.9e-05,
+    -0.0,
+    1.0
+   ],
+   "up_jc3": [
+    1.0,
+    -3e-06,
+    3.9e-05
+   ],
+   "right_jc3": [
+    3e-06,
+    1.0,
+    0.0
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "FearGasTrail2R",
+   "bone": "Batmobile_Chassis",
+   "bone_parent": "Batmobile_Chassis",
+   "part_hint": "body",
+   "role": "other",
+   "relative_location_cm": [
+    -225.260849,
+    63.199688,
+    194.749985
+   ],
+   "relative_rotation_raw": [
+    0,
+    32768,
+    0
+   ],
+   "relative_rotation_deg": [
+    0.0,
+    180.0,
+    0.0
+   ],
+   "relative_rotation_quat": [
+    0.0,
+    -0.0,
+    1.0,
+    0.0
+   ],
+   "bone_position_m": [
+    -0.0,
+    0.022231,
+    0.154297
+   ],
+   "position_m": [
+    -0.631903,
+    1.969733,
+    2.406931
+   ],
+   "forward_jc3": [
+    -3.9e-05,
+    -0.0,
+    1.0
+   ],
+   "up_jc3": [
+    1.0,
+    -3e-06,
+    3.9e-05
+   ],
+   "right_jc3": [
+    3e-06,
+    1.0,
+    0.0
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "FearGasTrailL",
+   "bone": "Batmobile_Chassis",
+   "bone_parent": "Batmobile_Chassis",
+   "part_hint": "body",
+   "role": "other",
+   "relative_location_cm": [
+    -230.0,
+    -68.0,
+    185.0
+   ],
+   "relative_rotation_raw": [
+    1820,
+    32768,
+    0
+   ],
+   "relative_rotation_deg": [
+    9.9976,
+    180.0,
+    0.0
+   ],
+   "relative_rotation_quat": [
+    0.08713452,
+    -0.0,
+    0.99619655,
+    0.0
+   ],
+   "bone_position_m": [
+    -0.0,
+    0.022231,
+    0.154297
+   ],
+   "position_m": [
+    0.680096,
+    1.872229,
+    2.454271
+   ],
+   "forward_jc3": [
+    -3.9e-05,
+    0.173606,
+    0.984815
+   ],
+   "up_jc3": [
+    1.0,
+    4e-06,
+    3.9e-05
+   ],
+   "right_jc3": [
+    3e-06,
+    0.984815,
+    -0.173606
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "FearGasTrailR",
+   "bone": "Batmobile_Chassis",
+   "bone_parent": "Batmobile_Chassis",
+   "part_hint": "body",
+   "role": "other",
+   "relative_location_cm": [
+    -230.0,
+    68.0,
+    185.0
+   ],
+   "relative_rotation_raw": [
+    1820,
+    32768,
+    0
+   ],
+   "relative_rotation_deg": [
+    9.9976,
+    180.0,
+    0.0
+   ],
+   "relative_rotation_quat": [
+    0.08713452,
+    -0.0,
+    0.99619655,
+    0.0
+   ],
+   "bone_position_m": [
+    -0.0,
+    0.022231,
+    0.154297
+   ],
+   "position_m": [
+    -0.679904,
+    1.872233,
+    2.454324
+   ],
+   "forward_jc3": [
+    -3.9e-05,
+    0.173606,
+    0.984815
+   ],
+   "up_jc3": [
+    1.0,
+    4e-06,
+    3.9e-05
+   ],
+   "right_jc3": [
+    3e-06,
+    0.984815,
+    -0.173606
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "HangFromRope_Front_Left",
+   "bone": "Wheel_Front_Left",
+   "bone_parent": "Batmobile_Chassis_Mesh",
+   "part_hint": "wheel_f_l",
+   "role": "rope_anchor",
+   "relative_location_cm": [
+    36.692184,
+    -2.405115,
+    460.5
+   ],
+   "relative_rotation_raw": null,
+   "relative_rotation_deg": null,
+   "relative_rotation_quat": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "bone_position_m": [
+    -1.211263,
+    0.702707,
+    -2.570122
+   ],
+   "position_m": [
+    -1.578173,
+    5.307708,
+    -2.594158
+   ],
+   "forward_jc3": [
+    1.0,
+    -0.0,
+    4e-05
+   ],
+   "up_jc3": [
+    4e-05,
+    -3e-06,
+    -1.0
+   ],
+   "right_jc3": [
+    0.0,
+    1.0,
+    -3e-06
+   ],
+   "inside_body_box": false,
+   "outside_by_m": 2.445708,
+   "outside_axes": [
+    "y"
+   ],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": true
+  },
+  {
+   "socket": "HangFromRope_Front_Right",
+   "bone": "Wheel_Front_Right",
+   "bone_parent": "Batmobile_Chassis_Mesh",
+   "part_hint": "wheel_f_r",
+   "role": "rope_anchor",
+   "relative_location_cm": [
+    -38.192822,
+    -2.092066,
+    460.5
+   ],
+   "relative_rotation_raw": null,
+   "relative_rotation_deg": null,
+   "relative_rotation_quat": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "bone_position_m": [
+    1.21083,
+    0.702663,
+    -2.570067
+   ],
+   "position_m": [
+    1.592772,
+    5.307662,
+    -2.591002
+   ],
+   "forward_jc3": [
+    1.0,
+    -0.0,
+    3.9e-05
+   ],
+   "up_jc3": [
+    3.9e-05,
+    -3e-06,
+    -1.0
+   ],
+   "right_jc3": [
+    0.0,
+    1.0,
+    -3e-06
+   ],
+   "inside_body_box": false,
+   "outside_by_m": 2.445662,
+   "outside_axes": [
+    "y"
+   ],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": true
+  },
+  {
+   "socket": "HangFromRope_Rear_Left",
+   "bone": "Wheel_Rear_Left",
+   "bone_parent": "Batmobile_Chassis_Mesh",
+   "part_hint": "wheel_r_l",
+   "role": "rope_anchor",
+   "relative_location_cm": [
+    29.240784,
+    -17.231911,
+    460.5
+   ],
+   "relative_rotation_raw": null,
+   "relative_rotation_deg": null,
+   "relative_rotation_quat": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "bone_position_m": [
+    -1.285069,
+    0.702723,
+    2.458703
+   ],
+   "position_m": [
+    -1.577472,
+    5.307723,
+    2.286396
+   ],
+   "forward_jc3": [
+    1.0,
+    -0.0,
+    3.9e-05
+   ],
+   "up_jc3": [
+    3.9e-05,
+    -2e-06,
+    -1.0
+   ],
+   "right_jc3": [
+    0.0,
+    1.0,
+    -2e-06
+   ],
+   "inside_body_box": false,
+   "outside_by_m": 2.445723,
+   "outside_axes": [
+    "y"
+   ],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": true
+  },
+  {
+   "socket": "HangFromRope_Rear_Right",
+   "bone": "Wheel_Rear_Right",
+   "bone_parent": "Batmobile_Chassis_Mesh",
+   "part_hint": "wheel_r_r",
+   "role": "rope_anchor",
+   "relative_location_cm": [
+    -31.115643,
+    -18.333076,
+    460.5
+   ],
+   "relative_rotation_raw": null,
+   "relative_rotation_deg": null,
+   "relative_rotation_quat": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "bone_position_m": [
+    1.285216,
+    0.702681,
+    2.459102
+   ],
+   "position_m": [
+    1.596377,
+    5.307681,
+    2.275759
+   ],
+   "forward_jc3": [
+    1.0,
+    -0.0,
+    3.9e-05
+   ],
+   "up_jc3": [
+    3.9e-05,
+    -3e-06,
+    -1.0
+   ],
+   "right_jc3": [
+    0.0,
+    1.0,
+    -3e-06
+   ],
+   "inside_body_box": false,
+   "outside_by_m": 2.445681,
+   "outside_axes": [
+    "y"
+   ],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": true
+  },
+  {
+   "socket": "HeadLight1",
+   "bone": "Winch_DOOR_Mesh",
+   "bone_parent": "Batmobile_Nose_Mesh",
+   "part_hint": "winch_door",
+   "role": "light",
+   "relative_location_cm": [
+    21.286633,
+    45.192657,
+    -44.25
+   ],
+   "relative_rotation_raw": null,
+   "relative_rotation_deg": null,
+   "relative_rotation_quat": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "bone_position_m": [
+    -0.000244,
+    1.136545,
+    -2.76418
+   ],
+   "position_m": [
+    -0.452191,
+    0.694048,
+    -2.977011
+   ],
+   "forward_jc3": [
+    7.9e-05,
+    -0.0,
+    -1.0
+   ],
+   "up_jc3": [
+    -1.0,
+    -6e-06,
+    -7.9e-05
+   ],
+   "right_jc3": [
+    -6e-06,
+    1.0,
+    -0.0
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": true,
+   "location_missing": false,
+   "rotation_missing": true
+  },
+  {
+   "socket": "HeadLight1a",
+   "bone": "Winch_DOOR_Mesh",
+   "bone_parent": "Batmobile_Nose_Mesh",
+   "part_hint": "winch_door",
+   "role": "light",
+   "relative_location_cm": [
+    24.295439,
+    42.017044,
+    -52.5
+   ],
+   "relative_rotation_raw": null,
+   "relative_rotation_deg": null,
+   "relative_rotation_quat": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "bone_position_m": [
+    -0.000244,
+    1.136545,
+    -2.76418
+   ],
+   "position_m": [
+    -0.420437,
+    0.611548,
+    -3.007102
+   ],
+   "forward_jc3": [
+    7.9e-05,
+    -0.0,
+    -1.0
+   ],
+   "up_jc3": [
+    -1.0,
+    -6e-06,
+    -7.9e-05
+   ],
+   "right_jc3": [
+    -6e-06,
+    1.0,
+    -0.0
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": true,
+   "location_missing": false,
+   "rotation_missing": true
+  },
+  {
+   "socket": "HeadLight1b",
+   "bone": "Winch_DOOR_Mesh",
+   "bone_parent": "Batmobile_Nose_Mesh",
+   "part_hint": "winch_door",
+   "role": "light",
+   "relative_location_cm": [
+    28.216906,
+    38.295086,
+    -61.0
+   ],
+   "relative_rotation_raw": null,
+   "relative_rotation_deg": null,
+   "relative_rotation_quat": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "bone_position_m": [
+    -0.000244,
+    1.136545,
+    -2.76418
+   ],
+   "position_m": [
+    -0.383221,
+    0.526548,
+    -3.046319
+   ],
+   "forward_jc3": [
+    7.9e-05,
+    -0.0,
+    -1.0
+   ],
+   "up_jc3": [
+    -1.0,
+    -6e-06,
+    -7.9e-05
+   ],
+   "right_jc3": [
+    -6e-06,
+    1.0,
+    -0.0
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": true,
+   "location_missing": false,
+   "rotation_missing": true
+  },
+  {
+   "socket": "HeadLight2",
+   "bone": "Winch_DOOR_Mesh",
+   "bone_parent": "Batmobile_Nose_Mesh",
+   "part_hint": "winch_door",
+   "role": "light",
+   "relative_location_cm": [
+    28.216906,
+    -38.593201,
+    -61.0
+   ],
+   "relative_rotation_raw": null,
+   "relative_rotation_deg": null,
+   "relative_rotation_quat": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "bone_position_m": [
+    -0.000244,
+    1.136545,
+    -2.76418
+   ],
+   "position_m": [
+    0.385662,
+    0.526543,
+    -3.04638
+   ],
+   "forward_jc3": [
+    7.9e-05,
+    -0.0,
+    -1.0
+   ],
+   "up_jc3": [
+    -1.0,
+    -6e-06,
+    -7.9e-05
+   ],
+   "right_jc3": [
+    -6e-06,
+    1.0,
+    -0.0
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": true,
+   "location_missing": false,
+   "rotation_missing": true
+  },
+  {
+   "socket": "HeadLight2a",
+   "bone": "Winch_DOOR_Mesh",
+   "bone_parent": "Batmobile_Nose_Mesh",
+   "part_hint": "winch_door",
+   "role": "light",
+   "relative_location_cm": [
+    21.286633,
+    -44.76918,
+    -44.25
+   ],
+   "relative_rotation_raw": null,
+   "relative_rotation_deg": null,
+   "relative_rotation_quat": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "bone_position_m": [
+    -0.000244,
+    1.136545,
+    -2.76418
+   ],
+   "position_m": [
+    0.447428,
+    0.694042,
+    -2.977082
+   ],
+   "forward_jc3": [
+    7.9e-05,
+    -0.0,
+    -1.0
+   ],
+   "up_jc3": [
+    -1.0,
+    -6e-06,
+    -7.9e-05
+   ],
+   "right_jc3": [
+    -6e-06,
+    1.0,
+    -0.0
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": true,
+   "location_missing": false,
+   "rotation_missing": true
+  },
+  {
+   "socket": "HeadLight2b",
+   "bone": "Winch_DOOR_Mesh",
+   "bone_parent": "Batmobile_Nose_Mesh",
+   "part_hint": "winch_door",
+   "role": "light",
+   "relative_location_cm": [
+    24.295439,
+    -41.631226,
+    -52.5
+   ],
+   "relative_rotation_raw": null,
+   "relative_rotation_deg": null,
+   "relative_rotation_quat": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "bone_position_m": [
+    -0.000244,
+    1.136545,
+    -2.76418
+   ],
+   "position_m": [
+    0.416045,
+    0.611543,
+    -3.007167
+   ],
+   "forward_jc3": [
+    7.9e-05,
+    -0.0,
+    -1.0
+   ],
+   "up_jc3": [
+    -1.0,
+    -6e-06,
+    -7.9e-05
+   ],
+   "right_jc3": [
+    -6e-06,
+    1.0,
+    -0.0
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": true,
+   "location_missing": false,
+   "rotation_missing": true
+  },
+  {
+   "socket": "Headlight_Centre",
+   "bone": "Batmobile_Chassis",
+   "bone_parent": "Batmobile_Chassis",
+   "part_hint": "body",
+   "role": "light",
+   "relative_location_cm": [
+    331.418701,
+    0.0,
+    63.250084
+   ],
+   "relative_rotation_raw": null,
+   "relative_rotation_deg": null,
+   "relative_rotation_quat": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "bone_position_m": [
+    -0.0,
+    0.022231,
+    0.154297
+   ],
+   "position_m": [
+    -0.000129,
+    0.654733,
+    -3.15989
+   ],
+   "forward_jc3": [
+    3.9e-05,
+    -0.0,
+    -1.0
+   ],
+   "up_jc3": [
+    -1.0,
+    -3e-06,
+    -3.9e-05
+   ],
+   "right_jc3": [
+    -3e-06,
+    1.0,
+    -0.0
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": true
+  },
+  {
+   "socket": "LWheelLight",
+   "bone": "Wheel_Frnt_Left_Disc",
+   "bone_parent": "Wheel_Parent_F_L",
+   "part_hint": "wheel_f_l",
+   "role": "wheel_light",
+   "relative_location_cm": [
+    -0.349729,
+    50.689182,
+    26.0
+   ],
+   "relative_rotation_raw": [
+    0,
+    16384,
+    0
+   ],
+   "relative_rotation_deg": [
+    0.0,
+    90.0,
+    0.0
+   ],
+   "relative_rotation_quat": [
+    0.0,
+    -0.0,
+    0.70710678,
+    0.70710678
+   ],
+   "bone_position_m": [
+    -1.211159,
+    0.702679,
+    -2.569927
+   ],
+   "position_m": [
+    -1.207621,
+    0.962679,
+    -2.063036
+   ],
+   "forward_jc3": [
+    7.8e-05,
+    -0.0,
+    -1.0
+   ],
+   "up_jc3": [
+    -1.0,
+    -6e-06,
+    -7.8e-05
+   ],
+   "right_jc3": [
+    -6e-06,
+    1.0,
+    -0.0
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "LWheelLight_bottom",
+   "bone": "Wheel_Frnt_Left_Disc",
+   "bone_parent": "Wheel_Parent_F_L",
+   "part_hint": "wheel_f_l",
+   "role": "wheel_light",
+   "relative_location_cm": [
+    -0.292692,
+    56.499176,
+    10.5
+   ],
+   "relative_rotation_raw": [
+    0,
+    16384,
+    0
+   ],
+   "relative_rotation_deg": [
+    0.0,
+    90.0,
+    0.0
+   ],
+   "relative_rotation_quat": [
+    0.0,
+    -0.0,
+    0.70710678,
+    0.70710678
+   ],
+   "bone_position_m": [
+    -1.211159,
+    0.702679,
+    -2.569927
+   ],
+   "position_m": [
+    -1.208188,
+    0.807679,
+    -2.004936
+   ],
+   "forward_jc3": [
+    7.8e-05,
+    -0.0,
+    -1.0
+   ],
+   "up_jc3": [
+    -1.0,
+    -6e-06,
+    -7.8e-05
+   ],
+   "right_jc3": [
+    -6e-06,
+    1.0,
+    -0.0
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "LWheelLight_top",
+   "bone": "Wheel_Frnt_Left_Disc",
+   "bone_parent": "Wheel_Parent_F_L",
+   "part_hint": "wheel_f_l",
+   "role": "wheel_light",
+   "relative_location_cm": [
+    -0.118559,
+    40.599998,
+    40.0
+   ],
+   "relative_rotation_raw": [
+    0,
+    16384,
+    0
+   ],
+   "relative_rotation_deg": [
+    0.0,
+    90.0,
+    0.0
+   ],
+   "relative_rotation_quat": [
+    0.0,
+    -0.0,
+    0.70710678,
+    0.70710678
+   ],
+   "bone_position_m": [
+    -1.211159,
+    0.702679,
+    -2.569927
+   ],
+   "position_m": [
+    -1.20994,
+    1.102679,
+    -2.163927
+   ],
+   "forward_jc3": [
+    7.8e-05,
+    -0.0,
+    -1.0
+   ],
+   "up_jc3": [
+    -1.0,
+    -6e-06,
+    -7.8e-05
+   ],
+   "right_jc3": [
+    -6e-06,
+    1.0,
+    -0.0
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "LeftGasVent",
+   "bone": "Batmobile_Chassis",
+   "bone_parent": "Batmobile_Chassis",
+   "part_hint": "body",
+   "role": "vent",
+   "relative_location_cm": [
+    78.948082,
+    -61.960831,
+    147.25
+   ],
+   "relative_rotation_raw": null,
+   "relative_rotation_deg": null,
+   "relative_rotation_quat": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "bone_position_m": [
+    -0.0,
+    0.022231,
+    0.154297
+   ],
+   "position_m": [
+    0.619581,
+    1.49473,
+    -0.635208
+   ],
+   "forward_jc3": [
+    3.9e-05,
+    -0.0,
+    -1.0
+   ],
+   "up_jc3": [
+    -1.0,
+    -3e-06,
+    -3.9e-05
+   ],
+   "right_jc3": [
+    -3e-06,
+    1.0,
+    -0.0
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": true
+  },
+  {
+   "socket": "Mine1",
+   "bone": "Batmobile_Rig_Weapons_Projectile_Mine_01",
+   "bone_parent": "Batmobile_Rig_Weapons_Turret_Top",
+   "part_hint": "weapons",
+   "role": "mine",
+   "relative_location_cm": [
+    2.035669,
+    -16.13117,
+    7.323866
+   ],
+   "relative_rotation_raw": [
+    11325,
+    0,
+    0
+   ],
+   "relative_rotation_deg": [
+    62.2101,
+    0.0,
+    0.0
+   ],
+   "relative_rotation_quat": [
+    0.0,
+    -0.51660867,
+    0.0,
+    0.85622163
+   ],
+   "bone_position_m": [
+    0.000385,
+    1.757541,
+    0.422595
+   ],
+   "position_m": [
+    0.161712,
+    1.830747,
+    0.40224
+   ],
+   "forward_jc3": [
+    3.9e-05,
+    0.884613,
+    -0.466326
+   ],
+   "up_jc3": [
+    -1.0,
+    -6.6e-05,
+    -0.00021
+   ],
+   "right_jc3": [
+    -0.000217,
+    0.466326,
+    0.884613
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "Mine2",
+   "bone": "Batmobile_Rig_Weapons_Projectile_Mine_01",
+   "bone_parent": "Batmobile_Rig_Weapons_Turret_Top",
+   "part_hint": "weapons",
+   "role": "mine",
+   "relative_location_cm": [
+    2.035669,
+    17.800238,
+    7.323866
+   ],
+   "relative_rotation_raw": [
+    11325,
+    0,
+    0
+   ],
+   "relative_rotation_deg": [
+    62.2101,
+    0.0,
+    0.0
+   ],
+   "relative_rotation_quat": [
+    0.0,
+    -0.51660867,
+    0.0,
+    0.85622163
+   ],
+   "bone_position_m": [
+    0.000385,
+    1.757541,
+    0.422595
+   ],
+   "position_m": [
+    -0.177602,
+    1.830821,
+    0.402254
+   ],
+   "forward_jc3": [
+    3.9e-05,
+    0.884613,
+    -0.466326
+   ],
+   "up_jc3": [
+    -1.0,
+    -6.6e-05,
+    -0.00021
+   ],
+   "right_jc3": [
+    -0.000217,
+    0.466326,
+    0.884613
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "Mine3",
+   "bone": "Batmobile_Rig_Weapons_Projectile_Mine_02",
+   "bone_parent": "Batmobile_Rig_Weapons_Turret_Top",
+   "part_hint": "weapons",
+   "role": "mine",
+   "relative_location_cm": [
+    2.035669,
+    -16.13117,
+    7.323866
+   ],
+   "relative_rotation_raw": [
+    11325,
+    0,
+    0
+   ],
+   "relative_rotation_deg": [
+    62.2101,
+    0.0,
+    0.0
+   ],
+   "relative_rotation_quat": [
+    0.0,
+    -0.51660867,
+    0.0,
+    0.85622163
+   ],
+   "bone_position_m": [
+    0.000393,
+    1.767127,
+    0.563804
+   ],
+   "position_m": [
+    0.16172,
+    1.840333,
+    0.543449
+   ],
+   "forward_jc3": [
+    3.9e-05,
+    0.884613,
+    -0.466326
+   ],
+   "up_jc3": [
+    -1.0,
+    -6.6e-05,
+    -0.00021
+   ],
+   "right_jc3": [
+    -0.000217,
+    0.466326,
+    0.884613
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "Mine4",
+   "bone": "Batmobile_Rig_Weapons_Projectile_Mine_02",
+   "bone_parent": "Batmobile_Rig_Weapons_Turret_Top",
+   "part_hint": "weapons",
+   "role": "mine",
+   "relative_location_cm": [
+    2.035669,
+    17.800238,
+    7.323866
+   ],
+   "relative_rotation_raw": [
+    11325,
+    0,
+    0
+   ],
+   "relative_rotation_deg": [
+    62.2101,
+    0.0,
+    0.0
+   ],
+   "relative_rotation_quat": [
+    0.0,
+    -0.51660867,
+    0.0,
+    0.85622163
+   ],
+   "bone_position_m": [
+    0.000393,
+    1.767127,
+    0.563804
+   ],
+   "position_m": [
+    -0.177594,
+    1.840406,
+    0.543462
+   ],
+   "forward_jc3": [
+    3.9e-05,
+    0.884613,
+    -0.466326
+   ],
+   "up_jc3": [
+    -1.0,
+    -6.6e-05,
+    -0.00021
+   ],
+   "right_jc3": [
+    -0.000217,
+    0.466326,
+    0.884613
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "Mine5",
+   "bone": "Batmobile_Rig_Weapons_Projectile_Mine_03",
+   "bone_parent": "Batmobile_Rig_Weapons_Turret_Top",
+   "part_hint": "weapons",
+   "role": "mine",
+   "relative_location_cm": [
+    2.035669,
+    -16.13117,
+    7.323866
+   ],
+   "relative_rotation_raw": [
+    11325,
+    0,
+    0
+   ],
+   "relative_rotation_deg": [
+    62.2101,
+    0.0,
+    0.0
+   ],
+   "relative_rotation_quat": [
+    0.0,
+    -0.51660867,
+    0.0,
+    0.85622163
+   ],
+   "bone_position_m": [
+    0.0004,
+    1.774659,
+    0.702345
+   ],
+   "position_m": [
+    0.161727,
+    1.847864,
+    0.68199
+   ],
+   "forward_jc3": [
+    3.9e-05,
+    0.884613,
+    -0.466326
+   ],
+   "up_jc3": [
+    -1.0,
+    -6.6e-05,
+    -0.00021
+   ],
+   "right_jc3": [
+    -0.000217,
+    0.466326,
+    0.884613
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "Mine6",
+   "bone": "Batmobile_Rig_Weapons_Projectile_Mine_03",
+   "bone_parent": "Batmobile_Rig_Weapons_Turret_Top",
+   "part_hint": "weapons",
+   "role": "mine",
+   "relative_location_cm": [
+    2.035669,
+    17.800238,
+    7.323866
+   ],
+   "relative_rotation_raw": [
+    11325,
+    0,
+    0
+   ],
+   "relative_rotation_deg": [
+    62.2101,
+    0.0,
+    0.0
+   ],
+   "relative_rotation_quat": [
+    0.0,
+    -0.51660867,
+    0.0,
+    0.85622163
+   ],
+   "bone_position_m": [
+    0.0004,
+    1.774659,
+    0.702345
+   ],
+   "position_m": [
+    -0.177587,
+    1.847938,
+    0.682003
+   ],
+   "forward_jc3": [
+    3.9e-05,
+    0.884613,
+    -0.466326
+   ],
+   "up_jc3": [
+    -1.0,
+    -6.6e-05,
+    -0.00021
+   ],
+   "right_jc3": [
+    -0.000217,
+    0.466326,
+    0.884613
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "Mine7",
+   "bone": "Batmobile_Rig_Weapons_Projectile_Mine_04",
+   "bone_parent": "Batmobile_Rig_Weapons_Turret_Top",
+   "part_hint": "weapons",
+   "role": "mine",
+   "relative_location_cm": [
+    2.035669,
+    -16.13117,
+    7.323866
+   ],
+   "relative_rotation_raw": [
+    11325,
+    0,
+    0
+   ],
+   "relative_rotation_deg": [
+    62.2101,
+    0.0,
+    0.0
+   ],
+   "relative_rotation_quat": [
+    0.0,
+    -0.51660867,
+    0.0,
+    0.85622163
+   ],
+   "bone_position_m": [
+    0.000408,
+    1.784692,
+    0.841729
+   ],
+   "position_m": [
+    0.161735,
+    1.857898,
+    0.821374
+   ],
+   "forward_jc3": [
+    3.9e-05,
+    0.884613,
+    -0.466326
+   ],
+   "up_jc3": [
+    -1.0,
+    -6.6e-05,
+    -0.00021
+   ],
+   "right_jc3": [
+    -0.000217,
+    0.466326,
+    0.884613
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "Mine8",
+   "bone": "Batmobile_Rig_Weapons_Projectile_Mine_04",
+   "bone_parent": "Batmobile_Rig_Weapons_Turret_Top",
+   "part_hint": "weapons",
+   "role": "mine",
+   "relative_location_cm": [
+    2.035669,
+    17.800238,
+    7.323866
+   ],
+   "relative_rotation_raw": [
+    11325,
+    0,
+    0
+   ],
+   "relative_rotation_deg": [
+    62.2101,
+    0.0,
+    0.0
+   ],
+   "relative_rotation_quat": [
+    0.0,
+    -0.51660867,
+    0.0,
+    0.85622163
+   ],
+   "bone_position_m": [
+    0.000408,
+    1.784692,
+    0.841729
+   ],
+   "position_m": [
+    -0.17758,
+    1.857972,
+    0.821387
+   ],
+   "forward_jc3": [
+    3.9e-05,
+    0.884613,
+    -0.466326
+   ],
+   "up_jc3": [
+    -1.0,
+    -6.6e-05,
+    -0.00021
+   ],
+   "right_jc3": [
+    -0.000217,
+    0.466326,
+    0.884613
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "MissileL",
+   "bone": "Batmobile_Chassis",
+   "bone_parent": "Batmobile_Chassis",
+   "part_hint": "body",
+   "role": "missile",
+   "relative_location_cm": [
+    130.108459,
+    -59.381752,
+    146.24527
+   ],
+   "relative_rotation_raw": [
+    8192,
+    0,
+    0
+   ],
+   "relative_rotation_deg": [
+    45.0,
+    0.0,
+    0.0
+   ],
+   "relative_rotation_quat": [
+    0.0,
+    -0.38268343,
+    0.0,
+    0.92387953
+   ],
+   "bone_position_m": [
+    -0.0,
+    0.022231,
+    0.154297
+   ],
+   "position_m": [
+    0.593771,
+    1.484682,
+    -1.14681
+   ],
+   "forward_jc3": [
+    3.9e-05,
+    0.707107,
+    -0.707107
+   ],
+   "up_jc3": [
+    -1.0,
+    2.6e-05,
+    -3e-05
+   ],
+   "right_jc3": [
+    -3e-06,
+    0.707107,
+    0.707107
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "MissileR",
+   "bone": "Batmobile_Chassis",
+   "bone_parent": "Batmobile_Chassis",
+   "part_hint": "body",
+   "role": "missile",
+   "relative_location_cm": [
+    130.108459,
+    58.879951,
+    146.74559
+   ],
+   "relative_rotation_raw": [
+    8192,
+    0,
+    0
+   ],
+   "relative_rotation_deg": [
+    45.0,
+    0.0,
+    0.0
+   ],
+   "relative_rotation_quat": [
+    0.0,
+    -0.38268343,
+    0.0,
+    0.92387953
+   ],
+   "bone_position_m": [
+    -0.0,
+    0.022231,
+    0.154297
+   ],
+   "position_m": [
+    -0.588846,
+    1.489689,
+    -1.146764
+   ],
+   "forward_jc3": [
+    3.9e-05,
+    0.707107,
+    -0.707107
+   ],
+   "up_jc3": [
+    -1.0,
+    2.6e-05,
+    -3e-05
+   ],
+   "right_jc3": [
+    -3e-06,
+    0.707107,
+    0.707107
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "PassengerNoiseOrigin",
+   "bone": "Batmobile_Chassis",
+   "bone_parent": "Batmobile_Chassis",
+   "part_hint": "body",
+   "role": "audio",
+   "relative_location_cm": [
+    -236.324081,
+    0.0,
+    129.250031
+   ],
+   "relative_rotation_raw": [
+    0,
+    -16384,
+    0
+   ],
+   "relative_rotation_deg": [
+    0.0,
+    -90.0,
+    0.0
+   ],
+   "relative_rotation_quat": [
+    -0.0,
+    0.0,
+    -0.70710678,
+    0.70710678
+   ],
+   "bone_position_m": [
+    -0.0,
+    0.022231,
+    0.154297
+   ],
+   "position_m": [
+    9.6e-05,
+    1.314731,
+    2.517538
+   ],
+   "forward_jc3": [
+    1.0,
+    -0.0,
+    3.9e-05
+   ],
+   "up_jc3": [
+    3.9e-05,
+    -3e-06,
+    -1.0
+   ],
+   "right_jc3": [
+    0.0,
+    1.0,
+    -3e-06
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "RWheelLight",
+   "bone": "Wheel_Frnt_Right_Disc",
+   "bone_parent": "Wheel_Parent_F_R",
+   "part_hint": "wheel_f_r",
+   "role": "wheel_light",
+   "relative_location_cm": [
+    0.380923,
+    46.332195,
+    25.7519
+   ],
+   "relative_rotation_raw": [
+    0,
+    16384,
+    0
+   ],
+   "relative_rotation_deg": [
+    0.0,
+    90.0,
+    0.0
+   ],
+   "relative_rotation_quat": [
+    0.0,
+    -0.0,
+    0.70710678,
+    0.70710678
+   ],
+   "bone_position_m": [
+    1.210557,
+    0.702624,
+    -2.570036
+   ],
+   "position_m": [
+    1.20683,
+    0.960147,
+    -2.106716
+   ],
+   "forward_jc3": [
+    0.000336,
+    1.2e-05,
+    -1.0
+   ],
+   "up_jc3": [
+    -1.0,
+    0.000287,
+    -0.000336
+   ],
+   "right_jc3": [
+    0.000287,
+    1.0,
+    1.2e-05
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "RWheelLight_bottom",
+   "bone": "Wheel_Frnt_Right_Disc",
+   "bone_parent": "Wheel_Parent_F_R",
+   "part_hint": "wheel_f_r",
+   "role": "wheel_light",
+   "relative_location_cm": [
+    0.347289,
+    53.81432,
+    10.002043
+   ],
+   "relative_rotation_raw": [
+    0,
+    16384,
+    0
+   ],
+   "relative_rotation_deg": [
+    0.0,
+    90.0,
+    0.0
+   ],
+   "relative_rotation_quat": [
+    0.0,
+    -0.0,
+    0.70710678,
+    0.70710678
+   ],
+   "bone_position_m": [
+    1.210557,
+    0.702624,
+    -2.570036
+   ],
+   "position_m": [
+    1.207236,
+    0.802649,
+    -2.031893
+   ],
+   "forward_jc3": [
+    0.000336,
+    1.2e-05,
+    -1.0
+   ],
+   "up_jc3": [
+    -1.0,
+    0.000287,
+    -0.000336
+   ],
+   "right_jc3": [
+    0.000287,
+    1.0,
+    1.2e-05
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "RWheelLight_top",
+   "bone": "Wheel_Frnt_Right_Disc",
+   "bone_parent": "Wheel_Parent_F_R",
+   "part_hint": "wheel_f_r",
+   "role": "wheel_light",
+   "relative_location_cm": [
+    0.380923,
+    40.638508,
+    40.000805
+   ],
+   "relative_rotation_raw": [
+    0,
+    16384,
+    0
+   ],
+   "relative_rotation_deg": [
+    0.0,
+    90.0,
+    0.0
+   ],
+   "relative_rotation_quat": [
+    0.0,
+    -0.0,
+    0.70710678,
+    0.70710678
+   ],
+   "bone_position_m": [
+    1.210557,
+    0.702624,
+    -2.570036
+   ],
+   "position_m": [
+    1.20677,
+    1.102635,
+    -2.163654
+   ],
+   "forward_jc3": [
+    0.000336,
+    1.2e-05,
+    -1.0
+   ],
+   "up_jc3": [
+    -1.0,
+    0.000287,
+    -0.000336
+   ],
+   "right_jc3": [
+    0.000287,
+    1.0,
+    1.2e-05
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "RightGasVent",
+   "bone": "Batmobile_Chassis",
+   "bone_parent": "Batmobile_Chassis",
+   "part_hint": "body",
+   "role": "vent",
+   "relative_location_cm": [
+    78.948082,
+    61.960838,
+    147.25
+   ],
+   "relative_rotation_raw": null,
+   "relative_rotation_deg": null,
+   "relative_rotation_quat": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "bone_position_m": [
+    -0.0,
+    0.022231,
+    0.154297
+   ],
+   "position_m": [
+    -0.619635,
+    1.494733,
+    -0.635159
+   ],
+   "forward_jc3": [
+    3.9e-05,
+    -0.0,
+    -1.0
+   ],
+   "up_jc3": [
+    -1.0,
+    -3e-06,
+    -3.9e-05
+   ],
+   "right_jc3": [
+    -3e-06,
+    1.0,
+    -0.0
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": true
+  },
+  {
+   "socket": "RiotSuppressorMuzzle",
+   "bone": "Batmobile_Rig_Weapons_Riot_Sup_Main",
+   "bone_parent": "Batmobile_Rig_Weapons_Riot_Sup_Arm_01",
+   "part_hint": "weapons",
+   "role": "muzzle",
+   "relative_location_cm": [
+    26.788136,
+    0.0,
+    0.0
+   ],
+   "relative_rotation_raw": null,
+   "relative_rotation_deg": null,
+   "relative_rotation_quat": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "bone_position_m": [
+    0.389113,
+    1.451425,
+    0.410274
+   ],
+   "position_m": [
+    0.389103,
+    1.451453,
+    0.142393
+   ],
+   "forward_jc3": [
+    3.9e-05,
+    -0.000108,
+    -1.0
+   ],
+   "up_jc3": [
+    -1.0,
+    -0.000217,
+    -3.9e-05
+   ],
+   "right_jc3": [
+    -0.000217,
+    1.0,
+    -0.000108
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": true
+  },
+  {
+   "socket": "RiotSuppressorShells",
+   "bone": "Batmobile_Rig_Weapons_Riot_Sup_Main",
+   "bone_parent": "Batmobile_Rig_Weapons_Riot_Sup_Arm_01",
+   "part_hint": "weapons",
+   "role": "shells",
+   "relative_location_cm": [
+    0.0,
+    3.4903,
+    -9.286965
+   ],
+   "relative_rotation_raw": [
+    0,
+    0,
+    32768
+   ],
+   "relative_rotation_deg": [
+    0.0,
+    0.0,
+    180.0
+   ],
+   "relative_rotation_quat": [
+    -1.0,
+    -0.0,
+    0.0,
+    0.0
+   ],
+   "bone_position_m": [
+    0.389113,
+    1.451425,
+    0.410274
+   ],
+   "position_m": [
+    0.35419,
+    1.358562,
+    0.410266
+   ],
+   "forward_jc3": [
+    -3.9e-05,
+    0.000108,
+    -1.0
+   ],
+   "up_jc3": [
+    1.0,
+    0.000217,
+    -3.9e-05
+   ],
+   "right_jc3": [
+    0.000217,
+    -1.0,
+    -0.000108
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "ScrapeSparksL",
+   "bone": "Batmobile_Chassis",
+   "bone_parent": "Batmobile_Chassis",
+   "part_hint": "body",
+   "role": "sparks",
+   "relative_location_cm": [
+    -178.691925,
+    -172.121078,
+    103.500015
+   ],
+   "relative_rotation_raw": [
+    0,
+    0,
+    32768
+   ],
+   "relative_rotation_deg": [
+    0.0,
+    0.0,
+    180.0
+   ],
+   "relative_rotation_quat": [
+    -1.0,
+    -0.0,
+    0.0,
+    0.0
+   ],
+   "bone_position_m": [
+    -0.0,
+    0.022231,
+    0.154297
+   ],
+   "position_m": [
+    1.721284,
+    1.057226,
+    1.941149
+   ],
+   "forward_jc3": [
+    -3.9e-05,
+    0.0,
+    -1.0
+   ],
+   "up_jc3": [
+    1.0,
+    3e-06,
+    -3.9e-05
+   ],
+   "right_jc3": [
+    3e-06,
+    -1.0,
+    -0.0
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "ScrapeSparksR",
+   "bone": "Batmobile_Chassis",
+   "bone_parent": "Batmobile_Chassis",
+   "part_hint": "body",
+   "role": "sparks",
+   "relative_location_cm": [
+    -178.691925,
+    172.121109,
+    103.500015
+   ],
+   "relative_rotation_raw": null,
+   "relative_rotation_deg": null,
+   "relative_rotation_quat": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "bone_position_m": [
+    -0.0,
+    0.022231,
+    0.154297
+   ],
+   "position_m": [
+    -1.721138,
+    1.057237,
+    1.941284
+   ],
+   "forward_jc3": [
+    3.9e-05,
+    -0.0,
+    -1.0
+   ],
+   "up_jc3": [
+    -1.0,
+    -3e-06,
+    -3.9e-05
+   ],
+   "right_jc3": [
+    -3e-06,
+    1.0,
+    -0.0
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": true
+  },
+  {
+   "socket": "SideExhaustL",
+   "bone": "Batmobile_Chassis",
+   "bone_parent": "Batmobile_Chassis",
+   "part_hint": "body",
+   "role": "exhaust",
+   "relative_location_cm": [
+    14.598115,
+    -117.386169,
+    119.244385
+   ],
+   "relative_rotation_raw": [
+    1649,
+    -23665,
+    775
+   ],
+   "relative_rotation_deg": [
+    9.0582,
+    -129.9957,
+    4.2572
+   ],
+   "relative_rotation_quat": [
+    -0.08716591,
+    0.00020492,
+    -0.90407821,
+    0.41838338
+   ],
+   "bone_position_m": [
+    -0.0,
+    0.022231,
+    0.154297
+   ],
+   "position_m": [
+    1.173859,
+    1.214672,
+    0.00827
+   ],
+   "forward_jc3": [
+    0.756513,
+    0.157441,
+    0.634745
+   ],
+   "up_jc3": [
+    0.649941,
+    -0.073305,
+    -0.756441
+   ],
+   "right_jc3": [
+    -0.072565,
+    0.984804,
+    -0.157783
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "SideExhaustR",
+   "bone": "Batmobile_Chassis",
+   "bone_parent": "Batmobile_Chassis",
+   "part_hint": "body",
+   "role": "exhaust",
+   "relative_location_cm": [
+    18.081932,
+    117.267464,
+    134.44458
+   ],
+   "relative_rotation_raw": [
+    839,
+    23665,
+    30905
+   ],
+   "relative_rotation_deg": [
+    4.6088,
+    129.9957,
+    169.7662
+   ],
+   "relative_rotation_quat": [
+    -0.41737725,
+    -0.90346599,
+    0.06383845,
+    0.07396008
+   ],
+   "bone_position_m": [
+    -0.0,
+    0.022231,
+    0.154297
+   ],
+   "position_m": [
+    -1.172678,
+    1.366681,
+    -0.026476
+   ],
+   "forward_jc3": [
+    -0.76359,
+    0.080358,
+    0.640682
+   ],
+   "up_jc3": [
+    -0.643472,
+    -0.177084,
+    -0.744705
+   ],
+   "right_jc3": [
+    0.053611,
+    -0.98091,
+    0.186928
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "SpeedLines",
+   "bone": "Batmobile_Chassis_Mesh",
+   "bone_parent": "Batmobile_Chassis",
+   "part_hint": "body",
+   "role": "fx",
+   "relative_location_cm": [
+    -322.999023,
+    0.0,
+    40.0
+   ],
+   "relative_rotation_raw": [
+    0,
+    32768,
+    0
+   ],
+   "relative_rotation_deg": [
+    0.0,
+    180.0,
+    0.0
+   ],
+   "relative_rotation_quat": [
+    0.0,
+    -0.0,
+    1.0,
+    0.0
+   ],
+   "bone_position_m": [
+    -0.0,
+    0.022231,
+    0.154297
+   ],
+   "position_m": [
+    0.000128,
+    0.422231,
+    3.384288
+   ],
+   "forward_jc3": [
+    -3.9e-05,
+    -0.0,
+    1.0
+   ],
+   "up_jc3": [
+    1.0,
+    -3e-06,
+    3.9e-05
+   ],
+   "right_jc3": [
+    3e-06,
+    1.0,
+    0.0
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "WinchAttach",
+   "bone": "Batmobile_Chassis",
+   "bone_parent": "Batmobile_Chassis",
+   "part_hint": "body",
+   "role": "winch",
+   "relative_location_cm": [
+    339.221954,
+    0.0,
+    70.75
+   ],
+   "relative_rotation_raw": null,
+   "relative_rotation_deg": null,
+   "relative_rotation_quat": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "bone_position_m": [
+    -0.0,
+    0.022231,
+    0.154297
+   ],
+   "position_m": [
+    -0.000132,
+    0.729732,
+    -3.237922
+   ],
+   "forward_jc3": [
+    3.9e-05,
+    -0.0,
+    -1.0
+   ],
+   "up_jc3": [
+    -1.0,
+    -3e-06,
+    -3.9e-05
+   ],
+   "right_jc3": [
+    -3e-06,
+    1.0,
+    -0.0
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": true
+  },
+  {
+   "socket": "WinchOrigin",
+   "bone": "Batmobile_Chassis",
+   "bone_parent": "Batmobile_Chassis",
+   "part_hint": "body",
+   "role": "winch",
+   "relative_location_cm": [
+    286.554138,
+    0.0,
+    58.999992
+   ],
+   "relative_rotation_raw": null,
+   "relative_rotation_deg": null,
+   "relative_rotation_quat": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "bone_position_m": [
+    -0.0,
+    0.022231,
+    0.154297
+   ],
+   "position_m": [
+    -0.000111,
+    0.612232,
+    -2.711244
+   ],
+   "forward_jc3": [
+    3.9e-05,
+    -0.0,
+    -1.0
+   ],
+   "up_jc3": [
+    -1.0,
+    -3e-06,
+    -3.9e-05
+   ],
+   "right_jc3": [
+    -3e-06,
+    1.0,
+    -0.0
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": true
+  },
+  {
+   "socket": "ZapperFL",
+   "bone": "SUSP2_Wheel_Front_Left",
+   "bone_parent": "SUSP1_Wheel_Front_Left",
+   "part_hint": "wheel_f_l",
+   "role": "zapper",
+   "relative_location_cm": [
+    187.620087,
+    0.0,
+    57.0
+   ],
+   "relative_rotation_raw": null,
+   "relative_rotation_deg": null,
+   "relative_rotation_quat": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "bone_position_m": [
+    -1.20986,
+    0.770117,
+    -1.172827
+   ],
+   "position_m": [
+    -1.210004,
+    1.340118,
+    -3.049028
+   ],
+   "forward_jc3": [
+    7.9e-05,
+    -0.0,
+    -1.0
+   ],
+   "up_jc3": [
+    -1.0,
+    -6e-06,
+    -7.9e-05
+   ],
+   "right_jc3": [
+    -6e-06,
+    1.0,
+    -0.0
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": true
+  },
+  {
+   "socket": "ZapperFR",
+   "bone": "SUSP2_Wheel_Front_Right",
+   "bone_parent": "SUSP1_Wheel_Front_Right",
+   "part_hint": "wheel_f_r",
+   "role": "zapper",
+   "relative_location_cm": [
+    187.620071,
+    0.0,
+    57.0
+   ],
+   "relative_rotation_raw": null,
+   "relative_rotation_deg": null,
+   "relative_rotation_quat": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "bone_position_m": [
+    1.209692,
+    0.77009,
+    -1.172951
+   ],
+   "position_m": [
+    1.209503,
+    1.340091,
+    -3.049151
+   ],
+   "forward_jc3": [
+    0.000102,
+    -0.0,
+    -1.0
+   ],
+   "up_jc3": [
+    -1.0,
+    -5e-06,
+    -0.000102
+   ],
+   "right_jc3": [
+    -5e-06,
+    1.0,
+    -0.0
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": true
+  },
+  {
+   "socket": "ZapperRL",
+   "bone": "SUSP2_Wheel_Rear_Left",
+   "bone_parent": "SUSP1_Wheel_Rear_Left",
+   "part_hint": "wheel_r_l",
+   "role": "zapper",
+   "relative_location_cm": [
+    -277.0,
+    -41.0,
+    65.900002
+   ],
+   "relative_rotation_raw": [
+    1274,
+    32768,
+    0
+   ],
+   "relative_rotation_deg": [
+    6.9983,
+    180.0,
+    0.0
+   ],
+   "relative_rotation_quat": [
+    0.06103365,
+    -0.0,
+    0.99813571,
+    0.0
+   ],
+   "bone_position_m": [
+    -0.885411,
+    1.227036,
+    0.644712
+   ],
+   "position_m": [
+    -0.475118,
+    1.529054,
+    3.475917
+   ],
+   "forward_jc3": [
+    -0.000103,
+    -0.005149,
+    0.999987
+   ],
+   "up_jc3": [
+    1.0,
+    -7e-06,
+    0.000103
+   ],
+   "right_jc3": [
+    7e-06,
+    0.999987,
+    0.005149
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  },
+  {
+   "socket": "ZapperRR",
+   "bone": "SUSP2_Wheel_Rear_Right",
+   "bone_parent": "SUSP1_Wheel_Rear_Right",
+   "part_hint": "wheel_r_r",
+   "role": "zapper",
+   "relative_location_cm": [
+    277.0,
+    -41.0,
+    65.900002
+   ],
+   "relative_rotation_raw": [
+    1274,
+    0,
+    0
+   ],
+   "relative_rotation_deg": [
+    6.9983,
+    0.0,
+    0.0
+   ],
+   "relative_rotation_quat": [
+    0.0,
+    -0.06103365,
+    0.0,
+    0.99813571
+   ],
+   "bone_position_m": [
+    0.885425,
+    1.227093,
+    0.644566
+   ],
+   "position_m": [
+    0.475697,
+    1.524896,
+    3.4763
+   ],
+   "forward_jc3": [
+    -9.7e-05,
+    -0.248299,
+    0.968684
+   ],
+   "up_jc3": [
+    1.0,
+    -1.4e-05,
+    9.7e-05
+   ],
+   "right_jc3": [
+    -1e-05,
+    0.968684,
+    0.248299
+   ],
+   "inside_body_box": true,
+   "outside_by_m": 0.0,
+   "outside_axes": [],
+   "door_bound": false,
+   "location_missing": false,
+   "rotation_missing": false
+  }
+ ],
+ "checks": {
+  "socket_count_65": true,
+  "all_sockets_placed": true,
+  "all_socket_bones_in_bones_json": true,
+  "all_socket_parents_resolved": true,
+  "required_anchors_present": true,
+  "headlight_family_present": true,
+  "brakelight_family_present": true,
+  "wheellight_family_6": true,
+  "forward_vectors_unit": true,
+  "muzzle_forward": true,
+  "missile_forward_up": true,
+  "tail_forward": true,
+  "body_box_outliers_are_hang_ropes": true,
+  "grb8_orphan_refs_total_6": true,
+  "grb8_orphan_refs_this_package_2": true,
+  "door_bound_headlights_6": true
+ }
+}

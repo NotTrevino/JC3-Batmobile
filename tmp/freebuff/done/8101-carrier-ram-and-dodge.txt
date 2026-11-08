@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/carrier-ram-and-dodge.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-06
+Two out rows hide how the Batmobile hurts things it hits: T-DM7 (outgoing ram damage, ImpactMinDamageSpeed 20 / ImpactMaxDamageSpeed 150 / ImpactStrafeMod 2.25) and T-RA1 (ImpactRoadAssist, PMDodge, BattleDodgeImpulse, VehicleShove, kill-flip). G2-28 said the fleet has no outgoing-damage member, but only the vehicle modules were searched. Check the other layers that decide what a car does to a pedestrian, soldier or another car: character damage on impact, CDamageController objects, collision-event hooks in the entity graph, the rigid-body contact data in the .physicsc files, and how the tank, APC and Bavarium vehicles injure what they touch. Write what each layer can express and which BmAK number each could carry. A negative answer must list every place searched and name the capability that would have to be added. Pointer: tmp/freebuff/INSTRUCTIONS.md.

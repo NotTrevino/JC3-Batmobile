@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/jeb-qwen-fair-runs.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08 (stage 2 of 3 of the old fair-test brief, which used two full sessions without finishing)
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/jeb-qwen-fair-corpus.md
+Run the two judges over the frozen cases in Tools/scripts/chase/fair_cases.jsonl. Start the Jeb server yourself on :8081 (model E:/AI/models/jebadiah-9b-v2-1-Q5_K_M.gguf, flags as in tmp/freebuff/screen-jeb-run.txt) and stop it when done; leave the Qwen server on :8080 running. Tune prompts on the tuning third only, then run the test two-thirds once. Both models answer the same question: which of candidates A to F stores the default, or none; Jeb through jebadiah_decide choice, Qwen through chase_judge with a one-letter constrained answer. Run each test case in three shuffled candidate orders from fixed seeds. Save raw answers, probabilities and seconds per case as JSON under tmp/freebuff/smartsearch/fair_runs/ and write a short log of the commands. Do not score or interpret; scoring is the next stage.

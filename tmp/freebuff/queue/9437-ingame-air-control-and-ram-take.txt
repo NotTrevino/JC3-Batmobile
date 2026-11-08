@@ -1,0 +1,7 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/ingame-air-control-and-ram-take.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/ingame-telemetry-calibration.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/pilot-cards-collision-air-flip-spin.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-air-control-and-ram.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/handling-section-of-approval-request.md, E:/Modding/JC3-Batmobile/tmp/freebuff/APPROVED_Q_FULL.txt
+In-game take for air control and ram assist with cards C2_AIR.md in Working/Q/PILOT/ and the ram section of C1_COLLISION.md. Air: drive up a steep ramp at 80 km/h; once airborne, hold the stick right for the whole flight, then left, then pull back; three jumps. Observation: yaw and pitch change during flight from telemetry rotation, divided by the airborne time measured as the time z is above ground. Pass rule: the rotation rate lies inside the band stored by brief 9123 in its report (airborne window 1.211 s); no rotation at all is a fail. Ram: ram a parked car at 80 km/h and a moving car from behind; the impulse on the target is read from its telemetry speed jump if the hook can see it, else by screen recording. Pass rule: the band stored by 9123. Fail route: Working/Q/FIXES.md lines naming the AirControl member, drift max torque 8000 or the force-pulse cell. Save to Working/Q/caps/c2/ and append result rows.
+Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

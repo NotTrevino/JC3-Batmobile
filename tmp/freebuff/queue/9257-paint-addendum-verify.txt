@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/paint-addendum-verify.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/paint-addendum-build.md
+Independent read-back of Builds/bm-RC5-paint2. Do not reuse the --check of Tools/scripts/rc5_paint2.py; open the built .ddsc and material containers with Tools/scripts/upk_read.py and the dds reader, and recompute from bytes: the three body channel values, the clearcoat and gloss floats, the inset channel assignment, the decal texture binding, and each texture's size against Tools/scripts/bm_budget.py. Predict check C1 by computing (max-min)/max of the final albedo in sRGB and the blue-versus-red order, and C3 by the luma ratio of inset to panel on the baked texture itself. Write Working/Appearance/PAINT2_VERIFY.md with measured against planned for every item and a PASS or FAIL line each. Each FAIL gets a one-variable fix card at Working/Appearance/fixcards/paint2-<n>.md naming file and member. Done check: the report lists at least 12 measured items, none taken from the build script's own printout. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

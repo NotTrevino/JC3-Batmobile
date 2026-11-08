@@ -1,5 +1,5 @@
 {
- "schema": 1,
+ "schema": 2,
  "generated_by": "grab_lights.py",
  "skeleton": "Working\\Appearance\\grab\\Playable_Batmobile_SF\\SkeletalMesh3\\Batmobile_V2.pskx",
  "vanilla": "21 entries in Working\\Lights\\serpente_lights.xml",
@@ -174,18 +174,134 @@
       {
        "class": "SpotLightComponent",
        "path": "BatmobileFunhouse.SpotLightComponent",
+       "index": 5449,
+       "fields": {
+        "InnerConeAngle": 20.0,
+        "OuterConeAngle": 70.0,
+        "Radius": 6000.0,
+        "FalloffExponent": 1.0,
+        "Brightness": 0.15000000596046448,
+        "LightColor": [
+         138,
+         197,
+         246,
+         255
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         138,
+         197,
+         246,
+         255
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 0.15000000596046448,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       },
       {
        "class": "LensFlareComponent",
        "path": "BatmobileFunhouse.LensFlareComponent",
+       "index": 327,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       },
       {
        "class": "SpotLightComponent",
        "path": "BatmobileFunhouse.SpotLightComponent",
+       "index": 5451,
+       "fields": {
+        "InnerConeAngle": 20.0,
+        "OuterConeAngle": 70.0,
+        "Radius": 1800.0,
+        "Brightness": 0.15000000596046448,
+        "LightColor": [
+         138,
+         197,
+         246,
+         255
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "FalloffExponent": 2.0
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         138,
+         197,
+         246,
+         255
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 0.15000000596046448,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -234,12 +350,86 @@
       {
        "class": "SpotLightComponent",
        "path": "BatmobileFunhouse.SpotLightComponent",
+       "index": 5450,
+       "fields": {
+        "InnerConeAngle": 10.0,
+        "OuterConeAngle": 35.0,
+        "Radius": 0.10000000149011612,
+        "FalloffExponent": 1.0,
+        "Brightness": 0.0,
+        "LightColor": [
+         160,
+         180,
+         255,
+         0
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         160,
+         180,
+         255,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 0.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       },
       {
        "class": "LensFlareComponent",
        "path": "BatmobileFunhouse.LensFlareComponent",
+       "index": 328,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -269,6 +459,48 @@
       {
        "class": "SpotLightComponent",
        "path": "BatmobileFunhouse.SpotLightComponent",
+       "index": 5456,
+       "fields": {
+        "OuterConeAngle": 50.0,
+        "Radius": 4096.0,
+        "FalloffExponent": 1.0,
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "Brightness": 1.0,
+        "LightColor": [
+         255,
+         255,
+         255,
+         0
+        ],
+        "InnerConeAngle": null
+       },
+       "field_sources": {
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "Brightness": "class default: `Default__LightComponent` (Engine.upk)",
+        "LightColor": "class default: `Default__LightComponent` (Engine.upk)",
+        "InnerConeAngle": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         255,
+         255,
+         255,
+         0
+        ],
+        "source": "class default: `Default__LightComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 1.0,
+        "source": "class default: `Default__LightComponent` (Engine.upk)"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -317,6 +549,48 @@
       {
        "class": "SpotLightComponent",
        "path": "BatmobileFunhouse.SpotLightComponent",
+       "index": 5458,
+       "fields": {
+        "LightColor": [
+         223,
+         91,
+         75,
+         0
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "OuterConeAngle": 44.0,
+        "Radius": 1024.0,
+        "FalloffExponent": 2.0,
+        "Brightness": 1.0,
+        "InnerConeAngle": null
+       },
+       "field_sources": {
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "OuterConeAngle": "class default: `Default__SpotLightComponent` (Engine.upk)",
+        "Radius": "class default: `Default__PointLightComponent` (Engine.upk)",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)",
+        "Brightness": "class default: `Default__LightComponent` (Engine.upk)",
+        "InnerConeAngle": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         223,
+         91,
+         75,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 1.0,
+        "source": "class default: `Default__LightComponent` (Engine.upk)"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -365,6 +639,48 @@
       {
        "class": "SpotLightComponent",
        "path": "BatmobileFunhouse.SpotLightComponent",
+       "index": 5459,
+       "fields": {
+        "LightColor": [
+         223,
+         91,
+         75,
+         0
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "OuterConeAngle": 44.0,
+        "Radius": 1024.0,
+        "FalloffExponent": 2.0,
+        "Brightness": 1.0,
+        "InnerConeAngle": null
+       },
+       "field_sources": {
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "OuterConeAngle": "class default: `Default__SpotLightComponent` (Engine.upk)",
+        "Radius": "class default: `Default__PointLightComponent` (Engine.upk)",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)",
+        "Brightness": "class default: `Default__LightComponent` (Engine.upk)",
+        "InnerConeAngle": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         223,
+         91,
+         75,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 1.0,
+        "source": "class default: `Default__LightComponent` (Engine.upk)"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -413,12 +729,86 @@
       {
        "class": "SpotLightComponent",
        "path": "BatmobileFunhouse.SpotLightComponent",
+       "index": 5462,
+       "fields": {
+        "OuterConeAngle": 0.0,
+        "Radius": 0.0,
+        "FalloffExponent": 1.0,
+        "Brightness": 0.0,
+        "LightColor": [
+         160,
+         180,
+         255,
+         0
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "InnerConeAngle": null
+       },
+       "field_sources": {
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "InnerConeAngle": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         160,
+         180,
+         255,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 0.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       },
       {
        "class": "LensFlareComponent",
        "path": "BatmobileFunhouse.LensFlareComponent",
+       "index": 334,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -467,12 +857,86 @@
       {
        "class": "SpotLightComponent",
        "path": "BatmobileFunhouse.SpotLightComponent",
+       "index": 5463,
+       "fields": {
+        "OuterConeAngle": 0.0,
+        "Radius": 0.0,
+        "FalloffExponent": 1.0,
+        "Brightness": 0.0,
+        "LightColor": [
+         160,
+         180,
+         255,
+         0
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "InnerConeAngle": null
+       },
+       "field_sources": {
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "InnerConeAngle": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         160,
+         180,
+         255,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 0.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       },
       {
        "class": "LensFlareComponent",
        "path": "BatmobileFunhouse.LensFlareComponent",
+       "index": 335,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -521,12 +985,86 @@
       {
        "class": "PointLightComponent",
        "path": "BatmobileFunhouse.PointLightComponent",
+       "index": 5109,
+       "fields": {
+        "Radius": 150.0,
+        "FalloffExponent": 6.0,
+        "LightColor": [
+         255,
+         38,
+         0,
+         0
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "Brightness": 1.0,
+        "InnerConeAngle": null,
+        "OuterConeAngle": null
+       },
+       "field_sources": {
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "Brightness": "class default: `Default__LightComponent` (Engine.upk)",
+        "InnerConeAngle": "not serialised anywhere in the install (native default)",
+        "OuterConeAngle": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         255,
+         38,
+         0,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 1.0,
+        "source": "class default: `Default__LightComponent` (Engine.upk)"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       },
       {
        "class": "LensFlareComponent",
        "path": "BatmobileFunhouse.LensFlareComponent",
+       "index": 336,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -575,12 +1113,86 @@
       {
        "class": "PointLightComponent",
        "path": "BatmobileFunhouse.PointLightComponent",
+       "index": 5110,
+       "fields": {
+        "Radius": 150.0,
+        "FalloffExponent": 6.0,
+        "LightColor": [
+         255,
+         38,
+         0,
+         0
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "Brightness": 1.0,
+        "InnerConeAngle": null,
+        "OuterConeAngle": null
+       },
+       "field_sources": {
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "Brightness": "class default: `Default__LightComponent` (Engine.upk)",
+        "InnerConeAngle": "not serialised anywhere in the install (native default)",
+        "OuterConeAngle": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         255,
+         38,
+         0,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 1.0,
+        "source": "class default: `Default__LightComponent` (Engine.upk)"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       },
       {
        "class": "LensFlareComponent",
        "path": "BatmobileFunhouse.LensFlareComponent",
+       "index": 337,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -629,6 +1241,48 @@
       {
        "class": "SpotLightComponent",
        "path": "BatmobileFunhouse.SpotLightComponent",
+       "index": 5455,
+       "fields": {
+        "InnerConeAngle": 5.0,
+        "OuterConeAngle": 15.0,
+        "Radius": 4500.0,
+        "FalloffExponent": 1.0,
+        "Brightness": 0.0,
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "LightColor": [
+         255,
+         255,
+         255,
+         0
+        ]
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "Brightness": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "LightColor": "class default: `Default__LightComponent` (Engine.upk)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         255,
+         255,
+         255,
+         0
+        ],
+        "source": "class default: `Default__LightComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 0.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -677,6 +1331,48 @@
       {
        "class": "SpotLightComponent",
        "path": "BatmobileFunhouse.SpotLightComponent",
+       "index": 5460,
+       "fields": {
+        "InnerConeAngle": 10.0,
+        "OuterConeAngle": 35.0,
+        "Brightness": 5.0,
+        "LightColor": [
+         255,
+         0,
+         0,
+         0
+        ],
+        "CastDynamicShadows": true,
+        "CastShadows": false,
+        "Radius": 1024.0,
+        "FalloffExponent": 2.0
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "Radius": "class default: `Default__PointLightComponent` (Engine.upk)",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         255,
+         0,
+         0,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 5.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -725,6 +1421,48 @@
       {
        "class": "SpotLightComponent",
        "path": "BatmobileFunhouse.SpotLightComponent",
+       "index": 5454,
+       "fields": {
+        "InnerConeAngle": 10.0,
+        "OuterConeAngle": 35.0,
+        "Brightness": 5.0,
+        "LightColor": [
+         255,
+         0,
+         0,
+         0
+        ],
+        "CastDynamicShadows": true,
+        "CastShadows": false,
+        "Radius": 1024.0,
+        "FalloffExponent": 2.0
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "Radius": "class default: `Default__PointLightComponent` (Engine.upk)",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         255,
+         0,
+         0,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 5.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -773,6 +1511,48 @@
       {
        "class": "SpotLightComponent",
        "path": "BatmobileFunhouse.SpotLightComponent",
+       "index": 5457,
+       "fields": {
+        "InnerConeAngle": 5.0,
+        "OuterConeAngle": 15.0,
+        "Radius": 2048.0,
+        "Brightness": 0.0,
+        "LightColor": [
+         255,
+         0,
+         0,
+         0
+        ],
+        "CastDynamicShadows": true,
+        "CastShadows": false,
+        "FalloffExponent": 2.0
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         255,
+         0,
+         0,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 0.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -802,6 +1582,48 @@
       {
        "class": "RHelicopterSpotLightComponent",
        "path": "BatmobileFunhouse.RHelicopterSpotLightComponent",
+       "index": 5214,
+       "fields": {
+        "OuterConeAngle": 0.0,
+        "Radius": 0.0,
+        "FalloffExponent": 1.0,
+        "Brightness": 0.0,
+        "LightColor": [
+         195,
+         255,
+         244,
+         0
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "InnerConeAngle": null
+       },
+       "field_sources": {
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "InnerConeAngle": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         195,
+         255,
+         244,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 0.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "approximated: spotlight, no helicopter mode"
       }
@@ -831,6 +1653,48 @@
       {
        "class": "SpotLightComponent",
        "path": "BatmobileFunhouse.SpotLightComponent",
+       "index": 5461,
+       "fields": {
+        "InnerConeAngle": 10.0,
+        "OuterConeAngle": 35.0,
+        "Brightness": 5.0,
+        "LightColor": [
+         255,
+         0,
+         0,
+         255
+        ],
+        "CastDynamicShadows": true,
+        "CastShadows": false,
+        "Radius": 1024.0,
+        "FalloffExponent": 2.0
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "Radius": "class default: `Default__PointLightComponent` (Engine.upk)",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         255,
+         0,
+         0,
+         255
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 5.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -860,6 +1724,48 @@
       {
        "class": "SpotLightComponent",
        "path": "BatmobileFunhouse.SpotLightComponent",
+       "index": 5464,
+       "fields": {
+        "InnerConeAngle": 10.0,
+        "OuterConeAngle": 35.0,
+        "Brightness": 5.0,
+        "LightColor": [
+         255,
+         0,
+         0,
+         255
+        ],
+        "CastDynamicShadows": true,
+        "CastShadows": false,
+        "Radius": 1024.0,
+        "FalloffExponent": 2.0
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "Radius": "class default: `Default__PointLightComponent` (Engine.upk)",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         255,
+         0,
+         0,
+         255
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 5.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -908,6 +1814,48 @@
       {
        "class": "SpotLightComponent",
        "path": "BatmobileFunhouse.SpotLightComponent",
+       "index": 5453,
+       "fields": {
+        "InnerConeAngle": 20.0,
+        "OuterConeAngle": 45.0,
+        "Radius": 80.0,
+        "Brightness": 5.0,
+        "LightColor": [
+         172,
+         245,
+         255,
+         0
+        ],
+        "CastDynamicShadows": true,
+        "CastShadows": false,
+        "FalloffExponent": 2.0
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         172,
+         245,
+         255,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 5.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -956,6 +1904,38 @@
       {
        "class": "LensFlareComponent",
        "path": "BatmobileFunhouse.LensFlareComponent",
+       "index": 333,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -1004,6 +1984,38 @@
       {
        "class": "LensFlareComponent",
        "path": "BatmobileFunhouse.LensFlareComponent",
+       "index": 342,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -1052,6 +2064,38 @@
       {
        "class": "LensFlareComponent",
        "path": "BatmobileFunhouse.LensFlareComponent",
+       "index": 329,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -1096,6 +2140,38 @@
       {
        "class": "LensFlareComponent",
        "path": "BatmobileFunhouse.LensFlareComponent",
+       "index": 330,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -1144,6 +2220,38 @@
       {
        "class": "LensFlareComponent",
        "path": "BatmobileFunhouse.LensFlareComponent",
+       "index": 331,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -1188,6 +2296,38 @@
       {
        "class": "LensFlareComponent",
        "path": "BatmobileFunhouse.LensFlareComponent",
+       "index": 332,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -1236,6 +2376,38 @@
       {
        "class": "LensFlareComponent",
        "path": "BatmobileFunhouse.LensFlareComponent",
+       "index": 338,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -1284,6 +2456,38 @@
       {
        "class": "LensFlareComponent",
        "path": "BatmobileFunhouse.LensFlareComponent",
+       "index": 339,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -1332,6 +2536,38 @@
       {
        "class": "LensFlareComponent",
        "path": "BatmobileFunhouse.LensFlareComponent",
+       "index": 340,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -1380,6 +2616,38 @@
       {
        "class": "LensFlareComponent",
        "path": "BatmobileFunhouse.LensFlareComponent",
+       "index": 341,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -1428,12 +2696,86 @@
       {
        "class": "SpotLightComponent",
        "path": "BatmobileFunhouse.SpotLightComponent",
+       "index": 5452,
+       "fields": {
+        "InnerConeAngle": 50.0,
+        "OuterConeAngle": 60.0,
+        "Radius": 400.0,
+        "Brightness": 5.0,
+        "LightColor": [
+         152,
+         255,
+         225,
+         0
+        ],
+        "CastDynamicShadows": true,
+        "CastShadows": false,
+        "FalloffExponent": 2.0
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         152,
+         255,
+         225,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 5.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       },
       {
        "class": "LensFlareComponent",
        "path": "BatmobileFunhouse.LensFlareComponent",
+       "index": 343,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -1488,12 +2830,86 @@
       {
        "class": "SpotLightComponent",
        "path": "JokersBatmobile.SpotLightComponent",
+       "index": 3260,
+       "fields": {
+        "InnerConeAngle": 10.0,
+        "OuterConeAngle": 35.0,
+        "Radius": 3072.0,
+        "FalloffExponent": 1.0,
+        "Brightness": 4.0,
+        "LightColor": [
+         160,
+         180,
+         255,
+         0
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         160,
+         180,
+         255,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 4.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       },
       {
        "class": "LensFlareComponent",
        "path": "JokersBatmobile.LensFlareComponent",
+       "index": 551,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -1542,12 +2958,86 @@
       {
        "class": "SpotLightComponent",
        "path": "JokersBatmobile.SpotLightComponent",
+       "index": 3261,
+       "fields": {
+        "InnerConeAngle": 10.0,
+        "OuterConeAngle": 35.0,
+        "Radius": 3072.0,
+        "FalloffExponent": 1.0,
+        "Brightness": 4.0,
+        "LightColor": [
+         160,
+         180,
+         255,
+         0
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         160,
+         180,
+         255,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 4.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       },
       {
        "class": "LensFlareComponent",
        "path": "JokersBatmobile.LensFlareComponent",
+       "index": 552,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -1577,6 +3067,48 @@
       {
        "class": "SpotLightComponent",
        "path": "JokersBatmobile.SpotLightComponent",
+       "index": 3264,
+       "fields": {
+        "OuterConeAngle": 50.0,
+        "Radius": 4096.0,
+        "FalloffExponent": 1.0,
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "Brightness": 1.0,
+        "LightColor": [
+         255,
+         255,
+         255,
+         0
+        ],
+        "InnerConeAngle": null
+       },
+       "field_sources": {
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "Brightness": "class default: `Default__LightComponent` (Engine.upk)",
+        "LightColor": "class default: `Default__LightComponent` (Engine.upk)",
+        "InnerConeAngle": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         255,
+         255,
+         255,
+         0
+        ],
+        "source": "class default: `Default__LightComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 1.0,
+        "source": "class default: `Default__LightComponent` (Engine.upk)"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -1625,6 +3157,48 @@
       {
        "class": "SpotLightComponent",
        "path": "JokersBatmobile.SpotLightComponent",
+       "index": 3266,
+       "fields": {
+        "LightColor": [
+         223,
+         91,
+         75,
+         0
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "OuterConeAngle": 44.0,
+        "Radius": 1024.0,
+        "FalloffExponent": 2.0,
+        "Brightness": 1.0,
+        "InnerConeAngle": null
+       },
+       "field_sources": {
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "OuterConeAngle": "class default: `Default__SpotLightComponent` (Engine.upk)",
+        "Radius": "class default: `Default__PointLightComponent` (Engine.upk)",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)",
+        "Brightness": "class default: `Default__LightComponent` (Engine.upk)",
+        "InnerConeAngle": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         223,
+         91,
+         75,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 1.0,
+        "source": "class default: `Default__LightComponent` (Engine.upk)"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -1673,6 +3247,48 @@
       {
        "class": "SpotLightComponent",
        "path": "JokersBatmobile.SpotLightComponent",
+       "index": 3267,
+       "fields": {
+        "LightColor": [
+         223,
+         91,
+         75,
+         0
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "OuterConeAngle": 44.0,
+        "Radius": 1024.0,
+        "FalloffExponent": 2.0,
+        "Brightness": 1.0,
+        "InnerConeAngle": null
+       },
+       "field_sources": {
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "OuterConeAngle": "class default: `Default__SpotLightComponent` (Engine.upk)",
+        "Radius": "class default: `Default__PointLightComponent` (Engine.upk)",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)",
+        "Brightness": "class default: `Default__LightComponent` (Engine.upk)",
+        "InnerConeAngle": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         223,
+         91,
+         75,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 1.0,
+        "source": "class default: `Default__LightComponent` (Engine.upk)"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -1721,12 +3337,86 @@
       {
        "class": "SpotLightComponent",
        "path": "JokersBatmobile.SpotLightComponent",
+       "index": 3270,
+       "fields": {
+        "OuterConeAngle": 0.0,
+        "Radius": 0.0,
+        "FalloffExponent": 1.0,
+        "Brightness": 0.0,
+        "LightColor": [
+         160,
+         180,
+         255,
+         0
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "InnerConeAngle": null
+       },
+       "field_sources": {
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "InnerConeAngle": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         160,
+         180,
+         255,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 0.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       },
       {
        "class": "LensFlareComponent",
        "path": "JokersBatmobile.LensFlareComponent",
+       "index": 553,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -1775,12 +3465,86 @@
       {
        "class": "SpotLightComponent",
        "path": "JokersBatmobile.SpotLightComponent",
+       "index": 3271,
+       "fields": {
+        "OuterConeAngle": 0.0,
+        "Radius": 0.0,
+        "FalloffExponent": 1.0,
+        "Brightness": 0.0,
+        "LightColor": [
+         160,
+         180,
+         255,
+         0
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "InnerConeAngle": null
+       },
+       "field_sources": {
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "InnerConeAngle": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         160,
+         180,
+         255,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 0.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       },
       {
        "class": "LensFlareComponent",
        "path": "JokersBatmobile.LensFlareComponent",
+       "index": 554,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -1829,6 +3593,48 @@
       {
        "class": "PointLightComponent",
        "path": "JokersBatmobile.PointLightComponent",
+       "index": 2968,
+       "fields": {
+        "Radius": 150.0,
+        "FalloffExponent": 6.0,
+        "LightColor": [
+         255,
+         38,
+         0,
+         0
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "Brightness": 1.0,
+        "InnerConeAngle": null,
+        "OuterConeAngle": null
+       },
+       "field_sources": {
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "Brightness": "class default: `Default__LightComponent` (Engine.upk)",
+        "InnerConeAngle": "not serialised anywhere in the install (native default)",
+        "OuterConeAngle": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         255,
+         38,
+         0,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 1.0,
+        "source": "class default: `Default__LightComponent` (Engine.upk)"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -1877,6 +3683,48 @@
       {
        "class": "PointLightComponent",
        "path": "JokersBatmobile.PointLightComponent",
+       "index": 2969,
+       "fields": {
+        "Radius": 150.0,
+        "FalloffExponent": 6.0,
+        "LightColor": [
+         255,
+         38,
+         0,
+         0
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "Brightness": 1.0,
+        "InnerConeAngle": null,
+        "OuterConeAngle": null
+       },
+       "field_sources": {
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "Brightness": "class default: `Default__LightComponent` (Engine.upk)",
+        "InnerConeAngle": "not serialised anywhere in the install (native default)",
+        "OuterConeAngle": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         255,
+         38,
+         0,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 1.0,
+        "source": "class default: `Default__LightComponent` (Engine.upk)"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -1925,6 +3773,48 @@
       {
        "class": "SpotLightComponent",
        "path": "JokersBatmobile.SpotLightComponent",
+       "index": 3263,
+       "fields": {
+        "InnerConeAngle": 5.0,
+        "OuterConeAngle": 15.0,
+        "Radius": 0.0,
+        "FalloffExponent": 1.0,
+        "Brightness": 0.0,
+        "LightColor": [
+         100,
+         50,
+         255,
+         0
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         100,
+         50,
+         255,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 0.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -1973,6 +3863,48 @@
       {
        "class": "SpotLightComponent",
        "path": "JokersBatmobile.SpotLightComponent",
+       "index": 3268,
+       "fields": {
+        "InnerConeAngle": 10.0,
+        "OuterConeAngle": 35.0,
+        "Brightness": 5.0,
+        "LightColor": [
+         255,
+         0,
+         0,
+         0
+        ],
+        "CastDynamicShadows": true,
+        "CastShadows": false,
+        "Radius": 1024.0,
+        "FalloffExponent": 2.0
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "Radius": "class default: `Default__PointLightComponent` (Engine.upk)",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         255,
+         0,
+         0,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 5.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -2021,6 +3953,48 @@
       {
        "class": "SpotLightComponent",
        "path": "JokersBatmobile.SpotLightComponent",
+       "index": 3262,
+       "fields": {
+        "InnerConeAngle": 10.0,
+        "OuterConeAngle": 35.0,
+        "Brightness": 5.0,
+        "LightColor": [
+         255,
+         0,
+         0,
+         0
+        ],
+        "CastDynamicShadows": true,
+        "CastShadows": false,
+        "Radius": 1024.0,
+        "FalloffExponent": 2.0
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "Radius": "class default: `Default__PointLightComponent` (Engine.upk)",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         255,
+         0,
+         0,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 5.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -2069,6 +4043,48 @@
       {
        "class": "SpotLightComponent",
        "path": "JokersBatmobile.SpotLightComponent",
+       "index": 3265,
+       "fields": {
+        "InnerConeAngle": 5.0,
+        "OuterConeAngle": 15.0,
+        "Radius": 2048.0,
+        "Brightness": 0.0,
+        "LightColor": [
+         255,
+         0,
+         0,
+         0
+        ],
+        "CastDynamicShadows": true,
+        "CastShadows": false,
+        "FalloffExponent": 2.0
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         255,
+         0,
+         0,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 0.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -2098,6 +4114,48 @@
       {
        "class": "RHelicopterSpotLightComponent",
        "path": "JokersBatmobile.RHelicopterSpotLightComponent",
+       "index": 3132,
+       "fields": {
+        "InnerConeAngle": 5.0,
+        "OuterConeAngle": 15.0,
+        "Radius": 0.0,
+        "FalloffExponent": 1.0,
+        "Brightness": 0.0,
+        "LightColor": [
+         195,
+         255,
+         244,
+         0
+        ],
+        "CastDynamicShadows": true,
+        "CastShadows": false
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         195,
+         255,
+         244,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 0.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "approximated: spotlight, no helicopter mode"
       }
@@ -2127,6 +4185,48 @@
       {
        "class": "SpotLightComponent",
        "path": "JokersBatmobile.SpotLightComponent",
+       "index": 3269,
+       "fields": {
+        "InnerConeAngle": 10.0,
+        "OuterConeAngle": 35.0,
+        "Brightness": 5.0,
+        "LightColor": [
+         255,
+         0,
+         0,
+         255
+        ],
+        "CastDynamicShadows": true,
+        "CastShadows": false,
+        "Radius": 1024.0,
+        "FalloffExponent": 2.0
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "Radius": "class default: `Default__PointLightComponent` (Engine.upk)",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         255,
+         0,
+         0,
+         255
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 5.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -2156,6 +4256,48 @@
       {
        "class": "SpotLightComponent",
        "path": "JokersBatmobile.SpotLightComponent",
+       "index": 3272,
+       "fields": {
+        "InnerConeAngle": 10.0,
+        "OuterConeAngle": 35.0,
+        "Brightness": 5.0,
+        "LightColor": [
+         255,
+         0,
+         0,
+         255
+        ],
+        "CastDynamicShadows": true,
+        "CastShadows": false,
+        "Radius": 1024.0,
+        "FalloffExponent": 2.0
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "Radius": "class default: `Default__PointLightComponent` (Engine.upk)",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         255,
+         0,
+         0,
+         255
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 5.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -2204,6 +4346,48 @@
       {
        "class": "PointLightComponent",
        "path": "JokersBatmobile.PointLightComponent",
+       "index": 2970,
+       "fields": {
+        "Radius": 80.0,
+        "Brightness": 0.20000000298023224,
+        "LightColor": [
+         173,
+         119,
+         240,
+         0
+        ],
+        "CastDynamicShadows": true,
+        "CastShadows": false,
+        "FalloffExponent": 2.0,
+        "InnerConeAngle": null,
+        "OuterConeAngle": null
+       },
+       "field_sources": {
+        "Radius": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)",
+        "InnerConeAngle": "not serialised anywhere in the install (native default)",
+        "OuterConeAngle": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         173,
+         119,
+         240,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 0.20000000298023224,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -2258,18 +4442,134 @@
       {
        "class": "SpotLightComponent",
        "path": "Batmobile_MK2.SpotLightComponent",
+       "index": 5406,
+       "fields": {
+        "InnerConeAngle": 20.0,
+        "OuterConeAngle": 70.0,
+        "Radius": 6000.0,
+        "FalloffExponent": 1.0,
+        "Brightness": 0.15000000596046448,
+        "LightColor": [
+         138,
+         197,
+         246,
+         255
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         138,
+         197,
+         246,
+         255
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 0.15000000596046448,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       },
       {
        "class": "LensFlareComponent",
        "path": "Batmobile_MK2.LensFlareComponent",
+       "index": 330,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       },
       {
        "class": "SpotLightComponent",
        "path": "Batmobile_MK2.SpotLightComponent",
+       "index": 5408,
+       "fields": {
+        "InnerConeAngle": 20.0,
+        "OuterConeAngle": 70.0,
+        "Radius": 1800.0,
+        "Brightness": 0.15000000596046448,
+        "LightColor": [
+         138,
+         197,
+         246,
+         255
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "FalloffExponent": 2.0
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         138,
+         197,
+         246,
+         255
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 0.15000000596046448,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -2318,12 +4618,86 @@
       {
        "class": "SpotLightComponent",
        "path": "Batmobile_MK2.SpotLightComponent",
+       "index": 5407,
+       "fields": {
+        "InnerConeAngle": 10.0,
+        "OuterConeAngle": 35.0,
+        "Radius": 0.10000000149011612,
+        "FalloffExponent": 1.0,
+        "Brightness": 0.0,
+        "LightColor": [
+         160,
+         180,
+         255,
+         0
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         160,
+         180,
+         255,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 0.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       },
       {
        "class": "LensFlareComponent",
        "path": "Batmobile_MK2.LensFlareComponent",
+       "index": 331,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -2353,6 +4727,48 @@
       {
        "class": "SpotLightComponent",
        "path": "Batmobile_MK2.SpotLightComponent",
+       "index": 5413,
+       "fields": {
+        "OuterConeAngle": 50.0,
+        "Radius": 4096.0,
+        "FalloffExponent": 1.0,
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "Brightness": 1.0,
+        "LightColor": [
+         255,
+         255,
+         255,
+         0
+        ],
+        "InnerConeAngle": null
+       },
+       "field_sources": {
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "Brightness": "class default: `Default__LightComponent` (Engine.upk)",
+        "LightColor": "class default: `Default__LightComponent` (Engine.upk)",
+        "InnerConeAngle": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         255,
+         255,
+         255,
+         0
+        ],
+        "source": "class default: `Default__LightComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 1.0,
+        "source": "class default: `Default__LightComponent` (Engine.upk)"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -2401,6 +4817,48 @@
       {
        "class": "SpotLightComponent",
        "path": "Batmobile_MK2.SpotLightComponent",
+       "index": 5415,
+       "fields": {
+        "LightColor": [
+         223,
+         91,
+         75,
+         0
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "OuterConeAngle": 44.0,
+        "Radius": 1024.0,
+        "FalloffExponent": 2.0,
+        "Brightness": 1.0,
+        "InnerConeAngle": null
+       },
+       "field_sources": {
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "OuterConeAngle": "class default: `Default__SpotLightComponent` (Engine.upk)",
+        "Radius": "class default: `Default__PointLightComponent` (Engine.upk)",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)",
+        "Brightness": "class default: `Default__LightComponent` (Engine.upk)",
+        "InnerConeAngle": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         223,
+         91,
+         75,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 1.0,
+        "source": "class default: `Default__LightComponent` (Engine.upk)"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -2449,6 +4907,48 @@
       {
        "class": "SpotLightComponent",
        "path": "Batmobile_MK2.SpotLightComponent",
+       "index": 5416,
+       "fields": {
+        "LightColor": [
+         223,
+         91,
+         75,
+         0
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "OuterConeAngle": 44.0,
+        "Radius": 1024.0,
+        "FalloffExponent": 2.0,
+        "Brightness": 1.0,
+        "InnerConeAngle": null
+       },
+       "field_sources": {
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "OuterConeAngle": "class default: `Default__SpotLightComponent` (Engine.upk)",
+        "Radius": "class default: `Default__PointLightComponent` (Engine.upk)",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)",
+        "Brightness": "class default: `Default__LightComponent` (Engine.upk)",
+        "InnerConeAngle": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         223,
+         91,
+         75,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 1.0,
+        "source": "class default: `Default__LightComponent` (Engine.upk)"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -2497,12 +4997,86 @@
       {
        "class": "SpotLightComponent",
        "path": "Batmobile_MK2.SpotLightComponent",
+       "index": 5419,
+       "fields": {
+        "OuterConeAngle": 0.0,
+        "Radius": 0.0,
+        "FalloffExponent": 1.0,
+        "Brightness": 0.0,
+        "LightColor": [
+         160,
+         180,
+         255,
+         0
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "InnerConeAngle": null
+       },
+       "field_sources": {
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "InnerConeAngle": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         160,
+         180,
+         255,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 0.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       },
       {
        "class": "LensFlareComponent",
        "path": "Batmobile_MK2.LensFlareComponent",
+       "index": 337,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -2551,12 +5125,86 @@
       {
        "class": "SpotLightComponent",
        "path": "Batmobile_MK2.SpotLightComponent",
+       "index": 5420,
+       "fields": {
+        "OuterConeAngle": 0.0,
+        "Radius": 0.0,
+        "FalloffExponent": 1.0,
+        "Brightness": 0.0,
+        "LightColor": [
+         160,
+         180,
+         255,
+         0
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "InnerConeAngle": null
+       },
+       "field_sources": {
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "InnerConeAngle": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         160,
+         180,
+         255,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 0.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       },
       {
        "class": "LensFlareComponent",
        "path": "Batmobile_MK2.LensFlareComponent",
+       "index": 338,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -2605,12 +5253,86 @@
       {
        "class": "PointLightComponent",
        "path": "Batmobile_MK2.PointLightComponent",
+       "index": 5070,
+       "fields": {
+        "Radius": 150.0,
+        "FalloffExponent": 6.0,
+        "LightColor": [
+         255,
+         38,
+         0,
+         0
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "Brightness": 1.0,
+        "InnerConeAngle": null,
+        "OuterConeAngle": null
+       },
+       "field_sources": {
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "Brightness": "class default: `Default__LightComponent` (Engine.upk)",
+        "InnerConeAngle": "not serialised anywhere in the install (native default)",
+        "OuterConeAngle": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         255,
+         38,
+         0,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 1.0,
+        "source": "class default: `Default__LightComponent` (Engine.upk)"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       },
       {
        "class": "LensFlareComponent",
        "path": "Batmobile_MK2.LensFlareComponent",
+       "index": 339,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -2659,12 +5381,86 @@
       {
        "class": "PointLightComponent",
        "path": "Batmobile_MK2.PointLightComponent",
+       "index": 5071,
+       "fields": {
+        "Radius": 150.0,
+        "FalloffExponent": 6.0,
+        "LightColor": [
+         255,
+         38,
+         0,
+         0
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "Brightness": 1.0,
+        "InnerConeAngle": null,
+        "OuterConeAngle": null
+       },
+       "field_sources": {
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "Brightness": "class default: `Default__LightComponent` (Engine.upk)",
+        "InnerConeAngle": "not serialised anywhere in the install (native default)",
+        "OuterConeAngle": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         255,
+         38,
+         0,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 1.0,
+        "source": "class default: `Default__LightComponent` (Engine.upk)"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       },
       {
        "class": "LensFlareComponent",
        "path": "Batmobile_MK2.LensFlareComponent",
+       "index": 340,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -2713,6 +5509,48 @@
       {
        "class": "SpotLightComponent",
        "path": "Batmobile_MK2.SpotLightComponent",
+       "index": 5412,
+       "fields": {
+        "InnerConeAngle": 5.0,
+        "OuterConeAngle": 15.0,
+        "Radius": 4500.0,
+        "FalloffExponent": 1.0,
+        "Brightness": 0.0,
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "LightColor": [
+         255,
+         255,
+         255,
+         0
+        ]
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "Brightness": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "LightColor": "class default: `Default__LightComponent` (Engine.upk)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         255,
+         255,
+         255,
+         0
+        ],
+        "source": "class default: `Default__LightComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 0.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -2761,6 +5599,48 @@
       {
        "class": "SpotLightComponent",
        "path": "Batmobile_MK2.SpotLightComponent",
+       "index": 5417,
+       "fields": {
+        "InnerConeAngle": 10.0,
+        "OuterConeAngle": 35.0,
+        "Brightness": 5.0,
+        "LightColor": [
+         255,
+         0,
+         0,
+         0
+        ],
+        "CastDynamicShadows": true,
+        "CastShadows": false,
+        "Radius": 1024.0,
+        "FalloffExponent": 2.0
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "Radius": "class default: `Default__PointLightComponent` (Engine.upk)",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         255,
+         0,
+         0,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 5.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -2809,6 +5689,48 @@
       {
        "class": "SpotLightComponent",
        "path": "Batmobile_MK2.SpotLightComponent",
+       "index": 5411,
+       "fields": {
+        "InnerConeAngle": 10.0,
+        "OuterConeAngle": 35.0,
+        "Brightness": 5.0,
+        "LightColor": [
+         255,
+         0,
+         0,
+         0
+        ],
+        "CastDynamicShadows": true,
+        "CastShadows": false,
+        "Radius": 1024.0,
+        "FalloffExponent": 2.0
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "Radius": "class default: `Default__PointLightComponent` (Engine.upk)",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         255,
+         0,
+         0,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 5.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -2857,6 +5779,48 @@
       {
        "class": "SpotLightComponent",
        "path": "Batmobile_MK2.SpotLightComponent",
+       "index": 5414,
+       "fields": {
+        "InnerConeAngle": 5.0,
+        "OuterConeAngle": 15.0,
+        "Radius": 2048.0,
+        "Brightness": 0.0,
+        "LightColor": [
+         255,
+         0,
+         0,
+         0
+        ],
+        "CastDynamicShadows": true,
+        "CastShadows": false,
+        "FalloffExponent": 2.0
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         255,
+         0,
+         0,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 0.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -2886,6 +5850,48 @@
       {
        "class": "RHelicopterSpotLightComponent",
        "path": "Batmobile_MK2.RHelicopterSpotLightComponent",
+       "index": 5175,
+       "fields": {
+        "OuterConeAngle": 0.0,
+        "Radius": 0.0,
+        "FalloffExponent": 1.0,
+        "Brightness": 0.0,
+        "LightColor": [
+         195,
+         255,
+         244,
+         0
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "InnerConeAngle": null
+       },
+       "field_sources": {
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "InnerConeAngle": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         195,
+         255,
+         244,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 0.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "approximated: spotlight, no helicopter mode"
       }
@@ -2915,6 +5921,48 @@
       {
        "class": "SpotLightComponent",
        "path": "Batmobile_MK2.SpotLightComponent",
+       "index": 5418,
+       "fields": {
+        "InnerConeAngle": 10.0,
+        "OuterConeAngle": 35.0,
+        "Brightness": 5.0,
+        "LightColor": [
+         255,
+         0,
+         0,
+         255
+        ],
+        "CastDynamicShadows": true,
+        "CastShadows": false,
+        "Radius": 1024.0,
+        "FalloffExponent": 2.0
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "Radius": "class default: `Default__PointLightComponent` (Engine.upk)",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         255,
+         0,
+         0,
+         255
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 5.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -2944,6 +5992,48 @@
       {
        "class": "SpotLightComponent",
        "path": "Batmobile_MK2.SpotLightComponent",
+       "index": 5421,
+       "fields": {
+        "InnerConeAngle": 10.0,
+        "OuterConeAngle": 35.0,
+        "Brightness": 5.0,
+        "LightColor": [
+         255,
+         0,
+         0,
+         255
+        ],
+        "CastDynamicShadows": true,
+        "CastShadows": false,
+        "Radius": 1024.0,
+        "FalloffExponent": 2.0
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "Radius": "class default: `Default__PointLightComponent` (Engine.upk)",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         255,
+         0,
+         0,
+         255
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 5.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -2992,6 +6082,48 @@
       {
        "class": "SpotLightComponent",
        "path": "Batmobile_MK2.SpotLightComponent",
+       "index": 5410,
+       "fields": {
+        "InnerConeAngle": 20.0,
+        "OuterConeAngle": 45.0,
+        "Radius": 80.0,
+        "Brightness": 5.0,
+        "LightColor": [
+         172,
+         245,
+         255,
+         0
+        ],
+        "CastDynamicShadows": true,
+        "CastShadows": false,
+        "FalloffExponent": 2.0
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         172,
+         245,
+         255,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 5.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -3040,6 +6172,38 @@
       {
        "class": "LensFlareComponent",
        "path": "Batmobile_MK2.LensFlareComponent",
+       "index": 336,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -3088,6 +6252,38 @@
       {
        "class": "LensFlareComponent",
        "path": "Batmobile_MK2.LensFlareComponent",
+       "index": 345,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -3136,6 +6332,38 @@
       {
        "class": "LensFlareComponent",
        "path": "Batmobile_MK2.LensFlareComponent",
+       "index": 332,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -3180,6 +6408,38 @@
       {
        "class": "LensFlareComponent",
        "path": "Batmobile_MK2.LensFlareComponent",
+       "index": 333,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -3228,6 +6488,38 @@
       {
        "class": "LensFlareComponent",
        "path": "Batmobile_MK2.LensFlareComponent",
+       "index": 334,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -3272,6 +6564,38 @@
       {
        "class": "LensFlareComponent",
        "path": "Batmobile_MK2.LensFlareComponent",
+       "index": 335,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -3320,6 +6644,38 @@
       {
        "class": "LensFlareComponent",
        "path": "Batmobile_MK2.LensFlareComponent",
+       "index": 341,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -3368,6 +6724,38 @@
       {
        "class": "LensFlareComponent",
        "path": "Batmobile_MK2.LensFlareComponent",
+       "index": 342,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -3416,6 +6804,38 @@
       {
        "class": "LensFlareComponent",
        "path": "Batmobile_MK2.LensFlareComponent",
+       "index": 343,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -3464,6 +6884,38 @@
       {
        "class": "LensFlareComponent",
        "path": "Batmobile_MK2.LensFlareComponent",
+       "index": 344,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -3512,12 +6964,86 @@
       {
        "class": "SpotLightComponent",
        "path": "Batmobile_MK2.SpotLightComponent",
+       "index": 5409,
+       "fields": {
+        "InnerConeAngle": 50.0,
+        "OuterConeAngle": 60.0,
+        "Radius": 400.0,
+        "Brightness": 5.0,
+        "LightColor": [
+         152,
+         255,
+         225,
+         0
+        ],
+        "CastDynamicShadows": true,
+        "CastShadows": false,
+        "FalloffExponent": 2.0
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         152,
+         255,
+         225,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 5.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       },
       {
        "class": "LensFlareComponent",
        "path": "Batmobile_MK2.LensFlareComponent",
+       "index": 346,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -3572,18 +7098,134 @@
       {
        "class": "SpotLightComponent",
        "path": "Batmobile.SpotLightComponent",
+       "index": 5365,
+       "fields": {
+        "InnerConeAngle": 20.0,
+        "OuterConeAngle": 70.0,
+        "Radius": 6000.0,
+        "FalloffExponent": 1.0,
+        "Brightness": 0.15000000596046448,
+        "LightColor": [
+         138,
+         197,
+         246,
+         255
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         138,
+         197,
+         246,
+         255
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 0.15000000596046448,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       },
       {
        "class": "LensFlareComponent",
        "path": "Batmobile.LensFlareComponent",
+       "index": 331,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       },
       {
        "class": "SpotLightComponent",
        "path": "Batmobile.SpotLightComponent",
+       "index": 5367,
+       "fields": {
+        "InnerConeAngle": 20.0,
+        "OuterConeAngle": 70.0,
+        "Radius": 1800.0,
+        "Brightness": 0.15000000596046448,
+        "LightColor": [
+         138,
+         197,
+         246,
+         255
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "FalloffExponent": 2.0
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         138,
+         197,
+         246,
+         255
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 0.15000000596046448,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -3632,12 +7274,86 @@
       {
        "class": "SpotLightComponent",
        "path": "Batmobile.SpotLightComponent",
+       "index": 5366,
+       "fields": {
+        "InnerConeAngle": 10.0,
+        "OuterConeAngle": 35.0,
+        "Radius": 0.10000000149011612,
+        "FalloffExponent": 1.0,
+        "Brightness": 0.0,
+        "LightColor": [
+         160,
+         180,
+         255,
+         0
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         160,
+         180,
+         255,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 0.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       },
       {
        "class": "LensFlareComponent",
        "path": "Batmobile.LensFlareComponent",
+       "index": 332,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -3667,6 +7383,48 @@
       {
        "class": "SpotLightComponent",
        "path": "Batmobile.SpotLightComponent",
+       "index": 5372,
+       "fields": {
+        "OuterConeAngle": 50.0,
+        "Radius": 4096.0,
+        "FalloffExponent": 1.0,
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "Brightness": 1.0,
+        "LightColor": [
+         255,
+         255,
+         255,
+         0
+        ],
+        "InnerConeAngle": null
+       },
+       "field_sources": {
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "Brightness": "class default: `Default__LightComponent` (Engine.upk)",
+        "LightColor": "class default: `Default__LightComponent` (Engine.upk)",
+        "InnerConeAngle": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         255,
+         255,
+         255,
+         0
+        ],
+        "source": "class default: `Default__LightComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 1.0,
+        "source": "class default: `Default__LightComponent` (Engine.upk)"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -3715,6 +7473,48 @@
       {
        "class": "SpotLightComponent",
        "path": "Batmobile.SpotLightComponent",
+       "index": 5374,
+       "fields": {
+        "LightColor": [
+         223,
+         91,
+         75,
+         0
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "OuterConeAngle": 44.0,
+        "Radius": 1024.0,
+        "FalloffExponent": 2.0,
+        "Brightness": 1.0,
+        "InnerConeAngle": null
+       },
+       "field_sources": {
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "OuterConeAngle": "class default: `Default__SpotLightComponent` (Engine.upk)",
+        "Radius": "class default: `Default__PointLightComponent` (Engine.upk)",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)",
+        "Brightness": "class default: `Default__LightComponent` (Engine.upk)",
+        "InnerConeAngle": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         223,
+         91,
+         75,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 1.0,
+        "source": "class default: `Default__LightComponent` (Engine.upk)"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -3763,6 +7563,48 @@
       {
        "class": "SpotLightComponent",
        "path": "Batmobile.SpotLightComponent",
+       "index": 5375,
+       "fields": {
+        "LightColor": [
+         223,
+         91,
+         75,
+         0
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "OuterConeAngle": 44.0,
+        "Radius": 1024.0,
+        "FalloffExponent": 2.0,
+        "Brightness": 1.0,
+        "InnerConeAngle": null
+       },
+       "field_sources": {
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "OuterConeAngle": "class default: `Default__SpotLightComponent` (Engine.upk)",
+        "Radius": "class default: `Default__PointLightComponent` (Engine.upk)",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)",
+        "Brightness": "class default: `Default__LightComponent` (Engine.upk)",
+        "InnerConeAngle": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         223,
+         91,
+         75,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 1.0,
+        "source": "class default: `Default__LightComponent` (Engine.upk)"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -3811,12 +7653,86 @@
       {
        "class": "SpotLightComponent",
        "path": "Batmobile.SpotLightComponent",
+       "index": 5378,
+       "fields": {
+        "OuterConeAngle": 0.0,
+        "Radius": 0.0,
+        "FalloffExponent": 1.0,
+        "Brightness": 0.0,
+        "LightColor": [
+         160,
+         180,
+         255,
+         0
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "InnerConeAngle": null
+       },
+       "field_sources": {
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "InnerConeAngle": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         160,
+         180,
+         255,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 0.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       },
       {
        "class": "LensFlareComponent",
        "path": "Batmobile.LensFlareComponent",
+       "index": 338,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -3865,12 +7781,86 @@
       {
        "class": "SpotLightComponent",
        "path": "Batmobile.SpotLightComponent",
+       "index": 5379,
+       "fields": {
+        "OuterConeAngle": 0.0,
+        "Radius": 0.0,
+        "FalloffExponent": 1.0,
+        "Brightness": 0.0,
+        "LightColor": [
+         160,
+         180,
+         255,
+         0
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "InnerConeAngle": null
+       },
+       "field_sources": {
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "InnerConeAngle": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         160,
+         180,
+         255,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 0.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       },
       {
        "class": "LensFlareComponent",
        "path": "Batmobile.LensFlareComponent",
+       "index": 339,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -3919,12 +7909,86 @@
       {
        "class": "PointLightComponent",
        "path": "Batmobile.PointLightComponent",
+       "index": 5019,
+       "fields": {
+        "Radius": 150.0,
+        "FalloffExponent": 6.0,
+        "LightColor": [
+         255,
+         38,
+         0,
+         0
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "Brightness": 1.0,
+        "InnerConeAngle": null,
+        "OuterConeAngle": null
+       },
+       "field_sources": {
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "Brightness": "class default: `Default__LightComponent` (Engine.upk)",
+        "InnerConeAngle": "not serialised anywhere in the install (native default)",
+        "OuterConeAngle": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         255,
+         38,
+         0,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 1.0,
+        "source": "class default: `Default__LightComponent` (Engine.upk)"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       },
       {
        "class": "LensFlareComponent",
        "path": "Batmobile.LensFlareComponent",
+       "index": 340,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -3973,12 +8037,86 @@
       {
        "class": "PointLightComponent",
        "path": "Batmobile.PointLightComponent",
+       "index": 5020,
+       "fields": {
+        "Radius": 150.0,
+        "FalloffExponent": 6.0,
+        "LightColor": [
+         255,
+         38,
+         0,
+         0
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "Brightness": 1.0,
+        "InnerConeAngle": null,
+        "OuterConeAngle": null
+       },
+       "field_sources": {
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "Brightness": "class default: `Default__LightComponent` (Engine.upk)",
+        "InnerConeAngle": "not serialised anywhere in the install (native default)",
+        "OuterConeAngle": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         255,
+         38,
+         0,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 1.0,
+        "source": "class default: `Default__LightComponent` (Engine.upk)"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       },
       {
        "class": "LensFlareComponent",
        "path": "Batmobile.LensFlareComponent",
+       "index": 341,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -4027,6 +8165,48 @@
       {
        "class": "SpotLightComponent",
        "path": "Batmobile.SpotLightComponent",
+       "index": 5371,
+       "fields": {
+        "InnerConeAngle": 5.0,
+        "OuterConeAngle": 15.0,
+        "Radius": 4500.0,
+        "FalloffExponent": 1.0,
+        "Brightness": 0.0,
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "LightColor": [
+         255,
+         255,
+         255,
+         0
+        ]
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "Brightness": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "LightColor": "class default: `Default__LightComponent` (Engine.upk)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         255,
+         255,
+         255,
+         0
+        ],
+        "source": "class default: `Default__LightComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 0.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -4075,6 +8255,48 @@
       {
        "class": "SpotLightComponent",
        "path": "Batmobile.SpotLightComponent",
+       "index": 5376,
+       "fields": {
+        "InnerConeAngle": 10.0,
+        "OuterConeAngle": 35.0,
+        "Brightness": 5.0,
+        "LightColor": [
+         255,
+         0,
+         0,
+         0
+        ],
+        "CastDynamicShadows": true,
+        "CastShadows": false,
+        "Radius": 1024.0,
+        "FalloffExponent": 2.0
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "Radius": "class default: `Default__PointLightComponent` (Engine.upk)",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         255,
+         0,
+         0,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 5.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -4123,6 +8345,48 @@
       {
        "class": "SpotLightComponent",
        "path": "Batmobile.SpotLightComponent",
+       "index": 5370,
+       "fields": {
+        "InnerConeAngle": 10.0,
+        "OuterConeAngle": 35.0,
+        "Brightness": 5.0,
+        "LightColor": [
+         255,
+         0,
+         0,
+         0
+        ],
+        "CastDynamicShadows": true,
+        "CastShadows": false,
+        "Radius": 1024.0,
+        "FalloffExponent": 2.0
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "Radius": "class default: `Default__PointLightComponent` (Engine.upk)",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         255,
+         0,
+         0,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 5.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -4171,6 +8435,48 @@
       {
        "class": "SpotLightComponent",
        "path": "Batmobile.SpotLightComponent",
+       "index": 5373,
+       "fields": {
+        "InnerConeAngle": 5.0,
+        "OuterConeAngle": 15.0,
+        "Radius": 2048.0,
+        "Brightness": 0.0,
+        "LightColor": [
+         255,
+         0,
+         0,
+         0
+        ],
+        "CastDynamicShadows": true,
+        "CastShadows": false,
+        "FalloffExponent": 2.0
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         255,
+         0,
+         0,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 0.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -4200,6 +8506,48 @@
       {
        "class": "RHelicopterSpotLightComponent",
        "path": "Batmobile.RHelicopterSpotLightComponent",
+       "index": 5124,
+       "fields": {
+        "OuterConeAngle": 0.0,
+        "Radius": 0.0,
+        "FalloffExponent": 1.0,
+        "Brightness": 0.0,
+        "LightColor": [
+         195,
+         255,
+         244,
+         0
+        ],
+        "CastDynamicShadows": false,
+        "CastShadows": false,
+        "InnerConeAngle": null
+       },
+       "field_sources": {
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "FalloffExponent": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "InnerConeAngle": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         195,
+         255,
+         244,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 0.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "approximated: spotlight, no helicopter mode"
       }
@@ -4229,6 +8577,48 @@
       {
        "class": "SpotLightComponent",
        "path": "Batmobile.SpotLightComponent",
+       "index": 5377,
+       "fields": {
+        "InnerConeAngle": 10.0,
+        "OuterConeAngle": 35.0,
+        "Brightness": 5.0,
+        "LightColor": [
+         255,
+         0,
+         0,
+         255
+        ],
+        "CastDynamicShadows": true,
+        "CastShadows": false,
+        "Radius": 1024.0,
+        "FalloffExponent": 2.0
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "Radius": "class default: `Default__PointLightComponent` (Engine.upk)",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         255,
+         0,
+         0,
+         255
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 5.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -4258,6 +8648,48 @@
       {
        "class": "SpotLightComponent",
        "path": "Batmobile.SpotLightComponent",
+       "index": 5380,
+       "fields": {
+        "InnerConeAngle": 10.0,
+        "OuterConeAngle": 35.0,
+        "Brightness": 5.0,
+        "LightColor": [
+         255,
+         0,
+         0,
+         255
+        ],
+        "CastDynamicShadows": true,
+        "CastShadows": false,
+        "Radius": 1024.0,
+        "FalloffExponent": 2.0
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "Radius": "class default: `Default__PointLightComponent` (Engine.upk)",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         255,
+         0,
+         0,
+         255
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 5.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -4306,6 +8738,48 @@
       {
        "class": "SpotLightComponent",
        "path": "Batmobile.SpotLightComponent",
+       "index": 5369,
+       "fields": {
+        "InnerConeAngle": 20.0,
+        "OuterConeAngle": 45.0,
+        "Radius": 80.0,
+        "Brightness": 5.0,
+        "LightColor": [
+         172,
+         245,
+         255,
+         0
+        ],
+        "CastDynamicShadows": true,
+        "CastShadows": false,
+        "FalloffExponent": 2.0
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         172,
+         245,
+         255,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 5.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       }
@@ -4354,6 +8828,38 @@
       {
        "class": "LensFlareComponent",
        "path": "Batmobile.LensFlareComponent",
+       "index": 337,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -4402,6 +8908,38 @@
       {
        "class": "LensFlareComponent",
        "path": "Batmobile.LensFlareComponent",
+       "index": 346,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -4450,6 +8988,38 @@
       {
        "class": "LensFlareComponent",
        "path": "Batmobile.LensFlareComponent",
+       "index": 333,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -4494,6 +9064,38 @@
       {
        "class": "LensFlareComponent",
        "path": "Batmobile.LensFlareComponent",
+       "index": 334,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -4542,6 +9144,38 @@
       {
        "class": "LensFlareComponent",
        "path": "Batmobile.LensFlareComponent",
+       "index": 335,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -4586,6 +9220,38 @@
       {
        "class": "LensFlareComponent",
        "path": "Batmobile.LensFlareComponent",
+       "index": 336,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -4634,6 +9300,38 @@
       {
        "class": "LensFlareComponent",
        "path": "Batmobile.LensFlareComponent",
+       "index": 342,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -4682,6 +9380,38 @@
       {
        "class": "LensFlareComponent",
        "path": "Batmobile.LensFlareComponent",
+       "index": 343,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -4730,6 +9460,38 @@
       {
        "class": "LensFlareComponent",
        "path": "Batmobile.LensFlareComponent",
+       "index": 344,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -4778,6 +9540,38 @@
       {
        "class": "LensFlareComponent",
        "path": "Batmobile.LensFlareComponent",
+       "index": 345,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -4826,12 +9620,86 @@
       {
        "class": "SpotLightComponent",
        "path": "Batmobile.SpotLightComponent",
+       "index": 5368,
+       "fields": {
+        "InnerConeAngle": 50.0,
+        "OuterConeAngle": 60.0,
+        "Radius": 400.0,
+        "Brightness": 5.0,
+        "LightColor": [
+         152,
+         255,
+         225,
+         0
+        ],
+        "CastDynamicShadows": true,
+        "CastShadows": false,
+        "FalloffExponent": 2.0
+       },
+       "field_sources": {
+        "InnerConeAngle": "component",
+        "OuterConeAngle": "component",
+        "Radius": "component",
+        "Brightness": "component",
+        "LightColor": "component",
+        "CastDynamicShadows": "component",
+        "CastShadows": "component",
+        "FalloffExponent": "class default: `Default__PointLightComponent` (Engine.upk)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "LightColor",
+        "value": [
+         152,
+         255,
+         225,
+         0
+        ],
+        "source": "component"
+       },
+       "intensity": {
+        "field": "Brightness",
+        "value": 5.0,
+        "source": "component"
+       },
        "jc3": "VehicleDynamicLight",
        "disposition": "mapped"
       },
       {
        "class": "LensFlareComponent",
        "path": "Batmobile.LensFlareComponent",
+       "index": 347,
+       "fields": {
+        "SourceColor": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "Radius": null,
+        "MinStrength": null
+       },
+       "field_sources": {
+        "SourceColor": "class default: `Default__LensFlareComponent` (Engine.upk)",
+        "Radius": "not serialised anywhere in the install (native default)",
+        "MinStrength": "not serialised anywhere in the install (native default)"
+       },
+       "gaps": [],
+       "colour": {
+        "field": "SourceColor",
+        "value": [
+         1.0,
+         1.0,
+         1.0,
+         1.0
+        ],
+        "source": "class default: `Default__LensFlareComponent` (Engine.upk)"
+       },
+       "intensity": {
+        "field": "MinStrength",
+        "value": null,
+        "source": "not serialised anywhere in the install (native default)"
+       },
        "jc3": "none",
        "disposition": "no-jc3-equivalent: JC3 light module has no flare"
       }
@@ -4843,6 +9711,25 @@
  "summary": {
   "entries": 101,
   "vehicles": 4,
+  "components": 129,
+  "components_with_colour": 129,
+  "components_with_intensity": 74,
+  "colour_sources": {
+   "component": 67,
+   "class default": 62
+  },
+  "intensity_sources": {
+   "component": 54,
+   "not shipped": 55,
+   "class default": 20
+  },
+  "component_gaps": 0,
+  "by_component_class": {
+   "SpotLightComponent": 61,
+   "LensFlareComponent": 55,
+   "PointLightComponent": 9,
+   "RHelicopterSpotLightComponent": 4
+  },
   "orphan_sockets": 6,
   "missing_bones": 0,
   "by_type": {

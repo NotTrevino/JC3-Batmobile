@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/lod-behaviour-check.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-merge-release-candidate.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-budget-ledger.md
+Check the level-of-detail behaviour of the merged Builds/bm-RC5. Read MODLOG.md lines 4100 to 4118 (vehicle vanished when the texture resident limit was crossed after an LOD change), the five LOD distances in the .lod file, and the shadow LOD. Tasks: print the five switch distances in metres and the triangle count per LOD from the built meshes; compute the largest screen-space jump (silhouette area change) at each switch at 1080p so a pop can be predicted; confirm that the resident texture set at the farthest LOD is a subset of what fits the cap in Working/Appearance/BUDGET_RC5.md; confirm shadow LOD is not LOD0. Output Working/Appearance/LOD_CHECK.md with the table and a predicted observation per switch for the later close-up take. Done check: 5 LODs by 4 columns filled, and a PASS or FAIL for the resident-set rule with the arithmetic. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

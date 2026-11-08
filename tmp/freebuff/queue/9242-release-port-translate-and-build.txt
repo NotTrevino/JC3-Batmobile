@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/release-port-translate-and-build.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/release-config-layer-and-doctor.md
+Port Working/Release/MANIFEST_B.txt, the translation and build scripts, into the private release tree Builds/release-0001 by the same rules as the extraction group: configuration through jc3bm_paths.py, originals untouched, same command line options. Special care: the build scripts write whole trees, so each must write only inside the configured work folder and refuse a work folder that equals either game folder (add that guard and test it with a pretend folder). Scripts that embed tables of ledger values are data about the mod, not game bytes: keep them, but flag any table whose cells hold extracted byte payloads as WITHHELD in a list. Run --help for each and a no-config run for each. Report the guard test output, the flagged list and a table of script, literals replaced, results. Done when every manifest script is in the table and no drive-letter literal remains in the ported copies. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

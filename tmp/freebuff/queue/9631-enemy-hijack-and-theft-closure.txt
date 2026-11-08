@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/enemy-hijack-and-theft-closure.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/factions-heat-ai-reaction-decode.md
+Operator fact: enemies cannot pull Rico out of the Batmobile. Extend that to the empty parked car: confirm no NPC can steal or enter it. From Working/Translation/T9_INTERACTION.md (six hijack objects dropped), the entity graph of Builds/bm-RC4-entity and Builds/bm-RC5-entity, and the w04 decode, list every object and member that allows an AI to enter, hijack, pull the driver out or target the car as a vehicle to take: seat and door interaction nodes, hijack nodes, driver-eject on damage, AI vehicle-claim flags. For each, give the member path, the shipped value, and the value that closes it. Write Tools/scripts/hijack_closure.py (--write, --check), Working/World/hijack_closure.md/.json and a row list that the RC5 world build reads. Where only the hook can close a path, say so and name the telemetry field. Unknown AI behaviour stays UNKNOWN with the pilot observation that settles it. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

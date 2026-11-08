@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/G3-19b.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-03
+G3-19 (Research/JC3Grab/DECODE_DEPTH3.md, Tools/scripts/decode_depth3.py) brought three of the vanilla Serpente's PARTIAL .rbm files to full byte accounting except one named block payload in each. Decode those three payloads: identify each block type by its hash, compare its size with vertex/index counts in the same file, and test candidate layouts (packed normals, tangents, UV sets, skin weights) with an oracle such as unit-length normals or UVs inside the texture. Write decode_depth4.py (--write/--check) -> Research/JC3Grab/DECODE_DEPTH4.md + .json. Rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md section 3. Report at the DONE path with STATUS (or VERDICT for a review) and every command with its output.

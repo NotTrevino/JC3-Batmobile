@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/v04-red-diagnosis.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-05
+V-04 (Tools/scripts/v04_audio.py, Builds/bm-RC1/verify/audio.md) is RED: loudness on weapons#408 is off by 2.33 LU (limit 1 LU) and the loop click on vehicles#279 exceeds -40 dBFS; two other loops stay UNKNOWN. Find why. For weapons#408 locate the WAV source and the vanilla event it replaces and recompute loudness both ways (say which loudness measure the script uses and whether it is ITU BS.1770 gated or plain RMS). For vehicles#279 print the samples around the loop point and decide whether the click is in the source WAV or created by the build's loop points. Propose (do not apply) the fix as a diff for Working/Audio/bm_bank_manifest.json or the source WAV. New script Tools/scripts/v04_diag.py --write/--check; output Builds/bm-RC1/verify/audio_diag.md. Rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md section 3 (test ban stays; never guess; label decoded/derived/UNKNOWN). Report at the DONE path: STATUS first, files, verbatim commands, UNKNOWNs.

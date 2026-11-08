@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-complete-flag-owner-table.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc4-not-done-owner-check.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/review-v2-apply-wave.md
+STAGES.md demands zero omitted items before BUILD exits, yet some RC5 items cannot be finished by building: the swap trigger (U1), engine behaviour, and anything that still lacks a carrier. The operator should see up front which receipt lines will stay in not_done. Using reports/rc4-not-done-owner-check.md, Builds/bm-RC4/receipt.json and the 15 blocked rows of Working/Translation/T_ROWS.jsonl, write Working/RC5/COMPLETE_FLAG.md: one row per item that may keep complete=false, with the owning brief number, the closest JC3 system and the remaining gap (never write that JC3 has no system), and the evidence that would close it. Add a second table of items that look unfinishable but have an owner who can finish them. Compromises are not proposed; each row either has a build route or a probe route. Done when every blocked row and every not_done line appears exactly once, and the counts match t_rows.py check output. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

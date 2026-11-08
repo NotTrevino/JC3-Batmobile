@@ -1,0 +1,238 @@
+{
+ "ids": [
+  "Q1-1",
+  "Q1-2",
+  "Q1-3",
+  "Q1-4",
+  "Q1-5",
+  "Q1-6",
+  "Q1-7",
+  "Q1-8",
+  "Q2-A1",
+  "Q2-A2",
+  "Q2-A3",
+  "Q2-A4",
+  "Q2-A5",
+  "Q2-A6",
+  "Q2-A7",
+  "Q2-A8",
+  "Q2-A9",
+  "Q2-A10",
+  "Q2-A15",
+  "Q2-A16",
+  "Q2-battle",
+  "Q3-1",
+  "Q3-2",
+  "Q3-3",
+  "Q3-4",
+  "Q3-5",
+  "Q3-6",
+  "Q3-7"
+ ],
+ "rows": [
+  {
+   "id": "Q1-1",
+   "prediction": "'BATMOBILE' in the Rebel Drop vehicles list at menu slot 12, Serpente icon; unlocks with the Serpente (task 1361701860); spawns the new-leaf entity",
+   "band": "entry present AND spawns the Batmobile (not a Serpente)",
+   "source": "Builds/bm-013/receipt.json; tmp/freebuff/reports/B-13.md",
+   "status": "predicted"
+  },
+  {
+   "id": "Q1-2",
+   "prediction": "body silhouette 99.9004 % on the side view (99.9 % limit), front 100.0691 %, top 99.9247 %; 59 parts, 8 lamp parts; matte/satin armour at noon",
+   "band": "no missing panel, no tear, no Serpente bodywork visible; side coverage stays >= 99.9 %",
+   "source": "tmp/freebuff/reports/verify-v02a-silhouette-census-collision.md; tmp/freebuff/reports/verify-v02b-pose-renders-lights.md",
+   "status": "predicted"
+  },
+  {
+   "id": "Q1-3",
+   "prediction": "85 interaction objects, 77 placed 0.05-0.30 m off the hull; seat hip 0.8647 m, canopy clearance 0.151 m",
+   "band": "entry from both sides; Rico seated, head under the canopy",
+   "source": "Working/Translation/t9_interaction.json",
+   "status": "predicted"
+  },
+  {
+   "id": "Q1-4",
+   "prediction": "turret yaw clamps at the built +-60.000 deg (120 deg span); machine gun -179.493/+177.861 deg; the four air-brake flaps -48.9..+7.5 deg; Vulcan barrels spin",
+   "band": "turret follows the camera and stops inside +-60 deg (never passes it); no 360 deg yaw",
+   "source": "tmp/freebuff/reports/verify-v02b-pose-renders-lights.md (V-02b poses); Research/JC3Grab/TURRET.md",
+   "status": "predicted (limits decoded; traverse RATE stays code-side, UNKNOWN)"
+  },
+  {
+   "id": "Q1-5",
+   "prediction": "9 SWeaponPoints; cannon + Vulcan + 2 missile pods; 2 HUD slots, cooldown 0..1, no heat bar",
+   "band": "each weapon fires from its muzzle socket, not the car origin",
+   "source": "Builds/bm-RC2/verify/wiring.json (RC4 ships no verify/wiring.json); Working/Translation/t19_hud.json",
+   "status": "predicted"
+  },
+  {
+   "id": "Q1-6",
+   "prediction": "36,000 HP: pistol 1,200 / AR 1,125 / MG 1,286 hits (H0); small arms 'never' under H2",
+   "band": "small arms do not move the health bar (ARM-1)",
+   "source": "damage_predict.py --root Builds/bm-RC4 table",
+   "status": "predicted"
+  },
+  {
+   "id": "Q1-7",
+   "prediction": "24 light rows: 15 HeadLight + 3 TailLight + 2 Reverse + 4 None; two 70 deg entries on each headlight (18 m and 60 m); 24 CarLight blocks over 8 lamp parts (3 per part, one per LOD)",
+   "band": "cone count and colours as listed; brake light red; every row's part is a CarLight-bearing part",
+   "source": "tmp/freebuff/reports/verify-v02b-pose-renders-lights.md; Working/Lights/bm_rc4_lights.json",
+   "status": "predicted"
+  },
+  {
+   "id": "Q1-8",
+   "prediction": "5 mapped slots (2 one-shots, 3 loops); 21 of 45 sound GUIDs are donor-carried",
+   "band": "no silence gap in the nitro / creak / Vulcan loops; donor and built sounds both audible",
+   "source": "Builds/bm-RC1/verify/audio.json (RC4 ships no verify/audio.json)",
+   "status": "predicted"
+  },
+  {
+   "id": "Q2-A1",
+   "prediction": "0-100 km/h 16.4 s / 256.9 m (QA-1 baseline)",
+   "band": "15.6-17.2 s (+-5 %)",
+   "source": "Working/Translation/QA1_RESULTS.md",
+   "status": "predicted"
+  },
+  {
+   "id": "Q2-A2",
+   "prediction": "terminal 267 km/h at T-A2's Cd 0.55 and T-E2's 894.7 kW; the take tests reachability of T-E5's assumed 300-336 km/h label, not fidelity to BmAK",
+   "band": "terminal 240-294 km/h; the 300-336 km/h label is NOT a pass criterion",
+   "source": "Working/Translation/T_ROWS.jsonl (T-E5, T-A2, T-E2)",
+   "status": "predicted"
+  },
+  {
+   "id": "Q2-A3",
+   "prediction": "turn radius 3.52 m at the 55 deg low-speed lock, 13.82 m at the 20 deg high-speed lock (R = wheelbase 5.029 m / tan(lock))",
+   "band": "3.17-3.87 m at the low-speed lock, 12.44-15.20 m at the high-speed lock (+-10 %); a radius outside it is understeer, not a failed derivation",
+   "source": "Working/Translation/T_ROWS.jsonl (T-ST7, T-ST1, T-G1); Tools/scripts/v05_driving.py D-4",
+   "status": "predicted"
+  },
+  {
+   "id": "Q2-A4",
+   "prediction": "steering hold: the built lock is reached in 0.8 s low / 0.6 s high; the operator ruling's 0.25 s / 0.091 s goal is MISSED (3.2x / 6.6x)",
+   "band": "car holds its line; full-lock time reads the built 0.8 / 0.6 s. The 0.25 / 0.091 s goal band is a named expected failure, not a pass",
+   "source": "Working/Translation/T_ROWS.jsonl (T-ST7, ruling 2026-11-06)",
+   "status": "predicted (goal miss RED)"
+  },
+  {
+   "id": "Q2-A5",
+   "prediction": "braking 100->0: d = v^2/2a, a 3.5-3.8 m/s^2 -> 101.5-110.2 m",
+   "band": "101.5-110.2 m",
+   "source": "Working/Translation/QA1_RESULTS.md (T-K1/T-K2)",
+   "status": "predicted"
+  },
+  {
+   "id": "Q2-A6",
+   "prediction": "suspension stroke 0.70 m, hub 0.70 m; lands without bounce or wheel jitter",
+   "band": "<= 1 rebound, no visible jitter",
+   "source": "Working/Translation/T_ROWS.jsonl (T-S3, T-G4)",
+   "status": "predicted"
+  },
+  {
+   "id": "Q2-A7",
+   "prediction": "handbrake drift 40/60 km/h then release: entered near 20 deg (T-DR1), peaks inside its 45 deg shipped cap, holds without snap-back and countersteers back; the rear aligning carries the label 0.625 (= 1/1.6), falsifier 0.48, handbrake friction 4.0 and release ramp 0.3 s",
+   "band": "drifts and recovers inside ~2 s with no spin past ~60 deg; a refusal to rotate at 0.625 points at the 0.48 falsifier, and a stop time that does not fall against the 1.0-factor control fails T-K3. Carried as LABEL BANDS, not measured truths: 0.625 is INFERRED, 4.0 sits above the 6 t band 1..2.25, and T-K4's ledger `from` still reads 5 where the bytes read 1",
+   "source": "Working/Translation/T_ROWS.jsonl (T-DR1, T-ST5, T-ST6, T-K3, T-K4)",
+   "status": "predicted (label bands)"
+  },
+  {
+   "id": "Q2-A8",
+   "prediction": "first shift knee 67 km/h (computed 66.8)",
+   "band": "64-70 km/h",
+   "source": "Working/Translation/T_ROWS.jsonl (T-E3/T-E4)",
+   "status": "predicted"
+  },
+  {
+   "id": "Q2-A9",
+   "prediction": "boost: torque ratio 1.30-2.10, +43.2 km/h top (min(3500, 600 x 2.0) = 1200 cu)",
+   "band": "boosted 0-100 faster; no grip snap",
+   "source": "Working/Translation/T_ROWS.jsonl (T-B1/T-B2/T-B3)",
+   "status": "predicted"
+  },
+  {
+   "id": "Q2-A10",
+   "prediction": "tyre squeal thresholds 0.2 long / 0.2 lat",
+   "band": "skids appear only past the squeal threshold",
+   "source": "Working/Translation/T_ROWS.jsonl (T-EF1)",
+   "status": "predicted"
+  },
+  {
+   "id": "Q2-A15",
+   "prediction": "chase camera 7.0 m back, 1.3 m up, look-at 1.55 m, FOV 55 rising to 63 with speed",
+   "band": "FOV 55-63; distance 7.0 m +-0.5",
+   "source": "Working/Translation/T6_HUD_CAMERA.md (CAM_TUNE)",
+   "status": "predicted"
+  },
+  {
+   "id": "Q2-A16",
+   "prediction": "2 weapon slots, cooldown 0..1, no heat bar",
+   "band": "as listed",
+   "source": "Working/Translation/t19_hud.json",
+   "status": "predicted"
+  },
+  {
+   "id": "Q2-battle",
+   "prediction": "excluded by decision: D-2 = one hybrid car, B-12 skipped",
+   "band": "n/a",
+   "source": "Working/Translation/t11_variants.json",
+   "status": "excluded"
+  },
+  {
+   "id": "Q3-1",
+   "prediction": "impact_damage_factor 0: ramming walls/cars at 40/80 km/h costs 0 HP; cars shoved (6 t class)",
+   "band": "health bar unchanged",
+   "source": "Working/Translation/T_ROWS.jsonl (T-DM8)",
+   "status": "predicted"
+  },
+  {
+   "id": "Q3-2",
+   "prediction": "tank cannon hits to destroy: 24 (H0) / 48 (H1) / 25 (H2); small arms never under H2",
+   "band": "survive >= 2 min at 5-star heat; tank shells 24-48",
+   "source": "damage_predict.py --root Builds/bm-RC4 table",
+   "status": "predicted"
+  },
+  {
+   "id": "Q3-3",
+   "prediction": "Vulcan does not overheat inside a 30 s burst (0.25 / 0.0 has no finite time); missile lock time on the JC3 side is UNKNOWN (no lock-duration member in 4,054 tune rows)",
+   "band": "gun does not stop for heat in 30 s and no overheat sound plays; lock time is measured and recorded, not failed",
+   "source": "Working/Q/PREDICTIONS_COMBAT.md (K-10, K-11); Research/BatmobileGrab/WEAPONS.json",
+   "status": "predicted"
+  },
+  {
+   "id": "Q3-4",
+   "prediction": "will_sink 1; engine shuts down 30 s after entering deep water",
+   "band": "car sinks and stalls (not amphibious, D-8)",
+   "source": "Research/JC3Grab/ (G2-31 water)",
+   "status": "predicted"
+  },
+  {
+   "id": "Q3-5",
+   "prediction": "tether the car to a pole: the tether attaches and holds a 6,000 kg car (6.154x the donor's 975, the design value); airlift cannot lift it - 6,000 is 40.0% of the flatbed's 15,000 body, 15.0% of the cargo plane's 40,000 and 6.0% of the transport boat's 100,000",
+   "band": "tether grabs and drags/holds the car without detaching, and no fleet carrier lifts it; a clean airlift, or a tether that passes through the body, fails the line",
+   "source": "Research/JC3Grab/TETHER.md (G2-34); Working/Translation/T_ROWS.jsonl",
+   "status": "predicted"
+  },
+  {
+   "id": "Q3-6",
+   "prediction": "0 NPC Batmobiles (standalone leaf, no traffic records)",
+   "band": "0 in 10 min",
+   "source": "Research/JC3Grab/STANDALONE.md; Builds/bm-RC1",
+   "status": "predicted"
+  },
+  {
+   "id": "Q3-7",
+   "prediction": "17 FX rows / 12 .effc: lamp break and engine burn on the right part",
+   "band": "effect at the broken part",
+   "source": "Working/Translation/t17_fx.json",
+   "status": "predicted"
+  }
+ ],
+ "missing": [],
+ "extra": [],
+ "counts": {
+  "parsed": 28,
+  "predicted": 27,
+  "blocked": 0,
+  "excluded": 1
+ }
+}

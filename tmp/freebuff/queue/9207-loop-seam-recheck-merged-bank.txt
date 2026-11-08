@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/loop-seam-recheck-merged-bank.md
+ONLY: freebuff
+EST: 25
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-audio-override-and-layers.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-merge-release-candidate.md
+Brief 9150 may regenerate vehicles.bank or weapons.bank, which could undo the vehicles#279 loop-wrap repair from reports/rc5-loop279-wrap-build.md (three of three loops under -40 dBFS at the seam in Builds/bm-RC5-audio). Run the loop check from Builds/bm-RC5-audio/verify against the audio payload inside the merged Builds/bm-RC5, not against the branch tree. Report the seam level in dBFS for each of the three loops, the sha256 of each bank in the merged tree against the branch tree, and whether the merged bank still carries the repaired bytes. If a bank differs, say which brief produced the difference, and write the narrow rebuild step (inputs, output, check) as text in the report without building it. Done when three seam numbers and two hash comparisons are in the report and the verdict is stated as SURVIVED or LOST. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

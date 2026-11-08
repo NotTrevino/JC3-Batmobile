@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-exit-enter-canopy-build.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/enter-exit-canopy-sequence-spec.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/canopy-part-cut-build.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-gamepad-scoping.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-mode-controller-build.md
+Implement entry, LB exit and canopy handling in the native hook from Working/Modes/enter_exit_spec.md. Enter stays on JC3 Y; the hook adds LB exit while in our Batmobile (pursuit: Batman jumps out and the car breaks right; battle: the car breaks straight), and drives the canopy part from mod-15 open on entry and exit and closed while driving, over 0.433 s. Write Tools/hook/src/enter_exit.*; gate everything behind the in-our-Batmobile check from the 7982 readout so other vehicles are untouched. Where the spec marks a velocity as UNKNOWN-authored, read it from a parameter file Tools/hook/params/exit.json rather than a constant. Stage Builds/hook-mod-exit/ with receipt. Done-check: the build is clean, an offline trace test shows Y-enter, LB-exit pursuit, LB-exit battle and LB inside another vehicle (ignored), and the parameter file has no empty values. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

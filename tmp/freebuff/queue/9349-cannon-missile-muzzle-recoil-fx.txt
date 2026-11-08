@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/cannon-missile-muzzle-recoil-fx.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-effect-writer-payloads.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-cannon-vulcan-riot-pods.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/missile-carrier-reclone.md
+Ship the muzzle flash, recoil and impact payloads for the cannon and both missile weapons through the proven effect writer (Tools/scripts/effc_writer.py, 95 of 95 byte-identical in effc-format-writable.md). Use tmp/freebuff/reports/cannon-recoil-and-muzzle-plan.md, the ledger rows T-FX10 to T-FX16 in Working/Translation/T_ROWS.jsonl, and the socket positions CannonMuzzle, MissileL and MissileR in Research/BatmobileGrab/SOCKETS_JC3.md. Write private effect copies and the recoil kick values the plan names, patching each member at its decoded offset in carry mode; list each member that has no counterpart as an open gap. Do not touch the trail and launch flash that 9102 already ships. Script Tools/scripts/rc5_fx_cannon.py (--write, --check), tree Builds/bm-RC5-fxcannon. Done-check: --check lists each effect file, each patched member and a byte-identical carry for the rest. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

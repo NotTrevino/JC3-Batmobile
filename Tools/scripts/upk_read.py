@@ -37,7 +37,14 @@ TYPE_NAMES = {
     15: "FixedArrayProperty", 16: "ObjectNCRProperty", 17: "GuidProperty",
 }
 # serialized inline, without a name (the object's field offset identifies it)
-SIMPLE = {2: 4, 3: 4, 4: 4, 6: 8, 11: 12, 12: 12, 13: 0, 16: 4, 17: 16}
+# Payload bytes behind a tag header, by type id.  `17` (GuidProperty) is **32**, not the 16 an
+# FGuid occupies: the cooked stream writes the 16-byte value and a second 16-byte half behind it.
+# Measured on `Playable_Batmobile_SF`'s SpotLightComponent (248 bytes): consuming 16 stops the walk
+# at byte 146 with `unknown_type_27275`, consuming 32 re-syncs to byte 246 and every later tag
+# resolves to a BmSDK offset (LightGuid 0x1cc, LightmapGuid 0x1dc, Brightness 0x1f0, LightColor
+# 0x200, CastShadows 0x220).  All 1,778 guid-bearing records in objects.jsonl desynced at the guid
+# before this; all 134 light components now walk to `eof` with 0 unresolved tags.
+SIMPLE = {2: 4, 3: 4, 4: 4, 6: 8, 11: 12, 12: 12, 13: 0, 16: 4, 17: 32}
 # serialized with FName + size + array index
 NAMED = {1, 5, 7, 8, 9, 10, 14, 15}
 

@@ -1,0 +1,2108 @@
+{
+ "bones_transform_offset_used": [
+  -4.77e-07,
+  0.022231445,
+  0.15429744
+ ],
+ "card": "G3-01",
+ "generator": "grab_collision.py",
+ "inputs": {
+  "bmgame": {
+   "path": "E:\\Games\\Batman - Arkham Knight\\BmGame\\CookedPCConsole\\BmGame.upk",
+   "sha256": "12a29c2f9e2bd839780c8c95ada6b322f50be53243ff8535464c9e1ac88221e3"
+  },
+  "bmsdk_offsets": {
+   "path": "E:\\Modding\\JC3-Batmobile\\Research\\BatmobileGrab\\BMSDK_OFFSETS.json",
+   "sha256": "4cbdd7da0d667d818ffa259b51cac5915b406459d309902f8eb72f2f83013cae"
+  },
+  "bones": {
+   "path": "E:\\Modding\\JC3-Batmobile\\Research\\BatmobileGrab\\BONES.json",
+   "sha256": "d92590d5907f6566a0e947de388f6b07a7d54c752685cabbe164da72a246ec1e"
+  },
+  "playable": {
+   "path": "E:\\Games\\Batman - Arkham Knight\\BmGame\\CookedPCConsole\\Playable_Batmobile_SF.upk",
+   "sha256": "f8c1e41047989a0d023a1ed25ff599b0b179b0c5887864ea59dd7bb3aa7573c3"
+  },
+  "sockets_jc3": {
+   "path": "E:\\Modding\\JC3-Batmobile\\Research\\BatmobileGrab\\SOCKETS_JC3.json",
+   "sha256": "92f72c4d2d312d1490840036de3f27d32bc99db7df720a19dec13fce953182b2"
+  },
+  "startup": {
+   "path": "E:\\Games\\Batman - Arkham Knight\\BmGame\\CookedPCConsole\\Startup.upk",
+   "sha256": "035bee054cf884142fe541a4e0cee7d3ea7a660d4b0eda12649683d3ef20abe0"
+  }
+ },
+ "objects": {
+  "archetype:Batmobile": {
+   "class": "RVehicleBatmobile",
+   "export": 5281,
+   "name": "Batmobile",
+   "outer": "Batmobile_Archetypes.Vehicle",
+   "parsed_end": 3905,
+   "prefix": {
+    "bytes": 1,
+    "hex": "00"
+   },
+   "size": 3905,
+   "start": 1,
+   "stop": "end",
+   "tag_count": 136,
+   "tail": {
+    "bytes": [
+     3905,
+     3905
+    ],
+    "hex": ""
+   }
+  },
+  "base_cdo:Default__RVehicleBatmobileBase": {
+   "class": "RVehicleBatmobileBase",
+   "export": 10923,
+   "name": "Default__RVehicleBatmobileBase",
+   "outer": null,
+   "parsed_end": 3186,
+   "prefix": {
+    "bytes": 0,
+    "hex": ""
+   },
+   "size": 3186,
+   "start": 0,
+   "stop": "end",
+   "tag_count": 182,
+   "tail": {
+    "bytes": [
+     3186,
+     3186
+    ],
+    "hex": ""
+   }
+  },
+  "base_template:BatmanCollisionMeshBattleMode0": {
+   "class": "StaticMeshComponent",
+   "export": 176111,
+   "name": "BatmanCollisionMeshBattleMode0",
+   "outer": "Default__RVehicleBatmobileBase",
+   "parsed_end": 102,
+   "prefix": {
+    "bytes": 12,
+    "fname": {
+     "index": 4735,
+     "number": 0,
+     "text": "BatmanCollisionMeshBattleMode0"
+    },
+    "hex": "000000007f12000000000000"
+   },
+   "size": 123,
+   "start": 12,
+   "stop": "end",
+   "tag_count": 8,
+   "tail": {
+    "bytes": [
+     102,
+     123
+    ],
+    "hex": "000000000000000000000000000000000000000000"
+   }
+  },
+  "base_template:BatmanCollisionMeshPursuitMode0": {
+   "class": "StaticMeshComponent",
+   "export": 176112,
+   "name": "BatmanCollisionMeshPursuitMode0",
+   "outer": "Default__RVehicleBatmobileBase",
+   "parsed_end": 86,
+   "prefix": {
+    "bytes": 12,
+    "fname": {
+     "index": 4737,
+     "number": 0,
+     "text": "BatmanCollisionMeshPursuitMode0"
+    },
+    "hex": "000000008112000000000000"
+   },
+   "size": 107,
+   "start": 12,
+   "stop": "end",
+   "tag_count": 7,
+   "tail": {
+    "bytes": [
+     86,
+     107
+    ],
+    "hex": "000000000000000000000000000000000000000000"
+   }
+  },
+  "base_template:FrontCollisionCylinder": {
+   "class": "CylinderComponent",
+   "export": 142597,
+   "name": "FrontCollisionCylinder",
+   "outer": "Default__RVehicleBatmobileBase",
+   "parsed_end": 137,
+   "prefix": {
+    "bytes": 12,
+    "fname": {
+     "index": 35578,
+     "number": 0,
+     "text": "FrontCollisionCylinder"
+    },
+    "hex": "00000000fa8a000000000000"
+   },
+   "size": 137,
+   "start": 12,
+   "stop": "end",
+   "tag_count": 8,
+   "tail": {
+    "bytes": [
+     137,
+     137
+    ],
+    "hex": ""
+   }
+  },
+  "base_template:RB_StayUprightSetup": {
+   "class": "RB_StayUprightSetup",
+   "export": 172112,
+   "name": "MyStayUprightSetup",
+   "outer": "Default__RVehicleBatmobileBase",
+   "parsed_end": 2,
+   "prefix": {
+    "bytes": 0,
+    "hex": ""
+   },
+   "size": 2,
+   "start": 0,
+   "stop": "end",
+   "tag_count": 1,
+   "tail": {
+    "bytes": [
+     2,
+     2
+    ],
+    "hex": ""
+   }
+  },
+  "base_template:RearCollisionCylinder": {
+   "class": "CylinderComponent",
+   "export": 142598,
+   "name": "RearCollisionCylinder",
+   "outer": "Default__RVehicleBatmobileBase",
+   "parsed_end": 137,
+   "prefix": {
+    "bytes": 12,
+    "fname": {
+     "index": 63868,
+     "number": 0,
+     "text": "RearCollisionCylinder"
+    },
+    "hex": "000000007cf9000000000000"
+   },
+   "size": 137,
+   "start": 12,
+   "stop": "end",
+   "tag_count": 8,
+   "tail": {
+    "bytes": [
+     137,
+     137
+    ],
+    "hex": ""
+   }
+  },
+  "base_template:SVehicleMesh": {
+   "class": "SkeletalMeshComponent",
+   "export": 175716,
+   "name": "SVehicleMesh",
+   "outer": "Default__RVehicleBatmobileBase",
+   "parsed_end": 145,
+   "prefix": {
+    "bytes": 12,
+    "fname": {
+     "index": 75708,
+     "number": 0,
+     "text": "SVehicleMesh"
+    },
+    "hex": "00000000bc27010000000000"
+   },
+   "size": 157,
+   "start": 12,
+   "stop": "end",
+   "tag_count": 9,
+   "tail": {
+    "bytes": [
+     145,
+     157
+    ],
+    "hex": "000000000000000000000000"
+   }
+  },
+  "instance:BatmanCollisionMeshBattleMode0": {
+   "class": "StaticMeshComponent",
+   "export": 5392,
+   "name": "BatmanCollisionMeshBattleMode0",
+   "outer": "Vehicle.Batmobile",
+   "parsed_end": 38,
+   "prefix": {
+    "bytes": 4,
+    "hex": "00000000"
+   },
+   "size": 59,
+   "start": 4,
+   "stop": "end",
+   "tag_count": 3,
+   "tail": {
+    "bytes": [
+     38,
+     59
+    ],
+    "hex": "000000000000000000000000000000000000000000"
+   }
+  },
+  "instance:BatmanCollisionMeshPursuitMode0": {
+   "class": "StaticMeshComponent",
+   "export": 5393,
+   "name": "BatmanCollisionMeshPursuitMode0",
+   "outer": "Vehicle.Batmobile",
+   "parsed_end": 38,
+   "prefix": {
+    "bytes": 4,
+    "hex": "00000000"
+   },
+   "size": 59,
+   "start": 4,
+   "stop": "end",
+   "tag_count": 3,
+   "tail": {
+    "bytes": [
+     38,
+     59
+    ],
+    "hex": "000000000000000000000000000000000000000000"
+   }
+  },
+  "instance:CollisionCylinder": {
+   "class": "CylinderComponent",
+   "export": 276,
+   "name": "CollisionCylinder",
+   "outer": "Vehicle.Batmobile",
+   "parsed_end": 81,
+   "prefix": {
+    "bytes": 4,
+    "hex": "00000000"
+   },
+   "size": 81,
+   "start": 4,
+   "stop": "end",
+   "tag_count": 3,
+   "tail": {
+    "bytes": [
+     81,
+     81
+    ],
+    "hex": ""
+   }
+  },
+  "instance:FrontCollisionCylinder": {
+   "class": "CylinderComponent",
+   "export": 277,
+   "name": "FrontCollisionCylinder",
+   "outer": "Vehicle.Batmobile",
+   "parsed_end": 38,
+   "prefix": {
+    "bytes": 4,
+    "hex": "00000000"
+   },
+   "size": 38,
+   "start": 4,
+   "stop": "end",
+   "tag_count": 3,
+   "tail": {
+    "bytes": [
+     38,
+     38
+    ],
+    "hex": ""
+   }
+  },
+  "instance:RB_StayUprightSetup": {
+   "class": "RB_StayUprightSetup",
+   "export": 5106,
+   "name": "RB_StayUprightSetup",
+   "outer": "Vehicle.Batmobile",
+   "parsed_end": 2,
+   "prefix": {
+    "bytes": 0,
+    "hex": ""
+   },
+   "size": 2,
+   "start": 0,
+   "stop": "end",
+   "tag_count": 1,
+   "tail": {
+    "bytes": [
+     2,
+     2
+    ],
+    "hex": ""
+   }
+  },
+  "instance:RearCollisionCylinder": {
+   "class": "CylinderComponent",
+   "export": 278,
+   "name": "RearCollisionCylinder",
+   "outer": "Vehicle.Batmobile",
+   "parsed_end": 38,
+   "prefix": {
+    "bytes": 4,
+    "hex": "00000000"
+   },
+   "size": 38,
+   "start": 4,
+   "stop": "end",
+   "tag_count": 3,
+   "tail": {
+    "bytes": [
+     38,
+     38
+    ],
+    "hex": ""
+   }
+  },
+  "instance:SVehicleMesh": {
+   "class": "SkeletalMeshComponent",
+   "export": 5289,
+   "name": "SVehicleMesh",
+   "outer": "Vehicle.Batmobile",
+   "parsed_end": 174,
+   "prefix": {
+    "bytes": 4,
+    "hex": "00000000"
+   },
+   "size": 258,
+   "start": 4,
+   "stop": "end",
+   "tag_count": 6,
+   "tail": {
+    "bytes": [
+     174,
+     258
+    ],
+    "hex": "120000000b0300000b0300000b0300000b0300000b0300000b0300000b0300000b0300000b0300000b0300000b0300000b0300000b0300000b0300000b0300000b0300000b0300000b0300000000000000000000"
+   }
+  },
+  "startup_cdo:Default__RVehicleBatmobile": {
+   "class": "RVehicleBatmobile",
+   "export": 7530,
+   "name": "Default__RVehicleBatmobile",
+   "outer": "BmScript",
+   "parsed_end": 978,
+   "prefix": {
+    "bytes": 0,
+    "hex": ""
+   },
+   "size": 978,
+   "start": 0,
+   "stop": "end",
+   "tag_count": 94,
+   "tail": {
+    "bytes": [
+     978,
+     978
+    ],
+    "hex": ""
+   }
+  },
+  "startup_template:BatmanCollisionMeshBattleMode0": {
+   "class": "StaticMeshComponent",
+   "export": 171103,
+   "name": "BatmanCollisionMeshBattleMode0",
+   "outer": "BmScript.Default__RVehicleBatmobile",
+   "parsed_end": 46,
+   "prefix": {
+    "bytes": 12,
+    "fname": {
+     "index": 5198,
+     "number": 0,
+     "text": "BatmanCollisionMeshBattleMode0"
+    },
+    "hex": "000000004e14000000000000"
+   },
+   "size": 67,
+   "start": 12,
+   "stop": "end",
+   "tag_count": 3,
+   "tail": {
+    "bytes": [
+     46,
+     67
+    ],
+    "hex": "000000000000000000000000000000000000000000"
+   }
+  },
+  "startup_template:BatmanCollisionMeshPursuitMode0": {
+   "class": "StaticMeshComponent",
+   "export": 171104,
+   "name": "BatmanCollisionMeshPursuitMode0",
+   "outer": "BmScript.Default__RVehicleBatmobile",
+   "parsed_end": 46,
+   "prefix": {
+    "bytes": 12,
+    "fname": {
+     "index": 5200,
+     "number": 0,
+     "text": "BatmanCollisionMeshPursuitMode0"
+    },
+    "hex": "000000005014000000000000"
+   },
+   "size": 67,
+   "start": 12,
+   "stop": "end",
+   "tag_count": 3,
+   "tail": {
+    "bytes": [
+     46,
+     67
+    ],
+    "hex": "000000000000000000000000000000000000000000"
+   }
+  },
+  "startup_template:FrontCollisionCylinder": {
+   "class": "CylinderComponent",
+   "export": 82147,
+   "name": "FrontCollisionCylinder",
+   "outer": "BmScript.Default__RVehicleBatmobile",
+   "parsed_end": 46,
+   "prefix": {
+    "bytes": 12,
+    "fname": {
+     "index": 25827,
+     "number": 0,
+     "text": "FrontCollisionCylinder"
+    },
+    "hex": "00000000e364000000000000"
+   },
+   "size": 46,
+   "start": 12,
+   "stop": "end",
+   "tag_count": 3,
+   "tail": {
+    "bytes": [
+     46,
+     46
+    ],
+    "hex": ""
+   }
+  },
+  "startup_template:RB_StayUprightSetup": {
+   "class": "RB_StayUprightSetup",
+   "export": 154788,
+   "name": "MyStayUprightSetup",
+   "outer": "BmScript.Default__RVehicleBatmobile",
+   "parsed_end": 2,
+   "prefix": {
+    "bytes": 0,
+    "hex": ""
+   },
+   "size": 2,
+   "start": 0,
+   "stop": "end",
+   "tag_count": 1,
+   "tail": {
+    "bytes": [
+     2,
+     2
+    ],
+    "hex": ""
+   }
+  },
+  "startup_template:RearCollisionCylinder": {
+   "class": "CylinderComponent",
+   "export": 82148,
+   "name": "RearCollisionCylinder",
+   "outer": "BmScript.Default__RVehicleBatmobile",
+   "parsed_end": 46,
+   "prefix": {
+    "bytes": 12,
+    "fname": {
+     "index": 56206,
+     "number": 0,
+     "text": "RearCollisionCylinder"
+    },
+    "hex": "000000008edb000000000000"
+   },
+   "size": 46,
+   "start": 12,
+   "stop": "end",
+   "tag_count": 3,
+   "tail": {
+    "bytes": [
+     46,
+     46
+    ],
+    "hex": ""
+   }
+  },
+  "startup_template:SVehicleMesh": {
+   "class": "SkeletalMeshComponent",
+   "export": 169640,
+   "name": "SVehicleMesh",
+   "outer": "BmScript.Default__RVehicleBatmobile",
+   "parsed_end": 46,
+   "prefix": {
+    "bytes": 12,
+    "fname": {
+     "index": 60818,
+     "number": 0,
+     "text": "SVehicleMesh"
+    },
+    "hex": "0000000092ed000000000000"
+   },
+   "size": 58,
+   "start": 12,
+   "stop": "end",
+   "tag_count": 3,
+   "tail": {
+    "bytes": [
+     46,
+     58
+    ],
+    "hex": "000000000000000000000000"
+   }
+  }
+ },
+ "primitives": [
+  {
+   "base_template_export": null,
+   "fields": [
+    {
+     "index": 0,
+     "layout_name": {
+      "label": "decoded",
+      "reason": "BMSDK_OFFSETS.json PrimitiveComponent.ReplacementPrimitive at 0x13c",
+      "text": "ReplacementPrimitive"
+     },
+     "name": {
+      "label": "decoded",
+      "text": "ReplacementPrimitive"
+     },
+     "offset": 316,
+     "ref": null,
+     "tag_type": "ObjectReference",
+     "value_from": "instance"
+    },
+    {
+     "layout_name": {
+      "label": "decoded",
+      "reason": "BMSDK_OFFSETS.json PrimitiveComponent.LightingChannels at 0x200",
+      "text": "LightingChannels"
+     },
+     "name": {
+      "label": "decoded",
+      "text": "LightingChannels"
+     },
+     "offset": 512,
+     "tag_type": "StructProperty",
+     "value_from": "instance"
+    }
+   ],
+   "instance_bytes": {
+    "parsed_end": 81,
+    "prefix": {
+     "bytes": 4,
+     "hex": "00000000"
+    },
+    "size": 81,
+    "start": 4,
+    "stop": "end",
+    "tail": {
+     "bytes": [
+      81,
+      81
+     ],
+     "hex": ""
+    }
+   },
+   "instance_export": 276,
+   "name": "CollisionCylinder",
+   "startup_template_export": null
+  },
+  {
+   "base_template_export": 142597,
+   "fields": [
+    {
+     "index": 0,
+     "layout_name": {
+      "label": "decoded",
+      "reason": "BMSDK_OFFSETS.json PrimitiveComponent.ReplacementPrimitive at 0x13c",
+      "text": "ReplacementPrimitive"
+     },
+     "name": {
+      "label": "decoded",
+      "text": "ReplacementPrimitive"
+     },
+     "offset": 316,
+     "ref": null,
+     "tag_type": "ObjectReference",
+     "value_from": "instance"
+    },
+    {
+     "layout_name": {
+      "label": "decoded",
+      "reason": "BMSDK_OFFSETS.json PrimitiveComponent.PerInstanceRandom at 0x16c",
+      "text": "PerInstanceRandom"
+     },
+     "offset": 364,
+     "tag_type": "FloatProperty",
+     "value": 0.6867886,
+     "value_from": "instance"
+    },
+    {
+     "layout_name": {
+      "label": "decoded",
+      "reason": "BMSDK_OFFSETS.json PrimitiveComponent.Translation at 0x190",
+      "text": "Translation"
+     },
+     "offset": 400,
+     "tag_type": "VectorProperty",
+     "value": [
+      100.0,
+      0.0,
+      0.0
+     ],
+     "value_from": "base_template"
+    },
+    {
+     "bits": 285884962,
+     "bits_hex": "0x110a4222",
+     "bool_bits_unmapped": [],
+     "bool_flags_set": [
+      {
+       "mask": 16384,
+       "name": "CanBlockCamera",
+       "set": true
+      },
+      {
+       "mask": 524288,
+       "name": "OverrideCollisionFilter",
+       "set": true
+      },
+      {
+       "mask": 2,
+       "name": "bAcceptsDynamicDominantLightShadows",
+       "set": true
+      },
+      {
+       "mask": 32,
+       "name": "bAcceptsDynamicLights",
+       "set": true
+      },
+      {
+       "mask": 512,
+       "name": "bAllowAmbientOcclusion",
+       "set": true
+      },
+      {
+       "mask": 131072,
+       "name": "bBlockFootPlacement",
+       "set": true
+      },
+      {
+       "mask": 268435456,
+       "name": "bDisableMinCollisionThickness",
+       "set": true
+      },
+      {
+       "mask": 16777216,
+       "name": "bNotifyRigidBodyCollisionIgnoredWhenFarAway",
+       "set": true
+      }
+     ],
+     "layout_name": {
+      "label": "decoded",
+      "reason": "BoolProperty bitfield at offset 484; flags listed in bool_flags_set",
+      "text": null
+     },
+     "offset": 484,
+     "tag_type": "BoolProperty",
+     "value_from": "base_template"
+    },
+    {
+     "layout_name": {
+      "label": "decoded",
+      "reason": "BMSDK_OFFSETS.json PrimitiveComponent.LightingChannels at 0x200",
+      "text": "LightingChannels"
+     },
+     "name": {
+      "label": "decoded",
+      "text": "LightingChannels"
+     },
+     "offset": 512,
+     "tag_type": "StructProperty",
+     "value_from": "base_template"
+    },
+    {
+     "layout_name": {
+      "label": "UNKNOWN",
+      "reason": "no BMSDK layout entry at offset 540 (class layout not in BMSDK_OFFSETS.json)",
+      "text": null
+     },
+     "offset": 540,
+     "tag_type": "FloatProperty",
+     "value": 78.0,
+     "value_from": "base_template"
+    },
+    {
+     "layout_name": {
+      "label": "UNKNOWN",
+      "reason": "no BMSDK layout entry at offset 544 (class layout not in BMSDK_OFFSETS.json)",
+      "text": null
+     },
+     "offset": 544,
+     "tag_type": "FloatProperty",
+     "value": 175.0,
+     "value_from": "base_template"
+    }
+   ],
+   "instance_bytes": {
+    "parsed_end": 38,
+    "prefix": {
+     "bytes": 4,
+     "hex": "00000000"
+    },
+    "size": 38,
+    "start": 4,
+    "stop": "end",
+    "tail": {
+     "bytes": [
+      38,
+      38
+     ],
+     "hex": ""
+    }
+   },
+   "instance_export": 277,
+   "name": "FrontCollisionCylinder",
+   "size_fields_540_544": [
+    {
+     "from": "base_template",
+     "label": "decoded",
+     "name": "UNKNOWN (CylinderComponent layout not in BMSDK_OFFSETS.json)",
+     "offset": 540,
+     "value": 78.0
+    },
+    {
+     "from": "base_template",
+     "label": "decoded",
+     "name": "UNKNOWN (CylinderComponent layout not in BMSDK_OFFSETS.json)",
+     "offset": 544,
+     "value": 175.0
+    }
+   ],
+   "startup_template_export": 82147,
+   "translation_cm": {
+    "from": "base_template",
+    "jc3_label": "derived: to_jc3_rot(p)*0.01 + BONES.offset_used, conditional on the actor frame equalling the PSK mesh frame (UNKNOWN link)",
+    "jc3_m_if_actor_frame_is_psk_frame": [
+     -0.0,
+     0.022231,
+     -0.845703
+    ],
+    "label": "decoded",
+    "source": "tag at offset 400 (Vector3)",
+    "value": [
+     100.0,
+     0.0,
+     0.0
+    ]
+   }
+  },
+  {
+   "base_template_export": 142598,
+   "fields": [
+    {
+     "index": 0,
+     "layout_name": {
+      "label": "decoded",
+      "reason": "BMSDK_OFFSETS.json PrimitiveComponent.ReplacementPrimitive at 0x13c",
+      "text": "ReplacementPrimitive"
+     },
+     "name": {
+      "label": "decoded",
+      "text": "ReplacementPrimitive"
+     },
+     "offset": 316,
+     "ref": null,
+     "tag_type": "ObjectReference",
+     "value_from": "instance"
+    },
+    {
+     "layout_name": {
+      "label": "decoded",
+      "reason": "BMSDK_OFFSETS.json PrimitiveComponent.PerInstanceRandom at 0x16c",
+      "text": "PerInstanceRandom"
+     },
+     "offset": 364,
+     "tag_type": "FloatProperty",
+     "value": 0.0204169,
+     "value_from": "instance"
+    },
+    {
+     "layout_name": {
+      "label": "decoded",
+      "reason": "BMSDK_OFFSETS.json PrimitiveComponent.Translation at 0x190",
+      "text": "Translation"
+     },
+     "offset": 400,
+     "tag_type": "VectorProperty",
+     "value": [
+      -200.0,
+      0.0,
+      0.0
+     ],
+     "value_from": "base_template"
+    },
+    {
+     "bits": 285884962,
+     "bits_hex": "0x110a4222",
+     "bool_bits_unmapped": [],
+     "bool_flags_set": [
+      {
+       "mask": 16384,
+       "name": "CanBlockCamera",
+       "set": true
+      },
+      {
+       "mask": 524288,
+       "name": "OverrideCollisionFilter",
+       "set": true
+      },
+      {
+       "mask": 2,
+       "name": "bAcceptsDynamicDominantLightShadows",
+       "set": true
+      },
+      {
+       "mask": 32,
+       "name": "bAcceptsDynamicLights",
+       "set": true
+      },
+      {
+       "mask": 512,
+       "name": "bAllowAmbientOcclusion",
+       "set": true
+      },
+      {
+       "mask": 131072,
+       "name": "bBlockFootPlacement",
+       "set": true
+      },
+      {
+       "mask": 268435456,
+       "name": "bDisableMinCollisionThickness",
+       "set": true
+      },
+      {
+       "mask": 16777216,
+       "name": "bNotifyRigidBodyCollisionIgnoredWhenFarAway",
+       "set": true
+      }
+     ],
+     "layout_name": {
+      "label": "decoded",
+      "reason": "BoolProperty bitfield at offset 484; flags listed in bool_flags_set",
+      "text": null
+     },
+     "offset": 484,
+     "tag_type": "BoolProperty",
+     "value_from": "base_template"
+    },
+    {
+     "layout_name": {
+      "label": "decoded",
+      "reason": "BMSDK_OFFSETS.json PrimitiveComponent.LightingChannels at 0x200",
+      "text": "LightingChannels"
+     },
+     "name": {
+      "label": "decoded",
+      "text": "LightingChannels"
+     },
+     "offset": 512,
+     "tag_type": "StructProperty",
+     "value_from": "base_template"
+    },
+    {
+     "layout_name": {
+      "label": "UNKNOWN",
+      "reason": "no BMSDK layout entry at offset 540 (class layout not in BMSDK_OFFSETS.json)",
+      "text": null
+     },
+     "offset": 540,
+     "tag_type": "FloatProperty",
+     "value": 78.0,
+     "value_from": "base_template"
+    },
+    {
+     "layout_name": {
+      "label": "UNKNOWN",
+      "reason": "no BMSDK layout entry at offset 544 (class layout not in BMSDK_OFFSETS.json)",
+      "text": null
+     },
+     "offset": 544,
+     "tag_type": "FloatProperty",
+     "value": 175.0,
+     "value_from": "base_template"
+    }
+   ],
+   "instance_bytes": {
+    "parsed_end": 38,
+    "prefix": {
+     "bytes": 4,
+     "hex": "00000000"
+    },
+    "size": 38,
+    "start": 4,
+    "stop": "end",
+    "tail": {
+     "bytes": [
+      38,
+      38
+     ],
+     "hex": ""
+    }
+   },
+   "instance_export": 278,
+   "name": "RearCollisionCylinder",
+   "size_fields_540_544": [
+    {
+     "from": "base_template",
+     "label": "decoded",
+     "name": "UNKNOWN (CylinderComponent layout not in BMSDK_OFFSETS.json)",
+     "offset": 540,
+     "value": 78.0
+    },
+    {
+     "from": "base_template",
+     "label": "decoded",
+     "name": "UNKNOWN (CylinderComponent layout not in BMSDK_OFFSETS.json)",
+     "offset": 544,
+     "value": 175.0
+    }
+   ],
+   "startup_template_export": 82148,
+   "translation_cm": {
+    "from": "base_template",
+    "jc3_label": "derived: to_jc3_rot(p)*0.01 + BONES.offset_used, conditional on the actor frame equalling the PSK mesh frame (UNKNOWN link)",
+    "jc3_m_if_actor_frame_is_psk_frame": [
+     -0.0,
+     0.022231,
+     2.154297
+    ],
+    "label": "decoded",
+    "source": "tag at offset 400 (Vector3)",
+    "value": [
+     -200.0,
+     0.0,
+     0.0
+    ]
+   }
+  },
+  {
+   "base_template_export": 176111,
+   "fields": [
+    {
+     "index": 0,
+     "layout_name": {
+      "label": "decoded",
+      "reason": "BMSDK_OFFSETS.json PrimitiveComponent.ReplacementPrimitive at 0x13c",
+      "text": "ReplacementPrimitive"
+     },
+     "name": {
+      "label": "decoded",
+      "text": "ReplacementPrimitive"
+     },
+     "offset": 316,
+     "ref": null,
+     "tag_type": "ObjectReference",
+     "value_from": "instance"
+    },
+    {
+     "layout_name": {
+      "label": "decoded",
+      "reason": "BMSDK_OFFSETS.json PrimitiveComponent.PerInstanceRandom at 0x16c",
+      "text": "PerInstanceRandom"
+     },
+     "offset": 364,
+     "tag_type": "FloatProperty",
+     "value": 0.2486953,
+     "value_from": "instance"
+    },
+    {
+     "layout_name": {
+      "label": "decoded",
+      "reason": "BMSDK_OFFSETS.json PrimitiveComponent.Translation at 0x190",
+      "text": "Translation"
+     },
+     "offset": 400,
+     "tag_type": "VectorProperty",
+     "value": [
+      -40.0,
+      0.0,
+      -110.0
+     ],
+     "value_from": "base_template"
+    },
+    {
+     "layout_name": {
+      "label": "decoded",
+      "reason": "BMSDK_OFFSETS.json PrimitiveComponent.Rotation at 0x19c",
+      "text": "Rotation"
+     },
+     "offset": 412,
+     "tag_type": "RotatorProperty",
+     "value": [
+      750,
+      0,
+      0
+     ],
+     "value_from": "base_template"
+    },
+    {
+     "bits": 49152,
+     "bits_hex": "0x0000c000",
+     "bool_bits_unmapped": [],
+     "bool_flags_set": [
+      {
+       "mask": 32768,
+       "name": "HiddenGame",
+       "set": true
+      },
+      {
+       "mask": 16384,
+       "name": "bAllowCullDistanceVolume",
+       "set": true
+      }
+     ],
+     "layout_name": {
+      "label": "decoded",
+      "reason": "BoolProperty bitfield at offset 476; flags listed in bool_flags_set",
+      "text": null
+     },
+     "offset": 476,
+     "tag_type": "BoolProperty",
+     "value_from": "base_template"
+    },
+    {
+     "bits": 285376050,
+     "bits_hex": "0x11027e32",
+     "bool_bits_unmapped": [],
+     "bool_flags_set": [
+      {
+       "mask": 2048,
+       "name": "BlockActors",
+       "set": true
+      },
+      {
+       "mask": 8192,
+       "name": "BlockNonZeroExtent",
+       "set": true
+      },
+      {
+       "mask": 4096,
+       "name": "BlockZeroExtent",
+       "set": true
+      },
+      {
+       "mask": 16384,
+       "name": "CanBlockCamera",
+       "set": true
+      },
+      {
+       "mask": 1024,
+       "name": "CollideActors",
+       "set": true
+      },
+      {
+       "mask": 2,
+       "name": "bAcceptsDynamicDominantLightShadows",
+       "set": true
+      },
+      {
+       "mask": 32,
+       "name": "bAcceptsDynamicLights",
+       "set": true
+      },
+      {
+       "mask": 16,
+       "name": "bAcceptsLights",
+       "set": true
+      },
+      {
+       "mask": 512,
+       "name": "bAllowAmbientOcclusion",
+       "set": true
+      },
+      {
+       "mask": 131072,
+       "name": "bBlockFootPlacement",
+       "set": true
+      },
+      {
+       "mask": 268435456,
+       "name": "bDisableMinCollisionThickness",
+       "set": true
+      },
+      {
+       "mask": 16777216,
+       "name": "bNotifyRigidBodyCollisionIgnoredWhenFarAway",
+       "set": true
+      }
+     ],
+     "layout_name": {
+      "label": "decoded",
+      "reason": "BoolProperty bitfield at offset 484; flags listed in bool_flags_set",
+      "text": null
+     },
+     "offset": 484,
+     "tag_type": "BoolProperty",
+     "value_from": "base_template"
+    },
+    {
+     "index": 175973,
+     "layout_name": {
+      "label": "UNKNOWN",
+      "reason": "no BMSDK layout entry at offset 644 (class layout not in BMSDK_OFFSETS.json)",
+      "text": null
+     },
+     "offset": 644,
+     "ref": {
+      "class": "StaticMesh",
+      "index": 175973,
+      "path": "Batmobile_V2_Mesh.Batmobile_V2"
+     },
+     "tag_type": "ObjectReference",
+     "value_from": "base_template"
+    }
+   ],
+   "instance_bytes": {
+    "parsed_end": 38,
+    "prefix": {
+     "bytes": 4,
+     "hex": "00000000"
+    },
+    "size": 59,
+    "start": 4,
+    "stop": "end",
+    "tail": {
+     "bytes": [
+      38,
+      59
+     ],
+     "hex": "000000000000000000000000000000000000000000"
+    }
+   },
+   "instance_export": 5392,
+   "name": "BatmanCollisionMeshBattleMode0",
+   "startup_template_export": 171103,
+   "static_mesh_ref": {
+    "export": 175973,
+    "field_name": "UNKNOWN (StaticMeshComponent layout not in BMSDK_OFFSETS.json)",
+    "field_offset": 644,
+    "from": "base_template",
+    "label": "decoded: value and referent class; field name UNKNOWN",
+    "path": "Batmobile_V2_Mesh.Batmobile_V2"
+   },
+   "translation_cm": {
+    "from": "base_template",
+    "jc3_label": "derived: to_jc3_rot(p)*0.01 + BONES.offset_used, conditional on the actor frame equalling the PSK mesh frame (UNKNOWN link)",
+    "jc3_m_if_actor_frame_is_psk_frame": [
+     -0.0,
+     -1.077769,
+     0.554297
+    ],
+    "label": "decoded",
+    "source": "tag at offset 400 (Vector3)",
+    "value": [
+     -40.0,
+     0.0,
+     -110.0
+    ]
+   }
+  },
+  {
+   "base_template_export": 176112,
+   "fields": [
+    {
+     "index": 0,
+     "layout_name": {
+      "label": "decoded",
+      "reason": "BMSDK_OFFSETS.json PrimitiveComponent.ReplacementPrimitive at 0x13c",
+      "text": "ReplacementPrimitive"
+     },
+     "name": {
+      "label": "decoded",
+      "text": "ReplacementPrimitive"
+     },
+     "offset": 316,
+     "ref": null,
+     "tag_type": "ObjectReference",
+     "value_from": "instance"
+    },
+    {
+     "layout_name": {
+      "label": "decoded",
+      "reason": "BMSDK_OFFSETS.json PrimitiveComponent.PerInstanceRandom at 0x16c",
+      "text": "PerInstanceRandom"
+     },
+     "offset": 364,
+     "tag_type": "FloatProperty",
+     "value": 0.3221839,
+     "value_from": "instance"
+    },
+    {
+     "layout_name": {
+      "label": "decoded",
+      "reason": "BMSDK_OFFSETS.json PrimitiveComponent.Translation at 0x190",
+      "text": "Translation"
+     },
+     "offset": 400,
+     "tag_type": "VectorProperty",
+     "value": [
+      -45.0,
+      0.0,
+      -95.0
+     ],
+     "value_from": "base_template"
+    },
+    {
+     "bits": 49152,
+     "bits_hex": "0x0000c000",
+     "bool_bits_unmapped": [],
+     "bool_flags_set": [
+      {
+       "mask": 32768,
+       "name": "HiddenGame",
+       "set": true
+      },
+      {
+       "mask": 16384,
+       "name": "bAllowCullDistanceVolume",
+       "set": true
+      }
+     ],
+     "layout_name": {
+      "label": "decoded",
+      "reason": "BoolProperty bitfield at offset 476; flags listed in bool_flags_set",
+      "text": null
+     },
+     "offset": 476,
+     "tag_type": "BoolProperty",
+     "value_from": "base_template"
+    },
+    {
+     "bits": 285376050,
+     "bits_hex": "0x11027e32",
+     "bool_bits_unmapped": [],
+     "bool_flags_set": [
+      {
+       "mask": 2048,
+       "name": "BlockActors",
+       "set": true
+      },
+      {
+       "mask": 8192,
+       "name": "BlockNonZeroExtent",
+       "set": true
+      },
+      {
+       "mask": 4096,
+       "name": "BlockZeroExtent",
+       "set": true
+      },
+      {
+       "mask": 16384,
+       "name": "CanBlockCamera",
+       "set": true
+      },
+      {
+       "mask": 1024,
+       "name": "CollideActors",
+       "set": true
+      },
+      {
+       "mask": 2,
+       "name": "bAcceptsDynamicDominantLightShadows",
+       "set": true
+      },
+      {
+       "mask": 32,
+       "name": "bAcceptsDynamicLights",
+       "set": true
+      },
+      {
+       "mask": 16,
+       "name": "bAcceptsLights",
+       "set": true
+      },
+      {
+       "mask": 512,
+       "name": "bAllowAmbientOcclusion",
+       "set": true
+      },
+      {
+       "mask": 131072,
+       "name": "bBlockFootPlacement",
+       "set": true
+      },
+      {
+       "mask": 268435456,
+       "name": "bDisableMinCollisionThickness",
+       "set": true
+      },
+      {
+       "mask": 16777216,
+       "name": "bNotifyRigidBodyCollisionIgnoredWhenFarAway",
+       "set": true
+      }
+     ],
+     "layout_name": {
+      "label": "decoded",
+      "reason": "BoolProperty bitfield at offset 484; flags listed in bool_flags_set",
+      "text": null
+     },
+     "offset": 484,
+     "tag_type": "BoolProperty",
+     "value_from": "base_template"
+    },
+    {
+     "index": 175974,
+     "layout_name": {
+      "label": "UNKNOWN",
+      "reason": "no BMSDK layout entry at offset 644 (class layout not in BMSDK_OFFSETS.json)",
+      "text": null
+     },
+     "offset": 644,
+     "ref": {
+      "class": "StaticMesh",
+      "index": 175974,
+      "path": "Batmobile_V2_Mesh.Batmobile_V2_Collision_Pursuite"
+     },
+     "tag_type": "ObjectReference",
+     "value_from": "base_template"
+    }
+   ],
+   "instance_bytes": {
+    "parsed_end": 38,
+    "prefix": {
+     "bytes": 4,
+     "hex": "00000000"
+    },
+    "size": 59,
+    "start": 4,
+    "stop": "end",
+    "tail": {
+     "bytes": [
+      38,
+      59
+     ],
+     "hex": "000000000000000000000000000000000000000000"
+    }
+   },
+   "instance_export": 5393,
+   "name": "BatmanCollisionMeshPursuitMode0",
+   "startup_template_export": 171104,
+   "static_mesh_ref": {
+    "export": 175974,
+    "field_name": "UNKNOWN (StaticMeshComponent layout not in BMSDK_OFFSETS.json)",
+    "field_offset": 644,
+    "from": "base_template",
+    "label": "decoded: value and referent class; field name UNKNOWN",
+    "path": "Batmobile_V2_Mesh.Batmobile_V2_Collision_Pursuite"
+   },
+   "translation_cm": {
+    "from": "base_template",
+    "jc3_label": "derived: to_jc3_rot(p)*0.01 + BONES.offset_used, conditional on the actor frame equalling the PSK mesh frame (UNKNOWN link)",
+    "jc3_m_if_actor_frame_is_psk_frame": [
+     -0.0,
+     -0.927769,
+     0.604297
+    ],
+    "label": "decoded",
+    "source": "tag at offset 400 (Vector3)",
+    "value": [
+     -45.0,
+     0.0,
+     -95.0
+    ]
+   }
+  },
+  {
+   "base_template_export": 175716,
+   "fields": [
+    {
+     "index": 0,
+     "layout_name": {
+      "label": "decoded",
+      "reason": "BMSDK_OFFSETS.json PrimitiveComponent.ReplacementPrimitive at 0x13c",
+      "text": "ReplacementPrimitive"
+     },
+     "name": {
+      "label": "decoded",
+      "text": "ReplacementPrimitive"
+     },
+     "offset": 316,
+     "ref": null,
+     "tag_type": "ObjectReference",
+     "value_from": "instance"
+    },
+    {
+     "layout_name": {
+      "label": "decoded",
+      "reason": "BMSDK_OFFSETS.json PrimitiveComponent.PerInstanceRandom at 0x16c",
+      "text": "PerInstanceRandom"
+     },
+     "offset": 364,
+     "tag_type": "FloatProperty",
+     "value": 0.9370708,
+     "value_from": "startup_template"
+    },
+    {
+     "layout_name": {
+      "label": "decoded",
+      "reason": "BMSDK_OFFSETS.json PrimitiveComponent.Translation at 0x190",
+      "text": "Translation"
+     },
+     "offset": 400,
+     "tag_type": "VectorProperty",
+     "value": [
+      -50.0,
+      0.0,
+      -95.0
+     ],
+     "value_from": "base_template"
+    },
+    {
+     "bits": 3489677329,
+     "bits_hex": "0xd0004011",
+     "bool_bits_unmapped": [
+      "0x80000000"
+     ],
+     "bool_flags_set": [
+      {
+       "mask": 16384,
+       "name": "bAllowCullDistanceVolume",
+       "set": true
+      },
+      {
+       "mask": 16,
+       "name": "bDrawInForegroundAndInFrontOfPostProcessWhenInXrayMode",
+       "set": true
+      },
+      {
+       "mask": 1,
+       "name": "bForceEdCanScale",
+       "set": true
+      },
+      {
+       "mask": 268435456,
+       "name": "bReflectionNoSee",
+       "set": true
+      },
+      {
+       "mask": 1073741824,
+       "name": "bReflectionProbeNoSee",
+       "set": true
+      }
+     ],
+     "layout_name": {
+      "label": "decoded",
+      "reason": "BoolProperty bitfield at offset 476; flags listed in bool_flags_set",
+      "text": null
+     },
+     "offset": 476,
+     "tag_type": "BoolProperty",
+     "value_from": "instance"
+    },
+    {
+     "bits": 360906290,
+     "bits_hex": "0x1582fe32",
+     "bool_bits_unmapped": [],
+     "bool_flags_set": [
+      {
+       "mask": 2048,
+       "name": "BlockActors",
+       "set": true
+      },
+      {
+       "mask": 8192,
+       "name": "BlockNonZeroExtent",
+       "set": true
+      },
+      {
+       "mask": 32768,
+       "name": "BlockRigidBody",
+       "set": true
+      },
+      {
+       "mask": 4096,
+       "name": "BlockZeroExtent",
+       "set": true
+      },
+      {
+       "mask": 16384,
+       "name": "CanBlockCamera",
+       "set": true
+      },
+      {
+       "mask": 1024,
+       "name": "CollideActors",
+       "set": true
+      },
+      {
+       "mask": 2,
+       "name": "bAcceptsDynamicDominantLightShadows",
+       "set": true
+      },
+      {
+       "mask": 32,
+       "name": "bAcceptsDynamicLights",
+       "set": true
+      },
+      {
+       "mask": 16,
+       "name": "bAcceptsLights",
+       "set": true
+      },
+      {
+       "mask": 512,
+       "name": "bAllowAmbientOcclusion",
+       "set": true
+      },
+      {
+       "mask": 131072,
+       "name": "bBlockFootPlacement",
+       "set": true
+      },
+      {
+       "mask": 268435456,
+       "name": "bDisableMinCollisionThickness",
+       "set": true
+      },
+      {
+       "mask": 67108864,
+       "name": "bEnableContactModificationCallback",
+       "set": true
+      },
+      {
+       "mask": 8388608,
+       "name": "bNotifyRigidBodyCollision",
+       "set": true
+      },
+      {
+       "mask": 16777216,
+       "name": "bNotifyRigidBodyCollisionIgnoredWhenFarAway",
+       "set": true
+      }
+     ],
+     "layout_name": {
+      "label": "decoded",
+      "reason": "BoolProperty bitfield at offset 484; flags listed in bool_flags_set",
+      "text": null
+     },
+     "offset": 484,
+     "tag_type": "BoolProperty",
+     "value_from": "base_template"
+    },
+    {
+     "layout_name": {
+      "label": "decoded",
+      "reason": "BMSDK_OFFSETS.json PrimitiveComponent.LightingChannels at 0x200",
+      "text": "LightingChannels"
+     },
+     "name": {
+      "label": "decoded",
+      "text": "LightingChannels"
+     },
+     "offset": 512,
+     "tag_type": "StructProperty",
+     "value_from": "base_template"
+    },
+    {
+     "layout_name": {
+      "label": "UNKNOWN",
+      "reason": "no BMSDK layout entry at offset 556 (class layout not in BMSDK_OFFSETS.json)",
+      "text": null
+     },
+     "name": {
+      "label": "decoded",
+      "text": "XRayMaterials"
+     },
+     "offset": 556,
+     "tag_type": "ArrayProperty",
+     "value_from": "instance"
+    },
+    {
+     "index": 5284,
+     "layout_name": {
+      "label": "UNKNOWN",
+      "reason": "no BMSDK layout entry at offset 640 (class layout not in BMSDK_OFFSETS.json)",
+      "text": null
+     },
+     "offset": 640,
+     "ref": {
+      "class": "SkeletalMesh",
+      "index": 5284,
+      "path": "Batmobile_V2_Mesh.Batmobile_V2"
+     },
+     "tag_type": "ObjectReference",
+     "value_from": "instance"
+    },
+    {
+     "index": 142057,
+     "layout_name": {
+      "label": "UNKNOWN",
+      "reason": "no BMSDK layout entry at offset 656 (class layout not in BMSDK_OFFSETS.json)",
+      "text": null
+     },
+     "offset": 656,
+     "ref": {
+      "class": "AnimTree",
+      "index": 142057,
+      "path": "Anims.Batmobile_Drivable_AnimTree"
+     },
+     "tag_type": "ObjectReference",
+     "value_from": "base_template"
+    },
+    {
+     "index": 158266,
+     "layout_name": {
+      "label": "UNKNOWN",
+      "reason": "no BMSDK layout entry at offset 824 (class layout not in BMSDK_OFFSETS.json)",
+      "text": null
+     },
+     "offset": 824,
+     "ref": {
+      "class": "PhysicsAsset",
+      "index": 158266,
+      "path": "Physics.Batmobile_V3_Physics"
+     },
+     "tag_type": "ObjectReference",
+     "value_from": "base_template"
+    },
+    {
+     "layout_name": {
+      "label": "UNKNOWN",
+      "reason": "no BMSDK layout entry at offset 1148 (class layout not in BMSDK_OFFSETS.json)",
+      "text": null
+     },
+     "name": {
+      "label": "decoded",
+      "text": "AnimSets"
+     },
+     "offset": 1148,
+     "tag_type": "ArrayProperty",
+     "value_from": "instance"
+    },
+    {
+     "bits": 270344,
+     "bits_hex": "0x00042008",
+     "bool_bits_unmapped": [
+      "0x8",
+      "0x2000",
+      "0x40000"
+     ],
+     "bool_flags_set": [],
+     "layout_name": {
+      "label": "decoded",
+      "reason": "BoolProperty bitfield at offset 1500; flags listed in bool_flags_set",
+      "text": null
+     },
+     "offset": 1500,
+     "tag_type": "BoolProperty",
+     "value_from": "base_template"
+    }
+   ],
+   "instance_bytes": {
+    "parsed_end": 174,
+    "prefix": {
+     "bytes": 4,
+     "hex": "00000000"
+    },
+    "size": 258,
+    "start": 4,
+    "stop": "end",
+    "tail": {
+     "bytes": [
+      174,
+      258
+     ],
+     "hex": "120000000b0300000b0300000b0300000b0300000b0300000b0300000b0300000b0300000b0300000b0300000b0300000b0300000b0300000b0300000b0300000b0300000b0300000b0300000000000000000000"
+    }
+   },
+   "instance_export": 5289,
+   "name": "SVehicleMesh",
+   "startup_template_export": 169640,
+   "translation_cm": {
+    "from": "base_template",
+    "jc3_label": "derived: to_jc3_rot(p)*0.01 + BONES.offset_used, conditional on the actor frame equalling the PSK mesh frame (UNKNOWN link)",
+    "jc3_m_if_actor_frame_is_psk_frame": [
+     -0.0,
+     -0.927769,
+     0.654297
+    ],
+    "label": "decoded",
+    "source": "tag at offset 400 (Vector3)",
+    "value": [
+     -50.0,
+     0.0,
+     -95.0
+    ]
+   }
+  },
+  {
+   "base_template_export": 172112,
+   "fields": [],
+   "instance_bytes": {
+    "parsed_end": 2,
+    "prefix": {
+     "bytes": 0,
+     "hex": ""
+    },
+    "size": 2,
+    "start": 0,
+    "stop": "end",
+    "tail": {
+     "bytes": [
+      2,
+      2
+     ],
+     "hex": ""
+    }
+   },
+   "instance_export": 5106,
+   "name": "RB_StayUprightSetup",
+   "startup_template_export": 154788
+  }
+ ],
+ "schema": 1,
+ "static_mesh_chains": {
+  "175973": {
+   "body_setups": [
+    {
+     "AggGeom": {
+      "label": "UNKNOWN: AggGeom payload is not a tag stream (nested walk ends at 2 of 25907 bytes); its convex/box/sphere element layout is not decoded, so no geometry is claimed",
+      "nested_tag_walk": {
+       "parsed_end": 2,
+       "start": 0,
+       "stop": "end",
+       "tags": 1
+      },
+      "payload_first_32_hex": "0000000000000000000000002b0000000a000000ab2f7ec3a4adadc237996243",
+      "size": 25907
+     },
+     "class": "RB_BodySetup",
+     "export": 169748,
+     "name": "RB_BodySetup",
+     "outer": "Batmobile_V2_Mesh.Batmobile_V2",
+     "parsed_end": 25958,
+     "size": 43346,
+     "start": 0,
+     "stop": "end",
+     "tags": [
+      {
+       "bytes": [
+        0,
+        21
+       ],
+       "name": {
+        "label": "decoded",
+        "text": "PreCachedPhysDataVersion"
+       },
+       "offset": 205,
+       "type": "ByteProperty",
+       "value": 5
+      },
+      {
+       "bits": 18432,
+       "bits_hex": "0x00004800",
+       "bytes": [
+        21,
+        29
+       ],
+       "offset": 224,
+       "type": "BoolProperty"
+      },
+      {
+       "bytes": [
+        29,
+        25956
+       ],
+       "name": {
+        "label": "decoded",
+        "text": "AggGeom"
+       },
+       "offset": 96,
+       "size": 25907,
+       "type": "StructProperty"
+      },
+      {
+       "bytes": [
+        25956,
+        25958
+       ],
+       "kind": "terminator",
+       "raw": "0000"
+      }
+     ],
+     "unparsed_tail_bytes": 17388
+    }
+   ],
+   "class": "StaticMesh",
+   "export": 175973,
+   "name": "Batmobile_V2",
+   "outer": "Batmobile.Batmobile_V2_Mesh",
+   "parsed_end": 34,
+   "size": 25324,
+   "start": 0,
+   "stop": "end",
+   "tags": [
+    {
+     "bits": 1,
+     "bits_hex": "0x00000001",
+     "bytes": [
+      0,
+      8
+     ],
+     "offset": 412,
+     "type": "BoolProperty"
+    },
+    {
+     "bytes": [
+      8,
+      16
+     ],
+     "index": 169748,
+     "offset": 284,
+     "ref": {
+      "class": "RB_BodySetup",
+      "index": 169748,
+      "path": "Batmobile_V2.RB_BodySetup"
+     },
+     "type": "ObjectReference"
+    },
+    {
+     "bytes": [
+      16,
+      24
+     ],
+     "offset": 236,
+     "type": "IntProperty",
+     "value": 1
+    },
+    {
+     "bytes": [
+      24,
+      32
+     ],
+     "offset": 232,
+     "type": "IntProperty",
+     "value": 32
+    },
+    {
+     "bytes": [
+      32,
+      34
+     ],
+     "kind": "terminator",
+     "raw": "0000"
+    }
+   ]
+  },
+  "175974": {
+   "body_setups": [
+    {
+     "AggGeom": {
+      "label": "UNKNOWN: AggGeom payload is not a tag stream (nested walk ends at 2 of 8275 bytes); its convex/box/sphere element layout is not decoded, so no geometry is claimed",
+      "nested_tag_walk": {
+       "parsed_end": 2,
+       "start": 0,
+       "stop": "end",
+       "tags": 1
+      },
+      "payload_first_32_hex": "0000000000000000000000000d0000000800000087ece541e44918c376267234",
+      "size": 8275
+     },
+     "class": "RB_BodySetup",
+     "export": 169749,
+     "name": "RB_BodySetup",
+     "outer": "Batmobile_V2_Mesh.Batmobile_V2_Collision_Pursuite",
+     "parsed_end": 8326,
+     "size": 14062,
+     "start": 0,
+     "stop": "end",
+     "tags": [
+      {
+       "bytes": [
+        0,
+        21
+       ],
+       "name": {
+        "label": "decoded",
+        "text": "PreCachedPhysDataVersion"
+       },
+       "offset": 205,
+       "type": "ByteProperty",
+       "value": 5
+      },
+      {
+       "bits": 18432,
+       "bits_hex": "0x00004800",
+       "bytes": [
+        21,
+        29
+       ],
+       "offset": 224,
+       "type": "BoolProperty"
+      },
+      {
+       "bytes": [
+        29,
+        8324
+       ],
+       "name": {
+        "label": "decoded",
+        "text": "AggGeom"
+       },
+       "offset": 96,
+       "size": 8275,
+       "type": "StructProperty"
+      },
+      {
+       "bytes": [
+        8324,
+        8326
+       ],
+       "kind": "terminator",
+       "raw": "0000"
+      }
+     ],
+     "unparsed_tail_bytes": 5736
+    }
+   ],
+   "class": "StaticMesh",
+   "export": 175974,
+   "name": "Batmobile_V2_Collision_Pursuite",
+   "outer": "Batmobile.Batmobile_V2_Mesh",
+   "parsed_end": 34,
+   "size": 20660,
+   "start": 0,
+   "stop": "end",
+   "tags": [
+    {
+     "bits": 1,
+     "bits_hex": "0x00000001",
+     "bytes": [
+      0,
+      8
+     ],
+     "offset": 412,
+     "type": "BoolProperty"
+    },
+    {
+     "bytes": [
+      8,
+      16
+     ],
+     "index": 169749,
+     "offset": 284,
+     "ref": {
+      "class": "RB_BodySetup",
+      "index": 169749,
+      "path": "Batmobile_V2_Collision_Pursuite.RB_BodySetup"
+     },
+     "type": "ObjectReference"
+    },
+    {
+     "bytes": [
+      16,
+      24
+     ],
+     "offset": 236,
+     "type": "IntProperty",
+     "value": 1
+    },
+    {
+     "bytes": [
+      24,
+      32
+     ],
+     "offset": 232,
+     "type": "IntProperty",
+     "value": 32
+    },
+    {
+     "bytes": [
+      32,
+      34
+     ],
+     "kind": "terminator",
+     "raw": "0000"
+    }
+   ]
+  }
+ },
+ "svehicle_mesh_refs": [
+  {
+   "field_name": "UNKNOWN (SkeletalMeshComponent layout not in BMSDK_OFFSETS.json)",
+   "from": "instance",
+   "label": "decoded value and referent class; field name UNKNOWN",
+   "offset": 640,
+   "ref": {
+    "class": "SkeletalMesh",
+    "index": 5284,
+    "path": "Batmobile_V2_Mesh.Batmobile_V2"
+   }
+  },
+  {
+   "field_name": "UNKNOWN (SkeletalMeshComponent layout not in BMSDK_OFFSETS.json)",
+   "from": "base_template",
+   "label": "decoded value and referent class; field name UNKNOWN",
+   "offset": 656,
+   "ref": {
+    "class": "AnimTree",
+    "index": 142057,
+    "path": "Anims.Batmobile_Drivable_AnimTree"
+   }
+  },
+  {
+   "field_name": "UNKNOWN (SkeletalMeshComponent layout not in BMSDK_OFFSETS.json)",
+   "from": "base_template",
+   "label": "decoded value and referent class; field name UNKNOWN",
+   "offset": 824,
+   "ref": {
+    "class": "PhysicsAsset",
+    "index": 158266,
+    "path": "Physics.Batmobile_V3_Physics"
+   }
+  }
+ ],
+ "svehicle_tail_check": {
+  "XRayMaterials_payload_bytes": 76,
+  "label": "decoded byte comparison",
+  "remaining_bytes_after_copy_all_zero": true,
+  "tail_bytes": 84,
+  "tail_hex": "120000000b0300000b0300000b0300000b0300000b0300000b0300000b0300000b0300000b0300000b0300000b0300000b0300000b0300000b0300000b0300000b0300000b0300000b0300000000000000000000",
+  "tail_starts_with_XRayMaterials_payload": true
+ },
+ "unknown": [
+  "CylinderComponent radius and height: the floats at offsets 540 and 544 (78.0 and 175.0 in the BmGame base template) are decoded, but BMSDK_OFFSETS.json has no CylinderComponent layout, so which is radius and which is height is UNKNOWN. No bounds are claimed.",
+  "CollisionCylinder (Playable export 276): its template is not found in Startup or BmGame base chains; its translation/radius/height are UNKNOWN. Pawn.CylinderComponent (offset 900) is the slot it fills (decoded from the archetype).",
+  "StaticMesh geometry for Batmobile_V2 (175973) and Batmobile_V2_Collision_Pursuite (175974): the BodySetup AggGeom payloads are native binary (first 13 zero bytes then non-tag data); the element layout is not decoded, so no vertices, boxes or bounds are claimed.",
+  "PhysicsAsset Physics.Batmobile_V3_Physics (158266, reached from SVehicleMesh offset 824): bodies and constraints not decoded.",
+  "Which component is active in each mode: the selector BatmanVsBatmobileCollisionMode (layout offset 5895) is not serialised in the archetype, the Startup CDO or the BmGame base walk, so the Battle/Pursuit choice is UNKNOWN.",
+  "Field names for offsets 540/544 (cylinder), 644 (StaticMeshComponent reference) and 556/640/656/824/1148/1500 (SkeletalMeshComponent): no layout entry in BMSDK_OFFSETS.json; referent classes are decoded, names are not.",
+  "Collision flag effective values: taken from the BmGame base template (offset 484 and 476 bitfields); the bitfield-to-name map is the BMSDK PrimitiveComponent mask table. The RBChannel (524) and RBCollideWithChannels (516) values are not serialised in any walked layer and are UNKNOWN.",
+  "Actor frame to PSK mesh frame: the Translation values are actor-local; the link from actor frame to the Batmobile_V2 PSK frame is UNKNOWN. The JC3 positions use the SOCKETS_JC3 transform and are conditional on that frame link.",
+  "Prefix bytes before the first tag: 4 zero bytes in instances, 12 bytes (4 zero bytes plus an FName that equals the object's own name) in templates. Their meaning is UNKNOWN.",
+  "Tails after the terminator, all zero bytes: 21 for StaticMeshComponent templates (Startup 171103/171104, BmGame 176111/176112), 12 for SVehicleMesh templates (Startup 169640, BmGame 175716), 0 beyond the terminator for the cylinder templates (BmGame 142597/142598 end at 135 of 137 with 0000 as the terminator). Meaning UNKNOWN. SVehicleMesh instance (5289) carries an 84-byte tail, see svehicle_tail_check.",
+  "The Playable CollisionCylinder/Front/Rear and the StayUpright objects: sizes and terminators are decoded; no further tags exist.",
+  "Wreck PhysicsAsset Batmobile_V3_Destroyed_Physics (Playable 5017) was not used."
+ ]
+}

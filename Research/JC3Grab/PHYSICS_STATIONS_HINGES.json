@@ -1,0 +1,940 @@
+{
+ "schema": "jc3.stations_vs_hinges/1",
+ "generated_by": "Tools/scripts/jc3_stations_vs_hinges.py",
+ "question": "are the four wheel-station quads the hinge pivots G3-10e decoded?",
+ "answer": "no",
+ "inputs": {
+  "phys_grab": "E:/Modding/_gamedata/JC3grab\\phys",
+  "limits_json": "Research/JC3Grab/PHYSICS_LIMITS.json",
+  "limits_md": "Research/JC3Grab/PHYSICS_LIMITS.md"
+ },
+ "entities": 17,
+ "models": 6,
+ "distance_all_quads": {
+  "n": 24,
+  "min": 0.403544,
+  "median": 0.835385,
+  "max": 1.428041,
+  "within_1e-3": 0,
+  "within_1e-2": 0,
+  "within_0.05": 0,
+  "within_0.2": 0
+ },
+ "models_detail": [
+  {
+   "physicsc": "models/jc_vehicles/01_land/v0002_car_autostraad_oldcampervan/oldcampervan.physicsc",
+   "entities": [
+    "editor/entities/jc_vehicles/01_land/v0002_car_autostraad_oldcampervan/v0002_car_autostraad_oldcampervan_civilian_01.ee",
+    "editor/entities/jc_vehicles/01_land/v0002_car_autostraad_oldcampervan/v0002_car_autostraad_oldcampervan_civilian_z80.ee",
+    "editor/entities/jc_vehicles/01_land/v0002_car_autostraad_oldcampervan/v0002_car_autostraad_oldcampervan_debug.ee"
+   ],
+   "entity_count": 3,
+   "station": {
+    "x": 0.67,
+    "y": 0.333,
+    "z_rear": -1.265,
+    "z_front": 1.2,
+    "track_m": 1.34,
+    "wheelbase_m": 2.465
+   },
+   "container": {
+    "class": "hknpPhysicsSystemData",
+    "object_offset": 160,
+    "extent": 26912,
+    "relative": [
+     17968,
+     18064,
+     18160,
+     18256
+    ]
+   },
+   "table": {
+    "stride": 96,
+    "entries": 51,
+    "id_first": 1,
+    "id_last": 51,
+    "station_ids": [
+     39,
+     40,
+     41,
+     42
+    ],
+    "nonzero_positions": 4,
+    "station_quats": [
+     [
+      0.0,
+      0.0,
+      0.0,
+      0.9999999403953552
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      0.9999999403953552
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      0.9999999403953552
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      0.9999999403953552
+     ]
+    ],
+    "flags": [
+     255
+    ]
+   },
+   "hinges": {
+    "n": 11,
+    "AB_equal": 11
+   },
+   "hinge_pivots": [
+    [
+     -0.6089,
+     0.3723,
+     -2.0836
+    ],
+    [
+     -0.737,
+     0.5094,
+     2.028
+    ],
+    [
+     0.6795,
+     0.4431,
+     2.028
+    ],
+    [
+     -0.8341,
+     1.2305,
+     -1.8765
+    ],
+    [
+     -0.822,
+     1.3509,
+     -1.6647
+    ],
+    [
+     0.8352,
+     1.2124,
+     -1.8765
+    ],
+    [
+     0.84,
+     1.3295,
+     -1.6891
+    ],
+    [
+     -0.5035,
+     1.3152,
+     2.0605
+    ],
+    [
+     0.4928,
+     1.3152,
+     2.0605
+    ],
+    [
+     0.8332,
+     1.1158,
+     -0.7908
+    ],
+    [
+     0.8332,
+     1.0669,
+     0.5134
+    ]
+   ],
+   "nearest_pivot_distance": {
+    "min": 0.821769,
+    "median": 0.849289,
+    "max": 0.92965,
+    "per_quad": [
+     0.821769,
+     0.92965,
+     0.849289,
+     0.835385
+    ],
+    "variants_identical": true
+   },
+   "named_hardpoints_agree": true
+  },
+  {
+   "physicsc": "models/jc_vehicles/01_land/v0009_car_autostraad_modernsaloon/modernsaloon.physicsc",
+   "entities": [
+    "editor/entities/jc_vehicles/01_land/v0009_car_autostraad_modernsaloon/v0009_car_autostraad_modernsaloon_civilian_01.ee",
+    "editor/entities/jc_vehicles/01_land/v0009_car_autostraad_modernsaloon/v0009_car_autostraad_modernsaloon_debug.ee",
+    "editor/entities/jc_vehicles/01_land/v0009_car_autostraad_modernsaloon/v0009_car_autostraad_modernsaloon_premium_01.ee"
+   ],
+   "entity_count": 3,
+   "station": {
+    "x": 0.886,
+    "y": 0.342,
+    "z_rear": -1.469,
+    "z_front": 1.728,
+    "track_m": 1.772,
+    "wheelbase_m": 3.197
+   },
+   "container": {
+    "class": "hknpPhysicsSystemData",
+    "object_offset": 160,
+    "extent": 22256,
+    "relative": [
+     14768,
+     14864,
+     14960,
+     15056
+    ]
+   },
+   "table": {
+    "stride": 96,
+    "entries": 41,
+    "id_first": 1,
+    "id_last": 41,
+    "station_ids": [
+     34,
+     35,
+     36,
+     37
+    ],
+    "nonzero_positions": 4,
+    "station_quats": [
+     [
+      0.0,
+      0.0,
+      0.0,
+      0.9999999403953552
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      0.9999999403953552
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      0.9999999403953552
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      0.9999999403953552
+     ]
+    ],
+    "flags": [
+     1,
+     255
+    ]
+   },
+   "hinges": {
+    "n": 10,
+    "AB_equal": 10
+   },
+   "hinge_pivots": [
+    [
+     1.0069,
+     0.6091,
+     -1.7463
+    ],
+    [
+     -1.0025,
+     0.5829,
+     2.0388
+    ],
+    [
+     -0.9757,
+     0.7386,
+     -0.8368
+    ],
+    [
+     -0.8709,
+     1.0432,
+     -0.6012
+    ],
+    [
+     0.9757,
+     0.7386,
+     -0.8368
+    ],
+    [
+     0.8818,
+     1.0029,
+     -0.6004
+    ],
+    [
+     -0.9753,
+     0.7818,
+     0.4063
+    ],
+    [
+     0.9753,
+     0.7818,
+     0.4063
+    ],
+    [
+     0.0,
+     1.0343,
+     -0.9493
+    ],
+    [
+     -0.0,
+     1.112,
+     2.0903
+    ]
+   ],
+   "nearest_pivot_distance": {
+    "min": 0.403544,
+    "median": 0.751721,
+    "max": 1.228491,
+    "per_quad": [
+     0.751721,
+     0.403544,
+     0.410111,
+     1.228491
+    ],
+    "variants_identical": true
+   },
+   "named_hardpoints_agree": true
+  },
+  {
+   "physicsc": "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle.physicsc",
+   "entities": [
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_civilian_01.ee",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.ee",
+    "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_signature_preorder.ee"
+   ],
+   "entity_count": 3,
+   "station": {
+    "x": 0.885,
+    "y": 0.4,
+    "z_rear": -1.557,
+    "z_front": 1.446,
+    "track_m": 1.77,
+    "wheelbase_m": 3.003
+   },
+   "container": {
+    "class": "hknpPhysicsSystemData",
+    "object_offset": 160,
+    "extent": 20912,
+    "relative": [
+     13712,
+     13808,
+     15056,
+     15152
+    ]
+   },
+   "table": {
+    "stride": 96,
+    "entries": 41,
+    "id_first": 1,
+    "id_last": 41,
+    "station_ids": [
+     23,
+     24,
+     37,
+     38
+    ],
+    "nonzero_positions": 4,
+    "station_quats": [
+     [
+      0.0,
+      0.0,
+      0.0,
+      0.9999999403953552
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      0.9999999403953552
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      0.9999999403953552
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      0.9999999403953552
+     ]
+    ],
+    "flags": [
+     1,
+     255
+    ]
+   },
+   "hinges": {
+    "n": 9,
+    "AB_equal": 9
+   },
+   "hinge_pivots": [
+    [
+     -1.0185,
+     0.6223,
+     -0.7714
+    ],
+    [
+     -0.833,
+     1.0016,
+     -0.5032
+    ],
+    [
+     1.0185,
+     0.6223,
+     -0.7714
+    ],
+    [
+     0.833,
+     1.0016,
+     -0.5032
+    ],
+    [
+     0.6508,
+     0.2089,
+     -0.2296
+    ],
+    [
+     0.0,
+     1.0572,
+     -0.8478
+    ],
+    [
+     0.0,
+     1.0572,
+     -0.8478
+    ],
+    [
+     -0.5078,
+     0.7374,
+     2.4304
+    ],
+    [
+     0.0035,
+     1.44,
+     1.0209
+    ]
+   ],
+   "nearest_pivot_distance": {
+    "min": 0.827279,
+    "median": 1.106857,
+    "max": 1.428041,
+    "per_quad": [
+     0.827279,
+     0.827279,
+     1.106857,
+     1.428041
+    ],
+    "variants_identical": true
+   },
+   "named_hardpoints_agree": true
+  },
+  {
+   "physicsc": "models/jc_vehicles/01_land/v0502_car_solar_modernsedan/modernsedan.physicsc",
+   "entities": [
+    "editor/entities/jc_vehicles/01_land/v0502_car_solar_modernsedan/v0502_car_solar_modernsedan_civic_police_01.ee",
+    "editor/entities/jc_vehicles/01_land/v0502_car_solar_modernsedan/v0502_car_solar_modernsedan_civilian_01.ee",
+    "editor/entities/jc_vehicles/01_land/v0502_car_solar_modernsedan/v0502_car_solar_modernsedan_debug.ee"
+   ],
+   "entity_count": 3,
+   "station": {
+    "x": 0.818,
+    "y": 0.316,
+    "z_rear": -1.114,
+    "z_front": 1.304,
+    "track_m": 1.636,
+    "wheelbase_m": 2.418
+   },
+   "container": {
+    "class": "hknpPhysicsSystemData",
+    "object_offset": 160,
+    "extent": 25136,
+    "relative": [
+     17520,
+     17616,
+     17712,
+     17808
+    ]
+   },
+   "table": {
+    "stride": 96,
+    "entries": 49,
+    "id_first": 1,
+    "id_last": 49,
+    "station_ids": [
+     40,
+     41,
+     42,
+     43
+    ],
+    "nonzero_positions": 4,
+    "station_quats": [
+     [
+      0.0,
+      0.0,
+      0.0,
+      0.9999999403953552
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      0.9999999403953552
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      0.9999999403953552
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      0.9999999403953552
+     ]
+    ],
+    "flags": [
+     1,
+     255
+    ]
+   },
+   "hinges": {
+    "n": 8,
+    "AB_equal": 8
+   },
+   "hinge_pivots": [
+    [
+     -0.8575,
+     0.8116,
+     -0.675
+    ],
+    [
+     0.8575,
+     0.8116,
+     -0.675
+    ],
+    [
+     -0.8462,
+     0.9588,
+     0.2988
+    ],
+    [
+     0.871,
+     0.8662,
+     0.2906
+    ],
+    [
+     0.8034,
+     0.5686,
+     -1.5788
+    ],
+    [
+     0.0,
+     0.9898,
+     -0.9145
+    ],
+    [
+     -0.8228,
+     0.3633,
+     1.7094
+    ],
+    [
+     0.0,
+     1.4484,
+     1.4554
+    ]
+   ],
+   "nearest_pivot_distance": {
+    "min": 0.407968,
+    "median": 0.663174,
+    "max": 1.15438,
+    "per_quad": [
+     0.663174,
+     0.529044,
+     0.407968,
+     1.15438
+    ],
+    "variants_identical": true
+   },
+   "named_hardpoints_agree": true
+  },
+  {
+   "physicsc": "models/jc_vehicles/01_land/v0508_car_solar_oldcompact/oldcompact.physicsc",
+   "entities": [
+    "editor/entities/jc_vehicles/01_land/v0508_car_solar_oldcompact/v0508_car_solar_oldcompact_civilian_01.ee",
+    "editor/entities/jc_vehicles/01_land/v0508_car_solar_oldcompact/v0508_car_solar_oldcompact_debug.ee"
+   ],
+   "entity_count": 2,
+   "station": {
+    "x": 0.735,
+    "y": 0.321,
+    "z_rear": -1.374,
+    "z_front": 1.43,
+    "track_m": 1.47,
+    "wheelbase_m": 2.804
+   },
+   "container": {
+    "class": "hknpPhysicsSystemData",
+    "object_offset": 160,
+    "extent": 24704,
+    "relative": [
+     17072,
+     17168,
+     17264,
+     17360
+    ]
+   },
+   "table": {
+    "stride": 96,
+    "entries": 47,
+    "id_first": 1,
+    "id_last": 47,
+    "station_ids": [
+     41,
+     42,
+     43,
+     44
+    ],
+    "nonzero_positions": 4,
+    "station_quats": [
+     [
+      0.0,
+      0.0,
+      0.0,
+      0.9999999403953552
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      0.9999999403953552
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      0.9999999403953552
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      0.9999999403953552
+     ]
+    ],
+    "flags": [
+     1,
+     255
+    ]
+   },
+   "hinges": {
+    "n": 10,
+    "AB_equal": 10
+   },
+   "hinge_pivots": [
+    [
+     0.7829,
+     0.5786,
+     -1.9494
+    ],
+    [
+     -0.7943,
+     0.5338,
+     2.2299
+    ],
+    [
+     -0.8657,
+     0.6435,
+     -0.6637
+    ],
+    [
+     -0.8961,
+     0.9855,
+     -0.4952
+    ],
+    [
+     0.8657,
+     0.6435,
+     -0.6637
+    ],
+    [
+     0.8961,
+     0.9855,
+     -0.4952
+    ],
+    [
+     -0.8657,
+     0.6435,
+     0.3177
+    ],
+    [
+     0.8657,
+     0.6435,
+     0.3177
+    ],
+    [
+     0.0,
+     1.0189,
+     -0.9004
+    ],
+    [
+     0.0,
+     1.0341,
+     1.5249
+    ]
+   ],
+   "nearest_pivot_distance": {
+    "min": 0.632244,
+    "median": 0.829812,
+    "max": 1.02848,
+    "per_quad": [
+     0.790951,
+     0.632244,
+     0.829812,
+     1.02848
+    ],
+    "variants_identical": true
+   },
+   "named_hardpoints_agree": true
+  },
+  {
+   "physicsc": "models/jc_vehicles/01_land/v0603_car_urga_smalltank/smalltank.physicsc",
+   "entities": [
+    "editor/entities/jc_vehicles/01_land/v0603_car_urga_smalltank/v0603_car_urga_smalltank_debug.ee",
+    "editor/entities/jc_vehicles/01_land/v0603_car_urga_smalltank/v0603_car_urga_smalltank_military_01.ee",
+    "editor/entities/jc_vehicles/01_land/v0603_car_urga_smalltank/v0603_car_urga_smalltank_rebel_01.ee"
+   ],
+   "entity_count": 3,
+   "station": {
+    "x": 1.231,
+    "y": 0.615,
+    "z_rear": -1.598,
+    "z_front": 1.63,
+    "track_m": 2.462,
+    "wheelbase_m": 3.228
+   },
+   "container": {
+    "class": "hknpPhysicsSystemData",
+    "object_offset": 160,
+    "extent": 18272,
+    "relative": [
+     13312,
+     13408,
+     13504,
+     13600
+    ]
+   },
+   "table": {
+    "stride": 96,
+    "entries": 36,
+    "id_first": 1,
+    "id_last": 36,
+    "station_ids": [
+     33,
+     34,
+     35,
+     36
+    ],
+    "nonzero_positions": 4,
+    "station_quats": [
+     [
+      0.0,
+      0.0,
+      0.0,
+      0.9999999403953552
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      0.9999999403953552
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      0.9999999403953552
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      0.9999999403953552
+     ]
+    ],
+    "flags": [
+     255
+    ]
+   },
+   "hinges": {
+    "n": 16,
+    "AB_equal": 16
+   },
+   "hinge_pivots": [
+    [
+     0.5617,
+     0.8167,
+     -2.33
+    ],
+    [
+     -0.0128,
+     1.3585,
+     2.3377
+    ],
+    [
+     -0.8483,
+     1.4454,
+     -1.3336
+    ],
+    [
+     -1.1185,
+     0.5855,
+     -0.6532
+    ],
+    [
+     0.8429,
+     1.442,
+     -1.3369
+    ],
+    [
+     1.1444,
+     0.5855,
+     -0.6647
+    ],
+    [
+     -1.0436,
+     1.0081,
+     2.3497
+    ],
+    [
+     1.024,
+     1.0081,
+     2.3497
+    ],
+    [
+     -0.0395,
+     1.3521,
+     -1.8345
+    ],
+    [
+     -0.5226,
+     1.6458,
+     -0.6675
+    ],
+    [
+     0.5751,
+     1.6458,
+     -0.6675
+    ],
+    [
+     0.0,
+     1.9143,
+     -0.3611
+    ],
+    [
+     -0.4558,
+     2.6627,
+     1.3729
+    ],
+    [
+     -0.0234,
+     2.3475,
+     0.0314
+    ],
+    [
+     0.3229,
+     2.4059,
+     1.8392
+    ],
+    [
+     0.0,
+     1.8131,
+     0.5247
+    ]
+   ],
+   "nearest_pivot_distance": {
+    "min": 0.841172,
+    "median": 0.93776,
+    "max": 0.951818,
+    "per_quad": [
+     0.951818,
+     0.93776,
+     0.841172,
+     0.845752
+    ],
+    "variants_identical": true
+   },
+   "named_hardpoints_agree": true
+  }
+ ],
+ "pivot_x": {
+  "n": 64,
+  "side_n": 50,
+  "side_min": 0.3229,
+  "side_max": 1.1444,
+  "centre_n": 14
+ },
+ "problems": [],
+ "station_ids": {
+  "oldcampervan.physicsc": [
+   39,
+   40,
+   41,
+   42
+  ],
+  "modernsaloon.physicsc": [
+   34,
+   35,
+   36,
+   37
+  ],
+  "sportsmuscle.physicsc": [
+   23,
+   24,
+   37,
+   38
+  ],
+  "modernsedan.physicsc": [
+   40,
+   41,
+   42,
+   43
+  ],
+  "oldcompact.physicsc": [
+   41,
+   42,
+   43,
+   44
+  ],
+  "smalltank.physicsc": [
+   33,
+   34,
+   35,
+   36
+  ]
+ },
+ "station_ids_consecutive": 5,
+ "checks": {
+  "four_quads_per_entity": true,
+  "variants_of_one_car_agree": true,
+  "quads_inside_system_object": true,
+  "quads_are_distinct_table_entries": true,
+  "only_wheel_entries_have_a_position": true,
+  "station_rotation_is_identity": true,
+  "named_hardpoints_agree": true,
+  "no_quad_is_a_hinge_pivot": true,
+  "hinge_frames_share_the_pivot": true
+ }
+}

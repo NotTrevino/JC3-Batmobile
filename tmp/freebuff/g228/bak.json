@@ -1,0 +1,2615 @@
+{
+ "arm_targets": {
+  "arm1_needs": {
+   "H1": "bullet_armor_strength = 100 (fleet maximum is 99; out of domain, and test-077 shipped exactly this and failed)",
+   "H2": "bullet_armor_strength >= 144.000002 (fleet maximum is 99; the shotgun alone delivers 144.000002 per trigger pull)",
+   "either": "invulnerable = 1 on the CCar root (whole-vehicle; also blocks ARM-2)"
+  },
+  "arm2_needs": {
+   "H1": "per-hit = D x (1 - strength/100) must stay above 0, i.e. strength < 100",
+   "H2": "explosion_armor_strength < tank shell damage, i.e. strength below 1500.0 (the build ships 50)",
+   "note": "ARM-1 and ARM-2 cannot both come from `invulnerable`; they need the channel split that bullet_heavy_* already expresses at the name level"
+  },
+  "bmak_ratio": {
+   "armour_mode_damage_reduction": 0,
+   "emp_missile_damages": [
+    60.0
+   ],
+   "health": 1200,
+   "heavy_cannon_damage": 50.0,
+   "heavy_cannon_hits": 24,
+   "missile_damages": [
+    250.0
+   ],
+   "source": "DAMAGE_RULES.json (G1-14); ArmourModeDamageReduction ships 0 (CHAIN.json)"
+  },
+  "fleet_max_health": 4000,
+  "hits_at_fleet_max_health_H0": 3,
+  "hits_at_fleet_max_health_H1": 6,
+  "max_health_needed": 36000.0,
+  "max_small_arms_per_hit": 144.000002,
+  "tank_shell_damage": 1500.0
+ },
+ "arms": {
+  "assault_rifle": {
+   "blast": null,
+   "blast_in_file": null,
+   "channel": "bullet",
+   "damage": 32.0,
+   "fire_rate_s": 0.09200000017881393,
+   "gun": "bullet_weapon",
+   "key": "assault_rifle",
+   "label": "Rico's assault rifle (w111_UP_39)",
+   "mount": "patch",
+   "pellets": 1,
+   "per_shot_vs_vehicle": 32.0,
+   "tune": "editor/entities/jc_weapons/02_two_handed/w111_assault_rifle_up_39/w111_assault_rifle_up_39.wtunec",
+   "vehicle_factor": 1.0
+  },
+  "grenade": {
+   "blast": null,
+   "blast_in_file": {
+    "path": "editor/entities/jc_explosions/weapons/hand_grenade.ftunec",
+    "player_damage": 700,
+    "player_radius": 8.0
+   },
+   "channel": "explosion",
+   "damage": 750.0,
+   "fire_rate_s": 0.75,
+   "gun": "grenade_weapon",
+   "key": "grenade",
+   "label": "Rico's grenade (w301)",
+   "mount": "patch",
+   "pellets": 1,
+   "per_shot_vs_vehicle": 1012.5000178813934,
+   "tune": "editor/entities/jc_weapons/03_thrown/w301_grenade/w301_grenade.wtunec",
+   "vehicle_factor": 1.350000023841858
+  },
+  "heli_mg": {
+   "blast": null,
+   "blast_in_file": null,
+   "channel": "bullet",
+   "damage": 250.0,
+   "fire_rate_s": 0.10000000149011612,
+   "gun": "bullet_weapon",
+   "impact_pulse": {
+    "id": "w604_helicopter_mgun_impact",
+    "path": "editor/entities/jc_explosions/weapons/w604_helicopter_mgun_impact.ftunec",
+    "player_damage": 25,
+    "player_radius": 1.5
+   },
+   "key": "heli_mg",
+   "label": "heli MG w604_helicopter_mgun",
+   "mount": "archive",
+   "pellets": 1,
+   "per_shot_vs_vehicle": 25.00000037252903,
+   "tune": "w604_helicopter_mgun",
+   "vehicle_factor": 0.10000000149011612
+  },
+  "heli_missile": {
+   "blast": null,
+   "blast_in_file": null,
+   "channel": "bullet",
+   "damage": 1500.0,
+   "fire_rate_s": 0.5,
+   "gun": "missile_weapon",
+   "key": "heli_missile",
+   "label": "heli missile w601_helicopter_missile",
+   "mount": "archive",
+   "pellets": 1,
+   "per_shot_vs_vehicle": 1500.0,
+   "tune": "w601_helicopter_missile",
+   "vehicle_factor": 1.0
+  },
+  "machine_gun": {
+   "blast": null,
+   "blast_in_file": null,
+   "channel": "bullet",
+   "damage": 56.0,
+   "fire_rate_s": 0.13099999725818634,
+   "gun": "bullet_weapon",
+   "key": "machine_gun",
+   "label": "Rico's machine gun (w131_Vdova_89)",
+   "mount": "patch",
+   "pellets": 1,
+   "per_shot_vs_vehicle": 28.0,
+   "tune": "editor/entities/jc_weapons/02_two_handed/w131_machine_gun_urga_vdova_89/w131_machine_gun_urga_vdova_89.wtunec",
+   "vehicle_factor": 0.5
+  },
+  "pistol": {
+   "blast": null,
+   "blast_in_file": null,
+   "channel": "bullet",
+   "damage": 30.0,
+   "fire_rate_s": 0.11999999731779099,
+   "gun": "bullet_weapon",
+   "key": "pistol",
+   "label": "Rico's pistol (w011_pozhar_98)",
+   "mount": "patch",
+   "pellets": 1,
+   "per_shot_vs_vehicle": 30.0,
+   "tune": "editor/entities/jc_weapons/01_one_handed/w011_pistol_u_pozhar_98/w011_pistol_u_pozhar_98.wtunec",
+   "vehicle_factor": 1.0
+  },
+  "rpg": {
+   "blast": null,
+   "blast_in_file": {
+    "path": "editor/entities/jc_explosions/weapons/rpg_mm110.ftunec",
+    "player_damage": 1500,
+    "player_radius": 10.0
+   },
+   "channel": "explosion",
+   "damage": 30.0,
+   "fire_rate_s": 1.0,
+   "gun": "missile_weapon",
+   "key": "rpg",
+   "label": "Rico's RPG (w141_UVK_13)",
+   "mount": "patch",
+   "pellets": 1,
+   "per_shot_vs_vehicle": 15.0,
+   "tune": "editor/entities/jc_weapons/02_two_handed/w141_rpg_uvk_13/w141_rpg_uvk_13.wtunec",
+   "vehicle_factor": 0.5
+  },
+  "shotgun": {
+   "blast": null,
+   "blast_in_file": null,
+   "channel": "bullet",
+   "damage": 90.0,
+   "fire_rate_s": 0.6499999761581421,
+   "gun": "bullet_weapon",
+   "key": "shotgun",
+   "label": "Rico's shotgun (w151_RYS_96)",
+   "mount": "patch",
+   "pellets": 8,
+   "per_shot_vs_vehicle": 144.0000021457672,
+   "tune": "editor/entities/jc_weapons/02_two_handed/w151_shotgun_u_rys_96/w151_shotgun_u_rys_96.wtunec",
+   "vehicle_factor": 0.20000000298023224
+  },
+  "tank_cannon": {
+   "blast": null,
+   "blast_in_file": {
+    "ai_damage": 550,
+    "path": "editor/entities/jc_explosions/weapons/w602_mediumtank_canon.ftunec",
+    "player_damage": 1500,
+    "player_radius": 8.0
+   },
+   "channel": "explosion",
+   "damage": 1.0,
+   "fire_rate_s": 1.75,
+   "gun": "bullet_weapon",
+   "key": "tank_cannon",
+   "label": "tank cannon w602_mediumtank_canon",
+   "mount": "archive",
+   "pellets": 1,
+   "per_shot_vs_vehicle": 1.0,
+   "tune": "w602_mediumtank_canon",
+   "vehicle_factor": 1.0
+  }
+ },
+ "builds": {
+  "build": "E:\\Modding\\JC3-Batmobile\\Builds\\test-091",
+  "build_epe": "v0300_car_kensington_sportsmuscle_civilian_01.epe",
+  "donor": "v0300_car_kensington_sportsmuscle__v0300_car_kensington_sportsmuscle_civilian_01.ee.json",
+  "medium_tank": "v0201_car_capstone_mediumtank__v0201_car_capstone_mediumtank_military_01.ee.json"
+ },
+ "chain": [
+  {
+   "carrier": "`VehicleParts.parts[].damage_type` -> a `PartDamageType` name",
+   "class": "decoded (mechanism)",
+   "evidence": "monorailflatbed_vehicle_parts.vmodc (the only VehicleParts module in the fleet that decodes: 4 entities, all the same shared file)",
+   "name": "the hit lands on a part",
+   "step": 1,
+   "unknown": "the donor's, the tank's and the build's own part -> damage-type maps: every other `*_vehicle_parts.vmodc` fails ConvertAdf (MODLOG 98), so which part a given shot hits and which `PartDamageType` that part carries is UNKNOWN for all three vehicles"
+  },
+  {
+   "carrier": "`<weapon>_weapon[0].tuning.base_tuning.damage` x `vehicle_damage_factor` x `bullets_per_shot`; blasts use `ForcePulseSettings.PlayerDamage`",
+   "class": "decoded (values); the multiplication itself is `derived` - both fields are named, no file states the product",
+   "evidence": "WEAPONS.jsonl (vehicle arms) + the hand tunes decoded here",
+   "name": "the weapon delivers damage",
+   "step": 2,
+   "unknown": "`object_damage_factor` is the character/object half and is not used here; whether a vehicle takes `damage x vehicle_damage_factor` or the raw `damage` with the factor applied to impulse only is UNKNOWN (the field name is the only bridge)"
+  },
+  {
+   "carrier": "`VehicleDamage` carries 8 channels: bullet, bullet_heavy, explosion, impact, fire, melee, electricity, grapple_pull",
+   "class": "decoded (the channels exist)",
+   "evidence": "the 233 decoded VehicleDamage modules",
+   "name": "the damage type selects an armour channel",
+   "step": 3,
+   "unknown": "no file maps a weapon to a channel: across the 9 weapon tunes decoded here (1,515 member rows) 0 member names mention heavy/armour/penetration, so whether an assault rifle counts as `bullet` and a tank MG as `bullet_heavy` is UNKNOWN. The names are the only bridge"
+  },
+  {
+   "carrier": "`<channel>_armor` (0..5000) + `<channel>_armor_strength` (0..99 for bullets, 0..100 for electricity/grapple)",
+   "class": "decoded (values); the composition is UNKNOWN",
+   "evidence": "fleet census in this file; MODLOG 97 (the 99/100 gate) and 98 (test-077 with 100 still failed, symptom unrecorded)",
+   "name": "the channel's gate",
+   "step": 4,
+   "unknown": "what `_armor` and `_armor_strength` do to a hit. Three models are carried here (H0/H1/H2) with exact numbers; the Q-1 probes separate them"
+  },
+  {
+   "carrier": "`VehicleDamage.part_damage_types[]`: initial_health, damaged_health, loosen_health, instantly_{damaged,loosened,broken}_by_bullets, damages_owning_vehicle",
+   "class": "decoded (rows); semantics UNKNOWN",
+   "evidence": "24 rows in the donor, 24 in the medium tank, 24 in the build - the same 24 `Land_*` names in all three, but the numbers differ: the tank's table differs from the donor's in 24 values, while the build's table is the donor's with exactly 1 change (Land_Wheel.instantly_damaged_by_bullets). The train's own health module carries a `Train_*` set of 13 names, so the type list is per vehicle family, not global",
+   "name": "the part's own damage table",
+   "step": 5,
+   "unknown": "what initial/damaged/loosen health measure (part HP thresholds? health lost?) and whether `damages_owning_vehicle` is the only path from part damage to vehicle health is not in any file"
+  },
+  {
+   "carrier": "`VehicleDamage.max_health` (500..4000) x the entity root's `health` float32 (100.0 on all 233 roots) + the root's `invulnerable` int32 (0 on all 233)",
+   "class": "decoded (values)",
+   "evidence": "DAMAGE_MECHANISMS.md \u00a71/\u00a73; the build's own `.epe` re-read here",
+   "name": "the vehicle's health pool and scale",
+   "step": 6,
+   "unknown": "how the root `health` float composes with `max_health` (percent? multiplier? a separate pool?). Every shipped root is 100.0, so no file shows a second value to compare against"
+  },
+  {
+   "carrier": "smoke_threshold, burn_threshold, explosion_threshold, npc_explosion_threshold, vulnerable_explosion_threshold, explosion_delay_s",
+   "class": "decoded (values); semantics UNKNOWN",
+   "evidence": "the 233 modules",
+   "name": "thresholds and death",
+   "step": 7,
+   "unknown": "whether explosion_threshold is a per-hit blast damage that destroys the vehicle outright or a health threshold; the fleet's 500..4000 range overlaps max_health 500..4000, so both readings fit the data"
+  }
+ ],
+ "channel_bridge": {
+  "names": [],
+  "rows": 1515,
+  "rows_naming_heavy_or_armour": 0,
+  "tunes": 9
+ },
+ "diffs": {
+  "part_table_build_vs_donor": [
+   [
+    "Land_Wheel",
+    "instantly_damaged_by_bullets",
+    0,
+    1
+   ]
+  ],
+  "part_table_build_vs_tank": [
+   [
+    "Land_Generic",
+    "damaged_health",
+    0,
+    100
+   ],
+   [
+    "Land_Wheel",
+    "initial_health",
+    1020,
+    1000
+   ],
+   [
+    "Land_Wheel",
+    "damaged_health",
+    400,
+    500
+   ],
+   [
+    "Land_Door",
+    "initial_health",
+    300,
+    1000
+   ],
+   [
+    "Land_Door",
+    "loosen_health",
+    200,
+    100
+   ],
+   [
+    "Land_Window",
+    "initial_health",
+    50,
+    500
+   ],
+   [
+    "Land_Stunt_Window",
+    "initial_health",
+    700,
+    2000
+   ],
+   [
+    "Land_Engine",
+    "initial_health",
+    900,
+    1800
+   ],
+   [
+    "Land_Engine",
+    "loosen_health",
+    150,
+    100
+   ],
+   [
+    "Land_Roof_Rack",
+    "damaged_health",
+    0,
+    100
+   ],
+   [
+    "Land_Roof_Rack",
+    "loosen_health",
+    50,
+    100
+   ],
+   [
+    "Land_Bumper",
+    "loosen_health",
+    50,
+    100
+   ],
+   [
+    "Land_Fender",
+    "initial_health",
+    200,
+    500
+   ],
+   [
+    "Land_Fender",
+    "damaged_health",
+    0,
+    200
+   ],
+   [
+    "Land_Fender",
+    "loosen_health",
+    50,
+    200
+   ],
+   [
+    "Land_Hood",
+    "initial_health",
+    350,
+    200
+   ],
+   [
+    "Land_Hood",
+    "damaged_health",
+    0,
+    100
+   ],
+   [
+    "Land_Trunk",
+    "initial_health",
+    350,
+    200
+   ],
+   [
+    "Land_Trunk",
+    "damaged_health",
+    0,
+    100
+   ],
+   [
+    "Land_Back_Gate",
+    "damaged_health",
+    0,
+    100
+   ],
+   [
+    "Land_Back_Gate",
+    "loosen_health",
+    50,
+    100
+   ],
+   [
+    "Land_Grill",
+    "damaged_health",
+    0,
+    100
+   ],
+   [
+    "Land_Grill",
+    "loosen_health",
+    50,
+    100
+   ]
+  ],
+  "part_table_tank_vs_donor": [
+   [
+    "Land_Generic",
+    "damaged_health",
+    100,
+    0
+   ],
+   [
+    "Land_Wheel",
+    "initial_health",
+    1000,
+    1020
+   ],
+   [
+    "Land_Wheel",
+    "damaged_health",
+    500,
+    400
+   ],
+   [
+    "Land_Wheel",
+    "instantly_damaged_by_bullets",
+    0,
+    1
+   ],
+   [
+    "Land_Door",
+    "initial_health",
+    1000,
+    300
+   ],
+   [
+    "Land_Door",
+    "loosen_health",
+    100,
+    200
+   ],
+   [
+    "Land_Window",
+    "initial_health",
+    500,
+    50
+   ],
+   [
+    "Land_Stunt_Window",
+    "initial_health",
+    2000,
+    700
+   ],
+   [
+    "Land_Engine",
+    "initial_health",
+    1800,
+    900
+   ],
+   [
+    "Land_Engine",
+    "loosen_health",
+    100,
+    150
+   ],
+   [
+    "Land_Roof_Rack",
+    "damaged_health",
+    100,
+    0
+   ],
+   [
+    "Land_Roof_Rack",
+    "loosen_health",
+    100,
+    50
+   ],
+   [
+    "Land_Bumper",
+    "loosen_health",
+    100,
+    50
+   ],
+   [
+    "Land_Fender",
+    "initial_health",
+    500,
+    200
+   ],
+   [
+    "Land_Fender",
+    "damaged_health",
+    200,
+    0
+   ],
+   [
+    "Land_Fender",
+    "loosen_health",
+    200,
+    50
+   ],
+   [
+    "Land_Hood",
+    "initial_health",
+    200,
+    350
+   ],
+   [
+    "Land_Hood",
+    "damaged_health",
+    100,
+    0
+   ],
+   [
+    "Land_Trunk",
+    "initial_health",
+    200,
+    350
+   ],
+   [
+    "Land_Trunk",
+    "damaged_health",
+    100,
+    0
+   ],
+   [
+    "Land_Back_Gate",
+    "damaged_health",
+    100,
+    0
+   ],
+   [
+    "Land_Back_Gate",
+    "loosen_health",
+    100,
+    50
+   ],
+   [
+    "Land_Grill",
+    "damaged_health",
+    100,
+    0
+   ],
+   [
+    "Land_Grill",
+    "loosen_health",
+    100,
+    50
+   ]
+  ],
+  "scalars_build_vs_donor": [
+   [
+    "bullet_armor",
+    5000,
+    0
+   ],
+   [
+    "bullet_armor_strength",
+    99,
+    0
+   ],
+   [
+    "bullet_heavy_armor",
+    5,
+    0
+   ],
+   [
+    "bullet_heavy_armor_strength",
+    20,
+    0
+   ],
+   [
+    "burn_threshold",
+    250,
+    80
+   ],
+   [
+    "deform_scale",
+    0,
+    1
+   ],
+   [
+    "electricity_armor",
+    -1,
+    0
+   ],
+   [
+    "electricity_armor_strength",
+    100,
+    0
+   ],
+   [
+    "explosion_armor",
+    250,
+    0
+   ],
+   [
+    "explosion_armor_strength",
+    50,
+    0
+   ],
+   [
+    "explosion_delay_s",
+    10,
+    8
+   ],
+   [
+    "explosion_threshold",
+    4000,
+    700
+   ],
+   [
+    "grapple_pull_armor",
+    -1,
+    0
+   ],
+   [
+    "grapple_pull_armor_strength",
+    100,
+    0
+   ],
+   [
+    "impact_armor",
+    5000,
+    0
+   ],
+   [
+    "impact_armor_strength",
+    100,
+    0
+   ],
+   [
+    "impact_damage_factor",
+    0,
+    1
+   ],
+   [
+    "max_health",
+    2000,
+    700
+   ],
+   [
+    "melee_armor",
+    5000,
+    0
+   ],
+   [
+    "melee_armor_strength",
+    100,
+    0
+   ],
+   [
+    "npc_explosion_threshold",
+    4000,
+    700
+   ],
+   [
+    "smoke_threshold",
+    1050,
+    200
+   ],
+   [
+    "vulnerable_explosion_threshold",
+    100,
+    35
+   ]
+  ],
+  "scalars_build_vs_tank": [
+   [
+    "deform_scale",
+    0,
+    1
+   ],
+   [
+    "impact_armor",
+    5000,
+    0
+   ],
+   [
+    "impact_armor_strength",
+    100,
+    0
+   ],
+   [
+    "impact_damage_factor",
+    0,
+    1
+   ],
+   [
+    "melee_armor",
+    5000,
+    0
+   ],
+   [
+    "melee_armor_strength",
+    100,
+    0
+   ]
+  ],
+  "scalars_tank_vs_donor": [
+   [
+    "bullet_armor",
+    5000,
+    0
+   ],
+   [
+    "bullet_armor_strength",
+    99,
+    0
+   ],
+   [
+    "bullet_heavy_armor",
+    5,
+    0
+   ],
+   [
+    "bullet_heavy_armor_strength",
+    20,
+    0
+   ],
+   [
+    "burn_threshold",
+    250,
+    80
+   ],
+   [
+    "electricity_armor",
+    -1,
+    0
+   ],
+   [
+    "electricity_armor_strength",
+    100,
+    0
+   ],
+   [
+    "explosion_armor",
+    250,
+    0
+   ],
+   [
+    "explosion_armor_strength",
+    50,
+    0
+   ],
+   [
+    "explosion_delay_s",
+    10,
+    8
+   ],
+   [
+    "explosion_threshold",
+    4000,
+    700
+   ],
+   [
+    "grapple_pull_armor",
+    -1,
+    0
+   ],
+   [
+    "grapple_pull_armor_strength",
+    100,
+    0
+   ],
+   [
+    "max_health",
+    2000,
+    700
+   ],
+   [
+    "npc_explosion_threshold",
+    4000,
+    700
+   ],
+   [
+    "smoke_threshold",
+    1050,
+    200
+   ],
+   [
+    "vulnerable_explosion_threshold",
+    100,
+    35
+   ]
+  ]
+ },
+ "fleet": {
+  "modules": 233,
+  "pairs": {
+   "bullet": {
+    "0@0": 183,
+    "100@50": 18,
+    "100@75": 4,
+    "2000@99": 6,
+    "20@60": 9,
+    "5000@99": 13
+   },
+   "bullet_heavy": {
+    "0@0": 189,
+    "100@30": 18,
+    "100@50": 3,
+    "5@20": 14,
+    "5@40": 9
+   },
+   "electricity": {
+    "-1@100": 41,
+    "0@0": 192
+   },
+   "explosion": {
+    "0@0": 193,
+    "100@100": 13,
+    "100@30": 14,
+    "250@50": 13
+   },
+   "fire": {
+    "0@0": 233
+   },
+   "grapple_pull": {
+    "-1@100": 41,
+    "0@0": 192
+   },
+   "impact": {
+    "0@0": 220,
+    "5@100": 13
+   },
+   "melee": {
+    "0@0": 233
+   }
+  }
+ },
+ "generated_by": "Tools/scripts/damage_predict.py",
+ "models": {
+  "H0": "armour ignored: per-hit = D",
+  "H1": "percentage gate: per-hit = D x (1 - strength/100)",
+  "H2": "threshold gate + pool: D <= strength absorbed, else ceil((armor + HP) / D)"
+ },
+ "probes": [
+  {
+   "H0": "2 shells",
+   "H1": "3 shells",
+   "H2": "2 shells",
+   "arm": "tank_cannon",
+   "channel": "explosion",
+   "id": "Q1-DM-A",
+   "question": "is the armour strength a percentage gate (H1) or a per-hit threshold (H2)?",
+   "setup": "one tank shell into the Batmobile's body, at the centre of the 8 m blast",
+   "vehicle": "build_test-091",
+   "why": "strength 50 makes H1 halve the 1500 blast; H2 lets it through because 1500 > 50. The explosion channel is the only one where the two models disagree at a testable count"
+  },
+  {
+   "H0": "200 rounds = 6,000 damage = destroyed",
+   "H1": "200 rounds x 0.3 = 60 damage, bar barely moves, no destruction",
+   "H2": "0 damage, bar unchanged",
+   "arm": "pistol",
+   "channel": "bullet",
+   "id": "Q1-DM-B",
+   "question": "does the bullet gate at strength 99 leak 1 % (H1) or absorb everything up to strength (H2)?",
+   "setup": "200 pistol rounds at the body, health read before and after",
+   "vehicle": "build_test-091",
+   "why": "H0 and H1/H2 are separated by 3 orders of magnitude; H1 vs H2 is 60 HP vs 0 HP on a 2000 HP bar (3 %) - readable only if the HUD shows a number. If test-077's failure was small-arms damage, H1 is already falsified for this channel"
+  },
+  {
+   "H0": "2 shells",
+   "H1": "3 shells",
+   "H2": "2 shells (250 absorbed, then 1750 of 2000)",
+   "arm": "tank_cannon",
+   "channel": "explosion",
+   "id": "Q1-DM-C",
+   "question": "does an emptied armour pool take the hit instead of health (H2 pool half)?",
+   "setup": "two tank shells into a stock medium tank (explosion_armor 250). Not the donor: its pool is 0, so H2 collapses to H0 there and the pool half cannot be seen",
+   "vehicle": "medium_tank",
+   "why": "the pool half of H2 is invisible on the donor (armour 0) and only shows on a vehicle with a non-zero pool"
+  }
+ ],
+ "schema": 1,
+ "table": {
+  "build_test-091": {
+   "assault_rifle": {
+    "components": [
+     {
+      "H0": 63,
+      "H1": 6250,
+      "H2": null,
+      "armor": 5000,
+      "channel": "bullet",
+      "component": "direct",
+      "damage": 32.0,
+      "strength": 99
+     }
+    ],
+    "primary": {
+     "H0": 63,
+     "H1": 6250,
+     "H2": null,
+     "armor": 5000,
+     "channel": "bullet",
+     "component": "direct",
+     "damage": 32.0,
+     "strength": 99
+    }
+   },
+   "grenade": {
+    "components": [
+     {
+      "H0": 3,
+      "H1": 6,
+      "H2": 4,
+      "armor": 250,
+      "channel": "explosion",
+      "component": "blast",
+      "damage": 700.0,
+      "strength": 50
+     },
+     {
+      "H0": 2,
+      "H1": 2,
+      "H2": 2,
+      "armor": 0,
+      "channel": "unknown",
+      "component": "direct",
+      "damage": 1012.500018,
+      "strength": 0
+     }
+    ],
+    "primary": {
+     "H0": 2,
+     "H1": 2,
+     "H2": 2,
+     "armor": 0,
+     "channel": "unknown",
+     "component": "direct",
+     "damage": 1012.500018,
+     "strength": 0
+    }
+   },
+   "heli_mg": {
+    "components": [
+     {
+      "H0": 80,
+      "H1": 8000,
+      "H2": null,
+      "armor": 5000,
+      "channel": "bullet",
+      "component": "direct",
+      "damage": 25.0,
+      "strength": 99
+     }
+    ],
+    "primary": {
+     "H0": 80,
+     "H1": 8000,
+     "H2": null,
+     "armor": 5000,
+     "channel": "bullet",
+     "component": "direct",
+     "damage": 25.0,
+     "strength": 99
+    }
+   },
+   "heli_missile": {
+    "components": [
+     {
+      "H0": 2,
+      "H1": 2,
+      "H2": 2,
+      "armor": 0,
+      "channel": "unknown",
+      "component": "direct",
+      "damage": 1500.0,
+      "strength": 0
+     }
+    ],
+    "primary": {
+     "H0": 2,
+     "H1": 2,
+     "H2": 2,
+     "armor": 0,
+     "channel": "unknown",
+     "component": "direct",
+     "damage": 1500.0,
+     "strength": 0
+    }
+   },
+   "machine_gun": {
+    "components": [
+     {
+      "H0": 72,
+      "H1": 7143,
+      "H2": null,
+      "armor": 5000,
+      "channel": "bullet",
+      "component": "direct",
+      "damage": 28.0,
+      "strength": 99
+     }
+    ],
+    "primary": {
+     "H0": 72,
+     "H1": 7143,
+     "H2": null,
+     "armor": 5000,
+     "channel": "bullet",
+     "component": "direct",
+     "damage": 28.0,
+     "strength": 99
+    }
+   },
+   "pistol": {
+    "components": [
+     {
+      "H0": 67,
+      "H1": 6667,
+      "H2": null,
+      "armor": 5000,
+      "channel": "bullet",
+      "component": "direct",
+      "damage": 30.0,
+      "strength": 99
+     }
+    ],
+    "primary": {
+     "H0": 67,
+     "H1": 6667,
+     "H2": null,
+     "armor": 5000,
+     "channel": "bullet",
+     "component": "direct",
+     "damage": 30.0,
+     "strength": 99
+    }
+   },
+   "rpg": {
+    "components": [
+     {
+      "H0": 2,
+      "H1": 3,
+      "H2": 2,
+      "armor": 250,
+      "channel": "explosion",
+      "component": "blast",
+      "damage": 1500.0,
+      "strength": 50
+     },
+     {
+      "H0": 134,
+      "H1": 134,
+      "H2": 134,
+      "armor": 0,
+      "channel": "unknown",
+      "component": "direct",
+      "damage": 15.0,
+      "strength": 0
+     }
+    ],
+    "primary": {
+     "H0": 2,
+     "H1": 3,
+     "H2": 2,
+     "armor": 250,
+     "channel": "explosion",
+     "component": "blast",
+     "damage": 1500.0,
+     "strength": 50
+    }
+   },
+   "shotgun": {
+    "components": [
+     {
+      "H0": 14,
+      "H1": 1389,
+      "H2": 49,
+      "armor": 5000,
+      "channel": "bullet",
+      "component": "direct",
+      "damage": 144.000002,
+      "strength": 99
+     }
+    ],
+    "primary": {
+     "H0": 14,
+     "H1": 1389,
+     "H2": 49,
+     "armor": 5000,
+     "channel": "bullet",
+     "component": "direct",
+     "damage": 144.000002,
+     "strength": 99
+    }
+   },
+   "tank_cannon": {
+    "components": [
+     {
+      "H0": 2,
+      "H1": 3,
+      "H2": 2,
+      "armor": 250,
+      "channel": "explosion",
+      "component": "blast",
+      "damage": 1500.0,
+      "strength": 50
+     },
+     {
+      "H0": 2000,
+      "H1": 200000,
+      "H2": null,
+      "armor": 5000,
+      "channel": "bullet",
+      "component": "direct",
+      "damage": 1.0,
+      "strength": 99
+     }
+    ],
+    "primary": {
+     "H0": 2,
+     "H1": 3,
+     "H2": 2,
+     "armor": 250,
+     "channel": "explosion",
+     "component": "blast",
+     "damage": 1500.0,
+     "strength": 50
+    }
+   }
+  },
+  "donor": {
+   "assault_rifle": {
+    "components": [
+     {
+      "H0": 22,
+      "H1": 22,
+      "H2": 22,
+      "armor": 0,
+      "channel": "bullet",
+      "component": "direct",
+      "damage": 32.0,
+      "strength": 0
+     }
+    ],
+    "primary": {
+     "H0": 22,
+     "H1": 22,
+     "H2": 22,
+     "armor": 0,
+     "channel": "bullet",
+     "component": "direct",
+     "damage": 32.0,
+     "strength": 0
+    }
+   },
+   "grenade": {
+    "components": [
+     {
+      "H0": 1,
+      "H1": 1,
+      "H2": 1,
+      "armor": 0,
+      "channel": "explosion",
+      "component": "blast",
+      "damage": 700.0,
+      "strength": 0
+     },
+     {
+      "H0": 1,
+      "H1": 1,
+      "H2": 1,
+      "armor": 0,
+      "channel": "unknown",
+      "component": "direct",
+      "damage": 1012.500018,
+      "strength": 0
+     }
+    ],
+    "primary": {
+     "H0": 1,
+     "H1": 1,
+     "H2": 1,
+     "armor": 0,
+     "channel": "unknown",
+     "component": "direct",
+     "damage": 1012.500018,
+     "strength": 0
+    }
+   },
+   "heli_mg": {
+    "components": [
+     {
+      "H0": 28,
+      "H1": 28,
+      "H2": 28,
+      "armor": 0,
+      "channel": "bullet",
+      "component": "direct",
+      "damage": 25.0,
+      "strength": 0
+     }
+    ],
+    "primary": {
+     "H0": 28,
+     "H1": 28,
+     "H2": 28,
+     "armor": 0,
+     "channel": "bullet",
+     "component": "direct",
+     "damage": 25.0,
+     "strength": 0
+    }
+   },
+   "heli_missile": {
+    "components": [
+     {
+      "H0": 1,
+      "H1": 1,
+      "H2": 1,
+      "armor": 0,
+      "channel": "unknown",
+      "component": "direct",
+      "damage": 1500.0,
+      "strength": 0
+     }
+    ],
+    "primary": {
+     "H0": 1,
+     "H1": 1,
+     "H2": 1,
+     "armor": 0,
+     "channel": "unknown",
+     "component": "direct",
+     "damage": 1500.0,
+     "strength": 0
+    }
+   },
+   "machine_gun": {
+    "components": [
+     {
+      "H0": 25,
+      "H1": 25,
+      "H2": 25,
+      "armor": 0,
+      "channel": "bullet",
+      "component": "direct",
+      "damage": 28.0,
+      "strength": 0
+     }
+    ],
+    "primary": {
+     "H0": 25,
+     "H1": 25,
+     "H2": 25,
+     "armor": 0,
+     "channel": "bullet",
+     "component": "direct",
+     "damage": 28.0,
+     "strength": 0
+    }
+   },
+   "pistol": {
+    "components": [
+     {
+      "H0": 24,
+      "H1": 24,
+      "H2": 24,
+      "armor": 0,
+      "channel": "bullet",
+      "component": "direct",
+      "damage": 30.0,
+      "strength": 0
+     }
+    ],
+    "primary": {
+     "H0": 24,
+     "H1": 24,
+     "H2": 24,
+     "armor": 0,
+     "channel": "bullet",
+     "component": "direct",
+     "damage": 30.0,
+     "strength": 0
+    }
+   },
+   "rpg": {
+    "components": [
+     {
+      "H0": 1,
+      "H1": 1,
+      "H2": 1,
+      "armor": 0,
+      "channel": "explosion",
+      "component": "blast",
+      "damage": 1500.0,
+      "strength": 0
+     },
+     {
+      "H0": 47,
+      "H1": 47,
+      "H2": 47,
+      "armor": 0,
+      "channel": "unknown",
+      "component": "direct",
+      "damage": 15.0,
+      "strength": 0
+     }
+    ],
+    "primary": {
+     "H0": 1,
+     "H1": 1,
+     "H2": 1,
+     "armor": 0,
+     "channel": "explosion",
+     "component": "blast",
+     "damage": 1500.0,
+     "strength": 0
+    }
+   },
+   "shotgun": {
+    "components": [
+     {
+      "H0": 5,
+      "H1": 5,
+      "H2": 5,
+      "armor": 0,
+      "channel": "bullet",
+      "component": "direct",
+      "damage": 144.000002,
+      "strength": 0
+     }
+    ],
+    "primary": {
+     "H0": 5,
+     "H1": 5,
+     "H2": 5,
+     "armor": 0,
+     "channel": "bullet",
+     "component": "direct",
+     "damage": 144.000002,
+     "strength": 0
+    }
+   },
+   "tank_cannon": {
+    "components": [
+     {
+      "H0": 1,
+      "H1": 1,
+      "H2": 1,
+      "armor": 0,
+      "channel": "explosion",
+      "component": "blast",
+      "damage": 1500.0,
+      "strength": 0
+     },
+     {
+      "H0": 700,
+      "H1": 700,
+      "H2": 700,
+      "armor": 0,
+      "channel": "bullet",
+      "component": "direct",
+      "damage": 1.0,
+      "strength": 0
+     }
+    ],
+    "primary": {
+     "H0": 1,
+     "H1": 1,
+     "H2": 1,
+     "armor": 0,
+     "channel": "explosion",
+     "component": "blast",
+     "damage": 1500.0,
+     "strength": 0
+    }
+   }
+  },
+  "medium_tank": {
+   "assault_rifle": {
+    "components": [
+     {
+      "H0": 63,
+      "H1": 6250,
+      "H2": null,
+      "armor": 5000,
+      "channel": "bullet",
+      "component": "direct",
+      "damage": 32.0,
+      "strength": 99
+     }
+    ],
+    "primary": {
+     "H0": 63,
+     "H1": 6250,
+     "H2": null,
+     "armor": 5000,
+     "channel": "bullet",
+     "component": "direct",
+     "damage": 32.0,
+     "strength": 99
+    }
+   },
+   "grenade": {
+    "components": [
+     {
+      "H0": 3,
+      "H1": 6,
+      "H2": 4,
+      "armor": 250,
+      "channel": "explosion",
+      "component": "blast",
+      "damage": 700.0,
+      "strength": 50
+     },
+     {
+      "H0": 2,
+      "H1": 2,
+      "H2": 2,
+      "armor": 0,
+      "channel": "unknown",
+      "component": "direct",
+      "damage": 1012.500018,
+      "strength": 0
+     }
+    ],
+    "primary": {
+     "H0": 2,
+     "H1": 2,
+     "H2": 2,
+     "armor": 0,
+     "channel": "unknown",
+     "component": "direct",
+     "damage": 1012.500018,
+     "strength": 0
+    }
+   },
+   "heli_mg": {
+    "components": [
+     {
+      "H0": 80,
+      "H1": 8000,
+      "H2": null,
+      "armor": 5000,
+      "channel": "bullet",
+      "component": "direct",
+      "damage": 25.0,
+      "strength": 99
+     }
+    ],
+    "primary": {
+     "H0": 80,
+     "H1": 8000,
+     "H2": null,
+     "armor": 5000,
+     "channel": "bullet",
+     "component": "direct",
+     "damage": 25.0,
+     "strength": 99
+    }
+   },
+   "heli_missile": {
+    "components": [
+     {
+      "H0": 2,
+      "H1": 2,
+      "H2": 2,
+      "armor": 0,
+      "channel": "unknown",
+      "component": "direct",
+      "damage": 1500.0,
+      "strength": 0
+     }
+    ],
+    "primary": {
+     "H0": 2,
+     "H1": 2,
+     "H2": 2,
+     "armor": 0,
+     "channel": "unknown",
+     "component": "direct",
+     "damage": 1500.0,
+     "strength": 0
+    }
+   },
+   "machine_gun": {
+    "components": [
+     {
+      "H0": 72,
+      "H1": 7143,
+      "H2": null,
+      "armor": 5000,
+      "channel": "bullet",
+      "component": "direct",
+      "damage": 28.0,
+      "strength": 99
+     }
+    ],
+    "primary": {
+     "H0": 72,
+     "H1": 7143,
+     "H2": null,
+     "armor": 5000,
+     "channel": "bullet",
+     "component": "direct",
+     "damage": 28.0,
+     "strength": 99
+    }
+   },
+   "pistol": {
+    "components": [
+     {
+      "H0": 67,
+      "H1": 6667,
+      "H2": null,
+      "armor": 5000,
+      "channel": "bullet",
+      "component": "direct",
+      "damage": 30.0,
+      "strength": 99
+     }
+    ],
+    "primary": {
+     "H0": 67,
+     "H1": 6667,
+     "H2": null,
+     "armor": 5000,
+     "channel": "bullet",
+     "component": "direct",
+     "damage": 30.0,
+     "strength": 99
+    }
+   },
+   "rpg": {
+    "components": [
+     {
+      "H0": 2,
+      "H1": 3,
+      "H2": 2,
+      "armor": 250,
+      "channel": "explosion",
+      "component": "blast",
+      "damage": 1500.0,
+      "strength": 50
+     },
+     {
+      "H0": 134,
+      "H1": 134,
+      "H2": 134,
+      "armor": 0,
+      "channel": "unknown",
+      "component": "direct",
+      "damage": 15.0,
+      "strength": 0
+     }
+    ],
+    "primary": {
+     "H0": 2,
+     "H1": 3,
+     "H2": 2,
+     "armor": 250,
+     "channel": "explosion",
+     "component": "blast",
+     "damage": 1500.0,
+     "strength": 50
+    }
+   },
+   "shotgun": {
+    "components": [
+     {
+      "H0": 14,
+      "H1": 1389,
+      "H2": 49,
+      "armor": 5000,
+      "channel": "bullet",
+      "component": "direct",
+      "damage": 144.000002,
+      "strength": 99
+     }
+    ],
+    "primary": {
+     "H0": 14,
+     "H1": 1389,
+     "H2": 49,
+     "armor": 5000,
+     "channel": "bullet",
+     "component": "direct",
+     "damage": 144.000002,
+     "strength": 99
+    }
+   },
+   "tank_cannon": {
+    "components": [
+     {
+      "H0": 2,
+      "H1": 3,
+      "H2": 2,
+      "armor": 250,
+      "channel": "explosion",
+      "component": "blast",
+      "damage": 1500.0,
+      "strength": 50
+     },
+     {
+      "H0": 2000,
+      "H1": 200000,
+      "H2": null,
+      "armor": 5000,
+      "channel": "bullet",
+      "component": "direct",
+      "damage": 1.0,
+      "strength": 99
+     }
+    ],
+    "primary": {
+     "H0": 2,
+     "H1": 3,
+     "H2": 2,
+     "armor": 250,
+     "channel": "explosion",
+     "component": "blast",
+     "damage": 1500.0,
+     "strength": 50
+    }
+   }
+  }
+ },
+ "vehicles": {
+  "build_test-091": {
+   "channels": {
+    "bullet": {
+     "armor": 5000,
+     "strength": 99
+    },
+    "bullet_heavy": {
+     "armor": 5,
+     "strength": 20
+    },
+    "electricity": {
+     "armor": -1,
+     "strength": 100
+    },
+    "explosion": {
+     "armor": 250,
+     "strength": 50
+    },
+    "fire": {
+     "armor": 0,
+     "strength": 0
+    },
+    "grapple_pull": {
+     "armor": -1,
+     "strength": 100
+    },
+    "impact": {
+     "armor": 5000,
+     "strength": 100
+    },
+    "melee": {
+     "armor": 5000,
+     "strength": 100
+    }
+   },
+   "entity": "E:/Modding/JC3-Batmobile/Builds/test-091",
+   "file": "lave_health_medium.vmodc",
+   "max_health": 2000,
+   "part_damage_types": [
+    {
+     "damaged_health": 30,
+     "damages_owning_vehicle": 1,
+     "initial_health": 50,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 20,
+     "type.hash": 3681480222,
+     "type.string": "Default"
+    },
+    {
+     "damaged_health": 0,
+     "damages_owning_vehicle": 1,
+     "initial_health": 200,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 50,
+     "type.hash": 2527474000,
+     "type.string": "Land_Generic"
+    },
+    {
+     "damaged_health": 0,
+     "damages_owning_vehicle": 1,
+     "initial_health": 1000,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 0,
+     "type.hash": 934577878,
+     "type.string": "Land_Body"
+    },
+    {
+     "damaged_health": 400,
+     "damages_owning_vehicle": 1,
+     "initial_health": 1020,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 100,
+     "type.hash": 4030506882,
+     "type.string": "Land_Wheel"
+    },
+    {
+     "damaged_health": 50,
+     "damages_owning_vehicle": 1,
+     "initial_health": 300,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 200,
+     "type.hash": 1675990137,
+     "type.string": "Land_Door"
+    },
+    {
+     "damaged_health": 30,
+     "damages_owning_vehicle": 0,
+     "initial_health": 50,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 1,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 20,
+     "type.hash": 2081319590,
+     "type.string": "Land_Light"
+    },
+    {
+     "damaged_health": 30,
+     "damages_owning_vehicle": 0,
+     "initial_health": 50,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 20,
+     "type.hash": 2679678956,
+     "type.string": "Land_Window"
+    },
+    {
+     "damaged_health": 0,
+     "damages_owning_vehicle": 0,
+     "initial_health": 700,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 0,
+     "type.hash": 3246790467,
+     "type.string": "Land_Stunt_Window"
+    },
+    {
+     "damaged_health": 100,
+     "damages_owning_vehicle": 1,
+     "initial_health": 900,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 150,
+     "type.hash": 1575498096,
+     "type.string": "Land_Engine"
+    },
+    {
+     "damaged_health": 30,
+     "damages_owning_vehicle": 1,
+     "initial_health": 50,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 20,
+     "type.hash": 2423863589,
+     "type.string": "Land_Axle"
+    },
+    {
+     "damaged_health": 30,
+     "damages_owning_vehicle": 1,
+     "initial_health": 50,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 20,
+     "type.hash": 765511268,
+     "type.string": "Land_Spring"
+    },
+    {
+     "damaged_health": 30,
+     "damages_owning_vehicle": 1,
+     "initial_health": 50,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 20,
+     "type.hash": 1963236820,
+     "type.string": "Land_Seat"
+    },
+    {
+     "damaged_health": 30,
+     "damages_owning_vehicle": 1,
+     "initial_health": 50,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 20,
+     "type.hash": 3639659349,
+     "type.string": "Land_Wing_Mirror"
+    },
+    {
+     "damaged_health": 30,
+     "damages_owning_vehicle": 1,
+     "initial_health": 50,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 20,
+     "type.hash": 2441122572,
+     "type.string": "Land_Steering_Wheel"
+    },
+    {
+     "damaged_health": 0,
+     "damages_owning_vehicle": 1,
+     "initial_health": 500,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 50,
+     "type.hash": 1772228324,
+     "type.string": "Land_Roof_Rack"
+    },
+    {
+     "damaged_health": 30,
+     "damages_owning_vehicle": 1,
+     "initial_health": 50,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 20,
+     "type.hash": 2782868255,
+     "type.string": "Land_Mud_Flap"
+    },
+    {
+     "damaged_health": 30,
+     "damages_owning_vehicle": 1,
+     "initial_health": 200,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 50,
+     "type.hash": 5547231,
+     "type.string": "Land_Bumper"
+    },
+    {
+     "damaged_health": 0,
+     "damages_owning_vehicle": 1,
+     "initial_health": 800,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 0,
+     "type.hash": 4166444258,
+     "type.string": "Land_Undercarriage"
+    },
+    {
+     "damaged_health": 0,
+     "damages_owning_vehicle": 1,
+     "initial_health": 200,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 50,
+     "type.hash": 4282321924,
+     "type.string": "Land_Fender"
+    },
+    {
+     "damaged_health": 0,
+     "damages_owning_vehicle": 1,
+     "initial_health": 350,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 100,
+     "type.hash": 823330335,
+     "type.string": "Land_Hood"
+    },
+    {
+     "damaged_health": 0,
+     "damages_owning_vehicle": 1,
+     "initial_health": 350,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 100,
+     "type.hash": 2840501542,
+     "type.string": "Land_Trunk"
+    },
+    {
+     "damaged_health": 0,
+     "damages_owning_vehicle": 1,
+     "initial_health": 200,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 50,
+     "type.hash": 3550569539,
+     "type.string": "Land_Back_Gate"
+    },
+    {
+     "damaged_health": 30,
+     "damages_owning_vehicle": 1,
+     "initial_health": 50,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 20,
+     "type.hash": 1336304469,
+     "type.string": "Land_Antenna"
+    },
+    {
+     "damaged_health": 0,
+     "damages_owning_vehicle": 1,
+     "initial_health": 200,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 50,
+     "type.hash": 2987839894,
+     "type.string": "Land_Grill"
+    }
+   ],
+   "root": {
+    "health": 100.0,
+    "invulnerable": 0,
+    "source": "v0300_car_kensington_sportsmuscle_civilian_01.epe"
+   },
+   "switches": {
+    "deform_scale": 0,
+    "impact_armor": 5000,
+    "impact_damage_factor": 0
+   },
+   "thresholds": {
+    "burn_duration_s": 20,
+    "burn_threshold": 250,
+    "explosion_delay_s": 10,
+    "explosion_threshold": 4000,
+    "npc_explosion_threshold": 4000,
+    "smoke_threshold": 1050,
+    "vulnerable_duration_s": 5,
+    "vulnerable_explosion_threshold": 100
+   }
+  },
+  "donor": {
+   "channels": {
+    "bullet": {
+     "armor": 0,
+     "strength": 0
+    },
+    "bullet_heavy": {
+     "armor": 0,
+     "strength": 0
+    },
+    "electricity": {
+     "armor": 0,
+     "strength": 0
+    },
+    "explosion": {
+     "armor": 0,
+     "strength": 0
+    },
+    "fire": {
+     "armor": 0,
+     "strength": 0
+    },
+    "grapple_pull": {
+     "armor": 0,
+     "strength": 0
+    },
+    "impact": {
+     "armor": 0,
+     "strength": 0
+    },
+    "melee": {
+     "armor": 0,
+     "strength": 0
+    }
+   },
+   "entity": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_civilian_01.ee",
+   "file": "editor/entities/jc_vehicles/00_shared/modules/health/lave_health_medium.vmodc",
+   "max_health": 700,
+   "part_damage_types": [
+    {
+     "damaged_health": 30,
+     "damages_owning_vehicle": 1,
+     "initial_health": 50,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 20,
+     "type.hash": 3681480222,
+     "type.string": "Default"
+    },
+    {
+     "damaged_health": 0,
+     "damages_owning_vehicle": 1,
+     "initial_health": 200,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 50,
+     "type.hash": 2527474000,
+     "type.string": "Land_Generic"
+    },
+    {
+     "damaged_health": 0,
+     "damages_owning_vehicle": 1,
+     "initial_health": 1000,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 0,
+     "type.hash": 934577878,
+     "type.string": "Land_Body"
+    },
+    {
+     "damaged_health": 400,
+     "damages_owning_vehicle": 1,
+     "initial_health": 1020,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 1,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 100,
+     "type.hash": 4030506882,
+     "type.string": "Land_Wheel"
+    },
+    {
+     "damaged_health": 50,
+     "damages_owning_vehicle": 1,
+     "initial_health": 300,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 200,
+     "type.hash": 1675990137,
+     "type.string": "Land_Door"
+    },
+    {
+     "damaged_health": 30,
+     "damages_owning_vehicle": 0,
+     "initial_health": 50,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 1,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 20,
+     "type.hash": 2081319590,
+     "type.string": "Land_Light"
+    },
+    {
+     "damaged_health": 30,
+     "damages_owning_vehicle": 0,
+     "initial_health": 50,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 20,
+     "type.hash": 2679678956,
+     "type.string": "Land_Window"
+    },
+    {
+     "damaged_health": 0,
+     "damages_owning_vehicle": 0,
+     "initial_health": 700,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 0,
+     "type.hash": 3246790467,
+     "type.string": "Land_Stunt_Window"
+    },
+    {
+     "damaged_health": 100,
+     "damages_owning_vehicle": 1,
+     "initial_health": 900,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 150,
+     "type.hash": 1575498096,
+     "type.string": "Land_Engine"
+    },
+    {
+     "damaged_health": 30,
+     "damages_owning_vehicle": 1,
+     "initial_health": 50,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 20,
+     "type.hash": 2423863589,
+     "type.string": "Land_Axle"
+    },
+    {
+     "damaged_health": 30,
+     "damages_owning_vehicle": 1,
+     "initial_health": 50,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 20,
+     "type.hash": 765511268,
+     "type.string": "Land_Spring"
+    },
+    {
+     "damaged_health": 30,
+     "damages_owning_vehicle": 1,
+     "initial_health": 50,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 20,
+     "type.hash": 1963236820,
+     "type.string": "Land_Seat"
+    },
+    {
+     "damaged_health": 30,
+     "damages_owning_vehicle": 1,
+     "initial_health": 50,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 20,
+     "type.hash": 3639659349,
+     "type.string": "Land_Wing_Mirror"
+    },
+    {
+     "damaged_health": 30,
+     "damages_owning_vehicle": 1,
+     "initial_health": 50,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 20,
+     "type.hash": 2441122572,
+     "type.string": "Land_Steering_Wheel"
+    },
+    {
+     "damaged_health": 0,
+     "damages_owning_vehicle": 1,
+     "initial_health": 500,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 50,
+     "type.hash": 1772228324,
+     "type.string": "Land_Roof_Rack"
+    },
+    {
+     "damaged_health": 30,
+     "damages_owning_vehicle": 1,
+     "initial_health": 50,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 20,
+     "type.hash": 2782868255,
+     "type.string": "Land_Mud_Flap"
+    },
+    {
+     "damaged_health": 30,
+     "damages_owning_vehicle": 1,
+     "initial_health": 200,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 50,
+     "type.hash": 5547231,
+     "type.string": "Land_Bumper"
+    },
+    {
+     "damaged_health": 0,
+     "damages_owning_vehicle": 1,
+     "initial_health": 800,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 0,
+     "type.hash": 4166444258,
+     "type.string": "Land_Undercarriage"
+    },
+    {
+     "damaged_health": 0,
+     "damages_owning_vehicle": 1,
+     "initial_health": 200,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 50,
+     "type.hash": 4282321924,
+     "type.string": "Land_Fender"
+    },
+    {
+     "damaged_health": 0,
+     "damages_owning_vehicle": 1,
+     "initial_health": 350,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 100,
+     "type.hash": 823330335,
+     "type.string": "Land_Hood"
+    },
+    {
+     "damaged_health": 0,
+     "damages_owning_vehicle": 1,
+     "initial_health": 350,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 100,
+     "type.hash": 2840501542,
+     "type.string": "Land_Trunk"
+    },
+    {
+     "damaged_health": 0,
+     "damages_owning_vehicle": 1,
+     "initial_health": 200,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 50,
+     "type.hash": 3550569539,
+     "type.string": "Land_Back_Gate"
+    },
+    {
+     "damaged_health": 30,
+     "damages_owning_vehicle": 1,
+     "initial_health": 50,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 20,
+     "type.hash": 1336304469,
+     "type.string": "Land_Antenna"
+    },
+    {
+     "damaged_health": 0,
+     "damages_owning_vehicle": 1,
+     "initial_health": 200,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 50,
+     "type.hash": 2987839894,
+     "type.string": "Land_Grill"
+    }
+   ],
+   "root": {
+    "health": {
+     "distinct": 1,
+     "n": 126,
+     "values": {
+      "100": 126
+     }
+    },
+    "invulnerable": "0 on all 233 roots (DAMAGE_MECHANISMS \u00a71)",
+    "source": "DAMAGE_MECHANISMS.json (fleet census)"
+   },
+   "switches": {
+    "deform_scale": 1,
+    "impact_armor": 0,
+    "impact_damage_factor": 1
+   },
+   "thresholds": {
+    "burn_duration_s": 20,
+    "burn_threshold": 80,
+    "explosion_delay_s": 8,
+    "explosion_threshold": 700,
+    "npc_explosion_threshold": 700,
+    "smoke_threshold": 200,
+    "vulnerable_duration_s": 5,
+    "vulnerable_explosion_threshold": 35
+   }
+  },
+  "medium_tank": {
+   "channels": {
+    "bullet": {
+     "armor": 5000,
+     "strength": 99
+    },
+    "bullet_heavy": {
+     "armor": 5,
+     "strength": 20
+    },
+    "electricity": {
+     "armor": -1,
+     "strength": 100
+    },
+    "explosion": {
+     "armor": 250,
+     "strength": 50
+    },
+    "fire": {
+     "armor": 0,
+     "strength": 0
+    },
+    "grapple_pull": {
+     "armor": -1,
+     "strength": 100
+    },
+    "impact": {
+     "armor": 0,
+     "strength": 0
+    },
+    "melee": {
+     "armor": 0,
+     "strength": 0
+    }
+   },
+   "entity": "editor/entities/jc_vehicles/01_land/v0201_car_capstone_mediumtank/v0201_car_capstone_mediumtank_military_01.ee",
+   "file": "editor/entities/jc_vehicles/00_shared/modules/health/lave_health_tank.vmodc",
+   "max_health": 2000,
+   "part_damage_types": [
+    {
+     "damaged_health": 30,
+     "damages_owning_vehicle": 1,
+     "initial_health": 50,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 20,
+     "type.hash": 3681480222,
+     "type.string": "Default"
+    },
+    {
+     "damaged_health": 100,
+     "damages_owning_vehicle": 1,
+     "initial_health": 200,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 50,
+     "type.hash": 2527474000,
+     "type.string": "Land_Generic"
+    },
+    {
+     "damaged_health": 0,
+     "damages_owning_vehicle": 1,
+     "initial_health": 1000,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 0,
+     "type.hash": 934577878,
+     "type.string": "Land_Body"
+    },
+    {
+     "damaged_health": 500,
+     "damages_owning_vehicle": 1,
+     "initial_health": 1000,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 100,
+     "type.hash": 4030506882,
+     "type.string": "Land_Wheel"
+    },
+    {
+     "damaged_health": 50,
+     "damages_owning_vehicle": 1,
+     "initial_health": 1000,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 100,
+     "type.hash": 1675990137,
+     "type.string": "Land_Door"
+    },
+    {
+     "damaged_health": 30,
+     "damages_owning_vehicle": 0,
+     "initial_health": 50,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 1,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 20,
+     "type.hash": 2081319590,
+     "type.string": "Land_Light"
+    },
+    {
+     "damaged_health": 30,
+     "damages_owning_vehicle": 0,
+     "initial_health": 500,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 20,
+     "type.hash": 2679678956,
+     "type.string": "Land_Window"
+    },
+    {
+     "damaged_health": 0,
+     "damages_owning_vehicle": 0,
+     "initial_health": 2000,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 0,
+     "type.hash": 3246790467,
+     "type.string": "Land_Stunt_Window"
+    },
+    {
+     "damaged_health": 100,
+     "damages_owning_vehicle": 1,
+     "initial_health": 1800,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 100,
+     "type.hash": 1575498096,
+     "type.string": "Land_Engine"
+    },
+    {
+     "damaged_health": 30,
+     "damages_owning_vehicle": 1,
+     "initial_health": 50,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 20,
+     "type.hash": 2423863589,
+     "type.string": "Land_Axle"
+    },
+    {
+     "damaged_health": 30,
+     "damages_owning_vehicle": 1,
+     "initial_health": 50,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 20,
+     "type.hash": 765511268,
+     "type.string": "Land_Spring"
+    },
+    {
+     "damaged_health": 30,
+     "damages_owning_vehicle": 1,
+     "initial_health": 50,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 20,
+     "type.hash": 1963236820,
+     "type.string": "Land_Seat"
+    },
+    {
+     "damaged_health": 30,
+     "damages_owning_vehicle": 1,
+     "initial_health": 50,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 20,
+     "type.hash": 3639659349,
+     "type.string": "Land_Wing_Mirror"
+    },
+    {
+     "damaged_health": 30,
+     "damages_owning_vehicle": 1,
+     "initial_health": 50,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 20,
+     "type.hash": 2441122572,
+     "type.string": "Land_Steering_Wheel"
+    },
+    {
+     "damaged_health": 100,
+     "damages_owning_vehicle": 1,
+     "initial_health": 500,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 100,
+     "type.hash": 1772228324,
+     "type.string": "Land_Roof_Rack"
+    },
+    {
+     "damaged_health": 30,
+     "damages_owning_vehicle": 1,
+     "initial_health": 50,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 20,
+     "type.hash": 2782868255,
+     "type.string": "Land_Mud_Flap"
+    },
+    {
+     "damaged_health": 30,
+     "damages_owning_vehicle": 1,
+     "initial_health": 200,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 100,
+     "type.hash": 5547231,
+     "type.string": "Land_Bumper"
+    },
+    {
+     "damaged_health": 0,
+     "damages_owning_vehicle": 1,
+     "initial_health": 800,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 0,
+     "type.hash": 4166444258,
+     "type.string": "Land_Undercarriage"
+    },
+    {
+     "damaged_health": 200,
+     "damages_owning_vehicle": 1,
+     "initial_health": 500,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 200,
+     "type.hash": 4282321924,
+     "type.string": "Land_Fender"
+    },
+    {
+     "damaged_health": 100,
+     "damages_owning_vehicle": 1,
+     "initial_health": 200,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 100,
+     "type.hash": 823330335,
+     "type.string": "Land_Hood"
+    },
+    {
+     "damaged_health": 100,
+     "damages_owning_vehicle": 1,
+     "initial_health": 200,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 100,
+     "type.hash": 2840501542,
+     "type.string": "Land_Trunk"
+    },
+    {
+     "damaged_health": 100,
+     "damages_owning_vehicle": 1,
+     "initial_health": 200,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 100,
+     "type.hash": 3550569539,
+     "type.string": "Land_Back_Gate"
+    },
+    {
+     "damaged_health": 30,
+     "damages_owning_vehicle": 1,
+     "initial_health": 50,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 20,
+     "type.hash": 1336304469,
+     "type.string": "Land_Antenna"
+    },
+    {
+     "damaged_health": 100,
+     "damages_owning_vehicle": 1,
+     "initial_health": 200,
+     "instantly_broken_by_bullets": 0,
+     "instantly_damaged_by_bullets": 0,
+     "instantly_loosened_by_bullets": 0,
+     "loosen_health": 100,
+     "type.hash": 2987839894,
+     "type.string": "Land_Grill"
+    }
+   ],
+   "root": {
+    "health": {
+     "distinct": 1,
+     "n": 126,
+     "values": {
+      "100": 126
+     }
+    },
+    "invulnerable": "0 on all 233 roots (DAMAGE_MECHANISMS \u00a71)",
+    "source": "DAMAGE_MECHANISMS.json (fleet census)"
+   },
+   "switches": {
+    "deform_scale": 1,
+    "impact_armor": 0,
+    "impact_damage_factor": 1
+   },
+   "thresholds": {
+    "burn_duration_s": 20,
+    "burn_threshold": 250,
+    "explosion_delay_s": 10,
+    "explosion_threshold": 4000,
+    "npc_explosion_threshold": 4000,
+    "smoke_threshold": 1050,
+    "vulnerable_duration_s": 5,
+    "vulnerable_explosion_threshold": 100
+   }
+  }
+ }
+}

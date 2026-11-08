@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/pilot-card-combat-unknowns.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+The pilot card report tmp/freebuff/reports/pilot-card-combat-and-gadgets.md has about forty-nine UNKNOWN markers, and the gadget ones are the most likely to be decided by the existing grab output. Pull out only the UNKNOWN markers that name a weapon, gadget, or combat value, and skip the driving ones covered elsewhere. For each one, look in Research/BatmobileGrab/ and Working/Translation/T7_WEAPONS.md for the matching weapon or gadget row, and in Working/Translation/T_WP5B_EMP_BURST.md for the EMP ones. Record the findings in Working/Prep/pilot_card_combat_unknowns.csv with the columns marker_line, topic, found_in, found_line, value and still_unknown (yes or no). A value that cannot be tied to a file and line stays unknown, and the report must say which file would settle it.

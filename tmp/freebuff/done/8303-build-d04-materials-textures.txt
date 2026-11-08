@@ -1,0 +1,8 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-d04-materials-textures.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-06
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/apply-texture-bake-plan.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/apply-colour-and-material-rows.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/apply-interior-glass-wheel-plans.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-d02-parts-split.md
+Build the appearance textures and materials from Working/Appearance/TEXTURE_BUILD_PLAN.md and APPEARANCE_PLAN.md: channel packing, baked micro-detail, ramps, emissive masks, glass, interior, wheels, skins, in a new private tree Builds/bm-RC4-appearance. Use the existing pipelines (appearance_grab.py, jc3 texture tools); for each texture write source, destination channel, transform and the measurement that proves it. Run appearance_progress.py and report the new percentages (strict, and of everything with a slot). Respect the texture budget (7,065 KB).
+
+Updated by review 8299: TEXTURE_BUILD_PLAN.md has 23 rows and 12 have no faithful route — 4 chapter damage masks (D9, one static state only) and 8 textures whose pixels are absent (Batmobile_Micropattern_A/_Normal/B/C, Batmobile_V3_Wheel_E, Batman_BM3_V2_Lacquered_Underlayer_Ramp, Batman_BM3_V2_Leather_Ramp, Batmobile_V3_Body_ColourRamp). Do not forecast a percentage rise: appearance_progress gives overall 54.6%, strict 49.3%, of-slotted 91.1%, textures 53.9% (17/38 transferred + 7 partial); plan tally bake 23 / route 61 / drop 88.

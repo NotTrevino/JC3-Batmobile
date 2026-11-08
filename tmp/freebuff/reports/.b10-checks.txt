@@ -1,0 +1,27 @@
+$ python Tools/scripts/bm_collision.py --write
+wrote Working/Collision/batmobile.physicsc (340,368 B), Working/Collision/bm_collision.json and Working/Collision/BM_COLLISION.md: 5 hulls, 3 compounds, body dev 0.0000 m
+  donor hulls re-emitted from their decoded values reproduce the s PASS  (54/54 hulls byte-identical)
+  the write re-reads clean (verify_written)                        PASS  (0 problem(s))
+  every shape invariant on the built file (`shape_checks`)         PASS  (0 violation(s), 54/54 convex, 22/22 unions)
+  object count and class list unchanged                            PASS  (430 objects, 22 compounds, 112 instances)
+  only the written hulls and their ancestor compounds changed      PASS  (5 hulls + 3 ancestor compound(s))
+  the body-entry data (hknpPhysicsSystemData) is byte-identical (R PASS  (1 object(s), 20912 B)
+  the file carries no station quad before or after                 PASS  (0 -> 0 station sets)
+  every plane of the written body hull is supported exactly        PASS  (max |max(n.v) + d| = 2.93e-07 m (float32), donor 1.75e-07 m)
+  hull union bbox within 5 cm of the body bbox (Done check 2)      PASS  (max |dev| 0.0000 m, missing 0.0000 m)
+EXIT=0
+
+$ python Tools/scripts/bm_collision.py --check
+PASS: 5 hulls written, 3 ancestor compounds re-boxed, 430 objects, stations 0 -> 0 | body union vs body bbox max |dev| 0.0000 m <= 0.05 m: True | Working/Collision/batmobile.physicsc 340,368 B sha256 192c12479d81da6e... | json match True, md match True
+EXIT=0
+
+$ python Tools/scripts/jc3hkx.py check --all --file Working/Collision/batmobile.physicsc --against Builds/test-091/aaf/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle.physicsc
+file Working/Collision/batmobile.physicsc: 340,368 B, 430 objects, 54 hulls (convex 54), 18 mesh shapes, 22 compounds (112 instances, 22 AABB unions exact), station sets 0, sha256 192c12479d81da6e... | vs sportsmuscle.physicsc: 5 object(s) changed (hknpConvexPolytopeShape), hknpPhysicsSystemData identical True
+entities 233 | files 234 | objects 130513 | hulls 18865 (convex 18865) | mesh shapes 4791 | geometries 9582 | compounds 6382 (35499 instances, 25769 with a part index, 6341 AABB unions exact) | station sets 17 (land_global agree 17, disagree 0)
+check ok
+EXIT=0
+
+$ python Tools/scripts/jc3hkx.py check --all
+entities 233 | files 234 | objects 130513 | hulls 18865 (convex 18865) | mesh shapes 4791 | geometries 9582 | compounds 6382 (35499 instances, 25769 with a part index, 6341 AABB unions exact) | station sets 17 (land_global agree 17, disagree 0)
+check ok
+EXIT=0

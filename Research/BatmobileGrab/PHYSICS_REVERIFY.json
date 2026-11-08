@@ -1,0 +1,924 @@
+{
+ "task": "reverify BMAK-PHYSICS - the pre-reset PHY-1 card against the bytes",
+ "inputs": {
+  "packages": {
+   "Playable_Batmobile_SF": {
+    "bytes": 17916421,
+    "bodies": 32,
+    "physics_assets": [
+     "Batmobile_V3_Destroyed_Physics",
+     "PhysicsAssetInstance"
+    ]
+   },
+   "Playable_BatmobileMK2_SF": {
+    "bytes": 17406701,
+    "bodies": 32,
+    "physics_assets": [
+     "Batmobile_V3_Destroyed_Physics",
+     "PhysicsAssetInstance"
+    ]
+   },
+   "Playable_BatmobileJoker_SF": {
+    "bytes": 23649057,
+    "bodies": 32,
+    "physics_assets": [
+     "Batmobile_V3_Destroyed_Physics",
+     "PhysicsAssetInstance"
+    ]
+   },
+   "Playable_BatmobileFunhouse_SF": {
+    "bytes": 17650541,
+    "bodies": 32,
+    "physics_assets": [
+     "Batmobile_V3_Destroyed_Physics",
+     "PhysicsAssetInstance"
+    ]
+   }
+  },
+  "old_card": "Research/BatmobileGrab/PHYSICS.md",
+  "old_json": "Research/BatmobileGrab/PHYSICS.json",
+  "drivable_asset_from": [
+   "Research/BatmobileGrab/COLLISION_GEOM.md",
+   "Research/BatmobileGrab/COLLISION_BOXES.md"
+  ]
+ },
+ "old_check": {
+  "exit": 0,
+  "stdout": "4 vehicles, 128 collision bodies, identical layouts\nPHYSICS.md/json current",
+  "stderr": ""
+ },
+ "package": {
+  "package": "Playable_Batmobile_SF",
+  "bodies": [
+   {
+    "export": 5066,
+    "bone": "Root",
+    "walk_end": 196,
+    "walk_stop": "end",
+    "outer": "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics",
+    "agg_bytes": 128,
+    "agg_sha1": "1fe4aefef75645b9bb8938f7305e850a577b8020",
+    "u32_12": 2846,
+    "spheres": 0,
+    "boxes": 1,
+    "extents": [
+     30.3,
+     30.3,
+     30.3
+    ],
+    "centre": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "export": 5067,
+    "bone": "SUSP2_Wheel_Front_Left_Mesh",
+    "walk_end": 196,
+    "walk_stop": "end",
+    "outer": "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics",
+    "agg_bytes": 128,
+    "agg_sha1": "d41efb3b9e9ce70439c15133052018524abd4b93",
+    "u32_12": 2846,
+    "spheres": 0,
+    "boxes": 1,
+    "extents": [
+     211.54,
+     51.093,
+     109.003
+    ],
+    "centre": [
+     66.542,
+     -1.608,
+     12.661
+    ]
+   },
+   {
+    "export": 5068,
+    "bone": "SUSP2_Wheel_Front_Right_Mesh",
+    "walk_end": 196,
+    "walk_stop": "end",
+    "outer": "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics",
+    "agg_bytes": 128,
+    "agg_sha1": "fb3696f23fa3a8afa488725db4ec0b5d8aebfbe6",
+    "u32_12": 2846,
+    "spheres": 0,
+    "boxes": 1,
+    "extents": [
+     157.805,
+     60.058,
+     110.255
+    ],
+    "centre": [
+     64.419,
+     28.091,
+     15.607
+    ]
+   },
+   {
+    "export": 5069,
+    "bone": "Wheel_Front_Left_Vis_Mesh",
+    "walk_end": 196,
+    "walk_stop": "end",
+    "outer": "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics",
+    "agg_bytes": 128,
+    "agg_sha1": "d6a9b413203827c5e8089cc10f3c8493f510973f",
+    "u32_12": 2846,
+    "spheres": 0,
+    "boxes": 1,
+    "extents": [
+     97.605,
+     55.342,
+     101.533
+    ],
+    "centre": [
+     11.718,
+     -3.285,
+     -4.991
+    ]
+   },
+   {
+    "export": 5070,
+    "bone": "Wheel_Back_Left_Vis_Mesh",
+    "walk_end": 196,
+    "walk_stop": "end",
+    "outer": "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics",
+    "agg_bytes": 128,
+    "agg_sha1": "e59395ca4798bd6645f57b6976e6f4c304a25225",
+    "u32_12": 2846,
+    "spheres": 0,
+    "boxes": 1,
+    "extents": [
+     98.989,
+     60.573,
+     108.901
+    ],
+    "centre": [
+     2.755,
+     1.781,
+     -9.909
+    ]
+   },
+   {
+    "export": 5071,
+    "bone": "Wheel_Front_Right_Vis_Mesh",
+    "walk_end": 196,
+    "walk_stop": "end",
+    "outer": "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics",
+    "agg_bytes": 128,
+    "agg_sha1": "3e55ba63c89a1e627ec6a50acfa92473036d998e",
+    "u32_12": 2846,
+    "spheres": 0,
+    "boxes": 1,
+    "extents": [
+     97.01,
+     52.545,
+     103.247
+    ],
+    "centre": [
+     0.404,
+     -1.591,
+     0.384
+    ]
+   },
+   {
+    "export": 5072,
+    "bone": "SUSP1_Wheel_Rear_Right_Mesh",
+    "walk_end": 196,
+    "walk_stop": "end",
+    "outer": "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics",
+    "agg_bytes": 128,
+    "agg_sha1": "d873a68f8d6f2a2523e112fe5c896d916546c138",
+    "u32_12": 2846,
+    "spheres": 0,
+    "boxes": 1,
+    "extents": [
+     317.942,
+     64.552,
+     97.966
+    ],
+    "centre": [
+     -121.915,
+     25.708,
+     -17.364
+    ]
+   },
+   {
+    "export": 5073,
+    "bone": "Wheel_Rear_Right_Vis_Mesh",
+    "walk_end": 196,
+    "walk_stop": "end",
+    "outer": "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics",
+    "agg_bytes": 128,
+    "agg_sha1": "c07f23dd5765dca3d9cb96be55a40ad26f7d460d",
+    "u32_12": 2846,
+    "spheres": 0,
+    "boxes": 1,
+    "extents": [
+     106.61,
+     64.812,
+     106.033
+    ],
+    "centre": [
+     0.059,
+     -1.273,
+     -2.678
+    ]
+   },
+   {
+    "export": 5074,
+    "bone": "SUSP1_Wheel_Rear_Left_Mesh",
+    "walk_end": 196,
+    "walk_stop": "end",
+    "outer": "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics",
+    "agg_bytes": 128,
+    "agg_sha1": "1745a3823b3ceb37d3590bae3b2432ea06b9c67a",
+    "u32_12": 2846,
+    "spheres": 0,
+    "boxes": 1,
+    "extents": [
+     316.155,
+     63.418,
+     109.881
+    ],
+    "centre": [
+     -117.414,
+     -17.569,
+     -12.155
+    ]
+   },
+   {
+    "export": 5075,
+    "bone": "Object001",
+    "walk_end": 196,
+    "walk_stop": "end",
+    "outer": "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics",
+    "agg_bytes": 128,
+    "agg_sha1": "508f480873aa397496eb39de5beffba797f9a7fe",
+    "u32_12": 2846,
+    "spheres": 0,
+    "boxes": 1,
+    "extents": [
+     40.267,
+     51.068,
+     50.379
+    ],
+    "centre": [
+     -245.722,
+     13.217,
+     28.159
+    ]
+   },
+   {
+    "export": 5076,
+    "bone": "Main_Turret_00",
+    "walk_end": 196,
+    "walk_stop": "end",
+    "outer": "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics",
+    "agg_bytes": 128,
+    "agg_sha1": "65b8ab2d38447056e84ca577692a7690e980ec9b",
+    "u32_12": 2846,
+    "spheres": 0,
+    "boxes": 1,
+    "extents": [
+     114.042,
+     64.794,
+     79.53
+    ],
+    "centre": [
+     -37.52,
+     1.287,
+     -17.554
+    ]
+   },
+   {
+    "export": 5077,
+    "bone": "CockPit_Mesh",
+    "walk_end": 196,
+    "walk_stop": "end",
+    "outer": "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics",
+    "agg_bytes": 128,
+    "agg_sha1": "0951749fededac0163f8b7877e5f286eb2c81295",
+    "u32_12": 2846,
+    "spheres": 0,
+    "boxes": 1,
+    "extents": [
+     143.357,
+     80.663,
+     64.851
+    ],
+    "centre": [
+     -1.842,
+     -4.191,
+     21.586
+    ]
+   },
+   {
+    "export": 5078,
+    "bone": "Rear_Door_BOTTOM",
+    "walk_end": 196,
+    "walk_stop": "end",
+    "outer": "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics",
+    "agg_bytes": 128,
+    "agg_sha1": "fba7b5746ee40366a709dc2100a0d64cd3ef68f4",
+    "u32_12": 2846,
+    "spheres": 0,
+    "boxes": 1,
+    "extents": [
+     26.006,
+     152.76,
+     71.739
+    ],
+    "centre": [
+     13.996,
+     1.491,
+     40.038
+    ]
+   },
+   {
+    "export": 5079,
+    "bone": "Rear_Door_MIDDLE",
+    "walk_end": 196,
+    "walk_stop": "end",
+    "outer": "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics",
+    "agg_bytes": 128,
+    "agg_sha1": "ba02bc7f24890819764beacfde14937931a0d903",
+    "u32_12": 2846,
+    "spheres": 0,
+    "boxes": 1,
+    "extents": [
+     59.101,
+     197.09,
+     37.58
+    ],
+    "centre": [
+     6.467,
+     -5.005,
+     -14.893
+    ]
+   },
+   {
+    "export": 5080,
+    "bone": "Object003_frag_007",
+    "walk_end": 196,
+    "walk_stop": "end",
+    "outer": "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics",
+    "agg_bytes": 128,
+    "agg_sha1": "9073051cef1a1fae2357105c98e17fc51e1387e9",
+    "u32_12": 2846,
+    "spheres": 0,
+    "boxes": 1,
+    "extents": [
+     89.649,
+     63.024,
+     65.765
+    ],
+    "centre": [
+     2.173,
+     -8.362,
+     -2.622
+    ]
+   },
+   {
+    "export": 5081,
+    "bone": "Object003_frag_008",
+    "walk_end": 196,
+    "walk_stop": "end",
+    "outer": "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics",
+    "agg_bytes": 128,
+    "agg_sha1": "52504c0e4f5227cf882b3856476633cc8015abfa",
+    "u32_12": 2846,
+    "spheres": 0,
+    "boxes": 1,
+    "extents": [
+     144.953,
+     111.448,
+     117.238
+    ],
+    "centre": [
+     1.704,
+     -3.677,
+     4.732
+    ]
+   },
+   {
+    "export": 5082,
+    "bone": "Object003_frag_017",
+    "walk_end": 196,
+    "walk_stop": "end",
+    "outer": "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics",
+    "agg_bytes": 128,
+    "agg_sha1": "87f4b562bd5cbeb1c608ff85a7902e9b88d393a6",
+    "u32_12": 2846,
+    "spheres": 0,
+    "boxes": 1,
+    "extents": [
+     89.817,
+     75.49,
+     26.539
+    ],
+    "centre": [
+     -0.663,
+     0.766,
+     18.174
+    ]
+   },
+   {
+    "export": 5083,
+    "bone": "Object003_frag_023",
+    "walk_end": 196,
+    "walk_stop": "end",
+    "outer": "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics",
+    "agg_bytes": 128,
+    "agg_sha1": "c450473e11ea0dad0c8a3901498e78c0134f2abf",
+    "u32_12": 2846,
+    "spheres": 0,
+    "boxes": 1,
+    "extents": [
+     128.557,
+     94.312,
+     101.819
+    ],
+    "centre": [
+     -1.445,
+     -1.988,
+     -0.414
+    ]
+   },
+   {
+    "export": 5084,
+    "bone": "Object003_frag_024",
+    "walk_end": 196,
+    "walk_stop": "end",
+    "outer": "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics",
+    "agg_bytes": 128,
+    "agg_sha1": "ea961dd774b344c49f0159263764a58e86722fbc",
+    "u32_12": 2846,
+    "spheres": 0,
+    "boxes": 1,
+    "extents": [
+     117.992,
+     92.692,
+     102.093
+    ],
+    "centre": [
+     -1.929,
+     0.823,
+     -0.936
+    ]
+   },
+   {
+    "export": 5085,
+    "bone": "Object003_frag_025",
+    "walk_end": 196,
+    "walk_stop": "end",
+    "outer": "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics",
+    "agg_bytes": 128,
+    "agg_sha1": "b6b56352b808ac18e48d7dca96c15fc255041d97",
+    "u32_12": 2846,
+    "spheres": 0,
+    "boxes": 1,
+    "extents": [
+     104.668,
+     61.156,
+     90.378
+    ],
+    "centre": [
+     0.887,
+     12.673,
+     6.955
+    ]
+   },
+   {
+    "export": 5086,
+    "bone": "Object004_frag_002",
+    "walk_end": 196,
+    "walk_stop": "end",
+    "outer": "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics",
+    "agg_bytes": 128,
+    "agg_sha1": "e3a9ca32e7a7c6630e512d8b218c6c5481e918cd",
+    "u32_12": 2846,
+    "spheres": 0,
+    "boxes": 1,
+    "extents": [
+     82.268,
+     83.697,
+     79.315
+    ],
+    "centre": [
+     -19.944,
+     3.363,
+     -0.3
+    ]
+   },
+   {
+    "export": 5087,
+    "bone": "Object004_frag_003",
+    "walk_end": 196,
+    "walk_stop": "end",
+    "outer": "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics",
+    "agg_bytes": 128,
+    "agg_sha1": "d5e013a608ec266edbd78455c76a74593e1026f4",
+    "u32_12": 2846,
+    "spheres": 0,
+    "boxes": 1,
+    "extents": [
+     61.13,
+     41.854,
+     64.069
+    ],
+    "centre": [
+     1.1,
+     6.473,
+     -3.332
+    ]
+   },
+   {
+    "export": 5088,
+    "bone": "Object004_frag_006",
+    "walk_end": 196,
+    "walk_stop": "end",
+    "outer": "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics",
+    "agg_bytes": 128,
+    "agg_sha1": "c77926faec3f5b91acc0fa72109d40786f0360a0",
+    "u32_12": 2846,
+    "spheres": 0,
+    "boxes": 1,
+    "extents": [
+     91.434,
+     73.846,
+     64.868
+    ],
+    "centre": [
+     6.79,
+     -2.994,
+     -18.721
+    ]
+   },
+   {
+    "export": 5089,
+    "bone": "Object004_frag_007",
+    "walk_end": 196,
+    "walk_stop": "end",
+    "outer": "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics",
+    "agg_bytes": 128,
+    "agg_sha1": "be58ce0c76a1aeae094ef7dd6fb5161501433655",
+    "u32_12": 2846,
+    "spheres": 0,
+    "boxes": 1,
+    "extents": [
+     80.714,
+     60.293,
+     63.52
+    ],
+    "centre": [
+     10.36,
+     10.925,
+     -14.706
+    ]
+   },
+   {
+    "export": 5090,
+    "bone": "Jet_Fins001",
+    "walk_end": 196,
+    "walk_stop": "end",
+    "outer": "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics",
+    "agg_bytes": 128,
+    "agg_sha1": "7e5a42907e194cced8d91451ce7378422aa12480",
+    "u32_12": 2846,
+    "spheres": 0,
+    "boxes": 1,
+    "extents": [
+     129.11,
+     61.195,
+     28.711
+    ],
+    "centre": [
+     -0.388,
+     9.832,
+     -1.784
+    ]
+   },
+   {
+    "export": 5091,
+    "bone": "Object007",
+    "walk_end": 196,
+    "walk_stop": "end",
+    "outer": "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics",
+    "agg_bytes": 128,
+    "agg_sha1": "f916ab377fa9627ee18f652e288b7f278c36725d",
+    "u32_12": 2846,
+    "spheres": 0,
+    "boxes": 1,
+    "extents": [
+     138.533,
+     73.341,
+     28.961
+    ],
+    "centre": [
+     -4.007,
+     3.85,
+     -9.774
+    ]
+   },
+   {
+    "export": 5092,
+    "bone": "Object",
+    "walk_end": 196,
+    "walk_stop": "end",
+    "outer": "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics",
+    "agg_bytes": 128,
+    "agg_sha1": "456c17e8de18982d9ec2b975c1f3696ca68968e2",
+    "u32_12": 2846,
+    "spheres": 0,
+    "boxes": 1,
+    "extents": [
+     70.096,
+     41.614,
+     27.411
+    ],
+    "centre": [
+     2.668,
+     38.829,
+     5.337
+    ]
+   },
+   {
+    "export": 5093,
+    "bone": "Object011",
+    "walk_end": 196,
+    "walk_stop": "end",
+    "outer": "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics",
+    "agg_bytes": 128,
+    "agg_sha1": "bbca70173d82cea3058d7702cea80d37eb9ddeaa",
+    "u32_12": 2846,
+    "spheres": 0,
+    "boxes": 1,
+    "extents": [
+     142.069,
+     97.628,
+     44.313
+    ],
+    "centre": [
+     -1.213,
+     -33.476,
+     52.419
+    ]
+   },
+   {
+    "export": 5094,
+    "bone": "Object013",
+    "walk_end": 196,
+    "walk_stop": "end",
+    "outer": "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics",
+    "agg_bytes": 128,
+    "agg_sha1": "a742a63b28e62b80d232f1d106b21ccb13b6c8e4",
+    "u32_12": 2846,
+    "spheres": 0,
+    "boxes": 1,
+    "extents": [
+     130.594,
+     118.598,
+     54.127
+    ],
+    "centre": [
+     -2.476,
+     -4.679,
+     61.885
+    ]
+   },
+   {
+    "export": 5095,
+    "bone": "Object009",
+    "walk_end": 196,
+    "walk_stop": "end",
+    "outer": "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics",
+    "agg_bytes": 128,
+    "agg_sha1": "d85bbf1865a8e93533fad1bc2bc1c9b94adf3895",
+    "u32_12": 2846,
+    "spheres": 0,
+    "boxes": 1,
+    "extents": [
+     166.12,
+     141.823,
+     62.936
+    ],
+    "centre": [
+     -5.308,
+     1.818,
+     40.067
+    ]
+   },
+   {
+    "export": 5096,
+    "bone": "Object017",
+    "walk_end": 196,
+    "walk_stop": "end",
+    "outer": "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics",
+    "agg_bytes": 128,
+    "agg_sha1": "d1c61243f053cf532618eb44fe6928efc894b795",
+    "u32_12": 2846,
+    "spheres": 0,
+    "boxes": 1,
+    "extents": [
+     77.622,
+     73.176,
+     23.906
+    ],
+    "centre": [
+     -11.188,
+     5.85,
+     50.459
+    ]
+   },
+   {
+    "export": 5097,
+    "bone": "Object015",
+    "walk_end": 196,
+    "walk_stop": "end",
+    "outer": "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics",
+    "agg_bytes": 128,
+    "agg_sha1": "f620ceb529b756be33ea90a312cedc977e4f666f",
+    "u32_12": 2846,
+    "spheres": 0,
+    "boxes": 1,
+    "extents": [
+     78.331,
+     65.638,
+     42.043
+    ],
+    "centre": [
+     24.174,
+     -40.507,
+     45.973
+    ]
+   }
+  ],
+  "physics_assets": [
+   "Batmobile_V3_Destroyed_Physics",
+   "PhysicsAssetInstance"
+  ],
+  "has_drivable_name": false,
+  "outer_hist": {
+   "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics": 32
+  },
+  "bytes": 17916421
+ },
+ "by_package": {
+  "Playable_Batmobile_SF": {
+   "outer_hist": {
+    "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics": 32
+   },
+   "distinct_agg_sha1": 32,
+   "has_drivable": false,
+   "bodies": 32,
+   "assets": [
+    "Batmobile_V3_Destroyed_Physics",
+    "PhysicsAssetInstance"
+   ]
+  },
+  "Playable_BatmobileMK2_SF": {
+   "outer_hist": {
+    "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics": 32
+   },
+   "distinct_agg_sha1": 32,
+   "has_drivable": false,
+   "bodies": 32,
+   "assets": [
+    "Batmobile_V3_Destroyed_Physics",
+    "PhysicsAssetInstance"
+   ]
+  },
+  "Playable_BatmobileJoker_SF": {
+   "outer_hist": {
+    "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics": 32
+   },
+   "distinct_agg_sha1": 32,
+   "has_drivable": false,
+   "bodies": 32,
+   "assets": [
+    "Batmobile_V3_Destroyed_Physics",
+    "PhysicsAssetInstance"
+   ]
+  },
+  "Playable_BatmobileFunhouse_SF": {
+   "outer_hist": {
+    "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics": 32
+   },
+   "distinct_agg_sha1": 32,
+   "has_drivable": false,
+   "bodies": 32,
+   "assets": [
+    "Batmobile_V3_Destroyed_Physics",
+    "PhysicsAssetInstance"
+   ]
+  }
+ },
+ "claims": {
+  "bodies_per_package": 32,
+  "total_records": 128,
+  "byte_identical_payloads": false,
+  "identical_triples": true,
+  "owner": [
+   "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics"
+  ],
+  "drivable_asset_present_here": false,
+  "drivable_bone_overlap": [],
+  "chassis_bones_in_this_list": [],
+  "payload_diff_offsets": [
+   12,
+   13
+  ],
+  "u32_12_values": {
+   "Playable_Batmobile_SF": [
+    2846
+   ],
+   "Playable_BatmobileMK2_SF": [
+    2851
+   ],
+   "Playable_BatmobileJoker_SF": [
+    3120
+   ],
+   "Playable_BatmobileFunhouse_SF": [
+    2836
+   ]
+  }
+ },
+ "verdict": {
+  "destroyed_list": "32 bodies, owner Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics, 4 packages; payloads differ only at the u32 +12 (sha1-identical: False)",
+  "drivable_list": "Physics.Batmobile_V3_Physics (export 158266, bodies 169750/169751: Batmobile_Chassis, Batmobile_Rig_Weapons_Trans) - a different asset in a different package, absent from these four",
+  "old_card_byte_identical": "FALSE: the payloads differ in the u32 at +12 (old docstring called it a constant 2846); every other byte is identical, and the parsed triples match",
+  "payload_diff_offsets": [
+   12,
+   13
+  ],
+  "u32_12_values": {
+   "Playable_Batmobile_SF": [
+    2846
+   ],
+   "Playable_BatmobileMK2_SF": [
+    2851
+   ],
+   "Playable_BatmobileJoker_SF": [
+    3120
+   ],
+   "Playable_BatmobileFunhouse_SF": [
+    2836
+   ]
+  },
+  "old_card_attribution": "correct: the 32-body list is the destroyed asset's"
+ },
+ "checks": [
+  {
+   "check": "the old card's own --check still passes",
+   "pass": true,
+   "detail": "exit 0: 4 vehicles, 128 collision bodies, identical layouts | PHYSICS.md/json current"
+  },
+  {
+   "check": "one package holds 32 RB_BodySetup exports and my parser reads every one",
+   "pass": true,
+   "detail": "32 bodies, 32 with extents, stop codes {'end': 32}"
+  },
+  {
+   "check": "every body is one box and no sphere, as the old card states",
+   "pass": true,
+   "detail": "box counts {'1': 32}, sphere counts {'0': 32}"
+  },
+  {
+   "check": "my extents and centres agree with the old card on all 32 bones",
+   "pass": true,
+   "detail": "32 agree, 0 disagree []"
+  },
+  {
+   "check": "the payloads are NOT byte-identical: they differ only in the u32 at +12",
+   "pass": true,
+   "detail": "distinct sha1 multisets: 4; differing byte offsets across the four packages: [12, 13]; u32@12 per package: {'Playable_Batmobile_SF': [2846], 'Playable_BatmobileMK2_SF': [2851], 'Playable_BatmobileJoker_SF': [3120], 'Playable_BatmobileFunhouse_SF': [2836]}"
+  },
+  {
+   "check": "the parsed (bone, extents, centre) triples are identical across the four packages",
+   "pass": true,
+   "detail": "distinct triple sets: 1"
+  },
+  {
+   "check": "all 32 bodies are outered to the destroyed asset, not the drivable one",
+   "pass": true,
+   "detail": "outer paths {'Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics': 32}"
+  },
+  {
+   "check": "no package in the set holds an export named Batmobile_V3_Physics",
+   "pass": true,
+   "detail": "assets per package {'Batmobile_V3_Destroyed_Physics': 4, 'PhysicsAssetInstance': 4}"
+  },
+  {
+   "check": "the drivable asset's bones do not intersect this list",
+   "pass": true,
+   "detail": "drivable bones ['Batmobile_Chassis', 'Batmobile_Rig_Weapons_Trans']; overlap []; chassis/hull bones here []"
+  },
+  {
+   "check": "the 32 bones are the wreck's parts, not a vehicle hull",
+   "pass": true,
+   "detail": "19 of 32 are Root/Object*/frag bones; sample ['CockPit_Mesh', 'Jet_Fins001', 'Main_Turret_00', 'Object', 'Object001', 'Object003_frag_007']"
+  }
+ ]
+}

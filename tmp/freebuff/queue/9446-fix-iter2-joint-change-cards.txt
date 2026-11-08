@@ -1,0 +1,7 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/fix-iter2-joint-change-cards.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/triage-after-iteration-1.md
+Fix iteration 2, interaction faults. Use tmp/freebuff/reports/hdl-iter1-triage.md. For each coupled group of failures (for instance grip, steering lock angle and inertia moving cornering radius and drift together), write one joint fix card in Working/Q/FIXES_ITER2.md that changes the whole group at once, with the model used to size the change: a bicycle model for radius, a rolling-friction balance for terminal speed, a mass times deceleration balance for braking. Show the arithmetic, the cells and the predicted result per take, which must fall inside the band with margin. Respect the sources: BmAK-decoded values (steer lock 55 and 20 degrees, lock times 0.25 and 0.091 s) are not touched unless the card cites a decode error; assumed ones (mass 6000, inertia, friction 3.0) are the levers. Where a lever has reached the end of the fleet range in Research/JC3Grab/GRIP_CENSUS.md, say so and name the next lever. Edit only branch tuning tables. Done check: each group has a before and after prediction table; edited scripts pass --check.
+Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

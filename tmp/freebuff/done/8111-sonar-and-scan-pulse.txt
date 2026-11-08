@@ -1,0 +1,7 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/sonar-and-scan-pulse.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-06
+T-WP8: BmAK's Batmobile Sonar (RBatmobileSonar, ChargingScreenShake and the BML_Sonar audio bank that was found) pings and reveals the surroundings. JC3 has CForcePulse for the shockwave half only. Search for anything that reveals or highlights objects through a pulse: the chaos-object markers, enemy-spotting, Rico's scanner or binocular effects, the Sensor/Radar members of vehicles and the HUD hooks, post-effects driven by a pulse. List what each does, its members and values, and map the BmAK sonar fields onto them. Also read the BML_Sonar bank's HIRC events so the audio carrier is named. UNKNOWN stays UNKNOWN.
+Where JC3 has no exact carrier, give the closest system and the gap for the build to fill (STAGES.md).
+Operator lead (2026-11-06): in BmAK the sonar's tracking of treadmarks on the road is mission-dependent; outside a mission it is just a good-looking pulse, and it is the lowest-priority weapon in the operator's ranking. So the closest system for the base behaviour is a visible pulse (CForcePulse plus an effect and the BML_Sonar sound); treat the mission-specific treadmark tracking as a separate, later row.

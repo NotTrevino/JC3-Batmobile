@@ -1,0 +1,76 @@
+# smart_search — chase smart-search tool and calibration
+
+## STATUS: deferred (chase_candidates not done)
+
+The prerequisite for this card is the deliverable of the chase-candidates card:
+`E:/Modding/JC3-Batmobile/tmp/freebuff/reports/chase-candidates.md` **existing with `STATUS: done`**.
+It does not exist, so nothing was built, calibrated or changed.
+
+### What was checked (evidence)
+
+```
+$ ls -la tmp/freebuff/reports/chase-candidates.md
+ls: cannot access 'tmp/freebuff/reports/chase-candidates.md': No such file or directory
+
+$ ls tmp/freebuff/reports/ | grep -i chase
+(no output — no chase report of any name in the reports directory)
+
+$ grep -rn "chase-candidates.md" MODLOG.md
+(no output)
+```
+
+What *does* exist (so the gap is the report, not the code):
+
+```
+$ wc -l Tools/scripts/chase/chase_candidates.py Tools/scripts/chase/chase_judge.py
+  443 Tools/scripts/chase/chase_candidates.py
+  100 Tools/scripts/chase/chase_judge.py
+```
+
+`E:/Modding/_BmAKgrab/chase/` also holds the earlier chase outputs (`selftest.jsonl`,
+`selftest.verdicts.jsonl`, `namescan.json`, `g1_chase_native.json`, …), i.e. the chase work ran, but
+the card that turns it into the two-stage pipeline never published its report.
+
+### Why this is a stop and not a start
+
+The card's step 1 modifies `chase_candidates.py` (adding `--member/--owner/--offset/--type` for one
+arbitrary member while leaving the all-open-rows default output untouched) and step 2 wraps it with
+`chase_judge.py`. Both must be read for their contracts, but the deferred prerequisite is precisely
+the record that says which of the two stages is finished, which member/owner/offset/type conventions
+it settled on, and what the existing default output is. Building the single-member mode on top of an
+unpublished pipeline would either duplicate its interface or contradict it — the same failure mode the
+backlog rules call out for `out`-row re-litigation. No value here is worth guessing at.
+
+### What unblocks it (one step)
+
+Publish `tmp/freebuff/reports/chase-candidates.md` with `STATUS: done` for the chase-candidates card
+(its `Tools/scripts/chase/chase_candidates.py` is already on disk, 443 lines), then re-run this card.
+Everything else this card needs is present:
+
+| input | state |
+|---|---|
+| `Tools/scripts/chase/chase_candidates.py` | present (443 lines) |
+| `Tools/scripts/chase/chase_judge.py` (local LLM judge, server `http://127.0.0.1:8080`, model `qwen3.5-4b`) | present (100 lines) |
+| `Research/BatmobileGrab/*.md` + JSON (G1 decoded members with owner/offset/value) | present — e.g. `WEAPONS.json`, `ANIMATIONS.json`, `LIGHTS.json`, `DAMAGE_RULES.json`, `MODES.json`, `COVERAGE.json` |
+| known chase FOUND rows (e.g. `F-7 AirControl 0.05`) | in `E:/Modding/_BmAKgrab/chase/` |
+| `E:/Modding/_BmAKgrab/chase/` (cache + `calib.jsonl` target dir) | present |
+| judge server | UNKNOWN — not probed, because the card was not started |
+
+### UNKNOWNs
+
+1. Whether the judge server answers `/health` — not probed (deferring, not calibrating).
+2. The chase-candidate interface the new `--member/--owner/--offset/--type` mode must match — UNKNOWN
+   until the report exists.
+3. Which G1 members carry a decoded value **and** an owner/class **and** an offset in the same row
+   (needed for the 15–30 calibration rows) — not enumerated yet.
+
+### Files touched
+
+None. No script written, no `calib.jsonl`, no cache directory created, nothing under `D:/Games` or
+`E:/Games`, no game launched or patched, `FOOTAGE.md` / the chase files / `GRAB_BACKLOG.md` untouched,
+nothing committed.
+
+### MODLOG heading used
+
+`## smart_search — deferred (chase_candidates not done) (2026-10-29)` (append-only entry, no scores
+because nothing ran).

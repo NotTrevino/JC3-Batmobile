@@ -1,0 +1,11 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/death-explosion-carriers.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-08
+Operator fact: when health reaches zero, the Batmobile explodes instantly (no warning smoke or sparks) and the passengers die. BmAK side: DeathExplosionSoundArray and the death particles (Research/BatmobileGrab/PARTICLES_FEATURES.md, AUDIO_FEATURES.md). JC3 side: the donor's damage-state effects, burn and smoke rows T-FX22/T-FX23 (which contradict "no visible damage stages"), and the death effect slots in the .epe (Research/JC3Grab/DAMAGE_MECHANISMS.md, FX_TABLE.jsonl).
+Plan the closest carrier:
+- which JC3 slot fires at zero health;
+- how to remove the intermediate smoke/burn states;
+- which BmAK particle and sound go in;
+- the passenger-kill path (JC3 member, or native hook).
+Report only, with every member path cited. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

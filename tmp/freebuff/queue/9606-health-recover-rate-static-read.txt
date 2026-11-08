@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/health-recover-rate-static-read.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/regen-reader-function.md
+Find the Batmobile regeneration rate without running BmAK. The member HealthRecoverRate is a TArray<float> at +8220 in the vehicle class, one entry per difficulty (Research/BatmobileGrab/DAMAGE_RULES.md section 5). Read tmp/freebuff/reports/regen-reader-function.md, bmak-gog-live-batmobile-reader.md and bmak-live-values-to-rows.md first, then look for the value in three static places: the class default properties of the Batmobile archetype in the cooked packages, any archetype or ini override, and the save or profile structures that LoadHealth reads. Use Tools/scripts/upk_read.py for the default-property scan and say which difficulty index applies to the player's game (UNKNOWN if the files do not state it). Output Tools/scripts/bmak_regen_value.py (--write, --check), Research/BatmobileGrab/REGEN_VALUE.md and .json with every candidate value, its offset and its units (per second or per XP award; the earlier note says per award). If nothing is found, write the exact live read as one 5-minute step for the hook telemetry of brief 7982. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

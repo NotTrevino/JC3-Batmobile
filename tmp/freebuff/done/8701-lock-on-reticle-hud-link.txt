@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/lock-on-reticle-hud-link.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-06
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/wp4-fire-leech.md
+The same report says the lock-on reticle's entity-to-HUD link is native and UNKNOWN. Look at it from the data side: the HUD movies that draw lock-on boxes (read Research/JC3Grab HUD notes and the SWF/gfx lists), the UC_-style setters or ids those movies expose for a lock reticle, and the entity or weapon members that name a HUD element (AutoAim tune members, weapon HUD references, vehicle HUD objects). Decode which weapons show a reticle on lock and what in their data selects it, and say whether a private Batmobile missile weapon can opt in by data alone. BmAK's reticle and lock tones are in Research/BatmobileGrab/HUD.md and HUD_SPEC.json; list what the BmAK reticle shows that the JC3 one would have to match.

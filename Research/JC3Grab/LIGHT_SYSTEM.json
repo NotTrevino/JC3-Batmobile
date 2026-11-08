@@ -1,0 +1,1992 @@
+{
+ "binding": {
+  "donor_land_light": 10,
+  "donor_lit": 12,
+  "donor_lit_by_damage_type": {
+   "Land_Body": 1,
+   "Land_Generic": 1,
+   "Land_Light": 10
+  },
+  "donor_parts": 42,
+  "examples": {
+   "index": [
+    {
+     "entity": "v2601_helicopter_urga_heavyassault_debug",
+     "part": "heavyassault_wing_light_r",
+     "part_index": 39,
+     "why": "part_index not in the module"
+    },
+    {
+     "entity": "v2601_helicopter_urga_heavyassault_military_01",
+     "part": "heavyassault_wing_light_r",
+     "part_index": 39,
+     "why": "part_index not in the module"
+    },
+    {
+     "entity": "v2601_helicopter_urga_heavyassault_rebel_01",
+     "part": "heavyassault_wing_light_r",
+     "part_index": 39,
+     "why": "part_index not in the module"
+    }
+   ],
+   "name": [
+    {
+     "entity": "v2601_helicopter_urga_heavyassault_debug",
+     "part": "heavyassault_wing_light_l",
+     "part_index": 37,
+     "why": "module has heavyassault_missile_f_r"
+    },
+    {
+     "entity": "v2601_helicopter_urga_heavyassault_debug",
+     "part": "heavyassault_tail_light",
+     "part_index": 35,
+     "why": "module has heavyassault_missile_f_l"
+    },
+    {
+     "entity": "v2601_helicopter_urga_heavyassault_military_01",
+     "part": "heavyassault_wing_light_l",
+     "part_index": 37,
+     "why": "module has heavyassault_missile_f_r"
+    }
+   ],
+   "unlit": [
+    {
+     "entity": "v0202_car_capstone_bavariumtank_debug",
+     "part": "bavariumtank_turret",
+     "part_index": 24,
+     "why": "has_lights = 0"
+    },
+    {
+     "entity": "v0202_car_capstone_bavariumtank_debug",
+     "part": "bavariumtank_turret",
+     "part_index": 24,
+     "why": "has_lights = 0"
+    },
+    {
+     "entity": "v0202_car_capstone_bavariumtank_military_01",
+     "part": "bavariumtank_turret",
+     "part_index": 24,
+     "why": "has_lights = 0"
+    }
+   ]
+  },
+  "index_missing": 3,
+  "lit_parts_without_a_light": 13,
+  "name_mismatch": 27,
+  "on_unlit_part": 6,
+  "parts_land_light": 1323,
+  "parts_total": 11643,
+  "parts_with_lights": 2073
+ },
+ "card": "G2-33",
+ "carlight": {
+  "blocks": 11367,
+  "entities": 220,
+  "index_width": {
+   "2": 11367
+  },
+  "layout": {
+   "buffers": [
+    12,
+    24,
+    2
+   ],
+   "gap_bytes": 16,
+   "parameters": "UNKNOWN - the material/emissive parameter bytes are not decoded (MODLOG §102d), so a CarLight block can be copied byte-exact but not authored from numbers",
+   "source": "MODLOG.md §17 ('Window and CarLight solved from the files'); solver Tools/scripts/_probe_layout.py, round-trip 190/193 blocks byte-identical, 0 mismatched",
+   "static_header_bytes": 1085
+  },
+  "material_slots": {
+   "6": 11367
+  },
+  "meshes": 11367,
+  "stride": {
+   "12": 11367
+  }
+ },
+ "digest": "c1265c3e959416ab",
+ "epe": {
+  "classes": {
+   "SVehicleLight": 3972,
+   "SVehicleLightList": 412,
+   "SVehicleLights": 233
+  },
+  "entities_with_lights": 232,
+  "lights": 3972,
+  "members": [
+   {
+    "count": 3972,
+    "path": "diffuse",
+    "sample_values": [
+     "0,1,0",
+     "0.01569,0.6745,0.3137",
+     "0.02745,0.7216,0.2039",
+     "0.1686,0.8353,0.4353",
+     "0.3098,0.5608,0.8157",
+     "0.4745,0.7333,0.9686",
+     "0.5255,0.9451,0.1451",
+     "0.6039,0.6039,0.9529"
+    ]
+   },
+   {
+    "count": 3972,
+    "path": "enabled",
+    "sample_values": [
+     "1"
+    ]
+   },
+   {
+    "count": 3972,
+    "path": "falloff_start",
+    "sample_values": [
+     "0",
+     "0.1",
+     "0.2",
+     "0.3",
+     "0.35"
+    ]
+   },
+   {
+    "count": 3972,
+    "path": "is_shadow_caster",
+    "sample_values": [
+     "0",
+     "1"
+    ]
+   },
+   {
+    "count": 3972,
+    "path": "min_luminosity",
+    "sample_values": [
+     "0"
+    ]
+   },
+   {
+    "count": 3972,
+    "path": "multiplier",
+    "sample_values": [
+     "0",
+     "0.2",
+     "0.3",
+     "0.4",
+     "0.5",
+     "0.6",
+     "0.8",
+     "1"
+    ]
+   },
+   {
+    "count": 3972,
+    "path": "near_cap",
+    "sample_values": [
+     "0",
+     "0.1",
+     "0.2",
+     "0.26",
+     "0.3",
+     "0.35",
+     "0.39",
+     "0.4"
+    ]
+   },
+   {
+    "count": 3972,
+    "path": "preset_id",
+    "sample_values": [
+     "Advanced_Assault_Front_Bottom",
+     "Advanced_Assault_Rear_Tail_Bottom",
+     "Advanced_Assault_Rear_Top",
+     "Advanced_Assault_Window_Front_Left",
+     "Advanced_Assault_Window_Front_Right",
+     "Advanced_Assault_Window_Left",
+     "Advanced_Assault_Window_Right",
+     "Ambulance_Headlight_Point_Front_Left"
+    ]
+   },
+   {
+    "count": 3972,
+    "path": "radius",
+    "sample_values": [
+     "0.2",
+     "0.3",
+     "0.5",
+     "0.6",
+     "0.7",
+     "0.8",
+     "1",
+     "1.1"
+    ]
+   },
+   {
+    "count": 3972,
+    "path": "spot_angle",
+    "sample_values": [
+     "15",
+     "20",
+     "25",
+     "30",
+     "35",
+     "40",
+     "45",
+     "50"
+    ]
+   },
+   {
+    "count": 3972,
+    "path": "spot_inner_angle",
+    "sample_values": [
+     "0",
+     "10",
+     "20",
+     "30"
+    ]
+   },
+   {
+    "count": 3972,
+    "path": "volume_intensity",
+    "sample_values": [
+     "0.001",
+     "0.0015",
+     "0.002",
+     "0.0025",
+     "0.1",
+     "0.25"
+    ]
+   },
+   {
+    "count": 3972,
+    "path": "volumetric_mode",
+    "sample_values": [
+     "0",
+     "1",
+     "2"
+    ]
+   }
+  ],
+  "preset_names": {
+   "Advanced_Assault_Front_Bottom": 5,
+   "Advanced_Assault_Rear_Tail_Bottom": 5,
+   "Advanced_Assault_Rear_Top": 5,
+   "Advanced_Assault_Window_Front_Left": 5,
+   "Advanced_Assault_Window_Front_Right": 5,
+   "Advanced_Assault_Window_Left": 5,
+   "Advanced_Assault_Window_Right": 5,
+   "Ambulance_Headlight_Point_Front_Left": 5,
+   "Ambulance_Headlight_Point_Front_Right": 5,
+   "Ambulance_Headlight_Point_Left": 5,
+   "Ambulance_Headlight_Point_Rear": 5,
+   "Ambulance_Headlight_Point_Rear_Left": 5,
+   "Ambulance_Headlight_Point_Rear_Right": 5,
+   "Ambulance_Headlight_Point_Right": 5,
+   "Armored_Jeep_Front_Roof_Left_Point": 3,
+   "Armored_Jeep_Front_Roof_Left_Spot": 3,
+   "Armored_Jeep_Front_Roof_Right_Point": 3,
+   "Armored_Jeep_Front_Roof_Right_Spot": 3,
+   "Armored_Jeep_Headlight_Point_Left": 3,
+   "Armored_Jeep_Headlight_Point_Right": 3,
+   "Armored_Jeep_Rear_Roof_Left_Point": 3,
+   "Armored_Jeep_Rear_Roof_Left_Spot": 3,
+   "Armored_Jeep_Rear_Roof_Right_Point": 3,
+   "Armored_Jeep_Rear_Roof_Right_Spot": 3,
+   "Armored_Jeep_Side_Front_Left_Turn": 3,
+   "Armored_Jeep_Side_Front_Right_Turn": 3,
+   "Armored_Rear_Left_Turn": 2,
+   "Armored_Rear_Right_Turn": 2,
+   "Armored_Side_Front_Left_Turn": 2,
+   "Armored_Side_Front_Right_Turn": 2,
+   "Armored_Side_Rear_Left_Turn": 2,
+   "Armored_Side_Rear_Left_Turn_Low": 2,
+   "Armored_Side_Rear_Right_Turn": 2,
+   "Armored_Side_Rear_Right_Turn_Low": 2,
+   "Armored_Trans_Headlight_Left_Point": 3,
+   "Armored_Trans_Headlight_Right_Point": 3,
+   "Armored_Trans_Roof_spot_Front": 3,
+   "Armored_Trans_Side_Front_Left_Turn": 3,
+   "Armored_Trans_Side_Front_Right_Turn": 3,
+   "Armored_Trans_Side_Rear_Left_Turn": 3,
+   "Armored_Trans_Side_Rear_Right_Turn": 3,
+   "Armored_Trans_Siren_Front1": 3,
+   "Armored_Trans_Siren_Front2": 3,
+   "Armored_Trans_Siren_Front3": 3,
+   "Bavarium_Tank_Window_Front": 3,
+   "Bavarium_Tank_Window_Left": 3,
+   "Bavarium_Tank_Window_Right": 3,
+   "Capstone_Assault_Dash_Light": 3,
+   "Capstone_Assault_Front_Point": 3,
+   "Capstone_Assault_Front_Primary_Head": 3,
+   "Capstone_Assault_Front_Primary_Volumetric": 3,
+   "Capstone_Fighter_Engine_Left_Point": 3,
+   "Capstone_Fighter_Engine_Right_Point": 3,
+   "Capstone_Fighter_Front_Bottom_Point": 3,
+   "Capstone_Fighter_Headlight_Wheel": 3,
+   "Capstone_Fighter_Headlight_Wheel_Point": 3,
+   "Capstone_Fighter_Headlight_Wheel_Volume": 3,
+   "Capstone_Fighter_Middle_Body_Point": 3,
+   "Capstone_Fighter_Wing_Left_Point1": 3,
+   "Capstone_Fighter_Wing_Left_Point2": 3,
+   "Capstone_Fighter_Wing_Right_Point1": 3,
+   "Capstone_Fighter_Wing_Right_Point2": 3,
+   "Cargo_Front_Bottom_Point": 6,
+   "Cargo_Headlight_Wheel_Left": 6,
+   "Cargo_Headlight_Wheel_Right": 6,
+   "Cargo_Int_Front_L": 6,
+   "Cargo_Int_L_01": 6,
+   "Cargo_Int_L_02": 6,
+   "Cargo_Int_L_03": 6,
+   "Cargo_Int_L_04": 6,
+   "Cargo_Int_L_05": 6,
+   "Cargo_Int_R_01": 6,
+   "Cargo_Int_R_02": 6,
+   "Cargo_Int_R_03": 6,
+   "Cargo_Int_R_04": 6,
+   "Cargo_Int_R_05": 6,
+   "Cargo_Int_Ramp_Green": 6,
+   "Cargo_Int_Ramp_Red": 6,
+   "Cargo_Point_F_R_01": 6,
+   "Cargo_Point_F_l_01": 6,
+   "Cargo_Point_L_01": 6,
+   "Cargo_Point_L_02": 6,
+   "Cargo_Point_R_01": 6,
+   "Cargo_Point_R_02": 6,
+   "Cargo_Rear_Wing_Left_Point": 6,
+   "Cargo_Rear_Wing_Right_Point": 6,
+   "Corvette_Nav_Back_Point": 3,
+   "Corvette_Nav_Left_Point": 3,
+   "Corvette_Nav_Right_Point": 3,
+   "Corvette_Nav_Top_Point": 3,
+   "Corvette_Side_Front_Right_Point": 3,
+   "Corvette_Side_Rear_Left_Point": 3,
+   "Corvette_Side_Rear_Right_Point": 3,
+   "Dash_Light": 221,
+   "Engine_Car_Dash_Light": 7,
+   "Engine_Car_Front_Left_Point": 7,
+   "Engine_Car_Front_Left_Volumetric": 7,
+   "Engine_Car_Front_Primary_Left_Head": 7,
+   "Engine_Car_Front_Primary_Right_Head": 7,
+   "Engine_Car_Front_Right_Point": 7,
+   "Engine_Car_Front_Right_Volumetric": 7,
+   "Eubus_Bottom_Point": 3,
+   "Eubus_Front_Point": 3,
+   "Eubus_Front_Primary_Head": 3,
+   "Eubus_Front_Primary_Volumetric": 3,
+   "Eubus_Front_Top_Point": 3,
+   "Eubus_Rear_Tail_Point": 3,
+   "Eubus_Rear_Top_Point": 3,
+   "Fighter_Bomber_Front_Left_Point": 3,
+   "Fighter_Bomber_Front_Right_Point": 3,
+   "Fighter_Bomber_Headlight_Wheel": 3,
+   "Fighter_Bomber_Headlight_Wheel_Point": 3,
+   "Fighter_Bomber_Headlight_Wheel_Volume": 3,
+   "Fighter_Bomber_Rear_Tail_Left_Point": 3,
+   "Fighter_Bomber_Rear_Tail_Right_Point": 3,
+   "Fighter_Bomber_Wing_Left_Top_Point": 3,
+   "Fighter_Bomber_Wing_Right_Top_Point": 3,
+   "Front_Left_Point": 126,
+   "Front_Left_Turn": 145,
+   "Front_Left_Volumetric": 126,
+   "Front_Primary_Head": 145,
+   "Front_Primary_Volumetric": 19,
+   "Front_Right_Point": 126,
+   "Front_Right_Turn": 145,
+   "Front_Right_Volumetric": 126,
+   "Front_Secondary_Head": 126,
+   "Grand_Tourer_Headlight_Point_Left": 2,
+   "Grand_Tourer_Headlight_Point_Right": 2,
+   "Grand_Tourer_Headlight_Volume_Left": 2,
+   "Grand_Tourer_Headlight_Volume_Right": 2,
+   "Grand_Tourer_Side_Left_Turn": 2,
+   "Grand_Tourer_Side_Right_Turn": 2,
+   "Grand_tourer_Side_Left_Mirror": 2,
+   "Grand_tourer_Side_Right_Mirror": 2,
+   "Heavy_Assault_Dash_Light": 3,
+   "Heavy_Patrol_Dash_Light_Left": 5,
+   "Heavy_Patrol_Dash_Light_Right": 5,
+   "Heavy_Patrol_Front_Left_Point": 5,
+   "Heavy_Patrol_Front_Left_Volumetric": 5,
+   "Heavy_Patrol_Front_Primary_Head": 5,
+   "Heavy_Patrol_Front_Right_Point": 5,
+   "Heavy_Patrol_Front_Right_Volumetric": 5,
+   "Heavy_Patrol_Rear_Left_Point": 5,
+   "Heavy_Patrol_Rear_Left_Volumetric": 5,
+   "Heavy_Patrol_Rear_Primary_Head": 5,
+   "Heavy_Patrol_Rear_Right_Point": 5,
+   "Heavy_Patrol_Rear_Right_Volumetric": 5,
+   "Heavy_Troop_Front_Bottom_Point": 3,
+   "Heavy_Troop_Rear_Tail_Top_Point": 3,
+   "Heavy_Troop_Side_Bottom_Left_Point": 3,
+   "Heavy_Troop_Side_Bottom_Right_Point": 3,
+   "Heavy_Troop_Side_Lower_Left_Point": 3,
+   "Heavy_Troop_Side_Lower_Right_Point": 3,
+   "Jeep_Front_Side_Left_Turn": 12,
+   "Jeep_Front_Side_Right_Turn": 12,
+   "Jeep_Front_Top_Left_Turn": 12,
+   "Jeep_Front_Top_Right_Turn": 12,
+   "Jeep_Headlight_Point_Left": 12,
+   "Jeep_Headlight_Point_Right": 12,
+   "Jeep_LightRack1": 12,
+   "Jeep_LightRack2": 12,
+   "Jeep_LightRack3": 12,
+   "Jeep_LightRack4": 12,
+   "Jetski_Front_Primary_Head": 3,
+   "Jetski_Headlight_Left_Point": 3,
+   "Jetski_Headlight_Right_Point": 3,
+   "Jetski_Headlight_Volume_Left": 3,
+   "Jetski_Headlight_Volume_Right": 3,
+   "Left_Point": 23,
+   "Left_Wing_point": 18,
+   "Light_Assault_Front_Left_Point": 3,
+   "Light_Assault_Front_Left_Volumetric": 3,
+   "Light_Assault_Front_Point": 3,
+   "Light_Assault_Front_Primary_Head": 3,
+   "Light_Assault_Front_Right_Point": 3,
+   "Light_Assault_Front_Right_Volumetric": 3,
+   "Light_Assault_Rear_Tail_Bottom_Point": 3,
+   "Limo_Headlight_Point_Left1": 2,
+   "Limo_Headlight_Point_Left2": 2,
+   "Limo_Headlight_Point_Left3": 2,
+   "Limo_Headlight_Point_Right1": 2,
+   "Limo_Headlight_Point_Right2": 2,
+   "Limo_Headlight_Point_Right3": 2,
+   "Limo_Headlight_Volume_Left": 2,
+   "Limo_Headlight_Volume_Right": 2,
+   "Limo_Rear_Left_Point": 2,
+   "Limo_Rear_Right_Point": 2,
+   "Medium_Fishing_Front_Left_Point": 2,
+   "Medium_Fishing_Front_Left_Volumetric": 2,
+   "Medium_Fishing_Front_Right_Point": 2,
+   "Medium_Fishing_Front_Right_Volumetric": 2,
+   "Medium_Fishing_Side_Left_Front_Point": 2,
+   "Medium_Fishing_Side_Left_Front_Vol": 2,
+   "Medium_Fishing_Side_Left_Point": 2,
+   "Medium_Fishing_Side_Left_Rear_Point": 2,
+   "Medium_Fishing_Side_Left_Rear_Vol": 2,
+   "Medium_Fishing_Side_Right_Front_Point": 2,
+   "Medium_Fishing_Side_Right_Front_Vol": 2,
+   "Medium_Fishing_Side_Right_Rear_Point": 2,
+   "Medium_Fishing_Side_Right_Rear_Vol": 2,
+   "Medium_Tank_Front_Left_Point": 4,
+   "Medium_Tank_Front_Lower_Left_Point": 4,
+   "Medium_Tank_Front_Lower_Left_Vol": 4,
+   "Medium_Tank_Front_Lower_Right_Point": 4,
+   "Medium_Tank_Front_Lower_Right_Vol": 4,
+   "Medium_Tank_Front_Outer_Left_Vol": 4,
+   "Medium_Tank_Front_Outer_Right_Vol": 4,
+   "Medium_Tank_Front_Right_Point": 4,
+   "Medium_Tank_Side_Left_Turn": 4,
+   "Medium_Tank_Side_Right_Turn": 4,
+   "Mine_Truck_Front_Left_Turn": 2,
+   "Mine_Truck_Front_Right_Turn": 2,
+   "Mine_Truck_Headlight_Left": 2,
+   "Mine_Truck_Headlight_Right": 2,
+   "Mine_Truck_Rear_Left_Point": 2,
+   "Mine_Truck_Rear_Right_Point": 2,
+   "Mine_Truck_Side_Left_Turn": 2,
+   "Mine_Truck_Side_Right_Turn": 2,
+   "Mine_Truck_Top_Center_Point": 2,
+   "Mine_Truck_Top_Left_Inner_Point": 2,
+   "Mine_Truck_Top_Left_Outer_Point": 2,
+   "Mine_Truck_Top_Right_Inner_Point": 2,
+   "Mine_Truck_Top_Right_Outer_Point": 2,
+   "Missile_Car_Pole_Front_Left_Point": 12,
+   "Missile_Car_Pole_Front_Right_Point": 12,
+   "Missile_Car_Pole_Rear_Left_Point": 12,
+   "Missile_Car_Pole_Rear_Right_Point": 12,
+   "Modern_Bus_Headlight_Left_Point1": 2,
+   "Modern_Bus_Headlight_Left_Point2": 2,
+   "Modern_Bus_Headlight_Right_Point1": 2,
+   "Modern_Bus_Headlight_Right_Point2": 2,
+   "Modern_Bus_Rear_Left_Point": 2,
+   "Modern_Bus_Rear_Right_Point": 2,
+   "Modern_Bus_Side_Front_Left_Turn": 2,
+   "Modern_Bus_Side_Front_Right_Turn": 2,
+   "Modern_Bus_Side_Rear_Left_Turn": 2,
+   "Modern_Bus_Side_Rear_Right_Turn": 2,
+   "Modern_Mini_Headlight_Point_Left": 5,
+   "Modern_Mini_Headlight_Point_Right": 5,
+   "Modern_Moped_Front_Headlight_Volume_Left": 2,
+   "Modern_Moped_Front_Headlight_Volume_Right": 2,
+   "Modern_Moped_Front_Wheel_Left_Turn": 2,
+   "Modern_Moped_Front_Wheel_Right_Turn": 2,
+   "Modern_Moped_Primary_Head": 2,
+   "Modern_Sedan_Rear_Left_Point": 5,
+   "Modern_Sedan_Rear_Right_Point": 5,
+   "Modern_Sport_Headlight_Volume": 4,
+   "Modern_Sport_Primary_Head": 4,
+   "Modern_Super_Front_Headlight_Volume_Left": 2,
+   "Modern_Super_Front_Headlight_Volume_Right": 2,
+   "Modern_Super_Primary_Head": 2,
+   "Modern_Suv_Headlight_Point_Left": 12,
+   "Modern_Suv_Headlight_Point_Right": 12,
+   "Modern_Suv_Rear_Point_Left": 12,
+   "Modern_Suv_Rear_Point_Right": 12,
+   "Modern_Suv_Rear_Reverse_Left": 12,
+   "Modern_Suv_Rear_Reverse_Right": 12,
+   "Modern_Suv_Side_Front_Left_Turn": 12,
+   "Modern_Suv_Side_Front_Right_Turn": 12,
+   "Motoryacht_Door_Point1": 2,
+   "Motoryacht_Door_Point2": 2,
+   "Motoryacht_Door_Point3": 2,
+   "Motoryacht_Door_Top_Point": 2,
+   "Motoryacht_Side_Left_Point": 2,
+   "Motoryacht_Side_Right_Point": 2,
+   "Motoryacht_Stern_Left_Staircase_Point1": 2,
+   "Motoryacht_Stern_Left_Staircase_Point2": 2,
+   "Motoryacht_Stern_Left_Staircase_Point3": 2,
+   "Motoryacht_Stern_Left_Staircase_Point4": 2,
+   "Motoryacht_Stern_Left_Staircase_Point5": 2,
+   "Motoryacht_Stern_Left_Staircase_Point6": 2,
+   "Motoryacht_Stern_Left_Staircase_Point7": 2,
+   "Motoryacht_Stern_Right_Staircase_Point1": 2,
+   "Motoryacht_Stern_Right_Staircase_Point2": 2,
+   "Motoryacht_Stern_Right_Staircase_Point3": 2,
+   "Motoryacht_Stern_Right_Staircase_Point4": 2,
+   "Motoryacht_Stern_Right_Staircase_Point5": 2,
+   "Motoryacht_Stern_Right_Staircase_Point6": 2,
+   "Motoryacht_Stern_Right_Staircase_Point7": 2,
+   "Motoryacht_Top_Point": 2,
+   "Motoryacht_Top_Spot": 2,
+   "Motoryacht_Top_Spot_Volumetric": 2,
+   "Mugello_Super_Rear_Left_Turn": 5,
+   "Mugello_Super_Rear_Right_Turn": 5,
+   "Mugello_Super_Rear_Top_Point": 5,
+   "Nav_Left_Point": 35,
+   "Nav_Right_Point": 35,
+   "None": 8,
+   "Old_Bus_Front_Left_Turn": 3,
+   "Old_Bus_Front_Right_Turn": 3,
+   "Old_Bus_Headlight_Left_Point": 3,
+   "Old_Bus_Headlight_Right_Point": 3,
+   "Old_Bus_Rear_Left_Point": 3,
+   "Old_Bus_Rear_Right_Point": 3,
+   "Old_Bus_Side_Front_Left_Turn": 3,
+   "Old_Bus_Side_Front_Right_Turn": 3,
+   "Old_Bus_Side_Rear_Left_Turn": 3,
+   "Old_Bus_Side_Rear_Right_Turn": 3,
+   "Old_Compact_Headlight_Left_Point": 9,
+   "Old_Compact_Headlight_Right_Point": 9,
+   "Old_Compact_Side_Front_Left_Turn": 9,
+   "Old_Compact_Side_Front_Right_Turn": 9,
+   "Old_Compact_Side_Rear_Left_Turn": 9,
+   "Old_Compact_Side_Rear_Right_Turn": 9,
+   "Old_Front_Headlight_Volume_Left": 2,
+   "Old_Front_Primary_Head": 2,
+   "Old_Moped_Front_Headlight_Volume_Left": 2,
+   "Old_Moped_Front_Headlight_Volume_Right": 2,
+   "Old_Moped_Front_Primary_Head": 2,
+   "Old_Truck_Headlight_Point_Left": 9,
+   "Old_Truck_Headlight_Point_Right": 9,
+   "Old_Truck_Military_Headlight_Point_Left": 1,
+   "Old_Truck_Military_Headlight_Point_Right": 1,
+   "Old_Truck_Military_Headlight_Volumetric_Left": 1,
+   "Old_Truck_Military_Headlight_Volumetric_Right": 1,
+   "Old_Truck_Rear_Left_Point": 9,
+   "Old_Truck_Rear_Right_Point": 9,
+   "Private_Propeller_Headlight": 2,
+   "Private_Propeller_Headlight_Point": 2,
+   "Private_Propeller_Headlight_Volume": 2,
+   "Private_Propeller_L_Headlight": 2,
+   "Private_Propeller_L_Headlight_Point": 2,
+   "Private_Propeller_L_Headlight_Volume": 2,
+   "Private_Propeller_Wing_Inner_Left_Point": 2,
+   "Private_Propeller_Wing_Inner_Right_Point": 2,
+   "Rear_Brake": 145,
+   "Rear_Left_Point": 126,
+   "Rear_Left_Reverse": 145,
+   "Rear_Left_Turn": 145,
+   "Rear_Point": 23,
+   "Rear_Right_Point": 126,
+   "Rear_Right_Reverse": 126,
+   "Rear_Right_Turn": 145,
+   "Rear_Tail_Wing_Point": 18,
+   "Right_Point": 23,
+   "Right_Wing_Point": 18,
+   "Saloon_Headlight_Left_Point": 3,
+   "Saloon_Headlight_Right_Point": 3,
+   "Saloon_Rear_Left_Point": 3,
+   "Saloon_Rear_Right_Point": 3,
+   "Sea_Scout_Front_Point": 3,
+   "Sea_Scout_Front_Primary_Head": 3,
+   "Sea_Scout_Front_Primary_Volumetric": 3,
+   "Sea_Scout_Top_Point": 3,
+   "Small_Fishing_Front_Left_Point": 2,
+   "Small_Fishing_Front_Right_Point": 2,
+   "Small_Fishing_Stern_Point": 2,
+   "Small_Tank_Front_Outer_Left_Vol": 3,
+   "Small_Tank_Front_Outer_Right_Vol": 3,
+   "Small_Tank_Rear_Left_Turn": 3,
+   "Small_Tank_Rear_Right_Turn": 3,
+   "Small_Tank_Side_Left_Turn": 3,
+   "Small_Tank_Side_Right_Turn": 3,
+   "Speedboat_Front_Left_Volumetric": 3,
+   "Speedboat_Front_Primary_Head": 3,
+   "Speedboat_Front_Right_Volumetric": 3,
+   "Speedboat_Headlight_Left_Point1": 3,
+   "Speedboat_Headlight_Left_Point2": 3,
+   "Speedboat_Headlight_Left_Point3": 3,
+   "Speedboat_Headlight_Right_Point1": 3,
+   "Speedboat_Headlight_Right_Point2": 3,
+   "Speedboat_Headlight_Right_Point3": 3,
+   "Speedboat_Rear_Left_Point": 3,
+   "Speedboat_Rear_Right_Point": 3,
+   "Sport_Muscle_Headlight_Point_Left": 3,
+   "Sport_Muscle_Headlight_Point_Right": 3,
+   "Sport_Muscle_Headlight_Volume_Left": 3,
+   "Sport_Muscle_Headlight_Volume_Right": 3,
+   "Sport_Muscle_Rear_Break_Left": 3,
+   "Sport_Muscle_Rear_Break_Right": 3,
+   "Sport_Saloon_Left_Brake": 2,
+   "Sport_Saloon_Left_Reverse": 2,
+   "Sport_Saloon_Right_Brake": 2,
+   "Sport_Saloon_Right_Reverse": 2,
+   "Sport_Saloon_Side_Left_Mirror": 2,
+   "Sport_Saloon_Side_Right_Mirror": 2,
+   "Sport_Saloon_Trunk_Reverse": 2,
+   "Stern_Point": 35,
+   "Transport_Front_Point": 4,
+   "Transport_Front_Primary_Head": 4,
+   "Transport_Front_Volumetric": 4,
+   "Truck_Headlight_Point_Left": 2,
+   "Truck_Headlight_Point_Right": 2,
+   "Truck_Middle_Left_Turn": 2,
+   "Truck_Middle_Right_Turn": 2,
+   "Vintage_Front_Bottom_Point": 2,
+   "Vintage_Headlight_Point_Left": 7,
+   "Vintage_Headlight_Point_Right": 7,
+   "Vintage_Headlight_Wheel_Left": 2,
+   "Vintage_Headlight_Wheel_Left_Point": 2,
+   "Vintage_Headlight_Wheel_Right": 2,
+   "Vintage_Headlight_Wheel_Right_Point": 2,
+   "Vintage_Headlight_Wheel_Volume_Left": 2,
+   "Vintage_Headlight_Wheel_Volume_Right": 2,
+   "Vintage_Rear_Point_Inner_Left": 7,
+   "Vintage_Rear_Point_Inner_Right": 7,
+   "Vintage_Rear_Point_Left": 7,
+   "Vintage_Rear_Point_Right": 7,
+   "Vintage_Side_Front_Left_Turn": 7,
+   "Vintage_Side_Front_Right_Turn": 7,
+   "Vintage_Side_Rear_Left_Turn": 7,
+   "Vintage_Side_Rear_Right_Turn": 7,
+   "Vintage_Wing_Left_Rear_Point": 2,
+   "Vintage_Wing_Right_Rear_Point": 2
+  },
+  "preset_names_distinct": 404,
+  "preset_names_matching_wheel": [
+   "Capstone_Fighter_Headlight_Wheel",
+   "Capstone_Fighter_Headlight_Wheel_Point",
+   "Capstone_Fighter_Headlight_Wheel_Volume",
+   "Cargo_Headlight_Wheel_Left",
+   "Cargo_Headlight_Wheel_Right",
+   "Fighter_Bomber_Headlight_Wheel",
+   "Fighter_Bomber_Headlight_Wheel_Point",
+   "Fighter_Bomber_Headlight_Wheel_Volume",
+   "Modern_Moped_Front_Wheel_Left_Turn",
+   "Modern_Moped_Front_Wheel_Right_Turn",
+   "Vintage_Headlight_Wheel_Left",
+   "Vintage_Headlight_Wheel_Left_Point",
+   "Vintage_Headlight_Wheel_Right",
+   "Vintage_Headlight_Wheel_Right_Point",
+   "Vintage_Headlight_Wheel_Volume_Left",
+   "Vintage_Headlight_Wheel_Volume_Right"
+  ]
+ },
+ "index_scan": {
+  "by_dir": [
+   [
+    "locations/region_03/capital_city",
+    29
+   ],
+   [
+    "animations/jc_characters/dialogue/archive/eng",
+    26
+   ],
+   [
+    "models/jc_environments/lights/industrial/textures",
+    26
+   ],
+   [
+    "models/jc_environments/lights/industrial",
+    21
+   ],
+   [
+    "models/jc_environments/lights/civilian/textures",
+    14
+   ],
+   [
+    "animations/sequence/mm110_flightpath/animations",
+    13
+   ],
+   [
+    "dlc/mech_land_assault/models/jc_environment/structures/textures",
+    10
+   ],
+   [
+    "dlc/bavarium_sea_heist/sound/dialogue/ara",
+    9
+   ],
+   [
+    "dlc/bavarium_sea_heist/sound/dialogue/bra",
+    9
+   ],
+   [
+    "dlc/bavarium_sea_heist/sound/dialogue/eng",
+    9
+   ]
+  ],
+  "light_paths_outside_vehicles": 588,
+  "preset_count": 0,
+  "vehicle_light_preset_tables": []
+ },
+ "inputs": {
+  "bmak_lights_sha1": "d5ef78c568d23a31",
+  "detail_graphs": 232,
+  "entity_caches": 232,
+  "geometry_rows": 56136,
+  "index_sha1": "85369c3fda0e864e",
+  "parts_rows": 233
+ },
+ "module": {
+  "behaviors": {
+   "HeadLight": 1027,
+   "LeftSignal": 253,
+   "None": 1177,
+   "Reverse": 191,
+   "RightSignal": 253,
+   "SirenLightOffOnFast": 3,
+   "SirenLightOn": 9,
+   "SirenLightOnOffFast": 3,
+   "TailLight": 301
+  },
+  "entities_with_module": 223,
+  "entities_without_module": [
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0000_car_autostraad_oldjeep__v0000_car_autostraad_oldjeep_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0000_car_autostraad_oldjeep__v0000_car_autostraad_oldjeep_civilian_z80.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0000_car_autostraad_oldjeep__v0000_car_autostraad_oldjeep_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0000_car_autostraad_oldjeep__v0000_car_autostraad_oldjeep_military_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0000_car_autostraad_oldjeep__v0000_car_autostraad_oldjeep_military_z80.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0000_car_autostraad_oldjeep__v0000_car_autostraad_oldjeep_rebel_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0001_car_autostraad_armoredtruck__v0001_car_autostraad_armoredtruck_commercial_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0001_car_autostraad_armoredtruck__v0001_car_autostraad_armoredtruck_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0002_car_autostraad_oldcampervan__v0002_car_autostraad_oldcampervan_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0002_car_autostraad_oldcampervan__v0002_car_autostraad_oldcampervan_civilian_z80.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0002_car_autostraad_oldcampervan__v0002_car_autostraad_oldcampervan_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0003_car_autostraad_racinghothatch__v0003_car_autostraad_racinghothatch_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0003_car_autostraad_racinghothatch__v0003_car_autostraad_racinghothatch_civilian_z80.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0003_car_autostraad_racinghothatch__v0003_car_autostraad_racinghothatch_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0005_car_autostraad_minetruck__v0005_car_autostraad_minetruck_commercial_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0005_car_autostraad_minetruck__v0005_car_autostraad_minetruck_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0006_car_autostraad_modernbus__v0006_car_autostraad_modernbus_commercial_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0006_car_autostraad_modernbus__v0006_car_autostraad_modernbus_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0008_car_autostraad_modernsportssaloon__v0008_car_autostraad_modernsportssaloon_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0008_car_autostraad_modernsportssaloon__v0008_car_autostraad_modernsportssaloon_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0009_car_autostraad_modernsaloon__v0009_car_autostraad_modernsaloon_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0009_car_autostraad_modernsaloon__v0009_car_autostraad_modernsaloon_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0009_car_autostraad_modernsaloon__v0009_car_autostraad_modernsaloon_premium_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0011_car_autostraad_articulatedtruck__v0011_car_autostraad_articulatedtruck_commercial_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0011_car_autostraad_articulatedtruck__v0011_car_autostraad_articulatedtruck_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0012_car_autostraad_atv__v0012_car_autostraad_atv_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0012_car_autostraad_atv__v0012_car_autostraad_atv_civilian_01_z80.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0012_car_autostraad_atv__v0012_car_autostraad_atv_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0012_car_autostraad_atv__v0012_car_autostraad_atv_signature_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0200_car_capstone_apc__v0200_car_capstone_apc_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0200_car_capstone_apc__v0200_car_capstone_apc_military_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0200_car_capstone_apc__v0200_car_capstone_apc_rebel_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0201_car_capstone_mediumtank__v0201_car_capstone_mediumtank_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0201_car_capstone_mediumtank__v0201_car_capstone_mediumtank_military_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0201_car_capstone_mediumtank__v0201_car_capstone_mediumtank_rebel_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0202_car_capstone_bavariumtank__v0202_car_capstone_bavariumtank_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0202_car_capstone_bavariumtank__v0202_car_capstone_bavariumtank_military_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0202_car_capstone_bavariumtank__v0202_car_capstone_bavariumtank_rebel_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0300_car_kensington_sportsmuscle__v0300_car_kensington_sportsmuscle_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0300_car_kensington_sportsmuscle__v0300_car_kensington_sportsmuscle_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0300_car_kensington_sportsmuscle__v0300_car_kensington_sportsmuscle_signature_preorder.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0302_car_kensington_modernlimo__v0302_car_kensington_modernlimo_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0302_car_kensington_modernlimo__v0302_car_kensington_modernlimo_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0305_car_kensington_moderngrandtourer__v0305_car_kensington_moderngrandtourer_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0305_car_kensington_moderngrandtourer__v0305_car_kensington_moderngrandtourer_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0400_car_mugello_vintagesports__v0400_car_mugello_vintagesports_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0400_car_mugello_vintagesports__v0400_car_mugello_vintagesports_civilian_z80.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0400_car_mugello_vintagesports__v0400_car_mugello_vintagesports_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0400_car_mugello_vintagesports__v0400_car_mugello_vintagesports_signature_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0401_car_mugello_racingsupercar__v0401_car_mugello_racingsupercar_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0401_car_mugello_racingsupercar__v0401_car_mugello_racingsupercar_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0401_car_mugello_racingsupercar__v0401_car_mugello_racingsupercar_premium_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0402_car_mugello_vintagesuper__v0402_car_mugello_vintagesuper_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0402_car_mugello_vintagesuper__v0402_car_mugello_vintagesuper_civilian_z80_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0402_car_mugello_vintagesuper__v0402_car_mugello_vintagesuper_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0403_car_mugello_modernecosuper__v0403_car_mugello_modernecosuper_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0403_car_mugello_modernecosuper__v0403_car_mugello_modernecosuper_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0405_car_mugello_moderncircuitracer__v0405_car_mugello_moderncircuitracer_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0405_car_mugello_moderncircuitracer__v0405_car_mugello_moderncircuitracer_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0500_car_solar_oldmini__v0500_car_solar_oldmini_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0500_car_solar_oldmini__v0500_car_solar_oldmini_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0500_car_solar_oldmini__v0500_car_solar_oldmini_signature_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0501_car_solar_smallvan__v0501_car_solar_smallvan_civic_ambulance_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0501_car_solar_smallvan__v0501_car_solar_smallvan_commercial_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0501_car_solar_smallvan__v0501_car_solar_smallvan_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0501_car_solar_smallvan__v0501_car_solar_smallvan_propaganda_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0501_car_solar_smallvan__v0501_car_solar_smallvan_propaganda_chaoslist.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0502_car_solar_modernsedan__v0502_car_solar_modernsedan_civic_police_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0502_car_solar_modernsedan__v0502_car_solar_modernsedan_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0502_car_solar_modernsedan__v0502_car_solar_modernsedan_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0503_car_solar_modernsuv__v0503_car_solar_modernsuv_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0503_car_solar_modernsuv__v0503_car_solar_modernsuv_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0504_car_solar_technicaljeep__v0504_car_solar_technicaljeep_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0504_car_solar_technicaljeep__v0504_car_solar_technicaljeep_militia_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0504_car_solar_technicaljeep__v0504_car_solar_technicaljeep_rebel_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0504_car_solar_technicaljeep__v0504_car_solar_technicaljeep_rebel_machinegun.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0505_car_solar_oldtruck__v0505_car_solar_oldtruck_commercial_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0505_car_solar_oldtruck__v0505_car_solar_oldtruck_commercial_cargo_barrel.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0505_car_solar_oldtruck__v0505_car_solar_oldtruck_commercial_cargo_random.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0505_car_solar_oldtruck__v0505_car_solar_oldtruck_commercial_cargo_wine.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0505_car_solar_oldtruck__v0505_car_solar_oldtruck_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0505_car_solar_oldtruck__v0505_car_solar_oldtruck_military_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0505_car_solar_oldtruck__v0505_car_solar_oldtruck_rebel_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0505_car_solar_oldtruck__v0505_car_solar_oldtruck_rebel_emp_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0505_car_solar_oldtruck__v0505_car_solar_oldtruck_rebel_emp_custom_mm250.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0506_car_solar_oldtractor__v0506_car_solar_oldtractor_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0506_car_solar_oldtractor__v0506_car_solar_oldtractor_civilian_z80.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0506_car_solar_oldtractor__v0506_car_solar_oldtractor_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0507_car_solar_oldbus__v0507_car_solar_oldbus_commercial_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0507_car_solar_oldbus__v0507_car_solar_oldbus_commercial_z80.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0507_car_solar_oldbus__v0507_car_solar_oldbus_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0508_car_solar_oldcompact__v0508_car_solar_oldcompact_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0508_car_solar_oldcompact__v0508_car_solar_oldcompact_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0509_car_solar_modernmini__v0509_car_solar_modernmini_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0509_car_solar_modernmini__v0509_car_solar_modernmini_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0510_car_solar_modernroadster__v0510_car_solar_modernroadster_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0510_car_solar_modernroadster__v0510_car_solar_modernroadster_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0512_car_solar_oldtwodoorhatch__v0512_car_solar_oldtwodoorhatch_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0512_car_solar_oldtwodoorhatch__v0512_car_solar_oldtwodoorhatch_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0513_car_solar_oldfourdoorhatch__v0513_car_solar_oldfourdoorhatch_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0513_car_solar_oldfourdoorhatch__v0513_car_solar_oldfourdoorhatch_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0514_car_solar_modernpickup__v0514_car_solar_modernpickup_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0514_car_solar_modernpickup__v0514_car_solar_modernpickup_civilian_z80.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0514_car_solar_modernpickup__v0514_car_solar_modernpickup_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0600_car_urga_armoredjeep__v0600_car_urga_armoredjeep_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0600_car_urga_armoredjeep__v0600_car_urga_armoredjeep_military_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0600_car_urga_armoredjeep__v0600_car_urga_armoredjeep_rebel_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0602_car_urga_armoredtransport__v0602_car_urga_armoredtransport_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0602_car_urga_armoredtransport__v0602_car_urga_armoredtransport_military_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0602_car_urga_armoredtransport__v0602_car_urga_armoredtransport_rebel_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0603_car_urga_smalltank__v0603_car_urga_smalltank_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0603_car_urga_smalltank__v0603_car_urga_smalltank_military_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0603_car_urga_smalltank__v0603_car_urga_smalltank_rebel_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0604_car_urga_buggy__v0604_car_urga_buggy_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0604_car_urga_buggy__v0604_car_urga_buggy_military_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0604_car_urga_buggy__v0604_car_urga_buggy_military_z80.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0604_car_urga_buggy__v0604_car_urga_buggy_premium_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0604_car_urga_buggy__v0604_car_urga_buggy_rebel_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0604_car_urga_buggy__v0604_car_urga_buggy_signature_preorder.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0803_car_na_monstertruck__v0803_car_na_monstertruck_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0803_car_na_monstertruck__v0803_car_na_monstertruck_civilian_01_z80.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0803_car_na_monstertruck__v0803_car_na_monstertruck_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0866_car_na_ladbil__v0866_car_na_ladbil_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v0866_car_na_ladbil__v0866_car_na_ladbil_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v1200_boat_capstone_heavypatrol__v1200_boat_capstone_heavypatrol_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v1200_boat_capstone_heavypatrol__v1200_boat_capstone_heavypatrol_military_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v1200_boat_capstone_heavypatrol__v1200_boat_capstone_heavypatrol_military_01_delivery.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v1200_boat_capstone_heavypatrol__v1200_boat_capstone_heavypatrol_rebel_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v1200_boat_capstone_heavypatrol__v1200_boat_capstone_heavypatrol_rebel_01_mm210.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v1202_boat_capstone_corvette__v1202_boat_capstone_corvette_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v1202_boat_capstone_corvette__v1202_boat_capstone_corvette_military_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v1202_boat_capstone_corvette__v1202_boat_capstone_corvette_rebel_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v1300_boat_kensington_motoryacht__v1300_boat_kensington_motoryacht_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v1300_boat_kensington_motoryacht__v1300_boat_kensington_motoryacht_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v1302_boat_kensington_sailboat__v1302_boat_kensington_sailboat_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v1302_boat_kensington_sailboat__v1302_boat_kensington_sailboat_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v1400_boat_mugello_spyspeedboat__v1400_boat_mugello_spyspeedboat_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v1400_boat_mugello_spyspeedboat__v1400_boat_mugello_spyspeedboat_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v1400_boat_mugello_spyspeedboat__v1400_boat_mugello_spyspeedboat_premium_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v1401_boat_mugello_racingboat__v1401_boat_mugello_racingboat_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v1401_boat_mugello_racingboat__v1401_boat_mugello_racingboat_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v1401_boat_mugello_racingboat__v1401_boat_mugello_racingboat_signature_preorder.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v1500_boat_solar_jetski__v1500_boat_solar_jetski_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v1500_boat_solar_jetski__v1500_boat_solar_jetski_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v1500_boat_solar_jetski__v1500_boat_solar_jetski_signature_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v1602_boat_urga_transport__v1602_boat_urga_transport_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v1602_boat_urga_transport__v1602_boat_urga_transport_military_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v1602_boat_urga_transport__v1602_boat_urga_transport_military_01_delivery.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v1602_boat_urga_transport__v1602_boat_urga_transport_rebel_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v1701_boat_na_smalloldfishing__v1701_boat_na_smalloldfishing_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v1701_boat_na_smalloldfishing__v1701_boat_na_smalloldfishing_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v1704_boat_na_lightpatrol__v1704_boat_na_lightpatrol_civic_police_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v1704_boat_na_lightpatrol__v1704_boat_na_lightpatrol_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v1704_boat_na_lightpatrol__v1704_boat_na_lightpatrol_military_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v1704_boat_na_lightpatrol__v1704_boat_na_lightpatrol_rebel_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v1705_boat_na_mediumoldfishing__v1705_boat_na_mediumoldfishing_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v1705_boat_na_mediumoldfishing__v1705_boat_na_mediumoldfishing_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v1717_boat_na_duck__v1717_boat_na_duck_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v1717_boat_na_duck__v1717_boat_na_duck_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v2102_helicopter_eubus_utility__v2102_helicopter_eubus_utility_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v2102_helicopter_eubus_utility__v2102_helicopter_eubus_utility_commercial_news.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v2102_helicopter_eubus_utility__v2102_helicopter_eubus_utility_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v2200_helicopter_capstone_assault__v2200_helicopter_capstone_assault_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v2200_helicopter_capstone_assault__v2200_helicopter_capstone_assault_military_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v2200_helicopter_capstone_assault__v2200_helicopter_capstone_assault_rebel_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v2201_helicopter_capstone_heavytroop__v2201_helicopter_capstone_heavytroop_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v2201_helicopter_capstone_heavytroop__v2201_helicopter_capstone_heavytroop_military_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v2201_helicopter_capstone_heavytroop__v2201_helicopter_capstone_heavytroop_rebel_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v2601_helicopter_urga_heavyassault__v2601_helicopter_urga_heavyassault_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v2601_helicopter_urga_heavyassault__v2601_helicopter_urga_heavyassault_military_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v2601_helicopter_urga_heavyassault__v2601_helicopter_urga_heavyassault_rebel_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v2602_helicopter_urga_lightassault__v2602_helicopter_urga_lightassault_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v2602_helicopter_urga_lightassault__v2602_helicopter_urga_lightassault_military_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v2602_helicopter_urga_lightassault__v2602_helicopter_urga_lightassault_rebel_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v2603_helicopter_urga_seascout__v2603_helicopter_urga_seascout_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v2603_helicopter_urga_seascout__v2603_helicopter_urga_seascout_military_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v2603_helicopter_urga_seascout__v2603_helicopter_urga_seascout_rebel_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v2604_helicopter_urga_advancedassault__v2604_helicopter_urga_advancedassault_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v2604_helicopter_urga_advancedassault__v2604_helicopter_urga_advancedassault_military_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v2604_helicopter_urga_advancedassault__v2604_helicopter_urga_advancedassault_rebel_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v2604_helicopter_urga_advancedassault__v2604_helicopter_urga_advancedassault_signature_shielded.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v2604_helicopter_urga_advancedassault__v2604_helicopter_urga_advancedassault_signature_shielded_di_ravello.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v3000_bike_autostraad_trials__v3000_bike_autostraad_trials_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v3000_bike_autostraad_trials__v3000_bike_autostraad_trials_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v3000_bike_autostraad_trials__v3000_bike_autostraad_trials_signature_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v3001_bike_autostraad_snowmobile__v3001_bike_autostraad_snowmobile_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v3401_bike_mugello_modernsport__v3401_bike_mugello_modernsport_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v3401_bike_mugello_modernsport__v3401_bike_mugello_modernsport_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v3402_bike_mugello_modernsuper__v3402_bike_mugello_modernsuper_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v3402_bike_mugello_modernsuper__v3402_bike_mugello_modernsuper_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v3500_bike_solar_oldmoped__v3500_bike_solar_oldmoped_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v3500_bike_solar_oldmoped__v3500_bike_solar_oldmoped_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v3501_bike_solar_modernmoped__v3501_bike_solar_modernmoped_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v3501_bike_solar_modernmoped__v3501_bike_solar_modernmoped_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v3502_bike_solar_modernroad__v3502_bike_solar_modernroad_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v3502_bike_solar_modernroad__v3502_bike_solar_modernroad_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v3503_bike_solar_oldroad__v3503_bike_solar_oldroad_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v3503_bike_solar_oldroad__v3503_bike_solar_oldroad_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v3600_bike_urga_combatdirt__v3600_bike_urga_combatdirt_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v3600_bike_urga_combatdirt__v3600_bike_urga_combatdirt_military_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v3600_bike_urga_combatdirt__v3600_bike_urga_combatdirt_rebel_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v4202_plane_capstone_fighterjet__v4202_plane_capstone_fighterjet_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v4202_plane_capstone_fighterjet__v4202_plane_capstone_fighterjet_military_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v4202_plane_capstone_fighterjet__v4202_plane_capstone_fighterjet_rebel_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v4500_plane_solar_smallfloatprop__v4500_plane_solar_smallfloatprop_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v4500_plane_solar_smallfloatprop__v4500_plane_solar_smallfloatprop_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v4600_plane_urga_privatepropeller__v4600_plane_urga_privatepropeller_civilian_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v4600_plane_urga_privatepropeller__v4600_plane_urga_privatepropeller_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v4602_plane_urga_fighterbomber__v4602_plane_urga_fighterbomber_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v4602_plane_urga_fighterbomber__v4602_plane_urga_fighterbomber_military_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v4602_plane_urga_fighterbomber__v4602_plane_urga_fighterbomber_rebel_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v4603_plane_urga_cargotransport__v4603_plane_urga_cargotransport_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v4603_plane_urga_cargotransport__v4603_plane_urga_cargotransport_military_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v4603_plane_urga_cargotransport__v4603_plane_urga_cargotransport_military_cargo_paratrooper.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v4603_plane_urga_cargotransport__v4603_plane_urga_cargotransport_military_cargo_tank.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v4603_plane_urga_cargotransport__v4603_plane_urga_cargotransport_mm340.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v4603_plane_urga_cargotransport__v4603_plane_urga_cargotransport_rebel_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v4800_plane_brothers_vintagefighter__v4800_plane_brothers_vintagefighter_debug.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v4800_plane_brothers_vintagefighter__v4800_plane_brothers_vintagefighter_rebel_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v5601_train_urga_monorailcargoengine__v5601_train_urga_monorailcargoengine_military_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v5601_train_urga_monorailcargoengine__v5601_train_urga_monorailcargoengine_military_02.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v5601_train_urga_monorailcargoengine__v5601_train_urga_monorailcargoengine_military_03.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v5601_train_urga_monorailcargoengine__v5601_train_urga_monorailcargoengine_military_04.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v5601_train_urga_monorailcargoengine__v5601_train_urga_monorailcargoengine_military_mission_mm320_boss_train.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v5601_train_urga_monorailcargoengine__v5601_train_urga_monorailcargoengine_military_mission_mm320_train.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v5601_train_urga_monorailcargoengine__v5601_train_urga_monorailcargoengine_military_mission_mm320_train_rammer.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v5602_train_urga_monorailflatbed__v5602_train_urga_monorailflatbed_military_catwalk.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v5602_train_urga_monorailflatbed__v5602_train_urga_monorailflatbed_military_containers.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v5602_train_urga_monorailflatbed__v5602_train_urga_monorailflatbed_military_containers_rigidobject.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v5602_train_urga_monorailflatbed__v5602_train_urga_monorailflatbed_military_empty.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v5603_train_urga_monorailmissilecar__v5603_train_urga_monorailmissilecar_military_01.ee.json",
+   "E:/Modding/_gamedata/JC3grab\\entities\\v9999_car_mugello_dlctestcar__v9999_car_mugello_dlctestcar_debug.ee.json"
+  ],
+  "entries": 3217,
+  "hash_check": {
+   "bad": [],
+   "behavior_ok": 3217,
+   "entries": 3217,
+   "part_ok": 3217,
+   "transform_ok": 3217
+  },
+  "members": [
+   {
+    "count": 3217,
+    "path": "angle",
+    "type": "float"
+   },
+   {
+    "count": 3217,
+    "path": "behavior",
+    "type": "string"
+   },
+   {
+    "count": 3217,
+    "path": "behavior_hash",
+    "type": "uint32"
+   },
+   {
+    "count": 3217,
+    "path": "blinking",
+    "type": "int32"
+   },
+   {
+    "count": 3217,
+    "path": "cast_shadows",
+    "type": "int8"
+   },
+   {
+    "count": 3217,
+    "path": "deformable_transform",
+    "type": "string"
+   },
+   {
+    "count": 3217,
+    "path": "deformable_transform_hash",
+    "type": "uint32"
+   },
+   {
+    "count": 3217,
+    "path": "diffuse.B",
+    "type": "float"
+   },
+   {
+    "count": 3217,
+    "path": "diffuse.G",
+    "type": "float"
+   },
+   {
+    "count": 3217,
+    "path": "diffuse.R",
+    "type": "float"
+   },
+   {
+    "count": 3217,
+    "path": "falloff_start",
+    "type": "float"
+   },
+   {
+    "count": 3217,
+    "path": "light_type",
+    "type": "int32"
+   },
+   {
+    "count": 3217,
+    "path": "min_luminosity",
+    "type": "float"
+   },
+   {
+    "count": 3217,
+    "path": "multiplier",
+    "type": "float"
+   },
+   {
+    "count": 3217,
+    "path": "near_cap",
+    "type": "float"
+   },
+   {
+    "count": 3217,
+    "path": "part",
+    "type": "string"
+   },
+   {
+    "count": 3217,
+    "path": "part_hash",
+    "type": "uint32"
+   },
+   {
+    "count": 3217,
+    "path": "part_index",
+    "type": "uint32"
+   },
+   {
+    "count": 3217,
+    "path": "preset_id",
+    "type": "uint32"
+   },
+   {
+    "count": 3217,
+    "path": "projected_texture_index",
+    "type": "int8"
+   },
+   {
+    "count": 3217,
+    "path": "range",
+    "type": "float"
+   },
+   {
+    "count": 3217,
+    "path": "uvscale.u",
+    "type": "float"
+   },
+   {
+    "count": 3217,
+    "path": "uvscale.v",
+    "type": "float"
+   },
+   {
+    "count": 3217,
+    "path": "volume_intensity",
+    "type": "float"
+   },
+   {
+    "count": 3217,
+    "path": "volumetric_mode",
+    "type": "int16"
+   }
+  ],
+  "per_entity": {
+   "v0000_car_autostraad_oldjeep_civilian_01": 21,
+   "v0000_car_autostraad_oldjeep_civilian_z80": 21,
+   "v0000_car_autostraad_oldjeep_debug": 21,
+   "v0000_car_autostraad_oldjeep_military_01": 21,
+   "v0000_car_autostraad_oldjeep_military_z80": 21,
+   "v0000_car_autostraad_oldjeep_rebel_01": 21,
+   "v0001_car_autostraad_armoredtruck_commercial_01": 23,
+   "v0001_car_autostraad_armoredtruck_debug": 23,
+   "v0002_car_autostraad_oldcampervan_civilian_01": 16,
+   "v0002_car_autostraad_oldcampervan_civilian_z80": 16,
+   "v0002_car_autostraad_oldcampervan_debug": 16,
+   "v0003_car_autostraad_racinghothatch_civilian_01": 13,
+   "v0003_car_autostraad_racinghothatch_civilian_z80": 13,
+   "v0003_car_autostraad_racinghothatch_debug": 13,
+   "v0005_car_autostraad_minetruck_commercial_01": 24,
+   "v0005_car_autostraad_minetruck_debug": 24,
+   "v0006_car_autostraad_modernbus_commercial_01": 23,
+   "v0006_car_autostraad_modernbus_debug": 23,
+   "v0008_car_autostraad_modernsportssaloon_civilian_01": 21,
+   "v0008_car_autostraad_modernsportssaloon_debug": 21,
+   "v0009_car_autostraad_modernsaloon_civilian_01": 18,
+   "v0009_car_autostraad_modernsaloon_debug": 18,
+   "v0009_car_autostraad_modernsaloon_premium_01": 18,
+   "v0011_car_autostraad_articulatedtruck_commercial_01": 18,
+   "v0011_car_autostraad_articulatedtruck_debug": 18,
+   "v0012_car_autostraad_atv_civilian_01": 6,
+   "v0012_car_autostraad_atv_civilian_01_z80": 6,
+   "v0012_car_autostraad_atv_debug": 6,
+   "v0012_car_autostraad_atv_signature_01": 6,
+   "v0200_car_capstone_apc_debug": 13,
+   "v0200_car_capstone_apc_military_01": 13,
+   "v0200_car_capstone_apc_rebel_01": 13,
+   "v0201_car_capstone_mediumtank_debug": 21,
+   "v0201_car_capstone_mediumtank_military_01": 21,
+   "v0201_car_capstone_mediumtank_rebel_01": 21,
+   "v0202_car_capstone_bavariumtank_debug": 12,
+   "v0202_car_capstone_bavariumtank_military_01": 12,
+   "v0202_car_capstone_bavariumtank_rebel_01": 12,
+   "v0300_car_kensington_sportsmuscle_civilian_01": 21,
+   "v0300_car_kensington_sportsmuscle_debug": 21,
+   "v0300_car_kensington_sportsmuscle_signature_preorder": 21,
+   "v0302_car_kensington_modernlimo_civilian_01": 22,
+   "v0302_car_kensington_modernlimo_debug": 22,
+   "v0305_car_kensington_moderngrandtourer_civilian_01": 22,
+   "v0305_car_kensington_moderngrandtourer_debug": 22,
+   "v0400_car_mugello_vintagesports_civilian_01": 16,
+   "v0400_car_mugello_vintagesports_civilian_z80": 16,
+   "v0400_car_mugello_vintagesports_debug": 16,
+   "v0400_car_mugello_vintagesports_signature_01": 16,
+   "v0401_car_mugello_racingsupercar_civilian_01": 20,
+   "v0401_car_mugello_racingsupercar_debug": 20,
+   "v0401_car_mugello_racingsupercar_premium_01": 20,
+   "v0402_car_mugello_vintagesuper_civilian_01": 20,
+   "v0402_car_mugello_vintagesuper_civilian_z80_01": 20,
+   "v0402_car_mugello_vintagesuper_debug": 20,
+   "v0403_car_mugello_modernecosuper_civilian_01": 16,
+   "v0403_car_mugello_modernecosuper_debug": 16,
+   "v0405_car_mugello_moderncircuitracer_civilian_01": 1,
+   "v0405_car_mugello_moderncircuitracer_debug": 1,
+   "v0500_car_solar_oldmini_civilian_01": 12,
+   "v0500_car_solar_oldmini_debug": 12,
+   "v0500_car_solar_oldmini_signature_01": 12,
+   "v0501_car_solar_smallvan_civic_ambulance_01": 21,
+   "v0501_car_solar_smallvan_commercial_01": 21,
+   "v0501_car_solar_smallvan_debug": 21,
+   "v0501_car_solar_smallvan_propaganda_01": 21,
+   "v0501_car_solar_smallvan_propaganda_chaoslist": 21,
+   "v0502_car_solar_modernsedan_civic_police_01": 21,
+   "v0502_car_solar_modernsedan_civilian_01": 21,
+   "v0502_car_solar_modernsedan_debug": 21,
+   "v0503_car_solar_modernsuv_civilian_01": 20,
+   "v0503_car_solar_modernsuv_debug": 20,
+   "v0504_car_solar_technicaljeep_debug": 19,
+   "v0504_car_solar_technicaljeep_militia_01": 19,
+   "v0504_car_solar_technicaljeep_rebel_01": 19,
+   "v0504_car_solar_technicaljeep_rebel_machinegun": 19,
+   "v0505_car_solar_oldtruck_commercial_01": 22,
+   "v0505_car_solar_oldtruck_commercial_cargo_barrel": 22,
+   "v0505_car_solar_oldtruck_commercial_cargo_random": 22,
+   "v0505_car_solar_oldtruck_commercial_cargo_wine": 22,
+   "v0505_car_solar_oldtruck_debug": 22,
+   "v0505_car_solar_oldtruck_military_01": 22,
+   "v0505_car_solar_oldtruck_rebel_01": 22,
+   "v0505_car_solar_oldtruck_rebel_emp_01": 22,
+   "v0505_car_solar_oldtruck_rebel_emp_custom_mm250": 22,
+   "v0506_car_solar_oldtractor_civilian_01": 5,
+   "v0506_car_solar_oldtractor_civilian_z80": 5,
+   "v0506_car_solar_oldtractor_debug": 5,
+   "v0507_car_solar_oldbus_commercial_01": 24,
+   "v0507_car_solar_oldbus_commercial_z80": 24,
+   "v0507_car_solar_oldbus_debug": 24,
+   "v0508_car_solar_oldcompact_civilian_01": 16,
+   "v0508_car_solar_oldcompact_debug": 16,
+   "v0509_car_solar_modernmini_civilian_01": 14,
+   "v0509_car_solar_modernmini_debug": 14,
+   "v0510_car_solar_modernroadster_civilian_01": 12,
+   "v0510_car_solar_modernroadster_debug": 12,
+   "v0512_car_solar_oldtwodoorhatch_civilian_01": 20,
+   "v0512_car_solar_oldtwodoorhatch_debug": 20,
+   "v0513_car_solar_oldfourdoorhatch_civilian_01": 18,
+   "v0513_car_solar_oldfourdoorhatch_debug": 18,
+   "v0514_car_solar_modernpickup_civilian_01": 21,
+   "v0514_car_solar_modernpickup_civilian_z80": 21,
+   "v0514_car_solar_modernpickup_debug": 21,
+   "v0600_car_urga_armoredjeep_debug": 24,
+   "v0600_car_urga_armoredjeep_military_01": 24,
+   "v0600_car_urga_armoredjeep_rebel_01": 24,
+   "v0602_car_urga_armoredtransport_debug": 22,
+   "v0602_car_urga_armoredtransport_military_01": 22,
+   "v0602_car_urga_armoredtransport_rebel_01": 22,
+   "v0603_car_urga_smalltank_debug": 19,
+   "v0603_car_urga_smalltank_military_01": 19,
+   "v0603_car_urga_smalltank_rebel_01": 19,
+   "v0604_car_urga_buggy_debug": 13,
+   "v0604_car_urga_buggy_military_01": 13,
+   "v0604_car_urga_buggy_military_z80": 13,
+   "v0604_car_urga_buggy_premium_01": 13,
+   "v0604_car_urga_buggy_rebel_01": 13,
+   "v0604_car_urga_buggy_signature_preorder": 13,
+   "v0803_car_na_monstertruck_civilian_01": 19,
+   "v0803_car_na_monstertruck_civilian_01_z80": 19,
+   "v0803_car_na_monstertruck_debug": 19,
+   "v1200_boat_capstone_heavypatrol_debug": 13,
+   "v1200_boat_capstone_heavypatrol_military_01": 13,
+   "v1200_boat_capstone_heavypatrol_military_01_delivery": 13,
+   "v1200_boat_capstone_heavypatrol_rebel_01": 13,
+   "v1200_boat_capstone_heavypatrol_rebel_01_mm210": 13,
+   "v1202_boat_capstone_corvette_debug": 7,
+   "v1202_boat_capstone_corvette_military_01": 7,
+   "v1202_boat_capstone_corvette_rebel_01": 7,
+   "v1300_boat_kensington_motoryacht_civilian_01": 22,
+   "v1300_boat_kensington_motoryacht_debug": 22,
+   "v1302_boat_kensington_sailboat_civilian_01": 4,
+   "v1302_boat_kensington_sailboat_debug": 4,
+   "v1400_boat_mugello_spyspeedboat_civilian_01": 11,
+   "v1400_boat_mugello_spyspeedboat_debug": 11,
+   "v1400_boat_mugello_spyspeedboat_premium_01": 11,
+   "v1401_boat_mugello_racingboat_civilian_01": 5,
+   "v1401_boat_mugello_racingboat_debug": 5,
+   "v1401_boat_mugello_racingboat_signature_preorder": 5,
+   "v1500_boat_solar_jetski_civilian_01": 5,
+   "v1500_boat_solar_jetski_debug": 5,
+   "v1500_boat_solar_jetski_signature_01": 5,
+   "v1602_boat_urga_transport_debug": 6,
+   "v1602_boat_urga_transport_military_01": 6,
+   "v1602_boat_urga_transport_military_01_delivery": 6,
+   "v1602_boat_urga_transport_rebel_01": 6,
+   "v1701_boat_na_smalloldfishing_civilian_01": 4,
+   "v1701_boat_na_smalloldfishing_debug": 4,
+   "v1704_boat_na_lightpatrol_civic_police_01": 3,
+   "v1704_boat_na_lightpatrol_debug": 3,
+   "v1704_boat_na_lightpatrol_military_01": 3,
+   "v1704_boat_na_lightpatrol_rebel_01": 3,
+   "v1705_boat_na_mediumoldfishing_civilian_01": 14,
+   "v1705_boat_na_mediumoldfishing_debug": 14,
+   "v2102_helicopter_eubus_utility_civilian_01": 11,
+   "v2102_helicopter_eubus_utility_commercial_news": 11,
+   "v2102_helicopter_eubus_utility_debug": 11,
+   "v2200_helicopter_capstone_assault_debug": 8,
+   "v2200_helicopter_capstone_assault_military_01": 8,
+   "v2200_helicopter_capstone_assault_rebel_01": 8,
+   "v2201_helicopter_capstone_heavytroop_debug": 9,
+   "v2201_helicopter_capstone_heavytroop_military_01": 9,
+   "v2201_helicopter_capstone_heavytroop_rebel_01": 9,
+   "v2601_helicopter_urga_heavyassault_debug": 5,
+   "v2601_helicopter_urga_heavyassault_military_01": 5,
+   "v2601_helicopter_urga_heavyassault_rebel_01": 5,
+   "v2602_helicopter_urga_lightassault_debug": 12,
+   "v2602_helicopter_urga_lightassault_military_01": 12,
+   "v2602_helicopter_urga_lightassault_rebel_01": 12,
+   "v2603_helicopter_urga_seascout_debug": 9,
+   "v2603_helicopter_urga_seascout_military_01": 9,
+   "v2603_helicopter_urga_seascout_rebel_01": 9,
+   "v2604_helicopter_urga_advancedassault_debug": 11,
+   "v2604_helicopter_urga_advancedassault_military_01": 11,
+   "v2604_helicopter_urga_advancedassault_rebel_01": 11,
+   "v2604_helicopter_urga_advancedassault_signature_shielded": 11,
+   "v2604_helicopter_urga_advancedassault_signature_shielded_di_ravello": 11,
+   "v3000_bike_autostraad_trials_civilian_01": 6,
+   "v3000_bike_autostraad_trials_debug": 6,
+   "v3000_bike_autostraad_trials_signature_01": 6,
+   "v3401_bike_mugello_modernsport_civilian_01": 9,
+   "v3401_bike_mugello_modernsport_debug": 9,
+   "v3402_bike_mugello_modernsuper_civilian_01": 9,
+   "v3402_bike_mugello_modernsuper_debug": 9,
+   "v3500_bike_solar_oldmoped_civilian_01": 7,
+   "v3500_bike_solar_oldmoped_debug": 7,
+   "v3501_bike_solar_modernmoped_civilian_01": 13,
+   "v3501_bike_solar_modernmoped_debug": 13,
+   "v3502_bike_solar_modernroad_civilian_01": 9,
+   "v3502_bike_solar_modernroad_debug": 9,
+   "v3503_bike_solar_oldroad_civilian_01": 9,
+   "v3503_bike_solar_oldroad_debug": 9,
+   "v3600_bike_urga_combatdirt_debug": 9,
+   "v3600_bike_urga_combatdirt_military_01": 9,
+   "v3600_bike_urga_combatdirt_rebel_01": 9,
+   "v4202_plane_capstone_fighterjet_debug": 15,
+   "v4202_plane_capstone_fighterjet_military_01": 15,
+   "v4202_plane_capstone_fighterjet_rebel_01": 15,
+   "v4500_plane_solar_smallfloatprop_civilian_01": 4,
+   "v4500_plane_solar_smallfloatprop_debug": 4,
+   "v4600_plane_urga_privatepropeller_civilian_01": 11,
+   "v4600_plane_urga_privatepropeller_debug": 11,
+   "v4602_plane_urga_fighterbomber_debug": 12,
+   "v4602_plane_urga_fighterbomber_military_01": 12,
+   "v4602_plane_urga_fighterbomber_rebel_01": 12,
+   "v4603_plane_urga_cargotransport_debug": 24,
+   "v4603_plane_urga_cargotransport_military_01": 24,
+   "v4603_plane_urga_cargotransport_military_cargo_paratrooper": 24,
+   "v4603_plane_urga_cargotransport_military_cargo_tank": 45,
+   "v4603_plane_urga_cargotransport_mm340": 24,
+   "v4603_plane_urga_cargotransport_rebel_01": 24,
+   "v4800_plane_brothers_vintagefighter_debug": 13,
+   "v4800_plane_brothers_vintagefighter_rebel_01": 13,
+   "v5601_train_urga_monorailcargoengine_military_01": 11,
+   "v5601_train_urga_monorailcargoengine_military_02": 11,
+   "v5601_train_urga_monorailcargoengine_military_03": 11,
+   "v5601_train_urga_monorailcargoengine_military_04": 11,
+   "v5601_train_urga_monorailcargoengine_military_mission_mm320_boss_train": 11,
+   "v5601_train_urga_monorailcargoengine_military_mission_mm320_train": 11,
+   "v5601_train_urga_monorailcargoengine_military_mission_mm320_train_rammer": 11,
+   "v5603_train_urga_monorailmissilecar_military_01": 4,
+   "v9999_car_mugello_dlctestcar_debug": 13
+  },
+  "presets": {
+   "distinct": 393,
+   "inconsistent": 34,
+   "inconsistent_examples": {
+    "1271816577": 17,
+    "1358616627": 16,
+    "1435191809": 14,
+    "3048938132": 15,
+    "3407385576": 12,
+    "521093305": 11
+   },
+   "top": [
+    [
+     2763198432,
+     170
+    ],
+    [
+     1358616627,
+     128
+    ],
+    [
+     1271816577,
+     128
+    ],
+    [
+     4272096469,
+     126
+    ],
+    [
+     1814273923,
+     122
+    ],
+    [
+     4276153710,
+     122
+    ],
+    [
+     2877751723,
+     122
+    ],
+    [
+     3407385576,
+     122
+    ],
+    [
+     1435191809,
+     118
+    ],
+    [
+     3048938132,
+     118
+    ]
+   ],
+   "zero": 17
+  },
+  "value_census": {
+   "angle": {
+    "10": 2494,
+    "25": 3,
+    "30": 4,
+    "35": 2,
+    "40": 628,
+    "45": 12,
+    "50": 74
+   },
+   "blinking": {
+    "0": 2553,
+    "1": 664
+   },
+   "cast_shadows": {
+    "0": 3215,
+    "1": 2
+   },
+   "falloff_start": {
+    "0": 744,
+    "0.100000001": 63,
+    "0.300000012": 170,
+    "0.600000024": 30,
+    "0.800000012": 2210
+   },
+   "light_type": {
+    "0": 2494,
+    "1": 723
+   },
+   "min_luminosity": {
+    "0": 3217
+   },
+   "multiplier": {
+    "0.300000012": 6,
+    "0.400000006": 3,
+    "0.5": 174,
+    "0.699999988": 30,
+    "1": 2188,
+    "2": 792,
+    "3": 12,
+    "5": 12
+   },
+   "near_cap": {
+    "0": 1173,
+    "1": 2044
+   },
+   "projected_texture_index": {
+    "-1": 3215,
+    "0": 2
+   },
+   "range": {
+    "0.100000001": 4,
+    "0.200000003": 11,
+    "0.300000012": 6,
+    "0.5": 34,
+    "1": 332,
+    "1.5": 6,
+    "10": 1667,
+    "15": 2,
+    "2": 669,
+    "2.5": 12,
+    "20": 12,
+    "3": 39,
+    "30": 351,
+    "40": 6,
+    "50": 66
+   },
+   "uvscale.u": {
+    "1": 3217
+   },
+   "uvscale.v": {
+    "1": 3217
+   },
+   "volume_intensity": {
+    "0.00999999978": 1171,
+    "0.0199999996": 2,
+    "1": 2044
+   },
+   "volumetric_mode": {
+    "0": 3215,
+    "1": 2
+   }
+  },
+  "zero_preset_rows": [
+   {
+    "angle": 10,
+    "behavior": "TailLight",
+    "diffuse": [
+     1,
+     0,
+     0
+    ],
+    "entity": "editor/entities/jc_vehicles/01_land/v0006_car_autostraad_modernbus/v0006_car_autostraad_modernbus_commercial_01.ee",
+    "multiplier": 0.5,
+    "part": "modernbus_brake_light_t_r",
+    "range": 2
+   },
+   {
+    "angle": 10,
+    "behavior": "TailLight",
+    "diffuse": [
+     1,
+     0,
+     0
+    ],
+    "entity": "editor/entities/jc_vehicles/01_land/v0006_car_autostraad_modernbus/v0006_car_autostraad_modernbus_commercial_01.ee",
+    "multiplier": 0.5,
+    "part": "modernbus_brake_light_t_l",
+    "range": 2
+   },
+   {
+    "angle": 10,
+    "behavior": "TailLight",
+    "diffuse": [
+     1,
+     0,
+     0
+    ],
+    "entity": "editor/entities/jc_vehicles/01_land/v0006_car_autostraad_modernbus/v0006_car_autostraad_modernbus_debug.ee",
+    "multiplier": 0.5,
+    "part": "modernbus_brake_light_t_r",
+    "range": 2
+   },
+   {
+    "angle": 10,
+    "behavior": "TailLight",
+    "diffuse": [
+     1,
+     0,
+     0
+    ],
+    "entity": "editor/entities/jc_vehicles/01_land/v0006_car_autostraad_modernbus/v0006_car_autostraad_modernbus_debug.ee",
+    "multiplier": 0.5,
+    "part": "modernbus_brake_light_t_l",
+    "range": 2
+   },
+   {
+    "angle": 10,
+    "behavior": "SirenLightOnOffFast",
+    "diffuse": [
+     1,
+     0.185000002,
+     0.185000002
+    ],
+    "entity": "editor/entities/jc_vehicles/01_land/v0502_car_solar_modernsedan/v0502_car_solar_modernsedan_civic_police_01.ee",
+    "multiplier": 2,
+    "part": "modernsedan_red_light",
+    "range": 0.300000012
+   },
+   {
+    "angle": 10,
+    "behavior": "SirenLightOffOnFast",
+    "diffuse": [
+     0.185000002,
+     0.31319952,
+     1
+    ],
+    "entity": "editor/entities/jc_vehicles/01_land/v0502_car_solar_modernsedan/v0502_car_solar_modernsedan_civic_police_01.ee",
+    "multiplier": 2,
+    "part": "modernsedan_blue_light",
+    "range": 0.300000012
+   },
+   {
+    "angle": 10,
+    "behavior": "SirenLightOnOffFast",
+    "diffuse": [
+     1,
+     0.185000002,
+     0.185000002
+    ],
+    "entity": "editor/entities/jc_vehicles/01_land/v0502_car_solar_modernsedan/v0502_car_solar_modernsedan_civilian_01.ee",
+    "multiplier": 2,
+    "part": "modernsedan_red_light",
+    "range": 0.300000012
+   },
+   {
+    "angle": 10,
+    "behavior": "SirenLightOffOnFast",
+    "diffuse": [
+     0.185000002,
+     0.31319952,
+     1
+    ],
+    "entity": "editor/entities/jc_vehicles/01_land/v0502_car_solar_modernsedan/v0502_car_solar_modernsedan_civilian_01.ee",
+    "multiplier": 2,
+    "part": "modernsedan_blue_light",
+    "range": 0.300000012
+   },
+   {
+    "angle": 10,
+    "behavior": "SirenLightOnOffFast",
+    "diffuse": [
+     1,
+     0.185000002,
+     0.185000002
+    ],
+    "entity": "editor/entities/jc_vehicles/01_land/v0502_car_solar_modernsedan/v0502_car_solar_modernsedan_debug.ee",
+    "multiplier": 2,
+    "part": "modernsedan_red_light",
+    "range": 0.300000012
+   },
+   {
+    "angle": 10,
+    "behavior": "SirenLightOffOnFast",
+    "diffuse": [
+     0.185000002,
+     0.31319952,
+     1
+    ],
+    "entity": "editor/entities/jc_vehicles/01_land/v0502_car_solar_modernsedan/v0502_car_solar_modernsedan_debug.ee",
+    "multiplier": 2,
+    "part": "modernsedan_blue_light",
+    "range": 0.300000012
+   },
+   {
+    "angle": 10,
+    "behavior": "None",
+    "diffuse": [
+     1,
+     1,
+     1
+    ],
+    "entity": "editor/entities/jc_vehicles/03_sea/v1401_boat_mugello_racingboat/v1401_boat_mugello_racingboat_civilian_01.ee",
+    "multiplier": 1,
+    "part": "racingboat_interior",
+    "range": 10
+   },
+   {
+    "angle": 10,
+    "behavior": "None",
+    "diffuse": [
+     1,
+     1,
+     1
+    ],
+    "entity": "editor/entities/jc_vehicles/03_sea/v1401_boat_mugello_racingboat/v1401_boat_mugello_racingboat_debug.ee",
+    "multiplier": 1,
+    "part": "racingboat_interior",
+    "range": 10
+   },
+   {
+    "angle": 10,
+    "behavior": "None",
+    "diffuse": [
+     1,
+     1,
+     1
+    ],
+    "entity": "editor/entities/jc_vehicles/03_sea/v1401_boat_mugello_racingboat/v1401_boat_mugello_racingboat_signature_preorder.ee",
+    "multiplier": 1,
+    "part": "racingboat_interior",
+    "range": 10
+   },
+   {
+    "angle": 10,
+    "behavior": "HeadLight",
+    "diffuse": [
+     0,
+     1,
+     0
+    ],
+    "entity": "editor/entities/jc_vehicles/02_air/v2602_helicopter_urga_lightassault/v2602_helicopter_urga_lightassault_debug.ee",
+    "multiplier": 2,
+    "part": "lightassault_body",
+    "range": 1
+   },
+   {
+    "angle": 10,
+    "behavior": "HeadLight",
+    "diffuse": [
+     0,
+     1,
+     0
+    ],
+    "entity": "editor/entities/jc_vehicles/02_air/v2602_helicopter_urga_lightassault/v2602_helicopter_urga_lightassault_military_01.ee",
+    "multiplier": 2,
+    "part": "lightassault_body",
+    "range": 1
+   },
+   {
+    "angle": 10,
+    "behavior": "HeadLight",
+    "diffuse": [
+     0,
+     1,
+     0
+    ],
+    "entity": "editor/entities/jc_vehicles/02_air/v2602_helicopter_urga_lightassault/v2602_helicopter_urga_lightassault_rebel_01.ee",
+    "multiplier": 2,
+    "part": "lightassault_body",
+    "range": 1
+   },
+   {
+    "angle": 10,
+    "behavior": "TailLight",
+    "diffuse": [
+     1,
+     0.247850001,
+     0.0789999962
+    ],
+    "entity": "editor/entities/jc_vehicles/01_land/v9999_car_mugello_dlctestcar/v9999_car_mugello_dlctestcar_debug.ee",
+    "multiplier": 2,
+    "part": "dlctestcar_taillight_t",
+    "range": 2
+   }
+  ]
+ },
+ "recipe": {
+  "bmak": {
+   "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+   "battle_mode": [
+    {
+     "behavior": "HeadLight",
+     "material_type": "VEHLTMAT_Special3",
+     "type": "VEHLT_BattleModeLight"
+    }
+   ],
+   "battle_mode_count": 1,
+   "behavior": "HeadLight",
+   "bone": "Wheel_Frnt_Left_Disc",
+   "brightness": 0.0,
+   "cast_shadows": false,
+   "colour_rgba": [
+    160,
+    180,
+    255,
+    0
+   ],
+   "falloff_exponent": 1.0,
+   "jc3_anchor": "|sportsmuscle_LOD1|wheel_f_l|Wheel_Frnt_Left_Disc|Wheel_Frnt_Left_Disc_LIG",
+   "jc3_part": "sportsmuscle_wheel_f_l",
+   "material_type": "VEHLTMAT_Special3",
+   "outer_cone": 0.0,
+   "package": "Playable_Batmobile_SF",
+   "radius": 0.0,
+   "same_socket_entries": 2,
+   "socket": "LWheelLight",
+   "socket_location": [
+    -0.349729,
+    50.689182,
+    26.0
+   ],
+   "type": "VEHLT_HeadLight",
+   "vanilla_reference": {
+    "angle": 10.0,
+    "blinking": 0,
+    "cast_shadows": 0,
+    "diffuse": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "falloff_start": 0.0,
+    "light_type": 0,
+    "min_luminosity": 0.0,
+    "multiplier": 1.0,
+    "near_cap": 1.0,
+    "preset_id": 2763198432,
+    "projected_texture_index": -1,
+    "range": 2.0,
+    "volume_intensity": 1.0,
+    "volumetric_mode": 0
+   }
+  },
+  "light": {
+   "name": "wheel_arch_l",
+   "rows": [
+    {
+     "class": "decoded",
+     "m": "behavior",
+     "src": "Research/BatmobileGrab/LIGHTS.json Playable_Batmobile_SF/LWheelLight (VEHLT_HeadLight -> HeadLight, G1-17 mapping)",
+     "v": "HeadLight"
+    },
+    {
+     "class": "derived (verified)",
+     "m": "behavior_hash",
+     "src": "rbmhdr.hash_jenkins(behavior); the same function reproduces all 3,217 shipped behavior_hash values",
+     "v": 3460580079
+    },
+    {
+     "class": "decoded",
+     "m": "part",
+     "src": "LIGHTS.json LWheelLight.jc3_part (the donor parts module has it at part_index 26)",
+     "v": "sportsmuscle_wheel_f_l"
+    },
+    {
+     "class": "derived (verified)",
+     "m": "part_hash",
+     "src": "rbmhdr.hash_jenkins(part); verified on all 3,217 shipped part_hash values",
+     "v": 1432199802
+    },
+    {
+     "class": "decoded",
+     "m": "part_index",
+     "src": "PARTS_TABLE.jsonl donor parts module (sportsmuscle_wheel_f_l, damage type Land_Wheel)",
+     "v": 26
+    },
+    {
+     "class": "derived",
+     "m": "diffuse.R",
+     "src": "LIGHTS.json SpotLightComponent LightColor [160, 180, 255] / 255 (sRGB -> 0..1)",
+     "v": 0.627451
+    },
+    {
+     "class": "derived",
+     "m": "diffuse.G",
+     "src": "LIGHTS.json SpotLightComponent LightColor [160, 180, 255] / 255 (sRGB -> 0..1)",
+     "v": 0.705882
+    },
+    {
+     "class": "derived",
+     "m": "diffuse.B",
+     "src": "LIGHTS.json SpotLightComponent LightColor [160, 180, 255] / 255 (sRGB -> 0..1)",
+     "v": 1.0
+    },
+    {
+     "class": "decoded",
+     "m": "range",
+     "src": "donor module lights[2] (the shipped steady HeadLight point lamp, anchor |sportsmuscle_LOD1|body|dashboard_LIG)",
+     "v": 2
+    },
+    {
+     "class": "decoded",
+     "m": "falloff_start",
+     "src": "donor module lights[2] (the shipped steady HeadLight point lamp, anchor |sportsmuscle_LOD1|body|dashboard_LIG)",
+     "v": 0
+    },
+    {
+     "class": "decoded",
+     "m": "near_cap",
+     "src": "donor module lights[2] (the shipped steady HeadLight point lamp, anchor |sportsmuscle_LOD1|body|dashboard_LIG)",
+     "v": 1
+    },
+    {
+     "class": "decoded",
+     "m": "multiplier",
+     "src": "donor module lights[2] (the shipped steady HeadLight point lamp, anchor |sportsmuscle_LOD1|body|dashboard_LIG)",
+     "v": 1
+    },
+    {
+     "class": "decoded",
+     "m": "min_luminosity",
+     "src": "donor module lights[2] (the shipped steady HeadLight point lamp, anchor |sportsmuscle_LOD1|body|dashboard_LIG)",
+     "v": 0
+    },
+    {
+     "class": "decoded",
+     "m": "light_type",
+     "src": "donor module lights[2] (the shipped steady HeadLight point lamp, anchor |sportsmuscle_LOD1|body|dashboard_LIG)",
+     "v": 0
+    },
+    {
+     "class": "decoded",
+     "m": "blinking",
+     "src": "donor module lights[2] (the shipped steady HeadLight point lamp, anchor |sportsmuscle_LOD1|body|dashboard_LIG)",
+     "v": 0
+    },
+    {
+     "class": "decoded",
+     "m": "angle",
+     "src": "donor module lights[2] (the shipped steady HeadLight point lamp, anchor |sportsmuscle_LOD1|body|dashboard_LIG)",
+     "v": 10
+    },
+    {
+     "class": "decoded",
+     "m": "cast_shadows",
+     "src": "donor module lights[2] (the shipped steady HeadLight point lamp, anchor |sportsmuscle_LOD1|body|dashboard_LIG)",
+     "v": 0
+    },
+    {
+     "class": "decoded",
+     "m": "projected_texture_index",
+     "src": "donor module lights[2] (the shipped steady HeadLight point lamp, anchor |sportsmuscle_LOD1|body|dashboard_LIG)",
+     "v": -1
+    },
+    {
+     "class": "decoded",
+     "m": "volumetric_mode",
+     "src": "donor module lights[2] (the shipped steady HeadLight point lamp, anchor |sportsmuscle_LOD1|body|dashboard_LIG)",
+     "v": 0
+    },
+    {
+     "class": "decoded",
+     "m": "volume_intensity",
+     "src": "donor module lights[2] (the shipped steady HeadLight point lamp, anchor |sportsmuscle_LOD1|body|dashboard_LIG)",
+     "v": 1
+    },
+    {
+     "class": "decoded",
+     "m": "uvscale.u",
+     "src": "donor module lights[2] (the shipped steady HeadLight point lamp, anchor |sportsmuscle_LOD1|body|dashboard_LIG)",
+     "v": 1
+    },
+    {
+     "class": "decoded",
+     "m": "uvscale.v",
+     "src": "donor module lights[2] (the shipped steady HeadLight point lamp, anchor |sportsmuscle_LOD1|body|dashboard_LIG)",
+     "v": 1
+    },
+    {
+     "class": "decoded (mapped)",
+     "m": "deformable_transform",
+     "src": "LIGHTS.json LWheelLight.jc3_anchor (socket LWheelLight, bone Wheel_Frnt_Left_Disc) - G1-17's translation of the BmAK socket chain",
+     "v": "|sportsmuscle_LOD1|wheel_f_l|Wheel_Frnt_Left_Disc|Wheel_Frnt_Left_Disc_LIG"
+    },
+    {
+     "class": "derived (verified)",
+     "m": "deformable_transform_hash",
+     "src": "rbmhdr.hash_jenkins(anchor); verified on all 3,217 shipped deformable_transform_hash values",
+     "v": 3050336140
+    },
+    {
+     "class": "decoded",
+     "m": "preset_id",
+     "src": "17 shipped entries carry preset_id 0 (modernbus brake lights, police siren) and every entry states its own numbers; the 16 preset names that mention wheel/arch are `Capstone_Fighter_Headlight_Wheel`, `Capstone_Fighter_Headlight_Wheel_Point`, `Capstone_Fighter_Headlight_Wheel_Volume`, `Cargo_Headlight_Wheel_Left`, `Cargo_Headlight_Wheel_Right` …; none is a wheel-arch lamp, and no decoded file gives a preset's values, so using one would import numbers nothing here explains",
+     "v": 0
+    }
+   ]
+  },
+  "part": {
+   "name": "sportsmuscle_wheel_f_l_arch",
+   "rows": [
+    {
+     "class": "derived",
+     "f": "name",
+     "src": "new part, named after the wheel part it hangs on",
+     "v": "sportsmuscle_wheel_f_l_arch"
+    },
+    {
+     "class": "decoded",
+     "f": "parent",
+     "src": "PARTS_TABLE.jsonl donor: the wheel part",
+     "v": 26
+    },
+    {
+     "class": "derived",
+     "f": "part_index",
+     "src": "must stay inside the module's part count; a new record needs a re-encode (MODLOG §101b writer gap)",
+     "v": "next free index in the parts module"
+    },
+    {
+     "class": "decoded",
+     "f": "has_lights",
+     "src": "the donor wheel part ships 0 (PARTS_TABLE.jsonl); 2,073 fleet parts ship 1, 1,323 of them Land_Light",
+     "v": 1
+    },
+    {
+     "class": "decoded",
+     "f": "damage_type",
+     "src": "the donor's lit parts by damage type: Land_Body x1, Land_Generic x1, Land_Light x10",
+     "v": "Land_Light"
+    },
+    {
+     "class": "decoded",
+     "f": "parent_space_offset",
+     "src": "LIGHTS.json LWheelLight.socket_location (BmAK cm) - must go through T(p) from bat_assemble.py (R2), so the number here is the pre-transform source, not the final offset",
+     "v": [
+      -0.349729,
+      50.689182,
+      26.0
+     ]
+    },
+    {
+     "class": "derived",
+     "f": "model (lod+rbm)",
+     "src": "every one of the 11,367 fleet CarLight blocks has vertex_stride 12, index width 2 and exactly 6 material slots; copy the block byte-exact from a vanilla light part (MODLOG §17), never author its parameters (§102d)",
+     "v": "new .lod whose lod1.rbm carries one CarLight block"
+    },
+    {
+     "class": "UNKNOWN (Q-1 probe)",
+     "f": "anchor node in the rig",
+     "src": "the light's deformable_transform resolves against this chain; LGT-1 §5 proved it is not in the RBM/parts bones/deform table - the §112 probe decides it",
+     "v": "wheel_f_l -> Wheel_Frnt_Left_Disc -> Wheel_Frnt_Left_Disc_LIG"
+    }
+   ]
+  },
+  "template": {
+   "anchor": "|sportsmuscle_LOD1|body|dashboard_LIG",
+   "behavior": "HeadLight",
+   "entity": "v0300_car_kensington_sportsmuscle_civilian_01",
+   "index": 2
+  }
+ }
+}

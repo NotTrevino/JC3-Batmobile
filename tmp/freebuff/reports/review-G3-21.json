@@ -1,0 +1,754 @@
+{
+ "card_count_claim": {
+  "cards_in_backlog": 57,
+  "cards_with_a_report_now": 50,
+  "cards_without_a_report_now": 7,
+  "claimed": null
+ },
+ "check": {
+  "exit": 1,
+  "stderr": [],
+  "stdout": [
+   "FAIL",
+   "  - Research/RESET_STATUS.md is stale"
+  ]
+ },
+ "counts": {
+  "false": 14,
+  "statements": 24,
+  "true": 6,
+  "true_but_misleading": 12
+ },
+ "oracles": {
+  "check_exit_reported": true,
+  "every_statement_was_tested": true,
+  "no_card_list_has_entries": true,
+  "reports_without_a_card_tested": true,
+  "side_claims_tested": true,
+  "statement_count_matches_the_md": true,
+  "twenty_probes_all_hold": true
+ },
+ "probe_rows_in_md": 20,
+ "probes": {
+  "count": 20,
+  "detail": [
+   {
+    "ok": true,
+    "path": "Research/BatmobileGrab/COLLISION_SELECTOR.md",
+    "what": null
+   },
+   {
+    "ok": true,
+    "path": "Research/BatmobileGrab/COLLISION_FRAME.md",
+    "what": null
+   },
+   {
+    "ok": true,
+    "path": "Research/BatmobileGrab/COLLISION_CONVEX.md",
+    "what": null
+   },
+   {
+    "ok": true,
+    "path": "Research/BatmobileGrab/COLLISION_BOXES.md",
+    "what": null
+   },
+   {
+    "ok": true,
+    "path": "Research/BatmobileGrab/CONFIG.md",
+    "what": null
+   },
+   {
+    "ok": true,
+    "path": "Research/JC3Grab/INPUT.md",
+    "what": null
+   },
+   {
+    "ok": true,
+    "path": "Research/BatmobileGrab/CONTROLS_NATIVE2.md",
+    "what": null
+   },
+   {
+    "ok": true,
+    "path": "Research/BatmobileGrab/CONTROLS.md",
+    "what": null
+   },
+   {
+    "ok": true,
+    "path": "Research/BatmobileGrab/runtime/*.jsonl",
+    "what": null
+   },
+   {
+    "ok": true,
+    "path": "Research/BatmobileGrab/COLLISION_SELECTOR.md",
+    "what": null
+   },
+   {
+    "ok": true,
+    "path": "Research/BatmobileGrab/COLOUR_FUNCTIONS.md",
+    "what": null
+   },
+   {
+    "ok": true,
+    "path": "Research/BatmobileGrab/COLOUR_PARAMS.md",
+    "what": null
+   },
+   {
+    "ok": true,
+    "path": "Research/JC3Grab/COLOUR.md",
+    "what": null
+   },
+   {
+    "ok": true,
+    "path": "Research/JC3Grab/COLOUR_NATIVE.md",
+    "what": null
+   },
+   {
+    "ok": true,
+    "path": "Working/Translation/LEDGER_AUDIT.md",
+    "what": null
+   },
+   {
+    "ok": true,
+    "path": "Working/Translation/LEDGER_AUDIT2.md",
+    "what": null
+   },
+   {
+    "ok": true,
+    "path": "Research/BatmobileGrab/REMAINDER.md",
+    "what": null
+   },
+   {
+    "ok": true,
+    "path": "Research/BatmobileGrab/PACKAGES_G305.md",
+    "what": null
+   },
+   {
+    "ok": true,
+    "path": "Research/JC3Grab/DECODE_DEPTH.md",
+    "what": null
+   },
+   {
+    "ok": true,
+    "path": "Research/JC3Grab/DECODE_DEPTH2.md",
+    "what": null
+   }
+  ],
+  "failed": [],
+  "ok": 20
+ },
+ "reports_on_disk": 58,
+ "reports_without_a_card": [
+  {
+   "has_backlog_row": false,
+   "report": "G3-01b-boxes",
+   "verdict": "true"
+  },
+  {
+   "has_backlog_row": false,
+   "report": "G3-01b-cyl",
+   "verdict": "true"
+  },
+  {
+   "has_backlog_row": false,
+   "report": "G3-01b-mode",
+   "verdict": "true"
+  },
+  {
+   "has_backlog_row": true,
+   "report": "G3-01e",
+   "verdict": "false"
+  },
+  {
+   "has_backlog_row": true,
+   "report": "G3-01e-fix",
+   "verdict": "false"
+  },
+  {
+   "has_backlog_row": true,
+   "report": "G3-04c",
+   "verdict": "false"
+  }
+ ],
+ "side_claims": [
+  {
+   "claim": "Research/JC3Grab/RUNTIME_LAYOUT.md does not exist",
+   "exists": true,
+   "path": "Research/JC3Grab/RUNTIME_LAYOUT.md",
+   "verdict": "false"
+  },
+  {
+   "claim": "Working/Translation/LEDGER_G3.md does not exist",
+   "exists": true,
+   "path": "Working/Translation/LEDGER_G3.md",
+   "verdict": "false"
+  }
+ ],
+ "statements": [
+  {
+   "cards": [
+    {
+     "backlog_status": "done (geometry open -> G3-01b)",
+     "card": "G3-01",
+     "out_files": [
+      "Research/BatmobileGrab/COLLISION.md"
+     ],
+     "reports": [],
+     "verdict": "true-but-misleading",
+     "why": "no report, but the tracker row declares `done (geometry open -> G3-01b)` and its Out files exist (COLLISION.md)"
+    }
+   ],
+   "kind": "census row",
+   "line": 56,
+   "text": "| `G3-01` (supporting) | _no report_ | BmAK drivable collision (class defaults) |",
+   "verdict": "true-but-misleading"
+  },
+  {
+   "cards": [
+    {
+     "backlog_status": "done (geometry open -> G3-01b)",
+     "card": "G3-01",
+     "out_files": [
+      "Research/BatmobileGrab/COLLISION.md"
+     ],
+     "reports": [],
+     "verdict": "true-but-misleading",
+     "why": "no report, but the tracker row declares `done (geometry open -> G3-01b)` and its Out files exist (COLLISION.md)"
+    },
+    {
+     "backlog_status": "partial",
+     "card": "G3-01b",
+     "out_files": [
+      "COLLISION_GEOM.md"
+     ],
+     "reports": [
+      "G3-01b-boxes.md",
+      "G3-01b-cyl.md",
+      "G3-01b-mode.md"
+     ],
+     "verdict": "false",
+     "why": "report file(s) on disk: G3-01b-boxes.md, G3-01b-cyl.md, G3-01b-mode.md"
+    },
+    {
+     "backlog_status": "done",
+     "card": "G3-01c",
+     "out_files": [
+      "Research/BatmobileGrab/COLLISION_CONVEX.md"
+     ],
+     "reports": [
+      "G3-01c.md"
+     ],
+     "verdict": "false",
+     "why": "report file(s) on disk: G3-01c.md"
+    },
+    {
+     "backlog_status": "done",
+     "card": "G3-01e",
+     "out_files": [
+      "COLLISION_SELECTOR.md"
+     ],
+     "reports": [
+      "G3-01e.md"
+     ],
+     "verdict": "false",
+     "why": "report file(s) on disk: G3-01e.md"
+    }
+   ],
+   "kind": "prose",
+   "line": 80,
+   "text": "* `G3-01` and `G3-01b` themselves have no report file \u2014 their facts live in `COLLISION.md` / `COLLISION_GEOM.md` and were carried forward by the `G3-01b-*`, `G3-01c`, `G3-01e` reports. Their STATUS is therefore second-hand in this table.",
+   "verdict": "false in part"
+  },
+  {
+   "cards": [
+    {
+     "backlog_status": "done (12 UNKNOWN open)",
+     "card": "G3-02",
+     "out_files": [
+      "Research/BatmobileGrab/CONTROLS.md"
+     ],
+     "reports": [],
+     "verdict": "true-but-misleading",
+     "why": "no report, but the tracker row declares `done (12 UNKNOWN open)` and its Out files exist (CONTROLS.md)"
+    }
+   ],
+   "kind": "census row",
+   "line": 94,
+   "text": "| `G3-02` | _no report_ | BmAK controls and input |",
+   "verdict": "true-but-misleading"
+  },
+  {
+   "cards": [
+    {
+     "backlog_status": "done (5/5 UNKNOWN; next: native)",
+     "card": "G3-02b",
+     "out_files": [
+      "Research/BatmobileGrab/CONTROLS_CONSUMERS.md"
+     ],
+     "reports": [],
+     "verdict": "true-but-misleading",
+     "why": "no report, but the tracker row declares `done (5/5 UNKNOWN; next: native)` and its Out files exist (CONTROLS_CONSUMERS.md)"
+    }
+   ],
+   "kind": "census row",
+   "line": 95,
+   "text": "| `G3-02b` | _no report_ | BmAK driving-state input code (the meaning of LT/B/LB/A) |",
+   "verdict": "true-but-misleading"
+  },
+  {
+   "cards": [
+    {
+     "backlog_status": "done (5/5 UNKNOWN; switch located)",
+     "card": "G3-02c",
+     "out_files": [
+      "Research/BatmobileGrab/CONTROLS_NATIVE.md"
+     ],
+     "reports": [],
+     "verdict": "true-but-misleading",
+     "why": "no report, but the tracker row declares `done (5/5 UNKNOWN; switch located)` and its Out files exist (CONTROLS_NATIVE.md)"
+    }
+   ],
+   "kind": "census row",
+   "line": 96,
+   "text": "| `G3-02c` | _no report_ | BmAK native input path (BatmanAK.exe) |",
+   "verdict": "true-but-misleading"
+  },
+  {
+   "cards": [
+    {
+     "backlog_status": "done (X/Y not sampled)",
+     "card": "G3-02d",
+     "out_files": [],
+     "reports": [],
+     "verdict": "true",
+     "why": "no report file and no completed Out file in the tracker row"
+    }
+   ],
+   "kind": "census row",
+   "line": 99,
+   "text": "| `G3-02d` (supporting) | _no report_ | BmAK runtime observation of the controls (read-only) |",
+   "verdict": "true"
+  },
+  {
+   "cards": [
+    {
+     "backlog_status": "done (12 UNKNOWN open)",
+     "card": "G3-02",
+     "out_files": [
+      "Research/BatmobileGrab/CONTROLS.md"
+     ],
+     "reports": [],
+     "verdict": "true-but-misleading",
+     "why": "no report, but the tracker row declares `done (12 UNKNOWN open)` and its Out files exist (CONTROLS.md)"
+    },
+    {
+     "backlog_status": "done (5/5 UNKNOWN; next: native)",
+     "card": "G3-02b",
+     "out_files": [
+      "Research/BatmobileGrab/CONTROLS_CONSUMERS.md"
+     ],
+     "reports": [],
+     "verdict": "true-but-misleading",
+     "why": "no report, but the tracker row declares `done (5/5 UNKNOWN; next: native)` and its Out files exist (CONTROLS_CONSUMERS.md)"
+    },
+    {
+     "backlog_status": "done (5/5 UNKNOWN; switch located)",
+     "card": "G3-02c",
+     "out_files": [
+      "Research/BatmobileGrab/CONTROLS_NATIVE.md"
+     ],
+     "reports": [],
+     "verdict": "true-but-misleading",
+     "why": "no report, but the tracker row declares `done (5/5 UNKNOWN; switch located)` and its Out files exist (CONTROLS_NATIVE.md)"
+    },
+    {
+     "backlog_status": "done (X/Y not sampled)",
+     "card": "G3-02d",
+     "out_files": [],
+     "reports": [],
+     "verdict": "true",
+     "why": "no report file and no completed Out file in the tracker row"
+    },
+    {
+     "backlog_status": "done",
+     "card": "G3-02f",
+     "out_files": [
+      "SAMPLER_FIELDS2.md"
+     ],
+     "reports": [
+      "G3-02f.md"
+     ],
+     "verdict": "false",
+     "why": "report file(s) on disk: G3-02f.md"
+    }
+   ],
+   "kind": "prose",
+   "line": 120,
+   "text": "* `G3-02`, `G3-02b`, `G3-02c`, `G3-02d`, `G3-02f` have no report files, so the config\u2192script\u2192native chain is evidenced only by its outputs (`CONFIG.md`, `CONTROLS.md`, `CONTROLS_CONSUMERS.md`, `CONTROLS_NATIVE*.md`).",
+   "verdict": "false in part"
+  },
+  {
+   "cards": [
+    {
+     "backlog_status": "open",
+     "card": "G3-07",
+     "out_files": [],
+     "reports": [],
+     "verdict": "true",
+     "why": "no report file and no completed Out file in the tracker row"
+    }
+   ],
+   "kind": "census row",
+   "line": 137,
+   "text": "| `G3-07` | _no report_ | JC3 runtime oracle (read-only) |",
+   "verdict": "true"
+  },
+  {
+   "cards": [
+    {
+     "backlog_status": "open",
+     "card": "G3-07",
+     "out_files": [],
+     "reports": [],
+     "verdict": "true",
+     "why": "no report file and no completed Out file in the tracker row"
+    },
+    {
+     "backlog_status": "done",
+     "card": "G3-07a",
+     "out_files": [
+      "RUNTIME_LAYOUT.md"
+     ],
+     "reports": [
+      "G3-07a.md"
+     ],
+     "verdict": "false",
+     "why": "report file(s) on disk: G3-07a.md"
+    }
+   ],
+   "kind": "prose",
+   "line": 155,
+   "text": "* `G3-07` and `G3-07a` have no reports, and `Research/JC3Grab/RUNTIME_LAYOUT.md` does not exist \u2014 the sampler's layout has no oracle-backed document.",
+   "verdict": "false in part"
+  },
+  {
+   "cards": [
+    {
+     "backlog_status": "partial (keyword pass)",
+     "card": "G3-20",
+     "out_files": [
+      "LEDGER_G3.md"
+     ],
+     "reports": [
+      "G3-20.md"
+     ],
+     "verdict": "false",
+     "why": "report file(s) on disk: G3-20.md"
+    }
+   ],
+   "kind": "census row",
+   "line": 215,
+   "text": "| `G3-20` (supporting) | _no report_ | Ledger rows sourced from G3 results (synthesis) |",
+   "verdict": "false"
+  },
+  {
+   "cards": [
+    {
+     "backlog_status": "partial (keyword pass)",
+     "card": "G3-20",
+     "out_files": [
+      "LEDGER_G3.md"
+     ],
+     "reports": [
+      "G3-20.md"
+     ],
+     "verdict": "false",
+     "why": "report file(s) on disk: G3-20.md"
+    }
+   ],
+   "kind": "prose",
+   "line": 231,
+   "text": "* `G3-20` (which G3 file supplies/corrects/refutes each row, open rows named) has no report and no `Working/Translation/LEDGER_G3.md`; the per-row G3 sourcing is not yet written.",
+   "verdict": "false"
+  },
+  {
+   "cards": [
+    {
+     "backlog_status": "done",
+     "card": "G3-19",
+     "out_files": [
+      "DECODE_DEPTH3.md"
+     ],
+     "reports": [
+      "G3-19.md"
+     ],
+     "verdict": "false",
+     "why": "report file(s) on disk: G3-19.md"
+    }
+   ],
+   "kind": "census row",
+   "line": 250,
+   "text": "| `G3-19` (supporting) | _no report_ | JC3 partial .rbm / .epe to FULL |",
+   "verdict": "false"
+  },
+  {
+   "cards": [
+    {
+     "backlog_status": "done",
+     "card": "G3-19",
+     "out_files": [
+      "DECODE_DEPTH3.md"
+     ],
+     "reports": [
+      "G3-19.md"
+     ],
+     "verdict": "false",
+     "why": "report file(s) on disk: G3-19.md"
+    }
+   ],
+   "kind": "prose",
+   "line": 272,
+   "text": "* `G3-19` (partial `.rbm`/`.epe` to FULL) has no report, so the donor is classified but not fully decoded.",
+   "verdict": "false"
+  },
+  {
+   "cards": [
+    {
+     "backlog_status": "done (geometry open -> G3-01b)",
+     "card": "G3-01",
+     "out_files": [
+      "Research/BatmobileGrab/COLLISION.md"
+     ],
+     "reports": [],
+     "verdict": "true-but-misleading",
+     "why": "no report, but the tracker row declares `done (geometry open -> G3-01b)` and its Out files exist (COLLISION.md)"
+    }
+   ],
+   "kind": "census row",
+   "line": 284,
+   "text": "| `G3-01` | M | DIM-4, WLD-4, R-1 | \u2014 | _no report_ | \u2014 |",
+   "verdict": "true-but-misleading"
+  },
+  {
+   "cards": [
+    {
+     "backlog_status": "done (12 UNKNOWN open)",
+     "card": "G3-02",
+     "out_files": [
+      "Research/BatmobileGrab/CONTROLS.md"
+     ],
+     "reports": [],
+     "verdict": "true-but-misleading",
+     "why": "no report, but the tracker row declares `done (12 UNKNOWN open)` and its Out files exist (CONTROLS.md)"
+    }
+   ],
+   "kind": "census row",
+   "line": 287,
+   "text": "| `G3-02` | M | D-11, MOD-1/2, WPN, R-2 | \u2014 | _no report_ | \u2014 |",
+   "verdict": "true-but-misleading"
+  },
+  {
+   "cards": [
+    {
+     "backlog_status": "done (5/5 UNKNOWN; next: native)",
+     "card": "G3-02b",
+     "out_files": [
+      "Research/BatmobileGrab/CONTROLS_CONSUMERS.md"
+     ],
+     "reports": [],
+     "verdict": "true-but-misleading",
+     "why": "no report, but the tracker row declares `done (5/5 UNKNOWN; next: native)` and its Out files exist (CONTROLS_CONSUMERS.md)"
+    }
+   ],
+   "kind": "census row",
+   "line": 288,
+   "text": "| `G3-02b` | M | D-11, MOD-1/2, WPN-3/4, R-2 | \u2014 | _no report_ | \u2014 |",
+   "verdict": "true-but-misleading"
+  },
+  {
+   "cards": [
+    {
+     "backlog_status": "done (5/5 UNKNOWN; switch located)",
+     "card": "G3-02c",
+     "out_files": [
+      "Research/BatmobileGrab/CONTROLS_NATIVE.md"
+     ],
+     "reports": [],
+     "verdict": "true-but-misleading",
+     "why": "no report, but the tracker row declares `done (5/5 UNKNOWN; switch located)` and its Out files exist (CONTROLS_NATIVE.md)"
+    }
+   ],
+   "kind": "census row",
+   "line": 289,
+   "text": "| `G3-02c` | M | D-11, MOD-1/2, R-2 | \u2014 | _no report_ | \u2014 |",
+   "verdict": "true-but-misleading"
+  },
+  {
+   "cards": [
+    {
+     "backlog_status": "done (X/Y not sampled)",
+     "card": "G3-02d",
+     "out_files": [],
+     "reports": [],
+     "verdict": "true",
+     "why": "no report file and no completed Out file in the tracker row"
+    }
+   ],
+   "kind": "census row",
+   "line": 290,
+   "text": "| `G3-02d` | M | D-11, MOD-1/2, R-2 | \u2014 | _no report_ | \u2014 |",
+   "verdict": "true"
+  },
+  {
+   "cards": [
+    {
+     "backlog_status": "open",
+     "card": "G3-07",
+     "out_files": [],
+     "reports": [],
+     "verdict": "true",
+     "why": "no report file and no completed Out file in the tracker row"
+    }
+   ],
+   "kind": "census row",
+   "line": 296,
+   "text": "| `G3-07` | L | every Q check, R-3 | \u2014 | _no report_ | \u2014 |",
+   "verdict": "true"
+  },
+  {
+   "cards": [
+    {
+     "backlog_status": "partial",
+     "card": "G3-10c",
+     "out_files": [
+      "PHYSICS_ROLES3.md"
+     ],
+     "reports": [
+      "G3-10c.md"
+     ],
+     "verdict": "false",
+     "why": "report file(s) on disk: G3-10c.md"
+    }
+   ],
+   "kind": "census row",
+   "line": 310,
+   "text": "| `G3-10c` | M | DIM-4 | \u2014 | _no report_ | \u2014 |",
+   "verdict": "false"
+  },
+  {
+   "cards": [
+    {
+     "backlog_status": "done",
+     "card": "G3-14",
+     "out_files": [
+      "AUDIO_BANKS.md"
+     ],
+     "reports": [
+      "G3-14.md"
+     ],
+     "verdict": "false",
+     "why": "report file(s) on disk: G3-14.md"
+    }
+   ],
+   "kind": "census row",
+   "line": 311,
+   "text": "| `G3-14` | S | AUD, T-AU3/5 | \u2014 | _no report_ | \u2014 |",
+   "verdict": "false"
+  },
+  {
+   "cards": [
+    {
+     "backlog_status": "done",
+     "card": "G3-19",
+     "out_files": [
+      "DECODE_DEPTH3.md"
+     ],
+     "reports": [
+      "G3-19.md"
+     ],
+     "verdict": "false",
+     "why": "report file(s) on disk: G3-19.md"
+    }
+   ],
+   "kind": "census row",
+   "line": 312,
+   "text": "| `G3-19` | M | R-6 | \u2014 | _no report_ | \u2014 |",
+   "verdict": "false"
+  },
+  {
+   "cards": [
+    {
+     "backlog_status": "partial (keyword pass)",
+     "card": "G3-20",
+     "out_files": [
+      "LEDGER_G3.md"
+     ],
+     "reports": [
+      "G3-20.md"
+     ],
+     "verdict": "false",
+     "why": "report file(s) on disk: G3-20.md"
+    }
+   ],
+   "kind": "census row",
+   "line": 313,
+   "text": "| `G3-20` | M | R-5, T | \u2014 | _no report_ | \u2014 |",
+   "verdict": "false"
+  },
+  {
+   "cards": [
+    {
+     "backlog_status": "done (snapshot)",
+     "card": "G3-21",
+     "out_files": [
+      "Research/RESET_STATUS.md"
+     ],
+     "reports": [
+      "G3-21.md"
+     ],
+     "verdict": "false",
+     "why": "report file(s) on disk: G3-21.md"
+    }
+   ],
+   "kind": "census row",
+   "line": 314,
+   "text": "| `G3-21` | S | all | \u2014 | _no report_ | \u2014 |",
+   "verdict": "false"
+  }
+ ],
+ "task": "review of G3-21",
+ "totals_claim": {
+  "claimed": [
+   "0",
+   "6",
+   "0",
+   "6"
+  ],
+  "rows": [
+   [
+    "R-1",
+    "PARTIAL"
+   ],
+   [
+    "R-2",
+    "PARTIAL"
+   ],
+   [
+    "R-3",
+    "PARTIAL"
+   ],
+   [
+    "R-4",
+    "PARTIAL"
+   ],
+   [
+    "R-5",
+    "PARTIAL"
+   ],
+   [
+    "R-6",
+    "PARTIAL"
+   ]
+  ]
+ },
+ "verdict": "needs rework"
+}

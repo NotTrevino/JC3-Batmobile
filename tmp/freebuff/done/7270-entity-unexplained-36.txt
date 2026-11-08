@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/entity-unexplained-36.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-06
+Builds/bm-RC2/verify/entity_diff.md lists 87 differences between the shipped debug.epe and the vanilla one; 36 have no entry in Working/Entity/bm_epe_edits.json, among them 34 of 40 CPartProp objects gone, the root CCar rename and an added palette member. Take the 36 and look for the cause outside bm_epe_edits.json: later pipeline steps (Tools/scripts/bm_rc.py step list, the B-16 weapon-clone cleanup that removes 12 APC mounted-M2 members, bm_entity.py, the RC merge). For each unexplained difference say which step produced it, with the code line, and whether it is intended per the MODLOG/B cards. Decide for the 34 CPartProp objects whether dropping them can matter for the car (what are CPartProp objects in the donor graph, which parts do they bind). Output Builds/bm-RC2/verify/entity_unexplained.md + Tools/scripts/v_entity_unexplained.py --check; read-only.

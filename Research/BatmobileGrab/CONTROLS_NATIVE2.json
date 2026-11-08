@@ -1,0 +1,2819 @@
+{
+ "schema": 1,
+ "generated_by": "Tools/scripts/grab_controls_native2.py --write",
+ "card": "GRB-G3-02e BmAK native mode flags, 0.707 test, exit route (static)",
+ "image": {
+  "path": "E:\\Games\\Batman - Arkham Knight\\Binaries\\Win64\\BatmanAK.exe",
+  "size": 55101440,
+  "base": "0x140000000"
+ },
+ "flag_word": {
+  "class": "RVehicleBatmobileBase",
+  "offset": 4568,
+  "masks": [
+   {
+    "mask": 1,
+    "name": "RollingStart",
+    "kind": "BoolProperty"
+   },
+   {
+    "mask": 2,
+    "name": "ArmouredMode",
+    "kind": "BoolProperty"
+   },
+   {
+    "mask": 4,
+    "name": "ArmouredModeOld",
+    "kind": "BoolProperty"
+   },
+   {
+    "mask": 8,
+    "name": "bTransforming",
+    "kind": "BoolProperty"
+   },
+   {
+    "mask": 16,
+    "name": "bWeaponsReady",
+    "kind": "BoolProperty"
+   },
+   {
+    "mask": 32,
+    "name": "KismetForceWheelspin",
+    "kind": "BoolProperty"
+   },
+   {
+    "mask": 64,
+    "name": "StopBoxForceWheelspin",
+    "kind": "BoolProperty"
+   },
+   {
+    "mask": 128,
+    "name": "WallScrapeL",
+    "kind": "BoolProperty"
+   },
+   {
+    "mask": 256,
+    "name": "WallScrapeR",
+    "kind": "BoolProperty"
+   },
+   {
+    "mask": 512,
+    "name": "EnemyTaunt_DebugVisualisation",
+    "kind": "BoolProperty"
+   },
+   {
+    "mask": 1024,
+    "name": "AudioPlayingIn",
+    "kind": "BoolProperty"
+   },
+   {
+    "mask": 2048,
+    "name": "bIsPrototypeBatmobile",
+    "kind": "BoolProperty"
+   },
+   {
+    "mask": 4096,
+    "name": "bIsJokerfiedBatmobile",
+    "kind": "BoolProperty"
+   },
+   {
+    "mask": 8192,
+    "name": "AbseilBlocked",
+    "kind": "BoolProperty"
+   },
+   {
+    "mask": 16384,
+    "name": "bBoostLocked",
+    "kind": "BoolProperty"
+   },
+   {
+    "mask": 32768,
+    "name": "bBattleModeLocked",
+    "kind": "BoolProperty"
+   },
+   {
+    "mask": 65536,
+    "name": "bLockInBattleMode",
+    "kind": "BoolProperty"
+   },
+   {
+    "mask": 131072,
+    "name": "ForceHeadlightsSwitchedOn",
+    "kind": "BoolProperty"
+   },
+   {
+    "mask": 262144,
+    "name": "bFailedWeaponFlag",
+    "kind": "BoolProperty"
+   },
+   {
+    "mask": 524288,
+    "name": "bCockpitOpen",
+    "kind": "BoolProperty"
+   },
+   {
+    "mask": 1048576,
+    "name": "AudioClutch",
+    "kind": "BoolProperty"
+   },
+   {
+    "mask": 2097152,
+    "name": "SatNavChallengeActive",
+    "kind": "BoolProperty"
+   },
+   {
+    "mask": 4194304,
+    "name": "SelfDriveAllowBoost",
+    "kind": "BoolProperty"
+   },
+   {
+    "mask": 8388608,
+    "name": "SelfDriveUturn",
+    "kind": "BoolProperty"
+   },
+   {
+    "mask": 16777216,
+    "name": "bRemoteDrive",
+    "kind": "BoolProperty"
+   },
+   {
+    "mask": 33554432,
+    "name": "bFakeRemoteDrive",
+    "kind": "BoolProperty"
+   },
+   {
+    "mask": 67108864,
+    "name": "bRemoteScoopUp",
+    "kind": "BoolProperty"
+   },
+   {
+    "mask": 134217728,
+    "name": "bWasRemoteDriving",
+    "kind": "BoolProperty"
+   },
+   {
+    "mask": 268435456,
+    "name": "bRemoteDriveBatmanTrackerDisabled",
+    "kind": "BoolProperty"
+   },
+   {
+    "mask": 536870912,
+    "name": "InfiniteBoost",
+    "kind": "BoolProperty"
+   },
+   {
+    "mask": 1073741824,
+    "name": "DisabledByEMP",
+    "kind": "BoolProperty"
+   }
+  ],
+  "sites": {
+   "disp_occurrences": 170,
+   "functions": 77,
+   "outside_functions": 5,
+   "in_functions": 165,
+   "matched_to_an_instruction": 163,
+   "unmatched_in_functions": 2,
+   "writes": [
+    {
+     "at": 5369063464,
+     "in_function": [
+      5369063184,
+      5369065559
+     ],
+     "text": "0x140056828: and dword ptr [rbx + 0x11d8], 0xffefffff",
+     "mnemonic": "and",
+     "kind": "write",
+     "immediate": 4293918719,
+     "effective_mask": 1048576,
+     "names": [
+      "AudioClutch"
+     ],
+     "width": "dword",
+     "rule": "and clears ~imm; or/xor/mov set imm"
+    },
+    {
+     "at": 5369064958,
+     "in_function": [
+      5369063184,
+      5369065559
+     ],
+     "text": "0x140056dfe: and dword ptr [rbx + 0x11d8], 0xffffff7f",
+     "mnemonic": "and",
+     "kind": "write",
+     "immediate": 4294967167,
+     "effective_mask": 128,
+     "names": [
+      "WallScrapeL"
+     ],
+     "width": "dword",
+     "rule": "and clears ~imm; or/xor/mov set imm"
+    },
+    {
+     "at": 5369065070,
+     "in_function": [
+      5369063184,
+      5369065559
+     ],
+     "text": "0x140056e6e: and dword ptr [rbx + 0x11d8], 0xfffffeff",
+     "mnemonic": "and",
+     "kind": "write",
+     "immediate": 4294967039,
+     "effective_mask": 256,
+     "names": [
+      "WallScrapeR"
+     ],
+     "width": "dword",
+     "rule": "and clears ~imm; or/xor/mov set imm"
+    },
+    {
+     "at": 5369072342,
+     "in_function": [
+      5369072336,
+      5369072637
+     ],
+     "text": "0x140058ad6: and dword ptr [rcx + 0x11d8], 0xfffffffd",
+     "mnemonic": "and",
+     "kind": "write",
+     "immediate": 4294967293,
+     "effective_mask": 2,
+     "names": [
+      "ArmouredMode"
+     ],
+     "width": "dword",
+     "rule": "and clears ~imm; or/xor/mov set imm"
+    },
+    {
+     "at": 5369072482,
+     "in_function": [
+      5369072336,
+      5369072637
+     ],
+     "text": "0x140058b62: or dword ptr [rbx + 0x11d8], 0x10",
+     "mnemonic": "or",
+     "kind": "write",
+     "immediate": 16,
+     "effective_mask": 16,
+     "names": [
+      "bWeaponsReady"
+     ],
+     "width": "dword",
+     "rule": "and clears ~imm; or/xor/mov set imm"
+    },
+    {
+     "at": 5369072507,
+     "in_function": [
+      5369072336,
+      5369072637
+     ],
+     "text": "0x140058b7b: and dword ptr [rbx + 0x11d8], 0xfffffff7",
+     "mnemonic": "and",
+     "kind": "write",
+     "immediate": 4294967287,
+     "effective_mask": 8,
+     "names": [
+      "bTransforming"
+     ],
+     "width": "dword",
+     "rule": "and clears ~imm; or/xor/mov set imm"
+    },
+    {
+     "at": 5369072584,
+     "in_function": [
+      5369072336,
+      5369072637
+     ],
+     "text": "0x140058bc8: and dword ptr [rbx + 0x11d8], 0xffffffef",
+     "mnemonic": "and",
+     "kind": "write",
+     "immediate": 4294967279,
+     "effective_mask": 16,
+     "names": [
+      "bWeaponsReady"
+     ],
+     "width": "dword",
+     "rule": "and clears ~imm; or/xor/mov set imm"
+    },
+    {
+     "at": 5369072604,
+     "in_function": [
+      5369072336,
+      5369072637
+     ],
+     "text": "0x140058bdc: and dword ptr [rbx + 0x11d8], 0xfffffff7",
+     "mnemonic": "and",
+     "kind": "write",
+     "immediate": 4294967287,
+     "effective_mask": 8,
+     "names": [
+      "bTransforming"
+     ],
+     "width": "dword",
+     "rule": "and clears ~imm; or/xor/mov set imm"
+    },
+    {
+     "at": 5369099372,
+     "in_function": [
+      5369096080,
+      5369099475
+     ],
+     "text": "0x14005f46c: or dword ptr [rdi + 0x11d8], 0x80",
+     "mnemonic": "or",
+     "kind": "write",
+     "immediate": 128,
+     "effective_mask": 128,
+     "names": [
+      "WallScrapeL"
+     ],
+     "width": "dword",
+     "rule": "and clears ~imm; or/xor/mov set imm"
+    },
+    {
+     "at": 5369099384,
+     "in_function": [
+      5369096080,
+      5369099475
+     ],
+     "text": "0x14005f478: or dword ptr [rdi + 0x11d8], 0x100",
+     "mnemonic": "or",
+     "kind": "write",
+     "immediate": 256,
+     "effective_mask": 256,
+     "names": [
+      "WallScrapeR"
+     ],
+     "width": "dword",
+     "rule": "and clears ~imm; or/xor/mov set imm"
+    },
+    {
+     "at": 5369142108,
+     "in_function": [
+      5369139440,
+      5369143445
+     ],
+     "text": "0x140069b5c: and dword ptr [rbx + 0x11d8], 0xff7fffff",
+     "mnemonic": "and",
+     "kind": "write",
+     "immediate": 4286578687,
+     "effective_mask": 8388608,
+     "names": [
+      "SelfDriveUturn"
+     ],
+     "width": "dword",
+     "rule": "and clears ~imm; or/xor/mov set imm"
+    },
+    {
+     "at": 5371153111,
+     "in_function": [
+      5371151712,
+      5371159357
+     ],
+     "text": "0x140254ad7: and dword ptr [rdi + 0x11d8], 0xffffffbf",
+     "mnemonic": "and",
+     "kind": "write",
+     "immediate": 4294967231,
+     "effective_mask": 64,
+     "names": [
+      "StopBoxForceWheelspin"
+     ],
+     "width": "dword",
+     "rule": "and clears ~imm; or/xor/mov set imm"
+    },
+    {
+     "at": 5371156687,
+     "in_function": [
+      5371151712,
+      5371159357
+     ],
+     "text": "0x1402558cf: or dword ptr [rdi + 0x11d8], 0x40",
+     "mnemonic": "or",
+     "kind": "write",
+     "immediate": 64,
+     "effective_mask": 64,
+     "names": [
+      "StopBoxForceWheelspin"
+     ],
+     "width": "dword",
+     "rule": "and clears ~imm; or/xor/mov set imm"
+    },
+    {
+     "at": 5373347440,
+     "in_function": [
+      5373344144,
+      5373347679
+     ],
+     "text": "0x14046c670: and dword ptr [rax + 0x11d8], 0xfeffffff",
+     "mnemonic": "and",
+     "kind": "write",
+     "immediate": 4278190079,
+     "effective_mask": 16777216,
+     "names": [
+      "bRemoteDrive"
+     ],
+     "width": "dword",
+     "rule": "and clears ~imm; or/xor/mov set imm"
+    },
+    {
+     "at": 5373382850,
+     "in_function": [
+      5373381232,
+      5373383746
+     ],
+     "text": "0x1404750c2: and dword ptr [r12 + 0x11d8], 0xfcffffff",
+     "mnemonic": "and",
+     "kind": "write",
+     "immediate": 4244635647,
+     "effective_mask": 50331648,
+     "names": [],
+     "width": "dword",
+     "rule": "and clears ~imm; or/xor/mov set imm"
+    }
+   ],
+   "computed_writes": [
+    {
+     "at": 5369063480,
+     "in_function": [
+      5369063184,
+      5369065559
+     ],
+     "text": "0x140056838: or dword ptr [rbx + 0x11d8], eax",
+     "mnemonic": "or",
+     "kind": "write_computed",
+     "source": "eax",
+     "mask_from_load": null,
+     "names": [],
+     "rule": "last `mov <src>, imm` within 30 instructions in the function"
+    },
+    {
+     "at": 5369064885,
+     "in_function": [
+      5369063184,
+      5369065559
+     ],
+     "text": "0x140056db5: mov dword ptr [rbx + 0x11d8], eax",
+     "mnemonic": "mov",
+     "kind": "write_computed",
+     "source": "eax",
+     "mask_from_load": null,
+     "names": [],
+     "rule": "last `mov <src>, imm` within 30 instructions in the function"
+    },
+    {
+     "at": 5369072357,
+     "in_function": [
+      5369072336,
+      5369072637
+     ],
+     "text": "0x140058ae5: or dword ptr [rcx + 0x11d8], edx",
+     "mnemonic": "or",
+     "kind": "write_computed",
+     "source": "edx",
+     "mask_from_load": null,
+     "names": [],
+     "rule": "last `mov <src>, imm` within 30 instructions in the function"
+    },
+    {
+     "at": 5369073074,
+     "in_function": [
+      5369073018,
+      5369073414
+     ],
+     "text": "0x140058db2: mov dword ptr [rbx + 0x11d8], eax",
+     "mnemonic": "mov",
+     "kind": "write_computed",
+     "source": "eax",
+     "mask_from_load": null,
+     "names": [],
+     "rule": "last `mov <src>, imm` within 30 instructions in the function"
+    },
+    {
+     "at": 5369073154,
+     "in_function": [
+      5369073018,
+      5369073414
+     ],
+     "text": "0x140058e02: mov dword ptr [rbx + 0x11d8], eax",
+     "mnemonic": "mov",
+     "kind": "write_computed",
+     "source": "eax",
+     "mask_from_load": null,
+     "names": [],
+     "rule": "last `mov <src>, imm` within 30 instructions in the function"
+    },
+    {
+     "at": 5369141961,
+     "in_function": [
+      5369139440,
+      5369143445
+     ],
+     "text": "0x140069ac9: mov dword ptr [rbx + 0x11d8], eax",
+     "mnemonic": "mov",
+     "kind": "write_computed",
+     "source": "eax",
+     "mask_from_load": null,
+     "names": [],
+     "rule": "last `mov <src>, imm` within 30 instructions in the function"
+    },
+    {
+     "at": 5369142090,
+     "in_function": [
+      5369139440,
+      5369143445
+     ],
+     "text": "0x140069b4a: mov dword ptr [rbx + 0x11d8], eax",
+     "mnemonic": "mov",
+     "kind": "write_computed",
+     "source": "eax",
+     "mask_from_load": null,
+     "names": [],
+     "rule": "last `mov <src>, imm` within 30 instructions in the function"
+    },
+    {
+     "at": 5369147788,
+     "in_function": [
+      5369146880,
+      5369151623
+     ],
+     "text": "0x14006b18c: mov dword ptr [rdi + 0x11d8], eax",
+     "mnemonic": "mov",
+     "kind": "write_computed",
+     "source": "eax",
+     "mask_from_load": null,
+     "names": [],
+     "rule": "last `mov <src>, imm` within 30 instructions in the function"
+    },
+    {
+     "at": 5369147801,
+     "in_function": [
+      5369146880,
+      5369151623
+     ],
+     "text": "0x14006b199: mov dword ptr [rdi + 0x11d8], eax",
+     "mnemonic": "mov",
+     "kind": "write_computed",
+     "source": "eax",
+     "mask_from_load": null,
+     "names": [],
+     "rule": "last `mov <src>, imm` within 30 instructions in the function"
+    },
+    {
+     "at": 5373347483,
+     "in_function": [
+      5373344144,
+      5373347679
+     ],
+     "text": "0x14046c69b: xor dword ptr [rdx + 0x11d8], ecx",
+     "mnemonic": "xor",
+     "kind": "write_computed",
+     "source": "ecx",
+     "mask_from_load": null,
+     "names": [],
+     "rule": "last `mov <src>, imm` within 30 instructions in the function"
+    }
+   ],
+   "reads": [
+    {
+     "at": 5368887402,
+     "in_function": [
+      5368887188,
+      5368887773
+     ],
+     "text": "0x14002b86a: test byte ptr [rax + 0x11d8], 2",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5368992512,
+     "in_function": [
+      5368986912,
+      5368996204
+     ],
+     "text": "0x140045300: test byte ptr [rsi + 0x11d8], 2",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5369020960,
+     "in_function": [
+      5369020864,
+      5369020992
+     ],
+     "text": "0x14004c220: test byte ptr [rcx + 0x11d8], 2",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5369021484,
+     "in_function": [
+      5369021440,
+      5369021548
+     ],
+     "text": "0x14004c42c: or dword ptr [rax + 0x11d8], 1",
+     "mnemonic": "or",
+     "kind": "read"
+    },
+    {
+     "at": 5369022211,
+     "in_function": [
+      5369022176,
+      5369022405
+     ],
+     "text": "0x14004c703: test byte ptr [rbx + 0x11d8], 2",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5369022474,
+     "in_function": [
+      5369022468,
+      5369022967
+     ],
+     "text": "0x14004c80a: test byte ptr [rcx + 0x11d8], 2",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5369023650,
+     "in_function": [
+      5369023520,
+      5369023736
+     ],
+     "text": "0x14004cca2: mov eax, dword ptr [r9 + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5369028343,
+     "in_function": [
+      5369028224,
+      5369028597
+     ],
+     "text": "0x14004def7: mov ebx, dword ptr [rdi + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5369034811,
+     "in_function": [
+      5369034784,
+      5369035285
+     ],
+     "text": "0x14004f83b: test byte ptr [rcx + 0x11d8], 2",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5369035946,
+     "in_function": [
+      5369035856,
+      5369036161
+     ],
+     "text": "0x14004fcaa: test byte ptr [rcx + 0x11d8], 8",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5369037719,
+     "in_function": [
+      5369037616,
+      5369037913
+     ],
+     "text": "0x140050397: test byte ptr [rbx + 0x11d8], 2",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5369038425,
+     "in_function": [
+      5369038336,
+      5369038743
+     ],
+     "text": "0x140050659: mov eax, dword ptr [rcx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5369038675,
+     "in_function": [
+      5369038336,
+      5369038743
+     ],
+     "text": "0x140050753: test dword ptr [rbx + 0x11d8], 0x200",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5369047041,
+     "in_function": [
+      5369047018,
+      5369047201
+     ],
+     "text": "0x140052801: test byte ptr [rbx + 0x11d8], 2",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5369051497,
+     "in_function": [
+      5369051216,
+      5369053823
+     ],
+     "text": "0x140053969: test dword ptr [rsi + 0x11d8], 0x1000",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5369062351,
+     "in_function": [
+      5369062304,
+      5369063004
+     ],
+     "text": "0x1400563cf: test dword ptr [rcx + 0x11d8], 0x2000",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5369063014,
+     "in_function": [
+      5369063008,
+      5369063053
+     ],
+     "text": "0x140056666: test byte ptr [rcx + 0x11d8], 2",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5369063428,
+     "in_function": [
+      5369063184,
+      5369065559
+     ],
+     "text": "0x140056804: mov ecx, dword ptr [rbx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5369063486,
+     "in_function": [
+      5369063184,
+      5369065559
+     ],
+     "text": "0x14005683e: test dword ptr [rbx + 0x11d8], 0x100000",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5369064801,
+     "in_function": [
+      5369063184,
+      5369065559
+     ],
+     "text": "0x140056d61: mov eax, dword ptr [rbx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5369064865,
+     "in_function": [
+      5369063184,
+      5369065559
+     ],
+     "text": "0x140056da1: mov r11d, dword ptr [rbx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5369064899,
+     "in_function": [
+      5369063184,
+      5369065559
+     ],
+     "text": "0x140056dc3: test byte ptr [rbx + 0x11d8], 0x80",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5369065008,
+     "in_function": [
+      5369063184,
+      5369065559
+     ],
+     "text": "0x140056e30: test dword ptr [rbx + 0x11d8], 0x100",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5369072405,
+     "in_function": [
+      5369072336,
+      5369072637
+     ],
+     "text": "0x140058b15: test byte ptr [rbx + 0x11d8], 2",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5369072733,
+     "in_function": [
+      5369072637,
+      5369072835
+     ],
+     "text": "0x140058c5d: test dword ptr [rbx + 0x11d8], 0x400",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5369073046,
+     "in_function": [
+      5369073018,
+      5369073414
+     ],
+     "text": "0x140058d96: mov eax, dword ptr [rbx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5369073273,
+     "in_function": [
+      5369073018,
+      5369073414
+     ],
+     "text": "0x140058e79: or dword ptr [rbx + 0x11d8], 8",
+     "mnemonic": "or",
+     "kind": "read"
+    },
+    {
+     "at": 5369073375,
+     "in_function": [
+      5369073018,
+      5369073414
+     ],
+     "text": "0x140058edf: mov eax, dword ptr [rbx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5369078838,
+     "in_function": [
+      5369078761,
+      5369079215
+     ],
+     "text": "0x14005a436: test byte ptr [rsi + 0x11d8], 8",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5369082924,
+     "in_function": [
+      5369081920,
+      5369083963
+     ],
+     "text": "0x14005b42c: test byte ptr [rdi + 0x11d8], 2",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5369097559,
+     "in_function": [
+      5369096080,
+      5369099475
+     ],
+     "text": "0x14005ed57: test byte ptr [rdi + 0x11d8], 2",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5369113886,
+     "in_function": [
+      5369113856,
+      5369113893
+     ],
+     "text": "0x140062d1e: test byte ptr [rcx + 0x11d8], 2",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5369117771,
+     "in_function": [
+      5369116928,
+      5369118342
+     ],
+     "text": "0x140063c4b: test byte ptr [rbx + 0x11d8], 2",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5369118533,
+     "in_function": [
+      5369118352,
+      5369118667
+     ],
+     "text": "0x140063f45: test byte ptr [rbx + 0x11d8], 2",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5369126276,
+     "in_function": [
+      5369125312,
+      5369129186
+     ],
+     "text": "0x140065d84: test byte ptr [rsi + 0x11d8], 1",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5369127846,
+     "in_function": [
+      5369125312,
+      5369129186
+     ],
+     "text": "0x1400663a6: mov eax, dword ptr [rsi + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5369128719,
+     "in_function": [
+      5369125312,
+      5369129186
+     ],
+     "text": "0x14006670f: mov eax, dword ptr [rsi + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5369129087,
+     "in_function": [
+      5369125312,
+      5369129186
+     ],
+     "text": "0x14006687f: mov eax, dword ptr [rsi + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5369131946,
+     "in_function": [
+      5369129849,
+      5369136702
+     ],
+     "text": "0x1400673aa: mov eax, dword ptr [r13 + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5369141544,
+     "in_function": [
+      5369139440,
+      5369143445
+     ],
+     "text": "0x140069928: test dword ptr [rbx + 0x11d8], 0x800000",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5369141591,
+     "in_function": [
+      5369139440,
+      5369143445
+     ],
+     "text": "0x140069957: test dword ptr [rbx + 0x11d8], 0x800000",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5369141701,
+     "in_function": [
+      5369139440,
+      5369143445
+     ],
+     "text": "0x1400699c5: mov eax, dword ptr [rbx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5369143188,
+     "in_function": [
+      5369139440,
+      5369143445
+     ],
+     "text": "0x140069f94: test dword ptr [rbx + 0x11d8], 0x400000",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5369145114,
+     "in_function": [
+      5369144816,
+      5369146880
+     ],
+     "text": "0x14006a71a: mov ecx, dword ptr [rbx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5369147714,
+     "in_function": [
+      5369146880,
+      5369151623
+     ],
+     "text": "0x14006b142: test byte ptr [rdi + 0x11d8], 2",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5369147754,
+     "in_function": [
+      5369146880,
+      5369151623
+     ],
+     "text": "0x14006b16a: mov eax, dword ptr [rdi + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5369148314,
+     "in_function": [
+      5369146880,
+      5369151623
+     ],
+     "text": "0x14006b39a: test dword ptr [rdi + 0x11d8], 0x20000000",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5369149889,
+     "in_function": [
+      5369146880,
+      5369151623
+     ],
+     "text": "0x14006b9c1: test byte ptr [rdi + 0x11d8], 2",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5369193967,
+     "in_function": [
+      5369193918,
+      5369193999
+     ],
+     "text": "0x1400765ef: mov eax, dword ptr [rax + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5369194686,
+     "in_function": [
+      5369194637,
+      5369194718
+     ],
+     "text": "0x1400768be: mov eax, dword ptr [rax + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5369227729,
+     "in_function": [
+      5369227712,
+      5369227954
+     ],
+     "text": "0x14007e9d1: mov ecx, dword ptr [rcx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5369228241,
+     "in_function": [
+      5369227954,
+      5369228555
+     ],
+     "text": "0x14007ebd1: mov ebx, dword ptr [r12 + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5369296310,
+     "in_function": [
+      5369292688,
+      5369296405
+     ],
+     "text": "0x14008f5b6: mov edx, dword ptr [rax + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5369418613,
+     "in_function": [
+      5369418480,
+      5369421201
+     ],
+     "text": "0x1400ad375: mov rcx, qword ptr [rdi + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5369870917,
+     "in_function": [
+      5369870176,
+      5369874329
+     ],
+     "text": "0x14011ba45: test byte ptr [rsi + 0x11d8], 8",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5370348813,
+     "in_function": [
+      5370348160,
+      5370353309
+     ],
+     "text": "0x14019050d: mov eax, dword ptr [r15 + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5370569110,
+     "in_function": [
+      5370568832,
+      5370570635
+     ],
+     "text": "0x1401c6196: call qword ptr [rax + 0x11d8]",
+     "mnemonic": "call",
+     "kind": "read"
+    },
+    {
+     "at": 5370569306,
+     "in_function": [
+      5370568832,
+      5370570635
+     ],
+     "text": "0x1401c625a: call qword ptr [rax + 0x11d8]",
+     "mnemonic": "call",
+     "kind": "read"
+    },
+    {
+     "at": 5371101845,
+     "in_function": [
+      5371100464,
+      5371102866
+     ],
+     "text": "0x140248295: mov qword ptr [rbx + 0x11d8], rdi",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5371125381,
+     "in_function": [
+      5371125369,
+      5371125706
+     ],
+     "text": "0x14024de85: test byte ptr [rcx + 0x11d8], 2",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5371152000,
+     "in_function": [
+      5371151712,
+      5371159357
+     ],
+     "text": "0x140254680: test dword ptr [rcx + 0x11d8], 0x2000000",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5371152850,
+     "in_function": [
+      5371151712,
+      5371159357
+     ],
+     "text": "0x1402549d2: test dword ptr [rdi + 0x11d8], 0x40000000",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5371152939,
+     "in_function": [
+      5371151712,
+      5371159357
+     ],
+     "text": "0x140254a2b: mov eax, dword ptr [rdi + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5371157397,
+     "in_function": [
+      5371151712,
+      5371159357
+     ],
+     "text": "0x140255b95: test byte ptr [rdi + 0x11d8], 2",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5371157462,
+     "in_function": [
+      5371151712,
+      5371159357
+     ],
+     "text": "0x140255bd6: test dword ptr [rdi + 0x11d8], 0x4000",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5371158333,
+     "in_function": [
+      5371151712,
+      5371159357
+     ],
+     "text": "0x140255f3d: mov ecx, dword ptr [rdi + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5371158493,
+     "in_function": [
+      5371151712,
+      5371159357
+     ],
+     "text": "0x140255fdd: test byte ptr [rax + 0x11d8], 2",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5371332947,
+     "in_function": [
+      5371332668,
+      5371333139
+     ],
+     "text": "0x140280953: call qword ptr [rax + 0x11d8]",
+     "mnemonic": "call",
+     "kind": "read"
+    },
+    {
+     "at": 5373202015,
+     "in_function": [
+      5373201989,
+      5373202301
+     ],
+     "text": "0x140448e5f: mov eax, dword ptr [rsi + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5373221172,
+     "in_function": [
+      5373220592,
+      5373221979
+     ],
+     "text": "0x14044d934: mov eax, dword ptr [rax + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5373347471,
+     "in_function": [
+      5373344144,
+      5373347679
+     ],
+     "text": "0x14046c68f: xor ecx, dword ptr [rdx + 0x11d8]",
+     "mnemonic": "xor",
+     "kind": "read"
+    },
+    {
+     "at": 5373357234,
+     "in_function": [
+      5373356752,
+      5373366829
+     ],
+     "text": "0x14046ecb2: mov ecx, dword ptr [r12 + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5373358608,
+     "in_function": [
+      5373356752,
+      5373366829
+     ],
+     "text": "0x14046f210: test byte ptr [rax + 0x11d8], 2",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5373426187,
+     "in_function": [
+      5373416512,
+      5373466824
+     ],
+     "text": "0x14047fa0b: lea rcx, [rbp + 0x11d8]",
+     "mnemonic": "lea",
+     "kind": "read"
+    },
+    {
+     "at": 5373528287,
+     "in_function": [
+      5373528224,
+      5373528320
+     ],
+     "text": "0x1404988df: call qword ptr [rax + 0x11d8]",
+     "mnemonic": "call",
+     "kind": "read"
+    },
+    {
+     "at": 5373957161,
+     "in_function": [
+      5373956880,
+      5373957168
+     ],
+     "text": "0x140501429: jmp qword ptr [rax + 0x11d8]",
+     "mnemonic": "jmp",
+     "kind": "read"
+    },
+    {
+     "at": 5374491203,
+     "in_function": [
+      5374490809,
+      5374491755
+     ],
+     "text": "0x140583a43: test byte ptr [rcx + 0x11d8], 2",
+     "mnemonic": "test",
+     "kind": "read"
+    },
+    {
+     "at": 5387028478,
+     "in_function": [
+      5387028352,
+      5387028880
+     ],
+     "text": "0x1411787fe: cmp qword ptr [r11 + 0x11d8], 0",
+     "mnemonic": "cmp",
+     "kind": "read"
+    },
+    {
+     "at": 5387028501,
+     "in_function": [
+      5387028352,
+      5387028880
+     ],
+     "text": "0x141178815: mov rcx, qword ptr [rcx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387028644,
+     "in_function": [
+      5387028352,
+      5387028880
+     ],
+     "text": "0x1411788a4: cmp qword ptr [r11 + 0x11d8], 0",
+     "mnemonic": "cmp",
+     "kind": "read"
+    },
+    {
+     "at": 5387028667,
+     "in_function": [
+      5387028352,
+      5387028880
+     ],
+     "text": "0x1411788bb: mov rcx, qword ptr [rcx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387028745,
+     "in_function": [
+      5387028352,
+      5387028880
+     ],
+     "text": "0x141178909: cmp qword ptr [r11 + 0x11d8], 0",
+     "mnemonic": "cmp",
+     "kind": "read"
+    },
+    {
+     "at": 5387028768,
+     "in_function": [
+      5387028352,
+      5387028880
+     ],
+     "text": "0x141178920: mov rcx, qword ptr [rcx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387028931,
+     "in_function": [
+      5387028896,
+      5387029968
+     ],
+     "text": "0x1411789c3: cmp qword ptr [rax + 0x11d8], 0",
+     "mnemonic": "cmp",
+     "kind": "read"
+    },
+    {
+     "at": 5387029858,
+     "in_function": [
+      5387028896,
+      5387029968
+     ],
+     "text": "0x141178d62: mov rcx, qword ptr [rcx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387041545,
+     "in_function": [
+      5387039728,
+      5387042214
+     ],
+     "text": "0x14117bb09: mov qword ptr [rax + 0x11d8], rdx",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387041560,
+     "in_function": [
+      5387039728,
+      5387042214
+     ],
+     "text": "0x14117bb18: cmp qword ptr [rax + 0x11d8], 0",
+     "mnemonic": "cmp",
+     "kind": "read"
+    },
+    {
+     "at": 5387041646,
+     "in_function": [
+      5387039728,
+      5387042214
+     ],
+     "text": "0x14117bb6e: mov rcx, qword ptr [rcx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387041681,
+     "in_function": [
+      5387039728,
+      5387042214
+     ],
+     "text": "0x14117bb91: mov rcx, qword ptr [rcx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387041703,
+     "in_function": [
+      5387039728,
+      5387042214
+     ],
+     "text": "0x14117bba7: mov qword ptr [rax + 0x11d8], 0",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387041722,
+     "in_function": [
+      5387039728,
+      5387042214
+     ],
+     "text": "0x14117bbba: mov r8, qword ptr [r8 + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387042708,
+     "in_function": [
+      5387042576,
+      5387043119
+     ],
+     "text": "0x14117bf94: cmp qword ptr [rax + 0x11d8], 0",
+     "mnemonic": "cmp",
+     "kind": "read"
+    },
+    {
+     "at": 5387042723,
+     "in_function": [
+      5387042576,
+      5387043119
+     ],
+     "text": "0x14117bfa3: mov rcx, qword ptr [rcx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387042740,
+     "in_function": [
+      5387042576,
+      5387043119
+     ],
+     "text": "0x14117bfb4: mov qword ptr [r11 + 0x11d8], 0",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387044703,
+     "in_function": [
+      5387044656,
+      5387044739
+     ],
+     "text": "0x14117c75f: cmp qword ptr [rax + 0x11d8], 0",
+     "mnemonic": "cmp",
+     "kind": "read"
+    },
+    {
+     "at": 5387044718,
+     "in_function": [
+      5387044656,
+      5387044739
+     ],
+     "text": "0x14117c76e: mov rcx, qword ptr [rcx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387044879,
+     "in_function": [
+      5387044848,
+      5387044996
+     ],
+     "text": "0x14117c80f: mov rax, qword ptr [rax + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387055644,
+     "in_function": [
+      5387055584,
+      5387057120
+     ],
+     "text": "0x14117f21c: mov rax, qword ptr [rax + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387056344,
+     "in_function": [
+      5387055584,
+      5387057120
+     ],
+     "text": "0x14117f4d8: mov rcx, qword ptr [rcx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387056940,
+     "in_function": [
+      5387055584,
+      5387057120
+     ],
+     "text": "0x14117f72c: cmp qword ptr [rax + 0x11d8], 0",
+     "mnemonic": "cmp",
+     "kind": "read"
+    },
+    {
+     "at": 5387056958,
+     "in_function": [
+      5387055584,
+      5387057120
+     ],
+     "text": "0x14117f73e: mov rcx, qword ptr [rcx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387056978,
+     "in_function": [
+      5387055584,
+      5387057120
+     ],
+     "text": "0x14117f752: mov rcx, qword ptr [rcx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387057018,
+     "in_function": [
+      5387055584,
+      5387057120
+     ],
+     "text": "0x14117f77a: mov rcx, qword ptr [rcx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387057044,
+     "in_function": [
+      5387055584,
+      5387057120
+     ],
+     "text": "0x14117f794: mov rcx, qword ptr [rcx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387059896,
+     "in_function": [
+      5387059840,
+      5387060062
+     ],
+     "text": "0x1411802b8: cmp qword ptr [rax + 0x11d8], 0",
+     "mnemonic": "cmp",
+     "kind": "read"
+    },
+    {
+     "at": 5387059921,
+     "in_function": [
+      5387059840,
+      5387060062
+     ],
+     "text": "0x1411802d1: mov rcx, qword ptr [rcx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387060339,
+     "in_function": [
+      5387060256,
+      5387060406
+     ],
+     "text": "0x141180473: mov rax, qword ptr [rax + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387060967,
+     "in_function": [
+      5387060416,
+      5387060999
+     ],
+     "text": "0x1411806e7: cmp qword ptr [r11 + 0x11d8], 0",
+     "mnemonic": "cmp",
+     "kind": "read"
+    },
+    {
+     "at": 5387060982,
+     "in_function": [
+      5387060416,
+      5387060999
+     ],
+     "text": "0x1411806f6: mov rcx, qword ptr [rcx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387061835,
+     "in_function": [
+      5387061696,
+      5387061870
+     ],
+     "text": "0x141180a4b: mov rax, qword ptr [rax + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387065167,
+     "in_function": [
+      5387065088,
+      5387065202
+     ],
+     "text": "0x14118174f: cmp qword ptr [r11 + 0x11d8], 0",
+     "mnemonic": "cmp",
+     "kind": "read"
+    },
+    {
+     "at": 5387065510,
+     "in_function": [
+      5387065456,
+      5387065659
+     ],
+     "text": "0x1411818a6: cmp qword ptr [r11 + 0x11d8], 0",
+     "mnemonic": "cmp",
+     "kind": "read"
+    },
+    {
+     "at": 5387065558,
+     "in_function": [
+      5387065456,
+      5387065659
+     ],
+     "text": "0x1411818d6: mov rcx, qword ptr [rcx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387066153,
+     "in_function": [
+      5387066128,
+      5387066221
+     ],
+     "text": "0x141181b29: cmp qword ptr [rax + 0x11d8], 0",
+     "mnemonic": "cmp",
+     "kind": "read"
+    },
+    {
+     "at": 5387066196,
+     "in_function": [
+      5387066128,
+      5387066221
+     ],
+     "text": "0x141181b54: mov rcx, qword ptr [rcx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387066286,
+     "in_function": [
+      5387066240,
+      5387066502
+     ],
+     "text": "0x141181bae: cmp qword ptr [rax + 0x11d8], 0",
+     "mnemonic": "cmp",
+     "kind": "read"
+    },
+    {
+     "at": 5387066413,
+     "in_function": [
+      5387066240,
+      5387066502
+     ],
+     "text": "0x141181c2d: mov rcx, qword ptr [rcx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387066549,
+     "in_function": [
+      5387066512,
+      5387066648
+     ],
+     "text": "0x141181cb5: mov rcx, qword ptr [rcx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387066593,
+     "in_function": [
+      5387066512,
+      5387066648
+     ],
+     "text": "0x141181ce1: mov rcx, qword ptr [rcx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387066618,
+     "in_function": [
+      5387066512,
+      5387066648
+     ],
+     "text": "0x141181cfa: mov rcx, qword ptr [rcx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387066778,
+     "in_function": [
+      5387066656,
+      5387066921
+     ],
+     "text": "0x141181d9a: cmp qword ptr [rax + 0x11d8], 0",
+     "mnemonic": "cmp",
+     "kind": "read"
+    },
+    {
+     "at": 5387067012,
+     "in_function": [
+      5387066928,
+      5387067138
+     ],
+     "text": "0x141181e84: mov rcx, qword ptr [rcx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387067047,
+     "in_function": [
+      5387066928,
+      5387067138
+     ],
+     "text": "0x141181ea7: mov rcx, qword ptr [rcx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387067092,
+     "in_function": [
+      5387066928,
+      5387067138
+     ],
+     "text": "0x141181ed4: mov rcx, qword ptr [rcx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387067180,
+     "in_function": [
+      5387067152,
+      5387067243
+     ],
+     "text": "0x141181f2c: cmp qword ptr [rax + 0x11d8], 0",
+     "mnemonic": "cmp",
+     "kind": "read"
+    },
+    {
+     "at": 5387067204,
+     "in_function": [
+      5387067152,
+      5387067243
+     ],
+     "text": "0x141181f44: mov rcx, qword ptr [rcx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387068694,
+     "in_function": [
+      5387068640,
+      5387068775
+     ],
+     "text": "0x141182516: cmp qword ptr [rax + 0x11d8], 0",
+     "mnemonic": "cmp",
+     "kind": "read"
+    },
+    {
+     "at": 5387068709,
+     "in_function": [
+      5387068640,
+      5387068775
+     ],
+     "text": "0x141182525: mov rcx, qword ptr [rcx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387068742,
+     "in_function": [
+      5387068640,
+      5387068775
+     ],
+     "text": "0x141182546: mov rcx, qword ptr [rcx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387070112,
+     "in_function": [
+      5387070000,
+      5387070476
+     ],
+     "text": "0x141182aa0: cmp qword ptr [rax + 0x11d8], 0",
+     "mnemonic": "cmp",
+     "kind": "read"
+    },
+    {
+     "at": 5387070312,
+     "in_function": [
+      5387070000,
+      5387070476
+     ],
+     "text": "0x141182b68: cmp qword ptr [rax + 0x11d8], 0",
+     "mnemonic": "cmp",
+     "kind": "read"
+    },
+    {
+     "at": 5387070356,
+     "in_function": [
+      5387070000,
+      5387070476
+     ],
+     "text": "0x141182b94: mov rcx, qword ptr [rcx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387070428,
+     "in_function": [
+      5387070000,
+      5387070476
+     ],
+     "text": "0x141182bdc: mov rcx, qword ptr [rcx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5387070453,
+     "in_function": [
+      5387070000,
+      5387070476
+     ],
+     "text": "0x141182bf5: mov rcx, qword ptr [rcx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5391182064,
+     "in_function": [
+      5391181808,
+      5391182515
+     ],
+     "text": "0x14156e8f0: cmp qword ptr [rax + 0x11d8], 0",
+     "mnemonic": "cmp",
+     "kind": "read"
+    },
+    {
+     "at": 5391182090,
+     "in_function": [
+      5391181808,
+      5391182515
+     ],
+     "text": "0x14156e90a: mov rcx, qword ptr [rcx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    },
+    {
+     "at": 5391182371,
+     "in_function": [
+      5391181808,
+      5391182515
+     ],
+     "text": "0x14156ea23: cmp qword ptr [rax + 0x11d8], 0",
+     "mnemonic": "cmp",
+     "kind": "read"
+    },
+    {
+     "at": 5391182397,
+     "in_function": [
+      5391181808,
+      5391182515
+     ],
+     "text": "0x14156ea3d: mov rcx, qword ptr [rcx + 0x11d8]",
+     "mnemonic": "mov",
+     "kind": "read"
+    }
+   ],
+   "register_tests": [
+    {
+     "at": 5369063486,
+     "in_function": [
+      5369063184,
+      5369065559
+     ],
+     "text": "0x140056804: mov ecx, dword ptr [rbx + 0x11d8] ; 0x14005683e: test dword ptr [rbx + 0x11d8], 0x100000",
+     "mask": 1048576,
+     "names": [
+      "AudioClutch"
+     ]
+    },
+    {
+     "at": 5369063486,
+     "in_function": [
+      5369063184,
+      5369065559
+     ],
+     "text": "0x140056828: and dword ptr [rbx + 0x11d8], 0xffefffff ; 0x14005683e: test dword ptr [rbx + 0x11d8], 0x100000",
+     "mask": 1048576,
+     "names": [
+      "AudioClutch"
+     ]
+    },
+    {
+     "at": 5369063486,
+     "in_function": [
+      5369063184,
+      5369065559
+     ],
+     "text": "0x140056838: or dword ptr [rbx + 0x11d8], eax ; 0x14005683e: test dword ptr [rbx + 0x11d8], 0x100000",
+     "mask": 1048576,
+     "names": [
+      "AudioClutch"
+     ]
+    },
+    {
+     "at": 5369064899,
+     "in_function": [
+      5369063184,
+      5369065559
+     ],
+     "text": "0x140056da1: mov r11d, dword ptr [rbx + 0x11d8] ; 0x140056dc3: test byte ptr [rbx + 0x11d8], 0x80",
+     "mask": 128,
+     "names": [
+      "WallScrapeL"
+     ]
+    },
+    {
+     "at": 5369064899,
+     "in_function": [
+      5369063184,
+      5369065559
+     ],
+     "text": "0x140056db5: mov dword ptr [rbx + 0x11d8], eax ; 0x140056dc3: test byte ptr [rbx + 0x11d8], 0x80",
+     "mask": 128,
+     "names": [
+      "WallScrapeL"
+     ]
+    },
+    {
+     "at": 5369065008,
+     "in_function": [
+      5369063184,
+      5369065559
+     ],
+     "text": "0x140056dfe: and dword ptr [rbx + 0x11d8], 0xffffff7f ; 0x140056e30: test dword ptr [rbx + 0x11d8], 0x100",
+     "mask": 256,
+     "names": [
+      "WallScrapeR"
+     ]
+    },
+    {
+     "at": 5369127852,
+     "in_function": [
+      5369125312,
+      5369129186
+     ],
+     "text": "0x1400663a6: mov eax, dword ptr [rsi + 0x11d8] ; 0x1400663ac: test al, 0x20",
+     "mask": 32,
+     "names": [
+      "KismetForceWheelspin"
+     ]
+    },
+    {
+     "at": 5369127856,
+     "in_function": [
+      5369125312,
+      5369129186
+     ],
+     "text": "0x1400663a6: mov eax, dword ptr [rsi + 0x11d8] ; 0x1400663b0: test al, 0x40",
+     "mask": 64,
+     "names": [
+      "StopBoxForceWheelspin"
+     ]
+    },
+    {
+     "at": 5369128725,
+     "in_function": [
+      5369125312,
+      5369129186
+     ],
+     "text": "0x14006670f: mov eax, dword ptr [rsi + 0x11d8] ; 0x140066715: test al, 0x20",
+     "mask": 32,
+     "names": [
+      "KismetForceWheelspin"
+     ]
+    },
+    {
+     "at": 5369128733,
+     "in_function": [
+      5369125312,
+      5369129186
+     ],
+     "text": "0x14006670f: mov eax, dword ptr [rsi + 0x11d8] ; 0x14006671d: test al, 0x40",
+     "mask": 64,
+     "names": [
+      "StopBoxForceWheelspin"
+     ]
+    },
+    {
+     "at": 5369129093,
+     "in_function": [
+      5369125312,
+      5369129186
+     ],
+     "text": "0x14006687f: mov eax, dword ptr [rsi + 0x11d8] ; 0x140066885: test al, 0x20",
+     "mask": 32,
+     "names": [
+      "KismetForceWheelspin"
+     ]
+    },
+    {
+     "at": 5369129097,
+     "in_function": [
+      5369125312,
+      5369129186
+     ],
+     "text": "0x14006687f: mov eax, dword ptr [rsi + 0x11d8] ; 0x140066889: test al, 0x40",
+     "mask": 64,
+     "names": [
+      "StopBoxForceWheelspin"
+     ]
+    },
+    {
+     "at": 5369141591,
+     "in_function": [
+      5369139440,
+      5369143445
+     ],
+     "text": "0x140069928: test dword ptr [rbx + 0x11d8], 0x800000 ; 0x140069957: test dword ptr [rbx + 0x11d8], 0x800000",
+     "mask": 8388608,
+     "names": [
+      "SelfDriveUturn"
+     ]
+    },
+    {
+     "at": 5371157462,
+     "in_function": [
+      5371151712,
+      5371159357
+     ],
+     "text": "0x140255b95: test byte ptr [rdi + 0x11d8], 2 ; 0x140255bd6: test dword ptr [rdi + 0x11d8], 0x4000",
+     "mask": 16384,
+     "names": [
+      "bBoostLocked"
+     ]
+    }
+   ]
+  },
+  "class_chain": [
+   "RVehicleBatmobileBase",
+   "RVehicle",
+   "AkVehicle",
+   "SVehicle",
+   "Vehicle",
+   "Pawn",
+   "Actor"
+  ]
+ },
+ "mode_change": {
+  "impl": 5369118352,
+  "impl_function": [
+   5369118352,
+   5369118667
+  ],
+  "comparisons": [
+   {
+    "at": 5369118468,
+    "const_va": 5398011100,
+    "value": -0.707,
+    "text": "0x140063f04: comiss xmm1, dword ptr [rip + 0x1b8ddd1]"
+   },
+   {
+    "at": 5369118498,
+    "const_va": 5397866744,
+    "value": 0.707,
+    "text": "0x140063f22: comiss xmm1, dword ptr [rip + 0x1b6a9cf]"
+   }
+  ],
+  "float_sources": [
+   {
+    "at": 5369118460,
+    "text": "0x140063efc: movss xmm1, dword ptr [rax + 0xd8]",
+    "src": "xmm1, dword ptr [rax + 0xd8]"
+   }
+  ],
+  "slot": {
+   "load_object": "0x140063ef5: mov rax, qword ptr [rbx + 0x38c]",
+   "load_float": "0x140063efc: movss xmm1, dword ptr [rax + 0xd8]",
+   "object_slot_props": [
+    {
+     "class": "Pawn",
+     "name": "Mesh",
+     "kind": "ComponentProperty",
+     "mask": null,
+     "type": "SkeletalMeshComponent"
+    }
+   ],
+   "object_slot_anywhere": [
+    {
+     "class": "Pawn",
+     "name": "Mesh",
+     "kind": "ComponentProperty",
+     "mask": null
+    },
+    {
+     "class": "RBasicProjectile",
+     "name": "TargetActor",
+     "kind": "ObjectProperty",
+     "mask": null
+    }
+   ],
+   "float_slot_props": [],
+   "float_slot_anywhere": [],
+   "object_named": {
+    "class": "Pawn",
+    "name": "Mesh",
+    "kind": "ComponentProperty",
+    "mask": null,
+    "type": "SkeletalMeshComponent"
+   },
+   "float_named": null
+  },
+  "mode_compare": [
+   {
+    "at": 5369118437,
+    "constant": 576,
+    "equal_to_battle_mode": true,
+    "next": [
+     "0x140063eee: cmp rdx, qword ptr [rsp + 0x30]",
+     "0x140063ef3: jne 0x140063f2f",
+     "0x140063ef5: mov rax, qword ptr [rbx + 0x38c]"
+    ]
+   }
+  ],
+  "vehicle_fields": [
+   {
+    "at": 5369118423,
+    "text": "0x140063ed7: cmp qword ptr [rbx + 0x1494], 0",
+    "offset": 5268,
+    "props": [
+     "TransformationAnimNode"
+    ]
+   },
+   {
+    "at": 5369118453,
+    "text": "0x140063ef5: mov rax, qword ptr [rbx + 0x38c]",
+    "offset": 908,
+    "props": [
+     "Mesh"
+    ]
+   },
+   {
+    "at": 5369118481,
+    "text": "0x140063f11: movss xmm0, dword ptr [rbx + 0x1d20]",
+    "offset": 7456,
+    "props": [
+     "BatmobileStuckTimeFlip"
+    ]
+   },
+   {
+    "at": 5369118489,
+    "text": "0x140063f19: comiss xmm0, dword ptr [rbx + 0x1d18]",
+    "offset": 7448,
+    "props": [
+     "BatmobileStuckTime"
+    ]
+   },
+   {
+    "at": 5369118511,
+    "text": "0x140063f2f: cmp dword ptr [rbx + 0x112c], 0",
+    "offset": 4396,
+    "props": [
+     "MatineeControlRefCount"
+    ]
+   },
+   {
+    "at": 5369118524,
+    "text": "0x140063f3c: test byte ptr [rbx + 0x11dc], 0x40",
+    "offset": 4572,
+    "props": [
+     "BatmobileAboutToAboveOceanLevel",
+     "BatmobileAboutToHitWater",
+     "BatmobileAboveOceanLevel",
+     "BatmobileHitWater"
+    ]
+   },
+   {
+    "at": 5369118533,
+    "text": "0x140063f45: test byte ptr [rbx + 0x11d8], 2",
+    "offset": 4568,
+    "props": [
+     "AbseilBlocked",
+     "ArmouredMode",
+     "ArmouredModeOld",
+     "AudioClutch"
+    ]
+   },
+   {
+    "at": 5369118563,
+    "text": "0x140063f63: mov rcx, qword ptr [rbx + 0x6a4]",
+    "offset": 1700,
+    "props": [
+     "SimObj"
+    ]
+   },
+   {
+    "at": 5369118590,
+    "text": "0x140063f7e: ucomiss xmm0, dword ptr [rbx + 0x1990]",
+    "offset": 6544,
+    "props": [
+     "PreventModeSwitchDuration"
+    ]
+   }
+  ],
+  "disassembly": [
+   {
+    "at": 5369118352,
+    "text": "0x140063e90: mov qword ptr [rsp + 0x18], rbx"
+   },
+   {
+    "at": 5369118357,
+    "text": "0x140063e95: mov qword ptr [rsp + 0x10], rdx"
+   },
+   {
+    "at": 5369118362,
+    "text": "0x140063e9a: push rdi"
+   },
+   {
+    "at": 5369118363,
+    "text": "0x140063e9b: sub rsp, 0x20"
+   },
+   {
+    "at": 5369118367,
+    "text": "0x140063e9f: mov rax, qword ptr [rcx + 0x9c]"
+   },
+   {
+    "at": 5369118374,
+    "text": "0x140063ea6: mov rbx, rcx"
+   },
+   {
+    "at": 5369118377,
+    "text": "0x140063ea9: mov rcx, qword ptr [rax + 0x5ac]"
+   },
+   {
+    "at": 5369118384,
+    "text": "0x140063eb0: mov rax, qword ptr [rcx]"
+   },
+   {
+    "at": 5369118387,
+    "text": "0x140063eb3: call qword ptr [rax + 0xaa0]"
+   },
+   {
+    "at": 5369118393,
+    "text": "0x140063eb9: lea rdx, [rsp + 0x30]"
+   },
+   {
+    "at": 5369118398,
+    "text": "0x140063ebe: mov rcx, rbx"
+   },
+   {
+    "at": 5369118401,
+    "text": "0x140063ec1: mov rdi, rax"
+   },
+   {
+    "at": 5369118404,
+    "text": "0x140063ec4: call 0x140fa3c70"
+   },
+   {
+    "at": 5369118409,
+    "text": "0x140063ec9: mov rdx, qword ptr [rsp + 0x38]"
+   },
+   {
+    "at": 5369118414,
+    "text": "0x140063ece: cmp rdx, qword ptr [rax]"
+   },
+   {
+    "at": 5369118417,
+    "text": "0x140063ed1: je 0x140063fbe"
+   },
+   {
+    "at": 5369118423,
+    "text": "0x140063ed7: cmp qword ptr [rbx + 0x1494], 0"
+   },
+   {
+    "at": 5369118431,
+    "text": "0x140063edf: je 0x140063fbe"
+   },
+   {
+    "at": 5369118437,
+    "text": "0x140063ee5: mov qword ptr [rsp + 0x30], 0x240"
+   },
+   {
+    "at": 5369118446,
+    "text": "0x140063eee: cmp rdx, qword ptr [rsp + 0x30]"
+   },
+   {
+    "at": 5369118451,
+    "text": "0x140063ef3: jne 0x140063f2f"
+   },
+   {
+    "at": 5369118453,
+    "text": "0x140063ef5: mov rax, qword ptr [rbx + 0x38c]"
+   },
+   {
+    "at": 5369118460,
+    "text": "0x140063efc: movss xmm1, dword ptr [rax + 0xd8]"
+   },
+   {
+    "at": 5369118468,
+    "text": "0x140063f04: comiss xmm1, dword ptr [rip + 0x1b8ddd1]"
+   },
+   {
+    "at": 5369118475,
+    "text": "0x140063f0b: jb 0x140063fbe"
+   },
+   {
+    "at": 5369118481,
+    "text": "0x140063f11: movss xmm0, dword ptr [rbx + 0x1d20]"
+   },
+   {
+    "at": 5369118489,
+    "text": "0x140063f19: comiss xmm0, dword ptr [rbx + 0x1d18]"
+   },
+   {
+    "at": 5369118496,
+    "text": "0x140063f20: jae 0x140063f2f"
+   },
+   {
+    "at": 5369118498,
+    "text": "0x140063f22: comiss xmm1, dword ptr [rip + 0x1b6a9cf]"
+   },
+   {
+    "at": 5369118505,
+    "text": "0x140063f29: jb 0x140063fbe"
+   },
+   {
+    "at": 5369118511,
+    "text": "0x140063f2f: cmp dword ptr [rbx + 0x112c], 0"
+   },
+   {
+    "at": 5369118518,
+    "text": "0x140063f36: jne 0x140063fbe"
+   },
+   {
+    "at": 5369118524,
+    "text": "0x140063f3c: test byte ptr [rbx + 0x11dc], 0x40"
+   },
+   {
+    "at": 5369118531,
+    "text": "0x140063f43: jne 0x140063fbe"
+   },
+   {
+    "at": 5369118533,
+    "text": "0x140063f45: test byte ptr [rbx + 0x11d8], 2"
+   },
+   {
+    "at": 5369118540,
+    "text": "0x140063f4c: jne 0x140063f63"
+   },
+   {
+    "at": 5369118542,
+    "text": "0x140063f4e: mov rax, qword ptr [rdi + 0x754]"
+   },
+   {
+    "at": 5369118549,
+    "text": "0x140063f55: test rax, rax"
+   },
+   {
+    "at": 5369118552,
+    "text": "0x140063f58: je 0x140063f63"
+   },
+   {
+    "at": 5369118554,
+    "text": "0x140063f5a: test byte ptr [rax + 0x164], 0x80"
+   },
+   {
+    "at": 5369118561,
+    "text": "0x140063f61: je 0x140063fbe"
+   },
+   {
+    "at": 5369118563,
+    "text": "0x140063f63: mov rcx, qword ptr [rbx + 0x6a4]"
+   },
+   {
+    "at": 5369118570,
+    "text": "0x140063f6a: call 0x1400620b0"
+   },
+   {
+    "at": 5369118575,
+    "text": "0x140063f6f: test dword ptr [rax + 0x294], 0x1000"
+   },
+   {
+    "at": 5369118585,
+    "text": "0x140063f79: jne 0x140063fbe"
+   },
+   {
+    "at": 5369118587,
+    "text": "0x140063f7b: xorps xmm0, xmm0"
+   },
+   {
+    "at": 5369118590,
+    "text": "0x140063f7e: ucomiss xmm0, dword ptr [rbx + 0x1990]"
+   },
+   {
+    "at": 5369118597,
+    "text": "0x140063f85: jne 0x140063fbe"
+   },
+   {
+    "at": 5369118599,
+    "text": "0x140063f87: mov rax, qword ptr [rbx]"
+   },
+   {
+    "at": 5369118602,
+    "text": "0x140063f8a: mov rcx, rbx"
+   },
+   {
+    "at": 5369118605,
+    "text": "0x140063f8d: call qword ptr [rax + 0x1120]"
+   },
+   {
+    "at": 5369118611,
+    "text": "0x140063f93: test eax, eax"
+   },
+   {
+    "at": 5369118613,
+    "text": "0x140063f95: je 0x140063fbe"
+   },
+   {
+    "at": 5369118615,
+    "text": "0x140063f97: mov rax, qword ptr [rbx]"
+   },
+   {
+    "at": 5369118618,
+    "text": "0x140063f9a: mov rdx, qword ptr [rsp + 0x38]"
+   },
+   {
+    "at": 5369118623,
+    "text": "0x140063f9f: xor r9d, r9d"
+   },
+   {
+    "at": 5369118626,
+    "text": "0x140063fa2: xor r8d, r8d"
+   },
+   {
+    "at": 5369118629,
+    "text": "0x140063fa5: mov rcx, rbx"
+   },
+   {
+    "at": 5369118632,
+    "text": "0x140063fa8: call qword ptr [rax + 0x280]"
+   },
+   {
+    "at": 5369118638,
+    "text": "0x140063fae: mov eax, 1"
+   },
+   {
+    "at": 5369118643,
+    "text": "0x140063fb3: mov rbx, qword ptr [rsp + 0x40]"
+   },
+   {
+    "at": 5369118648,
+    "text": "0x140063fb8: add rsp, 0x20"
+   },
+   {
+    "at": 5369118652,
+    "text": "0x140063fbc: pop rdi"
+   },
+   {
+    "at": 5369118653,
+    "text": "0x140063fbd: ret "
+   },
+   {
+    "at": 5369118654,
+    "text": "0x140063fbe: xor eax, eax"
+   },
+   {
+    "at": 5369118656,
+    "text": "0x140063fc0: mov rbx, qword ptr [rsp + 0x40]"
+   },
+   {
+    "at": 5369118661,
+    "text": "0x140063fc5: add rsp, 0x20"
+   },
+   {
+    "at": 5369118665,
+    "text": "0x140063fc9: pop rdi"
+   },
+   {
+    "at": 5369118666,
+    "text": "0x140063fca: ret "
+   }
+  ]
+ },
+ "dispatch": {
+  "thunk": 5373960032,
+  "body": 5371151712,
+  "direct_callers_of_thunk": [],
+  "direct_callers_of_body": [
+   {
+    "at": 5373960319,
+    "op": "jmp"
+   }
+  ],
+  "registration": {
+   "entry_va": 5419671856,
+   "name_string_va": 5400135064,
+   "slot": "0x14309a130"
+  },
+  "code_pointer_data_refs": [
+   {
+    "at": "0x14308fa78",
+    "section": ".data"
+   },
+   {
+    "at": "0x14309a138",
+    "section": ".data"
+   }
+  ],
+  "arplayercontroller_table": {
+   "entries": 347,
+   "code_in_text": 347,
+   "zero_direct_callers": 347,
+   "rule": "membership in the one-pass E8/E9 target set of .text"
+  },
+  "vehicle_table": {
+   "entries": 75,
+   "code_in_text": 75,
+   "zero_direct_callers": 75,
+   "rule": "membership in the one-pass E8/E9 target set of .text"
+  },
+  "rule": "an exec thunk reached only through data has no direct caller; the script VM dispatches it by FName through ProcessEvent"
+ },
+ "exit_route": {
+  "exit_set": {
+   "name": "ARVehicleBatmobileBaseexecSetBatmobileExit",
+   "present": true,
+   "code_va": 5373681120,
+   "function": [
+    5373681120,
+    5373681183
+   ],
+   "array_entries": 75,
+   "direct_callers": [],
+   "caller_check": "one-pass E8/E9 target set, then verified sites if any",
+   "callees": [],
+   "callees_shared_with_driving_move": [],
+   "native_link_to_input": false
+  },
+  "exit_check": {
+   "name": "ARVehicleBatmobileBaseexecCheckSpaceToGetOutOfBatmobile",
+   "present": true,
+   "code_va": 5374250768,
+   "function": [
+    5374250768,
+    5374251166
+   ],
+   "array_entries": 75,
+   "direct_callers": [],
+   "caller_check": "one-pass E8/E9 target set, then verified sites if any",
+   "callees": [
+    {
+     "at": 5374250856,
+     "target": 5374251025,
+     "section": ".text"
+    },
+    {
+     "at": 5374250897,
+     "target": 5374251025,
+     "section": ".text"
+    },
+    {
+     "at": 5374250960,
+     "target": 5374251025,
+     "section": ".text"
+    },
+    {
+     "at": 5374250974,
+     "target": 5374251025,
+     "section": ".text"
+    },
+    {
+     "at": 5374251129,
+     "target": 5369051216,
+     "section": ".text"
+    }
+   ],
+   "callees_shared_with_driving_move": [],
+   "native_link_to_input": false
+  },
+  "eject_up": {
+   "name": "ARVehicleBatmobileBaseexecModifyEjectUpLoc",
+   "present": true,
+   "code_va": 5374250384,
+   "function": [
+    5374250384,
+    5374250762
+   ],
+   "array_entries": 75,
+   "direct_callers": [],
+   "caller_check": "one-pass E8/E9 target set, then verified sites if any",
+   "callees": [
+    {
+     "at": 5374250526,
+     "target": 5374250675,
+     "section": ".text"
+    },
+    {
+     "at": 5374250567,
+     "target": 5374250675,
+     "section": ".text"
+    },
+    {
+     "at": 5374250624,
+     "target": 5374250675,
+     "section": ".text"
+    }
+   ],
+   "callees_shared_with_driving_move": [],
+   "native_link_to_input": false
+  },
+  "_input_to_mode": {
+   "body": [
+    5371151712,
+    5371159357
+   ],
+   "call_sites_to_TryToChangeMode": [
+    {
+     "at": 5371152972,
+     "target": 5369118352
+    },
+    {
+     "at": 5371153049,
+     "target": 5369118352
+    },
+    {
+     "at": 5371153098,
+     "target": 5369118352
+    },
+    {
+     "at": 5371158366,
+     "target": 5369118352
+    },
+    {
+     "at": 5371158469,
+     "target": 5369118352
+    }
+   ],
+   "count": 5
+  }
+ },
+ "oracles": {
+  "flag_word_is_one_documented_bitfield": {
+   "ok": true,
+   "detail": {
+    "masked_fields": 31,
+    "distinct_masks": 31,
+    "bits_0x10_0x8000": [
+     "bWeaponsReady",
+     "bBattleModeLocked"
+    ],
+    "dump_rows_without_mask": [
+     "VulnerableToEMP"
+    ]
+   }
+  },
+  "every_decoded_flag_reference_is_an_instruction_operand": {
+   "ok": true,
+   "detail": {
+    "occurrences": 170,
+    "in_functions": 165,
+    "instruction_refs": 163,
+    "matched_to_an_instruction": 163,
+    "outside_functions": 5,
+    "unmatched_in_functions": 2
+   }
+  },
+  "mode_compare_constants_are_pm_0_707": {
+   "ok": true,
+   "detail": [
+    {
+     "at": "0x140063f04",
+     "const": "0x141bf1cdc",
+     "value": -0.707
+    },
+    {
+     "at": "0x140063f22",
+     "const": "0x141bce8f8",
+     "value": 0.707
+    }
+   ]
+  },
+  "float_load_chain": {
+   "ok": true,
+   "detail": {
+    "object": "0x140063ef5: mov rax, qword ptr [rbx + 0x38c]",
+    "float": "0x140063efc: movss xmm1, dword ptr [rax + 0xd8]"
+   }
+  },
+  "exec_thunks_have_no_direct_caller": {
+   "ok": true,
+   "detail": {
+    "thunk": 0,
+    "arplayercontroller": {
+     "entries": 347,
+     "code_in_text": 347,
+     "zero_direct_callers": 347,
+     "rule": "membership in the one-pass E8/E9 target set of .text"
+    },
+    "vehicle": {
+     "entries": 75,
+     "code_in_text": 75,
+     "zero_direct_callers": 75,
+     "rule": "membership in the one-pass E8/E9 target set of .text"
+    }
+   }
+  },
+  "exit_natives_have_no_native_input_link": {
+   "ok": true,
+   "detail": {
+    "exit_set": {
+     "direct": 0,
+     "shared": []
+    },
+    "exit_check": {
+     "direct": 0,
+     "shared": []
+    },
+    "eject_up": {
+     "direct": 0,
+     "shared": []
+    }
+   }
+  }
+ },
+ "unknowns": [
+  "the meaning of the float at [[this+0x38c]+0xd8]: the chain `[this+0x38c]` is decoded, but the dump declares no property at +0xd8 on that class",
+  "whether the -0.707/+0.707 comparisons mean pitch, direction or a normalised dot product: the instruction only proves a float compare, not its source semantics",
+  "which computed writes set bit 0x8000: writers whose source is a register are resolved only to the last immediate load in the same function, and where that immediate is not the bit the data flow is UNKNOWN",
+  "the script side of exit/eject: the three execs have no direct native caller and no callee shared with DrivingPlayerMove, so their input route is in unrealscript (BmGame.upk), which this card does not decode"
+ ]
+}

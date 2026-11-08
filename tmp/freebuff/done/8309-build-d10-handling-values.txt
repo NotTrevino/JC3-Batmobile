@@ -1,0 +1,8 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-d10-handling-values.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-06
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-d01-scaffold-rc4.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/apply-keep-audit-fixes-handling.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/apply-suspension-rows.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/apply-air-control-rows.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/apply-ram-and-dodge-rows.md
+Build step for the handling values: apply every ledger value queued for the next build (the 40 'next' rows plus all values changed by apply-keep-audit-fixes-handling and the 0.25 s steering of T-ST7) into private modules in Builds/bm-RC4-handling, using the existing tune writers (t1_apply.py and friends, ConvertAdf offset-in-file patching so sizes stay equal). Read every edited value back through the built .toc and report 100 percent read-back with the BmAK source of each number.
+
+Updated by review 8299: the ledger has 109 'next' rows, not 40; the edit rows are 16 (35 values) and the keep-audit payload is B-24 = 15 values over 13 rows (t1_handling.json) — T-ST2 0.25 s, T-ST3 0.091 s (below the 0.2 s fleet minimum, declared R3), T-ST4 1/1/1, T-ST6 0.625 (INFERRED, falsifier 0.48), T-K3 4.0, T-E2 2921 N.m, T-E5 336.4 + Cd 0.1213, T-B1 6.3, T-B4 donor 1.5/80, T-A3 1.0, T-G4 0.071 m. T-E5 is the one 'assumed' row (signed off 2026-10-23) — report it as a label, not a measurement.

@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/stale-text-correction-specs.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-08
+Several project texts contradict the operator and mislead small models. Locate each and write an exact edit specification (file, old text, new text) without applying it. Targets: GRAB_BACKLOG.md MOD-3 saying hold-to-eject, versus the operator's eject (hold A charges, tap A goes higher, a double-tap is lowest); the older wording in the eject memory note; rows T-WLD13 and T-WLD14 in Working/Translation/T_ROWS.jsonl (they say the car sinks and the engine stalls, but the operator says it teleports to land and the engine is fine); T-PA5 and T-PA6 listing doors that B-04 removed; GB B-12 saying T-MD8 and T-MD14 stay named omissions; t11_variants.json still showing one hybrid variant. Search for further hits by grepping for hold-to-eject and named omission. Output Working/Modes/stale_text_edits.md with one numbered entry per fix and the grep line proving the old text exists. Done-check: every entry quotes a line number from the current file. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

@@ -1,0 +1,4668 @@
+{
+ "bindings": {
+  "BatmobileFireButton": [
+   {
+    "line": 252,
+    "text": ".Bindings=(Name=\"XboxTypeS_RightTrigger\",Command=\"StealthOrGadget | DebugMenuQualifyOnT | OnRelease DebugMenuQualifyOffT | DebugMenuNextPage | AttackThrow | BatmobileFireButton | Button bFireVehicleWeapon | FireGun | DeepScanIn \")"
+   }
+  ],
+  "BattleStrafe": [
+   {
+    "line": 267,
+    "text": ".Bindings=(Name=\"XboxTypeS_A\",Command=\"DebugCamSingleFrameStep | EjectFromVehicle | BattleStrafe  | ContextSensitive | Run | CapeGlide | AcceptConversation | Evade | DebugMenuSelectA | CancelBatarangCamera | TriggerPhysImpact\")"
+   }
+  ],
+  "EjectFromVehicle": [
+   {
+    "line": 267,
+    "text": ".Bindings=(Name=\"XboxTypeS_A\",Command=\"DebugCamSingleFrameStep | EjectFromVehicle | BattleStrafe  | ContextSensitive | Run | CapeGlide | AcceptConversation | Evade | DebugMenuSelectA | CancelBatarangCamera | TriggerPhysImpact\")"
+   }
+  ],
+  "FirePursuitMissile": [],
+  "IsBatmobileFireButtonHeld": [],
+  "QuickGadgetB": [
+   {
+    "line": 268,
+    "text": ".Bindings=(Name=\"XboxTypeS_B\",Command=\"ExitAgilityMode | QuickGadgetB | OnRelease ReleaseQuickGadgetB | Cover | BlockBreaker | SkipCutscene | CancelGadget | DebugMenuSelectB | CancelBatarangCamera | Button bCancelButton\")"
+   }
+  ],
+  "QuickGadgetX": [
+   {
+    "line": 269,
+    "text": ".Bindings=(Name=\"XboxTypeS_X\",Command=\"TriggerFearTakedown 0 | TriggerQuickStrike | QuickGadgetX | OnRelease ReleaseQuickGadgetY | DebugMenuSelectX | CancelBatarangCamera | BrakeButton | OnRelease QuickStrikeReleased | Button aQuickStrike\")"
+   }
+  ],
+  "QuickGadgetY": [
+   {
+    "line": 270,
+    "text": ".Bindings=(Name=\"XboxTypeS_Y\",Command=\"QuickGadgetY | OnRelease ReleaseQuickGadgetY | Grab | ActivateNoise  | DebugMenuSelectY | SpecialMoveCheat  | CancelBatarangCamera | ToggleVideoRec | Button bVehicleBoostButton | TogglePhysImpact | HangFromVantagePoint | ZipLine\")"
+   }
+  ],
+  "ReleaseQuickGadgetB": [
+   {
+    "line": 268,
+    "text": ".Bindings=(Name=\"XboxTypeS_B\",Command=\"ExitAgilityMode | QuickGadgetB | OnRelease ReleaseQuickGadgetB | Cover | BlockBreaker | SkipCutscene | CancelGadget | DebugMenuSelectB | CancelBatarangCamera | Button bCancelButton\")"
+   }
+  ],
+  "ReleaseQuickGadgetX": [],
+  "ReleaseQuickGadgetY": [
+   {
+    "line": 269,
+    "text": ".Bindings=(Name=\"XboxTypeS_X\",Command=\"TriggerFearTakedown 0 | TriggerQuickStrike | QuickGadgetX | OnRelease ReleaseQuickGadgetY | DebugMenuSelectX | CancelBatarangCamera | BrakeButton | OnRelease QuickStrikeReleased | Button aQuickStrike\")"
+   },
+   {
+    "line": 270,
+    "text": ".Bindings=(Name=\"XboxTypeS_Y\",Command=\"QuickGadgetY | OnRelease ReleaseQuickGadgetY | Grab | ActivateNoise  | DebugMenuSelectY | SpecialMoveCheat  | CancelBatarangCamera | ToggleVideoRec | Button bVehicleBoostButton | TogglePhysImpact | HangFromVantagePoint | ZipLine\")"
+   }
+  ],
+  "ReleaseVehicleWeapon": [
+   {
+    "line": 259,
+    "text": ".Bindings=(Name=\"XboxTypeS_DPad_Up\",Command=\"Button bRawDpadUp | MoveDialogueOptionUp | ForensicMode | DebugMenuUpPressed | OnRelease DebugMenuUpReleased | SelectVehicleWeapon 4 | OnRelease ReleaseVehicleWeapon 4\")"
+   }
+  ],
+  "SecondaryFireVehicleWeapon": [
+   {
+    "line": 272,
+    "text": ".Bindings=(Name=\"XboxTypeS_RightShoulder\",Command=\"DebugMenuStepDown | Grapple | SecondaryFireGadget | ToggleDrivingCamera | OnRelease SecondaryFireReleased | DebugMenuQualifyOnB | OnRelease DebugMenuQualifyOffB | Button aRightShoulder | SpeedUpSpectatorCamera | Button bFireVehicleSecondaryWeapon | SecondaryFireVehicleWeapon | PursuitModeTagGun\")"
+   }
+  ],
+  "SelectVehicleWeapon": [
+   {
+    "line": 259,
+    "text": ".Bindings=(Name=\"XboxTypeS_DPad_Up\",Command=\"Button bRawDpadUp | MoveDialogueOptionUp | ForensicMode | DebugMenuUpPressed | OnRelease DebugMenuUpReleased | SelectVehicleWeapon 4 | OnRelease ReleaseVehicleWeapon 4\")"
+   }
+  ],
+  "ToggleBattleMode": [],
+  "TriggerBatmobileBoost": []
+ },
+ "bytes": 214757637,
+ "exports": 177031,
+ "functions": [
+  {
+   "accepted_tokens": 248,
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "call_sites": 15,
+   "callees": [
+    {
+     "calls": [],
+     "export": 12757,
+     "from_call_at": 59,
+     "path": "RVehicleCombatManager.GetHeavyTankExclusionZone",
+     "script_bytes": 10,
+     "target": "RVehicleCombatManager.GetHeavyTankExclusionZone"
+    },
+    {
+     "calls": [
+      {
+       "args": [],
+       "at": 41,
+       "end": 47,
+       "err": null,
+       "heuristic_args": [],
+       "index": -1690,
+       "name_match": [],
+       "target": "Core.GetLineCount",
+       "target_class": "Function",
+       "terminator_ok": true,
+       "text": "GetLineCount()",
+       "token": "EX_FinalFunction"
+      },
+      {
+       "args": [
+        {
+         "at": 93,
+         "ref": "PlayThought.lineIdx",
+         "ref_index": 21877,
+         "text": "lineIdx",
+         "tok": "EX_LocalVariable"
+        }
+       ],
+       "at": 88,
+       "end": 99,
+       "err": null,
+       "heuristic_args": [],
+       "index": -1689,
+       "name_match": [],
+       "target": "Core.GetLine",
+       "target_class": "Function",
+       "terminator_ok": true,
+       "text": "GetLine(lineIdx)",
+       "token": "EX_FinalFunction"
+      },
+      {
+       "args": [
+        {
+         "at": 117,
+         "ref": "PlayThought.DesiredType",
+         "ref_index": 21875,
+         "text": "DesiredType",
+         "tok": "EX_LocalVariable"
+        }
+       ],
+       "at": 112,
+       "end": 123,
+       "err": null,
+       "heuristic_args": [],
+       "index": -1682,
+       "name_match": [],
+       "target": "Core.SetDialogueType",
+       "target_class": "Function",
+       "terminator_ok": true,
+       "text": "SetDialogueType(DesiredType)",
+       "token": "EX_FinalFunction"
+      },
+      {
+       "args": [
+        {
+         "at": 143,
+         "candidates": [
+          2,
+          3
+         ],
+         "heuristic": true,
+         "text": "19018",
+         "tok": "unnamed 0x4a",
+         "value": 19018,
+         "width": 2
+        }
+       ],
+       "at": 138,
+       "end": 147,
+       "err": null,
+       "heuristic_args": [
+        143
+       ],
+       "index": -1568,
+       "name_match": [],
+       "target": "Core.IsSpeaking",
+       "target_class": "Function",
+       "terminator_ok": true,
+       "text": "IsSpeaking(19018)",
+       "token": "EX_FinalFunction"
+      },
+      {
+       "args": [],
+       "at": 165,
+       "end": 170,
+       "err": "token 0x50 at 170: width not determinable (candidates [])",
+       "heuristic_args": [],
+       "index": -1662,
+       "name_match": [],
+       "target": "Core.IsSpeechPlaying_VoiceId",
+       "target_class": "Function",
+       "terminator_ok": false,
+       "text": "IsSpeechPlaying_VoiceId()",
+       "token": "EX_FinalFunction"
+      },
+      {
+       "args": [],
+       "at": 188,
+       "end": 194,
+       "err": null,
+       "heuristic_args": [],
+       "index": -1679,
+       "name_match": [],
+       "target": "Core.GetLineVoice",
+       "target_class": "Function",
+       "terminator_ok": true,
+       "text": "GetLineVoice()",
+       "token": "EX_FinalFunction"
+      },
+      {
+       "args": [
+        {
+         "at": 202,
+         "ref": "PlayThought.NewSpeech",
+         "ref_index": 21881,
+         "text": "NewSpeech",
+         "tok": "EX_LocalVariable"
+        },
+        {
+         "at": 207,
+         "ref": "PlayThought.SpeechOpts",
+         "ref_index": 21879,
+         "text": "SpeechOpts",
+         "tok": "EX_LocalVariable"
+        },
+        {
+         "at": 212,
+         "candidates": [
+          1
+         ],
+         "heuristic": true,
+         "text": "0",
+         "tok": "EX_StringConst",
+         "value": 0,
+         "width": 1
+        }
+       ],
+       "at": 197,
+       "end": 215,
+       "err": null,
+       "heuristic_args": [
+        212
+       ],
+       "index": -1628,
+       "name_match": [],
+       "target": "Core.StartSpeech",
+       "target_class": "Function",
+       "terminator_ok": true,
+       "text": "StartSpeech(NewSpeech, SpeechOpts, 0)",
+       "token": "EX_FinalFunction"
+      }
+     ],
+     "export": 21882,
+     "from_call_at": 143,
+     "path": "RPawnPlayer.PlayThought",
+     "script_bytes": 224,
+     "target": "RPawnPlayer.PlayThought"
+    },
+    {
+     "calls": [],
+     "export": 10764,
+     "from_call_at": 173,
+     "path": "RVehicleBatmobileBase.CheckSpaceAboveBatmobileCockpit",
+     "script_bytes": 0,
+     "target": "RVehicleBatmobileBase.CheckSpaceAboveBatmobileCockpit"
+    },
+    {
+     "calls": [
+      {
+       "args": [
+        {
+         "at": 112,
+         "ref": "InRangeForTakedownPrompt.Loc",
+         "ref_index": 94591,
+         "text": "Loc",
+         "tok": "EX_LocalVariable"
+        }
+       ],
+       "at": 107,
+       "end": 118,
+       "err": null,
+       "heuristic_args": [],
+       "index": 56723,
+       "name_match": [],
+       "target": "RBMBehaviour_FireflyFleeBase.InRangeForTakedownPrompt",
+       "target_class": "Function",
+       "terminator_ok": true,
+       "text": "InRangeForTakedownPrompt(Loc)",
+       "token": "EX_FinalFunction"
+      }
+     ],
+     "export": 94592,
+     "from_call_at": 236,
+     "path": "RPawnBossFireflyBase.InRangeForTakedownPrompt",
+     "script_bytes": 123,
+     "target": "RPawnBossFireflyBase.InRangeForTakedownPrompt"
+    },
+    {
+     "calls": [
+      {
+       "args": [
+        {
+         "at": 112,
+         "ref": "InRangeForActualTakedown.Loc",
+         "ref_index": 94594,
+         "text": "Loc",
+         "tok": "EX_LocalVariable"
+        }
+       ],
+       "at": 107,
+       "end": 118,
+       "err": null,
+       "heuristic_args": [],
+       "index": 56726,
+       "name_match": [],
+       "target": "RBMBehaviour_FireflyFleeBase.InRangeForActualTakedown",
+       "target_class": "Function",
+       "terminator_ok": true,
+       "text": "InRangeForActualTakedown(Loc)",
+       "token": "EX_FinalFunction"
+      }
+     ],
+     "export": 94595,
+     "from_call_at": 276,
+     "path": "RPawnBossFireflyBase.InRangeForActualTakedown",
+     "script_bytes": 123,
+     "target": "RPawnBossFireflyBase.InRangeForActualTakedown"
+    },
+    {
+     "calls": [
+      {
+       "args": [],
+       "at": 39,
+       "end": 45,
+       "err": null,
+       "heuristic_args": [],
+       "index": 54207,
+       "name_match": [
+        "RBMBehaviour_FireflyFleeBase.NotifyTakedownStarted"
+       ],
+       "target": "NotifyTakedownStarted",
+       "target_class": null,
+       "terminator_ok": true,
+       "text": "NotifyTakedownStarted()",
+       "token": "EX_VirtualFunction"
+      },
+      {
+       "args": [
+        {
+         "at": 222,
+         "ref": "RPawnBossFireflyBase.BeatDownMove",
+         "ref_index": 94488,
+         "text": "BeatDownMove",
+         "tok": "EX_InstanceVariable"
+        },
+        {
+         "at": 227,
+         "ref": "InitiateTakedownMove.Locator",
+         "ref_index": 94599,
+         "text": "Locator",
+         "tok": "EX_LocalVariable"
+        },
+        {
+         "at": 232,
+         "candidates": [
+          0
+         ],
+         "heuristic": true,
+         "text": "<0x4a>",
+         "tok": "unnamed 0x4a",
+         "width": 0
+        }
+       ],
+       "at": 217,
+       "end": 234,
+       "err": null,
+       "heuristic_args": [
+        232
+       ],
+       "index": 7796,
+       "name_match": [],
+       "target": "RPawnCombat.TriggerSpecialMove",
+       "target_class": "Function",
+       "terminator_ok": true,
+       "text": "TriggerSpecialMove(BeatDownMove, Locator, <0x4a>)",
+       "token": "EX_FinalFunction"
+      },
+      {
+       "args": [],
+       "at": 234,
+       "end": 240,
+       "err": null,
+       "heuristic_args": [],
+       "index": 94606,
+       "name_match": [],
+       "target": "RPawnBossFireflyBase.CleanUpGrenades",
+       "target_class": "Function",
+       "terminator_ok": true,
+       "text": "CleanUpGrenades()",
+       "token": "EX_FinalFunction"
+      }
+     ],
+     "export": 94601,
+     "from_call_at": 546,
+     "path": "RPawnBossFireflyBase.InitiateTakedownMove",
+     "script_bytes": 241,
+     "target": "RPawnBossFireflyBase.InitiateTakedownMove"
+    },
+    {
+     "calls": [],
+     "export": 3033,
+     "from_call_at": 594,
+     "path": "RPersistentData.IncremementBatmobileDriveTutorialTimer",
+     "script_bytes": 10,
+     "target": "RPersistentData.IncremementBatmobileDriveTutorialTimer"
+    }
+   ],
+   "calls": [
+    {
+     "args": [
+      {
+       "at": 8,
+       "candidates": [
+        1
+       ],
+       "heuristic": true,
+       "text": "74",
+       "tok": "unnamed 0x4a",
+       "value": 74,
+       "width": 1
+      }
+     ],
+     "at": 3,
+     "end": 11,
+     "err": null,
+     "heuristic_args": [
+      8
+     ],
+     "index": 15450,
+     "name_match": [
+      "DrivingMode.CantEjectFromBatmobile"
+     ],
+     "target": "CantEjectFromBatmobile",
+     "target_class": null,
+     "terminator_ok": true,
+     "text": "CantEjectFromBatmobile(74)",
+     "token": "EX_VirtualFunction"
+    },
+    {
+     "args": [
+      {
+       "at": 64,
+       "ref": "EjectFromVehicle.RestrictionOrigin",
+       "ref_index": 104923,
+       "text": "RestrictionOrigin",
+       "tok": "EX_LocalVariable"
+      },
+      {
+       "at": 69,
+       "ref": "EjectFromVehicle.RestrictionRadius",
+       "ref_index": 104924,
+       "text": "RestrictionRadius",
+       "tok": "EX_LocalVariable"
+      }
+     ],
+     "at": 59,
+     "end": 75,
+     "err": null,
+     "heuristic_args": [],
+     "index": 12757,
+     "name_match": [],
+     "target": "RVehicleCombatManager.GetHeavyTankExclusionZone",
+     "target_class": "Function",
+     "terminator_ok": true,
+     "text": "GetHeavyTankExclusionZone(RestrictionOrigin, RestrictionRadius)",
+     "token": "EX_FinalFunction"
+    },
+    {
+     "args": [
+      {
+       "at": 148,
+       "ref": "Conversation.main_ch05_s04_gcpd_exterior_bm_gadgets",
+       "ref_index": 131842,
+       "text": "main_ch05_s04_gcpd_exterior_bm_gadgets",
+       "tok": "EX_ObjectConst"
+      }
+     ],
+     "at": 143,
+     "end": 154,
+     "err": null,
+     "heuristic_args": [],
+     "index": 21882,
+     "name_match": [],
+     "target": "RPawnPlayer.PlayThought",
+     "target_class": "Function",
+     "terminator_ok": true,
+     "text": "PlayThought(main_ch05_s04_gcpd_exterior_bm_gadgets)",
+     "token": "EX_FinalFunction"
+    },
+    {
+     "args": [],
+     "at": 173,
+     "end": 179,
+     "err": null,
+     "heuristic_args": [],
+     "index": 10764,
+     "name_match": [],
+     "target": "RVehicleBatmobileBase.CheckSpaceAboveBatmobileCockpit",
+     "target_class": "Function",
+     "terminator_ok": true,
+     "text": "CheckSpaceAboveBatmobileCockpit()",
+     "token": "EX_FinalFunction"
+    },
+    {
+     "args": [],
+     "at": 236,
+     "end": 241,
+     "err": "token 0x19 (EX_Context) at 241 carries a nested expression, so it has no fixed width",
+     "heuristic_args": [],
+     "index": 94592,
+     "name_match": [],
+     "target": "RPawnBossFireflyBase.InRangeForTakedownPrompt",
+     "target_class": "Function",
+     "terminator_ok": false,
+     "text": "InRangeForTakedownPrompt()",
+     "token": "EX_FinalFunction"
+    },
+    {
+     "args": [],
+     "at": 276,
+     "end": 281,
+     "err": "token 0x19 (EX_Context) at 281 carries a nested expression, so it has no fixed width",
+     "heuristic_args": [],
+     "index": 94595,
+     "name_match": [],
+     "target": "RPawnBossFireflyBase.InRangeForActualTakedown",
+     "target_class": "Function",
+     "terminator_ok": false,
+     "text": "InRangeForActualTakedown()",
+     "token": "EX_FinalFunction"
+    },
+    {
+     "args": [
+      {
+       "at": 370,
+       "text": "true",
+       "tok": "EX_True"
+      },
+      {
+       "at": 371,
+       "candidates": [
+        0
+       ],
+       "heuristic": true,
+       "text": "<0x2d>",
+       "tok": "unnamed 0x2d",
+       "width": 0
+      },
+      {
+       "at": 372,
+       "ref": "EjectFromVehicle.FFInRange",
+       "ref_index": 104926,
+       "text": "FFInRange",
+       "tok": "EX_LocalVariable"
+      }
+     ],
+     "at": 365,
+     "end": 378,
+     "err": null,
+     "heuristic_args": [
+      371
+     ],
+     "index": 27649,
+     "name_match": [],
+     "target": "DriverLeave",
+     "target_class": null,
+     "terminator_ok": true,
+     "text": "DriverLeave(true, <0x2d>, FFInRange)",
+     "token": "EX_VirtualFunction"
+    },
+    {
+     "args": [],
+     "at": 424,
+     "end": 430,
+     "err": null,
+     "heuristic_args": [],
+     "index": 64560,
+     "name_match": [
+      "RVehicleBatmobileBase.RemoveBatmobileBindsAndSetBatmanBinds"
+     ],
+     "target": "RemoveBatmobileBindsAndSetBatmanBinds",
+     "target_class": null,
+     "terminator_ok": true,
+     "text": "RemoveBatmobileBindsAndSetBatmanBinds()",
+     "token": "EX_VirtualFunction"
+    },
+    {
+     "args": [],
+     "at": 443,
+     "end": 449,
+     "err": null,
+     "heuristic_args": [],
+     "index": 59294,
+     "name_match": [
+      "RVehicleBatmobileBase.PlayCockpitOpenFast"
+     ],
+     "target": "PlayCockpitOpenFast",
+     "target_class": null,
+     "terminator_ok": true,
+     "text": "PlayCockpitOpenFast()",
+     "token": "EX_VirtualFunction"
+    },
+    {
+     "args": [
+      {
+       "at": 518,
+       "candidates": [
+        2,
+        3,
+        8,
+        12,
+        13
+       ],
+       "heuristic": true,
+       "text": "0",
+       "tok": "unnamed 0x23",
+       "value": 0,
+       "width": 2
+      },
+      {
+       "at": 521,
+       "ref": null,
+       "ref_index": 0,
+       "text": "ref 0",
+       "tok": "EX_LocalVariable"
+      },
+      {
+       "at": 526,
+       "ref": null,
+       "ref_index": 0,
+       "text": "ref 0",
+       "tok": "EX_LocalVariable"
+      },
+      {
+       "at": 531,
+       "text": "false",
+       "tok": "EX_False"
+      }
+     ],
+     "at": 513,
+     "end": 533,
+     "err": null,
+     "heuristic_args": [
+      518
+     ],
+     "index": -2300,
+     "name_match": [],
+     "target": "Core.SetRBLinearVelocity",
+     "target_class": "Function",
+     "terminator_ok": true,
+     "text": "SetRBLinearVelocity(0, ref 0, ref 0, false)",
+     "token": "EX_FinalFunction"
+    },
+    {
+     "args": [
+      {
+       "at": 551,
+       "text": "self",
+       "tok": "EX_Self"
+      }
+     ],
+     "at": 546,
+     "end": 553,
+     "err": null,
+     "heuristic_args": [],
+     "index": 94601,
+     "name_match": [],
+     "target": "RPawnBossFireflyBase.InitiateTakedownMove",
+     "target_class": "Function",
+     "terminator_ok": true,
+     "text": "InitiateTakedownMove(self)",
+     "token": "EX_FinalFunction"
+    },
+    {
+     "args": [
+      {
+       "at": 599,
+       "text": "1.0",
+       "tok": "EX_FloatConst",
+       "value": 1.0
+      },
+      {
+       "at": 604,
+       "candidates": [
+        1,
+        12,
+        13
+       ],
+       "heuristic": true,
+       "text": "6",
+       "tok": "EX_ByteConst",
+       "value": 6,
+       "width": 1
+      }
+     ],
+     "at": 594,
+     "end": 607,
+     "err": null,
+     "heuristic_args": [
+      604
+     ],
+     "index": 3033,
+     "name_match": [],
+     "target": "RPersistentData.IncremementBatmobileDriveTutorialTimer",
+     "target_class": "Function",
+     "terminator_ok": true,
+     "text": "IncremementBatmobileDriveTutorialTimer(1.0, 6)",
+     "token": "EX_FinalFunction"
+    },
+    {
+     "args": [],
+     "at": 679,
+     "end": 684,
+     "err": "token 0xd8 at 684: width not determinable (candidates [])",
+     "heuristic_args": [],
+     "index": -1486,
+     "name_match": [],
+     "target": "Core.VSizeSq2D",
+     "target_class": "Function",
+     "terminator_ok": false,
+     "text": "VSizeSq2D()",
+     "token": "EX_FinalFunction"
+    },
+    {
+     "args": [
+      {
+       "at": 1108,
+       "text": "self",
+       "tok": "EX_Self"
+      },
+      {
+       "at": 1109,
+       "ref": "EjectFromVehicle.Loc",
+       "ref_index": 104928,
+       "text": "Loc",
+       "tok": "EX_LocalVariable"
+      },
+      {
+       "at": 1114,
+       "candidates": [
+        0
+       ],
+       "heuristic": true,
+       "text": "<0x4a>",
+       "tok": "unnamed 0x4a",
+       "width": 0
+      }
+     ],
+     "at": 1103,
+     "end": 1116,
+     "err": null,
+     "heuristic_args": [
+      1114
+     ],
+     "index": 79525,
+     "name_match": [
+      "MSpecialMoveInstance_PlaceJackInBox.TriggerSpecialMove",
+      "MSpecialMoveInstance_RedhoodGunWindow.TriggerSpecialMove",
+      "RHidePoint_GrateBase.TriggerSpecialMove",
+      "RPawnCombat.TriggerSpecialMove",
+      "RPlayerController.TriggerSpecialMove",
+      "RRemoveableGrate.TriggerSpecialMove",
+      "RSimpleSpecialMoveConfig.TriggerSpecialMove",
+      "RSpecialMoveConfig.TriggerSpecialMove"
+     ],
+     "target": "TriggerSpecialMove",
+     "target_class": null,
+     "terminator_ok": true,
+     "text": "TriggerSpecialMove(self, Loc, <0x4a>)",
+     "token": "EX_VirtualFunction"
+    },
+    {
+     "args": [],
+     "at": 1238,
+     "end": 1243,
+     "err": "token 0x2b at 1243: width not determinable (candidates [])",
+     "heuristic_args": [],
+     "index": -1516,
+     "name_match": [],
+     "target": "Core.ClearTimer",
+     "target_class": "Function",
+     "terminator_ok": false,
+     "text": "ClearTimer()",
+     "token": "EX_FinalFunction"
+    }
+   ],
+   "class_sibling_export": null,
+   "command": "EjectFromVehicle",
+   "constants": [
+    {
+     "at": 599,
+     "kind": "float",
+     "value": 1.0
+    },
+    {
+     "at": 827,
+     "kind": "float",
+     "value": 600.0
+    },
+    {
+     "at": 1037,
+     "kind": "float",
+     "value": 0.0
+    },
+    {
+     "at": 1198,
+     "kind": "float",
+     "value": 1.0
+    },
+    {
+     "at": 1233,
+     "kind": "float",
+     "value": 1.0
+    }
+   ],
+   "export": 104931,
+   "names_hit": 1,
+   "path": "DrivingMode.EjectFromVehicle",
+   "refs": [
+    {
+     "at": 15,
+     "kind": "BoolProperty",
+     "ref": "EjectFromVehicle.bRadiusRestricted",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 23,
+     "kind": "ObjectProperty",
+     "ref": "Core.WorldInfo",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 29,
+     "kind": "ObjectProperty",
+     "ref": "Core.Game",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 35,
+     "kind": "ObjectProperty",
+     "ref": "Core.Game",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 41,
+     "kind": "ObjectProperty",
+     "ref": "RGameInfo.VehicleCombatManager",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 47,
+     "kind": "ObjectProperty",
+     "ref": "RGameInfo.VehicleCombatManager",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 53,
+     "kind": "BoolProperty",
+     "ref": "GetHeavyTankExclusionZone.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 64,
+     "kind": "StructProperty",
+     "ref": "EjectFromVehicle.RestrictionOrigin",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 69,
+     "kind": "FloatProperty",
+     "ref": "EjectFromVehicle.RestrictionRadius",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 80,
+     "kind": "BoolProperty",
+     "ref": "EjectFromVehicle.bRadiusRestricted",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 92,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 98,
+     "kind": "StructProperty",
+     "ref": "Core.Location",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 104,
+     "kind": "StructProperty",
+     "ref": "Core.Location",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 109,
+     "kind": "StructProperty",
+     "ref": "EjectFromVehicle.RestrictionOrigin",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 117,
+     "kind": "FloatProperty",
+     "ref": "EjectFromVehicle.RestrictionRadius",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 122,
+     "kind": "FloatProperty",
+     "ref": "EjectFromVehicle.RestrictionRadius",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 131,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.OriginalPawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 137,
+     "kind": "BoolProperty",
+     "ref": "PlayThought.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 148,
+     "kind": "AkDialogueConversation",
+     "ref": "Conversation.main_ch05_s04_gcpd_exterior_bm_gadgets",
+     "token": "EX_ObjectConst"
+    },
+    {
+     "at": 161,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 167,
+     "kind": "BoolProperty",
+     "ref": "CheckSpaceAboveBatmobileCockpit.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 183,
+     "kind": "ObjectProperty",
+     "ref": "EjectFromVehicle.Car",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 188,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 194,
+     "kind": "ObjectProperty",
+     "ref": "EjectFromVehicle.FF",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 199,
+     "kind": null,
+     "ref": "RPawnBossFireflyBase",
+     "token": "EX_DynamicCast"
+    },
+    {
+     "at": 204,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.CurrentBossPawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 213,
+     "kind": "ObjectProperty",
+     "ref": "EjectFromVehicle.FF",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 224,
+     "kind": "ObjectProperty",
+     "ref": "EjectFromVehicle.FF",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 230,
+     "kind": "BoolProperty",
+     "ref": "InRangeForTakedownPrompt.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 242,
+     "kind": "ObjectProperty",
+     "ref": "EjectFromVehicle.Car",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 248,
+     "kind": "StructProperty",
+     "ref": "Core.Location",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 254,
+     "kind": "StructProperty",
+     "ref": "Core.Location",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 264,
+     "kind": "ObjectProperty",
+     "ref": "EjectFromVehicle.FF",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 270,
+     "kind": "BoolProperty",
+     "ref": "InRangeForActualTakedown.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 282,
+     "kind": "ObjectProperty",
+     "ref": "EjectFromVehicle.Car",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 288,
+     "kind": "StructProperty",
+     "ref": "Core.Location",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 294,
+     "kind": "StructProperty",
+     "ref": "Core.Location",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 302,
+     "kind": "BoolProperty",
+     "ref": "EjectFromVehicle.FFInRange",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 314,
+     "kind": "ObjectProperty",
+     "ref": "EjectFromVehicle.CapeTarget",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 319,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.CapeGlideTarget",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 326,
+     "kind": "ObjectProperty",
+     "ref": "EjectFromVehicle.Car",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 332,
+     "kind": "ByteProperty",
+     "ref": "RVehicleBatmobileBase.BoostingOut",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 338,
+     "kind": "ByteProperty",
+     "ref": "RVehicleBatmobileBase.BoostingOut",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 343,
+     "kind": "ByteProperty",
+     "ref": "RPlayerController.CurrentEjectType",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 353,
+     "kind": "ObjectProperty",
+     "ref": "EjectFromVehicle.Car",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 359,
+     "kind": "BoolProperty",
+     "ref": "Core.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 372,
+     "kind": "BoolProperty",
+     "ref": "EjectFromVehicle.FFInRange",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 382,
+     "kind": "ObjectProperty",
+     "ref": "EjectFromVehicle.Car",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 388,
+     "kind": "ByteProperty",
+     "ref": "RVehicleBatmobileBase.BoostingOut",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 394,
+     "kind": "ByteProperty",
+     "ref": "RVehicleBatmobileBase.BoostingOut",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 403,
+     "kind": "BoolProperty",
+     "ref": "RPlayerController.bWaitingToDebounceCrouch",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 412,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 431,
+     "kind": "ObjectProperty",
+     "ref": "EjectFromVehicle.Car",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 451,
+     "kind": "ObjectProperty",
+     "ref": "EjectFromVehicle.Car",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 457,
+     "kind": "ByteProperty",
+     "ref": "RVehicleBatmobileBase.BoostingOut",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 463,
+     "kind": "ByteProperty",
+     "ref": "RVehicleBatmobileBase.BoostingOut",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 472,
+     "kind": "BoolProperty",
+     "ref": "RPlayerController.bWaitingToDebounceCrouch",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 482,
+     "kind": "BoolProperty",
+     "ref": "EjectFromVehicle.FFInRange",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 489,
+     "kind": "ObjectProperty",
+     "ref": "EjectFromVehicle.Car",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 495,
+     "kind": "ComponentProperty",
+     "ref": "Core.Mesh",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 501,
+     "kind": "ComponentProperty",
+     "ref": "Core.Mesh",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 534,
+     "kind": "ObjectProperty",
+     "ref": "EjectFromVehicle.FF",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 558,
+     "kind": "ObjectProperty",
+     "ref": "Core.WorldInfo",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 564,
+     "kind": "ObjectProperty",
+     "ref": "Core.Game",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 570,
+     "kind": "ObjectProperty",
+     "ref": "Core.Game",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 576,
+     "kind": "ObjectProperty",
+     "ref": "RGameInfoBase.PersistentData",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 582,
+     "kind": "ObjectProperty",
+     "ref": "RGameInfoBase.PersistentData",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 612,
+     "kind": "ObjectProperty",
+     "ref": "EjectFromVehicle.CapeTarget",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 623,
+     "kind": "ObjectProperty",
+     "ref": "EjectFromVehicle.FF",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 639,
+     "kind": "ObjectProperty",
+     "ref": "EjectFromVehicle.Car",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 645,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.ShortRangeGlideKick",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 651,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.ShortRangeGlideKick",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 662,
+     "kind": null,
+     "ref": "RPawnVillain",
+     "token": "EX_DynamicCast"
+    },
+    {
+     "at": 667,
+     "kind": "ObjectProperty",
+     "ref": "EjectFromVehicle.CapeTarget",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 686,
+     "kind": "ObjectProperty",
+     "ref": "EjectFromVehicle.CapeTarget",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 692,
+     "kind": "StructProperty",
+     "ref": "Core.Location",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 698,
+     "kind": "StructProperty",
+     "ref": "Core.Location",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 704,
+     "kind": "ObjectProperty",
+     "ref": "Core.Pawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 710,
+     "kind": "StructProperty",
+     "ref": "Core.Location",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 716,
+     "kind": "StructProperty",
+     "ref": "Core.Location",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 725,
+     "kind": "ObjectProperty",
+     "ref": "EjectFromVehicle.Car",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 731,
+     "kind": "FloatProperty",
+     "ref": "RVehicleBatmobileBase.ShortRangeGlideKickRange",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 737,
+     "kind": "FloatProperty",
+     "ref": "RVehicleBatmobileBase.ShortRangeGlideKickRange",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 743,
+     "kind": "ObjectProperty",
+     "ref": "EjectFromVehicle.Car",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 749,
+     "kind": "FloatProperty",
+     "ref": "RVehicleBatmobileBase.ShortRangeGlideKickRange",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 755,
+     "kind": "FloatProperty",
+     "ref": "RVehicleBatmobileBase.ShortRangeGlideKickRange",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 780,
+     "kind": "ObjectProperty",
+     "ref": "EjectFromVehicle.CapeTarget",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 786,
+     "kind": "StructProperty",
+     "ref": "Core.Location",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 792,
+     "kind": "StructProperty",
+     "ref": "Core.Location",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 809,
+     "kind": "ObjectProperty",
+     "ref": "Core.Pawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 815,
+     "kind": "StructProperty",
+     "ref": "Core.Location",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 821,
+     "kind": "StructProperty",
+     "ref": "Core.Location",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 839,
+     "kind": "ScriptStruct",
+     "ref": "REnvironmentCheckTicker.EnvironmentSpecialMoveLocator",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 846,
+     "kind": "StructProperty",
+     "ref": "EjectFromVehicle.Loc",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 851,
+     "kind": "ObjectProperty",
+     "ref": "EjectFromVehicle.CapeTarget",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 861,
+     "kind": "ScriptStruct",
+     "ref": "REnvironmentCheckTicker.EnvironmentSpecialMoveLocator",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 868,
+     "kind": "StructProperty",
+     "ref": "EjectFromVehicle.Loc",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 874,
+     "kind": "ObjectProperty",
+     "ref": "EjectFromVehicle.CapeTarget",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 880,
+     "kind": "StructProperty",
+     "ref": "Core.Location",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 886,
+     "kind": "StructProperty",
+     "ref": "Core.Location",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 907,
+     "kind": "ScriptStruct",
+     "ref": "REnvironmentCheckTicker.EnvironmentSpecialMoveLocator",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 914,
+     "kind": "StructProperty",
+     "ref": "EjectFromVehicle.Loc",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 920,
+     "kind": "Class",
+     "ref": "Core.CylinderComponent",
+     "token": "EX_DynamicCast"
+    },
+    {
+     "at": 926,
+     "kind": "ObjectProperty",
+     "ref": "EjectFromVehicle.CapeTarget",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 932,
+     "kind": "ComponentProperty",
+     "ref": "Core.CollisionComponent",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 938,
+     "kind": "ComponentProperty",
+     "ref": "Core.CollisionComponent",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 944,
+     "kind": "FloatProperty",
+     "ref": "Core.CollisionHeight",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 950,
+     "kind": "FloatProperty",
+     "ref": "Core.CollisionHeight",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 961,
+     "kind": "ScriptStruct",
+     "ref": "REnvironmentCheckTicker.EnvironmentSpecialMoveLocator",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 968,
+     "kind": "StructProperty",
+     "ref": "EjectFromVehicle.Loc",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 975,
+     "kind": "ObjectProperty",
+     "ref": "Core.Pawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 981,
+     "kind": "StructProperty",
+     "ref": "Core.Location",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 987,
+     "kind": "StructProperty",
+     "ref": "Core.Location",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 996,
+     "kind": "ScriptStruct",
+     "ref": "REnvironmentCheckTicker.EnvironmentSpecialMoveLocator",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 1003,
+     "kind": "StructProperty",
+     "ref": "EjectFromVehicle.Loc",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 1025,
+     "kind": "ScriptStruct",
+     "ref": "REnvironmentCheckTicker.EnvironmentSpecialMoveLocator",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 1032,
+     "kind": "StructProperty",
+     "ref": "EjectFromVehicle.Loc",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 1047,
+     "kind": "ScriptStruct",
+     "ref": "REnvironmentCheckTicker.EnvironmentSpecialMoveLocator",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 1054,
+     "kind": "StructProperty",
+     "ref": "EjectFromVehicle.Loc",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 1064,
+     "kind": "ScriptStruct",
+     "ref": "REnvironmentCheckTicker.EnvironmentSpecialMoveLocator",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 1071,
+     "kind": "StructProperty",
+     "ref": "EjectFromVehicle.Loc",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 1079,
+     "kind": "ObjectProperty",
+     "ref": "EjectFromVehicle.Car",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 1085,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.ShortRangeGlideKick",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 1091,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.ShortRangeGlideKick",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 1109,
+     "kind": "StructProperty",
+     "ref": "EjectFromVehicle.Loc",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 1118,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.CombatPawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 1124,
+     "kind": "ObjectProperty",
+     "ref": "RPawnCharacter.IgnoreCollisionWithPawn",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 1130,
+     "kind": "ObjectProperty",
+     "ref": "RPawnCharacter.IgnoreCollisionWithPawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 1135,
+     "kind": "ObjectProperty",
+     "ref": "EjectFromVehicle.Car",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 1156,
+     "kind": "ObjectProperty",
+     "ref": "Core.PlayerCamera",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 1162,
+     "kind": "StructProperty",
+     "ref": "Core.ViewTarget",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 1168,
+     "kind": "StructProperty",
+     "ref": "Core.ViewTarget",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 1173,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.CharacterSwitchCamera",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 1181,
+     "kind": "ObjectProperty",
+     "ref": "Core.PlayerCamera",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 1187,
+     "kind": "FloatProperty",
+     "ref": "Core.BlendTimeToGo",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 1193,
+     "kind": "FloatProperty",
+     "ref": "Core.BlendTimeToGo",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 1216,
+     "kind": "ObjectProperty",
+     "ref": "Core.PlayerCamera",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 1222,
+     "kind": "StructProperty",
+     "ref": "Core.BlendParams",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 1228,
+     "kind": "StructProperty",
+     "ref": "Core.BlendParams",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 1254,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.CapeGlideTarget",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 1259,
+     "kind": "ObjectProperty",
+     "ref": "EjectFromVehicle.CapeTarget",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 1266,
+     "kind": "BoolProperty",
+     "ref": "RPlayerController.AttackGlide",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 1273,
+     "kind": "FloatProperty",
+     "ref": "RPlayerController.LastEjectFromBatmobileTime",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 1279,
+     "kind": "ObjectProperty",
+     "ref": "Core.WorldInfo",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 1285,
+     "kind": "FloatProperty",
+     "ref": "Core.TimeSeconds",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 1291,
+     "kind": "FloatProperty",
+     "ref": "Core.TimeSeconds",
+     "token": "EX_InstanceVariable"
+    }
+   ],
+   "script_bytes": 1297,
+   "script_sha1": "070df66156ce397fb9ed74ff01b62ac80e8cd8d0",
+   "size": 1335,
+   "unexplained_bytes": 385
+  },
+  {
+   "accepted_tokens": 94,
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "call_sites": 8,
+   "callees": [
+    {
+     "calls": [
+      {
+       "args": [],
+       "at": 3,
+       "end": 9,
+       "err": null,
+       "heuristic_args": [],
+       "index": 33876,
+       "name_match": [
+        "DemonAttack.FireWeapon",
+        "Holstered.FireWeapon",
+        "Holstered.FireWeapon",
+        "Holstered.FireWeapon",
+        "InfiniteMissiles.FireWeapon",
+        "MatineeControlled.FireWeapon",
+        "RBatmobileAllegianceSwitcher.FireWeapon",
+        "RBatmobileCannon.FireWeapon"
+       ],
+       "target": "FireWeapon",
+       "target_class": null,
+       "terminator_ok": true,
+       "text": "FireWeapon()",
+       "token": "EX_VirtualFunction"
+      },
+      {
+       "args": [],
+       "at": 94,
+       "end": 100,
+       "err": null,
+       "heuristic_args": [],
+       "index": 5282,
+       "name_match": [
+        "RBatmobileCannon.BattleModeExitted",
+        "RBatmobileSonar.BattleModeExitted",
+        "RVehicleWeapon.BattleModeExitted"
+       ],
+       "target": "BattleModeExitted",
+       "target_class": null,
+       "terminator_ok": true,
+       "text": "BattleModeExitted()",
+       "token": "EX_VirtualFunction"
+      }
+     ],
+     "export": 9437,
+     "from_call_at": 278,
+     "path": "RVehicleWeapon.TryToFireWeapon",
+     "script_bytes": 109,
+     "target": "RVehicleWeapon.TryToFireWeapon"
+    },
+    {
+     "calls": [],
+     "export": 10572,
+     "from_call_at": 315,
+     "path": "RVehicleBatmobileBase.TryRightingFlip",
+     "script_bytes": 11,
+     "target": "RVehicleBatmobileBase.TryRightingFlip"
+    },
+    {
+     "calls": [
+      {
+       "args": [],
+       "at": 3,
+       "end": 9,
+       "err": null,
+       "heuristic_args": [],
+       "index": 33876,
+       "name_match": [
+        "DemonAttack.FireWeapon",
+        "Holstered.FireWeapon",
+        "Holstered.FireWeapon",
+        "Holstered.FireWeapon",
+        "InfiniteMissiles.FireWeapon",
+        "MatineeControlled.FireWeapon",
+        "RBatmobileAllegianceSwitcher.FireWeapon",
+        "RBatmobileCannon.FireWeapon"
+       ],
+       "target": "FireWeapon",
+       "target_class": null,
+       "terminator_ok": true,
+       "text": "FireWeapon()",
+       "token": "EX_VirtualFunction"
+      },
+      {
+       "args": [],
+       "at": 94,
+       "end": 100,
+       "err": null,
+       "heuristic_args": [],
+       "index": 5282,
+       "name_match": [
+        "RBatmobileCannon.BattleModeExitted",
+        "RBatmobileSonar.BattleModeExitted",
+        "RVehicleWeapon.BattleModeExitted"
+       ],
+       "target": "BattleModeExitted",
+       "target_class": null,
+       "terminator_ok": true,
+       "text": "BattleModeExitted()",
+       "token": "EX_VirtualFunction"
+      }
+     ],
+     "export": 9437,
+     "from_call_at": 402,
+     "path": "RVehicleWeapon.TryToFireWeapon",
+     "script_bytes": 109,
+     "target": "RVehicleWeapon.TryToFireWeapon"
+    }
+   ],
+   "calls": [
+    {
+     "args": [],
+     "at": 8,
+     "end": 14,
+     "err": null,
+     "heuristic_args": [],
+     "index": -2189,
+     "name_match": [],
+     "target": "Core.IsButtonInputIgnored",
+     "target_class": "Function",
+     "terminator_ok": true,
+     "text": "IsButtonInputIgnored()",
+     "token": "EX_FinalFunction"
+    },
+    {
+     "args": [],
+     "at": 92,
+     "end": 98,
+     "err": null,
+     "heuristic_args": [],
+     "index": 63824,
+     "name_match": [
+      "Holstered.ReadyToFire",
+      "Holstered.ReadyToFire",
+      "InfiniteMissiles.ReadyToFire",
+      "Primed.ReadyToFire",
+      "Primed.ReadyToFire",
+      "Primed.ReadyToFire",
+      "RBatmobileAllegianceSwitcher.ReadyToFire",
+      "RBatmobileEMP.ReadyToFire"
+     ],
+     "target": "ReadyToFire",
+     "target_class": null,
+     "terminator_ok": true,
+     "text": "ReadyToFire()",
+     "token": "EX_VirtualFunction"
+    },
+    {
+     "args": [],
+     "at": 209,
+     "end": 215,
+     "err": null,
+     "heuristic_args": [],
+     "index": 45204,
+     "name_match": [
+      "Firing.IsFiring",
+      "FiringExplosiveGel.IsFiring",
+      "Hacking.IsFiring",
+      "InfiniteMissiles.IsFiring",
+      "IsAttacking.IsFiring",
+      "OnHelicopter.IsFiring",
+      "RAEC_Smoke_Sub_Outsider.IsFiring",
+      "RBatmobileEMP.IsFiring"
+     ],
+     "target": "IsFiring",
+     "target_class": null,
+     "terminator_ok": true,
+     "text": "IsFiring()",
+     "token": "EX_VirtualFunction"
+    },
+    {
+     "args": [],
+     "at": 278,
+     "end": 284,
+     "err": null,
+     "heuristic_args": [],
+     "index": 9437,
+     "name_match": [],
+     "target": "RVehicleWeapon.TryToFireWeapon",
+     "target_class": "Function",
+     "terminator_ok": true,
+     "text": "TryToFireWeapon()",
+     "token": "EX_FinalFunction"
+    },
+    {
+     "args": [
+      {
+       "at": 320,
+       "text": "false",
+       "tok": "EX_False"
+      },
+      {
+       "at": 321,
+       "candidates": [
+        0,
+        1
+       ],
+       "heuristic": true,
+       "text": "<0x4a>",
+       "tok": "unnamed 0x4a",
+       "width": 0
+      }
+     ],
+     "at": 315,
+     "end": 323,
+     "err": null,
+     "heuristic_args": [
+      321
+     ],
+     "index": 10572,
+     "name_match": [],
+     "target": "RVehicleBatmobileBase.TryRightingFlip",
+     "target_class": "Function",
+     "terminator_ok": true,
+     "text": "TryRightingFlip(false, <0x4a>)",
+     "token": "EX_FinalFunction"
+    },
+    {
+     "args": [],
+     "at": 364,
+     "end": 370,
+     "err": null,
+     "heuristic_args": [],
+     "index": 63824,
+     "name_match": [
+      "Holstered.ReadyToFire",
+      "Holstered.ReadyToFire",
+      "InfiniteMissiles.ReadyToFire",
+      "Primed.ReadyToFire",
+      "Primed.ReadyToFire",
+      "Primed.ReadyToFire",
+      "RBatmobileAllegianceSwitcher.ReadyToFire",
+      "RBatmobileEMP.ReadyToFire"
+     ],
+     "target": "ReadyToFire",
+     "target_class": null,
+     "terminator_ok": true,
+     "text": "ReadyToFire()",
+     "token": "EX_VirtualFunction"
+    },
+    {
+     "args": [],
+     "at": 402,
+     "end": 408,
+     "err": null,
+     "heuristic_args": [],
+     "index": 9437,
+     "name_match": [],
+     "target": "RVehicleWeapon.TryToFireWeapon",
+     "target_class": "Function",
+     "terminator_ok": true,
+     "text": "TryToFireWeapon()",
+     "token": "EX_FinalFunction"
+    },
+    {
+     "args": [
+      {
+       "at": 437,
+       "ref": "RSeqEvent_BatmobileRiddlerButton",
+       "ref_index": 118512,
+       "text": "RSeqEvent_BatmobileRiddlerButton",
+       "tok": "EX_ObjectConst"
+      },
+      {
+       "at": 442,
+       "text": "self",
+       "tok": "EX_Self"
+      },
+      {
+       "at": 443,
+       "text": "0",
+       "tok": "EX_IntZero"
+      },
+      {
+       "at": 444,
+       "candidates": [
+        1
+       ],
+       "heuristic": true,
+       "text": "74",
+       "tok": "unnamed 0x4a",
+       "value": 74,
+       "width": 1
+      }
+     ],
+     "at": 432,
+     "end": 447,
+     "err": null,
+     "heuristic_args": [
+      444
+     ],
+     "index": -1641,
+     "name_match": [],
+     "target": "Core.TriggerEventClass",
+     "target_class": "Function",
+     "terminator_ok": true,
+     "text": "TriggerEventClass(RSeqEvent_BatmobileRiddlerButton, self, 0, 74)",
+     "token": "EX_FinalFunction"
+    }
+   ],
+   "class_sibling_export": 105073,
+   "command": "SelectVehicleWeapon",
+   "constants": [],
+   "export": 104971,
+   "names_hit": 2,
+   "path": "DrivingMode.SelectVehicleWeapon",
+   "refs": [
+    {
+     "at": 17,
+     "kind": "IntProperty",
+     "ref": "SelectVehicleWeapon.WeaponToFire",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 23,
+     "kind": "IntProperty",
+     "ref": "SelectVehicleWeapon.Weapon",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 36,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 42,
+     "kind": "NameProperty",
+     "ref": "Core.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 62,
+     "kind": "IntProperty",
+     "ref": "SelectVehicleWeapon.WeaponToFire",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 68,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 74,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.ActualWeapons",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 80,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.ActualWeapons",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 86,
+     "kind": "BoolProperty",
+     "ref": "ReadyToFire.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 100,
+     "kind": "BoolProperty",
+     "ref": "SelectVehicleWeapon.CanFire",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 107,
+     "kind": "IntProperty",
+     "ref": "SelectVehicleWeapon.I",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 118,
+     "kind": "IntProperty",
+     "ref": "SelectVehicleWeapon.I",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 132,
+     "kind": "IntProperty",
+     "ref": "SelectVehicleWeapon.I",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 137,
+     "kind": "IntProperty",
+     "ref": "SelectVehicleWeapon.WeaponToFire",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 148,
+     "kind": "IntProperty",
+     "ref": "SelectVehicleWeapon.I",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 154,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 160,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.ActualWeapons",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 166,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.ActualWeapons",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 179,
+     "kind": "IntProperty",
+     "ref": "SelectVehicleWeapon.I",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 185,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 191,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.ActualWeapons",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 197,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.ActualWeapons",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 203,
+     "kind": "BoolProperty",
+     "ref": "IsFiring.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 218,
+     "kind": "BoolProperty",
+     "ref": "SelectVehicleWeapon.CanFire",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 228,
+     "kind": "IntProperty",
+     "ref": "SelectVehicleWeapon.I",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 241,
+     "kind": "BoolProperty",
+     "ref": "SelectVehicleWeapon.CanFire",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 248,
+     "kind": "IntProperty",
+     "ref": "SelectVehicleWeapon.WeaponToFire",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 254,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 260,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.ActualWeapons",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 266,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.ActualWeapons",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 272,
+     "kind": "BoolProperty",
+     "ref": "TryToFireWeapon.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 292,
+     "kind": "IntProperty",
+     "ref": "SelectVehicleWeapon.Weapon",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 303,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 309,
+     "kind": "BoolProperty",
+     "ref": "TryRightingFlip.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 334,
+     "kind": "IntProperty",
+     "ref": "SelectVehicleWeapon.WeaponToFire",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 340,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 346,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.ActualPMWeapons",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 352,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.ActualPMWeapons",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 358,
+     "kind": "BoolProperty",
+     "ref": "ReadyToFire.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 372,
+     "kind": "IntProperty",
+     "ref": "SelectVehicleWeapon.WeaponToFire",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 378,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 384,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.ActualPMWeapons",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 390,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.ActualPMWeapons",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 396,
+     "kind": "BoolProperty",
+     "ref": "TryToFireWeapon.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 412,
+     "kind": "IntProperty",
+     "ref": "SelectVehicleWeapon.Weapon",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 420,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 426,
+     "kind": "BoolProperty",
+     "ref": "Core.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 437,
+     "kind": null,
+     "ref": "RSeqEvent_BatmobileRiddlerButton",
+     "token": "EX_ObjectConst"
+    }
+   ],
+   "script_bytes": 448,
+   "script_sha1": "ff7bcbfcab46e165c36a8d17a0592f089a54ff99",
+   "size": 486,
+   "unexplained_bytes": 130
+  },
+  {
+   "accepted_tokens": 44,
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "call_sites": 5,
+   "callees": [
+    {
+     "calls": [],
+     "export": 102276,
+     "from_call_at": 18,
+     "path": "RPlayerController.GetGRI",
+     "script_bytes": 0,
+     "target": "RPlayerController.GetGRI"
+    },
+    {
+     "calls": [],
+     "export": 27205,
+     "from_call_at": 43,
+     "path": "RPersistentOptions.GetBattleModeToggle",
+     "script_bytes": 35,
+     "target": "RPersistentOptions.GetBattleModeToggle"
+    },
+    {
+     "calls": [],
+     "export": 10552,
+     "from_call_at": 145,
+     "path": "RVehicleBatmobileBase.TryToChangeMode",
+     "script_bytes": 5,
+     "target": "RVehicleBatmobileBase.TryToChangeMode"
+    },
+    {
+     "calls": [],
+     "export": 10552,
+     "from_call_at": 188,
+     "path": "RVehicleBatmobileBase.TryToChangeMode",
+     "script_bytes": 5,
+     "target": "RVehicleBatmobileBase.TryToChangeMode"
+    }
+   ],
+   "calls": [
+    {
+     "args": [],
+     "at": 3,
+     "end": 9,
+     "err": null,
+     "heuristic_args": [],
+     "index": -2189,
+     "name_match": [],
+     "target": "Core.IsButtonInputIgnored",
+     "target_class": "Function",
+     "terminator_ok": true,
+     "text": "IsButtonInputIgnored()",
+     "token": "EX_FinalFunction"
+    },
+    {
+     "args": [],
+     "at": 18,
+     "end": 24,
+     "err": null,
+     "heuristic_args": [],
+     "index": 102276,
+     "name_match": [],
+     "target": "RPlayerController.GetGRI",
+     "target_class": "Function",
+     "terminator_ok": true,
+     "text": "GetGRI()",
+     "token": "EX_FinalFunction"
+    },
+    {
+     "args": [
+      {
+       "at": 48,
+       "text": "false",
+       "tok": "EX_False"
+      }
+     ],
+     "at": 43,
+     "end": 50,
+     "err": null,
+     "heuristic_args": [],
+     "index": 27205,
+     "name_match": [],
+     "target": "RPersistentOptions.GetBattleModeToggle",
+     "target_class": "Function",
+     "terminator_ok": true,
+     "text": "GetBattleModeToggle(false)",
+     "token": "EX_FinalFunction"
+    },
+    {
+     "args": [
+      {
+       "at": 150,
+       "candidates": [
+        4
+       ],
+       "heuristic": true,
+       "text": "5269",
+       "tok": "unnamed 0x2b",
+       "value": 5269,
+       "width": 4
+      }
+     ],
+     "at": 145,
+     "end": 156,
+     "err": null,
+     "heuristic_args": [
+      150
+     ],
+     "index": 10552,
+     "name_match": [],
+     "target": "RVehicleBatmobileBase.TryToChangeMode",
+     "target_class": "Function",
+     "terminator_ok": true,
+     "text": "TryToChangeMode(5269)",
+     "token": "EX_FinalFunction"
+    },
+    {
+     "args": [
+      {
+       "at": 193,
+       "candidates": [
+        4
+       ],
+       "heuristic": true,
+       "text": "61474",
+       "tok": "unnamed 0x2b",
+       "value": 61474,
+       "width": 4
+      }
+     ],
+     "at": 188,
+     "end": 199,
+     "err": null,
+     "heuristic_args": [
+      193
+     ],
+     "index": 10552,
+     "name_match": [],
+     "target": "RVehicleBatmobileBase.TryToChangeMode",
+     "target_class": "Function",
+     "terminator_ok": true,
+     "text": "TryToChangeMode(61474)",
+     "token": "EX_FinalFunction"
+    }
+   ],
+   "class_sibling_export": null,
+   "command": "ToggleBattleMode",
+   "constants": [],
+   "export": 105028,
+   "names_hit": 1,
+   "path": "DrivingMode.ToggleBattleMode",
+   "refs": [
+    {
+     "at": 25,
+     "kind": "ObjectProperty",
+     "ref": "RGameRI.PersistentOptions",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 31,
+     "kind": "ObjectProperty",
+     "ref": "RGameRI.PersistentOptions",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 37,
+     "kind": "IntProperty",
+     "ref": "GetBattleModeToggle.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 57,
+     "kind": "ObjectProperty",
+     "ref": "Core.PlayerInput",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 63,
+     "kind": "BoolProperty",
+     "ref": "Core.bUsingGamepad",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 70,
+     "kind": "BoolProperty",
+     "ref": "Core.bUsingGamepad",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 85,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 91,
+     "kind": "BoolProperty",
+     "ref": "RVehicleBatmobileBase.ArmouredMode",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 98,
+     "kind": "BoolProperty",
+     "ref": "RVehicleBatmobileBase.ArmouredMode",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 109,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 115,
+     "kind": "BoolProperty",
+     "ref": "RVehicleBatmobileBase.bBattleModeLocked",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 122,
+     "kind": "BoolProperty",
+     "ref": "RVehicleBatmobileBase.bBattleModeLocked",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 133,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 139,
+     "kind": "BoolProperty",
+     "ref": "TryToChangeMode.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 158,
+     "kind": "BoolProperty",
+     "ref": "RPlayerController.bWaitingToDebounceRun",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 166,
+     "kind": "BoolProperty",
+     "ref": "RPlayerController.bWaitingToDebounceAimGadget",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 176,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 182,
+     "kind": "BoolProperty",
+     "ref": "TryToChangeMode.ReturnValue",
+     "token": "EX_LocalVariable"
+    }
+   ],
+   "script_bytes": 200,
+   "script_sha1": "1cb9801219cb1aef92cda0c5d7262225c9ff90e8",
+   "size": 238,
+   "unexplained_bytes": 64
+  },
+  {
+   "accepted_tokens": 45,
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "call_sites": 2,
+   "callees": [],
+   "calls": [
+    {
+     "args": [],
+     "at": 3,
+     "end": 9,
+     "err": null,
+     "heuristic_args": [],
+     "index": -2189,
+     "name_match": [],
+     "target": "Core.IsButtonInputIgnored",
+     "target_class": "Function",
+     "terminator_ok": true,
+     "text": "IsButtonInputIgnored()",
+     "token": "EX_FinalFunction"
+    },
+    {
+     "args": [
+      {
+       "at": 223,
+       "ref": "BatmobileFireButton.CarTarget",
+       "ref_index": 105037,
+       "text": "CarTarget",
+       "tok": "EX_LocalVariable"
+      }
+     ],
+     "at": 218,
+     "end": 229,
+     "err": null,
+     "heuristic_args": [],
+     "index": 5284,
+     "name_match": [
+      "RBatmobileEMPMissile.BattleModeFireButtonPressed"
+     ],
+     "target": "BattleModeFireButtonPressed",
+     "target_class": null,
+     "terminator_ok": true,
+     "text": "BattleModeFireButtonPressed(CarTarget)",
+     "token": "EX_VirtualFunction"
+    }
+   ],
+   "class_sibling_export": 105256,
+   "command": "BatmobileFireButton",
+   "constants": [],
+   "export": 105039,
+   "names_hit": 2,
+   "path": "DrivingMode.BatmobileFireButton",
+   "refs": [
+    {
+     "at": 15,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 21,
+     "kind": "BoolProperty",
+     "ref": "RVehicleBatmobileBase.ArmouredMode",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 28,
+     "kind": "BoolProperty",
+     "ref": "RVehicleBatmobileBase.ArmouredMode",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 34,
+     "kind": "ObjectProperty",
+     "ref": "BatmobileFireButton.CannonSecondary",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 39,
+     "kind": null,
+     "ref": "RBatmobileCannon",
+     "token": "EX_DynamicCast"
+    },
+    {
+     "at": 45,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 51,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.SecondaryWeapon",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 57,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.SecondaryWeapon",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 67,
+     "kind": "ObjectProperty",
+     "ref": "BatmobileFireButton.CannonSecondary",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 81,
+     "kind": "ObjectProperty",
+     "ref": "BatmobileFireButton.CannonSecondary",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 87,
+     "kind": "ByteProperty",
+     "ref": "RBatmobileCannon.CurrentMode",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 93,
+     "kind": "ByteProperty",
+     "ref": "RBatmobileCannon.CurrentMode",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 105,
+     "kind": "ObjectProperty",
+     "ref": "BatmobileFireButton.CarTarget",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 110,
+     "kind": null,
+     "ref": "RVehicleCar",
+     "token": "EX_DynamicCast"
+    },
+    {
+     "at": 116,
+     "kind": "ObjectProperty",
+     "ref": "BatmobileFireButton.CannonSecondary",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 122,
+     "kind": "ObjectProperty",
+     "ref": "RBatmobileCannon.RiotSuppressorTarget",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 128,
+     "kind": "ObjectProperty",
+     "ref": "RBatmobileCannon.RiotSuppressorTarget",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 137,
+     "kind": "ObjectProperty",
+     "ref": "BatmobileFireButton.CarTarget",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 145,
+     "kind": "ObjectProperty",
+     "ref": "BatmobileFireButton.CarTarget",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 150,
+     "kind": null,
+     "ref": "RVehicleCar",
+     "token": "EX_DynamicCast"
+    },
+    {
+     "at": 156,
+     "kind": "ObjectProperty",
+     "ref": "BatmobileFireButton.CannonSecondary",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 162,
+     "kind": "ObjectProperty",
+     "ref": "RBatmobileCannon.SuppressFireTarget",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 168,
+     "kind": "ObjectProperty",
+     "ref": "RBatmobileCannon.SuppressFireTarget",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 177,
+     "kind": "ObjectProperty",
+     "ref": "BatmobileFireButton.CarTarget",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 185,
+     "kind": null,
+     "ref": "RBatmobileEMPMissile",
+     "token": "EX_DynamicCast"
+    },
+    {
+     "at": 194,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 200,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.ActualPMWeapons",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 206,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.ActualPMWeapons",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 223,
+     "kind": "ObjectProperty",
+     "ref": "BatmobileFireButton.CarTarget",
+     "token": "EX_LocalVariable"
+    }
+   ],
+   "script_bytes": 230,
+   "script_sha1": "7d29ca237455d5cd5666bb6fdbc46d87a4c93c7c",
+   "size": 268,
+   "unexplained_bytes": 61
+  },
+  {
+   "accepted_tokens": 13,
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "call_sites": 2,
+   "callees": [],
+   "calls": [
+    {
+     "args": [],
+     "at": 3,
+     "end": 9,
+     "err": null,
+     "heuristic_args": [],
+     "index": -2189,
+     "name_match": [],
+     "target": "Core.IsButtonInputIgnored",
+     "target_class": "Function",
+     "terminator_ok": true,
+     "text": "IsButtonInputIgnored()",
+     "token": "EX_FinalFunction"
+    },
+    {
+     "args": [],
+     "at": 59,
+     "end": 65,
+     "err": null,
+     "heuristic_args": [],
+     "index": 14115,
+     "name_match": [
+      "Homing.ButtonPressed",
+      "Primed.ButtonPressed",
+      "Primed.ButtonPressed",
+      "Primed.ButtonPressed",
+      "Primed.ButtonPressed",
+      "Primed.ButtonPressed",
+      "Primed.ButtonPressed",
+      "Primed.ButtonPressed"
+     ],
+     "target": "ButtonPressed",
+     "target_class": null,
+     "terminator_ok": true,
+     "text": "ButtonPressed()",
+     "token": "EX_VirtualFunction"
+    }
+   ],
+   "class_sibling_export": 105917,
+   "command": "SecondaryFireVehicleWeapon",
+   "constants": [],
+   "export": 104978,
+   "names_hit": 2,
+   "path": "DrivingMode.SecondaryFireVehicleWeapon",
+   "refs": [
+    {
+     "at": 15,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 21,
+     "kind": "BoolProperty",
+     "ref": "RVehicleBatmobileBase.ArmouredMode",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 28,
+     "kind": "BoolProperty",
+     "ref": "RVehicleBatmobileBase.ArmouredMode",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 35,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 41,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.BatmobileWinch",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 47,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.BatmobileWinch",
+     "token": "EX_InstanceVariable"
+    }
+   ],
+   "script_bytes": 66,
+   "script_sha1": "ac82a01784e0c3ae324594b03f863896f7b65420",
+   "size": 104,
+   "unexplained_bytes": 21
+  },
+  {
+   "accepted_tokens": 22,
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "call_sites": 3,
+   "callees": [
+    {
+     "calls": [
+      {
+       "args": [],
+       "at": 3,
+       "end": 9,
+       "err": null,
+       "heuristic_args": [],
+       "index": 33876,
+       "name_match": [
+        "DemonAttack.FireWeapon",
+        "Holstered.FireWeapon",
+        "Holstered.FireWeapon",
+        "Holstered.FireWeapon",
+        "InfiniteMissiles.FireWeapon",
+        "MatineeControlled.FireWeapon",
+        "RBatmobileAllegianceSwitcher.FireWeapon",
+        "RBatmobileCannon.FireWeapon"
+       ],
+       "target": "FireWeapon",
+       "target_class": null,
+       "terminator_ok": true,
+       "text": "FireWeapon()",
+       "token": "EX_VirtualFunction"
+      },
+      {
+       "args": [],
+       "at": 94,
+       "end": 100,
+       "err": null,
+       "heuristic_args": [],
+       "index": 5282,
+       "name_match": [
+        "RBatmobileCannon.BattleModeExitted",
+        "RBatmobileSonar.BattleModeExitted",
+        "RVehicleWeapon.BattleModeExitted"
+       ],
+       "target": "BattleModeExitted",
+       "target_class": null,
+       "terminator_ok": true,
+       "text": "BattleModeExitted()",
+       "token": "EX_VirtualFunction"
+      }
+     ],
+     "export": 9437,
+     "from_call_at": 103,
+     "path": "RVehicleWeapon.TryToFireWeapon",
+     "script_bytes": 109,
+     "target": "RVehicleWeapon.TryToFireWeapon"
+    }
+   ],
+   "calls": [
+    {
+     "args": [],
+     "at": 3,
+     "end": 9,
+     "err": null,
+     "heuristic_args": [],
+     "index": -2189,
+     "name_match": [],
+     "target": "Core.IsButtonInputIgnored",
+     "target_class": "Function",
+     "terminator_ok": true,
+     "text": "IsButtonInputIgnored()",
+     "token": "EX_FinalFunction"
+    },
+    {
+     "args": [],
+     "at": 68,
+     "end": 74,
+     "err": null,
+     "heuristic_args": [],
+     "index": 63824,
+     "name_match": [
+      "Holstered.ReadyToFire",
+      "Holstered.ReadyToFire",
+      "InfiniteMissiles.ReadyToFire",
+      "Primed.ReadyToFire",
+      "Primed.ReadyToFire",
+      "Primed.ReadyToFire",
+      "RBatmobileAllegianceSwitcher.ReadyToFire",
+      "RBatmobileEMP.ReadyToFire"
+     ],
+     "target": "ReadyToFire",
+     "target_class": null,
+     "terminator_ok": true,
+     "text": "ReadyToFire()",
+     "token": "EX_VirtualFunction"
+    },
+    {
+     "args": [],
+     "at": 103,
+     "end": 109,
+     "err": null,
+     "heuristic_args": [],
+     "index": 9437,
+     "name_match": [],
+     "target": "RVehicleWeapon.TryToFireWeapon",
+     "target_class": "Function",
+     "terminator_ok": true,
+     "text": "TryToFireWeapon()",
+     "token": "EX_FinalFunction"
+    }
+   ],
+   "class_sibling_export": 105074,
+   "command": "FirePursuitMissile",
+   "constants": [],
+   "export": 104972,
+   "names_hit": 2,
+   "path": "DrivingMode.FirePursuitMissile",
+   "refs": [
+    {
+     "at": 16,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 22,
+     "kind": "BoolProperty",
+     "ref": "RVehicleBatmobileBase.ArmouredMode",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 29,
+     "kind": "BoolProperty",
+     "ref": "RVehicleBatmobileBase.ArmouredMode",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 44,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 50,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.ActualPMWeapons",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 56,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.ActualPMWeapons",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 62,
+     "kind": "BoolProperty",
+     "ref": "ReadyToFire.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 79,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 85,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.ActualPMWeapons",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 91,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.ActualPMWeapons",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 97,
+     "kind": "BoolProperty",
+     "ref": "TryToFireWeapon.ReturnValue",
+     "token": "EX_LocalVariable"
+    }
+   ],
+   "script_bytes": 110,
+   "script_sha1": "c91972510f2e77bf165c1444342d7cbe840184cd",
+   "size": 148,
+   "unexplained_bytes": 32
+  },
+  {
+   "accepted_tokens": 27,
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "call_sites": 3,
+   "callees": [],
+   "calls": [
+    {
+     "args": [],
+     "at": 8,
+     "end": 14,
+     "err": null,
+     "heuristic_args": [],
+     "index": -2189,
+     "name_match": [],
+     "target": "Core.IsButtonInputIgnored",
+     "target_class": "Function",
+     "terminator_ok": true,
+     "text": "IsButtonInputIgnored()",
+     "token": "EX_FinalFunction"
+    },
+    {
+     "args": [],
+     "at": 78,
+     "end": 84,
+     "err": null,
+     "heuristic_args": [],
+     "index": 14117,
+     "name_match": [
+      "Charging.ButtonReleased",
+      "Charging.ButtonReleased",
+      "Firing.ButtonReleased",
+      "Hacking.ButtonReleased",
+      "Primed.ButtonReleased",
+      "Primed.ButtonReleased",
+      "RBatarang.ButtonReleased",
+      "RBatmobileEMP.ButtonReleased"
+     ],
+     "target": "ButtonReleased",
+     "target_class": null,
+     "terminator_ok": true,
+     "text": "ButtonReleased()",
+     "token": "EX_VirtualFunction"
+    },
+    {
+     "args": [],
+     "at": 123,
+     "end": 129,
+     "err": null,
+     "heuristic_args": [],
+     "index": 14117,
+     "name_match": [
+      "Charging.ButtonReleased",
+      "Charging.ButtonReleased",
+      "Firing.ButtonReleased",
+      "Hacking.ButtonReleased",
+      "Primed.ButtonReleased",
+      "Primed.ButtonReleased",
+      "RBatarang.ButtonReleased",
+      "RBatmobileEMP.ButtonReleased"
+     ],
+     "target": "ButtonReleased",
+     "target_class": null,
+     "terminator_ok": true,
+     "text": "ButtonReleased()",
+     "token": "EX_VirtualFunction"
+    }
+   ],
+   "class_sibling_export": null,
+   "command": "ReleaseVehicleWeapon",
+   "constants": [],
+   "export": 104975,
+   "names_hit": 1,
+   "path": "DrivingMode.ReleaseVehicleWeapon",
+   "refs": [
+    {
+     "at": 21,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 27,
+     "kind": "NameProperty",
+     "ref": "Core.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 45,
+     "kind": "IntProperty",
+     "ref": "ReleaseVehicleWeapon.Weapon",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 54,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 60,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.ActualWeapons",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 66,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.ActualWeapons",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 90,
+     "kind": "IntProperty",
+     "ref": "ReleaseVehicleWeapon.Weapon",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 99,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 105,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.ActualPMWeapons",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 111,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.ActualPMWeapons",
+     "token": "EX_InstanceVariable"
+    }
+   ],
+   "script_bytes": 130,
+   "script_sha1": "07f857151e06b5588f5dba11365cf847525e3338",
+   "size": 168,
+   "unexplained_bytes": 51
+  },
+  {
+   "accepted_tokens": 122,
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "call_sites": 2,
+   "callees": [
+    {
+     "calls": [],
+     "export": 97237,
+     "from_call_at": 4,
+     "path": "RPlayerControllerBase.InCinematicMode",
+     "script_bytes": 0,
+     "target": "RPlayerControllerBase.InCinematicMode"
+    },
+    {
+     "calls": [],
+     "export": 114737,
+     "from_call_at": 39,
+     "path": "RSeqAct_CinematicMode.AllowGadget",
+     "script_bytes": 86,
+     "target": "RSeqAct_CinematicMode.AllowGadget"
+    }
+   ],
+   "calls": [
+    {
+     "args": [],
+     "at": 4,
+     "end": 10,
+     "err": null,
+     "heuristic_args": [],
+     "index": 97237,
+     "name_match": [],
+     "target": "RPlayerControllerBase.InCinematicMode",
+     "target_class": "Function",
+     "terminator_ok": true,
+     "text": "InCinematicMode()",
+     "token": "EX_FinalFunction"
+    },
+    {
+     "args": [],
+     "at": 39,
+     "end": 44,
+     "err": "token 0x19 (EX_Context) at 44 carries a nested expression, so it has no fixed width",
+     "heuristic_args": [],
+     "index": 114737,
+     "name_match": [],
+     "target": "RSeqAct_CinematicMode.AllowGadget",
+     "target_class": "Function",
+     "terminator_ok": false,
+     "text": "AllowGadget()",
+     "token": "EX_FinalFunction"
+    }
+   ],
+   "class_sibling_export": 105249,
+   "command": "IsBatmobileFireButtonHeld",
+   "constants": [
+    {
+     "at": 257,
+     "kind": "float",
+     "value": 0.05
+    }
+   ],
+   "export": 105036,
+   "names_hit": 2,
+   "path": "DrivingMode.IsBatmobileFireButtonHeld",
+   "refs": [
+    {
+     "at": 15,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerControllerBase.ActiveCinematicMode",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 27,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerControllerBase.ActiveCinematicMode",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 33,
+     "kind": "BoolProperty",
+     "ref": "AllowGadget.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 45,
+     "kind": "ObjectProperty",
+     "ref": "IsBatmobileFireButtonHeld.Weapon",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 51,
+     "kind": "ClassProperty",
+     "ref": "Core.Class",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 57,
+     "kind": "ClassProperty",
+     "ref": "Core.Class",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 72,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 78,
+     "kind": "BoolProperty",
+     "ref": "RVehicleBatmobileBase.bControlledBySeqAct",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 85,
+     "kind": "BoolProperty",
+     "ref": "RVehicleBatmobileBase.bControlledBySeqAct",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 93,
+     "kind": "ObjectProperty",
+     "ref": "IsBatmobileFireButtonHeld.Input",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 98,
+     "kind": "ObjectProperty",
+     "ref": "Core.PlayerInput",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 104,
+     "kind": "ObjectProperty",
+     "ref": "IsBatmobileFireButtonHeld.CannonSecondary",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 109,
+     "kind": null,
+     "ref": "RBatmobileCannon",
+     "token": "EX_DynamicCast"
+    },
+    {
+     "at": 115,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 121,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.SecondaryWeapon",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 127,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.SecondaryWeapon",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 136,
+     "kind": "ObjectProperty",
+     "ref": "IsBatmobileFireButtonHeld.Weapon",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 142,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 148,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.CurrentWeapon",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 154,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.CurrentWeapon",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 165,
+     "kind": "ObjectProperty",
+     "ref": "IsBatmobileFireButtonHeld.CannonSecondary",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 179,
+     "kind": "ObjectProperty",
+     "ref": "IsBatmobileFireButtonHeld.CannonSecondary",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 185,
+     "kind": "ByteProperty",
+     "ref": "RBatmobileCannon.CurrentMode",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 191,
+     "kind": "ByteProperty",
+     "ref": "RBatmobileCannon.CurrentMode",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 210,
+     "kind": "ObjectProperty",
+     "ref": "IsBatmobileFireButtonHeld.Input",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 216,
+     "kind": "BoolProperty",
+     "ref": "RPlayerInput.bBatmobileBattleModeToggle",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 223,
+     "kind": "BoolProperty",
+     "ref": "RPlayerInput.bBatmobileBattleModeToggle",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 234,
+     "kind": "ObjectProperty",
+     "ref": "IsBatmobileFireButtonHeld.Input",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 240,
+     "kind": "FloatProperty",
+     "ref": "RPlayerInput.aLeftTrigger",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 246,
+     "kind": "FloatProperty",
+     "ref": "RPlayerInput.aLeftTrigger",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 252,
+     "kind": "FloatProperty",
+     "ref": "RPlayerController.LastTriggerAmount",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 273,
+     "kind": "ObjectProperty",
+     "ref": "IsBatmobileFireButtonHeld.Input",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 279,
+     "kind": "ByteProperty",
+     "ref": "RPlayerInput.bFireVehicleWeapon",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 285,
+     "kind": "ByteProperty",
+     "ref": "RPlayerInput.bFireVehicleWeapon",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 300,
+     "kind": "BoolProperty",
+     "ref": "RPlayerController.bWaitingToDebounceBatmobileFire",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 314,
+     "kind": "ObjectProperty",
+     "ref": "IsBatmobileFireButtonHeld.Weapon",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 320,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 326,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.SecondaryWeapon",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 332,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.SecondaryWeapon",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 344,
+     "kind": "ObjectProperty",
+     "ref": "IsBatmobileFireButtonHeld.CannonSecondary",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 358,
+     "kind": "ObjectProperty",
+     "ref": "IsBatmobileFireButtonHeld.CannonSecondary",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 364,
+     "kind": "ByteProperty",
+     "ref": "RBatmobileCannon.CurrentMode",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 370,
+     "kind": "ByteProperty",
+     "ref": "RBatmobileCannon.CurrentMode",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 388,
+     "kind": "ObjectProperty",
+     "ref": "Core.PlayerInput",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 394,
+     "kind": "ByteProperty",
+     "ref": "RPlayerInput.bFireVehicleWeapon",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 400,
+     "kind": "ByteProperty",
+     "ref": "RPlayerInput.bFireVehicleWeapon",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 420,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 426,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.BatmobileWinch",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 432,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.BatmobileWinch",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 447,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 453,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.BatmobileWinch",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 459,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.BatmobileWinch",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 465,
+     "kind": "ByteProperty",
+     "ref": "RBatmobileWinch.WinchPullType",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 471,
+     "kind": "ByteProperty",
+     "ref": "RBatmobileWinch.WinchPullType",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 490,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 496,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.BatmobileWinch",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 502,
+     "kind": "ObjectProperty",
+     "ref": "RVehicleBatmobileBase.BatmobileWinch",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 508,
+     "kind": "ByteProperty",
+     "ref": "RBatmobileWinch.WinchPullType",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 514,
+     "kind": "ByteProperty",
+     "ref": "RBatmobileWinch.WinchPullType",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 533,
+     "kind": "ObjectProperty",
+     "ref": "IsBatmobileFireButtonHeld.Input",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 539,
+     "kind": "ByteProperty",
+     "ref": "RPlayerInput.bFireVehicleSecondaryWeapon",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 545,
+     "kind": "ByteProperty",
+     "ref": "RPlayerInput.bFireVehicleSecondaryWeapon",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 560,
+     "kind": "BoolProperty",
+     "ref": "RPlayerController.bWaitingToDebounceSecondaryFire",
+     "token": "EX_InstanceVariable"
+    }
+   ],
+   "script_bytes": 574,
+   "script_sha1": "5abeb62f66c36b47a45379f70c91eab5a814bc85",
+   "size": 612,
+   "unexplained_bytes": 188
+  },
+  {
+   "accepted_tokens": 15,
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "call_sites": 3,
+   "callees": [],
+   "calls": [
+    {
+     "args": [],
+     "at": 4,
+     "end": 10,
+     "err": null,
+     "heuristic_args": [],
+     "index": 45482,
+     "name_match": [
+      "DebugSpectating.IsMoveInputIgnored",
+      "RPlayerController.IsMoveInputIgnored",
+      "RadioMode.IsMoveInputIgnored"
+     ],
+     "target": "IsMoveInputIgnored",
+     "target_class": null,
+     "terminator_ok": true,
+     "text": "IsMoveInputIgnored()",
+     "token": "EX_VirtualFunction"
+    },
+    {
+     "args": [],
+     "at": 13,
+     "end": 19,
+     "err": null,
+     "heuristic_args": [],
+     "index": -2189,
+     "name_match": [],
+     "target": "Core.IsButtonInputIgnored",
+     "target_class": "Function",
+     "terminator_ok": true,
+     "text": "IsButtonInputIgnored()",
+     "token": "EX_FinalFunction"
+    },
+    {
+     "args": [],
+     "at": 51,
+     "end": 57,
+     "err": null,
+     "heuristic_args": [],
+     "index": 79352,
+     "name_match": [
+      "BattleMode.TriggerBoost",
+      "BattleMode.TriggerBoost",
+      "RVehicle.TriggerBoost"
+     ],
+     "target": "TriggerBoost",
+     "target_class": null,
+     "terminator_ok": true,
+     "text": "TriggerBoost()",
+     "token": "EX_VirtualFunction"
+    }
+   ],
+   "class_sibling_export": null,
+   "command": "TriggerBatmobileBoost",
+   "constants": [],
+   "export": 104965,
+   "names_hit": 1,
+   "path": "DrivingMode.TriggerBatmobileBoost",
+   "refs": [
+    {
+     "at": 23,
+     "kind": "ObjectProperty",
+     "ref": "TriggerBatmobileBoost.Car",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 28,
+     "kind": null,
+     "ref": "RVehicle",
+     "token": "EX_DynamicCast"
+    },
+    {
+     "at": 33,
+     "kind": "ObjectProperty",
+     "ref": "Core.Pawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 39,
+     "kind": "ObjectProperty",
+     "ref": "TriggerBatmobileBoost.Car",
+     "token": "EX_LocalVariable"
+    }
+   ],
+   "script_bytes": 58,
+   "script_sha1": "4d5f4c84788f5c4315e7783db6d3c6ba9bb60c80",
+   "size": 96,
+   "unexplained_bytes": 15
+  },
+  {
+   "accepted_tokens": 28,
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "call_sites": 2,
+   "callees": [],
+   "calls": [
+    {
+     "args": [],
+     "at": 3,
+     "end": 9,
+     "err": null,
+     "heuristic_args": [],
+     "index": 45482,
+     "name_match": [
+      "DebugSpectating.IsMoveInputIgnored",
+      "RPlayerController.IsMoveInputIgnored",
+      "RadioMode.IsMoveInputIgnored"
+     ],
+     "target": "IsMoveInputIgnored",
+     "target_class": null,
+     "terminator_ok": true,
+     "text": "IsMoveInputIgnored()",
+     "token": "EX_VirtualFunction"
+    },
+    {
+     "args": [],
+     "at": 36,
+     "end": 42,
+     "err": null,
+     "heuristic_args": [],
+     "index": -2189,
+     "name_match": [],
+     "target": "Core.IsButtonInputIgnored",
+     "target_class": "Function",
+     "terminator_ok": true,
+     "text": "IsButtonInputIgnored()",
+     "token": "EX_FinalFunction"
+    }
+   ],
+   "class_sibling_export": null,
+   "command": "BattleStrafe",
+   "constants": [
+    {
+     "at": 57,
+     "kind": "float",
+     "value": 0.2
+    },
+    {
+     "at": 79,
+     "kind": "float",
+     "value": 0.3333
+    }
+   ],
+   "export": 104979,
+   "names_hit": 1,
+   "path": "DrivingMode.BattleStrafe",
+   "refs": [
+    {
+     "at": 19,
+     "kind": "ScriptStruct",
+     "ref": "RAffectPlayerVolume.AffectPlayerVolumeInfo",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 26,
+     "kind": "StructProperty",
+     "ref": "RPlayerController.AffectPlayerInfo",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 48,
+     "kind": "ObjectProperty",
+     "ref": "RPlayerController.CapeGlideTarget",
+     "token": "EX_InstanceVariable"
+    }
+   ],
+   "script_bytes": 94,
+   "script_sha1": "0ed04150ee8fe18da6718267a16b2af9dd8d0246",
+   "size": 132,
+   "unexplained_bytes": 38
+  },
+  {
+   "accepted_tokens": 3,
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "call_sites": 1,
+   "callees": [],
+   "calls": [
+    {
+     "args": [
+      {
+       "at": 5,
+       "text": "2",
+       "tok": "EX_IntConstByte",
+       "value": 2
+      },
+      {
+       "at": 7,
+       "candidates": [
+        0
+       ],
+       "heuristic": true,
+       "text": "<0x4a>",
+       "tok": "unnamed 0x4a",
+       "width": 0
+      }
+     ],
+     "at": 0,
+     "end": 9,
+     "err": null,
+     "heuristic_args": [
+      7
+     ],
+     "index": 69312,
+     "name_match": [
+      "DrivingMode.SelectVehicleWeapon",
+      "RPlayerController.SelectVehicleWeapon"
+     ],
+     "target": "SelectVehicleWeapon",
+     "target_class": null,
+     "terminator_ok": true,
+     "text": "SelectVehicleWeapon(2, <0x4a>)",
+     "token": "EX_VirtualFunction"
+    }
+   ],
+   "class_sibling_export": 105945,
+   "command": "QuickGadgetX",
+   "constants": [],
+   "export": 105040,
+   "names_hit": 3,
+   "path": "DrivingMode.QuickGadgetX",
+   "refs": [],
+   "script_bytes": 10,
+   "script_sha1": "a3a8f5b9d4a343d91086d377875e80382973af39",
+   "size": 48,
+   "unexplained_bytes": 3
+  },
+  {
+   "accepted_tokens": 4,
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "call_sites": 1,
+   "callees": [],
+   "calls": [
+    {
+     "args": [
+      {
+       "at": 5,
+       "text": "1",
+       "tok": "EX_IntOne"
+      },
+      {
+       "at": 6,
+       "candidates": [
+        0
+       ],
+       "heuristic": true,
+       "text": "<0x4a>",
+       "tok": "unnamed 0x4a",
+       "width": 0
+      }
+     ],
+     "at": 0,
+     "end": 8,
+     "err": null,
+     "heuristic_args": [
+      6
+     ],
+     "index": 69312,
+     "name_match": [
+      "DrivingMode.SelectVehicleWeapon",
+      "RPlayerController.SelectVehicleWeapon"
+     ],
+     "target": "SelectVehicleWeapon",
+     "target_class": null,
+     "terminator_ok": true,
+     "text": "SelectVehicleWeapon(1, <0x4a>)",
+     "token": "EX_VirtualFunction"
+    }
+   ],
+   "class_sibling_export": 105947,
+   "command": "QuickGadgetB",
+   "constants": [],
+   "export": 105042,
+   "names_hit": 3,
+   "path": "DrivingMode.QuickGadgetB",
+   "refs": [],
+   "script_bytes": 9,
+   "script_sha1": "42c324a8c5ffd066ccb461b2281f90b2b92019c0",
+   "size": 47,
+   "unexplained_bytes": 1
+  },
+  {
+   "accepted_tokens": 3,
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "call_sites": 1,
+   "callees": [],
+   "calls": [
+    {
+     "args": [
+      {
+       "at": 5,
+       "text": "3",
+       "tok": "EX_IntConstByte",
+       "value": 3
+      },
+      {
+       "at": 7,
+       "candidates": [
+        0
+       ],
+       "heuristic": true,
+       "text": "<0x4a>",
+       "tok": "unnamed 0x4a",
+       "width": 0
+      }
+     ],
+     "at": 0,
+     "end": 9,
+     "err": null,
+     "heuristic_args": [
+      7
+     ],
+     "index": 69312,
+     "name_match": [
+      "DrivingMode.SelectVehicleWeapon",
+      "RPlayerController.SelectVehicleWeapon"
+     ],
+     "target": "SelectVehicleWeapon",
+     "target_class": null,
+     "terminator_ok": true,
+     "text": "SelectVehicleWeapon(3, <0x4a>)",
+     "token": "EX_VirtualFunction"
+    }
+   ],
+   "class_sibling_export": 105943,
+   "command": "QuickGadgetY",
+   "constants": [],
+   "export": 105044,
+   "names_hit": 4,
+   "path": "DrivingMode.QuickGadgetY",
+   "refs": [],
+   "script_bytes": 10,
+   "script_sha1": "0852cb7deaf9535dad259d99637a7855022c8e34",
+   "size": 48,
+   "unexplained_bytes": 3
+  },
+  {
+   "accepted_tokens": 3,
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "call_sites": 1,
+   "callees": [],
+   "calls": [
+    {
+     "args": [
+      {
+       "at": 5,
+       "text": "2",
+       "tok": "EX_IntConstByte",
+       "value": 2
+      },
+      {
+       "at": 7,
+       "candidates": [
+        0
+       ],
+       "heuristic": true,
+       "text": "<0x4a>",
+       "tok": "unnamed 0x4a",
+       "width": 0
+      }
+     ],
+     "at": 0,
+     "end": 9,
+     "err": null,
+     "heuristic_args": [
+      7
+     ],
+     "index": 64443,
+     "name_match": [
+      "DrivingMode.ReleaseVehicleWeapon"
+     ],
+     "target": "ReleaseVehicleWeapon",
+     "target_class": null,
+     "terminator_ok": true,
+     "text": "ReleaseVehicleWeapon(2, <0x4a>)",
+     "token": "EX_VirtualFunction"
+    }
+   ],
+   "class_sibling_export": 105946,
+   "command": "ReleaseQuickGadgetX",
+   "constants": [],
+   "export": 105041,
+   "names_hit": 3,
+   "path": "DrivingMode.ReleaseQuickGadgetX",
+   "refs": [],
+   "script_bytes": 10,
+   "script_sha1": "e3b4e43c932c51f46acbc8f706b9ca7a25c425c0",
+   "size": 48,
+   "unexplained_bytes": 3
+  },
+  {
+   "accepted_tokens": 4,
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "call_sites": 1,
+   "callees": [],
+   "calls": [
+    {
+     "args": [
+      {
+       "at": 5,
+       "text": "1",
+       "tok": "EX_IntOne"
+      },
+      {
+       "at": 6,
+       "candidates": [
+        0
+       ],
+       "heuristic": true,
+       "text": "<0x4a>",
+       "tok": "unnamed 0x4a",
+       "width": 0
+      }
+     ],
+     "at": 0,
+     "end": 8,
+     "err": null,
+     "heuristic_args": [
+      6
+     ],
+     "index": 64443,
+     "name_match": [
+      "DrivingMode.ReleaseVehicleWeapon"
+     ],
+     "target": "ReleaseVehicleWeapon",
+     "target_class": null,
+     "terminator_ok": true,
+     "text": "ReleaseVehicleWeapon(1, <0x4a>)",
+     "token": "EX_VirtualFunction"
+    }
+   ],
+   "class_sibling_export": 105948,
+   "command": "ReleaseQuickGadgetB",
+   "constants": [],
+   "export": 105043,
+   "names_hit": 3,
+   "path": "DrivingMode.ReleaseQuickGadgetB",
+   "refs": [],
+   "script_bytes": 9,
+   "script_sha1": "ba7da670e7af3686ebcca1c43476152b7b98995d",
+   "size": 47,
+   "unexplained_bytes": 1
+  },
+  {
+   "accepted_tokens": 3,
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "call_sites": 1,
+   "callees": [],
+   "calls": [
+    {
+     "args": [
+      {
+       "at": 5,
+       "text": "3",
+       "tok": "EX_IntConstByte",
+       "value": 3
+      },
+      {
+       "at": 7,
+       "candidates": [
+        0
+       ],
+       "heuristic": true,
+       "text": "<0x4a>",
+       "tok": "unnamed 0x4a",
+       "width": 0
+      }
+     ],
+     "at": 0,
+     "end": 9,
+     "err": null,
+     "heuristic_args": [
+      7
+     ],
+     "index": 64443,
+     "name_match": [
+      "DrivingMode.ReleaseVehicleWeapon"
+     ],
+     "target": "ReleaseVehicleWeapon",
+     "target_class": null,
+     "terminator_ok": true,
+     "text": "ReleaseVehicleWeapon(3, <0x4a>)",
+     "token": "EX_VirtualFunction"
+    }
+   ],
+   "class_sibling_export": 105944,
+   "command": "ReleaseQuickGadgetY",
+   "constants": [],
+   "export": 105045,
+   "names_hit": 3,
+   "path": "DrivingMode.ReleaseQuickGadgetY",
+   "refs": [],
+   "script_bytes": 10,
+   "script_sha1": "b378cca501e3a560e003a1242a9b73312d1bebc6",
+   "size": 48,
+   "unexplained_bytes": 3
+  }
+ ],
+ "licensee": 32995,
+ "mode_calls": [
+  {
+   "at": 145,
+   "mode": "BattleMode",
+   "path": "DrivingMode.ToggleBattleMode",
+   "values": [
+    5269
+   ]
+  },
+  {
+   "at": 188,
+   "mode": "PursuitMode",
+   "path": "DrivingMode.ToggleBattleMode",
+   "values": [
+    61474
+   ]
+  }
+ ],
+ "names": 84813,
+ "oracles": [
+  {
+   "evidence": "state `RPlayerController.DrivingMode` export 105048, class `RPlayerController` export 106013; 16/16 commands resolve to exactly one Function with outer_index == 105048",
+   "key": "O1-state-functions",
+   "ok": true
+  },
+  {
+   "evidence": "27/27 decoded exports pass all three anchors (script_size field == len+1, name index == export name, pre-name word 0x0002xxxx)",
+   "key": "O2-layout-anchors",
+   "ok": true
+  },
+  {
+   "evidence": "69 call sites: 63 argument lists end on a re-verified 0x16 (18 of those use at least one uniqueness-checked heuristic width), 6 stop at an exact gap: EjectFromVehicle@236 starts at 241, gap: token 0x19 (EX_Context) at 241 carries a nested expression, so it has no fixed width | EjectFromVehicle@276 starts at 281, gap: token 0x19 (EX_Context) at 281 carries a nested expression, so it has no fixed width | EjectFromVehicle@679 starts at 684, gap: token 0xd8 at 684: width not determinable (candidates []) | EjectFromVehicle@1238 starts at 1243, gap: token 0x2b at 1243: width not determinable (candidates [])",
+   "key": "O3-arguments",
+   "ok": true
+  },
+  {
+   "evidence": "27 functions: accepted 0x1B/0x1C count == rows emitted",
+   "key": "O4-call-completeness",
+   "ok": true
+  },
+  {
+   "evidence": "12/12 bodies match CONTROLS_CONSUMERS.json on export id, script length and sha1 prefix",
+   "key": "O5-cross-check-g3-02b",
+   "ok": true
+  },
+  {
+   "evidence": "11 literal arguments re-read from the bytes at their token offsets",
+   "key": "O6-quoted-arguments",
+   "ok": true
+  },
+  {
+   "evidence": "2 TryToChangeMode call(s); the decoded argument equals names[5269]='BattleMode' or names[61474]='PursuitMode' in each",
+   "key": "O8-mode-argument",
+   "ok": true
+  },
+  {
+   "evidence": "12 DefaultInput.ini `Bindings=` rows re-read and matched to 11 commands; 5 command(s) have no binding anywhere in the chain: ToggleBattleMode, FirePursuitMissile, IsBatmobileFireButtonHeld, TriggerBatmobileBoost, ReleaseQuickGadgetX",
+   "key": "O7-bindings",
+   "ok": true
+  }
+ ],
+ "package": "BmGame.upk",
+ "quoted_literals": [
+  {
+   "at": 8,
+   "call_at": 3,
+   "export": 104931,
+   "heuristic": true,
+   "path": "DrivingMode.EjectFromVehicle",
+   "tok": "unnamed 0x4a",
+   "value": 74
+  },
+  {
+   "at": 518,
+   "call_at": 513,
+   "export": 104931,
+   "heuristic": true,
+   "path": "DrivingMode.EjectFromVehicle",
+   "tok": "unnamed 0x23",
+   "value": 0
+  },
+  {
+   "at": 599,
+   "call_at": 594,
+   "export": 104931,
+   "heuristic": false,
+   "path": "DrivingMode.EjectFromVehicle",
+   "tok": "EX_FloatConst",
+   "value": 1.0
+  },
+  {
+   "at": 604,
+   "call_at": 594,
+   "export": 104931,
+   "heuristic": true,
+   "path": "DrivingMode.EjectFromVehicle",
+   "tok": "EX_ByteConst",
+   "value": 6
+  },
+  {
+   "at": 444,
+   "call_at": 432,
+   "export": 104971,
+   "heuristic": true,
+   "path": "DrivingMode.SelectVehicleWeapon",
+   "tok": "unnamed 0x4a",
+   "value": 74
+  },
+  {
+   "at": 150,
+   "call_at": 145,
+   "export": 105028,
+   "heuristic": true,
+   "path": "DrivingMode.ToggleBattleMode",
+   "tok": "unnamed 0x2b",
+   "value": 5269
+  },
+  {
+   "at": 193,
+   "call_at": 188,
+   "export": 105028,
+   "heuristic": true,
+   "path": "DrivingMode.ToggleBattleMode",
+   "tok": "unnamed 0x2b",
+   "value": 61474
+  },
+  {
+   "at": 5,
+   "call_at": 0,
+   "export": 105040,
+   "heuristic": false,
+   "path": "DrivingMode.QuickGadgetX",
+   "tok": "EX_IntConstByte",
+   "value": 2
+  },
+  {
+   "at": 5,
+   "call_at": 0,
+   "export": 105044,
+   "heuristic": false,
+   "path": "DrivingMode.QuickGadgetY",
+   "tok": "EX_IntConstByte",
+   "value": 3
+  },
+  {
+   "at": 5,
+   "call_at": 0,
+   "export": 105041,
+   "heuristic": false,
+   "path": "DrivingMode.ReleaseQuickGadgetX",
+   "tok": "EX_IntConstByte",
+   "value": 2
+  },
+  {
+   "at": 5,
+   "call_at": 0,
+   "export": 105045,
+   "heuristic": false,
+   "path": "DrivingMode.ReleaseQuickGadgetY",
+   "tok": "EX_IntConstByte",
+   "value": 3
+  }
+ ],
+ "siblings": [
+  {
+   "accepted_tokens": 3,
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "call_sites": 0,
+   "calls": [],
+   "command": "SelectVehicleWeapon",
+   "constants": [],
+   "export": 105073,
+   "path": "RPlayerController.SelectVehicleWeapon",
+   "refs": [],
+   "script_bytes": 6,
+   "script_sha1": "7ef570f1081bb1758a8c7642e56327033d3e4f32",
+   "size": 44,
+   "state_export": 104971,
+   "unexplained_bytes": 3
+  },
+  {
+   "accepted_tokens": 1,
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "call_sites": 0,
+   "calls": [],
+   "command": "BatmobileFireButton",
+   "constants": [],
+   "export": 105256,
+   "path": "RPlayerController.BatmobileFireButton",
+   "refs": [],
+   "script_bytes": 1,
+   "script_sha1": "a42c6cf1de3abfdea9b95f34687cbbe92b9a7383",
+   "size": 39,
+   "state_export": 105039,
+   "unexplained_bytes": 0
+  },
+  {
+   "accepted_tokens": 1,
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "call_sites": 0,
+   "calls": [],
+   "command": "SecondaryFireVehicleWeapon",
+   "constants": [],
+   "export": 105917,
+   "path": "RPlayerController.SecondaryFireVehicleWeapon",
+   "refs": [],
+   "script_bytes": 1,
+   "script_sha1": "a42c6cf1de3abfdea9b95f34687cbbe92b9a7383",
+   "size": 39,
+   "state_export": 104978,
+   "unexplained_bytes": 0
+  },
+  {
+   "accepted_tokens": 1,
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "call_sites": 0,
+   "calls": [],
+   "command": "FirePursuitMissile",
+   "constants": [],
+   "export": 105074,
+   "path": "RPlayerController.FirePursuitMissile",
+   "refs": [],
+   "script_bytes": 1,
+   "script_sha1": "a42c6cf1de3abfdea9b95f34687cbbe92b9a7383",
+   "size": 39,
+   "state_export": 104972,
+   "unexplained_bytes": 0
+  },
+  {
+   "accepted_tokens": 3,
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "call_sites": 0,
+   "calls": [],
+   "command": "IsBatmobileFireButtonHeld",
+   "constants": [],
+   "export": 105249,
+   "path": "RPlayerController.IsBatmobileFireButtonHeld",
+   "refs": [],
+   "script_bytes": 7,
+   "script_sha1": "415b00c8caab18e589af0db9b5acd668ba048fa2",
+   "size": 45,
+   "state_export": 105036,
+   "unexplained_bytes": 4
+  },
+  {
+   "accepted_tokens": 1,
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "call_sites": 0,
+   "calls": [],
+   "command": "QuickGadgetX",
+   "constants": [],
+   "export": 105945,
+   "path": "RPlayerController.QuickGadgetX",
+   "refs": [],
+   "script_bytes": 1,
+   "script_sha1": "a42c6cf1de3abfdea9b95f34687cbbe92b9a7383",
+   "size": 39,
+   "state_export": 105040,
+   "unexplained_bytes": 0
+  },
+  {
+   "accepted_tokens": 1,
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "call_sites": 0,
+   "calls": [],
+   "command": "QuickGadgetB",
+   "constants": [],
+   "export": 105947,
+   "path": "RPlayerController.QuickGadgetB",
+   "refs": [],
+   "script_bytes": 1,
+   "script_sha1": "a42c6cf1de3abfdea9b95f34687cbbe92b9a7383",
+   "size": 39,
+   "state_export": 105042,
+   "unexplained_bytes": 0
+  },
+  {
+   "accepted_tokens": 1,
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "call_sites": 0,
+   "calls": [],
+   "command": "QuickGadgetY",
+   "constants": [],
+   "export": 105943,
+   "path": "RPlayerController.QuickGadgetY",
+   "refs": [],
+   "script_bytes": 1,
+   "script_sha1": "a42c6cf1de3abfdea9b95f34687cbbe92b9a7383",
+   "size": 39,
+   "state_export": 105044,
+   "unexplained_bytes": 0
+  },
+  {
+   "accepted_tokens": 1,
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "call_sites": 0,
+   "calls": [],
+   "command": "ReleaseQuickGadgetX",
+   "constants": [],
+   "export": 105946,
+   "path": "RPlayerController.ReleaseQuickGadgetX",
+   "refs": [],
+   "script_bytes": 1,
+   "script_sha1": "a42c6cf1de3abfdea9b95f34687cbbe92b9a7383",
+   "size": 39,
+   "state_export": 105041,
+   "unexplained_bytes": 0
+  },
+  {
+   "accepted_tokens": 1,
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "call_sites": 0,
+   "calls": [],
+   "command": "ReleaseQuickGadgetB",
+   "constants": [],
+   "export": 105948,
+   "path": "RPlayerController.ReleaseQuickGadgetB",
+   "refs": [],
+   "script_bytes": 1,
+   "script_sha1": "a42c6cf1de3abfdea9b95f34687cbbe92b9a7383",
+   "size": 39,
+   "state_export": 105043,
+   "unexplained_bytes": 0
+  },
+  {
+   "accepted_tokens": 1,
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "call_sites": 0,
+   "calls": [],
+   "command": "ReleaseQuickGadgetY",
+   "constants": [],
+   "export": 105944,
+   "path": "RPlayerController.ReleaseQuickGadgetY",
+   "refs": [],
+   "script_bytes": 1,
+   "script_sha1": "a42c6cf1de3abfdea9b95f34687cbbe92b9a7383",
+   "size": 39,
+   "state_export": 105045,
+   "unexplained_bytes": 0
+  }
+ ],
+ "state": {
+  "class_export": 106013,
+  "class_path": "RPlayerController",
+  "export": 105048,
+  "name": "DrivingMode",
+  "path": "RPlayerController.DrivingMode"
+ },
+ "unknowns": [
+  {
+   "what": "control flow inside every body (jumps, branches, conditions)",
+   "why": "the repo walk is one left-to-right pass without a jump table. A call in a body proves the body contains it, not that the button's path executes it; each function's unexplained byte count is reported so the residue stays visible."
+  },
+  {
+   "what": "what an `EX_VirtualFunction` (0x1B) FName dispatches to",
+   "why": "0x1B carries a name, not an object. name_match lists every export with that name (state, class and unrelated classes); the engine's dispatch is not stored in the package."
+  },
+  {
+   "what": "the arguments inside an `EX_Context` (0x19) / `EX_Skip` (0x18) window",
+   "why": "these tokens carry a nested expression and a skip offset, so they have no fixed operand width; the argument list stops there and the offset is reported."
+  },
+  {
+   "what": "the effect of a native/imported callee",
+   "why": "a call whose operand is <= 0 (an import such as Core.*) has no body in this package; it can only be reported by name."
+  },
+  {
+   "what": "which weapon or mode an integer argument selects",
+   "why": "the literals are decoded, but the objects behind the *PrimaryWeapon / SecondaryWeapon slots and the weapon class indices are not resolved here."
+  }
+ ],
+ "version": 863
+}

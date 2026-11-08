@@ -1,0 +1,1723 @@
+{
+ "adjudication": {
+  "Core.ArmouredMode": {
+   "adjudication": [
+    277,
+    341
+   ],
+   "each_cited_offset_is_real": true,
+   "payload_idx_offsets": [
+    277,
+    341
+   ]
+  },
+  "Core.BatmobileWinch": {
+   "adjudication": [
+    286
+   ],
+   "each_cited_offset_is_real": true,
+   "payload_idx_offsets": [
+    286,
+    301
+   ]
+  },
+  "Core.FakeRoadCollisionStatic": {
+   "adjudication": [
+    253
+   ],
+   "each_cited_offset_is_real": true,
+   "payload_idx_offsets": [
+    253
+   ]
+  }
+ },
+ "card": "G3-01e-fix adjudication - independent token decode of Startup.upk export 7400",
+ "facts": {
+  "class": "Function",
+  "export": 7400,
+  "frame_rule": "payload offset = script offset + 22; a ref's int32 lies at its token + 1",
+  "name_index": 19530,
+  "name_index_matches": true,
+  "package": "Startup.upk",
+  "path": "RVehicleBatmobile.DriverLeft",
+  "payload_bytes": 406,
+  "script_bytes": 368,
+  "script_sha1": "70471c04b9526a2616e27c3c3830155112765efb",
+  "script_sha1_bytes": "70471c04b9526a2616e27c3c3830155112765efb",
+  "script_starts_at_payload": 22,
+  "size_field": 369,
+  "size_field_is_script_plus_1": true,
+  "trailer_hex": "0b000000020002004a4c000000000000"
+ },
+ "fix_missed": {
+  "54": "Core.Driver",
+  "61": "Core.InteriorLightsSwitchedOn",
+  "100": "Core.ReturnValue",
+  "179": "Core.ReturnValue",
+  "263": "Core.BatmobileWinch",
+  "351": "Core.WheelspinSmokeMomentum"
+ },
+ "fix_reconciliation": [
+  {
+   "byte_at_fix_offset": "0x2D",
+   "fix_offset": 4,
+   "ok": true,
+   "ref_path": "Core.bWasRemoteDriving",
+   "ref_token_at": 5
+  },
+  {
+   "byte_at_fix_offset": "0x00",
+   "fix_offset": 20,
+   "ok": true,
+   "ref_path": "Core.Driver",
+   "ref_token_at": 21
+  },
+  {
+   "byte_at_fix_offset": "0x00",
+   "fix_offset": 42,
+   "ok": true,
+   "ref_path": "Core.Driver",
+   "ref_token_at": 43
+  },
+  {
+   "byte_at_fix_offset": "0x19",
+   "fix_offset": 69,
+   "ok": true,
+   "ref_path": "Core.WorldInfo",
+   "ref_token_at": 70
+  },
+  {
+   "byte_at_fix_offset": "0x09",
+   "fix_offset": 75,
+   "ok": true,
+   "ref_path": "Core.GRI",
+   "ref_token_at": 76
+  },
+  {
+   "byte_at_fix_offset": "0x00",
+   "fix_offset": 81,
+   "ok": true,
+   "ref_path": "Core.GRI",
+   "ref_token_at": 82
+  },
+  {
+   "byte_at_fix_offset": "0x09",
+   "fix_offset": 87,
+   "ok": true,
+   "ref_path": "Core.FlagManager",
+   "ref_token_at": 88
+  },
+  {
+   "byte_at_fix_offset": "0x00",
+   "fix_offset": 93,
+   "ok": true,
+   "ref_path": "Core.FlagManager",
+   "ref_token_at": 94
+  },
+  {
+   "byte_at_fix_offset": "0x19",
+   "fix_offset": 148,
+   "ok": true,
+   "ref_path": "Core.WorldInfo",
+   "ref_token_at": 149
+  },
+  {
+   "byte_at_fix_offset": "0x09",
+   "fix_offset": 154,
+   "ok": true,
+   "ref_path": "Core.GRI",
+   "ref_token_at": 155
+  },
+  {
+   "byte_at_fix_offset": "0x00",
+   "fix_offset": 160,
+   "ok": true,
+   "ref_path": "Core.GRI",
+   "ref_token_at": 161
+  },
+  {
+   "byte_at_fix_offset": "0x09",
+   "fix_offset": 166,
+   "ok": true,
+   "ref_path": "Core.FlagManager",
+   "ref_token_at": 167
+  },
+  {
+   "byte_at_fix_offset": "0x00",
+   "fix_offset": 172,
+   "ok": true,
+   "ref_path": "Core.FlagManager",
+   "ref_token_at": 173
+  },
+  {
+   "byte_at_fix_offset": "0x2D",
+   "fix_offset": 222,
+   "ok": true,
+   "ref_path": "Core.IsVehicleAsleep",
+   "ref_token_at": 223
+  },
+  {
+   "byte_at_fix_offset": "0x2D",
+   "fix_offset": 229,
+   "ok": true,
+   "ref_path": "Core.FakeRoadCollisionStatic",
+   "ref_token_at": 230
+  },
+  {
+   "byte_at_fix_offset": "0x2D",
+   "fix_offset": 253,
+   "ok": true,
+   "ref_path": "Core.ArmouredMode",
+   "ref_token_at": 254
+  },
+  {
+   "byte_at_fix_offset": "0x19",
+   "fix_offset": 277,
+   "ok": true,
+   "ref_path": "Core.BatmobileWinch",
+   "ref_token_at": 278
+  },
+  {
+   "byte_at_fix_offset": "0x09",
+   "fix_offset": 283,
+   "ok": true,
+   "ref_path": "Core.WinchPullType",
+   "ref_token_at": 284
+  },
+  {
+   "byte_at_fix_offset": "0x00",
+   "fix_offset": 289,
+   "ok": true,
+   "ref_path": "Core.WinchPullType",
+   "ref_token_at": 290
+  },
+  {
+   "byte_at_fix_offset": "0x2D",
+   "fix_offset": 317,
+   "ok": true,
+   "ref_path": "Core.ArmouredMode",
+   "ref_token_at": 318
+  },
+  {
+   "byte_at_fix_offset": "0x2D",
+   "fix_offset": 327,
+   "ok": true,
+   "ref_path": "Core.IsVehicleAsleep",
+   "ref_token_at": 328
+  },
+  {
+   "byte_at_fix_offset": "0x2D",
+   "fix_offset": 343,
+   "ok": true,
+   "ref_path": "Core.bForceWheelspin",
+   "ref_token_at": 344
+  }
+ ],
+ "four_names": {
+  "Core.ArmouredMode": {
+   "class": [
+    "BoolProperty"
+   ],
+   "index": [
+    -1366
+   ],
+   "offsets": [
+    254,
+    318
+   ]
+  },
+  "Core.BatmobileWinch": {
+   "class": [
+    "ObjectProperty"
+   ],
+   "index": [
+    -5673
+   ],
+   "offsets": [
+    263,
+    278
+   ]
+  },
+  "Core.IsVehicleAsleep": {
+   "class": [
+    "BoolProperty"
+   ],
+   "index": [
+    -1498
+   ],
+   "offsets": [
+    223,
+    328
+   ]
+  },
+  "Core.WinchPullType": {
+   "class": [
+    "ByteProperty"
+   ],
+   "index": [
+    -1515
+   ],
+   "offsets": [
+    284,
+    290
+   ]
+  }
+ },
+ "labels": {
+  "decoded": "the walk, the reference offsets and the import indices - all read from the 368 script bytes of Startup.upk export 7400",
+  "derived": "payload offset = script offset + 22; the adjudication's offsets are the index-field positions of the same references",
+  "unknown": "the names of the one-byte tokens (reported as bytes), which branch a value selects, and whether one-byte prefixes carry semantics"
+ },
+ "oracles": {
+  "adjudication_payload_frame": {
+   "detail": {
+    "Core.ArmouredMode": {
+     "adjudication": [
+      277,
+      341
+     ],
+     "each_cited_offset_is_real": true,
+     "payload_idx_offsets": [
+      277,
+      341
+     ]
+    },
+    "Core.BatmobileWinch": {
+     "adjudication": [
+      286
+     ],
+     "each_cited_offset_is_real": true,
+     "payload_idx_offsets": [
+      286,
+      301
+     ]
+    },
+    "Core.FakeRoadCollisionStatic": {
+     "adjudication": [
+      253
+     ],
+     "each_cited_offset_is_real": true,
+     "payload_idx_offsets": [
+      253
+     ]
+    }
+   },
+   "ok": true
+  },
+  "all_refs_resolve": {
+   "detail": {
+    "refs": 28,
+    "unresolved": 0
+   },
+   "ok": true
+  },
+  "export_identity": {
+   "detail": {
+    "class": "Function",
+    "path": "RVehicleBatmobile.DriverLeft",
+    "payload_bytes": 406,
+    "script_bytes": 368
+   },
+   "ok": true
+  },
+  "fix_misses_six": {
+   "detail": {
+    "missed": {
+     "54": "Core.Driver",
+     "61": "Core.InteriorLightsSwitchedOn",
+     "100": "Core.ReturnValue",
+     "179": "Core.ReturnValue",
+     "263": "Core.BatmobileWinch",
+     "351": "Core.WheelspinSmokeMomentum"
+    }
+   },
+   "ok": true
+  },
+  "fix_offsets_are_prefixes": {
+   "detail": [
+    {
+     "byte_at_fix_offset": "0x2D",
+     "fix_offset": 4,
+     "ok": true,
+     "ref_path": "Core.bWasRemoteDriving",
+     "ref_token_at": 5
+    },
+    {
+     "byte_at_fix_offset": "0x00",
+     "fix_offset": 20,
+     "ok": true,
+     "ref_path": "Core.Driver",
+     "ref_token_at": 21
+    },
+    {
+     "byte_at_fix_offset": "0x00",
+     "fix_offset": 42,
+     "ok": true,
+     "ref_path": "Core.Driver",
+     "ref_token_at": 43
+    },
+    {
+     "byte_at_fix_offset": "0x19",
+     "fix_offset": 69,
+     "ok": true,
+     "ref_path": "Core.WorldInfo",
+     "ref_token_at": 70
+    },
+    {
+     "byte_at_fix_offset": "0x09",
+     "fix_offset": 75,
+     "ok": true,
+     "ref_path": "Core.GRI",
+     "ref_token_at": 76
+    },
+    {
+     "byte_at_fix_offset": "0x00",
+     "fix_offset": 81,
+     "ok": true,
+     "ref_path": "Core.GRI",
+     "ref_token_at": 82
+    },
+    {
+     "byte_at_fix_offset": "0x09",
+     "fix_offset": 87,
+     "ok": true,
+     "ref_path": "Core.FlagManager",
+     "ref_token_at": 88
+    },
+    {
+     "byte_at_fix_offset": "0x00",
+     "fix_offset": 93,
+     "ok": true,
+     "ref_path": "Core.FlagManager",
+     "ref_token_at": 94
+    },
+    {
+     "byte_at_fix_offset": "0x19",
+     "fix_offset": 148,
+     "ok": true,
+     "ref_path": "Core.WorldInfo",
+     "ref_token_at": 149
+    },
+    {
+     "byte_at_fix_offset": "0x09",
+     "fix_offset": 154,
+     "ok": true,
+     "ref_path": "Core.GRI",
+     "ref_token_at": 155
+    },
+    {
+     "byte_at_fix_offset": "0x00",
+     "fix_offset": 160,
+     "ok": true,
+     "ref_path": "Core.GRI",
+     "ref_token_at": 161
+    },
+    {
+     "byte_at_fix_offset": "0x09",
+     "fix_offset": 166,
+     "ok": true,
+     "ref_path": "Core.FlagManager",
+     "ref_token_at": 167
+    },
+    {
+     "byte_at_fix_offset": "0x00",
+     "fix_offset": 172,
+     "ok": true,
+     "ref_path": "Core.FlagManager",
+     "ref_token_at": 173
+    },
+    {
+     "byte_at_fix_offset": "0x2D",
+     "fix_offset": 222,
+     "ok": true,
+     "ref_path": "Core.IsVehicleAsleep",
+     "ref_token_at": 223
+    },
+    {
+     "byte_at_fix_offset": "0x2D",
+     "fix_offset": 229,
+     "ok": true,
+     "ref_path": "Core.FakeRoadCollisionStatic",
+     "ref_token_at": 230
+    },
+    {
+     "byte_at_fix_offset": "0x2D",
+     "fix_offset": 253,
+     "ok": true,
+     "ref_path": "Core.ArmouredMode",
+     "ref_token_at": 254
+    },
+    {
+     "byte_at_fix_offset": "0x19",
+     "fix_offset": 277,
+     "ok": true,
+     "ref_path": "Core.BatmobileWinch",
+     "ref_token_at": 278
+    },
+    {
+     "byte_at_fix_offset": "0x09",
+     "fix_offset": 283,
+     "ok": true,
+     "ref_path": "Core.WinchPullType",
+     "ref_token_at": 284
+    },
+    {
+     "byte_at_fix_offset": "0x00",
+     "fix_offset": 289,
+     "ok": true,
+     "ref_path": "Core.WinchPullType",
+     "ref_token_at": 290
+    },
+    {
+     "byte_at_fix_offset": "0x2D",
+     "fix_offset": 317,
+     "ok": true,
+     "ref_path": "Core.ArmouredMode",
+     "ref_token_at": 318
+    },
+    {
+     "byte_at_fix_offset": "0x2D",
+     "fix_offset": 327,
+     "ok": true,
+     "ref_path": "Core.IsVehicleAsleep",
+     "ref_token_at": 328
+    },
+    {
+     "byte_at_fix_offset": "0x2D",
+     "fix_offset": 343,
+     "ok": true,
+     "ref_path": "Core.bForceWheelspin",
+     "ref_token_at": 344
+    }
+   ],
+   "ok": true
+  },
+  "flag_blocks_differ_only_at_99_178": {
+   "detail": {
+    "bytes": {
+     "178": "0x20",
+     "99": "0x2C"
+    },
+    "differing_script_offsets": [
+     99
+    ],
+    "note": "everything after the differing byte is identical in both blocks, so the next token is decoded identically in both"
+   },
+   "ok": true
+  },
+  "four_names_offsets": {
+   "detail": {
+    "Core.ArmouredMode": {
+     "class": [
+      "BoolProperty"
+     ],
+     "index": [
+      -1366
+     ],
+     "offsets": [
+      254,
+      318
+     ]
+    },
+    "Core.BatmobileWinch": {
+     "class": [
+      "ObjectProperty"
+     ],
+     "index": [
+      -5673
+     ],
+     "offsets": [
+      263,
+      278
+     ]
+    },
+    "Core.IsVehicleAsleep": {
+     "class": [
+      "BoolProperty"
+     ],
+     "index": [
+      -1498
+     ],
+     "offsets": [
+      223,
+      328
+     ]
+    },
+    "Core.WinchPullType": {
+     "class": [
+      "ByteProperty"
+     ],
+     "index": [
+      -1515
+     ],
+     "offsets": [
+      284,
+      290
+     ]
+    }
+   },
+   "ok": true
+  },
+  "local_form_forced_desyncs": {
+   "detail": {
+    "decided_by_block_oracle": [
+     100,
+     179
+    ],
+    "decided_by_closure": [
+     76,
+     88,
+     155,
+     167,
+     284
+    ],
+    "sites": {
+     "76": {
+      "closed": false,
+      "consumed": 77
+     },
+     "88": {
+      "closed": false,
+      "consumed": 89
+     },
+     "100": {
+      "closed": true,
+      "consumed": 368
+     },
+     "155": {
+      "closed": false,
+      "consumed": 156
+     },
+     "167": {
+      "closed": false,
+      "consumed": 168
+     },
+     "179": {
+      "closed": true,
+      "consumed": 368
+     },
+     "284": {
+      "closed": false,
+      "consumed": 285
+     }
+    }
+   },
+   "ok": true
+  },
+  "script_anchors": {
+   "detail": {
+    "name_index": 19530,
+    "size_field": 369
+   },
+   "ok": true
+  },
+  "selector_calls": {
+   "detail": {
+    "calls": [
+     301,
+     334
+    ],
+    "expected": {
+     "301": 2,
+     "334": 1
+    }
+   },
+   "ok": true
+  },
+  "walk_closes": {
+   "detail": {
+    "closed": true,
+    "consumed": 368,
+    "last": {
+     "at": 367,
+     "kind": "Return",
+     "size": 1
+    },
+    "script_bytes": 368,
+    "tokens": 135,
+    "unexplained": 0
+   },
+   "ok": true
+  }
+ },
+ "refs": [
+  {
+   "at": 5,
+   "form": "0x01",
+   "index": -1382,
+   "kind": "ref",
+   "object_class": "BoolProperty",
+   "path": "Core.bWasRemoteDriving",
+   "size": 5
+  },
+  {
+   "at": 21,
+   "form": "0x01",
+   "index": -5746,
+   "kind": "ref",
+   "object_class": "ObjectProperty",
+   "path": "Core.Driver",
+   "size": 5
+  },
+  {
+   "at": 43,
+   "form": "0x01",
+   "index": -5746,
+   "kind": "ref",
+   "object_class": "ObjectProperty",
+   "path": "Core.Driver",
+   "size": 5
+  },
+  {
+   "at": 54,
+   "form": "0x01",
+   "index": -5746,
+   "kind": "ref",
+   "object_class": "ObjectProperty",
+   "path": "Core.Driver",
+   "size": 5
+  },
+  {
+   "at": 61,
+   "form": "0x01",
+   "index": -1581,
+   "kind": "ref",
+   "object_class": "ByteProperty",
+   "path": "Core.InteriorLightsSwitchedOn",
+   "size": 5
+  },
+  {
+   "at": 70,
+   "form": "0x01",
+   "index": -5702,
+   "kind": "ref",
+   "object_class": "ObjectProperty",
+   "path": "Core.WorldInfo",
+   "size": 5
+  },
+  {
+   "at": 76,
+   "form": "0x00",
+   "index": -5749,
+   "kind": "ref",
+   "object_class": "ObjectProperty",
+   "path": "Core.GRI",
+   "size": 5
+  },
+  {
+   "at": 82,
+   "form": "0x01",
+   "index": -5749,
+   "kind": "ref",
+   "object_class": "ObjectProperty",
+   "path": "Core.GRI",
+   "size": 5
+  },
+  {
+   "at": 88,
+   "form": "0x00",
+   "index": -5377,
+   "kind": "ref",
+   "object_class": "ObjectProperty",
+   "path": "Core.FlagManager",
+   "size": 5
+  },
+  {
+   "at": 94,
+   "form": "0x01",
+   "index": -5377,
+   "kind": "ref",
+   "object_class": "ObjectProperty",
+   "path": "Core.FlagManager",
+   "size": 5
+  },
+  {
+   "at": 100,
+   "form": "0x00",
+   "index": -995,
+   "kind": "ref",
+   "object_class": "BoolProperty",
+   "path": "Core.ReturnValue",
+   "size": 5
+  },
+  {
+   "at": 149,
+   "form": "0x01",
+   "index": -5702,
+   "kind": "ref",
+   "object_class": "ObjectProperty",
+   "path": "Core.WorldInfo",
+   "size": 5
+  },
+  {
+   "at": 155,
+   "form": "0x00",
+   "index": -5749,
+   "kind": "ref",
+   "object_class": "ObjectProperty",
+   "path": "Core.GRI",
+   "size": 5
+  },
+  {
+   "at": 161,
+   "form": "0x01",
+   "index": -5749,
+   "kind": "ref",
+   "object_class": "ObjectProperty",
+   "path": "Core.GRI",
+   "size": 5
+  },
+  {
+   "at": 167,
+   "form": "0x00",
+   "index": -5377,
+   "kind": "ref",
+   "object_class": "ObjectProperty",
+   "path": "Core.FlagManager",
+   "size": 5
+  },
+  {
+   "at": 173,
+   "form": "0x01",
+   "index": -5377,
+   "kind": "ref",
+   "object_class": "ObjectProperty",
+   "path": "Core.FlagManager",
+   "size": 5
+  },
+  {
+   "at": 179,
+   "form": "0x00",
+   "index": -995,
+   "kind": "ref",
+   "object_class": "BoolProperty",
+   "path": "Core.ReturnValue",
+   "size": 5
+  },
+  {
+   "at": 223,
+   "form": "0x01",
+   "index": -1498,
+   "kind": "ref",
+   "object_class": "BoolProperty",
+   "path": "Core.IsVehicleAsleep",
+   "size": 5
+  },
+  {
+   "at": 230,
+   "form": "0x01",
+   "index": -1361,
+   "kind": "ref",
+   "object_class": "BoolProperty",
+   "path": "Core.FakeRoadCollisionStatic",
+   "size": 5
+  },
+  {
+   "at": 254,
+   "form": "0x01",
+   "index": -1366,
+   "kind": "ref",
+   "object_class": "BoolProperty",
+   "path": "Core.ArmouredMode",
+   "size": 5
+  },
+  {
+   "at": 263,
+   "form": "0x01",
+   "index": -5673,
+   "kind": "ref",
+   "object_class": "ObjectProperty",
+   "path": "Core.BatmobileWinch",
+   "size": 5
+  },
+  {
+   "at": 278,
+   "form": "0x01",
+   "index": -5673,
+   "kind": "ref",
+   "object_class": "ObjectProperty",
+   "path": "Core.BatmobileWinch",
+   "size": 5
+  },
+  {
+   "at": 284,
+   "form": "0x00",
+   "index": -1515,
+   "kind": "ref",
+   "object_class": "ByteProperty",
+   "path": "Core.WinchPullType",
+   "size": 5
+  },
+  {
+   "at": 290,
+   "form": "0x01",
+   "index": -1515,
+   "kind": "ref",
+   "object_class": "ByteProperty",
+   "path": "Core.WinchPullType",
+   "size": 5
+  },
+  {
+   "at": 318,
+   "form": "0x01",
+   "index": -1366,
+   "kind": "ref",
+   "object_class": "BoolProperty",
+   "path": "Core.ArmouredMode",
+   "size": 5
+  },
+  {
+   "at": 328,
+   "form": "0x01",
+   "index": -1498,
+   "kind": "ref",
+   "object_class": "BoolProperty",
+   "path": "Core.IsVehicleAsleep",
+   "size": 5
+  },
+  {
+   "at": 344,
+   "form": "0x01",
+   "index": -1494,
+   "kind": "ref",
+   "object_class": "BoolProperty",
+   "path": "Core.bForceWheelspin",
+   "size": 5
+  },
+  {
+   "at": 351,
+   "form": "0x01",
+   "index": -3046,
+   "kind": "ref",
+   "object_class": "FloatProperty",
+   "path": "Core.WheelspinSmokeMomentum",
+   "size": 5
+  }
+ ],
+ "schema": 1,
+ "tokens": [
+  {
+   "at": 0,
+   "kind": "JumpIfNot",
+   "size": 3,
+   "word": 49
+  },
+  {
+   "at": 3,
+   "kind": "0x81",
+   "size": 1
+  },
+  {
+   "at": 4,
+   "kind": "0x2D",
+   "size": 1
+  },
+  {
+   "at": 5,
+   "form": "0x01",
+   "index": -1382,
+   "kind": "ref",
+   "object_class": "BoolProperty",
+   "path": "Core.bWasRemoteDriving",
+   "size": 5
+  },
+  {
+   "at": 10,
+   "kind": "EndFunctionParms",
+   "size": 1
+  },
+  {
+   "at": 11,
+   "index": -4563,
+   "kind": "FinalFunction",
+   "name": "Core.TriggerEventClass",
+   "size": 5
+  },
+  {
+   "at": 16,
+   "kind": "0x20",
+   "size": 1
+  },
+  {
+   "at": 17,
+   "kind": "0xF8",
+   "size": 1
+  },
+  {
+   "at": 18,
+   "kind": "Skip",
+   "size": 3,
+   "word": 0
+  },
+  {
+   "at": 21,
+   "form": "0x01",
+   "index": -5746,
+   "kind": "ref",
+   "object_class": "ObjectProperty",
+   "path": "Core.Driver",
+   "size": 5
+  },
+  {
+   "at": 26,
+   "kind": "IntOne",
+   "size": 1
+  },
+  {
+   "at": 27,
+   "kind": "0x4A",
+   "size": 1
+  },
+  {
+   "at": 28,
+   "kind": "0x4A",
+   "size": 1
+  },
+  {
+   "at": 29,
+   "kind": "EndFunctionParms",
+   "size": 1
+  },
+  {
+   "at": 30,
+   "kind": "Jump",
+   "size": 3,
+   "word": 81
+  },
+  {
+   "at": 33,
+   "index": -4563,
+   "kind": "FinalFunction",
+   "name": "Core.TriggerEventClass",
+   "size": 5
+  },
+  {
+   "at": 38,
+   "kind": "0x20",
+   "size": 1
+  },
+  {
+   "at": 39,
+   "kind": "0xF8",
+   "size": 1
+  },
+  {
+   "at": 40,
+   "kind": "Skip",
+   "size": 3,
+   "word": 0
+  },
+  {
+   "at": 43,
+   "form": "0x01",
+   "index": -5746,
+   "kind": "ref",
+   "object_class": "ObjectProperty",
+   "path": "Core.Driver",
+   "size": 5
+  },
+  {
+   "at": 48,
+   "kind": "0x2C",
+   "size": 1
+  },
+  {
+   "at": 49,
+   "kind": "0x03",
+   "size": 1
+  },
+  {
+   "at": 50,
+   "kind": "0x4A",
+   "size": 1
+  },
+  {
+   "at": 51,
+   "kind": "0x4A",
+   "size": 1
+  },
+  {
+   "at": 52,
+   "kind": "EndFunctionParms",
+   "size": 1
+  },
+  {
+   "at": 53,
+   "kind": "0x0F",
+   "size": 1
+  },
+  {
+   "at": 54,
+   "form": "0x01",
+   "index": -5746,
+   "kind": "ref",
+   "object_class": "ObjectProperty",
+   "path": "Core.Driver",
+   "size": 5
+  },
+  {
+   "at": 59,
+   "kind": "0x2A",
+   "size": 1
+  },
+  {
+   "at": 60,
+   "kind": "0x8C",
+   "size": 1
+  },
+  {
+   "at": 61,
+   "form": "0x01",
+   "index": -1581,
+   "kind": "ref",
+   "object_class": "ByteProperty",
+   "path": "Core.InteriorLightsSwitchedOn",
+   "size": 5
+  },
+  {
+   "at": 66,
+   "kind": "EndFunctionParms",
+   "size": 1
+  },
+  {
+   "at": 67,
+   "kind": "Context",
+   "size": 1
+  },
+  {
+   "at": 68,
+   "kind": "Context",
+   "size": 1
+  },
+  {
+   "at": 69,
+   "kind": "Context",
+   "size": 1
+  },
+  {
+   "at": 70,
+   "form": "0x01",
+   "index": -5702,
+   "kind": "ref",
+   "object_class": "ObjectProperty",
+   "path": "Core.WorldInfo",
+   "size": 5
+  },
+  {
+   "at": 75,
+   "kind": "0x09",
+   "size": 1
+  },
+  {
+   "at": 76,
+   "form": "0x00",
+   "index": -5749,
+   "kind": "ref",
+   "object_class": "ObjectProperty",
+   "path": "Core.GRI",
+   "size": 5
+  },
+  {
+   "at": 81,
+   "kind": "0x00",
+   "size": 1
+  },
+  {
+   "at": 82,
+   "form": "0x01",
+   "index": -5749,
+   "kind": "ref",
+   "object_class": "ObjectProperty",
+   "path": "Core.GRI",
+   "size": 5
+  },
+  {
+   "at": 87,
+   "kind": "0x09",
+   "size": 1
+  },
+  {
+   "at": 88,
+   "form": "0x00",
+   "index": -5377,
+   "kind": "ref",
+   "object_class": "ObjectProperty",
+   "path": "Core.FlagManager",
+   "size": 5
+  },
+  {
+   "at": 93,
+   "kind": "0x00",
+   "size": 1
+  },
+  {
+   "at": 94,
+   "form": "0x01",
+   "index": -5377,
+   "kind": "ref",
+   "object_class": "ObjectProperty",
+   "path": "Core.FlagManager",
+   "size": 5
+  },
+  {
+   "at": 99,
+   "kind": "0x2C",
+   "size": 1
+  },
+  {
+   "at": 100,
+   "form": "0x00",
+   "index": -995,
+   "kind": "ref",
+   "object_class": "BoolProperty",
+   "path": "Core.ReturnValue",
+   "size": 5
+  },
+  {
+   "at": 105,
+   "kind": "0x00",
+   "size": 1
+  },
+  {
+   "at": 106,
+   "index": -3470,
+   "kind": "FinalFunction",
+   "name": "Core.SetGlobalFlag",
+   "size": 5
+  },
+  {
+   "at": 111,
+   "kind": "StringConst",
+   "size": 33,
+   "value": "Batman_Remote_Control_Batmobile"
+  },
+  {
+   "at": 144,
+   "kind": "False",
+   "size": 1
+  },
+  {
+   "at": 145,
+   "kind": "EndFunctionParms",
+   "size": 1
+  },
+  {
+   "at": 146,
+   "kind": "Context",
+   "size": 1
+  },
+  {
+   "at": 147,
+   "kind": "Context",
+   "size": 1
+  },
+  {
+   "at": 148,
+   "kind": "Context",
+   "size": 1
+  },
+  {
+   "at": 149,
+   "form": "0x01",
+   "index": -5702,
+   "kind": "ref",
+   "object_class": "ObjectProperty",
+   "path": "Core.WorldInfo",
+   "size": 5
+  },
+  {
+   "at": 154,
+   "kind": "0x09",
+   "size": 1
+  },
+  {
+   "at": 155,
+   "form": "0x00",
+   "index": -5749,
+   "kind": "ref",
+   "object_class": "ObjectProperty",
+   "path": "Core.GRI",
+   "size": 5
+  },
+  {
+   "at": 160,
+   "kind": "0x00",
+   "size": 1
+  },
+  {
+   "at": 161,
+   "form": "0x01",
+   "index": -5749,
+   "kind": "ref",
+   "object_class": "ObjectProperty",
+   "path": "Core.GRI",
+   "size": 5
+  },
+  {
+   "at": 166,
+   "kind": "0x09",
+   "size": 1
+  },
+  {
+   "at": 167,
+   "form": "0x00",
+   "index": -5377,
+   "kind": "ref",
+   "object_class": "ObjectProperty",
+   "path": "Core.FlagManager",
+   "size": 5
+  },
+  {
+   "at": 172,
+   "kind": "0x00",
+   "size": 1
+  },
+  {
+   "at": 173,
+   "form": "0x01",
+   "index": -5377,
+   "kind": "ref",
+   "object_class": "ObjectProperty",
+   "path": "Core.FlagManager",
+   "size": 5
+  },
+  {
+   "at": 178,
+   "kind": "0x20",
+   "size": 1
+  },
+  {
+   "at": 179,
+   "form": "0x00",
+   "index": -995,
+   "kind": "ref",
+   "object_class": "BoolProperty",
+   "path": "Core.ReturnValue",
+   "size": 5
+  },
+  {
+   "at": 184,
+   "kind": "0x00",
+   "size": 1
+  },
+  {
+   "at": 185,
+   "index": -3470,
+   "kind": "FinalFunction",
+   "name": "Core.SetGlobalFlag",
+   "size": 5
+  },
+  {
+   "at": 190,
+   "kind": "StringConst",
+   "size": 21,
+   "value": "Batman_In_Batmobile"
+  },
+  {
+   "at": 211,
+   "kind": "False",
+   "size": 1
+  },
+  {
+   "at": 212,
+   "kind": "EndFunctionParms",
+   "size": 1
+  },
+  {
+   "at": 213,
+   "index": 56660,
+   "kind": "VirtualFunction",
+   "name": "RemoveBatmobileBindsAndSetBatmanBinds",
+   "size": 5
+  },
+  {
+   "at": 218,
+   "kind": "EndFunctionParms",
+   "size": 1
+  },
+  {
+   "at": 219,
+   "kind": "JumpIfNot",
+   "size": 3,
+   "word": 352
+  },
+  {
+   "at": 222,
+   "kind": "0x2D",
+   "size": 1
+  },
+  {
+   "at": 223,
+   "form": "0x01",
+   "index": -1498,
+   "kind": "ref",
+   "object_class": "BoolProperty",
+   "path": "Core.IsVehicleAsleep",
+   "size": 5
+  },
+  {
+   "at": 228,
+   "kind": "0x14",
+   "size": 1
+  },
+  {
+   "at": 229,
+   "kind": "0x2D",
+   "size": 1
+  },
+  {
+   "at": 230,
+   "form": "0x01",
+   "index": -1361,
+   "kind": "ref",
+   "object_class": "BoolProperty",
+   "path": "Core.FakeRoadCollisionStatic",
+   "size": 5
+  },
+  {
+   "at": 235,
+   "kind": "True",
+   "size": 1
+  },
+  {
+   "at": 236,
+   "index": -4355,
+   "kind": "FinalFunction",
+   "name": "Core.UpdateFakeRoadCollision",
+   "size": 5
+  },
+  {
+   "at": 241,
+   "kind": "True",
+   "size": 1
+  },
+  {
+   "at": 242,
+   "kind": "FloatConst",
+   "size": 5,
+   "value": 0.0
+  },
+  {
+   "at": 247,
+   "kind": "EndFunctionParms",
+   "size": 1
+  },
+  {
+   "at": 248,
+   "kind": "JumpIfNot",
+   "size": 3,
+   "word": 436
+  },
+  {
+   "at": 251,
+   "kind": "0x82",
+   "size": 1
+  },
+  {
+   "at": 252,
+   "kind": "0x82",
+   "size": 1
+  },
+  {
+   "at": 253,
+   "kind": "0x2D",
+   "size": 1
+  },
+  {
+   "at": 254,
+   "form": "0x01",
+   "index": -1366,
+   "kind": "ref",
+   "object_class": "BoolProperty",
+   "path": "Core.ArmouredMode",
+   "size": 5
+  },
+  {
+   "at": 259,
+   "kind": "Skip",
+   "size": 3,
+   "word": 13
+  },
+  {
+   "at": 262,
+   "kind": "0x77",
+   "size": 1
+  },
+  {
+   "at": 263,
+   "form": "0x01",
+   "index": -5673,
+   "kind": "ref",
+   "object_class": "ObjectProperty",
+   "path": "Core.BatmobileWinch",
+   "size": 5
+  },
+  {
+   "at": 268,
+   "kind": "0x2A",
+   "size": 1
+  },
+  {
+   "at": 269,
+   "kind": "EndFunctionParms",
+   "size": 1
+  },
+  {
+   "at": 270,
+   "kind": "EndFunctionParms",
+   "size": 1
+  },
+  {
+   "at": 271,
+   "kind": "Skip",
+   "size": 3,
+   "word": 39
+  },
+  {
+   "at": 274,
+   "kind": "0x9B",
+   "size": 1
+  },
+  {
+   "at": 275,
+   "kind": "0x38",
+   "size": 1
+  },
+  {
+   "at": 276,
+   "kind": "0x3A",
+   "size": 1
+  },
+  {
+   "at": 277,
+   "kind": "Context",
+   "size": 1
+  },
+  {
+   "at": 278,
+   "form": "0x01",
+   "index": -5673,
+   "kind": "ref",
+   "object_class": "ObjectProperty",
+   "path": "Core.BatmobileWinch",
+   "size": 5
+  },
+  {
+   "at": 283,
+   "kind": "0x09",
+   "size": 1
+  },
+  {
+   "at": 284,
+   "form": "0x00",
+   "index": -1515,
+   "kind": "ref",
+   "object_class": "ByteProperty",
+   "path": "Core.WinchPullType",
+   "size": 5
+  },
+  {
+   "at": 289,
+   "kind": "0x00",
+   "size": 1
+  },
+  {
+   "at": 290,
+   "form": "0x01",
+   "index": -1515,
+   "kind": "ref",
+   "object_class": "ByteProperty",
+   "path": "Core.WinchPullType",
+   "size": 5
+  },
+  {
+   "at": 295,
+   "kind": "0x38",
+   "size": 1
+  },
+  {
+   "at": 296,
+   "kind": "0x3A",
+   "size": 1
+  },
+  {
+   "at": 297,
+   "kind": "ByteConst",
+   "size": 2,
+   "value": 0
+  },
+  {
+   "at": 299,
+   "kind": "EndFunctionParms",
+   "size": 1
+  },
+  {
+   "at": 300,
+   "kind": "EndFunctionParms",
+   "size": 1
+  },
+  {
+   "at": 301,
+   "index": 58517,
+   "kind": "VirtualFunction",
+   "name": "SetBatmanVsBatmobileCollisionMode",
+   "size": 5
+  },
+  {
+   "at": 306,
+   "kind": "ByteConst",
+   "size": 2,
+   "value": 2
+  },
+  {
+   "at": 308,
+   "kind": "EndFunctionParms",
+   "size": 1
+  },
+  {
+   "at": 309,
+   "kind": "Jump",
+   "size": 3,
+   "word": 474
+  },
+  {
+   "at": 312,
+   "kind": "JumpIfNot",
+   "size": 3,
+   "word": 474
+  },
+  {
+   "at": 315,
+   "kind": "0x82",
+   "size": 1
+  },
+  {
+   "at": 316,
+   "kind": "0x81",
+   "size": 1
+  },
+  {
+   "at": 317,
+   "kind": "0x2D",
+   "size": 1
+  },
+  {
+   "at": 318,
+   "form": "0x01",
+   "index": -1366,
+   "kind": "ref",
+   "object_class": "BoolProperty",
+   "path": "Core.ArmouredMode",
+   "size": 5
+  },
+  {
+   "at": 323,
+   "kind": "EndFunctionParms",
+   "size": 1
+  },
+  {
+   "at": 324,
+   "kind": "Skip",
+   "size": 3,
+   "word": 11
+  },
+  {
+   "at": 327,
+   "kind": "0x2D",
+   "size": 1
+  },
+  {
+   "at": 328,
+   "form": "0x01",
+   "index": -1498,
+   "kind": "ref",
+   "object_class": "BoolProperty",
+   "path": "Core.IsVehicleAsleep",
+   "size": 5
+  },
+  {
+   "at": 333,
+   "kind": "EndFunctionParms",
+   "size": 1
+  },
+  {
+   "at": 334,
+   "index": 58517,
+   "kind": "VirtualFunction",
+   "name": "SetBatmanVsBatmobileCollisionMode",
+   "size": 5
+  },
+  {
+   "at": 339,
+   "kind": "ByteConst",
+   "size": 2,
+   "value": 1
+  },
+  {
+   "at": 341,
+   "kind": "EndFunctionParms",
+   "size": 1
+  },
+  {
+   "at": 342,
+   "kind": "0x14",
+   "size": 1
+  },
+  {
+   "at": 343,
+   "kind": "0x2D",
+   "size": 1
+  },
+  {
+   "at": 344,
+   "form": "0x01",
+   "index": -1494,
+   "kind": "ref",
+   "object_class": "BoolProperty",
+   "path": "Core.bForceWheelspin",
+   "size": 5
+  },
+  {
+   "at": 349,
+   "kind": "False",
+   "size": 1
+  },
+  {
+   "at": 350,
+   "kind": "0x0F",
+   "size": 1
+  },
+  {
+   "at": 351,
+   "form": "0x01",
+   "index": -3046,
+   "kind": "ref",
+   "object_class": "FloatProperty",
+   "path": "Core.WheelspinSmokeMomentum",
+   "size": 5
+  },
+  {
+   "at": 356,
+   "kind": "FloatConst",
+   "size": 5,
+   "value": 0.0
+  },
+  {
+   "at": 361,
+   "index": -4372,
+   "kind": "FinalFunction",
+   "name": "Core.DriverLeft",
+   "size": 5
+  },
+  {
+   "at": 366,
+   "kind": "EndFunctionParms",
+   "size": 1
+  },
+  {
+   "at": 367,
+   "kind": "Return",
+   "size": 1
+  }
+ ]
+}

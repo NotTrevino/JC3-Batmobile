@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/turret-limits-check.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-06
+Pick the turret and cannon rows (P-01, P-02 style rows in Working/Translation/T8_PARTS.md and Research/JC3Grab/TURRET.md). Compare the ranges the rows give for yaw and pitch with what the built parts module in Builds/bm-RC2 stores (read with Tools/scripts/jc3adf.py dump --paths) and with the BmAK values in Research/BatmobileGrab (ANIMATIONS.md moved_bones ranges). Tabulate row value, built value, BmAK value and flag differences larger than 0.5 degrees. Output Builds/bm-RC2/verify/turret_ranges.md and Tools/scripts/v_turret_ranges.py --check. Read-only on the build; report at the DONE path.

@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/cargo-bay-attach-rule.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-08
+The helicopter airlift question (row T-WLD17) is blocked on data, because no helicopter carries a CVehicleCargoBay, and the rows T-WLD15 and T-WLD17 in Working/Translation/T_ROWS.jsonl say that the native attach rule is UNKNOWN. Read tmp/freebuff/reports/winch-and-tether.md first, since it lists the cargo bay members and the rico tether. The open item is what happens when a bay's enable event fires: all 12 shipped bays carry empty enable and disable event lists, so look for the consumer of that event elsewhere, through Research/JC3Grab/INDEX.jsonl hits for the bay's name_hash and enable member. Report whether the consumer checks mass, class or attach state, and quote each hit path with its line number. Conclude with what a helicopter would need wired to reach the same attach, or with UNKNOWN and the file that would settle it.

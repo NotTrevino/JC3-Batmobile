@@ -1,0 +1,12 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-live-vehicle-readout.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-dll-scaffold-logging-only.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/jc3-vehicle-rtti-static-map.md
+The runtime oracle (ROADMAP RB-7), built on the logging scaffold in Tools/hook/. Inputs:
+- the vtables decoded in Working/RTTI/vehicle_rtti.json: CCar 0x1424E8A28, CLandVehicle 0x1424E5778, CVehicle 0x1424E30B8, hknpVehicleInstance 0x14256AC98, CDamageable 0x1423DFB78;
+- the player manager path from jc3-console-thingy.
+
+Write the read-only code that finds the vehicle the player sits in and logs once a second: model or entity name/hash, world position, rotation, linear speed, health and max health if a field is identified. Every offset must cite its evidence: a source line, an RTTI row, or "to confirm live" with its 5-minute check. No writes to game memory.
+
+Also write a JSON-lines output (%LOCALAPPDATA%/jc3-batmobile-hook/telemetry.jsonl) that the pilot cards and QA scripts can read instead of screenshots. Stage it as Builds/hook-0002/ with a receipt. Report the offsets table, and which offsets need the first live session to confirm. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

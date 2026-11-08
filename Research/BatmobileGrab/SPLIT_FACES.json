@@ -1,0 +1,4655 @@
+{
+ "schema": 1,
+ "generator": "review_splits.py",
+ "verdict": "1701 LOD0 split faces in 85 bone sets (73 pairs, 12 triples) and 99 bone-set × slot groups; 230 cross-part seams. 1670 faces resolve by summed weight; 31 are three-bone ties at slots 7 (19), 17 (12), all with a 2:1 or 3:0 part-level vertex majority (weapons 31).",
+ "inputs": {
+  "bones_json": "E:\\Modding\\JC3-Batmobile\\Research\\BatmobileGrab\\BONES.json",
+  "bones_sha256": "f807aea510db3d3d989c17ccde4166ffe6d9132bcad77e5345828ac1cbc369c9",
+  "mesh": "E:\\Modding\\_gamedata\\BmAKgrab\\meshes\\Playable_Batmobile_SF\\Playable_Batmobile_SF\\SkeletalMesh3\\Batmobile_V2.pskx",
+  "mesh_sha256": "c80752e2acaaaee6e5b98e12e2144c65368d44521dd22ecb8e3adcc408bae844",
+  "split_npy": "E:\\Modding\\_gamedata\\BmAKgrab\\bones\\_split.npy",
+  "split_npy_sha256": "ad59a1c32d72ae7f607cf0e79c52a2a4825788b6e6bf4f19c19b6b5fcc515f08"
+ },
+ "convention": {
+  "split_face": "the three points do not share one unique >= 0.5 owner",
+  "weight": "sum of the point's bone weight over the face's three points",
+  "margin": "best candidate weight minus second candidate weight",
+  "tie": "margin < 1e-6 (all observed ties are exactly 0)",
+  "part_hint": "body, wheel_f_l/r/l/r, weapons, jet, aero_flaps from the bone name",
+  "bone_set": "sorted distinct owner bone names; 2 or 3 per split face",
+  "assignment": "larger summed weight; a tie uses the part with more of the three vertices"
+ },
+ "counts": {
+  "split_faces": 1701,
+  "bone_sets": 85,
+  "bone_pairs": 73,
+  "bone_triples": 12,
+  "bone_set_slot_groups": 99,
+  "assigned_by_weight": 1670,
+  "ties": 31,
+  "ties_by_slot": {
+   "7": 19,
+   "17": 12
+  },
+  "ties_by_recommended_part": {
+   "weapons": 31
+  },
+  "cross_part_faces": 230,
+  "winner_bones": 64
+ },
+ "by_slot": [
+  {
+   "slot": 2,
+   "slot_name": "Batmobile_V3_Mainbody_NEW_MIC",
+   "faces": 58,
+   "bone_sets": 5,
+   "ties": 0,
+   "cross_part": 24,
+   "top_set": [
+    "CockPit_Mesh",
+    "Batmobile_Nose_Mesh"
+   ],
+   "top_set_faces": 16
+  },
+  {
+   "slot": 3,
+   "slot_name": "Batmobile_V3_WheelArchs_NEW_MIC",
+   "faces": 103,
+   "bone_sets": 7,
+   "ties": 0,
+   "cross_part": 35,
+   "top_set": [
+    "SUSP1_Wheel_Rear_Right",
+    "SUSP2_Wheel_Rear_Right"
+   ],
+   "top_set_faces": 49
+  },
+  {
+   "slot": 4,
+   "slot_name": "Batmobile_V3_Undercarriage_NEW_MIC",
+   "faces": 349,
+   "bone_sets": 20,
+   "ties": 0,
+   "cross_part": 20,
+   "top_set": [
+    "Batmobile_Rig_Jet_Nozzle_001",
+    "Batmobile_Rig_Jet_Nozzle_002"
+   ],
+   "top_set_faces": 19
+  },
+  {
+   "slot": 5,
+   "slot_name": "Batmobile_V3_Emissive",
+   "faces": 36,
+   "bone_sets": 1,
+   "ties": 0,
+   "cross_part": 0,
+   "top_set": [
+    "Wheel_Frnt_Left_Disc",
+    "Damper_Left_Front_02"
+   ],
+   "top_set_faces": 36
+  },
+  {
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 856,
+   "bone_sets": 51,
+   "ties": 19,
+   "cross_part": 136,
+   "top_set": [
+    "Batmobile_Rig_Weapons_Missiles_L_Mid",
+    "Batmobile_Rig_Weapons_Missiles_L_02"
+   ],
+   "top_set_faces": 57
+  },
+  {
+   "slot": 17,
+   "slot_name": "BatmobileV3_Upgrades_MAT_INST",
+   "faces": 299,
+   "bone_sets": 15,
+   "ties": 12,
+   "cross_part": 15,
+   "top_set": [
+    "Batmobile_Rig_Weapons_Missiles_L_Mid",
+    "Batmobile_Rig_Weapons_Missiles_L_02"
+   ],
+   "top_set_faces": 32
+  }
+ ],
+ "by_part_pair": [
+  {
+   "part_pair": "weapons",
+   "faces": 808,
+   "bone_sets": 30,
+   "ties": 15
+  },
+  {
+   "part_pair": "jet",
+   "faces": 329,
+   "bone_sets": 18,
+   "ties": 0
+  },
+  {
+   "part_pair": "aero_flaps",
+   "faces": 132,
+   "bone_sets": 8,
+   "ties": 0
+  },
+  {
+   "part_pair": "body|weapons",
+   "faces": 111,
+   "bone_sets": 10,
+   "ties": 16
+  },
+  {
+   "part_pair": "aero_flaps|body",
+   "faces": 96,
+   "bone_sets": 8,
+   "ties": 0
+  },
+  {
+   "part_pair": "wheel_f_l",
+   "faces": 74,
+   "bone_sets": 2,
+   "ties": 0
+  },
+  {
+   "part_pair": "wheel_r_r",
+   "faces": 49,
+   "bone_sets": 1,
+   "ties": 0
+  },
+  {
+   "part_pair": "body",
+   "faces": 34,
+   "bone_sets": 3,
+   "ties": 0
+  },
+  {
+   "part_pair": "wheel_f_r",
+   "faces": 26,
+   "bone_sets": 1,
+   "ties": 0
+  },
+  {
+   "part_pair": "wheel_r_l",
+   "faces": 19,
+   "bone_sets": 1,
+   "ties": 0
+  },
+  {
+   "part_pair": "body|wheel_r_r",
+   "faces": 12,
+   "bone_sets": 2,
+   "ties": 0
+  },
+  {
+   "part_pair": "body|wheel_r_l",
+   "faces": 11,
+   "bone_sets": 1,
+   "ties": 0
+  }
+ ],
+ "by_bone_set": [
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_L_Mid",
+    "Batmobile_Rig_Weapons_Missiles_L_02"
+   ],
+   "bone_count": 2,
+   "faces": 89,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 57
+    },
+    {
+     "slot": 17,
+     "faces": 32
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_L_02": 42,
+    "Batmobile_Rig_Weapons_Missiles_L_Mid": 47
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_Mid",
+    "Batmobile_Rig_Weapons_Missiles_R_01"
+   ],
+   "bone_count": 2,
+   "faces": 89,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 57
+    },
+    {
+     "slot": 17,
+     "faces": 32
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_R_01": 42,
+    "Batmobile_Rig_Weapons_Missiles_R_Mid": 47
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_L_Mid",
+    "Batmobile_Rig_Weapons_Missiles_L_01"
+   ],
+   "bone_count": 2,
+   "faces": 85,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 53
+    },
+    {
+     "slot": 17,
+     "faces": 32
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_L_01": 41,
+    "Batmobile_Rig_Weapons_Missiles_L_Mid": 44
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_L_Mid",
+    "Batmobile_Rig_Weapons_Missiles_L_03"
+   ],
+   "bone_count": 2,
+   "faces": 85,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 53
+    },
+    {
+     "slot": 17,
+     "faces": 32
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_L_03": 40,
+    "Batmobile_Rig_Weapons_Missiles_L_Mid": 45
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_L_Mid",
+    "Batmobile_Rig_Weapons_Missiles_L_04"
+   ],
+   "bone_count": 2,
+   "faces": 85,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 53
+    },
+    {
+     "slot": 17,
+     "faces": 32
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_L_04": 40,
+    "Batmobile_Rig_Weapons_Missiles_L_Mid": 45
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_Mid",
+    "Batmobile_Rig_Weapons_Missiles_R_02"
+   ],
+   "bone_count": 2,
+   "faces": 85,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 53
+    },
+    {
+     "slot": 17,
+     "faces": 32
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_R_02": 40,
+    "Batmobile_Rig_Weapons_Missiles_R_Mid": 45
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Turret_Top",
+    "Batmobile_Rig_Weapons_Turret_Top_Slide"
+   ],
+   "bone_count": 2,
+   "faces": 57,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 57
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Weapons_Turret_Top": 20,
+    "Batmobile_Rig_Weapons_Turret_Top_Slide": 37
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "SUSP1_Wheel_Rear_Right",
+    "SUSP2_Wheel_Rear_Right"
+   ],
+   "bone_count": 2,
+   "faces": 49,
+   "slots": [
+    {
+     "slot": 3,
+     "faces": 49
+    }
+   ],
+   "winners": {
+    "SUSP1_Wheel_Rear_Right": 39,
+    "SUSP2_Wheel_Rear_Right": 10
+   },
+   "ties": 0,
+   "part_pair": "wheel_r_r",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_T",
+    "Batmobile_Rig_Weapons_Missiles_R_04"
+   ],
+   "bone_count": 2,
+   "faces": 47,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 24
+    },
+    {
+     "slot": 17,
+     "faces": 23
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_R_04": 22,
+    "Batmobile_Rig_Weapons_Missiles_R_T": 25
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_T",
+    "Batmobile_Rig_Weapons_Missiles_R_03"
+   ],
+   "bone_count": 2,
+   "faces": 44,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 21
+    },
+    {
+     "slot": 17,
+     "faces": 23
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_R_03": 22,
+    "Batmobile_Rig_Weapons_Missiles_R_T": 22
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis",
+    "Batmobile_Rig_Weapons_Missiles_R_T"
+   ],
+   "bone_count": 2,
+   "faces": 39,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 34
+    },
+    {
+     "slot": 17,
+     "faces": 5
+    }
+   ],
+   "winners": {
+    "Batmobile_Chassis": 14,
+    "Batmobile_Rig_Weapons_Missiles_R_T": 25
+   },
+   "ties": 0,
+   "part_pair": "body|weapons",
+   "cross_part": 39,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_T",
+    "Batmobile_Rig_Weapons_Missiles_R_Mid"
+   ],
+   "bone_count": 2,
+   "faces": 38,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 15
+    },
+    {
+     "slot": 17,
+     "faces": 23
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_R_Mid": 14,
+    "Batmobile_Rig_Weapons_Missiles_R_T": 24
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "SUSP1_Wheel_Front_Left",
+    "SUSP2_Wheel_Front_Left"
+   ],
+   "bone_count": 2,
+   "faces": 38,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 38
+    }
+   ],
+   "winners": {
+    "SUSP1_Wheel_Front_Left": 14,
+    "SUSP2_Wheel_Front_Left": 24
+   },
+   "ties": 0,
+   "part_pair": "wheel_f_l",
+   "cross_part": 0,
+   "min_margin": 0.192157,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Wheel_Frnt_Left_Disc",
+    "Damper_Left_Front_02"
+   ],
+   "bone_count": 2,
+   "faces": 36,
+   "slots": [
+    {
+     "slot": 5,
+     "faces": 36
+    }
+   ],
+   "winners": {
+    "Damper_Left_Front_02": 18,
+    "Wheel_Frnt_Left_Disc": 18
+   },
+   "ties": 0,
+   "part_pair": "wheel_f_l",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis_Mesh",
+    "Batmobile_Rig_Aero_Flap_L_B_Piston_Btm_001"
+   ],
+   "bone_count": 2,
+   "faces": 28,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 28
+    }
+   ],
+   "winners": {
+    "Batmobile_Chassis_Mesh": 6,
+    "Batmobile_Rig_Aero_Flap_L_B_Piston_Btm_001": 22
+   },
+   "ties": 0,
+   "part_pair": "aero_flaps|body",
+   "cross_part": 28,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis_Mesh",
+    "Batmobile_Rig_Aero_Flap_R_B_Piston_Btm_001"
+   ],
+   "bone_count": 2,
+   "faces": 28,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 28
+    }
+   ],
+   "winners": {
+    "Batmobile_Chassis_Mesh": 6,
+    "Batmobile_Rig_Aero_Flap_R_B_Piston_Btm_001": 22
+   },
+   "ties": 0,
+   "part_pair": "aero_flaps|body",
+   "cross_part": 28,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "SUSP1_Wheel_Front_Right",
+    "SUSP2_Wheel_Front_Right"
+   ],
+   "bone_count": 2,
+   "faces": 26,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 26
+    }
+   ],
+   "winners": {
+    "SUSP1_Wheel_Front_Right": 13,
+    "SUSP2_Wheel_Front_Right": 13
+   },
+   "ties": 0,
+   "part_pair": "wheel_f_r",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Aero_Flap_L_F",
+    "Batmobile_Rig_Aero_Flap_L_F_Piston_Top"
+   ],
+   "bone_count": 2,
+   "faces": 20,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 20
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Aero_Flap_L_F": 16,
+    "Batmobile_Rig_Aero_Flap_L_F_Piston_Top": 4
+   },
+   "ties": 0,
+   "part_pair": "aero_flaps",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Aero_Flap_R_F",
+    "Batmobile_Rig_Aero_Flap_R_F_Piston_Top"
+   ],
+   "bone_count": 2,
+   "faces": 20,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 20
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Aero_Flap_R_F": 16,
+    "Batmobile_Rig_Aero_Flap_R_F_Piston_Top": 4
+   },
+   "ties": 0,
+   "part_pair": "aero_flaps",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_L_T",
+    "Batmobile_Rig_Weapons_Missiles_L_Mid"
+   ],
+   "bone_count": 2,
+   "faces": 20,
+   "slots": [
+    {
+     "slot": 17,
+     "faces": 20
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_L_Mid": 4,
+    "Batmobile_Rig_Weapons_Missiles_L_T": 16
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_001",
+    "Batmobile_Rig_Jet_Nozzle_002"
+   ],
+   "bone_count": 2,
+   "faces": 19,
+   "slots": [
+    {
+     "slot": 4,
+     "faces": 19
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_001": 10,
+    "Batmobile_Rig_Jet_Nozzle_002": 9
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_001",
+    "Batmobile_Rig_Jet_Nozzle_018"
+   ],
+   "bone_count": 2,
+   "faces": 19,
+   "slots": [
+    {
+     "slot": 4,
+     "faces": 19
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_001": 9,
+    "Batmobile_Rig_Jet_Nozzle_018": 10
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_002",
+    "Batmobile_Rig_Jet_Nozzle_003"
+   ],
+   "bone_count": 2,
+   "faces": 19,
+   "slots": [
+    {
+     "slot": 4,
+     "faces": 19
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_002": 10,
+    "Batmobile_Rig_Jet_Nozzle_003": 9
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_004",
+    "Batmobile_Rig_Jet_Nozzle_003"
+   ],
+   "bone_count": 2,
+   "faces": 19,
+   "slots": [
+    {
+     "slot": 4,
+     "faces": 19
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_003": 10,
+    "Batmobile_Rig_Jet_Nozzle_004": 9
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_004",
+    "Batmobile_Rig_Jet_Nozzle_005"
+   ],
+   "bone_count": 2,
+   "faces": 19,
+   "slots": [
+    {
+     "slot": 4,
+     "faces": 19
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_004": 10,
+    "Batmobile_Rig_Jet_Nozzle_005": 9
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_005",
+    "Batmobile_Rig_Jet_Nozzle_006"
+   ],
+   "bone_count": 2,
+   "faces": 19,
+   "slots": [
+    {
+     "slot": 4,
+     "faces": 19
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_005": 10,
+    "Batmobile_Rig_Jet_Nozzle_006": 9
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_006",
+    "Batmobile_Rig_Jet_Nozzle_007"
+   ],
+   "bone_count": 2,
+   "faces": 19,
+   "slots": [
+    {
+     "slot": 4,
+     "faces": 19
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_006": 10,
+    "Batmobile_Rig_Jet_Nozzle_007": 9
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_007",
+    "Batmobile_Rig_Jet_Nozzle_008"
+   ],
+   "bone_count": 2,
+   "faces": 19,
+   "slots": [
+    {
+     "slot": 4,
+     "faces": 19
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_007": 10,
+    "Batmobile_Rig_Jet_Nozzle_008": 9
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_008",
+    "Batmobile_Rig_Jet_Nozzle_009"
+   ],
+   "bone_count": 2,
+   "faces": 19,
+   "slots": [
+    {
+     "slot": 4,
+     "faces": 19
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_008": 10,
+    "Batmobile_Rig_Jet_Nozzle_009": 9
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_010",
+    "Batmobile_Rig_Jet_Nozzle_011"
+   ],
+   "bone_count": 2,
+   "faces": 19,
+   "slots": [
+    {
+     "slot": 4,
+     "faces": 19
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_010": 10,
+    "Batmobile_Rig_Jet_Nozzle_011": 9
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_011",
+    "Batmobile_Rig_Jet_Nozzle_012"
+   ],
+   "bone_count": 2,
+   "faces": 19,
+   "slots": [
+    {
+     "slot": 4,
+     "faces": 19
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_011": 10,
+    "Batmobile_Rig_Jet_Nozzle_012": 9
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_015",
+    "Batmobile_Rig_Jet_Nozzle_016"
+   ],
+   "bone_count": 2,
+   "faces": 19,
+   "slots": [
+    {
+     "slot": 4,
+     "faces": 19
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_015": 10,
+    "Batmobile_Rig_Jet_Nozzle_016": 9
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_016",
+    "Batmobile_Rig_Jet_Nozzle_017"
+   ],
+   "bone_count": 2,
+   "faces": 19,
+   "slots": [
+    {
+     "slot": 4,
+     "faces": 19
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_016": 10,
+    "Batmobile_Rig_Jet_Nozzle_017": 9
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_017",
+    "Batmobile_Rig_Jet_Nozzle_018"
+   ],
+   "bone_count": 2,
+   "faces": 19,
+   "slots": [
+    {
+     "slot": 4,
+     "faces": 19
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_017": 10,
+    "Batmobile_Rig_Jet_Nozzle_018": 9
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "SUSP1_Wheel_Rear_Left",
+    "SUSP2_Wheel_Rear_Left"
+   ],
+   "bone_count": 2,
+   "faces": 19,
+   "slots": [
+    {
+     "slot": 3,
+     "faces": 19
+    }
+   ],
+   "winners": {
+    "SUSP1_Wheel_Rear_Left": 4,
+    "SUSP2_Wheel_Rear_Left": 15
+   },
+   "ties": 0,
+   "part_pair": "wheel_r_l",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Aero_Flap_L_B_Piston_Btm_001",
+    "Batmobile_Rig_Aero_Flap_L_B_Piston_Top_001"
+   ],
+   "bone_count": 2,
+   "faces": 18,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 18
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Aero_Flap_L_B_Piston_Btm_001": 9,
+    "Batmobile_Rig_Aero_Flap_L_B_Piston_Top_001": 9
+   },
+   "ties": 0,
+   "part_pair": "aero_flaps",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Aero_Flap_L_F_Piston_Top",
+    "Batmobile_Rig_Aero_Flap_L_F_Piston_Btm"
+   ],
+   "bone_count": 2,
+   "faces": 18,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 18
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Aero_Flap_L_F_Piston_Btm": 9,
+    "Batmobile_Rig_Aero_Flap_L_F_Piston_Top": 9
+   },
+   "ties": 0,
+   "part_pair": "aero_flaps",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Aero_Flap_R_B_Piston_Btm_001",
+    "Batmobile_Rig_Aero_Flap_R_B_Piston_Top_001"
+   ],
+   "bone_count": 2,
+   "faces": 18,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 18
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Aero_Flap_R_B_Piston_Btm_001": 9,
+    "Batmobile_Rig_Aero_Flap_R_B_Piston_Top_001": 9
+   },
+   "ties": 0,
+   "part_pair": "aero_flaps",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Aero_Flap_R_F_Piston_Top",
+    "Batmobile_Rig_Aero_Flap_R_F_Piston_Btm"
+   ],
+   "bone_count": 2,
+   "faces": 18,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 18
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Aero_Flap_R_F_Piston_Btm": 9,
+    "Batmobile_Rig_Aero_Flap_R_F_Piston_Top": 9
+   },
+   "ties": 0,
+   "part_pair": "aero_flaps",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_009",
+    "Batmobile_Rig_Jet_Nozzle_010"
+   ],
+   "bone_count": 2,
+   "faces": 18,
+   "slots": [
+    {
+     "slot": 4,
+     "faces": 18
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_009": 8,
+    "Batmobile_Rig_Jet_Nozzle_010": 10
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Riot_Sup_Arm_01",
+    "Batmobile_Rig_Weapons_Riot_Sup_Main"
+   ],
+   "bone_count": 2,
+   "faces": 17,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 17
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Weapons_Riot_Sup_Arm_01": 7,
+    "Batmobile_Rig_Weapons_Riot_Sup_Main": 10
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis",
+    "Batmobile_Rig_Weapons_Missiles_R_03"
+   ],
+   "bone_count": 2,
+   "faces": 16,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 16
+    }
+   ],
+   "winners": {
+    "Batmobile_Chassis": 7,
+    "Batmobile_Rig_Weapons_Missiles_R_03": 9
+   },
+   "ties": 0,
+   "part_pair": "body|weapons",
+   "cross_part": 16,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis",
+    "Batmobile_Rig_Weapons_Missiles_R_04"
+   ],
+   "bone_count": 2,
+   "faces": 16,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 16
+    }
+   ],
+   "winners": {
+    "Batmobile_Chassis": 7,
+    "Batmobile_Rig_Weapons_Missiles_R_04": 9
+   },
+   "ties": 0,
+   "part_pair": "body|weapons",
+   "cross_part": 16,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_013",
+    "Batmobile_Rig_Jet_Nozzle_014"
+   ],
+   "bone_count": 2,
+   "faces": 16,
+   "slots": [
+    {
+     "slot": 4,
+     "faces": 16
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_013": 7,
+    "Batmobile_Rig_Jet_Nozzle_014": 9
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_014",
+    "Batmobile_Rig_Jet_Nozzle_015"
+   ],
+   "bone_count": 2,
+   "faces": 16,
+   "slots": [
+    {
+     "slot": 4,
+     "faces": 16
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_014": 7,
+    "Batmobile_Rig_Jet_Nozzle_015": 9
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "CockPit_Mesh",
+    "Batmobile_Nose_Mesh"
+   ],
+   "bone_count": 2,
+   "faces": 16,
+   "slots": [
+    {
+     "slot": 2,
+     "faces": 16
+    }
+   ],
+   "winners": {
+    "Batmobile_Nose_Mesh": 4,
+    "CockPit_Mesh": 12
+   },
+   "ties": 0,
+   "part_pair": "body",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_012",
+    "Batmobile_Rig_Jet_Nozzle_013"
+   ],
+   "bone_count": 2,
+   "faces": 13,
+   "slots": [
+    {
+     "slot": 4,
+     "faces": 13
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_012": 6,
+    "Batmobile_Rig_Jet_Nozzle_013": 7
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis_Mesh",
+    "Batmobile_Rig_Weapons_Missiles_L_T"
+   ],
+   "bone_count": 2,
+   "faces": 12,
+   "slots": [
+    {
+     "slot": 2,
+     "faces": 12
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_L_T": 12
+   },
+   "ties": 0,
+   "part_pair": "body|weapons",
+   "cross_part": 12,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis_Mesh",
+    "Batmobile_Rig_Weapons_Missiles_R_T"
+   ],
+   "bone_count": 2,
+   "faces": 12,
+   "slots": [
+    {
+     "slot": 2,
+     "faces": 12
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_R_T": 12
+   },
+   "ties": 0,
+   "part_pair": "body|weapons",
+   "cross_part": 12,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_Mid",
+    "Batmobile_Rig_Weapons_Missiles_R_03"
+   ],
+   "bone_count": 2,
+   "faces": 12,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 11
+    },
+    {
+     "slot": 17,
+     "faces": 1
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_R_03": 5,
+    "Batmobile_Rig_Weapons_Missiles_R_Mid": 7
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "SUSP2_Wheel_Rear_Left",
+    "Batmobile_Chassis_L_REAR_WHEEL_ARCH"
+   ],
+   "bone_count": 2,
+   "faces": 11,
+   "slots": [
+    {
+     "slot": 3,
+     "faces": 11
+    }
+   ],
+   "winners": {
+    "SUSP2_Wheel_Rear_Left": 11
+   },
+   "ties": 0,
+   "part_pair": "body|wheel_r_l",
+   "cross_part": 11,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis_Mesh",
+    "Batmobile_Nose_Mesh"
+   ],
+   "bone_count": 2,
+   "faces": 10,
+   "slots": [
+    {
+     "slot": 2,
+     "faces": 10
+    }
+   ],
+   "winners": {
+    "Batmobile_Chassis_Mesh": 4,
+    "Batmobile_Nose_Mesh": 6
+   },
+   "ties": 0,
+   "part_pair": "body",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis_Mesh",
+    "Batmobile_Rig_Aero_Flap_L_F_Piston_Btm"
+   ],
+   "bone_count": 2,
+   "faces": 10,
+   "slots": [
+    {
+     "slot": 4,
+     "faces": 10
+    }
+   ],
+   "winners": {
+    "Batmobile_Chassis_Mesh": 8,
+    "Batmobile_Rig_Aero_Flap_L_F_Piston_Btm": 2
+   },
+   "ties": 0,
+   "part_pair": "aero_flaps|body",
+   "cross_part": 10,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis_Mesh",
+    "Batmobile_Rig_Aero_Flap_R_F_Piston_Btm"
+   ],
+   "bone_count": 2,
+   "faces": 10,
+   "slots": [
+    {
+     "slot": 4,
+     "faces": 10
+    }
+   ],
+   "winners": {
+    "Batmobile_Chassis_Mesh": 8,
+    "Batmobile_Rig_Aero_Flap_R_F_Piston_Btm": 2
+   },
+   "ties": 0,
+   "part_pair": "aero_flaps|body",
+   "cross_part": 10,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Aero_Flap_L_B",
+    "Batmobile_Rig_Aero_Flap_L_B_Piston_Top_001"
+   ],
+   "bone_count": 2,
+   "faces": 10,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 10
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Aero_Flap_L_B": 2,
+    "Batmobile_Rig_Aero_Flap_L_B_Piston_Top_001": 8
+   },
+   "ties": 0,
+   "part_pair": "aero_flaps",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Aero_Flap_R_B",
+    "Batmobile_Rig_Aero_Flap_R_B_Piston_Top_001"
+   ],
+   "bone_count": 2,
+   "faces": 10,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 10
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Aero_Flap_R_B": 2,
+    "Batmobile_Rig_Aero_Flap_R_B_Piston_Top_001": 8
+   },
+   "ties": 0,
+   "part_pair": "aero_flaps",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Heavy_Cannon_Barrel_01",
+    "Batmobile_Rig_Weapons_Heavy_Cannon_Barrrel_02"
+   ],
+   "bone_count": 2,
+   "faces": 10,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 10
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Weapons_Heavy_Cannon_Barrel_01": 6,
+    "Batmobile_Rig_Weapons_Heavy_Cannon_Barrrel_02": 4
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_Mid",
+    "Batmobile_Rig_Weapons_Missiles_R_04"
+   ],
+   "bone_count": 2,
+   "faces": 10,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 10
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_R_04": 3,
+    "Batmobile_Rig_Weapons_Missiles_R_Mid": 7
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis_Mesh",
+    "Rear_Door_TOP"
+   ],
+   "bone_count": 2,
+   "faces": 8,
+   "slots": [
+    {
+     "slot": 2,
+     "faces": 8
+    }
+   ],
+   "winners": {
+    "Batmobile_Chassis_Mesh": 8
+   },
+   "ties": 0,
+   "part_pair": "body",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis",
+    "Batmobile_Rig_Weapons_Missiles_R_T",
+    "Batmobile_Rig_Weapons_Missiles_R_04"
+   ],
+   "bone_count": 3,
+   "faces": 7,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 1
+    },
+    {
+     "slot": 17,
+     "faces": 6
+    }
+   ],
+   "winners": {},
+   "ties": 7,
+   "part_pair": "body|weapons",
+   "cross_part": 7,
+   "min_margin": 0.0,
+   "max_margin": 0.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis_Mesh",
+    "Batmobile_Rig_Aero_Flap_L_F"
+   ],
+   "bone_count": 2,
+   "faces": 6,
+   "slots": [
+    {
+     "slot": 3,
+     "faces": 6
+    }
+   ],
+   "winners": {
+    "Batmobile_Chassis_Mesh": 6
+   },
+   "ties": 0,
+   "part_pair": "aero_flaps|body",
+   "cross_part": 6,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis_Mesh",
+    "Batmobile_Rig_Aero_Flap_R_F"
+   ],
+   "bone_count": 2,
+   "faces": 6,
+   "slots": [
+    {
+     "slot": 3,
+     "faces": 6
+    }
+   ],
+   "winners": {
+    "Batmobile_Chassis_Mesh": 6
+   },
+   "ties": 0,
+   "part_pair": "aero_flaps|body",
+   "cross_part": 6,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis_R_REAR_WHEEL_ARCH",
+    "SUSP1_Wheel_Rear_Right"
+   ],
+   "bone_count": 2,
+   "faces": 6,
+   "slots": [
+    {
+     "slot": 3,
+     "faces": 6
+    }
+   ],
+   "winners": {
+    "SUSP1_Wheel_Rear_Right": 6
+   },
+   "ties": 0,
+   "part_pair": "body|wheel_r_r",
+   "cross_part": 6,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis_R_REAR_WHEEL_ARCH",
+    "SUSP2_Wheel_Rear_Right"
+   ],
+   "bone_count": 2,
+   "faces": 6,
+   "slots": [
+    {
+     "slot": 3,
+     "faces": 6
+    }
+   ],
+   "winners": {
+    "SUSP2_Wheel_Rear_Right": 6
+   },
+   "ties": 0,
+   "part_pair": "body|wheel_r_r",
+   "cross_part": 6,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Sides_Root",
+    "Batmobile_Rig_Weapons_Turret_Top"
+   ],
+   "bone_count": 2,
+   "faces": 6,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 6
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Weapons_Turret_Top": 6
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis",
+    "Batmobile_Rig_Weapons_Missiles_R_T",
+    "Batmobile_Rig_Weapons_Missiles_R_03"
+   ],
+   "bone_count": 3,
+   "faces": 5,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 1
+    },
+    {
+     "slot": 17,
+     "faces": 4
+    }
+   ],
+   "winners": {},
+   "ties": 5,
+   "part_pair": "body|weapons",
+   "cross_part": 5,
+   "min_margin": 0.0,
+   "max_margin": 0.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_T",
+    "Batmobile_Rig_Weapons_Missiles_R_Mid",
+    "Batmobile_Rig_Weapons_Missiles_R_03"
+   ],
+   "bone_count": 3,
+   "faces": 5,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 3
+    },
+    {
+     "slot": 17,
+     "faces": 2
+    }
+   ],
+   "winners": {},
+   "ties": 5,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 0.0,
+   "max_margin": 0.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis_Mesh",
+    "Batmobile_Rig_Aero_Flap_L_F_Piston_Top"
+   ],
+   "bone_count": 2,
+   "faces": 4,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 4
+    }
+   ],
+   "winners": {
+    "Batmobile_Chassis_Mesh": 4
+   },
+   "ties": 0,
+   "part_pair": "aero_flaps|body",
+   "cross_part": 4,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis_Mesh",
+    "Batmobile_Rig_Aero_Flap_R_F_Piston_Top"
+   ],
+   "bone_count": 2,
+   "faces": 4,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 4
+    }
+   ],
+   "winners": {
+    "Batmobile_Chassis_Mesh": 4
+   },
+   "ties": 0,
+   "part_pair": "aero_flaps|body",
+   "cross_part": 4,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Riot_Sup_Main",
+    "Batmobile_Rig_Weapons_Riot_Sup_Ammo"
+   ],
+   "bone_count": 2,
+   "faces": 3,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 3
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Weapons_Riot_Sup_Ammo": 1,
+    "Batmobile_Rig_Weapons_Riot_Sup_Main": 2
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis",
+    "Batmobile_Rig_Weapons_Missiles_R_T",
+    "Batmobile_Rig_Weapons_Missiles_R_Mid"
+   ],
+   "bone_count": 3,
+   "faces": 2,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 2
+    }
+   ],
+   "winners": {},
+   "ties": 2,
+   "part_pair": "body|weapons",
+   "cross_part": 2,
+   "min_margin": 0.0,
+   "max_margin": 0.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Machine_Gun_Root",
+    "Batmobile_Rig_Weapons_Machine_Gun_01"
+   ],
+   "bone_count": 2,
+   "faces": 2,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 2
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Weapons_Machine_Gun_01": 2
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_L_02",
+    "Batmobile_Rig_Weapons_Missiles_L_03"
+   ],
+   "bone_count": 2,
+   "faces": 2,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 2
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_L_02": 1,
+    "Batmobile_Rig_Weapons_Missiles_L_03": 1
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_L_04",
+    "Batmobile_Rig_Weapons_Missiles_L_01"
+   ],
+   "bone_count": 2,
+   "faces": 2,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 2
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_L_01": 1,
+    "Batmobile_Rig_Weapons_Missiles_L_04": 1
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_L_Mid",
+    "Batmobile_Rig_Weapons_Missiles_L_02",
+    "Batmobile_Rig_Weapons_Missiles_L_03"
+   ],
+   "bone_count": 3,
+   "faces": 2,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 2
+    }
+   ],
+   "winners": {},
+   "ties": 2,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 0.0,
+   "max_margin": 0.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_L_Mid",
+    "Batmobile_Rig_Weapons_Missiles_L_04",
+    "Batmobile_Rig_Weapons_Missiles_L_01"
+   ],
+   "bone_count": 3,
+   "faces": 2,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 2
+    }
+   ],
+   "winners": {},
+   "ties": 2,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 0.0,
+   "max_margin": 0.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_01",
+    "Batmobile_Rig_Weapons_Missiles_R_04"
+   ],
+   "bone_count": 2,
+   "faces": 2,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 2
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_R_01": 1,
+    "Batmobile_Rig_Weapons_Missiles_R_04": 1
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_03",
+    "Batmobile_Rig_Weapons_Missiles_R_02"
+   ],
+   "bone_count": 2,
+   "faces": 2,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 2
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_R_02": 1,
+    "Batmobile_Rig_Weapons_Missiles_R_03": 1
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_Mid",
+    "Batmobile_Rig_Weapons_Missiles_R_01",
+    "Batmobile_Rig_Weapons_Missiles_R_04"
+   ],
+   "bone_count": 3,
+   "faces": 2,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 2
+    }
+   ],
+   "winners": {},
+   "ties": 2,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 0.0,
+   "max_margin": 0.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_Mid",
+    "Batmobile_Rig_Weapons_Missiles_R_03",
+    "Batmobile_Rig_Weapons_Missiles_R_02"
+   ],
+   "bone_count": 3,
+   "faces": 2,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 2
+    }
+   ],
+   "winners": {},
+   "ties": 2,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 0.0,
+   "max_margin": 0.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis",
+    "Batmobile_Rig_Weapons_Missiles_R_Mid",
+    "Batmobile_Rig_Weapons_Missiles_R_03"
+   ],
+   "bone_count": 3,
+   "faces": 1,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 1
+    }
+   ],
+   "winners": {},
+   "ties": 1,
+   "part_pair": "body|weapons",
+   "cross_part": 1,
+   "min_margin": 0.0,
+   "max_margin": 0.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis",
+    "Batmobile_Rig_Weapons_Missiles_R_Mid",
+    "Batmobile_Rig_Weapons_Missiles_R_04"
+   ],
+   "bone_count": 3,
+   "faces": 1,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 1
+    }
+   ],
+   "winners": {},
+   "ties": 1,
+   "part_pair": "body|weapons",
+   "cross_part": 1,
+   "min_margin": 0.0,
+   "max_margin": 0.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_T",
+    "Batmobile_Rig_Weapons_Missiles_R_Mid",
+    "Batmobile_Rig_Weapons_Missiles_R_04"
+   ],
+   "bone_count": 3,
+   "faces": 1,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 1
+    }
+   ],
+   "winners": {},
+   "ties": 1,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 0.0,
+   "max_margin": 0.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Riot_Sup_Arm_01",
+    "Batmobile_Rig_Weapons_Riot_Sup_Ammo"
+   ],
+   "bone_count": 2,
+   "faces": 1,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 1
+    }
+   ],
+   "winners": {
+    "Batmobile_Rig_Weapons_Riot_Sup_Arm_01": 1
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Riot_Sup_Arm_01",
+    "Batmobile_Rig_Weapons_Riot_Sup_Main",
+    "Batmobile_Rig_Weapons_Riot_Sup_Ammo"
+   ],
+   "bone_count": 3,
+   "faces": 1,
+   "slots": [
+    {
+     "slot": 7,
+     "faces": 1
+    }
+   ],
+   "winners": {},
+   "ties": 1,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 0.0,
+   "max_margin": 0.0
+  }
+ ],
+ "by_bone_set_slot": [
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_L_Mid",
+    "Batmobile_Rig_Weapons_Missiles_L_02"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 57,
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_L_02": 26,
+    "Batmobile_Rig_Weapons_Missiles_L_Mid": 31
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_Mid",
+    "Batmobile_Rig_Weapons_Missiles_R_01"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 57,
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_R_01": 26,
+    "Batmobile_Rig_Weapons_Missiles_R_Mid": 31
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Turret_Top",
+    "Batmobile_Rig_Weapons_Turret_Top_Slide"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 57,
+   "winners": {
+    "Batmobile_Rig_Weapons_Turret_Top": 20,
+    "Batmobile_Rig_Weapons_Turret_Top_Slide": 37
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_L_Mid",
+    "Batmobile_Rig_Weapons_Missiles_L_01"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 53,
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_L_01": 25,
+    "Batmobile_Rig_Weapons_Missiles_L_Mid": 28
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_L_Mid",
+    "Batmobile_Rig_Weapons_Missiles_L_03"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 53,
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_L_03": 24,
+    "Batmobile_Rig_Weapons_Missiles_L_Mid": 29
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_L_Mid",
+    "Batmobile_Rig_Weapons_Missiles_L_04"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 53,
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_L_04": 24,
+    "Batmobile_Rig_Weapons_Missiles_L_Mid": 29
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_Mid",
+    "Batmobile_Rig_Weapons_Missiles_R_02"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 53,
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_R_02": 24,
+    "Batmobile_Rig_Weapons_Missiles_R_Mid": 29
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "SUSP1_Wheel_Rear_Right",
+    "SUSP2_Wheel_Rear_Right"
+   ],
+   "bone_count": 2,
+   "slot": 3,
+   "slot_name": "Batmobile_V3_WheelArchs_NEW_MIC",
+   "faces": 49,
+   "winners": {
+    "SUSP1_Wheel_Rear_Right": 39,
+    "SUSP2_Wheel_Rear_Right": 10
+   },
+   "ties": 0,
+   "part_pair": "wheel_r_r",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "SUSP1_Wheel_Front_Left",
+    "SUSP2_Wheel_Front_Left"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 38,
+   "winners": {
+    "SUSP1_Wheel_Front_Left": 14,
+    "SUSP2_Wheel_Front_Left": 24
+   },
+   "ties": 0,
+   "part_pair": "wheel_f_l",
+   "cross_part": 0,
+   "min_margin": 0.192157,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Wheel_Frnt_Left_Disc",
+    "Damper_Left_Front_02"
+   ],
+   "bone_count": 2,
+   "slot": 5,
+   "slot_name": "Batmobile_V3_Emissive",
+   "faces": 36,
+   "winners": {
+    "Damper_Left_Front_02": 18,
+    "Wheel_Frnt_Left_Disc": 18
+   },
+   "ties": 0,
+   "part_pair": "wheel_f_l",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis",
+    "Batmobile_Rig_Weapons_Missiles_R_T"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 34,
+   "winners": {
+    "Batmobile_Chassis": 14,
+    "Batmobile_Rig_Weapons_Missiles_R_T": 20
+   },
+   "ties": 0,
+   "part_pair": "body|weapons",
+   "cross_part": 34,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_L_Mid",
+    "Batmobile_Rig_Weapons_Missiles_L_01"
+   ],
+   "bone_count": 2,
+   "slot": 17,
+   "slot_name": "BatmobileV3_Upgrades_MAT_INST",
+   "faces": 32,
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_L_01": 16,
+    "Batmobile_Rig_Weapons_Missiles_L_Mid": 16
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_L_Mid",
+    "Batmobile_Rig_Weapons_Missiles_L_02"
+   ],
+   "bone_count": 2,
+   "slot": 17,
+   "slot_name": "BatmobileV3_Upgrades_MAT_INST",
+   "faces": 32,
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_L_02": 16,
+    "Batmobile_Rig_Weapons_Missiles_L_Mid": 16
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_L_Mid",
+    "Batmobile_Rig_Weapons_Missiles_L_03"
+   ],
+   "bone_count": 2,
+   "slot": 17,
+   "slot_name": "BatmobileV3_Upgrades_MAT_INST",
+   "faces": 32,
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_L_03": 16,
+    "Batmobile_Rig_Weapons_Missiles_L_Mid": 16
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_L_Mid",
+    "Batmobile_Rig_Weapons_Missiles_L_04"
+   ],
+   "bone_count": 2,
+   "slot": 17,
+   "slot_name": "BatmobileV3_Upgrades_MAT_INST",
+   "faces": 32,
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_L_04": 16,
+    "Batmobile_Rig_Weapons_Missiles_L_Mid": 16
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_Mid",
+    "Batmobile_Rig_Weapons_Missiles_R_01"
+   ],
+   "bone_count": 2,
+   "slot": 17,
+   "slot_name": "BatmobileV3_Upgrades_MAT_INST",
+   "faces": 32,
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_R_01": 16,
+    "Batmobile_Rig_Weapons_Missiles_R_Mid": 16
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_Mid",
+    "Batmobile_Rig_Weapons_Missiles_R_02"
+   ],
+   "bone_count": 2,
+   "slot": 17,
+   "slot_name": "BatmobileV3_Upgrades_MAT_INST",
+   "faces": 32,
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_R_02": 16,
+    "Batmobile_Rig_Weapons_Missiles_R_Mid": 16
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis_Mesh",
+    "Batmobile_Rig_Aero_Flap_L_B_Piston_Btm_001"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 28,
+   "winners": {
+    "Batmobile_Chassis_Mesh": 6,
+    "Batmobile_Rig_Aero_Flap_L_B_Piston_Btm_001": 22
+   },
+   "ties": 0,
+   "part_pair": "aero_flaps|body",
+   "cross_part": 28,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis_Mesh",
+    "Batmobile_Rig_Aero_Flap_R_B_Piston_Btm_001"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 28,
+   "winners": {
+    "Batmobile_Chassis_Mesh": 6,
+    "Batmobile_Rig_Aero_Flap_R_B_Piston_Btm_001": 22
+   },
+   "ties": 0,
+   "part_pair": "aero_flaps|body",
+   "cross_part": 28,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "SUSP1_Wheel_Front_Right",
+    "SUSP2_Wheel_Front_Right"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 26,
+   "winners": {
+    "SUSP1_Wheel_Front_Right": 13,
+    "SUSP2_Wheel_Front_Right": 13
+   },
+   "ties": 0,
+   "part_pair": "wheel_f_r",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_T",
+    "Batmobile_Rig_Weapons_Missiles_R_04"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 24,
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_R_04": 12,
+    "Batmobile_Rig_Weapons_Missiles_R_T": 12
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_T",
+    "Batmobile_Rig_Weapons_Missiles_R_03"
+   ],
+   "bone_count": 2,
+   "slot": 17,
+   "slot_name": "BatmobileV3_Upgrades_MAT_INST",
+   "faces": 23,
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_R_03": 11,
+    "Batmobile_Rig_Weapons_Missiles_R_T": 12
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_T",
+    "Batmobile_Rig_Weapons_Missiles_R_04"
+   ],
+   "bone_count": 2,
+   "slot": 17,
+   "slot_name": "BatmobileV3_Upgrades_MAT_INST",
+   "faces": 23,
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_R_04": 10,
+    "Batmobile_Rig_Weapons_Missiles_R_T": 13
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_T",
+    "Batmobile_Rig_Weapons_Missiles_R_Mid"
+   ],
+   "bone_count": 2,
+   "slot": 17,
+   "slot_name": "BatmobileV3_Upgrades_MAT_INST",
+   "faces": 23,
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_R_Mid": 4,
+    "Batmobile_Rig_Weapons_Missiles_R_T": 19
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_T",
+    "Batmobile_Rig_Weapons_Missiles_R_03"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 21,
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_R_03": 11,
+    "Batmobile_Rig_Weapons_Missiles_R_T": 10
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Aero_Flap_L_F",
+    "Batmobile_Rig_Aero_Flap_L_F_Piston_Top"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 20,
+   "winners": {
+    "Batmobile_Rig_Aero_Flap_L_F": 16,
+    "Batmobile_Rig_Aero_Flap_L_F_Piston_Top": 4
+   },
+   "ties": 0,
+   "part_pair": "aero_flaps",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Aero_Flap_R_F",
+    "Batmobile_Rig_Aero_Flap_R_F_Piston_Top"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 20,
+   "winners": {
+    "Batmobile_Rig_Aero_Flap_R_F": 16,
+    "Batmobile_Rig_Aero_Flap_R_F_Piston_Top": 4
+   },
+   "ties": 0,
+   "part_pair": "aero_flaps",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_L_T",
+    "Batmobile_Rig_Weapons_Missiles_L_Mid"
+   ],
+   "bone_count": 2,
+   "slot": 17,
+   "slot_name": "BatmobileV3_Upgrades_MAT_INST",
+   "faces": 20,
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_L_Mid": 4,
+    "Batmobile_Rig_Weapons_Missiles_L_T": 16
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_001",
+    "Batmobile_Rig_Jet_Nozzle_002"
+   ],
+   "bone_count": 2,
+   "slot": 4,
+   "slot_name": "Batmobile_V3_Undercarriage_NEW_MIC",
+   "faces": 19,
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_001": 10,
+    "Batmobile_Rig_Jet_Nozzle_002": 9
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_001",
+    "Batmobile_Rig_Jet_Nozzle_018"
+   ],
+   "bone_count": 2,
+   "slot": 4,
+   "slot_name": "Batmobile_V3_Undercarriage_NEW_MIC",
+   "faces": 19,
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_001": 9,
+    "Batmobile_Rig_Jet_Nozzle_018": 10
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_002",
+    "Batmobile_Rig_Jet_Nozzle_003"
+   ],
+   "bone_count": 2,
+   "slot": 4,
+   "slot_name": "Batmobile_V3_Undercarriage_NEW_MIC",
+   "faces": 19,
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_002": 10,
+    "Batmobile_Rig_Jet_Nozzle_003": 9
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_004",
+    "Batmobile_Rig_Jet_Nozzle_003"
+   ],
+   "bone_count": 2,
+   "slot": 4,
+   "slot_name": "Batmobile_V3_Undercarriage_NEW_MIC",
+   "faces": 19,
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_003": 10,
+    "Batmobile_Rig_Jet_Nozzle_004": 9
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_004",
+    "Batmobile_Rig_Jet_Nozzle_005"
+   ],
+   "bone_count": 2,
+   "slot": 4,
+   "slot_name": "Batmobile_V3_Undercarriage_NEW_MIC",
+   "faces": 19,
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_004": 10,
+    "Batmobile_Rig_Jet_Nozzle_005": 9
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_005",
+    "Batmobile_Rig_Jet_Nozzle_006"
+   ],
+   "bone_count": 2,
+   "slot": 4,
+   "slot_name": "Batmobile_V3_Undercarriage_NEW_MIC",
+   "faces": 19,
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_005": 10,
+    "Batmobile_Rig_Jet_Nozzle_006": 9
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_006",
+    "Batmobile_Rig_Jet_Nozzle_007"
+   ],
+   "bone_count": 2,
+   "slot": 4,
+   "slot_name": "Batmobile_V3_Undercarriage_NEW_MIC",
+   "faces": 19,
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_006": 10,
+    "Batmobile_Rig_Jet_Nozzle_007": 9
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_007",
+    "Batmobile_Rig_Jet_Nozzle_008"
+   ],
+   "bone_count": 2,
+   "slot": 4,
+   "slot_name": "Batmobile_V3_Undercarriage_NEW_MIC",
+   "faces": 19,
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_007": 10,
+    "Batmobile_Rig_Jet_Nozzle_008": 9
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_008",
+    "Batmobile_Rig_Jet_Nozzle_009"
+   ],
+   "bone_count": 2,
+   "slot": 4,
+   "slot_name": "Batmobile_V3_Undercarriage_NEW_MIC",
+   "faces": 19,
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_008": 10,
+    "Batmobile_Rig_Jet_Nozzle_009": 9
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_010",
+    "Batmobile_Rig_Jet_Nozzle_011"
+   ],
+   "bone_count": 2,
+   "slot": 4,
+   "slot_name": "Batmobile_V3_Undercarriage_NEW_MIC",
+   "faces": 19,
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_010": 10,
+    "Batmobile_Rig_Jet_Nozzle_011": 9
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_011",
+    "Batmobile_Rig_Jet_Nozzle_012"
+   ],
+   "bone_count": 2,
+   "slot": 4,
+   "slot_name": "Batmobile_V3_Undercarriage_NEW_MIC",
+   "faces": 19,
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_011": 10,
+    "Batmobile_Rig_Jet_Nozzle_012": 9
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_015",
+    "Batmobile_Rig_Jet_Nozzle_016"
+   ],
+   "bone_count": 2,
+   "slot": 4,
+   "slot_name": "Batmobile_V3_Undercarriage_NEW_MIC",
+   "faces": 19,
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_015": 10,
+    "Batmobile_Rig_Jet_Nozzle_016": 9
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_016",
+    "Batmobile_Rig_Jet_Nozzle_017"
+   ],
+   "bone_count": 2,
+   "slot": 4,
+   "slot_name": "Batmobile_V3_Undercarriage_NEW_MIC",
+   "faces": 19,
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_016": 10,
+    "Batmobile_Rig_Jet_Nozzle_017": 9
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_017",
+    "Batmobile_Rig_Jet_Nozzle_018"
+   ],
+   "bone_count": 2,
+   "slot": 4,
+   "slot_name": "Batmobile_V3_Undercarriage_NEW_MIC",
+   "faces": 19,
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_017": 10,
+    "Batmobile_Rig_Jet_Nozzle_018": 9
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "SUSP1_Wheel_Rear_Left",
+    "SUSP2_Wheel_Rear_Left"
+   ],
+   "bone_count": 2,
+   "slot": 3,
+   "slot_name": "Batmobile_V3_WheelArchs_NEW_MIC",
+   "faces": 19,
+   "winners": {
+    "SUSP1_Wheel_Rear_Left": 4,
+    "SUSP2_Wheel_Rear_Left": 15
+   },
+   "ties": 0,
+   "part_pair": "wheel_r_l",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Aero_Flap_L_B_Piston_Btm_001",
+    "Batmobile_Rig_Aero_Flap_L_B_Piston_Top_001"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 18,
+   "winners": {
+    "Batmobile_Rig_Aero_Flap_L_B_Piston_Btm_001": 9,
+    "Batmobile_Rig_Aero_Flap_L_B_Piston_Top_001": 9
+   },
+   "ties": 0,
+   "part_pair": "aero_flaps",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Aero_Flap_L_F_Piston_Top",
+    "Batmobile_Rig_Aero_Flap_L_F_Piston_Btm"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 18,
+   "winners": {
+    "Batmobile_Rig_Aero_Flap_L_F_Piston_Btm": 9,
+    "Batmobile_Rig_Aero_Flap_L_F_Piston_Top": 9
+   },
+   "ties": 0,
+   "part_pair": "aero_flaps",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Aero_Flap_R_B_Piston_Btm_001",
+    "Batmobile_Rig_Aero_Flap_R_B_Piston_Top_001"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 18,
+   "winners": {
+    "Batmobile_Rig_Aero_Flap_R_B_Piston_Btm_001": 9,
+    "Batmobile_Rig_Aero_Flap_R_B_Piston_Top_001": 9
+   },
+   "ties": 0,
+   "part_pair": "aero_flaps",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Aero_Flap_R_F_Piston_Top",
+    "Batmobile_Rig_Aero_Flap_R_F_Piston_Btm"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 18,
+   "winners": {
+    "Batmobile_Rig_Aero_Flap_R_F_Piston_Btm": 9,
+    "Batmobile_Rig_Aero_Flap_R_F_Piston_Top": 9
+   },
+   "ties": 0,
+   "part_pair": "aero_flaps",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_009",
+    "Batmobile_Rig_Jet_Nozzle_010"
+   ],
+   "bone_count": 2,
+   "slot": 4,
+   "slot_name": "Batmobile_V3_Undercarriage_NEW_MIC",
+   "faces": 18,
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_009": 8,
+    "Batmobile_Rig_Jet_Nozzle_010": 10
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Riot_Sup_Arm_01",
+    "Batmobile_Rig_Weapons_Riot_Sup_Main"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 17,
+   "winners": {
+    "Batmobile_Rig_Weapons_Riot_Sup_Arm_01": 7,
+    "Batmobile_Rig_Weapons_Riot_Sup_Main": 10
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis",
+    "Batmobile_Rig_Weapons_Missiles_R_03"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 16,
+   "winners": {
+    "Batmobile_Chassis": 7,
+    "Batmobile_Rig_Weapons_Missiles_R_03": 9
+   },
+   "ties": 0,
+   "part_pair": "body|weapons",
+   "cross_part": 16,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis",
+    "Batmobile_Rig_Weapons_Missiles_R_04"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 16,
+   "winners": {
+    "Batmobile_Chassis": 7,
+    "Batmobile_Rig_Weapons_Missiles_R_04": 9
+   },
+   "ties": 0,
+   "part_pair": "body|weapons",
+   "cross_part": 16,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_013",
+    "Batmobile_Rig_Jet_Nozzle_014"
+   ],
+   "bone_count": 2,
+   "slot": 4,
+   "slot_name": "Batmobile_V3_Undercarriage_NEW_MIC",
+   "faces": 16,
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_013": 7,
+    "Batmobile_Rig_Jet_Nozzle_014": 9
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_014",
+    "Batmobile_Rig_Jet_Nozzle_015"
+   ],
+   "bone_count": 2,
+   "slot": 4,
+   "slot_name": "Batmobile_V3_Undercarriage_NEW_MIC",
+   "faces": 16,
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_014": 7,
+    "Batmobile_Rig_Jet_Nozzle_015": 9
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "CockPit_Mesh",
+    "Batmobile_Nose_Mesh"
+   ],
+   "bone_count": 2,
+   "slot": 2,
+   "slot_name": "Batmobile_V3_Mainbody_NEW_MIC",
+   "faces": 16,
+   "winners": {
+    "Batmobile_Nose_Mesh": 4,
+    "CockPit_Mesh": 12
+   },
+   "ties": 0,
+   "part_pair": "body",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_T",
+    "Batmobile_Rig_Weapons_Missiles_R_Mid"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 15,
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_R_Mid": 10,
+    "Batmobile_Rig_Weapons_Missiles_R_T": 5
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Jet_Nozzle_012",
+    "Batmobile_Rig_Jet_Nozzle_013"
+   ],
+   "bone_count": 2,
+   "slot": 4,
+   "slot_name": "Batmobile_V3_Undercarriage_NEW_MIC",
+   "faces": 13,
+   "winners": {
+    "Batmobile_Rig_Jet_Nozzle_012": 6,
+    "Batmobile_Rig_Jet_Nozzle_013": 7
+   },
+   "ties": 0,
+   "part_pair": "jet",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis_Mesh",
+    "Batmobile_Rig_Weapons_Missiles_L_T"
+   ],
+   "bone_count": 2,
+   "slot": 2,
+   "slot_name": "Batmobile_V3_Mainbody_NEW_MIC",
+   "faces": 12,
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_L_T": 12
+   },
+   "ties": 0,
+   "part_pair": "body|weapons",
+   "cross_part": 12,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis_Mesh",
+    "Batmobile_Rig_Weapons_Missiles_R_T"
+   ],
+   "bone_count": 2,
+   "slot": 2,
+   "slot_name": "Batmobile_V3_Mainbody_NEW_MIC",
+   "faces": 12,
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_R_T": 12
+   },
+   "ties": 0,
+   "part_pair": "body|weapons",
+   "cross_part": 12,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_Mid",
+    "Batmobile_Rig_Weapons_Missiles_R_03"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 11,
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_R_03": 4,
+    "Batmobile_Rig_Weapons_Missiles_R_Mid": 7
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "SUSP2_Wheel_Rear_Left",
+    "Batmobile_Chassis_L_REAR_WHEEL_ARCH"
+   ],
+   "bone_count": 2,
+   "slot": 3,
+   "slot_name": "Batmobile_V3_WheelArchs_NEW_MIC",
+   "faces": 11,
+   "winners": {
+    "SUSP2_Wheel_Rear_Left": 11
+   },
+   "ties": 0,
+   "part_pair": "body|wheel_r_l",
+   "cross_part": 11,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis_Mesh",
+    "Batmobile_Nose_Mesh"
+   ],
+   "bone_count": 2,
+   "slot": 2,
+   "slot_name": "Batmobile_V3_Mainbody_NEW_MIC",
+   "faces": 10,
+   "winners": {
+    "Batmobile_Chassis_Mesh": 4,
+    "Batmobile_Nose_Mesh": 6
+   },
+   "ties": 0,
+   "part_pair": "body",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis_Mesh",
+    "Batmobile_Rig_Aero_Flap_L_F_Piston_Btm"
+   ],
+   "bone_count": 2,
+   "slot": 4,
+   "slot_name": "Batmobile_V3_Undercarriage_NEW_MIC",
+   "faces": 10,
+   "winners": {
+    "Batmobile_Chassis_Mesh": 8,
+    "Batmobile_Rig_Aero_Flap_L_F_Piston_Btm": 2
+   },
+   "ties": 0,
+   "part_pair": "aero_flaps|body",
+   "cross_part": 10,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis_Mesh",
+    "Batmobile_Rig_Aero_Flap_R_F_Piston_Btm"
+   ],
+   "bone_count": 2,
+   "slot": 4,
+   "slot_name": "Batmobile_V3_Undercarriage_NEW_MIC",
+   "faces": 10,
+   "winners": {
+    "Batmobile_Chassis_Mesh": 8,
+    "Batmobile_Rig_Aero_Flap_R_F_Piston_Btm": 2
+   },
+   "ties": 0,
+   "part_pair": "aero_flaps|body",
+   "cross_part": 10,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Aero_Flap_L_B",
+    "Batmobile_Rig_Aero_Flap_L_B_Piston_Top_001"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 10,
+   "winners": {
+    "Batmobile_Rig_Aero_Flap_L_B": 2,
+    "Batmobile_Rig_Aero_Flap_L_B_Piston_Top_001": 8
+   },
+   "ties": 0,
+   "part_pair": "aero_flaps",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Aero_Flap_R_B",
+    "Batmobile_Rig_Aero_Flap_R_B_Piston_Top_001"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 10,
+   "winners": {
+    "Batmobile_Rig_Aero_Flap_R_B": 2,
+    "Batmobile_Rig_Aero_Flap_R_B_Piston_Top_001": 8
+   },
+   "ties": 0,
+   "part_pair": "aero_flaps",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Heavy_Cannon_Barrel_01",
+    "Batmobile_Rig_Weapons_Heavy_Cannon_Barrrel_02"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 10,
+   "winners": {
+    "Batmobile_Rig_Weapons_Heavy_Cannon_Barrel_01": 6,
+    "Batmobile_Rig_Weapons_Heavy_Cannon_Barrrel_02": 4
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_Mid",
+    "Batmobile_Rig_Weapons_Missiles_R_04"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 10,
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_R_04": 3,
+    "Batmobile_Rig_Weapons_Missiles_R_Mid": 7
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis_Mesh",
+    "Rear_Door_TOP"
+   ],
+   "bone_count": 2,
+   "slot": 2,
+   "slot_name": "Batmobile_V3_Mainbody_NEW_MIC",
+   "faces": 8,
+   "winners": {
+    "Batmobile_Chassis_Mesh": 8
+   },
+   "ties": 0,
+   "part_pair": "body",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis",
+    "Batmobile_Rig_Weapons_Missiles_R_T",
+    "Batmobile_Rig_Weapons_Missiles_R_04"
+   ],
+   "bone_count": 3,
+   "slot": 17,
+   "slot_name": "BatmobileV3_Upgrades_MAT_INST",
+   "faces": 6,
+   "winners": {},
+   "ties": 6,
+   "part_pair": "body|weapons",
+   "cross_part": 6,
+   "min_margin": 0.0,
+   "max_margin": 0.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis_Mesh",
+    "Batmobile_Rig_Aero_Flap_L_F"
+   ],
+   "bone_count": 2,
+   "slot": 3,
+   "slot_name": "Batmobile_V3_WheelArchs_NEW_MIC",
+   "faces": 6,
+   "winners": {
+    "Batmobile_Chassis_Mesh": 6
+   },
+   "ties": 0,
+   "part_pair": "aero_flaps|body",
+   "cross_part": 6,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis_Mesh",
+    "Batmobile_Rig_Aero_Flap_R_F"
+   ],
+   "bone_count": 2,
+   "slot": 3,
+   "slot_name": "Batmobile_V3_WheelArchs_NEW_MIC",
+   "faces": 6,
+   "winners": {
+    "Batmobile_Chassis_Mesh": 6
+   },
+   "ties": 0,
+   "part_pair": "aero_flaps|body",
+   "cross_part": 6,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis_R_REAR_WHEEL_ARCH",
+    "SUSP1_Wheel_Rear_Right"
+   ],
+   "bone_count": 2,
+   "slot": 3,
+   "slot_name": "Batmobile_V3_WheelArchs_NEW_MIC",
+   "faces": 6,
+   "winners": {
+    "SUSP1_Wheel_Rear_Right": 6
+   },
+   "ties": 0,
+   "part_pair": "body|wheel_r_r",
+   "cross_part": 6,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis_R_REAR_WHEEL_ARCH",
+    "SUSP2_Wheel_Rear_Right"
+   ],
+   "bone_count": 2,
+   "slot": 3,
+   "slot_name": "Batmobile_V3_WheelArchs_NEW_MIC",
+   "faces": 6,
+   "winners": {
+    "SUSP2_Wheel_Rear_Right": 6
+   },
+   "ties": 0,
+   "part_pair": "body|wheel_r_r",
+   "cross_part": 6,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Sides_Root",
+    "Batmobile_Rig_Weapons_Turret_Top"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 6,
+   "winners": {
+    "Batmobile_Rig_Weapons_Turret_Top": 6
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis",
+    "Batmobile_Rig_Weapons_Missiles_R_T"
+   ],
+   "bone_count": 2,
+   "slot": 17,
+   "slot_name": "BatmobileV3_Upgrades_MAT_INST",
+   "faces": 5,
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_R_T": 5
+   },
+   "ties": 0,
+   "part_pair": "body|weapons",
+   "cross_part": 5,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis",
+    "Batmobile_Rig_Weapons_Missiles_R_T",
+    "Batmobile_Rig_Weapons_Missiles_R_03"
+   ],
+   "bone_count": 3,
+   "slot": 17,
+   "slot_name": "BatmobileV3_Upgrades_MAT_INST",
+   "faces": 4,
+   "winners": {},
+   "ties": 4,
+   "part_pair": "body|weapons",
+   "cross_part": 4,
+   "min_margin": 0.0,
+   "max_margin": 0.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis_Mesh",
+    "Batmobile_Rig_Aero_Flap_L_F_Piston_Top"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 4,
+   "winners": {
+    "Batmobile_Chassis_Mesh": 4
+   },
+   "ties": 0,
+   "part_pair": "aero_flaps|body",
+   "cross_part": 4,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis_Mesh",
+    "Batmobile_Rig_Aero_Flap_R_F_Piston_Top"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 4,
+   "winners": {
+    "Batmobile_Chassis_Mesh": 4
+   },
+   "ties": 0,
+   "part_pair": "aero_flaps|body",
+   "cross_part": 4,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_T",
+    "Batmobile_Rig_Weapons_Missiles_R_Mid",
+    "Batmobile_Rig_Weapons_Missiles_R_03"
+   ],
+   "bone_count": 3,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 3,
+   "winners": {},
+   "ties": 3,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 0.0,
+   "max_margin": 0.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Riot_Sup_Main",
+    "Batmobile_Rig_Weapons_Riot_Sup_Ammo"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 3,
+   "winners": {
+    "Batmobile_Rig_Weapons_Riot_Sup_Ammo": 1,
+    "Batmobile_Rig_Weapons_Riot_Sup_Main": 2
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis",
+    "Batmobile_Rig_Weapons_Missiles_R_T",
+    "Batmobile_Rig_Weapons_Missiles_R_Mid"
+   ],
+   "bone_count": 3,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 2,
+   "winners": {},
+   "ties": 2,
+   "part_pair": "body|weapons",
+   "cross_part": 2,
+   "min_margin": 0.0,
+   "max_margin": 0.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Machine_Gun_Root",
+    "Batmobile_Rig_Weapons_Machine_Gun_01"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 2,
+   "winners": {
+    "Batmobile_Rig_Weapons_Machine_Gun_01": 2
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_L_02",
+    "Batmobile_Rig_Weapons_Missiles_L_03"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 2,
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_L_02": 1,
+    "Batmobile_Rig_Weapons_Missiles_L_03": 1
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_L_04",
+    "Batmobile_Rig_Weapons_Missiles_L_01"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 2,
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_L_01": 1,
+    "Batmobile_Rig_Weapons_Missiles_L_04": 1
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_L_Mid",
+    "Batmobile_Rig_Weapons_Missiles_L_02",
+    "Batmobile_Rig_Weapons_Missiles_L_03"
+   ],
+   "bone_count": 3,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 2,
+   "winners": {},
+   "ties": 2,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 0.0,
+   "max_margin": 0.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_L_Mid",
+    "Batmobile_Rig_Weapons_Missiles_L_04",
+    "Batmobile_Rig_Weapons_Missiles_L_01"
+   ],
+   "bone_count": 3,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 2,
+   "winners": {},
+   "ties": 2,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 0.0,
+   "max_margin": 0.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_01",
+    "Batmobile_Rig_Weapons_Missiles_R_04"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 2,
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_R_01": 1,
+    "Batmobile_Rig_Weapons_Missiles_R_04": 1
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_03",
+    "Batmobile_Rig_Weapons_Missiles_R_02"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 2,
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_R_02": 1,
+    "Batmobile_Rig_Weapons_Missiles_R_03": 1
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_Mid",
+    "Batmobile_Rig_Weapons_Missiles_R_01",
+    "Batmobile_Rig_Weapons_Missiles_R_04"
+   ],
+   "bone_count": 3,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 2,
+   "winners": {},
+   "ties": 2,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 0.0,
+   "max_margin": 0.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_Mid",
+    "Batmobile_Rig_Weapons_Missiles_R_03",
+    "Batmobile_Rig_Weapons_Missiles_R_02"
+   ],
+   "bone_count": 3,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 2,
+   "winners": {},
+   "ties": 2,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 0.0,
+   "max_margin": 0.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_T",
+    "Batmobile_Rig_Weapons_Missiles_R_Mid",
+    "Batmobile_Rig_Weapons_Missiles_R_03"
+   ],
+   "bone_count": 3,
+   "slot": 17,
+   "slot_name": "BatmobileV3_Upgrades_MAT_INST",
+   "faces": 2,
+   "winners": {},
+   "ties": 2,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 0.0,
+   "max_margin": 0.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis",
+    "Batmobile_Rig_Weapons_Missiles_R_Mid",
+    "Batmobile_Rig_Weapons_Missiles_R_03"
+   ],
+   "bone_count": 3,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 1,
+   "winners": {},
+   "ties": 1,
+   "part_pair": "body|weapons",
+   "cross_part": 1,
+   "min_margin": 0.0,
+   "max_margin": 0.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis",
+    "Batmobile_Rig_Weapons_Missiles_R_Mid",
+    "Batmobile_Rig_Weapons_Missiles_R_04"
+   ],
+   "bone_count": 3,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 1,
+   "winners": {},
+   "ties": 1,
+   "part_pair": "body|weapons",
+   "cross_part": 1,
+   "min_margin": 0.0,
+   "max_margin": 0.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis",
+    "Batmobile_Rig_Weapons_Missiles_R_T",
+    "Batmobile_Rig_Weapons_Missiles_R_03"
+   ],
+   "bone_count": 3,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 1,
+   "winners": {},
+   "ties": 1,
+   "part_pair": "body|weapons",
+   "cross_part": 1,
+   "min_margin": 0.0,
+   "max_margin": 0.0
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis",
+    "Batmobile_Rig_Weapons_Missiles_R_T",
+    "Batmobile_Rig_Weapons_Missiles_R_04"
+   ],
+   "bone_count": 3,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 1,
+   "winners": {},
+   "ties": 1,
+   "part_pair": "body|weapons",
+   "cross_part": 1,
+   "min_margin": 0.0,
+   "max_margin": 0.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_Mid",
+    "Batmobile_Rig_Weapons_Missiles_R_03"
+   ],
+   "bone_count": 2,
+   "slot": 17,
+   "slot_name": "BatmobileV3_Upgrades_MAT_INST",
+   "faces": 1,
+   "winners": {
+    "Batmobile_Rig_Weapons_Missiles_R_03": 1
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_T",
+    "Batmobile_Rig_Weapons_Missiles_R_Mid",
+    "Batmobile_Rig_Weapons_Missiles_R_04"
+   ],
+   "bone_count": 3,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 1,
+   "winners": {},
+   "ties": 1,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 0.0,
+   "max_margin": 0.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Riot_Sup_Arm_01",
+    "Batmobile_Rig_Weapons_Riot_Sup_Ammo"
+   ],
+   "bone_count": 2,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 1,
+   "winners": {
+    "Batmobile_Rig_Weapons_Riot_Sup_Arm_01": 1
+   },
+   "ties": 0,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 1.0,
+   "max_margin": 1.0
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Riot_Sup_Arm_01",
+    "Batmobile_Rig_Weapons_Riot_Sup_Main",
+    "Batmobile_Rig_Weapons_Riot_Sup_Ammo"
+   ],
+   "bone_count": 3,
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 1,
+   "winners": {},
+   "ties": 1,
+   "part_pair": "weapons",
+   "cross_part": 0,
+   "min_margin": 0.0,
+   "max_margin": 0.0
+  }
+ ],
+ "ties": [
+  {
+   "bones": [
+    "Batmobile_Chassis",
+    "Batmobile_Rig_Weapons_Missiles_R_T",
+    "Batmobile_Rig_Weapons_Missiles_R_04"
+   ],
+   "slot": 17,
+   "slot_name": "BatmobileV3_Upgrades_MAT_INST",
+   "faces": 6,
+   "part_pair": "body|weapons",
+   "weights": {
+    "Batmobile_Chassis": 1.0,
+    "Batmobile_Rig_Weapons_Missiles_R_T": 1.0,
+    "Batmobile_Rig_Weapons_Missiles_R_04": 1.0
+   },
+   "vertex_parts": {
+    "body": 1,
+    "weapons": 2
+   },
+   "recommended_part": "weapons",
+   "face_ids": [
+    295998,
+    296000,
+    296011,
+    296013,
+    296017,
+    296019
+   ]
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis",
+    "Batmobile_Rig_Weapons_Missiles_R_T",
+    "Batmobile_Rig_Weapons_Missiles_R_03"
+   ],
+   "slot": 17,
+   "slot_name": "BatmobileV3_Upgrades_MAT_INST",
+   "faces": 4,
+   "part_pair": "body|weapons",
+   "weights": {
+    "Batmobile_Chassis": 1.0,
+    "Batmobile_Rig_Weapons_Missiles_R_T": 1.0,
+    "Batmobile_Rig_Weapons_Missiles_R_03": 1.0
+   },
+   "vertex_parts": {
+    "body": 1,
+    "weapons": 2
+   },
+   "recommended_part": "weapons",
+   "face_ids": [
+    294840,
+    294842,
+    294853,
+    294856
+   ]
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_T",
+    "Batmobile_Rig_Weapons_Missiles_R_Mid",
+    "Batmobile_Rig_Weapons_Missiles_R_03"
+   ],
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 3,
+   "part_pair": "weapons",
+   "weights": {
+    "Batmobile_Rig_Weapons_Missiles_R_T": 1.0,
+    "Batmobile_Rig_Weapons_Missiles_R_Mid": 1.0,
+    "Batmobile_Rig_Weapons_Missiles_R_03": 1.0
+   },
+   "vertex_parts": {
+    "weapons": 3
+   },
+   "recommended_part": "weapons",
+   "face_ids": [
+    186554,
+    186958,
+    186968
+   ]
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis",
+    "Batmobile_Rig_Weapons_Missiles_R_T",
+    "Batmobile_Rig_Weapons_Missiles_R_Mid"
+   ],
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 2,
+   "part_pair": "body|weapons",
+   "weights": {
+    "Batmobile_Chassis": 1.0,
+    "Batmobile_Rig_Weapons_Missiles_R_T": 1.0,
+    "Batmobile_Rig_Weapons_Missiles_R_Mid": 1.0
+   },
+   "vertex_parts": {
+    "body": 1,
+    "weapons": 2
+   },
+   "recommended_part": "weapons",
+   "face_ids": [
+    186601,
+    187073
+   ]
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_L_Mid",
+    "Batmobile_Rig_Weapons_Missiles_L_02",
+    "Batmobile_Rig_Weapons_Missiles_L_03"
+   ],
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 2,
+   "part_pair": "weapons",
+   "weights": {
+    "Batmobile_Rig_Weapons_Missiles_L_Mid": 1.0,
+    "Batmobile_Rig_Weapons_Missiles_L_02": 1.0,
+    "Batmobile_Rig_Weapons_Missiles_L_03": 1.0
+   },
+   "vertex_parts": {
+    "weapons": 3
+   },
+   "recommended_part": "weapons",
+   "face_ids": [
+    196239,
+    196242
+   ]
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_L_Mid",
+    "Batmobile_Rig_Weapons_Missiles_L_04",
+    "Batmobile_Rig_Weapons_Missiles_L_01"
+   ],
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 2,
+   "part_pair": "weapons",
+   "weights": {
+    "Batmobile_Rig_Weapons_Missiles_L_Mid": 1.0,
+    "Batmobile_Rig_Weapons_Missiles_L_04": 1.0,
+    "Batmobile_Rig_Weapons_Missiles_L_01": 1.0
+   },
+   "vertex_parts": {
+    "weapons": 3
+   },
+   "recommended_part": "weapons",
+   "face_ids": [
+    189452,
+    189453
+   ]
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_Mid",
+    "Batmobile_Rig_Weapons_Missiles_R_01",
+    "Batmobile_Rig_Weapons_Missiles_R_04"
+   ],
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 2,
+   "part_pair": "weapons",
+   "weights": {
+    "Batmobile_Rig_Weapons_Missiles_R_Mid": 1.0,
+    "Batmobile_Rig_Weapons_Missiles_R_01": 1.0,
+    "Batmobile_Rig_Weapons_Missiles_R_04": 1.0
+   },
+   "vertex_parts": {
+    "weapons": 3
+   },
+   "recommended_part": "weapons",
+   "face_ids": [
+    187471,
+    187472
+   ]
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_Mid",
+    "Batmobile_Rig_Weapons_Missiles_R_03",
+    "Batmobile_Rig_Weapons_Missiles_R_02"
+   ],
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 2,
+   "part_pair": "weapons",
+   "weights": {
+    "Batmobile_Rig_Weapons_Missiles_R_Mid": 1.0,
+    "Batmobile_Rig_Weapons_Missiles_R_03": 1.0,
+    "Batmobile_Rig_Weapons_Missiles_R_02": 1.0
+   },
+   "vertex_parts": {
+    "weapons": 3
+   },
+   "recommended_part": "weapons",
+   "face_ids": [
+    186998,
+    187001
+   ]
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_T",
+    "Batmobile_Rig_Weapons_Missiles_R_Mid",
+    "Batmobile_Rig_Weapons_Missiles_R_03"
+   ],
+   "slot": 17,
+   "slot_name": "BatmobileV3_Upgrades_MAT_INST",
+   "faces": 2,
+   "part_pair": "weapons",
+   "weights": {
+    "Batmobile_Rig_Weapons_Missiles_R_T": 1.0,
+    "Batmobile_Rig_Weapons_Missiles_R_Mid": 1.0,
+    "Batmobile_Rig_Weapons_Missiles_R_03": 1.0
+   },
+   "vertex_parts": {
+    "weapons": 3
+   },
+   "recommended_part": "weapons",
+   "face_ids": [
+    294835,
+    294844
+   ]
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis",
+    "Batmobile_Rig_Weapons_Missiles_R_Mid",
+    "Batmobile_Rig_Weapons_Missiles_R_03"
+   ],
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 1,
+   "part_pair": "body|weapons",
+   "weights": {
+    "Batmobile_Chassis": 1.0,
+    "Batmobile_Rig_Weapons_Missiles_R_Mid": 1.0,
+    "Batmobile_Rig_Weapons_Missiles_R_03": 1.0
+   },
+   "vertex_parts": {
+    "body": 1,
+    "weapons": 2
+   },
+   "recommended_part": "weapons",
+   "face_ids": [
+    186535
+   ]
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis",
+    "Batmobile_Rig_Weapons_Missiles_R_Mid",
+    "Batmobile_Rig_Weapons_Missiles_R_04"
+   ],
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 1,
+   "part_pair": "body|weapons",
+   "weights": {
+    "Batmobile_Chassis": 1.0,
+    "Batmobile_Rig_Weapons_Missiles_R_Mid": 1.0,
+    "Batmobile_Rig_Weapons_Missiles_R_04": 1.0
+   },
+   "vertex_parts": {
+    "body": 1,
+    "weapons": 2
+   },
+   "recommended_part": "weapons",
+   "face_ids": [
+    187007
+   ]
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis",
+    "Batmobile_Rig_Weapons_Missiles_R_T",
+    "Batmobile_Rig_Weapons_Missiles_R_03"
+   ],
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 1,
+   "part_pair": "body|weapons",
+   "weights": {
+    "Batmobile_Chassis": 1.0,
+    "Batmobile_Rig_Weapons_Missiles_R_T": 1.0,
+    "Batmobile_Rig_Weapons_Missiles_R_03": 1.0
+   },
+   "vertex_parts": {
+    "body": 1,
+    "weapons": 2
+   },
+   "recommended_part": "weapons",
+   "face_ids": [
+    186553
+   ]
+  },
+  {
+   "bones": [
+    "Batmobile_Chassis",
+    "Batmobile_Rig_Weapons_Missiles_R_T",
+    "Batmobile_Rig_Weapons_Missiles_R_04"
+   ],
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 1,
+   "part_pair": "body|weapons",
+   "weights": {
+    "Batmobile_Chassis": 1.0,
+    "Batmobile_Rig_Weapons_Missiles_R_T": 1.0,
+    "Batmobile_Rig_Weapons_Missiles_R_04": 1.0
+   },
+   "vertex_parts": {
+    "body": 1,
+    "weapons": 2
+   },
+   "recommended_part": "weapons",
+   "face_ids": [
+    187025
+   ]
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Missiles_R_T",
+    "Batmobile_Rig_Weapons_Missiles_R_Mid",
+    "Batmobile_Rig_Weapons_Missiles_R_04"
+   ],
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 1,
+   "part_pair": "weapons",
+   "weights": {
+    "Batmobile_Rig_Weapons_Missiles_R_T": 1.0,
+    "Batmobile_Rig_Weapons_Missiles_R_Mid": 1.0,
+    "Batmobile_Rig_Weapons_Missiles_R_04": 1.0
+   },
+   "vertex_parts": {
+    "weapons": 3
+   },
+   "recommended_part": "weapons",
+   "face_ids": [
+    187026
+   ]
+  },
+  {
+   "bones": [
+    "Batmobile_Rig_Weapons_Riot_Sup_Arm_01",
+    "Batmobile_Rig_Weapons_Riot_Sup_Main",
+    "Batmobile_Rig_Weapons_Riot_Sup_Ammo"
+   ],
+   "slot": 7,
+   "slot_name": "Batmobile_V3_Turret_NEW_MIC",
+   "faces": 1,
+   "part_pair": "weapons",
+   "weights": {
+    "Batmobile_Rig_Weapons_Riot_Sup_Arm_01": 1.0,
+    "Batmobile_Rig_Weapons_Riot_Sup_Main": 1.0,
+    "Batmobile_Rig_Weapons_Riot_Sup_Ammo": 1.0
+   },
+   "vertex_parts": {
+    "weapons": 3
+   },
+   "recommended_part": "weapons",
+   "face_ids": [
+    206688
+   ]
+  }
+ ],
+ "winner_bones": [
+  {
+   "bone": "Batmobile_Rig_Weapons_Missiles_L_Mid",
+   "faces": 185
+  },
+  {
+   "bone": "Batmobile_Rig_Weapons_Missiles_R_Mid",
+   "faces": 120
+  },
+  {
+   "bone": "Batmobile_Rig_Weapons_Missiles_R_T",
+   "faces": 108
+  },
+  {
+   "bone": "Batmobile_Chassis_Mesh",
+   "faces": 60
+  },
+  {
+   "bone": "SUSP1_Wheel_Rear_Right",
+   "faces": 45
+  },
+  {
+   "bone": "Batmobile_Rig_Weapons_Missiles_R_01",
+   "faces": 43
+  },
+  {
+   "bone": "Batmobile_Rig_Weapons_Missiles_L_02",
+   "faces": 43
+  },
+  {
+   "bone": "Batmobile_Rig_Weapons_Missiles_L_01",
+   "faces": 42
+  },
+  {
+   "bone": "Batmobile_Rig_Weapons_Missiles_R_02",
+   "faces": 41
+  },
+  {
+   "bone": "Batmobile_Rig_Weapons_Missiles_L_04",
+   "faces": 41
+  },
+  {
+   "bone": "Batmobile_Rig_Weapons_Missiles_L_03",
+   "faces": 41
+  },
+  {
+   "bone": "Batmobile_Rig_Weapons_Turret_Top_Slide",
+   "faces": 37
+  },
+  {
+   "bone": "Batmobile_Rig_Weapons_Missiles_R_03",
+   "faces": 37
+  },
+  {
+   "bone": "Batmobile_Rig_Weapons_Missiles_R_04",
+   "faces": 35
+  },
+  {
+   "bone": "Batmobile_Rig_Aero_Flap_L_B_Piston_Btm_001",
+   "faces": 31
+  },
+  {
+   "bone": "Batmobile_Rig_Aero_Flap_R_B_Piston_Btm_001",
+   "faces": 31
+  },
+  {
+   "bone": "Batmobile_Rig_Weapons_Missiles_L_T",
+   "faces": 28
+  },
+  {
+   "bone": "Batmobile_Chassis",
+   "faces": 28
+  },
+  {
+   "bone": "SUSP2_Wheel_Rear_Left",
+   "faces": 26
+  },
+  {
+   "bone": "Batmobile_Rig_Weapons_Turret_Top",
+   "faces": 26
+  },
+  {
+   "bone": "SUSP2_Wheel_Front_Left",
+   "faces": 24
+  },
+  {
+   "bone": "Batmobile_Rig_Jet_Nozzle_010",
+   "faces": 20
+  },
+  {
+   "bone": "Batmobile_Rig_Jet_Nozzle_015",
+   "faces": 19
+  },
+  {
+   "bone": "Batmobile_Rig_Jet_Nozzle_016",
+   "faces": 19
+  },
+  {
+   "bone": "Batmobile_Rig_Jet_Nozzle_017",
+   "faces": 19
+  },
+  {
+   "bone": "Batmobile_Rig_Jet_Nozzle_018",
+   "faces": 19
+  },
+  {
+   "bone": "Batmobile_Rig_Jet_Nozzle_001",
+   "faces": 19
+  },
+  {
+   "bone": "Batmobile_Rig_Jet_Nozzle_002",
+   "faces": 19
+  },
+  {
+   "bone": "Batmobile_Rig_Jet_Nozzle_003",
+   "faces": 19
+  },
+  {
+   "bone": "Batmobile_Rig_Jet_Nozzle_004",
+   "faces": 19
+  },
+  {
+   "bone": "Batmobile_Rig_Jet_Nozzle_005",
+   "faces": 19
+  },
+  {
+   "bone": "Batmobile_Rig_Jet_Nozzle_006",
+   "faces": 19
+  },
+  {
+   "bone": "Batmobile_Rig_Jet_Nozzle_007",
+   "faces": 19
+  },
+  {
+   "bone": "Batmobile_Rig_Jet_Nozzle_008",
+   "faces": 19
+  },
+  {
+   "bone": "Batmobile_Rig_Jet_Nozzle_011",
+   "faces": 19
+  },
+  {
+   "bone": "Damper_Left_Front_02",
+   "faces": 18
+  },
+  {
+   "bone": "Wheel_Frnt_Left_Disc",
+   "faces": 18
+  },
+  {
+   "bone": "Batmobile_Rig_Jet_Nozzle_009",
+   "faces": 17
+  },
+  {
+   "bone": "Batmobile_Rig_Aero_Flap_L_B_Piston_Top_001",
+   "faces": 17
+  },
+  {
+   "bone": "Batmobile_Rig_Aero_Flap_R_B_Piston_Top_001",
+   "faces": 17
+  },
+  {
+   "bone": "SUSP2_Wheel_Rear_Right",
+   "faces": 16
+  },
+  {
+   "bone": "Batmobile_Rig_Jet_Nozzle_014",
+   "faces": 16
+  },
+  {
+   "bone": "Batmobile_Rig_Aero_Flap_L_F",
+   "faces": 16
+  },
+  {
+   "bone": "Batmobile_Rig_Aero_Flap_R_F",
+   "faces": 16
+  },
+  {
+   "bone": "Batmobile_Rig_Jet_Nozzle_012",
+   "faces": 15
+  },
+  {
+   "bone": "Batmobile_Rig_Jet_Nozzle_013",
+   "faces": 14
+  },
+  {
+   "bone": "SUSP1_Wheel_Front_Left",
+   "faces": 14
+  },
+  {
+   "bone": "Batmobile_Rig_Aero_Flap_L_F_Piston_Top",
+   "faces": 13
+  },
+  {
+   "bone": "Batmobile_Rig_Aero_Flap_R_F_Piston_Top",
+   "faces": 13
+  },
+  {
+   "bone": "SUSP1_Wheel_Front_Right",
+   "faces": 13
+  },
+  {
+   "bone": "SUSP2_Wheel_Front_Right",
+   "faces": 13
+  },
+  {
+   "bone": "CockPit_Mesh",
+   "faces": 12
+  },
+  {
+   "bone": "Batmobile_Rig_Weapons_Riot_Sup_Main",
+   "faces": 12
+  },
+  {
+   "bone": "Batmobile_Rig_Aero_Flap_R_F_Piston_Btm",
+   "faces": 11
+  },
+  {
+   "bone": "Batmobile_Rig_Aero_Flap_L_F_Piston_Btm",
+   "faces": 11
+  },
+  {
+   "bone": "Batmobile_Nose_Mesh",
+   "faces": 10
+  },
+  {
+   "bone": "Batmobile_Rig_Weapons_Riot_Sup_Arm_01",
+   "faces": 8
+  },
+  {
+   "bone": "Batmobile_Rig_Weapons_Heavy_Cannon_Barrel_01",
+   "faces": 6
+  },
+  {
+   "bone": "SUSP1_Wheel_Rear_Left",
+   "faces": 4
+  },
+  {
+   "bone": "Batmobile_Rig_Weapons_Heavy_Cannon_Barrrel_02",
+   "faces": 4
+  },
+  {
+   "bone": "Batmobile_Rig_Aero_Flap_L_B",
+   "faces": 2
+  },
+  {
+   "bone": "Batmobile_Rig_Weapons_Machine_Gun_01",
+   "faces": 2
+  },
+  {
+   "bone": "Batmobile_Rig_Aero_Flap_R_B",
+   "faces": 2
+  },
+  {
+   "bone": "Batmobile_Rig_Weapons_Riot_Sup_Ammo",
+   "faces": 1
+  }
+ ],
+ "checks": {
+  "split_faces_1701": true,
+  "split_face_set_matches_npy": true,
+  "split_by_slot_matches_bones": true,
+  "all_faces_two_or_three_bones": true,
+  "group_face_sum_1701": true,
+  "set_slot_face_sum_1701": true,
+  "slot_face_sum_1701": true,
+  "part_pair_face_sum_1701": true,
+  "tie_group_face_sum_31": true,
+  "winner_faces_sum_1670": true,
+  "winner_plus_ties_1701": true,
+  "all_ties_three_bone": true,
+  "all_ties_part_resolved": true,
+  "all_ties_resolve_to_weapons": true,
+  "no_weight_winner_differs_from_part": true,
+  "cross_part_230": true,
+  "tie_count_31": true
+ }
+}

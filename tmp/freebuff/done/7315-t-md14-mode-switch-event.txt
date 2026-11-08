@@ -1,0 +1,7 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/T-MD14b.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-05 (from Working/Translation/T_ROWS.jsonl blocked rows)
+Rows: T-MD14 (donor has no mode-switch event; hybrid has no second variant to hang the 30 bat-mode rows on). Translation analysis is allowed (operator 2026-11-05); the TEST BAN stays: read-only on game installs, no game launch.
+Task, files only: Search the JC3 fleet for any vehicle that changes handling/physics at runtime (jets VTOL, helicopters, transforming or two-mode vehicles, boosted states): list the carrier (event, variant, state machine member) with module and offsets. Then check BmAK's mode switch (Research/BatmobileGrab/MECHANICS.md, G3-02l drive modes) and state which JC3 carrier, if any, can express Pursuit/Battle switching, labelled decoded/derived/UNKNOWN.
+Rules: follow tmp/freebuff/INSTRUCTIONS.md section 3. Never guess; label every value decoded/derived/UNKNOWN. New script under Tools/scripts/ with --write/--check, outputs under Working/Translation/, DONE report as above.

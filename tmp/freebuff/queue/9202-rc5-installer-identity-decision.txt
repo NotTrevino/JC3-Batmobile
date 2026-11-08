@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-installer-identity-decision.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-scaffold-and-merge-script.md
+Three documents disagree about which installer a test sitting uses: queue/held/8601 says to install bm-RC4 with install_v3.ps1, Working/Q/APPROVAL_REQUEST.md points at Builds/bm-RC4/install.ps1, and the RC2 installer had a Rollback091 defect that deleted files (reports/install-v3-guard-fix.md, reports/verify-v06-install-dry-run-rc4.md). Read those, plus Builds/bm-RC4/install.ps1 and install_v3.ps1. Decide, with the files as evidence, which installer RC5 must ship, and state the Rollback-after-install-over-install caveat in one paragraph with a command that reproduces it on a simulated dropzone copy only. Write the exact installer text 9190 must emit (paths relative to the tree, snapshot-by-diff kept, no Rollback091 anywhere: give the grep that proves count 0) and the six dry-run cases V-06 must repeat. Output reports/rc5-installer-identity-decision.md only; run no install script against a real folder. Done when the report names one installer, one grep, six cases. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

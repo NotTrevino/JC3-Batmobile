@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/death-explosion-audio.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/bind-26-events-to-jc3-slots.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-health-explosion-no-crash.md
+Death explosion sound. BmAK event Play_Batmobile_Destroyed 0x3531A5D5 (BML_Impacts) and the DeathExplosionSoundArr found in brief 7953's carrier report; the operator fact is an instant explosion at zero health with no warning smoke, and passengers die. JC3's closest system is the explosion event d167a490 and fire_post_explosion, which sit in the shared effects bank. Build the BmAK sound into Builds/bm-RC5-audio3 using the route in audio-route-decision.md and wire it to the health-zero path made by brief 9171, ensuring no other vehicle's explosion changes (per the per-entity test result in per-entity-effect-binding-test.md). Verify the media is trimmed with its tail intact. Done check: event bound, media loudness within 1 LU, trigger row names the health event, and --check passes. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

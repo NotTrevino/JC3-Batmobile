@@ -1,0 +1,1171 @@
+{
+ "executable": {
+  "path": "D:/Games/Just Cause 3/JustCause3.exe",
+  "bytes": 51083264,
+  "base": 5368709120,
+  "pdata_functions": 188670
+ },
+ "walker": {
+  "all_branches": [
+   {
+    "at": 5391162710,
+    "text": "je 0x141569d68",
+    "target": 5391162728
+   },
+   {
+    "at": 5391162740,
+    "text": "jle 0x141569ddd",
+    "target": 5391162845
+   },
+   {
+    "at": 5391162816,
+    "text": "je 0x141569dd2",
+    "target": 5391162834
+   },
+   {
+    "at": 5391162828,
+    "text": "je 0x141569dd2",
+    "target": 5391162834
+   },
+   {
+    "at": 5391162841,
+    "text": "jne 0x141569d80",
+    "target": 5391162752
+   },
+   {
+    "at": 5391162868,
+    "text": "jle 0x141569f2b",
+    "target": 5391163179
+   },
+   {
+    "at": 5391162965,
+    "text": "jne 0x141569e63",
+    "target": 5391162979
+   },
+   {
+    "at": 5391163052,
+    "text": "je 0x141569ebe",
+    "target": 5391163070
+   },
+   {
+    "at": 5391163077,
+    "text": "je 0x141569f06",
+    "target": 5391163142
+   },
+   {
+    "at": 5391163084,
+    "text": "je 0x141569f06",
+    "target": 5391163142
+   },
+   {
+    "at": 5391163125,
+    "text": "jne 0x141569ee0",
+    "target": 5391163104
+   },
+   {
+    "at": 5391163131,
+    "text": "jne 0x141569f06",
+    "target": 5391163142
+   },
+   {
+    "at": 5391163173,
+    "text": "jl 0x141569e10",
+    "target": 5391162896
+   },
+   {
+    "at": 5391163201,
+    "text": "jae 0x141569f5c",
+    "target": 5391163228
+   },
+   {
+    "at": 5391163230,
+    "text": "je 0x141569fca",
+    "target": 5391163338
+   },
+   {
+    "at": 5391163252,
+    "text": "je 0x141569fc1",
+    "target": 5391163329
+   },
+   {
+    "at": 5391163265,
+    "text": "jae 0x141569fc1",
+    "target": 5391163329
+   },
+   {
+    "at": 5391163284,
+    "text": "je 0x141569fc1",
+    "target": 5391163329
+   },
+   {
+    "at": 5391163295,
+    "text": "je 0x141569fc1",
+    "target": 5391163329
+   },
+   {
+    "at": 5391163299,
+    "text": "jae 0x141569fc1",
+    "target": 5391163329
+   },
+   {
+    "at": 5391163314,
+    "text": "je 0x141569fc1",
+    "target": 5391163329
+   },
+   {
+    "at": 5391163336,
+    "text": "jne 0x141569f60",
+    "target": 5391163232
+   }
+  ],
+  "branches_to_skip": [
+   {
+    "at": 5391163252,
+    "text": "je 0x141569fc1",
+    "target": 5391163329
+   },
+   {
+    "at": 5391163265,
+    "text": "jae 0x141569fc1",
+    "target": 5391163329
+   },
+   {
+    "at": 5391163284,
+    "text": "je 0x141569fc1",
+    "target": 5391163329
+   },
+   {
+    "at": 5391163295,
+    "text": "je 0x141569fc1",
+    "target": 5391163329
+   },
+   {
+    "at": 5391163299,
+    "text": "jae 0x141569fc1",
+    "target": 5391163329
+   },
+   {
+    "at": 5391163314,
+    "text": "je 0x141569fc1",
+    "target": 5391163329
+   }
+  ],
+  "skip_target": 5391163329,
+  "back_edge": [
+   {
+    "at": 5391163336,
+    "text": "jne 0x141569f60",
+    "target": 5391163232
+   }
+  ],
+  "loop_body_instructions": 29,
+  "calls_in_loop": [
+   {
+    "at": 5391163324,
+    "text": "call 0x1414e7200"
+   }
+  ],
+  "writes_in_loop": [],
+  "reg_writes_in_loop": [
+   {
+    "at": 5391163239,
+    "text": "lea r8, [rbx + rax]"
+   }
+  ],
+  "sentinel_imms": [
+   {
+    "at": 5391163247,
+    "text": "cmp eax, 0x7fffffff"
+   },
+   {
+    "at": 5391163290,
+    "text": "cmp eax, 0x7fffffff"
+   }
+  ],
+  "count_slot": [
+   "mov edi, dword ptr [r15 + 0x148]"
+  ],
+  "array_slot": [
+   "mov rax, qword ptr [r15 + 0x140]"
+  ],
+  "setup": [
+   {
+    "at": 5391163188,
+    "text": "mov edi, dword ptr [r15 + 0x148]"
+   },
+   {
+    "at": 5391163195,
+    "text": "cmp dword ptr [rsi + 0x130], edi"
+   },
+   {
+    "at": 5391163201,
+    "text": "jae 0x141569f5c"
+   },
+   {
+    "at": 5391163203,
+    "text": "lea rcx, [rsi + 0x120]"
+   },
+   {
+    "at": 5391163210,
+    "text": "mov r9d, edi"
+   },
+   {
+    "at": 5391163213,
+    "text": "xor r8d, r8d"
+   },
+   {
+    "at": 5391163216,
+    "text": "lea rdx, [rbp + 0xd0]"
+   },
+   {
+    "at": 5391163223,
+    "text": "call 0x141520f70"
+   },
+   {
+    "at": 5391163228,
+    "text": "test edi, edi"
+   },
+   {
+    "at": 5391163230,
+    "text": "je 0x141569fca"
+   }
+  ],
+  "cinfo_pointer_set": [
+   {
+    "at": 5391163239,
+    "text": "lea r8, [rbx + rax]"
+   }
+  ],
+  "body_cinfo_slots": [
+   "mov eax, dword ptr [r15 + 0x138]",
+   "mov rax, qword ptr [r15 + 0x130]",
+   "add r13, 0x90"
+  ],
+  "start": 5391162624,
+  "pdata": "0x141569d00-0x141569ff0",
+  "contiguous": true,
+  "n_instructions": 191
+ },
+ "scan": {
+  "functions_with_constant": 1407,
+  "sentinel_cmp_sites": 853,
+  "sites_fed_from_body_fields": [
+   {
+    "at": 5370930422,
+    "text": "cmp dword ptr [rcx + rdx*4 + 8], 0x7fffffff",
+    "direct_mem": true,
+    "field": 8,
+    "source": "cmp dword ptr [rcx + rdx*4 + 8], 0x7fffffff",
+    "function": "0x14021e1c0-0x14021e6dc"
+   },
+   {
+    "at": 5371140614,
+    "text": "cmp dword ptr [rcx + 8], 0x7fffffff",
+    "direct_mem": true,
+    "field": 8,
+    "source": "cmp dword ptr [rcx + 8], 0x7fffffff",
+    "function": "0x1402519b0-0x140251b85"
+   },
+   {
+    "at": 5371140803,
+    "text": "cmp dword ptr [rcx + 8], 0x7fffffff",
+    "direct_mem": true,
+    "field": 8,
+    "source": "cmp dword ptr [rcx + 8], 0x7fffffff",
+    "function": "0x1402519b0-0x140251b85"
+   },
+   {
+    "at": 5371355066,
+    "text": "cmp ebx, 0x7fffffff",
+    "direct_mem": false,
+    "field": 8,
+    "source": "mov ebx, dword ptr [r8 + 8]",
+    "function": "0x140285fa0-0x140285fd6"
+   },
+   {
+    "at": 5371414610,
+    "text": "cmp dword ptr [rax + rcx*4 + 8], 0x7fffffff",
+    "direct_mem": true,
+    "field": 8,
+    "source": "cmp dword ptr [rax + rcx*4 + 8], 0x7fffffff",
+    "function": "0x1402947c0-0x1402949cb"
+   },
+   {
+    "at": 5371414758,
+    "text": "cmp dword ptr [rax + rcx*4 + 8], 0x7fffffff",
+    "direct_mem": true,
+    "field": 8,
+    "source": "cmp dword ptr [rax + rcx*4 + 8], 0x7fffffff",
+    "function": "0x1402947c0-0x1402949cb"
+   },
+   {
+    "at": 5371415140,
+    "text": "cmp dword ptr [rax + rcx*4 + 8], 0x7fffffff",
+    "direct_mem": true,
+    "field": 8,
+    "source": "cmp dword ptr [rax + rcx*4 + 8], 0x7fffffff",
+    "function": "0x1402949d0-0x140294c03"
+   },
+   {
+    "at": 5371415288,
+    "text": "cmp dword ptr [rax + rcx*4 + 8], 0x7fffffff",
+    "direct_mem": true,
+    "field": 8,
+    "source": "cmp dword ptr [rax + rcx*4 + 8], 0x7fffffff",
+    "function": "0x1402949d0-0x140294c03"
+   },
+   {
+    "at": 5371415725,
+    "text": "cmp dword ptr [rax + rcx*4 + 8], 0x7fffffff",
+    "direct_mem": true,
+    "field": 8,
+    "source": "cmp dword ptr [rax + rcx*4 + 8], 0x7fffffff",
+    "function": "0x140294c10-0x140294d8a"
+   },
+   {
+    "at": 5377623829,
+    "text": "cmp edx, 0x7fffffff",
+    "direct_mem": false,
+    "field": 8,
+    "source": "movsxd rdx, dword ptr [r8 + rax*4 + 8]",
+    "function": "0x1408806f0-0x1408807c1"
+   },
+   {
+    "at": 5380921944,
+    "text": "cmp dword ptr [rcx + r8*4 + 8], 0x7fffffff",
+    "direct_mem": true,
+    "field": 8,
+    "source": "cmp dword ptr [rcx + r8*4 + 8], 0x7fffffff",
+    "function": "0x140ba59b6-0x140ba5b5c"
+   },
+   {
+    "at": 5380922046,
+    "text": "cmp dword ptr [rax + rcx*4 + 8], 0x7fffffff",
+    "direct_mem": true,
+    "field": 8,
+    "source": "cmp dword ptr [rax + rcx*4 + 8], 0x7fffffff",
+    "function": "0x140ba59b6-0x140ba5b5c"
+   },
+   {
+    "at": 5382054408,
+    "text": "cmp eax, 0x7fffffff",
+    "direct_mem": false,
+    "field": 8,
+    "source": "movsxd rax, dword ptr [r8 + rax*4 + 8]",
+    "function": "0x140cba1d0-0x140cba250"
+   },
+   {
+    "at": 5384738037,
+    "text": "cmp dword ptr [rdx + 8], 0x7fffffff",
+    "direct_mem": true,
+    "field": 8,
+    "source": "cmp dword ptr [rdx + 8], 0x7fffffff",
+    "function": "0x140f49450-0x140f4965d"
+   },
+   {
+    "at": 5384738209,
+    "text": "cmp dword ptr [rcx + 8], 0x7fffffff",
+    "direct_mem": true,
+    "field": 8,
+    "source": "cmp dword ptr [rcx + 8], 0x7fffffff",
+    "function": "0x140f49450-0x140f4965d"
+   },
+   {
+    "at": 5387391479,
+    "text": "test dword ptr [rax + 8], 0x7fffffff",
+    "direct_mem": true,
+    "field": 8,
+    "source": "test dword ptr [rax + 8], 0x7fffffff",
+    "function": "0x1411d11e0-0x1411d1208"
+   },
+   {
+    "at": 5388008852,
+    "text": "test dword ptr [rax + 8], 0x7fffffff",
+    "direct_mem": true,
+    "field": 8,
+    "source": "test dword ptr [rax + 8], 0x7fffffff",
+    "function": "0x141267ce2-0x141267ef7"
+   },
+   {
+    "at": 5390632958,
+    "text": "cmp eax, 0x7fffffff",
+    "direct_mem": false,
+    "field": 8,
+    "source": "mov eax, dword ptr [r8 + 8]",
+    "function": "0x1414e87d0-0x1414e899a"
+   },
+   {
+    "at": 5390765929,
+    "text": "cmp ecx, 0x7fffffff",
+    "direct_mem": false,
+    "field": 12,
+    "source": "mov ecx, dword ptr [r9 + rax + 0xc]",
+    "function": "0x141508e50-0x14150a447"
+   },
+   {
+    "at": 5390767513,
+    "text": "cmp eax, 0x7fffffff",
+    "direct_mem": false,
+    "field": 12,
+    "source": "movsxd rax, dword ptr [rdx + r9 + 0xc]",
+    "function": "0x141508e50-0x14150a447"
+   },
+   {
+    "at": 5390771445,
+    "text": "cmp eax, 0x7fffffff",
+    "direct_mem": false,
+    "field": 12,
+    "source": "movsxd rax, dword ptr [r14 + r13 + 0xc]",
+    "function": "0x14150a450-0x14150a753"
+   },
+   {
+    "at": 5391015412,
+    "text": "cmp eax, 0x7fffffff",
+    "direct_mem": false,
+    "field": 8,
+    "source": "movsxd rax, dword ptr [rdx + 8]",
+    "function": "0x141545dd0-0x141545e29"
+   },
+   {
+    "at": 5391015983,
+    "text": "cmp eax, 0x7fffffff",
+    "direct_mem": false,
+    "field": 12,
+    "source": "movsxd rax, dword ptr [rdi + 0xc]",
+    "function": "0x141545e29-0x14154623b"
+   },
+   {
+    "at": 5391163247,
+    "text": "cmp eax, 0x7fffffff",
+    "direct_mem": false,
+    "field": 8,
+    "source": "movsxd rax, dword ptr [r8 + 8]",
+    "function": "0x141569d00-0x141569ff0"
+   },
+   {
+    "at": 5391163290,
+    "text": "cmp eax, 0x7fffffff",
+    "direct_mem": false,
+    "field": 12,
+    "source": "movsxd rax, dword ptr [r8 + 0xc]",
+    "function": "0x141569d00-0x141569ff0"
+   },
+   {
+    "at": 5391670642,
+    "text": "cmp ebx, 0x7fffffff",
+    "direct_mem": false,
+    "field": 12,
+    "source": "mov ebx, dword ptr [r10 + 0xc]",
+    "function": "0x1415e5d40-0x1415e5d89"
+   },
+   {
+    "at": 5391671545,
+    "text": "cmp edi, 0x7fffffff",
+    "direct_mem": false,
+    "field": 12,
+    "source": "movsxd rdi, dword ptr [r14 + rsi + 0xc]",
+    "function": "0x1415e6030-0x1415e6651"
+   },
+   {
+    "at": 5391671740,
+    "text": "cmp esi, 0x7fffffff",
+    "direct_mem": false,
+    "field": 8,
+    "source": "movsxd rsi, dword ptr [r14 + rsi + 8]",
+    "function": "0x1415e6030-0x1415e6651"
+   },
+   {
+    "at": 5394854663,
+    "text": "cmp r11d, 0x7fffffff",
+    "direct_mem": false,
+    "field": 12,
+    "source": "movsxd r11, dword ptr [r12 + 0xc]",
+    "function": "0x1418ef210-0x1418ef53c"
+   },
+   {
+    "at": 5395197679,
+    "text": "cmp dword ptr [r8 + 0xc], 0x7fffffff",
+    "direct_mem": true,
+    "field": 12,
+    "source": "cmp dword ptr [r8 + 0xc], 0x7fffffff",
+    "function": "0x141942eef-0x141942f05"
+   },
+   {
+    "at": 5395198584,
+    "text": "cmp ebx, 0x7fffffff",
+    "direct_mem": false,
+    "field": 12,
+    "source": "mov ebx, dword ptr [r8 + 0xc]",
+    "function": "0x141943257-0x1419432a2"
+   }
+  ],
+  "functions_testing_both": [
+   "0x141569d00-0x141569ff0",
+   "0x1415e6030-0x1415e6651"
+  ],
+  "both_evidence": [
+   {
+    "function": "0x141569d00-0x141569ff0",
+    "stride_0x18": [
+     {
+      "at": 5391163329,
+      "text": "add rbx, 0x18"
+     }
+    ],
+    "sites": [
+     5391163247,
+     5391163290
+    ]
+   },
+   {
+    "function": "0x1415e6030-0x1415e6651",
+    "stride_0x18": [
+     {
+      "at": 5391672029,
+      "text": "add r14, 0x18"
+     }
+    ],
+    "sites": [
+     5391671545,
+     5391671740
+    ]
+   }
+  ]
+ },
+ "other": {
+  "function": "0x1415e6030-0x1415e6651",
+  "block": [
+   {
+    "at": 5391671536,
+    "text": "mov rsi, qword ptr [r8 + 0x50]"
+   },
+   {
+    "at": 5391671540,
+    "text": "movsxd rdi, dword ptr [r14 + rsi + 0xc]"
+   },
+   {
+    "at": 5391671545,
+    "text": "cmp edi, 0x7fffffff"
+   },
+   {
+    "at": 5391671551,
+    "text": "je 0x1415e6352"
+   },
+   {
+    "at": 5391671735,
+    "text": "movsxd rsi, dword ptr [r14 + rsi + 8]"
+   },
+   {
+    "at": 5391671740,
+    "text": "cmp esi, 0x7fffffff"
+   },
+   {
+    "at": 5391671746,
+    "text": "je 0x1415e62fe"
+   },
+   {
+    "at": 5391672029,
+    "text": "add r14, 0x18"
+   },
+   {
+    "at": 5391672062,
+    "text": "mov r8d, 0x200"
+   },
+   {
+    "at": 5391672068,
+    "text": "lea rdx, [rsp + 0x70]"
+   },
+   {
+    "at": 5391672073,
+    "text": "lea rcx, [rsp + 0x50]"
+   },
+   {
+    "at": 5391672084,
+    "text": "lea rdx, [rip + 0xfb10dd]"
+   },
+   {
+    "at": 5391672146,
+    "text": "mov r8d, 0x200"
+   },
+   {
+    "at": 5391672152,
+    "text": "lea rdx, [rsp + 0x70]"
+   },
+   {
+    "at": 5391672157,
+    "text": "lea rcx, [rsp + 0x50]"
+   },
+   {
+    "at": 5391672168,
+    "text": "lea rdx, [rip + 0xfb1031]"
+   }
+  ],
+  "stride": [
+   {
+    "at": 5391672029,
+    "text": "add r14, 0x18"
+   }
+  ],
+  "branches_to": {
+   "0x1415e62fe": "mov r8d, 0x200",
+   "0x1415e6352": "mov r8d, 0x200"
+  },
+  "epilogue_jmp": [
+   {
+    "at": 5391672141,
+    "text": "jmp 0x1415e6601"
+   }
+  ]
+ },
+ "cites": [
+  {
+   "at": 5391163188,
+   "want": "[r15 + 0x148]",
+   "what": "cinfo count",
+   "function": "0x141569d00-0x141569ff0",
+   "boundary": true,
+   "text": "mov edi, dword ptr [r15 + 0x148]",
+   "ok": true
+  },
+  {
+   "at": 5391163232,
+   "want": "[r15 + 0x140]",
+   "what": "cinfo array",
+   "function": "0x141569d00-0x141569ff0",
+   "boundary": true,
+   "text": "mov rax, qword ptr [r15 + 0x140]",
+   "ok": true
+  },
+  {
+   "at": 5391163239,
+   "want": "lea r8",
+   "what": "&cinfo[i]",
+   "function": "0x141569d00-0x141569ff0",
+   "boundary": true,
+   "text": "lea r8, [rbx + rax]",
+   "ok": true
+  },
+  {
+   "at": 5391163243,
+   "want": "[r8 + 8]",
+   "what": "bodyA load",
+   "function": "0x141569d00-0x141569ff0",
+   "boundary": true,
+   "text": "movsxd rax, dword ptr [r8 + 8]",
+   "ok": true
+  },
+  {
+   "at": 5391163247,
+   "want": "0x7fffffff",
+   "what": "bodyA sentinel test",
+   "function": "0x141569d00-0x141569ff0",
+   "boundary": true,
+   "text": "cmp eax, 0x7fffffff",
+   "ok": true
+  },
+  {
+   "at": 5391163252,
+   "want": "0x141569fc1",
+   "what": "bodyA sentinel branch",
+   "function": "0x141569d00-0x141569ff0",
+   "boundary": true,
+   "text": "je 0x141569fc1",
+   "ok": true
+  },
+  {
+   "at": 5391163254,
+   "want": "[rsi + 0x2c]",
+   "what": "capacity source",
+   "function": "0x141569d00-0x141569ff0",
+   "boundary": true,
+   "text": "mov edx, dword ptr [rsi + 0x2c]",
+   "ok": true
+  },
+  {
+   "at": 5391163257,
+   "want": "0x3fffffff",
+   "what": "capacity mask",
+   "function": "0x141569d00-0x141569ff0",
+   "boundary": true,
+   "text": "and edx, 0x3fffffff",
+   "ok": true
+  },
+  {
+   "at": 5391163265,
+   "want": "0x141569fc1",
+   "what": "bodyA range branch",
+   "function": "0x141569d00-0x141569ff0",
+   "boundary": true,
+   "text": "jae 0x141569fc1",
+   "ok": true
+  },
+  {
+   "at": 5391163267,
+   "want": "[rsi + 0x20]",
+   "what": "body array",
+   "function": "0x141569d00-0x141569ff0",
+   "boundary": true,
+   "text": "mov r9, qword ptr [rsi + 0x20]",
+   "ok": true
+  },
+  {
+   "at": 5391163278,
+   "want": "0x40",
+   "what": "live-byte test A",
+   "function": "0x141569d00-0x141569ff0",
+   "boundary": true,
+   "text": "test byte ptr [r9 + rax*8 + 0x40], 3",
+   "ok": true
+  },
+  {
+   "at": 5391163284,
+   "want": "0x141569fc1",
+   "what": "bodyA live branch",
+   "function": "0x141569d00-0x141569ff0",
+   "boundary": true,
+   "text": "je 0x141569fc1",
+   "ok": true
+  },
+  {
+   "at": 5391163286,
+   "want": "[r8 + 0xc]",
+   "what": "bodyB load",
+   "function": "0x141569d00-0x141569ff0",
+   "boundary": true,
+   "text": "movsxd rax, dword ptr [r8 + 0xc]",
+   "ok": true
+  },
+  {
+   "at": 5391163290,
+   "want": "0x7fffffff",
+   "what": "bodyB sentinel test",
+   "function": "0x141569d00-0x141569ff0",
+   "boundary": true,
+   "text": "cmp eax, 0x7fffffff",
+   "ok": true
+  },
+  {
+   "at": 5391163295,
+   "want": "0x141569fc1",
+   "what": "bodyB sentinel branch",
+   "function": "0x141569d00-0x141569ff0",
+   "boundary": true,
+   "text": "je 0x141569fc1",
+   "ok": true
+  },
+  {
+   "at": 5391163299,
+   "want": "0x141569fc1",
+   "what": "bodyB range branch",
+   "function": "0x141569d00-0x141569ff0",
+   "boundary": true,
+   "text": "jae 0x141569fc1",
+   "ok": true
+  },
+  {
+   "at": 5391163314,
+   "want": "0x141569fc1",
+   "what": "bodyB live branch",
+   "function": "0x141569d00-0x141569ff0",
+   "boundary": true,
+   "text": "je 0x141569fc1",
+   "ok": true
+  },
+  {
+   "at": 5391163316,
+   "want": "lea rdx, [rsp + 0x38]",
+   "what": "slot out-param",
+   "function": "0x141569d00-0x141569ff0",
+   "boundary": true,
+   "text": "lea rdx, [rsp + 0x38]",
+   "ok": true
+  },
+  {
+   "at": 5391163321,
+   "want": "mov rcx, rsi",
+   "what": "arg 1 = system",
+   "function": "0x141569d00-0x141569ff0",
+   "boundary": true,
+   "text": "mov rcx, rsi",
+   "ok": true
+  },
+  {
+   "at": 5391163324,
+   "want": "call 0x1414e7200",
+   "what": "the add",
+   "function": "0x141569d00-0x141569ff0",
+   "boundary": true,
+   "text": "call 0x1414e7200",
+   "ok": true
+  },
+  {
+   "at": 5391163329,
+   "want": "add rbx, 0x18",
+   "what": "loop increment",
+   "function": "0x141569d00-0x141569ff0",
+   "boundary": true,
+   "text": "add rbx, 0x18",
+   "ok": true
+  },
+  {
+   "at": 5391163333,
+   "want": "dec rdi",
+   "what": "records left",
+   "function": "0x141569d00-0x141569ff0",
+   "boundary": true,
+   "text": "dec rdi",
+   "ok": true
+  },
+  {
+   "at": 5391163336,
+   "want": "jne 0x141569f60",
+   "what": "back edge",
+   "function": "0x141569d00-0x141569ff0",
+   "boundary": true,
+   "text": "jne 0x141569f60",
+   "ok": true
+  },
+  {
+   "at": 5390627369,
+   "want": "[rcx + 0x13c]",
+   "what": "world free-list head",
+   "function": "0x1414e7200-0x1414e735e",
+   "boundary": true,
+   "text": "cmp dword ptr [rcx + 0x13c], 0x7fffffff",
+   "ok": true
+  },
+  {
+   "at": 5390627431,
+   "want": "[rbx + 0x120]",
+   "what": "allocator",
+   "function": "0x1414e7200-0x1414e735e",
+   "boundary": true,
+   "text": "lea rcx, [rbx + 0x120]",
+   "ok": true
+  },
+  {
+   "at": 5390627448,
+   "want": "0x38",
+   "what": "constraint stride",
+   "function": "0x1414e7200-0x1414e735e",
+   "boundary": true,
+   "text": "imul rsi, rsi, 0x38",
+   "ok": true
+  },
+  {
+   "at": 5390627604,
+   "want": "[rsi + 0x16]",
+   "what": "disable bit",
+   "function": "0x1414e7200-0x1414e735e",
+   "boundary": true,
+   "text": "or byte ptr [rsi + 0x16], 4",
+   "ok": true
+  },
+  {
+   "at": 5390627610,
+   "want": "[rbp + 0xc]",
+   "what": "bodyB read in add",
+   "function": "0x1414e7200-0x1414e735e",
+   "boundary": true,
+   "text": "mov eax, dword ptr [rbp + 0xc]",
+   "ok": true
+  },
+  {
+   "at": 5390627613,
+   "want": "[rbp + 8]",
+   "what": "bodyA read in add",
+   "function": "0x1414e7200-0x1414e735e",
+   "boundary": true,
+   "text": "cmp dword ptr [rbp + 8], eax",
+   "ok": true
+  },
+  {
+   "at": 5391088199,
+   "want": "[rdx]",
+   "what": "constraintData",
+   "function": "0x141557a30-0x141557bf9",
+   "boundary": true,
+   "text": "mov r12, qword ptr [rdx]",
+   "ok": true
+  },
+  {
+   "at": 5391088202,
+   "want": "[rdx + 0x10]",
+   "what": "flags",
+   "function": "0x141557a30-0x141557bf9",
+   "boundary": true,
+   "text": "movzx esi, byte ptr [rdx + 0x10]",
+   "ok": true
+  },
+  {
+   "at": 5391088206,
+   "want": "[rdx + 0xc]",
+   "what": "bodyB copy",
+   "function": "0x141557a30-0x141557bf9",
+   "boundary": true,
+   "text": "mov ebx, dword ptr [rdx + 0xc]",
+   "ok": true
+  },
+  {
+   "at": 5391088209,
+   "want": "[rdx + 8]",
+   "what": "bodyA copy",
+   "function": "0x141557a30-0x141557bf9",
+   "boundary": true,
+   "text": "mov edi, dword ptr [rdx + 8]",
+   "ok": true
+  },
+  {
+   "at": 5391088330,
+   "want": "[rbp]",
+   "what": "bodyIdA store",
+   "function": "0x141557a30-0x141557bf9",
+   "boundary": true,
+   "text": "mov dword ptr [rbp], edi",
+   "ok": true
+  },
+  {
+   "at": 5391088333,
+   "want": "[rbp + 4]",
+   "what": "bodyIdB store",
+   "function": "0x141557a30-0x141557bf9",
+   "boundary": true,
+   "text": "mov dword ptr [rbp + 4], ebx",
+   "ok": true
+  },
+  {
+   "at": 5371333009,
+   "want": "[rsp + 0x48]",
+   "what": "caller cinfo +8",
+   "function": "0x140280530-0x140280acf",
+   "boundary": true,
+   "text": "mov dword ptr [rsp + 0x48], ecx",
+   "ok": true
+  },
+  {
+   "at": 5371333013,
+   "want": "[rsp + 0x4c]",
+   "what": "caller cinfo +0xc",
+   "function": "0x140280530-0x140280acf",
+   "boundary": true,
+   "text": "mov dword ptr [rsp + 0x4c], ebx",
+   "ok": true
+  },
+  {
+   "at": 5371333141,
+   "want": "[rsi + 0x310]",
+   "what": "caller world",
+   "function": "0x140280530-0x140280acf",
+   "boundary": true,
+   "text": "mov rcx, qword ptr [rsi + 0x310]",
+   "ok": true
+  },
+  {
+   "at": 5371333148,
+   "want": "call 0x1414e7200",
+   "what": "caller add",
+   "function": "0x140280530-0x140280acf",
+   "boundary": true,
+   "text": "call 0x1414e7200",
+   "ok": true
+  }
+ ],
+ "registry": {
+  "cinfo": {
+   "record": 5416667552,
+   "size": 24,
+   "members": [
+    {
+     "name": "constraintData",
+     "offset": 0
+    },
+    {
+     "name": "bodyA",
+     "offset": 8
+    },
+    {
+     "name": "bodyB",
+     "offset": 12
+    },
+    {
+     "name": "flags",
+     "offset": 16
+    },
+    {
+     "name": "hknpConstraint",
+     "offset": 0
+    }
+   ]
+  },
+  "world": {
+   "record": 5416662872,
+   "size": 256,
+   "members": [
+    {
+     "name": "bodyBufferCapacity",
+     "offset": 0
+    },
+    {
+     "name": "userBodyBuffer",
+     "offset": 8
+    },
+    {
+     "name": "motionBufferCapacity",
+     "offset": 16
+    },
+    {
+     "name": "userMotionBuffer",
+     "offset": 24
+    },
+    {
+     "name": "constraintBufferCapacity",
+     "offset": 32
+    },
+    {
+     "name": "userConstraintBuffer",
+     "offset": 40
+    },
+    {
+     "name": "persistentStreamAllocator",
+     "offset": 48
+    },
+    {
+     "name": "materialLibrary",
+     "offset": 56
+    },
+    {
+     "name": "motionPropertiesLibrary",
+     "offset": 64
+    },
+    {
+     "name": "qualityLibrary",
+     "offset": 72
+    },
+    {
+     "name": "simulationType",
+     "offset": 80
+    },
+    {
+     "name": "numSplitterCells",
+     "offset": 84
+    },
+    {
+     "name": "gravity",
+     "offset": 96
+    },
+    {
+     "name": "enableContactCaching",
+     "offset": 112
+    },
+    {
+     "name": "mergeEventsBeforeDispatch",
+     "offset": 113
+    },
+    {
+     "name": "leavingBroadPhaseBehavior",
+     "offset": 114
+    },
+    {
+     "name": "broadPhaseAabb",
+     "offset": 128
+    },
+    {
+     "name": "broadPhaseConfig",
+     "offset": 160
+    },
+    {
+     "name": "collisionFilter",
+     "offset": 168
+    },
+    {
+     "name": "shapeTagCodec",
+     "offset": 176
+    },
+    {
+     "name": "collisionTolerance",
+     "offset": 184
+    },
+    {
+     "name": "relativeCollisionAccuracy",
+     "offset": 188
+    },
+    {
+     "name": "enableWeldingForDefaultObjects",
+     "offset": 192
+    },
+    {
+     "name": "enableWeldingForCriticalObjects",
+     "offset": 193
+    },
+    {
+     "name": "solverTau",
+     "offset": 196
+    }
+   ]
+  }
+ },
+ "fleet": {
+  "files": 50,
+  "records": 494,
+  "bodyB_sentinel": 494,
+  "bodyA_sentinel": 0,
+  "bodyA_out_of_range": 0,
+  "bodyB_other_values": [],
+  "stored_dword_hex": [
+   "ffffff7f"
+  ],
+  "tested_imm_hex": "ffffff7f",
+  "rejected": 494,
+  "errors": []
+ },
+ "add": {
+  "va": 5390627328,
+  "pdata": "0x1414e7200-0x1414e735e",
+  "sentinel_sites": [
+   {
+    "at": 5390627369,
+    "text": "cmp dword ptr [rcx + 0x13c], 0x7fffffff"
+   }
+  ],
+  "sentinel_in_claimed_range": [
+   {
+    "at": 5390627369,
+    "text": "cmp dword ptr [rcx + 0x13c], 0x7fffffff"
+   }
+  ],
+  "strings": [
+   {
+    "at": 5390627548,
+    "text": "lea rdx, [rip + 0x107c8d5]",
+    "target": 5407914936,
+    "string": "Unsupported constraint type. Disabling the constraint."
+   },
+   {
+    "at": 5390627571,
+    "text": "lea r8, [rip + 0x107c836]",
+    "target": 5407914800,
+    "string": "z:\\dependencyrepository\\3rdparty\\havok_physics\\havok_physics-2014.1.0.3.2.7.1020265\\source\\physics\\physics\\dynamics\\world\\hknpworld.cpp"
+   }
+  ]
+ },
+ "copy": {
+  "va": 5391088176,
+  "pdata": "0x141557a30-0x141557bf9",
+  "sentinel_sites": []
+ },
+ "calls_to_add": [
+  5370810456,
+  5370816552,
+  5371250024,
+  5371313358,
+  5371333148,
+  5371584633,
+  5378097557,
+  5378332787,
+  5381308677,
+  5390771705,
+  5391163324,
+  5393800283,
+  5393801958
+ ]
+}

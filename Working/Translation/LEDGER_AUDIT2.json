@@ -1,0 +1,4971 @@
+{
+ "generated_by": "Tools/scripts/ledger_audit2.py (--write)",
+ "card": "GRB-G3-11b ledger re-check with the right decoders",
+ "inputs": {
+  "ledger": {
+   "path": "Working/Translation/T_ROWS.jsonl",
+   "rows": 198,
+   "sha256": "8996b60a5370d932f437fd138d23dc15358d41e24e1026306d7b02172dc0e5f4"
+  },
+  "before": {
+   "path": "Working/Translation/LEDGER_AUDIT.json",
+   "sha256": "3a9a9bcf49a5bfe699374b7ae7d190a824c84cf3768c1fb2ba9a3eee6409dcea",
+   "rows": 198
+  },
+  "physicsc": {
+   "path": "Builds/bm-RC1/aaf/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle.physicsc",
+   "bytes": 902384,
+   "sha256": "eda17906c1f81c7bd0fd5798653eeb178d3c3b71e6a659f98576aaf0f9c99536"
+  },
+  "epe": {
+   "path": "Builds/bm-RC1/aaf/editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe",
+   "sha256": "2db78866360b960dfb30183740bf14b80fafa048828610a06ab2dd0d91432b8b",
+   "objects": 466
+  },
+  "parts": {
+   "path": "Builds/bm-RC1/aaf/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc",
+   "sha256": "6e379e4c5716f15c82f3b8a557f6140b059b7157f2655215f05fa8a340e82560",
+   "parts": 61
+  },
+  "lights": {
+   "path": "Builds/bm-RC1/aaf/editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/generated/batmobile/v0300_car_kensington_sportsmuscle_lights.vmodc",
+   "sha256": "d4e6610b0ea33a77c0b7a6fa6740779eab4a3e2901ae98a06e6627bff478a34e",
+   "rows": 18
+  },
+  "convert": {
+   "tool": "Tools/Gibbed/Gibbed.JustCause3.ConvertProperty.exe --e",
+   "ok": true
+  }
+ },
+ "rules": {
+  "scope_collision": "id starts T-P/T-CO, or the row text names collision/physicsc/hull/world_collision/raycast/body_id/contact hull",
+  "scope_epe": "dispo=epe, or doc T-13/T-14 (the entity-graph rows)",
+  "before": "G3-11's stored verdict/tier/evidence, read from LEDGER_AUDIT.json (read-only); not re-derived, so any change is attributable to G3-11b's decoder, not to a different matching rule",
+  "physicsc": "jc3hkx.Packfile + body table (hknpPhysicsSystemData + 0x2d20, 0x60/body), jc3hkx.decode_polytope, bm_colmesh.decode_tree, bm_colmesh.dyn_tree_refit, bm_colhull.selftest",
+  "epe": "Gibbed ConvertProperty --e to XML, then object `name`, `name_hash`, `_class` and member names; a token resolves by exact name, by jenkins(name) against a name_hash, by class/member, by a lights-module preset_id, or by part name",
+  "verdicts": "TRANSLATED / GUESSED / NOT TRANSLATED / REFUTED / UNVERIFIABLE (UNVERIFIABLE = the claim needs data outside the built files)"
+ },
+ "facts": {
+  "physics": {
+   "file": "Builds/bm-RC1/aaf/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle.physicsc",
+   "bytes": 902384,
+   "sha256": "eda17906c1f81c7bd0fd5798653eeb178d3c3b71e6a659f98576aaf0f9c99536",
+   "objects": 430,
+   "sha256_16": "eda17906c1f81c7b",
+   "classes": {
+    "CPfxPartIndexProperty": 98,
+    "hkRefCountedProperties": 92,
+    "hknpShapeMassProperties": 56,
+    "hknpConvexPolytopeShape": 54,
+    "hkGeometry": 36,
+    "hknpDynamicCompoundShape": 20,
+    "hknpDynamicCompoundShapeData": 20,
+    "hknpExternMeshShape": 18,
+    "hknpExternMeshShapeData": 18,
+    "hkpLimitedHingeConstraintData": 9,
+    "hknpStaticCompoundShape": 2,
+    "hknpStaticCompoundShapeData": 2,
+    "hkpRagdollConstraintData": 2,
+    "hkRootLevelContainer": 1,
+    "hknpPhysicsSceneData": 1,
+    "hknpPhysicsSystemData": 1
+   },
+   "body_table": {
+    "entries": 62,
+    "index_max": 61,
+    "gaps": [],
+    "shape_entries": 62,
+    "hulls": 40,
+    "meshes": 18,
+    "dynamic_compounds": 2,
+    "static_compounds": 2,
+    "class_of": {
+     "0": "hknpConvexPolytopeShape",
+     "1": "hknpConvexPolytopeShape",
+     "2": "hknpConvexPolytopeShape",
+     "3": "hknpConvexPolytopeShape",
+     "4": "hknpConvexPolytopeShape",
+     "5": "hknpConvexPolytopeShape",
+     "6": "hknpConvexPolytopeShape",
+     "7": "hknpConvexPolytopeShape",
+     "8": "hknpConvexPolytopeShape",
+     "9": "hknpConvexPolytopeShape",
+     "10": "hknpConvexPolytopeShape",
+     "11": "hknpConvexPolytopeShape",
+     "12": "hknpConvexPolytopeShape",
+     "13": "hknpConvexPolytopeShape",
+     "14": "hknpConvexPolytopeShape",
+     "15": "hknpConvexPolytopeShape",
+     "16": "hknpStaticCompoundShape",
+     "17": "hknpConvexPolytopeShape",
+     "18": "hknpConvexPolytopeShape",
+     "19": "hknpConvexPolytopeShape",
+     "20": "hknpConvexPolytopeShape",
+     "21": "hknpConvexPolytopeShape",
+     "22": "hknpConvexPolytopeShape",
+     "23": "hknpConvexPolytopeShape",
+     "24": "hknpConvexPolytopeShape",
+     "25": "hknpConvexPolytopeShape",
+     "26": "hknpStaticCompoundShape",
+     "27": "hknpConvexPolytopeShape",
+     "28": "hknpConvexPolytopeShape",
+     "29": "hknpConvexPolytopeShape",
+     "30": "hknpConvexPolytopeShape",
+     "31": "hknpConvexPolytopeShape",
+     "32": "hknpConvexPolytopeShape",
+     "33": "hknpConvexPolytopeShape",
+     "34": "hknpConvexPolytopeShape",
+     "35": "hknpConvexPolytopeShape",
+     "36": "hknpConvexPolytopeShape",
+     "37": "hknpConvexPolytopeShape",
+     "38": "hknpConvexPolytopeShape",
+     "39": "hknpConvexPolytopeShape",
+     "40": "hknpConvexPolytopeShape",
+     "41": "hknpConvexPolytopeShape",
+     "42": "hknpExternMeshShape",
+     "43": "hknpExternMeshShape",
+     "44": "hknpExternMeshShape",
+     "45": "hknpExternMeshShape",
+     "46": "hknpExternMeshShape",
+     "47": "hknpExternMeshShape",
+     "48": "hknpExternMeshShape",
+     "49": "hknpExternMeshShape",
+     "50": "hknpExternMeshShape",
+     "51": "hknpExternMeshShape",
+     "52": "hknpExternMeshShape",
+     "53": "hknpExternMeshShape",
+     "54": "hknpExternMeshShape",
+     "55": "hknpExternMeshShape",
+     "56": "hknpExternMeshShape",
+     "57": "hknpExternMeshShape",
+     "58": "hknpExternMeshShape",
+     "59": "hknpExternMeshShape",
+     "60": "hknpDynamicCompoundShape",
+     "61": "hknpDynamicCompoundShape"
+    }
+   },
+   "extern_mesh_part0": {
+    "shape": "0x11bc0",
+    "vertices_packed": 12537,
+    "vertex_stride": 6,
+    "geometries": {
+     "A": 11197,
+     "B": null
+    },
+    "triangles": 6269,
+    "sections": 2,
+    "aabb": [
+     [
+      -1.794664978981018,
+      0.02507000043988228,
+      -3.4776859283447266,
+      -0.05000000074505806
+     ],
+     [
+      1.8035739660263062,
+      2.4082188606262207,
+      3.6592719554901123,
+      0.05000000074505806
+     ]
+    ],
+    "tree_nodes": 12537,
+    "tree_leaves": 6269,
+    "tree_errors": [],
+    "leaves_distinct_triangles": 6269,
+    "triangles_outside_leaf": 0
+   },
+   "hull_reencode": 54,
+   "oracles": {
+    "bm_colmesh.selftest": "PASS",
+    "bm_colhull.selftest": "PASS 54/54"
+   },
+   "dynamic_trees": {
+    "trees": 20,
+    "worst_m": 0.01593,
+    "exact": 19,
+    "stale": [
+     {
+      "compound": "0xd3c80",
+      "part": null,
+      "max_move_m": 0.01593
+     }
+    ]
+   },
+   "hulls": {
+    "count": 54,
+    "max_axis_m": 7.037,
+    "convex_ok": 54,
+    "longest_axis_3679": [],
+    "top6": [
+     {
+      "offset": "0x5250",
+      "part": 0,
+      "vertices": 96,
+      "extents": [
+       3.4982,
+       2.2831,
+       7.037
+      ],
+      "longest": 7.037,
+      "bounds": {
+       "min": [
+        -1.7446650266647339,
+        0.07507000118494034,
+        -3.4276859760284424
+       ],
+       "max": [
+        1.753574013710022,
+        2.3582189083099365,
+        3.609272003173828
+       ]
+      },
+      "convex_ok": true
+     },
+     {
+      "offset": "0x7e80",
+      "part": 3,
+      "vertices": 24,
+      "extents": [
+       1.9443,
+       0.8531,
+       1.5455
+      ],
+      "longest": 1.9443,
+      "bounds": {
+       "min": [
+        -1.0073214769363403,
+        0.2216556966304779,
+        -2.426797866821289
+       ],
+       "max": [
+        0.9369574785232544,
+        1.0747507810592651,
+        -0.8812875747680664
+       ]
+      },
+      "convex_ok": true
+     },
+     {
+      "offset": "0x8310",
+      "part": 20,
+      "vertices": 20,
+      "extents": [
+       0.6795,
+       0.6374,
+       1.7265
+      ],
+      "longest": 1.7265,
+      "bounds": {
+       "min": [
+        -1.0548491477966309,
+        0.34331199526786804,
+        -2.468519449234009
+       ],
+       "max": [
+        -0.3753688633441925,
+        0.9807424545288086,
+        -0.7420598864555359
+       ]
+      },
+      "convex_ok": true
+     },
+     {
+      "offset": "0x91d0",
+      "part": 21,
+      "vertices": 20,
+      "extents": [
+       0.6592,
+       0.6373,
+       1.7264
+      ],
+      "longest": 1.7264,
+      "bounds": {
+       "min": [
+        0.3753989338874817,
+        0.3433624505996704,
+        -2.4684712886810303
+       ],
+       "max": [
+        1.0346341133117676,
+        0.9807049036026001,
+        -0.7420310974121094
+       ]
+      },
+      "convex_ok": true
+     },
+     {
+      "offset": "0xb8b0",
+      "part": 24,
+      "vertices": 24,
+      "extents": [
+       1.5718,
+       0.3284,
+       1.4899
+      ],
+      "longest": 1.5718,
+      "bounds": {
+       "min": [
+        -0.7911131381988525,
+        0.7568855285644531,
+        -2.370298385620117
+       ],
+       "max": [
+        0.7807327508926392,
+        1.0852619409561157,
+        -0.8804025650024414
+       ]
+      },
+      "convex_ok": true
+     },
+     {
+      "offset": "0xbd90",
+      "part": 25,
+      "vertices": 24,
+      "extents": [
+       1.5718,
+       0.3284,
+       1.4899
+      ],
+      "longest": 1.5718,
+      "bounds": {
+       "min": [
+        -0.7911131381988525,
+        0.7568855285644531,
+        -2.370298385620117
+       ],
+       "max": [
+        0.7807327508926392,
+        1.0852619409561157,
+        -0.8804025650024414
+       ]
+      },
+      "convex_ok": true
+     }
+    ]
+   },
+   "body0": {
+    "class": "hknpConvexPolytopeShape",
+    "hull": {
+     "offset": "0x5250",
+     "part": 0,
+     "vertices": 96,
+     "extents": [
+      3.4982,
+      2.2831,
+      7.037
+     ],
+     "longest": 7.037,
+     "bounds": {
+      "min": [
+       -1.7446650266647339,
+       0.07507000118494034,
+       -3.4276859760284424
+      ],
+      "max": [
+       1.753574013710022,
+       2.3582189083099365,
+       3.609272003173828
+      ]
+     },
+     "convex_ok": true
+    },
+    "lod2_vs_hull": {
+     "mesh": "Builds/bm-RC1/aaf/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_body_lod2.rbm",
+     "vertices": 11197,
+     "triangles": 6269,
+     "hull_own_support_m": 2.18e-07,
+     "mesh_max_over_planes_m": 2.38e-07,
+     "mesh_protrusion_m": 2.1e-08
+    },
+    "root_compounds": [
+     {
+      "offset": "0xd0820",
+      "aabb_min": [
+       -1.794664978981018,
+       -0.6926243305206299,
+       -3.4776859283447266
+      ],
+      "aabb_max": [
+       1.8035739660263062,
+       2.4082188606262207,
+       3.6592719554901123
+      ],
+      "child_classes": [
+       "hknpConvexPolytopeShape",
+       "hknpDynamicCompoundShape",
+       "hknpExternMeshShape"
+      ],
+      "contains_hull": true,
+      "short_by_m": 0.0
+     },
+     {
+      "offset": "0xd3c80",
+      "aabb_min": [
+       -1.7480000257492065,
+       0.09099999815225601,
+       -3.4200000762939453
+      ],
+      "aabb_max": [
+       1.746999979019165,
+       2.371999979019165,
+       3.6050000190734863
+      ],
+      "child_classes": [
+       "hknpConvexPolytopeShape",
+       "hknpDynamicCompoundShape",
+       "hknpStaticCompoundShape"
+      ],
+      "contains_hull": false,
+      "short_by_m": 0.01593
+     }
+    ],
+    "root_compound": {
+     "offset": "0xd3c80",
+     "aabb_min": [
+      -1.7480000257492065,
+      0.09099999815225601,
+      -3.4200000762939453
+     ],
+     "aabb_max": [
+      1.746999979019165,
+      2.371999979019165,
+      3.6050000190734863
+     ],
+     "child_classes": [
+      "hknpConvexPolytopeShape",
+      "hknpDynamicCompoundShape",
+      "hknpStaticCompoundShape"
+     ],
+     "contains_hull": false,
+     "short_by_m": 0.01593
+    }
+   },
+   "versus": {
+    "grab_extract": {
+     "path": "../_gamedata/JC3grab/hkx/sportsmuscle.physicsc",
+     "exists": true,
+     "physics_system_data_identical": false,
+     "sysd_extent": [
+      20912,
+      20912
+     ],
+     "sysd_diff": {
+      "first": 13712,
+      "count": 44,
+      "body_entries": [
+       22,
+       23,
+       36,
+       37
+      ],
+      "byte_offsets_in_entry": [
+       48,
+       49,
+       50,
+       52,
+       53,
+       54,
+       55,
+       56,
+       57,
+       58,
+       59
+      ],
+      "above_body_table": 0,
+      "built": "be9f9abf3867343fe17a24c0",
+      "donor": "5c8f62bfcccccc3ec64bc7bf"
+     },
+     "objects": [
+      430,
+      430
+     ],
+     "class_delta": {},
+     "hulls_same_part_different_bounds": [
+      0,
+      11,
+      12,
+      26,
+      27
+     ],
+     "hull_parts_only_in_build": [],
+     "hull_parts_only_in_donor": [],
+     "part0_bounds": {
+      "built": {
+       "min": [
+        -1.7446650266647339,
+        0.07507000118494034,
+        -3.4276859760284424
+       ],
+       "max": [
+        1.753574013710022,
+        2.3582189083099365,
+        3.609272003173828
+       ]
+      },
+      "donor": {
+       "min": [
+        -1.0425009727478027,
+        0.24412000179290771,
+        -1.2011505365371704
+       ],
+       "max": [
+        1.0425009727478027,
+        1.4561220407485962,
+        2.4776978492736816
+       ]
+      }
+     }
+    },
+    "test-091": {
+     "path": "Builds/test-091/aaf/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle.physicsc",
+     "exists": true,
+     "physics_system_data_identical": true,
+     "sysd_extent": [
+      20912,
+      20912
+     ],
+     "sysd_diff": {
+      "first": null,
+      "count": 0,
+      "body_entries": [],
+      "byte_offsets_in_entry": [],
+      "above_body_table": 0,
+      "built": null,
+      "donor": null
+     },
+     "objects": [
+      430,
+      430
+     ],
+     "class_delta": {},
+     "hulls_same_part_different_bounds": [
+      0,
+      11,
+      12,
+      26,
+      27
+     ],
+     "hull_parts_only_in_build": [],
+     "hull_parts_only_in_donor": [],
+     "part0_bounds": {
+      "built": {
+       "min": [
+        -1.7446650266647339,
+        0.07507000118494034,
+        -3.4276859760284424
+       ],
+       "max": [
+        1.753574013710022,
+        2.3582189083099365,
+        3.609272003173828
+       ]
+      },
+      "donor": {
+       "min": [
+        -1.0425009727478027,
+        0.24412000179290771,
+        -1.2011505365371704
+       ],
+       "max": [
+        1.0425009727478027,
+        1.4561220407485962,
+        2.4776978492736816
+       ]
+      }
+     }
+    }
+   }
+  },
+  "parts": {
+   "file": "Builds/bm-RC1/aaf/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc",
+   "sha256": "6e379e4c5716f15c82f3b8a557f6140b059b7157f2655215f05fa8a340e82560",
+   "count": 61,
+   "has_world_true": [
+    "sportsmuscle_body",
+    "sportsmuscle_door_f_l",
+    "sportsmuscle_door_f_r",
+    "sportsmuscle_engine",
+    "sportsmuscle_f_l_seat",
+    "sportsmuscle_f_r_seat",
+    "sportsmuscle_rear_bumper",
+    "sportsmuscle_steeringwheel",
+    "sportsmuscle_taillight_r_l",
+    "sportsmuscle_taillight_r_r",
+    "sportsmuscle_trunk",
+    "sportsmuscle_window_f",
+    "sportsmuscle_window_r_l",
+    "sportsmuscle_window_r_r",
+    "sportsmuscle_door_f_l_window",
+    "sportsmuscle_l_mirror",
+    "sportsmuscle_door_f_r_window",
+    "sportsmuscle_r_mirror",
+    "sportsmuscle_fender_l",
+    "sportsmuscle_fender_r",
+    "sportsmuscle_front_bumper",
+    "sportsmuscle_grill",
+    "sportsmuscle_hood",
+    "sportsmuscle_hood_signature",
+    "sportsmuscle_plate_r",
+    "sportsmuscle_signal_r_l",
+    "sportsmuscle_signal_r_r",
+    "sportsmuscle_taillight_r_c",
+    "sportsmuscle_trunk_window",
+    "sportsmuscle_c_mirror",
+    "sportsmuscle_headlight_f_l_01",
+    "sportsmuscle_headlight_f_l_02",
+    "sportsmuscle_signal_f_l",
+    "sportsmuscle_headlight_f_r_01",
+    "sportsmuscle_headlight_f_r_02",
+    "sportsmuscle_signal_f_r",
+    "sportsmuscle_plate_f",
+    "sportsmuscle_missile_base_signature"
+   ],
+   "has_world_false": [
+    "sportsmuscle_wheel_r_l",
+    "sportsmuscle_wheel_r_r",
+    "sportsmuscle_wheel_f_l",
+    "sportsmuscle_wheel_f_r",
+    "sportsmuscle_wheel_f_l_arch",
+    "sportsmuscle_wheel_f_r_arch",
+    "sportsmuscle_headlight_f_l",
+    "sportsmuscle_headlight_f_r",
+    "sportsmuscle_wheel_r_l_arch",
+    "sportsmuscle_wheel_r_r_arch",
+    "sportsmuscle_tailstrip_r_l",
+    "sportsmuscle_tailstrip_r_r",
+    "batmobile_turret",
+    "batmobile_cannon",
+    "batmobile_machine_gun",
+    "batmobile_riot_suppressor",
+    "batmobile_missile_pod_l",
+    "batmobile_missile_pod_r",
+    "batmobile_aero_flap_l_f",
+    "batmobile_aero_flap_r_f",
+    "batmobile_aero_flap_l_b",
+    "batmobile_aero_flap_r_b",
+    "batmobile_jet"
+   ],
+   "world_minus1": [
+    "sportsmuscle_wheel_r_l",
+    "sportsmuscle_wheel_r_r",
+    "sportsmuscle_wheel_f_l",
+    "sportsmuscle_wheel_f_r",
+    "sportsmuscle_wheel_f_l_arch",
+    "sportsmuscle_wheel_f_r_arch",
+    "sportsmuscle_headlight_f_l",
+    "sportsmuscle_headlight_f_r",
+    "sportsmuscle_wheel_r_l_arch",
+    "sportsmuscle_wheel_r_r_arch",
+    "sportsmuscle_tailstrip_r_l",
+    "sportsmuscle_tailstrip_r_r",
+    "batmobile_turret",
+    "batmobile_cannon",
+    "batmobile_machine_gun",
+    "batmobile_riot_suppressor",
+    "batmobile_missile_pod_l",
+    "batmobile_missile_pod_r",
+    "batmobile_aero_flap_l_f",
+    "batmobile_aero_flap_r_f",
+    "batmobile_aero_flap_l_b",
+    "batmobile_aero_flap_r_b",
+    "batmobile_jet"
+   ],
+   "raycast_minus1": [
+    "sportsmuscle_wheel_f_l_arch",
+    "sportsmuscle_wheel_f_r_arch",
+    "sportsmuscle_headlight_f_l",
+    "sportsmuscle_headlight_f_r",
+    "sportsmuscle_wheel_r_l_arch",
+    "sportsmuscle_wheel_r_r_arch",
+    "sportsmuscle_tailstrip_r_l",
+    "sportsmuscle_tailstrip_r_r",
+    "batmobile_turret",
+    "batmobile_cannon",
+    "batmobile_machine_gun",
+    "batmobile_riot_suppressor",
+    "batmobile_missile_pod_l",
+    "batmobile_missile_pod_r",
+    "batmobile_aero_flap_l_f",
+    "batmobile_aero_flap_r_f",
+    "batmobile_aero_flap_l_b",
+    "batmobile_aero_flap_r_b",
+    "batmobile_jet"
+   ],
+   "world_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    38,
+    39,
+    40,
+    41
+   ],
+   "raycast_ids": [
+    3,
+    6,
+    9,
+    10,
+    11,
+    13,
+    14,
+    15,
+    17,
+    21,
+    22,
+    23,
+    24,
+    25,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    36,
+    37,
+    38,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59
+   ],
+   "named": {
+    "sportsmuscle_body": {
+     "part_index": 0,
+     "world": 0,
+     "raycast": 42
+    },
+    "sportsmuscle_door_f_l": {
+     "part_index": 1,
+     "world": 1,
+     "raycast": 43
+    },
+    "sportsmuscle_engine": {
+     "part_index": 3,
+     "world": 7,
+     "raycast": 47
+    },
+    "sportsmuscle_wheel_r_l": {
+     "part_index": 11,
+     "world": -1,
+     "raycast": 36
+    },
+    "sportsmuscle_wheel_r_r": {
+     "part_index": 12,
+     "world": -1,
+     "raycast": 37
+    },
+    "sportsmuscle_wheel_f_l": {
+     "part_index": 26,
+     "world": -1,
+     "raycast": 22
+    },
+    "sportsmuscle_wheel_f_r": {
+     "part_index": 27,
+     "world": -1,
+     "raycast": 23
+    }
+   }
+  },
+  "epe": {
+   "file": "Builds/bm-RC1/aaf/editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe",
+   "sha256": "2db78866360b960dfb30183740bf14b80fafa048828610a06ab2dd0d91432b8b",
+   "xml_bytes": 500458,
+   "elements": 467,
+   "objects": 466,
+   "classes": {
+    "SAttachedEffect": 47,
+    "CInteractionGraphParentIsUpRightCondition": 41,
+    "CInteractionGraphEntry": 29,
+    "SVehicleLight": 28,
+    "CInteractionGraphNodeAboveWaterCondition": 27,
+    "CInteractionGraphExit": 26,
+    "CInteractionGraphParentVelocityCondition": 24,
+    "CInteractionGraphVehicleSeatPlayerUsableCondition": 24,
+    "CCameraModifier": 23,
+    "SDynamicAttachedEffect": 20,
+    "CCameraTransition": 17,
+    "CInteractionGraphParentPlayerLockedCondition": 17,
+    "CInteractionGraphNodeOccupiedCondition": 15,
+    "CInteractionGraphTransition": 12,
+    "SAttachedEffectTable": 12,
+    "SDynamicAttachedEffectTable": 10,
+    "SWeaponPoint": 9,
+    "CInteractionGraphPointNode": 8,
+    "CInteractionTrigger": 7,
+    "CInteractionComponentSetNode": 6,
+    "CPartProp": 6,
+    "CCameraObject": 5,
+    "CCameraTransitionCollection": 5,
+    "CInteractionGraphExitObstructedCondition": 5,
+    "SEffects": 5,
+    "CAIEntityProxy": 4,
+    "CBulletWeaponBase": 4,
+    "CInteractionGraphUserIsPlayerCondition": 4,
+    "CInteraction": 3,
+    "SValueDrivenEffectUsage": 3,
+    "CInteractionGraphEntryIsFacingParentCondition": 2,
+    "CInteractionGraphStuntExitValidCondition": 2,
+    "CSpeaker": 2,
+    "SVehicleLightList": 2,
+    "CCameraRef": 1,
+    "CCar": 1,
+    "CForcePulse": 1,
+    "CInteractionContext": 1,
+    "CInteractionGraph": 1,
+    "CInteractionGraphIsAttachedCondition": 1,
+    "CParts": 1,
+    "SDynamicExpressions": 1,
+    "SEventDrivenEffectUsages": 1,
+    "STargetPoint": 1,
+    "SValueDrivenEffectUsages": 1,
+    "SVehicleLights": 1
+   },
+   "names": {
+    "v0300_car_kensington_sportsmuscle_debug": "CCar",
+    "CarCameraRef": "CCameraRef",
+    "CForcePulse": "CForcePulse",
+    "Parts": "CParts",
+    "sportsmuscle_body": "CPartProp",
+    "sportsmuscle_wheel_r_r": "CPartProp",
+    "sportsmuscle_wheel_r_l": "CPartProp",
+    "sportsmuscle_wheel_f_r": "CPartProp",
+    "sportsmuscle_wheel_f_l": "CPartProp",
+    "sportsmuscle_taillight_r_l": "CPartProp",
+    "AmbientTrafficLayerSpeaker": "CSpeaker",
+    "DynamicExpressions": "SDynamicExpressions",
+    "Effects": "SEffects",
+    "damage_fire_left": "SAttachedEffect",
+    "rear_left_wheel": "SAttachedEffectTable",
+    "TireDestroyed": "SDynamicAttachedEffect",
+    "part_impact": "SDynamicAttachedEffectTable",
+    "wheel_suspension_bottom_out_materials": "SAttachedEffectTable",
+    "dynamic_break_large": "SDynamicAttachedEffect",
+    "dynamic_break_taillight": "SDynamicAttachedEffect",
+    "front_left_notire": "SAttachedEffectTable",
+    "GearChange": "SAttachedEffect",
+    "fire_post_explosion": "SAttachedEffect",
+    "chassis_sliding": "SDynamicAttachedEffectTable",
+    "explosion": "SAttachedEffect",
+    "dynamic_trail_effect": "SDynamicAttachedEffect",
+    "engine_fire_ground": "SAttachedEffect",
+    "dynamic_burn_engine": "SDynamicAttachedEffect",
+    "combined_wheel_default_sfx": "SAttachedEffectTable",
+    "dynamic_break_medium": "SDynamicAttachedEffect",
+    "front_right_notire": "SAttachedEffectTable",
+    "jump_air_whoosh_sound": "SAttachedEffect",
+    "dynamic_burn_roof": "SDynamicAttachedEffect",
+    "speedwind_sound_player": "SAttachedEffect",
+    "horn": "SAttachedEffect",
+    "dynamic_break_turnsignal": "SDynamicAttachedEffect",
+    "dynamic_break_window_sm": "SDynamicAttachedEffect",
+    "damage_fire_right": "SAttachedEffect",
+    "engine_running_sound": "SAttachedEffect",
+    "front_right_wheel": "SAttachedEffectTable",
+    "rear_right_wheel": "SAttachedEffectTable",
+    "wheel_suspension_car_materials": "SAttachedEffectTable",
+    "flame": "SDynamicAttachedEffect",
+    "exhaust_upgrade_nitrous2": "SAttachedEffect",
+    "in_water_move_sound": "SAttachedEffect",
+    "chassis_undercarriage_slide_sfx": "SDynamicAttachedEffectTable",
+    "engine_fire_drips": "SAttachedEffect",
+    "dynamic_trail_medium": "SDynamicAttachedEffect",
+    "chassis_impact_default_sfx": "SDynamicAttachedEffectTable",
+    "rear_right_notire": "SAttachedEffectTable",
+    "damage_smoke": "SAttachedEffect",
+    "exhaust_upgrade_tjump_trail": "SAttachedEffect",
+    "rear_left_notire": "SAttachedEffectTable",
+    "sinking_sound": "SAttachedEffect",
+    "dynamic_trail_large": "SDynamicAttachedEffect",
+    "dynamic_break_small": "SDynamicAttachedEffect",
+    "ground_roughness_sound_attached": "SAttachedEffect",
+    "AOE_air": "SAttachedEffect",
+    "exhaust_upgrade_nitrous": "SAttachedEffect",
+    "dynamic_break_electric": "SDynamicAttachedEffect",
+    "dynamic_headlight": "SDynamicAttachedEffect",
+    "dynamic_trail_small": "SDynamicAttachedEffect",
+    "exhaust": "SAttachedEffect",
+    "DoorOpeningStart": "SAttachedEffect",
+    "dynamic_break_window": "SDynamicAttachedEffect",
+    "front_left_wheel": "SAttachedEffectTable",
+    "chassis_impact_vfx": "SDynamicAttachedEffectTable",
+    "dynamic_burn_base": "SDynamicAttachedEffect",
+    "exhaust2": "SAttachedEffect",
+    "exhaust_upgrade_tjump2": "SAttachedEffect",
+    "dynamic_break_light_off": "SDynamicAttachedEffect",
+    "DoorClosingEnd": "SAttachedEffect",
+    "chassis_spinning_sound": "SAttachedEffect",
+    "chassis_undercarriage_impact": "SDynamicAttachedEffectTable",
+    "water_explosion": "SAttachedEffect",
+    "dynamic_break_light_on": "SDynamicAttachedEffect",
+    "exhaust_upgrade_tjump": "SAttachedEffect",
+    "vehicle_dust_trail": "SAttachedEffectTable",
+    "AutoAimTargetPoint": "STargetPoint",
+    "SValueDrivenEffectUsages": "SValueDrivenEffectUsages",
+    "IsPlayerControlled": "SValueDrivenEffectUsage",
+    "IsInAir": "SValueDrivenEffectUsage",
+    "IsInWater": "SValueDrivenEffectUsage",
+    "Lights": "SVehicleLights",
+    "_Default": "SVehicleLightList",
+    "Front_Left_Point": "SVehicleLight",
+    "Front_Left_Volumetric": "SVehicleLight",
+    "Front_Right_Point": "SVehicleLight",
+    "Front_Right_Turn": "SVehicleLight",
+    "Front_Right_Volumetric": "SVehicleLight",
+    "Rear_Left_Point": "SVehicleLight",
+    "Rear_Left_Reverse": "SVehicleLight",
+    "Rear_Left_Turn": "SVehicleLight",
+    "Rear_Right_Point": "SVehicleLight",
+    "Rear_Right_Reverse": "SVehicleLight",
+    "Rear_Right_Turn": "SVehicleLight",
+    "Front_Primary_Head": "SVehicleLight",
+    "sportsmuscle_wheel_f_l_arch_light": "SVehicleLight",
+    "headlight_battle_right_light": "SVehicleLight",
+    "Rear_Break": "SVehicleLight",
+    "Front_Left_Turn": "SVehicleLight",
+    "sportsmuscle_wheel_f_r_arch_light": "SVehicleLight",
+    "headlight_battle_left_light": "SVehicleLight",
+    "sportsmuscle_wheel_f_l_arch_battle_light": "SVehicleLight",
+    "Front_Secondary_Head": "SVehicleLight",
+    "Dash_Light": "SVehicleLight",
+    "boot_light_light": "SVehicleLight",
+    "Sport_Muscle": "SVehicleLightList",
+    "Sport_Muscle_Headlight_Volume_Right": "SVehicleLight",
+    "Sport_Muscle_Headlight_Volume_Left": "SVehicleLight",
+    "Sport_Muscle_Headlight_Point_Left": "SVehicleLight",
+    "Sport_Muscle_Rear_Break_Right": "SVehicleLight",
+    "Sport_Muscle_Rear_Break_Left": "SVehicleLight",
+    "Sport_Muscle_Headlight_Point_Right": "SVehicleLight",
+    "LeftHijackCamera": "CCameraObject",
+    "LeftHijackFraming": "CCameraModifier",
+    "CCameraTransitionCollection": "CCameraTransitionCollection",
+    "ReelInToAction": "CCameraTransition",
+    "AnyToAction": "CCameraTransition",
+    "StuntTravToAction": "CCameraTransition",
+    "AuxliaryMotion": "CCameraModifier",
+    "FullScreenFX": "CCameraModifier",
+    "NoPCVehicleCameraCollision": "CCameraModifier",
+    "ExitLeftFramingCamera": "CCameraObject",
+    "ExitLeftFraming": "CCameraModifier",
+    "VehicleToExit": "CCameraTransition",
+    "DefaultIgnoreParentRotation": "CCameraModifier",
+    "SEventDrivenEffectUsages": "SEventDrivenEffectUsages",
+    "ExitRightFramingCamera": "CCameraObject",
+    "ExitRightFraming": "CCameraModifier",
+    "RightHijackCamera": "CCameraObject",
+    "RightHijackFraming": "CCameraModifier",
+    "AmbientRainSpeaker": "CSpeaker",
+    "SharedCarCamera": "CCameraObject",
+    "CCameraModifier": "CCameraModifier",
+    "ToVehicleSmooth": "CCameraTransition",
+    "FromAction": "CCameraTransition",
+    "FromStuntTrav": "CCameraTransition",
+    "VehicleAuxiliaryMotion": "CCameraModifier",
+    "VehicleCameraShakeModifier": "CCameraModifier",
+    "ListenerPosition": "CCameraModifier",
+    "context": "CInteractionContext",
+    "interaction.seat.driver": "CInteraction",
+    "set.node.npc": "CInteractionComponentSetNode",
+    "set.node.player": "CInteractionComponentSetNode",
+    "graph": "CInteractionGraph",
+    "entry.driver": "CInteractionGraphEntry",
+    "CInteractionGraphVehicleSeatPlayerUsableCondition": "CInteractionGraphVehicleSeatPlayerUsableCondition",
+    "point.driver": "CInteractionGraphPointNode",
+    "exit.driver.default": "CInteractionGraphExit",
+    "exit.ai.driver.default": "CInteractionGraphExit",
+    "transition.passenger1": "CInteractionGraphTransition",
+    "exit.ai.driver.to.hood": "CInteractionGraphExit",
+    "exit.driver.roll.out": "CInteractionGraphExit",
+    "exit.driver.moving.parachute": "CInteractionGraphExit",
+    "exit.ai.driver.default90R": "CInteractionGraphExit",
+    "exit.driver.pushed.out": "CInteractionGraphExit",
+    "exit.ai.driver.default90L": "CInteractionGraphExit",
+    "exit.driver.to.fall": "CInteractionGraphExit",
+    "exit.ai.driver.default180": "CInteractionGraphExit",
+    "exit.driver.to.swim": "CInteractionGraphExit",
+    "transition.stunt": "CInteractionGraphTransition",
+    "exit.ai.driver.default0": "CInteractionGraphExit",
+    "exit.driver.pulled.out": "CInteractionGraphExit",
+    "transition.passenger1.exit": "CInteractionGraphTransition",
+    "exit.driver.upside.down": "CInteractionGraphExit",
+    "point.passenger1.onground": "CInteractionGraphPointNode",
+    "transition.passenger1.side": "CInteractionGraphTransition",
+    "entry.ai.passenger1": "CInteractionGraphEntry",
+    "entry.jump_to_stunt_vehicle_to_vehicle": "CInteractionGraphEntry",
+    "entry.driver.pull.out.onground.no.door": "CInteractionGraphEntry",
+    "point.stunt": "CInteractionGraphPointNode",
+    "exit.from.stunt": "CInteractionGraphExit",
+    "point.passenger1.side": "CInteractionGraphPointNode",
+    "entry.pull.up.to.stunt.hood.close": "CInteractionGraphEntry",
+    "entry.stunt.to.driver.side.enter.vehicle2": "CInteractionGraphEntry",
+    "entry.stunt.to.driver.side.enter.vehicle3": "CInteractionGraphEntry",
+    "entry.passenger1.no.door": "CInteractionGraphEntry",
+    "CInteractionGraphVehicleSeatPlayerUsableCondition2": "CInteractionGraphVehicleSeatPlayerUsableCondition",
+    "entry.reel.to.stunt.hood": "CInteractionGraphEntry",
+    "entry.reel.to.stunt.main": "CInteractionGraphEntry",
+    "entry.passenger1.pull.out.onground": "CInteractionGraphEntry",
+    "entry.pull.up.to.stunt.hood.far": "CInteractionGraphEntry",
+    "entry.passenger1.side.fast": "CInteractionGraphEntry",
+    "entry.step.over.low.stunt.hood": "CInteractionGraphEntry",
+    "entry.pull.up.to.stunt.close": "CInteractionGraphEntry",
+    "entry.jump_to_stunt": "CInteractionGraphEntry",
+    "entry.driver.locked.onground": "CInteractionGraphEntry",
+    "point.passenger1": "CInteractionGraphPointNode",
+    "exit.passenger1.default": "CInteractionGraphExit",
+    "exit.passenger1.roll.out": "CInteractionGraphExit",
+    "exit.ai.passenger1.default90L": "CInteractionGraphExit",
+    "exit.ai.passenger1.default180": "CInteractionGraphExit",
+    "exit.ai.passenger1.default": "CInteractionGraphExit",
+    "transition.driver": "CInteractionGraphTransition",
+    "exit.passenger1.upside.down": "CInteractionGraphExit",
+    "exit.ai.passenger1.default0": "CInteractionGraphExit",
+    "exit.passenger1.pulled.out": "CInteractionGraphExit",
+    "exit.ai.passenger1.to.hood": "CInteractionGraphExit",
+    "exit.ai.passenger1.default90R": "CInteractionGraphExit",
+    "entry.passenger1.pull.out.onground.no.door": "CInteractionGraphEntry",
+    "entry.passenger1": "CInteractionGraphEntry",
+    "entry.step.over.high.stunt": "CInteractionGraphEntry",
+    "point.stunt.hood": "CInteractionGraphPointNode",
+    "exit.from.stunt.hood": "CInteractionGraphExit",
+    "point.driver.onground": "CInteractionGraphPointNode",
+    "transition.driver.side": "CInteractionGraphTransition",
+    "entry.driver.pull.out.onground": "CInteractionGraphEntry",
+    "entry.stunt.to.driver.side.enter.vehicle": "CInteractionGraphEntry",
+    "entry.step.over.low.stunt": "CInteractionGraphEntry",
+    "entry.passenger1.locked.onground": "CInteractionGraphEntry",
+    "entry.step.over.high.stunt.hood": "CInteractionGraphEntry",
+    "entry.ai.driver.left": "CInteractionGraphEntry",
+    "entry.pull.up.to.stunt.far": "CInteractionGraphEntry",
+    "entry.driver.side.fast": "CInteractionGraphEntry",
+    "point.driver.side": "CInteractionGraphPointNode",
+    "entry.driver.no.door": "CInteractionGraphEntry",
+    "trigger.driver": "CInteractionTrigger",
+    "trigger.step.to.stunt": "CInteractionTrigger",
+    "trigger.driver.fast": "CInteractionTrigger",
+    "interaction.seat.stunt": "CInteraction",
+    "trigger.passenger1": "CInteractionTrigger",
+    "trigger.stunt.vehicle.to.vehicle": "CInteractionTrigger",
+    "interaction.seat.passenger1": "CInteraction",
+    "trigger.stationary.stunt": "CInteractionTrigger",
+    "trigger.stunt": "CInteractionTrigger",
+    "w602_mediumtank_canon": "CBulletWeaponBase",
+    "AIEntityProxy": "CAIEntityProxy",
+    "sound_turret_rotation_yaw": "SAttachedEffect",
+    "50calImpact": "SDynamicAttachedEffectTable",
+    "sound_turret_rotation_pitch": "SAttachedEffect",
+    "ShellEjection": "SAttachedEffect",
+    "Fire_AI": "SAttachedEffect",
+    "Fire": "SAttachedEffect",
+    "CannonMuzzle": "SWeaponPoint",
+    "attach.vehicle": "SWeaponPoint",
+    "w603_mediumtank_mgun": "CBulletWeaponBase",
+    "ChainGunMuzzle": "SWeaponPoint",
+    "w618_sportsmuscle_missile": "CBulletWeaponBase",
+    "MissileL": "SWeaponPoint",
+    "MissileR": "SWeaponPoint",
+    "w618_sportsmuscle_missile_emp": "CBulletWeaponBase",
+    "BattleModeSpotLight": "SWeaponPoint"
+   },
+   "hash2names": {
+    "1621485476": [
+     "v0300_car_kensington_sportsmuscle_debug"
+    ],
+    "3291747920": [
+     "CarCameraRef"
+    ],
+    "3166021335": [
+     "CForcePulse"
+    ],
+    "2770622556": [
+     "Parts"
+    ],
+    "3076414876": [
+     "sportsmuscle_body"
+    ],
+    "2792115682": [
+     "sportsmuscle_wheel_r_r"
+    ],
+    "3331436737": [
+     "sportsmuscle_wheel_r_l"
+    ],
+    "637462210": [
+     "sportsmuscle_wheel_f_r"
+    ],
+    "1432199802": [
+     "sportsmuscle_wheel_f_l"
+    ],
+    "3654365951": [
+     "sportsmuscle_taillight_r_l"
+    ],
+    "738762638": [
+     "AmbientTrafficLayerSpeaker"
+    ],
+    "4235525322": [
+     "DynamicExpressions"
+    ],
+    "2233936768": [
+     "Effects",
+     "Effects",
+     "Effects",
+     "Effects",
+     "Effects"
+    ],
+    "1935130147": [
+     "damage_fire_left"
+    ],
+    "1407563615": [
+     "rear_left_wheel"
+    ],
+    "5822793": [
+     "TireDestroyed"
+    ],
+    "944290038": [
+     "part_impact"
+    ],
+    "299439951": [
+     "wheel_suspension_bottom_out_materials"
+    ],
+    "3240668340": [
+     "dynamic_break_large"
+    ],
+    "3166624777": [
+     "dynamic_break_taillight"
+    ],
+    "436671233": [
+     "front_left_notire"
+    ],
+    "768006784": [
+     "GearChange"
+    ],
+    "420163728": [
+     "fire_post_explosion"
+    ],
+    "230603849": [
+     "chassis_sliding"
+    ],
+    "1474905899": [
+     "explosion"
+    ],
+    "1067160906": [
+     "dynamic_trail_effect"
+    ],
+    "1308813871": [
+     "engine_fire_ground"
+    ],
+    "3861582852": [
+     "dynamic_burn_engine"
+    ],
+    "1064497374": [
+     "combined_wheel_default_sfx"
+    ],
+    "1180419684": [
+     "dynamic_break_medium"
+    ],
+    "3326792996": [
+     "front_right_notire"
+    ],
+    "1404200491": [
+     "jump_air_whoosh_sound"
+    ],
+    "2497503284": [
+     "dynamic_burn_roof"
+    ],
+    "669821603": [
+     "speedwind_sound_player"
+    ],
+    "1776172889": [
+     "horn"
+    ],
+    "4136822666": [
+     "dynamic_break_turnsignal"
+    ],
+    "25129775": [
+     "dynamic_break_window_sm"
+    ],
+    "1524336894": [
+     "damage_fire_right"
+    ],
+    "2470388135": [
+     "engine_running_sound"
+    ],
+    "3149956902": [
+     "front_right_wheel"
+    ],
+    "1907993940": [
+     "rear_right_wheel"
+    ],
+    "1792860304": [
+     "wheel_suspension_car_materials"
+    ],
+    "3276669149": [
+     "flame"
+    ],
+    "768924948": [
+     "exhaust_upgrade_nitrous2"
+    ],
+    "3289926300": [
+     "in_water_move_sound"
+    ],
+    "436264007": [
+     "chassis_undercarriage_slide_sfx"
+    ],
+    "1156230324": [
+     "engine_fire_drips"
+    ],
+    "696138957": [
+     "dynamic_trail_medium"
+    ],
+    "2690518967": [
+     "chassis_impact_default_sfx"
+    ],
+    "3759217713": [
+     "rear_right_notire"
+    ],
+    "1100285556": [
+     "damage_smoke"
+    ],
+    "2548902658": [
+     "exhaust_upgrade_tjump_trail"
+    ],
+    "4173967842": [
+     "rear_left_notire"
+    ],
+    "2258193744": [
+     "sinking_sound"
+    ],
+    "3333150887": [
+     "dynamic_trail_large"
+    ],
+    "2815332361": [
+     "dynamic_break_small"
+    ],
+    "3289847305": [
+     "ground_roughness_sound_attached"
+    ],
+    "1783606325": [
+     "AOE_air"
+    ],
+    "4031424882": [
+     "exhaust_upgrade_nitrous"
+    ],
+    "2352887260": [
+     "dynamic_break_electric"
+    ],
+    "330657054": [
+     "dynamic_headlight"
+    ],
+    "1870360440": [
+     "dynamic_trail_small"
+    ],
+    "2122339282": [
+     "exhaust"
+    ],
+    "4059596067": [
+     "DoorOpeningStart"
+    ],
+    "2522820556": [
+     "dynamic_break_window"
+    ],
+    "2565033266": [
+     "front_left_wheel"
+    ],
+    "249145614": [
+     "chassis_impact_vfx"
+    ],
+    "888175220": [
+     "dynamic_burn_base"
+    ],
+    "113928626": [
+     "exhaust2"
+    ],
+    "1958732979": [
+     "exhaust_upgrade_tjump2"
+    ],
+    "1776079116": [
+     "dynamic_break_light_off"
+    ],
+    "2551142798": [
+     "DoorClosingEnd"
+    ],
+    "661194691": [
+     "chassis_spinning_sound"
+    ],
+    "201202405": [
+     "chassis_undercarriage_impact"
+    ],
+    "1579769706": [
+     "water_explosion"
+    ],
+    "3420812477": [
+     "dynamic_break_light_on"
+    ],
+    "1987793497": [
+     "exhaust_upgrade_tjump"
+    ],
+    "4137608127": [
+     "vehicle_dust_trail"
+    ],
+    "2214590360": [
+     "AutoAimTargetPoint"
+    ],
+    "1999720612": [
+     "SValueDrivenEffectUsages"
+    ],
+    "4139857690": [
+     "IsPlayerControlled"
+    ],
+    "646966454": [
+     "IsInAir"
+    ],
+    "2178731301": [
+     "IsInWater"
+    ],
+    "3678991706": [
+     "Lights"
+    ],
+    "2219940032": [
+     "_Default"
+    ],
+    "2877751723": [
+     "Front_Left_Point"
+    ],
+    "1814273923": [
+     "Front_Left_Volumetric"
+    ],
+    "4276153710": [
+     "Front_Right_Point"
+    ],
+    "521093305": [
+     "Front_Right_Turn"
+    ],
+    "3407385576": [
+     "Front_Right_Volumetric"
+    ],
+    "1435191809": [
+     "Rear_Left_Point"
+    ],
+    "3815211005": [
+     "Rear_Left_Reverse"
+    ],
+    "1358616627": [
+     "Rear_Left_Turn"
+    ],
+    "3048938132": [
+     "Rear_Right_Point"
+    ],
+    "937754529": [
+     "Rear_Right_Reverse"
+    ],
+    "1271816577": [
+     "Rear_Right_Turn"
+    ],
+    "4272096469": [
+     "Front_Primary_Head"
+    ],
+    "469429099": [
+     "sportsmuscle_wheel_f_l_arch_light"
+    ],
+    "666791693": [
+     "headlight_battle_right_light"
+    ],
+    "873569254": [
+     "Rear_Break"
+    ],
+    "891622622": [
+     "Front_Left_Turn"
+    ],
+    "1224337178": [
+     "sportsmuscle_wheel_f_r_arch_light"
+    ],
+    "1591090344": [
+     "headlight_battle_left_light"
+    ],
+    "3605787663": [
+     "sportsmuscle_wheel_f_l_arch_battle_light"
+    ],
+    "3189390601": [
+     "Front_Secondary_Head"
+    ],
+    "2763198432": [
+     "Dash_Light"
+    ],
+    "4293470761": [
+     "boot_light_light"
+    ],
+    "3886879127": [
+     "Sport_Muscle"
+    ],
+    "1729670457": [
+     "Sport_Muscle_Headlight_Volume_Right"
+    ],
+    "625235815": [
+     "Sport_Muscle_Headlight_Volume_Left"
+    ],
+    "1754632929": [
+     "Sport_Muscle_Headlight_Point_Left"
+    ],
+    "4016595472": [
+     "Sport_Muscle_Rear_Break_Right"
+    ],
+    "1700993006": [
+     "Sport_Muscle_Rear_Break_Left"
+    ],
+    "126093807": [
+     "Sport_Muscle_Headlight_Point_Right"
+    ],
+    "3610340048": [
+     "LeftHijackCamera"
+    ],
+    "3545492652": [
+     "LeftHijackFraming"
+    ],
+    "2248951479": [
+     "CCameraTransitionCollection",
+     "CCameraTransitionCollection",
+     "CCameraTransitionCollection",
+     "CCameraTransitionCollection",
+     "CCameraTransitionCollection"
+    ],
+    "2012950265": [
+     "ReelInToAction",
+     "ReelInToAction",
+     "ReelInToAction",
+     "ReelInToAction"
+    ],
+    "622839838": [
+     "AnyToAction",
+     "AnyToAction",
+     "AnyToAction",
+     "AnyToAction"
+    ],
+    "1649372375": [
+     "StuntTravToAction",
+     "StuntTravToAction",
+     "StuntTravToAction",
+     "StuntTravToAction"
+    ],
+    "2290626671": [
+     "AuxliaryMotion",
+     "AuxliaryMotion",
+     "AuxliaryMotion",
+     "AuxliaryMotion"
+    ],
+    "4029069924": [
+     "FullScreenFX",
+     "FullScreenFX",
+     "FullScreenFX",
+     "FullScreenFX",
+     "FullScreenFX"
+    ],
+    "3857960549": [
+     "NoPCVehicleCameraCollision",
+     "NoPCVehicleCameraCollision",
+     "NoPCVehicleCameraCollision",
+     "NoPCVehicleCameraCollision"
+    ],
+    "1152433205": [
+     "ExitLeftFramingCamera"
+    ],
+    "619827187": [
+     "ExitLeftFraming"
+    ],
+    "1664397731": [
+     "VehicleToExit",
+     "VehicleToExit"
+    ],
+    "203681069": [
+     "DefaultIgnoreParentRotation",
+     "DefaultIgnoreParentRotation"
+    ],
+    "1168322541": [
+     "SEventDrivenEffectUsages"
+    ],
+    "881115520": [
+     "ExitRightFramingCamera"
+    ],
+    "3497680103": [
+     "ExitRightFraming"
+    ],
+    "511036596": [
+     "RightHijackCamera"
+    ],
+    "2790064187": [
+     "RightHijackFraming"
+    ],
+    "1110506233": [
+     "AmbientRainSpeaker"
+    ],
+    "4178846536": [
+     "SharedCarCamera"
+    ],
+    "2014739119": [
+     "CCameraModifier"
+    ],
+    "4208321594": [
+     "ToVehicleSmooth"
+    ],
+    "2346121775": [
+     "FromAction"
+    ],
+    "156878823": [
+     "FromStuntTrav"
+    ],
+    "1956501570": [
+     "VehicleAuxiliaryMotion"
+    ],
+    "676455388": [
+     "VehicleCameraShakeModifier"
+    ],
+    "846070922": [
+     "ListenerPosition"
+    ],
+    "2716808245": [
+     "context"
+    ],
+    "1910979666": [
+     "interaction.seat.driver"
+    ],
+    "3680237478": [
+     "set.node.npc",
+     "set.node.npc",
+     "set.node.npc"
+    ],
+    "3041949685": [
+     "set.node.player",
+     "set.node.player",
+     "set.node.player"
+    ],
+    "4073806307": [
+     "graph"
+    ],
+    "2642587110": [
+     "entry.driver"
+    ],
+    "535288112": [
+     "CInteractionGraphVehicleSeatPlayerUsableCondition",
+     "CInteractionGraphVehicleSeatPlayerUsableCondition",
+     "CInteractionGraphVehicleSeatPlayerUsableCondition",
+     "CInteractionGraphVehicleSeatPlayerUsableCondition",
+     "CInteractionGraphVehicleSeatPlayerUsableCondition",
+     "CInteractionGraphVehicleSeatPlayerUsableCondition",
+     "CInteractionGraphVehicleSeatPlayerUsableCondition",
+     "CInteractionGraphVehicleSeatPlayerUsableCondition",
+     "CInteractionGraphVehicleSeatPlayerUsableCondition",
+     "CInteractionGraphVehicleSeatPlayerUsableCondition",
+     "CInteractionGraphVehicleSeatPlayerUsableCondition",
+     "CInteractionGraphVehicleSeatPlayerUsableCondition",
+     "CInteractionGraphVehicleSeatPlayerUsableCondition",
+     "CInteractionGraphVehicleSeatPlayerUsableCondition",
+     "CInteractionGraphVehicleSeatPlayerUsableCondition",
+     "CInteractionGraphVehicleSeatPlayerUsableCondition",
+     "CInteractionGraphVehicleSeatPlayerUsableCondition",
+     "CInteractionGraphVehicleSeatPlayerUsableCondition"
+    ],
+    "2660215418": [
+     "point.driver"
+    ],
+    "3670666007": [
+     "exit.driver.default"
+    ],
+    "3291342764": [
+     "exit.ai.driver.default"
+    ],
+    "3771593475": [
+     "transition.passenger1",
+     "transition.passenger1",
+     "transition.passenger1"
+    ],
+    "3029223785": [
+     "exit.ai.driver.to.hood"
+    ],
+    "1660701665": [
+     "exit.driver.roll.out"
+    ],
+    "2199569653": [
+     "exit.driver.moving.parachute"
+    ],
+    "3520368871": [
+     "exit.ai.driver.default90R"
+    ],
+    "4189672808": [
+     "exit.driver.pushed.out"
+    ],
+    "3335934166": [
+     "exit.ai.driver.default90L"
+    ],
+    "329281913": [
+     "exit.driver.to.fall"
+    ],
+    "2044622343": [
+     "exit.ai.driver.default180"
+    ],
+    "1991872887": [
+     "exit.driver.to.swim"
+    ],
+    "2191761094": [
+     "transition.stunt",
+     "transition.stunt",
+     "transition.stunt"
+    ],
+    "3169141337": [
+     "exit.ai.driver.default0"
+    ],
+    "2473268656": [
+     "exit.driver.pulled.out"
+    ],
+    "1353167537": [
+     "transition.passenger1.exit"
+    ],
+    "2519360253": [
+     "exit.driver.upside.down"
+    ],
+    "2859094143": [
+     "point.passenger1.onground"
+    ],
+    "3561089266": [
+     "transition.passenger1.side"
+    ],
+    "4076438183": [
+     "entry.ai.passenger1"
+    ],
+    "4049788810": [
+     "entry.jump_to_stunt_vehicle_to_vehicle"
+    ],
+    "1788866674": [
+     "entry.driver.pull.out.onground.no.door"
+    ],
+    "1645250333": [
+     "point.stunt"
+    ],
+    "2280893852": [
+     "exit.from.stunt"
+    ],
+    "50388110": [
+     "point.passenger1.side"
+    ],
+    "3600440858": [
+     "entry.pull.up.to.stunt.hood.close"
+    ],
+    "3048624140": [
+     "entry.stunt.to.driver.side.enter.vehicle2"
+    ],
+    "2375953723": [
+     "entry.stunt.to.driver.side.enter.vehicle3"
+    ],
+    "1216773967": [
+     "entry.passenger1.no.door"
+    ],
+    "3164145772": [
+     "CInteractionGraphVehicleSeatPlayerUsableCondition2",
+     "CInteractionGraphVehicleSeatPlayerUsableCondition2",
+     "CInteractionGraphVehicleSeatPlayerUsableCondition2",
+     "CInteractionGraphVehicleSeatPlayerUsableCondition2",
+     "CInteractionGraphVehicleSeatPlayerUsableCondition2",
+     "CInteractionGraphVehicleSeatPlayerUsableCondition2"
+    ],
+    "1595937355": [
+     "entry.reel.to.stunt.hood"
+    ],
+    "162429267": [
+     "entry.reel.to.stunt.main"
+    ],
+    "3332442573": [
+     "entry.passenger1.pull.out.onground"
+    ],
+    "3200534046": [
+     "entry.pull.up.to.stunt.hood.far"
+    ],
+    "3649675607": [
+     "entry.passenger1.side.fast"
+    ],
+    "4206499343": [
+     "entry.step.over.low.stunt.hood"
+    ],
+    "3887766765": [
+     "entry.pull.up.to.stunt.close"
+    ],
+    "3705260847": [
+     "entry.jump_to_stunt"
+    ],
+    "554740409": [
+     "entry.driver.locked.onground"
+    ],
+    "736192723": [
+     "point.passenger1"
+    ],
+    "1814341530": [
+     "exit.passenger1.default"
+    ],
+    "2992860757": [
+     "exit.passenger1.roll.out"
+    ],
+    "4006547399": [
+     "exit.ai.passenger1.default90L"
+    ],
+    "2255430410": [
+     "exit.ai.passenger1.default180"
+    ],
+    "186374088": [
+     "exit.ai.passenger1.default"
+    ],
+    "3923571060": [
+     "transition.driver",
+     "transition.driver",
+     "transition.driver"
+    ],
+    "3451236437": [
+     "exit.passenger1.upside.down"
+    ],
+    "633900908": [
+     "exit.ai.passenger1.default0"
+    ],
+    "1291033588": [
+     "exit.passenger1.pulled.out"
+    ],
+    "2703629275": [
+     "exit.ai.passenger1.to.hood"
+    ],
+    "3987520131": [
+     "exit.ai.passenger1.default90R"
+    ],
+    "3928423207": [
+     "entry.passenger1.pull.out.onground.no.door"
+    ],
+    "594931181": [
+     "entry.passenger1"
+    ],
+    "1793434393": [
+     "entry.step.over.high.stunt"
+    ],
+    "2953541751": [
+     "point.stunt.hood"
+    ],
+    "3699872431": [
+     "exit.from.stunt.hood"
+    ],
+    "2184723345": [
+     "point.driver.onground"
+    ],
+    "100479710": [
+     "transition.driver.side"
+    ],
+    "3664133507": [
+     "entry.driver.pull.out.onground"
+    ],
+    "4206880437": [
+     "entry.stunt.to.driver.side.enter.vehicle"
+    ],
+    "840786850": [
+     "entry.step.over.low.stunt"
+    ],
+    "3169917181": [
+     "entry.passenger1.locked.onground"
+    ],
+    "892772437": [
+     "entry.step.over.high.stunt.hood"
+    ],
+    "2908501183": [
+     "entry.ai.driver.left"
+    ],
+    "2649111092": [
+     "entry.pull.up.to.stunt.far"
+    ],
+    "2660589875": [
+     "entry.driver.side.fast"
+    ],
+    "1387011305": [
+     "point.driver.side"
+    ],
+    "4110998292": [
+     "entry.driver.no.door"
+    ],
+    "3704428031": [
+     "trigger.driver"
+    ],
+    "2447617343": [
+     "trigger.step.to.stunt"
+    ],
+    "2447230243": [
+     "trigger.driver.fast"
+    ],
+    "329759188": [
+     "interaction.seat.stunt"
+    ],
+    "3972996146": [
+     "trigger.passenger1"
+    ],
+    "2826913017": [
+     "trigger.stunt.vehicle.to.vehicle"
+    ],
+    "3128319031": [
+     "interaction.seat.passenger1"
+    ],
+    "2370890960": [
+     "trigger.stationary.stunt"
+    ],
+    "458852547": [
+     "trigger.stunt"
+    ],
+    "1057967201": [
+     "w602_mediumtank_canon"
+    ],
+    "2973387874": [
+     "AIEntityProxy",
+     "AIEntityProxy",
+     "AIEntityProxy",
+     "AIEntityProxy"
+    ],
+    "960619455": [
+     "sound_turret_rotation_yaw",
+     "sound_turret_rotation_yaw",
+     "sound_turret_rotation_yaw",
+     "sound_turret_rotation_yaw"
+    ],
+    "3671146100": [
+     "50calImpact",
+     "50calImpact",
+     "50calImpact",
+     "50calImpact"
+    ],
+    "1150811309": [
+     "sound_turret_rotation_pitch",
+     "sound_turret_rotation_pitch",
+     "sound_turret_rotation_pitch",
+     "sound_turret_rotation_pitch"
+    ],
+    "3811014039": [
+     "ShellEjection",
+     "ShellEjection",
+     "ShellEjection",
+     "ShellEjection"
+    ],
+    "1677039845": [
+     "Fire_AI",
+     "Fire_AI",
+     "Fire_AI",
+     "Fire_AI"
+    ],
+    "4131019937": [
+     "Fire",
+     "Fire",
+     "Fire",
+     "Fire"
+    ],
+    "1653192211": [
+     "CannonMuzzle"
+    ],
+    "2049066765": [
+     "attach.vehicle",
+     "attach.vehicle",
+     "attach.vehicle",
+     "attach.vehicle"
+    ],
+    "502440914": [
+     "w603_mediumtank_mgun"
+    ],
+    "2964540672": [
+     "ChainGunMuzzle"
+    ],
+    "3407801836": [
+     "w618_sportsmuscle_missile"
+    ],
+    "1695562604": [
+     "MissileL"
+    ],
+    "3009621542": [
+     "MissileR"
+    ],
+    "836236026": [
+     "w618_sportsmuscle_missile_emp"
+    ],
+    "1954744807": [
+     "BattleModeSpotLight"
+    ]
+   },
+   "members": {
+    "CCar": [
+     "00568A74",
+     "00BA1BA3",
+     "026CADB0",
+     "02753C89",
+     "04BEEFC2",
+     "06104F94",
+     "07D03F75",
+     "08ABD92E",
+     "0AEDB7F9",
+     "0B294FFB",
+     "0F641EA8",
+     "13843B5A",
+     "19356D3A",
+     "1D12F46D",
+     "1D46389E",
+     "2170E0B3",
+     "264AF6B1",
+     "27E9F53A",
+     "281D204D",
+     "298EE593",
+     "29B88DC4",
+     "2A8F9C2D",
+     "2D5EE905",
+     "3058698F",
+     "3076629D",
+     "33349143",
+     "35B57209",
+     "3685B985",
+     "36C61D80",
+     "3B2CA229",
+     "424987CD",
+     "42E16868",
+     "4C363F52",
+     "4C6ADC7B",
+     "4D29467E",
+     "4D9CF325",
+     "50864504",
+     "50D36D35",
+     "52CD567B",
+     "5452DD95",
+     "571C6BCA",
+     "59DC1B4A",
+     "5DC970C4",
+     "5F125D8D",
+     "5F55721C",
+     "61FBD1FC",
+     "6404D56C",
+     "66547E5A",
+     "6CECC776",
+     "6ED0DC26",
+     "723C3F2D",
+     "74B52F92",
+     "788862FA",
+     "79E5A22A",
+     "7AF6155F",
+     "7BC5BA47",
+     "7C85A1B4",
+     "7CF13E9A",
+     "7D0DAC10",
+     "7FDDB93A",
+     "8345AFE6",
+     "838886B4",
+     "838CB2FE",
+     "843D8B31",
+     "851CAABE",
+     "8580BA42",
+     "8B7D1863",
+     "903F1B0E",
+     "914E926B",
+     "91F61063",
+     "93117F63",
+     "93E3B3D2",
+     "95389AA0",
+     "95CF67C0",
+     "9607EB5A",
+     "9970126C",
+     "9B727E52",
+     "9BD6FA33",
+     "9FA59713",
+     "9FCD4A91",
+     "A25EAC15",
+     "A44C2854",
+     "A498D348",
+     "A85F0F0C",
+     "A8CD45AE",
+     "A99478A8",
+     "AC0BC788",
+     "AC314E9E",
+     "B2C9E89C",
+     "B45731B8",
+     "B469FA22",
+     "B5AE7986",
+     "B5FA4AA3",
+     "B8433347",
+     "BACFD3F8",
+     "C61FB33A",
+     "C701B86B",
+     "C779FC21",
+     "C7AB4134",
+     "C88066F0",
+     "C968C0FF",
+     "CA349CD3",
+     "CA86AA17",
+     "CF07A614",
+     "CF2A0290",
+     "D04059E6",
+     "D1DC14AE",
+     "D4768D44",
+     "D62402A4",
+     "D93331CB",
+     "DABA0DC1",
+     "DC04A2F0",
+     "DCE41EA9",
+     "E1D83C70",
+     "E4862550",
+     "E6469898",
+     "E6566044",
+     "E6F3579E",
+     "EA011E72",
+     "EBB7BE13",
+     "EC4B3896",
+     "EC99117D",
+     "ED754443",
+     "EE52AE1C",
+     "F3D1A894",
+     "F6B3CBBB",
+     "F7247736",
+     "F8547A79",
+     "F9C7CAA7",
+     "FB1FDB65",
+     "FBAE18D2",
+     "FC03C362",
+     "FE44FC36",
+     "FE781C71",
+     "FFE31EE1",
+     "_class",
+     "_object_id",
+     "action_1",
+     "action_2",
+     "aerodynamics",
+     "ai",
+     "audio",
+     "brakes",
+     "buoyancy",
+     "chaos",
+     "common",
+     "damage",
+     "decals",
+     "deform_points",
+     "disable_event",
+     "effect_attachments",
+     "enable_event",
+     "enabled",
+     "engine",
+     "extended_effect_usages",
+     "force_destroy",
+     "global",
+     "health",
+     "interaction_context",
+     "invulnerable",
+     "lights",
+     "make_vulnerable",
+     "mounted_weapon",
+     "name",
+     "name_hash",
+     "on_destroy",
+     "on_hit",
+     "palette",
+     "rigid_body",
+     "steering",
+     "stunt_areas",
+     "suspension",
+     "tags",
+     "transmission",
+     "vehicle_misc",
+     "vehicle_parts",
+     "vehicle_type",
+     "velocity_damper",
+     "water_interaction",
+     "world"
+    ],
+    "CCameraRef": [
+     "23882AB5",
+     "9270776B",
+     "D04059E6",
+     "_class",
+     "_object_id",
+     "name",
+     "name_hash",
+     "tags"
+    ],
+    "CForcePulse": [
+     "060AAA81",
+     "06A05F33",
+     "1AF6FDF0",
+     "24872388",
+     "2849C306",
+     "34303F77",
+     "4912FC04",
+     "530046B3",
+     "57F1B4E1",
+     "593FCDBF",
+     "5AF29116",
+     "6B47B5C3",
+     "71446B1A",
+     "74896A12",
+     "7FD59340",
+     "831DAB81",
+     "879640EA",
+     "9865E7F2",
+     "9BD6FA33",
+     "A1B0DAF9",
+     "AE6F7EFF",
+     "CF4F7880",
+     "D04059E6",
+     "D3DDD766",
+     "F39EC6EA",
+     "SettingsFile",
+     "_class",
+     "_object_id",
+     "name",
+     "name_hash",
+     "tags",
+     "world"
+    ],
+    "CParts": [
+     "D04059E6",
+     "_class",
+     "_object_id",
+     "name",
+     "name_hash",
+     "tags"
+    ],
+    "CPartProp": [
+     "D04059E6",
+     "_GUID",
+     "_class",
+     "_object_id",
+     "name",
+     "name_hash",
+     "part_index",
+     "tags"
+    ],
+    "CSpeaker": [
+     "6DC0B43E",
+     "8A4A4A7F",
+     "994C6DB3",
+     "B47B897A",
+     "BE6854FA",
+     "C9084562",
+     "D04059E6",
+     "_class",
+     "_object_id",
+     "enabled",
+     "energy",
+     "event_disable",
+     "event_enable",
+     "fade_in_time",
+     "fade_out_time",
+     "name",
+     "name_hash",
+     "tags",
+     "world"
+    ],
+    "SDynamicExpressions": [
+     "D04059E6",
+     "_class",
+     "_object_id",
+     "name",
+     "name_hash",
+     "tags"
+    ],
+    "SEffects": [
+     "D04059E6",
+     "_class",
+     "_object_id",
+     "name",
+     "name_hash",
+     "tags"
+    ],
+    "SAttachedEffect": [
+     "0B331E40",
+     "0BE205E8",
+     "16CD11F8",
+     "1A2409D0",
+     "3BD8425D",
+     "50D1ADE7",
+     "73D2DC91",
+     "8B1EB7CB",
+     "B895FE97",
+     "B9E0900F",
+     "D04059E6",
+     "EA7A66D7",
+     "EED1DAFB",
+     "Effect",
+     "Sound",
+     "Usage",
+     "_class",
+     "_object_id",
+     "name",
+     "name_hash",
+     "tags",
+     "world"
+    ],
+    "SAttachedEffectTable": [
+     "0B331E40",
+     "0BE205E8",
+     "16CD11F8",
+     "1A2409D0",
+     "3BD8425D",
+     "50D1ADE7",
+     "73D2DC91",
+     "8B1EB7CB",
+     "AB772F9C",
+     "B895FE97",
+     "B9E0900F",
+     "D04059E6",
+     "EED1DAFB",
+     "Usage",
+     "_class",
+     "_object_id",
+     "name",
+     "name_hash",
+     "tags",
+     "world"
+    ],
+    "SDynamicAttachedEffect": [
+     "0BE205E8",
+     "1A2409D0",
+     "3BD8425D",
+     "73D2DC91",
+     "B895FE97",
+     "B9E0900F",
+     "D04059E6",
+     "EA7A66D7",
+     "EED1DAFB",
+     "Effect",
+     "Material",
+     "Sound",
+     "Usage",
+     "_class",
+     "_object_id",
+     "name",
+     "name_hash",
+     "tags"
+    ],
+    "SDynamicAttachedEffectTable": [
+     "0BE205E8",
+     "1A2409D0",
+     "3BD8425D",
+     "73D2DC91",
+     "8B1EB7CB",
+     "AB772F9C",
+     "B895FE97",
+     "B9E0900F",
+     "D04059E6",
+     "EED1DAFB",
+     "Material",
+     "Usage",
+     "_class",
+     "_object_id",
+     "name",
+     "name_hash",
+     "tags"
+    ],
+    "STargetPoint": [
+     "076F6110",
+     "3E5487F2",
+     "D04059E6",
+     "_class",
+     "_object_id",
+     "min_aim_distance",
+     "name",
+     "name_hash",
+     "tags",
+     "world"
+    ],
+    "SValueDrivenEffectUsages": [
+     "D04059E6",
+     "_class",
+     "_object_id",
+     "name",
+     "name_hash",
+     "tags"
+    ],
+    "SValueDrivenEffectUsage": [
+     "1633C703",
+     "1E5B0594",
+     "B67CFDE6",
+     "B9581621",
+     "D04059E6",
+     "_class",
+     "_object_id",
+     "name",
+     "name_hash",
+     "tags"
+    ],
+    "SVehicleLights": [
+     "D04059E6",
+     "_class",
+     "_object_id",
+     "name",
+     "name_hash",
+     "tags"
+    ],
+    "SVehicleLightList": [
+     "D04059E6",
+     "_class",
+     "_object_id",
+     "name",
+     "name_hash",
+     "tags"
+    ],
+    "SVehicleLight": [
+     "08B484C3",
+     "25008EB5",
+     "287B7000",
+     "2EDC1454",
+     "49C101EC",
+     "5EC67A0E",
+     "A04C3B1E",
+     "B2B3447E",
+     "D04059E6",
+     "D9AFC712",
+     "FC94AAEC",
+     "_class",
+     "_object_id",
+     "diffuse",
+     "enabled",
+     "falloff_start",
+     "is_shadow_caster",
+     "min_luminosity",
+     "multiplier",
+     "name",
+     "name_hash",
+     "near_cap",
+     "preset_id",
+     "radius",
+     "spot_angle",
+     "spot_inner_angle",
+     "tags",
+     "volume_intensity",
+     "volumetric_mode"
+    ],
+    "CCameraObject": [
+     "0EA268E5",
+     "Activate",
+     "C69E22E8",
+     "D04059E6",
+     "DE79306E",
+     "DOFHeightFalloff",
+     "DOFSmoothness",
+     "DOFSmoothnessNear",
+     "Deactivate",
+     "DebugColor",
+     "E73C341E",
+     "F01875E9",
+     "FOV",
+     "FocalDistance",
+     "FocalDistanceNear",
+     "MaxDOF",
+     "MaxDOFNear",
+     "VFX_HDR_Scale",
+     "_class",
+     "_object_id",
+     "default",
+     "lifetime",
+     "name",
+     "name_hash",
+     "tags",
+     "world"
+    ],
+    "CCameraModifier": [
+     "D04059E6",
+     "D14867C7",
+     "_class",
+     "_object_id",
+     "name",
+     "name_hash",
+     "tags"
+    ],
+    "CCameraTransitionCollection": [
+     "D04059E6",
+     "_class",
+     "_object_id",
+     "name",
+     "name_hash",
+     "tags"
+    ],
+    "CCameraTransition": [
+     "264B008B",
+     "4C98D419",
+     "4F147CEA",
+     "D04059E6",
+     "D14867C7",
+     "FFAEB5E7",
+     "_class",
+     "_object_id",
+     "name",
+     "name_hash",
+     "tags"
+    ],
+    "SEventDrivenEffectUsages": [
+     "D04059E6",
+     "_class",
+     "_object_id",
+     "name",
+     "name_hash",
+     "tags"
+    ],
+    "CInteractionContext": [
+     "D04059E6",
+     "_class",
+     "_object_id",
+     "disable_event",
+     "enable_event",
+     "enabled",
+     "name",
+     "name_hash",
+     "tags",
+     "world"
+    ],
+    "CInteraction": [
+     "2E701938",
+     "3D22FCD2",
+     "565F571C",
+     "61548A03",
+     "9306B393",
+     "D04059E6",
+     "_class",
+     "_object_id",
+     "name",
+     "name_hash",
+     "tags"
+    ],
+    "CInteractionComponentSetNode": [
+     "0AEA454B",
+     "54292FB4",
+     "D04059E6",
+     "_class",
+     "_object_id",
+     "name",
+     "name_hash",
+     "node",
+     "state",
+     "tags"
+    ],
+    "CInteractionGraph": [
+     "0A7B89E7",
+     "15A66E7B",
+     "3423454B",
+     "566A5018",
+     "68CEDC2F",
+     "7132FA3E",
+     "B529523D",
+     "D04059E6",
+     "E2CE42CB",
+     "E9AE11FE",
+     "EB048FC8",
+     "F1668CBD",
+     "_class",
+     "_object_id",
+     "disable_event",
+     "enable_event",
+     "enabled",
+     "modifier",
+     "name",
+     "name_hash",
+     "tags",
+     "world"
+    ],
+    "CInteractionGraphEntry": [
+     "0A7B89E7",
+     "0AEA454B",
+     "0ECBF7B1",
+     "15A66E7B",
+     "2B627D5A",
+     "3423454B",
+     "3A29A978",
+     "3B381407",
+     "463A6E5C",
+     "565F571C",
+     "566A5018",
+     "5B4EF246",
+     "68CEDC2F",
+     "7132FA3E",
+     "999864F0",
+     "A86BF9D2",
+     "B529523D",
+     "BA25AE52",
+     "CD912CD5",
+     "D04059E6",
+     "E2CE42CB",
+     "E9AE11FE",
+     "EB048FC8",
+     "F1668CBD",
+     "_class",
+     "_object_id",
+     "disable_event",
+     "enable_event",
+     "enabled",
+     "interaction",
+     "name",
+     "name_hash",
+     "state",
+     "tags"
+    ],
+    "CInteractionGraphParentPlayerLockedCondition": [
+     "61548A03",
+     "D04059E6",
+     "_class",
+     "_object_id",
+     "check",
+     "tags"
+    ],
+    "CInteractionGraphNodeAboveWaterCondition": [
+     "524156BF",
+     "56116F1C",
+     "61548A03",
+     "D04059E6",
+     "_class",
+     "_object_id",
+     "tags"
+    ],
+    "CInteractionGraphParentVelocityCondition": [
+     "61548A03",
+     "D04059E6",
+     "_class",
+     "_object_id",
+     "max",
+     "min",
+     "tags"
+    ],
+    "CInteractionGraphParentIsUpRightCondition": [
+     "61548A03",
+     "D04059E6",
+     "_class",
+     "_object_id",
+     "check",
+     "tags"
+    ],
+    "CInteractionGraphVehicleSeatPlayerUsableCondition": [
+     "524156BF",
+     "61548A03",
+     "D04059E6",
+     "_class",
+     "_object_id",
+     "check",
+     "name",
+     "name_hash",
+     "tags"
+    ],
+    "CInteractionGraphNodeOccupiedCondition": [
+     "3AA7622B",
+     "61548A03",
+     "7BCF7D2D",
+     "D04059E6",
+     "_class",
+     "_object_id",
+     "check",
+     "tags"
+    ],
+    "CInteractionGraphPointNode": [
+     "00231609",
+     "0A7B89E7",
+     "15A66E7B",
+     "1752505B",
+     "1E0D3888",
+     "3423454B",
+     "4B7BDE5B",
+     "566A5018",
+     "61548A03",
+     "68CEDC2F",
+     "7132FA3E",
+     "78781906",
+     "85CEE196",
+     "936C0A2A",
+     "B529523D",
+     "B8364012",
+     "D04059E6",
+     "E2CE42CB",
+     "E9AE11FE",
+     "EB048FC8",
+     "ED4F648C",
+     "F1668CBD",
+     "_class",
+     "_object_id",
+     "disable_event",
+     "enable_event",
+     "enabled",
+     "name",
+     "name_hash",
+     "tags",
+     "world"
+    ],
+    "CInteractionGraphExit": [
+     "0A7B89E7",
+     "15A66E7B",
+     "3423454B",
+     "4C654BDB",
+     "566A5018",
+     "613C2FBF",
+     "68CEDC2F",
+     "7132FA3E",
+     "72B824BE",
+     "B529523D",
+     "C8F5DB5C",
+     "D04059E6",
+     "E2CE42CB",
+     "E9AE11FE",
+     "EB048FC8",
+     "F1668CBD",
+     "FCCAB39D",
+     "_class",
+     "_object_id",
+     "disable_event",
+     "enable_event",
+     "enabled",
+     "interaction",
+     "modifier",
+     "name",
+     "name_hash",
+     "state",
+     "tags"
+    ],
+    "CInteractionGraphExitObstructedCondition": [
+     "0A0959B4",
+     "61548A03",
+     "A3CC001A",
+     "D04059E6",
+     "_class",
+     "_object_id",
+     "check",
+     "tags"
+    ],
+    "CInteractionGraphUserIsPlayerCondition": [
+     "D04059E6",
+     "_class",
+     "_object_id",
+     "check",
+     "tags"
+    ],
+    "CInteractionGraphTransition": [
+     "0A7B89E7",
+     "15A66E7B",
+     "3423454B",
+     "566A5018",
+     "68CEDC2F",
+     "7132FA3E",
+     "84B795D3",
+     "B529523D",
+     "D04059E6",
+     "E2CE42CB",
+     "E9AE11FE",
+     "EB048FC8",
+     "F1668CBD",
+     "FCCAB39D",
+     "_class",
+     "_object_id",
+     "disable_event",
+     "enable_event",
+     "enabled",
+     "name",
+     "name_hash",
+     "tags"
+    ],
+    "CInteractionGraphEntryIsFacingParentCondition": [
+     "61548A03",
+     "6D27C361",
+     "D04059E6",
+     "_class",
+     "_object_id",
+     "tags"
+    ],
+    "CInteractionGraphIsAttachedCondition": [
+     "D04059E6",
+     "_class",
+     "_object_id",
+     "check",
+     "tags"
+    ],
+    "CInteractionGraphStuntExitValidCondition": [
+     "61548A03",
+     "D04059E6",
+     "_class",
+     "_object_id",
+     "tags"
+    ],
+    "CInteractionTrigger": [
+     "05D8F404",
+     "0AEA454B",
+     "75239A63",
+     "A5C536A1",
+     "A866D55E",
+     "CABBED57",
+     "D04059E6",
+     "_class",
+     "_object_id",
+     "name",
+     "name_hash",
+     "tags",
+     "world"
+    ],
+    "CBulletWeaponBase": [
+     "116FDB23",
+     "14478936",
+     "19068026",
+     "1C3A1E84",
+     "20F3A3B6",
+     "230F75BA",
+     "245A951B",
+     "2ADF374B",
+     "317091C7",
+     "32445E10",
+     "34FE55A3",
+     "35B57209",
+     "4474CD7E",
+     "4652A3FC",
+     "549FFEA5",
+     "5E1154F9",
+     "6033350F",
+     "6551987A",
+     "6D4C8277",
+     "6D76F142",
+     "7614B92E",
+     "7A680F5F",
+     "7B769B47",
+     "7EB75509",
+     "907674E0",
+     "92F4A50E",
+     "99925699",
+     "9FA545E1",
+     "A1CD3292",
+     "A22B4DE0",
+     "A2EF1543",
+     "A4182A9F",
+     "A5705CCB",
+     "A7B78197",
+     "AA7096C9",
+     "ADA004BE",
+     "B4A7F410",
+     "B5AE7986",
+     "B65F3E21",
+     "B7AAA8C8",
+     "BA1B2B73",
+     "BC3BDB8E",
+     "BE5380F4",
+     "CB1E3165",
+     "CB5983BA",
+     "CE8CA386",
+     "D04059E6",
+     "D075017A",
+     "D0A3F95F",
+     "D55DE33F",
+     "D7D9B6CA",
+     "DBA5AE47",
+     "DDD54301",
+     "E28D7846",
+     "E2C9D651",
+     "EE7A5EEF",
+     "F2A36C5B",
+     "F30CCB1C",
+     "F7AAAA48",
+     "F82B8A98",
+     "FDDE26EB",
+     "_class",
+     "_object_id",
+     "name",
+     "name_hash",
+     "tags",
+     "weapon_id",
+     "weapon_type",
+     "world"
+    ],
+    "CAIEntityProxy": [
+     "995242EA",
+     "D04059E6",
+     "_class",
+     "_object_id",
+     "faction",
+     "name",
+     "name_hash",
+     "tags"
+    ],
+    "SWeaponPoint": [
+     "5C19E7E0",
+     "61ECCE72",
+     "80201E4D",
+     "8C547250",
+     "D04059E6",
+     "_class",
+     "_object_id",
+     "fire_effect",
+     "name",
+     "name_hash",
+     "tags",
+     "type",
+     "world"
+    ]
+   },
+   "part_indexes": {
+    "sportsmuscle_body": "0",
+    "sportsmuscle_wheel_r_r": "12",
+    "sportsmuscle_wheel_r_l": "11",
+    "sportsmuscle_wheel_f_r": "27",
+    "sportsmuscle_wheel_f_l": "26",
+    "sportsmuscle_taillight_r_l": "8"
+   },
+   "lights": {
+    "file": "Builds/bm-RC1/aaf/editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/generated/batmobile/v0300_car_kensington_sportsmuscle_lights.vmodc",
+    "sha256": "d4e6610b0ea33a77c0b7a6fa6740779eab4a3e2901ae98a06e6627bff478a34e",
+    "members": 451,
+    "rows": {
+     "0": {
+      "behavior": "HeadLight",
+      "behavior_hash": 3460580079,
+      "part": "sportsmuscle_body",
+      "part_hash": 3076414876,
+      "part_index": 0,
+      "diffuse.R": 0.6745100021362305,
+      "diffuse.G": 0.9607840180397034,
+      "diffuse.B": 1.0,
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "uvscale.u": 1.0,
+      "uvscale.v": 1.0,
+      "deformable_transform": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+      "deformable_transform_hash": 2887366761,
+      "preset_id": 2763198432
+     },
+     "1": {
+      "behavior": "TailLight",
+      "behavior_hash": 4253610154,
+      "part": "sportsmuscle_tailstrip_r_r",
+      "part_hash": 3256338112,
+      "part_index": 49,
+      "diffuse.R": 1.0,
+      "diffuse.G": 0.1490200012922287,
+      "diffuse.B": 0.0,
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 2.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "uvscale.u": 1.0,
+      "uvscale.v": 1.0,
+      "deformable_transform": "|sportsmuscle_LOD1|body|SUSP2_Wheel_Rear_Right|SUSP2_Wheel_Rear_Right_LIG",
+      "deformable_transform_hash": 3563820646,
+      "preset_id": 4016595472
+     },
+     "2": {
+      "behavior": "HeadLight",
+      "behavior_hash": 3460580079,
+      "part": "sportsmuscle_headlight_f_l",
+      "part_hash": 42559635,
+      "part_index": 44,
+      "diffuse.R": 0.5411760210990906,
+      "diffuse.G": 0.7725489735603333,
+      "diffuse.B": 0.9647060036659241,
+      "range": 30.0,
+      "falloff_start": 0.800000011920929,
+      "near_cap": 1.0,
+      "multiplier": 2.0,
+      "min_luminosity": 0.0,
+      "light_type": 1,
+      "blinking": 0,
+      "angle": 40.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "uvscale.u": 1.0,
+      "uvscale.v": 1.0,
+      "deformable_transform": "|sportsmuscle_LOD1|body|Winch_DOOR_Mesh|Winch_DOOR_Mesh_LIG",
+      "deformable_transform_hash": 3268475469,
+      "preset_id": 625235815
+     },
+     "3": {
+      "behavior": "HeadLight",
+      "behavior_hash": 3460580079,
+      "part": "sportsmuscle_headlight_f_r",
+      "part_hash": 2362776972,
+      "part_index": 45,
+      "diffuse.R": 0.8745099902153015,
+      "diffuse.G": 0.35686299204826355,
+      "diffuse.B": 0.2941179871559143,
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 1,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "uvscale.u": 1.0,
+      "uvscale.v": 1.0,
+      "deformable_transform": "|sportsmuscle_LOD1|body|Winch_DOOR_Mesh|Winch_DOOR_Mesh_LIG",
+      "deformable_transform_hash": 3268475469,
+      "preset_id": 4276153710
+     },
+     "4": {
+      "behavior": "HeadLight",
+      "behavior_hash": 3460580079,
+      "part": "sportsmuscle_headlight_f_l",
+      "part_hash": 42559635,
+      "part_index": 44,
+      "diffuse.R": 0.8745099902153015,
+      "diffuse.G": 0.35686299204826355,
+      "diffuse.B": 0.2941179871559143,
+      "range": 30.0,
+      "falloff_start": 0.800000011920929,
+      "near_cap": 1.0,
+      "multiplier": 2.0,
+      "min_luminosity": 0.0,
+      "light_type": 1,
+      "blinking": 0,
+      "angle": 40.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "uvscale.u": 1.0,
+      "uvscale.v": 1.0,
+      "deformable_transform": "|sportsmuscle_LOD1|body|Winch_DOOR_Mesh|Winch_DOOR_Mesh_LIG",
+      "deformable_transform_hash": 3268475469,
+      "preset_id": 1814273923
+     },
+     "5": {
+      "behavior": "HeadLight",
+      "behavior_hash": 3460580079,
+      "part": "sportsmuscle_headlight_f_l",
+      "part_hash": 42559635,
+      "part_index": 44,
+      "diffuse.R": 0.5411760210990906,
+      "diffuse.G": 0.7725489735603333,
+      "diffuse.B": 0.9647060036659241,
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 1,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "uvscale.u": 1.0,
+      "uvscale.v": 1.0,
+      "deformable_transform": "|sportsmuscle_LOD1|body|Winch_DOOR_Mesh|Winch_DOOR_Mesh_LIG",
+      "deformable_transform_hash": 3268475469,
+      "preset_id": 1754632929
+     },
+     "6": {
+      "behavior": "HeadLight",
+      "behavior_hash": 3460580079,
+      "part": "sportsmuscle_headlight_f_r",
+      "part_hash": 2362776972,
+      "part_index": 45,
+      "diffuse.R": 0.8745099902153015,
+      "diffuse.G": 0.35686299204826355,
+      "diffuse.B": 0.2941179871559143,
+      "range": 30.0,
+      "falloff_start": 0.800000011920929,
+      "near_cap": 1.0,
+      "multiplier": 2.0,
+      "min_luminosity": 0.0,
+      "light_type": 1,
+      "blinking": 0,
+      "angle": 40.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "uvscale.u": 1.0,
+      "uvscale.v": 1.0,
+      "deformable_transform": "|sportsmuscle_LOD1|body|Winch_DOOR_Mesh|Winch_DOOR_Mesh_LIG",
+      "deformable_transform_hash": 3268475469,
+      "preset_id": 3407385576
+     },
+     "7": {
+      "behavior": "HeadLight",
+      "behavior_hash": 3460580079,
+      "part": "sportsmuscle_headlight_f_l",
+      "part_hash": 42559635,
+      "part_index": 44,
+      "diffuse.R": 0.8745099902153015,
+      "diffuse.G": 0.35686299204826355,
+      "diffuse.B": 0.2941179871559143,
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 1,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "uvscale.u": 1.0,
+      "uvscale.v": 1.0,
+      "deformable_transform": "|sportsmuscle_LOD1|body|Winch_DOOR_Mesh|Winch_DOOR_Mesh_LIG",
+      "deformable_transform_hash": 3268475469,
+      "preset_id": 2877751723
+     },
+     "8": {
+      "behavior": "TailLight",
+      "behavior_hash": 4253610154,
+      "part": "sportsmuscle_tailstrip_r_l",
+      "part_hash": 2494935739,
+      "part_index": 48,
+      "diffuse.R": 1.0,
+      "diffuse.G": 0.1490200012922287,
+      "diffuse.B": 0.0,
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 2.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "uvscale.u": 1.0,
+      "uvscale.v": 1.0,
+      "deformable_transform": "|sportsmuscle_LOD1|body|SUSP2_Wheel_Rear_Left|SUSP2_Wheel_Rear_Left_LIG",
+      "deformable_transform_hash": 3705241838,
+      "preset_id": 1700993006
+     },
+     "9": {
+      "behavior": "HeadLight",
+      "behavior_hash": 3460580079,
+      "part": "sportsmuscle_headlight_f_r",
+      "part_hash": 2362776972,
+      "part_index": 45,
+      "diffuse.R": 0.6274510025978088,
+      "diffuse.G": 0.7058820128440857,
+      "diffuse.B": 1.0,
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 1,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "uvscale.u": 1.0,
+      "uvscale.v": 1.0,
+      "deformable_transform": "|sportsmuscle_LOD1|body|Winch_DOOR_Mesh|Winch_DOOR_Mesh_LIG",
+      "deformable_transform_hash": 3268475469,
+      "preset_id": 126093807
+     },
+     "10": {
+      "behavior": "HeadLight",
+      "behavior_hash": 3460580079,
+      "part": "sportsmuscle_headlight_f_r",
+      "part_hash": 2362776972,
+      "part_index": 45,
+      "diffuse.R": 0.6274510025978088,
+      "diffuse.G": 0.7058820128440857,
+      "diffuse.B": 1.0,
+      "range": 30.0,
+      "falloff_start": 0.800000011920929,
+      "near_cap": 1.0,
+      "multiplier": 2.0,
+      "min_luminosity": 0.0,
+      "light_type": 1,
+      "blinking": 0,
+      "angle": 40.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "uvscale.u": 1.0,
+      "uvscale.v": 1.0,
+      "deformable_transform": "|sportsmuscle_LOD1|body|Winch_DOOR_Mesh|Winch_DOOR_Mesh_LIG",
+      "deformable_transform_hash": 3268475469,
+      "preset_id": 1729670457
+     },
+     "11": {
+      "behavior": "HeadLight",
+      "behavior_hash": 3460580079,
+      "part": "sportsmuscle_body",
+      "part_hash": 3076414876,
+      "part_index": 0,
+      "diffuse.R": 0.6039000153541565,
+      "diffuse.G": 0.6039000153541565,
+      "diffuse.B": 0.9528999924659729,
+      "range": 10.0,
+      "falloff_start": 0.800000011920929,
+      "near_cap": 1.25,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 1,
+      "blinking": 0,
+      "angle": 60.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 0.25,
+      "uvscale.u": 1.0,
+      "uvscale.v": 1.0,
+      "deformable_transform": "|sportsmuscle_LOD1|body|Batmobile_Rig_Weapons_Drone_Decoder|Batmobile_Rig_Weapons_Drone_Decoder_LIG",
+      "deformable_transform_hash": 635566479,
+      "preset_id": 3189390601
+     },
+     "12": {
+      "behavior": "HeadLight",
+      "behavior_hash": 3460580079,
+      "part": "sportsmuscle_wheel_f_l_arch",
+      "part_hash": 571525670,
+      "part_index": 42,
+      "diffuse.R": 0.6274510025978088,
+      "diffuse.G": 0.7058820128440857,
+      "diffuse.B": 1.0,
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "uvscale.u": 1.0,
+      "uvscale.v": 1.0,
+      "deformable_transform": "|sportsmuscle_LOD1|wheel_f_l|Wheel_Frnt_Left_Disc|Wheel_Frnt_Left_Disc_LIG",
+      "deformable_transform_hash": 3050336140,
+      "preset_id": 0
+     },
+     "13": {
+      "behavior": "HeadLight",
+      "behavior_hash": 3460580079,
+      "part": "sportsmuscle_wheel_f_r_arch",
+      "part_hash": 528542251,
+      "part_index": 43,
+      "diffuse.R": 0.6274510025978088,
+      "diffuse.G": 0.7058820128440857,
+      "diffuse.B": 1.0,
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "uvscale.u": 1.0,
+      "uvscale.v": 1.0,
+      "deformable_transform": "|sportsmuscle_LOD1|wheel_f_r|Wheel_Frnt_Right_Disc|Wheel_Frnt_Right_Disc_LIG",
+      "deformable_transform_hash": 1409711428,
+      "preset_id": 0
+     },
+     "14": {
+      "behavior": "HeadLight",
+      "behavior_hash": 3460580079,
+      "part": "sportsmuscle_headlight_f_l",
+      "part_hash": 42559635,
+      "part_index": 44,
+      "diffuse.R": 1.0,
+      "diffuse.G": 0.0,
+      "diffuse.B": 0.0,
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "uvscale.u": 1.0,
+      "uvscale.v": 1.0,
+      "deformable_transform": "|sportsmuscle_LOD1|body|Winch_DOOR_Mesh|Winch_DOOR_Mesh_LIG",
+      "deformable_transform_hash": 3268475469,
+      "preset_id": 0
+     },
+     "15": {
+      "behavior": "HeadLight",
+      "behavior_hash": 3460580079,
+      "part": "sportsmuscle_headlight_f_r",
+      "part_hash": 2362776972,
+      "part_index": 45,
+      "diffuse.R": 1.0,
+      "diffuse.G": 0.0,
+      "diffuse.B": 0.0,
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "uvscale.u": 1.0,
+      "uvscale.v": 1.0,
+      "deformable_transform": "|sportsmuscle_LOD1|body|Winch_DOOR_Mesh|Winch_DOOR_Mesh_LIG",
+      "deformable_transform_hash": 3268475469,
+      "preset_id": 0
+     },
+     "16": {
+      "behavior": "HeadLight",
+      "behavior_hash": 3460580079,
+      "part": "sportsmuscle_wheel_f_l_arch",
+      "part_hash": 571525670,
+      "part_index": 42,
+      "diffuse.R": 1.0,
+      "diffuse.G": 0.0,
+      "diffuse.B": 0.0,
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "uvscale.u": 1.0,
+      "uvscale.v": 1.0,
+      "deformable_transform": "|sportsmuscle_LOD1|wheel_f_l|Wheel_Frnt_Left_Disc|Wheel_Frnt_Left_Disc_LIG",
+      "deformable_transform_hash": 3050336140,
+      "preset_id": 0
+     },
+     "17": {
+      "behavior": "TailLight",
+      "behavior_hash": 4253610154,
+      "part": "sportsmuscle_body",
+      "part_hash": 3076414876,
+      "part_index": 0,
+      "diffuse.R": 0.5960779786109924,
+      "diffuse.G": 1.0,
+      "diffuse.B": 0.8823530077934265,
+      "range": 2.0,
+      "falloff_start": 0.0,
+      "near_cap": 1.0,
+      "multiplier": 1.0,
+      "min_luminosity": 0.0,
+      "light_type": 0,
+      "blinking": 0,
+      "angle": 10.0,
+      "cast_shadows": 0,
+      "projected_texture_index": -1,
+      "volumetric_mode": 0,
+      "volume_intensity": 1.0,
+      "uvscale.u": 1.0,
+      "uvscale.v": 1.0,
+      "deformable_transform": "|sportsmuscle_LOD1|body|Batmobile_Chassis|Batmobile_Chassis_LIG",
+      "deformable_transform_hash": 2887366761,
+      "preset_id": 0
+     }
+    },
+    "row_count": 18,
+    "range_angle": {
+     "2.0/10.0": 13,
+     "30.0/40.0": 4,
+     "10.0/60.0": 1
+    }
+   },
+   "module_refs": {
+    "0": {
+     "preset_id": 2763198432,
+     "name": "Dash_Light",
+     "behavior": "HeadLight",
+     "range": 2.0,
+     "angle": 10.0
+    },
+    "1": {
+     "preset_id": 4016595472,
+     "name": "Sport_Muscle_Rear_Break_Right",
+     "behavior": "TailLight",
+     "range": 2.0,
+     "angle": 10.0
+    },
+    "2": {
+     "preset_id": 625235815,
+     "name": "Sport_Muscle_Headlight_Volume_Left",
+     "behavior": "HeadLight",
+     "range": 30.0,
+     "angle": 40.0
+    },
+    "3": {
+     "preset_id": 4276153710,
+     "name": "Front_Right_Point",
+     "behavior": "HeadLight",
+     "range": 2.0,
+     "angle": 10.0
+    },
+    "4": {
+     "preset_id": 1814273923,
+     "name": "Front_Left_Volumetric",
+     "behavior": "HeadLight",
+     "range": 30.0,
+     "angle": 40.0
+    },
+    "5": {
+     "preset_id": 1754632929,
+     "name": "Sport_Muscle_Headlight_Point_Left",
+     "behavior": "HeadLight",
+     "range": 2.0,
+     "angle": 10.0
+    },
+    "6": {
+     "preset_id": 3407385576,
+     "name": "Front_Right_Volumetric",
+     "behavior": "HeadLight",
+     "range": 30.0,
+     "angle": 40.0
+    },
+    "7": {
+     "preset_id": 2877751723,
+     "name": "Front_Left_Point",
+     "behavior": "HeadLight",
+     "range": 2.0,
+     "angle": 10.0
+    },
+    "8": {
+     "preset_id": 1700993006,
+     "name": "Sport_Muscle_Rear_Break_Left",
+     "behavior": "TailLight",
+     "range": 2.0,
+     "angle": 10.0
+    },
+    "9": {
+     "preset_id": 126093807,
+     "name": "Sport_Muscle_Headlight_Point_Right",
+     "behavior": "HeadLight",
+     "range": 2.0,
+     "angle": 10.0
+    },
+    "10": {
+     "preset_id": 1729670457,
+     "name": "Sport_Muscle_Headlight_Volume_Right",
+     "behavior": "HeadLight",
+     "range": 30.0,
+     "angle": 40.0
+    },
+    "11": {
+     "preset_id": 3189390601,
+     "name": "Front_Secondary_Head",
+     "behavior": "HeadLight",
+     "range": 10.0,
+     "angle": 60.0
+    },
+    "12": {
+     "preset_id": 0,
+     "name": null,
+     "behavior": "HeadLight",
+     "range": 2.0,
+     "angle": 10.0
+    },
+    "13": {
+     "preset_id": 0,
+     "name": null,
+     "behavior": "HeadLight",
+     "range": 2.0,
+     "angle": 10.0
+    },
+    "14": {
+     "preset_id": 0,
+     "name": null,
+     "behavior": "HeadLight",
+     "range": 2.0,
+     "angle": 10.0
+    },
+    "15": {
+     "preset_id": 0,
+     "name": null,
+     "behavior": "HeadLight",
+     "range": 2.0,
+     "angle": 10.0
+    },
+    "16": {
+     "preset_id": 0,
+     "name": null,
+     "behavior": "HeadLight",
+     "range": 2.0,
+     "angle": 10.0
+    },
+    "17": {
+     "preset_id": 0,
+     "name": null,
+     "behavior": "TailLight",
+     "range": 2.0,
+     "angle": 10.0
+    }
+   },
+   "light_objects_default": [
+    "Front_Left_Point",
+    "Front_Left_Volumetric",
+    "Front_Right_Point",
+    "Front_Right_Turn",
+    "Front_Right_Volumetric",
+    "Rear_Left_Point",
+    "Rear_Left_Reverse",
+    "Rear_Left_Turn",
+    "Rear_Right_Point",
+    "Rear_Right_Reverse",
+    "Rear_Right_Turn",
+    "Front_Primary_Head",
+    "sportsmuscle_wheel_f_l_arch_light",
+    "headlight_battle_right_light",
+    "Rear_Break",
+    "Front_Left_Turn",
+    "sportsmuscle_wheel_f_r_arch_light",
+    "headlight_battle_left_light",
+    "sportsmuscle_wheel_f_l_arch_battle_light",
+    "Front_Secondary_Head",
+    "Dash_Light",
+    "boot_light_light",
+    "Sport_Muscle_Headlight_Volume_Right",
+    "Sport_Muscle_Headlight_Volume_Left",
+    "Sport_Muscle_Headlight_Point_Left",
+    "Sport_Muscle_Rear_Break_Right",
+    "Sport_Muscle_Rear_Break_Left",
+    "Sport_Muscle_Headlight_Point_Right"
+   ],
+   "referenced_names": [
+    "Dash_Light",
+    "Front_Left_Point",
+    "Front_Left_Volumetric",
+    "Front_Right_Point",
+    "Front_Right_Volumetric",
+    "Front_Secondary_Head",
+    "Sport_Muscle_Headlight_Point_Left",
+    "Sport_Muscle_Headlight_Point_Right",
+    "Sport_Muscle_Headlight_Volume_Left",
+    "Sport_Muscle_Headlight_Volume_Right",
+    "Sport_Muscle_Rear_Break_Left",
+    "Sport_Muscle_Rear_Break_Right"
+   ],
+   "unreferenced_lights": [
+    "Front_Left_Turn",
+    "Front_Primary_Head",
+    "Front_Right_Turn",
+    "Rear_Break",
+    "Rear_Left_Point",
+    "Rear_Left_Reverse",
+    "Rear_Left_Turn",
+    "Rear_Right_Point",
+    "Rear_Right_Reverse",
+    "Rear_Right_Turn",
+    "boot_light_light",
+    "headlight_battle_left_light",
+    "headlight_battle_right_light",
+    "sportsmuscle_wheel_f_l_arch_battle_light",
+    "sportsmuscle_wheel_f_l_arch_light",
+    "sportsmuscle_wheel_f_r_arch_light"
+   ],
+   "conversion": {
+    "tool": "Tools/Gibbed/Gibbed.JustCause3.ConvertProperty.exe --e",
+    "ok": true
+   }
+  }
+ },
+ "regrade": [
+  {
+   "class": "hknpExternMeshShapeData",
+   "g3_12_grade": "PARTIAL (count/AABB exact, 3x u16 vertex frame unpinned)",
+   "g3_11b_grade": "FULL for the static tree + domain + sections; PARTIAL for the 3x u16 vertex dequantization",
+   "oracle": "bm_colmesh.decode_tree: pre-order Codec3Axis6 leaves reach each of 6269 triangles exactly once (6269 distinct, 0 outside their leaf box); domain = union(A,B) -/+ 0.05 (bm_colmesh.selftest asserts it on this file); bm_colmesh.selftest = PASS",
+   "measured": {
+    "tree_nodes": 12537,
+    "leaves": 6269,
+    "sections": 2,
+    "packed_vertices": 12537
+   }
+  },
+  {
+   "class": "hknpDynamicCompoundShapeData",
+   "g3_12_grade": "NAMED-ONLY",
+   "g3_11b_grade": "PARTIAL (tree decoded and refit-proved; 19/20 trees reproduce the stored bytes exactly, 1 is stale)",
+   "oracle": "bm_colmesh.dyn_tree_refit: leaf = instance shape box (+ convex radius for a polytope) transformed by the instance basis/translation, internal = union of children. On this file 19/20 trees reproduce the stored bytes to <=1e-5 m; worst 0.01593 m: [{'compound': '0xd3c80', 'part': None, 'max_move_m': 0.01593}]",
+   "measured": {
+    "trees": 20,
+    "worst_m": 0.01593,
+    "exact": 19,
+    "stale": [
+     {
+      "compound": "0xd3c80",
+      "part": null,
+      "max_move_m": 0.01593
+     }
+    ]
+   }
+  }
+ ],
+ "counts": {
+  "scope": 72,
+  "changed": 19,
+  "unchanged": 53,
+  "after": {
+   "TRANSLATED": 42,
+   "GUESSED": 0,
+   "NOT TRANSLATED": 25,
+   "REFUTED": 5,
+   "UNVERIFIABLE": 0
+  },
+  "before": {
+   "TRANSLATED": 45,
+   "NOT TRANSLATED": 27
+  },
+  "by_scope": {
+   "collision": 6,
+   "epe": 66
+  }
+ },
+ "changed": [
+  {
+   "id": "T-L5",
+   "doc": "T-1",
+   "dispo": "epe",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "REFUTED",
+   "tier": "epe-name",
+   "evidence": "Front_Secondary_Head: object present (SVehicleLight); referenced by lights[11] = preset 3189390601, HeadLight, range 10.0, angle 60.0; BattleModeSpotLight: .epe object name 'BattleModeSpotLight' (class SWeaponPoint); Front_Secondary_Head: .epe object name 'Front_Secondary_Head' (class SVehicleLight)",
+   "flags": [],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x4F28: 'Front_Secondary_Head'"
+   },
+   "changed": true,
+   "evidence_upgraded": false
+  },
+  {
+   "id": "T-P1",
+   "doc": "T-1",
+   "dispo": "epe",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "epe-class",
+   "evidence": ".epe CPartProp objects: 6; part names sportsmuscle_body, sportsmuscle_wheel_r_r, sportsmuscle_wheel_r_l, sportsmuscle_wheel_f_r, sportsmuscle_wheel_f_l, sportsmuscle_taillight_r_l; CPartProp.name: .epe class CPartProp (6 object(s)) has member 'name'",
+   "flags": [],
+   "before": {
+    "verdict": "NOT TRANSLATED",
+    "tier": "none",
+    "evidence": "no member/value/token match in the aaf (dispo=epe, 1 member hint(s))"
+   },
+   "changed": true,
+   "evidence_upgraded": false
+  },
+  {
+   "id": "T-P3",
+   "doc": "T-1",
+   "dispo": "next",
+   "scope": "collision",
+   "scope_rule": "named in COLLISION_IDS (the rows whose subject is the built `.physicsc`: hulls, body ids, collision flags)",
+   "verdict": "NOT TRANSLATED",
+   "tier": "measured",
+   "evidence": "built physicsc 62 body-table entries (0..61) of which 40 are hulls (54 hull objects), 18 extern meshes, 2 dynamic + 2 static compounds; parts module 61 parts, 38 with a world body, 23 without; the 7 slots the row names: sportsmuscle_body world=0 raycast=42, sportsmuscle_door_f_l world=1 raycast=43, sportsmuscle_engine world=7 raycast=47, sportsmuscle_wheel_f_l world=-1 raycast=22, sportsmuscle_wheel_f_r world=-1 raycast=23, sportsmuscle_wheel_r_l world=-1 raycast=36, sportsmuscle_wheel_r_r world=-1 raycast=37; the row's BmAK side (32 boxes -> 7 hull slots) is not in the built files; the 4 wheels it counts as hull slots carry world_collision_body_id -1 (parts sportsmuscle_wheel_r_l sportsmuscle_wheel_r_r sportsmuscle_wheel_f_l sportsmuscle_wheel_f_r)",
+   "flags": [
+    "outside-build",
+    "dispo=next"
+   ],
+   "before": {
+    "verdict": "NOT TRANSLATED",
+    "tier": "none",
+    "evidence": "ledger dispo=next (not built); no member among 1 row member(s) and no carried token in the aaf"
+   },
+   "changed": true,
+   "evidence_upgraded": false
+  },
+  {
+   "id": "T-LG1",
+   "doc": "T-2b",
+   "dispo": "keep",
+   "scope": "epe",
+   "scope_rule": "named in EPE_IDS (the light-rig rows whose subject is the entity graph / lights module: row count, graph objects, range/angle)",
+   "verdict": "REFUTED",
+   "tier": "epe-class",
+   "evidence": "built lights module 18 rows (row says 21)",
+   "flags": [],
+   "before": {
+    "verdict": "NOT TRANSLATED",
+    "tier": "member",
+    "evidence": "member present, no row number matches: editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/generated/batmobile/v0300_car_kensington_sportsmuscle_lights.vmodc:lights.behavior = 'HeadLight' (+449 more member(s))"
+   },
+   "changed": true,
+   "evidence_upgraded": false
+  },
+  {
+   "id": "T-LG2",
+   "doc": "T-2b",
+   "dispo": "keep",
+   "scope": "epe",
+   "scope_rule": "named in EPE_IDS (the light-rig rows whose subject is the entity graph / lights module: row count, graph objects, range/angle)",
+   "verdict": "REFUTED",
+   "tier": "epe-class",
+   "evidence": "built .epe: 28 SVehicleLight objects, 12 of them referenced by the 18 module rows; unreferenced: Front_Left_Turn, Front_Primary_Head, Front_Right_Turn, Rear_Break, Rear_Left_Point, Rear_Left_Reverse, Rear_Left_Turn, Rear_Right_Point, Rear_Right_Reverse, Rear_Right_Turn, boot_light_light, headlight_battle_left_light, headlight_battle_right_light, sportsmuscle_wheel_f_l_arch_battle_light, sportsmuscle_wheel_f_l_arch_light, sportsmuscle_wheel_f_r_arch_light (row says 21 rows / 22 objects); SVehicleLight: .epe class SVehicleLight: 28 object(s); Front_Secondary_Head: .epe object name 'Front_Secondary_Head' (class SVehicleLight); Rear_Break: .epe object name 'Rear_Break' (class SVehicleLight)",
+   "flags": [],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x4F28: 'Front_Secondary_Head'"
+   },
+   "changed": true,
+   "evidence_upgraded": false
+  },
+  {
+   "id": "T-LG6",
+   "doc": "T-2b",
+   "dispo": "keep",
+   "scope": "epe",
+   "scope_rule": "named in EPE_IDS (the light-rig rows whose subject is the entity graph / lights module: row count, graph objects, range/angle)",
+   "verdict": "REFUTED",
+   "tier": "epe-class",
+   "evidence": "lights module range/angle histogram: 10.0/60.0 x1, 2.0/10.0 x13, 30.0/40.0 x4 (row says 5 spots at 30/40 and 16 at 2/10)",
+   "flags": [],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "value",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/generated/batmobile/v0300_car_kensington_sportsmuscle_lights.vmodc:lights.range = 2.0 (row says 2)"
+   },
+   "changed": true,
+   "evidence_upgraded": false
+  },
+  {
+   "id": "T-CO1",
+   "doc": "T-2b",
+   "dispo": "keep",
+   "scope": "collision",
+   "scope_rule": "named in COLLISION_IDS (the rows whose subject is the built `.physicsc`: hulls, body ids, collision flags)",
+   "verdict": "TRANSLATED",
+   "tier": "measured",
+   "evidence": "hknpPhysicsSystemData vs grab_extract: 44 bytes differ, first at +0x3590 = body entries [22, 23, 36, 37] at byte offsets ['0x30', '0x31', '0x32', '0x34', '0x35', '0x36', '0x37', '0x38', '0x39', '0x3a', '0x3b'] inside each entry (built be9f9abf3867343fe17a24c0 / donor 5c8f62bfcccccc3ec64bc7bf), 0 bytes above the body table; grab_extract: hulls differing at the same part [0, 11, 12, 26, 27], class delta {}, part 0 hull {'min': [-1.0425009727478027, 0.24412000179290771, -1.2011505365371704], 'max': [1.0425009727478027, 1.4561220407485962, 2.4776978492736816]} -> {'min': [-1.7446650266647339, 0.07507000118494034, -3.4276859760284424], 'max': [1.753574013710022, 2.3582189083099365, 3.609272003173828]}; hknpPhysicsSystemData vs test-091: IDENTICAL (20912 B, 0 bytes differ); test-091: hulls differing at the same part [0, 11, 12, 26, 27], class delta {}, part 0 hull {'min': [-1.0425009727478027, 0.24412000179290771, -1.2011505365371704], 'max': [1.0425009727478027, 1.4561220407485962, 2.4776978492736816]} -> {'min': [-1.7446650266647339, 0.07507000118494034, -3.4276859760284424], 'max': [1.753574013710022, 2.3582189083099365, 3.609272003173828]}; so 'stations moved' is true for the entries that differ and the shapes are the donor's except the hulls that differ above",
+   "flags": [
+    "row dispo=keep"
+   ],
+   "before": {
+    "verdict": "NOT TRANSLATED",
+    "tier": "none",
+    "evidence": "no member/value/token match in the aaf (dispo=keep, 1 member hint(s))"
+   },
+   "changed": true,
+   "evidence_upgraded": false
+  },
+  {
+   "id": "T-CO2",
+   "doc": "T-2b",
+   "dispo": "next",
+   "scope": "collision",
+   "scope_rule": "named in COLLISION_IDS (the rows whose subject is the built `.physicsc`: hulls, body ids, collision flags)",
+   "verdict": "TRANSLATED",
+   "tier": "measured",
+   "evidence": "largest hull (part 0, B-10c): extents [3.4982, 2.2831, 7.037] -> the 3.1615x0.6342x1.0988 m box fits with identity axes; no hull in the built file has the 3.679 m longest axis the row cites: 0 match; the built maximum is 7.037 m",
+   "flags": [
+    "premise superseded by B-10c (body 0 hull replaced)"
+   ],
+   "before": {
+    "verdict": "NOT TRANSLATED",
+    "tier": "none",
+    "evidence": "ledger dispo=next (not built); no member among 1 row member(s) and no carried token in the aaf"
+   },
+   "changed": true,
+   "evidence_upgraded": false
+  },
+  {
+   "id": "T-CO3",
+   "doc": "T-2b",
+   "dispo": "keep",
+   "scope": "collision",
+   "scope_rule": "named in COLLISION_IDS (the rows whose subject is the built `.physicsc`: hulls, body ids, collision flags)",
+   "verdict": "REFUTED",
+   "tier": "measured",
+   "evidence": "built parts module: has_world_collision_shape=1 on 38 of 61 parts (the row says 38 of 42); world_collision_body_id = -1 on 23 parts (the row says 4, the wheels): sportsmuscle_wheel_r_l, sportsmuscle_wheel_r_r, sportsmuscle_wheel_f_l, sportsmuscle_wheel_f_r, sportsmuscle_wheel_f_l_arch, sportsmuscle_wheel_f_r_arch, sportsmuscle_headlight_f_l, sportsmuscle_headlight_f_r ...; the 4 wheels: sportsmuscle_wheel_r_l world=-1 raycast=36, sportsmuscle_wheel_r_r world=-1 raycast=37, sportsmuscle_wheel_f_l world=-1 raycast=22, sportsmuscle_wheel_f_r world=-1 raycast=23",
+   "flags": [
+    "38 = the row's count; the 42-part denominator is stale"
+   ],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "value",
+    "evidence": "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:parts.has_world_collision_shape = 1 (row says 1)"
+   },
+   "changed": true,
+   "evidence_upgraded": false
+  },
+  {
+   "id": "T-FX10",
+   "doc": "T-13",
+   "dispo": "next",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "epe-name",
+   "evidence": "CannonMuzzle: .epe object name 'CannonMuzzle' (class SWeaponPoint)",
+   "flags": [
+    "dispo=next"
+   ],
+   "before": {
+    "verdict": "NOT TRANSLATED",
+    "tier": "none",
+    "evidence": "ledger dispo=next (not built); no member among 0 row member(s) and no carried token in the aaf"
+   },
+   "changed": true,
+   "evidence_upgraded": false
+  },
+  {
+   "id": "T-FX11",
+   "doc": "T-13",
+   "dispo": "next",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "epe-name",
+   "evidence": "ChainGunMuzzle: .epe object name 'ChainGunMuzzle' (class SWeaponPoint)",
+   "flags": [
+    "dispo=next"
+   ],
+   "before": {
+    "verdict": "NOT TRANSLATED",
+    "tier": "none",
+    "evidence": "ledger dispo=next (not built); no member among 0 row member(s) and no carried token in the aaf"
+   },
+   "changed": true,
+   "evidence_upgraded": false
+  },
+  {
+   "id": "T-FX14",
+   "doc": "T-13",
+   "dispo": "next",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "epe-name",
+   "evidence": "MissileL: .epe object name 'MissileL' (class SWeaponPoint)",
+   "flags": [
+    "dispo=next"
+   ],
+   "before": {
+    "verdict": "NOT TRANSLATED",
+    "tier": "none",
+    "evidence": "ledger dispo=next (not built); no member among 0 row member(s) and no carried token in the aaf"
+   },
+   "changed": true,
+   "evidence_upgraded": false
+  },
+  {
+   "id": "T-FX17",
+   "doc": "T-13",
+   "dispo": "epe",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no token of the row (wheel_f_l) resolves to an .epe object name, a name_hash, a class/member, a lights-module preset or a part name; unresolved tokens: wheel_f_l; 'wheel_f_l' is not an .epe name; the closest is sportsmuscle_wheel_f_l (CPartProp, not referenced by a module preset), sportsmuscle_wheel_f_l_arch_light (SVehicleLight, not referenced by a module preset), sportsmuscle_wheel_f_l_arch_battle_light (SVehicleLight, not referenced by a module preset)",
+   "flags": [],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1D09: 'wheel_f_l'"
+   },
+   "changed": true,
+   "evidence_upgraded": false
+  },
+  {
+   "id": "T-FX21",
+   "doc": "T-13",
+   "dispo": "epe",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no token of the row (car_explosion_medium) resolves to an .epe object name, a name_hash, a class/member, a lights-module preset or a part name; unresolved tokens: car_explosion_medium",
+   "flags": [],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x53EF: 'car_explosion_medium'"
+   },
+   "changed": true,
+   "evidence_upgraded": false
+  },
+  {
+   "id": "T-L22",
+   "doc": "T-14",
+   "dispo": "out",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "NOT TRANSLATED",
+   "tier": "epe-name",
+   "evidence": "sportsmuscle_body: .epe object name 'sportsmuscle_body' (class CPartProp); unresolved tokens: HeadLight1, VEHLT_ForensicsLight",
+   "flags": [
+    "dispo=out"
+   ],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1B44: 'sportsmuscle_body'"
+   },
+   "changed": true,
+   "evidence_upgraded": false
+  },
+  {
+   "id": "T-L23",
+   "doc": "T-14",
+   "dispo": "out",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "NOT TRANSLATED",
+   "tier": "epe-name",
+   "evidence": "sportsmuscle_body: .epe object name 'sportsmuscle_body' (class CPartProp); unresolved tokens: HeadLight2, VEHLT_ForensicsLight",
+   "flags": [
+    "dispo=out"
+   ],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1B44: 'sportsmuscle_body'"
+   },
+   "changed": true,
+   "evidence_upgraded": false
+  },
+  {
+   "id": "T-L28",
+   "doc": "T-14",
+   "dispo": "out",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "NOT TRANSLATED",
+   "tier": "epe-name",
+   "evidence": "sportsmuscle_body: .epe object name 'sportsmuscle_body' (class CPartProp); unresolved tokens: HeadLight1c, HeadLight2c, problems",
+   "flags": [
+    "dispo=out"
+   ],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1B44: 'sportsmuscle_body'"
+   },
+   "changed": true,
+   "evidence_upgraded": false
+  },
+  {
+   "id": "T-L30",
+   "doc": "T-14",
+   "dispo": "out",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "NOT TRANSLATED",
+   "tier": "epe-name",
+   "evidence": "sportsmuscle_body: .epe object name 'sportsmuscle_body' (class CPartProp); unresolved tokens: HeadLight2c, HeadLight1c, problems",
+   "flags": [
+    "dispo=out"
+   ],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1B44: 'sportsmuscle_body'"
+   },
+   "changed": true,
+   "evidence_upgraded": false
+  },
+  {
+   "id": "T-WLD8",
+   "doc": "T-20",
+   "dispo": "epe",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "epe-class",
+   "evidence": ".epe CInteractionGraphEntry objects: 29 (row says 29); triggers 7, point nodes 8",
+   "flags": [],
+   "before": {
+    "verdict": "NOT TRANSLATED",
+    "tier": "none",
+    "evidence": "no member/value/token match in the aaf (dispo=epe, 0 member hint(s))"
+   },
+   "changed": true,
+   "evidence_upgraded": false
+  }
+ ],
+ "unchanged": [
+  {
+   "id": "T-L1",
+   "doc": "T-1",
+   "dispo": "epe",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "epe-name",
+   "evidence": "Front_Left_Point: .epe object name 'Front_Left_Point' (class SVehicleLight); Front_Left_Volumetric: .epe object name 'Front_Left_Volumetric' (class SVehicleLight)",
+   "flags": [],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x35CC: 'Front_Left_Point'"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-L2",
+   "doc": "T-1",
+   "dispo": "epe",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no token of the row (radius) resolves to an .epe object name, a name_hash, a class/member, a lights-module preset or a part name; unresolved tokens: radius",
+   "flags": [],
+   "before": {
+    "verdict": "NOT TRANSLATED",
+    "tier": "none",
+    "evidence": "no member/value/token match in the aaf (dispo=epe, 0 member hint(s))"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-L3",
+   "doc": "T-1",
+   "dispo": "epe",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "module",
+   "evidence": "Rear_Break: object present (SVehicleLight); referenced by a module row: no; TailLight: lights module behaviour 'TailLight'; Rear_Break: .epe object name 'Rear_Break' (class SVehicleLight)",
+   "flags": [],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x2CF9: 'Rear_Break'"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-L6",
+   "doc": "T-1",
+   "dispo": "epe",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "epe-name",
+   "evidence": "Dash_Light: .epe object name 'Dash_Light' (class SVehicleLight)",
+   "flags": [],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x50AC: 'Dash_Light'"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-PA1",
+   "doc": "T-2b",
+   "dispo": "epe",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "epe-class",
+   "evidence": ".epe CPartProp objects: 6: sportsmuscle_body, sportsmuscle_wheel_r_r, sportsmuscle_wheel_r_l, sportsmuscle_wheel_f_r, sportsmuscle_wheel_f_l, sportsmuscle_taillight_r_l; part_index members: sportsmuscle_body=0, sportsmuscle_wheel_r_r=12, sportsmuscle_wheel_r_l=11, sportsmuscle_wheel_f_r=27, sportsmuscle_wheel_f_l=26, sportsmuscle_taillight_r_l=8; CPartProp: .epe class CPartProp: 6 object(s)",
+   "flags": [],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1D75: 'taillight_r_l'"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-PA2",
+   "doc": "T-2b",
+   "dispo": "epe",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "the .epe holds no name/hash for this row's target; its member evidence is in another built file and G3-11's verdict stands (tier value)",
+   "flags": [],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "value",
+    "evidence": "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_vehicle_deform.vmodc:light_indices = 12 (row says 12)"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-PA3",
+   "doc": "T-2b",
+   "dispo": "epe",
+   "scope": "collision",
+   "scope_rule": "named in COLLISION_IDS (the rows whose subject is the built `.physicsc`: hulls, body ids, collision flags)",
+   "verdict": "TRANSLATED",
+   "tier": "measured",
+   "evidence": "sportsmuscle_body: world_collision_body_id 0 -> body-table class hknpConvexPolytopeShape; raycast_body_id 42 -> hknpExternMeshShape; sportsmuscle_door_f_l: world_collision_body_id 1 -> body-table class hknpConvexPolytopeShape; raycast_body_id 43 -> hknpExternMeshShape; sportsmuscle_engine: world_collision_body_id 7 -> body-table class hknpConvexPolytopeShape; raycast_body_id 47 -> hknpExternMeshShape; sportsmuscle_wheel_f_l: world_collision_body_id -1 -> body-table class ABSENT; raycast_body_id 22 -> hknpConvexPolytopeShape; sportsmuscle_wheel_f_r: world_collision_body_id -1 -> body-table class ABSENT; raycast_body_id 23 -> hknpConvexPolytopeShape; sportsmuscle_wheel_r_l: world_collision_body_id -1 -> body-table class ABSENT; raycast_body_id 36 -> hknpConvexPolytopeShape; sportsmuscle_wheel_r_r: world_collision_body_id -1 -> body-table class ABSENT; raycast_body_id 37 -> hknpConvexPolytopeShape; body 0 is the polytope B-10c wrote; body 42 is the extern mesh whose CPfxPartIndexProperty part index is 0 (bm_colmesh.selftest)",
+   "flags": [],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "value",
+    "evidence": "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:parts.world_collision_body_id = 0 (row says 0)"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-PA4",
+   "doc": "T-2b",
+   "dispo": "epe",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "the .epe holds no name/hash for this row's target; its member evidence is in another built file and G3-11's verdict stands (tier value)",
+   "flags": [],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "value",
+    "evidence": "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:wheel_parts.part_index = 11 (row says 11)"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-PA5",
+   "doc": "T-2b",
+   "dispo": "epe",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "value",
+   "evidence": "the .epe holds no name/hash for this row's target; its member evidence is in another built file and G3-11's verdict stands (tier value)",
+   "flags": [],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "value",
+    "evidence": "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/batmobile/sportsmuscle_vehicle_parts.vmodc:door_parts.part_index = 25 (row says 25)"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-PA6",
+   "doc": "T-2b",
+   "dispo": "epe",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "NOT TRANSLATED",
+   "tier": "member",
+   "evidence": "the .epe holds no name/hash for this row's target; its member evidence is in another built file and G3-11's verdict stands (tier member); unresolved tokens: DeformPoints.constraint_indices",
+   "flags": [],
+   "before": {
+    "verdict": "NOT TRANSLATED",
+    "tier": "member",
+    "evidence": "member present, no row number matches: models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_vehicle_deform.vmodc:constraint_indices = 14 (+10 more member(s))"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-PA7",
+   "doc": "T-2b",
+   "dispo": "epe",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "NOT TRANSLATED",
+   "tier": "member",
+   "evidence": "the .epe holds no name/hash for this row's target; its member evidence is in another built file and G3-11's verdict stands (tier member); unresolved tokens: DeformPoints.non_deformable_parts_indices",
+   "flags": [],
+   "before": {
+    "verdict": "NOT TRANSLATED",
+    "tier": "member",
+    "evidence": "member present, no row number matches: models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_vehicle_deform.vmodc:non_deformable_parts_indices = 5 (+19 more member(s))"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-PA8",
+   "doc": "T-2b",
+   "dispo": "epe",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no token of the row (VehicleLights, LIGHTS.json, problems) resolves to an .epe object name, a name_hash, a class/member, a lights-module preset or a part name; unresolved tokens: VehicleLights, LIGHTS.json, problems",
+   "flags": [],
+   "before": {
+    "verdict": "NOT TRANSLATED",
+    "tier": "none",
+    "evidence": "no member/value/token match in the aaf (dispo=epe, 1 member hint(s))"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-LG3",
+   "doc": "T-2b",
+   "dispo": "keep",
+   "scope": "epe",
+   "scope_rule": "named in EPE_IDS (the light-rig rows whose subject is the entity graph / lights module: row count, graph objects, range/angle)",
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no token of the row (range) resolves to an .epe object name, a name_hash, a class/member, a lights-module preset or a part name; unresolved tokens: range",
+   "flags": [],
+   "before": {
+    "verdict": "NOT TRANSLATED",
+    "tier": "none",
+    "evidence": "no member/value/token match in the aaf (dispo=keep, 0 member hint(s))"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-FX6",
+   "doc": "T-3",
+   "dispo": "epe",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no token of the row (RearFinTrail, SpeedLinesSystem, HeatSteam, ExhaustBurstEffect, SideExhaust) resolves to an .epe object name, a name_hash, a class/member, a lights-module preset or a part name; unresolved tokens: RearFinTrail, SpeedLinesSystem, HeatSteam, ExhaustBurstEffect, SideExhaust",
+   "flags": [],
+   "before": {
+    "verdict": "NOT TRANSLATED",
+    "tier": "none",
+    "evidence": "no member/value/token match in the aaf (dispo=epe, 0 member hint(s))"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-FX7",
+   "doc": "T-13",
+   "dispo": "epe",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no token of the row (Afterburner, EngineNitro) resolves to an .epe object name, a name_hash, a class/member, a lights-module preset or a part name; unresolved tokens: Afterburner, EngineNitro",
+   "flags": [],
+   "before": {
+    "verdict": "NOT TRANSLATED",
+    "tier": "none",
+    "evidence": "no member/value/token match in the aaf (dispo=epe, 0 member hint(s))"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-FX8",
+   "doc": "T-13",
+   "dispo": "epe",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no token of the row (SideExhaustL, EngineRunning) resolves to an .epe object name, a name_hash, a class/member, a lights-module preset or a part name; unresolved tokens: SideExhaustL, EngineRunning",
+   "flags": [],
+   "before": {
+    "verdict": "NOT TRANSLATED",
+    "tier": "none",
+    "evidence": "no member/value/token match in the aaf (dispo=epe, 0 member hint(s))"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-FX9",
+   "doc": "T-13",
+   "dispo": "out",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no token of the row (Afterburner) resolves to an .epe object name, a name_hash, a class/member, a lights-module preset or a part name; unresolved tokens: Afterburner",
+   "flags": [
+    "dispo=out"
+   ],
+   "before": {
+    "verdict": "NOT TRANSLATED",
+    "tier": "none",
+    "evidence": "ledger dispo=out (declared not built): no heat haze: G1-16 heat-steam is 0 systems and FX_TABLE has 0 haze paths in 955"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-FX12",
+   "doc": "T-13",
+   "dispo": "out",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no token of the row (tracer_texture_type, tracer_fire_velocity, tracer_time_to_live, tracer_fire_length) resolves to an .epe object name, a name_hash, a class/member, a lights-module preset or a part name; unresolved tokens: tracer_texture_type, tracer_fire_velocity, tracer_time_to_live, tracer_fire_length",
+   "flags": [
+    "dispo=out"
+   ],
+   "before": {
+    "verdict": "NOT TRANSLATED",
+    "tier": "none",
+    "evidence": "ledger dispo=out (declared not built): no tracer .effc (0 of 955): the tracer is a WeaponTuning texture member (G2-10), carried by the weapon clone"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-FX13",
+   "doc": "T-13",
+   "dispo": "out",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no token of the row (ChainGunShells) resolves to an .epe object name, a name_hash, a class/member, a lights-module preset or a part name; unresolved tokens: ChainGunShells",
+   "flags": [
+    "dispo=out"
+   ],
+   "before": {
+    "verdict": "NOT TRANSLATED",
+    "tier": "none",
+    "evidence": "ledger dispo=out (declared not built): no vehicle carries a casing/shell effect; ChainGun_BulletCasing has no JC3 carrier"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-FX15",
+   "doc": "T-13",
+   "dispo": "next",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no token of the row (tank_explosive_) resolves to an .epe object name, a name_hash, a class/member, a lights-module preset or a part name; unresolved tokens: tank_explosive_",
+   "flags": [
+    "dispo=next"
+   ],
+   "before": {
+    "verdict": "NOT TRANSLATED",
+    "tier": "none",
+    "evidence": "ledger dispo=next (not built); no member among 0 row member(s) and no carried token in the aaf"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-FX16",
+   "doc": "T-13",
+   "dispo": "out",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no token of the row (none) resolves to an .epe object name, a name_hash, a class/member, a lights-module preset or a part name",
+   "flags": [
+    "dispo=out"
+   ],
+   "before": {
+    "verdict": "NOT TRANSLATED",
+    "tier": "none",
+    "evidence": "ledger dispo=out (declared not built): no cannon-round trail effect exists (0 of 955); the round shows as the tracer (T-FX12)"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-FX18",
+   "doc": "T-13",
+   "dispo": "epe",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no token of the row (none) resolves to an .epe object name, a name_hash, a class/member, a lights-module preset or a part name",
+   "flags": [],
+   "before": {
+    "verdict": "NOT TRANSLATED",
+    "tier": "none",
+    "evidence": "no member/value/token match in the aaf (dispo=epe, 0 member hint(s))"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-FX19",
+   "doc": "T-13",
+   "dispo": "epe",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no token of the row (ScrapeSparksL, spark_trail_02_med) resolves to an .epe object name, a name_hash, a class/member, a lights-module preset or a part name; unresolved tokens: ScrapeSparksL, spark_trail_02_med",
+   "flags": [],
+   "before": {
+    "verdict": "NOT TRANSLATED",
+    "tier": "none",
+    "evidence": "no member/value/token match in the aaf (dispo=epe, 0 member hint(s))"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-FX20",
+   "doc": "T-13",
+   "dispo": "out",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no token of the row (BrakeTrailL) resolves to an .epe object name, a name_hash, a class/member, a lights-module preset or a part name; unresolved tokens: BrakeTrailL",
+   "flags": [
+    "dispo=out"
+   ],
+   "before": {
+    "verdict": "NOT TRANSLATED",
+    "tier": "none",
+    "evidence": "ledger dispo=out (declared not built): no brake-trail effect path (0 of 955) and no BrakeLightTrail system in G1-16's 206; T-FX6 keeps the donor's own"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-FX22",
+   "doc": "T-13",
+   "dispo": "epe",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no token of the row (none) resolves to an .epe object name, a name_hash, a class/member, a lights-module preset or a part name",
+   "flags": [],
+   "before": {
+    "verdict": "NOT TRANSLATED",
+    "tier": "none",
+    "evidence": "no member/value/token match in the aaf (dispo=epe, 0 member hint(s))"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-FX23",
+   "doc": "T-13",
+   "dispo": "epe",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "NOT TRANSLATED",
+   "tier": "none",
+   "evidence": "no token of the row (dmg_post_burn) resolves to an .epe object name, a name_hash, a class/member, a lights-module preset or a part name; unresolved tokens: dmg_post_burn",
+   "flags": [],
+   "before": {
+    "verdict": "NOT TRANSLATED",
+    "tier": "none",
+    "evidence": "no member/value/token match in the aaf (dispo=epe, 0 member hint(s))"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-L8",
+   "doc": "T-14",
+   "dispo": "next",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "epe-name",
+   "evidence": "Sport_Muscle_Headlight_Point_Left: .epe object name 'Sport_Muscle_Headlight_Point_Left' (class SVehicleLight); Sport_Muscle_Headlight_Volume_Left: .epe object name 'Sport_Muscle_Headlight_Volume_Left' (class SVehicleLight); sportsmuscle_body: .epe object name 'sportsmuscle_body' (class CPartProp); HeadLight: lights module behaviour 'HeadLight'; sportsmuscle_headlight_f_l_01: parts module part 'sportsmuscle_headlight_f_l_01'",
+   "flags": [
+    "dispo=next"
+   ],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x2B5C: 'Sport_Muscle_Headlight_Point_Left'"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-L9",
+   "doc": "T-14",
+   "dispo": "next",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "epe-name",
+   "evidence": "Sport_Muscle_Headlight_Point_Right: .epe object name 'Sport_Muscle_Headlight_Point_Right' (class SVehicleLight); Sport_Muscle_Headlight_Volume_Right: .epe object name 'Sport_Muscle_Headlight_Volume_Right' (class SVehicleLight); sportsmuscle_body: .epe object name 'sportsmuscle_body' (class CPartProp); HeadLight: lights module behaviour 'HeadLight'; sportsmuscle_headlight_f_r_01: parts module part 'sportsmuscle_headlight_f_r_01'",
+   "flags": [
+    "dispo=next"
+   ],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x2FEC: 'Sport_Muscle_Headlight_Point_Right'"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-L10",
+   "doc": "T-14",
+   "dispo": "out",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "epe-name",
+   "evidence": "ChainGunMuzzle: .epe object name 'ChainGunMuzzle' (class SWeaponPoint); sportsmuscle_body: .epe object name 'sportsmuscle_body' (class CPartProp)",
+   "flags": [
+    "dispo=out"
+   ],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1B44: 'sportsmuscle_body'"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-L11",
+   "doc": "T-14",
+   "dispo": "next",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "epe-name",
+   "evidence": "Front_Left_Point: .epe object name 'Front_Left_Point' (class SVehicleLight); Front_Left_Volumetric: .epe object name 'Front_Left_Volumetric' (class SVehicleLight); sportsmuscle_body: .epe object name 'sportsmuscle_body' (class CPartProp); HeadLight: lights module behaviour 'HeadLight'; sportsmuscle_headlight_f_l_02: parts module part 'sportsmuscle_headlight_f_l_02'",
+   "flags": [
+    "dispo=next"
+   ],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x35CC: 'Front_Left_Point'"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-L12",
+   "doc": "T-14",
+   "dispo": "next",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "epe-name",
+   "evidence": "Front_Right_Point: .epe object name 'Front_Right_Point' (class SVehicleLight); Front_Right_Volumetric: .epe object name 'Front_Right_Volumetric' (class SVehicleLight); sportsmuscle_body: .epe object name 'sportsmuscle_body' (class CPartProp); HeadLight: lights module behaviour 'HeadLight'; sportsmuscle_headlight_f_r_02: parts module part 'sportsmuscle_headlight_f_r_02'",
+   "flags": [
+    "dispo=next"
+   ],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x3770: 'Front_Right_Point'"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-L13",
+   "doc": "T-14",
+   "dispo": "next",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "epe-name",
+   "evidence": "sportsmuscle_wheel_f_l_arch: .epe object name 'sportsmuscle_wheel_f_l_arch_light' = the row's 'sportsmuscle_wheel_f_l_arch' + '_light' (class SVehicleLight); sportsmuscle_wheel_f_l: .epe object name 'sportsmuscle_wheel_f_l' (class CPartProp)",
+   "flags": [
+    "dispo=next"
+   ],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x3638: 'sportsmuscle_wheel_f_l_arch'"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-L14",
+   "doc": "T-14",
+   "dispo": "next",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "epe-name",
+   "evidence": "sportsmuscle_wheel_f_r_arch: .epe object name 'sportsmuscle_wheel_f_r_arch_light' = the row's 'sportsmuscle_wheel_f_r_arch' + '_light' (class SVehicleLight); sportsmuscle_wheel_f_r: .epe object name 'sportsmuscle_wheel_f_r' (class CPartProp)",
+   "flags": [
+    "dispo=next"
+   ],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x41F8: 'sportsmuscle_wheel_f_r_arch'"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-L15",
+   "doc": "T-14",
+   "dispo": "next",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "epe-name",
+   "evidence": "Sport_Muscle_Rear_Break_Left: .epe object name 'Sport_Muscle_Rear_Break_Left' (class SVehicleLight); sportsmuscle_body: .epe object name 'sportsmuscle_body' (class CPartProp); TailLight: lights module behaviour 'TailLight'; sportsmuscle_signal_r_l: parts module part 'sportsmuscle_signal_r_l'",
+   "flags": [
+    "dispo=next"
+   ],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x2E6C: 'Sport_Muscle_Rear_Break_Left'"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-L16",
+   "doc": "T-14",
+   "dispo": "next",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "epe-name",
+   "evidence": "Sport_Muscle_Rear_Break_Right: .epe object name 'Sport_Muscle_Rear_Break_Right' (class SVehicleLight); sportsmuscle_body: .epe object name 'sportsmuscle_body' (class CPartProp); TailLight: lights module behaviour 'TailLight'; sportsmuscle_signal_r_r: parts module part 'sportsmuscle_signal_r_r'",
+   "flags": [
+    "dispo=next"
+   ],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x2CEC: 'Sport_Muscle_Rear_Break_Right'"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-L17",
+   "doc": "T-14",
+   "dispo": "next",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "epe-name",
+   "evidence": "BattleModeSpotLight: .epe object name 'BattleModeSpotLight' (class SWeaponPoint); Front_Secondary_Head: .epe object name 'Front_Secondary_Head' (class SVehicleLight); sportsmuscle_body: .epe object name 'sportsmuscle_body' (class CPartProp)",
+   "flags": [
+    "dispo=next"
+   ],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x4F28: 'Front_Secondary_Head'"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-L18",
+   "doc": "T-14",
+   "dispo": "next",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "epe-name",
+   "evidence": "headlight_battle_left: .epe object name 'headlight_battle_left_light' = the row's 'headlight_battle_left' + '_light' (class SVehicleLight); sportsmuscle_body: .epe object name 'sportsmuscle_body' (class CPartProp)",
+   "flags": [
+    "dispo=next"
+   ],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x4388: 'headlight_battle_left'"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-L19",
+   "doc": "T-14",
+   "dispo": "next",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "epe-name",
+   "evidence": "headlight_battle_right: .epe object name 'headlight_battle_right_light' = the row's 'headlight_battle_right' + '_light' (class SVehicleLight); sportsmuscle_body: .epe object name 'sportsmuscle_body' (class CPartProp)",
+   "flags": [
+    "dispo=next"
+   ],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x3938: 'headlight_battle_right'"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-L20",
+   "doc": "T-14",
+   "dispo": "next",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "epe-name",
+   "evidence": "sportsmuscle_wheel_f_l_arch_battle: .epe object name 'sportsmuscle_wheel_f_l_arch_battle_light' = the row's 'sportsmuscle_wheel_f_l_arch_battle' + '_light' (class SVehicleLight); sportsmuscle_wheel_f_l: .epe object name 'sportsmuscle_wheel_f_l' (class CPartProp)",
+   "flags": [
+    "dispo=next"
+   ],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x4DE8: 'sportsmuscle_wheel_f_l_arch_battle'"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-L21",
+   "doc": "T-14",
+   "dispo": "out",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "epe-name",
+   "evidence": "BattleModeSpotLight: .epe object name 'BattleModeSpotLight' (class SWeaponPoint); sportsmuscle_body: .epe object name 'sportsmuscle_body' (class CPartProp)",
+   "flags": [
+    "dispo=out"
+   ],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x1B44: 'sportsmuscle_body'"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-L24",
+   "doc": "T-14",
+   "dispo": "next",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "epe-name",
+   "evidence": "Dash_Light: .epe object name 'Dash_Light' (class SVehicleLight); sportsmuscle_body: .epe object name 'sportsmuscle_body' (class CPartProp); HeadLight: lights module behaviour 'HeadLight'",
+   "flags": [
+    "dispo=next"
+   ],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x50AC: 'Dash_Light'"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-L25",
+   "doc": "T-14",
+   "dispo": "out",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "epe-name",
+   "evidence": "Sport_Muscle_Headlight_Volume_Left: .epe object name 'Sport_Muscle_Headlight_Volume_Left' (class SVehicleLight); sportsmuscle_body: .epe object name 'sportsmuscle_body' (class CPartProp); HeadLight: lights module behaviour 'HeadLight'; sportsmuscle_headlight_f_l_01: parts module part 'sportsmuscle_headlight_f_l_01'",
+   "flags": [
+    "dispo=out"
+   ],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x29CC: 'Sport_Muscle_Headlight_Volume_Left'"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-L26",
+   "doc": "T-14",
+   "dispo": "out",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "epe-name",
+   "evidence": "Sport_Muscle_Headlight_Volume_Right: .epe object name 'Sport_Muscle_Headlight_Volume_Right' (class SVehicleLight); sportsmuscle_body: .epe object name 'sportsmuscle_body' (class CPartProp); HeadLight: lights module behaviour 'HeadLight'; sportsmuscle_headlight_f_r_01: parts module part 'sportsmuscle_headlight_f_r_01'",
+   "flags": [
+    "dispo=out"
+   ],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x282C: 'Sport_Muscle_Headlight_Volume_Right'"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-L27",
+   "doc": "T-14",
+   "dispo": "out",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "epe-name",
+   "evidence": "Sport_Muscle_Headlight_Volume_Left: .epe object name 'Sport_Muscle_Headlight_Volume_Left' (class SVehicleLight); sportsmuscle_body: .epe object name 'sportsmuscle_body' (class CPartProp); HeadLight: lights module behaviour 'HeadLight'; sportsmuscle_headlight_f_l_01: parts module part 'sportsmuscle_headlight_f_l_01'",
+   "flags": [
+    "dispo=out"
+   ],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x29CC: 'Sport_Muscle_Headlight_Volume_Left'"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-L29",
+   "doc": "T-14",
+   "dispo": "out",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "epe-name",
+   "evidence": "Sport_Muscle_Headlight_Volume_Right: .epe object name 'Sport_Muscle_Headlight_Volume_Right' (class SVehicleLight); sportsmuscle_body: .epe object name 'sportsmuscle_body' (class CPartProp); HeadLight: lights module behaviour 'HeadLight'; sportsmuscle_headlight_f_r_01: parts module part 'sportsmuscle_headlight_f_r_01'",
+   "flags": [
+    "dispo=out"
+   ],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x282C: 'Sport_Muscle_Headlight_Volume_Right'"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-L31",
+   "doc": "T-14",
+   "dispo": "out",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "epe-name",
+   "evidence": "sportsmuscle_wheel_f_r_arch: .epe object name 'sportsmuscle_wheel_f_r_arch_light' = the row's 'sportsmuscle_wheel_f_r_arch' + '_light' (class SVehicleLight); sportsmuscle_wheel_f_r: .epe object name 'sportsmuscle_wheel_f_r' (class CPartProp)",
+   "flags": [
+    "dispo=out"
+   ],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x41F8: 'sportsmuscle_wheel_f_r_arch'"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-L32",
+   "doc": "T-14",
+   "dispo": "out",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "epe-name",
+   "evidence": "sportsmuscle_wheel_f_r_arch: .epe object name 'sportsmuscle_wheel_f_r_arch_light' = the row's 'sportsmuscle_wheel_f_r_arch' + '_light' (class SVehicleLight); sportsmuscle_wheel_f_r: .epe object name 'sportsmuscle_wheel_f_r' (class CPartProp)",
+   "flags": [
+    "dispo=out"
+   ],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x41F8: 'sportsmuscle_wheel_f_r_arch'"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-L33",
+   "doc": "T-14",
+   "dispo": "out",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "epe-name",
+   "evidence": "sportsmuscle_wheel_f_l_arch: .epe object name 'sportsmuscle_wheel_f_l_arch_light' = the row's 'sportsmuscle_wheel_f_l_arch' + '_light' (class SVehicleLight); sportsmuscle_wheel_f_l: .epe object name 'sportsmuscle_wheel_f_l' (class CPartProp)",
+   "flags": [
+    "dispo=out"
+   ],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x3638: 'sportsmuscle_wheel_f_l_arch'"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-L34",
+   "doc": "T-14",
+   "dispo": "out",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "epe-name",
+   "evidence": "sportsmuscle_wheel_f_l_arch: .epe object name 'sportsmuscle_wheel_f_l_arch_light' = the row's 'sportsmuscle_wheel_f_l_arch' + '_light' (class SVehicleLight); sportsmuscle_wheel_f_l: .epe object name 'sportsmuscle_wheel_f_l' (class CPartProp)",
+   "flags": [
+    "dispo=out"
+   ],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x3638: 'sportsmuscle_wheel_f_l_arch'"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-L35",
+   "doc": "T-14",
+   "dispo": "next",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "epe-name",
+   "evidence": "boot_light: .epe object name 'boot_light_light' = the row's 'boot_light' + '_light' (class SVehicleLight); sportsmuscle_body: .epe object name 'sportsmuscle_body' (class CPartProp)",
+   "flags": [
+    "dispo=next"
+   ],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x5268: 'boot_light'"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-WLD9",
+   "doc": "T-20",
+   "dispo": "epe",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "epe-value",
+   "evidence": ".epe CInteractionGraphExit objects: 26 (row says 26); 'S_EXIT_DRIVER_VEHICLE_IN_WATER' present in a value; S_EXIT_DRIVER_VEHICLE_IN_WATER: .epe value 'S_EXIT_DRIVER_VEHICLE_IN_WATER'",
+   "flags": [],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x157E0: 'S_EXIT_DRIVER_VEHICLE_IN_WATER'"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-WLD10",
+   "doc": "T-20",
+   "dispo": "epe",
+   "scope": "epe",
+   "scope_rule": "dispo=epe or doc T-13/T-14 (entity-graph rows)",
+   "verdict": "TRANSLATED",
+   "tier": "epe-name",
+   "evidence": ".epe CInteractionGraphPointNode objects: 8 (row says 8); stunt nodes: point.stunt, point.stunt.hood; point.stunt: .epe object name 'point.stunt' (class CInteractionGraphPointNode)",
+   "flags": [],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "string",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe@0x12D3C: 'point.stunt'"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  },
+  {
+   "id": "T-WLD12",
+   "doc": "T-20",
+   "dispo": "next",
+   "scope": "collision",
+   "scope_rule": "named in COLLISION_IDS (the rows whose subject is the built `.physicsc`: hulls, body ids, collision flags)",
+   "verdict": "TRANSLATED",
+   "tier": "measured",
+   "evidence": "body 0 hull: 96 vertices, bounds [[-1.7447, 0.0751, -3.4277], [1.7536, 2.3582, 3.6093]]; every one of the 11197 built LOD2 vertices lies on or inside that hull: max protrusion 2.1e-08 m (6269 triangles)",
+   "flags": [],
+   "before": {
+    "verdict": "TRANSLATED",
+    "tier": "value",
+    "evidence": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/modules/default/batmobile/v0300_car_kensington_sportsmuscle_rigid_body.vmodc:mass = 6000.0 (row says 6000)"
+   },
+   "changed": false,
+   "evidence_upgraded": true
+  }
+ ]
+}

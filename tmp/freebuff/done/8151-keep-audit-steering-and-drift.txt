@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/keep-audit-steering-and-drift.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-06
+Rows T-ST2, T-ST3, T-ST4, T-ST6, T-K3, T-K4 and T-DR1 (steering rate, steering-speed curve, input curve, drift pair, handbrake) are marked keep, yet T-DR1 literally says the JC3-native drift block is kept "for character". That is a compromise. Re-derive from the BmAK handling numbers (HandbrakeOnSpeed 10000, LatSlipFactor 1.6, HandbrakeLatSlipFactor 1.5, EbrakeTime 0.75, EBrakeBrakeForce 640000) the JC3 values that give the same behaviour and compare with what the build carries. Output per row LORE-EXACT or COMPROMISE with numbers and the proposed replacement, plus the list of BmAK numbers that still have no JC3 member.
+Where JC3 has no exact carrier, give the closest system and the gap for the build to fill (STAGES.md).

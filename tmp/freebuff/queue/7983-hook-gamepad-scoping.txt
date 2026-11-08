@@ -1,0 +1,15 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-gamepad-scoping.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-dll-scaffold-logging-only.md
+Controls inside the Batmobile (decision D-11). The rule: enter with JC3's Y, exit with BmAK's LB, and inside the car BmAK's buttons win. The operator plays on an Xbox-style gamepad. Data files cannot express hold or double-press, and the keymap is global.
+
+Design and write, in Tools/hook/, a gamepad layer that reads XInput itself (XInputGetState from the DLL). It is active only while the player is in our Batmobile; use the in-vehicle check from 7982 or the one in the design report. It must recognise:
+- LT hold = battle mode; release = pursuit.
+- A hold-to-charge then tap A = eject higher; a double-tap of A = the lowest eject.
+- LB = exit.
+- B = Immobiliser (pursuit).
+- RT = cannon and RB = Vulcan (battle).
+
+Emit them as named events in the log, with no game action yet. For each, describe how it will be routed to a game action: through console-thingy's input manager at 0x142E2B6F8, or by hooking the vanilla action dispatch. Also describe how the vanilla bindings are suppressed only while the player is in the car. Stage Builds/hook-0003/ with a receipt. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

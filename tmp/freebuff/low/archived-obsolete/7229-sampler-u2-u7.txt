@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/sampler-u2-u7.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-05
+Research/BatmobileGrab/SAMPLER_UNKNOWNS2.md leaves two items missing their input: U2 (the writer) and U7 (the producer). Do not retry the routes already listed there. Pick routes it does not list: search every BmAK script package for the field offsets in SAMPLER_FIELDS2.md as FNames and property accessors, and check BmSDK for any class that writes the field. Report for each of U2/U7 either a located writer/producer with package, export and byte offset, or the list of NEW routes you tried and why they fail. Output Research/BatmobileGrab/SAMPLER_UNKNOWNS3.md + Tools/scripts/bmak_sampler_unknowns3.py --check. Rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md section 3 (test ban stays; never guess; label decoded/derived/UNKNOWN). Report at the DONE path: STATUS first, files, verbatim commands, UNKNOWNs.

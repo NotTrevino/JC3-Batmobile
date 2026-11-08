@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/muzzle-and-forensics-lights.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-06
+Rows T-L10 (ChainGunMuzzle light) and T-L21..T-L23 (BattleModeSpotLight, HeadLight1/2 on the VEHLT_ForensicsLight rig) were omitted because the donor has no matching behaviour. Study what BmAK's forensics rig actually does (Research/BatmobileGrab/LIGHTS.md and its entries for those 12 rows) and what JC3 offers for the same job: weapon muzzle-flash lights in weapon tunes, spotlight vehicles (searchlights on helicopters, police cars, the scanner-like lights), light-preset members for cone angle, range, colour and animation. Report, per row, the closest JC3 system with its member paths and values, and the gap the build step must fill (what to compose, clone or author on top of it). This is a lookup with measured values, not a design.
+Where JC3 has no exact carrier, give the closest system and the gap for the build to fill (STAGES.md).

@@ -1,0 +1,140 @@
+# B-12 · Variants — report
+
+**STATUS: deferred**
+
+Blocker: the card's own precondition ("only if D-2 = two variants") fails. D-2 was resolved by the
+user on 2026-10-28 as **(b) one hybrid car** (one Rebel Drop entry, one entity), and §11 of the
+backlog already tags the card `B-12 skipped: D-2`. The card's Do-line builds "both entities" and its
+Done-line diffs "between variants"; with one entity there is no pair to build or diff, and inventing
+a second entity would contradict the user decision (R1). Nothing was faked: no second variant was
+written, no `aafdiff` was run against a pair that does not exist, and no value was typed into a
+report (R11 — the blocker is re-derived by `Tools/scripts/b12_variants.py --check`).
+
+## Files changed
+
+| file | change |
+|---|---|
+| `Tools/scripts/b12_variants.py` | **new** read-only checker (`--check`); re-derives the precondition from the variant table, the §11 D-2 row, `bm_build.py`'s argument surface and `Builds/` |
+| `tmp/b12_tamper.py` | **new** tamper harness (mutated copies only; real inputs hashed before/after) |
+| `GRAB_BACKLOG.md` §12 | one `B-12` row inserted above the `B-06 … B-14` group; the group row is unchanged |
+| `MODLOG.md` | `B-12 start (continued) — intended change` and `B-12 — deferred`, both append-only |
+| `tmp/freebuff/reports/B-12.md` | this report |
+
+Not touched: any `Builds/` tree, any translation artefact, any shared game module (R7), any game
+file under `D:\Games` or `E:\Games`. No game launched, no git command run, no secrets.
+
+## Inputs read
+
+- `GRAB_BACKLOG.md` §0.5 (R1–R14), the full §8 card B-12, §11 D-2, §12.
+- `Working/Translation/t11_variants.json` (T-15 output, sha256 `a02d7cd30505ab267c1e5a433f59f6718172cd6628cca122b0a399378ea926e4`) and `T11_MODES.md` §4.
+- `Tools/scripts/t11_modes.py` (`cmd_check`, the `variants` block that emits `"B-12": "skipped: D-2"`).
+- `Tools/scripts/bm_build.py` (sha256 `2dfc47db36894d08177ec6feea77d8baf4f51384e2938fffe38503809fdd9c15`).
+- `Tools/scripts/aafdiff.py` (usage `aafdiff.py <vanilla_dir> <mod_dir>`).
+- Dependency rows B-05…B-11 (§12, all `done`; their build lineages are `bm-002/004/005/006/007/008/009`, merged only by B-14).
+
+## Done criterion 1 (the card's only Done line)
+
+> "`aafdiff` between variants lists only the files the variant table names."
+
+**Result: not runnable — no second variant exists.** The variant table declares one variant, so a
+between-variants `aafdiff` has no second input. Evidence, in the order it was gathered:
+
+### 1. The variant table and the decision (this is the blocker)
+
+```
+$ python Tools/scripts/b12_variants.py --check
+PASS: B-12 is skipped by D-2 - 1 variant (hybrid), 1 entity, 1 drop entry, 0 variant pair(s) to diff
+  table    : Working/Translation/t11_variants.json - 15 split rows (MOD-1 4, MOD-2 11); 13 row(s) where pursuit != battle
+             T-MD1, T-MD2, T-MD4, T-MD5, T-MD6, T-MD7, T-MD8, T-MD9, T-MD10, T-MD11, T-MD12, T-MD13, T-MD14
+  decision : backlog section 11, D-2 = (b) one hybrid car; card tag `B-12 skipped: D-2`
+  Do-line  : Tools/scripts/bm_build.py registers --variant: False; variant-named trees in Builds/: 0
+  Done     : NOT RUNNABLE - `aafdiff` needs two entity trees and the table declares 1
+```
+
+exit status `0` — the pass means "the precondition is still the one the decision register records".
+If a second variant ever appears the same command fails and says the card is live.
+
+### 2. The Do-line's tool surface, run literally
+
+```
+$ python Tools/scripts/bm_build.py --tag probe --variant pursuit
+usage: bm_build.py [-h] --tag TAG [--base BASE] [--edits EDITS] [--force]
+                   [--check]
+bm_build.py: error: unrecognized arguments: --variant pursuit
+```
+
+exit status `2`. `bm_build.py` has `--tag/--base/--edits/--force/--check` and no variant concept.
+
+### 3. The Done-line's inputs, attempted literally
+
+```
+$ ls -d Builds/*pursuit* Builds/*battle*
+ls: cannot access 'Builds/*pursuit*': No such file or directory
+ls: cannot access 'Builds/*battle*': No such file or directory
+```
+
+No variant build tree exists, so `aafdiff Builds/<pursuit>/aaf Builds/<battle>/aaf` has no arguments
+to receive.
+
+### 4. The table's input is current (re-run, not assumed)
+
+```
+$ python Tools/scripts/t11_modes.py --check
+PASS: 15 rows | MOD-1 4 / MOD-2 11 | compromises carried 7, inside band 1, omitted 7 | ledger 15/15
+```
+
+exit status `0`.
+
+### 5. Tamper test on the `--check` (6/6 caught, real inputs unchanged)
+
+```
+$ python tmp/b12_tamper.py
+control: real table + real script
+  exit 0: PASS: B-12 is skipped by D-2 - 1 variant (hybrid), 1 entity, 1 drop entry, 0 variant pair(s) to diff
+1. second variant 'battle' added to the table
+   exit 1 caught: FAIL: the table declares 2 variant(s) - D-2 (one hybrid car) no longer holds, so B-12 is live and the two-variant build must be made, not deferred
+          FAIL: variant id 'battle', the decision's single variant is 'hybrid'
+          FAIL: variant 'battle' B-12 'live', expected 'skipped: D-2'
+          FAIL: B-12 is skipped by D-2 - 2 variant (None), None entity, None drop entry, 0 variant pair(s) to diff
+2. the hybrid's entity count 1 -> 2
+   exit 1 caught: FAIL: variant 'hybrid' entities 2, D-2's hybrid is 1
+          FAIL: B-12 is skipped by D-2 - 1 variant (hybrid), 2 entity, 1 drop entry, 0 variant pair(s) to diff
+3. the variant's B-12 tag -> 'done'
+   exit 1 caught: FAIL: variant 'hybrid' B-12 'done', expected 'skipped: D-2'
+          FAIL: B-12 is skipped by D-2 - 1 variant (hybrid), 1 entity, 1 drop entry, 0 variant pair(s) to diff
+4. one split row deleted, counts left alone
+   exit 1 caught: FAIL: counts.rows 15 != 14 split rows
+          FAIL: counts.MOD-2 11 != 10 re-counted rows
+          FAIL: B-12 is skipped by D-2 - 1 variant (hybrid), 1 entity, 1 drop entry, 0 variant pair(s) to diff
+5. bm_build.py made to register --variant
+   exit 1 caught: FAIL: tmp/b12_tamper/bm_build_variant.py now registers a --variant argument - re-read the card, the Do-line may have become runnable
+          FAIL: B-12 is skipped by D-2 - 1 variant (hybrid), 1 entity, 1 drop entry, 0 variant pair(s) to diff
+6. variant table missing
+   exit 1 caught: FAIL: no variant table at tmp/b12_tamper/nope.json
+
+real inputs unchanged: 2/2
+tampers: 6/6 caught, real inputs unchanged
+```
+
+exit status `0`. All tampering happened on copies under `tmp/b12_tamper/`; `t11_variants.json` and
+`bm_build.py` were sha256-compared before and after and did not change, so there was nothing to
+restore.
+
+## What is carried, and what a re-opened D-2 would need
+
+Measured: 13 of the 15 T-15 rows record different `pursuit` and `battle` values (`T-MD1`, `T-MD2`,
+`T-MD4`…`T-MD14`) — that is the payload a two-variant build would have written. The hybrid column is
+what D-2 chose instead; the rows themselves are T-15's, not this card's.
+
+Not written, because it would encode the decision the user declined: a `--variant` option on
+`bm_build.py`, per-variant edit specs derived from those 13 rows, two build tags, and the `aafdiff`
+comparison. If D-2 is re-opened, `b12_variants.py --check` fails first and points here.
+
+## Limits
+
+- This report proves a **negative** (no second variant exists / no variant build is possible) with
+  commands; it does not and cannot show an `aafdiff` result, because the card's Done criterion has no
+  inputs under D-2.
+- Whether BmAK's battle pose is fully reachable as a runtime state remains MOD-1/2's concern (T-15,
+  card B-04/B-05), not B-12's.
+- No offline check here can validate a two-variant design, because none exists to validate.

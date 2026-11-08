@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/funhouse-materials-build.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/funhouse-mesh-build.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/paint-addendum-build.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-texture-rows.md
+Build the Funhouse materials and textures with Tools/scripts/rc5_skin.py --skin funhouse --materials on Builds/bm-RC5-skin-funhouse. Use the colour decoding of the base paint tree Builds/bm-RC5-paint2 (decoded values, no gain chosen by eye) and the shared-texture references used for MK2 and Joker. Read Research/BatmobileGrab/SKINS.md for the Funhouse parameter set; the carnival-style colours are decoded from the package, so note each material's source parameter. Count textures against Working/Appearance/BUDGET_RC5.md, and write the trim plan when over. List every unfaithful row with a card, same as the base car. Done check: every Funhouse material slot has a block read back from the container, the sRGB value of each main colour is printed with its decoded linear source, and texture KB totals are given per skin and combined with the other two skins. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

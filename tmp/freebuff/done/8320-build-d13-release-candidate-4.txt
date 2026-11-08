@@ -1,0 +1,8 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-d13-release-candidate-4.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-06
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-d03-lights-and-flares.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-d04-materials-textures.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-d06-weapons-tunes.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-d07-effects.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-d08-health-collision.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-d09-audio.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-d10-handling-values.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-d11-rebel-drop-text.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-d12-variants-modes.md
+Build step B-14: merge all bm-RC4-* trees into Builds/bm-RC4 with the 3-way .epe merge (as bm_rc.py / bm_rc2.py did for RC1 and RC2), integrate the collision and health, produce the drop/ files, receipt schema 2 and install.ps1 built on Working/Installer/install_v3.ps1 (its guards refuse non-simulation paths; adopt it for the RC). Run bm_rc.py --check equivalent for RC4, bm_budget.py (Model 4,915 KB, Texture 7,065 KB) and aafdiff against RC2 listing exactly the planned files.
+
+Updated by review 8299: merge B-10's reopened collision (2 bodies / 3 boxes / 1 constraint; the chassis-box Done gate in §8 B-10) and B-25/B-26 as cards; BUILD_BATCHES now has 24 steps with B-17…B-20 declared no-payload. Budgets stay Model 4,915 KB / Texture 7,065 KB. Expect 12 of 23 texture rows to be unfaithful (4 chapter masks + 8 missing pixel sets) and record them in the receipt — do not mark the tree complete.

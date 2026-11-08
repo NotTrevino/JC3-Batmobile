@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/armour-mode-reduction-meaning.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-08
+The operator says battle (armour) mode and pursuit mode take identical damage. The decoded data has ArmourModeDamageReduction (Research/BatmobileGrab/MODES.md, DAMAGE_RULES.md). Find what the member actually does: its readers in the decoded script bytecode (G1-14 lists 14 damage entry points), whether any serialised package sets a non-default value, and whether it might apply to something other than the car's health (passengers, the turret, a story-only armour upgrade). Report the evidence and a verdict: consistent with the player fact, contradicts it, or UNKNOWN. Keep both facts if they disagree. Name the ledger rows affected (T-MD*, T-DM*). Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

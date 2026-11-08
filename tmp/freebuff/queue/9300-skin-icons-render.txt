@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/skin-icons-render.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/mk2-mesh-build.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/joker-mesh-build.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/funhouse-mesh-build.md
+Produce the three Rebel Drop icons. Read Research/JC3Grab/NAMES.md and REBELDROP.md for the icon path pattern textures/ui/vehicle_icons/<leaf>.ddsc, its size and format, and the existing icon of the base Batmobile in Builds/bm-013 for style and dimensions. Render each skin from the built meshes at the same three-quarter front angle and lighting as the base icon (use the project's software renderer if one exists in Tools/scripts, otherwise name the gap and compose from the BmAK-side icon files if the grab has any), crop to the icon rectangle, and write .ddsc with the project writer into Builds/bm-RC5-skin-icons. Script Tools/scripts/rc5_skin_icons.py (--write, --check). Done check: 3 icons of the exact size and format of the base icon, read back through the dds reader, with PNG previews saved under Working/Skins/icons/ and the leaf name of each taken from the entity clone report. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

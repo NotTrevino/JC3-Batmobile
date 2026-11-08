@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/t25-lamp-state-carrier.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+Use the T-25 row and the card note in GRAB_BACKLOG.md, which say that lamp rows T-L10 and T-L21 to T-L23 keep preset_id 0 because nothing in JC3 carries the state that switches them on muzzle fire or bForensicsLightActive. Open Research/BatmobileGrab/LIGHTS.md and LIGHTS.json and list every light member that holds a state, timer or trigger field. Then search tmp/freebuff/reports/ for the light and muzzle notes and record which carrier each one proposes. Write the comparison to Working/Prep/t25_lamp_state_carriers.json with the columns lamp_row, candidate_member, source_path, source_line, evidence_quote and closes_gap (yes, partly or no). If the gap is not closed by any candidate, state the closest JC3 state system and the single build step that would close the gap, and do not write that it cannot be done. Only the JSON file and the report named after this slug may be written.

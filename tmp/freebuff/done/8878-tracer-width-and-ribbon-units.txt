@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/tracer-width-and-ribbon-units.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-08
+The tracer and trail carriers are already set out in tmp/freebuff/reports/fx12-16-tracer-and-trail.md, and the term search for the round trail is in tmp/freebuff/reports/t-fx16-term.md, so cite both and do not redo them. Three fields in that report still have no unit: tracer_expand_width (metres or metres per second), tracer_per_smoke_trail (count or interval) and the integer 250 at tag @104 (centimetres or a segment count). Settle each one by comparing the BmAK tracer tune bytes with the field layout of the shipped JC3 wtunec entries, using the INDEX line numbers that the fx12-16 report gives under Research/JC3Grab/INDEX.jsonl. Write a table with the field, the BmAK raw value, the JC3 field it maps to, the unit, and the verdict. The material and gloss rows are closed in tmp/freebuff/reports/apply-colour-and-material-rows.md, so they stay out of this brief.

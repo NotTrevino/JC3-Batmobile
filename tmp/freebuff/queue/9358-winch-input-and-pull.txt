@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/winch-input-and-pull.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/winch-rope-part-and-fx.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-controls-entry-exit-eject.md
+Second half of the winch: firing, latching and pulling. Operator rule from Working/Q/PILOT/CONTROLS.md row 20: D-pad right fires the winch and replaces the mission select. Bind the action through the 9170 controls route, wire the fire event to the rope extend of the first half, and implement the pull per the winch build plan (grapple_pull damage channel and CVehicleCargoBay-style behaviour, or the plan's alternative). Add the audio events Play_BML_WinchFire and Play_BML_WinchAttatch as bindings noted for the audio group (do not build audio here). If a pull member does not exist, write the exact capability card instead of faking it. Script Tools/scripts/rc5_winch_pull.py (--write, --check), tree Builds/bm-RC5-winchpull. Done-check: --check shows the input binding, the event chain from fire to latch to pull, and the capability card list. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

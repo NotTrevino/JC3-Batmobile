@@ -1,0 +1,7 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/T-ST7b.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-05 (from Working/Translation/T_ROWS.jsonl blocked rows)
+Rows: T-ST7 (BmAK 220 deg/s = 0.25 s to lock; JC3 family floor 0.5 s). Translation analysis is allowed (operator 2026-11-05); the TEST BAN stays: read-only on game installs, no game launch.
+Task, files only: Verify the 0.5 s floor: tabulate the steering-lock/steer-rate members across all 6,045 decoded vehicle modules (Research/JC3Grab/ENTITIES.md, jc3 scripts) with the minimum observed and whether the engine clamps it (find the clamp in the exe if disassembly docs exist, else UNKNOWN). Report whether any vehicle reaches 0.25 s and what mechanism it uses. Lore priority applies (memory: 100% BmAK fidelity): list every route that could reach 0.25 s, with evidence.
+Rules: follow tmp/freebuff/INSTRUCTIONS.md section 3. Never guess; label every value decoded/derived/UNKNOWN. New script under Tools/scripts/ with --write/--check, outputs under Working/Translation/, DONE report as above.

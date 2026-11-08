@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/b23-rate-member-search.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+The B-23 row in GRAB_BACKLOG.md says the 750, 20 and 5 values of a BmAK suspension mode have no per-mode or stationary member, and Research/specs/B-23.md carries the card. Read the 750 row in tmp/freebuff/reports/suspension-unit-bridge.md section 9 first, then search the decode outputs under Research/BatmobileGrab/ for every field that holds a stiffness, damping or rate value per vehicle state. Build a candidate list in Working/Prep/b23_rate_members.json, one object per candidate with the fields name, file, line, stored_value and whether it is per-mode, stationary or neither. A candidate that cannot be tied to a mode or to rest stays neither, and anything the files do not settle is UNKNOWN with the file that would settle it. Leave Research/specs/B-23.md untouched and only write the one JSON file plus a short report at tmp/freebuff/reports/b23-rate-member-search.md.

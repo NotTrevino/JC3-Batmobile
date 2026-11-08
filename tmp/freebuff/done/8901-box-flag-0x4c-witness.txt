@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/box-flag-0x4c-witness.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+The packed bool at byte 0x4C of each FKBoxElem is still open in reports/chase-G3-01b-boxes-u5.md, item U-3 near line 136, which says the meaning is out of scope there. Start from the box table in reports/G3-01b-boxes.md and the layout that reports/chase-G3-01b-boxes-u2.md settled (the nSphere, nBox, nSphyl, nConvex order). Walk the cooked PhysicsAsset exports of the other vehicles and characters under BmGame/CookedPCConsole with Tools/scripts/upk_read.py and look for FKBoxElem records whose 0x4C byte is nonzero. For every hit, record its package, export index, owning body name and bone name, and whether the body is a driving body or a visual one. Name the flag only when one property is shared by all hits and absent from the zero boxes; otherwise leave it UNKNOWN. Write Tools/scripts/box_flag_0x4c.py with --write and --check and produce Research/BatmobileGrab/BOX_FLAG_0X4C.md, listing the packages searched and the number of boxes checked.

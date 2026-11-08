@@ -1,0 +1,7 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/T-AU3b.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-05 (from Working/Translation/T_ROWS.jsonl blocked rows)
+Rows: T-AU3 (10 banks absent) and T-AU5 (transformation/taser banks absent). Translation analysis is allowed (operator 2026-11-05); the TEST BAN stays: read-only on game installs, no game launch.
+Task, files only: Row T-AU3/T-AU5 say the banks are absent from the install. Prove it: list every audio bank the BmAK Batmobile references (Research/BatmobileGrab/AUDIO_BANKS*.md), search the JC3 install index (Research/JC3Grab/INDEX.json) and the DLC/dropzone archives for each by name and by hash, and report found/absent per bank with the search method. For absent banks, list the closest JC3 vehicle-audio carriers that exist (event names, bank names) as candidates only, each labelled derived with the matching rule.
+Rules: follow tmp/freebuff/INSTRUCTIONS.md section 3. Never guess; label every value decoded/derived/UNKNOWN. New script under Tools/scripts/ with --write/--check, outputs under Working/Translation/, DONE report as above.

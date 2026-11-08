@@ -1,0 +1,380 @@
+{
+ "schema": "g3-01e-pol/1",
+ "package": "BmGame.upk",
+ "selector": {
+  "export": 10894,
+  "path": "RVehicleBatmobileBase.SetBatmanVsBatmobileCollisionMode",
+  "script_bytes": 253,
+  "script_sha1": "c2f6a2ee667c544876e5317a103072c44ea17788",
+  "guards": [
+   {
+    "at": 0,
+    "word": 352,
+    "expr_at": 3,
+    "expr_end": 20,
+    "expr_bytes": "82 9b 38 3a 01 31 26 00 00 38 3a 00 8d 2a 00 00 16",
+    "expr_rule": "terminator-scan",
+    "expr_sha1": "8258a85ed7b64aa0ee1ec521932442af7b04f34d"
+   },
+   {
+    "at": 32,
+    "word": 86,
+    "expr_at": 35,
+    "expr_end": 48,
+    "expr_bytes": "9a 38 3a 01 31 26 00 00 38 3a 24 01 16",
+    "expr_rule": "parser",
+    "expr_sha1": "239805477b2a65a90718f13031b0e242d5143a85"
+   },
+   {
+    "at": 62,
+    "word": 125,
+    "expr_at": 65,
+    "expr_end": 78,
+    "expr_bytes": "9a 38 3a 01 31 26 00 00 38 3a 24 02 16",
+    "expr_rule": "parser",
+    "expr_sha1": "51b6301a2c8355854945eb80d4466af412b6d3f5"
+   },
+   {
+    "at": 89,
+    "word": 167,
+    "expr_at": 92,
+    "expr_end": 105,
+    "expr_bytes": "9a 38 3a 00 8d 2a 00 00 38 3a 24 01 16",
+    "expr_rule": "parser",
+    "expr_sha1": "521a9b21d3dfed8856d7c378e1c795298c165f73"
+   },
+   {
+    "at": 119,
+    "word": 206,
+    "expr_at": 122,
+    "expr_end": 135,
+    "expr_bytes": "9a 38 3a 00 8d 2a 00 00 38 3a 24 02 16",
+    "expr_rule": "parser",
+    "expr_sha1": "4c719a838c38836f3249b512a3cc21d21932319d"
+   },
+   {
+    "at": 180,
+    "word": 326,
+    "expr_at": 183,
+    "expr_end": 197,
+    "expr_bytes": "82 9b 38 3a 00 8d 2a 00 00 38 3a 24 00 16",
+    "expr_rule": "terminator-scan",
+    "expr_sha1": "c1eeb3efabb842c5f8bcc48de03a830022fb979c"
+   }
+  ],
+  "calls": [
+   {
+    "at": 48,
+    "name": "Core.DetachComponent",
+    "args": [
+     "01 45 26 00 00"
+    ]
+   },
+   {
+    "at": 78,
+    "name": "Core.DetachComponent",
+    "args": [
+     "01 46 26 00 00"
+    ]
+   },
+   {
+    "at": 105,
+    "name": "Core.AttachComponent",
+    "args": [
+     "01 45 26 00 00"
+    ]
+   },
+   {
+    "at": 135,
+    "name": "Core.AttachComponent",
+    "args": [
+     "01 46 26 00 00"
+    ]
+   },
+   {
+    "at": 159,
+    "name": "Core.SetCollisionFilter",
+    "args": [
+     "24 00",
+     "9b 38 3a 00 8d 2a 00 00 38 3a 24 00 16"
+    ]
+   },
+   {
+    "at": 224,
+    "name": "SetBatmanCanClimb",
+    "args": [
+     "28"
+    ]
+   },
+   {
+    "at": 234,
+    "name": "SetBatmanCanClimb",
+    "args": [
+     "27"
+    ]
+   }
+  ],
+  "pairs": [
+   {
+    "call": "DetachComponent",
+    "call_at": 48,
+    "guard_at": 32,
+    "guard_word": 86
+   },
+   {
+    "call": "DetachComponent",
+    "call_at": 78,
+    "guard_at": 62,
+    "guard_word": 125
+   },
+   {
+    "call": "AttachComponent",
+    "call_at": 105,
+    "guard_at": 89,
+    "guard_word": 167
+   },
+   {
+    "call": "AttachComponent",
+    "call_at": 135,
+    "guard_at": 119,
+    "guard_word": 206
+   }
+  ],
+  "label": "decoded (export 10894, script offset as shown)"
+ },
+ "corpus": {
+  "functions": 29620,
+  "closed": 17201,
+  "closed_pct": 58.1,
+  "jumps_total": 58761,
+  "jumps_by_token": {
+   "0x06": 14737,
+   "0x07": 31394,
+   "0x18": 12630
+  },
+  "bases": [
+   {
+    "base": "abs_u",
+    "hits": 16852,
+    "pct": 28.7
+   },
+   {
+    "base": "abs_s",
+    "hits": 16852,
+    "pct": 28.7
+   },
+   {
+    "base": "payload_u",
+    "hits": 12170,
+    "pct": 20.7
+   },
+   {
+    "base": "payload_s",
+    "hits": 12170,
+    "pct": 20.7
+   },
+   {
+    "base": "tok_u",
+    "hits": 13281,
+    "pct": 22.6
+   },
+   {
+    "base": "tok_s",
+    "hits": 13294,
+    "pct": 22.6
+   },
+   {
+    "base": "tok3_u",
+    "hits": 13482,
+    "pct": 22.9
+   },
+   {
+    "base": "tok3_s",
+    "hits": 13492,
+    "pct": 23.0
+   },
+   {
+    "base": "end_u",
+    "hits": 13422,
+    "pct": 22.8
+   },
+   {
+    "base": "end_s",
+    "hits": 13422,
+    "pct": 22.8
+   },
+   {
+    "base": "tok2_s",
+    "hits": 10258,
+    "pct": 17.5
+   }
+  ],
+  "best": "abs_u",
+  "label": "derived (sequential walk; a script counts only when the walk consumes it exactly and ends on 0x04 while a token start)"
+ },
+ "cases": [
+  {
+   "path": "RPlayerController.HideHealthBarIfMax",
+   "export": 98241,
+   "why": "the name states the hide happens *if max*, i.e. when IsMaxHealth() is true",
+   "certainty": "name (condition is a call)",
+   "expect_call": "HideHealthBar",
+   "decisive": true,
+   "script_bytes": 16,
+   "guard_word": 19,
+   "expr_at": 3,
+   "expr_end": 9,
+   "expr_bytes": "1b 9c b1 00 00 16",
+   "expr_call": "IsMaxHealth",
+   "body_at": 9,
+   "body_bytes": 7,
+   "body_call_at": 9,
+   "body_call": "HideHealthBar",
+   "body_sha1": "f16b1810e74e97049e78e451383a72b5ef2fe33d",
+   "body_has_expected_call": true,
+   "agree_body_on_true": true,
+   "ok": true
+  },
+  {
+   "path": "RPlayerController.ShowHealthBarIfNotMax",
+   "export": 98240,
+   "why": "the name states the show happens *if not max*; the expression is the 0x81 negated IsMaxHealth() call, so the body must run when the expression as written is true",
+   "certainty": "name (condition is a negated call)",
+   "expect_call": "ShowHealthBar",
+   "decisive": true,
+   "script_bytes": 18,
+   "guard_word": 21,
+   "expr_at": 3,
+   "expr_end": 11,
+   "expr_bytes": "81 1b 9c b1 00 00 16 16",
+   "expr_call": "IsMaxHealth",
+   "body_at": 11,
+   "body_bytes": 7,
+   "body_call_at": 11,
+   "body_call": "ShowHealthBar",
+   "body_sha1": "c3be0a61d90b93cf158dae71b891d8f39cf4bcd4",
+   "body_has_expected_call": true,
+   "agree_body_on_true": true,
+   "ok": true
+  },
+  {
+   "path": "RPlayerController.ShowHealthBar",
+   "export": 98237,
+   "why": "the body sets bShowHealthBar = true and SetHealthBarVisible(true), so it must run when the bar is not already shown; the guard is 0xf2 applied to bShowHealthBar and FALSE, and whether 0xf2 is equality is UNKNOWN, so this case supports but does not decide the polarity",
+   "certainty": "name, conditional on operator 0xf2",
+   "expect_call": "SetHealthBarVisible",
+   "decisive": false,
+   "script_bytes": 54,
+   "guard_word": 81,
+   "expr_at": 3,
+   "expr_end": 12,
+   "expr_bytes": "f2 2d 01 46 98 01 00 28 16",
+   "expr_call": null,
+   "body_at": 12,
+   "body_bytes": 42,
+   "body_call_at": 46,
+   "body_call": "SetHealthBarVisible",
+   "body_sha1": "2ffad7e1dbbc69d22406edbc761bc4e37ea6bad2",
+   "body_has_expected_call": true,
+   "agree_body_on_true": true,
+   "ok": true
+  },
+  {
+   "path": "RPlayerController.HideHealthBar",
+   "export": 98242,
+   "why": "the body sets bShowHealthBar = false and SetHealthBarVisible(false), so it must run when the bar is shown; the guard is 0xf2 applied to bShowHealthBar and TRUE, and 0xf2's meaning is UNKNOWN, so this case supports but does not decide",
+   "certainty": "name, conditional on operator 0xf2",
+   "expect_call": "SetHealthBarVisible",
+   "decisive": false,
+   "script_bytes": 54,
+   "guard_word": 81,
+   "expr_at": 3,
+   "expr_end": 12,
+   "expr_bytes": "f2 2d 01 46 98 01 00 27 16",
+   "expr_call": null,
+   "body_at": 12,
+   "body_bytes": 42,
+   "body_call_at": 46,
+   "body_call": "SetHealthBarVisible",
+   "body_sha1": "84a8f660e6744b097d8758486617b64339bfaae7",
+   "body_has_expected_call": true,
+   "agree_body_on_true": true,
+   "ok": true
+  },
+  {
+   "path": "RVehicleNPCWeapon.Tick",
+   "export": 129889,
+   "why": "Tick disables its own tick via SetTickIsDisabled(true); the guard is the predicate CanDisableTick(), so the body must run when it is true",
+   "certainty": "name (condition is a call)",
+   "expect_call": "SetTickIsDisabled",
+   "decisive": true,
+   "script_bytes": 17,
+   "guard_word": 16,
+   "expr_at": 3,
+   "expr_end": 9,
+   "expr_bytes": "1b 29 3b 00 00 16",
+   "expr_call": "CanDisableTick",
+   "body_at": 9,
+   "body_bytes": 8,
+   "body_call_at": 9,
+   "body_call": "SetTickIsDisabled",
+   "body_sha1": "aede2db41c6d66b17e3994a9bc5c50e6ec16e06a",
+   "body_has_expected_call": true,
+   "agree_body_on_true": true,
+   "ok": true
+  },
+  {
+   "path": "Primed.UnequipSelf",
+   "export": 48190,
+   "why": "the guard body is `return false`; the only reading in which UnequipSelf can ever run is: refuse while IsTimerActive() is true, act when it is false.  Under the inverted reading the function could never unequip anything (the return would fire on the false branch)",
+   "certainty": "structure (liveness)",
+   "expect_call": "UnequipSelf",
+   "decisive": true,
+   "script_bytes": 29,
+   "guard_word": 21,
+   "expr_at": 3,
+   "expr_end": 15,
+   "expr_bytes": "1c de f9 ff ff 2b fc 46 01 00 4a 16",
+   "expr_call": "Core.IsTimerActive",
+   "body_at": 15,
+   "body_bytes": 14,
+   "body_call_at": 18,
+   "body_call": "UnequipSelf",
+   "body_sha1": "ec5eb878faaa7e60f6b95ae3b46e5ec07b8d5890",
+   "body_has_expected_call": true,
+   "agree_body_on_true": true,
+   "ok": true
+  }
+ ],
+ "counts": {
+  "cases": 6,
+  "agree_body_on_true": 6,
+  "decisive": 4,
+  "agree_decisive": 4,
+  "disagree": 0,
+  "disagreeing": [],
+  "disagreeing_decisive": []
+ },
+ "verdict": {
+  "status": "decided",
+  "text": "body runs when the comparison is TRUE (0x07 skips the body when the expression is FALSE)"
+ },
+ "unknowns": [
+  {
+   "what": "the absolute target of the 0x06/0x07/0x18 2-byte words",
+   "why": "11 candidate bases were tested over 17201 closed scripts; the best lands on a token start 28.7% of the time, so no base is proven.  Polarity here is therefore read from linear order (the 0x07 precedes its expression; the body follows), which the six cases test."
+  },
+  {
+   "what": "whether 0x9A and 0x9B are == and != (or vice versa)",
+   "why": "the two tokens are decoded separately per comparison; no file or prior card in this repo assigns them a meaning, and the case set does not use them"
+  },
+  {
+   "what": "the meaning of operator tokens 0x77, 0x81, 0x82, 0xf2, 0x2b",
+   "why": "their extents parse (params until 0x16) but their semantics are not decoded; the cases use them only as expression wrappers, never as the condition"
+  },
+  {
+   "what": "whether the sampler can observe any of the six guarded effects",
+   "why": "the sampler logs vehicle fields (Driver, BatmanVsBatmobileCollisionMode, weapons, flags); it logs no HUD visibility, tick-disable or gadget state, so it cannot corroborate the six cases.  It is used only for the selector's mode/driver context"
+  }
+ ]
+}

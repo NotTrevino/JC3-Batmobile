@@ -1,0 +1,518 @@
+{
+ "executable": {
+  "path": "D:/Games/Just Cause 3/JustCause3.exe",
+  "bytes": 51083264,
+  "base": 5368709120,
+  "pdata_functions": 188670
+ },
+ "schema": {
+  "cinfo_record": 5416667552,
+  "cinfo_size": 24,
+  "members": {
+   "constraintData": 0,
+   "bodyA": 8,
+   "bodyB": 12,
+   "flags": 16
+  },
+  "constraint_size": 56,
+  "constraint_members": {
+   "bodyIdA": 0,
+   "bodyIdB": 4,
+   "data": 8,
+   "id": 16,
+   "immediateId": 20,
+   "flags": 22,
+   "type": 23
+  },
+  "worldcinfo_size": 256,
+  "worldcinfo_members": {
+   "bodyBufferCapacity": 0,
+   "userBodyBuffer": 8,
+   "motionBufferCapacity": 16,
+   "userMotionBuffer": 24,
+   "constraintBufferCapacity": 32,
+   "userConstraintBuffer": 40,
+   "persistentStreamAllocator": 48
+  }
+ },
+ "walker": {
+  "va": 5391162624,
+  "end": 5391163376,
+  "guard": [
+   {
+    "at": 5391163188,
+    "text": "mov edi, dword ptr [r15 + 0x148]"
+   },
+   {
+    "at": 5391163232,
+    "text": "mov rax, qword ptr [r15 + 0x140]"
+   },
+   {
+    "at": 5391163239,
+    "text": "lea r8, [rbx + rax]"
+   },
+   {
+    "at": 5391163243,
+    "text": "movsxd rax, dword ptr [r8 + 8]"
+   },
+   {
+    "at": 5391163247,
+    "text": "cmp eax, 0x7fffffff"
+   },
+   {
+    "at": 5391163252,
+    "text": "je 0x141569fc1"
+   },
+   {
+    "at": 5391163254,
+    "text": "mov edx, dword ptr [rsi + 0x2c]"
+   },
+   {
+    "at": 5391163257,
+    "text": "and edx, 0x3fffffff"
+   },
+   {
+    "at": 5391163263,
+    "text": "cmp eax, edx"
+   },
+   {
+    "at": 5391163265,
+    "text": "jae 0x141569fc1"
+   },
+   {
+    "at": 5391163267,
+    "text": "mov r9, qword ptr [rsi + 0x20]"
+   },
+   {
+    "at": 5391163271,
+    "text": "lea rax, [rax + rax*8]"
+   },
+   {
+    "at": 5391163275,
+    "text": "add rax, rax"
+   },
+   {
+    "at": 5391163278,
+    "text": "test byte ptr [r9 + rax*8 + 0x40], 3"
+   },
+   {
+    "at": 5391163284,
+    "text": "je 0x141569fc1"
+   },
+   {
+    "at": 5391163286,
+    "text": "movsxd rax, dword ptr [r8 + 0xc]"
+   },
+   {
+    "at": 5391163290,
+    "text": "cmp eax, 0x7fffffff"
+   },
+   {
+    "at": 5391163295,
+    "text": "je 0x141569fc1"
+   },
+   {
+    "at": 5391163297,
+    "text": "cmp eax, edx"
+   },
+   {
+    "at": 5391163299,
+    "text": "jae 0x141569fc1"
+   },
+   {
+    "at": 5391163301,
+    "text": "lea rax, [rax + rax*8]"
+   },
+   {
+    "at": 5391163305,
+    "text": "add rax, rax"
+   },
+   {
+    "at": 5391163308,
+    "text": "test byte ptr [r9 + rax*8 + 0x40], 3"
+   },
+   {
+    "at": 5391163314,
+    "text": "je 0x141569fc1"
+   },
+   {
+    "at": 5391163316,
+    "text": "lea rdx, [rsp + 0x38]"
+   },
+   {
+    "at": 5391163321,
+    "text": "mov rcx, rsi"
+   },
+   {
+    "at": 5391163324,
+    "text": "call 0x1414e7200"
+   },
+   {
+    "at": 5391163329,
+    "text": "add rbx, 0x18"
+   },
+   {
+    "at": 5391163333,
+    "text": "dec rdi"
+   },
+   {
+    "at": 5391163336,
+    "text": "jne 0x141569f60"
+   }
+  ],
+  "sentinel_sites": [
+   {
+    "at": 5391163247,
+    "text": "cmp eax, 0x7fffffff"
+   },
+   {
+    "at": 5391163290,
+    "text": "cmp eax, 0x7fffffff"
+   }
+  ],
+  "skip_target": 5391163329,
+  "body_stride": 144,
+  "cinfo_stride": 24,
+  "data_constraint_array": 320,
+  "data_constraint_count": 328,
+  "data_body_array": 304,
+  "data_body_count": 312,
+  "system_body_array": 32,
+  "system_body_capacity": 44
+ },
+ "add": {
+  "va": 5390627328,
+  "end": 5390627678,
+  "block": [
+   {
+    "at": 5390627360,
+    "text": "mov rbp, r8"
+   },
+   {
+    "at": 5390627363,
+    "text": "mov rdi, rdx"
+   },
+   {
+    "at": 5390627366,
+    "text": "mov rbx, rcx"
+   },
+   {
+    "at": 5390627369,
+    "text": "cmp dword ptr [rcx + 0x13c], 0x7fffffff"
+   },
+   {
+    "at": 5390627431,
+    "text": "lea rcx, [rbx + 0x120]"
+   },
+   {
+    "at": 5390627441,
+    "text": "call 0x141520e80"
+   },
+   {
+    "at": 5390627446,
+    "text": "mov esi, dword ptr [rdi]"
+   },
+   {
+    "at": 5390627448,
+    "text": "imul rsi, rsi, 0x38"
+   },
+   {
+    "at": 5390627468,
+    "text": "call 0x141557a30"
+   },
+   {
+    "at": 5390627548,
+    "text": "lea rdx, [rip + 0x107c8d5]"
+   },
+   {
+    "at": 5390627604,
+    "text": "or byte ptr [rsi + 0x16], 4"
+   },
+   {
+    "at": 5390627610,
+    "text": "mov eax, dword ptr [rbp + 0xc]"
+   },
+   {
+    "at": 5390627613,
+    "text": "cmp dword ptr [rbp + 8], eax"
+   },
+   {
+    "at": 5390627616,
+    "text": "je 0x1414e7314"
+   }
+  ],
+  "sentinel_sites": [
+   {
+    "at": 5390627369,
+    "text": "cmp dword ptr [rcx + 0x13c], 0x7fffffff"
+   }
+  ],
+  "strings": [
+   "Unsupported constraint type. Disabling the constraint.",
+   "z:\\dependencyrepository\\3rdparty\\havok_physics\\havok_physics-2014.1.0.3.2.7.1020265\\source\\physics\\physics\\dynamics\\world\\hknpworld.cpp"
+  ]
+ },
+ "release": {
+  "va": 5390627696,
+  "block": [
+   {
+    "at": 5390627831,
+    "text": "mov dword ptr [rdi], 0x7fffffff"
+   }
+  ],
+  "sentinel_sites": [
+   {
+    "at": 5390627831,
+    "text": "mov dword ptr [rdi], 0x7fffffff"
+   }
+  ]
+ },
+ "copy": {
+  "va": 5391088176,
+  "end": 5391088448,
+  "block": [
+   {
+    "at": 5391088199,
+    "text": "mov r12, qword ptr [rdx]"
+   },
+   {
+    "at": 5391088202,
+    "text": "movzx esi, byte ptr [rdx + 0x10]"
+   },
+   {
+    "at": 5391088206,
+    "text": "mov ebx, dword ptr [rdx + 0xc]"
+   },
+   {
+    "at": 5391088209,
+    "text": "mov edi, dword ptr [rdx + 8]"
+   },
+   {
+    "at": 5391088330,
+    "text": "mov dword ptr [rbp], edi"
+   },
+   {
+    "at": 5391088333,
+    "text": "mov dword ptr [rbp + 4], ebx"
+   }
+  ],
+  "sentinel_sites": []
+ },
+ "callers": [
+  {
+   "at": 5370810456,
+   "function": "0x140200f00-0x1402010c2",
+   "is_walker": false
+  },
+  {
+   "at": 5370816552,
+   "function": "0x1402026e0-0x14020296f",
+   "is_walker": false
+  },
+  {
+   "at": 5371250024,
+   "function": "0x14026c3f0-0x14026c60a",
+   "is_walker": false
+  },
+  {
+   "at": 5371313358,
+   "function": "0x14027baa0-0x14027bd83",
+   "is_walker": false
+  },
+  {
+   "at": 5371333148,
+   "function": "0x140280530-0x140280acf",
+   "is_walker": false
+  },
+  {
+   "at": 5371584633,
+   "function": "0x1402bdb60-0x1402be122",
+   "is_walker": false
+  },
+  {
+   "at": 5378097557,
+   "function": "0x1408f3de0-0x1408f4248",
+   "is_walker": false
+  },
+  {
+   "at": 5378332787,
+   "function": "0x14092d4f0-0x14092da3d",
+   "is_walker": false
+  },
+  {
+   "at": 5381308677,
+   "function": "0x140c03ed0-0x140c041f8",
+   "is_walker": false
+  },
+  {
+   "at": 5390771705,
+   "function": "0x14150a450-0x14150a753",
+   "is_walker": false
+  },
+  {
+   "at": 5391163324,
+   "function": "0x141569d00-0x141569ff0",
+   "is_walker": true
+  },
+  {
+   "at": 5393800283,
+   "function": "0x1417ed200-0x1417edcf8",
+   "is_walker": false
+  },
+  {
+   "at": 5393801958,
+   "function": "0x1417edd00-0x1417ee3ba",
+   "is_walker": false
+  }
+ ],
+ "inventory": {
+  "functions_with_constant": 1407,
+  "sentinel_cmp_sites": 843,
+  "sites_fed_from_body_fields": [
+   {
+    "at": 5371336351,
+    "offset": 8,
+    "load": "mov eax, dword ptr [rbx + 8]",
+    "function": "0x140281430-0x1402817ea"
+   },
+   {
+    "at": 5371355066,
+    "offset": 8,
+    "load": "mov ebx, dword ptr [r8 + 8]",
+    "function": "0x140285fa0-0x140285fd6"
+   },
+   {
+    "at": 5391015983,
+    "offset": 12,
+    "load": "movsxd rax, dword ptr [rdi + 0xc]",
+    "function": "0x141545e29-0x14154623b"
+   },
+   {
+    "at": 5391163247,
+    "offset": 8,
+    "load": "movsxd rax, dword ptr [r8 + 8]",
+    "function": "0x141569d00-0x141569ff0"
+   },
+   {
+    "at": 5391163290,
+    "offset": 12,
+    "load": "movsxd rax, dword ptr [r8 + 0xc]",
+    "function": "0x141569d00-0x141569ff0"
+   },
+   {
+    "at": 5391670642,
+    "offset": 12,
+    "load": "mov ebx, dword ptr [r10 + 0xc]",
+    "function": "0x1415e5d40-0x1415e5d89"
+   },
+   {
+    "at": 5394854663,
+    "offset": 12,
+    "load": "movsxd r11, dword ptr [r12 + 0xc]",
+    "function": "0x1418ef210-0x1418ef53c"
+   },
+   {
+    "at": 5395198584,
+    "offset": 12,
+    "load": "mov ebx, dword ptr [r8 + 0xc]",
+    "function": "0x141943257-0x1419432a2"
+   }
+  ],
+  "functions_testing_both": [
+   "0x141569d00-0x141569ff0"
+  ]
+ },
+ "refs": {
+  "walker": {
+   "direct_calls": 0,
+   "qword_slots": [],
+   "rva_slots": [
+    5414936920,
+    5420048300
+   ],
+   "sections": [
+    ".pdata",
+    ".rdata"
+   ],
+   "rdata_rva_slots": [
+    5414936920
+   ]
+  },
+  "add": {
+   "direct_calls": 13,
+   "qword_slots": [],
+   "rva_slots": [
+    5414872012,
+    5420018576
+   ],
+   "sections": [
+    ".pdata",
+    ".rdata"
+   ],
+   "rdata_rva_slots": [
+    5414872012
+   ]
+  }
+ },
+ "game_site": {
+  "function": 5371331888,
+  "call": 5371333148,
+  "block": [
+   {
+    "at": 5371332995,
+    "text": "mov rax, qword ptr [rsi]"
+   },
+   {
+    "at": 5371333001,
+    "text": "call qword ptr [rax + 0x120]"
+   },
+   {
+    "at": 5371333007,
+    "text": "mov ecx, dword ptr [rax]"
+   },
+   {
+    "at": 5371333009,
+    "text": "mov dword ptr [rsp + 0x48], ecx"
+   },
+   {
+    "at": 5371331989,
+    "text": "mov r12, qword ptr [rsp + 0x58]"
+   },
+   {
+    "at": 5371331994,
+    "text": "mov rax, qword ptr [r12]"
+   },
+   {
+    "at": 5371332001,
+    "text": "call qword ptr [rax + 0x120]"
+   },
+   {
+    "at": 5371332007,
+    "text": "mov ebx, dword ptr [rax]"
+   },
+   {
+    "at": 5371333013,
+    "text": "mov dword ptr [rsp + 0x4c], ebx"
+   },
+   {
+    "at": 5371333141,
+    "text": "mov rcx, qword ptr [rsi + 0x310]"
+   },
+   {
+    "at": 5371333148,
+    "text": "call 0x1414e7200"
+   }
+  ]
+ },
+ "fleet": {
+  "files": 50,
+  "records": 494,
+  "bodyB_sentinel": 494,
+  "bodyA_sentinel": 0,
+  "bodyA_out_of_range": 0,
+  "bodyB_out_of_range": 0,
+  "rejected_by_guard": 494,
+  "surviving": 0,
+  "distinct_bodyA": 97
+ }
+}

@@ -1,0 +1,430 @@
+{
+ "schema": 1,
+ "task": "7210",
+ "title": "blocked translation rows and what each waits for",
+ "generator": "Tools/scripts/t_blocked.py",
+ "inputs": {
+  "ledger": {
+   "path": "Working/Translation/T_ROWS.jsonl",
+   "sha256": "08d9a6000bddf46be7e3df48013c807d6157ffc1ff0c0096d85d5b083adfd6db",
+   "rows": 244
+  },
+  "t6": {
+   "path": "Working/Translation/T6_HUD_CAMERA.md",
+   "sha256": "4fff95a3667f76147afd1b648ad3518b30b528645ec6fef6b1e1b8b61a0a5459"
+  }
+ },
+ "counts": {
+  "ledger_blocked": 27,
+  "t6_blocked": 4,
+  "total_blocked": 31,
+  "ledger_rows": 244,
+  "in_scope_rows": 260,
+  "status_md_says": "31 / 260 (STATUS.md)",
+  "status_audit": {
+   "rows": 244,
+   "t6_rows": 37,
+   "out": 13,
+   "superseded": 8,
+   "blocked": 31,
+   "in_scope": 260
+  },
+  "reconciles": true
+ },
+ "method": {
+  "which_rows": "T_ROWS.jsonl rows with dispo == 'blocked', plus the T6 rows status_audit.py:128-141 classifies as blocked; the tracker adds both",
+  "waits_for": "a one-line restatement of the row's own `why` / blocked cell, no new claim",
+  "attempts": "only the first six ledger rows; each cites an existing repo file and a marker string, re-checked by --check",
+  "edits": "proposals only (`applies: false`); T_ROWS.jsonl is read-only here"
+ },
+ "rows": [
+  {
+   "id": "T-RA1",
+   "doc": "T-3",
+   "source": "T_ROWS.jsonl",
+   "waits_for": "a triggered, non-damaging impulse/torque with target selection and a duration - no road-assist/dodge/shove/kill-flip member at any layer (card G2-35)",
+   "attempt": null
+  },
+  {
+   "id": "T-RC1",
+   "doc": "T-3",
+   "source": "T_ROWS.jsonl",
+   "waits_for": "an input carrier for remote drive - the land-vehicle action set has no aim/stick/cursor action, JC3 has no 2D vehicle stick and the gadget route is a proximity interaction; halted by ruling (`water-flip-damage-remote-plans-v2.md` section 4.4), with Rebel Drop carrying the summon",
+   "attempt": null
+  },
+  {
+   "id": "T-RC2",
+   "doc": "T-3",
+   "source": "T_ROWS.jsonl",
+   "waits_for": "a distance-to-player read and a HUD overlay element - 0 hits for static/noise/jam/overlay/fullscreen in the vehicle-HUD element table and none in the interaction layer; halted by ruling, not declared impossible",
+   "attempt": null
+  },
+  {
+   "id": "T-CT1",
+   "doc": "T-3",
+   "source": "T_ROWS.jsonl",
+   "waits_for": "the keymap writer (`T-CT5`) - the patch keymap's `EXIT_VEHICLE` / `RPADUP` pair has to be split into enter = Y and exit = LB",
+   "attempt": null
+  },
+  {
+   "id": "T-CT2",
+   "doc": "T-3",
+   "source": "T_ROWS.jsonl",
+   "waits_for": "the keymap writer plus the double-press timer - no hold/duration/tap field in 145+104+249 binding rows (U2) and 0 of 4,832 exits carries a launch member",
+   "attempt": null
+  },
+  {
+   "id": "T-CT3",
+   "doc": "T-3",
+   "source": "T_ROWS.jsonl",
+   "waits_for": "the keymap writer, for the winch on `RPADRIGHT` with `USE_VEHICLE_MOD` re-homed to Y",
+   "attempt": null
+  },
+  {
+   "id": "T-CT4",
+   "doc": "T-3",
+   "source": "T_ROWS.jsonl",
+   "waits_for": "BmAK's in-car steering response curve (`StandardSteeringSpeedCurve` / `DesiredTurnOnSpotSpeed` need the capture set, U6); the two axes are decoded",
+   "attempt": null
+  },
+  {
+   "id": "T-CT5",
+   "doc": "T-3",
+   "source": "T_ROWS.jsonl",
+   "waits_for": "a keymap writer - 0 of 575 `Tools/scripts` files writes a bin; the 12-byte binding record plus 18 B of `stringZ` records must re-parse to 145 patch bindings",
+   "attempt": null
+  },
+  {
+   "id": "T-MS1",
+   "doc": "T-3",
+   "source": "T_ROWS.jsonl",
+   "waits_for": "a consumer that swaps or replaces a vehicle entity at runtime (U1) - 0 `replace`, 0 `respawn`, 0 `despawn` and 0 `.ee` `swap` paths in 81,952, so the settler is `JustCause3.exe`; the two leaves and Rebel Drop are buildable without it",
+   "attempt": null
+  },
+  {
+   "id": "T-TX1",
+   "doc": "T-3",
+   "source": "T_ROWS.jsonl",
+   "waits_for": "the `Batmobile_Micropattern_A` pixels - 0 of 61 grab `.tga` carry the stem; settler is a re-grab of the `Playable_Batmobile*` packages",
+   "attempt": null
+  },
+  {
+   "id": "T-TX2",
+   "doc": "T-3",
+   "source": "T_ROWS.jsonl",
+   "waits_for": "the `Batmobile_Micropattern_A_Normal` pixels - same re-grab; no substitute map exists",
+   "attempt": null
+  },
+  {
+   "id": "T-TX3",
+   "doc": "T-3",
+   "source": "T_ROWS.jsonl",
+   "waits_for": "the `Batmobile_Micropattern_B` pixels - same re-grab",
+   "attempt": null
+  },
+  {
+   "id": "T-TX4",
+   "doc": "T-3",
+   "source": "T_ROWS.jsonl",
+   "waits_for": "the `Batmobile_Micropattern_C` pixels - same re-grab",
+   "attempt": null
+  },
+  {
+   "id": "T-TX9",
+   "doc": "T-3",
+   "source": "T_ROWS.jsonl",
+   "waits_for": "a chapter selector for `Damage_Chapter_Mask` (0 of 961 headers, `SupportDmgBlend` [0.0] in all 160 blocks) - and the operator's no-damage-stages ruling closes the crude single-state route",
+   "attempt": null
+  },
+  {
+   "id": "T-TX10",
+   "doc": "T-3",
+   "source": "T_ROWS.jsonl",
+   "waits_for": "the same chapter selector as `T-TX9`",
+   "attempt": null
+  },
+  {
+   "id": "T-TX11",
+   "doc": "T-3",
+   "source": "T_ROWS.jsonl",
+   "waits_for": "the same chapter selector as `T-TX9`",
+   "attempt": null
+  },
+  {
+   "id": "T-TX12",
+   "doc": "T-3",
+   "source": "T_ROWS.jsonl",
+   "waits_for": "the same chapter selector as `T-TX9`",
+   "attempt": null
+  },
+  {
+   "id": "T-L28",
+   "doc": "T-14",
+   "source": "T_ROWS.jsonl",
+   "waits_for": "a body `_LIG` anchor node plus a `CarLight` block on the body (B-03 / B-04) - socket and bone are null on `HeadLight1c`; the sprite waits on T-24",
+   "attempt": null
+  },
+  {
+   "id": "T-L30",
+   "doc": "T-14",
+   "source": "T_ROWS.jsonl",
+   "waits_for": "the same body-hosted `_LIG` node and `CarLight` block (B-03 / B-04) for `HeadLight2c`; the sprite waits on T-24",
+   "attempt": null
+  },
+  {
+   "id": "T-WP6",
+   "doc": "T-7",
+   "source": "T_ROWS.jsonl",
+   "waits_for": "a code-level pull loop (force, length clamp, reel, release) - the anchor object, rope mesh and VFX/SFX are decoded and buildable (`Research/specs/B-16.md`)",
+   "attempt": null
+  },
+  {
+   "id": "T-WLD17",
+   "doc": "T-20",
+   "source": "T_ROWS.jsonl",
+   "waits_for": "a cargo bay on a helicopter (0 of 23) plus the native attach rule a cloned bay would need - closest carrier is the cargo plane's bay (`Research/specs/B-16.md`)",
+   "attempt": null
+  },
+  {
+   "id": "T-MD5",
+   "doc": "T-15",
+   "source": "T_ROWS.jsonl",
+   "waits_for": "D-2 re-resolved to two variants (B-12) plus a runtime entity swap - the battle variant's own `arcade`/`CustomLandGlobal` values; no JC3 member scales top speed by a mode",
+   "attempt": null
+  },
+  {
+   "id": "T-MD6",
+   "doc": "T-15",
+   "source": "T_ROWS.jsonl",
+   "waits_for": "the same battle variant plus a decoded speed-cap member - no member in the fleet caps speed (nearest: `vehicle_misc.official_top_speed`, `extra_top_speed`)",
+   "attempt": null
+  },
+  {
+   "id": "T-MD7",
+   "doc": "T-15",
+   "source": "T_ROWS.jsonl",
+   "waits_for": "the battle variant's own `land_steering`/torque set (four of six factors) plus the swap; the two slip-scale members do not exist",
+   "attempt": null
+  },
+  {
+   "id": "T-MD8",
+   "doc": "T-15",
+   "source": "T_ROWS.jsonl",
+   "waits_for": "a native turn-on-the-spot mechanism - G2-21 refuted its candidates and found 0 tank-only driving members; a second variant does not create one",
+   "attempt": null
+  },
+  {
+   "id": "T-MD13",
+   "doc": "T-15",
+   "source": "T_ROWS.jsonl",
+   "waits_for": "the battle variant's part angles for the deployed pose (T-12) plus the swap; `TransformationAnimNode` still has no JC3 analogue",
+   "attempt": null
+  },
+  {
+   "id": "T-MD14",
+   "doc": "T-15",
+   "source": "T_ROWS.jsonl",
+   "waits_for": "a `BattleMode` usage a graph dispatches on plus a second variant to hang T-16's 30 battle-mode events on (B-12); no usage consumer is decoded (U1)",
+   "attempt": null
+  },
+  {
+   "id": "T-HUD5",
+   "doc": "T6 HUD/camera",
+   "source": "T6_HUD_CAMERA.md",
+   "waits_for": "a weapon component on the entity for the HUD's 2 slots (T-11 bound w602/w603 since; the 3 special-weapon states have no member)",
+   "attempt": null
+  },
+  {
+   "id": "T-CAM8",
+   "doc": "T6 HUD/camera",
+   "source": "T6_HUD_CAMERA.md",
+   "waits_for": "a head-impulse / drift-orientation camera member - none in any decoded camera module",
+   "attempt": null
+  },
+  {
+   "id": "T-CAM9",
+   "doc": "T6 HUD/camera",
+   "source": "T6_HUD_CAMERA.md",
+   "waits_for": "a unit bridge from BmAK's camera smoothing strength to JC3 spring stiffness",
+   "attempt": null
+  },
+  {
+   "id": "T-CAM11",
+   "doc": "T6 HUD/camera",
+   "source": "T6_HUD_CAMERA.md",
+   "waits_for": "a numeric bridge to `AddCameraShake` (game code; no values decoded)",
+   "attempt": null
+  }
+ ],
+ "attempted": [],
+ "resolved": [
+  {
+   "id": "T-ST7",
+   "verdict": "resolved-by-operator-ruling",
+   "ruling": "operator ruling 2026-11-06, option A: **0.25 s, no compromise** (`Working/Translation/DECISIONS_NEEDED.md`, 'OPERATOR RULINGS 2026-11-06', item 1), with the steering-rate / max-speed members checked so the whole BmAK rate is carried, not only the lock time",
+   "evidence": [
+    {
+     "file": "Research/JC3Grab/DRIVE_CARRIERS.json",
+     "marker": "t_to_full_steer_s",
+     "means": "the steering member is decoded per module, so the fleet's values are data"
+    },
+    {
+     "file": "Working/Translation/T_ST7B_FLOOR.md",
+     "marker": "exists in the fleet",
+     "means": "0.25 s ships in 4 LandSteering AI twins and 0.2 s on the high-speed member"
+    },
+    {
+     "file": "Working/Translation/T_ST7B_FLOOR.md",
+     "marker": "MotorbikeSteering",
+     "means": "a *player* module ships 0.3 s (2 modules), so the player path is not floored at 0.5 s either"
+    }
+   ],
+   "applied": "ledger `T-ST7`: dispo `blocked` -> `next`, value 0.8 s low / 0.6 s high -> 0.25 s low / 0.091 s high (55 deg and 20 deg at 220 deg/s); the row left the blocked set, so this sheet enumerates 16",
+   "remaining": "a game probe: neither value is measured (test ban), and 0.091 s is below the 0.2 s fleet minimum, i.e. a declared out-of-domain switch"
+  },
+  {
+   "id": "T-FX3",
+   "verdict": "resolved-by-operator-approval",
+   "ruling": "operator ruling 2026-11-06, item 2: **approve** the decoded afterburner-flame edit (`Working/Translation/DECISIONS_NEEDED.md`, 'OPERATOR RULINGS 2026-11-06')",
+   "evidence": [
+    {
+     "file": "Research/JC3Grab/USAGES.json",
+     "marker": "4197885156",
+     "means": "usage id `EngineNitro` exists in the decoded 155-value usage vocabulary"
+    },
+    {
+     "file": "Research/JC3Grab/FX_TABLE.jsonl",
+     "marker": "car_cycle_base_dual_nitrous",
+     "means": "the fleet ships the dual nitro exhaust effect (17 cargo rows)"
+    },
+    {
+     "file": "Working/Translation/T_FX3B.md",
+     "marker": "EngineNitro",
+     "means": "the donor's two exhaust emitters already carry usage 4197885156, so the approved edit is placement on the `Afterburner` socket (B-08), not a new effect or a new usage"
+    }
+   ],
+   "applied": "ledger `T-FX3`: dispo `blocked` -> `next`; the edit is B-08's placement - both `SAttachedEffect.world` mats from the Serpente's exhaust to the `Afterburner` socket (bone `JetSMove`), spec `Working/Effects/bm_fx_edits.json` `edits[]`, compiled by `Tools/scripts/bm_fx.py` into `Builds/bm-008/.../*_civilian_01.epe`; the row left the blocked set, so this sheet enumerates 15",
+   "remaining": "`bm_fx.py --check` is red for an unrelated reason (6 `SWeaponPoint` objects gained a later `weapon_anchor` property in bm-008), and no probe was run: whether the flame follows the nozzle in motion is UNKNOWN (test ban)"
+  },
+  {
+   "id": "T-AU3",
+   "verdict": "resolved-by-evidence",
+   "ruling": "no operator decision needed: `Research/BatmobileGrab/AUDIO_BANKS.md` (G3-14) re-tested the absence claim against the whole BmAK install - 10 claimed banks, **10 found, 0 absent**, 117 `AkBank` payloads read",
+   "evidence": [
+    {
+     "file": "Research/BatmobileGrab/AUDIO_BANKS.md",
+     "marker": "10 found, 0 confirmed absent",
+     "means": "every one of the 10 banks the row called absent is present in a BmAK package"
+    },
+    {
+     "file": "Research/BatmobileGrab/AUDIO_BANKS.md",
+     "marker": "BML_Batmobile_Subjective",
+     "means": "the four jump banks live in `Startup`, a package the old 3-package scan never opened"
+    },
+    {
+     "file": "Working/Translation/T_AU3B.md",
+     "marker": "ABSENT: 27 of 27",
+     "means": "the 27/27 absence is true of the JC3 install only: a carrier gap, not a missing source"
+    }
+   ],
+   "applied": "ledger `T-AU3`: dispo `blocked` -> `next`; the source banks exist, so what remains is the JC3 event binding of the 26 ids; the row left the blocked set",
+   "remaining": "a JC3-side event slot per id and, where JC3 has no sample, an auditioned substitute (`T_AU3B` section 4 lists the name-level candidates); no probe was run"
+  },
+  {
+   "id": "T-AU5",
+   "verdict": "resolved-by-evidence",
+   "ruling": "no operator decision needed: the same `AUDIO_BANKS.md` re-test (10 found / 0 absent) removes the 'absent banks' half; only these three families' own bank and slot remain",
+   "evidence": [
+    {
+     "file": "Research/BatmobileGrab/AUDIO_BANKS.md",
+     "marker": "10 found, 0 confirmed absent",
+     "means": "the banks T-AU5 inherited from T-AU3 are present"
+    },
+    {
+     "file": "Research/BatmobileGrab/ASSETS.md",
+     "marker": "AkVehicleSound",
+     "means": "the Batmobile's vehicle-sound object is an `AkVehicleSound`, so the mapping is an object-level task, not a missing bank"
+    },
+    {
+     "file": "Working/Translation/T_AU3B.md",
+     "marker": "T-AU5",
+     "means": "the note records this row's own claim and that the loss is a JC3 carrier gap"
+    }
+   ],
+   "applied": "ledger `T-AU5`: dispo `blocked` -> `next`; the source side is complete, and the row now names these events' own bank (UNKNOWN - not among `AUDIO_MAP.json`'s 361 rows) plus a JC3 slot and the mode-switch trigger as what it needs",
+   "remaining": "the bank and event id of `TransformationReverseDirection*`, `TaserSound` and `VehicleSound` (not in the four-package `AUDIO_MAP` sweep), then a JC3 slot and the T-MD14 mode-switch trigger"
+  },
+  {
+   "id": "T-S6",
+   "verdict": "resolved-by-derived-bridge",
+   "ruling": "no operator decision needed: the unit bridge is derived from the decoded class defaults and the 166-vehicle fleet (`tmp/freebuff/reports/suspension-unit-bridge.md`, 14/14 oracles, `Tools/scripts/t_s6_bridge.py --check`)",
+   "evidence": [
+    {
+     "file": "tmp/freebuff/reports/suspension-unit-bridge.md",
+     "marker": "0.4542",
+     "means": "the fleet's median static-sag fraction is derived, so `strength = g/(4*f*length)` closes the dimension"
+    },
+    {
+     "file": "tmp/freebuff/reports/suspension-unit-bridge.md",
+     "marker": "13.500",
+     "means": "TravelDown 40 cm at that fraction needs strength 13.500 s^-2, and BmAK's 3000 against the decoded 210 kg gives 14.286 - fit error +5.8% / -5.5%"
+    },
+    {
+     "file": "tmp/freebuff/reports/suspension-unit-bridge.md",
+     "marker": "no_bias_member",
+     "means": "JC3 carries no bias channel, so the front bias is placed as a hardpoint offset (-0.10, 0.0% against the fleet median) and the rear bias stays a gap"
+    }
+   ],
+   "applied": "ledger `T-S6`: dispo `blocked` -> `next`; TravelDown 40 cm -> length 0.40 m, stiffness 3000 -> strength 13.500 s^-2, damping 300 -> compression/relaxation 1/2 (-31.1% on integer quantisation), front bias 10 -> hardpoint offset -0.10; the row left the blocked set, so this sheet enumerates 17",
+   "remaining": "no member for droop (`BMRearWheelMaxDroop` 100) or the up-travel 30 cm (cards B-22), none for the per-mode 750 / stationary bias (B-23); whether the engine reads `hardpoint_offset_along_spring` as a rest position is UNKNOWN (test ban)"
+  },
+  {
+   "id": "T-WP4",
+   "verdict": "resolved-by-operator-ruling-and-donor",
+   "ruling": "operator ruling 4, 2026-11-06: **approve the split** so the missile launcher ships, with the JC3 Fire Leech as the lock-on lead (`Working/Translation/DECISIONS_NEEDED.md`, 'OPERATOR RULINGS 2026-11-06')",
+   "evidence": [
+    {
+     "file": "tmp/freebuff/reports/wp4-fire-leech.md",
+     "marker": "w143_rpg_fire_leach",
+     "means": "the Fire Leech is a decoded `WeaponTuning` whose `missile_turning_speed` is 300 and whose `AutoAim` cone equals the fleet lock-on preset, so the guidance transplants onto the w618 clone by value"
+    },
+    {
+     "file": "tmp/freebuff/reports/wp4-fire-leech.md",
+     "marker": "CanTargetCharacters",
+     "means": "w143 may lock characters and BmAK may not, so the lock-on tune is a new `AutoAim` with the preset's classes rather than a wholesale copy"
+    },
+    {
+     "file": "Working/Translation/DECISIONS_NEEDED.md",
+     "marker": "T-WP4: approve the split",
+     "means": "the split is the operator's, not a research inference"
+    }
+   ],
+   "applied": "ledger `T-WP4`: dispo `blocked` -> `next`, launcher only (w618 clone + `CForcePulse` + the w143 guidance + a new lock-on `AutoAim`); the disable half became its own row `T-WP15` as a named omission (`out`), so the row left the blocked set and the sheet enumerates 15",
+   "remaining": "a 2.0 s held lock, an 8-target salvo and the reticle link have no member (cards B-24 / B-25); no probe was run (test ban)"
+  },
+  {
+   "id": "T-WP13",
+   "verdict": "resolved-by-operator-ruling",
+   "ruling": "operator ruling 3, 2026-11-06: **force extra weapon slots** - the two reference vehicles carry 2 weapons + a shield, so JC3's 2 driver slots are a convention",
+   "evidence": [
+    {
+     "file": "tmp/freebuff/reports/wp13-slots-force.md",
+     "marker": "v0202_car_capstone_bavariumtank",
+     "means": "the Imperator graph is decoded: 4 slot properties, 2 non-null pointers"
+    },
+    {
+     "file": "tmp/freebuff/reports/wp13-slots-force.md",
+     "marker": "BavariumShield",
+     "means": "the third weapon the premise counts is a shield PART + effect, not a slot, so forcing slots is a design decision and is recorded as one"
+    },
+    {
+     "file": "Working/Translation/DECISIONS_NEEDED.md",
+     "marker": "T-WP13: force extra weapon slots",
+     "means": "the ruling is the operator's, not a decoded member"
+    }
+   ],
+   "applied": "ledger `T-WP13`: dispo `blocked` -> `next`; 4 `CCar` roots x 2 decoded pointers = 8 slots for the 8 slot-able BmAK objects, 0 invented property names, the 5 gadgets outside the slot space; the row left the blocked set, so this sheet enumerates 15 of 216",
+   "remaining": "whether two or more roots on one car chassis fire from the driver seat is UNKNOWN (no entity states the input-to-root binding); `RiotSuppressorMuzzle` and the Joker weapons have no points"
+  }
+ ]
+}

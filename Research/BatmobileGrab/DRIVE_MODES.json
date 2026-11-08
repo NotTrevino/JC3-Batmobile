@@ -1,0 +1,7731 @@
+{
+ "archetypes": {
+  "class_default_object": {
+   "class": "RVehicleSimBatmobile",
+   "end": 722,
+   "export": 129779,
+   "object": "Default__RVehicleSimBatmobile",
+   "package": "BmGame.upk",
+   "role": "class_default_object",
+   "size": 724,
+   "stop": "eof",
+   "tag_start": 0,
+   "tags": 58,
+   "values": {
+    "AirControlInterpTime": {
+     "at": 678,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 1208,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 1.5
+    },
+    "AirControlPitchTorqueFactorMax": {
+     "at": 654,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 1196,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 5000.0
+    },
+    "AirControlPitchTorqueFactorMin": {
+     "at": 670,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 1204,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 3000.0
+    },
+    "AirControlYawTorqueFactorMax": {
+     "at": 646,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 1192,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 5000.0
+    },
+    "AirControlYawTorqueFactorMin": {
+     "at": 662,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 1200,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 2000.0
+    },
+    "BMFrontWheelMaxDroop": {
+     "at": 172,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 788,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 40.0
+    },
+    "BMRearWheelMaxDroop": {
+     "at": 180,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 792,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 40.0
+    },
+    "BatmobileMassRatio": {
+     "at": 360,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 1032,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 1.0
+    },
+    "BattleModeDriveForceFactor": {
+     "at": 140,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 756,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 75.0
+    },
+    "BattleModeDrivingForceZOffset": {
+     "at": 204,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 804,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 10.0
+    },
+    "BattleModeEngineBrakingFactor": {
+     "at": 108,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 732,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 0.02500000037252903
+    },
+    "BattleModeLatSlipScale": {
+     "at": 92,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 724,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 4.0
+    },
+    "BattleModeLongSlipScale": {
+     "at": 100,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 728,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 10.0
+    },
+    "BattleModeMaxSpeed": {
+     "at": 132,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 752,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 1200.0
+    },
+    "BattleModeMaxSteering": {
+     "at": 76,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 716,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 80.0
+    },
+    "BattleModeRearWheelTorquePower": {
+     "at": 84,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 720,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 0.5
+    },
+    "BattleModeSlopeFactor": {
+     "at": 686,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 1216,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 0.5
+    },
+    "BattleModeSteerAngleFactor": {
+     "at": 164,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 768,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 2.5
+    },
+    "BattleModeSteerBiasRate": {
+     "at": 336,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 964,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 3.0
+    },
+    "BattleModeStopAndTurnAngleMoving": {
+     "at": 156,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 764,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 90.0
+    },
+    "BattleModeStopAndTurnAngleStationary": {
+     "at": 148,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 760,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 60.0
+    },
+    "BattleModeThrottleSpeed": {
+     "at": 124,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 748,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 5.0
+    },
+    "BattleModeTrailingSteerFactorMoving": {
+     "at": 196,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 800,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": -0.5
+    },
+    "BattleModeTrailingSteerFactorTurnOnSpot": {
+     "at": 188,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 796,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 1.0
+    },
+    "BattleModeTurnOnSpotTorqueFactor": {
+     "at": 116,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 736,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 0.30000001192092896
+    },
+    "BattleModeUprightMaxTorque": {
+     "at": 252,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 884,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 2000.0
+    },
+    "BattleModeUprightTorqueFactor": {
+     "at": 244,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 880,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 2000.0
+    },
+    "BoostCooldown_0": {
+     "at": 36,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 668,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 12.0
+    },
+    "BoostCooldown_1": {
+     "at": 44,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 672,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 9.0
+    },
+    "BoostCooldown_2": {
+     "at": 52,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 676,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 6.0
+    },
+    "BoostDuration": {
+     "at": 28,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 664,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 2.0
+    },
+    "BoostDurationDonut": {
+     "at": 60,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 688,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 6.0
+    },
+    "CinematicRevsMax": {
+     "at": 376,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 1052,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 6000.0
+    },
+    "CinematicRevsSensitivity": {
+     "at": 368,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 1048,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 15000.0
+    },
+    "CinematicRevsVelMax": {
+     "at": 384,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 1056,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 15000.0
+    },
+    "CurrentBoostTimer": {
+     "at": 212,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 808,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 1.0
+    },
+    "DesiredTurnOnSpotSpeed": {
+     "at": 20,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 472,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 180.0
+    },
+    "DriveMode": {
+     "at": 308,
+     "bits": null,
+     "kind": "ByteProperty",
+     "offset": 944,
+     "struct": null,
+     "tag_type": "ByteProperty",
+     "value": "None"
+    },
+    "FrontWheelSteerPct": {
+     "at": 320,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 952,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 1.0
+    },
+    "HandBrakeOffTime": {
+     "at": 328,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 960,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 0.30000001192092896
+    },
+    "MaxPMSuspensionSpeed": {
+     "at": 220,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 832,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 1000.0
+    },
+    "PMFrontWheelMaxDroop": {
+     "at": 228,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 836,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 40.0
+    },
+    "PMRearWheelMaxDroop": {
+     "at": 236,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 840,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 40.0
+    },
+    "ScaleTopSpeed": {
+     "at": 638,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 1172,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 1.0
+    },
+    "SkidToPositionFactor": {
+     "at": 344,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 1008,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 50.0
+    },
+    "SkidToPositionMax": {
+     "at": 352,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 1012,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 50.0
+    },
+    "SteeringSpeedChangeDirectionMod": {
+     "at": 694,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 444,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 4.0
+    },
+    "SteeringSpeedReCentreMod": {
+     "at": 702,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 448,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 2.0
+    },
+    "TransformationTurnDecelTorqueFactor": {
+     "at": 268,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 916,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 8000.0
+    },
+    "TransformationTurnFactor": {
+     "at": 284,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 924,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 45.0
+    },
+    "TransformationTurnOnSpotSpeed": {
+     "at": 276,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 920,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 360.0
+    },
+    "TransformationTurnTorqueFactor": {
+     "at": 260,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 912,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 2000.0
+    },
+    "TransmissionModel": {
+     "at": 408,
+     "bits": null,
+     "kind": "StructProperty",
+     "offset": 1060,
+     "struct": 226,
+     "tag_type": "StructProperty",
+     "value": null
+    },
+    "TurnOnSpotFrontTorqueFactor": {
+     "at": 4,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 456,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 0.6000000238418579
+    },
+    "TurnOnSpotRearTorqueFactor": {
+     "at": 12,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 460,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": -0.5
+    },
+    "TurningModeMaxSpeed": {
+     "at": 68,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 708,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 300.0
+    },
+    "WheelInertia": {
+     "at": 710,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 184,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 20.0
+    },
+    "WheelMass": {
+     "at": 718,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 188,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 1.0
+    }
+   }
+  },
+  "shipped_simulation": {
+   "class": "RVehicleSimBatmobile",
+   "end": 4918,
+   "export": 169320,
+   "object": "Default__RVehicleBatmobile.SimulationModel",
+   "package": "Startup.upk",
+   "role": "shipped_simulation",
+   "size": 4920,
+   "stop": "eof",
+   "tag_start": 12,
+   "tags": 43,
+   "values": {
+    "BMWheelSuspensionDamping": {
+     "at": 3120,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 776,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 100.0
+    },
+    "BMWheelSuspensionStiffness": {
+     "at": 3112,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 772,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 1000.0
+    },
+    "BattleModeVSpeedCurve": {
+     "at": 1488,
+     "bits": null,
+     "kind": "StructProperty",
+     "offset": 536,
+     "struct": 336,
+     "tag_type": "StructProperty",
+     "value": null
+    },
+    "BoostSteeringSpeedCurve": {
+     "at": 1844,
+     "bits": null,
+     "kind": "StructProperty",
+     "offset": 556,
+     "struct": 336,
+     "tag_type": "StructProperty",
+     "value": null
+    },
+    "BoostTorqueVSpeedCurve": {
+     "at": 48,
+     "bits": null,
+     "kind": "StructProperty",
+     "offset": 476,
+     "struct": 460,
+     "tag_type": "StructProperty",
+     "value": null
+    },
+    "DriftSteerSpeedVsSpeedCurve": {
+     "at": 4316,
+     "bits": null,
+     "kind": "StructProperty",
+     "offset": 424,
+     "struct": 150,
+     "tag_type": "StructProperty",
+     "value": null
+    },
+    "DriveModeEngineBrakingFactor": {
+     "at": 24,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 468,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 0.003000000026077032
+    },
+    "EngineBrakeFactor": {
+     "at": 4834,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 228,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 0.05000000074505806
+    },
+    "EngineRPMCurve": {
+     "at": 3594,
+     "bits": null,
+     "kind": "StructProperty",
+     "offset": 280,
+     "struct": 460,
+     "tag_type": "StructProperty",
+     "value": null
+    },
+    "FrontalCollisionGripFactor": {
+     "at": 4090,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 368,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 0.18000000715255737
+    },
+    "HandbrakeSteeringSpeedCurve": {
+     "at": 2556,
+     "bits": null,
+     "kind": "StructProperty",
+     "offset": 596,
+     "struct": 88,
+     "tag_type": "StructProperty",
+     "value": null
+    },
+    "HardTurnMotorTorque": {
+     "at": 4082,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 352,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 0.699999988079071
+    },
+    "InAirUprightMaxTorque": {
+     "at": 4106,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 388,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 25.0
+    },
+    "InAirUprightTorqueFactor": {
+     "at": 4098,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 384,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": -30.0
+    },
+    "LSDFactor": {
+     "at": 4058,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 300,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 1.0
+    },
+    "MaxBrakeTorque": {
+     "at": 4850,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 236,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 40.0
+    },
+    "MaxSteerAngleCurve": {
+     "at": 4486,
+     "bits": null,
+     "kind": "StructProperty",
+     "offset": 200,
+     "struct": 336,
+     "tag_type": "StructProperty",
+     "value": null
+    },
+    "NeutralEngineBrakeFactor": {
+     "at": 4842,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 232,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 0.003000000026077032
+    },
+    "PMWheelSuspensionDamping": {
+     "at": 3136,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 816,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 50.0
+    },
+    "PMWheelSuspensionStiffness": {
+     "at": 3128,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 812,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 500.0
+    },
+    "SelfDriveSteeringSpeedCurve": {
+     "at": 2772,
+     "bits": null,
+     "kind": "StructProperty",
+     "offset": 636,
+     "struct": 336,
+     "tag_type": "StructProperty",
+     "value": null
+    },
+    "SlidingUprightMaxTorque": {
+     "at": 4122,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 396,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 250.0
+    },
+    "SlidingUprightTorqueFactor": {
+     "at": 4114,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 392,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": -150.0
+    },
+    "SlipstreamBoostTime": {
+     "at": 3152,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 876,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 3.0
+    },
+    "SlipstreamChargeTime": {
+     "at": 3144,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 872,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 1.5
+    },
+    "SlipstreamTorqueVSpeedCurve": {
+     "at": 1008,
+     "bits": null,
+     "kind": "StructProperty",
+     "offset": 516,
+     "struct": 460,
+     "tag_type": "StructProperty",
+     "value": null
+    },
+    "StandardSteeringSpeedCurve": {
+     "at": 2200,
+     "bits": null,
+     "kind": "StructProperty",
+     "offset": 576,
+     "struct": 336,
+     "tag_type": "StructProperty",
+     "value": null
+    },
+    "StandardTorqueVSpeedCurve": {
+     "at": 528,
+     "bits": null,
+     "kind": "StructProperty",
+     "offset": 496,
+     "struct": 460,
+     "tag_type": "StructProperty",
+     "value": null
+    },
+    "SteerSpeed": {
+     "at": 4826,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 220,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 110.0
+    },
+    "SteerSpeedVsSpeedCurve": {
+     "at": 4146,
+     "bits": null,
+     "kind": "StructProperty",
+     "offset": 404,
+     "struct": 150,
+     "tag_type": "StructProperty",
+     "value": null
+    },
+    "StopThreshold": {
+     "at": 4858,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 240,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 50.0
+    },
+    "ThrottleSpeed": {
+     "at": 4066,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 304,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 200.0
+    },
+    "TorqueVSpeedCurve": {
+     "at": 3176,
+     "bits": null,
+     "kind": "StructProperty",
+     "offset": 260,
+     "struct": 398,
+     "tag_type": "StructProperty",
+     "value": null
+    },
+    "TurnOnSpotModeEngineBrakingFactor": {
+     "at": 16,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 464,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 0.009999999776482582
+    },
+    "TurnOnSpotSteeringSpeedCurve": {
+     "at": 2664,
+     "bits": null,
+     "kind": "StructProperty",
+     "offset": 616,
+     "struct": 88,
+     "tag_type": "StructProperty",
+     "value": null
+    },
+    "UprightCarWhenOn2Wheels": {
+     "at": 4074,
+     "bits": 20,
+     "kind": "BoolProperty",
+     "offset": 320,
+     "struct": null,
+     "tag_type": "BoolProperty",
+     "value": true
+    },
+    "UseFrontWheelSuspensionBias": {
+     "at": 4882,
+     "bits": 4,
+     "kind": "BoolProperty",
+     "offset": 144,
+     "struct": null,
+     "tag_type": "BoolProperty",
+     "value": true
+    },
+    "WheelLatAsymptoteSlip": {
+     "at": 4906,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 176,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 2.0
+    },
+    "WheelLatAsymptoteValue": {
+     "at": 4914,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 180,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 1.0
+    },
+    "WheelLatExtremumValue": {
+     "at": 4898,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 172,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 1.0
+    },
+    "WheelLongAsymptoteValue": {
+     "at": 4890,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 164,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 1.0
+    },
+    "WheelSuspensionDamping": {
+     "at": 4874,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 136,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 50.0
+    },
+    "WheelSuspensionStiffness": {
+     "at": 4866,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 132,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 500.0
+    }
+   }
+  },
+  "vehicle_class_default_object": {
+   "class": "RVehicleBatmobileBase",
+   "end": 3184,
+   "export": 10923,
+   "object": "BmGame.Default__RVehicleBatmobileBase",
+   "package": "BmGame.upk",
+   "role": "vehicle_class_default_object",
+   "size": 3186,
+   "stop": "eof",
+   "tag_start": 0,
+   "tags": 181,
+   "values": {
+    "AbseilBlocked": {
+     "at": 4,
+     "bits": 4194304,
+     "kind": "BoolProperty",
+     "offset": 4568,
+     "struct": null,
+     "tag_type": "BoolProperty",
+     "value": true
+    },
+    "AccelTorqueFactor": {
+     "at": 774,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 6048,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": -0.019999999552965164
+    },
+    "AdjustedCarDirectionFactor": {
+     "at": 910,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 6572,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 8000.0
+    },
+    "ArmourLevels": {
+     "at": 2664,
+     "bits": null,
+     "kind": "ArrayProperty",
+     "offset": 8108,
+     "struct": null,
+     "tag_type": "ArrayProperty",
+     "value": null
+    },
+    "ArmourModeDamageReduction": {
+     "at": 822,
+     "bits": null,
+     "kind": "IntProperty",
+     "offset": 6424,
+     "struct": null,
+     "tag_type": "IntProperty",
+     "value": 20
+    },
+    "BatmobileLevelVolIndex": {
+     "at": 854,
+     "bits": null,
+     "kind": "IntProperty",
+     "offset": 6540,
+     "struct": null,
+     "tag_type": "IntProperty",
+     "value": -1
+    },
+    "BatmobileOnFireDamageRadiusScale": {
+     "at": 2700,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 8128,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 0.004999999888241291
+    },
+    "BatmobileOnFireRadiusDecayDelay": {
+     "at": 2708,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 8132,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 1.0
+    },
+    "BatmobileOnFireRadiusDecayRate": {
+     "at": 2716,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 8136,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 0.10000000149011612
+    },
+    "BatmobileStuckTimeFlip": {
+     "at": 1844,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7456,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 0.5
+    },
+    "BatmobileStuckTimeMax": {
+     "at": 1836,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7452,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 2.0
+    },
+    "BattleDodgeImpulse": {
+     "at": 814,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 6420,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 100000.0
+    },
+    "BattleModeHeight": {
+     "at": 878,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 6556,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 250.0
+    },
+    "BattleModeLength": {
+     "at": 870,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 6552,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 430.0
+    },
+    "BattleModeTransformationAnimName": {
+     "at": 830,
+     "bits": null,
+     "kind": "NameProperty",
+     "offset": 6460,
+     "struct": null,
+     "tag_type": "NameProperty",
+     "value": "Batmobile_V2_Tank_Spread_Open_Game"
+    },
+    "BattleModeWidth": {
+     "at": 862,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 6548,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 265.0
+    },
+    "BattleModeYawOffset": {
+     "at": 806,
+     "bits": null,
+     "kind": "IntProperty",
+     "offset": 6416,
+     "struct": null,
+     "tag_type": "IntProperty",
+     "value": 16384
+    },
+    "BlockRigidBody": {
+     "at": 3152,
+     "bits": 3834576,
+     "kind": "BoolProperty",
+     "offset": 264,
+     "struct": null,
+     "tag_type": "BoolProperty",
+     "value": true
+    },
+    "BlockThrottleUntilReleased": {
+     "at": 12,
+     "bits": 2048,
+     "kind": "BoolProperty",
+     "offset": 4576,
+     "struct": null,
+     "tag_type": "BoolProperty",
+     "value": true
+    },
+    "BoostDynamicTextureStreaming": {
+     "at": 3144,
+     "bits": 1099438080,
+     "kind": "BoolProperty",
+     "offset": 256,
+     "struct": null,
+     "tag_type": "BoolProperty",
+     "value": true
+    },
+    "BrakeSpinOutAngVel": {
+     "at": 782,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 6052,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 90.0
+    },
+    "BrakeSpinOutTorqueFactor": {
+     "at": 790,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 6056,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 5.0
+    },
+    "BurnoutDynamicGridActorTemplate": {
+     "at": 140,
+     "bits": null,
+     "kind": "ObjectProperty",
+     "offset": 4748,
+     "struct": null,
+     "tag_type": "ObjectNCRProperty",
+     "value": 142075
+    },
+    "CameraImpactEffectFactorFwd": {
+     "at": 1772,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7384,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 0.20000000298023224
+    },
+    "CameraImpactEffectFactorSide": {
+     "at": 1780,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7388,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 0.375
+    },
+    "ChassisName": {
+     "at": 2964,
+     "bits": null,
+     "kind": "NameProperty",
+     "offset": 1680,
+     "struct": null,
+     "tag_type": "NameProperty",
+     "value": "Batmobile_Chassis"
+    },
+    "CheatIgnoreCollisionMinSpeedFactor": {
+     "at": 1860,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7496,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 1250.0
+    },
+    "CheatIgnoreCollisionWidth": {
+     "at": 1852,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7492,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 50.0
+    },
+    "CollisionFFWaveForm": {
+     "at": 204,
+     "bits": null,
+     "kind": "ObjectProperty",
+     "offset": 5596,
+     "struct": null,
+     "tag_type": "ObjectNCRProperty",
+     "value": 143335
+    },
+    "CollisionType": {
+     "at": 3176,
+     "bits": null,
+     "kind": "ByteProperty",
+     "offset": 288,
+     "struct": null,
+     "tag_type": "ByteProperty",
+     "value": "COLLIDE_CustomDefault"
+    },
+    "Components": {
+     "at": 3108,
+     "bits": null,
+     "kind": "ArrayProperty",
+     "offset": 92,
+     "struct": null,
+     "tag_type": "ArrayProperty",
+     "value": null
+    },
+    "CurrentDisplayedWeaponGenerator": {
+     "at": 2748,
+     "bits": null,
+     "kind": "IntProperty",
+     "offset": 8216,
+     "struct": null,
+     "tag_type": "IntProperty",
+     "value": -1
+    },
+    "DefaultAkAudible": {
+     "at": 3128,
+     "bits": null,
+     "kind": "ObjectProperty",
+     "offset": 124,
+     "struct": null,
+     "tag_type": "ObjectNCRProperty",
+     "value": 158497
+    },
+    "DefaultTyreUpdates": {
+     "at": 3032,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 2064,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 16.5
+    },
+    "DiedFFWaveForm": {
+     "at": 196,
+     "bits": null,
+     "kind": "ObjectProperty",
+     "offset": 5260,
+     "struct": null,
+     "tag_type": "ObjectNCRProperty",
+     "value": 143336
+    },
+    "DiskBrakeMaterialIndex": {
+     "at": 372,
+     "bits": null,
+     "kind": "IntProperty",
+     "offset": 5916,
+     "struct": null,
+     "tag_type": "IntProperty",
+     "value": 13
+    },
+    "DriftAngularVelocityBySteer": {
+     "at": 2064,
+     "bits": null,
+     "kind": "StructProperty",
+     "offset": 8008,
+     "struct": 240,
+     "tag_type": "StructProperty",
+     "value": null
+    },
+    "DriftAngularVelocityFactor": {
+     "at": 2568,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 8048,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 320.0
+    },
+    "DriftAngularVelocityFactorMax": {
+     "at": 2576,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 8052,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 5760.0
+    },
+    "DriftCorrectionSteerSpeed": {
+     "at": 2616,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 8076,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 1.0
+    },
+    "DriftSpeedBySteer": {
+     "at": 2324,
+     "bits": null,
+     "kind": "StructProperty",
+     "offset": 8028,
+     "struct": 240,
+     "tag_type": "StructProperty",
+     "value": null
+    },
+    "DriftVelocityFactor": {
+     "at": 2584,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 8056,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 15.0
+    },
+    "DriftVelocityFactorMax": {
+     "at": 2592,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 8060,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 9999999.0
+    },
+    "DriftVelocityForcePosOffset": {
+     "at": 2600,
+     "bits": null,
+     "kind": "StructProperty",
+     "offset": 8064,
+     "struct": null,
+     "tag_type": "VectorProperty",
+     "value": [
+      25.0,
+      0.0,
+      0.0
+     ]
+    },
+    "DriftWobbleFrequencyMax": {
+     "at": 2624,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 8080,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 3.0
+    },
+    "DriftWobblePeriodMaxSpeed": {
+     "at": 2632,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 8084,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 1500.0
+    },
+    "DriftWobbleStrengthMax": {
+     "at": 2640,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 8088,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 5.0
+    },
+    "EBrakeAccelForce": {
+     "at": 52,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 4632,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 100000.0
+    },
+    "EBrakeBrakeForce": {
+     "at": 44,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 4628,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 160000.0
+    },
+    "EMPMaterialIndex": {
+     "at": 428,
+     "bits": null,
+     "kind": "IntProperty",
+     "offset": 5936,
+     "struct": null,
+     "tag_type": "IntProperty",
+     "value": 9
+    },
+    "EasyToPush": {
+     "at": 2956,
+     "bits": 67112960,
+     "kind": "BoolProperty",
+     "offset": 1676,
+     "struct": null,
+     "tag_type": "BoolProperty",
+     "value": true
+    },
+    "EbrakeTime": {
+     "at": 36,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 4624,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 1.0
+    },
+    "ExplosiveImpactScreenShake": {
+     "at": 934,
+     "bits": null,
+     "kind": "StructProperty",
+     "offset": 6596,
+     "struct": 272,
+     "tag_type": "StructProperty",
+     "value": null
+    },
+    "FakeExtaSpeedAccel": {
+     "at": 1384,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7160,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 600.0
+    },
+    "FakeExtaSpeedDecel": {
+     "at": 1392,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7164,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 2000.0
+    },
+    "FakeExtraSpeedMax": {
+     "at": 1376,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7156,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 3500.0
+    },
+    "HeadLightsColourBattle": {
+     "at": 1356,
+     "bits": null,
+     "kind": "StructProperty",
+     "offset": 7124,
+     "struct": 16,
+     "tag_type": "StructProperty",
+     "value": null
+    },
+    "HeadLightsColourPursuit": {
+     "at": 1320,
+     "bits": null,
+     "kind": "StructProperty",
+     "offset": 7108,
+     "struct": 16,
+     "tag_type": "StructProperty",
+     "value": null
+    },
+    "Health": {
+     "at": 3084,
+     "bits": null,
+     "kind": "IntProperty",
+     "offset": 1144,
+     "struct": null,
+     "tag_type": "IntProperty",
+     "value": 1000
+    },
+    "HealthRecoverRate": {
+     "at": 2772,
+     "bits": null,
+     "kind": "ArrayProperty",
+     "offset": 8220,
+     "struct": null,
+     "tag_type": "ArrayProperty",
+     "value": null
+    },
+    "HeatSteamBuildUpTime": {
+     "at": 2032,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 8000,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 3.0
+    },
+    "HeatSteamFallOffTime": {
+     "at": 2024,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7996,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 10.0
+    },
+    "HideDriverPitch": {
+     "at": 2808,
+     "bits": null,
+     "kind": "IntProperty",
+     "offset": 8344,
+     "struct": null,
+     "tag_type": "IntProperty",
+     "value": 10000
+    },
+    "HideDriverYaw": {
+     "at": 2816,
+     "bits": null,
+     "kind": "IntProperty",
+     "offset": 8348,
+     "struct": null,
+     "tag_type": "IntProperty",
+     "value": 10000
+    },
+    "HowMuchTheRainAffectsHeatSteam": {
+     "at": 2040,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 8004,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 0.5
+    },
+    "ImpactBoostMod": {
+     "at": 1280,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 6876,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 1.5
+    },
+    "ImpactCivilianVehicleMod": {
+     "at": 1272,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 6872,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 1.0
+    },
+    "ImpactMaxDamage": {
+     "at": 1240,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 6856,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 100.0
+    },
+    "ImpactMaxDamagePow": {
+     "at": 1288,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 6880,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 0.6660000085830688
+    },
+    "ImpactMaxDamageSpeed": {
+     "at": 1248,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 6860,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 200.0
+    },
+    "ImpactMinDamageSpeed": {
+     "at": 1256,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 6864,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 60.0
+    },
+    "ImpactRoadAssistAngVelocityTime": {
+     "at": 742,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 6000,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 0.25
+    },
+    "ImpactRoadAssistAngleStrength": {
+     "at": 766,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 6012,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 1500.0
+    },
+    "ImpactRoadAssistEnemyDuration": {
+     "at": 710,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 5984,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 1.5
+    },
+    "ImpactRoadAssistFactor": {
+     "at": 718,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 5988,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 40000.0
+    },
+    "ImpactRoadAssistLookAheadTime": {
+     "at": 758,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 6008,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 1.0
+    },
+    "ImpactRoadAssistMaxAngle": {
+     "at": 734,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 5996,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 45.0
+    },
+    "ImpactRoadAssistMaxTorque": {
+     "at": 726,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 5992,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 15000.0
+    },
+    "ImpactRoadAssistSceneryDuration": {
+     "at": 702,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 5980,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 0.75
+    },
+    "ImpactRoadAssistSteeringFactor": {
+     "at": 750,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 6004,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 30.0
+    },
+    "ImpactShake": {
+     "at": 1464,
+     "bits": null,
+     "kind": "StructProperty",
+     "offset": 7208,
+     "struct": 272,
+     "tag_type": "StructProperty",
+     "value": null
+    },
+    "ImpactShakeAbandonedVehicleFactor": {
+     "at": 1756,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7372,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 3.0
+    },
+    "ImpactShakeDestructiblesFactor": {
+     "at": 1764,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7376,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 3.0
+    },
+    "ImpactShakeForceFactor": {
+     "at": 1740,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7364,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 0.009999999776482582
+    },
+    "ImpactShakeVehicleFactor": {
+     "at": 1748,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7368,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 2.0
+    },
+    "ImpactSparksSizeName": {
+     "at": 360,
+     "bits": null,
+     "kind": "NameProperty",
+     "offset": 5904,
+     "struct": null,
+     "tag_type": "NameProperty",
+     "value": "Size"
+    },
+    "ImpactStrafeMod": {
+     "at": 1264,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 6868,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 1.5
+    },
+    "JumpLandSparksEffectL": {
+     "at": 124,
+     "bits": null,
+     "kind": "ObjectProperty",
+     "offset": 4716,
+     "struct": null,
+     "tag_type": "ObjectNCRProperty",
+     "value": 157931
+    },
+    "JumpLandSparksEffectR": {
+     "at": 132,
+     "bits": null,
+     "kind": "ObjectProperty",
+     "offset": 4724,
+     "struct": null,
+     "tag_type": "ObjectNCRProperty",
+     "value": 157932
+    },
+    "KillFlipTorque": {
+     "at": 1416,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7192,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": -2000000.0
+    },
+    "KillFlipTorqueDuration": {
+     "at": 1424,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7196,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 1.5
+    },
+    "KillKeepyUpFactor": {
+     "at": 1432,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7200,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 20.0
+    },
+    "KillKeepyUpFactorDuration": {
+     "at": 1440,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7204,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 2.0
+    },
+    "LastMobileTime": {
+     "at": 436,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 5944,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": -100.0
+    },
+    "LowHealthWarningLevel": {
+     "at": 2692,
+     "bits": null,
+     "kind": "IntProperty",
+     "offset": 8124,
+     "struct": null,
+     "tag_type": "IntProperty",
+     "value": 300
+    },
+    "MaxEjectType": {
+     "at": 348,
+     "bits": null,
+     "kind": "ByteProperty",
+     "offset": 5902,
+     "struct": null,
+     "tag_type": "ByteProperty",
+     "value": "EBET_NormalEject"
+    },
+    "MaxWeaponGeneratorPower": {
+     "at": 1948,
+     "bits": null,
+     "kind": "ArrayProperty",
+     "offset": 7920,
+     "struct": null,
+     "tag_type": "ArrayProperty",
+     "value": null
+    },
+    "MuddyCarMaterialIndices": {
+     "at": 396,
+     "bits": null,
+     "kind": "ArrayProperty",
+     "offset": 5920,
+     "struct": null,
+     "tag_type": "ArrayProperty",
+     "value": null
+    },
+    "NPCCheckExtents": {
+     "at": 2916,
+     "bits": null,
+     "kind": "StructProperty",
+     "offset": 4504,
+     "struct": null,
+     "tag_type": "VectorProperty",
+     "value": [
+      400.0,
+      300.0,
+      1000.0
+     ]
+    },
+    "NPCCheckOffset": {
+     "at": 2932,
+     "bits": null,
+     "kind": "StructProperty",
+     "offset": 4516,
+     "struct": null,
+     "tag_type": "VectorProperty",
+     "value": [
+      -50.0,
+      0.0,
+      0.0
+     ]
+    },
+    "NewVehicleSound": {
+     "at": 2948,
+     "bits": null,
+     "kind": "ObjectProperty",
+     "offset": 2072,
+     "struct": null,
+     "tag_type": "ObjectNCRProperty",
+     "value": 134681
+    },
+    "NumGuardPoints": {
+     "at": 2792,
+     "bits": null,
+     "kind": "IntProperty",
+     "offset": 8264,
+     "struct": null,
+     "tag_type": "IntProperty",
+     "value": 12
+    },
+    "PMDodgeDuration": {
+     "at": 2740,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 8164,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 0.25
+    },
+    "PMDodgeForce": {
+     "at": 2732,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 8160,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 6000.0
+    },
+    "PMDodgeTorque": {
+     "at": 2724,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 8156,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 5000.0
+    },
+    "PSMLightTemplate": {
+     "at": 156,
+     "bits": null,
+     "kind": "ObjectProperty",
+     "offset": 4780,
+     "struct": null,
+     "tag_type": "ObjectNCRProperty",
+     "value": 172271
+    },
+    "PassengerNoiseIndex": {
+     "at": 1868,
+     "bits": null,
+     "kind": "IntProperty",
+     "offset": 7804,
+     "struct": null,
+     "tag_type": "IntProperty",
+     "value": -1
+    },
+    "PawnCollision_LookAhead_BaseDist": {
+     "at": 2908,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 2688,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 1000.0
+    },
+    "PlayerCollisionFilter": {
+     "at": 3072,
+     "bits": null,
+     "kind": "ByteProperty",
+     "offset": 953,
+     "struct": null,
+     "tag_type": "ByteProperty",
+     "value": "COF_PlayerVehicle"
+    },
+    "PursuitModeHeight": {
+     "at": 902,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 6568,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 250.0
+    },
+    "PursuitModeLength": {
+     "at": 894,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 6564,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 430.0
+    },
+    "PursuitModeTransformationAnimName": {
+     "at": 842,
+     "bits": null,
+     "kind": "NameProperty",
+     "offset": 6468,
+     "struct": null,
+     "tag_type": "NameProperty",
+     "value": "Batmobile_V2_Tank_Spread_Close_Game"
+    },
+    "PursuitModeWidth": {
+     "at": 886,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 6560,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 220.0
+    },
+    "RoadObstacleAvoidTypes": {
+     "at": 2894,
+     "bits": null,
+     "kind": "StructProperty",
+     "offset": 2544,
+     "struct": 10,
+     "tag_type": "StructProperty",
+     "value": null
+    },
+    "RoadObstacleType": {
+     "at": 2864,
+     "bits": null,
+     "kind": "StructProperty",
+     "offset": 2540,
+     "struct": 10,
+     "tag_type": "StructProperty",
+     "value": null
+    },
+    "ScalarToReduceDestructibleParticlesAtHighSpeed": {
+     "at": 2800,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 8340,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 1.0
+    },
+    "SelfDriveRoadObstacleTypes": {
+     "at": 1226,
+     "bits": null,
+     "kind": "StructProperty",
+     "offset": 6852,
+     "struct": 10,
+     "tag_type": "StructProperty",
+     "value": null
+    },
+    "SideExhaustBoostEffect": {
+     "at": 116,
+     "bits": null,
+     "kind": "ObjectProperty",
+     "offset": 4700,
+     "struct": null,
+     "tag_type": "ObjectNCRProperty",
+     "value": 157928
+    },
+    "SideExhaustBurstEffect": {
+     "at": 108,
+     "bits": null,
+     "kind": "ObjectProperty",
+     "offset": 4692,
+     "struct": null,
+     "tag_type": "ObjectNCRProperty",
+     "value": 157928
+    },
+    "SideSwipeFwdRange": {
+     "at": 1408,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7188,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 500.0
+    },
+    "SideSwipeRange": {
+     "at": 1400,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7184,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 400.0
+    },
+    "StafeImpactImpulse": {
+     "at": 1296,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 6896,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 100000.0
+    },
+    "StayUprightConstraintInstance": {
+     "at": 3024,
+     "bits": null,
+     "kind": "ObjectProperty",
+     "offset": 1772,
+     "struct": null,
+     "tag_type": "ObjectNCRProperty",
+     "value": 170826
+    },
+    "StayUprightConstraintSetup": {
+     "at": 3016,
+     "bits": null,
+     "kind": "ObjectProperty",
+     "offset": 1764,
+     "struct": null,
+     "tag_type": "ObjectNCRProperty",
+     "value": 172112
+    },
+    "StrafeCooldown": {
+     "at": 20,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 4580,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 0.75
+    },
+    "StrafeFwdCorrectionForce": {
+     "at": 28,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 4616,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 3000.0
+    },
+    "TauntPositions": {
+     "at": 460,
+     "bits": null,
+     "kind": "ArrayProperty",
+     "offset": 5960,
+     "struct": null,
+     "tag_type": "ArrayProperty",
+     "value": null
+    },
+    "ThrottleSpeed": {
+     "at": 798,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 6412,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 2.0
+    },
+    "Transform_In_Bed": {
+     "at": 164,
+     "bits": null,
+     "kind": "ObjectProperty",
+     "offset": 4844,
+     "struct": null,
+     "tag_type": "ObjectNCRProperty",
+     "value": 132964
+    },
+    "Transform_In_Reverse_Bed": {
+     "at": 172,
+     "bits": null,
+     "kind": "ObjectProperty",
+     "offset": 4852,
+     "struct": null,
+     "tag_type": "ObjectNCRProperty",
+     "value": 132965
+    },
+    "Transform_Out_Bed": {
+     "at": 180,
+     "bits": null,
+     "kind": "ObjectProperty",
+     "offset": 4860,
+     "struct": null,
+     "tag_type": "ObjectNCRProperty",
+     "value": 132966
+    },
+    "Transform_Out_Reverse_Bed": {
+     "at": 188,
+     "bits": null,
+     "kind": "ObjectProperty",
+     "offset": 4868,
+     "struct": null,
+     "tag_type": "ObjectNCRProperty",
+     "value": 132967
+    },
+    "VehicleImpactEffectFactorFwd": {
+     "at": 1788,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7392,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": -0.15000000596046448
+    },
+    "VehicleImpactEffectFactorSide": {
+     "at": 1796,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7396,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": -0.4000000059604645
+    },
+    "VehicleImpactForceFactorFwd": {
+     "at": 1804,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7400,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": -1.0
+    },
+    "VehicleImpactForceFalloff": {
+     "at": 1812,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7404,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 1500.0
+    },
+    "VehicleImpactForceMax": {
+     "at": 1820,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7408,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 1000.0
+    },
+    "VehicleShovingTorque": {
+     "at": 1828,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7416,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 20000.0
+    },
+    "WeaponGeneratorBonusMultiplier": {
+     "at": 1992,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7964,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 1.0
+    },
+    "WeaponGeneratorDefaultPower": {
+     "at": 2008,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7972,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 1.0
+    },
+    "WeaponGeneratorDodgeBonus": {
+     "at": 1984,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7960,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 0.05000000074505806
+    },
+    "WeaponGeneratorDrain": {
+     "at": 2000,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7968,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 0.25
+    },
+    "WeaponGeneratorHeavyTankKillBonus": {
+     "at": 1976,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7940,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 1.0
+    },
+    "WeaponGeneratorKillBonus": {
+     "at": 1968,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7936,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 0.33340001106262207
+    },
+    "WeaponGeneratorPowerTickUp": {
+     "at": 1924,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7916,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 0.6660000085830688
+    },
+    "WeaponGeneratorScarecrowBonus": {
+     "at": 2016,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7980,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 5.0
+    },
+    "Wheels": {
+     "at": 2992,
+     "bits": null,
+     "kind": "ArrayProperty",
+     "offset": 1708,
+     "struct": null,
+     "tag_type": "ArrayProperty",
+     "value": null
+    },
+    "WispyDynamicGridActorTemplate": {
+     "at": 148,
+     "bits": null,
+     "kind": "ObjectProperty",
+     "offset": 4764,
+     "struct": null,
+     "tag_type": "ObjectNCRProperty",
+     "value": 142076
+    },
+    "XRayMaterialMIC": {
+     "at": 2832,
+     "bits": null,
+     "kind": "ObjectProperty",
+     "offset": 2268,
+     "struct": null,
+     "tag_type": "ObjectNCRProperty",
+     "value": 147501
+    },
+    "fRumbleAbandonedVehicleScaleMultiplier": {
+     "at": 1908,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7824,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 0.5
+    },
+    "fRumbleJumpLandingScaleMultiplier": {
+     "at": 1916,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7828,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 0.25
+    },
+    "fRumbleMinimumThreshold": {
+     "at": 1876,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7808,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 5.0
+    },
+    "fRumblePhysicsObjectMaxValue": {
+     "at": 1900,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7820,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 15.0
+    },
+    "fRumblePhysicsObjectScaleMultiplier": {
+     "at": 1892,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7816,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 0.05000000074505806
+    },
+    "fRumbleWallImpactScaleMultiplier": {
+     "at": 1884,
+     "bits": null,
+     "kind": "FloatProperty",
+     "offset": 7812,
+     "struct": null,
+     "tag_type": "FloatProperty",
+     "value": 0.25
+    }
+   }
+  }
+ },
+ "bodies": [
+  {
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "calls": [
+    {
+     "at": 69,
+     "first_arg_text": "0",
+     "first_arg_value": 0,
+     "kind": "FinalFunction",
+     "target": "RVehicleSimBatmobile.SetDriveMode"
+    },
+    {
+     "at": 134,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "R3rdPersonCamera.EnableCameraDragHardReset"
+    },
+    {
+     "at": 195,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RVehicleBatmobileBase.EquipWeaponAchetype"
+    },
+    {
+     "at": 206,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.SetGlobalAudioState"
+    }
+   ],
+   "constants": [
+    {
+     "at": 6,
+     "kind": "float",
+     "value": 0.0
+    }
+   ],
+   "export": 10515,
+   "label": "RVehicleBatmobileBase.PursuitMode.BeginState",
+   "native_thunk": false,
+   "path": "PursuitMode.BeginState",
+   "refs": [
+    {
+     "at": 1,
+     "ref": "RVehicleBatmobileBase.ImpactRoadAssistTimer",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 12,
+     "ref": "BeginState.BatmobileSim",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 17,
+     "ref": "RVehicleSimBatmobile",
+     "token": "EX_DynamicCast"
+    },
+    {
+     "at": 22,
+     "ref": "Core.SimObj",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 34,
+     "ref": "BeginState.BatmobileSim",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 40,
+     "ref": "RVehicleSimBatmobile.DriveMode",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 46,
+     "ref": "RVehicleSimBatmobile.DriveMode",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 57,
+     "ref": "BeginState.BatmobileSim",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 81,
+     "ref": "BeginState.PreviousStateName",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 96,
+     "ref": "RVehicleBatmobileBase.BattleModeYawOffset",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 105,
+     "ref": "RPlayerController",
+     "token": "EX_DynamicCast"
+    },
+    {
+     "at": 110,
+     "ref": "Core.Controller",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 116,
+     "ref": "Core.PlayerCamera",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 122,
+     "ref": "Core.PlayerCamera",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 144,
+     "ref": "RPlayerController",
+     "token": "EX_DynamicCast"
+    },
+    {
+     "at": 149,
+     "ref": "Core.Controller",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 164,
+     "ref": "RPlayerController",
+     "token": "EX_DynamicCast"
+    },
+    {
+     "at": 169,
+     "ref": "Core.Controller",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 175,
+     "ref": "RPlayerController.PursuitModeCameraLockTime",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 181,
+     "ref": "RPlayerController.PursuitModeCameraLockTime",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 200,
+     "ref": "RVehicleBatmobileBase.PursuitModePrimaryWeapon",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 211,
+     "ref": "Ww_Batmobile.Pursuit",
+     "token": "EX_ObjectConst"
+    }
+   ],
+   "script_bytes": 218
+  },
+  {
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "calls": [
+    {
+     "at": 3,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RVehicleBatmobileBase.IsBoosting"
+    },
+    {
+     "at": 9,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.SetGlobalAudioState"
+    },
+    {
+     "at": 23,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.SetGlobalAudioState"
+    },
+    {
+     "at": 136,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RVehicleBatmobileBase.UpdateDriveAssist"
+    },
+    {
+     "at": 158,
+     "first_arg_text": "0",
+     "first_arg_value": 0.0,
+     "kind": "FinalFunction",
+     "target": "RVehicleBatmobileBase.SetWantAirBrakes"
+    },
+    {
+     "at": 181,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.GetNumWheelsOnGround"
+    },
+    {
+     "at": 414,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RVehicleBatmobileBase.SetWantAirBrakes"
+    },
+    {
+     "at": 433,
+     "first_arg_text": "0",
+     "first_arg_value": 0.0,
+     "kind": "FinalFunction",
+     "target": "RVehicleBatmobileBase.SetWantAirBrakes"
+    },
+    {
+     "at": 478,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RVehicleBatmobileBase.SetWantAirBrakes"
+    },
+    {
+     "at": 531,
+     "first_arg_text": "1",
+     "first_arg_value": 1.0,
+     "kind": "FinalFunction",
+     "target": "RVehicleBatmobileBase.SetWantAirBrakes"
+    },
+    {
+     "at": 550,
+     "first_arg_text": "0",
+     "first_arg_value": 0.0,
+     "kind": "FinalFunction",
+     "target": "RVehicleBatmobileBase.SetWantAirBrakes"
+    },
+    {
+     "at": 607,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RSeqAct_WaitForBatmobileAction.BatmobileMoved"
+    },
+    {
+     "at": 657,
+     "first_arg_text": "false",
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RHudModuleBatmobile.SetBattleMode"
+    },
+    {
+     "at": 673,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RVehicleBatmobileBase.GetAdjustedAvoidanceDirection"
+    }
+   ],
+   "constants": [
+    {
+     "at": 163,
+     "kind": "float",
+     "value": 0.0
+    },
+    {
+     "at": 168,
+     "kind": "float",
+     "value": 0.0
+    },
+    {
+     "at": 228,
+     "kind": "float",
+     "value": 0.2
+    },
+    {
+     "at": 380,
+     "kind": "float",
+     "value": 0.0
+    },
+    {
+     "at": 385,
+     "kind": "float",
+     "value": 1.0
+    },
+    {
+     "at": 403,
+     "kind": "float",
+     "value": 0.0
+    },
+    {
+     "at": 408,
+     "kind": "float",
+     "value": 1.0
+    },
+    {
+     "at": 438,
+     "kind": "float",
+     "value": 0.0
+    },
+    {
+     "at": 443,
+     "kind": "float",
+     "value": 0.0
+    },
+    {
+     "at": 471,
+     "kind": "float",
+     "value": 500.0
+    },
+    {
+     "at": 509,
+     "kind": "float",
+     "value": 1.0
+    },
+    {
+     "at": 524,
+     "kind": "float",
+     "value": 500.0
+    },
+    {
+     "at": 536,
+     "kind": "float",
+     "value": 1.0
+    },
+    {
+     "at": 541,
+     "kind": "float",
+     "value": 1.0
+    },
+    {
+     "at": 555,
+     "kind": "float",
+     "value": 0.0
+    },
+    {
+     "at": 560,
+     "kind": "float",
+     "value": 0.0
+    },
+    {
+     "at": 588,
+     "kind": "float",
+     "value": 80.0
+    }
+   ],
+   "export": 10524,
+   "label": "RVehicleBatmobileBase.PursuitMode.Tick",
+   "native_thunk": false,
+   "path": "PursuitMode.Tick",
+   "refs": [
+    {
+     "at": 14,
+     "ref": "Ww_Batmobile.Boost",
+     "token": "EX_ObjectConst"
+    },
+    {
+     "at": 28,
+     "ref": "Ww_Batmobile.Pursuit",
+     "token": "EX_ObjectConst"
+    },
+    {
+     "at": 35,
+     "ref": "RVehicleBatmobileBase.CurrentStrafeTarget",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 46,
+     "ref": "Tick.DeltaTime",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 56,
+     "ref": "RVehicle.MatineeControlRefCount",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 65,
+     "ref": "RVehicle.HeadlightsSwitchedOn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 72,
+     "ref": "RVehicleBatmobileBase.ForceHeadlightsSwitchedOn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 83,
+     "ref": "Core.Controller",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 96,
+     "ref": "RVehicle.SelfDriveMode",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 111,
+     "ref": "RVehicleSimBatmobile",
+     "token": "EX_DynamicCast"
+    },
+    {
+     "at": 116,
+     "ref": "Core.SimObj",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 122,
+     "ref": "RVehicleSimBatmobile.bSkidToStop",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 129,
+     "ref": "RVehicleSimBatmobile.bSkidToStop",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 141,
+     "ref": "Tick.DeltaTime",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 151,
+     "ref": "RVehicle.MatineeControlRefCount",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 191,
+     "ref": "Tick.BatmobileSim",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 196,
+     "ref": "RVehicleSimBatmobile",
+     "token": "EX_DynamicCast"
+    },
+    {
+     "at": 201,
+     "ref": "Core.SimObj",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 211,
+     "ref": "Tick.BatmobileSim",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 217,
+     "ref": "RVehicleSimBatmobile.AirControlTimeInAir",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 223,
+     "ref": "RVehicleSimBatmobile.AirControlTimeInAir",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 235,
+     "ref": "Tick.RightBrake",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 253,
+     "ref": "Tick.BatmobileSim",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 259,
+     "ref": "RVehicleSimBatmobile.AbsoluteMoveDirection",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 265,
+     "ref": "RVehicleSimBatmobile.AbsoluteMoveDirection",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 282,
+     "ref": "Tick.BatmobileSim",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 288,
+     "ref": "RVehicleSimBatmobile.AbsoluteMoveDirection",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 294,
+     "ref": "RVehicleSimBatmobile.AbsoluteMoveDirection",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 301,
+     "ref": "Tick.LeftBrake",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 320,
+     "ref": "Tick.BatmobileSim",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 326,
+     "ref": "RVehicleSimBatmobile.AbsoluteMoveDirection",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 332,
+     "ref": "RVehicleSimBatmobile.AbsoluteMoveDirection",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 350,
+     "ref": "Tick.BatmobileSim",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 356,
+     "ref": "RVehicleSimBatmobile.AbsoluteMoveDirection",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 362,
+     "ref": "RVehicleSimBatmobile.AbsoluteMoveDirection",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 369,
+     "ref": "Tick.RightBrake",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 375,
+     "ref": "Tick.RightBrake",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 392,
+     "ref": "Tick.LeftBrake",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 398,
+     "ref": "Tick.LeftBrake",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 419,
+     "ref": "Tick.LeftBrake",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 424,
+     "ref": "Tick.RightBrake",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 457,
+     "ref": "Core.bOutputHandbrake",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 466,
+     "ref": "Core.ForwardVel",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 483,
+     "ref": "Core.OutputSteering",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 489,
+     "ref": "Core.OutputSteering",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 504,
+     "ref": "Core.OutputBrake",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 519,
+     "ref": "Core.ForwardVel",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 570,
+     "ref": "RVehicleBatmobileBase.WaitForBatmobileActionSequenceAction",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 582,
+     "ref": "Core.Velocity",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 595,
+     "ref": "RVehicleBatmobileBase.WaitForBatmobileActionSequenceAction",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 616,
+     "ref": "RPlayerController",
+     "token": "EX_DynamicCast"
+    },
+    {
+     "at": 621,
+     "ref": "Core.Controller",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 627,
+     "ref": "RPlayerController.ModularHud",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 633,
+     "ref": "RPlayerController.ModularHud",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 639,
+     "ref": "RGFxMovieModularHud.BatmobileModule",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 645,
+     "ref": "RGFxMovieModularHud.BatmobileModule",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 668,
+     "ref": "RVehicleBatmobileBase.bDebugAdjustedAvoidanceDirection",
+     "token": "EX_InstanceVariable"
+    }
+   ],
+   "script_bytes": 680
+  },
+  {
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "calls": [
+    {
+     "at": 7,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.EndState"
+    }
+   ],
+   "constants": [],
+   "export": 10517,
+   "label": "RVehicleBatmobileBase.PursuitMode.EndState",
+   "native_thunk": false,
+   "path": "PursuitMode.EndState",
+   "refs": [
+    {
+     "at": 1,
+     "ref": "RVehicleBatmobileBase.CurrentStrafeTarget",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 12,
+     "ref": "EndState.NextStateName",
+     "token": "EX_LocalVariable"
+    }
+   ],
+   "script_bytes": 19
+  },
+  {
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "calls": [
+    {
+     "at": 0,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RVehicleBatmobileBase.SendHydraEventBatmobileInputBattleMode"
+    },
+    {
+     "at": 88,
+     "first_arg_text": "2",
+     "first_arg_value": 2,
+     "kind": "FinalFunction",
+     "target": "RVehicleSimBatmobile.SetDriveMode"
+    },
+    {
+     "at": 114,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.ClearTimer"
+    },
+    {
+     "at": 126,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RVehicleBatmobileBase.EquipWeaponAchetype"
+    },
+    {
+     "at": 137,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RVehicleBatmobileBase.EquipSecondaryWeapon"
+    },
+    {
+     "at": 148,
+     "first_arg_text": "true",
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RVehicleBatmobileBase.SetArmouredMode"
+    },
+    {
+     "at": 199,
+     "first_arg_text": "true",
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RHudModuleBatmobile.SetBattleMode"
+    },
+    {
+     "at": 309,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.SetGlobalAudioState"
+    },
+    {
+     "at": 320,
+     "first_arg_text": "0",
+     "first_arg_value": 0.0,
+     "kind": "FinalFunction",
+     "target": "RVehicleBatmobileBase.SetWantAirBrakes"
+    },
+    {
+     "at": 349,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RSeqAct_WaitForBatmobileAction.BatmobileMoved"
+    },
+    {
+     "at": 438,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RGameInfo.GetPC"
+    },
+    {
+     "at": 451,
+     "first_arg_text": "false",
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RPlayerController.RemoveAllBinds"
+    },
+    {
+     "at": 485,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RGameInfo.GetPC"
+    },
+    {
+     "at": 498,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "VirtualFunction",
+     "target": "ChangeColour.BeginState"
+    }
+   ],
+   "constants": [
+    {
+     "at": 212,
+     "kind": "float",
+     "value": 3000.0
+    },
+    {
+     "at": 223,
+     "kind": "float",
+     "value": 3000.0
+    },
+    {
+     "at": 279,
+     "kind": "float",
+     "value": 0.5
+    },
+    {
+     "at": 295,
+     "kind": "float",
+     "value": 0.4
+    },
+    {
+     "at": 325,
+     "kind": "float",
+     "value": 0.0
+    },
+    {
+     "at": 330,
+     "kind": "float",
+     "value": 0.0
+    },
+    {
+     "at": 364,
+     "kind": "float",
+     "value": 2000.0
+    },
+    {
+     "at": 372,
+     "kind": "float",
+     "value": 1.5
+    }
+   ],
+   "export": 10529,
+   "label": "RVehicleBatmobileBase.BattleMode.BeginState",
+   "native_thunk": false,
+   "path": "BattleMode.BeginState",
+   "refs": [
+    {
+     "at": 7,
+     "ref": "BeginState.BatmobileSim",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 12,
+     "ref": "RVehicleSimBatmobile",
+     "token": "EX_DynamicCast"
+    },
+    {
+     "at": 17,
+     "ref": "Core.SimObj",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 24,
+     "ref": "BeginState.BatmobileSim",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 30,
+     "ref": "RVehicleSimBatmobile.TransformationRotation",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 36,
+     "ref": "RVehicleSimBatmobile.TransformationRotation",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 41,
+     "ref": "Core.Rotation",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 53,
+     "ref": "BeginState.BatmobileSim",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 59,
+     "ref": "RVehicleSimBatmobile.DriveMode",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 65,
+     "ref": "RVehicleSimBatmobile.DriveMode",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 76,
+     "ref": "BeginState.BatmobileSim",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 97,
+     "ref": "RPlayerController",
+     "token": "EX_DynamicCast"
+    },
+    {
+     "at": 102,
+     "ref": "Core.Controller",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 131,
+     "ref": "RVehicleBatmobileBase.BattleModePrimaryWeapon",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 142,
+     "ref": "RVehicleBatmobileBase.SecondaryWeapon",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 158,
+     "ref": "RPlayerController",
+     "token": "EX_DynamicCast"
+    },
+    {
+     "at": 163,
+     "ref": "Core.Controller",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 169,
+     "ref": "RPlayerController.ModularHud",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 175,
+     "ref": "RPlayerController.ModularHud",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 181,
+     "ref": "RGFxMovieModularHud.BatmobileModule",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 187,
+     "ref": "RGFxMovieModularHud.BatmobileModule",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 207,
+     "ref": "Core.TyreSmokeWheelSpinThreshold",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 218,
+     "ref": "Core.TyreSmokeSkidThreshold",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 230,
+     "ref": "BeginState.BatmobileSim",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 236,
+     "ref": "RVehicleSimBatmobile.bTakenControlDuringTransformation",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 243,
+     "ref": "RVehicleSimBatmobile.bTakenControlDuringTransformation",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 249,
+     "ref": "RVehicleBatmobileBase.BattleModeYawOffset",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 258,
+     "ref": "BeginState.BatmobileSim",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 264,
+     "ref": "RVehicleSimBatmobile.bDecelerateDuringTransformation",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 271,
+     "ref": "RVehicleSimBatmobile.bDecelerateDuringTransformation",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 314,
+     "ref": "Ww_Batmobile.Battle",
+     "token": "EX_ObjectConst"
+    },
+    {
+     "at": 337,
+     "ref": "RVehicleBatmobileBase.WaitForBatmobileActionSequenceAction",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 359,
+     "ref": "Core.ForwardVel",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 391,
+     "ref": "Core.Driver",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 403,
+     "ref": "RVehicleBatmobileBase.bRemoteDrive",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 414,
+     "ref": "Core.WorldInfo",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 420,
+     "ref": "Core.Game",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 426,
+     "ref": "Core.Game",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 432,
+     "ref": "GetPC.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 461,
+     "ref": "Core.WorldInfo",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 467,
+     "ref": "Core.Game",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 473,
+     "ref": "Core.Game",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 479,
+     "ref": "GetPC.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 506,
+     "ref": "RVehicleBatmobileBase.bAreKeysBound",
+     "token": "EX_InstanceVariable"
+    }
+   ],
+   "script_bytes": 513
+  },
+  {
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "calls": [
+    {
+     "at": 52,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RGameInfo.GetPC"
+    },
+    {
+     "at": 65,
+     "first_arg_text": "false",
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RPlayerController.RemoveAllBinds"
+    },
+    {
+     "at": 99,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RGameInfo.GetPC"
+    },
+    {
+     "at": 112,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "VirtualFunction",
+     "target": "Tick.TargetOffset"
+    },
+    {
+     "at": 159,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RGameInfo.GetPC"
+    },
+    {
+     "at": 172,
+     "first_arg_text": "false",
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RPlayerController.RemoveAllBinds"
+    },
+    {
+     "at": 206,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RGameInfo.GetPC"
+    },
+    {
+     "at": 219,
+     "first_arg_text": "false",
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RPlayerController.BindKeyMapsFromOptions"
+    },
+    {
+     "at": 242,
+     "first_arg_text": "false",
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RVehicleBatmobileBase.SetArmouredMode"
+    },
+    {
+     "at": 293,
+     "first_arg_text": "false",
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RHudModuleBatmobile.SetBattleMode"
+    },
+    {
+     "at": 437,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.ClearTimer"
+    },
+    {
+     "at": 475,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RVehicleBatmobileBase.SendHydraEventBatmobileInputNormalMode"
+    },
+    {
+     "at": 521,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "VirtualFunction",
+     "target": "RBMRoomAIState.PickBestResponderPawn"
+    }
+   ],
+   "constants": [
+    {
+     "at": 458,
+     "kind": "float",
+     "value": 0.0
+    },
+    {
+     "at": 470,
+     "kind": "float",
+     "value": 0.01
+    }
+   ],
+   "export": 10533,
+   "label": "RVehicleBatmobileBase.BattleMode.EndState",
+   "native_thunk": false,
+   "path": "BattleMode.EndState",
+   "refs": [
+    {
+     "at": 5,
+     "ref": "Core.Driver",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 17,
+     "ref": "RVehicleBatmobileBase.bRemoteDrive",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 28,
+     "ref": "Core.WorldInfo",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 34,
+     "ref": "Core.Game",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 40,
+     "ref": "Core.Game",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 46,
+     "ref": "GetPC.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 75,
+     "ref": "Core.WorldInfo",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 81,
+     "ref": "Core.Game",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 87,
+     "ref": "Core.Game",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 93,
+     "ref": "GetPC.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 126,
+     "ref": "RVehicleBatmobileBase.bAreKeysBound",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 135,
+     "ref": "Core.WorldInfo",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 141,
+     "ref": "Core.Game",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 147,
+     "ref": "Core.Game",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 153,
+     "ref": "GetPC.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 182,
+     "ref": "Core.WorldInfo",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 188,
+     "ref": "Core.Game",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 194,
+     "ref": "Core.Game",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 200,
+     "ref": "GetPC.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 227,
+     "ref": "EndState.BatmobileSim",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 232,
+     "ref": "RVehicleSimBatmobile",
+     "token": "EX_DynamicCast"
+    },
+    {
+     "at": 237,
+     "ref": "Core.SimObj",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 252,
+     "ref": "RPlayerController",
+     "token": "EX_DynamicCast"
+    },
+    {
+     "at": 257,
+     "ref": "Core.Controller",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 263,
+     "ref": "RPlayerController.ModularHud",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 269,
+     "ref": "RPlayerController.ModularHud",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 275,
+     "ref": "RGFxMovieModularHud.BatmobileModule",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 281,
+     "ref": "RGFxMovieModularHud.BatmobileModule",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 301,
+     "ref": "Core.TyreSmokeWheelSpinThreshold",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 306,
+     "ref": "Core.TyreSmokeWheelSpinThreshold",
+     "token": "EX_DefaultVariable"
+    },
+    {
+     "at": 312,
+     "ref": "Core.TyreSmokeSkidThreshold",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 317,
+     "ref": "Core.TyreSmokeSkidThreshold",
+     "token": "EX_DefaultVariable"
+    },
+    {
+     "at": 326,
+     "ref": "Core.Controller",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 335,
+     "ref": "EndState.BatmobileSim",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 341,
+     "ref": "RVehicleSimBatmobile.TransformationRotation",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 347,
+     "ref": "RVehicleSimBatmobile.TransformationRotation",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 353,
+     "ref": "Core.Controller",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 359,
+     "ref": "Core.Rotation",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 365,
+     "ref": "Core.Rotation",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 383,
+     "ref": "EndState.BatmobileSim",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 389,
+     "ref": "RVehicleSimBatmobile.TransformationRotation",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 395,
+     "ref": "RVehicleSimBatmobile.TransformationRotation",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 403,
+     "ref": "EndState.BatmobileSim",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 409,
+     "ref": "RVehicleSimBatmobile.bTakenControlDuringTransformation",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 416,
+     "ref": "RVehicleSimBatmobile.bTakenControlDuringTransformation",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 422,
+     "ref": "RVehicleBatmobileBase.BattleModeYawOffset",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 431,
+     "ref": "RVehicleBatmobileBase.bWeaponsReady",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 453,
+     "ref": "RVehicleBatmobileBase.ZapperTime",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 465,
+     "ref": "RVehicleBatmobileBase.ZapperTime",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 482,
+     "ref": "EndState.I",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 492,
+     "ref": "EndState.I",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 504,
+     "ref": "EndState.I",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 509,
+     "ref": "RVehicleBatmobileBase.ActualWeapons",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 528,
+     "ref": "EndState.I",
+     "token": "EX_LocalVariable"
+    }
+   ],
+   "script_bytes": 538
+  },
+  {
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "calls": [
+    {
+     "at": 59,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.SetGlobalAudioState"
+    },
+    {
+     "at": 102,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.SetGlobalAudioState"
+    },
+    {
+     "at": 145,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.SetGlobalAudioState"
+    },
+    {
+     "at": 210,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.SetGlobalAudioState"
+    },
+    {
+     "at": 224,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.SetGlobalAudioState"
+    },
+    {
+     "at": 267,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.SetGlobalAudioState"
+    },
+    {
+     "at": 281,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.SetGlobalAudioState"
+    },
+    {
+     "at": 295,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.SetGlobalAudioState"
+    },
+    {
+     "at": 350,
+     "first_arg_text": "true",
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RHudModuleBatmobile.SetBattleMode"
+    },
+    {
+     "at": 382,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RVehicleBatmobileBase.TryToChangeMode"
+    },
+    {
+     "at": 400,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "VirtualFunction",
+     "target": "Tick.MaxLightChange"
+    },
+    {
+     "at": 438,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.MatrixGetAxis"
+    },
+    {
+     "at": 502,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RVehicleBatmobileBase.TryToChangeMode"
+    }
+   ],
+   "constants": [
+    {
+     "at": 464,
+     "kind": "float",
+     "value": 0.707
+    }
+   ],
+   "export": 10546,
+   "label": "RVehicleBatmobileBase.BattleMode.Tick",
+   "native_thunk": false,
+   "path": "BattleMode.Tick",
+   "refs": [
+    {
+     "at": 5,
+     "ref": "Tick.DeltaTime",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 13,
+     "ref": "RVehicle.HeadlightsSwitchedOn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 23,
+     "ref": "RVehicleBatmobileBase.BatmobileWinch",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 37,
+     "ref": "RVehicleBatmobileBase.BatmobileWinch",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 43,
+     "ref": "RBatmobileWinch.WinchPullType",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 49,
+     "ref": "RBatmobileWinch.WinchPullType",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 64,
+     "ref": "Ww_Batmobile.Charging",
+     "token": "EX_ObjectConst"
+    },
+    {
+     "at": 80,
+     "ref": "RVehicleBatmobileBase.BatmobileWinch",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 86,
+     "ref": "RBatmobileWinch.WinchPullType",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 92,
+     "ref": "RBatmobileWinch.WinchPullType",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 107,
+     "ref": "Ww_Batmobile.Winching",
+     "token": "EX_ObjectConst"
+    },
+    {
+     "at": 123,
+     "ref": "RVehicleBatmobileBase.BatmobileWinch",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 129,
+     "ref": "RBatmobileWinch.WinchPullType",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 135,
+     "ref": "RBatmobileWinch.WinchPullType",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 150,
+     "ref": "Ww_Batmobile.Winching",
+     "token": "EX_ObjectConst"
+    },
+    {
+     "at": 166,
+     "ref": "RVehicleBatmobileBase.BatmobileWinch",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 172,
+     "ref": "RBatmobileWinch.WinchPullType",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 178,
+     "ref": "RBatmobileWinch.WinchPullType",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 192,
+     "ref": "RVehicleBatmobileBase.BatmobileWinch",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 198,
+     "ref": "RBatmobileWinch.ActuallyAbseiling",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 205,
+     "ref": "RBatmobileWinch.ActuallyAbseiling",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 215,
+     "ref": "Ww_Batmobile.Abseiling",
+     "token": "EX_ObjectConst"
+    },
+    {
+     "at": 229,
+     "ref": "Ww_Batmobile.Winching",
+     "token": "EX_ObjectConst"
+    },
+    {
+     "at": 245,
+     "ref": "RVehicleBatmobileBase.BatmobileWinch",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 251,
+     "ref": "RBatmobileWinch.WinchPullType",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 257,
+     "ref": "RBatmobileWinch.WinchPullType",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 272,
+     "ref": "Ww_Batmobile.Winching",
+     "token": "EX_ObjectConst"
+    },
+    {
+     "at": 286,
+     "ref": "Ww_Batmobile.Battle",
+     "token": "EX_ObjectConst"
+    },
+    {
+     "at": 300,
+     "ref": "Ww_Batmobile.Battle",
+     "token": "EX_ObjectConst"
+    },
+    {
+     "at": 309,
+     "ref": "RPlayerController",
+     "token": "EX_DynamicCast"
+    },
+    {
+     "at": 314,
+     "ref": "Core.Controller",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 320,
+     "ref": "RPlayerController.ModularHud",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 326,
+     "ref": "RPlayerController.ModularHud",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 332,
+     "ref": "RGFxMovieModularHud.BatmobileModule",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 338,
+     "ref": "RGFxMovieModularHud.BatmobileModule",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 362,
+     "ref": "Core.Controller",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 374,
+     "ref": "RVehicleBatmobileBase.bBattleModeControlled",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 412,
+     "ref": "RVehicleBatmobileBase.BatmobileStuckTime",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 417,
+     "ref": "RVehicleBatmobileBase.BatmobileStuckTimeFlip",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 444,
+     "ref": "Core.Mesh",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 450,
+     "ref": "Core.LocalToWorld",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 456,
+     "ref": "Core.LocalToWorld",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 478,
+     "ref": "RVehicleBatmobileBase.BatmobileWinch",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 484,
+     "ref": "RBatmobileWinch.WinchPullType",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 490,
+     "ref": "RBatmobileWinch.WinchPullType",
+     "token": "EX_InstanceVariable"
+    }
+   ],
+   "script_bytes": 514
+  },
+  {
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "calls": [
+    {
+     "at": 45,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "VirtualFunction",
+     "target": "RigidBodyCollision.Index1"
+    },
+    {
+     "at": 81,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "VirtualFunction",
+     "target": "RigidBodyCollision.Index1"
+    },
+    {
+     "at": 317,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.AddImpulse"
+    },
+    {
+     "at": 390,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.IsTimerActive"
+    },
+    {
+     "at": 413,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.ClearTimer"
+    },
+    {
+     "at": 495,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "VirtualFunction",
+     "target": "VisualDamageEffect.SoundEffect"
+    },
+    {
+     "at": 532,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "VirtualFunction",
+     "target": "VisualDamageEffect.SoundEffect"
+    },
+    {
+     "at": 569,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "VirtualFunction",
+     "target": "SwingLineCheck.EndLocation"
+    },
+    {
+     "at": 578,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "VirtualFunction",
+     "target": "TraceGroundPath.Start"
+    },
+    {
+     "at": 637,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "VirtualFunction",
+     "target": "RCheatManager.ChallengeAdjustScore"
+    },
+    {
+     "at": 679,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RVehicleCombatManager.GetCurrentEncounterType"
+    },
+    {
+     "at": 690,
+     "first_arg_text": "27",
+     "first_arg_value": 27,
+     "kind": "FinalFunction",
+     "target": "RVehicleBatmobileBase.TutorialActionAchieved"
+    },
+    {
+     "at": 809,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.IsForceFeedbackAllowed"
+    },
+    {
+     "at": 829,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.ClientPlayForceFeedbackWaveform"
+    }
+   ],
+   "constants": [
+    {
+     "at": 11,
+     "kind": "float",
+     "value": 0.0
+    },
+    {
+     "at": 205,
+     "kind": "float",
+     "value": 0.0
+    },
+    {
+     "at": 281,
+     "kind": "float",
+     "value": 2500.0
+    },
+    {
+     "at": 293,
+     "kind": "float",
+     "value": 0.0
+    },
+    {
+     "at": 298,
+     "kind": "float",
+     "value": 1.0
+    },
+    {
+     "at": 337,
+     "kind": "float",
+     "value": 1.0
+    },
+    {
+     "at": 434,
+     "kind": "float",
+     "value": 0.2
+    },
+    {
+     "at": 489,
+     "kind": "float",
+     "value": 0.707
+    },
+    {
+     "at": 526,
+     "kind": "float",
+     "value": -0.707
+    },
+    {
+     "at": 563,
+     "kind": "float",
+     "value": 0.707
+    },
+    {
+     "at": 586,
+     "kind": "float",
+     "value": 0.25
+    },
+    {
+     "at": 843,
+     "kind": "float",
+     "value": 0.75
+    }
+   ],
+   "export": 10544,
+   "label": "RVehicleBatmobileBase.BattleMode.BattleDodge",
+   "native_thunk": false,
+   "path": "BattleMode.BattleDodge",
+   "refs": [
+    {
+     "at": 6,
+     "ref": "RVehicleBatmobileBase.CurrentStrafeCooldown",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 22,
+     "ref": "RVehicleBatmobileBase.SecondaryWeapon",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 33,
+     "ref": "RVehicleBatmobileBase.SecondaryWeapon",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 39,
+     "ref": "CanBattleDodge.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 58,
+     "ref": "RVehicleBatmobileBase.BatmobileWinch",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 69,
+     "ref": "RVehicleBatmobileBase.BatmobileWinch",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 75,
+     "ref": "CanBattleDodge.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 90,
+     "ref": "BattleDodge.PC",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 95,
+     "ref": "RPlayerController",
+     "token": "EX_DynamicCast"
+    },
+    {
+     "at": 100,
+     "ref": "Core.Controller",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 106,
+     "ref": "BattleDodge.StrafeDir",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 111,
+     "ref": "Core.Rotation",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 128,
+     "ref": "BattleDodge.StrafeDir",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 146,
+     "ref": "BattleDodge.StrafeDir",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 151,
+     "ref": "RVehicleBatmobileBase.BattleModeYawOffset",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 158,
+     "ref": "BattleDodge.StrafeVec",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 165,
+     "ref": "BattleDodge.Direction",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 170,
+     "ref": "BattleDodge.StrafeDir",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 181,
+     "ref": "BattleDodge.StrafeVec",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 187,
+     "ref": "BattleDodge.PC",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 193,
+     "ref": "RPlayerController.DrivingCantMoveDir",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 199,
+     "ref": "RPlayerController.DrivingCantMoveDir",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 214,
+     "ref": "BattleDodge.BattleModeMaxSpeed",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 220,
+     "ref": "RVehicleSimBatmobile",
+     "token": "EX_DynamicCast"
+    },
+    {
+     "at": 225,
+     "ref": "Core.SimObj",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 231,
+     "ref": "RVehicleSimBatmobile.BattleModeMaxSpeed",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 237,
+     "ref": "RVehicleSimBatmobile.BattleModeMaxSpeed",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 243,
+     "ref": "BattleDodge.SpeedInDirection",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 250,
+     "ref": "BattleDodge.StrafeVec",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 255,
+     "ref": "Core.Velocity",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 261,
+     "ref": "BattleDodge.BattleModeMaxSpeed",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 268,
+     "ref": "BattleDodge.SpeedInDirection",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 275,
+     "ref": "BattleDodge.SpeedInDirection",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 286,
+     "ref": "BattleDodge.BattleModeMaxSpeed",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 305,
+     "ref": "Core.Mesh",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 325,
+     "ref": "BattleDodge.StrafeVec",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 330,
+     "ref": "RVehicleBatmobileBase.BattleDodgeImpulse",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 342,
+     "ref": "BattleDodge.SpeedInDirection",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 350,
+     "ref": "RVehicleSimBatmobile",
+     "token": "EX_DynamicCast"
+    },
+    {
+     "at": 355,
+     "ref": "Core.SimObj",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 361,
+     "ref": "RVehicleSimBatmobile.BatmobileMassRatio",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 367,
+     "ref": "RVehicleSimBatmobile.BatmobileMassRatio",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 382,
+     "ref": "RVehicleBatmobileBase.bDoubleDodgeUpgrade",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 403,
+     "ref": "RVehicleBatmobileBase.CurrentStrafeCooldown",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 408,
+     "ref": "RVehicleBatmobileBase.StrafeCooldown",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 429,
+     "ref": "RVehicleBatmobileBase.CurrentStrafeCooldown",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 441,
+     "ref": "RVehicleBatmobileBase.StrafeCooldown",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 459,
+     "ref": "RVehicleBatmobileBase.CurrentStrafeCooldown",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 464,
+     "ref": "RVehicleBatmobileBase.StrafeCooldown",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 484,
+     "ref": "BattleDodge.Direction",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 521,
+     "ref": "BattleDodge.Direction",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 558,
+     "ref": "BattleDodge.Direction",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 601,
+     "ref": "BattleDodge.Game",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 607,
+     "ref": "Core.WorldInfo",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 613,
+     "ref": "Core.Game",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 619,
+     "ref": "Core.Game",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 625,
+     "ref": "BattleDodge.PC",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 655,
+     "ref": "BattleDodge.Game",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 661,
+     "ref": "RGameInfo.VehicleCombatManager",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 667,
+     "ref": "RGameInfo.VehicleCombatManager",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 673,
+     "ref": "GetCurrentEncounterType.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 700,
+     "ref": "BattleDodge.PC",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 706,
+     "ref": "RPlayerController.NumBatmobileCannonHits",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 712,
+     "ref": "RPlayerController.NumBatmobileCannonHits",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 726,
+     "ref": "BattleDodge.PC",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 732,
+     "ref": "Core.ForceFeedbackManager",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 738,
+     "ref": "Core.ForceFeedbackManager",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 744,
+     "ref": "Core.FFWaveform",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 750,
+     "ref": "Core.FFWaveform",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 762,
+     "ref": "BattleDodge.PC",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 768,
+     "ref": "Core.PlayerInput",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 774,
+     "ref": "Core.PlayerInput",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 780,
+     "ref": "Core.bUsingGamepad",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 787,
+     "ref": "Core.bUsingGamepad",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 797,
+     "ref": "BattleDodge.PC",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 803,
+     "ref": "Core.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 817,
+     "ref": "BattleDodge.PC",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 834,
+     "ref": "RVehicleBatmobileBase.BattleDodgeFFWaveForm",
+     "token": "EX_InstanceVariable"
+    }
+   ],
+   "script_bytes": 858
+  },
+  {
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "calls": [
+    {
+     "at": 58,
+     "first_arg_text": "0",
+     "first_arg_value": 0,
+     "kind": "FinalFunction",
+     "target": "RVehicleSimBatmobile.SetDriveMode"
+    },
+    {
+     "at": 66,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RVehicleNPCBatmobile.EquipWeaponAchetype"
+    }
+   ],
+   "constants": [],
+   "export": 129841,
+   "label": "RVehicleNPCBatmobile.PursuitMode.BeginState",
+   "native_thunk": false,
+   "path": "PursuitMode.BeginState",
+   "refs": [
+    {
+     "at": 1,
+     "ref": "BeginState.BatmobileSim",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 6,
+     "ref": "RVehicleSimBatmobile",
+     "token": "EX_DynamicCast"
+    },
+    {
+     "at": 11,
+     "ref": "Core.SimObj",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 23,
+     "ref": "BeginState.BatmobileSim",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 29,
+     "ref": "RVehicleSimBatmobile.DriveMode",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 35,
+     "ref": "RVehicleSimBatmobile.DriveMode",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 46,
+     "ref": "BeginState.BatmobileSim",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 71,
+     "ref": "RVehicleNPCBatmobile.PursuitModePrimaryWeapon",
+     "token": "EX_InstanceVariable"
+    }
+   ],
+   "script_bytes": 78
+  },
+  {
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "calls": [
+    {
+     "at": 103,
+     "first_arg_text": "2",
+     "first_arg_value": 2,
+     "kind": "FinalFunction",
+     "target": "RVehicleSimBatmobile.SetDriveMode"
+    },
+    {
+     "at": 129,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.ClearTimer"
+    },
+    {
+     "at": 141,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RVehicleNPCBatmobile.EquipWeaponAchetype"
+    },
+    {
+     "at": 152,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RVehicleNPCBatmobile.EquipSecondaryWeapon"
+    },
+    {
+     "at": 163,
+     "first_arg_text": "true",
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RVehicleNPCBatmobile.SetArmouredMode"
+    },
+    {
+     "at": 214,
+     "first_arg_text": "true",
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RHudModuleBatmobile.SetBattleMode"
+    }
+   ],
+   "constants": [
+    {
+     "at": 1,
+     "kind": "int",
+     "value": 33631488
+    },
+    {
+     "at": 227,
+     "kind": "float",
+     "value": 3000.0
+    },
+    {
+     "at": 238,
+     "kind": "float",
+     "value": 3000.0
+    },
+    {
+     "at": 287,
+     "kind": "float",
+     "value": 0.5
+    }
+   ],
+   "export": 129848,
+   "label": "RVehicleNPCBatmobile.BattleMode.BeginState",
+   "native_thunk": false,
+   "path": "BattleMode.BeginState",
+   "refs": [
+    {
+     "at": 10,
+     "ref": "BeginState.PreviousStateName",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 22,
+     "ref": "BeginState.BatmobileSim",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 27,
+     "ref": "RVehicleSimBatmobile",
+     "token": "EX_DynamicCast"
+    },
+    {
+     "at": 32,
+     "ref": "Core.SimObj",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 39,
+     "ref": "BeginState.BatmobileSim",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 45,
+     "ref": "RVehicleSimBatmobile.TransformationRotation",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 51,
+     "ref": "RVehicleSimBatmobile.TransformationRotation",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 56,
+     "ref": "Core.Rotation",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 68,
+     "ref": "BeginState.BatmobileSim",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 74,
+     "ref": "RVehicleSimBatmobile.DriveMode",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 80,
+     "ref": "RVehicleSimBatmobile.DriveMode",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 91,
+     "ref": "BeginState.BatmobileSim",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 112,
+     "ref": "RPlayerController",
+     "token": "EX_DynamicCast"
+    },
+    {
+     "at": 117,
+     "ref": "Core.Controller",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 146,
+     "ref": "RVehicleNPCBatmobile.BattleModePrimaryWeapon",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 157,
+     "ref": "RVehicleNPCBatmobile.SecondaryWeapon",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 173,
+     "ref": "RPlayerController",
+     "token": "EX_DynamicCast"
+    },
+    {
+     "at": 178,
+     "ref": "Core.Controller",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 184,
+     "ref": "RPlayerController.ModularHud",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 190,
+     "ref": "RPlayerController.ModularHud",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 196,
+     "ref": "RGFxMovieModularHud.BatmobileModule",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 202,
+     "ref": "RGFxMovieModularHud.BatmobileModule",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 222,
+     "ref": "Core.TyreSmokeWheelSpinThreshold",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 233,
+     "ref": "Core.TyreSmokeSkidThreshold",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 245,
+     "ref": "BeginState.BatmobileSim",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 251,
+     "ref": "RVehicleSimBatmobile.bTakenControlDuringTransformation",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 258,
+     "ref": "RVehicleSimBatmobile.bTakenControlDuringTransformation",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 266,
+     "ref": "BeginState.BatmobileSim",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 272,
+     "ref": "RVehicleSimBatmobile.bDecelerateDuringTransformation",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 279,
+     "ref": "RVehicleSimBatmobile.bDecelerateDuringTransformation",
+     "token": "EX_InstanceVariable"
+    }
+   ],
+   "script_bytes": 302
+  },
+  {
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "calls": [
+    {
+     "at": 5,
+     "first_arg_text": "0.7",
+     "first_arg_value": 0.699999988079071,
+     "kind": "FinalFunction",
+     "target": "Core.GetNumWheelsOnFlatGround"
+    },
+    {
+     "at": 207,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RVehicleBatmobileBase.GetBatmobileDodgeDirection"
+    },
+    {
+     "at": 233,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "VirtualFunction",
+     "target": "SwingLineCheck.EndLocation"
+    },
+    {
+     "at": 242,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "VirtualFunction",
+     "target": "TraceGroundPath.Start"
+    },
+    {
+     "at": 288,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RVehicleBatmobileBase.KickStrafe"
+    },
+    {
+     "at": 388,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RVehicleCombatManager.GetCurrentEncounterType"
+    },
+    {
+     "at": 425,
+     "first_arg_text": "65",
+     "first_arg_value": 65,
+     "kind": "FinalFunction",
+     "target": "RPersistentData.TutorialActionAchieved"
+    }
+   ],
+   "constants": [
+    {
+     "at": 10,
+     "kind": "float",
+     "value": 0.7
+    },
+    {
+     "at": 28,
+     "kind": "float",
+     "value": 800.0
+    },
+    {
+     "at": 46,
+     "kind": "float",
+     "value": 0.0
+    },
+    {
+     "at": 73,
+     "kind": "float",
+     "value": 1200.0
+    },
+    {
+     "at": 126,
+     "kind": "float",
+     "value": 2500.0
+    },
+    {
+     "at": 151,
+     "kind": "float",
+     "value": 0.0
+    },
+    {
+     "at": 178,
+     "kind": "float",
+     "value": 0.5
+    },
+    {
+     "at": 227,
+     "kind": "float",
+     "value": 0.0
+    },
+    {
+     "at": 269,
+     "kind": "float",
+     "value": -0.1
+    },
+    {
+     "at": 318,
+     "kind": "float",
+     "value": 0.25
+    }
+   ],
+   "export": 10581,
+   "label": "RVehicleBatmobileBase.VehicleStrafe",
+   "native_thunk": false,
+   "path": "RVehicleBatmobileBase.VehicleStrafe",
+   "refs": [
+    {
+     "at": 23,
+     "ref": "Core.ForwardVel",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 41,
+     "ref": "RVehicleBatmobileBase.CurrentStrafeCooldown",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 59,
+     "ref": "Core.bIsOnJump",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 68,
+     "ref": "Core.ForwardVel",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 83,
+     "ref": "RVehicleBatmobileBase.StrafeTarget",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 90,
+     "ref": "VehicleStrafe.Torque",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 95,
+     "ref": "RVehicleBatmobileBase.PMDodgeTorque",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 101,
+     "ref": "VehicleStrafe.Force",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 107,
+     "ref": "RVehicleBatmobileBase.PMDodgeForce",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 114,
+     "ref": "Core.ForwardVel",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 121,
+     "ref": "RVehicleBatmobileBase.PMDodgeForce",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 135,
+     "ref": "VehicleStrafe.NextStrafeDuration",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 140,
+     "ref": "RVehicleBatmobileBase.PMDodgeDuration",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 146,
+     "ref": "RVehicleBatmobileBase.LastStrafeRange",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 157,
+     "ref": "RVehicleBatmobileBase.StrafeTarget",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 162,
+     "ref": "VehicleStrafe.Target",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 172,
+     "ref": "VehicleStrafe.Direction",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 185,
+     "ref": "VehicleStrafe.Direction",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 191,
+     "ref": "VehicleStrafe.Direction",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 202,
+     "ref": "VehicleStrafe.Direction",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 212,
+     "ref": "VehicleStrafe.Target",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 222,
+     "ref": "VehicleStrafe.Direction",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 249,
+     "ref": "VehicleStrafe.Torque",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 254,
+     "ref": "VehicleStrafe.Direction",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 264,
+     "ref": "Core.ForwardVel",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 276,
+     "ref": "VehicleStrafe.Torque",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 282,
+     "ref": "VehicleStrafe.Torque",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 294,
+     "ref": "VehicleStrafe.Force",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 299,
+     "ref": "VehicleStrafe.Direction",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 305,
+     "ref": "VehicleStrafe.Torque",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 310,
+     "ref": "VehicleStrafe.NextStrafeDuration",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 333,
+     "ref": "VehicleStrafe.Game",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 339,
+     "ref": "Core.WorldInfo",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 345,
+     "ref": "Core.Game",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 351,
+     "ref": "Core.Game",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 364,
+     "ref": "VehicleStrafe.Game",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 370,
+     "ref": "RGameInfo.VehicleCombatManager",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 376,
+     "ref": "RGameInfo.VehicleCombatManager",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 382,
+     "ref": "GetCurrentEncounterType.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 401,
+     "ref": "VehicleStrafe.Game",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 407,
+     "ref": "RGameInfoBase.PersistentData",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 413,
+     "ref": "RGameInfoBase.PersistentData",
+     "token": "EX_InstanceVariable"
+    }
+   ],
+   "script_bytes": 440
+  },
+  {
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "calls": [
+    {
+     "at": 3,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.IsButtonInputIgnored"
+    },
+    {
+     "at": 24,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "VirtualFunction",
+     "target": "GetMostWantedData_DLC.Discoverable"
+    }
+   ],
+   "constants": [],
+   "export": 104977,
+   "label": "RPlayerController.DrivingMode.VehicleStrafe",
+   "native_thunk": false,
+   "path": "DrivingMode.VehicleStrafe",
+   "refs": [
+    {
+     "at": 12,
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 18,
+     "ref": "VehicleStrafe.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 29,
+     "ref": "VehicleStrafe.Direction",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 34,
+     "ref": "RPlayerController.BatmobileSideSwipeTarget",
+     "token": "EX_InstanceVariable"
+    }
+   ],
+   "script_bytes": 41
+  },
+  {
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "calls": [
+    {
+     "at": 3,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "VirtualFunction",
+     "target": "SetExtraDistance.T"
+    },
+    {
+     "at": 36,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.IsButtonInputIgnored"
+    }
+   ],
+   "constants": [
+    {
+     "at": 57,
+     "kind": "float",
+     "value": 0.2
+    },
+    {
+     "at": 79,
+     "kind": "float",
+     "value": 0.3333
+    }
+   ],
+   "export": 104979,
+   "label": "RPlayerController.DrivingMode.BattleStrafe",
+   "native_thunk": false,
+   "path": "DrivingMode.BattleStrafe",
+   "refs": [
+    {
+     "at": 19,
+     "ref": "RAffectPlayerVolume.AffectPlayerVolumeInfo",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 26,
+     "ref": "RPlayerController.AffectPlayerInfo",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 48,
+     "ref": "RPlayerController.CapeGlideTarget",
+     "token": "EX_InstanceVariable"
+    }
+   ],
+   "script_bytes": 94
+  },
+  {
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "calls": [
+    {
+     "at": 34,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "VirtualFunction",
+     "target": "SetExtraDistance.T"
+    },
+    {
+     "at": 67,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.IsButtonInputIgnored"
+    }
+   ],
+   "constants": [
+    {
+     "at": 81,
+     "kind": "float",
+     "value": 0.3333
+    }
+   ],
+   "export": 104980,
+   "label": "RPlayerController.DrivingMode.DelayedBattleStrafe",
+   "native_thunk": false,
+   "path": "DrivingMode.DelayedBattleStrafe",
+   "refs": [
+    {
+     "at": 7,
+     "ref": "Core.PlayerInput",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 13,
+     "ref": "RPlayerInput.bRunButton",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 19,
+     "ref": "RPlayerInput.bRunButton",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 50,
+     "ref": "RAffectPlayerVolume.AffectPlayerVolumeInfo",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 57,
+     "ref": "RPlayerController.AffectPlayerInfo",
+     "token": "EX_InstanceVariable"
+    }
+   ],
+   "script_bytes": 96
+  },
+  {
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "calls": [
+    {
+     "at": 3,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.IsTimerActive"
+    },
+    {
+     "at": 15,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "VirtualFunction",
+     "target": "GetRECHitReactionAnimName.ReturnValue"
+    }
+   ],
+   "constants": [
+    {
+     "at": 26,
+     "kind": "float",
+     "value": 0.5
+    }
+   ],
+   "export": 104981,
+   "label": "RPlayerController.DrivingMode.PursuitStrafeOn",
+   "native_thunk": false,
+   "path": "DrivingMode.PursuitStrafeOn",
+   "refs": [],
+   "script_bytes": 41
+  },
+  {
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "calls": [
+    {
+     "at": 3,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "VirtualFunction",
+     "target": "SetExtraDistance.T"
+    },
+    {
+     "at": 14,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.IsButtonInputIgnored"
+    },
+    {
+     "at": 22,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "VirtualFunction",
+     "target": "DoPostAssignmentBark.ContextFlags"
+    },
+    {
+     "at": 266,
+     "first_arg_text": "0.7",
+     "first_arg_value": 0.699999988079071,
+     "kind": "FinalFunction",
+     "target": "Core.GetNumWheelsOnFlatGround"
+    },
+    {
+     "at": 322,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "VirtualFunction",
+     "target": "GetMostWantedData_DLC.Discoverable"
+    },
+    {
+     "at": 338,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.ClearTimer"
+    }
+   ],
+   "constants": [
+    {
+     "at": 223,
+     "kind": "int",
+     "value": 16384
+    },
+    {
+     "at": 271,
+     "kind": "float",
+     "value": 0.7
+    }
+   ],
+   "export": 104988,
+   "label": "RPlayerController.DrivingMode.PursuitStrafe",
+   "native_thunk": false,
+   "path": "DrivingMode.PursuitStrafe",
+   "refs": [
+    {
+     "at": 27,
+     "ref": "PursuitStrafe.X",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 32,
+     "ref": "PursuitStrafe.Y",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 37,
+     "ref": "PursuitStrafe.Z",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 45,
+     "ref": "PursuitStrafe.MoveDir",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 53,
+     "ref": "Core.PlayerInput",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 59,
+     "ref": "Core.aBaseY",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 65,
+     "ref": "Core.aBaseY",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 70,
+     "ref": "PursuitStrafe.X",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 78,
+     "ref": "Core.PlayerInput",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 84,
+     "ref": "Core.aStrafe",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 90,
+     "ref": "Core.aStrafe",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 95,
+     "ref": "PursuitStrafe.Y",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 103,
+     "ref": "PursuitStrafe.RightRot",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 109,
+     "ref": "Core.Pawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 115,
+     "ref": "Core.Rotation",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 121,
+     "ref": "Core.Rotation",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 138,
+     "ref": "PursuitStrafe.RightRot",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 149,
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 155,
+     "ref": "Core.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 182,
+     "ref": "PursuitStrafe.RightRot",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 188,
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 194,
+     "ref": "RVehicleBatmobileBase.BattleModeYawOffset",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 200,
+     "ref": "RVehicleBatmobileBase.BattleModeYawOffset",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 218,
+     "ref": "PursuitStrafe.RightRot",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 230,
+     "ref": "PursuitStrafe.Strafe",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 238,
+     "ref": "PursuitStrafe.RightRot",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 243,
+     "ref": "PursuitStrafe.MoveDir",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 254,
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 260,
+     "ref": "Core.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 285,
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 291,
+     "ref": "Core.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 310,
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 316,
+     "ref": "VehicleStrafe.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 327,
+     "ref": "PursuitStrafe.Strafe",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 332,
+     "ref": "RPlayerController.BatmobileSideSwipeTarget",
+     "token": "EX_InstanceVariable"
+    }
+   ],
+   "script_bytes": 351
+  },
+  {
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "calls": [
+    {
+     "at": 30,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "VirtualFunction",
+     "target": "DoPostAssignmentBark.ContextFlags"
+    },
+    {
+     "at": 294,
+     "first_arg_text": "0.7",
+     "first_arg_value": 0.699999988079071,
+     "kind": "FinalFunction",
+     "target": "Core.GetNumWheelsOnFlatGround"
+    },
+    {
+     "at": 362,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "VirtualFunction",
+     "target": "GrenGrateAssignmentFound.responderSearchAEC"
+    },
+    {
+     "at": 381,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.ClearTimer"
+    },
+    {
+     "at": 393,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.ClearTimer"
+    },
+    {
+     "at": 436,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "VirtualFunction",
+     "target": "GrenGrateAssignmentFound.responderSearchAEC"
+    },
+    {
+     "at": 455,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.ClearTimer"
+    },
+    {
+     "at": 467,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.ClearTimer"
+    },
+    {
+     "at": 510,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "VirtualFunction",
+     "target": "GrenGrateAssignmentFound.responderSearchAEC"
+    },
+    {
+     "at": 529,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.ClearTimer"
+    },
+    {
+     "at": 541,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.ClearTimer"
+    },
+    {
+     "at": 584,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "VirtualFunction",
+     "target": "GrenGrateAssignmentFound.responderSearchAEC"
+    },
+    {
+     "at": 603,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.ClearTimer"
+    },
+    {
+     "at": 615,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.ClearTimer"
+    },
+    {
+     "at": 695,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "RPawnBossFireflyBase.InRangeForTakedownPrompt"
+    },
+    {
+     "at": 796,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "VirtualFunction",
+     "target": "GetMostWantedData_DLC.Discoverable"
+    },
+    {
+     "at": 812,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.ClearTimer"
+    },
+    {
+     "at": 824,
+     "first_arg_text": null,
+     "first_arg_value": null,
+     "kind": "FinalFunction",
+     "target": "Core.ClearTimer"
+    }
+   ],
+   "constants": [
+    {
+     "at": 10,
+     "kind": "float",
+     "value": 1.0
+    },
+    {
+     "at": 251,
+     "kind": "int",
+     "value": 16384
+    },
+    {
+     "at": 299,
+     "kind": "float",
+     "value": 0.7
+    },
+    {
+     "at": 343,
+     "kind": "float",
+     "value": 0.5
+    },
+    {
+     "at": 417,
+     "kind": "float",
+     "value": -0.5
+    },
+    {
+     "at": 491,
+     "kind": "float",
+     "value": 0.5
+    },
+    {
+     "at": 565,
+     "kind": "float",
+     "value": -0.5
+    },
+    {
+     "at": 764,
+     "kind": "float",
+     "value": 0.9
+    }
+   ],
+   "export": 104998,
+   "label": "RPlayerController.DrivingMode.CheckBattleStrafe",
+   "native_thunk": false,
+   "path": "DrivingMode.CheckBattleStrafe",
+   "refs": [
+    {
+     "at": 5,
+     "ref": "RPlayerController.MaxDriveSpeed",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 20,
+     "ref": "RPlayerController.BatmobileNearDoorway",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 35,
+     "ref": "CheckBattleStrafe.X",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 40,
+     "ref": "CheckBattleStrafe.Y",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 45,
+     "ref": "CheckBattleStrafe.Z",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 53,
+     "ref": "CheckBattleStrafe.MoveDir",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 61,
+     "ref": "Core.PlayerInput",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 67,
+     "ref": "Core.aBaseY",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 73,
+     "ref": "Core.aBaseY",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 78,
+     "ref": "CheckBattleStrafe.X",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 86,
+     "ref": "Core.PlayerInput",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 92,
+     "ref": "Core.aStrafe",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 98,
+     "ref": "Core.aStrafe",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 103,
+     "ref": "CheckBattleStrafe.Y",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 111,
+     "ref": "CheckBattleStrafe.RightRot",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 117,
+     "ref": "Core.Pawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 123,
+     "ref": "Core.Rotation",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 129,
+     "ref": "Core.Rotation",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 146,
+     "ref": "CheckBattleStrafe.RightRot",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 157,
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 163,
+     "ref": "Core.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 190,
+     "ref": "CheckBattleStrafe.RightRot",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 196,
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 202,
+     "ref": "RVehicleBatmobileBase.BattleModeYawOffset",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 208,
+     "ref": "RVehicleBatmobileBase.BattleModeYawOffset",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 215,
+     "ref": "CheckBattleStrafe.Fwd",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 223,
+     "ref": "CheckBattleStrafe.RightRot",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 228,
+     "ref": "CheckBattleStrafe.MoveDir",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 246,
+     "ref": "CheckBattleStrafe.RightRot",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 258,
+     "ref": "CheckBattleStrafe.Strafe",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 266,
+     "ref": "CheckBattleStrafe.RightRot",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 271,
+     "ref": "CheckBattleStrafe.MoveDir",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 282,
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 288,
+     "ref": "Core.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 313,
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 319,
+     "ref": "Core.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 338,
+     "ref": "CheckBattleStrafe.Strafe",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 350,
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 373,
+     "ref": "RGameInfo.RiddlerPuzzlePiece",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 412,
+     "ref": "CheckBattleStrafe.Strafe",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 424,
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 447,
+     "ref": "RBM2Behaviour_IdleConfig.AllowAiming",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 486,
+     "ref": "CheckBattleStrafe.Fwd",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 498,
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 517,
+     "ref": "RGameInfo.RiddlerPuzzlePiece",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 560,
+     "ref": "CheckBattleStrafe.Fwd",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 572,
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 591,
+     "ref": "RBM2Behaviour_IdleConfig.AllowAiming",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 634,
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 640,
+     "ref": "RVehicleBatmobileBase.bAllowPMDodge",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 647,
+     "ref": "RVehicleBatmobileBase.bAllowPMDodge",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 653,
+     "ref": "CheckBattleStrafe.FF",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 658,
+     "ref": "RPawnBossFireflyBase",
+     "token": "EX_DynamicCast"
+    },
+    {
+     "at": 663,
+     "ref": "RPlayerController.CurrentBossPawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 672,
+     "ref": "CheckBattleStrafe.FF",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 683,
+     "ref": "CheckBattleStrafe.FF",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 689,
+     "ref": "InRangeForTakedownPrompt.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 701,
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 707,
+     "ref": "Core.Location",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 713,
+     "ref": "Core.Location",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 721,
+     "ref": "CheckBattleStrafe.FFInRange",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 733,
+     "ref": "CheckBattleStrafe.FFInRange",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 746,
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 752,
+     "ref": "Core.Steering",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 758,
+     "ref": "Core.Steering",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 774,
+     "ref": "RPlayerController.BatmobileSideSwipeTarget",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 784,
+     "ref": "RPlayerController.BatmobilePawn",
+     "token": "EX_InstanceVariable"
+    },
+    {
+     "at": 790,
+     "ref": "VehicleStrafe.ReturnValue",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 801,
+     "ref": "CheckBattleStrafe.Strafe",
+     "token": "EX_LocalVariable"
+    },
+    {
+     "at": 806,
+     "ref": "RPlayerController.BatmobileSideSwipeTarget",
+     "token": "EX_InstanceVariable"
+    }
+   ],
+   "script_bytes": 837
+  }
+ ],
+ "card": "G3-02l",
+ "cdo_drive_mode_tag": {
+  "at": 308,
+  "bits": null,
+  "kind": "ByteProperty",
+  "offset": 944,
+  "struct": null,
+  "tag_type": "ByteProperty",
+  "value": "None"
+ },
+ "comparisons": [
+  {
+   "at": 95,
+   "export": 10515,
+   "field": "BattleModeYawOffset",
+   "path": "RVehicleBatmobileBase.PursuitMode.BeginState",
+   "token": "0x9a"
+  },
+  {
+   "at": 248,
+   "export": 10529,
+   "field": "BattleModeYawOffset",
+   "path": "RVehicleBatmobileBase.BattleMode.BeginState",
+   "token": "0x9b"
+  },
+  {
+   "at": 421,
+   "export": 10533,
+   "field": "BattleModeYawOffset",
+   "path": "RVehicleBatmobileBase.BattleMode.EndState",
+   "token": "0x9b"
+  }
+ ],
+ "contradictions": [],
+ "corpus": [
+  {
+   "at": 231,
+   "export": 10544,
+   "field": "BattleModeMaxSpeed",
+   "field_export": 129688,
+   "function": "BattleMode.BattleDodge",
+   "token": "0x00"
+  },
+  {
+   "at": 237,
+   "export": 10544,
+   "field": "BattleModeMaxSpeed",
+   "field_export": 129688,
+   "function": "BattleMode.BattleDodge",
+   "token": "0x01"
+  },
+  {
+   "at": 259,
+   "export": 10524,
+   "field": "AbsoluteMoveDirection",
+   "field_export": 129656,
+   "function": "PursuitMode.Tick",
+   "token": "0x00"
+  },
+  {
+   "at": 265,
+   "export": 10524,
+   "field": "AbsoluteMoveDirection",
+   "field_export": 129656,
+   "function": "PursuitMode.Tick",
+   "token": "0x01"
+  },
+  {
+   "at": 288,
+   "export": 10524,
+   "field": "AbsoluteMoveDirection",
+   "field_export": 129656,
+   "function": "PursuitMode.Tick",
+   "token": "0x00"
+  },
+  {
+   "at": 294,
+   "export": 10524,
+   "field": "AbsoluteMoveDirection",
+   "field_export": 129656,
+   "function": "PursuitMode.Tick",
+   "token": "0x01"
+  },
+  {
+   "at": 326,
+   "export": 10524,
+   "field": "AbsoluteMoveDirection",
+   "field_export": 129656,
+   "function": "PursuitMode.Tick",
+   "token": "0x00"
+  },
+  {
+   "at": 332,
+   "export": 10524,
+   "field": "AbsoluteMoveDirection",
+   "field_export": 129656,
+   "function": "PursuitMode.Tick",
+   "token": "0x01"
+  },
+  {
+   "at": 356,
+   "export": 10524,
+   "field": "AbsoluteMoveDirection",
+   "field_export": 129656,
+   "function": "PursuitMode.Tick",
+   "token": "0x00"
+  },
+  {
+   "at": 362,
+   "export": 10524,
+   "field": "AbsoluteMoveDirection",
+   "field_export": 129656,
+   "function": "PursuitMode.Tick",
+   "token": "0x01"
+  },
+  {
+   "at": 42,
+   "export": 48209,
+   "field": "AbsoluteMoveDirection",
+   "field_export": 129656,
+   "function": "RBatmobileWinch.DriverLeft",
+   "token": "0x00"
+  },
+  {
+   "at": 48,
+   "export": 48209,
+   "field": "AbsoluteMoveDirection",
+   "field_export": 129656,
+   "function": "RBatmobileWinch.DriverLeft",
+   "token": "0x01"
+  },
+  {
+   "at": 455,
+   "export": 101666,
+   "field": "AbsoluteMoveDirection",
+   "field_export": 129656,
+   "function": "RadioMode.PlayerTick",
+   "token": "0x00"
+  },
+  {
+   "at": 461,
+   "export": 101666,
+   "field": "AbsoluteMoveDirection",
+   "field_export": 129656,
+   "function": "RadioMode.PlayerTick",
+   "token": "0x01"
+  },
+  {
+   "at": 247,
+   "export": 104918,
+   "field": "AbsoluteMoveDirection",
+   "field_export": 129656,
+   "function": "DrivingMode.StartRun",
+   "token": "0x00"
+  },
+  {
+   "at": 253,
+   "export": 104918,
+   "field": "AbsoluteMoveDirection",
+   "field_export": 129656,
+   "function": "DrivingMode.StartRun",
+   "token": "0x01"
+  },
+  {
+   "at": 139,
+   "export": 104919,
+   "field": "AbsoluteMoveDirection",
+   "field_export": 129656,
+   "function": "DrivingMode.EndRun",
+   "token": "0x00"
+  },
+  {
+   "at": 145,
+   "export": 104919,
+   "field": "AbsoluteMoveDirection",
+   "field_export": 129656,
+   "function": "DrivingMode.EndRun",
+   "token": "0x01"
+  },
+  {
+   "at": 96,
+   "export": 10515,
+   "field": "BattleModeYawOffset",
+   "field_export": 9736,
+   "function": "PursuitMode.BeginState",
+   "token": "0x01"
+  },
+  {
+   "at": 249,
+   "export": 10529,
+   "field": "BattleModeYawOffset",
+   "field_export": 9736,
+   "function": "BattleMode.BeginState",
+   "token": "0x01"
+  },
+  {
+   "at": 422,
+   "export": 10533,
+   "field": "BattleModeYawOffset",
+   "field_export": 9736,
+   "function": "BattleMode.EndState",
+   "token": "0x01"
+  },
+  {
+   "at": 151,
+   "export": 10544,
+   "field": "BattleModeYawOffset",
+   "field_export": 9736,
+   "function": "BattleMode.BattleDodge",
+   "token": "0x01"
+  },
+  {
+   "at": 194,
+   "export": 104988,
+   "field": "BattleModeYawOffset",
+   "field_export": 9736,
+   "function": "DrivingMode.PursuitStrafe",
+   "token": "0x00"
+  },
+  {
+   "at": 200,
+   "export": 104988,
+   "field": "BattleModeYawOffset",
+   "field_export": 9736,
+   "function": "DrivingMode.PursuitStrafe",
+   "token": "0x01"
+  },
+  {
+   "at": 202,
+   "export": 104998,
+   "field": "BattleModeYawOffset",
+   "field_export": 9736,
+   "function": "DrivingMode.CheckBattleStrafe",
+   "token": "0x00"
+  },
+  {
+   "at": 208,
+   "export": 104998,
+   "field": "BattleModeYawOffset",
+   "field_export": 9736,
+   "function": "DrivingMode.CheckBattleStrafe",
+   "token": "0x01"
+  },
+  {
+   "at": 408,
+   "export": 10544,
+   "field": "StrafeCooldown",
+   "field_export": 9902,
+   "function": "BattleMode.BattleDodge",
+   "token": "0x01"
+  },
+  {
+   "at": 441,
+   "export": 10544,
+   "field": "StrafeCooldown",
+   "field_export": 9902,
+   "function": "BattleMode.BattleDodge",
+   "token": "0x01"
+  },
+  {
+   "at": 464,
+   "export": 10544,
+   "field": "StrafeCooldown",
+   "field_export": 9902,
+   "function": "BattleMode.BattleDodge",
+   "token": "0x01"
+  },
+  {
+   "at": 382,
+   "export": 10656,
+   "field": "StrafeCooldown",
+   "field_export": 9902,
+   "function": "RVehicleBatmobileBase.CalculateAndStoreImpactDamage",
+   "token": "0x01"
+  },
+  {
+   "at": 95,
+   "export": 10581,
+   "field": "PMDodgeTorque",
+   "field_export": 9572,
+   "function": "RVehicleBatmobileBase.VehicleStrafe",
+   "token": "0x01"
+  },
+  {
+   "at": 4369,
+   "export": 74513,
+   "field": "PMDodgeTorque",
+   "field_export": 9572,
+   "function": "RDebugMenuContent.DoGadgetsMenu",
+   "token": "0x00"
+  },
+  {
+   "at": 4375,
+   "export": 74513,
+   "field": "PMDodgeTorque",
+   "field_export": 9572,
+   "function": "RDebugMenuContent.DoGadgetsMenu",
+   "token": "0x01"
+  },
+  {
+   "at": 4435,
+   "export": 74513,
+   "field": "PMDodgeTorque",
+   "field_export": 9572,
+   "function": "RDebugMenuContent.DoGadgetsMenu",
+   "token": "0x00"
+  },
+  {
+   "at": 4441,
+   "export": 74513,
+   "field": "PMDodgeTorque",
+   "field_export": 9572,
+   "function": "RDebugMenuContent.DoGadgetsMenu",
+   "token": "0x01"
+  },
+  {
+   "at": 107,
+   "export": 10581,
+   "field": "PMDodgeForce",
+   "field_export": 9571,
+   "function": "RVehicleBatmobileBase.VehicleStrafe",
+   "token": "0x01"
+  },
+  {
+   "at": 121,
+   "export": 10581,
+   "field": "PMDodgeForce",
+   "field_export": 9571,
+   "function": "RVehicleBatmobileBase.VehicleStrafe",
+   "token": "0x01"
+  },
+  {
+   "at": 4243,
+   "export": 74513,
+   "field": "PMDodgeForce",
+   "field_export": 9571,
+   "function": "RDebugMenuContent.DoGadgetsMenu",
+   "token": "0x00"
+  },
+  {
+   "at": 4249,
+   "export": 74513,
+   "field": "PMDodgeForce",
+   "field_export": 9571,
+   "function": "RDebugMenuContent.DoGadgetsMenu",
+   "token": "0x01"
+  },
+  {
+   "at": 4308,
+   "export": 74513,
+   "field": "PMDodgeForce",
+   "field_export": 9571,
+   "function": "RDebugMenuContent.DoGadgetsMenu",
+   "token": "0x00"
+  },
+  {
+   "at": 4314,
+   "export": 74513,
+   "field": "PMDodgeForce",
+   "field_export": 9571,
+   "function": "RDebugMenuContent.DoGadgetsMenu",
+   "token": "0x01"
+  },
+  {
+   "at": 140,
+   "export": 10581,
+   "field": "PMDodgeDuration",
+   "field_export": 9570,
+   "function": "RVehicleBatmobileBase.VehicleStrafe",
+   "token": "0x01"
+  },
+  {
+   "at": 4496,
+   "export": 74513,
+   "field": "PMDodgeDuration",
+   "field_export": 9570,
+   "function": "RDebugMenuContent.DoGadgetsMenu",
+   "token": "0x00"
+  },
+  {
+   "at": 4502,
+   "export": 74513,
+   "field": "PMDodgeDuration",
+   "field_export": 9570,
+   "function": "RDebugMenuContent.DoGadgetsMenu",
+   "token": "0x01"
+  },
+  {
+   "at": 4564,
+   "export": 74513,
+   "field": "PMDodgeDuration",
+   "field_export": 9570,
+   "function": "RDebugMenuContent.DoGadgetsMenu",
+   "token": "0x00"
+  },
+  {
+   "at": 4570,
+   "export": 74513,
+   "field": "PMDodgeDuration",
+   "field_export": 9570,
+   "function": "RDebugMenuContent.DoGadgetsMenu",
+   "token": "0x01"
+  },
+  {
+   "at": 330,
+   "export": 10544,
+   "field": "BattleDodgeImpulse",
+   "field_export": 9735,
+   "function": "BattleMode.BattleDodge",
+   "token": "0x01"
+  },
+  {
+   "at": 40,
+   "export": 10515,
+   "field": "DriveMode",
+   "field_export": 129646,
+   "function": "PursuitMode.BeginState",
+   "token": "0x00"
+  },
+  {
+   "at": 46,
+   "export": 10515,
+   "field": "DriveMode",
+   "field_export": 129646,
+   "function": "PursuitMode.BeginState",
+   "token": "0x01"
+  },
+  {
+   "at": 59,
+   "export": 10529,
+   "field": "DriveMode",
+   "field_export": 129646,
+   "function": "BattleMode.BeginState",
+   "token": "0x00"
+  },
+  {
+   "at": 65,
+   "export": 10529,
+   "field": "DriveMode",
+   "field_export": 129646,
+   "function": "BattleMode.BeginState",
+   "token": "0x01"
+  },
+  {
+   "at": 29,
+   "export": 129841,
+   "field": "DriveMode",
+   "field_export": 129646,
+   "function": "PursuitMode.BeginState",
+   "token": "0x00"
+  },
+  {
+   "at": 35,
+   "export": 129841,
+   "field": "DriveMode",
+   "field_export": 129646,
+   "function": "PursuitMode.BeginState",
+   "token": "0x01"
+  },
+  {
+   "at": 74,
+   "export": 129848,
+   "field": "DriveMode",
+   "field_export": 129646,
+   "function": "BattleMode.BeginState",
+   "token": "0x00"
+  },
+  {
+   "at": 80,
+   "export": 129848,
+   "field": "DriveMode",
+   "field_export": 129646,
+   "function": "BattleMode.BeginState",
+   "token": "0x01"
+  },
+  {
+   "at": 6,
+   "export": 10544,
+   "field": "CurrentStrafeCooldown",
+   "field_export": 9901,
+   "function": "BattleMode.BattleDodge",
+   "token": "0x01"
+  },
+  {
+   "at": 403,
+   "export": 10544,
+   "field": "CurrentStrafeCooldown",
+   "field_export": 9901,
+   "function": "BattleMode.BattleDodge",
+   "token": "0x01"
+  },
+  {
+   "at": 429,
+   "export": 10544,
+   "field": "CurrentStrafeCooldown",
+   "field_export": 9901,
+   "function": "BattleMode.BattleDodge",
+   "token": "0x01"
+  },
+  {
+   "at": 459,
+   "export": 10544,
+   "field": "CurrentStrafeCooldown",
+   "field_export": 9901,
+   "function": "BattleMode.BattleDodge",
+   "token": "0x01"
+  },
+  {
+   "at": 41,
+   "export": 10581,
+   "field": "CurrentStrafeCooldown",
+   "field_export": 9901,
+   "function": "RVehicleBatmobileBase.VehicleStrafe",
+   "token": "0x01"
+  },
+  {
+   "at": 370,
+   "export": 10656,
+   "field": "CurrentStrafeCooldown",
+   "field_export": 9901,
+   "function": "RVehicleBatmobileBase.CalculateAndStoreImpactDamage",
+   "token": "0x01"
+  }
+ ],
+ "enum": {
+  "count": 4,
+  "export": 129610,
+  "path": "RVehicleSimBatmobile.EBatmobileDriveMode",
+  "values": [
+   {
+    "name": "BMDM_Drive",
+    "name_index": 10387,
+    "number": 0,
+    "value": 0
+   },
+   {
+    "name": "BMDM_TurnOnSpot",
+    "name_index": 10389,
+    "number": 0,
+    "value": 1
+   },
+   {
+    "name": "BMDM_BattleMode",
+    "name_index": 10386,
+    "number": 0,
+    "value": 2
+   },
+   {
+    "name": "BMDM_MAX",
+    "name_index": 10388,
+    "number": 0,
+    "value": 3
+   }
+  ]
+ },
+ "fields": [
+  {
+   "class_default": "None",
+   "class_default_bits": null,
+   "kind": "ByteProperty",
+   "member": "DriveMode",
+   "offset": 944,
+   "offset_hex": "0x03b0",
+   "owner": "RVehicleSimBatmobile",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "EBatmobileDriveMode",
+   "vehicle_default": null,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": 0.6000000238418579,
+   "class_default_bits": null,
+   "kind": "FloatProperty",
+   "member": "TurnOnSpotFrontTorqueFactor",
+   "offset": 456,
+   "offset_hex": "0x01c8",
+   "owner": "RVehicleSimBatmobile",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "float",
+   "vehicle_default": null,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": -0.5,
+   "class_default_bits": null,
+   "kind": "FloatProperty",
+   "member": "TurnOnSpotRearTorqueFactor",
+   "offset": 460,
+   "offset_hex": "0x01cc",
+   "owner": "RVehicleSimBatmobile",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "float",
+   "vehicle_default": null,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": null,
+   "class_default_bits": null,
+   "kind": "FloatProperty",
+   "member": "TurnOnSpotModeEngineBrakingFactor",
+   "offset": 464,
+   "offset_hex": "0x01d0",
+   "owner": "RVehicleSimBatmobile",
+   "shipped": 0.009999999776482582,
+   "shipped_bits": null,
+   "type": "float",
+   "vehicle_default": null,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": null,
+   "class_default_bits": null,
+   "kind": "FloatProperty",
+   "member": "DriveModeEngineBrakingFactor",
+   "offset": 468,
+   "offset_hex": "0x01d4",
+   "owner": "RVehicleSimBatmobile",
+   "shipped": 0.003000000026077032,
+   "shipped_bits": null,
+   "type": "float",
+   "vehicle_default": null,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": 180.0,
+   "class_default_bits": null,
+   "kind": "FloatProperty",
+   "member": "DesiredTurnOnSpotSpeed",
+   "offset": 472,
+   "offset_hex": "0x01d8",
+   "owner": "RVehicleSimBatmobile",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "float",
+   "vehicle_default": null,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": 300.0,
+   "class_default_bits": null,
+   "kind": "FloatProperty",
+   "member": "TurningModeMaxSpeed",
+   "offset": 708,
+   "offset_hex": "0x02c4",
+   "owner": "RVehicleSimBatmobile",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "float",
+   "vehicle_default": null,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": null,
+   "class_default_bits": null,
+   "kind": "BoolProperty",
+   "member": "ForceTurnOnSpotMode",
+   "offset": 660,
+   "offset_hex": "0x0294",
+   "owner": "RVehicleSimBatmobile",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "bool",
+   "vehicle_default": null,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": null,
+   "class_default_bits": null,
+   "kind": "BoolProperty",
+   "member": "BattleModeMoving",
+   "offset": 660,
+   "offset_hex": "0x0294",
+   "owner": "RVehicleSimBatmobile",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "bool",
+   "vehicle_default": null,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": null,
+   "class_default_bits": null,
+   "kind": "BoolProperty",
+   "member": "bBattleModeReversing",
+   "offset": 660,
+   "offset_hex": "0x0294",
+   "owner": "RVehicleSimBatmobile",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "bool",
+   "vehicle_default": null,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": 0.30000001192092896,
+   "class_default_bits": null,
+   "kind": "FloatProperty",
+   "member": "BattleModeTurnOnSpotTorqueFactor",
+   "offset": 736,
+   "offset_hex": "0x02e0",
+   "owner": "RVehicleSimBatmobile",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "float",
+   "vehicle_default": null,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": 60.0,
+   "class_default_bits": null,
+   "kind": "FloatProperty",
+   "member": "BattleModeStopAndTurnAngleStationary",
+   "offset": 760,
+   "offset_hex": "0x02f8",
+   "owner": "RVehicleSimBatmobile",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "float",
+   "vehicle_default": null,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": 90.0,
+   "class_default_bits": null,
+   "kind": "FloatProperty",
+   "member": "BattleModeStopAndTurnAngleMoving",
+   "offset": 764,
+   "offset_hex": "0x02fc",
+   "owner": "RVehicleSimBatmobile",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "float",
+   "vehicle_default": null,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": 2.5,
+   "class_default_bits": null,
+   "kind": "FloatProperty",
+   "member": "BattleModeSteerAngleFactor",
+   "offset": 768,
+   "offset_hex": "0x0300",
+   "owner": "RVehicleSimBatmobile",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "float",
+   "vehicle_default": null,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": 1.0,
+   "class_default_bits": null,
+   "kind": "FloatProperty",
+   "member": "BattleModeTrailingSteerFactorTurnOnSpot",
+   "offset": 796,
+   "offset_hex": "0x031c",
+   "owner": "RVehicleSimBatmobile",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "float",
+   "vehicle_default": null,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": -0.5,
+   "class_default_bits": null,
+   "kind": "FloatProperty",
+   "member": "BattleModeTrailingSteerFactorMoving",
+   "offset": 800,
+   "offset_hex": "0x0320",
+   "owner": "RVehicleSimBatmobile",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "float",
+   "vehicle_default": null,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": 80.0,
+   "class_default_bits": null,
+   "kind": "FloatProperty",
+   "member": "BattleModeMaxSteering",
+   "offset": 716,
+   "offset_hex": "0x02cc",
+   "owner": "RVehicleSimBatmobile",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "float",
+   "vehicle_default": null,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": 0.5,
+   "class_default_bits": null,
+   "kind": "FloatProperty",
+   "member": "BattleModeRearWheelTorquePower",
+   "offset": 720,
+   "offset_hex": "0x02d0",
+   "owner": "RVehicleSimBatmobile",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "float",
+   "vehicle_default": null,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": null,
+   "class_default_bits": null,
+   "kind": "FloatProperty",
+   "member": "BattleModeFrontThrottle",
+   "offset": 740,
+   "offset_hex": "0x02e4",
+   "owner": "RVehicleSimBatmobile",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "float",
+   "vehicle_default": null,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": null,
+   "class_default_bits": null,
+   "kind": "FloatProperty",
+   "member": "BattleModeRearThrottle",
+   "offset": 744,
+   "offset_hex": "0x02e8",
+   "owner": "RVehicleSimBatmobile",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "float",
+   "vehicle_default": null,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": 75.0,
+   "class_default_bits": null,
+   "kind": "FloatProperty",
+   "member": "BattleModeDriveForceFactor",
+   "offset": 756,
+   "offset_hex": "0x02f4",
+   "owner": "RVehicleSimBatmobile",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "float",
+   "vehicle_default": null,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": 1200.0,
+   "class_default_bits": null,
+   "kind": "FloatProperty",
+   "member": "BattleModeMaxSpeed",
+   "offset": 752,
+   "offset_hex": "0x02f0",
+   "owner": "RVehicleSimBatmobile",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "float",
+   "vehicle_default": null,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": 5.0,
+   "class_default_bits": null,
+   "kind": "FloatProperty",
+   "member": "BattleModeThrottleSpeed",
+   "offset": 748,
+   "offset_hex": "0x02ec",
+   "owner": "RVehicleSimBatmobile",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "float",
+   "vehicle_default": null,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": 4.0,
+   "class_default_bits": null,
+   "kind": "FloatProperty",
+   "member": "BattleModeLatSlipScale",
+   "offset": 724,
+   "offset_hex": "0x02d4",
+   "owner": "RVehicleSimBatmobile",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "float",
+   "vehicle_default": null,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": 10.0,
+   "class_default_bits": null,
+   "kind": "FloatProperty",
+   "member": "BattleModeLongSlipScale",
+   "offset": 728,
+   "offset_hex": "0x02d8",
+   "owner": "RVehicleSimBatmobile",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "float",
+   "vehicle_default": null,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": 0.02500000037252903,
+   "class_default_bits": null,
+   "kind": "FloatProperty",
+   "member": "BattleModeEngineBrakingFactor",
+   "offset": 732,
+   "offset_hex": "0x02dc",
+   "owner": "RVehicleSimBatmobile",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "float",
+   "vehicle_default": null,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": 10.0,
+   "class_default_bits": null,
+   "kind": "FloatProperty",
+   "member": "BattleModeDrivingForceZOffset",
+   "offset": 804,
+   "offset_hex": "0x0324",
+   "owner": "RVehicleSimBatmobile",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "float",
+   "vehicle_default": null,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": null,
+   "class_default_bits": null,
+   "kind": "StructProperty",
+   "member": "BattleModeVSpeedCurve",
+   "offset": 536,
+   "offset_hex": "0x0218",
+   "owner": "RVehicleSimBatmobile",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "FInterpCurveFloat",
+   "vehicle_default": null,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": null,
+   "class_default_bits": null,
+   "kind": "StructProperty",
+   "member": "TurnOnSpotSteeringSpeedCurve",
+   "offset": 616,
+   "offset_hex": "0x0268",
+   "owner": "RVehicleSimBatmobile",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "FInterpCurveFloat",
+   "vehicle_default": null,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": 1.0,
+   "class_default_bits": null,
+   "kind": "FloatProperty",
+   "member": "FrontWheelSteerPct",
+   "offset": 952,
+   "offset_hex": "0x03b8",
+   "owner": "RVehicleSimBatmobile",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "float",
+   "vehicle_default": null,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": null,
+   "class_default_bits": null,
+   "kind": "FloatProperty",
+   "member": "RearWheelSteerPct",
+   "offset": 948,
+   "offset_hex": "0x03b4",
+   "owner": "RVehicleSimBatmobile",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "float",
+   "vehicle_default": null,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": null,
+   "class_default_bits": null,
+   "kind": "StructProperty",
+   "member": "AbsoluteMoveDirection",
+   "offset": 888,
+   "offset_hex": "0x0378",
+   "owner": "RVehicleSimBatmobile",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "Vector3",
+   "vehicle_default": null,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": null,
+   "class_default_bits": null,
+   "kind": "IntProperty",
+   "member": "BattleModeYawOffset",
+   "offset": 6416,
+   "offset_hex": "0x1910",
+   "owner": "RVehicleBatmobileBase",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "int",
+   "vehicle_default": 16384,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": null,
+   "class_default_bits": null,
+   "kind": "BoolProperty",
+   "member": "bForceBattleModeMovement",
+   "offset": 4572,
+   "offset_hex": "0x11dc",
+   "owner": "RVehicleBatmobileBase",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "bool",
+   "vehicle_default": null,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": null,
+   "class_default_bits": null,
+   "kind": "FloatProperty",
+   "member": "StrafeCooldown",
+   "offset": 4580,
+   "offset_hex": "0x11e4",
+   "owner": "RVehicleBatmobileBase",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "float",
+   "vehicle_default": 0.75,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": null,
+   "class_default_bits": null,
+   "kind": "FloatProperty",
+   "member": "StrafeFwdCorrectionForce",
+   "offset": 4616,
+   "offset_hex": "0x1208",
+   "owner": "RVehicleBatmobileBase",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "float",
+   "vehicle_default": 3000.0,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": null,
+   "class_default_bits": null,
+   "kind": "FloatProperty",
+   "member": "PMDodgeTorque",
+   "offset": 8156,
+   "offset_hex": "0x1fdc",
+   "owner": "RVehicleBatmobileBase",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "float",
+   "vehicle_default": 5000.0,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": null,
+   "class_default_bits": null,
+   "kind": "FloatProperty",
+   "member": "PMDodgeForce",
+   "offset": 8160,
+   "offset_hex": "0x1fe0",
+   "owner": "RVehicleBatmobileBase",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "float",
+   "vehicle_default": 6000.0,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": null,
+   "class_default_bits": null,
+   "kind": "FloatProperty",
+   "member": "PMDodgeDuration",
+   "offset": 8164,
+   "offset_hex": "0x1fe4",
+   "owner": "RVehicleBatmobileBase",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "float",
+   "vehicle_default": 0.25,
+   "vehicle_default_bits": null
+  },
+  {
+   "class_default": null,
+   "class_default_bits": null,
+   "kind": "FloatProperty",
+   "member": "BattleDodgeImpulse",
+   "offset": 6420,
+   "offset_hex": "0x1914",
+   "owner": "RVehicleBatmobileBase",
+   "shipped": null,
+   "shipped_bits": null,
+   "type": "float",
+   "vehicle_default": 100000.0,
+   "vehicle_default_bits": null
+  }
+ ],
+ "generator": "grab_drive_modes.py",
+ "menu_moves": [
+  {
+   "exports": [
+    {
+     "class": "ObjectProperty",
+     "export": 104540,
+     "path": "RPlayerController.BatmobileSideSwipeTarget",
+     "script_bytes": 0
+    }
+   ],
+   "name": "BatmobileSideSwipeTarget"
+  },
+  {
+   "exports": [
+    {
+     "class": "Function",
+     "export": 99028,
+     "path": "RPlayerController.GetMovementAxes",
+     "script_bytes": 25
+    },
+    {
+     "class": "Function",
+     "export": 101019,
+     "path": "LedgeHanging.GetMovementAxes",
+     "script_bytes": 147
+    }
+   ],
+   "name": "GetMovementAxes"
+  },
+  {
+   "exports": [
+    {
+     "class": "Function",
+     "export": 10536,
+     "path": "BattleMode.VehicleStrafe",
+     "script_bytes": 7
+    },
+    {
+     "class": "Function",
+     "export": 10581,
+     "path": "RVehicleBatmobileBase.VehicleStrafe",
+     "script_bytes": 440
+    },
+    {
+     "class": "Function",
+     "export": 104977,
+     "path": "DrivingMode.VehicleStrafe",
+     "script_bytes": 41
+    }
+   ],
+   "name": "VehicleStrafe"
+  },
+  {
+   "exports": [
+    {
+     "class": "Function",
+     "export": 10519,
+     "path": "PursuitMode.BattleDodge",
+     "script_bytes": 52
+    },
+    {
+     "class": "Function",
+     "export": 10544,
+     "path": "BattleMode.BattleDodge",
+     "script_bytes": 858
+    },
+    {
+     "class": "Function",
+     "export": 10568,
+     "path": "RVehicleBatmobileBase.BattleDodge",
+     "script_bytes": 1
+    }
+   ],
+   "name": "BattleDodge"
+  },
+  {
+   "exports": [
+    {
+     "class": "Function",
+     "export": 104988,
+     "path": "DrivingMode.PursuitStrafe",
+     "script_bytes": 351
+    }
+   ],
+   "name": "PursuitStrafe"
+  },
+  {
+   "exports": [
+    {
+     "class": "Function",
+     "export": 104998,
+     "path": "DrivingMode.CheckBattleStrafe",
+     "script_bytes": 837
+    },
+    {
+     "class": "Function",
+     "export": 105250,
+     "path": "RPlayerController.CheckBattleStrafe",
+     "script_bytes": 1
+    }
+   ],
+   "name": "CheckBattleStrafe"
+  },
+  {
+   "exports": [],
+   "name": "PowerSlide"
+  },
+  {
+   "exports": [
+    {
+     "class": "AkParameterName",
+     "export": 134487,
+     "path": "Ww_Parameters.Drift",
+     "script_bytes": 0
+    }
+   ],
+   "name": "Drift"
+  }
+ ],
+ "operator_lead": {
+  "battle_left_stick_is_camera_relative": {
+   "evidence": "AbsoluteMoveDirection is a sim struct; BattleModeYawOffset defaults to 16384 (90 deg) in the class CDO; CheckBattleStrafe builds a move vector from aBaseY/aStrafe and reads that offset.",
+   "verdict": "carrier present (AbsoluteMoveDirection + BattleModeYawOffset), arithmetic native"
+  },
+  "battle_mode_four_wheel_drive": {
+   "evidence": "BattleModeFrontThrottle/BattleModeRearThrottle are declared (no shipped value) and BattleModeRearWheelTorquePower has a class default of 0.5; NumPoweredWheels has no tag in either stream.",
+   "verdict": "front+rear torque fields exist; no shipped powered-wheel count"
+  },
+  "pursuit_stationary_turns_in_place": {
+   "evidence": "BMDM_TurnOnSpot exists (enum value 1) and the sim carries TurnOnSpotFrontTorqueFactor/TurnOnSpotRearTorqueFactor with opposite signs (front 0.6000000238418579, rear -0.5 in the class CDO), which is front/rear counter-torque; no script site sets mode 1.",
+   "verdict": "fields present; no pursuit script sets BMDM_TurnOnSpot"
+  }
+ },
+ "oracles": [
+  {
+   "evidence": "EBatmobileDriveMode export 129610: 4 values 0=BMDM_Drive, 1=BMDM_TurnOnSpot, 2=BMDM_BattleMode, 3=BMDM_MAX",
+   "key": "O1-enum",
+   "ok": true
+  },
+  {
+   "evidence": "streams end at shipped_simulation(eof), class_default_object(eof), vehicle_class_default_object(eof); 177 float values re-read from their tag payload offsets",
+   "key": "O3-tag-values",
+   "ok": true
+  },
+  {
+   "evidence": "16/16 decoded bodies pass the three bmak_damage anchors",
+   "key": "O2-function-anchors",
+   "ok": true
+  },
+  {
+   "evidence": "4 SetDriveMode call site(s); pursuit asks [0, 0], battle asks [2, 2] (enum values {'BMDM_Drive': 0, 'BMDM_TurnOnSpot': 1, 'BMDM_BattleMode': 2})",
+   "key": "O4-drive-mode-per-state",
+   "ok": true
+  },
+  {
+   "evidence": "class default object tag 0x03b0 = 'None' (FName 'None' = enum value 0 = BMDM_Drive); the shipped SimulationModel carries no DriveMode tag, so it inherits that default",
+   "key": "O7-drive-mode-default",
+   "ok": true
+  },
+  {
+   "evidence": "3 compare-and-jump token(s) on DriveMode/BattleModeYawOffset: BeginState BattleModeYawOffset 0x9a@95; BeginState BattleModeYawOffset 0x9b@248; EndState BattleModeYawOffset 0x9b@421 (0x9a = NotEqual, 0x9b = Equal)",
+   "key": "O8-mode-comparisons",
+   "ok": true
+  },
+  {
+   "evidence": "61 property references over 14 functions; every one re-reads its export index at the recorded offset",
+   "key": "O5-corpus-refs",
+   "ok": true
+  },
+  {
+   "evidence": "2 int32 constant(s) 16384 (90 deg) in the strafe/dodge bodies: PursuitStrafe@223, CheckBattleStrafe@251",
+   "key": "O6-yaw-offset-constant",
+   "ok": true
+  }
+ ],
+ "packages": {
+  "BmGame.upk": {
+   "bytes": 214757637,
+   "exports": 177031,
+   "names": 84813,
+   "version": 863
+  },
+  "Startup.upk": {
+   "bytes": 434869146,
+   "exports": 174890,
+   "names": 67407,
+   "version": 863
+  }
+ },
+ "rotator_16384": [
+  {
+   "at": 223,
+   "export": 104988,
+   "path": "DrivingMode.PursuitStrafe"
+  },
+  {
+   "at": 251,
+   "export": 104998,
+   "path": "DrivingMode.CheckBattleStrafe"
+  }
+ ],
+ "set_drive_mode": {
+  "expected": {
+   "BattleMode.BeginState": 2,
+   "PursuitMode.BeginState": 0
+  },
+  "export": 129767,
+  "observed": {
+   "BattleMode.BeginState": [
+    2,
+    2
+   ],
+   "PursuitMode.BeginState": [
+    0,
+    0
+   ]
+  },
+  "sites": [
+   {
+    "arg_text": "0",
+    "arg_value": 0,
+    "at": 69,
+    "export": 10515,
+    "label": "RVehicleBatmobileBase.PursuitMode.BeginState",
+    "path": "PursuitMode.BeginState"
+   },
+   {
+    "arg_text": "2",
+    "arg_value": 2,
+    "at": 88,
+    "export": 10529,
+    "label": "RVehicleBatmobileBase.BattleMode.BeginState",
+    "path": "BattleMode.BeginState"
+   },
+   {
+    "arg_text": "0",
+    "arg_value": 0,
+    "at": 58,
+    "export": 129841,
+    "label": "RVehicleNPCBatmobile.PursuitMode.BeginState",
+    "path": "PursuitMode.BeginState"
+   },
+   {
+    "arg_text": "2",
+    "arg_value": 2,
+    "at": 103,
+    "export": 129848,
+    "label": "RVehicleNPCBatmobile.BattleMode.BeginState",
+    "path": "BattleMode.BeginState"
+   }
+  ]
+ },
+ "ship_drive_mode_tag": null,
+ "try_to_change_mode": {
+  "export": 10552,
+  "native_thunk": true,
+  "script_bytes": 5
+ },
+ "unknowns": [
+  {
+   "what": "the body of RVehicleSimBatmobile.SetDriveMode",
+   "where": "BatmanAK.exe (native), out of scope for a static package read",
+   "why": "export 129767 is a native declaration, not bytecode: its whole script is the 0x29 PropRef to its own parameter (5 bytes). The per-mode torque/steer arithmetic therefore lives in the executable, not in the cooked package; only the fields it reads and the mode it is given are decodable here."
+  },
+  {
+   "what": "which caller sets BMDM_TurnOnSpot (value 1)",
+   "where": "the native SetDriveMode body, or an engine-side condition on throttle/speed",
+   "why": "the corpus scan finds SetDriveMode called only from PursuitMode.BeginState (0) and BattleMode.BeginState (2). No script body passes 1, so either the native simulation switches to it from a speed/throttle test, or the value is set by code the package does not carry."
+  },
+  {
+   "what": "the operator of the `DriveMode` guard in `BattleMode.BeginState`",
+   "where": "the same body, with an expression-tree parser",
+   "why": "the body reads `DriveMode` and then calls `SetDriveMode(2)`, but the comparison is written through an `EX_Context` (the object expression is `BatmobileSim`), so the operator token sits before a nested expression this one-pass scan does not classify. The reads and the call are decoded; the test is not."
+  },
+  {
+   "what": "the exact arithmetic of the camera-relative move",
+   "where": "the same bodies, with a full expression-tree parser",
+   "why": "CheckBattleStrafe/PursuitStrafe read PlayerInput.aBaseY/aStrafe into a vector, rotate it by the Pawn's rotation and read BattleModeYawOffset in the same expression; the operator chain is an expression tree this one-pass walk does not resolve, so only the inputs and the 16384 constant are decoded."
+  },
+  {
+   "what": "per-wheel powered flags in the shipped sim",
+   "where": "the wheel objects of the spawned vehicle at run time, or the native sim",
+   "why": "SVehicle.NumPoweredWheels (1908) and SVehicleWheel.bPoweredWheel (116) exist in the layout, but neither the shipped sim object nor the class CDO carries a tag for them, so no shipped value is readable here."
+  }
+ ]
+}

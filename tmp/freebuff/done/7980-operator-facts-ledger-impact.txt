@@ -1,0 +1,15 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/operator-facts-ledger-impact.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-08
+On 2026-11-08 the operator, who has played Arkham Knight, answered gameplay questions. ROADMAP.md §7 lists them. Several contradict standing records:
+- Pursuit fires only the EMP missile, while D-7 says every weapon works in both modes.
+- Armour is identical in both modes, against ArmourModeDamageReduction.
+- Health regenerates out of combat and is full on re-summon; ARM-5 was UNKNOWN.
+- Eject is hold A to charge, tap A to go higher, and a double-tap gives the lowest eject; the backlog says hold A.
+- The car explodes instantly at 0 HP, against the donor smoke/burn stages T-FX22/T-FX23.
+- The paint is dark gunmetal satin with carbon-weave insets and white chevron decals.
+- The barrage auto-fires at full lock, with 1/4/7/10 targets by upgrade level.
+- RT fires the cannon and RB the Vulcan.
+- The transform takes about 2 s and causes a near-instant slowdown.
+Report-only, no ledger edits (the 903x apply chain owns T_ROWS.jsonl). For each fact, list every affected row and card: grep T_ROWS.jsonl, GRAB_BACKLOG.md §1, §11 and the cards, the queued 91xx briefs, and Working/Roadmap/*.md. For each one, say what it says now, what the fact implies, and the exact proposed change. Mark each queued 91xx brief that must be rewritten before it runs, so the review brief 9033 can apply them. Where a decoded file value disagrees with the player fact, keep both, flag it for reconciliation, and do not pick a winner. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

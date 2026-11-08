@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/dash-hud-unknown-closing.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+The dash HUD gauges plan at tmp/freebuff/reports/dash-hud-gauges-plan.md lists about twenty-five UNKNOWN items about the gauge layout, numbers and binding of the Batmobile dashboard, and the HUD grab notes in Research/BatmobileGrab/HUD.md and HUD_SPEC.json may already answer some of them. Work through the UNKNOWN list in order and, for each item, search those two files plus Working/Translation/T6_HUD_CAMERA.md for a value or member that answers it. Write each result to Working/Prep/dash_hud_unknowns.json with the fields item, search_terms, answer_or_null, answer_source_path, answer_source_line and status (CLOSED or STILL_UNKNOWN). Close an item only when the cited line states the value, and leave the rest UNKNOWN with the file that would settle them. Do not edit the plan, HUD.json or HUD_SPEC.json.

@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/death-sequence-static-decode.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/death-explosion-carriers.md
+Locate the BmAK death sequence in the files already decoded. Inputs: Research/BatmobileGrab/DAMAGE_RULES.md (14 damage entry points), NATIVE_TRIAGE.md section 4 (the four RVisualDamageComponent exports), PARTICLES_FEATURES.md, AUDIO_FEATURES.md, and the report death-explosion-carriers.md from brief 7953. Trace the bytecode of the TakeDamage branch that fires when health reaches zero with Tools/scripts/bmak_damage.py and upk_read.py: what it spawns (explosion archetype, particle system, DeathExplosionSoundArray entry chosen), any delay constant, and the call that kills occupants (script call or native stub). Also read the four RVisualDamageComponent exports and say whether they produce any intermediate visible stage. Write Tools/scripts/bmak_death.py (--write, --check), Research/BatmobileGrab/DEATH_SEQUENCE.md and .json. Every line carries package, export and offset, or the word UNKNOWN with what was tried and which native function would settle it. The exe consumer of occupant death stays UNKNOWN unless an instruction address proves it. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

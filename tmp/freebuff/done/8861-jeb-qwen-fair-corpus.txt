@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/jeb-qwen-fair-corpus.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08 (stage 1 of 3 of the old fair-test brief, which used two full sessions without finishing)
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/jeb-choice-format-retest.md
+Build only the test material for comparing Jebadiah 9B with Qwen3.5-4B at picking the snippet that stores a member's default value. Read jeb-vs-qwen-calibration.md, jeb-short-window-retest.md and jeb-choice-format-retest.md, and Tools/scripts/chase/jeb_judge.py and chase_calibrate.py. Rebuild the candidate lists with the calib.jsonl manifest and every other tool-written file removed. Collect at least 30 positive cases (a candidate that truly stores the default; ground truth from decoded tune data, a verified offset table or hand-checked disassembly, with the evidence path in each row) and at least 30 negatives that include the distractor classes (offset table, count, register value, stack local, per-frame update, tool record). If fewer than 30 positives exist, say how many and which files would supply the rest. Freeze a one-third tuning split and a two-thirds test split with a fixed seed and write the cases to Tools/scripts/chase/fair_cases.jsonl. Write the decision rule into the report before any model runs. Do not call either model in this stage.

@@ -1,0 +1,12 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/skins-entity-plan.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+Skins (decision D-5): MK2, Jokerfied and Funhouse as extra Rebel Drop entries. Research/BatmobileGrab/VARIANTS.md diffs V2/MK2/Joker/Funhouse (meshes, sockets, materials, textures, light rigs, gadgets). Research/JC3Grab/REBELDROP.md section 7 describes the 128-byte Rebel Drop items, with 12 free UIDisplayOrder slots and the leaf-hash recipe. The damage/world audit says each extra entry may need another vanilla leaf (Working/Roadmap/damage_world.md, D-6).
+Plan per skin:
+- what differs from the base car (mesh, textures, materials, lights);
+- the texture and model budget against the hard walls (model 4,915 KB, texture 7,065 KB; the base car is at 4,791 KB);
+- whether the budget is per entity or global (cite evidence, or UNKNOWN);
+- the Rebel Drop entry recipe;
+- the runtime alternative: a spawn through the native hook instead of a Rebel Drop leaf.
+Report only. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

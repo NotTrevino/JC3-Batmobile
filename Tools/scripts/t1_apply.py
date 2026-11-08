@@ -13,7 +13,9 @@ complete before anyone does:
   * `not_numeric` rows are printed so nothing silently disappears from the plan.
 
 Usage:
-  python t1_apply.py                 # validate
+  python t1_apply.py                 # validate the default batch (t1_edits.json vs current.json)
+  python t1_apply.py --edits Working/Translation/t5b_edits.json \
+                     --current Working/Translation/t5b_current.json   # a later batch
   python t1_apply.py --json          # machine-readable validation report
 Exit code is 0 only when every edit validates.
 """
@@ -38,10 +40,16 @@ def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--json", action="store_true", help="print a JSON report")
+    ap.add_argument("--edits", default=os.path.join(BASE, "t1_edits.json"),
+                    help="edit list to validate (default: t1_edits.json)")
+    ap.add_argument("--current", default=os.path.join(BASE, "current.json"),
+                    help="decoded build values to validate against (default: current.json)")
     a = ap.parse_args()
 
-    edits_doc = load("t1_edits.json")
-    current = load("current.json")["modules"]
+    with open(a.edits, encoding="utf-8") as f:
+        edits_doc = json.load(f)
+    with open(a.current, encoding="utf-8") as f:
+        current = json.load(f)["modules"]
     led = os.path.join(BASE, "T_ROWS.jsonl")
     if not os.path.exists(led):
         raise SystemExit("no T_ROWS.jsonl - run `t_rows.py build` first")

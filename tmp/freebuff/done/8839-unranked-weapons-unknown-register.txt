@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/unranked-weapons-unknown-register.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+The report tmp/freebuff/reports/unranked-weapons-closest-system.md carries about thirty-six UNKNOWN entries, and each one needs a named file that would settle it before a build lane can act on it. Go through the report section by section and copy every UNKNOWN into a register at Working/Prep/unranked_unknowns.json with the fields item_id, report_line, claim_text, settling_file and settling_status. Search Research/ and Working/ for each settling file or its equivalent, and mark settling_status as PRESENT, ABSENT or NOT_CHECKED. Any entry whose settling file is present on disk must be listed in the report with the line that would close it, and nothing is to be marked resolved from memory. Do not change the source report.

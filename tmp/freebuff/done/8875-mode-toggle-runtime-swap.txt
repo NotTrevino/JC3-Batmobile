@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/mode-toggle-runtime-swap.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-08
+One question only: does any game-side consumer swap or replace the active vehicle entity, or its variant, when the battle mode toggles? The mode scalars (T-MD5, T-MD6, T-MD7, T-MD13) are closed by tmp/freebuff/reports/T-MD14b.md and the carrier table in tmp/freebuff/reports/mode-switch-carriers.md, so do not redo them. Start from U1 in tmp/freebuff/reports/mode-swap-trigger-closest-system-plan.md and from the census note inside mode-switch-carriers.md, then search Research/JC3Grab/INDEX.jsonl for spawn, replace, swap and variant events that a vehicle can receive. Report the search terms, the hit counts, and every consumer that acts on an entity rather than on a flag. If a consumer exists, state for each D-2 loss in Working/Translation/T_ROWS.jsonl whether the consumer removes it, and if none exists, mark U1 as UNKNOWN with the file the game's streaming code would need.

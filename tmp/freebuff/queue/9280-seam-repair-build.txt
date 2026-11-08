@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/seam-repair-build.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-moving-parts-animation.md
+Repair the visible gaps at part seams. Evidence: gross holes 0.309 percent and 0.2968 percent in RC4 at the seams, 31 three-bone-tie faces, per Working/Appearance/build_parts/parts_manifest.json and Builds/bm-RC2/verify/geometry.md. Seams that matter: canopy, turret, hatches, side panels. From the 9172 tree Builds/bm-RC5-parts, find every seam edge pair whose gap exceeds 5 mm at pose zero and at the open pose of each hinge, list them by part pair, and close them with the smallest edit (snap vertices, add a one-face lip inside the part, or shift a pivot). Respect the model budget in Working/Appearance/BUDGET_RC5.md and the silhouette limit 99.9 percent (RC4 99.9004). Tree Builds/bm-RC5-seams, script Tools/scripts/rc5_seams.py (--write, --check). Done check: gap table before and after for every seam pair, no gap above 5 mm at pose zero, and the silhouette number recomputed with Tools/scripts/v02a_rc4.py printed. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

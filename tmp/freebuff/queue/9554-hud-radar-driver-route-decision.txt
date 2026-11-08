@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hud-radar-driver-route-decision.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/radar-icon-set-extract.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-live-vehicle-readout.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-batmobile-hud-overlay.md
+Radar needs a per-frame vehicle to marker driver, and the movie contains zero vehicle CreatePoi calls. Decide the route from evidence. Inputs: reports/radar-icon-set-extract.md, reports/radar-minimap-icon-plan.md section 8, the 7982 telemetry report for what the hook can read per entity, and the 7985 overlay report. Compare route a (hook draws the radar icons itself) and route b (hook feeds JC3 POIs to a modified hud.gfx), per icon class: cops, military, tracked, hacked red to green, tank (larger), helicopter (spinning blades). For each class state the state source (the hacked flag comes from brief 9108's SAM hack) and the accuracy cost, e.g. the eight-way m_ArrowState versus continuous bearing. Output Working/HUD/RADAR_ROUTE.md ending in one chosen route with reasons. Done when all six classes have a source or UNKNOWN. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

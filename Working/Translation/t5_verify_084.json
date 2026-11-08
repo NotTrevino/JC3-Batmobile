@@ -1,0 +1,125 @@
+{
+ "build": "test-084",
+ "ee": "53DCEF8AFE808CAF249B7771EAEFC080D0E8AE32569E8443A3600047A3723EBF",
+ "toc": "4FD6DB3C1E2B7DB9EA07F143DC43BCDC0036146C12362980C2FB407CC88541A0",
+ "checks": [
+  {
+   "name": "installed .ee matches receipt",
+   "ok": true,
+   "detail": "53DCEF8AFE808CAF..."
+  },
+  {
+   "name": "installed .toc matches receipt",
+   "ok": true,
+   "detail": "4FD6DB3C1E2B7DB9..."
+  },
+  {
+   "name": "external/archives baseline identical to the base build",
+   "ok": true,
+   "detail": "505 records; .toc->archives 8 (base 8), unlisted 98 (base 98), bytes moved: none"
+  },
+  {
+   "name": "no file the base build listed went missing",
+   "ok": true,
+   "detail": "0 lost"
+  },
+  {
+   "name": "body LODs decode with 17 blocks each",
+   "ok": true,
+   "detail": "5 LODs [17]"
+  },
+  {
+   "name": "wheel meshes decode with 5 blocks each",
+   "ok": true,
+   "detail": "30 files [5]"
+  },
+  {
+   "name": "every replaced mesh read via the .toc equals the staged aaf copy",
+   "ok": true,
+   "detail": "35 meshes, 0 differ"
+  },
+  {
+   "name": "every referenced batmobile texture is in the .ee, byte-identical to aaf",
+   "ok": true,
+   "detail": "28 referenced, 0 missing, 0 differ, 28 staged"
+  },
+  {
+   "name": "all of them are internal (nonzero .toc offset), none empty",
+   "ok": true,
+   "detail": "0 external, 0 empty"
+  }
+ ],
+ "body_blocks": {
+  "sportsmuscle_body_lod1.rbm": 17,
+  "sportsmuscle_body_lod2.rbm": 17,
+  "sportsmuscle_body_lod3.rbm": 17,
+  "sportsmuscle_body_lod4.rbm": 17,
+  "sportsmuscle_body_lod5.rbm": 17
+ },
+ "wheel_blocks": {
+  "sportsmuscle_wheel_f_l_lod1.rbm": 5,
+  "sportsmuscle_wheel_f_l_lod2.rbm": 5,
+  "sportsmuscle_wheel_f_l_lod3.rbm": 5,
+  "sportsmuscle_wheel_f_lmshswap_lod1.rbm": 5,
+  "sportsmuscle_wheel_f_lmshswap_lod2.rbm": 5,
+  "sportsmuscle_wheel_f_lmshswap_lod3.rbm": 5,
+  "sportsmuscle_wheel_f_r_lod1.rbm": 5,
+  "sportsmuscle_wheel_f_r_lod2.rbm": 5,
+  "sportsmuscle_wheel_f_r_lod3.rbm": 5,
+  "sportsmuscle_wheel_f_rmshswap_lod1.rbm": 5,
+  "sportsmuscle_wheel_f_rmshswap_lod2.rbm": 5,
+  "sportsmuscle_wheel_f_rmshswap_lod3.rbm": 5,
+  "sportsmuscle_wheel_r_l_lod1.rbm": 5,
+  "sportsmuscle_wheel_r_l_lod2.rbm": 5,
+  "sportsmuscle_wheel_r_l_lod3.rbm": 5,
+  "sportsmuscle_wheel_r_l_lod4.rbm": 5,
+  "sportsmuscle_wheel_r_l_lod5.rbm": 5,
+  "sportsmuscle_wheel_r_lmshswap_lod1.rbm": 5,
+  "sportsmuscle_wheel_r_lmshswap_lod2.rbm": 5,
+  "sportsmuscle_wheel_r_lmshswap_lod3.rbm": 5,
+  "sportsmuscle_wheel_r_lmshswap_lod4.rbm": 5,
+  "sportsmuscle_wheel_r_r_lod1.rbm": 5,
+  "sportsmuscle_wheel_r_r_lod2.rbm": 5,
+  "sportsmuscle_wheel_r_r_lod3.rbm": 5,
+  "sportsmuscle_wheel_r_r_lod4.rbm": 5,
+  "sportsmuscle_wheel_r_r_lod5.rbm": 5,
+  "sportsmuscle_wheel_r_rmshswap_lod1.rbm": 5,
+  "sportsmuscle_wheel_r_rmshswap_lod2.rbm": 5,
+  "sportsmuscle_wheel_r_rmshswap_lod3.rbm": 5,
+  "sportsmuscle_wheel_r_rmshswap_lod4.rbm": 5
+ },
+ "materials": {
+  "CarPaintMM": 200,
+  "Window": 35
+ },
+ "textures": [
+  "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/textures/batmobile/batmobile_v3_body_decals_d.ddsc",
+  "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/textures/batmobile/batmobile_v3_body_n.ddsc",
+  "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/textures/batmobile/batmobile_v3_brake_disc_d.ddsc",
+  "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/textures/batmobile/batmobile_v3_brake_disc_n.ddsc",
+  "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/textures/batmobile/batmobile_v3_glass_a_glass.ddsc",
+  "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/textures/batmobile/batmobile_v3_glass_n.ddsc",
+  "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/textures/batmobile/batmobile_v3_int_cockpit_d.ddsc",
+  "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/textures/batmobile/batmobile_v3_int_cockpit_m_msk.ddsc",
+  "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/textures/batmobile/batmobile_v3_int_cockpit_n.ddsc",
+  "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/textures/batmobile/batmobile_v3_missile_upgrade_d.ddsc",
+  "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/textures/batmobile/batmobile_v3_missile_upgrade_n.ddsc",
+  "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/textures/batmobile/batmobile_v3_power_cell_int_d.ddsc",
+  "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/textures/batmobile/batmobile_v3_textures_tyre_v2_d.ddsc",
+  "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/textures/batmobile/batmobile_v3_textures_tyre_v2_n.ddsc",
+  "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/textures/batmobile/batmobile_v3_textures_wheel_v2_d.ddsc",
+  "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/textures/batmobile/batmobile_v3_textures_wheel_v2_n.ddsc",
+  "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/textures/batmobile/batmobile_v3_undercarriage_n.ddsc",
+  "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/textures/batmobile/batmobile_v3_weaponry_turret_v2_n.ddsc",
+  "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/textures/batmobile/batmobile_v3_wheel_lights_m_msk.ddsc",
+  "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/textures/batmobile/batmobile_v3_wheel_lights_n.ddsc",
+  "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/textures/batmobile/batmobile_v3_wheelarch_n.ddsc",
+  "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/textures/batmobile/nimbus_power_cell_n.ddsc",
+  "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/textures/batmobile/solid_6e6e6e.ddsc",
+  "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/textures/batmobile/solid_7a757e.ddsc",
+  "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/textures/batmobile/solid_808080.ddsc",
+  "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/textures/batmobile/solid_a7a7a7.ddsc",
+  "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/textures/batmobile/stagg_battery_01_d.ddsc",
+  "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/textures/batmobile/stagg_battery_01_n.ddsc"
+ ]
+}

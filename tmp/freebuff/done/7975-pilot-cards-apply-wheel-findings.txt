@@ -1,0 +1,9 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/pilot-cards-apply-wheel-findings.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-08
+The operator is ready to supervise the first agent-piloted session (APPROVED_Q.txt now exists, scoped to Q-0 and the L0 probe session). Q-0 (queue 8600) waits for this task. Apply the proposals in E:/Modding/JC3-Batmobile/tmp/freebuff/reports/pilot-cards-wheel-check.md §3 to the pilot cards in E:/Modding/JC3-Batmobile/Working/Q/PILOT/, so the first launch uses the reusable tools instead of fragile hand calibration:
+- LAUNCH.md: add the documented -quickstart argument and the intro-removal note, but keep the frame-difference proof of reaching the menu (no shortened invented waits).
+- RECORD.md: switch to OBS (--startrecording / websocket StopRecord) only if OBS is installed on this machine (check the usual install path read-only); otherwise leave the card and say so.
+- SPAWN_BATMOBILE.md and PROVE_CARDS.md: add a console route through jc3-console-thingy (E:/Modding/_tools/jc3-console-thingy, matching this exe; see reports/native-hook-design-jc3mp-contract.md if present) as the primary spawn route, with the menu route kept as fallback. Install its xinput9_1_0.dll only through a receipt with an undo step.
+Before editing any card, record in E:/Modding/JC3-Batmobile/MODLOG.md the intended change, the file, why, and how to revert (copy the old card to Working/Q/PILOT/_bak-20261108/). Do not launch the game. Report: per card, the change, the source line in the wheel-check report, and what stays UNKNOWN. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

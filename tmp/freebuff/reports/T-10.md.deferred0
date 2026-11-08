@@ -1,0 +1,71 @@
+# T-10 · Re-open the `out` rows with the G2 evidence — report
+
+**STATUS: deferred (G2X not passed; prerequisite G2X missing from `MODLOG.md`, and the card's input
+`T_ROWS.jsonl` does not exist yet)**
+
+## Why deferred
+
+T-10's dependency is **G2X** (the G2 exit gate). Checked at 2026-10-28:
+
+1. **`MODLOG.md` has no G2X section at all.** `grep -n "G2X" MODLOG.md` returns nothing — no
+   intended-change entry, no `G2X · … — passed` entry. The gate itself was deferred earlier today
+   because two G2 cards are not finished:
+   - `| G2-20 | todo | |` (Exit, bail-out and eject — MODLOG has only its intended-change entry),
+   - `| G2-27 | todo | |` (Standalone entity — MODLOG has only its intended-change entry).
+   So "G2X passed" is not satisfied, and per the card's prerequisite rule T-10 must not start.
+2. **§12 still shows `| T-10 | todo | |`**, and no earlier T-10 session left an intended-change
+   entry in `MODLOG.md` (nothing to resume).
+3. **The card's main input is absent.** T-10's `In` begins with `T_ROWS.jsonl` "rows with
+   `dispo = out`". No `T_ROWS.jsonl` exists anywhere in the project (`glob **/T_ROWS.jsonl` → 0
+   files), so there are no rows to re-open even if the gate had passed. `Working/Translation/
+   T6_HUD_CAMERA.md` (the other `In` file, 14,096 B) does exist.
+4. **Several §11 decisions T-10's expected outcomes depend on are unresolved**: D-2 (pursuit/battle
+   split — blocks T-15 and T-BM1's mode branch, recommended (a) but not marked resolved), D-6
+   (standalone vs replace — the G2-27 answer), D-7 (weapon slots), D-10 (turbo jump / nitro tiers).
+   T-10 says "expected outcomes (verify, do not assume)", and three of those outcomes land on
+   unresolved decisions, so the rows could not be written with a `proposed` cell today either.
+
+Nothing was written outside this report: `MODLOG.md`, `GRAB_BACKLOG.md`, `Research/JC3Grab/` and
+`Tools/scripts/` are untouched by this session.
+
+## Outputs
+
+None. No rows were re-opened, no `T_ROWS.jsonl` was created, no MODLOG entry was appended, the
+tracker row was left as `| T-10 | todo | |`.
+
+## Done-check command and output
+
+Not run. T-10's Done check would be `python Tools/scripts/status_audit.py --check` plus the row
+diff; both require translation rows that do not exist yet, and the gate that must precede it has
+not run, so there is nothing to check.
+
+## Tamper test
+
+Not run (no generated output to tamper with).
+
+## What must happen first (for whoever resumes T-10)
+
+1. G2-20 and G2-27 finish their Done checks and flip their §12 rows to `done`.
+2. G2X runs and appends `## G2X · G2 exit gate — passed` to `MODLOG.md` (plus a §12 row; §12 has
+   `G1X` but no `G2X`).
+3. `T_ROWS.jsonl` must exist with the `out` rows T-10 names (T-LG5, T-FX4, T-DM7, T-W1, T-BM1,
+   T-AC1, T-RA1, T-SR1) plus the 7 `out` rows in `T6_HUD_CAMERA.md` (T-HUD4, T-HUD6…T-HUD10,
+   T-CAM10) — it is produced by the earlier T-phase tooling (`Tools/scripts/t_rows.py`), which this
+   card does not create.
+4. D-2, D-6, D-7 and D-10 need answers before the rows that name them can carry a `proposed` cell.
+
+## UNKNOWNs and limits
+
+- **Which `out` rows actually exist** — UNKNOWN: `T_ROWS.jsonl` is not on disk, so the eight ids
+  named in the card are unverified against real rows.
+- **Whether the G2 docs already supply a carrier for each row** (the card's decision (a) vs (b)) is
+  UNKNOWN here: deciding it is the card's own work and was not started.
+- **G2-20 / G2-27 status** — their outputs (`EJECT.md`/`EJECT.json`/`jc3eject.py`,
+  `STANDALONE.md`/`STANDALONE.json`/`jc3standalone.py`) exist on disk, but their tracker rows and
+  MODLOG `done` entries are missing, so their passing status is unverified.
+- No game was launched, no `D:/Games` write, no shared game module edited, no git operation, no
+  secrets handled.
+
+## MODLOG heading used
+
+None — deferred, so nothing was appended to `MODLOG.md`.

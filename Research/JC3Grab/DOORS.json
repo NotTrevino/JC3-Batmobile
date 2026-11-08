@@ -1,0 +1,1223 @@
+{
+ "census": {
+  "by_axis": {
+   "X (transverse)": 60,
+   "Y (vertical)": 132,
+   "Z (longitudinal)": 28
+  },
+  "by_behaviour": {
+   "CargoBayDoor": {
+    "axes": {
+     "X (transverse)": 5
+    },
+    "max": 90.0,
+    "min": 0.0,
+    "rows": 5
+   },
+   "CenterLeftDoor": {
+    "axes": {
+     "X (transverse)": 1,
+     "Y (vertical)": 3
+    },
+    "max": 100.0,
+    "min": -0.5,
+    "rows": 4
+   },
+   "CenterRightDoor": {
+    "axes": {
+     "X (transverse)": 1,
+     "Y (vertical)": 5
+    },
+    "max": 100.0,
+    "min": -0.5,
+    "rows": 6
+   },
+   "FrontLeftDoor": {
+    "axes": {
+     "X (transverse)": 5,
+     "Y (vertical)": 44,
+     "Z (longitudinal)": 6
+    },
+    "max": 160.0,
+    "min": 0.0,
+    "rows": 55
+   },
+   "FrontRightDoor": {
+    "axes": {
+     "Y (vertical)": 39,
+     "Z (longitudinal)": 2
+    },
+    "max": 120.0,
+    "min": 0.0,
+    "rows": 41
+   },
+   "Hood": {
+    "axes": {
+     "X (transverse)": 26
+    },
+    "max": 90.0,
+    "min": 0.0,
+    "rows": 26
+   },
+   "LeftWing": {
+    "axes": {
+     "Z (longitudinal)": 2
+    },
+    "max": 90.0,
+    "min": 0.0,
+    "rows": 4
+   },
+   "MissileHatch": {
+    "axes": {
+     "Z (longitudinal)": 16
+    },
+    "max": 150.0,
+    "min": 0.0,
+    "rows": 16
+   },
+   "RearDoor": {
+    "axes": {
+     "X (transverse)": 1,
+     "Y (vertical)": 4
+    },
+    "max": 80.0,
+    "min": -90.0,
+    "rows": 5
+   },
+   "RearLeftDoor": {
+    "axes": {
+     "Y (vertical)": 16
+    },
+    "max": 95.0,
+    "min": -1.0,
+    "rows": 16
+   },
+   "RearRightDoor": {
+    "axes": {
+     "Y (vertical)": 20
+    },
+    "max": 90.0,
+    "min": -90.0,
+    "rows": 20
+   },
+   "RightWing": {
+    "axes": {
+     "Z (longitudinal)": 2
+    },
+    "max": 90.0,
+    "min": 0.0,
+    "rows": 4
+   },
+   "Trunk": {
+    "axes": {
+     "X (transverse)": 19,
+     "Y (vertical)": 1
+    },
+    "max": 110.0,
+    "min": -90.0,
+    "rows": 20
+   },
+   "TurretDoor": {
+    "axes": {
+     "X (transverse)": 2
+    },
+    "max": 130.0,
+    "min": 0.0,
+    "rows": 2
+   }
+  },
+  "door_rows": 224,
+  "limited": 220,
+  "modules": 78,
+  "modules_with_doors": 56,
+  "no_hinge": [
+   {
+    "constraint": -1,
+    "module": "privatepropeller_vehicle_parts.vmodc",
+    "part": "privatepropeller_wing_cl1"
+   },
+   {
+    "constraint": -1,
+    "module": "privatepropeller_vehicle_parts.vmodc",
+    "part": "privatepropeller_wing_cr1"
+   },
+   {
+    "constraint": -1,
+    "module": "smallfloatprop_vehicle_parts.vmodc",
+    "part": "smallfloatprop_wing_l"
+   },
+   {
+    "constraint": -1,
+    "module": "smallfloatprop_vehicle_parts.vmodc",
+    "part": "smallfloatprop_wing_r"
+   }
+  ],
+  "other_classes": {},
+  "transverse": [
+   {
+    "axis": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "behaviour": "FrontLeftDoor",
+    "max_deg": 130.0,
+    "min_deg": 0.0,
+    "module": "apc_vehicle_parts.vmodc",
+    "part": "apc_hatch_l"
+   },
+   {
+    "axis": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "behaviour": "TurretDoor",
+    "max_deg": 130.0,
+    "min_deg": 0.0,
+    "module": "apc_vehicle_parts.vmodc",
+    "part": "apc_turret_hatch"
+   },
+   {
+    "axis": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "behaviour": "TurretDoor",
+    "max_deg": 100.0,
+    "min_deg": 0.0,
+    "module": "armoredjeep_vehicle_parts.vmodc",
+    "part": "armoredjeep_turret_hatch"
+   },
+   {
+    "axis": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "behaviour": "Hood",
+    "max_deg": 80.0,
+    "min_deg": 0.0,
+    "module": "armoredtransport_vehicle_parts.vmodc",
+    "part": "armoredtransport_hood"
+   },
+   {
+    "axis": [
+     1.0,
+     -0.0,
+     0.0
+    ],
+    "behaviour": "Hood",
+    "max_deg": 30.0,
+    "min_deg": 0.0,
+    "module": "armoredtruck_vehicle_parts.vmodc",
+    "part": "armoredtruck_hood"
+   },
+   {
+    "axis": [
+     0.999,
+     -0.04,
+     0.0
+    ],
+    "behaviour": "FrontLeftDoor",
+    "max_deg": 130.0,
+    "min_deg": 0.0,
+    "module": "bavariumtank_vehicle_parts.vmodc",
+    "part": "bavariumtank_hatch"
+   },
+   {
+    "axis": [
+     1.0,
+     -0.0,
+     0.0
+    ],
+    "behaviour": "Hood",
+    "max_deg": 30.0,
+    "min_deg": 0.0,
+    "module": "buggy_vehicle_parts.vmodc",
+    "part": "buggy_hood"
+   },
+   {
+    "axis": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "behaviour": "Trunk",
+    "max_deg": 80.0,
+    "min_deg": 0.0,
+    "module": "buggy_vehicle_parts.vmodc",
+    "part": "buggy_trunk"
+   },
+   {
+    "axis": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "behaviour": "CargoBayDoor",
+    "max_deg": 43.0,
+    "min_deg": 0.0,
+    "module": "cargotransport_vehicle_parts.vmodc",
+    "part": "cargotransport_cargodoor_c_exterior"
+   },
+   {
+    "axis": [
+     1.0,
+     0.0,
+     -0.0
+    ],
+    "behaviour": "CargoBayDoor",
+    "max_deg": 43.0,
+    "min_deg": 0.0,
+    "module": "cargotransport_vehicle_parts.vmodc",
+    "part": "cargotransport_cargodoor_c_interior"
+   },
+   {
+    "axis": [
+     1.0,
+     -0.0,
+     0.0
+    ],
+    "behaviour": "CargoBayDoor",
+    "max_deg": 15.0,
+    "min_deg": 0.0,
+    "module": "cargotransport_vehicle_parts.vmodc",
+    "part": "cargotransport_cargodoor_r_exterior"
+   },
+   {
+    "axis": [
+     1.0,
+     -0.0,
+     0.0
+    ],
+    "behaviour": "CargoBayDoor",
+    "max_deg": 15.0,
+    "min_deg": 0.0,
+    "module": "cargotransport_vehicle_parts.vmodc",
+    "part": "cargotransport_cargodoor_r_interior"
+   }
+  ],
+  "with_hinge": 220
+ },
+ "digest": "2aae89dcd6e32b23",
+ "interactions": {
+  "both": 21,
+  "both_list": [
+   "v0300_car_kensington_sportsmuscle_civilian_01.ee",
+   "v0300_car_kensington_sportsmuscle_signature_preorder.ee",
+   "v0504_car_solar_technicaljeep_rebel_machinegun.ee",
+   "v0600_car_urga_armoredjeep_military_01.ee",
+   "v0600_car_urga_armoredjeep_rebel_01.ee",
+   "v0604_car_urga_buggy_military_01.ee",
+   "v0604_car_urga_buggy_signature_preorder.ee",
+   "v1200_boat_capstone_heavypatrol_debug.ee",
+   "v1200_boat_capstone_heavypatrol_military_01.ee",
+   "v1200_boat_capstone_heavypatrol_military_01_delivery.ee",
+   "v1200_boat_capstone_heavypatrol_rebel_01.ee",
+   "v1200_boat_capstone_heavypatrol_rebel_01_mm210.ee",
+   "v1202_boat_capstone_corvette_debug.ee",
+   "v1202_boat_capstone_corvette_military_01.ee",
+   "v1202_boat_capstone_corvette_rebel_01.ee",
+   "v2200_helicopter_capstone_assault_debug.ee",
+   "v2200_helicopter_capstone_assault_military_01.ee",
+   "v2200_helicopter_capstone_assault_rebel_01.ee",
+   "v2602_helicopter_urga_lightassault_debug.ee",
+   "v2602_helicopter_urga_lightassault_military_01.ee",
+   "v2602_helicopter_urga_lightassault_rebel_01.ee"
+  ],
+  "door_only": 0,
+  "entities": 55,
+  "neither": 30,
+  "no_door_list": [
+   "v1401_boat_mugello_racingboat_signature_preorder.ee",
+   "v1704_boat_na_lightpatrol_debug.ee",
+   "v1704_boat_na_lightpatrol_military_01.ee",
+   "v1704_boat_na_lightpatrol_rebel_01.ee"
+  ],
+  "no_door_only": 4,
+  "with_door_parts": 51
+ },
+ "samples": [
+  {
+   "constraints": 11,
+   "container": {
+    "animation_members": [],
+    "has_physics": true,
+    "members": 566
+   },
+   "door_parts": [
+    {
+     "axis_class": "Y (vertical)",
+     "behaviour": "FrontLeftDoor",
+     "constraint": 0,
+     "hinge": {
+      "axis": [
+       0.0,
+       -1.0,
+       0.0
+      ],
+      "class": "hkpLimitedHingeConstraintData",
+      "max_deg": 80.0,
+      "min_deg": 0.0,
+      "pivot": [
+       -1.018,
+       0.622,
+       -0.771
+      ],
+      "size": 304
+     },
+     "in_array": 1,
+     "index": 1,
+     "name": "sportsmuscle_door_f_l",
+     "parent": 0
+    },
+    {
+     "axis_class": "Y (vertical)",
+     "behaviour": "FrontRightDoor",
+     "constraint": 2,
+     "hinge": {
+      "axis": [
+       0.0,
+       1.0,
+       0.0
+      ],
+      "class": "hkpLimitedHingeConstraintData",
+      "max_deg": 80.0,
+      "min_deg": 0.0,
+      "pivot": [
+       1.018,
+       0.622,
+       -0.771
+      ],
+      "size": 304
+     },
+     "in_array": 1,
+     "index": 2,
+     "name": "sportsmuscle_door_f_r",
+     "parent": 0
+    },
+    {
+     "axis_class": "X (transverse)",
+     "behaviour": "Hood",
+     "constraint": 8,
+     "hinge": {
+      "axis": [
+       1.0,
+       0.0,
+       0.0
+      ],
+      "class": "hkpLimitedHingeConstraintData",
+      "max_deg": 70.0,
+      "min_deg": 0.0,
+      "pivot": [
+       0.0,
+       1.057,
+       -0.848
+      ],
+      "size": 304
+     },
+     "in_array": 1,
+     "index": 25,
+     "name": "sportsmuscle_hood_signature",
+     "parent": 3
+    }
+   ],
+   "entity": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_civilian_01.ee",
+   "interaction": {
+    "driver_door_entry": true,
+    "driver_enter_no_door_state": true,
+    "driver_enter_state": true,
+    "entries": [
+     "entry.ai.driver.left",
+     "entry.ai.passenger1",
+     "entry.driver",
+     "entry.driver.locked.onground",
+     "entry.driver.no.door",
+     "entry.driver.pull.out.onground",
+     "entry.driver.pull.out.onground.no.door",
+     "entry.driver.side.fast",
+     "entry.jump_to_stunt",
+     "entry.jump_to_stunt_vehicle_to_vehicle",
+     "entry.passenger1",
+     "entry.passenger1.locked.onground",
+     "entry.passenger1.no.door",
+     "entry.passenger1.pull.out.onground",
+     "entry.passenger1.pull.out.onground.no.door",
+     "entry.passenger1.side.fast",
+     "entry.pull.up.to.stunt.close",
+     "entry.pull.up.to.stunt.far",
+     "entry.pull.up.to.stunt.hood.close",
+     "entry.pull.up.to.stunt.hood.far",
+     "entry.reel.to.stunt.hood",
+     "entry.reel.to.stunt.main",
+     "entry.step.over.high.stunt",
+     "entry.step.over.high.stunt.hood",
+     "entry.step.over.low.stunt",
+     "entry.step.over.low.stunt.hood",
+     "entry.stunt.to.driver.side.enter.vehicle",
+     "entry.stunt.to.driver.side.enter.vehicle2",
+     "entry.stunt.to.driver.side.enter.vehicle3"
+    ],
+    "no_door_entry": true,
+    "states": [
+     "S_ENTER_DRIVER_NO_DOOR_VEHICLE",
+     "S_ENTER_DRIVER_VEHICLE",
+     "S_ENTER_ON_GROUND_THROW_OUT_NO_DOOR_VEHICLE",
+     "S_ENTER_ON_GROUND_THROW_OUT_VEHICLE",
+     "S_ENTER_ON_GROUND_UNLOCK_VEHICLE",
+     "S_ENTER_PASSENGER_NO_DOOR_VEHICLE",
+     "S_ENTER_PASSENGER_ON_GROUND_THROW_OUT_NO_DOOR_VEHICLE",
+     "S_ENTER_PASSENGER_ON_GROUND_THROW_OUT_VEHICLE",
+     "S_ENTER_PASSENGER_ON_GROUND_UNLOCK_VEHICLE",
+     "S_ENTER_PASSENGER_VEHICLE",
+     "S_ENTER_STUNT_TO_DRIVER_SIDE_VEHICLE",
+     "S_EXIT_DRIVER_TO_HOOD_VEHICLE",
+     "S_EXIT_DRIVER_VEHICLE_IN_WATER",
+     "S_EXIT_DRIVER_VEHICLE_UPSIDE_DOWN",
+     "S_EXIT_PASSENGER_VEHICLE_UPSIDE_DOWN",
+     "S_EXIT_VEHICLE",
+     "S_EXIT_VEHICLE_PARA",
+     "S_EXIT_VEHICLE_TO_FALL",
+     "S_ON_GROUND_TO_ENTER_DRIVER_SIDE_VEHICLE",
+     "S_PASSENGER_ON_GROUND_TO_ENTER_SIDE_VEHICLE",
+     "S_ROLL_OUT_EXIT_VEHICLE",
+     "S_STUNT_EXIT_VEHICLE"
+    ]
+   },
+   "label": "v0300 Serpente (civilian)",
+   "parts": 42,
+   "parts_module": "sportsmuscle_vehicle_parts.vmodc",
+   "tag": "donor"
+  },
+  {
+   "constraints": 16,
+   "container": {
+    "animation_members": [],
+    "has_physics": true,
+    "members": 631
+   },
+   "door_parts": [
+    {
+     "axis_class": "Y (vertical)",
+     "behaviour": "CenterLeftDoor",
+     "constraint": 6,
+     "hinge": {
+      "axis": [
+       0.0,
+       -1.0,
+       0.0
+      ],
+      "class": "hkpLimitedHingeConstraintData",
+      "max_deg": 100.0,
+      "min_deg": 0.0,
+      "pivot": [
+       -1.346,
+       1.646,
+       0.894
+      ],
+      "size": 304
+     },
+     "in_array": 1,
+     "index": 8,
+     "name": "apc_door_c_l",
+     "parent": 0
+    },
+    {
+     "axis_class": "Y (vertical)",
+     "behaviour": "CenterRightDoor",
+     "constraint": 7,
+     "hinge": {
+      "axis": [
+       0.0,
+       1.0,
+       0.0
+      ],
+      "class": "hkpLimitedHingeConstraintData",
+      "max_deg": 100.0,
+      "min_deg": 0.0,
+      "pivot": [
+       1.346,
+       1.644,
+       0.894
+      ],
+      "size": 304
+     },
+     "in_array": 1,
+     "index": 9,
+     "name": "apc_door_c_r",
+     "parent": 0
+    },
+    {
+     "axis_class": "Y (vertical)",
+     "behaviour": "RearLeftDoor",
+     "constraint": 8,
+     "hinge": {
+      "axis": [
+       0.001,
+       -1.0,
+       0.002
+      ],
+      "class": "hkpLimitedHingeConstraintData",
+      "max_deg": 95.0,
+      "min_deg": 0.0,
+      "pivot": [
+       -0.425,
+       1.758,
+       2.899
+      ],
+      "size": 304
+     },
+     "in_array": 1,
+     "index": 10,
+     "name": "apc_door_r",
+     "parent": 0
+    },
+    {
+     "axis_class": "X (transverse)",
+     "behaviour": "FrontLeftDoor",
+     "constraint": 9,
+     "hinge": {
+      "axis": [
+       1.0,
+       0.0,
+       0.0
+      ],
+      "class": "hkpLimitedHingeConstraintData",
+      "max_deg": 130.0,
+      "min_deg": 0.0,
+      "pivot": [
+       -0.5,
+       2.086,
+       -0.284
+      ],
+      "size": 304
+     },
+     "in_array": 1,
+     "index": 12,
+     "name": "apc_hatch_l",
+     "parent": 0
+    },
+    {
+     "axis_class": "X (transverse)",
+     "behaviour": "TurretDoor",
+     "constraint": 13,
+     "hinge": {
+      "axis": [
+       1.0,
+       0.0,
+       0.0
+      ],
+      "class": "hkpLimitedHingeConstraintData",
+      "max_deg": 130.0,
+      "min_deg": 0.0,
+      "pivot": [
+       -0.004,
+       2.257,
+       1.713
+      ],
+      "size": 304
+     },
+     "in_array": 1,
+     "index": 42,
+     "name": "apc_turret_hatch",
+     "parent": 30
+    }
+   ],
+   "entity": "editor/entities/jc_vehicles/01_land/v0200_car_capstone_apc/v0200_car_capstone_apc_military_01.ee",
+   "interaction": {
+    "driver_door_entry": false,
+    "driver_enter_no_door_state": false,
+    "driver_enter_state": false,
+    "entries": [
+     "entry.jump_to_stunt",
+     "entry.jump_to_stunt_vehicle_to_vehicle",
+     "entry.mounted_weapon.stationary.stunt",
+     "entry.pull.up.to.stunt.close",
+     "entry.pull.up.to.stunt.far",
+     "entry.reel.to.stunt.main",
+     "entry.step.over.high.stunt",
+     "entry.step.over.low.stunt",
+     "entry.stunt.driver.side.close.stationary",
+     "entry.stunt.driver.side.far.stationary"
+    ],
+    "no_door_entry": false,
+    "states": [
+     "S_ENTER_STUNT_TO_DRIVER_SIDE_CLOSE_VEHICLE",
+     "S_ENTER_STUNT_TO_DRIVER_SIDE_FAR_VEHICLE",
+     "S_ENTER_STUNT_TO_SPINNING_MOUNTED_WEAPON_VEHICLE",
+     "S_EXIT_DRIVER_VEHICLE_IN_WATER",
+     "S_EXIT_DRIVER_VEHICLE_UPSIDE_DOWN",
+     "S_EXIT_SPINNING_MOUNTED_TO_FALL",
+     "S_EXIT_SPINNING_MOUNTED_VEHICLE_IN_WATER",
+     "S_EXIT_VEHICLE",
+     "S_EXIT_VEHICLE_HIJACK",
+     "S_EXIT_VEHICLE_PARA",
+     "S_EXIT_VEHICLE_TO_FALL",
+     "S_ROLL_OUT_EXIT_VEHICLE",
+     "S_STUNT_EXIT_VEHICLE"
+    ]
+   },
+   "label": "v0200 APC (military)",
+   "parts": 45,
+   "parts_module": "apc_vehicle_parts.vmodc",
+   "tag": "apc"
+  },
+  {
+   "constraints": 16,
+   "container": {
+    "animation_members": [],
+    "has_physics": true,
+    "members": 334
+   },
+   "door_parts": [
+    {
+     "axis_class": "Z (longitudinal)",
+     "behaviour": "MissileHatch",
+     "constraint": 0,
+     "hinge": {
+      "axis": [
+       0.0,
+       -0.0,
+       -1.0
+      ],
+      "class": "hkpLimitedHingeConstraintData",
+      "max_deg": 150.0,
+      "min_deg": 0.0,
+      "pivot": [
+       -1.35,
+       3.35,
+       -6.117
+      ],
+      "size": 304
+     },
+     "in_array": 1,
+     "index": 20,
+     "name": "monorailmissilecar_missile_hatch_l_01",
+     "parent": 7
+    },
+    {
+     "axis_class": "Z (longitudinal)",
+     "behaviour": "MissileHatch",
+     "constraint": 1,
+     "hinge": {
+      "axis": [
+       0.0,
+       -0.0,
+       -1.0
+      ],
+      "class": "hkpLimitedHingeConstraintData",
+      "max_deg": 150.0,
+      "min_deg": 0.0,
+      "pivot": [
+       -1.35,
+       3.35,
+       -4.391
+      ],
+      "size": 304
+     },
+     "in_array": 1,
+     "index": 21,
+     "name": "monorailmissilecar_missile_hatch_l_02",
+     "parent": 7
+    },
+    {
+     "axis_class": "Z (longitudinal)",
+     "behaviour": "MissileHatch",
+     "constraint": 2,
+     "hinge": {
+      "axis": [
+       0.0,
+       -0.0,
+       -1.0
+      ],
+      "class": "hkpLimitedHingeConstraintData",
+      "max_deg": 150.0,
+      "min_deg": 0.0,
+      "pivot": [
+       -1.35,
+       3.35,
+       -2.612
+      ],
+      "size": 304
+     },
+     "in_array": 1,
+     "index": 22,
+     "name": "monorailmissilecar_missile_hatch_l_03",
+     "parent": 7
+    },
+    {
+     "axis_class": "Z (longitudinal)",
+     "behaviour": "MissileHatch",
+     "constraint": 3,
+     "hinge": {
+      "axis": [
+       0.0,
+       -0.0,
+       -1.0
+      ],
+      "class": "hkpLimitedHingeConstraintData",
+      "max_deg": 150.0,
+      "min_deg": 0.0,
+      "pivot": [
+       -1.35,
+       3.35,
+       -0.855
+      ],
+      "size": 304
+     },
+     "in_array": 1,
+     "index": 23,
+     "name": "monorailmissilecar_missile_hatch_l_04",
+     "parent": 7
+    },
+    {
+     "axis_class": "Z (longitudinal)",
+     "behaviour": "MissileHatch",
+     "constraint": 4,
+     "hinge": {
+      "axis": [
+       0.0,
+       -0.0,
+       -1.0
+      ],
+      "class": "hkpLimitedHingeConstraintData",
+      "max_deg": 150.0,
+      "min_deg": 0.0,
+      "pivot": [
+       -1.35,
+       3.35,
+       0.851
+      ],
+      "size": 304
+     },
+     "in_array": 1,
+     "index": 24,
+     "name": "monorailmissilecar_missile_hatch_l_05",
+     "parent": 7
+    },
+    {
+     "axis_class": "Z (longitudinal)",
+     "behaviour": "MissileHatch",
+     "constraint": 5,
+     "hinge": {
+      "axis": [
+       0.0,
+       -0.0,
+       -1.0
+      ],
+      "class": "hkpLimitedHingeConstraintData",
+      "max_deg": 150.0,
+      "min_deg": 0.0,
+      "pivot": [
+       -1.35,
+       3.35,
+       2.612
+      ],
+      "size": 304
+     },
+     "in_array": 1,
+     "index": 25,
+     "name": "monorailmissilecar_missile_hatch_l_06",
+     "parent": 7
+    },
+    {
+     "axis_class": "Z (longitudinal)",
+     "behaviour": "MissileHatch",
+     "constraint": 6,
+     "hinge": {
+      "axis": [
+       0.0,
+       -0.0,
+       -1.0
+      ],
+      "class": "hkpLimitedHingeConstraintData",
+      "max_deg": 150.0,
+      "min_deg": 0.0,
+      "pivot": [
+       -1.35,
+       3.35,
+       4.364
+      ],
+      "size": 304
+     },
+     "in_array": 1,
+     "index": 26,
+     "name": "monorailmissilecar_missile_hatch_l_07",
+     "parent": 7
+    },
+    {
+     "axis_class": "Z (longitudinal)",
+     "behaviour": "MissileHatch",
+     "constraint": 7,
+     "hinge": {
+      "axis": [
+       0.0,
+       -0.0,
+       -1.0
+      ],
+      "class": "hkpLimitedHingeConstraintData",
+      "max_deg": 150.0,
+      "min_deg": 0.0,
+      "pivot": [
+       -1.35,
+       3.35,
+       6.086
+      ],
+      "size": 304
+     },
+     "in_array": 1,
+     "index": 27,
+     "name": "monorailmissilecar_missile_hatch_l_08",
+     "parent": 7
+    },
+    {
+     "axis_class": "Z (longitudinal)",
+     "behaviour": "MissileHatch",
+     "constraint": 8,
+     "hinge": {
+      "axis": [
+       0.0,
+       0.0,
+       1.0
+      ],
+      "class": "hkpLimitedHingeConstraintData",
+      "max_deg": 150.0,
+      "min_deg": 0.0,
+      "pivot": [
+       1.35,
+       3.35,
+       -6.102
+      ],
+      "size": 304
+     },
+     "in_array": 1,
+     "index": 28,
+     "name": "monorailmissilecar_missile_hatch_r_01",
+     "parent": 8
+    },
+    {
+     "axis_class": "Z (longitudinal)",
+     "behaviour": "MissileHatch",
+     "constraint": 9,
+     "hinge": {
+      "axis": [
+       0.0,
+       0.0,
+       1.0
+      ],
+      "class": "hkpLimitedHingeConstraintData",
+      "max_deg": 150.0,
+      "min_deg": 0.0,
+      "pivot": [
+       1.35,
+       3.35,
+       -4.348
+      ],
+      "size": 304
+     },
+     "in_array": 1,
+     "index": 29,
+     "name": "monorailmissilecar_missile_hatch_r_02",
+     "parent": 8
+    },
+    {
+     "axis_class": "Z (longitudinal)",
+     "behaviour": "MissileHatch",
+     "constraint": 10,
+     "hinge": {
+      "axis": [
+       0.0,
+       0.0,
+       1.0
+      ],
+      "class": "hkpLimitedHingeConstraintData",
+      "max_deg": 150.0,
+      "min_deg": 0.0,
+      "pivot": [
+       1.35,
+       3.35,
+       -2.574
+      ],
+      "size": 304
+     },
+     "in_array": 1,
+     "index": 30,
+     "name": "monorailmissilecar_missile_hatch_r_03",
+     "parent": 8
+    },
+    {
+     "axis_class": "Z (longitudinal)",
+     "behaviour": "MissileHatch",
+     "constraint": 11,
+     "hinge": {
+      "axis": [
+       0.0,
+       0.0,
+       1.0
+      ],
+      "class": "hkpLimitedHingeConstraintData",
+      "max_deg": 150.0,
+      "min_deg": 0.0,
+      "pivot": [
+       1.35,
+       3.35,
+       -0.864
+      ],
+      "size": 304
+     },
+     "in_array": 1,
+     "index": 31,
+     "name": "monorailmissilecar_missile_hatch_r_04",
+     "parent": 8
+    },
+    {
+     "axis_class": "Z (longitudinal)",
+     "behaviour": "MissileHatch",
+     "constraint": 12,
+     "hinge": {
+      "axis": [
+       0.0,
+       0.0,
+       1.0
+      ],
+      "class": "hkpLimitedHingeConstraintData",
+      "max_deg": 150.0,
+      "min_deg": 0.0,
+      "pivot": [
+       1.35,
+       3.35,
+       0.87
+      ],
+      "size": 304
+     },
+     "in_array": 1,
+     "index": 32,
+     "name": "monorailmissilecar_missile_hatch_r_05",
+     "parent": 8
+    },
+    {
+     "axis_class": "Z (longitudinal)",
+     "behaviour": "MissileHatch",
+     "constraint": 13,
+     "hinge": {
+      "axis": [
+       0.0,
+       0.0,
+       1.0
+      ],
+      "class": "hkpLimitedHingeConstraintData",
+      "max_deg": 150.0,
+      "min_deg": 0.0,
+      "pivot": [
+       1.35,
+       3.35,
+       2.628
+      ],
+      "size": 304
+     },
+     "in_array": 1,
+     "index": 33,
+     "name": "monorailmissilecar_missile_hatch_r_06",
+     "parent": 8
+    },
+    {
+     "axis_class": "Z (longitudinal)",
+     "behaviour": "MissileHatch",
+     "constraint": 14,
+     "hinge": {
+      "axis": [
+       0.0,
+       0.0,
+       1.0
+      ],
+      "class": "hkpLimitedHingeConstraintData",
+      "max_deg": 150.0,
+      "min_deg": 0.0,
+      "pivot": [
+       1.35,
+       3.35,
+       4.372
+      ],
+      "size": 304
+     },
+     "in_array": 1,
+     "index": 34,
+     "name": "monorailmissilecar_missile_hatch_r_07",
+     "parent": 8
+    },
+    {
+     "axis_class": "Z (longitudinal)",
+     "behaviour": "MissileHatch",
+     "constraint": 15,
+     "hinge": {
+      "axis": [
+       0.0,
+       0.0,
+       1.0
+      ],
+      "class": "hkpLimitedHingeConstraintData",
+      "max_deg": 150.0,
+      "min_deg": 0.0,
+      "pivot": [
+       1.358,
+       3.318,
+       6.109
+      ],
+      "size": 304
+     },
+     "in_array": 1,
+     "index": 35,
+     "name": "monorailmissilecar_missile_hatch_r_08",
+     "parent": 8
+    }
+   ],
+   "entity": "editor/entities/jc_vehicles/01_land/v5603_train_urga_monorailmissilecar/v5603_train_urga_monorailmissilecar_military_01.ee",
+   "hatch_refs_outside_part_prop": [],
+   "interaction": {
+    "driver_door_entry": false,
+    "driver_enter_no_door_state": false,
+    "driver_enter_state": false,
+    "entries": [
+     "entry.jump_to_stunt",
+     "entry.jump_to_stunt_vehicle_to_vehicle",
+     "entry.jump_train_to_train.front",
+     "entry.jump_train_to_train.rear",
+     "entry.pull.up.to.stunt.close",
+     "entry.pull.up.to.stunt.far",
+     "entry.pull.up.to.stunt.hood.close",
+     "entry.pull.up.to.stunt.hood.far",
+     "entry.pull.up.to.stunt.rear.close",
+     "entry.pull.up.to.stunt.rear.far",
+     "entry.reel.to.stunt.hood",
+     "entry.reel.to.stunt.main",
+     "entry.reel.to.stunt.rear",
+     "entry.step.over.high.stunt",
+     "entry.step.over.high.stunt.hood",
+     "entry.step.over.high.stunt.rear",
+     "entry.use_item"
+    ],
+    "no_door_entry": false,
+    "states": []
+   },
+   "label": "v5603 monorail missile car",
+   "parts": 40,
+   "parts_module": "monorailmissilecar_vehicle_parts.vmodc",
+   "tag": "monorail",
+   "weapon_components": [
+    "CTurretWeaponComponent"
+   ],
+   "weapon_points": [
+    {
+     "name": "InternalFirePosition_0",
+     "world": "-1.192093E-07,0,-1,0, 0,1,0,0, 1,0,-1.192093E-07,0, -2.038574,2.492188,0.9648438,1"
+    },
+    {
+     "name": "InternalFirePosition_2",
+     "world": "-1.192093E-07,0,-1,0, 0,1,0,0, 1,0,-1.192093E-07,0, -2.038574,2.492188,-0.6616211,1"
+    },
+    {
+     "name": "InternalFirePosition_1",
+     "world": "-1.192093E-07,0,1,0, 0,1,0,0, -1,0,-1.192093E-07,0, 1.850586,2.492432,0.9423828,1"
+    },
+    {
+     "name": "InternalFirePosition_3",
+     "world": "-1.192093E-07,0,1,0, 0,1,0,0, -1,0,-1.192093E-07,0, 1.850586,2.492432,-0.9057617,1"
+    },
+    {
+     "name": "InternalFirePosition_4",
+     "world": "-1.192093E-07,0,-1,0, 0,1,0,0, 1,0,-1.192093E-07,0, -2.038574,2.492188,-2.327637,1"
+    },
+    {
+     "name": "InternalFirePosition_5",
+     "world": "-1.192093E-07,0,1,0, 0,1,0,0, -1,0,-1.192093E-07,0, 1.850586,2.492432,-2.528809,1"
+    }
+   ],
+   "weapons": [
+    {
+     "class": "CMissileWeaponBase",
+     "name": "w614_monorailmissilecar_missile",
+     "tuning": "editor/entities/jc_weapons/06_vehicle/w614_monorailmissilecar_missile/w614_monorailmissilecar_missile.wtune"
+    }
+   ]
+  },
+  {
+   "constraints": 3,
+   "container": {
+    "animation_members": [],
+    "has_physics": true,
+    "members": 642
+   },
+   "door_parts": [
+    {
+     "axis_class": "X (transverse)",
+     "behaviour": "FrontLeftDoor",
+     "constraint": 1,
+     "hinge": {
+      "axis": [
+       1.0,
+       0.0,
+       0.0
+      ],
+      "class": "hkpLimitedHingeConstraintData",
+      "max_deg": 130.0,
+      "min_deg": 0.0,
+      "pivot": [
+       -0.485,
+       2.921,
+       1.479
+      ],
+      "size": 304
+     },
+     "in_array": 1,
+     "index": 39,
+     "name": "mediumtank_hatch",
+     "parent": 26
+    }
+   ],
+   "entity": "editor/entities/jc_vehicles/01_land/v0201_car_capstone_mediumtank/v0201_car_capstone_mediumtank_military_01.ee",
+   "interaction": {
+    "driver_door_entry": false,
+    "driver_enter_no_door_state": false,
+    "driver_enter_state": true,
+    "entries": [
+     "entry.ai.driver.left",
+     "entry.jump_to_stunt",
+     "entry.jump_to_stunt_vehicle_to_vehicle",
+     "entry.pull.up.to.stunt.close",
+     "entry.pull.up.to.stunt.far",
+     "entry.pull.up.to.stunt.hood.close",
+     "entry.pull.up.to.stunt.hood.far",
+     "entry.pull.up.to.stunt.rear.close",
+     "entry.pull.up.to.stunt.rear.far",
+     "entry.reel.to.stunt.hood",
+     "entry.reel.to.stunt.main",
+     "entry.step.over.high.stunt",
+     "entry.step.over.high.stunt.hood",
+     "entry.step.over.high.stunt.rear",
+     "entry.step.over.low.stunt",
+     "entry.step.over.low.stunt.hood",
+     "entry.step.over.low.stunt.rear",
+     "entry.stunt.driver.side.close.stationary",
+     "entry.stunt.driver.side.far.stationary"
+    ],
+    "no_door_entry": false,
+    "states": [
+     "S_ENTER_DRIVER_VEHICLE",
+     "S_ENTER_STUNT_TO_DRIVER_SIDE_CLOSE_VEHICLE",
+     "S_ENTER_STUNT_TO_DRIVER_SIDE_FAR_VEHICLE",
+     "S_EXIT_DRIVER_VEHICLE_IN_WATER",
+     "S_EXIT_DRIVER_VEHICLE_UPSIDE_DOWN",
+     "S_EXIT_VEHICLE",
+     "S_EXIT_VEHICLE_PARA",
+     "S_STUNT_EXIT_VEHICLE"
+    ]
+   },
+   "label": "v0201 medium tank",
+   "parts": 42,
+   "parts_module": "mediumtank_vehicle_parts.vmodc",
+   "tag": "mediumtank"
+  }
+ ]
+}

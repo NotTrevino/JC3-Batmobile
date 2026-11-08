@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/t-fx16-term.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-05
+Task 7244 found row T-FX16 claims "0 of 955" fleet .effc matches but names no search term, so the claim is UNKNOWN. Find the term: read T13_FX.md and t17_fx.json around T-FX16, reconstruct the likeliest search (candidates from the row text and the BmAK particle group it concerns), run each candidate over the 955 distinct fleet .effc files (Tools/scripts/jc3fleet.py or t17_fx.py logic), and report counts per candidate. State which candidate reproduces "0 of 955", or that none does. Output Working/Translation/FX16_TERM.md + Tools/scripts/t_fx16_term.py --check. Do not edit rows. Rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md section 3 (test ban stays; never guess; label decoded/derived/UNKNOWN). Report at the DONE path: STATUS first, files, verbatim commands, UNKNOWNs.

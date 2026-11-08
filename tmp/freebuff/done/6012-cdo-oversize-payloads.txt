@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/CDO-payloads.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-04
+Goal: reach the six CDO component payloads that were skipped as past the 512 MiB decode budget (Research/RESET_STATUS.md, R-6 UNKNOWNs). First find out how a size past 512 MiB can occur: print each payload's declared length and the package file size; a declared length larger than the file is a misparse, not a big object. Then parse the payloads as property tags with Tools/scripts/upk_read.py and name every tag against E:/Modding/_tools/BmSDK-AK. Report per component: tags decoded, bytes left over, UNKNOWN tags. Read-only. Script grab_cdo_payloads.py (--write/--check) -> Research/BatmobileGrab/CDO_PAYLOADS.md. Rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md section 3. Report at the DONE path with STATUS (done / partial / blocked), every command you ran with its output, and each value labelled decoded / derived / UNKNOWN.

@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/review-G3-20d.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-04
+Review G3-20d (E:/Modding/JC3-Batmobile/tmp/freebuff/reports/G3-20d.md, Working/Translation/LEDGER_SOURCES.md). It reports seven pre-reset sources (CHAIN.json, VALUES.json, VOCABULARY.md, PARTS_TABLE.jsonl, FX_TABLE.jsonl, T3_FLEET.md, FITS.md) each made by a named script whose check exits 0, and splits 96 open rows into 69 re-derivable and 27 not. Re-run all seven producer checks yourself and note exit codes. Open VALUES.json and COLOUR_PARAMS.md around line 228 and confirm that paint.effective_base_colour is labelled assumed and the 944-of-944 zero FunctionExpression slots claim holds. Then choose five of the 69 're-derivable' rows and trace the chain to a primary byte source; report any whose chain stops at another derived file. Rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md section 3. Write the report at the DONE path with a VERDICT line (holds / minor issues / needs rework) first, then each claim you re-read, the bytes or command output you saw, and what you could not check.

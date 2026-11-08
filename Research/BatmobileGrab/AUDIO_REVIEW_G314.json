@@ -1,0 +1,879 @@
+{
+ "review": "G3-14 audio-bank claim",
+ "schema": 1,
+ "tool": "Tools/scripts/review_g314.py",
+ "inputs": {
+  "install_root": "E:/Games/Batman - Arkham Knight",
+  "packages": {
+   "BmGame": {
+    "path": "E:/Games/Batman - Arkham Knight/BmGame/CookedPCConsole/BmGame.upk",
+    "bytes": 214757637,
+    "version": 863,
+    "licensee": 32995,
+    "chunked": true,
+    "names": 84813,
+    "exports": 177031,
+    "tables_prefix_bytes": 15529470
+   },
+   "Startup": {
+    "path": "E:/Games/Batman - Arkham Knight/BmGame/CookedPCConsole/Startup.upk",
+    "bytes": 434869146,
+    "version": 863,
+    "licensee": 32995,
+    "chunked": true,
+    "names": 67407,
+    "exports": 174890,
+    "tables_prefix_bytes": 16103363
+   },
+   "StartupPatch": {
+    "path": "E:/Games/Batman - Arkham Knight/BmGame/CookedPCConsole/StartupPatch.upk",
+    "bytes": 248812096,
+    "version": 863,
+    "licensee": 32995,
+    "chunked": true,
+    "names": 51830,
+    "exports": 142232,
+    "tables_prefix_bytes": 13065905
+   },
+   "Engine": {
+    "path": "E:/Games/Batman - Arkham Knight/BmGame/CookedPCConsole/Engine.upk",
+    "bytes": 26578385,
+    "version": 863,
+    "licensee": 32995,
+    "chunked": true,
+    "names": 26790,
+    "exports": 39080,
+    "tables_prefix_bytes": 3637868
+   }
+  },
+  "audio_map": {
+   "path": "Research/BatmobileGrab/AUDIO_MAP.json",
+   "sha256_16": "94b1e73b61f0360c",
+   "events": 361
+  }
+ },
+ "stats": {
+  "packages_scanned": 4,
+  "packages_missing": [],
+  "audit_banks": [
+   "BML_Batmobile_Subjective",
+   "BML_Sonar",
+   "CHR_BatmanDisruptor"
+  ],
+  "banks_located": 3,
+  "banks_not_located": [],
+  "copies": 4,
+  "declared_ids_total": 12,
+  "ids_found": 11,
+  "ids_missing": 1,
+  "missing_ids": [
+   "0x6BB2C66E"
+  ],
+  "missing_ids_found_elsewhere": [],
+  "hunt_banks_scanned": 20,
+  "hunt_packages": 4,
+  "referenced_banks": 29,
+  "hash_rule": {
+   "rule": "fnv1(lower(name))",
+   "matches": 12,
+   "pairs": 12
+  },
+  "hash_rules": [
+   {
+    "rule": "fnv1(lower(name))",
+    "matches": 12,
+    "pairs": 12
+   },
+   {
+    "rule": "fnv1(name)",
+    "matches": 0,
+    "pairs": 12
+   },
+   {
+    "rule": "fnv1a(lower(name))",
+    "matches": 0,
+    "pairs": 12
+   },
+   {
+    "rule": "fnv1a(name)",
+    "matches": 0,
+    "pairs": 12
+   },
+   {
+    "rule": "crc32(lower(name))",
+    "matches": 0,
+    "pairs": 12
+   },
+   {
+    "rule": "crc32(name)",
+    "matches": 0,
+    "pairs": 12
+   }
+  ],
+  "ids_verified_by_hash": true,
+  "id_pairs_tested": 12,
+  "structure_ok": true,
+  "verdict": "supports the bank-level claim, one event id short"
+ },
+ "per_bank": [
+  {
+   "bank": "BML_Batmobile_Subjective",
+   "located": true,
+   "packages": [
+    "Startup"
+   ],
+   "export": 7756,
+   "bytes": 712059,
+   "sha1": "9b057ac9612031a5",
+   "bkhd_id": 112,
+   "bkhd_version": 3885090289,
+   "events_in_bank": 12,
+   "declared_rows": 16,
+   "declared_ids": [
+    "0x78DACB3D",
+    "0xA7C5D89A",
+    "0xC3438074",
+    "0xCE18923D"
+   ],
+   "found_ids": [
+    "0x78DACB3D",
+    "0xA7C5D89A",
+    "0xC3438074",
+    "0xCE18923D"
+   ],
+   "missing_ids": [],
+   "all_found": true,
+   "didx": {
+    "present": true,
+    "size": 216,
+    "records": 18,
+    "in_data": 18,
+    "outside_data": 0,
+    "data_size": 708559
+   },
+   "hirc": {
+    "count": 61,
+    "objects": 61,
+    "chunk_size": 3040,
+    "pad": 0,
+    "pad_zero": true,
+    "by_type": {
+     "2": 21,
+     "3": 21,
+     "4": 12,
+     "5": 5,
+     "7": 2
+    }
+   },
+   "event_layout": {
+    "u32_id_u32_count": 12,
+    "u32_id_u8_scope_u32_count": 0,
+    "events": 12
+   }
+  },
+  {
+   "bank": "BML_Sonar",
+   "located": true,
+   "packages": [
+    "BmGame"
+   ],
+   "export": 131399,
+   "bytes": 355830,
+   "sha1": "3151382d4c24eb72",
+   "bkhd_id": 112,
+   "bkhd_version": 3259549634,
+   "events_in_bank": 7,
+   "declared_rows": 18,
+   "declared_ids": [
+    "0x02EE7381",
+    "0x265FE0CD",
+    "0x2A77A8B4",
+    "0x835146BE",
+    "0x97CBF248",
+    "0xFFCC9813"
+   ],
+   "found_ids": [
+    "0x02EE7381",
+    "0x265FE0CD",
+    "0x2A77A8B4",
+    "0x835146BE",
+    "0x97CBF248",
+    "0xFFCC9813"
+   ],
+   "missing_ids": [],
+   "all_found": true,
+   "didx": {
+    "present": true,
+    "size": 264,
+    "records": 22,
+    "in_data": 22,
+    "outside_data": 0,
+    "data_size": 349590
+   },
+   "hirc": {
+    "count": 67,
+    "objects": 67,
+    "chunk_size": 3722,
+    "pad": 0,
+    "pad_zero": true,
+    "by_type": {
+     "2": 31,
+     "3": 18,
+     "4": 7,
+     "5": 8,
+     "7": 1,
+     "9": 2
+    }
+   },
+   "event_layout": {
+    "u32_id_u32_count": 7,
+    "u32_id_u8_scope_u32_count": 0,
+    "events": 7
+   }
+  },
+  {
+   "bank": "CHR_BatmanDisruptor",
+   "located": true,
+   "packages": [
+    "BmGame",
+    "StartupPatch"
+   ],
+   "export": 131407,
+   "bytes": 453260,
+   "sha1": "0aa7842d470f483c",
+   "bkhd_id": 112,
+   "bkhd_version": 3303467862,
+   "events_in_bank": 17,
+   "declared_rows": 7,
+   "declared_ids": [
+    "0x4F380472",
+    "0x6BB2C66E"
+   ],
+   "found_ids": [
+    "0x4F380472"
+   ],
+   "missing_ids": [
+    "0x6BB2C66E"
+   ],
+   "all_found": false,
+   "didx": {
+    "present": true,
+    "size": 480,
+    "records": 40,
+    "in_data": 40,
+    "outside_data": 0,
+    "data_size": 444549
+   },
+   "hirc": {
+    "count": 118,
+    "objects": 118,
+    "chunk_size": 5965,
+    "pad": 0,
+    "pad_zero": true,
+    "by_type": {
+     "2": 43,
+     "3": 44,
+     "4": 17,
+     "5": 7,
+     "7": 2,
+     "9": 3,
+     "14": 2
+    }
+   },
+   "event_layout": {
+    "u32_id_u32_count": 17,
+    "u32_id_u8_scope_u32_count": 0,
+    "events": 17
+   }
+  }
+ ],
+ "copies": [
+  {
+   "bank": "BML_Sonar",
+   "package": "BmGame",
+   "export": 131399,
+   "bytes": 355830,
+   "offset": 28905351,
+   "sha1": "3151382d4c24eb72",
+   "bkhd": {
+    "at": 2160,
+    "size": 32,
+    "id": 112,
+    "version": 3259549634
+   },
+   "prefix_len": 2160,
+   "chunks": [
+    {
+     "magic": "BKHD",
+     "at": 2160,
+     "size": 32
+    },
+    {
+     "magic": "DIDX",
+     "at": 2200,
+     "size": 264
+    },
+    {
+     "magic": "DATA",
+     "at": 2472,
+     "size": 349590
+    },
+    {
+     "magic": "HIRC",
+     "at": 352070,
+     "size": 3722
+    },
+    {
+     "magic": "STID",
+     "at": 355800,
+     "size": 22
+    }
+   ],
+   "chunk_tail": 0,
+   "chunk_stop": null,
+   "hirc": {
+    "count": 67,
+    "objects": 67,
+    "chunk_size": 3722,
+    "pad": 0,
+    "pad_zero": true,
+    "by_type": {
+     "2": 31,
+     "3": 18,
+     "4": 7,
+     "5": 8,
+     "7": 1,
+     "9": 2
+    }
+   },
+   "event_layout": {
+    "u32_id_u32_count": 7,
+    "u32_id_u8_scope_u32_count": 0,
+    "events": 7
+   },
+   "event_count": 7,
+   "event_ids": [
+    "0x02EE7381",
+    "0x265FE0CD",
+    "0x2A77A8B4",
+    "0x4B0D3A52",
+    "0x835146BE",
+    "0x97CBF248",
+    "0xFFCC9813"
+   ],
+   "didx": {
+    "present": true,
+    "size": 264,
+    "records": 22,
+    "in_data": 22,
+    "outside_data": 0,
+    "data_size": 349590
+   },
+   "declared_rows": 18,
+   "declared_ids": [
+    "0x02EE7381",
+    "0x265FE0CD",
+    "0x2A77A8B4",
+    "0x835146BE",
+    "0x97CBF248",
+    "0xFFCC9813"
+   ],
+   "found_ids": [
+    "0x02EE7381",
+    "0x265FE0CD",
+    "0x2A77A8B4",
+    "0x835146BE",
+    "0x97CBF248",
+    "0xFFCC9813"
+   ],
+   "missing_ids": [],
+   "all_found": true
+  },
+  {
+   "bank": "CHR_BatmanDisruptor",
+   "package": "BmGame",
+   "export": 131407,
+   "bytes": 453260,
+   "offset": 38229950,
+   "sha1": "0aa7842d470f483c",
+   "bkhd": {
+    "at": 2170,
+    "size": 24,
+    "id": 112,
+    "version": 3303467862
+   },
+   "prefix_len": 2170,
+   "chunks": [
+    {
+     "magic": "BKHD",
+     "at": 2170,
+     "size": 24
+    },
+    {
+     "magic": "DIDX",
+     "at": 2202,
+     "size": 480
+    },
+    {
+     "magic": "DATA",
+     "at": 2690,
+     "size": 444549
+    },
+    {
+     "magic": "HIRC",
+     "at": 447247,
+     "size": 5965
+    },
+    {
+     "magic": "STID",
+     "at": 453220,
+     "size": 32
+    }
+   ],
+   "chunk_tail": 0,
+   "chunk_stop": null,
+   "hirc": {
+    "count": 118,
+    "objects": 118,
+    "chunk_size": 5965,
+    "pad": 0,
+    "pad_zero": true,
+    "by_type": {
+     "2": 43,
+     "3": 44,
+     "4": 17,
+     "5": 7,
+     "7": 2,
+     "9": 3,
+     "14": 2
+    }
+   },
+   "event_layout": {
+    "u32_id_u32_count": 17,
+    "u32_id_u8_scope_u32_count": 0,
+    "events": 17
+   },
+   "event_count": 17,
+   "event_ids": [
+    "0x07CE378F",
+    "0x16443024",
+    "0x308BC06A",
+    "0x42F3A5EF",
+    "0x4F380472",
+    "0x5BC3EE41",
+    "0x62F2DD13",
+    "0x741478DC",
+    "0x8EA6FCA0",
+    "0x9C5EF1D6",
+    "0xB38D34B4",
+    "0xB4635EBB",
+    "0xBF0CEE98",
+    "0xDA7661EA",
+    "0xEE5F1211",
+    "0xF1BB7098",
+    "0xF94B9C61"
+   ],
+   "didx": {
+    "present": true,
+    "size": 480,
+    "records": 40,
+    "in_data": 40,
+    "outside_data": 0,
+    "data_size": 444549
+   },
+   "declared_rows": 7,
+   "declared_ids": [
+    "0x4F380472",
+    "0x6BB2C66E"
+   ],
+   "found_ids": [
+    "0x4F380472"
+   ],
+   "missing_ids": [
+    "0x6BB2C66E"
+   ],
+   "all_found": false
+  },
+  {
+   "bank": "BML_Batmobile_Subjective",
+   "package": "Startup",
+   "export": 7756,
+   "bytes": 712059,
+   "offset": 20560301,
+   "sha1": "9b057ac9612031a5",
+   "bkhd": {
+    "at": 135,
+    "size": 32,
+    "id": 112,
+    "version": 3885090289
+   },
+   "prefix_len": 135,
+   "chunks": [
+    {
+     "magic": "BKHD",
+     "at": 135,
+     "size": 32
+    },
+    {
+     "magic": "DIDX",
+     "at": 175,
+     "size": 216
+    },
+    {
+     "magic": "DATA",
+     "at": 399,
+     "size": 708559
+    },
+    {
+     "magic": "HIRC",
+     "at": 708966,
+     "size": 3040
+    },
+    {
+     "magic": "STID",
+     "at": 712014,
+     "size": 37
+    }
+   ],
+   "chunk_tail": 0,
+   "chunk_stop": null,
+   "hirc": {
+    "count": 61,
+    "objects": 61,
+    "chunk_size": 3040,
+    "pad": 0,
+    "pad_zero": true,
+    "by_type": {
+     "2": 21,
+     "3": 21,
+     "4": 12,
+     "5": 5,
+     "7": 2
+    }
+   },
+   "event_layout": {
+    "u32_id_u32_count": 12,
+    "u32_id_u8_scope_u32_count": 0,
+    "events": 12
+   },
+   "event_count": 12,
+   "event_ids": [
+    "0x66B6C3A7",
+    "0x78DACB3D",
+    "0x9F5181BC",
+    "0x9F5181BD",
+    "0xA7C5D89A",
+    "0xA86F5A4E",
+    "0xACB34CB7",
+    "0xC3438074",
+    "0xCE18923D",
+    "0xD58EF546",
+    "0xD6BC3575",
+    "0xD6BC3576"
+   ],
+   "didx": {
+    "present": true,
+    "size": 216,
+    "records": 18,
+    "in_data": 18,
+    "outside_data": 0,
+    "data_size": 708559
+   },
+   "declared_rows": 16,
+   "declared_ids": [
+    "0x78DACB3D",
+    "0xA7C5D89A",
+    "0xC3438074",
+    "0xCE18923D"
+   ],
+   "found_ids": [
+    "0x78DACB3D",
+    "0xA7C5D89A",
+    "0xC3438074",
+    "0xCE18923D"
+   ],
+   "missing_ids": [],
+   "all_found": true
+  },
+  {
+   "bank": "CHR_BatmanDisruptor",
+   "package": "StartupPatch",
+   "export": 7463,
+   "bytes": 453260,
+   "offset": 28649656,
+   "sha1": "410814e9ffb298a4",
+   "bkhd": {
+    "at": 2170,
+    "size": 24,
+    "id": 112,
+    "version": 3303467862
+   },
+   "prefix_len": 2170,
+   "chunks": [
+    {
+     "magic": "BKHD",
+     "at": 2170,
+     "size": 24
+    },
+    {
+     "magic": "DIDX",
+     "at": 2202,
+     "size": 480
+    },
+    {
+     "magic": "DATA",
+     "at": 2690,
+     "size": 444549
+    },
+    {
+     "magic": "HIRC",
+     "at": 447247,
+     "size": 5965
+    },
+    {
+     "magic": "STID",
+     "at": 453220,
+     "size": 32
+    }
+   ],
+   "chunk_tail": 0,
+   "chunk_stop": null,
+   "hirc": {
+    "count": 118,
+    "objects": 118,
+    "chunk_size": 5965,
+    "pad": 0,
+    "pad_zero": true,
+    "by_type": {
+     "2": 43,
+     "3": 44,
+     "4": 17,
+     "5": 7,
+     "7": 2,
+     "9": 3,
+     "14": 2
+    }
+   },
+   "event_layout": {
+    "u32_id_u32_count": 17,
+    "u32_id_u8_scope_u32_count": 0,
+    "events": 17
+   },
+   "event_count": 17,
+   "event_ids": [
+    "0x07CE378F",
+    "0x16443024",
+    "0x308BC06A",
+    "0x42F3A5EF",
+    "0x4F380472",
+    "0x5BC3EE41",
+    "0x62F2DD13",
+    "0x741478DC",
+    "0x8EA6FCA0",
+    "0x9C5EF1D6",
+    "0xB38D34B4",
+    "0xB4635EBB",
+    "0xBF0CEE98",
+    "0xDA7661EA",
+    "0xEE5F1211",
+    "0xF1BB7098",
+    "0xF94B9C61"
+   ],
+   "didx": {
+    "present": true,
+    "size": 480,
+    "records": 40,
+    "in_data": 40,
+    "outside_data": 0,
+    "data_size": 444549
+   },
+   "declared_rows": 7,
+   "declared_ids": [
+    "0x4F380472",
+    "0x6BB2C66E"
+   ],
+   "found_ids": [
+    "0x4F380472"
+   ],
+   "missing_ids": [
+    "0x6BB2C66E"
+   ],
+   "all_found": false
+  }
+ ],
+ "duplicates": [
+  {
+   "bank": "CHR_BatmanDisruptor",
+   "packages": [
+    "BmGame",
+    "StartupPatch"
+   ],
+   "sha1": [
+    "0aa7842d470f483c",
+    "410814e9ffb298a4"
+   ],
+   "identical": false,
+   "same_events": true
+  }
+ ],
+ "hash_rules": [
+  {
+   "rule": "fnv1(lower(name))",
+   "matches": 12,
+   "pairs": 12
+  },
+  {
+   "rule": "fnv1(name)",
+   "matches": 0,
+   "pairs": 12
+  },
+  {
+   "rule": "fnv1a(lower(name))",
+   "matches": 0,
+   "pairs": 12
+  },
+  {
+   "rule": "fnv1a(name)",
+   "matches": 0,
+   "pairs": 12
+  },
+  {
+   "rule": "crc32(lower(name))",
+   "matches": 0,
+   "pairs": 12
+  },
+  {
+   "rule": "crc32(name)",
+   "matches": 0,
+   "pairs": 12
+  }
+ ],
+ "missing_id_hunt": {
+  "targets": [
+   "0x6BB2C66E"
+  ],
+  "hits": {},
+  "banks": [
+   {
+    "package": "BmGame",
+    "bank": "BML_Impacts",
+    "export": 131397,
+    "events": 5
+   },
+   {
+    "package": "BmGame",
+    "bank": "BML_Sonar",
+    "export": 131399,
+    "events": 7
+   },
+   {
+    "package": "BmGame",
+    "bank": "CHR_BatmanAlerts",
+    "export": 131401,
+    "events": 6
+   },
+   {
+    "package": "BmGame",
+    "bank": "CHR_BatmanDisruptor",
+    "export": 131407,
+    "events": 17
+   },
+   {
+    "package": "BmGame",
+    "bank": "OBJ_Rolling_Objects",
+    "export": 131630,
+    "events": 9
+   },
+   {
+    "package": "BmGame",
+    "bank": "UI_InGame",
+    "export": 131652,
+    "events": 219
+   },
+   {
+    "package": "BmGame",
+    "bank": "VFX_Tank_Explosion",
+    "export": 131672,
+    "events": 22
+   },
+   {
+    "package": "Engine",
+    "bank": "BML_Batmobile",
+    "export": 37004,
+    "events": 53
+   },
+   {
+    "package": "Engine",
+    "bank": "BML_Battlemode",
+    "export": 37005,
+    "events": 7
+   },
+   {
+    "package": "Engine",
+    "bank": "BML_Tyres",
+    "export": 37006,
+    "events": 23
+   },
+   {
+    "package": "Engine",
+    "bank": "WEA_Rain_Materials",
+    "export": 37012,
+    "events": 582
+   },
+   {
+    "package": "Startup",
+    "bank": "BML_Batmobile_Subjective",
+    "export": 7756,
+    "events": 12
+   },
+   {
+    "package": "Startup",
+    "bank": "VEH_Tank_Heavy",
+    "export": 10397,
+    "events": 41
+   },
+   {
+    "package": "Startup",
+    "bank": "VEH_Tank_Missiles",
+    "export": 10398,
+    "events": 12
+   },
+   {
+    "package": "StartupPatch",
+    "bank": "BML_Impacts",
+    "export": 7454,
+    "events": 5
+   },
+   {
+    "package": "StartupPatch",
+    "bank": "CHR_BatmanAlerts",
+    "export": 7457,
+    "events": 6
+   },
+   {
+    "package": "StartupPatch",
+    "bank": "CHR_BatmanDisruptor",
+    "export": 7463,
+    "events": 17
+   },
+   {
+    "package": "StartupPatch",
+    "bank": "UI_InGame",
+    "export": 9950,
+    "events": 219
+   },
+   {
+    "package": "StartupPatch",
+    "bank": "VFX_Tank_Explosion",
+    "export": 9966,
+    "events": 22
+   },
+   {
+    "package": "StartupPatch",
+    "bank": "WEA_Rain_Materials",
+    "export": 9968,
+    "events": 582
+   }
+  ]
+ }
+}

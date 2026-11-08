@@ -1,0 +1,259 @@
+{
+ "card": "G3-HUD-RADAR recheck",
+ "movie": {
+  "object": "BmGame.upk:HudModuleBespokeLocalRadar.Image",
+  "packed_bytes": 66317,
+  "inflated_bytes": 139264,
+  "gfx_sha256": "f9f622d5a068919e96b93a6564873b7cbb9fd9035ce68782aaf99a89a5f972be",
+  "header": {
+   "nbits": 16,
+   "width": 1024.0,
+   "height": 720.0,
+   "frame_rate": 30.0,
+   "frames": 40
+  },
+  "header_hex": "80000280000001c200001e2800"
+ },
+ "as3": {
+  "as3_lines": 788,
+  "as3_sha256": "629688edf24150a64d738bb33f1a71b71f8e1b21ca6ebf96cf71f69a3e5166e6",
+  "px_per_unit_lines": [
+   288,
+   289,
+   336,
+   337
+  ],
+  "px_per_unit_values": [
+   80
+  ],
+  "degree_lines": [
+   301,
+   565
+  ],
+  "degree_values": [
+   "57.3"
+  ],
+  "debug_divisor_lines": [
+   596
+  ],
+  "debug_divisor_values": [
+   400
+  ],
+  "pulse_fps_lines": [
+   514
+  ],
+  "pulse_fps_values": [
+   30
+  ],
+  "mask_scale_lines": [
+   559,
+   560
+  ],
+  "setters": [
+   {
+    "name": "UC_PushHeavyTanksToFlash",
+    "params": "param1:int, param2:Boolean"
+   },
+   {
+    "name": "UC_UpdateTargetPosition",
+    "params": "param1:Number, param2:Number, param3:Number, param4:int"
+   },
+   {
+    "name": "UC_SetStationaryLockonValue",
+    "params": "param1:Number"
+   },
+   {
+    "name": "UC_SetLockonValue",
+    "params": "param1:Number, param2:Number"
+   },
+   {
+    "name": "UC_SetHealthTitle",
+    "params": "param1:String"
+   },
+   {
+    "name": "UC_SetHealthValue",
+    "params": "param1:Number, param2:Boolean"
+   },
+   {
+    "name": "UC_DoOutro",
+    "params": ""
+   },
+   {
+    "name": "UC_DoIntro",
+    "params": ""
+   },
+   {
+    "name": "UC_SetVisualMode",
+    "params": "param1:Boolean, param2:Boolean"
+   },
+   {
+    "name": "UC_SetRootsPermanentlyVisible",
+    "params": "param1:Boolean"
+   },
+   {
+    "name": "UC_DoPulse",
+    "params": "param1:Number"
+   },
+   {
+    "name": "UC_SetRootNetwork",
+    "params": "param1:String"
+   },
+   {
+    "name": "UC_SetMaskEnormous",
+    "params": "param1:Boolean"
+   },
+   {
+    "name": "UC_SetPlayerPosition",
+    "params": "param1:Number, param2:Number, param3:Number"
+   },
+   {
+    "name": "UC_SetRootNetworkOpacity",
+    "params": "param1:Number"
+   }
+  ],
+  "metre_constants": [],
+  "has_icon_size": false
+ },
+ "bmak_hud_data": {
+  "hud_json_objects": [
+   "BmGame.upk:HudModuleBatmobile.Image",
+   "Startup.upk:StoryModeHUD.HUD"
+  ],
+  "hud_json_covers_radar": false,
+  "bmak_hud_targets": [
+   "BmGame.upk:HudModuleBatmobile.Image",
+   "Startup.upk:StoryModeHUD.HUD"
+  ],
+  "hud_spec_constants": {
+   "TickDeltaTime": 0.033,
+   "StageWidth": 1024.0,
+   "StageHeight": 720.0,
+   "MaxHealthChangePerFrame": 0.05,
+   "PerspectiveFOV": 56.0,
+   "MovieWidth": 1024,
+   "MovieHeight": 768
+  },
+  "hud_spec_setters": 31,
+  "radar_json_px_per_unit": 80,
+  "radar_json_stage": {
+   "width": 1024,
+   "height": 720,
+   "frame_rate": 30,
+   "source": "the movie's own [SWF(...)] metadata, line 8"
+  },
+  "radar_json_standalone_divisor": null,
+  "radar_json_setters": 15,
+  "radar_json_sprite_count": 113,
+  "radar_json_script_count": 58
+ },
+ "jc3": {
+  "hud_as_swf": "[SWF(width=\"1280\", height=\"720\", backgroundColor=\"#666666\", frameRate=\"30\")]",
+  "stage_width": 1280,
+  "stage_height": 720,
+  "frame_rate": 30,
+  "poi_icon_scale_lines": 1,
+  "poi_update_present": true,
+  "poi_arrow_states": [
+   -1,
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "poi_arrow_rotations": [
+   -135,
+   -90,
+   -45,
+   0,
+   45,
+   90,
+   135,
+   180
+  ],
+  "poi_position_lines": [
+   7861,
+   7878,
+   7895
+  ],
+  "poi_has_distance_field": true,
+  "poi_count": 32
+ },
+ "rows": [
+  {
+   "id": "scale",
+   "report_value": "80 px per radar distance unit",
+   "source": "AS3 lines 288, 289, 336, 337: `80 * this.target_location_distance * Math.sin/Cos(...)` and the same 80 for each tracking dot",
+   "in_bmak_hud_data": "no - HUD.json covers only BmGame.upk:HudModuleBatmobile.Image, Startup.upk:StoryModeHUD.HUD; px/unit is in RADAR.json (80) and the AS3",
+   "verdict": "SAME",
+   "jc3_carry": "PARTIAL - JC3 POIs are placed in stage pixels by the caller (`poi.x = 600`, hud.as line 7861); hud.gfx has no world-to-pixel mapping, so the 80 would be applied by the transplant, not carried"
+  },
+  {
+   "id": "radius",
+   "report_value": "world radius / range in metres: UNKNOWN",
+   "source": "no metre constant in the AS3 (0 matches for metre/meter/world_radius/map_radius)",
+   "in_bmak_hud_data": "no - neither HUD.json nor RADAR.json carries a world radius",
+   "verdict": "UNKNOWN - no source in any file, the report is right to say so",
+   "jc3_carry": "NO - nothing to carry"
+  },
+  {
+   "id": "debug_divisor",
+   "report_value": "standalone debug build divides the pixel radius by 400",
+   "source": "AS3 line 596: `Math.sqrt(...) / 400` inside `Tick()`'s `if(Standalone)` block",
+   "in_bmak_hud_data": "no - but RADAR.json's `standalone_divisor` is None and RADAR.md says \"by None\", so the lane's own record disagrees with its report; the AS3 settles it in the report's favour",
+   "verdict": "SAME (400) - and it corrects RADAR.json/RADAR.md",
+   "jc3_carry": "NO - debug-only, not part of the shipped mapping"
+  },
+  {
+   "id": "icon_size",
+   "report_value": "icon pixel sizes: none given (explicitly \"size UNKNOWN\")",
+   "source": "no width/height for an icon anywhere in the module script",
+   "in_bmak_hud_data": "no - 113 DefineSprite carriers are counted, none is measured",
+   "verdict": "NO SOURCE for any number; the report claims none, only a carrier count (113 sprites)",
+   "jc3_carry": "PARTIAL - a JC3 POI scales its icon (`m_IconScale` -> `m_Icon.scaleX/scaleY`, poi.as line 764, 1 use), so a size *ratio* carries; an absolute pixel size has no JC3 field"
+  },
+  {
+   "id": "update_rate",
+   "report_value": "30 fps (stated as the stage frame rate, the only rate the report gives)",
+   "source": "GFx header of the carved movie: frame rate 0x1e00 = 30.0, 40 frames; the AS3 [SWF] metadata line repeats 30",
+   "in_bmak_hud_data": "not in HUD.json (no radar movie); HUD_SPEC.json's TickDeltaTime 0.033 = 1/30 for the Batmobile module",
+   "verdict": "SAME at movie level - BUT it is playback rate, not a radar refresh rate: positions arrive per setter call, and `UC_UpdateTargetPosition` returns early when angle/distance/bearing are unchanged",
+   "jc3_carry": "YES - JC3's hud.gfx stage is also 30 fps (`[SWF(width=\"1280\", height=\"720\", frameRate=\"30\")]`, hud.as line 15)"
+  },
+  {
+   "id": "pulse_period",
+   "report_value": "MapPulseTimer period: UNKNOWN",
+   "source": "AS3 line 514: `totalFrames - 55 - param1 * 30` - the 30 is seconds->frames, but `totalFrames` is symbol content, so no period number exists in the files",
+   "in_bmak_hud_data": "no",
+   "verdict": "UNKNOWN - no source; the report is right",
+   "jc3_carry": "NO - JC3 POIs have `m_Flash` (alpha tween) but no frame-counted pulse of this shape"
+  },
+  {
+   "id": "stage",
+   "report_value": "stage 1024x720",
+   "source": "GFx header of the carved movie: RECT 1024x720 (nbits 16, header 80000280000001c200001e2800)",
+   "in_bmak_hud_data": "not in HUD.json; HUD_SPEC.json agrees for the Batmobile module (StageWidth 1024.0, StageHeight 720.0)",
+   "verdict": "SAME",
+   "jc3_carry": "PARTIAL - JC3's stage is 1280x720: the height carries, the 1024 width does not (layout must be re-fitted)"
+  },
+  {
+   "id": "setters",
+   "report_value": "15 UC_* setters",
+   "source": "AS3: 15 `public function UC_*` definitions",
+   "in_bmak_hud_data": "RADAR.json lists 15; HUD_INTERFACES.json lists 21 for the same module (it adds the 6 inherited module-level ones)",
+   "verdict": "SAME for the module's own script (15); DIFFERS if counted from HUD_INTERFACES.json (21)",
+   "jc3_carry": "NO - JC3 has no ModuleStruct_Bespoke_LocalRadar; a POI is driven by one `UpdatePoi(poi, data)` object, so the setters must be re-expressed, not carried"
+  }
+ ],
+ "counts": {
+  "rows": 8,
+  "same": 5,
+  "differs": 0,
+  "no_source": 3
+ }
+}

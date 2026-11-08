@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/reverify-BONES.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-03
+Research/BatmobileGrab/BONES.md (pre-reset, Tools/scripts/grab_bones.py) reports 180 bones, one root, three LODs (299,837 / 144,857 / 21,720 faces), built from PSKX exports plus Playable_Batmobile_SF.upk section tables. The PSKX files were exported by a tool, so check them against the game's own bytes: read the skeletal mesh export in the cooked package yourself, count its bones and each LOD's triangles, and compare bone names and parent indices with BONES.md. Any mismatch decides whether later cards built on the PSKX can be trusted. Rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md section 3. Report at the DONE path with STATUS (or VERDICT for a review) and every command with its output.

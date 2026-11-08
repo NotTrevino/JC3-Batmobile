@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rotor-block-gate-input.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-08
+The ram-damage row T-RA1 is blocked, and the blocking question is whether the rotor-RPM collision block can open on a car. Read tmp/freebuff/reports/ram-assist-closest-system-plan.md sections 1 to 3, including the gate discussion near its opening lines, and do not repeat its 1260 RPM derivation. The gate's min_rpm is 30 in the rotor_collision member set, and the report says the gate input may be engine RPM or rotor RPM. Decode from the donor module's member list which input the gate reads, using the member names and offsets listed in that plan and the object list in Research/BatmobileGrab/objects.jsonl. State whether the car's engine RPM can reach the gate, and whether the no-mass fallback (mass_ratio_when_no_mass 0.1) would apply to a car. Give a verdict of YES, NO or UNKNOWN, with the consumer file that would show the input if UNKNOWN.

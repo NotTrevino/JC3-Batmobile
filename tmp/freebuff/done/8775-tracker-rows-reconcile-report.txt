@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/tracker-rows-reconcile-report.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-06
+Reconcile the project trackers with the finished reports without editing any tracker. Read GRAB_BACKLOG.md status rows and QUEUE_MAP.md, then list every report in tmp/freebuff/reports that is newer than the matching tracker row, grouped by row, with the report's own --check command where it names one. For each, say whether the tracker row still describes it correctly (quote the row id and the report path) and which rows look stale. Output a table the operator can use to flip rows after re-running each --check. Do not run any --check that writes files.

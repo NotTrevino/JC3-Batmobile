@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/install-rollback-live-card.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/live-dropzone-mode-and-rc2-state.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/world-pilot-cards.md
+Write the pilot card for the first real install and rollback, in the format of Working/Q/PILOT/CARD_FORMAT.md, as new files INSTALL_REAL.md and ROLLBACK_REAL.md in Working/Q/PILOT. The operator performs the file copy; the card tells the pilot what to read: the process list shows no JustCause3.exe, the snapshot folder exists with the manifest row count, Status prints the expected states, Verify prints verified N/N, a launch reaches the menu, and after Rollback the tree hash equals the pre-install hash recorded by the card. A second part covers rollback while the Batmobile is owned in a save: load a save that contains the car, run Rollback, load again and read whether the save opens and whether the game reports a missing vehicle. Pass bands are the counts and hashes from Builds/bm-RC5/verify/installer.md, never new numbers. Commands come only from the sources named in CARD_FORMAT.md or from the installer's own usage text. Add Tools/scripts/install_cards_check.py (--write, --check). Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

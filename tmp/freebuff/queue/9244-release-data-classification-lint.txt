@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/release-data-classification-lint.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/release-path-and-asset-inventory.md
+Decide which data files belong in the release and which do not, and prove it. Read Working/Release/PATHS.csv and the SAFE or WITHHELD marks from the inventory brief. Create the clean export folder Builds/release-0001/export as a candidate: scripts and edit specs only, no game bytes. Then lint it three ways. One: um publish check on the export folder (read um's own help first; if the command differs, quote the actual one). Two: a scan for files larger than 1 MB, for known game archive extensions (.arc, .ee, .tab, .toc, .bank, .ddsc, .rbm, .upk), and for hash-like blobs. Three: a scan of JSON and markdown for pasted extracted values beyond a numeric ledger cell. Write Working/Release/LINT.md with each hit and its fix. Do not delete anything from the originals; the export is built by copying. Done when all three scans report zero hits or each hit has an applied fix in the export, and the final file count and total size are printed. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

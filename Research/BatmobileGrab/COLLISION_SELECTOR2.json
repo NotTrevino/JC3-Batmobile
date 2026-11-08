@@ -1,0 +1,1439 @@
+{
+ "card": "G3-01e-fix - SetBatmanVsBatmobileCollisionMode: guard-region evidence and the full runtime transition set (value->mesh table unchanged)",
+ "driverleft": {
+  "calls": [
+   {
+    "argument": {
+     "at": 306,
+     "kind": "byte",
+     "prefix": null,
+     "value": 2
+    },
+    "at": 301,
+    "name": "SetBatmanVsBatmobileCollisionMode"
+   },
+   {
+    "argument": {
+     "at": 339,
+     "kind": "byte",
+     "prefix": null,
+     "value": 1
+    },
+    "at": 334,
+    "name": "SetBatmanVsBatmobileCollisionMode"
+   }
+  ],
+  "comparison_tokens": [
+   {
+    "at": 6,
+    "token": "0x9A"
+   },
+   {
+    "at": 274,
+    "token": "0x9B"
+   }
+  ],
+  "export": 7400,
+  "label": "decoded (Startup.upk export 7400, script bytes at the stated offsets)",
+  "member_refs": [
+   {
+    "at": 4,
+    "form": "0x2D 0x01",
+    "index": -1382,
+    "path": "Core.bWasRemoteDriving",
+    "window": "before the value-2 call"
+   },
+   {
+    "at": 20,
+    "form": "0x00 0x01",
+    "index": -5746,
+    "path": "Core.Driver",
+    "window": "before the value-2 call"
+   },
+   {
+    "at": 42,
+    "form": "0x00 0x01",
+    "index": -5746,
+    "path": "Core.Driver",
+    "window": "before the value-2 call"
+   },
+   {
+    "at": 69,
+    "form": "0x19 0x01",
+    "index": -5702,
+    "path": "Core.WorldInfo",
+    "window": "before the value-2 call"
+   },
+   {
+    "at": 75,
+    "form": "0x09 0x00",
+    "index": -5749,
+    "path": "Core.GRI",
+    "window": "before the value-2 call"
+   },
+   {
+    "at": 81,
+    "form": "0x00 0x01",
+    "index": -5749,
+    "path": "Core.GRI",
+    "window": "before the value-2 call"
+   },
+   {
+    "at": 87,
+    "form": "0x09 0x00",
+    "index": -5377,
+    "path": "Core.FlagManager",
+    "window": "before the value-2 call"
+   },
+   {
+    "at": 93,
+    "form": "0x00 0x01",
+    "index": -5377,
+    "path": "Core.FlagManager",
+    "window": "before the value-2 call"
+   },
+   {
+    "at": 148,
+    "form": "0x19 0x01",
+    "index": -5702,
+    "path": "Core.WorldInfo",
+    "window": "before the value-2 call"
+   },
+   {
+    "at": 154,
+    "form": "0x09 0x00",
+    "index": -5749,
+    "path": "Core.GRI",
+    "window": "before the value-2 call"
+   },
+   {
+    "at": 160,
+    "form": "0x00 0x01",
+    "index": -5749,
+    "path": "Core.GRI",
+    "window": "before the value-2 call"
+   },
+   {
+    "at": 166,
+    "form": "0x09 0x00",
+    "index": -5377,
+    "path": "Core.FlagManager",
+    "window": "before the value-2 call"
+   },
+   {
+    "at": 172,
+    "form": "0x00 0x01",
+    "index": -5377,
+    "path": "Core.FlagManager",
+    "window": "before the value-2 call"
+   },
+   {
+    "at": 222,
+    "form": "0x2D 0x01",
+    "index": -1498,
+    "path": "Core.IsVehicleAsleep",
+    "window": "before the value-2 call"
+   },
+   {
+    "at": 229,
+    "form": "0x2D 0x01",
+    "index": -1361,
+    "path": "Core.FakeRoadCollisionStatic",
+    "window": "before the value-2 call"
+   },
+   {
+    "at": 253,
+    "form": "0x2D 0x01",
+    "index": -1366,
+    "path": "Core.ArmouredMode",
+    "window": "before the value-2 call"
+   },
+   {
+    "at": 277,
+    "form": "0x19 0x01",
+    "index": -5673,
+    "path": "Core.BatmobileWinch",
+    "window": "before the value-2 call"
+   },
+   {
+    "at": 283,
+    "form": "0x09 0x00",
+    "index": -1515,
+    "path": "Core.WinchPullType",
+    "window": "before the value-2 call"
+   },
+   {
+    "at": 289,
+    "form": "0x00 0x01",
+    "index": -1515,
+    "path": "Core.WinchPullType",
+    "window": "before the value-2 call"
+   },
+   {
+    "at": 317,
+    "form": "0x2D 0x01",
+    "index": -1366,
+    "path": "Core.ArmouredMode",
+    "window": "between the value-2 and value-1 calls"
+   },
+   {
+    "at": 327,
+    "form": "0x2D 0x01",
+    "index": -1498,
+    "path": "Core.IsVehicleAsleep",
+    "window": "between the value-2 and value-1 calls"
+   },
+   {
+    "at": 343,
+    "form": "0x2D 0x01",
+    "index": -1494,
+    "path": "Core.bForceWheelspin",
+    "window": "after the value-1 call"
+   }
+  ],
+  "path": "RVehicleBatmobile.DriverLeft",
+  "script_bytes": 368,
+  "unexplained_bytes": 277
+ },
+ "guard_names": {
+  "decoded": "Startup.upk 7400 script: @222/@327 Core.IsVehicleAsleep, @253/@317 Core.ArmouredMode, @277 Core.BatmobileWinch, @283/@289 Core.WinchPullType (6-byte member refs; each row has its offset and form)",
+  "derived": "the value-2 call is at 301 and the value-1 call at 334; the Winch refs sit before 301, the ArmouredMode/IsVehicleAsleep pair between 301 and 334. That positional split *suggests* 2<->Winch and 1<->ArmouredMode/IsVehicleAsleep, but the branch encoding is UNKNOWN, so which body/guard each ref belongs to is not proven",
+  "label": "names decoded, branch association derived/UNKNOWN"
+ },
+ "jobs": [
+  {
+   "callers": [
+    {
+     "arg_label": "decoded (byte after the FName operand)",
+     "argument": {
+      "at": 18,
+      "kind": "byte",
+      "value": 0
+     },
+     "call_at": 13,
+     "call_name_index": 69765,
+     "export": 10701,
+     "function": "RVehicleBatmobileBase.StartSelfDrive",
+     "script_bytes": 159
+    }
+   ],
+   "functions_scanned": 29620,
+   "package": "BmGame.upk",
+   "selector_exports": [
+    10894
+   ],
+   "selector_name_indices": [
+    69765
+   ]
+  },
+  {
+   "callers": [
+    {
+     "arg_label": "decoded (byte after the FName operand)",
+     "argument": {
+      "at": 242,
+      "kind": "byte",
+      "value": 0
+     },
+     "call_at": 237,
+     "call_name_index": 58517,
+     "export": 7399,
+     "function": "RVehicleBatmobile.DriverEnter",
+     "script_bytes": 307
+    },
+    {
+     "arg_label": "decoded (byte after the FName operand)",
+     "argument": {
+      "at": 306,
+      "kind": "byte",
+      "value": 2
+     },
+     "call_at": 301,
+     "call_name_index": 58517,
+     "export": 7400,
+     "function": "RVehicleBatmobile.DriverLeft",
+     "script_bytes": 368
+    },
+    {
+     "arg_label": "decoded (byte after the FName operand)",
+     "argument": {
+      "at": 339,
+      "kind": "byte",
+      "value": 1
+     },
+     "call_at": 334,
+     "call_name_index": 58517,
+     "export": 7400,
+     "function": "RVehicleBatmobile.DriverLeft",
+     "script_bytes": 368
+    },
+    {
+     "arg_label": "decoded (byte after the FName operand)",
+     "argument": {
+      "at": 22,
+      "kind": "byte",
+      "value": 0
+     },
+     "call_at": 17,
+     "call_name_index": 58517,
+     "export": 7401,
+     "function": "RVehicleBatmobile.OnWakeRBPhysics",
+     "script_bytes": 26
+    },
+    {
+     "arg_label": "decoded (byte after the FName operand)",
+     "argument": {
+      "at": 59,
+      "kind": "byte",
+      "value": 1
+     },
+     "call_at": 54,
+     "call_name_index": 58517,
+     "export": 7402,
+     "function": "RVehicleBatmobile.OnSleepRBPhysics",
+     "script_bytes": 63
+    }
+   ],
+   "functions_scanned": 1886,
+   "package": "Startup.upk",
+   "selector_exports": [],
+   "selector_name_indices": [
+    58517
+   ]
+  }
+ ],
+ "oracles": {
+  "caller_constants": {
+   "detail": {
+    "constants": [
+     0,
+     1,
+     2
+    ],
+    "sites": 6
+   },
+   "ok": true
+  },
+  "guard_refs_present": {
+   "detail": {
+    "found": [
+     [
+      "Core.ArmouredMode",
+      253
+     ],
+     [
+      "Core.ArmouredMode",
+      317
+     ],
+     [
+      "Core.BatmobileWinch",
+      277
+     ],
+     [
+      "Core.Driver",
+      20
+     ],
+     [
+      "Core.Driver",
+      42
+     ],
+     [
+      "Core.FakeRoadCollisionStatic",
+      229
+     ],
+     [
+      "Core.FlagManager",
+      87
+     ],
+     [
+      "Core.FlagManager",
+      93
+     ],
+     [
+      "Core.FlagManager",
+      166
+     ],
+     [
+      "Core.FlagManager",
+      172
+     ],
+     [
+      "Core.GRI",
+      75
+     ],
+     [
+      "Core.GRI",
+      81
+     ],
+     [
+      "Core.GRI",
+      154
+     ],
+     [
+      "Core.GRI",
+      160
+     ],
+     [
+      "Core.IsVehicleAsleep",
+      222
+     ],
+     [
+      "Core.IsVehicleAsleep",
+      327
+     ],
+     [
+      "Core.WinchPullType",
+      283
+     ],
+     [
+      "Core.WinchPullType",
+      289
+     ],
+     [
+      "Core.WorldInfo",
+      69
+     ],
+     [
+      "Core.WorldInfo",
+      148
+     ],
+     [
+      "Core.bForceWheelspin",
+      343
+     ],
+     [
+      "Core.bWasRemoteDriving",
+      4
+     ]
+    ],
+    "missing": []
+   },
+   "ok": true
+  },
+  "guard_windows": {
+   "detail": {
+    "before_301": [
+     [
+      277,
+      "Core.BatmobileWinch"
+     ],
+     [
+      283,
+      "Core.WinchPullType"
+     ],
+     [
+      289,
+      "Core.WinchPullType"
+     ]
+    ],
+    "between_301_334": [
+     [
+      317,
+      "Core.ArmouredMode"
+     ],
+     [
+      327,
+      "Core.IsVehicleAsleep"
+     ]
+    ]
+   },
+   "ok": true
+  },
+  "mesh_table_matches_g3_01e": {
+   "detail": {
+    "g3_01e_rows": {
+     "0": null,
+     "1": "BatmanCollisionMeshPursuitMode",
+     "2": "BatmanCollisionMeshBattleMode"
+    }
+   },
+   "ok": true
+  },
+  "mesh_table_unchanged": {
+   "detail": {
+    "expected": {
+     "0": null,
+     "1": "BatmanCollisionMeshPursuitMode",
+     "2": "BatmanCollisionMeshBattleMode"
+    },
+    "rows": {
+     "0": null,
+     "1": "BatmanCollisionMeshPursuitMode",
+     "2": "BatmanCollisionMeshBattleMode"
+    }
+   },
+   "ok": true
+  },
+  "runtime_coverage": {
+   "detail": {
+    "coverage": {
+     "absent": 14,
+     "missing": 2,
+     "seated": 7
+    },
+    "sum_check": true
+   },
+   "ok": true
+  },
+  "runtime_rise_list": {
+   "detail": {
+    "actual": [
+     [
+      "10:05:15.778",
+      0,
+      1
+     ],
+     [
+      "11:48:22.562",
+      0,
+      1
+     ],
+     [
+      "11:48:22.898",
+      1,
+      0
+     ],
+     [
+      "11:48:24.093",
+      0,
+      1
+     ],
+     [
+      "11:48:25.206",
+      1,
+      0
+     ],
+     [
+      "11:48:38.572",
+      0,
+      1
+     ],
+     [
+      "11:53:43.969",
+      1,
+      0
+     ]
+    ]
+   },
+   "ok": true
+  },
+  "runtime_transitions": {
+   "detail": {
+    "falls": 3,
+    "list": [
+     [
+      "10:05:15.778",
+      0,
+      1,
+      "absent"
+     ],
+     [
+      "11:48:22.562",
+      0,
+      1,
+      "absent"
+     ],
+     [
+      "11:48:22.898",
+      1,
+      0,
+      "missing"
+     ],
+     [
+      "11:48:24.093",
+      0,
+      1,
+      "missing"
+     ],
+     [
+      "11:48:25.206",
+      1,
+      0,
+      "seated"
+     ],
+     [
+      "11:48:38.572",
+      0,
+      1,
+      "absent"
+     ],
+     [
+      "11:53:43.969",
+      1,
+      0,
+      "seated"
+     ]
+    ],
+    "rises": 4,
+    "total": 7
+   },
+   "ok": true
+  },
+  "runtime_values": {
+   "detail": {
+    "samples": 23,
+    "value_counts": {
+     "0": 17,
+     "1": 6
+    }
+   },
+   "ok": true
+  },
+  "selector_sha1": {
+   "detail": {
+    "g3_01e": "c2f6a2ee667c544876e5317a103072c44ea17788",
+    "recomputed": "c2f6a2ee667c544876e5317a103072c44ea17788"
+   },
+   "ok": true
+  }
+ },
+ "runtime": {
+  "coverage_by_mode": {
+   "mode=0|driver_absent": 9,
+   "mode=0|driver_missing": 1,
+   "mode=0|driver_seated": 7,
+   "mode=1|driver_absent": 5,
+   "mode=1|driver_missing": 1
+  },
+  "driver_coverage": {
+   "absent": 14,
+   "missing": 2,
+   "seated": 7
+  },
+  "falls": 3,
+  "files": [
+   "samples-20261103T084831Z.jsonl",
+   "samples-20261103T085330Z.jsonl",
+   "samples-20261103T085631Z.jsonl",
+   "samples-20261103T113755Z.jsonl",
+   "samples-20261103T114350Z.jsonl",
+   "samples-20261103T115320Z.jsonl",
+   "samples-20261103T120003Z.jsonl"
+  ],
+  "label": "decoded (Research/BatmobileGrab/runtime/samples-*.jsonl; the 03:57 sampler logged only *changes*, so a sample lists Driver only when it changed too)",
+  "rises": 4,
+  "sample_count": 23,
+  "samples": [
+   {
+    "driver_state": "absent",
+    "driver_value": 0,
+    "file": "samples-20261103T084831Z.jsonl",
+    "mode": 0,
+    "t": "2026-11-03T08:48:31.767Z",
+    "vehicle": "veh0"
+   },
+   {
+    "driver_state": "seated",
+    "driver_value": 636866416,
+    "file": "samples-20261103T084831Z.jsonl",
+    "mode": 0,
+    "t": "2026-11-03T08:48:31.767Z",
+    "vehicle": "veh1"
+   },
+   {
+    "driver_state": "absent",
+    "driver_value": 0,
+    "file": "samples-20261103T085330Z.jsonl",
+    "mode": 0,
+    "t": "2026-11-03T08:53:30.962Z",
+    "vehicle": "veh0"
+   },
+   {
+    "driver_state": "seated",
+    "driver_value": 636866416,
+    "file": "samples-20261103T085330Z.jsonl",
+    "mode": 0,
+    "t": "2026-11-03T08:53:30.962Z",
+    "vehicle": "veh1"
+   },
+   {
+    "driver_state": "absent",
+    "driver_value": 0,
+    "file": "samples-20261103T085631Z.jsonl",
+    "mode": 0,
+    "t": "2026-11-03T08:56:31.993Z",
+    "vehicle": "veh0"
+   },
+   {
+    "driver_state": "seated",
+    "driver_value": 636866416,
+    "file": "samples-20261103T085631Z.jsonl",
+    "mode": 0,
+    "t": "2026-11-03T08:56:31.993Z",
+    "vehicle": "veh1"
+   },
+   {
+    "driver_state": "absent",
+    "driver_value": 0,
+    "file": "samples-20261103T085631Z.jsonl",
+    "mode": 1,
+    "t": "2026-11-03T10:05:15.778Z",
+    "vehicle": "veh1"
+   },
+   {
+    "driver_state": "absent",
+    "driver_value": 0,
+    "file": "samples-20261103T113755Z.jsonl",
+    "mode": 0,
+    "t": "2026-11-03T11:37:55.959Z",
+    "vehicle": "veh0"
+   },
+   {
+    "driver_state": "absent",
+    "driver_value": 0,
+    "file": "samples-20261103T113755Z.jsonl",
+    "mode": 1,
+    "t": "2026-11-03T11:37:55.959Z",
+    "vehicle": "veh1"
+   },
+   {
+    "driver_state": "absent",
+    "driver_value": 0,
+    "file": "samples-20261103T114350Z.jsonl",
+    "mode": 0,
+    "t": "2026-11-03T11:43:50.763Z",
+    "vehicle": "veh0"
+   },
+   {
+    "driver_state": "seated",
+    "driver_value": 1529038352,
+    "file": "samples-20261103T114350Z.jsonl",
+    "mode": 0,
+    "t": "2026-11-03T11:43:50.763Z",
+    "vehicle": "veh1"
+   },
+   {
+    "driver_state": "absent",
+    "driver_value": 0,
+    "file": "samples-20261103T114350Z.jsonl",
+    "mode": 1,
+    "t": "2026-11-03T11:48:22.562Z",
+    "vehicle": "veh1"
+   },
+   {
+    "driver_state": "missing",
+    "driver_value": null,
+    "file": "samples-20261103T114350Z.jsonl",
+    "mode": 0,
+    "t": "2026-11-03T11:48:22.898Z",
+    "vehicle": "veh1"
+   },
+   {
+    "driver_state": "missing",
+    "driver_value": null,
+    "file": "samples-20261103T114350Z.jsonl",
+    "mode": 1,
+    "t": "2026-11-03T11:48:24.093Z",
+    "vehicle": "veh1"
+   },
+   {
+    "driver_state": "seated",
+    "driver_value": 1529038352,
+    "file": "samples-20261103T114350Z.jsonl",
+    "mode": 0,
+    "t": "2026-11-03T11:48:25.206Z",
+    "vehicle": "veh1"
+   },
+   {
+    "driver_state": "absent",
+    "driver_value": 0,
+    "file": "samples-20261103T114350Z.jsonl",
+    "mode": 1,
+    "t": "2026-11-03T11:48:38.572Z",
+    "vehicle": "veh1"
+   },
+   {
+    "driver_state": "absent",
+    "driver_value": 0,
+    "file": "samples-20261103T115320Z.jsonl",
+    "mode": 0,
+    "t": "2026-11-03T11:53:20.552Z",
+    "vehicle": "veh0"
+   },
+   {
+    "driver_state": "absent",
+    "driver_value": 0,
+    "file": "samples-20261103T115320Z.jsonl",
+    "mode": 1,
+    "t": "2026-11-03T11:53:20.552Z",
+    "vehicle": "veh1"
+   },
+   {
+    "driver_state": "seated",
+    "driver_value": 1529038352,
+    "file": "samples-20261103T115320Z.jsonl",
+    "mode": 0,
+    "t": "2026-11-03T11:53:43.969Z",
+    "vehicle": "veh1"
+   },
+   {
+    "driver_state": "absent",
+    "driver_value": 0,
+    "file": "samples-20261103T115320Z.jsonl",
+    "mode": 0,
+    "t": "2026-11-03T11:59:28.985Z",
+    "vehicle": "veh2"
+   },
+   {
+    "driver_state": "absent",
+    "driver_value": 0,
+    "file": "samples-20261103T120003Z.jsonl",
+    "mode": 0,
+    "t": "2026-11-03T12:00:03.220Z",
+    "vehicle": "veh0"
+   },
+   {
+    "driver_state": "seated",
+    "driver_value": 1470975488,
+    "file": "samples-20261103T120003Z.jsonl",
+    "mode": 0,
+    "t": "2026-11-03T12:00:03.220Z",
+    "vehicle": "veh1"
+   },
+   {
+    "driver_state": "absent",
+    "driver_value": 0,
+    "file": "samples-20261103T120003Z.jsonl",
+    "mode": 0,
+    "t": "2026-11-03T12:00:03.220Z",
+    "vehicle": "veh2"
+   }
+  ],
+  "transitions": [
+   {
+    "driver_in_same_sample": true,
+    "driver_state": "absent",
+    "from": 0,
+    "t": "2026-11-03T10:05:15.778Z",
+    "to": 1,
+    "vehicle": "veh1"
+   },
+   {
+    "driver_in_same_sample": true,
+    "driver_state": "absent",
+    "from": 0,
+    "t": "2026-11-03T11:48:22.562Z",
+    "to": 1,
+    "vehicle": "veh1"
+   },
+   {
+    "driver_in_same_sample": false,
+    "driver_state": "missing",
+    "from": 1,
+    "t": "2026-11-03T11:48:22.898Z",
+    "to": 0,
+    "vehicle": "veh1"
+   },
+   {
+    "driver_in_same_sample": false,
+    "driver_state": "missing",
+    "from": 0,
+    "t": "2026-11-03T11:48:24.093Z",
+    "to": 1,
+    "vehicle": "veh1"
+   },
+   {
+    "driver_in_same_sample": true,
+    "driver_state": "seated",
+    "from": 1,
+    "t": "2026-11-03T11:48:25.206Z",
+    "to": 0,
+    "vehicle": "veh1"
+   },
+   {
+    "driver_in_same_sample": true,
+    "driver_state": "absent",
+    "from": 0,
+    "t": "2026-11-03T11:48:38.572Z",
+    "to": 1,
+    "vehicle": "veh1"
+   },
+   {
+    "driver_in_same_sample": true,
+    "driver_state": "seated",
+    "from": 1,
+    "t": "2026-11-03T11:53:43.969Z",
+    "to": 0,
+    "vehicle": "veh1"
+   }
+  ],
+  "value_counts": {
+   "0": 17,
+   "1": 6
+  }
+ },
+ "schema": 1,
+ "selector": {
+  "assignments": [
+   {
+    "at": 241,
+    "property": {
+     "at": 242,
+     "index": 9777,
+     "kind": "ref",
+     "object_class": "ByteProperty",
+     "path": "RVehicleBatmobileBase.BatmanVsBatmobileCollisionMode",
+     "prefix": null,
+     "token": "EX_InstanceVariable"
+    },
+    "return_at": 252,
+    "value": {
+     "at": 247,
+     "index": 10893,
+     "kind": "ref",
+     "object_class": "ByteProperty",
+     "path": "SetBatmanVsBatmobileCollisionMode.Mode",
+     "prefix": null,
+     "token": "EX_LocalVariable"
+    }
+   }
+  ],
+  "calls": [
+   {
+    "args": [
+     {
+      "at": 53,
+      "index": 9797,
+      "kind": "ref",
+      "object_class": "ComponentProperty",
+      "path": "RVehicleBatmobileBase.BatmanCollisionMeshPursuitMode",
+      "prefix": null,
+      "token": "EX_InstanceVariable"
+     }
+    ],
+    "at": 48,
+    "complete": true,
+    "end_parms_at": 58,
+    "kind": "call",
+    "name": "Core.DetachComponent",
+    "operand": {
+     "index": -1523,
+     "kind": "export"
+    },
+    "token": "0x1C"
+   },
+   {
+    "args": [
+     {
+      "at": 83,
+      "index": 9798,
+      "kind": "ref",
+      "object_class": "ComponentProperty",
+      "path": "RVehicleBatmobileBase.BatmanCollisionMeshBattleMode",
+      "prefix": null,
+      "token": "EX_InstanceVariable"
+     }
+    ],
+    "at": 78,
+    "complete": true,
+    "end_parms_at": 88,
+    "kind": "call",
+    "name": "Core.DetachComponent",
+    "operand": {
+     "index": -1523,
+     "kind": "export"
+    },
+    "token": "0x1C"
+   },
+   {
+    "args": [
+     {
+      "at": 110,
+      "index": 9797,
+      "kind": "ref",
+      "object_class": "ComponentProperty",
+      "path": "RVehicleBatmobileBase.BatmanCollisionMeshPursuitMode",
+      "prefix": null,
+      "token": "EX_InstanceVariable"
+     }
+    ],
+    "at": 105,
+    "complete": true,
+    "end_parms_at": 115,
+    "kind": "call",
+    "name": "Core.AttachComponent",
+    "operand": {
+     "index": -1503,
+     "kind": "export"
+    },
+    "token": "0x1C"
+   },
+   {
+    "args": [
+     {
+      "at": 140,
+      "index": 9798,
+      "kind": "ref",
+      "object_class": "ComponentProperty",
+      "path": "RVehicleBatmobileBase.BatmanCollisionMeshBattleMode",
+      "prefix": null,
+      "token": "EX_InstanceVariable"
+     }
+    ],
+    "at": 135,
+    "complete": true,
+    "end_parms_at": 145,
+    "kind": "call",
+    "name": "Core.AttachComponent",
+    "operand": {
+     "index": -1503,
+     "kind": "export"
+    },
+    "token": "0x1C"
+   },
+   {
+    "args": [
+     {
+      "at": 164,
+      "kind": "byte",
+      "prefix": null,
+      "value": 0
+     },
+     {
+      "at": 166,
+      "kind": "comparison",
+      "left": {
+       "at": 169,
+       "index": 10893,
+       "kind": "ref",
+       "object_class": "ByteProperty",
+       "path": "SetBatmanVsBatmobileCollisionMode.Mode",
+       "prefix": "38 3A",
+       "token": "EX_LocalVariable"
+      },
+      "next": 179,
+      "op_token": "0x9B",
+      "prefix_tokens": null,
+      "right": {
+       "at": 176,
+       "kind": "byte",
+       "prefix": "38 3A",
+       "value": 0
+      },
+      "terminator_at": 178
+     }
+    ],
+    "at": 159,
+    "complete": true,
+    "end_parms_at": 179,
+    "kind": "call",
+    "name": "Core.SetCollisionFilter",
+    "operand": {
+     "index": -2278,
+     "kind": "export"
+    },
+    "token": "0x1C"
+   },
+   {
+    "args": [
+     {
+      "at": 229,
+      "kind": "bool",
+      "prefix": null,
+      "value": false
+     }
+    ],
+    "at": 224,
+    "complete": true,
+    "end_parms_at": 230,
+    "kind": "call",
+    "name": "SetBatmanCanClimb",
+    "operand": {
+     "index": 69762,
+     "kind": "fname"
+    },
+    "token": "0x1B"
+   },
+   {
+    "args": [
+     {
+      "at": 239,
+      "kind": "bool",
+      "prefix": null,
+      "value": true
+     }
+    ],
+    "at": 234,
+    "complete": true,
+    "end_parms_at": 240,
+    "kind": "call",
+    "name": "SetBatmanCanClimb",
+    "operand": {
+     "index": 69762,
+     "kind": "fname"
+    },
+    "token": "0x1B"
+   }
+  ],
+  "comparisons": [
+   {
+    "at": 3,
+    "kind": "comparison",
+    "left": {
+     "at": 7,
+     "index": 9777,
+     "kind": "ref",
+     "object_class": "ByteProperty",
+     "path": "RVehicleBatmobileBase.BatmanVsBatmobileCollisionMode",
+     "prefix": "38 3A",
+     "token": "EX_InstanceVariable"
+    },
+    "next": 20,
+    "op_token": "0x9B",
+    "prefix_tokens": [
+     "0x82"
+    ],
+    "right": {
+     "at": 14,
+     "index": 10893,
+     "kind": "ref",
+     "object_class": "ByteProperty",
+     "path": "SetBatmanVsBatmobileCollisionMode.Mode",
+     "prefix": "38 3A",
+     "token": "EX_LocalVariable"
+    },
+    "terminator_at": 19
+   },
+   {
+    "at": 35,
+    "kind": "comparison",
+    "left": {
+     "at": 38,
+     "index": 9777,
+     "kind": "ref",
+     "object_class": "ByteProperty",
+     "path": "RVehicleBatmobileBase.BatmanVsBatmobileCollisionMode",
+     "prefix": "38 3A",
+     "token": "EX_InstanceVariable"
+    },
+    "next": 48,
+    "op_token": "0x9A",
+    "prefix_tokens": null,
+    "right": {
+     "at": 45,
+     "kind": "byte",
+     "prefix": "38 3A",
+     "value": 1
+    },
+    "terminator_at": 47
+   },
+   {
+    "at": 65,
+    "kind": "comparison",
+    "left": {
+     "at": 68,
+     "index": 9777,
+     "kind": "ref",
+     "object_class": "ByteProperty",
+     "path": "RVehicleBatmobileBase.BatmanVsBatmobileCollisionMode",
+     "prefix": "38 3A",
+     "token": "EX_InstanceVariable"
+    },
+    "next": 78,
+    "op_token": "0x9A",
+    "prefix_tokens": null,
+    "right": {
+     "at": 75,
+     "kind": "byte",
+     "prefix": "38 3A",
+     "value": 2
+    },
+    "terminator_at": 77
+   },
+   {
+    "at": 92,
+    "kind": "comparison",
+    "left": {
+     "at": 95,
+     "index": 10893,
+     "kind": "ref",
+     "object_class": "ByteProperty",
+     "path": "SetBatmanVsBatmobileCollisionMode.Mode",
+     "prefix": "38 3A",
+     "token": "EX_LocalVariable"
+    },
+    "next": 105,
+    "op_token": "0x9A",
+    "prefix_tokens": null,
+    "right": {
+     "at": 102,
+     "kind": "byte",
+     "prefix": "38 3A",
+     "value": 1
+    },
+    "terminator_at": 104
+   },
+   {
+    "at": 122,
+    "kind": "comparison",
+    "left": {
+     "at": 125,
+     "index": 10893,
+     "kind": "ref",
+     "object_class": "ByteProperty",
+     "path": "SetBatmanVsBatmobileCollisionMode.Mode",
+     "prefix": "38 3A",
+     "token": "EX_LocalVariable"
+    },
+    "next": 135,
+    "op_token": "0x9A",
+    "prefix_tokens": null,
+    "right": {
+     "at": 132,
+     "kind": "byte",
+     "prefix": "38 3A",
+     "value": 2
+    },
+    "terminator_at": 134
+   },
+   {
+    "at": 166,
+    "kind": "comparison",
+    "left": {
+     "at": 169,
+     "index": 10893,
+     "kind": "ref",
+     "object_class": "ByteProperty",
+     "path": "SetBatmanVsBatmobileCollisionMode.Mode",
+     "prefix": "38 3A",
+     "token": "EX_LocalVariable"
+    },
+    "next": 179,
+    "op_token": "0x9B",
+    "prefix_tokens": null,
+    "right": {
+     "at": 176,
+     "kind": "byte",
+     "prefix": "38 3A",
+     "value": 0
+    },
+    "terminator_at": 178
+   },
+   {
+    "at": 183,
+    "kind": "comparison",
+    "left": {
+     "at": 187,
+     "index": 10893,
+     "kind": "ref",
+     "object_class": "ByteProperty",
+     "path": "SetBatmanVsBatmobileCollisionMode.Mode",
+     "prefix": "38 3A",
+     "token": "EX_LocalVariable"
+    },
+    "next": 197,
+    "op_token": "0x9B",
+    "prefix_tokens": [
+     "0x82"
+    ],
+    "right": {
+     "at": 194,
+     "kind": "byte",
+     "prefix": "38 3A",
+     "value": 0
+    },
+    "terminator_at": 196
+   }
+  ],
+  "contexts": [
+   {
+    "at": 146,
+    "label": "decoded",
+    "object": "Core.CollisionComponent",
+    "object_class": "ComponentProperty",
+    "token": "0x19"
+   }
+  ],
+  "function": {
+   "anchors": {
+    "name_index_matches_export_name": true,
+    "pre_name_word_0x0002xxxx": true,
+    "script_size_field_eq_len_plus_1": true
+   },
+   "class": "Function",
+   "export": 10894,
+   "export_bytes": 291,
+   "name_index_field": 69765,
+   "outer": "RVehicleBatmobileBase",
+   "package": "BmGame.upk",
+   "path": "RVehicleBatmobileBase.SetBatmanVsBatmobileCollisionMode",
+   "pre_name_word": 131074,
+   "script_bytes": 253,
+   "script_sha1": "c2f6a2ee667c544876e5317a103072c44ea17788",
+   "script_size_field": 254
+  },
+  "mesh_pairs": [
+   {
+    "bytes_between": 0,
+    "call": "DetachComponent",
+    "call_at": 48,
+    "guard_comparison_at": 35,
+    "guard_constant": 1,
+    "guard_operand": "RVehicleBatmobileBase.BatmanVsBatmobileCollisionMode",
+    "mesh": "BatmanCollisionMeshPursuitMode"
+   },
+   {
+    "bytes_between": 0,
+    "call": "DetachComponent",
+    "call_at": 78,
+    "guard_comparison_at": 65,
+    "guard_constant": 2,
+    "guard_operand": "RVehicleBatmobileBase.BatmanVsBatmobileCollisionMode",
+    "mesh": "BatmanCollisionMeshBattleMode"
+   },
+   {
+    "bytes_between": 0,
+    "call": "AttachComponent",
+    "call_at": 105,
+    "guard_comparison_at": 92,
+    "guard_constant": 1,
+    "guard_operand": "SetBatmanVsBatmobileCollisionMode.Mode",
+    "mesh": "BatmanCollisionMeshPursuitMode"
+   },
+   {
+    "bytes_between": 0,
+    "call": "AttachComponent",
+    "call_at": 135,
+    "guard_comparison_at": 122,
+    "guard_constant": 2,
+    "guard_operand": "SetBatmanVsBatmobileCollisionMode.Mode",
+    "mesh": "BatmanCollisionMeshBattleMode"
+   }
+  ],
+  "mesh_table": {
+   "label": "derived (rule above; inputs: decoded comparison constants at 45/75/102/132, decoded call targets at 48/78/105/135, decoded mesh properties 9797/9798)",
+   "rows": [
+    {
+     "attach_at": [],
+     "detach_at": [],
+     "label": "decoded (constant appears in no mesh pair; the old-value detach of the previous mode is what removes a mesh)",
+     "mesh": null,
+     "mode_value": 0
+    },
+    {
+     "attach_at": [
+      105
+     ],
+     "detach_at": [
+      48
+     ],
+     "label": "decoded",
+     "mesh": "BatmanCollisionMeshPursuitMode",
+     "mode_value": 1
+    },
+    {
+     "attach_at": [
+      135
+     ],
+     "detach_at": [
+      78
+     ],
+     "label": "decoded",
+     "mesh": "BatmanCollisionMeshBattleMode",
+     "mode_value": 2
+    }
+   ],
+   "rule": "a comparison unit's byte constant (0x24 xx) is paired with the DetachComponent/AttachComponent call that begins immediately after that comparison's 0x16 terminator; the call's argument names the mesh property. The first two comparisons read the property (the OLD value) and call DetachComponent; the next two read the parameter (the NEW value) and call AttachComponent. Guard polarity (body-on-true vs body-on-false) is UNKNOWN here, and the table is polarity-independent: whichever polarity 0x9A is, detach(old=k) and attach(new=k) use the same k for the same mesh, so k names the mesh. Under the inverted polarity the function would attach a mesh whenever the value is not k, which contradicts the detach/attach pair; that reading is rejected."
+  },
+  "no_set_hidden": {
+   "calls_present": [
+    "AttachComponent",
+    "DetachComponent",
+    "SetBatmanCanClimb",
+    "SetCollisionFilter"
+   ],
+   "label": "decoded (the selector body names none of those three functions)",
+   "set_actor_collision": false,
+   "set_block_rigid_body": false,
+   "set_hidden": false
+  },
+  "returns": [
+   {
+    "after_let": true,
+    "at": 252
+   }
+  ],
+  "unexpected_calls": [],
+  "unexplained": {
+   "bytes": 73,
+   "label": "UNKNOWN (byte shapes this decoder does not name: 0x07/0x06 words, 0x18 skip, 0x96/0x35, the 0x19 context wrapper)",
+   "offsets": [
+    0,
+    1,
+    2,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    89,
+    90,
+    91,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    180,
+    181,
+    182,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202,
+    203,
+    204,
+    205,
+    206,
+    207,
+    208,
+    209,
+    210,
+    211,
+    212,
+    213,
+    214,
+    215,
+    216,
+    217,
+    218,
+    219,
+    220,
+    221,
+    222,
+    223,
+    231,
+    232,
+    233
+   ]
+  }
+ },
+ "selector_sha1_recomputed": "c2f6a2ee667c544876e5317a103072c44ea17788",
+ "supersedes": "tmp/freebuff/reports/review-G3-01e.md item 1 (false negative: the ref scan missed the 2D/19/09/00-01 member-access forms)"
+}

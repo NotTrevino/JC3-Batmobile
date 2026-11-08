@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hud-test-gfx-load-gate.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hud-pilot-cards-write.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hud-gfx-loader-compat-offline.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/l0-rc4-probe-session.md, E:/Modding/JC3-Batmobile/tmp/freebuff/APPROVED_Q_FULL.txt
+In-game test, agent-piloted under operator supervision, only after the operator approves. Install the private hud.gfx tree from Builds/bm-RC5-hud or Builds/hud-speedo into a copy only as the console-thingy install flow allows, using cards Working/Q/PILOT/HUD_SPEEDO_HIDDEN.md and HUD_REST.md. One observation: does the game load the modified hud.gfx at all, and is the vanilla speedometer hidden on foot-to-car and in the Batmobile only? Pass rule: the changed text or element shows in the HUD, no crash within three minutes, speedometer absent in the Batmobile and present in a vanilla car. Save a screenshot and the log tail. On fail, write a fix card in Working/Q/ naming the loader row in Working/HUD/LOADER_COMPAT.md and mark the gfx route abandoned in the report. Write reports/hud-gfx-load-gate.md. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/light-unit-domain.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+Lights blocker NEW-LGT-1/2 (Working/Roadmap/hud_cam_lights_fx.md): the RC4 headlight range and angle (60 m, 70 deg) are outside the domain any shipped JC3 vehicle uses, and which list actually renders (the lights module or the .epe SVehicleLight) is UNKNOWN. Build the domain table from every shipped vehicle: range, angle, intensity, colour and flare for head, high-beam, tail and brake lights. Use Research/JC3Grab/ lights evidence (G2-33) and the decoded entity dumps; write a script with --check. Then map the BmAK light values (Research/BatmobileGrab/LIGHTS.md, 36 rig components) into that domain with the unit bridge stated, and flag each value that needs an in-game check. Report the table and the proposed values. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

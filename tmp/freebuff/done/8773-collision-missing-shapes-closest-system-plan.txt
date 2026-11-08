@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/collision-missing-shapes-closest-system-plan.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-06
+Read Working/Translation/T22_REOPEN.md and reports/collision-where.md, collision-rows-corrected.md and review-collision-corrected.md. The reopen found 2 shapes missing for the drivable Batmobile asset (Physics.Batmobile_V3_Physics: 2 bodies, 3 boxes, 1 constraint) and 0 free hull slots of 54. Close the gap on paper: the closest JC3 mechanism for adding or repurposing hull slots (compound shapes, instance lists, a second body, unbound hulls: 14 unbound), the byte-level edits needed in the .physicsc, the numbers from the decoded chassis and pod boxes, and the standing gates that would prove it (jc3hkx check --all). Mark each step decoded / derived / UNKNOWN with evidence, and write the pilot-card sentence for the in-game check.

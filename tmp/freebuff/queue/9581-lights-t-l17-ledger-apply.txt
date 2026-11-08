@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/lights-t-l17-ledger-apply.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/review-v2-apply-wave.md
+Apply the battle spotlight correction. Read Working/Translation/TL17_PROPOSAL.md and reports/light-entry-11.md: row T-L17 (Front_Secondary_Head) wrongly carries the colour graph 0.604, 0.604, 0.953 where BmAK uses white 1, 1, 1; the cone of 60 degrees and the volume 0.25 are outside the shipped set. Append a corrected row for T-L17 to Working/Translation/T_ROWS.jsonl, keeping intensity as multiplier 1.0 until the unit bridge of brief 7966 is in, and update the colour entry 11 in Working/Lights/bm_lightrig.json in a copy named bm_lightrig.v2.json (leave the original). Write the old and new values and the evidence into Working/Lights/TL17_APPLIED.md. Done when bm_lightrig.v2.json differs from the original in the colour of entry 11 only, proven with a diff, and t18_lights.py still passes. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

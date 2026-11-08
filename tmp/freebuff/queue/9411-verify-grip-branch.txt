@@ -1,0 +1,7 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-grip-branch.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-grip-branch.md
+Independent read-back of Builds/bm-RC5-grip. Do not trust rc5_grip.py's own --check; open the built module through the .toc with the generic reader used by Tools/scripts/t_rows.py and print arcade friction, friction_type and the slip pair, then diff the entire module against its source donor and list every changed byte range. Expect only the three intended cells to differ; any other difference is a fail with the offset shown. Confirm the branch record exists under Working/RC5/branches/ and that its declared cells equal what you found. Check also that no other branch record (handling, suspension, drive) declares the same module path, and list overlaps for the merge step. Write tmp/freebuff/reports/hdl-verify-grip.md with PASS or FAIL per cell and the diff summary. Done check: byte-range count equals the declared cell count; the report states the revert step, which is deleting Builds/bm-RC5-grip and its branch record.
+Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

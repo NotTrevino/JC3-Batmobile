@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/app-wetness-and-rain.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-06
+The BmAK screenshot the operator supplied is a wet street at night, and BmAK materials carry Rain_Constant and wetness terms (rule D8 drops them: "JC3 weather/wetness system"). JC3 does have wet-surface behaviour. Find how it works for vehicles: shader uniforms, per-material members, global weather parameters, SupportDirt/wetness flags in the vehicle modules and the CarPaintMM block. State whether a private material can opt in or out of the wet look, what BmAK's Rain_Constant would map to, and what JC3 does to a car in rain by default. Report decoded values only.
+Where JC3 has no exact carrier, give the closest system and the gap for the build to fill (STAGES.md).

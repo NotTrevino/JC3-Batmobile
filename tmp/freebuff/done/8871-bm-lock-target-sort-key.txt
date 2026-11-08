@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/bm-lock-target-sort-key.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-08
+Scope is the BmAK side only: the JC3 mapping is not part of this brief. Read tmp/freebuff/reports/T-WP3b.md and Working/Translation/T_WP3B_LOCKON.md first so you know what is already claimed, then open the launcher fields of RBatmobileMissileLauncher in Research/BatmobileGrab/objects.jsonl. Find the field or comparison that orders the lock candidates, and test the operator's hypothesis that the highest-health target is locked first against the bytes. Look at health, distance, angle to the reticle and class as candidate keys, and record the offset and value of every key that exists. Start the report with a VERDICT line that is PROVEN, REFUTED or UNKNOWN, then the evidence table. If no sort key exists in the data, say so with the search terms, and name the file that a runtime check would need to confirm it.
+Player fact from the operator, 2026-11-08 (the operator is not certain): with several enemies in lock range, the one nearest the crosshair locks first and proximity breaks ties. Use this as the working hypothesis to test against the data, and state clearly where the files agree, disagree or say nothing.

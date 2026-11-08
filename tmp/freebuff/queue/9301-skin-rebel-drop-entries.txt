@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/skin-rebel-drop-entries.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/skin-entities-clone.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/skin-icons-render.md
+Add the three skins to the Rebel Drop menu following the B-13 pattern in Builds/bm-013 and Research/JC3Grab/REBELDROP.md section 7 (128-byte items, 12 free UIDisplayOrder slots). Per skin write the item row, the task row, the display name and blurb strings (the T-WLD4 and T-WLD6 string rows were blocked; read the name-string reports tmp/freebuff/reports/name-string-lookup-key.md and Research/JC3Grab/NAMES.md first, and if the string path is still missing write the card rather than invent a hash), the icon reference from the icons brief, and the spawn table entry. Tree Builds/bm-RC5-skin-rebel, script Tools/scripts/rc5_skin_rebel.py (--write, --check). Also decide the order in the menu: base car first, then MK2, Jokerfied, Funhouse. Done check: 3 items occupy 3 distinct free UIDisplayOrder slots, every reference resolves (printed), and the strings are present or carded. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

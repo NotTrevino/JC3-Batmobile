@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/cam-ref-and-doc-verify.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-entity-roots-and-slots.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/cam-battle-tune-build.md
+Verify the camera wiring after the entity rebuild. In the tree produced by brief 9101 and in Builds/bm-RC5-camera/, confirm the CarCameraRef of every Batmobile entity points at the bat_base tune (or the battle tune where intended), the 2-byte .epe rename is intact, and the RC4 camera values are unchanged: run Tools/scripts/bmak_camfile.py check and compare hashes. Also correct the stale status text in Working/Camera/CAM_REF.md sections 5 and 6, listed in reports/review-CAM-1.md, by editing only those paragraphs. Output reports/cam-ref-verify.md with a table of entity, reference, target file, hash match. Done when every entity row matches and bmak_camfile.py check reports 8 of 8. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

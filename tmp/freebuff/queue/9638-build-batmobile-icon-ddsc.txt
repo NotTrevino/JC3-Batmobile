@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-batmobile-icon-ddsc.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rebase-world-rows-on-debug-leaf.md
+Replace the copy of the Serpente icon with a Batmobile icon. First read the donor Builds/bm-RC4/drop/textures/ui/vehicle_icons/*.ddsc header (the 18,688 byte file): dimensions, pixel format, mip chain, how Tools/scripts texture writers produce it. Then find the Batmobile image: a BmAK garage or HUD icon texture in Research/BatmobileGrab (list candidates in MESHES.json or the texture ledger Builds/bm-RC4-appearance/texture_ledger.json), or, if none exists, render a front-three-quarter view from the Batmobile mesh with the repo's own tools. Convert to the donor's format and size exactly. Build in Builds/bm-RC5-icon with Tools/scripts/rc5_icon.py (--write, --check), register a branch record in Working/RC5/branches/, and keep the output file name equal to the live leaf name. Done line: a decoded PNG preview under verify/ and a header comparison table of donor against new; the file size may differ only if the format table allows. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

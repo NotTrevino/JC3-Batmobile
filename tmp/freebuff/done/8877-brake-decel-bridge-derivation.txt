@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/brake-decel-bridge-derivation.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-08
+The row T-K1 in Working/Translation/T_ROWS.jsonl records the direct force-to-torque bridge as disproven and sets the JC3 brake torque to 5000 because that is the class median, with no BmAK number behind it. Working/Translation/COMPROMISES_T.md must already hold that choice, so read its entry first. Using Research/BatmobileGrab/CHAIN.json for BmAK's MaxBrakeTorque of 300, and the car's own mass and wheel radius from its module, derive the stopping deceleration that BmAK's values imply. Compare that with the 3.5 to 3.8 m/s2 that the footage note named in the T-K1 cell measures. Then tabulate the JC3 brake torque that reproduces each target deceleration, marking every step derived and every missing input UNKNOWN. The output is a single table and a verdict on whether the 5000 value is supported by any BmAK-derived number.

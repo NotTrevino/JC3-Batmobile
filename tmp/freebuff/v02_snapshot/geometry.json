@@ -1,0 +1,306 @@
+{
+ "card": "V-02 (GRAB_BACKLOG 9a)",
+ "build": "Builds/bm-RC4",
+ "offline": true,
+ "inputs": {
+  "source_mesh": "Working/Appearance/grab/Playable_Batmobile_SF/SkeletalMesh3/Batmobile_V2.pskx",
+  "source_body_faces": 215893
+ },
+ "silhouette": {
+  "rbm": "Builds/bm-RC4/aaf/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_body_lod1.rbm",
+  "rbm_sha256": "10cbbf400d5d618298f4a5a459c12c0e9115f47b3b03af050e7c35db80385018",
+  "ours_tris": 44602,
+  "offset_m": [
+   0.0,
+   0.022231,
+   0.154284
+  ],
+  "views": {
+   "side": {
+    "frame": [
+     2400,
+     864
+    ],
+    "source_px": 1131963,
+    "ours_px": 1130835,
+    "coverage": 0.999004,
+    "holes_pct": 0.2968,
+    "tears_pct": 0.0514,
+    "extra_pct": 0.1972,
+    "pass": true
+   },
+   "front": {
+    "frame": [
+     2400,
+     1605
+    ],
+    "source_px": 2631531,
+    "ours_px": 2633349,
+    "coverage": 1.000691,
+    "holes_pct": 0.1448,
+    "tears_pct": 0.011,
+    "extra_pct": 0.2139,
+    "pass": true
+   },
+   "top": {
+    "frame": [
+     1259,
+     2400
+    ],
+    "source_px": 2047733,
+    "ours_px": 2046192,
+    "coverage": 0.999247,
+    "holes_pct": 0.1932,
+    "tears_pct": 0.0047,
+    "extra_pct": 0.1179,
+    "pass": true
+   }
+  },
+  "gate": {
+   "threshold": 0.999,
+   "pass": true,
+   "per_view": {
+    "side": true,
+    "front": true,
+    "top": true
+   },
+   "min_margin_pp": 0.0004
+  },
+  "source_px": 1131963
+ },
+ "interaction": {
+  "mesh": {
+   "file": "Builds/bm-RC4/aaf/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_body_lod1.rbm",
+   "vertices": 55554,
+   "triangles": 44608
+  },
+  "band_m": [
+   0.05,
+   0.3
+  ],
+  "objects": 85,
+  "placed": 77,
+  "in_band": 77,
+  "min_m": 0.0577,
+  "max_m": 0.1461,
+  "failures": [],
+  "worst_outside_m": 0.0,
+  "gate": {
+   "pass": true,
+   "rule": "5 cm outside <= d <= 30 cm; no point outside by more than 2 cm"
+  }
+ },
+ "parts": {
+  "module": "Builds/bm-RC4/aaf/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_vehicle_parts.vmodc",
+  "module_sha256": "1fcd4215ff490248e9803192e79987a695853802a080c356fcc1d34644c3d195",
+  "parts": 59,
+  "distinct_types": 19,
+  "types": [
+   "Boat_Antenna",
+   "Boat_Generic",
+   "Land_Body",
+   "Land_Bumper",
+   "Land_Engine",
+   "Land_Fender",
+   "Land_Generic",
+   "Land_Grill",
+   "Land_Hood",
+   "Land_Light",
+   "Land_Seat",
+   "Land_Steering_Wheel",
+   "Land_Stunt_Window",
+   "Land_Trunk",
+   "Land_Wheel",
+   "Land_Window",
+   "Land_Wing_Mirror",
+   "Plane_Control_Surface",
+   "Train_Generic"
+  ],
+  "lamp_parts": 20,
+  "missing_models": [],
+  "census_expected": 59,
+  "extra_beyond_59": [],
+  "gate": {
+   "pass": true,
+   "rule": "59 parts / 19 distinct types (build-d08 section 2); every model resolves"
+  }
+ },
+ "poses": [
+  {
+   "pose": "pose_turret_yaw_max",
+   "part": "batmobile_turret",
+   "joint": "P-01",
+   "status": "rendered",
+   "file": "Builds/bm-RC4/verify/v02/pose_turret_yaw_max.png",
+   "angle_deg": 60.0,
+   "axis": [
+    -0.0,
+    1.0,
+    -0.0
+   ],
+   "triangles_moved": 16175,
+   "pivot_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "limit_deg": 60.0,
+   "width": 1000,
+   "height": 400
+  },
+  {
+   "pose": "pose_cannon_pitch_max",
+   "part": "batmobile_cannon",
+   "status": "no joint in this tree",
+   "why": "P-02 joint is null: the cannon translates (Batmobile_V2_Cannon_Fire) and a hinge cannot reproduce translation"
+  },
+  {
+   "pose": "pose_airbrake_lf_min",
+   "part": "batmobile_aero_flap_l_f",
+   "joint": "P-09",
+   "status": "rendered",
+   "file": "Builds/bm-RC4/verify/v02/pose_airbrake_lf_min.png",
+   "angle_deg": -18.352,
+   "axis": [
+    -0.0,
+    1.0,
+    -0.0
+   ],
+   "triangles_moved": 216,
+   "pivot_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "limit_deg": -18.352,
+   "width": 1000,
+   "height": 400
+  },
+  {
+   "pose": "pose_airbrake_rb_max",
+   "part": "batmobile_aero_flap_r_b",
+   "joint": "P-12",
+   "status": "rendered",
+   "file": "Builds/bm-RC4/verify/v02/pose_airbrake_rb_max.png",
+   "angle_deg": 5.973,
+   "axis": [
+    -0.0,
+    1.0,
+    -0.0
+   ],
+   "triangles_moved": 467,
+   "pivot_m": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "limit_deg": 5.973,
+   "width": 1000,
+   "height": 400
+  },
+  {
+   "pose": "pose_base",
+   "status": "rendered",
+   "angle_deg": 0,
+   "file": "Builds/bm-RC4/verify/v02/pose_base.png",
+   "width": 1000,
+   "height": 400
+  },
+  {
+   "pose": "canopy",
+   "status": "not in this tree",
+   "why": "no canopy part/bone (BONES.json); the glass is part of CockPit_Mesh"
+  },
+  {
+   "pose": "missile hatches",
+   "status": "not in this tree",
+   "why": "P-07/P-08 name no part; the hatches are inside the pod meshes"
+  },
+  {
+   "pose": "battle pose (T-MD13)",
+   "status": "not in this tree",
+   "why": "build-d12: the battle-pose values are blocked by ConvertAdf NullReferenceException on the parts module; the delivered pose is pose_base.png"
+  }
+ ],
+ "collision": {
+  "hulls_written": 5,
+  "donor_bodies": 62,
+  "shape_dev_vs_chassis_box_m": 0.0001,
+  "placement_m": [
+   2e-05,
+   0.0,
+   2e-05
+  ],
+  "placement_cm": 0.0,
+  "render_bbox_dev_m": [
+   0.1252,
+   0.196,
+   0.061
+  ],
+  "render_bbox_cm": 19.6,
+  "physicsc_sha256": "fda78f4d8056a4ee47bd8316b6c738fac6f16d227e3bd4769853a43613b41095",
+  "source": "Working/Collision2/batmobile.physicsc (B-10e BmAK-chassis variant, box-0 floor placement)",
+  "brief_placement_m": [
+   0.0005,
+   0.061,
+   0.0025
+  ],
+  "shapes_missing": 2,
+  "free_hull_slots": 0,
+  "constraint": "named omission (no JC3 constraint writer)",
+  "physicsc_records": 1,
+  "gate": {
+   "threshold_m": 0.05,
+   "pass": true,
+   "rule": "placement <= 5 cm (8390: 6.1 cm is NOT a pass)"
+  },
+  "brief_confirmed": false,
+  "confirmed": false
+ },
+ "lights": {
+  "module_offset": 16500744,
+  "module_bytes": 7105,
+  "rows": 24,
+  "lamp_parts": 6,
+  "lamp_part_names": [
+   "sportsmuscle_headlight_f_l",
+   "sportsmuscle_headlight_f_r",
+   "sportsmuscle_wheel_f_l_arch",
+   "sportsmuscle_wheel_f_r_arch",
+   "sportsmuscle_tailstrip_r_l",
+   "sportsmuscle_tailstrip_r_r"
+  ],
+  "b03_lamp_parts": 8,
+  "b03_lamp_parts_without_entry": [
+   "sportsmuscle_wheel_r_l_arch",
+   "sportsmuscle_wheel_r_r_arch"
+  ],
+  "module_lamp_parts": 20,
+  "max_angle_deg": 70.0,
+  "max_range_m": 60.0,
+  "shipped_max": {
+   "angle": 50.0,
+   "range": 50.0
+  },
+  "out_of_domain": {
+   "angle": [
+    60.0,
+    70.0
+   ],
+   "range": [
+    60.0
+   ]
+  },
+  "gate": {
+   "pass": true,
+   "rule": "24 rows; all 8 B-03 lamp parts carry has_lights (6 have an entry, the 2 rear arches ship lit with no row); 70 deg / 60 m out-of-domain"
+  }
+ },
+ "gates": {
+  "silhouette": true,
+  "interaction": true,
+  "parts": true,
+  "poses": true
+ },
+ "overall": true
+}

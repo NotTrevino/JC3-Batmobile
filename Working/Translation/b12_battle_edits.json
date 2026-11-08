@@ -1,0 +1,27 @@
+{
+ "schema": 1,
+ "card": "B-12",
+ "variant": "battle",
+ "generated_by": "hand-written 2026-11-07 from t11_variants.json's battle half + the decoded base modules",
+ "note": "Two members, both decoded on the JC3 side and derived from BmAK's battle half on the target side. Neither is a mode member: JC3 has no member that switches a handling value, so the second value set is the whole carrier and the swap stays U1 (item 1 of mode-switch-carriers.md §4).",
+ "edits": [
+  {
+   "row": "T-MD6",
+   "module": "VehicleMisc",
+   "member": "official_top_speed",
+   "old": 336.399994,
+   "new": 21.6,
+   "class": "composed",
+   "derivation": "BmAK `TurningModeMaxSpeed` = 600 cm/s = 21.6 km/h (MODES.md, decoded). `vehicle_misc.official_top_speed` is the fleet's decoded km/h stat (T-E5, median 271 vehicles). Both numbers are decoded; the join is the composition, because BmAK's member is a turning-mode cap and JC3's is a top-speed stat - no cap member exists (mode-switch-carriers.md §2.7)."
+  },
+  {
+   "row": "T-MD5",
+   "module": "CustomLandGlobal",
+   "member": "arcade.nitro_boost.extra_top_speed",
+   "old": 43.2000008,
+   "new": 0,
+   "class": "composed",
+   "derivation": "The battle speed envelope is a curve (0->60, 600->40, 1200->30) and no member takes a curve, so the variant carries the envelope's end state: with the boost delta at 0 the battle entity cannot exceed its own 21.6 km/h through T-B2's nitro (+43.2 km/h on the pursuit car), which is the only in-place speed change in the fleet (mode-switch-carriers.md §2.4). The 3 curve points stay raw in the table."
+  }
+ ]
+}

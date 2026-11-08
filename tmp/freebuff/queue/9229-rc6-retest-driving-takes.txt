@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc6-retest-driving-takes.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc6-retest-looks-and-static.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/q2-session-driving-takes.md, E:/Modding/JC3-Batmobile/tmp/freebuff/APPROVED_Q_FULL.txt
+In-game, operator supervising, RC6 still installed from the previous sitting. Re-take only the airfield driving takes that failed or were blocked in reports/q2-session-driving-takes.md, three repeats each, then one regression take from every group that passed (use takes A2, A5, A6, A7, A9 first, then A1, A3, A4, in that order). Judge them through hook telemetry with Tools/scripts/pilot_telemetry.py against the V-05 bands regenerated for RC6, and record with audio via pilot_record.py. Observations: peak speed, time to speed, steering lock time, circle radius, landing. A telemetry field that the hook marks unconfirmed is UNKNOWN, not PASS, and a take that needs a screen judgement says so. Every FAIL gets a fix card naming the member most likely responsible; no retuning during the sitting. Record in RESULTS.md and note which ledger rows could move to behaviour-verified, without editing the ledger. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

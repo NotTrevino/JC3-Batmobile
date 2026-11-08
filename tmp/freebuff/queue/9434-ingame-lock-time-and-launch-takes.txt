@@ -1,0 +1,7 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/ingame-lock-time-and-launch-takes.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/ingame-telemetry-calibration.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/pilot-cards-straight-line-takes.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/pilot-cards-cornering-landing-drift.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/handling-section-of-approval-request.md, E:/Modding/JC3-Batmobile/tmp/freebuff/APPROVED_Q_FULL.txt
+Two V-05 bands on one install. Take A1 (0 to 100 km/h from rest on the strip, three runs, card Working/Q/PILOT/A1_LAUNCH.md) and take A4 (steering lock time, card A4_LOCK.md). For A4 hold the stick still at centre at 15 km/h, snap to full right, record the time from stick deflection in the gamepad log of brief 7983 to the first yaw-rate rise; repeat above 72 km/h. Operator fact: how steering reacts at speed is not known to the operator, so the high-speed reading is compared with the BmAK steering curves captured by hdl-09 if present, else logged without a verdict. Pass rules: A1 15.6-17.2 s unless hdl-24 moved the band; A4 reads full lock within 0.25 s at low speed and 0.091 s at high speed, the 0.80 and 0.60 RC4 times mean the old build is installed and the take must STOP. A reading finer than the sample period is UNKNOWN. Fail route: Working/Q/FIXES.md line naming T-ST7, T-M1 or T-E2. Files to Working/Q/caps/a1_a4/; append rows to RESULTS.md.
+Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

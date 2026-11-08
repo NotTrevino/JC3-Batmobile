@@ -1,0 +1,903 @@
+{
+ "card": "G3-01d",
+ "chain": {
+  "frames": [
+   "mesh space: the SkeletalMesh's own/PSK space and the collision StaticMesh's own space",
+   "actor space: mesh space + the component's Translation (both components have no Rotation tag; the battle collision mesh does, and is tested separately)",
+   "bone space: the PhysicsAsset's boxes; bone 0 `Batmobile_Chassis` links it to mesh space"
+  ],
+  "label": "derived: the chain is the UE3 component rule (component Translation places the mesh in actor space) applied to the decoded values; the geometric oracles below are what test it"
+ },
+ "chain_translations": {
+  "battle_collision_component_cm": [
+   -40.0,
+   0.0,
+   -110.0
+  ],
+  "battle_minus_render_cm": [
+   10.0,
+   0.0,
+   -15.0
+  ],
+  "battle_rotation_deg": [
+   4.119873046875,
+   0.0,
+   0.0
+  ],
+  "battle_rotation_raw": [
+   750,
+   0,
+   0
+  ],
+  "label": "decoded: VectorProperty tags at offset 400 from the BmGame base templates (175716 / 176111 / 176112), walked from the start offset that yields the most tags (COLLISION.md's rule); the differences are derived",
+  "pursuit_collision_component_cm": [
+   -45.0,
+   0.0,
+   -95.0
+  ],
+  "pursuit_minus_render_cm": [
+   5.0,
+   0.0,
+   0.0
+  ],
+  "render_mesh_component_SVehicleMesh_cm": [
+   -50.0,
+   0.0,
+   -95.0
+  ]
+ },
+ "checks": [
+  {
+   "detail": "instance SVehicleMesh=None; instance battle collision mesh=None; instance pursuit collision mesh=None; Startup template SVehicleMesh=None; Startup template battle mesh=None; Startup template pursuit mesh=None; BmGame base SVehicleMesh=[-50.0, 0.0, -95.0]; BmGame base battle mesh=[-40.0, 0.0, -110.0]; BmGame base pursuit mesh=[-45.0, 0.0, -95.0]",
+   "name": "the three base-template components carry Translations; the instances/templates inherit them (no local override)",
+   "pass": true
+  },
+  {
+   "detail": "origin 8423, stride 44, names 180/180, bone 0 = Batmobile_Chassis",
+   "name": "the ref skeleton is located in SkeletalMesh 5284 with all 180 names in order",
+   "pass": true
+  },
+  {
+   "detail": "best layout quat_offset 16, translation_offset 32, 12/180 bones exact (max |dt| 5.61e+02 cm, max quat err 1.00e+00) -> accepted: False",
+   "name": "no ref-skeleton transform is claimed unless its layout reproduces the bind pose (the rejected search is recorded as UNKNOWN, not dressed up)",
+   "pass": true
+  },
+  {
+   "detail": "ref skeleton Batmobile_Chassis / physics asset Batmobile_Chassis",
+   "name": "bone 0 is `Batmobile_Chassis`, the physics asset's chassis bone",
+   "pass": true
+  },
+  {
+   "detail": "min margin 0.22 cm; relative component offset [5.0, 0.0, 0.0] cm",
+   "name": "the pursuit hull sits inside the render mesh bounds (residual stated)",
+   "pass": true
+  },
+  {
+   "detail": "margins lo [8.96, -12.57, 3.22] hi [3.28, -12.46, 23.46] cm; worst overshoot 12.57 cm = 3.6% of the bounds' Y span (349.5 cm); the 15 cm tolerance is a stated rule (5% of the car's width 349.5 cm), not a decoded value",
+   "name": "the physics chassis box is consistent with the render bounds (stated 15 cm tolerance)",
+   "pass": true
+  },
+  {
+   "detail": "rotation raw [750, 0, 0] = [4.12, 0.0, 0.0] deg",
+   "name": "the battle component's Rotation tag is decoded and applied explicitly",
+   "pass": true
+  }
+ ],
+ "components": [
+  {
+   "class": "SkeletalMeshComponent",
+   "export": 5289,
+   "kind": "instance",
+   "object": "Batmobile.SVehicleMesh",
+   "package": "Playable_Batmobile_SF.upk",
+   "parsed_bytes": 172,
+   "role": "instance SVehicleMesh",
+   "rotation_deg": null,
+   "rotation_label": "no RotatorProperty tag at 412 (absent tag = class default = zero rotator; derived, and tested by O-5)",
+   "rotation_raw": null,
+   "scale_label": "no VectorProperty tag at 424: absent tag = class default (derived, same rule the Translation tags of this build follow)",
+   "size": 258,
+   "stop": "end",
+   "translation_cm": null,
+   "translation_label": "no VectorProperty tag at 400",
+   "walk_start": 4
+  },
+  {
+   "class": "StaticMeshComponent",
+   "export": 5392,
+   "kind": "instance",
+   "object": "Batmobile.BatmanCollisionMeshBattleMode0",
+   "package": "Playable_Batmobile_SF.upk",
+   "parsed_bytes": 36,
+   "role": "instance battle collision mesh",
+   "rotation_deg": null,
+   "rotation_label": "no RotatorProperty tag at 412 (absent tag = class default = zero rotator; derived, and tested by O-5)",
+   "rotation_raw": null,
+   "scale_label": "no VectorProperty tag at 424: absent tag = class default (derived, same rule the Translation tags of this build follow)",
+   "size": 59,
+   "stop": "end",
+   "translation_cm": null,
+   "translation_label": "no VectorProperty tag at 400",
+   "walk_start": 4
+  },
+  {
+   "class": "StaticMeshComponent",
+   "export": 5393,
+   "kind": "instance",
+   "object": "Batmobile.BatmanCollisionMeshPursuitMode0",
+   "package": "Playable_Batmobile_SF.upk",
+   "parsed_bytes": 36,
+   "role": "instance pursuit collision mesh",
+   "rotation_deg": null,
+   "rotation_label": "no RotatorProperty tag at 412 (absent tag = class default = zero rotator; derived, and tested by O-5)",
+   "rotation_raw": null,
+   "scale_label": "no VectorProperty tag at 424: absent tag = class default (derived, same rule the Translation tags of this build follow)",
+   "size": 59,
+   "stop": "end",
+   "translation_cm": null,
+   "translation_label": "no VectorProperty tag at 400",
+   "walk_start": 4
+  },
+  {
+   "class": "SkeletalMeshComponent",
+   "export": 169640,
+   "kind": "template",
+   "object": "Default__RVehicleBatmobile.SVehicleMesh",
+   "package": "Startup.upk",
+   "parsed_bytes": 44,
+   "role": "Startup template SVehicleMesh",
+   "rotation_deg": null,
+   "rotation_label": "no RotatorProperty tag at 412 (absent tag = class default = zero rotator; derived, and tested by O-5)",
+   "rotation_raw": null,
+   "scale_label": "no VectorProperty tag at 424: absent tag = class default (derived, same rule the Translation tags of this build follow)",
+   "size": 58,
+   "stop": "end",
+   "translation_cm": null,
+   "translation_label": "no VectorProperty tag at 400",
+   "walk_start": 12
+  },
+  {
+   "class": "StaticMeshComponent",
+   "export": 171103,
+   "kind": "template",
+   "object": "Default__RVehicleBatmobile.BatmanCollisionMeshBattleMode0",
+   "package": "Startup.upk",
+   "parsed_bytes": 44,
+   "role": "Startup template battle mesh",
+   "rotation_deg": null,
+   "rotation_label": "no RotatorProperty tag at 412 (absent tag = class default = zero rotator; derived, and tested by O-5)",
+   "rotation_raw": null,
+   "scale_label": "no VectorProperty tag at 424: absent tag = class default (derived, same rule the Translation tags of this build follow)",
+   "size": 67,
+   "stop": "end",
+   "translation_cm": null,
+   "translation_label": "no VectorProperty tag at 400",
+   "walk_start": 12
+  },
+  {
+   "class": "StaticMeshComponent",
+   "export": 171104,
+   "kind": "template",
+   "object": "Default__RVehicleBatmobile.BatmanCollisionMeshPursuitMode0",
+   "package": "Startup.upk",
+   "parsed_bytes": 44,
+   "role": "Startup template pursuit mesh",
+   "rotation_deg": null,
+   "rotation_label": "no RotatorProperty tag at 412 (absent tag = class default = zero rotator; derived, and tested by O-5)",
+   "rotation_raw": null,
+   "scale_label": "no VectorProperty tag at 424: absent tag = class default (derived, same rule the Translation tags of this build follow)",
+   "size": 67,
+   "stop": "end",
+   "translation_cm": null,
+   "translation_label": "no VectorProperty tag at 400",
+   "walk_start": 12
+  },
+  {
+   "class": "SkeletalMeshComponent",
+   "export": 175716,
+   "kind": "template",
+   "object": "Default__RVehicleBatmobileBase.SVehicleMesh",
+   "package": "BmGame.upk",
+   "parsed_bytes": 143,
+   "role": "BmGame base SVehicleMesh",
+   "rotation_deg": null,
+   "rotation_label": "no RotatorProperty tag at 412 (absent tag = class default = zero rotator; derived, and tested by O-5)",
+   "rotation_raw": null,
+   "scale_label": "no VectorProperty tag at 424: absent tag = class default (derived, same rule the Translation tags of this build follow)",
+   "size": 157,
+   "stop": "end",
+   "translation_cm": [
+    -50.0,
+    0.0,
+    -95.0
+   ],
+   "translation_label": "decoded (VectorProperty at 400)",
+   "walk_start": 12
+  },
+  {
+   "class": "StaticMeshComponent",
+   "export": 176111,
+   "kind": "template",
+   "object": "Default__RVehicleBatmobileBase.BatmanCollisionMeshBattleMode0",
+   "package": "BmGame.upk",
+   "parsed_bytes": 100,
+   "role": "BmGame base battle mesh",
+   "rotation_deg": [
+    4.119873046875,
+    0.0,
+    0.0
+   ],
+   "rotation_label": "decoded (RotatorProperty at 412)",
+   "rotation_raw": [
+    750,
+    0,
+    0
+   ],
+   "scale_label": "no VectorProperty tag at 424: absent tag = class default (derived, same rule the Translation tags of this build follow)",
+   "size": 123,
+   "stop": "end",
+   "translation_cm": [
+    -40.0,
+    0.0,
+    -110.0
+   ],
+   "translation_label": "decoded (VectorProperty at 400)",
+   "walk_start": 12
+  },
+  {
+   "class": "StaticMeshComponent",
+   "export": 176112,
+   "kind": "template",
+   "object": "Default__RVehicleBatmobileBase.BatmanCollisionMeshPursuitMode0",
+   "package": "BmGame.upk",
+   "parsed_bytes": 84,
+   "role": "BmGame base pursuit mesh",
+   "rotation_deg": null,
+   "rotation_label": "no RotatorProperty tag at 412 (absent tag = class default = zero rotator; derived, and tested by O-5)",
+   "rotation_raw": null,
+   "scale_label": "no VectorProperty tag at 424: absent tag = class default (derived, same rule the Translation tags of this build follow)",
+   "size": 107,
+   "stop": "end",
+   "translation_cm": [
+    -45.0,
+    0.0,
+    -95.0
+   ],
+   "translation_label": "decoded (VectorProperty at 400)",
+   "walk_start": 12
+  }
+ ],
+ "generator": "grab_collision_frame.py",
+ "hull_union": {
+  "169748": {
+   "extent_cm": [
+    695.4123,
+    492.9222,
+    294.5026
+   ],
+   "max_cm": [
+    356.9706,
+    246.9817,
+    293.7526
+   ],
+   "min_cm": [
+    -338.4417,
+    -245.9405,
+    -0.75
+   ]
+  },
+  "169749": {
+   "extent_cm": [
+    670.9457,
+    318.3124,
+    224.0855
+   ],
+   "max_cm": [
+    339.6018,
+    159.1562,
+    224.0855
+   ],
+   "min_cm": [
+    -331.3439,
+    -159.1562,
+    -0.0
+   ]
+  },
+  "label": "decoded: union of the element boxes (G3-01c, ElemBox == vertex bounds on 56/56); mesh space of the collision StaticMesh"
+ },
+ "inputs": {
+  "bones": "E:\\Modding\\JC3-Batmobile\\Research\\BatmobileGrab\\BONES.json",
+  "boxes": "E:\\Modding\\JC3-Batmobile\\Research\\BatmobileGrab\\COLLISION_BOXES.json",
+  "convex": "E:\\Modding\\JC3-Batmobile\\Research\\BatmobileGrab\\COLLISION_CONVEX.json",
+  "meshes": "E:\\Modding\\JC3-Batmobile\\Research\\BatmobileGrab\\MESHES.json",
+  "playable": "E:\\Games\\Batman - Arkham Knight\\BmGame\\CookedPCConsole\\Playable_Batmobile_SF.upk",
+  "skeletal_mesh": 5284
+ },
+ "oracles": {
+  "battle": {
+   "component_offset_cm": [
+    -40.0,
+    0.0,
+    -110.0
+   ],
+   "hull_in_actor_space_cm": [
+    [
+     -377.62,
+     -245.94,
+     -136.39
+    ],
+    [
+     337.15,
+     246.98,
+     207.31
+    ]
+   ],
+   "hull_in_render_mesh_frame_cm": [
+    [
+     -327.62,
+     -245.94,
+     -41.39
+    ],
+    [
+     387.15,
+     246.98,
+     302.31
+    ]
+   ],
+   "hull_max_cm": [
+    377.15,
+    246.98,
+    317.31
+   ],
+   "hull_min_cm": [
+    -337.62,
+    -245.94,
+    -26.39
+   ],
+   "hull_rotation_applied": true,
+   "margin_in_actor_space": {
+    "hi_cm": [
+     -29.71,
+     -72.16,
+     -68.35
+    ],
+    "inside": false,
+    "lo_cm": [
+     17.5,
+     -71.23,
+     -41.17
+    ],
+    "min_cm": -72.16
+   },
+   "margin_of_hull_inside_render_bounds": {
+    "hi_cm": [
+     -29.71,
+     -72.16,
+     -68.35
+    ],
+    "inside": false,
+    "lo_cm": [
+     17.5,
+     -71.23,
+     -41.17
+    ],
+    "min_cm": -72.16
+   },
+   "relative_offset_cm": [
+    10.0,
+    0.0,
+    -15.0
+   ],
+   "render_bounds_in_actor_space_cm": [
+    [
+     -395.12,
+     -174.71,
+     -95.22
+    ],
+    [
+     307.44,
+     174.82,
+     138.96
+    ]
+   ]
+  },
+  "chassis_box": {
+   "actor_max_cm": [
+    304.16,
+    187.28,
+    115.5
+   ],
+   "actor_min_cm": [
+    -386.16,
+    -187.28,
+    -92.0
+   ],
+   "bone_link_translation_cm": [
+    2e-05,
+    0.0,
+    0.0
+   ],
+   "bone_space_rows": [
+    [
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "bone_space_translation_cm": [
+    9.0,
+    0.0,
+    106.75
+   ],
+   "margin_of_box_inside_render_bounds": {
+    "hi_cm": [
+     3.28,
+     -12.46,
+     23.46
+    ],
+    "inside": false,
+    "lo_cm": [
+     8.96,
+     -12.57,
+     3.22
+    ],
+    "min_cm": -12.57
+   },
+   "mesh_max_cm": [
+    354.16,
+    187.28,
+    210.5
+   ],
+   "mesh_min_cm": [
+    -336.16,
+    -187.28,
+    3.0
+   ],
+   "mesh_rows": [
+    [
+     1.0,
+     3.9e-05,
+     0.0
+    ],
+    [
+     -3.9e-05,
+     1.0,
+     3e-06
+    ],
+    [
+     -0.0,
+     -3e-06,
+     1.0
+    ]
+   ],
+   "mesh_translation_cm": [
+    9.0,
+    -0.0,
+    106.75
+   ]
+  },
+  "pursuit": {
+   "component_offset_cm": [
+    -45.0,
+    0.0,
+    -95.0
+   ],
+   "hull_in_actor_space_cm": [
+    [
+     -376.34,
+     -159.16,
+     -95.0
+    ],
+    [
+     294.6,
+     159.16,
+     129.09
+    ]
+   ],
+   "hull_in_render_mesh_frame_cm": [
+    [
+     -326.34,
+     -159.16,
+     0.0
+    ],
+    [
+     344.6,
+     159.16,
+     224.09
+    ]
+   ],
+   "hull_max_cm": [
+    339.6,
+    159.16,
+    224.09
+   ],
+   "hull_min_cm": [
+    -331.34,
+    -159.16,
+    -0.0
+   ],
+   "hull_rotation_applied": false,
+   "margin_in_actor_space": {
+    "hi_cm": [
+     12.84,
+     15.66,
+     9.87
+    ],
+    "inside": true,
+    "lo_cm": [
+     18.78,
+     15.55,
+     0.22
+    ],
+    "min_cm": 0.22
+   },
+   "margin_of_hull_inside_render_bounds": {
+    "hi_cm": [
+     12.84,
+     15.66,
+     9.87
+    ],
+    "inside": true,
+    "lo_cm": [
+     18.78,
+     15.55,
+     0.22
+    ],
+    "min_cm": 0.22
+   },
+   "relative_offset_cm": [
+    5.0,
+    0.0,
+    0.0
+   ],
+   "render_bounds_in_actor_space_cm": [
+    [
+     -395.12,
+     -174.71,
+     -95.22
+    ],
+    [
+     307.44,
+     174.82,
+     138.96
+    ]
+   ]
+  }
+ },
+ "physics_chassis_box": {
+  "bone": "Batmobile_Chassis",
+  "bone0_is_chassis": true,
+  "export": 169750,
+  "extents_cm": [
+   690.305,
+   374.5361,
+   207.5
+  ],
+  "half_cm": [
+   345.1525,
+   187.268,
+   103.75
+  ],
+  "label": "decoded (G3-01b boxes; extents are FULL lengths, proven there)",
+  "rows": [
+   [
+    1.0,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    1.0,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    1.0
+   ]
+  ],
+  "translation_cm": [
+   9.0,
+   0.0,
+   106.75
+  ]
+ },
+ "ref_skeleton": {
+  "bone0_decoded_transform": {
+   "index": 0,
+   "name": "Batmobile_Chassis",
+   "quat": [
+    0.0,
+    -0.0,
+    0.0,
+    -1.0
+   ],
+   "translation_cm": [
+    0.0,
+    -0.0,
+    0.0
+   ]
+  },
+  "bone0_name": "Batmobile_Chassis",
+  "bone0_psk_bind": {
+   "label": "decoded from BONES.json (umodel PSK export of the same SkeletalMesh 5284), used as the cross-check of the upk record and as the link if the record layout is rejected",
+   "local_position_cm": [
+    1.5e-05,
+    0.0,
+    0.0
+   ],
+   "local_rotation_quat": [
+    -1.575e-06,
+    5.6e-08,
+    -1.9646e-05,
+    1.0
+   ],
+   "rows": [
+    [
+     0.999999999,
+     3.9292e-05,
+     1.12e-07
+    ],
+    [
+     -3.9292e-05,
+     0.999999999,
+     3.15e-06
+    ],
+    [
+     -1.12e-07,
+     -3.15e-06,
+     1.0
+    ]
+   ]
+  },
+  "meta": {
+   "bone0": {
+    "index": 0,
+    "name": "Batmobile_Chassis",
+    "quat": [
+     0.0,
+     -0.0,
+     0.0,
+     -1.0
+    ],
+    "translation_cm": [
+     0.0,
+     -0.0,
+     0.0
+    ]
+   },
+   "bones": 180,
+   "bytes": 20151210,
+   "export": 5284,
+   "found": true,
+   "label": "decoded: record origin and stride from the 180/180 name run; field offsets accepted only because they reproduce the PSK bind pose on every bone",
+   "layout": {
+    "err_q": 1.0,
+    "err_t_cm": 561.452395927,
+    "ok": 12,
+    "quat_offset": 16,
+    "translation_offset": 32
+   },
+   "layout_accepted": false,
+   "names_match": 180,
+   "origin": 8423,
+   "records": [
+    {
+     "index": 0,
+     "name": "Batmobile_Chassis",
+     "quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -1.0
+     ],
+     "translation_cm": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    {
+     "index": 1,
+     "name": "Batmobile_Chassis_Mesh",
+     "quat": [
+      0.0,
+      -3e-06,
+      -0.000206,
+      -1.0
+     ],
+     "translation_cm": [
+      132.72005,
+      -120.97762,
+      74.79067
+     ]
+    },
+    {
+     "index": 2,
+     "name": "SUSP1_Wheel_Front_Left",
+     "quat": [
+      2e-06,
+      3e-06,
+      0.000226,
+      -1.0
+     ],
+     "translation_cm": [
+      -0.00284,
+      -0.00336,
+      -0.00247
+     ]
+    },
+    {
+     "index": 3,
+     "name": "SUSP2_Wheel_Front_Left",
+     "quat": [
+      -0.0,
+      -0.0,
+      0.707106,
+      -0.707107
+     ],
+     "translation_cm": [
+      139.71002,
+      -0.11894,
+      -6.74383
+     ]
+    },
+    {
+     "index": 4,
+     "name": "Wheel_Parent_F_L",
+     "quat": [
+      -0.0,
+      -0.0,
+      0.0,
+      -1.0
+     ],
+     "translation_cm": [
+      2e-05,
+      -3e-05,
+      1e-05
+     ]
+    },
+    {
+     "index": 5,
+     "name": "Wheel_Front_Left_Vis",
+     "quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -1.0
+     ],
+     "translation_cm": [
+      2e-05,
+      -3e-05,
+      1e-05
+     ]
+    },
+    {
+     "index": 6,
+     "name": "Wheel_Frnt_Left_Fan",
+     "quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -1.0
+     ],
+     "translation_cm": [
+      -3e-05,
+      -0.0,
+      0.0
+     ]
+    },
+    {
+     "index": 7,
+     "name": "Wheel_Frnt_Left_Disc",
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      -1.0
+     ],
+     "translation_cm": [
+      -8.73731,
+      51.5245,
+      0.02211
+     ]
+    }
+   ],
+   "stride": 44
+  }
+ },
+ "render_bounds": {
+  "label": "decoded (PSK vertex bounds of the render mesh)",
+  "max_cm": [
+   357.442,
+   174.824,
+   233.962
+  ],
+  "min_cm": [
+   -345.118,
+   -174.706,
+   -0.223
+  ],
+  "size_cm": [
+   702.56,
+   349.53,
+   234.185
+  ],
+  "source": "MESHES.json pskx.bounds for Batmobile_V2 @ Playable_Batmobile_SF (umodel export of SkeletalMesh 5284)"
+ },
+ "summary": {
+  "chassis_box_margin_cm": -12.57,
+  "components": 9,
+  "pursuit_margin_cm": 0.22,
+  "pursuit_relative_offset_cm": [
+   5.0,
+   0.0,
+   0.0
+  ],
+  "ref_skeleton_found": true,
+  "ref_skeleton_layout_accepted": false,
+  "render_bounds_cm": {
+   "max": [
+    357.442,
+    174.824,
+    233.962
+   ],
+   "min": [
+    -345.118,
+    -174.706,
+    -0.223
+   ]
+  }
+ },
+ "unknowns": [
+  "U-1 the ref-skeleton record's transform fields: the 180 bone names are decoded in order at stride 44 from byte 8423, but no field layout inside the record reproduces the PSK bind pose (best 12/180 exact, max |dt| 561 cm, max quat error 1.0), so the record's quat/translation placement stays UNKNOWN; the bone link therefore uses the PSK bind pose of the same export (BONES.json), which is identity for bone 0 anyway",
+  "the ref-skeleton records' remaining 8 bytes per bone (flags / parent index order): the layout search fixes the FName offset only, not those two fields",
+  "whether `Mesh space` is identical to `actor space` up to the component translation for a non-identity actor rotation: the data here only proves the component offsets",
+  "the collision hull's element-to-part assignment (which hull covers which piece), which is G3-01/G3-10's question, not the frame's"
+ ],
+ "verdict": {
+  "bone_link": "carried by the PSK bind pose of bone 0 (translation [2e-05, 0.0, 0.0] cm, quat [-2e-06, 0.0, -2e-05, 1.0], i.e. identity to 2e-5): the upk ref-skeleton record's transform fields are UNKNOWN (see U-1), so the link is decoded from the same export's PSK, not from the .upk record",
+  "component_link": "collision mesh offset minus render mesh offset = [5.0, 0.0, 0.0] cm",
+  "frame_link": "PROVEN within tolerance",
+  "residuals_cm": {
+   "chassis_box_vs_render_bounds": {
+    "hi_cm": [
+     3.28,
+     -12.46,
+     23.46
+    ],
+    "inside": false,
+    "lo_cm": [
+     8.96,
+     -12.57,
+     3.22
+    ],
+    "min_cm": -12.57
+   },
+   "pursuit_hull_vs_render_bounds": {
+    "hi_cm": [
+     12.84,
+     15.66,
+     9.87
+    ],
+    "inside": true,
+    "lo_cm": [
+     18.78,
+     15.55,
+     0.22
+    ],
+    "min_cm": 0.22
+   }
+  }
+ }
+}

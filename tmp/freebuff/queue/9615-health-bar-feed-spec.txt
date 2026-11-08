@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/health-bar-feed-spec.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-batmobile-hud-overlay.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-live-vehicle-readout.md
+Specify how the BmAK health bar (top left, shown in battle mode, element UC_SetHealth in Research/BatmobileGrab/HUD.md and HUD_SPEC.json) gets its value in JC3. JC3's HUD has no entity-to-HUD caller (STATUS.md, HUD bridge). Read the hook overlay design in tmp/freebuff/reports/hook-batmobile-hud-overlay.md and the telemetry fields of hook-live-vehicle-readout.md, then write the feed contract: the health fraction source, update rate, behaviour at 0 and during regen, hidden or shown per mode, and the exact overlay element fields. Include how the fraction is derived when max_health is not 1200 (see the d01 ruling). Produce Working/Damage/health_bar_feed.json and .md and Tools/scripts/health_bar_feed.py (--write, --check), which validates the json against the HUD_SPEC.json element names. The HUD lane builds the overlay; this brief hands it the contract and names the pilot-card observation (bar fraction after a known number of shell hits). Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

@@ -1,0 +1,3162 @@
+{
+ "schema": 1,
+ "generated_by": "grab_bindings_merge.py",
+ "task": "G3-02g",
+ "chain": {
+  "order_applied": [
+   "BaseInput",
+   "DefaultInput",
+   "UserInput",
+   "PCInput"
+  ],
+  "files": {
+   "PCInput": "E:/Games/Batman - Arkham Knight/BmGame/Config/PC/PCInput.ini",
+   "UserInput": "E:/Games/Batman - Arkham Knight/BmGame/Config/UserInput.ini",
+   "DefaultInput": "E:/Games/Batman - Arkham Knight/BmGame/Config/DefaultInput.ini",
+   "BaseInput": "E:/Games/Batman - Arkham Knight/Engine/Config/BaseInput.ini",
+   "BmInput": "E:/Games/Batman - Arkham Knight/BmGame/Config/BmInput.ini"
+  },
+  "oracle": "BmInput.ini is the engine's merged output (all lines prefix-less)"
+ },
+ "parse": {
+  "prefix_census": {
+   "BaseInput/plain": 125,
+   "BmInput/plain": 366,
+   "DefaultInput/-": 7,
+   "DefaultInput/.": 224,
+   "PCInput/.": 18
+  },
+  "oracle_sections": {
+   "Engine.PlayerInput": 182,
+   "Engine.DebugCameraInput": 109,
+   "UnrealEd.EditorViewportInput": 70,
+   "UnrealEd.ObjectEditorViewportInput": 3,
+   "Editor.EditorViewportInput": 2
+  },
+  "oracle_bindings": 366,
+  "raw_bindings_lines": 366,
+  "malformed": [
+   {
+    "line": 149,
+    "raw": "Bindings=(Name=\"U\",Command=\"DebugRemoveArmour\",Shift=false,Control=true)\"N"
+   }
+  ]
+ },
+ "candidates": [
+  {
+   "rule": {
+    "dot": "append",
+    "minus": "exact"
+   },
+   "matched": 366,
+   "total": 366,
+   "first_difference": null,
+   "identical": true
+  },
+  {
+   "rule": {
+    "dot": "append",
+    "minus": "name"
+   },
+   "matched": 208,
+   "total": 366,
+   "first_difference": {
+    "section": "Engine.PlayerInput",
+    "index": 24,
+    "have": "Name=\"F9\",Command=\"shot\"",
+    "want": "Name=\"F5\",Command=\"viewmodeshadercomplexity\"",
+    "counts": [
+     180,
+     182
+    ]
+   },
+   "identical": false
+  },
+  {
+   "rule": {
+    "dot": "replace_exact",
+    "minus": "exact"
+   },
+   "matched": 366,
+   "total": 366,
+   "first_difference": null,
+   "identical": true
+  },
+  {
+   "rule": {
+    "dot": "replace_exact",
+    "minus": "name"
+   },
+   "matched": 208,
+   "total": 366,
+   "first_difference": {
+    "section": "Engine.PlayerInput",
+    "index": 24,
+    "have": "Name=\"F9\",Command=\"shot\"",
+    "want": "Name=\"F5\",Command=\"viewmodeshadercomplexity\"",
+    "counts": [
+     180,
+     182
+    ]
+   },
+   "identical": false
+  },
+  {
+   "rule": {
+    "dot": "replace_name",
+    "minus": "exact"
+   },
+   "matched": 42,
+   "total": 366,
+   "first_difference": {
+    "section": "Engine.PlayerInput",
+    "index": 6,
+    "have": "Name=\"Pause\",Command=\"UserPause\"",
+    "want": "Name=\"Pause\",Command=\"Pause\"",
+    "counts": [
+     146,
+     182
+    ]
+   },
+   "identical": false
+  },
+  {
+   "rule": {
+    "dot": "replace_name",
+    "minus": "name"
+   },
+   "matched": 42,
+   "total": 366,
+   "first_difference": {
+    "section": "Engine.PlayerInput",
+    "index": 6,
+    "have": "Name=\"Pause\",Command=\"UserPause\"",
+    "want": "Name=\"Pause\",Command=\"Pause\"",
+    "counts": [
+     146,
+     182
+    ]
+   },
+   "identical": false
+  },
+  {
+   "rule": {
+    "dot": "clear",
+    "minus": "exact"
+   },
+   "matched": 3,
+   "total": 366,
+   "first_difference": {
+    "section": "Engine.PlayerInput",
+    "index": 0,
+    "have": "Name=\"LeftMouseButton\",Command=\"SkipCutscene\"",
+    "want": "Name=\"MoveForward\",Command=\"AxisaBaseYSpeed=1.0\"",
+    "counts": [
+     1,
+     182
+    ]
+   },
+   "identical": false
+  },
+  {
+   "rule": {
+    "dot": "clear",
+    "minus": "name"
+   },
+   "matched": 3,
+   "total": 366,
+   "first_difference": {
+    "section": "Engine.PlayerInput",
+    "index": 0,
+    "have": "Name=\"LeftMouseButton\",Command=\"SkipCutscene\"",
+    "want": "Name=\"MoveForward\",Command=\"AxisaBaseYSpeed=1.0\"",
+    "counts": [
+     1,
+     182
+    ]
+   },
+   "identical": false
+  }
+ ],
+ "rule": {
+  "established_by": "the only candidate set that reproduces BmInput.ini entry for entry",
+  "winners": [
+   {
+    "rule": {
+     "dot": "append",
+     "minus": "exact"
+    },
+    "matched": 366,
+    "total": 366,
+    "first_difference": null,
+    "identical": true
+   },
+   {
+    "rule": {
+     "dot": "replace_exact",
+     "minus": "exact"
+    },
+    "matched": 366,
+    "total": 366,
+    "first_difference": null,
+    "identical": true
+   }
+  ],
+  "minus": "exact canonical struct match",
+  "dot": "append (append and replace-if-identical agree on this data)",
+  "dot_duplicate_bodies": 0,
+  "plus": "not observed in any chain file (0 occurrences): UNKNOWN from this install",
+  "plain": "append, kept in file order",
+  "order": "BaseInput -> DefaultInput -> UserInput -> PCInput (BasedOn chain, reversed)"
+ },
+ "minus_discriminating": [
+  {
+   "file": "DefaultInput.ini",
+   "line": 47,
+   "section": "Engine.DebugCameraInput",
+   "body": "Name=\"Delete\",Command=\"CameraDefault\"",
+   "exact_matches": 0,
+   "same_name_others": 0,
+   "removes": null
+  },
+  {
+   "file": "DefaultInput.ini",
+   "line": 71,
+   "section": "Engine.DebugCameraInput",
+   "body": "Name=\"XboxTypeS_A\",Command=\"SetFreezeRendering\"",
+   "exact_matches": 1,
+   "same_name_others": 0,
+   "removes": "BaseInput.ini:69"
+  },
+  {
+   "file": "DefaultInput.ini",
+   "line": 107,
+   "section": "Engine.PlayerInput",
+   "body": "Name=\"F5\",Command=\"quicksave\"",
+   "exact_matches": 0,
+   "same_name_others": 1,
+   "removes": null
+  },
+  {
+   "file": "DefaultInput.ini",
+   "line": 108,
+   "section": "Engine.PlayerInput",
+   "body": "Name=\"F6\",Command=\"quickload\"",
+   "exact_matches": 0,
+   "same_name_others": 0,
+   "removes": null
+  },
+  {
+   "file": "DefaultInput.ini",
+   "line": 109,
+   "section": "Engine.PlayerInput",
+   "body": "Name=\"F7\",Command=\"setD3DRenderDevicebUsePostProcessEffectsFalse\",Control=False,Shift=False,Alt=False",
+   "exact_matches": 0,
+   "same_name_others": 1,
+   "removes": null
+  },
+  {
+   "file": "DefaultInput.ini",
+   "line": 110,
+   "section": "Engine.PlayerInput",
+   "body": "Name=\"F8\",Command=\"setD3DRenderDevicebUsePostProcessEffectsTrue\",Control=False,Shift=False,Alt=False",
+   "exact_matches": 0,
+   "same_name_others": 0,
+   "removes": null
+  },
+  {
+   "file": "DefaultInput.ini",
+   "line": 201,
+   "section": "Engine.PlayerInput",
+   "body": "Name=\"Delete\",Command=\"CameraDefault\"",
+   "exact_matches": 0,
+   "same_name_others": 0,
+   "removes": null
+  }
+ ],
+ "exe": {
+  "path": "E:/Games/Batman - Arkham Knight/Binaries/Win64/BatmanAK.exe",
+  "size": 55101440,
+  "strings": {
+   "Bindings": 1,
+   "Unknown array": 0,
+   "array entry": 0,
+   "Missing (": 0,
+   "Missing )": 0,
+   "SaveConfig": 3,
+   "ClearArray": 0,
+   "ConfigArray": 0,
+   "Section": 26,
+   "KeyValue": 5
+  },
+  "cmp_imm_byte_counts": {
+   "+": 109,
+   "-": 63,
+   ".": 89
+  },
+  "any_prefix_dispatch_bytes": 261,
+  "note": "byte-pattern census of the immediate-compare encodings; a hit is a candidate, not a proven dispatch, and this pass claims no more"
+ },
+ "merged": {
+  "Engine.PlayerInput": [
+   {
+    "file": "BaseInput.ini",
+    "line": 10,
+    "name": "MoveForward",
+    "body": "Name=\"MoveForward\",Command=\"AxisaBaseYSpeed=1.0\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 11,
+    "name": "MoveBackward",
+    "body": "Name=\"MoveBackward\",Command=\"AxisaBaseYSpeed=-1.0\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 12,
+    "name": "TurnLeft",
+    "body": "Name=\"TurnLeft\",Command=\"AxisaBaseXSpeed=-200.0AbsoluteAxis=100\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 13,
+    "name": "TurnRight",
+    "body": "Name=\"TurnRight\",Command=\"AxisaBaseXSpeed=+200.0AbsoluteAxis=100\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 14,
+    "name": "StrafeLeft",
+    "body": "Name=\"StrafeLeft\",Command=\"AxisaStrafeSpeed=-1.0\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 15,
+    "name": "StrafeRight",
+    "body": "Name=\"StrafeRight\",Command=\"AxisaStrafeSpeed=+1.0\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 16,
+    "name": "Pause",
+    "body": "Name=\"Pause\",Command=\"Pause\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 17,
+    "name": "W",
+    "body": "Name=\"W\",Command=\"MoveForward\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 18,
+    "name": "S",
+    "body": "Name=\"S\",Command=\"MoveBackward\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 19,
+    "name": "A",
+    "body": "Name=\"A\",Command=\"StrafeLeft\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 20,
+    "name": "D",
+    "body": "Name=\"D\",Command=\"StrafeRight\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 21,
+    "name": "F",
+    "body": "Name=\"F\",Command=\"FreezeRendering\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 22,
+    "name": "MouseX",
+    "body": "Name=\"MouseX\",Command=\"CountbXAxis|AxisaMouseX\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 23,
+    "name": "MouseY",
+    "body": "Name=\"MouseY\",Command=\"CountbYAxis|AxisaMouseY\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 24,
+    "name": "Escape",
+    "body": "Name=\"Escape\",Command=\"CloseEditorViewport|onreleaseShowMenu\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 25,
+    "name": "P",
+    "body": "Name=\"P\",Command=\"TogglePhysicsMode\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 26,
+    "name": "Up",
+    "body": "Name=\"Up\",Command=\"MoveForward\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 27,
+    "name": "Down",
+    "body": "Name=\"Down\",Command=\"MoveBackward\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 28,
+    "name": "Left",
+    "body": "Name=\"Left\",Command=\"TurnLeft\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 29,
+    "name": "Right",
+    "body": "Name=\"Right\",Command=\"TurnRight\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 30,
+    "name": "F1",
+    "body": "Name=\"F1\",Command=\"viewmodewireframe\",bIgnoreShift=True,Alt=False,bIgnoreAlt=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 31,
+    "name": "F2",
+    "body": "Name=\"F2\",Command=\"viewmodeunlit\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 32,
+    "name": "F3",
+    "body": "Name=\"F3\",Command=\"viewmodelit\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 33,
+    "name": "F4",
+    "body": "Name=\"F4\",Command=\"viewmodedetaillighting\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 34,
+    "name": "F5",
+    "body": "Name=\"F5\",Command=\"viewmodeshadercomplexity\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 35,
+    "name": "F7",
+    "body": "Name=\"F7\",Command=\"OPENKISMETDEBUGGERSEQUENCE=PAUSEKISMETDEBUGGER\",Alt=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 36,
+    "name": "F9",
+    "body": "Name=\"F9\",Command=\"shot\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 111,
+    "name": "F5",
+    "body": "Name=\"F5\",Command=\"ReloadLevel\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 112,
+    "name": "F8",
+    "body": "Name=\"F8\",Command=\"showpostprocess\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 113,
+    "name": "F11",
+    "body": "Name=\"F11\",Command=\"ToggleMovieRecord\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 114,
+    "name": "F6",
+    "body": "Name=\"F6\",Command=\"StatStartFile\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 115,
+    "name": "F7",
+    "body": "Name=\"F7\",Command=\"StatStopFile\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 116,
+    "name": "V",
+    "body": "Name=\"V\",Command=\"FreezeAll\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 117,
+    "name": "X",
+    "body": "Name=\"X\",Command=\"TelemetryTogglePause\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 118,
+    "name": "C",
+    "body": "Name=\"C\",Command=\"ToggleLockCamera\",Control=True"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 119,
+    "name": "Y",
+    "body": "Name=\"Y\",Command=\"ToggleGhost\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 120,
+    "name": "T",
+    "body": "Name=\"T\",Command=\"Teleport\",Alt=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 121,
+    "name": "T",
+    "body": "Name=\"T\",Command=\"DebugTest\",Alt=True"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 122,
+    "name": "Add",
+    "body": "Name=\"Add\",Command=\"AddXP\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 123,
+    "name": "Period",
+    "body": "Name=\"Period\",Command=\"ToggleThoughts\",Alt=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 124,
+    "name": "Period",
+    "body": "Name=\"Period\",Command=\"ToggleErrorThoughts\",Alt=True"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 125,
+    "name": "Semicolon",
+    "body": "Name=\"Semicolon\",Command=\"StepPawnDisplayingThoughts\",Alt=False,Control=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 126,
+    "name": "Semicolon",
+    "body": "Name=\"Semicolon\",Command=\"DisplayLookAtPawnThoughts\",Alt=False,Control=True"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 127,
+    "name": "Semicolon",
+    "body": "Name=\"Semicolon\",Command=\"AdvanceCurrentThoughtHistoryItem\",Alt=True,Control=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 128,
+    "name": "NumPadTwo",
+    "body": "Name=\"NumPadTwo\",Command=\"DebugCameraDown|OnReleaseStopDebugCameraMovement|DebugMenuNumber2\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 129,
+    "name": "NumPadFour",
+    "body": "Name=\"NumPadFour\",Command=\"DebugCameraLeft|OnReleaseStopDebugCameraMovement|DebugMenuNumber4\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 130,
+    "name": "NumPadSix",
+    "body": "Name=\"NumPadSix\",Command=\"DebugCameraRight|OnReleaseStopDebugCameraMovement|DebugMenuNumber6\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 131,
+    "name": "NumPadEight",
+    "body": "Name=\"NumPadEight\",Command=\"DebugCameraUp|OnReleaseStopDebugCameraMovement|DebugMenuNumber8\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 132,
+    "name": "NumPadSeven",
+    "body": "Name=\"NumPadSeven\",Command=\"DebugCameraForward|OnReleaseStopDebugCameraMovement|DebugMenuNumber7\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 133,
+    "name": "NumPadOne",
+    "body": "Name=\"NumPadOne\",Command=\"DebugCameraBack|OnReleaseStopDebugCameraMovement|DebugMenuNumber1\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 134,
+    "name": "NumPadNine",
+    "body": "Name=\"NumPadNine\",Command=\"DebugCameraZoomIn|OnReleaseStopDebugCameraMovement|DebugMenuNumber9\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 135,
+    "name": "NumPadThree",
+    "body": "Name=\"NumPadThree\",Command=\"DebugCameraZoomOut|OnReleaseStopDebugCameraMovement|DebugMenuNumber3\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 136,
+    "name": "NumPadZero",
+    "body": "Name=\"NumPadZero\",Command=\"DebugMenuNumber0\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 137,
+    "name": "NumPadFive",
+    "body": "Name=\"NumPadFive\",Command=\"DebugMenuNumber5\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 139,
+    "name": "One",
+    "body": "Name=\"One\",Command=\"SelectGadget0|DebugMenuNumber1\",Shift=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 140,
+    "name": "Two",
+    "body": "Name=\"Two\",Command=\"SelectGadget1|DebugMenuNumber2\",Shift=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 141,
+    "name": "Three",
+    "body": "Name=\"Three\",Command=\"SelectGadget2|DebugMenuNumber3\",Shift=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 142,
+    "name": "Four",
+    "body": "Name=\"Four\",Command=\"SelectGadget3|DebugMenuNumber4\",Shift=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 143,
+    "name": "Five",
+    "body": "Name=\"Five\",Command=\"SelectGadget4|DebugMenuNumber5\",Shift=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 144,
+    "name": "Six",
+    "body": "Name=\"Six\",Command=\"SelectGadget5|DebugMenuNumber6\",Shift=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 145,
+    "name": "Seven",
+    "body": "Name=\"Seven\",Command=\"SelectGadget6|DebugMenuNumber7\",Shift=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 146,
+    "name": "Eight",
+    "body": "Name=\"Eight\",Command=\"SelectGadget7|DebugMenuNumber8\",Shift=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 147,
+    "name": "Nine",
+    "body": "Name=\"Nine\",Command=\"SelectGadget8|DebugMenuNumber9\",Shift=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 148,
+    "name": "Zero",
+    "body": "Name=\"Zero\",Command=\"SelectGadget9|DebugMenuNumber0\",Shift=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 150,
+    "name": "C",
+    "body": "Name=\"C\",Command=\"ToggleAlternativeCamera\",Control=True"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 152,
+    "name": "Run",
+    "body": "Name=\"Run\",Command=\"StartRun|OnReleaseEndRun|ButtonbRunButton\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 153,
+    "name": "Stealth",
+    "body": "Name=\"Stealth\",Command=\"StartStealthMove|OnReleaseEndStealthMove|ButtonbCrouchButton|FloorTakedownModifierPressed|OnReleaseFloorTakedownModifierReleased|LedgeToCeilingPressed|LandPressed\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 154,
+    "name": "Grapple",
+    "body": "Name=\"Grapple\",Command=\"BankPoints|GrapplePressed|OnReleaseGrappleReleased|ButtonaGrappleButton\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 155,
+    "name": "Gadget",
+    "body": "Name=\"Gadget\",Command=\"GadgetPressed|OnReleaseGadgetReleased\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 156,
+    "name": "Grab",
+    "body": "Name=\"Grab\",Command=\"GrabPressed|OnReleaseGrabReleased|ButtonaTakedownButton\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 157,
+    "name": "Cover",
+    "body": "Name=\"Cover\",Command=\"CoverPressed|OnReleaseCoverReleased\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 158,
+    "name": "HoldToZoom",
+    "body": "Name=\"HoldToZoom\",Command=\"ReadyGadget|OnReleaseUnreadyGadget|ButtonbReadyGadgetButton\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 159,
+    "name": "GadgetMode",
+    "body": "Name=\"GadgetMode\",Command=\"StartGadgetMode|OnReleaseEndGadgetMode\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 160,
+    "name": "ForensicMode",
+    "body": "Name=\"ForensicMode\",Command=\"SelectForensicModePressed|OnReleaseSelectForensicModeReleased|ButtonbForensicsButton\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 162,
+    "name": "GrappleOrGadget",
+    "body": "Name=\"GrappleOrGadget\",Command=\"BankPoints|GrappleOrGadgetPressed|OnReleaseGadgetReleased|ButtonaGrappleButton\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 163,
+    "name": "GrappleOrGadgetOrQuickStrike",
+    "body": "Name=\"GrappleOrGadgetOrQuickStrike\",Command=\"GrappleOrStrikeGadgetPressed|OnReleaseGadgetReleased|ButtonaGrappleButton\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 164,
+    "name": "GadgetOrQuickStrike",
+    "body": "Name=\"GadgetOrQuickStrike\",Command=\"GadgetOrQuickStrikePressed|OnReleaseGadgetReleased|ButtonbRightTrigger\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 165,
+    "name": "StealthOrGadget",
+    "body": "Name=\"StealthOrGadget\",Command=\"StealthOrGadgetPressed|OnReleaseEndStealthMove|OnReleaseGadgetReleased|ButtonbCrouchButton|FloorTakedownModifierPressed|OnReleaseFloorTakedownModifierReleased|LedgeToCeilingPressed|LandPressed\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 166,
+    "name": "QuickStrike",
+    "body": "Name=\"QuickStrike\",Command=\"TriggerFearTakedown0|TriggerQuickStrike|OnReleaseQuickStrikeReleased|ButtonaQuickStrike\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 167,
+    "name": "HeavyStrike",
+    "body": "Name=\"HeavyStrike\",Command=\"TriggerHeavyStrike|OnReleaseHeavyStrikeReleased\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 168,
+    "name": "ChargeStrike",
+    "body": "Name=\"ChargeStrike\",Command=\"TriggerChargeStrike|OnReleaseChargeStrikeReleased\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 169,
+    "name": "BlockBreaker",
+    "body": "Name=\"BlockBreaker\",Command=\"TriggerBlockBreaker|OnReleaseBlockBreakerReleased\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 170,
+    "name": "Redirect",
+    "body": "Name=\"Redirect\",Command=\"TriggerRedirect|OnReleaseRedirectReleased\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 171,
+    "name": "ContextSensitive",
+    "body": "Name=\"ContextSensitive\",Command=\"PressedContextSensitive|OnReleaseReleasedContextSensitive\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 172,
+    "name": "ReadyBatarang",
+    "body": "Name=\"ReadyBatarang\",Command=\"ReadyBatarang|OnReleaseUnReadyBatarang\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 173,
+    "name": "HoldToZoomOrCounter",
+    "body": "Name=\"HoldToZoomOrCounter\",Command=\"ReadyGadgetOrCounterPressed|OnReleaseReadyGadgetOrCounterReleased|OnReleaseUnreadyGadget|ButtonbReadyGadgetButton|ButtonaTakedownButton|ButtonbRightTrigger\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 174,
+    "name": "PS3Crouch",
+    "body": "Name=\"PS3Crouch\",Command=\"StealthOrQuickBatclawPressed|OnReleaseEndStealthMove|ButtonbCrouchButton|FloorTakedownModifierPressed|OnReleaseFloorTakedownModifierReleased|LedgeToCeilingPressed|LandPressed\")"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 175,
+    "name": "ChargeVenom",
+    "body": "Name=\"ChargeVenom\",Command=\"ChargeVenomPressed|OnReleaseChargeVenomReleased\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 176,
+    "name": "HoldToTaunt",
+    "body": "Name=\"HoldToTaunt\",Command=\"HoldToTauntPressed|OnReleaseHoldToTauntReleased\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 177,
+    "name": "BrakeButton",
+    "body": "Name=\"BrakeButton\",Command=\"BrakePressed|ButtonbHandbrakeOrBrake\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 178,
+    "name": "ExitVehicle",
+    "body": "Name=\"ExitVehicle\",Command=\"ExitVehiclePressed|OnReleaseExitVehicleReleased\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 179,
+    "name": "DualPlay",
+    "body": "Name=\"DualPlay\",Command=\"DualPlayPressed|OnReleaseDualPlayReleased\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 180,
+    "name": "FireGun",
+    "body": "Name=\"FireGun\",Command=\"FireGunPressed\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 181,
+    "name": "ZoomOrDetectiveMode",
+    "body": "Name=\"ZoomOrDetectiveMode\",Command=\"ZoomOrDetPressed|OnReleaseZoomOrDetReleased\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 182,
+    "name": "VehicleSecondaryFire",
+    "body": "Name=\"VehicleSecondaryFire\",Command=\"\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 183,
+    "name": "HoldForLineLaunchStop",
+    "body": "Name=\"HoldForLineLaunchStop\",Command=\"HoldForLineLaunchStopPressed|OnReleaseHoldForLineLaunchStopReleased\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 184,
+    "name": "BatmobileSonar",
+    "body": "Name=\"BatmobileSonar\",Command=\"BatmobileSonarPressed|OnReleaseBatmobileSonarReleased\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 186,
+    "name": "C",
+    "body": "Name=\"C\",Command=\"ToggleDrivingCamera|DebugLevelLoadCombat\",Control=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 188,
+    "name": "Y",
+    "body": "Name=\"Y\",Command=\"ToggleGhost\",Shift=True,bIgnoreShift=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 189,
+    "name": "T",
+    "body": "Name=\"T\",Command=\"Teleport\",Shift=True,bIgnoreShift=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 190,
+    "name": "W",
+    "body": "Name=\"W\",Command=\"DebugMenuUpPressed|OnReleaseDebugMenuUpReleased\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 191,
+    "name": "S",
+    "body": "Name=\"S\",Command=\"DebugMenuDownPressed|OnReleaseDebugMenuDownReleased\",Control=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 192,
+    "name": "A",
+    "body": "Name=\"A\",Command=\"DebugMenuLeftPressed|OnReleaseDebugMenuLeftReleased\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 193,
+    "name": "D",
+    "body": "Name=\"D\",Command=\"DebugMenuRightPressed|OnReleaseDebugMenuRightReleased|DebugLevelLoadFE_VSlice\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 194,
+    "name": "Up",
+    "body": "Name=\"Up\",Command=\"DebugMenuUpPressed|OnReleaseDebugMenuUpReleased\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 195,
+    "name": "Down",
+    "body": "Name=\"Down\",Command=\"DebugMenuDownPressed|OnReleaseDebugMenuDownReleased\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 196,
+    "name": "Left",
+    "body": "Name=\"Left\",Command=\"DebugMenuLeftPressed|OnReleaseDebugMenuLeftReleased\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 197,
+    "name": "Right",
+    "body": "Name=\"Right\",Command=\"DebugMenuRightPressed|OnReleaseDebugMenuRightReleased\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 198,
+    "name": "S",
+    "body": "Name=\"S\",Command=\"AutoSaveGame\",Control=True"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 199,
+    "name": "Q",
+    "body": "Name=\"Q\",Command=\"DebugMenuPrevPage\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 200,
+    "name": "E",
+    "body": "Name=\"E\",Command=\"DebugMenuNextPage\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 202,
+    "name": "Delete",
+    "body": "Name=\"Delete\",Command=\"DebugMenuOn|OnReleaseDebugMenuOff\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 203,
+    "name": "RightShift",
+    "body": "Name=\"RightShift\",Command=\"DebugMenuOn|OnReleaseDebugMenuOff\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 204,
+    "name": "Enter",
+    "body": "Name=\"Enter\",Command=\"DebugCamSingleFrameStep|DebugMenuSelectA\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 205,
+    "name": "BackSpace",
+    "body": "Name=\"BackSpace\",Command=\"ToggleDebugCameraTrue\",Control=False,Alt=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 206,
+    "name": "BackSpace",
+    "body": "Name=\"BackSpace\",Command=\"DebugCamera2Pad\",Control=True"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 207,
+    "name": "K",
+    "body": "Name=\"K\",Command=\"DebugKillAllEnemies|KillVehicles\",Control=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 208,
+    "name": "K",
+    "body": "Name=\"K\",Command=\"DebugKillAllButOneEnemyInRoom\",Control=True"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 209,
+    "name": "I",
+    "body": "Name=\"I\",Command=\"ToggleLookInvert\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 210,
+    "name": "G",
+    "body": "Name=\"G\",Command=\"DebugGiveAllGadgets\",Shift=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 211,
+    "name": "F",
+    "body": "Name=\"F\",Command=\"DebugLevelLoadFE_Free_Roam\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 212,
+    "name": "Escape",
+    "body": "Name=\"Escape\",Command=\"UserPause\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 213,
+    "name": "Pause",
+    "body": "Name=\"Pause\",Command=\"UserPause\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 214,
+    "name": "P",
+    "body": "Name=\"P\",Command=\"TogglePhysicsGrabber|DebugLevelLoadPredator_A1?Chapters=4\",Control=False,Alt=False,Shift=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 215,
+    "name": "P",
+    "body": "Name=\"P\",Command=\"TogglePaths\",Control=False,Alt=True,Shift=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 216,
+    "name": "P",
+    "body": "Name=\"P\",Command=\"ToggleAIPaths\",Control=True,Alt=False,Shift=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 217,
+    "name": "P",
+    "body": "Name=\"P\",Command=\"ToggleNavMeshInspector\",Control=True,Alt=True,Shift=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 218,
+    "name": "H",
+    "body": "Name=\"H\",Command=\"ToggleHighSpeed\",Alt=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 219,
+    "name": "H",
+    "body": "Name=\"H\",Command=\"ToggleSuperHighSpeed\",Alt=True"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 220,
+    "name": "L",
+    "body": "Name=\"L\",Command=\"ToggleLowSpeed\",Alt=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 221,
+    "name": "L",
+    "body": "Name=\"L\",Command=\"DebugLoadGame\",Alt=True"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 222,
+    "name": "Equals",
+    "body": "Name=\"Equals\",Command=\"DebugWeaponIn|ButtonaRightShoulder\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 223,
+    "name": "Underscore",
+    "body": "Name=\"Underscore\",Command=\"DebugWeaponOut|ButtonaLeftShoulder\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 224,
+    "name": "SLASH",
+    "body": "Name=\"SLASH\",Command=\"GPU\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 225,
+    "name": "LeftBracket",
+    "body": "Name=\"LeftBracket\",Command=\"ToggleStreamingMiniMap\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 226,
+    "name": "RightBracket",
+    "body": "Name=\"RightBracket\",Command=\"StatLevels\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 227,
+    "name": "U",
+    "body": "Name=\"U\",Command=\"UnlockAllUpgradesTRUE\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 228,
+    "name": "U",
+    "body": "Name=\"U\",Command=\"DebugGiveArmour\",Shift=True,Control=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 229,
+    "name": "U",
+    "body": "Name=\"U\",Command=\"DebugRemoveArmour\",Shift=False,Control=True)\"N"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 230,
+    "name": "COMMA",
+    "body": "Name=\"COMMA\",Command=\"ToggleEnemiesCanAttack\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 231,
+    "name": "O",
+    "body": "Name=\"O\",Command=\"RestoreHealth\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 232,
+    "name": "PageUp",
+    "body": "Name=\"PageUp\",Command=\"DebugMenuStepUp\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 233,
+    "name": "PageDown",
+    "body": "Name=\"PageDown\",Command=\"DebugMenuStepDown\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 234,
+    "name": "R",
+    "body": "Name=\"R\",Command=\"DebugMenuSelectA\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 235,
+    "name": "Subtract",
+    "body": "Name=\"Subtract\",Command=\"BmRagDoll\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 236,
+    "name": "Tilde",
+    "body": "Name=\"Tilde\",Command=\"ToggleLowSpeed|OnReleaseToggleLowSpeed\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 237,
+    "name": "BackSpace",
+    "body": "Name=\"BackSpace\",Command=\"ToggleScreenshotCamera\",Control=False,Alt=True"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 238,
+    "name": "N",
+    "body": "Name=\"N\",Command=\"CycleAnimNames\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 239,
+    "name": "J",
+    "body": "Name=\"J\",Command=\"ReportBug\",Control=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 240,
+    "name": "J",
+    "body": "Name=\"J\",Command=\"CopyWaypoint\",Control=True"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 241,
+    "name": "V",
+    "body": "Name=\"V\",Command=\"ToggleGrapplePointDebug\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 242,
+    "name": "B",
+    "body": "Name=\"B\",Command=\"SpawnPlayerCar\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 243,
+    "name": "BackSlash",
+    "body": "Name=\"BackSlash\",Command=\"ToggleOnscreenKismetAndWarnings\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 244,
+    "name": "R",
+    "body": "Name=\"R\",Command=\"SpawnDebugRunAwayThug\",Control=True"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 251,
+    "name": "XboxTypeS_LeftTrigger",
+    "body": "Name=\"XboxTypeS_LeftTrigger\",Command=\"HoldToZoom|DebugMenuQualifyOnT|OnReleaseDebugMenuQualifyOffT|DebugMenuPrevPage|DeepScanOut\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 252,
+    "name": "XboxTypeS_RightTrigger",
+    "body": "Name=\"XboxTypeS_RightTrigger\",Command=\"StealthOrGadget|DebugMenuQualifyOnT|OnReleaseDebugMenuQualifyOffT|DebugMenuNextPage|AttackThrow|BatmobileFireButton|ButtonbFireVehicleWeapon|FireGun|DeepScanIn\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 253,
+    "name": "XboxTypeS_LeftTriggerAxis",
+    "body": "Name=\"XboxTypeS_LeftTriggerAxis\",Command=\"AxisaLeftTriggerSpeed=1.0DeadZone=0.2|AxisaUpSpeed=-1.0DeadZone=0.1\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 254,
+    "name": "XboxTypeS_RightTriggerAxis",
+    "body": "Name=\"XboxTypeS_RightTriggerAxis\",Command=\"AxisaRightTriggerSpeed=1.0DeadZone=0.2|AxisaUpSpeed=1.0DeadZone=0.1|AxisaThrottleAxisSpeed=1.0DeadZone=0.0\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 255,
+    "name": "XboxTypeS_RightThumbstick",
+    "body": "Name=\"XboxTypeS_RightThumbstick\",Command=\"DebugMenuSelectA|ButtonbLookBehindVehicle|QuickPhotoMode|ToggleCameraZoom\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 256,
+    "name": "XboxTypeS_LeftThumbstick",
+    "body": "Name=\"XboxTypeS_LeftThumbstick\",Command=\"DebugMenuSelectA|ButtonbLeftStickDown|QuickPhotoMode|DetonateGel|HoldForLineLaunchStop|BatmobileSonar\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 257,
+    "name": "XboxTypeS_DPad_Left",
+    "body": "Name=\"XboxTypeS_DPad_Left\",Command=\"ButtonbRawDpadLeft|OpenChallengeWheel|OnReleaseCloseChallengeWheel|DebugMenuLeftPressed|OnReleaseDebugMenuLeftReleased\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 258,
+    "name": "XboxTypeS_DPad_Right",
+    "body": "Name=\"XboxTypeS_DPad_Right\",Command=\"ButtonbRawDpadRight|OpenMostWantedmenu|OnReleaseCloseMostWantedMenu|DebugMenuRightPressed|OnReleaseDebugMenuRightReleased\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 259,
+    "name": "XboxTypeS_DPad_Up",
+    "body": "Name=\"XboxTypeS_DPad_Up\",Command=\"ButtonbRawDpadUp|MoveDialogueOptionUp|ForensicMode|DebugMenuUpPressed|OnReleaseDebugMenuUpReleased|SelectVehicleWeapon4|OnReleaseReleaseVehicleWeapon4\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 260,
+    "name": "XboxTypeS_DPad_Down",
+    "body": "Name=\"XboxTypeS_DPad_Down\",Command=\"ButtonbRawDpadDown|MoveDialogueOptionDown|ButtonbGadgetSelectWheel|DebugMenuDownPressed|OnReleaseDebugMenuDownReleased\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 261,
+    "name": "XboxTypeS_Back",
+    "body": "Name=\"XboxTypeS_Back\",Command=\"OpenLevelUpOrMap\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 262,
+    "name": "XboxTypeS_Start",
+    "body": "Name=\"XboxTypeS_Start\",Command=\"UserPause\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 263,
+    "name": "XboxTypeS_LeftX",
+    "body": "Name=\"XboxTypeS_LeftX\",Command=\"AxisaStrafeSpeed=1.0DeadZone=0.3|AxisaRawLHJoyRightSpeed=1.0DeadZone=0.0\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 264,
+    "name": "XboxTypeS_LeftY",
+    "body": "Name=\"XboxTypeS_LeftY\",Command=\"AxisaBaseYSpeed=1.0DeadZone=0.3|AxisaRawLHJoyUpSpeed=1.0DeadZone=0.0\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 265,
+    "name": "XboxTypeS_RightX",
+    "body": "Name=\"XboxTypeS_RightX\",Command=\"AxisaTurnSpeed=1.0DeadZone=0.2|AxisaRawRHJoyRightSpeed=1.0DeadZone=0.0\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 266,
+    "name": "XboxTypeS_RightY",
+    "body": "Name=\"XboxTypeS_RightY\",Command=\"AxisaLookupSpeed=1.0DeadZone=0.2|AxisaRawRHJoyUpSpeed=1.0DeadZone=0.0\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 267,
+    "name": "XboxTypeS_A",
+    "body": "Name=\"XboxTypeS_A\",Command=\"DebugCamSingleFrameStep|EjectFromVehicle|BattleStrafe|ContextSensitive|Run|CapeGlide|AcceptConversation|Evade|DebugMenuSelectA|CancelBatarangCamera|TriggerPhysImpact\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 268,
+    "name": "XboxTypeS_B",
+    "body": "Name=\"XboxTypeS_B\",Command=\"ExitAgilityMode|QuickGadgetB|OnReleaseReleaseQuickGadgetB|Cover|BlockBreaker|SkipCutscene|CancelGadget|DebugMenuSelectB|CancelBatarangCamera|ButtonbCancelButton\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 269,
+    "name": "XboxTypeS_X",
+    "body": "Name=\"XboxTypeS_X\",Command=\"TriggerFearTakedown0|TriggerQuickStrike|QuickGadgetX|OnReleaseReleaseQuickGadgetY|DebugMenuSelectX|CancelBatarangCamera|BrakeButton|OnReleaseQuickStrikeReleased|ButtonaQuickStrike\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 270,
+    "name": "XboxTypeS_Y",
+    "body": "Name=\"XboxTypeS_Y\",Command=\"QuickGadgetY|OnReleaseReleaseQuickGadgetY|Grab|ActivateNoise|DebugMenuSelectY|SpecialMoveCheat|CancelBatarangCamera|ToggleVideoRec|ButtonbVehicleBoostButton|TogglePhysImpact|HangFromVantagePoint|ZipLine\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 271,
+    "name": "XboxTypeS_LeftShoulder",
+    "body": "Name=\"XboxTypeS_LeftShoulder\",Command=\"DebugMenuStepUp|DualPlay|ThermalMode|ButtonaLeftShoulder|SlowDownSpectatorCamera\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 272,
+    "name": "XboxTypeS_RightShoulder",
+    "body": "Name=\"XboxTypeS_RightShoulder\",Command=\"DebugMenuStepDown|Grapple|SecondaryFireGadget|ToggleDrivingCamera|OnReleaseSecondaryFireReleased|DebugMenuQualifyOnB|OnReleaseDebugMenuQualifyOffB|ButtonaRightShoulder|SpeedUpSpectatorCamera|ButtonbFireVehicleSecondaryWeapon|SecondaryFireVehicleWeapon|PursuitModeTagGun\""
+   },
+   {
+    "file": "PCInput.ini",
+    "line": 10,
+    "name": "TAB",
+    "body": "Name=\"TAB\",Command=\"OpenLevelUpOrMap\""
+   },
+   {
+    "file": "PCInput.ini",
+    "line": 26,
+    "name": "SIXAXIS_AccelX",
+    "body": "Name=\"SIXAXIS_AccelX\",Command=\"AxisaAccelXSpeed=1.0DeadZone=0.2\""
+   },
+   {
+    "file": "PCInput.ini",
+    "line": 27,
+    "name": "SIXAXIS_AccelY",
+    "body": "Name=\"SIXAXIS_AccelY\",Command=\"AxisaAccelYSpeed=1.0DeadZone=0.2\""
+   },
+   {
+    "file": "PCInput.ini",
+    "line": 28,
+    "name": "SIXAXIS_AccelZ",
+    "body": "Name=\"SIXAXIS_AccelZ\",Command=\"AxisaAccelZSpeed=1.0DeadZone=0.2\""
+   },
+   {
+    "file": "PCInput.ini",
+    "line": 29,
+    "name": "SIXAXIS_Gyro",
+    "body": "Name=\"SIXAXIS_Gyro\",Command=\"AxisaGyroSpeed=1.0DeadZone=0.2\""
+   },
+   {
+    "file": "PCInput.ini",
+    "line": 30,
+    "name": "LeftMouseButton",
+    "body": "Name=\"LeftMouseButton\",Command=\"SkipCutscene\""
+   }
+  ],
+  "Engine.DebugCameraInput": [
+   {
+    "file": "BaseInput.ini",
+    "line": 40,
+    "name": "MoveUp",
+    "body": "Name=\"MoveUp\",Command=\"AxisaUpSpeed=1.0\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 41,
+    "name": "MoveDown",
+    "body": "Name=\"MoveDown\",Command=\"AxisaUpSpeed=-1.0\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 42,
+    "name": "MoveForward",
+    "body": "Name=\"MoveForward\",Command=\"AxisaBaseYSpeed=1.0\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 43,
+    "name": "MoveBackward",
+    "body": "Name=\"MoveBackward\",Command=\"AxisaBaseYSpeed=-1.0\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 44,
+    "name": "TurnLeft",
+    "body": "Name=\"TurnLeft\",Command=\"AxisaBaseXSpeed=-200.0AbsoluteAxis=100\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 45,
+    "name": "TurnRight",
+    "body": "Name=\"TurnRight\",Command=\"AxisaBaseXSpeed=+200.0AbsoluteAxis=100\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 46,
+    "name": "StrafeLeft",
+    "body": "Name=\"StrafeLeft\",Command=\"AxisaStrafeSpeed=-1.0\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 47,
+    "name": "StrafeRight",
+    "body": "Name=\"StrafeRight\",Command=\"AxisaStrafeSpeed=+1.0\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 48,
+    "name": "Q",
+    "body": "Name=\"Q\",Command=\"MoveDown\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 49,
+    "name": "E",
+    "body": "Name=\"E\",Command=\"MoveUp\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 50,
+    "name": "W",
+    "body": "Name=\"W\",Command=\"MoveForward\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 51,
+    "name": "S",
+    "body": "Name=\"S\",Command=\"MoveBackward\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 52,
+    "name": "A",
+    "body": "Name=\"A\",Command=\"StrafeLeft\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 53,
+    "name": "D",
+    "body": "Name=\"D\",Command=\"StrafeRight\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 54,
+    "name": "F",
+    "body": "Name=\"F\",Command=\"FreezeRendering\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 55,
+    "name": "MouseX",
+    "body": "Name=\"MouseX\",Command=\"CountbXAxis|AxisaMouseX\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 56,
+    "name": "MouseY",
+    "body": "Name=\"MouseY\",Command=\"CountbYAxis|AxisaMouseY\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 57,
+    "name": "Left",
+    "body": "Name=\"Left\",Command=\"TurnLeft\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 58,
+    "name": "Right",
+    "body": "Name=\"Right\",Command=\"TurnRight\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 59,
+    "name": "c",
+    "body": "Name=\"c\",Command=\"ToggleDebugCamera\",Control=False,Shift=False,Alt=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 60,
+    "name": "LeftShift",
+    "body": "Name=\"LeftShift\",Command=\"MoreSpeed|OnReleaseNormalSpeed\",Control=False,Shift=False,Alt=False"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 62,
+    "name": "XboxTypeS_LeftThumbstick",
+    "body": "Name=\"XboxTypeS_LeftThumbstick\",Command=\"ToggleDebugCamera\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 63,
+    "name": "XboxTypeS_LeftX",
+    "body": "Name=\"XboxTypeS_LeftX\",Command=\"AxisaStrafeSpeed=1.0DeadZone=0.3\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 64,
+    "name": "XboxTypeS_LeftY",
+    "body": "Name=\"XboxTypeS_LeftY\",Command=\"AxisaBaseYSpeed=1.0DeadZone=0.3\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 65,
+    "name": "XboxTypeS_RightX",
+    "body": "Name=\"XboxTypeS_RightX\",Command=\"AxisaTurnSpeed=1.0DeadZone=0.2\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 66,
+    "name": "XboxTypeS_RightY",
+    "body": "Name=\"XboxTypeS_RightY\",Command=\"AxisaLookupSpeed=0.8DeadZone=0.2\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 67,
+    "name": "XboxTypeS_LeftTrigger",
+    "body": "Name=\"XboxTypeS_LeftTrigger\",Command=\"MoveDown\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 68,
+    "name": "XboxTypeS_RightTrigger",
+    "body": "Name=\"XboxTypeS_RightTrigger\",Command=\"MoveUp\""
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 70,
+    "name": "XboxTypeS_B",
+    "body": "Name=\"XboxTypeS_B\",Command=\"MoreSpeed|OnReleaseNormalSpeed\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 14,
+    "name": "Pause",
+    "body": "Name=\"Pause\",Command=\"Pause\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 15,
+    "name": "BackSpace",
+    "body": "Name=\"BackSpace\",Command=\"ToggleDebugCameraTrue\",Control=False,Alt=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 16,
+    "name": "Period",
+    "body": "Name=\"Period\",Command=\"ToggleThoughts\",Alt=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 17,
+    "name": "Period",
+    "body": "Name=\"Period\",Command=\"ToggleErrorThoughts\",Alt=True"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 18,
+    "name": "Semicolon",
+    "body": "Name=\"Semicolon\",Command=\"StepPawnDisplayingThoughts\",Alt=False,Control=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 19,
+    "name": "Semicolon",
+    "body": "Name=\"Semicolon\",Command=\"DisplayLookAtPawnThoughts\",Alt=False,Control=True"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 20,
+    "name": "Semicolon",
+    "body": "Name=\"Semicolon\",Command=\"AdvanceCurrentThoughtHistoryItem\",Alt=True,Control=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 21,
+    "name": "P",
+    "body": "Name=\"P\",Command=\"DialogueCaptureAll\",Control=False,Alt=False,Shift=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 22,
+    "name": "P",
+    "body": "Name=\"P\",Command=\"TogglePaths\",Control=False,Alt=True,Shift=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 23,
+    "name": "P",
+    "body": "Name=\"P\",Command=\"ToggleAIPaths\",Control=True,Alt=False,Shift=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 24,
+    "name": "H",
+    "body": "Name=\"H\",Command=\"ToggleHighSpeed\",Alt=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 25,
+    "name": "H",
+    "body": "Name=\"H\",Command=\"ToggleSuperHighSpeed\",Alt=True"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 26,
+    "name": "L",
+    "body": "Name=\"L\",Command=\"ToggleLowSpeed\",Alt=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 27,
+    "name": "I",
+    "body": "Name=\"I\",Command=\"DialogueInc|ToggleLookInvert\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 28,
+    "name": "O",
+    "body": "Name=\"O\",Command=\"DialogueCapture\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 29,
+    "name": "SLASH",
+    "body": "Name=\"SLASH\",Command=\"GPU\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 30,
+    "name": "RightBracket",
+    "body": "Name=\"RightBracket\",Command=\"StatLevels\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 31,
+    "name": "F1",
+    "body": "Name=\"F1\",Command=\"viewmodewireframe\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 32,
+    "name": "F2",
+    "body": "Name=\"F2\",Command=\"viewmodeunlit\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 33,
+    "name": "F3",
+    "body": "Name=\"F3\",Command=\"viewmodelit\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 34,
+    "name": "F8",
+    "body": "Name=\"F8\",Command=\"showpostprocess\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 35,
+    "name": "F9",
+    "body": "Name=\"F9\",Command=\"shot\",Shift=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 36,
+    "name": "F11",
+    "body": "Name=\"F11\",Command=\"ToggleMovieRecord\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 37,
+    "name": "W",
+    "body": "Name=\"W\",Command=\"MoveForward|DebugMenuUpPressed|OnReleaseDebugMenuUpReleased|AxisaRawLHJoyUpSpeed=1.0\",Shift=False,Control=False,Alt=False,bIgnoreShift=False,bIgnoreCtrl=False,bIgnoreAlt=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 38,
+    "name": "S",
+    "body": "Name=\"S\",Command=\"MoveBackward|DebugMenuDownPressed|OnReleaseDebugMenuDownReleased|AxisaRawLHJoyUpSpeed=-1.0\",Shift=False,Control=False,Alt=False,bIgnoreShift=False,bIgnoreCtrl=False,bIgnoreAlt=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 39,
+    "name": "A",
+    "body": "Name=\"A\",Command=\"StrafeLeft|DebugMenuLeftPressed|OnReleaseDebugMenuLeftReleased|AxisaRawLHJoyRightSpeed=-1.0\",Shift=False,Control=False,Alt=False,bIgnoreShift=False,bIgnoreCtrl=False,bIgnoreAlt=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 40,
+    "name": "D",
+    "body": "Name=\"D\",Command=\"StrafeRight|DebugMenuRightPressed|OnReleaseDebugMenuRightReleased|AxisaRawLHJoyRightSpeed=1.0\",Shift=False,Control=False,Alt=False,bIgnoreShift=False,bIgnoreCtrl=False,bIgnoreAlt=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 41,
+    "name": "Up",
+    "body": "Name=\"Up\",Command=\"DebugMenuUpPressed|OnReleaseDebugMenuUpReleased|PhotoMenuUp\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 42,
+    "name": "Down",
+    "body": "Name=\"Down\",Command=\"DebugMenuDownPressed|OnReleaseDebugMenuDownReleased|PhotoMenuDown\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 43,
+    "name": "Left",
+    "body": "Name=\"Left\",Command=\"DebugMenuLeftPressed|OnReleaseDebugMenuLeftReleased|PhotoMenuStartAdjustLeft|OnReleasePhotoMenuStopAdjust\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 44,
+    "name": "Right",
+    "body": "Name=\"Right\",Command=\"DebugMenuRightPressed|OnReleaseDebugMenuRightReleased|PhotoMenuStartAdjustRight|OnReleasePhotoMenuStopAdjust\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 45,
+    "name": "Q",
+    "body": "Name=\"Q\",Command=\"DebugMenuPrevPage\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 46,
+    "name": "E",
+    "body": "Name=\"E\",Command=\"DebugMenuNextPage\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 48,
+    "name": "Delete",
+    "body": "Name=\"Delete\",Command=\"DebugMenuOn|OnReleaseDebugMenuOff\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 49,
+    "name": "RightShift",
+    "body": "Name=\"RightShift\",Command=\"DebugMenuOn|OnReleaseDebugMenuOff\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 50,
+    "name": "Enter",
+    "body": "Name=\"Enter\",Command=\"DebugCamSingleFrameStep|DebugMenuSelectA\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 51,
+    "name": "T",
+    "body": "Name=\"T\",Command=\"TrackingMode\",Shift=False,bIgnoreShift=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 52,
+    "name": "T",
+    "body": "Name=\"T\",Command=\"Teleport\",Shift=True,bIgnoreShift=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 53,
+    "name": "COMMA",
+    "body": "Name=\"COMMA\",Command=\"ToggleEnemiesCanAttack\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 54,
+    "name": "N",
+    "body": "Name=\"N\",Command=\"CycleAnimNames\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 55,
+    "name": "BackSlash",
+    "body": "Name=\"BackSlash\",Command=\"ToggleOnscreenKismetAndWarnings\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 56,
+    "name": "R",
+    "body": "Name=\"R\",Command=\"SpawnDebugRunAwayThug\",Control=True"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 57,
+    "name": "J",
+    "body": "Name=\"J\",Command=\"ReportBug\",Control=False"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 58,
+    "name": "J",
+    "body": "Name=\"J\",Command=\"CopyWaypoint\",Control=True"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 60,
+    "name": "One",
+    "body": "Name=\"One\",Command=\"DebugMenuNumber1\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 61,
+    "name": "Two",
+    "body": "Name=\"Two\",Command=\"DebugMenuNumber2\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 62,
+    "name": "Three",
+    "body": "Name=\"Three\",Command=\"DebugMenuNumber3\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 63,
+    "name": "Four",
+    "body": "Name=\"Four\",Command=\"DebugMenuNumber4\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 64,
+    "name": "Five",
+    "body": "Name=\"Five\",Command=\"DebugMenuNumber5\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 65,
+    "name": "Six",
+    "body": "Name=\"Six\",Command=\"DebugMenuNumber6\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 66,
+    "name": "Seven",
+    "body": "Name=\"Seven\",Command=\"DebugMenuNumber7\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 67,
+    "name": "Eight",
+    "body": "Name=\"Eight\",Command=\"DebugMenuNumber8\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 68,
+    "name": "Nine",
+    "body": "Name=\"Nine\",Command=\"DebugMenuNumber9\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 69,
+    "name": "Zero",
+    "body": "Name=\"Zero\",Command=\"DebugMenuNumber0\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 72,
+    "name": "XboxTypeS_B",
+    "body": "Name=\"XboxTypeS_B\",Command=\"DisablePhotoMode|MoreSpeed|OnReleaseNormalSpeed\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 73,
+    "name": "XboxTypeS_A",
+    "body": "Name=\"XboxTypeS_A\",Command=\"DebugCamSingleFrameStep|DebugMenuSelectA\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 74,
+    "name": "XboxTypeS_Y",
+    "body": "Name=\"XboxTypeS_Y\",Command=\"Teleport|PhotoToggleMenu\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 75,
+    "name": "XboxTypeS_X",
+    "body": "Name=\"XboxTypeS_X\",Command=\"ResetRoll\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 76,
+    "name": "XboxTypeS_Start",
+    "body": "Name=\"XboxTypeS_Start\",Command=\"Pause\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 77,
+    "name": "XboxTypeS_LeftTrigger",
+    "body": "Name=\"XboxTypeS_LeftTrigger\",Command=\"DebugMenuQualifyOnT|OnReleaseDebugMenuQualifyOffT|DebugMenuPrevPage|PhotoStartZoomOut|OnReleasePhotoStopZoom\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 78,
+    "name": "XboxTypeS_RightTrigger",
+    "body": "Name=\"XboxTypeS_RightTrigger\",Command=\"DebugMenuQualifyOnT|OnReleaseDebugMenuQualifyOffT|DebugMenuNextPage|PhotoStartZoomIn|OnReleasePhotoStopZoom\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 79,
+    "name": "XboxTypeS_LeftTriggerAxis",
+    "body": "Name=\"XboxTypeS_LeftTriggerAxis\",Command=\"AxisaUpSpeed=-1.0DeadZone=0.1\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 80,
+    "name": "XboxTypeS_RightTriggerAxis",
+    "body": "Name=\"XboxTypeS_RightTriggerAxis\",Command=\"AxisaUpSpeed=1.0DeadZone=0.1\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 81,
+    "name": "XboxTypeS_DPad_Left",
+    "body": "Name=\"XboxTypeS_DPad_Left\",Command=\"DebugMenuLeftPressed|OnReleaseDebugMenuLeftReleased|StartRollLeft|OnReleaseStopRoll|PhotoMenuStartAdjustLeft|OnReleasePhotoMenuStopAdjust\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 82,
+    "name": "XboxTypeS_DPad_Right",
+    "body": "Name=\"XboxTypeS_DPad_Right\",Command=\"DebugMenuRightPressed|OnReleaseDebugMenuRightReleased|StartRollRight|OnReleaseStopRoll|PhotoMenuStartAdjustRight|OnReleasePhotoMenuStopAdjust\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 83,
+    "name": "XboxTypeS_DPad_Up",
+    "body": "Name=\"XboxTypeS_DPad_Up\",Command=\"DebugMenuUpPressed|OnReleaseDebugMenuUpReleased|StartZoomIn|OnReleaseStopZoom|PhotoMenuUp\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 84,
+    "name": "XboxTypeS_DPad_Down",
+    "body": "Name=\"XboxTypeS_DPad_Down\",Command=\"DebugMenuDownPressed|OnReleaseDebugMenuDownReleased|StartZoomOut|OnReleaseStopZoom|PhotoMenuDown\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 85,
+    "name": "XboxTypeS_LeftShoulder",
+    "body": "Name=\"XboxTypeS_LeftShoulder\",Command=\"DebugMenuStepUp|SlowDownSpectatorCamera|PhotoStartRollLeft|OnReleasePhotoStopRoll\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 86,
+    "name": "XboxTypeS_RightShoulder",
+    "body": "Name=\"XboxTypeS_RightShoulder\",Command=\"DebugMenuStepDown|DebugMenuQualifyOnB|OnReleaseDebugMenuQualifyOffB|SpeedUpSpectatorCamera|PhotoStartRollRight|OnReleasePhotoStopRoll\""
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 87,
+    "name": "XboxTypeS_Back",
+    "body": "Name=\"XboxTypeS_Back\",Command=\"FocusDof\""
+   },
+   {
+    "file": "PCInput.ini",
+    "line": 13,
+    "name": "BackSpace",
+    "body": "Name=\"BackSpace\",Command=\"ToggleScreenshotCamera\",Control=False,Alt=True"
+   },
+   {
+    "file": "PCInput.ini",
+    "line": 14,
+    "name": "BackSpace",
+    "body": "Name=\"BackSpace\",Command=\"DebugCamera2Pad\",Control=True,Alt=False"
+   },
+   {
+    "file": "PCInput.ini",
+    "line": 15,
+    "name": "Y",
+    "body": "Name=\"Y\",Command=\"ToggleDebugLight\""
+   },
+   {
+    "file": "PCInput.ini",
+    "line": 16,
+    "name": "F9",
+    "body": "Name=\"F9\",Command=\"Take360Screenshot\",Shift=True"
+   },
+   {
+    "file": "PCInput.ini",
+    "line": 17,
+    "name": "F9",
+    "body": "Name=\"F9\",Command=\"Take360OrbitScreenshot\",Control=True"
+   },
+   {
+    "file": "PCInput.ini",
+    "line": 18,
+    "name": "F9",
+    "body": "Name=\"F9\",Command=\"Take360OrbitXYScreenshot\",Alt=True"
+   },
+   {
+    "file": "PCInput.ini",
+    "line": 19,
+    "name": "SpaceBar",
+    "body": "Name=\"SpaceBar\",Command=\"Set360OrbitLocation\",Shift=False"
+   },
+   {
+    "file": "PCInput.ini",
+    "line": 20,
+    "name": "SpaceBar",
+    "body": "Name=\"SpaceBar\",Command=\"Reset360OrbitLocation\",Shift=True"
+   },
+   {
+    "file": "PCInput.ini",
+    "line": 22,
+    "name": "XboxTypeS_LeftThumbstick",
+    "body": "Name=\"XboxTypeS_LeftThumbstick\",Command=\"TrackingMode\""
+   },
+   {
+    "file": "PCInput.ini",
+    "line": 23,
+    "name": "XboxTypeS_RightThumbstick",
+    "body": "Name=\"XboxTypeS_RightThumbstick\",Command=\"OrbitMode\""
+   }
+  ],
+  "UnrealEd.EditorViewportInput": [
+   {
+    "file": "BaseInput.ini",
+    "line": 73,
+    "name": "SpaceBar",
+    "body": "Command=\"MODEWIDGETMODECYCLE\",Name=SpaceBar"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 74,
+    "name": "Tilde",
+    "body": "Command=\"MODEWIDGETCOORDSYSTEMCYCLE\",Name=Tilde"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 75,
+    "name": "Delete",
+    "body": "Command=\"DELETE\",Name=Delete"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 76,
+    "name": "F2",
+    "body": "Command=\"SELECTBUILDERBRUSH\",Name=F2"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 77,
+    "name": "F4",
+    "body": "Command=\"EDCALLBACKSELECTEDPROPS\",Name=F4"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 78,
+    "name": "F4",
+    "body": "Command=\"QUIT_EDITOR\",Name=F4,Alt=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 79,
+    "name": "F5",
+    "body": "Command=\"EDCALLBACKSURFPROPS\",Name=F5"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 80,
+    "name": "F6",
+    "body": "Command=\"EDCALLBACKLEVELPROPS\",Name=F6"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 81,
+    "name": "A",
+    "body": "Command=\"ACTORSELECTALL\",Name=A,Shift=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 82,
+    "name": "B",
+    "body": "Command=\"POLYSELECTMATCHINGBRUSH\",Name=B,Shift=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 83,
+    "name": "C",
+    "body": "Command=\"POLYSELECTADJACENTCOPLANARS\",Name=C,Shift=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 84,
+    "name": "D",
+    "body": "Command=\"DUPLICATE\",Name=D,Shift=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 85,
+    "name": "E",
+    "body": "Command=\"ACTORSELECTMATCHINGSTATICMESHORDESTRUCTIBLE\",Name=E,Shift=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 86,
+    "name": "F",
+    "body": "Command=\"POLYSELECTADJACENTFLOORS\",Name=F,Shift=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 87,
+    "name": "F",
+    "body": "Command=\"EDCALLBACKFITTEXTURETOSURFACE\",Name=F,Control=True,Shift=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 89,
+    "name": "I",
+    "body": "Command=\"POLYSELECTMATCHINGITEMS\",Name=I,Shift=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 90,
+    "name": "J",
+    "body": "Command=\"POLYSELECTADJACENTALL\",Name=J,Shift=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 91,
+    "name": "M",
+    "body": "Command=\"POLYSELECTMEMORYSET\",Name=M,Shift=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 92,
+    "name": "M",
+    "body": "Command=\"ACTORLEVELCURRENT\",Name=M"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 93,
+    "name": "M",
+    "body": "Command=\"ACTORMOVETOCURRENT\",Name=M,Control=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 94,
+    "name": "N",
+    "body": "Command=\"SELECTNONE\",Name=N,Shift=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 95,
+    "name": "O",
+    "body": "Command=\"POLYSELECTMEMORYINTERSECT\",Name=O,Shift=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 96,
+    "name": "Q",
+    "body": "Command=\"POLYSELECTREVERSE\",Name=Q,Shift=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 97,
+    "name": "R",
+    "body": "Command=\"POLYSELECTMEMORYRECALL\",Name=R,Shift=True,bIgnoreCtrl=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 98,
+    "name": "S",
+    "body": "Command=\"POLYSELECTALL\",Name=S,Shift=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 99,
+    "name": "T",
+    "body": "Command=\"POLYSELECTMATCHINGTEXTURE\",Name=T,Shift=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 100,
+    "name": "U",
+    "body": "Command=\"POLYSELECTMEMORYUNION\",Name=U,Shift=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 101,
+    "name": "W",
+    "body": "Command=\"POLYSELECTADJACENTWALLS\",Name=W,Shift=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 102,
+    "name": "X",
+    "body": "Command=\"POLYSELECTMEMORYXOR\",Name=X,Shift=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 103,
+    "name": "Y",
+    "body": "Command=\"POLYSELECTADJACENTSLANTS\",Name=Y,Shift=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 104,
+    "name": "Z",
+    "body": "Command=\"ACTORSELECTMATCHINGSTATICMESHALLCLASSES\",Name=Z,Shift=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 105,
+    "name": "C",
+    "body": "Command=\"EDITCOPY\",Name=C,Control=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 106,
+    "name": "V",
+    "body": "Command=\"EDITPASTE\",Name=V,Control=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 107,
+    "name": "W",
+    "body": "Command=\"DUPLICATE\",Name=W,Control=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 108,
+    "name": "X",
+    "body": "Command=\"EDITCUT\",Name=X,Control=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 109,
+    "name": "Y",
+    "body": "Command=\"TRANSACTIONREDO\",Name=Y,Control=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 110,
+    "name": "Z",
+    "body": "Command=\"TRANSACTIONUNDO\",Name=Z,Control=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 115,
+    "name": "P",
+    "body": "Command=\"PREFABSELECTACTORSINPREFABS\",Name=P,Shift=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 116,
+    "name": "End",
+    "body": "Command=\"ACTORALIGNSNAPTOFLOORALIGN=0\",Name=End"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 117,
+    "name": "End",
+    "body": "Command=\"ACTORALIGNMOVETOGRID\",Name=End,Control=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 118,
+    "name": "Home",
+    "body": "Command=\"CAMERAALIGN\",Name=Home"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 119,
+    "name": "Home",
+    "body": "Command=\"CAMERAALIGNACTIVEVIEWPORTONLY\",Name=Home,Shift=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 120,
+    "name": "Add",
+    "body": "Command=\"CAMERAALIGNNEXT\",Name=Add"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 121,
+    "name": "Equals",
+    "body": "Command=\"CAMERAALIGNNEXT\",Name=Equals,Shift=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 122,
+    "name": "Subtract",
+    "body": "Command=\"CAMERAALIGNPREVIOUS\",Name=Subtract"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 123,
+    "name": "Underscore",
+    "body": "Command=\"CAMERAALIGNPREVIOUS\",Name=Underscore,Shift=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 124,
+    "name": "P",
+    "body": "Command=\"MAPBRUSHGET\",Name=P,Control=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 125,
+    "name": "K",
+    "body": "Command=\"ACTORFINDKISMET\",Name=K,Control=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 126,
+    "name": "A",
+    "body": "Command=\"ACTORSELECTALLFROMOBJ\",Name=A,Control=True,Shift=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 127,
+    "name": "B",
+    "body": "Command=\"ACTORSYNCBROWSER\",Name=B,Control=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 129,
+    "name": "B",
+    "body": "Command=\"ACTORSYNCBROWSERMATERIAL\",Name=B,Control=True,Shift=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 131,
+    "name": "Escape",
+    "body": "Command=\"ACTORDESELECT\",Name=Escape"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 132,
+    "name": "Tab",
+    "body": "Command=\"CTRLTABSHIFTDOWN=FALSE\",Name=Tab,Control=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 133,
+    "name": "Tab",
+    "body": "Command=\"CTRLTABSHIFTDOWN=TRUE\",Name=Tab,Control=True,Shift=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 134,
+    "name": "L",
+    "body": "Command=\"ACTORLINKSELECTED\",Name=L,Control=True,Shift=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 135,
+    "name": "U",
+    "body": "Command=\"ACTORUNLINKSELECTED\",Name=U,Control=True,Shift=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 136,
+    "name": "Semicolon",
+    "body": "Command=\"BUILDLIGHTING\",Name=Semicolon,Control=True,Shift=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 137,
+    "name": "Period",
+    "body": "Command=\"RECOMPILESHADERSCHANGED\",Name=Period,Control=True,Shift=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 138,
+    "name": "B",
+    "body": "Command=\"ACTORATTACH\",Name=B,Alt=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 139,
+    "name": "A",
+    "body": "Command=\"ACTORADDTOATTACHEDITOR\",Name=A,Alt=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 140,
+    "name": "Slash",
+    "body": "Command=\"PARTICLERESETSELECTED\",Name=Slash"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 141,
+    "name": "Slash",
+    "body": "Command=\"PARTICLERESETALL\",Name=Slash,Shift=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 142,
+    "name": "G",
+    "body": "Command=\"GROUPSREGROUP\",Name=G,Control=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 143,
+    "name": "G",
+    "body": "Command=\"GROUPSUNGROUP\",Name=G,Shift=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 144,
+    "name": "G",
+    "body": "Command=\"GROUPSTOGGLEMODE\",Name=G,Shift=True,Control=True"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 318,
+    "name": "R",
+    "body": "Command=\"SNAPRAILING\",Name=R,Alt=True"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 320,
+    "name": "Z",
+    "body": "Command=\"MODERACTORPLACEMENT\",Name=Z,bIgnoreShift=True,bIgnoreCtrl=True,bIgnoreAlt=True"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 321,
+    "name": "X",
+    "body": "Command=\"MODERSPOTLIGHTDIRECTION\",Name=X,bIgnoreShift=True,bIgnoreCtrl=True,bIgnoreAlt=True"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 323,
+    "name": "Comma",
+    "body": "Command=\"GROUPSLOCK\",Name=Comma,Control=True"
+   },
+   {
+    "file": "DefaultInput.ini",
+    "line": 324,
+    "name": "Comma",
+    "body": "Command=\"GROUPSUNLOCK\",Name=Comma,Shift=True"
+   }
+  ],
+  "UnrealEd.ObjectEditorViewportInput": [
+   {
+    "file": "BaseInput.ini",
+    "line": 147,
+    "name": "Y",
+    "body": "Command=\"TRANSACTIONREDO\",Name=Y,Control=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 148,
+    "name": "Z",
+    "body": "Command=\"TRANSACTIONREDO\",Name=Z,Control=True,Shift=True"
+   },
+   {
+    "file": "BaseInput.ini",
+    "line": 149,
+    "name": "Z",
+    "body": "Command=\"TRANSACTIONUNDO\",Name=Z,Control=True"
+   }
+  ],
+  "Editor.EditorViewportInput": [
+   {
+    "file": "PCInput.ini",
+    "line": 5,
+    "name": "S",
+    "body": "Command=\"SAVEALL\",Name=S,Control=True"
+   },
+   {
+    "file": "PCInput.ini",
+    "line": 6,
+    "name": "K",
+    "body": "Command=\"OPENKISMET\",Name=K,Control=True"
+   }
+  ]
+ },
+ "gamepad": {
+  "rows": [
+   {
+    "input": "XboxTypeS_LeftTrigger",
+    "defined_at": "DefaultInput.ini:251",
+    "tokens": [
+     "HoldToZoom",
+     "DebugMenuQualifyOnT",
+     "DebugMenuQualifyOffT",
+     "DebugMenuPrevPage",
+     "DeepScanOut"
+    ],
+    "on_release": [
+     "DebugMenuQualifyOffT"
+    ],
+    "axis": [],
+    "vehicle_tokens": [],
+    "vehicle_matches": [],
+    "batmobile_relevant": false,
+    "line": ".Bindings=(Name=\"XboxTypeS_LeftTrigger\",Command=\"HoldToZoom | DebugMenuQualifyOnT | OnRelease DebugMenuQualifyOffT | DebugMenuPrevPage | DeepScanOut\")"
+   },
+   {
+    "input": "XboxTypeS_RightTrigger",
+    "defined_at": "DefaultInput.ini:252",
+    "tokens": [
+     "StealthOrGadget",
+     "DebugMenuQualifyOnT",
+     "DebugMenuQualifyOffT",
+     "DebugMenuNextPage",
+     "AttackThrow",
+     "BatmobileFireButton",
+     "bFireVehicleWeapon",
+     "FireGun",
+     "DeepScanIn"
+    ],
+    "on_release": [
+     "DebugMenuQualifyOffT"
+    ],
+    "axis": [
+     "bFireVehicleWeapon"
+    ],
+    "vehicle_tokens": [
+     "BatmobileFireButton",
+     "bFireVehicleWeapon"
+    ],
+    "vehicle_matches": [
+     {
+      "token": "BatmobileFireButton",
+      "match": "exact"
+     },
+     {
+      "token": "bFireVehicleWeapon",
+      "match": "exact"
+     }
+    ],
+    "batmobile_relevant": true,
+    "line": ".Bindings=(Name=\"XboxTypeS_RightTrigger\",Command=\"StealthOrGadget | DebugMenuQualifyOnT | OnRelease DebugMenuQualifyOffT | DebugMenuNextPage | AttackThrow | BatmobileFireButton | Button bFireVehicleWeapon | FireGun | DeepScanIn \")"
+   },
+   {
+    "input": "XboxTypeS_LeftTriggerAxis",
+    "defined_at": "DefaultInput.ini:253",
+    "tokens": [
+     "aLeftTrigger",
+     "aUp"
+    ],
+    "on_release": [],
+    "axis": [
+     "aLeftTrigger",
+     "aUp"
+    ],
+    "vehicle_tokens": [
+     "aLeftTrigger",
+     "aUp"
+    ],
+    "vehicle_matches": [
+     {
+      "token": "aLeftTrigger",
+      "match": "exact"
+     },
+     {
+      "token": "aUp",
+      "match": "exact"
+     }
+    ],
+    "batmobile_relevant": true,
+    "line": ".Bindings=(Name=\"XboxTypeS_LeftTriggerAxis\",Command=\"Axis aLeftTrigger Speed=1.0 DeadZone=0.2 | Axis aUp Speed=-1.0 DeadZone=0.1\")"
+   },
+   {
+    "input": "XboxTypeS_RightTriggerAxis",
+    "defined_at": "DefaultInput.ini:254",
+    "tokens": [
+     "aRightTrigger",
+     "aUp",
+     "aThrottleAxis"
+    ],
+    "on_release": [],
+    "axis": [
+     "aRightTrigger",
+     "aUp",
+     "aThrottleAxis"
+    ],
+    "vehicle_tokens": [
+     "aRightTrigger",
+     "aUp",
+     "aThrottleAxis"
+    ],
+    "vehicle_matches": [
+     {
+      "token": "aRightTrigger",
+      "match": "exact"
+     },
+     {
+      "token": "aUp",
+      "match": "exact"
+     },
+     {
+      "token": "aThrottleAxis",
+      "match": "exact"
+     }
+    ],
+    "batmobile_relevant": true,
+    "line": ".Bindings=(Name=\"XboxTypeS_RightTriggerAxis\",Command=\"Axis aRightTrigger Speed=1.0 DeadZone=0.2 | Axis aUp Speed=1.0 DeadZone=0.1 | Axis aThrottleAxis Speed=1.0 DeadZone=0.0\")"
+   },
+   {
+    "input": "XboxTypeS_RightThumbstick",
+    "defined_at": "DefaultInput.ini:255",
+    "tokens": [
+     "DebugMenuSelectA",
+     "bLookBehindVehicle",
+     "QuickPhotoMode",
+     "ToggleCameraZoom"
+    ],
+    "on_release": [],
+    "axis": [
+     "bLookBehindVehicle"
+    ],
+    "vehicle_tokens": [
+     "bLookBehindVehicle"
+    ],
+    "vehicle_matches": [
+     {
+      "token": "bLookBehindVehicle",
+      "match": "exact"
+     }
+    ],
+    "batmobile_relevant": true,
+    "line": ".Bindings=(Name=\"XboxTypeS_RightThumbstick\",Command=\"DebugMenuSelectA | Button bLookBehindVehicle | QuickPhotoMode | ToggleCameraZoom\")"
+   },
+   {
+    "input": "XboxTypeS_LeftThumbstick",
+    "defined_at": "DefaultInput.ini:256",
+    "tokens": [
+     "DebugMenuSelectA",
+     "bLeftStickDown",
+     "QuickPhotoMode",
+     "DetonateGel",
+     "HoldForLineLaunchStop",
+     "BatmobileSonar"
+    ],
+    "on_release": [],
+    "axis": [
+     "bLeftStickDown"
+    ],
+    "vehicle_tokens": [
+     "bLeftStickDown",
+     "HoldForLineLaunchStop",
+     "BatmobileSonar"
+    ],
+    "vehicle_matches": [
+     {
+      "token": "bLeftStickDown",
+      "match": "exact"
+     },
+     {
+      "token": "HoldForLineLaunchStop",
+      "match": "normalised",
+      "as": "HoldForLineLaunchStopPressed"
+     },
+     {
+      "token": "BatmobileSonar",
+      "match": "normalised",
+      "as": "BatmobileSonarPressed"
+     }
+    ],
+    "batmobile_relevant": true,
+    "line": ".Bindings=(Name=\"XboxTypeS_LeftThumbstick\",Command=\"DebugMenuSelectA | Button bLeftStickDown | QuickPhotoMode | DetonateGel | HoldForLineLaunchStop | BatmobileSonar\")"
+   },
+   {
+    "input": "XboxTypeS_DPad_Left",
+    "defined_at": "DefaultInput.ini:257",
+    "tokens": [
+     "bRawDpadLeft",
+     "OpenChallengeWheel",
+     "CloseChallengeWheel",
+     "DebugMenuLeftPressed",
+     "DebugMenuLeftReleased"
+    ],
+    "on_release": [
+     "CloseChallengeWheel",
+     "DebugMenuLeftReleased"
+    ],
+    "axis": [
+     "bRawDpadLeft"
+    ],
+    "vehicle_tokens": [],
+    "vehicle_matches": [],
+    "batmobile_relevant": false,
+    "line": ".Bindings=(Name=\"XboxTypeS_DPad_Left\",Command=\"Button bRawDpadLeft | OpenChallengeWheel | OnRelease CloseChallengeWheel | DebugMenuLeftPressed | OnRelease DebugMenuLeftReleased\")"
+   },
+   {
+    "input": "XboxTypeS_DPad_Right",
+    "defined_at": "DefaultInput.ini:258",
+    "tokens": [
+     "bRawDpadRight",
+     "OpenMostWantedmenu",
+     "CloseMostWantedMenu",
+     "DebugMenuRightPressed",
+     "DebugMenuRightReleased"
+    ],
+    "on_release": [
+     "CloseMostWantedMenu",
+     "DebugMenuRightReleased"
+    ],
+    "axis": [
+     "bRawDpadRight"
+    ],
+    "vehicle_tokens": [],
+    "vehicle_matches": [],
+    "batmobile_relevant": false,
+    "line": ".Bindings=(Name=\"XboxTypeS_DPad_Right\",Command=\"Button bRawDpadRight | OpenMostWantedmenu | OnRelease CloseMostWantedMenu | DebugMenuRightPressed | OnRelease DebugMenuRightReleased\")"
+   },
+   {
+    "input": "XboxTypeS_DPad_Up",
+    "defined_at": "DefaultInput.ini:259",
+    "tokens": [
+     "bRawDpadUp",
+     "MoveDialogueOptionUp",
+     "ForensicMode",
+     "DebugMenuUpPressed",
+     "DebugMenuUpReleased",
+     "SelectVehicleWeapon 4",
+     "ReleaseVehicleWeapon 4"
+    ],
+    "on_release": [
+     "DebugMenuUpReleased",
+     "ReleaseVehicleWeapon 4"
+    ],
+    "axis": [
+     "bRawDpadUp"
+    ],
+    "vehicle_tokens": [],
+    "vehicle_matches": [],
+    "batmobile_relevant": false,
+    "line": ".Bindings=(Name=\"XboxTypeS_DPad_Up\",Command=\"Button bRawDpadUp | MoveDialogueOptionUp | ForensicMode | DebugMenuUpPressed | OnRelease DebugMenuUpReleased | SelectVehicleWeapon 4 | OnRelease ReleaseVehicleWeapon 4\")"
+   },
+   {
+    "input": "XboxTypeS_DPad_Down",
+    "defined_at": "DefaultInput.ini:260",
+    "tokens": [
+     "bRawDpadDown",
+     "MoveDialogueOptionDown",
+     "bGadgetSelectWheel",
+     "DebugMenuDownPressed",
+     "DebugMenuDownReleased"
+    ],
+    "on_release": [
+     "DebugMenuDownReleased"
+    ],
+    "axis": [
+     "bRawDpadDown",
+     "bGadgetSelectWheel"
+    ],
+    "vehicle_tokens": [],
+    "vehicle_matches": [],
+    "batmobile_relevant": false,
+    "line": ".Bindings=(Name=\"XboxTypeS_DPad_Down\",Command=\"Button bRawDpadDown |MoveDialogueOptionDown | Button bGadgetSelectWheel | DebugMenuDownPressed | OnRelease DebugMenuDownReleased\")"
+   },
+   {
+    "input": "XboxTypeS_Back",
+    "defined_at": "DefaultInput.ini:261",
+    "tokens": [
+     "OpenLevelUpOrMap"
+    ],
+    "on_release": [],
+    "axis": [],
+    "vehicle_tokens": [],
+    "vehicle_matches": [],
+    "batmobile_relevant": false,
+    "line": ".Bindings=(Name=\"XboxTypeS_Back\",Command=\"OpenLevelUpOrMap\")"
+   },
+   {
+    "input": "XboxTypeS_Start",
+    "defined_at": "DefaultInput.ini:262",
+    "tokens": [
+     "UserPause"
+    ],
+    "on_release": [],
+    "axis": [],
+    "vehicle_tokens": [],
+    "vehicle_matches": [],
+    "batmobile_relevant": false,
+    "line": ".Bindings=(Name=\"XboxTypeS_Start\",Command=\"UserPause\")"
+   },
+   {
+    "input": "XboxTypeS_LeftX",
+    "defined_at": "DefaultInput.ini:263",
+    "tokens": [
+     "aStrafe",
+     "aRawLHJoyRight"
+    ],
+    "on_release": [],
+    "axis": [
+     "aStrafe",
+     "aRawLHJoyRight"
+    ],
+    "vehicle_tokens": [
+     "aStrafe",
+     "aRawLHJoyRight"
+    ],
+    "vehicle_matches": [
+     {
+      "token": "aStrafe",
+      "match": "exact"
+     },
+     {
+      "token": "aRawLHJoyRight",
+      "match": "exact"
+     }
+    ],
+    "batmobile_relevant": true,
+    "line": ".Bindings=(Name=\"XboxTypeS_LeftX\",Command=\"Axis aStrafe Speed=1.0 DeadZone=0.3 | Axis aRawLHJoyRight Speed=1.0 DeadZone=0.0\")"
+   },
+   {
+    "input": "XboxTypeS_LeftY",
+    "defined_at": "DefaultInput.ini:264",
+    "tokens": [
+     "aBaseY",
+     "aRawLHJoyUp"
+    ],
+    "on_release": [],
+    "axis": [
+     "aBaseY",
+     "aRawLHJoyUp"
+    ],
+    "vehicle_tokens": [
+     "aBaseY",
+     "aRawLHJoyUp"
+    ],
+    "vehicle_matches": [
+     {
+      "token": "aBaseY",
+      "match": "exact"
+     },
+     {
+      "token": "aRawLHJoyUp",
+      "match": "exact"
+     }
+    ],
+    "batmobile_relevant": true,
+    "line": ".Bindings=(Name=\"XboxTypeS_LeftY\",Command=\"Axis aBaseY Speed=1.0 DeadZone=0.3 | Axis aRawLHJoyUp Speed=1.0 DeadZone=0.0\" )"
+   },
+   {
+    "input": "XboxTypeS_RightX",
+    "defined_at": "DefaultInput.ini:265",
+    "tokens": [
+     "aTurn",
+     "aRawRHJoyRight"
+    ],
+    "on_release": [],
+    "axis": [
+     "aTurn",
+     "aRawRHJoyRight"
+    ],
+    "vehicle_tokens": [
+     "aTurn",
+     "aRawRHJoyRight"
+    ],
+    "vehicle_matches": [
+     {
+      "token": "aTurn",
+      "match": "exact"
+     },
+     {
+      "token": "aRawRHJoyRight",
+      "match": "exact"
+     }
+    ],
+    "batmobile_relevant": true,
+    "line": ".Bindings=(Name=\"XboxTypeS_RightX\",Command=\"Axis aTurn Speed=1.0 DeadZone=0.2 | Axis aRawRHJoyRight Speed=1.0 DeadZone=0.0\")"
+   },
+   {
+    "input": "XboxTypeS_RightY",
+    "defined_at": "DefaultInput.ini:266",
+    "tokens": [
+     "aLookup",
+     "aRawRHJoyUp"
+    ],
+    "on_release": [],
+    "axis": [
+     "aLookup",
+     "aRawRHJoyUp"
+    ],
+    "vehicle_tokens": [
+     "aLookup",
+     "aRawRHJoyUp"
+    ],
+    "vehicle_matches": [
+     {
+      "token": "aLookup",
+      "match": "exact"
+     },
+     {
+      "token": "aRawRHJoyUp",
+      "match": "exact"
+     }
+    ],
+    "batmobile_relevant": true,
+    "line": ".Bindings=(Name=\"XboxTypeS_RightY\",Command=\"Axis aLookup Speed=1.0 DeadZone=0.2 | Axis aRawRHJoyUp Speed=1.0 DeadZone=0.0\")"
+   },
+   {
+    "input": "XboxTypeS_A",
+    "defined_at": "DefaultInput.ini:267",
+    "tokens": [
+     "DebugCamSingleFrameStep",
+     "EjectFromVehicle",
+     "BattleStrafe",
+     "ContextSensitive",
+     "Run",
+     "CapeGlide",
+     "AcceptConversation",
+     "Evade",
+     "DebugMenuSelectA",
+     "CancelBatarangCamera",
+     "TriggerPhysImpact"
+    ],
+    "on_release": [],
+    "axis": [],
+    "vehicle_tokens": [
+     "EjectFromVehicle"
+    ],
+    "vehicle_matches": [
+     {
+      "token": "EjectFromVehicle",
+      "match": "exact"
+     }
+    ],
+    "batmobile_relevant": true,
+    "line": ".Bindings=(Name=\"XboxTypeS_A\",Command=\"DebugCamSingleFrameStep | EjectFromVehicle | BattleStrafe  | ContextSensitive | Run | CapeGlide | AcceptConversation | Evade | DebugMenuSelectA | CancelBatarangCamera | TriggerPhysImpact\")"
+   },
+   {
+    "input": "XboxTypeS_B",
+    "defined_at": "DefaultInput.ini:268",
+    "tokens": [
+     "ExitAgilityMode",
+     "QuickGadgetB",
+     "ReleaseQuickGadgetB",
+     "Cover",
+     "BlockBreaker",
+     "SkipCutscene",
+     "CancelGadget",
+     "DebugMenuSelectB",
+     "CancelBatarangCamera",
+     "bCancelButton"
+    ],
+    "on_release": [
+     "ReleaseQuickGadgetB"
+    ],
+    "axis": [
+     "bCancelButton"
+    ],
+    "vehicle_tokens": [],
+    "vehicle_matches": [],
+    "batmobile_relevant": false,
+    "line": ".Bindings=(Name=\"XboxTypeS_B\",Command=\"ExitAgilityMode | QuickGadgetB | OnRelease ReleaseQuickGadgetB | Cover | BlockBreaker | SkipCutscene | CancelGadget | DebugMenuSelectB | CancelBatarangCamera | Button bCancelButton\")"
+   },
+   {
+    "input": "XboxTypeS_X",
+    "defined_at": "DefaultInput.ini:269",
+    "tokens": [
+     "TriggerFearTakedown 0",
+     "TriggerQuickStrike",
+     "QuickGadgetX",
+     "ReleaseQuickGadgetY",
+     "DebugMenuSelectX",
+     "CancelBatarangCamera",
+     "BrakeButton",
+     "QuickStrikeReleased",
+     "aQuickStrike"
+    ],
+    "on_release": [
+     "ReleaseQuickGadgetY",
+     "QuickStrikeReleased"
+    ],
+    "axis": [
+     "aQuickStrike"
+    ],
+    "vehicle_tokens": [
+     "BrakeButton"
+    ],
+    "vehicle_matches": [
+     {
+      "token": "BrakeButton",
+      "match": "normalised",
+      "as": "BrakePressed"
+     }
+    ],
+    "batmobile_relevant": true,
+    "line": ".Bindings=(Name=\"XboxTypeS_X\",Command=\"TriggerFearTakedown 0 | TriggerQuickStrike | QuickGadgetX | OnRelease ReleaseQuickGadgetY | DebugMenuSelectX | CancelBatarangCamera | BrakeButton | OnRelease QuickStrikeReleased | Button aQuickStrike\")"
+   },
+   {
+    "input": "XboxTypeS_Y",
+    "defined_at": "DefaultInput.ini:270",
+    "tokens": [
+     "QuickGadgetY",
+     "ReleaseQuickGadgetY",
+     "Grab",
+     "ActivateNoise",
+     "DebugMenuSelectY",
+     "SpecialMoveCheat",
+     "CancelBatarangCamera",
+     "ToggleVideoRec",
+     "bVehicleBoostButton",
+     "TogglePhysImpact",
+     "HangFromVantagePoint",
+     "ZipLine"
+    ],
+    "on_release": [
+     "ReleaseQuickGadgetY"
+    ],
+    "axis": [
+     "bVehicleBoostButton"
+    ],
+    "vehicle_tokens": [
+     "bVehicleBoostButton"
+    ],
+    "vehicle_matches": [
+     {
+      "token": "bVehicleBoostButton",
+      "match": "exact"
+     }
+    ],
+    "batmobile_relevant": true,
+    "line": ".Bindings=(Name=\"XboxTypeS_Y\",Command=\"QuickGadgetY | OnRelease ReleaseQuickGadgetY | Grab | ActivateNoise  | DebugMenuSelectY | SpecialMoveCheat  | CancelBatarangCamera | ToggleVideoRec | Button bVehicleBoostButton | TogglePhysImpact | HangFromVantagePoint | ZipLine\")"
+   },
+   {
+    "input": "XboxTypeS_LeftShoulder",
+    "defined_at": "DefaultInput.ini:271",
+    "tokens": [
+     "DebugMenuStepUp",
+     "DualPlay",
+     "ThermalMode",
+     "aLeftShoulder",
+     "SlowDownSpectatorCamera"
+    ],
+    "on_release": [],
+    "axis": [
+     "aLeftShoulder"
+    ],
+    "vehicle_tokens": [],
+    "vehicle_matches": [],
+    "batmobile_relevant": false,
+    "line": ".Bindings=(Name=\"XboxTypeS_LeftShoulder\",Command=\"DebugMenuStepUp | DualPlay | ThermalMode | Button aLeftShoulder | SlowDownSpectatorCamera\")"
+   },
+   {
+    "input": "XboxTypeS_RightShoulder",
+    "defined_at": "DefaultInput.ini:272",
+    "tokens": [
+     "DebugMenuStepDown",
+     "Grapple",
+     "SecondaryFireGadget",
+     "ToggleDrivingCamera",
+     "SecondaryFireReleased",
+     "DebugMenuQualifyOnB",
+     "DebugMenuQualifyOffB",
+     "aRightShoulder",
+     "SpeedUpSpectatorCamera",
+     "bFireVehicleSecondaryWeapon",
+     "SecondaryFireVehicleWeapon",
+     "PursuitModeTagGun"
+    ],
+    "on_release": [
+     "SecondaryFireReleased",
+     "DebugMenuQualifyOffB"
+    ],
+    "axis": [
+     "aRightShoulder",
+     "bFireVehicleSecondaryWeapon"
+    ],
+    "vehicle_tokens": [
+     "ToggleDrivingCamera",
+     "bFireVehicleSecondaryWeapon",
+     "SecondaryFireVehicleWeapon",
+     "PursuitModeTagGun"
+    ],
+    "vehicle_matches": [
+     {
+      "token": "ToggleDrivingCamera",
+      "match": "exact"
+     },
+     {
+      "token": "bFireVehicleSecondaryWeapon",
+      "match": "exact"
+     },
+     {
+      "token": "SecondaryFireVehicleWeapon",
+      "match": "exact"
+     },
+     {
+      "token": "PursuitModeTagGun",
+      "match": "exact"
+     }
+    ],
+    "batmobile_relevant": true,
+    "line": ".Bindings=(Name=\"XboxTypeS_RightShoulder\",Command=\"DebugMenuStepDown | Grapple | SecondaryFireGadget | ToggleDrivingCamera | OnRelease SecondaryFireReleased | DebugMenuQualifyOnB | OnRelease DebugMenuQualifyOffB | Button aRightShoulder | SpeedUpSpectatorCamera | Button bFireVehicleSecondaryWeapon | SecondaryFireVehicleWeapon | PursuitModeTagGun\")"
+   }
+  ],
+  "counts": {
+   "rows": 22,
+   "with_vehicle_token": 13
+  },
+  "vehicle_tokens": [
+   "BatmobileFireButton",
+   "BatmobileSonarPressed",
+   "BrakePressed",
+   "EjectFromVehicle",
+   "HoldForLineLaunchStopPressed",
+   "KillVehicles",
+   "PursuitModeTagGun",
+   "SecondaryFireVehicleWeapon",
+   "SelectVehicleWeapon",
+   "SpawnPlayerCar",
+   "ToggleDrivingCamera",
+   "aBaseX",
+   "aBaseY",
+   "aLeftTrigger",
+   "aLookup",
+   "aRawLHJoyRight",
+   "aRawLHJoyUp",
+   "aRawRHJoyRight",
+   "aRawRHJoyUp",
+   "aRightTrigger",
+   "aStrafe",
+   "aThrottleAxis",
+   "aTurn",
+   "aUp",
+   "bFireVehicleSecondaryWeapon",
+   "bFireVehicleWeapon",
+   "bHandbrakeOrBrake",
+   "bLeftStickDown",
+   "bLookBehindVehicle",
+   "bVehicleBoostButton"
+  ],
+  "vehicle_token_source": "CONTROLS.json actions[].token (G3-02 decode)"
+ }
+}

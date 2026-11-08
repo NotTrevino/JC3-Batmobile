@@ -1,0 +1,6668 @@
+{
+ "bodies": {
+  "Batmobile_Chassis": {
+   "bone": "Batmobile_Chassis",
+   "boxes": [
+    {
+     "bool_word": 64,
+     "bytes": 118,
+     "end": 126,
+     "extents": [
+      690.3049926757812,
+      374.53607177734375,
+      207.5
+     ],
+     "index": 0,
+     "rows": [
+      [
+       1.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       1.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.0,
+       1.0
+      ]
+     ],
+     "start": 8,
+     "tm": [
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      9.0,
+      0.0,
+      106.75
+     ],
+     "tm_name_index": 78655,
+     "translation": [
+      9.0,
+      0.0,
+      106.75
+     ]
+    },
+    {
+     "bool_word": 0,
+     "bytes": 118,
+     "end": 244,
+     "extents": [
+      679.585205078125,
+      345.6875915527344,
+      103.5
+     ],
+     "index": 1,
+     "rows": [
+      [
+       1.0,
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       1.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.0,
+       1.0
+      ]
+     ],
+     "start": 126,
+     "tm": [
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      0.0,
+      1.5385559393486315e-22,
+      79.0
+     ],
+     "tm_name_index": 78655,
+     "translation": [
+      0.0,
+      1.5385559393486315e-22,
+      79.0
+     ]
+    }
+   ],
+   "export": 169750
+  },
+  "Batmobile_Rig_Weapons_Trans": {
+   "bone": "Batmobile_Rig_Weapons_Trans",
+   "boxes": [
+    {
+     "bool_word": 0,
+     "bytes": 118,
+     "end": 126,
+     "extents": [
+      166.1769256591797,
+      189.36488342285156,
+      39.80005645751953
+     ],
+     "index": 0,
+     "rows": [
+      [
+       0.9975640773773193,
+       -4.504527566245474e-15,
+       -0.06975647062063217
+      ],
+      [
+       -4.504527566245474e-15,
+       1.0,
+       -1.2899279084113702e-13
+      ],
+      [
+       0.06975647062063217,
+       1.2899279084113702e-13,
+       0.9975640773773193
+      ]
+     ],
+     "start": 8,
+     "tm": [
+      0.0,
+      0.9975640773773193,
+      -4.504527566245474e-15,
+      -0.06975647062063217,
+      0.0,
+      -4.504527566245474e-15,
+      1.0,
+      -1.2899279084113702e-13,
+      0.0,
+      0.06975647062063217,
+      1.2899279084113702e-13,
+      0.9975640773773193,
+      1.0,
+      -30.499996185302734,
+      -5.4503956903317885e-11,
+      93.25
+     ],
+     "tm_name_index": 78655,
+     "translation": [
+      -30.499996185302734,
+      -5.4503956903317885e-11,
+      93.25
+     ]
+    }
+   ],
+   "export": 169751
+  }
+ },
+ "checks": [
+  {
+   "check": "the 44-byte record layout reproduces the intact PSK bind pose: local positions",
+   "detail": "180/180, worst 0.0000 cm (Y-negated)",
+   "pass": true
+  },
+  {
+   "check": "... parent indices",
+   "detail": "180/180",
+   "pass": true
+  },
+  {
+   "check": "... component-space positions after accumulation",
+   "detail": "180/180, worst 0.0251 cm (Y-negated)",
+   "pass": true
+  },
+  {
+   "check": "... local rotations, mirrored to the PSK handedness (x,-y,z,w)",
+   "detail": "180/180",
+   "pass": true
+  },
+  {
+   "check": "a 32-bone wreck reference skeleton is decoded in all four packages",
+   "detail": "Playable_Batmobile_SF: 32 bones at byte 1408, Playable_BatmobileMK2_SF: 32 bones at byte 1408, Playable_BatmobileJoker_SF: 32 bones at byte 1408, Playable_BatmobileFunhouse_SF: 32 bones at byte 1408",
+   "pass": true
+  },
+  {
+   "check": "every wreck body's bone exists in the wreck skeleton",
+   "detail": "32/32 in each package",
+   "pass": true
+  },
+  {
+   "check": "the wreck skeletons are flat (all bones are children of Root)",
+   "detail": "all parents 0 in 4/4 packages",
+   "pass": true
+  },
+  {
+   "check": "every box encloses its own bone in the bone-local frame",
+   "detail": "bone-local 23/32 vs translation-as-coordinate 1/32 (median bone-to-translation 193.1 cm)",
+   "pass": true
+  },
+  {
+   "check": "the four packages carry the same union",
+   "detail": "full-length union identical in 4/4",
+   "pass": true
+  },
+  {
+   "check": "G3-01b's published numbers are reproduced by the translation-as-coordinate reading",
+   "detail": "453.20/197.09/156.04 (full) and 717.94/394.18/247.90 (half)",
+   "pass": true
+  },
+  {
+   "check": "in the bone frame the FULL-length union matches the wreck mesh bounds",
+   "detail": "union 704.71/347.02/239.30 vs mesh 706.83/374.68/231.01 cm, worst deviation 7.4%",
+   "pass": true
+  },
+  {
+   "check": "the HALF-length union is at least 2x further from the wreck mesh bounds",
+   "detail": "union 913.80/435.88/315.06 vs mesh, worst deviation 36.4%",
+   "pass": true
+  },
+  {
+   "check": "chassis box FULL extents match the intact render-mesh bounds",
+   "detail": "690.305/374.536/207.500 vs 702.560/349.530/234.185 cm, ratios 0.983/1.072/0.886",
+   "pass": true
+  },
+  {
+   "check": "chassis box HALF extents are far outside the render mesh bounds",
+   "detail": "ratios 1.965/2.143/1.772",
+   "pass": true
+  },
+  {
+   "check": "the weapons box translation is a bone-local offset, not a component centre",
+   "detail": "translation -30.500/-0.000/93.250 cm, rotation 4.00 deg",
+   "pass": true
+  }
+ ],
+ "checks_passed": 15,
+ "checks_total": 15,
+ "generator": "grab_box_union_frame.py",
+ "inputs": {
+  "bmgame_bodies": [
+   169750,
+   169751
+  ],
+  "bones_oracle": "E:\\Modding\\JC3-Batmobile\\Research\\BatmobileGrab\\BONES.json",
+  "game": "E:\\Games\\Batman - Arkham Knight\\BmGame\\CookedPCConsole",
+  "intact_render_size_cm": [
+   702.56,
+   349.53,
+   234.185
+  ],
+  "meshes_oracle": "E:\\Modding\\JC3-Batmobile\\Research\\BatmobileGrab\\MESHES.json",
+  "wreck_packages": [
+   "E:\\Games\\Batman - Arkham Knight\\BmGame\\CookedPCConsole\\Playable_Batmobile_SF.upk",
+   "E:\\Games\\Batman - Arkham Knight\\BmGame\\CookedPCConsole\\Playable_BatmobileMK2_SF.upk",
+   "E:\\Games\\Batman - Arkham Knight\\BmGame\\CookedPCConsole\\Playable_BatmobileJoker_SF.upk",
+   "E:\\Games\\Batman - Arkham Knight\\BmGame\\CookedPCConsole\\Playable_BatmobileFunhouse_SF.upk"
+  ]
+ },
+ "layout_proof": {
+  "bones": 180,
+  "export": 5284,
+  "label": "decoded: the record layout read from the bytes reproduces the PSK bind pose of the same mesh (Y-negated, PSK is the mirrored handedness)",
+  "local_ok": 180,
+  "local_quat_ok": 180,
+  "local_worst_cm": 0.0,
+  "offset": 8423,
+  "parent_ok": 180,
+  "world_ok": 180,
+  "world_worst_cm": 0.025056
+ },
+ "schema": 1,
+ "verdict": {
+  "extents": "FULL lengths",
+  "frame": "bone-local (T_bone * T_box)",
+  "full_deviation": 0.07382956637482996,
+  "full_union": [
+   704.707935333252,
+   347.0175380706787,
+   239.29621697624157
+  ],
+  "half_deviation": 0.3638376888786412,
+  "half_union": [
+   913.797233581543,
+   435.8786392211914,
+   315.058780670166
+  ],
+  "text": "FULL lengths; the wreck boxes are bone-local. In the correct (bone) frame the 128-box union is 704.71 x 347.02 x 239.30 cm, within 7.4% of the wreck mesh's own bounds 706.83 x 374.68 x 231.01 cm; the half-length reading gives 913.80 x 435.88 x 315.06 cm (36.4% off). G3-01b's 'half matches' result came from reading the bone-local translation as a component-space centre."
+ },
+ "wreck": {
+  "mesh_bounds": {
+   "max": [
+    365.757,
+    178.558,
+    225.813
+   ],
+   "min": [
+    -341.076,
+    -196.123,
+    -5.195
+   ],
+   "size": [
+    706.833,
+    374.68,
+    231.009
+   ]
+  },
+  "packages": {
+   "Playable_BatmobileFunhouse_SF": {
+    "bone_count": 32,
+    "bones_inside_own_box_bone_frame": 23,
+    "bones_inside_own_box_component_frame": 1,
+    "box_bones": [
+     "CockPit_Mesh",
+     "Jet_Fins001",
+     "Main_Turret_00",
+     "Object",
+     "Object001",
+     "Object003_frag_007",
+     "Object003_frag_008",
+     "Object003_frag_017",
+     "Object003_frag_023",
+     "Object003_frag_024",
+     "Object003_frag_025",
+     "Object004_frag_002",
+     "Object004_frag_003",
+     "Object004_frag_006",
+     "Object004_frag_007",
+     "Object007",
+     "Object009",
+     "Object011",
+     "Object013",
+     "Object015",
+     "Object017",
+     "Rear_Door_BOTTOM",
+     "Rear_Door_MIDDLE",
+     "Root",
+     "SUSP1_Wheel_Rear_Left_Mesh",
+     "SUSP1_Wheel_Rear_Right_Mesh",
+     "SUSP2_Wheel_Front_Left_Mesh",
+     "SUSP2_Wheel_Front_Right_Mesh",
+     "Wheel_Back_Left_Vis_Mesh",
+     "Wheel_Front_Left_Vis_Mesh",
+     "Wheel_Front_Right_Vis_Mesh",
+     "Wheel_Rear_Right_Vis_Mesh"
+    ],
+    "flat_skeleton": true,
+    "g3b_union_full": [
+     453.19849395751953,
+     197.09030151367188,
+     156.04395484924316
+    ],
+    "g3b_union_half": [
+     717.9396591186523,
+     394.18060302734375,
+     247.8977813720703
+    ],
+    "max_bone_to_translation_cm": 334.6607208251953,
+    "median_bone_to_translation_cm": 193.13304901123047,
+    "rows": [
+     {
+      "bone": "Root",
+      "encloses_bone": true,
+      "extents": [
+       30.3,
+       30.3,
+       30.3
+      ],
+      "index": 0,
+      "parent": 0,
+      "pos": [
+       0.0,
+       -0.0,
+       0.0
+      ],
+      "translation": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     {
+      "bone": "SUSP2_Wheel_Front_Left_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       211.54,
+       51.093,
+       109.003
+      ],
+      "index": 1,
+      "parent": 0,
+      "pos": [
+       134.998,
+       -121.032,
+       84.401
+      ],
+      "translation": [
+       66.542,
+       -1.608,
+       12.661
+      ]
+     },
+     {
+      "bone": "SUSP2_Wheel_Front_Right_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       157.805,
+       60.058,
+       110.255
+      ],
+      "index": 2,
+      "parent": 0,
+      "pos": [
+       139.098,
+       95.695,
+       74.829
+      ],
+      "translation": [
+       64.419,
+       28.091,
+       15.607
+      ]
+     },
+     {
+      "bone": "Wheel_Front_Left_Vis_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       97.605,
+       55.342,
+       101.533
+      ],
+      "index": 3,
+      "parent": 0,
+      "pos": [
+       269.906,
+       -120.857,
+       68.044
+      ],
+      "translation": [
+       11.718,
+       -3.285,
+       -4.991
+      ]
+     },
+     {
+      "bone": "Wheel_Back_Left_Vis_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       98.989,
+       60.573,
+       108.901
+      ],
+      "index": 4,
+      "parent": 0,
+      "pos": [
+       -230.472,
+       -128.492,
+       68.044
+      ],
+      "translation": [
+       2.755,
+       1.781,
+       -9.909
+      ]
+     },
+     {
+      "bone": "Wheel_Front_Right_Vis_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       97.01,
+       52.545,
+       103.247
+      ],
+      "index": 5,
+      "parent": 0,
+      "pos": [
+       275.03,
+       120.857,
+       62.918
+      ],
+      "translation": [
+       0.404,
+       -1.591,
+       0.384
+      ]
+     },
+     {
+      "bone": "SUSP1_Wheel_Rear_Right_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       317.942,
+       64.552,
+       97.966
+      ],
+      "index": 6,
+      "parent": 0,
+      "pos": [
+       -59.744,
+       109.596,
+       117.481
+      ],
+      "translation": [
+       -121.915,
+       25.708,
+       -17.364
+      ]
+     },
+     {
+      "bone": "Wheel_Rear_Right_Vis_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       106.61,
+       64.812,
+       106.033
+      ],
+      "index": 7,
+      "parent": 0,
+      "pos": [
+       -223.614,
+       158.887,
+       58.885
+      ],
+      "translation": [
+       0.059,
+       -1.273,
+       -2.678
+      ]
+     },
+     {
+      "bone": "SUSP1_Wheel_Rear_Left_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       316.155,
+       63.418,
+       109.881
+      ],
+      "index": 8,
+      "parent": 0,
+      "pos": [
+       -67.147,
+       -104.0,
+       122.35
+      ],
+      "translation": [
+       -117.414,
+       -17.569,
+       -12.155
+      ]
+     },
+     {
+      "bone": "Object001",
+      "encloses_bone": false,
+      "extents": [
+       40.267,
+       51.068,
+       50.379
+      ],
+      "index": 9,
+      "parent": 0,
+      "pos": [
+       -29.727,
+       -3.195,
+       2.646
+      ],
+      "translation": [
+       -245.722,
+       13.217,
+       28.159
+      ]
+     },
+     {
+      "bone": "Main_Turret_00",
+      "encloses_bone": true,
+      "extents": [
+       114.042,
+       64.794,
+       79.53
+      ],
+      "index": 10,
+      "parent": 0,
+      "pos": [
+       -19.922,
+       0.008,
+       201.715
+      ],
+      "translation": [
+       -37.52,
+       1.287,
+       -17.554
+      ]
+     },
+     {
+      "bone": "CockPit_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       143.357,
+       80.663,
+       64.851
+      ],
+      "index": 11,
+      "parent": 0,
+      "pos": [
+       155.527,
+       -0.376,
+       154.954
+      ],
+      "translation": [
+       -1.842,
+       -4.191,
+       21.586
+      ]
+     },
+     {
+      "bone": "Rear_Door_BOTTOM",
+      "encloses_bone": false,
+      "extents": [
+       26.006,
+       152.76,
+       71.739
+      ],
+      "index": 12,
+      "parent": 0,
+      "pos": [
+       -320.665,
+       6.834,
+       61.14
+      ],
+      "translation": [
+       13.996,
+       1.491,
+       40.038
+      ]
+     },
+     {
+      "bone": "Rear_Door_MIDDLE",
+      "encloses_bone": true,
+      "extents": [
+       59.101,
+       197.09,
+       37.58
+      ],
+      "index": 13,
+      "parent": 0,
+      "pos": [
+       -283.647,
+       0.0,
+       171.339
+      ],
+      "translation": [
+       6.467,
+       -5.005,
+       -14.893
+      ]
+     },
+     {
+      "bone": "Object003_frag_007",
+      "encloses_bone": true,
+      "extents": [
+       89.649,
+       63.024,
+       65.765
+      ],
+      "index": 14,
+      "parent": 0,
+      "pos": [
+       43.014,
+       -90.3,
+       100.621
+      ],
+      "translation": [
+       2.173,
+       -8.362,
+       -2.622
+      ]
+     },
+     {
+      "bone": "Object003_frag_008",
+      "encloses_bone": true,
+      "extents": [
+       144.953,
+       111.448,
+       117.238
+      ],
+      "index": 15,
+      "parent": 0,
+      "pos": [
+       -48.619,
+       -93.683,
+       102.669
+      ],
+      "translation": [
+       1.704,
+       -3.677,
+       4.732
+      ]
+     },
+     {
+      "bone": "Object003_frag_017",
+      "encloses_bone": false,
+      "extents": [
+       89.817,
+       75.49,
+       26.539
+      ],
+      "index": 16,
+      "parent": 0,
+      "pos": [
+       -193.796,
+       3.632,
+       180.519
+      ],
+      "translation": [
+       -0.663,
+       0.766,
+       18.174
+      ]
+     },
+     {
+      "bone": "Object003_frag_023",
+      "encloses_bone": true,
+      "extents": [
+       128.557,
+       94.312,
+       101.819
+      ],
+      "index": 17,
+      "parent": 0,
+      "pos": [
+       32.453,
+       96.461,
+       111.033
+      ],
+      "translation": [
+       -1.445,
+       -1.988,
+       -0.414
+      ]
+     },
+     {
+      "bone": "Object003_frag_024",
+      "encloses_bone": true,
+      "extents": [
+       117.992,
+       92.692,
+       102.093
+      ],
+      "index": 18,
+      "parent": 0,
+      "pos": [
+       55.725,
+       12.695,
+       163.136
+      ],
+      "translation": [
+       -1.929,
+       0.823,
+       -0.936
+      ]
+     },
+     {
+      "bone": "Object003_frag_025",
+      "encloses_bone": true,
+      "extents": [
+       104.668,
+       61.156,
+       90.378
+      ],
+      "index": 19,
+      "parent": 0,
+      "pos": [
+       113.52,
+       -75.719,
+       110.633
+      ],
+      "translation": [
+       0.887,
+       12.673,
+       6.955
+      ]
+     },
+     {
+      "bone": "Object004_frag_002",
+      "encloses_bone": true,
+      "extents": [
+       82.268,
+       83.697,
+       79.315
+      ],
+      "index": 20,
+      "parent": 0,
+      "pos": [
+       253.58,
+       6.278,
+       92.617
+      ],
+      "translation": [
+       -19.944,
+       3.363,
+       -0.3
+      ]
+     },
+     {
+      "bone": "Object004_frag_003",
+      "encloses_bone": true,
+      "extents": [
+       61.13,
+       41.854,
+       64.069
+      ],
+      "index": 21,
+      "parent": 0,
+      "pos": [
+       191.194,
+       -45.932,
+       111.955
+      ],
+      "translation": [
+       1.1,
+       6.473,
+       -3.332
+      ]
+     },
+     {
+      "bone": "Object004_frag_006",
+      "encloses_bone": true,
+      "extents": [
+       91.434,
+       73.846,
+       64.868
+      ],
+      "index": 22,
+      "parent": 0,
+      "pos": [
+       294.932,
+       -35.583,
+       79.095
+      ],
+      "translation": [
+       6.79,
+       -2.994,
+       -18.721
+      ]
+     },
+     {
+      "bone": "Object004_frag_007",
+      "encloses_bone": true,
+      "extents": [
+       80.714,
+       60.293,
+       63.52
+      ],
+      "index": 23,
+      "parent": 0,
+      "pos": [
+       311.352,
+       24.892,
+       77.008
+      ],
+      "translation": [
+       10.36,
+       10.925,
+       -14.706
+      ]
+     },
+     {
+      "bone": "Jet_Fins001",
+      "encloses_bone": true,
+      "extents": [
+       129.11,
+       61.195,
+       28.711
+      ],
+      "index": 24,
+      "parent": 0,
+      "pos": [
+       -235.407,
+       -64.151,
+       58.892
+      ],
+      "translation": [
+       -0.388,
+       9.832,
+       -1.784
+      ]
+     },
+     {
+      "bone": "Object007",
+      "encloses_bone": true,
+      "extents": [
+       138.533,
+       73.341,
+       28.961
+      ],
+      "index": 25,
+      "parent": 0,
+      "pos": [
+       -235.585,
+       61.351,
+       63.464
+      ],
+      "translation": [
+       -4.007,
+       3.85,
+       -9.774
+      ]
+     },
+     {
+      "bone": "Object",
+      "encloses_bone": false,
+      "extents": [
+       70.096,
+       41.614,
+       27.411
+      ],
+      "index": 26,
+      "parent": 0,
+      "pos": [
+       151.919,
+       11.241,
+       129.768
+      ],
+      "translation": [
+       2.668,
+       38.829,
+       5.337
+      ]
+     },
+     {
+      "bone": "Object011",
+      "encloses_bone": false,
+      "extents": [
+       142.069,
+       97.628,
+       44.313
+      ],
+      "index": 27,
+      "parent": 0,
+      "pos": [
+       -90.881,
+       -64.699,
+       107.106
+      ],
+      "translation": [
+       -1.213,
+       -33.476,
+       52.419
+      ]
+     },
+     {
+      "bone": "Object013",
+      "encloses_bone": false,
+      "extents": [
+       130.594,
+       118.598,
+       54.127
+      ],
+      "index": 28,
+      "parent": 0,
+      "pos": [
+       -161.695,
+       -86.619,
+       117.087
+      ],
+      "translation": [
+       -2.476,
+       -4.679,
+       61.885
+      ]
+     },
+     {
+      "bone": "Object009",
+      "encloses_bone": false,
+      "extents": [
+       166.12,
+       141.823,
+       62.936
+      ],
+      "index": 29,
+      "parent": 0,
+      "pos": [
+       -141.605,
+       82.341,
+       135.273
+      ],
+      "translation": [
+       -5.308,
+       1.818,
+       40.067
+      ]
+     },
+     {
+      "bone": "Object017",
+      "encloses_bone": false,
+      "extents": [
+       77.622,
+       73.176,
+       23.906
+      ],
+      "index": 30,
+      "parent": 0,
+      "pos": [
+       -227.843,
+       51.418,
+       145.202
+      ],
+      "translation": [
+       -11.188,
+       5.85,
+       50.459
+      ]
+     },
+     {
+      "bone": "Object015",
+      "encloses_bone": false,
+      "extents": [
+       78.331,
+       65.638,
+       42.043
+      ],
+      "index": 31,
+      "parent": 0,
+      "pos": [
+       -241.11,
+       -27.881,
+       132.415
+      ],
+      "translation": [
+       24.174,
+       -40.507,
+       45.973
+      ]
+     }
+    ],
+    "skeleton_bones": [
+     "CockPit_Mesh",
+     "Jet_Fins001",
+     "Main_Turret_00",
+     "Object",
+     "Object001",
+     "Object003_frag_007",
+     "Object003_frag_008",
+     "Object003_frag_017",
+     "Object003_frag_023",
+     "Object003_frag_024",
+     "Object003_frag_025",
+     "Object004_frag_002",
+     "Object004_frag_003",
+     "Object004_frag_006",
+     "Object004_frag_007",
+     "Object007",
+     "Object009",
+     "Object011",
+     "Object013",
+     "Object015",
+     "Object017",
+     "Rear_Door_BOTTOM",
+     "Rear_Door_MIDDLE",
+     "Root",
+     "SUSP1_Wheel_Rear_Left_Mesh",
+     "SUSP1_Wheel_Rear_Right_Mesh",
+     "SUSP2_Wheel_Front_Left_Mesh",
+     "SUSP2_Wheel_Front_Right_Mesh",
+     "Wheel_Back_Left_Vis_Mesh",
+     "Wheel_Front_Left_Vis_Mesh",
+     "Wheel_Front_Right_Vis_Mesh",
+     "Wheel_Rear_Right_Vis_Mesh"
+    ],
+    "skeleton_offset": 1408,
+    "union_full": [
+     704.707935333252,
+     347.0175380706787,
+     239.29621697624157
+    ],
+    "union_full_bounds": {
+     "hi": [
+      362.0687141418457,
+      190.02008819580078,
+      224.1462173577113
+     ],
+     "lo": [
+      -342.63922119140625,
+      -156.99744987487793,
+      -15.149999618530273
+     ]
+    },
+    "union_half": [
+     913.797233581543,
+     435.8786392211914,
+     315.058780670166
+    ]
+   },
+   "Playable_BatmobileJoker_SF": {
+    "bone_count": 32,
+    "bones_inside_own_box_bone_frame": 23,
+    "bones_inside_own_box_component_frame": 1,
+    "box_bones": [
+     "CockPit_Mesh",
+     "Jet_Fins001",
+     "Main_Turret_00",
+     "Object",
+     "Object001",
+     "Object003_frag_007",
+     "Object003_frag_008",
+     "Object003_frag_017",
+     "Object003_frag_023",
+     "Object003_frag_024",
+     "Object003_frag_025",
+     "Object004_frag_002",
+     "Object004_frag_003",
+     "Object004_frag_006",
+     "Object004_frag_007",
+     "Object007",
+     "Object009",
+     "Object011",
+     "Object013",
+     "Object015",
+     "Object017",
+     "Rear_Door_BOTTOM",
+     "Rear_Door_MIDDLE",
+     "Root",
+     "SUSP1_Wheel_Rear_Left_Mesh",
+     "SUSP1_Wheel_Rear_Right_Mesh",
+     "SUSP2_Wheel_Front_Left_Mesh",
+     "SUSP2_Wheel_Front_Right_Mesh",
+     "Wheel_Back_Left_Vis_Mesh",
+     "Wheel_Front_Left_Vis_Mesh",
+     "Wheel_Front_Right_Vis_Mesh",
+     "Wheel_Rear_Right_Vis_Mesh"
+    ],
+    "flat_skeleton": true,
+    "g3b_union_full": [
+     453.19849395751953,
+     197.09030151367188,
+     156.04395484924316
+    ],
+    "g3b_union_half": [
+     717.9396591186523,
+     394.18060302734375,
+     247.8977813720703
+    ],
+    "max_bone_to_translation_cm": 334.6607208251953,
+    "median_bone_to_translation_cm": 193.13304901123047,
+    "rows": [
+     {
+      "bone": "Root",
+      "encloses_bone": true,
+      "extents": [
+       30.3,
+       30.3,
+       30.3
+      ],
+      "index": 0,
+      "parent": 0,
+      "pos": [
+       0.0,
+       -0.0,
+       0.0
+      ],
+      "translation": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     {
+      "bone": "SUSP2_Wheel_Front_Left_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       211.54,
+       51.093,
+       109.003
+      ],
+      "index": 1,
+      "parent": 0,
+      "pos": [
+       134.998,
+       -121.032,
+       84.401
+      ],
+      "translation": [
+       66.542,
+       -1.608,
+       12.661
+      ]
+     },
+     {
+      "bone": "SUSP2_Wheel_Front_Right_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       157.805,
+       60.058,
+       110.255
+      ],
+      "index": 2,
+      "parent": 0,
+      "pos": [
+       139.098,
+       95.695,
+       74.829
+      ],
+      "translation": [
+       64.419,
+       28.091,
+       15.607
+      ]
+     },
+     {
+      "bone": "Wheel_Front_Left_Vis_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       97.605,
+       55.342,
+       101.533
+      ],
+      "index": 3,
+      "parent": 0,
+      "pos": [
+       269.906,
+       -120.857,
+       68.044
+      ],
+      "translation": [
+       11.718,
+       -3.285,
+       -4.991
+      ]
+     },
+     {
+      "bone": "Wheel_Back_Left_Vis_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       98.989,
+       60.573,
+       108.901
+      ],
+      "index": 4,
+      "parent": 0,
+      "pos": [
+       -230.472,
+       -128.492,
+       68.044
+      ],
+      "translation": [
+       2.755,
+       1.781,
+       -9.909
+      ]
+     },
+     {
+      "bone": "Wheel_Front_Right_Vis_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       97.01,
+       52.545,
+       103.247
+      ],
+      "index": 5,
+      "parent": 0,
+      "pos": [
+       275.03,
+       120.857,
+       62.918
+      ],
+      "translation": [
+       0.404,
+       -1.591,
+       0.384
+      ]
+     },
+     {
+      "bone": "SUSP1_Wheel_Rear_Right_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       317.942,
+       64.552,
+       97.966
+      ],
+      "index": 6,
+      "parent": 0,
+      "pos": [
+       -59.744,
+       109.596,
+       117.481
+      ],
+      "translation": [
+       -121.915,
+       25.708,
+       -17.364
+      ]
+     },
+     {
+      "bone": "Wheel_Rear_Right_Vis_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       106.61,
+       64.812,
+       106.033
+      ],
+      "index": 7,
+      "parent": 0,
+      "pos": [
+       -223.614,
+       158.887,
+       58.885
+      ],
+      "translation": [
+       0.059,
+       -1.273,
+       -2.678
+      ]
+     },
+     {
+      "bone": "SUSP1_Wheel_Rear_Left_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       316.155,
+       63.418,
+       109.881
+      ],
+      "index": 8,
+      "parent": 0,
+      "pos": [
+       -67.147,
+       -104.0,
+       122.35
+      ],
+      "translation": [
+       -117.414,
+       -17.569,
+       -12.155
+      ]
+     },
+     {
+      "bone": "Object001",
+      "encloses_bone": false,
+      "extents": [
+       40.267,
+       51.068,
+       50.379
+      ],
+      "index": 9,
+      "parent": 0,
+      "pos": [
+       -29.727,
+       -3.195,
+       2.646
+      ],
+      "translation": [
+       -245.722,
+       13.217,
+       28.159
+      ]
+     },
+     {
+      "bone": "Main_Turret_00",
+      "encloses_bone": true,
+      "extents": [
+       114.042,
+       64.794,
+       79.53
+      ],
+      "index": 10,
+      "parent": 0,
+      "pos": [
+       -19.922,
+       0.008,
+       201.715
+      ],
+      "translation": [
+       -37.52,
+       1.287,
+       -17.554
+      ]
+     },
+     {
+      "bone": "CockPit_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       143.357,
+       80.663,
+       64.851
+      ],
+      "index": 11,
+      "parent": 0,
+      "pos": [
+       155.527,
+       -0.376,
+       154.954
+      ],
+      "translation": [
+       -1.842,
+       -4.191,
+       21.586
+      ]
+     },
+     {
+      "bone": "Rear_Door_BOTTOM",
+      "encloses_bone": false,
+      "extents": [
+       26.006,
+       152.76,
+       71.739
+      ],
+      "index": 12,
+      "parent": 0,
+      "pos": [
+       -320.665,
+       6.834,
+       61.14
+      ],
+      "translation": [
+       13.996,
+       1.491,
+       40.038
+      ]
+     },
+     {
+      "bone": "Rear_Door_MIDDLE",
+      "encloses_bone": true,
+      "extents": [
+       59.101,
+       197.09,
+       37.58
+      ],
+      "index": 13,
+      "parent": 0,
+      "pos": [
+       -283.647,
+       0.0,
+       171.339
+      ],
+      "translation": [
+       6.467,
+       -5.005,
+       -14.893
+      ]
+     },
+     {
+      "bone": "Object003_frag_007",
+      "encloses_bone": true,
+      "extents": [
+       89.649,
+       63.024,
+       65.765
+      ],
+      "index": 14,
+      "parent": 0,
+      "pos": [
+       43.014,
+       -90.3,
+       100.621
+      ],
+      "translation": [
+       2.173,
+       -8.362,
+       -2.622
+      ]
+     },
+     {
+      "bone": "Object003_frag_008",
+      "encloses_bone": true,
+      "extents": [
+       144.953,
+       111.448,
+       117.238
+      ],
+      "index": 15,
+      "parent": 0,
+      "pos": [
+       -48.619,
+       -93.683,
+       102.669
+      ],
+      "translation": [
+       1.704,
+       -3.677,
+       4.732
+      ]
+     },
+     {
+      "bone": "Object003_frag_017",
+      "encloses_bone": false,
+      "extents": [
+       89.817,
+       75.49,
+       26.539
+      ],
+      "index": 16,
+      "parent": 0,
+      "pos": [
+       -193.796,
+       3.632,
+       180.519
+      ],
+      "translation": [
+       -0.663,
+       0.766,
+       18.174
+      ]
+     },
+     {
+      "bone": "Object003_frag_023",
+      "encloses_bone": true,
+      "extents": [
+       128.557,
+       94.312,
+       101.819
+      ],
+      "index": 17,
+      "parent": 0,
+      "pos": [
+       32.453,
+       96.461,
+       111.033
+      ],
+      "translation": [
+       -1.445,
+       -1.988,
+       -0.414
+      ]
+     },
+     {
+      "bone": "Object003_frag_024",
+      "encloses_bone": true,
+      "extents": [
+       117.992,
+       92.692,
+       102.093
+      ],
+      "index": 18,
+      "parent": 0,
+      "pos": [
+       55.725,
+       12.695,
+       163.136
+      ],
+      "translation": [
+       -1.929,
+       0.823,
+       -0.936
+      ]
+     },
+     {
+      "bone": "Object003_frag_025",
+      "encloses_bone": true,
+      "extents": [
+       104.668,
+       61.156,
+       90.378
+      ],
+      "index": 19,
+      "parent": 0,
+      "pos": [
+       113.52,
+       -75.719,
+       110.633
+      ],
+      "translation": [
+       0.887,
+       12.673,
+       6.955
+      ]
+     },
+     {
+      "bone": "Object004_frag_002",
+      "encloses_bone": true,
+      "extents": [
+       82.268,
+       83.697,
+       79.315
+      ],
+      "index": 20,
+      "parent": 0,
+      "pos": [
+       253.58,
+       6.278,
+       92.617
+      ],
+      "translation": [
+       -19.944,
+       3.363,
+       -0.3
+      ]
+     },
+     {
+      "bone": "Object004_frag_003",
+      "encloses_bone": true,
+      "extents": [
+       61.13,
+       41.854,
+       64.069
+      ],
+      "index": 21,
+      "parent": 0,
+      "pos": [
+       191.194,
+       -45.932,
+       111.955
+      ],
+      "translation": [
+       1.1,
+       6.473,
+       -3.332
+      ]
+     },
+     {
+      "bone": "Object004_frag_006",
+      "encloses_bone": true,
+      "extents": [
+       91.434,
+       73.846,
+       64.868
+      ],
+      "index": 22,
+      "parent": 0,
+      "pos": [
+       294.932,
+       -35.583,
+       79.095
+      ],
+      "translation": [
+       6.79,
+       -2.994,
+       -18.721
+      ]
+     },
+     {
+      "bone": "Object004_frag_007",
+      "encloses_bone": true,
+      "extents": [
+       80.714,
+       60.293,
+       63.52
+      ],
+      "index": 23,
+      "parent": 0,
+      "pos": [
+       311.352,
+       24.892,
+       77.008
+      ],
+      "translation": [
+       10.36,
+       10.925,
+       -14.706
+      ]
+     },
+     {
+      "bone": "Jet_Fins001",
+      "encloses_bone": true,
+      "extents": [
+       129.11,
+       61.195,
+       28.711
+      ],
+      "index": 24,
+      "parent": 0,
+      "pos": [
+       -235.407,
+       -64.151,
+       58.892
+      ],
+      "translation": [
+       -0.388,
+       9.832,
+       -1.784
+      ]
+     },
+     {
+      "bone": "Object007",
+      "encloses_bone": true,
+      "extents": [
+       138.533,
+       73.341,
+       28.961
+      ],
+      "index": 25,
+      "parent": 0,
+      "pos": [
+       -235.585,
+       61.351,
+       63.464
+      ],
+      "translation": [
+       -4.007,
+       3.85,
+       -9.774
+      ]
+     },
+     {
+      "bone": "Object",
+      "encloses_bone": false,
+      "extents": [
+       70.096,
+       41.614,
+       27.411
+      ],
+      "index": 26,
+      "parent": 0,
+      "pos": [
+       151.919,
+       11.241,
+       129.768
+      ],
+      "translation": [
+       2.668,
+       38.829,
+       5.337
+      ]
+     },
+     {
+      "bone": "Object011",
+      "encloses_bone": false,
+      "extents": [
+       142.069,
+       97.628,
+       44.313
+      ],
+      "index": 27,
+      "parent": 0,
+      "pos": [
+       -90.881,
+       -64.699,
+       107.106
+      ],
+      "translation": [
+       -1.213,
+       -33.476,
+       52.419
+      ]
+     },
+     {
+      "bone": "Object013",
+      "encloses_bone": false,
+      "extents": [
+       130.594,
+       118.598,
+       54.127
+      ],
+      "index": 28,
+      "parent": 0,
+      "pos": [
+       -161.695,
+       -86.619,
+       117.087
+      ],
+      "translation": [
+       -2.476,
+       -4.679,
+       61.885
+      ]
+     },
+     {
+      "bone": "Object009",
+      "encloses_bone": false,
+      "extents": [
+       166.12,
+       141.823,
+       62.936
+      ],
+      "index": 29,
+      "parent": 0,
+      "pos": [
+       -141.605,
+       82.341,
+       135.273
+      ],
+      "translation": [
+       -5.308,
+       1.818,
+       40.067
+      ]
+     },
+     {
+      "bone": "Object017",
+      "encloses_bone": false,
+      "extents": [
+       77.622,
+       73.176,
+       23.906
+      ],
+      "index": 30,
+      "parent": 0,
+      "pos": [
+       -227.843,
+       51.418,
+       145.202
+      ],
+      "translation": [
+       -11.188,
+       5.85,
+       50.459
+      ]
+     },
+     {
+      "bone": "Object015",
+      "encloses_bone": false,
+      "extents": [
+       78.331,
+       65.638,
+       42.043
+      ],
+      "index": 31,
+      "parent": 0,
+      "pos": [
+       -241.11,
+       -27.881,
+       132.415
+      ],
+      "translation": [
+       24.174,
+       -40.507,
+       45.973
+      ]
+     }
+    ],
+    "skeleton_bones": [
+     "CockPit_Mesh",
+     "Jet_Fins001",
+     "Main_Turret_00",
+     "Object",
+     "Object001",
+     "Object003_frag_007",
+     "Object003_frag_008",
+     "Object003_frag_017",
+     "Object003_frag_023",
+     "Object003_frag_024",
+     "Object003_frag_025",
+     "Object004_frag_002",
+     "Object004_frag_003",
+     "Object004_frag_006",
+     "Object004_frag_007",
+     "Object007",
+     "Object009",
+     "Object011",
+     "Object013",
+     "Object015",
+     "Object017",
+     "Rear_Door_BOTTOM",
+     "Rear_Door_MIDDLE",
+     "Root",
+     "SUSP1_Wheel_Rear_Left_Mesh",
+     "SUSP1_Wheel_Rear_Right_Mesh",
+     "SUSP2_Wheel_Front_Left_Mesh",
+     "SUSP2_Wheel_Front_Right_Mesh",
+     "Wheel_Back_Left_Vis_Mesh",
+     "Wheel_Front_Left_Vis_Mesh",
+     "Wheel_Front_Right_Vis_Mesh",
+     "Wheel_Rear_Right_Vis_Mesh"
+    ],
+    "skeleton_offset": 1408,
+    "union_full": [
+     704.707935333252,
+     347.0175380706787,
+     239.29621697624157
+    ],
+    "union_full_bounds": {
+     "hi": [
+      362.0687141418457,
+      190.02008819580078,
+      224.1462173577113
+     ],
+     "lo": [
+      -342.63922119140625,
+      -156.99744987487793,
+      -15.149999618530273
+     ]
+    },
+    "union_half": [
+     913.797233581543,
+     435.8786392211914,
+     315.058780670166
+    ]
+   },
+   "Playable_BatmobileMK2_SF": {
+    "bone_count": 32,
+    "bones_inside_own_box_bone_frame": 23,
+    "bones_inside_own_box_component_frame": 1,
+    "box_bones": [
+     "CockPit_Mesh",
+     "Jet_Fins001",
+     "Main_Turret_00",
+     "Object",
+     "Object001",
+     "Object003_frag_007",
+     "Object003_frag_008",
+     "Object003_frag_017",
+     "Object003_frag_023",
+     "Object003_frag_024",
+     "Object003_frag_025",
+     "Object004_frag_002",
+     "Object004_frag_003",
+     "Object004_frag_006",
+     "Object004_frag_007",
+     "Object007",
+     "Object009",
+     "Object011",
+     "Object013",
+     "Object015",
+     "Object017",
+     "Rear_Door_BOTTOM",
+     "Rear_Door_MIDDLE",
+     "Root",
+     "SUSP1_Wheel_Rear_Left_Mesh",
+     "SUSP1_Wheel_Rear_Right_Mesh",
+     "SUSP2_Wheel_Front_Left_Mesh",
+     "SUSP2_Wheel_Front_Right_Mesh",
+     "Wheel_Back_Left_Vis_Mesh",
+     "Wheel_Front_Left_Vis_Mesh",
+     "Wheel_Front_Right_Vis_Mesh",
+     "Wheel_Rear_Right_Vis_Mesh"
+    ],
+    "flat_skeleton": true,
+    "g3b_union_full": [
+     453.19849395751953,
+     197.09030151367188,
+     156.04395484924316
+    ],
+    "g3b_union_half": [
+     717.9396591186523,
+     394.18060302734375,
+     247.8977813720703
+    ],
+    "max_bone_to_translation_cm": 334.6607208251953,
+    "median_bone_to_translation_cm": 193.13304901123047,
+    "rows": [
+     {
+      "bone": "Root",
+      "encloses_bone": true,
+      "extents": [
+       30.3,
+       30.3,
+       30.3
+      ],
+      "index": 0,
+      "parent": 0,
+      "pos": [
+       0.0,
+       -0.0,
+       0.0
+      ],
+      "translation": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     {
+      "bone": "SUSP2_Wheel_Front_Left_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       211.54,
+       51.093,
+       109.003
+      ],
+      "index": 1,
+      "parent": 0,
+      "pos": [
+       134.998,
+       -121.032,
+       84.401
+      ],
+      "translation": [
+       66.542,
+       -1.608,
+       12.661
+      ]
+     },
+     {
+      "bone": "SUSP2_Wheel_Front_Right_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       157.805,
+       60.058,
+       110.255
+      ],
+      "index": 2,
+      "parent": 0,
+      "pos": [
+       139.098,
+       95.695,
+       74.829
+      ],
+      "translation": [
+       64.419,
+       28.091,
+       15.607
+      ]
+     },
+     {
+      "bone": "Wheel_Front_Left_Vis_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       97.605,
+       55.342,
+       101.533
+      ],
+      "index": 3,
+      "parent": 0,
+      "pos": [
+       269.906,
+       -120.857,
+       68.044
+      ],
+      "translation": [
+       11.718,
+       -3.285,
+       -4.991
+      ]
+     },
+     {
+      "bone": "Wheel_Back_Left_Vis_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       98.989,
+       60.573,
+       108.901
+      ],
+      "index": 4,
+      "parent": 0,
+      "pos": [
+       -230.472,
+       -128.492,
+       68.044
+      ],
+      "translation": [
+       2.755,
+       1.781,
+       -9.909
+      ]
+     },
+     {
+      "bone": "Wheel_Front_Right_Vis_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       97.01,
+       52.545,
+       103.247
+      ],
+      "index": 5,
+      "parent": 0,
+      "pos": [
+       275.03,
+       120.857,
+       62.918
+      ],
+      "translation": [
+       0.404,
+       -1.591,
+       0.384
+      ]
+     },
+     {
+      "bone": "SUSP1_Wheel_Rear_Right_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       317.942,
+       64.552,
+       97.966
+      ],
+      "index": 6,
+      "parent": 0,
+      "pos": [
+       -59.744,
+       109.596,
+       117.481
+      ],
+      "translation": [
+       -121.915,
+       25.708,
+       -17.364
+      ]
+     },
+     {
+      "bone": "Wheel_Rear_Right_Vis_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       106.61,
+       64.812,
+       106.033
+      ],
+      "index": 7,
+      "parent": 0,
+      "pos": [
+       -223.614,
+       158.887,
+       58.885
+      ],
+      "translation": [
+       0.059,
+       -1.273,
+       -2.678
+      ]
+     },
+     {
+      "bone": "SUSP1_Wheel_Rear_Left_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       316.155,
+       63.418,
+       109.881
+      ],
+      "index": 8,
+      "parent": 0,
+      "pos": [
+       -67.147,
+       -104.0,
+       122.35
+      ],
+      "translation": [
+       -117.414,
+       -17.569,
+       -12.155
+      ]
+     },
+     {
+      "bone": "Object001",
+      "encloses_bone": false,
+      "extents": [
+       40.267,
+       51.068,
+       50.379
+      ],
+      "index": 9,
+      "parent": 0,
+      "pos": [
+       -29.727,
+       -3.195,
+       2.646
+      ],
+      "translation": [
+       -245.722,
+       13.217,
+       28.159
+      ]
+     },
+     {
+      "bone": "Main_Turret_00",
+      "encloses_bone": true,
+      "extents": [
+       114.042,
+       64.794,
+       79.53
+      ],
+      "index": 10,
+      "parent": 0,
+      "pos": [
+       -19.922,
+       0.008,
+       201.715
+      ],
+      "translation": [
+       -37.52,
+       1.287,
+       -17.554
+      ]
+     },
+     {
+      "bone": "CockPit_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       143.357,
+       80.663,
+       64.851
+      ],
+      "index": 11,
+      "parent": 0,
+      "pos": [
+       155.527,
+       -0.376,
+       154.954
+      ],
+      "translation": [
+       -1.842,
+       -4.191,
+       21.586
+      ]
+     },
+     {
+      "bone": "Rear_Door_BOTTOM",
+      "encloses_bone": false,
+      "extents": [
+       26.006,
+       152.76,
+       71.739
+      ],
+      "index": 12,
+      "parent": 0,
+      "pos": [
+       -320.665,
+       6.834,
+       61.14
+      ],
+      "translation": [
+       13.996,
+       1.491,
+       40.038
+      ]
+     },
+     {
+      "bone": "Rear_Door_MIDDLE",
+      "encloses_bone": true,
+      "extents": [
+       59.101,
+       197.09,
+       37.58
+      ],
+      "index": 13,
+      "parent": 0,
+      "pos": [
+       -283.647,
+       0.0,
+       171.339
+      ],
+      "translation": [
+       6.467,
+       -5.005,
+       -14.893
+      ]
+     },
+     {
+      "bone": "Object003_frag_007",
+      "encloses_bone": true,
+      "extents": [
+       89.649,
+       63.024,
+       65.765
+      ],
+      "index": 14,
+      "parent": 0,
+      "pos": [
+       43.014,
+       -90.3,
+       100.621
+      ],
+      "translation": [
+       2.173,
+       -8.362,
+       -2.622
+      ]
+     },
+     {
+      "bone": "Object003_frag_008",
+      "encloses_bone": true,
+      "extents": [
+       144.953,
+       111.448,
+       117.238
+      ],
+      "index": 15,
+      "parent": 0,
+      "pos": [
+       -48.619,
+       -93.683,
+       102.669
+      ],
+      "translation": [
+       1.704,
+       -3.677,
+       4.732
+      ]
+     },
+     {
+      "bone": "Object003_frag_017",
+      "encloses_bone": false,
+      "extents": [
+       89.817,
+       75.49,
+       26.539
+      ],
+      "index": 16,
+      "parent": 0,
+      "pos": [
+       -193.796,
+       3.632,
+       180.519
+      ],
+      "translation": [
+       -0.663,
+       0.766,
+       18.174
+      ]
+     },
+     {
+      "bone": "Object003_frag_023",
+      "encloses_bone": true,
+      "extents": [
+       128.557,
+       94.312,
+       101.819
+      ],
+      "index": 17,
+      "parent": 0,
+      "pos": [
+       32.453,
+       96.461,
+       111.033
+      ],
+      "translation": [
+       -1.445,
+       -1.988,
+       -0.414
+      ]
+     },
+     {
+      "bone": "Object003_frag_024",
+      "encloses_bone": true,
+      "extents": [
+       117.992,
+       92.692,
+       102.093
+      ],
+      "index": 18,
+      "parent": 0,
+      "pos": [
+       55.725,
+       12.695,
+       163.136
+      ],
+      "translation": [
+       -1.929,
+       0.823,
+       -0.936
+      ]
+     },
+     {
+      "bone": "Object003_frag_025",
+      "encloses_bone": true,
+      "extents": [
+       104.668,
+       61.156,
+       90.378
+      ],
+      "index": 19,
+      "parent": 0,
+      "pos": [
+       113.52,
+       -75.719,
+       110.633
+      ],
+      "translation": [
+       0.887,
+       12.673,
+       6.955
+      ]
+     },
+     {
+      "bone": "Object004_frag_002",
+      "encloses_bone": true,
+      "extents": [
+       82.268,
+       83.697,
+       79.315
+      ],
+      "index": 20,
+      "parent": 0,
+      "pos": [
+       253.58,
+       6.278,
+       92.617
+      ],
+      "translation": [
+       -19.944,
+       3.363,
+       -0.3
+      ]
+     },
+     {
+      "bone": "Object004_frag_003",
+      "encloses_bone": true,
+      "extents": [
+       61.13,
+       41.854,
+       64.069
+      ],
+      "index": 21,
+      "parent": 0,
+      "pos": [
+       191.194,
+       -45.932,
+       111.955
+      ],
+      "translation": [
+       1.1,
+       6.473,
+       -3.332
+      ]
+     },
+     {
+      "bone": "Object004_frag_006",
+      "encloses_bone": true,
+      "extents": [
+       91.434,
+       73.846,
+       64.868
+      ],
+      "index": 22,
+      "parent": 0,
+      "pos": [
+       294.932,
+       -35.583,
+       79.095
+      ],
+      "translation": [
+       6.79,
+       -2.994,
+       -18.721
+      ]
+     },
+     {
+      "bone": "Object004_frag_007",
+      "encloses_bone": true,
+      "extents": [
+       80.714,
+       60.293,
+       63.52
+      ],
+      "index": 23,
+      "parent": 0,
+      "pos": [
+       311.352,
+       24.892,
+       77.008
+      ],
+      "translation": [
+       10.36,
+       10.925,
+       -14.706
+      ]
+     },
+     {
+      "bone": "Jet_Fins001",
+      "encloses_bone": true,
+      "extents": [
+       129.11,
+       61.195,
+       28.711
+      ],
+      "index": 24,
+      "parent": 0,
+      "pos": [
+       -235.407,
+       -64.151,
+       58.892
+      ],
+      "translation": [
+       -0.388,
+       9.832,
+       -1.784
+      ]
+     },
+     {
+      "bone": "Object007",
+      "encloses_bone": true,
+      "extents": [
+       138.533,
+       73.341,
+       28.961
+      ],
+      "index": 25,
+      "parent": 0,
+      "pos": [
+       -235.585,
+       61.351,
+       63.464
+      ],
+      "translation": [
+       -4.007,
+       3.85,
+       -9.774
+      ]
+     },
+     {
+      "bone": "Object",
+      "encloses_bone": false,
+      "extents": [
+       70.096,
+       41.614,
+       27.411
+      ],
+      "index": 26,
+      "parent": 0,
+      "pos": [
+       151.919,
+       11.241,
+       129.768
+      ],
+      "translation": [
+       2.668,
+       38.829,
+       5.337
+      ]
+     },
+     {
+      "bone": "Object011",
+      "encloses_bone": false,
+      "extents": [
+       142.069,
+       97.628,
+       44.313
+      ],
+      "index": 27,
+      "parent": 0,
+      "pos": [
+       -90.881,
+       -64.699,
+       107.106
+      ],
+      "translation": [
+       -1.213,
+       -33.476,
+       52.419
+      ]
+     },
+     {
+      "bone": "Object013",
+      "encloses_bone": false,
+      "extents": [
+       130.594,
+       118.598,
+       54.127
+      ],
+      "index": 28,
+      "parent": 0,
+      "pos": [
+       -161.695,
+       -86.619,
+       117.087
+      ],
+      "translation": [
+       -2.476,
+       -4.679,
+       61.885
+      ]
+     },
+     {
+      "bone": "Object009",
+      "encloses_bone": false,
+      "extents": [
+       166.12,
+       141.823,
+       62.936
+      ],
+      "index": 29,
+      "parent": 0,
+      "pos": [
+       -141.605,
+       82.341,
+       135.273
+      ],
+      "translation": [
+       -5.308,
+       1.818,
+       40.067
+      ]
+     },
+     {
+      "bone": "Object017",
+      "encloses_bone": false,
+      "extents": [
+       77.622,
+       73.176,
+       23.906
+      ],
+      "index": 30,
+      "parent": 0,
+      "pos": [
+       -227.843,
+       51.418,
+       145.202
+      ],
+      "translation": [
+       -11.188,
+       5.85,
+       50.459
+      ]
+     },
+     {
+      "bone": "Object015",
+      "encloses_bone": false,
+      "extents": [
+       78.331,
+       65.638,
+       42.043
+      ],
+      "index": 31,
+      "parent": 0,
+      "pos": [
+       -241.11,
+       -27.881,
+       132.415
+      ],
+      "translation": [
+       24.174,
+       -40.507,
+       45.973
+      ]
+     }
+    ],
+    "skeleton_bones": [
+     "CockPit_Mesh",
+     "Jet_Fins001",
+     "Main_Turret_00",
+     "Object",
+     "Object001",
+     "Object003_frag_007",
+     "Object003_frag_008",
+     "Object003_frag_017",
+     "Object003_frag_023",
+     "Object003_frag_024",
+     "Object003_frag_025",
+     "Object004_frag_002",
+     "Object004_frag_003",
+     "Object004_frag_006",
+     "Object004_frag_007",
+     "Object007",
+     "Object009",
+     "Object011",
+     "Object013",
+     "Object015",
+     "Object017",
+     "Rear_Door_BOTTOM",
+     "Rear_Door_MIDDLE",
+     "Root",
+     "SUSP1_Wheel_Rear_Left_Mesh",
+     "SUSP1_Wheel_Rear_Right_Mesh",
+     "SUSP2_Wheel_Front_Left_Mesh",
+     "SUSP2_Wheel_Front_Right_Mesh",
+     "Wheel_Back_Left_Vis_Mesh",
+     "Wheel_Front_Left_Vis_Mesh",
+     "Wheel_Front_Right_Vis_Mesh",
+     "Wheel_Rear_Right_Vis_Mesh"
+    ],
+    "skeleton_offset": 1408,
+    "union_full": [
+     704.707935333252,
+     347.0175380706787,
+     239.29621697624157
+    ],
+    "union_full_bounds": {
+     "hi": [
+      362.0687141418457,
+      190.02008819580078,
+      224.1462173577113
+     ],
+     "lo": [
+      -342.63922119140625,
+      -156.99744987487793,
+      -15.149999618530273
+     ]
+    },
+    "union_half": [
+     913.797233581543,
+     435.8786392211914,
+     315.058780670166
+    ]
+   },
+   "Playable_Batmobile_SF": {
+    "bone_count": 32,
+    "bones_inside_own_box_bone_frame": 23,
+    "bones_inside_own_box_component_frame": 1,
+    "box_bones": [
+     "CockPit_Mesh",
+     "Jet_Fins001",
+     "Main_Turret_00",
+     "Object",
+     "Object001",
+     "Object003_frag_007",
+     "Object003_frag_008",
+     "Object003_frag_017",
+     "Object003_frag_023",
+     "Object003_frag_024",
+     "Object003_frag_025",
+     "Object004_frag_002",
+     "Object004_frag_003",
+     "Object004_frag_006",
+     "Object004_frag_007",
+     "Object007",
+     "Object009",
+     "Object011",
+     "Object013",
+     "Object015",
+     "Object017",
+     "Rear_Door_BOTTOM",
+     "Rear_Door_MIDDLE",
+     "Root",
+     "SUSP1_Wheel_Rear_Left_Mesh",
+     "SUSP1_Wheel_Rear_Right_Mesh",
+     "SUSP2_Wheel_Front_Left_Mesh",
+     "SUSP2_Wheel_Front_Right_Mesh",
+     "Wheel_Back_Left_Vis_Mesh",
+     "Wheel_Front_Left_Vis_Mesh",
+     "Wheel_Front_Right_Vis_Mesh",
+     "Wheel_Rear_Right_Vis_Mesh"
+    ],
+    "flat_skeleton": true,
+    "g3b_union_full": [
+     453.19849395751953,
+     197.09030151367188,
+     156.04395484924316
+    ],
+    "g3b_union_half": [
+     717.9396591186523,
+     394.18060302734375,
+     247.8977813720703
+    ],
+    "max_bone_to_translation_cm": 334.6607208251953,
+    "median_bone_to_translation_cm": 193.13304901123047,
+    "rows": [
+     {
+      "bone": "Root",
+      "encloses_bone": true,
+      "extents": [
+       30.3,
+       30.3,
+       30.3
+      ],
+      "index": 0,
+      "parent": 0,
+      "pos": [
+       0.0,
+       -0.0,
+       0.0
+      ],
+      "translation": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     {
+      "bone": "SUSP2_Wheel_Front_Left_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       211.54,
+       51.093,
+       109.003
+      ],
+      "index": 1,
+      "parent": 0,
+      "pos": [
+       134.998,
+       -121.032,
+       84.401
+      ],
+      "translation": [
+       66.542,
+       -1.608,
+       12.661
+      ]
+     },
+     {
+      "bone": "SUSP2_Wheel_Front_Right_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       157.805,
+       60.058,
+       110.255
+      ],
+      "index": 2,
+      "parent": 0,
+      "pos": [
+       139.098,
+       95.695,
+       74.829
+      ],
+      "translation": [
+       64.419,
+       28.091,
+       15.607
+      ]
+     },
+     {
+      "bone": "Wheel_Front_Left_Vis_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       97.605,
+       55.342,
+       101.533
+      ],
+      "index": 3,
+      "parent": 0,
+      "pos": [
+       269.906,
+       -120.857,
+       68.044
+      ],
+      "translation": [
+       11.718,
+       -3.285,
+       -4.991
+      ]
+     },
+     {
+      "bone": "Wheel_Back_Left_Vis_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       98.989,
+       60.573,
+       108.901
+      ],
+      "index": 4,
+      "parent": 0,
+      "pos": [
+       -230.472,
+       -128.492,
+       68.044
+      ],
+      "translation": [
+       2.755,
+       1.781,
+       -9.909
+      ]
+     },
+     {
+      "bone": "Wheel_Front_Right_Vis_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       97.01,
+       52.545,
+       103.247
+      ],
+      "index": 5,
+      "parent": 0,
+      "pos": [
+       275.03,
+       120.857,
+       62.918
+      ],
+      "translation": [
+       0.404,
+       -1.591,
+       0.384
+      ]
+     },
+     {
+      "bone": "SUSP1_Wheel_Rear_Right_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       317.942,
+       64.552,
+       97.966
+      ],
+      "index": 6,
+      "parent": 0,
+      "pos": [
+       -59.744,
+       109.596,
+       117.481
+      ],
+      "translation": [
+       -121.915,
+       25.708,
+       -17.364
+      ]
+     },
+     {
+      "bone": "Wheel_Rear_Right_Vis_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       106.61,
+       64.812,
+       106.033
+      ],
+      "index": 7,
+      "parent": 0,
+      "pos": [
+       -223.614,
+       158.887,
+       58.885
+      ],
+      "translation": [
+       0.059,
+       -1.273,
+       -2.678
+      ]
+     },
+     {
+      "bone": "SUSP1_Wheel_Rear_Left_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       316.155,
+       63.418,
+       109.881
+      ],
+      "index": 8,
+      "parent": 0,
+      "pos": [
+       -67.147,
+       -104.0,
+       122.35
+      ],
+      "translation": [
+       -117.414,
+       -17.569,
+       -12.155
+      ]
+     },
+     {
+      "bone": "Object001",
+      "encloses_bone": false,
+      "extents": [
+       40.267,
+       51.068,
+       50.379
+      ],
+      "index": 9,
+      "parent": 0,
+      "pos": [
+       -29.727,
+       -3.195,
+       2.646
+      ],
+      "translation": [
+       -245.722,
+       13.217,
+       28.159
+      ]
+     },
+     {
+      "bone": "Main_Turret_00",
+      "encloses_bone": true,
+      "extents": [
+       114.042,
+       64.794,
+       79.53
+      ],
+      "index": 10,
+      "parent": 0,
+      "pos": [
+       -19.922,
+       0.008,
+       201.715
+      ],
+      "translation": [
+       -37.52,
+       1.287,
+       -17.554
+      ]
+     },
+     {
+      "bone": "CockPit_Mesh",
+      "encloses_bone": true,
+      "extents": [
+       143.357,
+       80.663,
+       64.851
+      ],
+      "index": 11,
+      "parent": 0,
+      "pos": [
+       155.527,
+       -0.376,
+       154.954
+      ],
+      "translation": [
+       -1.842,
+       -4.191,
+       21.586
+      ]
+     },
+     {
+      "bone": "Rear_Door_BOTTOM",
+      "encloses_bone": false,
+      "extents": [
+       26.006,
+       152.76,
+       71.739
+      ],
+      "index": 12,
+      "parent": 0,
+      "pos": [
+       -320.665,
+       6.834,
+       61.14
+      ],
+      "translation": [
+       13.996,
+       1.491,
+       40.038
+      ]
+     },
+     {
+      "bone": "Rear_Door_MIDDLE",
+      "encloses_bone": true,
+      "extents": [
+       59.101,
+       197.09,
+       37.58
+      ],
+      "index": 13,
+      "parent": 0,
+      "pos": [
+       -283.647,
+       0.0,
+       171.339
+      ],
+      "translation": [
+       6.467,
+       -5.005,
+       -14.893
+      ]
+     },
+     {
+      "bone": "Object003_frag_007",
+      "encloses_bone": true,
+      "extents": [
+       89.649,
+       63.024,
+       65.765
+      ],
+      "index": 14,
+      "parent": 0,
+      "pos": [
+       43.014,
+       -90.3,
+       100.621
+      ],
+      "translation": [
+       2.173,
+       -8.362,
+       -2.622
+      ]
+     },
+     {
+      "bone": "Object003_frag_008",
+      "encloses_bone": true,
+      "extents": [
+       144.953,
+       111.448,
+       117.238
+      ],
+      "index": 15,
+      "parent": 0,
+      "pos": [
+       -48.619,
+       -93.683,
+       102.669
+      ],
+      "translation": [
+       1.704,
+       -3.677,
+       4.732
+      ]
+     },
+     {
+      "bone": "Object003_frag_017",
+      "encloses_bone": false,
+      "extents": [
+       89.817,
+       75.49,
+       26.539
+      ],
+      "index": 16,
+      "parent": 0,
+      "pos": [
+       -193.796,
+       3.632,
+       180.519
+      ],
+      "translation": [
+       -0.663,
+       0.766,
+       18.174
+      ]
+     },
+     {
+      "bone": "Object003_frag_023",
+      "encloses_bone": true,
+      "extents": [
+       128.557,
+       94.312,
+       101.819
+      ],
+      "index": 17,
+      "parent": 0,
+      "pos": [
+       32.453,
+       96.461,
+       111.033
+      ],
+      "translation": [
+       -1.445,
+       -1.988,
+       -0.414
+      ]
+     },
+     {
+      "bone": "Object003_frag_024",
+      "encloses_bone": true,
+      "extents": [
+       117.992,
+       92.692,
+       102.093
+      ],
+      "index": 18,
+      "parent": 0,
+      "pos": [
+       55.725,
+       12.695,
+       163.136
+      ],
+      "translation": [
+       -1.929,
+       0.823,
+       -0.936
+      ]
+     },
+     {
+      "bone": "Object003_frag_025",
+      "encloses_bone": true,
+      "extents": [
+       104.668,
+       61.156,
+       90.378
+      ],
+      "index": 19,
+      "parent": 0,
+      "pos": [
+       113.52,
+       -75.719,
+       110.633
+      ],
+      "translation": [
+       0.887,
+       12.673,
+       6.955
+      ]
+     },
+     {
+      "bone": "Object004_frag_002",
+      "encloses_bone": true,
+      "extents": [
+       82.268,
+       83.697,
+       79.315
+      ],
+      "index": 20,
+      "parent": 0,
+      "pos": [
+       253.58,
+       6.278,
+       92.617
+      ],
+      "translation": [
+       -19.944,
+       3.363,
+       -0.3
+      ]
+     },
+     {
+      "bone": "Object004_frag_003",
+      "encloses_bone": true,
+      "extents": [
+       61.13,
+       41.854,
+       64.069
+      ],
+      "index": 21,
+      "parent": 0,
+      "pos": [
+       191.194,
+       -45.932,
+       111.955
+      ],
+      "translation": [
+       1.1,
+       6.473,
+       -3.332
+      ]
+     },
+     {
+      "bone": "Object004_frag_006",
+      "encloses_bone": true,
+      "extents": [
+       91.434,
+       73.846,
+       64.868
+      ],
+      "index": 22,
+      "parent": 0,
+      "pos": [
+       294.932,
+       -35.583,
+       79.095
+      ],
+      "translation": [
+       6.79,
+       -2.994,
+       -18.721
+      ]
+     },
+     {
+      "bone": "Object004_frag_007",
+      "encloses_bone": true,
+      "extents": [
+       80.714,
+       60.293,
+       63.52
+      ],
+      "index": 23,
+      "parent": 0,
+      "pos": [
+       311.352,
+       24.892,
+       77.008
+      ],
+      "translation": [
+       10.36,
+       10.925,
+       -14.706
+      ]
+     },
+     {
+      "bone": "Jet_Fins001",
+      "encloses_bone": true,
+      "extents": [
+       129.11,
+       61.195,
+       28.711
+      ],
+      "index": 24,
+      "parent": 0,
+      "pos": [
+       -235.407,
+       -64.151,
+       58.892
+      ],
+      "translation": [
+       -0.388,
+       9.832,
+       -1.784
+      ]
+     },
+     {
+      "bone": "Object007",
+      "encloses_bone": true,
+      "extents": [
+       138.533,
+       73.341,
+       28.961
+      ],
+      "index": 25,
+      "parent": 0,
+      "pos": [
+       -235.585,
+       61.351,
+       63.464
+      ],
+      "translation": [
+       -4.007,
+       3.85,
+       -9.774
+      ]
+     },
+     {
+      "bone": "Object",
+      "encloses_bone": false,
+      "extents": [
+       70.096,
+       41.614,
+       27.411
+      ],
+      "index": 26,
+      "parent": 0,
+      "pos": [
+       151.919,
+       11.241,
+       129.768
+      ],
+      "translation": [
+       2.668,
+       38.829,
+       5.337
+      ]
+     },
+     {
+      "bone": "Object011",
+      "encloses_bone": false,
+      "extents": [
+       142.069,
+       97.628,
+       44.313
+      ],
+      "index": 27,
+      "parent": 0,
+      "pos": [
+       -90.881,
+       -64.699,
+       107.106
+      ],
+      "translation": [
+       -1.213,
+       -33.476,
+       52.419
+      ]
+     },
+     {
+      "bone": "Object013",
+      "encloses_bone": false,
+      "extents": [
+       130.594,
+       118.598,
+       54.127
+      ],
+      "index": 28,
+      "parent": 0,
+      "pos": [
+       -161.695,
+       -86.619,
+       117.087
+      ],
+      "translation": [
+       -2.476,
+       -4.679,
+       61.885
+      ]
+     },
+     {
+      "bone": "Object009",
+      "encloses_bone": false,
+      "extents": [
+       166.12,
+       141.823,
+       62.936
+      ],
+      "index": 29,
+      "parent": 0,
+      "pos": [
+       -141.605,
+       82.341,
+       135.273
+      ],
+      "translation": [
+       -5.308,
+       1.818,
+       40.067
+      ]
+     },
+     {
+      "bone": "Object017",
+      "encloses_bone": false,
+      "extents": [
+       77.622,
+       73.176,
+       23.906
+      ],
+      "index": 30,
+      "parent": 0,
+      "pos": [
+       -227.843,
+       51.418,
+       145.202
+      ],
+      "translation": [
+       -11.188,
+       5.85,
+       50.459
+      ]
+     },
+     {
+      "bone": "Object015",
+      "encloses_bone": false,
+      "extents": [
+       78.331,
+       65.638,
+       42.043
+      ],
+      "index": 31,
+      "parent": 0,
+      "pos": [
+       -241.11,
+       -27.881,
+       132.415
+      ],
+      "translation": [
+       24.174,
+       -40.507,
+       45.973
+      ]
+     }
+    ],
+    "skeleton_bones": [
+     "CockPit_Mesh",
+     "Jet_Fins001",
+     "Main_Turret_00",
+     "Object",
+     "Object001",
+     "Object003_frag_007",
+     "Object003_frag_008",
+     "Object003_frag_017",
+     "Object003_frag_023",
+     "Object003_frag_024",
+     "Object003_frag_025",
+     "Object004_frag_002",
+     "Object004_frag_003",
+     "Object004_frag_006",
+     "Object004_frag_007",
+     "Object007",
+     "Object009",
+     "Object011",
+     "Object013",
+     "Object015",
+     "Object017",
+     "Rear_Door_BOTTOM",
+     "Rear_Door_MIDDLE",
+     "Root",
+     "SUSP1_Wheel_Rear_Left_Mesh",
+     "SUSP1_Wheel_Rear_Right_Mesh",
+     "SUSP2_Wheel_Front_Left_Mesh",
+     "SUSP2_Wheel_Front_Right_Mesh",
+     "Wheel_Back_Left_Vis_Mesh",
+     "Wheel_Front_Left_Vis_Mesh",
+     "Wheel_Front_Right_Vis_Mesh",
+     "Wheel_Rear_Right_Vis_Mesh"
+    ],
+    "skeleton_offset": 1408,
+    "union_full": [
+     704.707935333252,
+     347.0175380706787,
+     239.29621697624157
+    ],
+    "union_full_bounds": {
+     "hi": [
+      362.0687141418457,
+      190.02008819580078,
+      224.1462173577113
+     ],
+     "lo": [
+      -342.63922119140625,
+      -156.99744987487793,
+      -15.149999618530273
+     ]
+    },
+    "union_half": [
+     913.797233581543,
+     435.8786392211914,
+     315.058780670166
+    ]
+   }
+  },
+  "skeletons": {
+   "Playable_BatmobileFunhouse_SF": {
+    "CockPit_Mesh": {
+     "local_pos": [
+      155.527099609375,
+      -0.3761349320411682,
+      154.95359802246094
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      155.527099609375,
+      -0.3761349320411682,
+      154.95359802246094
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Jet_Fins001": {
+     "local_pos": [
+      -235.40655517578125,
+      -64.1513671875,
+      58.89180374145508
+     ],
+     "local_quat": [
+      0.0,
+      0.08715572208166122,
+      0.0,
+      -0.9961946606636047
+     ],
+     "parent": 0,
+     "pos": [
+      -235.40655517578125,
+      -64.1513671875,
+      58.89180374145508
+     ],
+     "quat": [
+      -0.0,
+      -0.08715571688677537,
+      0.0,
+      0.9961946012857759
+     ]
+    },
+    "Main_Turret_00": {
+     "local_pos": [
+      -19.92215347290039,
+      0.008145414292812347,
+      201.7146453857422
+     ],
+     "local_quat": [
+      0.0,
+      -0.0011656356509774923,
+      0.0,
+      -0.9999992847442627
+     ],
+     "parent": 0,
+     "pos": [
+      -19.92215347290039,
+      0.008145414292812347,
+      201.7146453857422
+     ],
+     "quat": [
+      0.0,
+      0.0011656355815001934,
+      0.0,
+      0.9999992251396606
+     ]
+    },
+    "Object": {
+     "local_pos": [
+      151.9192657470703,
+      11.241288185119629,
+      129.7680206298828
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      151.9192657470703,
+      11.241288185119629,
+      129.7680206298828
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object001": {
+     "local_pos": [
+      -29.727310180664062,
+      -3.1949005126953125,
+      2.6462326049804688
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -29.727310180664062,
+      -3.1949005126953125,
+      2.6462326049804688
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object003_frag_007": {
+     "local_pos": [
+      43.01435470581055,
+      -90.29975891113281,
+      100.62065124511719
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      43.01435470581055,
+      -90.29975891113281,
+      100.62065124511719
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object003_frag_008": {
+     "local_pos": [
+      -48.618507385253906,
+      -93.68301391601562,
+      102.66938018798828
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -48.618507385253906,
+      -93.68301391601562,
+      102.66938018798828
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object003_frag_017": {
+     "local_pos": [
+      -193.79559326171875,
+      3.63196063041687,
+      180.51893615722656
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -193.79559326171875,
+      3.63196063041687,
+      180.51893615722656
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object003_frag_023": {
+     "local_pos": [
+      32.45250701904297,
+      96.4610595703125,
+      111.03286743164062
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      32.45250701904297,
+      96.4610595703125,
+      111.03286743164062
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object003_frag_024": {
+     "local_pos": [
+      55.72536849975586,
+      12.6954345703125,
+      163.13592529296875
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      55.72536849975586,
+      12.6954345703125,
+      163.13592529296875
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object003_frag_025": {
+     "local_pos": [
+      113.51979064941406,
+      -75.71894073486328,
+      110.6330337524414
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      113.51979064941406,
+      -75.71894073486328,
+      110.6330337524414
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object004_frag_002": {
+     "local_pos": [
+      253.5797119140625,
+      6.278433799743652,
+      92.61651611328125
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      253.5797119140625,
+      6.278433799743652,
+      92.61651611328125
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object004_frag_003": {
+     "local_pos": [
+      191.19442749023438,
+      -45.93175506591797,
+      111.95458984375
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      191.19442749023438,
+      -45.93175506591797,
+      111.95458984375
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object004_frag_006": {
+     "local_pos": [
+      294.93231201171875,
+      -35.58293914794922,
+      79.09545135498047
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      294.93231201171875,
+      -35.58293914794922,
+      79.09545135498047
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object004_frag_007": {
+     "local_pos": [
+      311.3516540527344,
+      24.89207649230957,
+      77.00801849365234
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      311.3516540527344,
+      24.89207649230957,
+      77.00801849365234
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object007": {
+     "local_pos": [
+      -235.5853271484375,
+      61.35141372680664,
+      63.46382141113281
+     ],
+     "local_quat": [
+      0.0,
+      0.08715572208166122,
+      0.0,
+      -0.9961946606636047
+     ],
+     "parent": 0,
+     "pos": [
+      -235.5853271484375,
+      61.35141372680664,
+      63.46382141113281
+     ],
+     "quat": [
+      -0.0,
+      -0.08715571688677537,
+      0.0,
+      0.9961946012857759
+     ]
+    },
+    "Object009": {
+     "local_pos": [
+      -141.60516357421875,
+      82.34097290039062,
+      135.27349853515625
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -141.60516357421875,
+      82.34097290039062,
+      135.27349853515625
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object011": {
+     "local_pos": [
+      -90.8807373046875,
+      -64.69898986816406,
+      107.10566711425781
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -90.8807373046875,
+      -64.69898986816406,
+      107.10566711425781
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object013": {
+     "local_pos": [
+      -161.69544982910156,
+      -86.6191635131836,
+      117.08745574951172
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -161.69544982910156,
+      -86.6191635131836,
+      117.08745574951172
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object015": {
+     "local_pos": [
+      -241.1100311279297,
+      -27.8814640045166,
+      132.41473388671875
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -241.1100311279297,
+      -27.8814640045166,
+      132.41473388671875
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object017": {
+     "local_pos": [
+      -227.84259033203125,
+      51.4184455871582,
+      145.20155334472656
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -227.84259033203125,
+      51.4184455871582,
+      145.20155334472656
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Rear_Door_BOTTOM": {
+     "local_pos": [
+      -320.664794921875,
+      6.83400297164917,
+      61.14031982421875
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -320.664794921875,
+      6.83400297164917,
+      61.14031982421875
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Rear_Door_MIDDLE": {
+     "local_pos": [
+      -283.64715576171875,
+      5.06266360389418e-07,
+      171.33901977539062
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -283.64715576171875,
+      5.06266360389418e-07,
+      171.33901977539062
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Root": {
+     "local_pos": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ]
+    },
+    "SUSP1_Wheel_Rear_Left_Mesh": {
+     "local_pos": [
+      -67.14718627929688,
+      -103.99978637695312,
+      122.34965515136719
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -67.14718627929688,
+      -103.99978637695312,
+      122.34965515136719
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "SUSP1_Wheel_Rear_Right_Mesh": {
+     "local_pos": [
+      -59.74378967285156,
+      109.59587097167969,
+      117.48080444335938
+     ],
+     "local_quat": [
+      4.827584344141488e-16,
+      -1.2149013350892801e-08,
+      -9.051720976137534e-17,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -59.74378967285156,
+      109.59587097167969,
+      117.48080444335938
+     ],
+     "quat": [
+      -4.827584056395038e-16,
+      1.2149012626755176e-08,
+      9.051720436612921e-17,
+      0.999999880790714
+     ]
+    },
+    "SUSP2_Wheel_Front_Left_Mesh": {
+     "local_pos": [
+      134.99822998046875,
+      -121.03231811523438,
+      84.40132141113281
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      134.99822998046875,
+      -121.03231811523438,
+      84.40132141113281
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "SUSP2_Wheel_Front_Right_Mesh": {
+     "local_pos": [
+      139.0984649658203,
+      95.69530487060547,
+      74.82853698730469
+     ],
+     "local_quat": [
+      0.0,
+      0.0,
+      -8.74227694680485e-08,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      139.0984649658203,
+      95.69530487060547,
+      74.82853698730469
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      8.742276425724538e-08,
+      0.999999880790714
+     ]
+    },
+    "Wheel_Back_Left_Vis_Mesh": {
+     "local_pos": [
+      -230.47152709960938,
+      -128.4921417236328,
+      68.04360961914062
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -230.47152709960938,
+      -128.4921417236328,
+      68.04360961914062
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Wheel_Front_Left_Vis_Mesh": {
+     "local_pos": [
+      269.9058532714844,
+      -120.8572998046875,
+      68.04369354248047
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      269.9058532714844,
+      -120.8572998046875,
+      68.04369354248047
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Wheel_Front_Right_Vis_Mesh": {
+     "local_pos": [
+      275.0303649902344,
+      120.8572998046875,
+      62.91808319091797
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      275.0303649902344,
+      120.8572998046875,
+      62.91808319091797
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Wheel_Rear_Right_Vis_Mesh": {
+     "local_pos": [
+      -223.61436462402344,
+      158.8869171142578,
+      58.88542938232422
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -223.61436462402344,
+      158.8869171142578,
+      58.88542938232422
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    }
+   },
+   "Playable_BatmobileJoker_SF": {
+    "CockPit_Mesh": {
+     "local_pos": [
+      155.527099609375,
+      -0.3761349320411682,
+      154.95359802246094
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      155.527099609375,
+      -0.3761349320411682,
+      154.95359802246094
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Jet_Fins001": {
+     "local_pos": [
+      -235.40655517578125,
+      -64.1513671875,
+      58.89180374145508
+     ],
+     "local_quat": [
+      0.0,
+      0.08715572208166122,
+      0.0,
+      -0.9961946606636047
+     ],
+     "parent": 0,
+     "pos": [
+      -235.40655517578125,
+      -64.1513671875,
+      58.89180374145508
+     ],
+     "quat": [
+      -0.0,
+      -0.08715571688677537,
+      0.0,
+      0.9961946012857759
+     ]
+    },
+    "Main_Turret_00": {
+     "local_pos": [
+      -19.92215347290039,
+      0.008145414292812347,
+      201.7146453857422
+     ],
+     "local_quat": [
+      0.0,
+      -0.0011656356509774923,
+      0.0,
+      -0.9999992847442627
+     ],
+     "parent": 0,
+     "pos": [
+      -19.92215347290039,
+      0.008145414292812347,
+      201.7146453857422
+     ],
+     "quat": [
+      0.0,
+      0.0011656355815001934,
+      0.0,
+      0.9999992251396606
+     ]
+    },
+    "Object": {
+     "local_pos": [
+      151.9192657470703,
+      11.241288185119629,
+      129.7680206298828
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      151.9192657470703,
+      11.241288185119629,
+      129.7680206298828
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object001": {
+     "local_pos": [
+      -29.727310180664062,
+      -3.1949005126953125,
+      2.6462326049804688
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -29.727310180664062,
+      -3.1949005126953125,
+      2.6462326049804688
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object003_frag_007": {
+     "local_pos": [
+      43.01435470581055,
+      -90.29975891113281,
+      100.62065124511719
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      43.01435470581055,
+      -90.29975891113281,
+      100.62065124511719
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object003_frag_008": {
+     "local_pos": [
+      -48.618507385253906,
+      -93.68301391601562,
+      102.66938018798828
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -48.618507385253906,
+      -93.68301391601562,
+      102.66938018798828
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object003_frag_017": {
+     "local_pos": [
+      -193.79559326171875,
+      3.63196063041687,
+      180.51893615722656
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -193.79559326171875,
+      3.63196063041687,
+      180.51893615722656
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object003_frag_023": {
+     "local_pos": [
+      32.45250701904297,
+      96.4610595703125,
+      111.03286743164062
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      32.45250701904297,
+      96.4610595703125,
+      111.03286743164062
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object003_frag_024": {
+     "local_pos": [
+      55.72536849975586,
+      12.6954345703125,
+      163.13592529296875
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      55.72536849975586,
+      12.6954345703125,
+      163.13592529296875
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object003_frag_025": {
+     "local_pos": [
+      113.51979064941406,
+      -75.71894073486328,
+      110.6330337524414
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      113.51979064941406,
+      -75.71894073486328,
+      110.6330337524414
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object004_frag_002": {
+     "local_pos": [
+      253.5797119140625,
+      6.278433799743652,
+      92.61651611328125
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      253.5797119140625,
+      6.278433799743652,
+      92.61651611328125
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object004_frag_003": {
+     "local_pos": [
+      191.19442749023438,
+      -45.93175506591797,
+      111.95458984375
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      191.19442749023438,
+      -45.93175506591797,
+      111.95458984375
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object004_frag_006": {
+     "local_pos": [
+      294.93231201171875,
+      -35.58293914794922,
+      79.09545135498047
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      294.93231201171875,
+      -35.58293914794922,
+      79.09545135498047
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object004_frag_007": {
+     "local_pos": [
+      311.3516540527344,
+      24.89207649230957,
+      77.00801849365234
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      311.3516540527344,
+      24.89207649230957,
+      77.00801849365234
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object007": {
+     "local_pos": [
+      -235.5853271484375,
+      61.35141372680664,
+      63.46382141113281
+     ],
+     "local_quat": [
+      0.0,
+      0.08715572208166122,
+      0.0,
+      -0.9961946606636047
+     ],
+     "parent": 0,
+     "pos": [
+      -235.5853271484375,
+      61.35141372680664,
+      63.46382141113281
+     ],
+     "quat": [
+      -0.0,
+      -0.08715571688677537,
+      0.0,
+      0.9961946012857759
+     ]
+    },
+    "Object009": {
+     "local_pos": [
+      -141.60516357421875,
+      82.34097290039062,
+      135.27349853515625
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -141.60516357421875,
+      82.34097290039062,
+      135.27349853515625
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object011": {
+     "local_pos": [
+      -90.8807373046875,
+      -64.69898986816406,
+      107.10566711425781
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -90.8807373046875,
+      -64.69898986816406,
+      107.10566711425781
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object013": {
+     "local_pos": [
+      -161.69544982910156,
+      -86.6191635131836,
+      117.08745574951172
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -161.69544982910156,
+      -86.6191635131836,
+      117.08745574951172
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object015": {
+     "local_pos": [
+      -241.1100311279297,
+      -27.8814640045166,
+      132.41473388671875
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -241.1100311279297,
+      -27.8814640045166,
+      132.41473388671875
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object017": {
+     "local_pos": [
+      -227.84259033203125,
+      51.4184455871582,
+      145.20155334472656
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -227.84259033203125,
+      51.4184455871582,
+      145.20155334472656
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Rear_Door_BOTTOM": {
+     "local_pos": [
+      -320.664794921875,
+      6.83400297164917,
+      61.14031982421875
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -320.664794921875,
+      6.83400297164917,
+      61.14031982421875
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Rear_Door_MIDDLE": {
+     "local_pos": [
+      -283.64715576171875,
+      5.06266360389418e-07,
+      171.33901977539062
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -283.64715576171875,
+      5.06266360389418e-07,
+      171.33901977539062
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Root": {
+     "local_pos": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ]
+    },
+    "SUSP1_Wheel_Rear_Left_Mesh": {
+     "local_pos": [
+      -67.14718627929688,
+      -103.99978637695312,
+      122.34965515136719
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -67.14718627929688,
+      -103.99978637695312,
+      122.34965515136719
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "SUSP1_Wheel_Rear_Right_Mesh": {
+     "local_pos": [
+      -59.74378967285156,
+      109.59587097167969,
+      117.48080444335938
+     ],
+     "local_quat": [
+      4.827584344141488e-16,
+      -1.2149013350892801e-08,
+      -9.051720976137534e-17,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -59.74378967285156,
+      109.59587097167969,
+      117.48080444335938
+     ],
+     "quat": [
+      -4.827584056395038e-16,
+      1.2149012626755176e-08,
+      9.051720436612921e-17,
+      0.999999880790714
+     ]
+    },
+    "SUSP2_Wheel_Front_Left_Mesh": {
+     "local_pos": [
+      134.99822998046875,
+      -121.03231811523438,
+      84.40132141113281
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      134.99822998046875,
+      -121.03231811523438,
+      84.40132141113281
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "SUSP2_Wheel_Front_Right_Mesh": {
+     "local_pos": [
+      139.0984649658203,
+      95.69530487060547,
+      74.82853698730469
+     ],
+     "local_quat": [
+      0.0,
+      0.0,
+      -8.74227694680485e-08,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      139.0984649658203,
+      95.69530487060547,
+      74.82853698730469
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      8.742276425724538e-08,
+      0.999999880790714
+     ]
+    },
+    "Wheel_Back_Left_Vis_Mesh": {
+     "local_pos": [
+      -230.47152709960938,
+      -128.4921417236328,
+      68.04360961914062
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -230.47152709960938,
+      -128.4921417236328,
+      68.04360961914062
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Wheel_Front_Left_Vis_Mesh": {
+     "local_pos": [
+      269.9058532714844,
+      -120.8572998046875,
+      68.04369354248047
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      269.9058532714844,
+      -120.8572998046875,
+      68.04369354248047
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Wheel_Front_Right_Vis_Mesh": {
+     "local_pos": [
+      275.0303649902344,
+      120.8572998046875,
+      62.91808319091797
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      275.0303649902344,
+      120.8572998046875,
+      62.91808319091797
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Wheel_Rear_Right_Vis_Mesh": {
+     "local_pos": [
+      -223.61436462402344,
+      158.8869171142578,
+      58.88542938232422
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -223.61436462402344,
+      158.8869171142578,
+      58.88542938232422
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    }
+   },
+   "Playable_BatmobileMK2_SF": {
+    "CockPit_Mesh": {
+     "local_pos": [
+      155.527099609375,
+      -0.3761349320411682,
+      154.95359802246094
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      155.527099609375,
+      -0.3761349320411682,
+      154.95359802246094
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Jet_Fins001": {
+     "local_pos": [
+      -235.40655517578125,
+      -64.1513671875,
+      58.89180374145508
+     ],
+     "local_quat": [
+      0.0,
+      0.08715572208166122,
+      0.0,
+      -0.9961946606636047
+     ],
+     "parent": 0,
+     "pos": [
+      -235.40655517578125,
+      -64.1513671875,
+      58.89180374145508
+     ],
+     "quat": [
+      -0.0,
+      -0.08715571688677537,
+      0.0,
+      0.9961946012857759
+     ]
+    },
+    "Main_Turret_00": {
+     "local_pos": [
+      -19.92215347290039,
+      0.008145414292812347,
+      201.7146453857422
+     ],
+     "local_quat": [
+      0.0,
+      -0.0011656356509774923,
+      0.0,
+      -0.9999992847442627
+     ],
+     "parent": 0,
+     "pos": [
+      -19.92215347290039,
+      0.008145414292812347,
+      201.7146453857422
+     ],
+     "quat": [
+      0.0,
+      0.0011656355815001934,
+      0.0,
+      0.9999992251396606
+     ]
+    },
+    "Object": {
+     "local_pos": [
+      151.9192657470703,
+      11.241288185119629,
+      129.7680206298828
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      151.9192657470703,
+      11.241288185119629,
+      129.7680206298828
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object001": {
+     "local_pos": [
+      -29.727310180664062,
+      -3.1949005126953125,
+      2.6462326049804688
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -29.727310180664062,
+      -3.1949005126953125,
+      2.6462326049804688
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object003_frag_007": {
+     "local_pos": [
+      43.01435470581055,
+      -90.29975891113281,
+      100.62065124511719
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      43.01435470581055,
+      -90.29975891113281,
+      100.62065124511719
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object003_frag_008": {
+     "local_pos": [
+      -48.618507385253906,
+      -93.68301391601562,
+      102.66938018798828
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -48.618507385253906,
+      -93.68301391601562,
+      102.66938018798828
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object003_frag_017": {
+     "local_pos": [
+      -193.79559326171875,
+      3.63196063041687,
+      180.51893615722656
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -193.79559326171875,
+      3.63196063041687,
+      180.51893615722656
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object003_frag_023": {
+     "local_pos": [
+      32.45250701904297,
+      96.4610595703125,
+      111.03286743164062
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      32.45250701904297,
+      96.4610595703125,
+      111.03286743164062
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object003_frag_024": {
+     "local_pos": [
+      55.72536849975586,
+      12.6954345703125,
+      163.13592529296875
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      55.72536849975586,
+      12.6954345703125,
+      163.13592529296875
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object003_frag_025": {
+     "local_pos": [
+      113.51979064941406,
+      -75.71894073486328,
+      110.6330337524414
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      113.51979064941406,
+      -75.71894073486328,
+      110.6330337524414
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object004_frag_002": {
+     "local_pos": [
+      253.5797119140625,
+      6.278433799743652,
+      92.61651611328125
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      253.5797119140625,
+      6.278433799743652,
+      92.61651611328125
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object004_frag_003": {
+     "local_pos": [
+      191.19442749023438,
+      -45.93175506591797,
+      111.95458984375
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      191.19442749023438,
+      -45.93175506591797,
+      111.95458984375
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object004_frag_006": {
+     "local_pos": [
+      294.93231201171875,
+      -35.58293914794922,
+      79.09545135498047
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      294.93231201171875,
+      -35.58293914794922,
+      79.09545135498047
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object004_frag_007": {
+     "local_pos": [
+      311.3516540527344,
+      24.89207649230957,
+      77.00801849365234
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      311.3516540527344,
+      24.89207649230957,
+      77.00801849365234
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object007": {
+     "local_pos": [
+      -235.5853271484375,
+      61.35141372680664,
+      63.46382141113281
+     ],
+     "local_quat": [
+      0.0,
+      0.08715572208166122,
+      0.0,
+      -0.9961946606636047
+     ],
+     "parent": 0,
+     "pos": [
+      -235.5853271484375,
+      61.35141372680664,
+      63.46382141113281
+     ],
+     "quat": [
+      -0.0,
+      -0.08715571688677537,
+      0.0,
+      0.9961946012857759
+     ]
+    },
+    "Object009": {
+     "local_pos": [
+      -141.60516357421875,
+      82.34097290039062,
+      135.27349853515625
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -141.60516357421875,
+      82.34097290039062,
+      135.27349853515625
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object011": {
+     "local_pos": [
+      -90.8807373046875,
+      -64.69898986816406,
+      107.10566711425781
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -90.8807373046875,
+      -64.69898986816406,
+      107.10566711425781
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object013": {
+     "local_pos": [
+      -161.69544982910156,
+      -86.6191635131836,
+      117.08745574951172
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -161.69544982910156,
+      -86.6191635131836,
+      117.08745574951172
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object015": {
+     "local_pos": [
+      -241.1100311279297,
+      -27.8814640045166,
+      132.41473388671875
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -241.1100311279297,
+      -27.8814640045166,
+      132.41473388671875
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object017": {
+     "local_pos": [
+      -227.84259033203125,
+      51.4184455871582,
+      145.20155334472656
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -227.84259033203125,
+      51.4184455871582,
+      145.20155334472656
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Rear_Door_BOTTOM": {
+     "local_pos": [
+      -320.664794921875,
+      6.83400297164917,
+      61.14031982421875
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -320.664794921875,
+      6.83400297164917,
+      61.14031982421875
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Rear_Door_MIDDLE": {
+     "local_pos": [
+      -283.64715576171875,
+      5.06266360389418e-07,
+      171.33901977539062
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -283.64715576171875,
+      5.06266360389418e-07,
+      171.33901977539062
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Root": {
+     "local_pos": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ]
+    },
+    "SUSP1_Wheel_Rear_Left_Mesh": {
+     "local_pos": [
+      -67.14718627929688,
+      -103.99978637695312,
+      122.34965515136719
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -67.14718627929688,
+      -103.99978637695312,
+      122.34965515136719
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "SUSP1_Wheel_Rear_Right_Mesh": {
+     "local_pos": [
+      -59.74378967285156,
+      109.59587097167969,
+      117.48080444335938
+     ],
+     "local_quat": [
+      4.827584344141488e-16,
+      -1.2149013350892801e-08,
+      -9.051720976137534e-17,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -59.74378967285156,
+      109.59587097167969,
+      117.48080444335938
+     ],
+     "quat": [
+      -4.827584056395038e-16,
+      1.2149012626755176e-08,
+      9.051720436612921e-17,
+      0.999999880790714
+     ]
+    },
+    "SUSP2_Wheel_Front_Left_Mesh": {
+     "local_pos": [
+      134.99822998046875,
+      -121.03231811523438,
+      84.40132141113281
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      134.99822998046875,
+      -121.03231811523438,
+      84.40132141113281
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "SUSP2_Wheel_Front_Right_Mesh": {
+     "local_pos": [
+      139.0984649658203,
+      95.69530487060547,
+      74.82853698730469
+     ],
+     "local_quat": [
+      0.0,
+      0.0,
+      -8.74227694680485e-08,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      139.0984649658203,
+      95.69530487060547,
+      74.82853698730469
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      8.742276425724538e-08,
+      0.999999880790714
+     ]
+    },
+    "Wheel_Back_Left_Vis_Mesh": {
+     "local_pos": [
+      -230.47152709960938,
+      -128.4921417236328,
+      68.04360961914062
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -230.47152709960938,
+      -128.4921417236328,
+      68.04360961914062
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Wheel_Front_Left_Vis_Mesh": {
+     "local_pos": [
+      269.9058532714844,
+      -120.8572998046875,
+      68.04369354248047
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      269.9058532714844,
+      -120.8572998046875,
+      68.04369354248047
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Wheel_Front_Right_Vis_Mesh": {
+     "local_pos": [
+      275.0303649902344,
+      120.8572998046875,
+      62.91808319091797
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      275.0303649902344,
+      120.8572998046875,
+      62.91808319091797
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Wheel_Rear_Right_Vis_Mesh": {
+     "local_pos": [
+      -223.61436462402344,
+      158.8869171142578,
+      58.88542938232422
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -223.61436462402344,
+      158.8869171142578,
+      58.88542938232422
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    }
+   },
+   "Playable_Batmobile_SF": {
+    "CockPit_Mesh": {
+     "local_pos": [
+      155.527099609375,
+      -0.3761349320411682,
+      154.95359802246094
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      155.527099609375,
+      -0.3761349320411682,
+      154.95359802246094
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Jet_Fins001": {
+     "local_pos": [
+      -235.40655517578125,
+      -64.1513671875,
+      58.89180374145508
+     ],
+     "local_quat": [
+      0.0,
+      0.08715572208166122,
+      0.0,
+      -0.9961946606636047
+     ],
+     "parent": 0,
+     "pos": [
+      -235.40655517578125,
+      -64.1513671875,
+      58.89180374145508
+     ],
+     "quat": [
+      -0.0,
+      -0.08715571688677537,
+      0.0,
+      0.9961946012857759
+     ]
+    },
+    "Main_Turret_00": {
+     "local_pos": [
+      -19.92215347290039,
+      0.008145414292812347,
+      201.7146453857422
+     ],
+     "local_quat": [
+      0.0,
+      -0.0011656356509774923,
+      0.0,
+      -0.9999992847442627
+     ],
+     "parent": 0,
+     "pos": [
+      -19.92215347290039,
+      0.008145414292812347,
+      201.7146453857422
+     ],
+     "quat": [
+      0.0,
+      0.0011656355815001934,
+      0.0,
+      0.9999992251396606
+     ]
+    },
+    "Object": {
+     "local_pos": [
+      151.9192657470703,
+      11.241288185119629,
+      129.7680206298828
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      151.9192657470703,
+      11.241288185119629,
+      129.7680206298828
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object001": {
+     "local_pos": [
+      -29.727310180664062,
+      -3.1949005126953125,
+      2.6462326049804688
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -29.727310180664062,
+      -3.1949005126953125,
+      2.6462326049804688
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object003_frag_007": {
+     "local_pos": [
+      43.01435470581055,
+      -90.29975891113281,
+      100.62065124511719
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      43.01435470581055,
+      -90.29975891113281,
+      100.62065124511719
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object003_frag_008": {
+     "local_pos": [
+      -48.618507385253906,
+      -93.68301391601562,
+      102.66938018798828
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -48.618507385253906,
+      -93.68301391601562,
+      102.66938018798828
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object003_frag_017": {
+     "local_pos": [
+      -193.79559326171875,
+      3.63196063041687,
+      180.51893615722656
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -193.79559326171875,
+      3.63196063041687,
+      180.51893615722656
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object003_frag_023": {
+     "local_pos": [
+      32.45250701904297,
+      96.4610595703125,
+      111.03286743164062
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      32.45250701904297,
+      96.4610595703125,
+      111.03286743164062
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object003_frag_024": {
+     "local_pos": [
+      55.72536849975586,
+      12.6954345703125,
+      163.13592529296875
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      55.72536849975586,
+      12.6954345703125,
+      163.13592529296875
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object003_frag_025": {
+     "local_pos": [
+      113.51979064941406,
+      -75.71894073486328,
+      110.6330337524414
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      113.51979064941406,
+      -75.71894073486328,
+      110.6330337524414
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object004_frag_002": {
+     "local_pos": [
+      253.5797119140625,
+      6.278433799743652,
+      92.61651611328125
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      253.5797119140625,
+      6.278433799743652,
+      92.61651611328125
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object004_frag_003": {
+     "local_pos": [
+      191.19442749023438,
+      -45.93175506591797,
+      111.95458984375
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      191.19442749023438,
+      -45.93175506591797,
+      111.95458984375
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object004_frag_006": {
+     "local_pos": [
+      294.93231201171875,
+      -35.58293914794922,
+      79.09545135498047
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      294.93231201171875,
+      -35.58293914794922,
+      79.09545135498047
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object004_frag_007": {
+     "local_pos": [
+      311.3516540527344,
+      24.89207649230957,
+      77.00801849365234
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      311.3516540527344,
+      24.89207649230957,
+      77.00801849365234
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object007": {
+     "local_pos": [
+      -235.5853271484375,
+      61.35141372680664,
+      63.46382141113281
+     ],
+     "local_quat": [
+      0.0,
+      0.08715572208166122,
+      0.0,
+      -0.9961946606636047
+     ],
+     "parent": 0,
+     "pos": [
+      -235.5853271484375,
+      61.35141372680664,
+      63.46382141113281
+     ],
+     "quat": [
+      -0.0,
+      -0.08715571688677537,
+      0.0,
+      0.9961946012857759
+     ]
+    },
+    "Object009": {
+     "local_pos": [
+      -141.60516357421875,
+      82.34097290039062,
+      135.27349853515625
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -141.60516357421875,
+      82.34097290039062,
+      135.27349853515625
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object011": {
+     "local_pos": [
+      -90.8807373046875,
+      -64.69898986816406,
+      107.10566711425781
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -90.8807373046875,
+      -64.69898986816406,
+      107.10566711425781
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object013": {
+     "local_pos": [
+      -161.69544982910156,
+      -86.6191635131836,
+      117.08745574951172
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -161.69544982910156,
+      -86.6191635131836,
+      117.08745574951172
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object015": {
+     "local_pos": [
+      -241.1100311279297,
+      -27.8814640045166,
+      132.41473388671875
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -241.1100311279297,
+      -27.8814640045166,
+      132.41473388671875
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Object017": {
+     "local_pos": [
+      -227.84259033203125,
+      51.4184455871582,
+      145.20155334472656
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -227.84259033203125,
+      51.4184455871582,
+      145.20155334472656
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Rear_Door_BOTTOM": {
+     "local_pos": [
+      -320.664794921875,
+      6.83400297164917,
+      61.14031982421875
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -320.664794921875,
+      6.83400297164917,
+      61.14031982421875
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Rear_Door_MIDDLE": {
+     "local_pos": [
+      -283.64715576171875,
+      5.06266360389418e-07,
+      171.33901977539062
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -283.64715576171875,
+      5.06266360389418e-07,
+      171.33901977539062
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Root": {
+     "local_pos": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ]
+    },
+    "SUSP1_Wheel_Rear_Left_Mesh": {
+     "local_pos": [
+      -67.14718627929688,
+      -103.99978637695312,
+      122.34965515136719
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -67.14718627929688,
+      -103.99978637695312,
+      122.34965515136719
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "SUSP1_Wheel_Rear_Right_Mesh": {
+     "local_pos": [
+      -59.74378967285156,
+      109.59587097167969,
+      117.48080444335938
+     ],
+     "local_quat": [
+      4.827584344141488e-16,
+      -1.2149013350892801e-08,
+      -9.051720976137534e-17,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -59.74378967285156,
+      109.59587097167969,
+      117.48080444335938
+     ],
+     "quat": [
+      -4.827584056395038e-16,
+      1.2149012626755176e-08,
+      9.051720436612921e-17,
+      0.999999880790714
+     ]
+    },
+    "SUSP2_Wheel_Front_Left_Mesh": {
+     "local_pos": [
+      134.99822998046875,
+      -121.03231811523438,
+      84.40132141113281
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      134.99822998046875,
+      -121.03231811523438,
+      84.40132141113281
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "SUSP2_Wheel_Front_Right_Mesh": {
+     "local_pos": [
+      139.0984649658203,
+      95.69530487060547,
+      74.82853698730469
+     ],
+     "local_quat": [
+      0.0,
+      0.0,
+      -8.74227694680485e-08,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      139.0984649658203,
+      95.69530487060547,
+      74.82853698730469
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      8.742276425724538e-08,
+      0.999999880790714
+     ]
+    },
+    "Wheel_Back_Left_Vis_Mesh": {
+     "local_pos": [
+      -230.47152709960938,
+      -128.4921417236328,
+      68.04360961914062
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -230.47152709960938,
+      -128.4921417236328,
+      68.04360961914062
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Wheel_Front_Left_Vis_Mesh": {
+     "local_pos": [
+      269.9058532714844,
+      -120.8572998046875,
+      68.04369354248047
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      269.9058532714844,
+      -120.8572998046875,
+      68.04369354248047
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Wheel_Front_Right_Vis_Mesh": {
+     "local_pos": [
+      275.0303649902344,
+      120.8572998046875,
+      62.91808319091797
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      275.0303649902344,
+      120.8572998046875,
+      62.91808319091797
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    },
+    "Wheel_Rear_Right_Vis_Mesh": {
+     "local_pos": [
+      -223.61436462402344,
+      158.8869171142578,
+      58.88542938232422
+     ],
+     "local_quat": [
+      0.0,
+      -0.0,
+      0.0,
+      -0.9999999403953552
+     ],
+     "parent": 0,
+     "pos": [
+      -223.61436462402344,
+      158.8869171142578,
+      58.88542938232422
+     ],
+     "quat": [
+      0.0,
+      0.0,
+      0.0,
+      0.999999880790714
+     ]
+    }
+   }
+  }
+ }
+}

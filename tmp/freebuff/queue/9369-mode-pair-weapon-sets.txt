@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/mode-pair-weapon-sets.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-mode-pair-and-swap.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/weapon-select-input-binding-build.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/weapon-loadout-table-per-mode.md
+The mode pair of 9130 swaps one vehicle entity for another, so the weapon sets must travel with each side. Pursuit entity: the EMP missile only, with the tracker and boost as gadgets. Battle entity: cannon (RT), Vulcan (RB), barrage, EMP burst, hacker, sonar, winch, and the tracker HUD persists. Take the entity pair from the 9130 report, attach the correct weapon branch trees of the weapon builds to each side, and make sure the shared HUD state (tracker markers, cooldowns) is not lost on swap. D-2 is reopened; state in the report which pairing the build assumes. Script Tools/scripts/rc5_mode_weapons.py (--write, --check), tree Builds/bm-RC5-modeweapons. Done-check: --check prints, for each side, the weapon entities, slot pointers and gadget set, and shows the pursuit side has exactly one fire weapon. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

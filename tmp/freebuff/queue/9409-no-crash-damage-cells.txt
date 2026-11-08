@@ -1,0 +1,7 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/no-crash-damage-cells.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-air-control-and-ram.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/handling-damage-upright-classes.md
+Operator fact: the Arkham Knight Batmobile takes no crash damage. Row T-DM7 (contact damage speed band) must therefore be reconciled with that fact. Read the row in Working/Translation/T_ROWS.jsonl, Research/BatmobileGrab/HANDLING_CLASSES.md from hdl-07 if it exists, tmp/freebuff/reports/audit-ram-assist-plan-numbers.md and the JC3 vehicle damage module members (collision damage multiplier, damage-per-impact, explosion-on-death) located through Tools/scripts/jc3fleet.py. Decide the cell set that makes collisions with walls, kerbs, traffic and ramming deal zero damage to the player car while ram assist still hurts the target as T-RA1 requires. Cite each member by module path and current Serpente value. Output tmp/freebuff/reports/hdl-no-crash-damage-plan.md with a before and after table and the reverse step. Done check: every proposed cell is found in the module data by a script that prints path and value; risks to traffic and AI cars sharing the module are named explicitly.
+Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

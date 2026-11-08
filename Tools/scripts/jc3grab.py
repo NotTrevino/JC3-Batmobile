@@ -14,7 +14,7 @@ Value rows keep the XML's own names, which is the whole point: JC3 names what
 it stores, so "mass", "spring_strength_base", "friction_multiplier" arrive
 labelled instead of as floats at an offset.
 
-Raw decodes stay OUTSIDE the repo (`--raw`, default E:/Modding/_JC3grab);
+Raw decodes stay OUTSIDE the repo (`--raw`, default E:/Modding/_gamedata/JC3grab);
 the repo gets only the derived tables written by `report`.
 
 Usage:
@@ -44,7 +44,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 TOOLS = os.path.dirname(HERE)
 ROOT = os.path.dirname(TOOLS)
 CONVERT = os.path.join(TOOLS, "Gibbed", "Gibbed.JustCause3.ConvertAdf.exe")
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
 OUT = os.path.join(ROOT, "Research", "JC3Grab")
 
 NUMERIC = {"float", "int8", "int16", "int32", "int64", "uint8", "uint16",

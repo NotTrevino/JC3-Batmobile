@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/no-source-paint-slots-offsets.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-paint-channels.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-live-vehicle-readout.md
+Fifteen body paint slots had no source in tmp/freebuff/reports/paint-slots-palette-verify.md (cb2, cb6, cb8 and the s0 half). The hook readout brief 7982 builds a live vehicle readout; read its report and the Tools/hook sources to see whether shader constant buffers or material parameter blocks of a spawned vehicle can be read. With that, plus Research/JC3Grab/CB0_SLOTS.md, UNIFORM_RECORDS.md and TINT_WRITE.md, rewrite the apply plan so each of the fifteen slots has one outcome: a source value with its file, a read recipe for the hook, or UNKNOWN with the single observation that would settle it. Output Working/Appearance/PAINT_SLOT_SOURCES.md and a JSON beside it. Do not run the game. Done check: 15 of 15 slots carry exactly one of the three outcomes, and each hook recipe names the hook source file and function to extend. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

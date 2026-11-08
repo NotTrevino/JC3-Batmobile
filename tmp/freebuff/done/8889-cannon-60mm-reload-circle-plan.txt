@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/cannon-60mm-reload-circle-plan.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-08
+Player fact from the operator, 2026-11-08: the 60 mm cannon behaves differently from the Vulcan: it has a reloading circle that shows the reload in progress. Take reports/ammo-types-and-reload-plan.md, reports/cannon-p02-mechanism.md and reports/cannon-recoil-and-muzzle-plan.md as the starting point and find in Research/BatmobileGrab (objects.jsonl, HUD.md, HUD_SPEC.json) the cannon's reload time, magazine or shot count, and the HUD element that draws the circle together with the member that fills it. Say for each number whether it is decoded or derived. Then name the closest JC3 weapon reload system and its HUD reload indicator, the members and values to write, and the build step that makes the circle fill over the BmAK reload time. Add one pilot-card sentence with a pass band for the reload duration.

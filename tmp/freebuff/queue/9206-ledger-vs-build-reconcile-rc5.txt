@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/ledger-vs-build-reconcile-rc5.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-merge-release-candidate.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/ledger-vs-build-reconcile-before-merge.md
+Repeat the ledger-to-build comparison on the merged candidate. Run Tools/scripts/ledger_recon.py against Builds/bm-RC5 and write Working/Translation/RECON_RC5.json and .md. Compare with Working/Translation/RECON_PRE_RC5.json row by row: rows that moved from absent to equal, from different to equal, and any that went the other way (a regression is listed first with the branch that owns the row). Then compare the receipt's not_done and its complete flag with the rows still absent or different: every such row must appear in not_done with an owner, and complete must be false while any remains. Do not edit the receipt; if it disagrees, write the exact discrepancy. Done when the report gives the four movement counts, the regression list (possibly empty), and one line stating whether the receipt flag is consistent with the ledger. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

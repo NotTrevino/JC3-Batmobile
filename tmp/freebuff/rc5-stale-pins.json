@@ -1,0 +1,566 @@
+{
+ "authoritative": {
+  "aaf_files": 696,
+  "drop_files": 9,
+  "drop_total_bytes": 401700202,
+  "ee": {
+   "bytes": 11225533,
+   "path": "Builds/bm-RC4/drop/editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.ee",
+   "sha256": "b72690d32c61a30c83eee69cf7e37f7197d5e2c6942443afdfda6b216e4a557b"
+  },
+  "ee_toc": {
+   "bytes": 68675,
+   "path": "Builds/bm-RC4/drop/editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.ee.toc",
+   "sha256": "cde0678e2fb710bad98b223854ea4ae3de26d1bd1816cbdecfb3097239745535"
+  },
+  "install_ps1": {
+   "bytes": 6535,
+   "path": "Builds/bm-RC4/install.ps1",
+   "sha256": "b4589d40f3bed7c1dd2300d2698790c4fc9fee7e5213398a00ebad3aded15382"
+  },
+  "install_sha256": "b4589d40f3bed7c1dd2300d2698790c4fc9fee7e5213398a00ebad3aded15382",
+  "install_sha256_hex_chars": 64,
+  "receipt_json": {
+   "bytes": 217652,
+   "path": "Builds/bm-RC4/receipt.json",
+   "sha256": "1812e4367482fce49e71d9ad36e90bbc73b476aa73a784b563eb526dadae05de"
+  },
+  "tree_files": 763,
+  "tree_total_bytes": 429804323
+ },
+ "build": "Builds/bm-RC4",
+ "rows": [
+  {
+   "excerpt": "a(\"reconciled silently: the brief's installer hash `df23485d65f358e14ea8d0b5037d42f0` is **32 hex\")",
+   "file": "Tools/scripts/dropzone_sim2.py",
+   "line": 278,
+   "literal": "df23485d65f358e14ea8d0b5037d42f0",
+   "pin": "install_sha256",
+   "state": "STALE",
+   "why": "32 hex characters where a sha256 has 64, and it matches neither install.ps1's SHA-256 nor its MD5; brief-only value"
+  },
+  {
+   "excerpt": "a(f\"is 64 characters; and the brief's `.ee` size **11,225,534 B** is one byte above the receipt's\")",
+   "file": "Tools/scripts/dropzone_sim2.py",
+   "line": 280,
+   "literal": "11,225,534",
+   "pin": "ee",
+   "state": "STALE",
+   "why": "build-d13's pin, paired there with sha256 a233c93d... (a different .ee); the RC4 rebuild at 12:59:52 shipped b72690d3... at 11,225,533 B, so this is +1 B of the artifact"
+  },
+  {
+   "excerpt": "tree      696 aaf files, 714 .toc records, 9 drop files, .ee 11,225,534 B, .ee.toc 68,675 B,",
+   "file": "Tools/scripts/v01_rc4.py",
+   "line": 7,
+   "literal": "68,675",
+   "pin": "ee_toc",
+   "state": "AUTHORITATIVE",
+   "why": "measured from the bytes"
+  },
+  {
+   "excerpt": "tree      696 aaf files, 714 .toc records, 9 drop files, .ee 11,225,534 B, .ee.toc 68,675 B,",
+   "file": "Tools/scripts/v01_rc4.py",
+   "line": 7,
+   "literal": "11,225,534",
+   "pin": "ee",
+   "state": "STALE",
+   "why": "build-d13's pin, paired there with sha256 a233c93d... (a different .ee); the RC4 rebuild at 12:59:52 shipped b72690d3... at 11,225,533 B, so this is +1 B of the artifact"
+  },
+  {
+   "excerpt": "install.ps1 6,535 B, receipt.json 211,711 B schema 2",
+   "file": "Tools/scripts/v01_rc4.py",
+   "line": 8,
+   "literal": "6,535",
+   "pin": "install_ps1",
+   "state": "AUTHORITATIVE",
+   "why": "measured from the bytes"
+  },
+  {
+   "excerpt": "install.ps1 6,535 B, receipt.json 211,711 B schema 2",
+   "file": "Tools/scripts/v01_rc4.py",
+   "line": 8,
+   "literal": "211,711",
+   "pin": "receipt_json",
+   "state": "STALE",
+   "why": "build-d13's receipt pin; the receipt was rewritten to 217,652 B at 13:00:07"
+  },
+  {
+   "excerpt": "want = {\"ee\": 11225533, \"toc\": 68675, \"install\": 6535, \"receipt\": 217652}",
+   "file": "Tools/scripts/v01_rc4.py",
+   "line": 130,
+   "literal": "11225533",
+   "pin": "ee",
+   "state": "AUTHORITATIVE",
+   "why": "measured from the bytes"
+  },
+  {
+   "excerpt": "want = {\"ee\": 11225533, \"toc\": 68675, \"install\": 6535, \"receipt\": 217652}",
+   "file": "Tools/scripts/v01_rc4.py",
+   "line": 130,
+   "literal": "68675",
+   "pin": "ee_toc",
+   "state": "AUTHORITATIVE",
+   "why": "measured from the bytes"
+  },
+  {
+   "excerpt": "want = {\"ee\": 11225533, \"toc\": 68675, \"install\": 6535, \"receipt\": 217652}",
+   "file": "Tools/scripts/v01_rc4.py",
+   "line": 130,
+   "literal": "6535",
+   "pin": "install_ps1",
+   "state": "AUTHORITATIVE",
+   "why": "measured from the bytes"
+  },
+  {
+   "excerpt": "want = {\"ee\": 11225533, \"toc\": 68675, \"install\": 6535, \"receipt\": 217652}",
+   "file": "Tools/scripts/v01_rc4.py",
+   "line": 130,
+   "literal": "217652",
+   "pin": "receipt_json",
+   "state": "AUTHORITATIVE",
+   "why": "measured from the bytes"
+  },
+  {
+   "excerpt": "(6,535 B, sha256 `b4589d40f3bed7c1dd2300d2698790c4fc9fee7e5213398a00ebad3aded15382`),",
+   "file": "Working/Q/APPROVAL_REQUEST.md",
+   "line": 10,
+   "literal": "6,535",
+   "pin": "install_ps1",
+   "state": "AUTHORITATIVE",
+   "why": "measured from the bytes"
+  },
+  {
+   "excerpt": "(6,535 B, sha256 `b4589d40f3bed7c1dd2300d2698790c4fc9fee7e5213398a00ebad3aded15382`),",
+   "file": "Working/Q/APPROVAL_REQUEST.md",
+   "line": 10,
+   "literal": "b4589d40f3bed7c1dd2300d2698790c4fc9fee7e5213398a00ebad3aded15382",
+   "pin": "install_sha256",
+   "state": "AUTHORITATIVE",
+   "why": "measured from the bytes"
+  },
+  {
+   "excerpt": "| 1 | `editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.ee` | 11,225,533 | `b72690d32c61a30c` |",
+   "file": "Working/Q/APPROVAL_REQUEST.md",
+   "line": 17,
+   "literal": "11,225,533",
+   "pin": "ee",
+   "state": "AUTHORITATIVE",
+   "why": "measured from the bytes"
+  },
+  {
+   "excerpt": "| 2 | `.../v0300_car_kensington_sportsmuscle_debug.ee.toc` | 68,675 | `cde0678e2fb710ba` |",
+   "file": "Working/Q/APPROVAL_REQUEST.md",
+   "line": 18,
+   "literal": "68,675",
+   "pin": "ee_toc",
+   "state": "AUTHORITATIVE",
+   "why": "measured from the bytes"
+  },
+  {
+   "excerpt": "| `drop/\u2026/v0300_car_kensington_sportsmuscle_debug.ee` | 11,225,534 | `a233c93dcbbe0732b48a448e5818e296` |",
+   "file": "tmp/freebuff/reports/build-d13-release-candidate-4.md",
+   "line": 84,
+   "literal": "11,225,534",
+   "pin": "ee",
+   "state": "STALE",
+   "why": "build-d13's pin, paired there with sha256 a233c93d... (a different .ee); the RC4 rebuild at 12:59:52 shipped b72690d3... at 11,225,533 B, so this is +1 B of the artifact"
+  },
+  {
+   "excerpt": "| `drop/\u2026/v0300_car_kensington_sportsmuscle_debug.ee.toc` | 68,675 | `cde0678e2fb710bad98b223854ea4ae3` |",
+   "file": "tmp/freebuff/reports/build-d13-release-candidate-4.md",
+   "line": 85,
+   "literal": "68,675",
+   "pin": "ee_toc",
+   "state": "AUTHORITATIVE",
+   "why": "measured from the bytes"
+  },
+  {
+   "excerpt": "| `install.ps1` | 6,535 | `df23485d65f358e14ea8d0b5037d42f0` |",
+   "file": "tmp/freebuff/reports/build-d13-release-candidate-4.md",
+   "line": 86,
+   "literal": "6,535",
+   "pin": "install_ps1",
+   "state": "AUTHORITATIVE",
+   "why": "measured from the bytes"
+  },
+  {
+   "excerpt": "| `install.ps1` | 6,535 | `df23485d65f358e14ea8d0b5037d42f0` |",
+   "file": "tmp/freebuff/reports/build-d13-release-candidate-4.md",
+   "line": 86,
+   "literal": "df23485d65f358e14ea8d0b5037d42f0",
+   "pin": "install_sha256",
+   "state": "STALE",
+   "why": "32 hex characters where a sha256 has 64, and it matches neither install.ps1's SHA-256 nor its MD5; brief-only value"
+  },
+  {
+   "excerpt": "| `receipt.json` | 211,711 | `8c361822c3ae5cd5b6dea2680b1b3a6d` |",
+   "file": "tmp/freebuff/reports/build-d13-release-candidate-4.md",
+   "line": 87,
+   "literal": "211,711",
+   "pin": "receipt_json",
+   "state": "STALE",
+   "why": "build-d13's receipt pin; the receipt was rewritten to 217,652 B at 13:00:07"
+  },
+  {
+   "excerpt": "| `editor/entities/.../v0300_car_kensington_sportsmuscle_debug.ee` | 11,225,534 | B-01\u2026B-13b merged |",
+   "file": "tmp/freebuff/reports/build-d13-release-candidate-4.md",
+   "line": 94,
+   "literal": "11,225,534",
+   "pin": "ee",
+   "state": "STALE",
+   "why": "build-d13's pin, paired there with sha256 a233c93d... (a different .ee); the RC4 rebuild at 12:59:52 shipped b72690d3... at 11,225,533 B, so this is +1 B of the artifact"
+  },
+  {
+   "excerpt": "| `\u2026debug.ee.toc` | 68,675 | B-14 |",
+   "file": "tmp/freebuff/reports/build-d13-release-candidate-4.md",
+   "line": 95,
+   "literal": "68,675",
+   "pin": "ee_toc",
+   "state": "AUTHORITATIVE",
+   "why": "measured from the bytes"
+  },
+  {
+   "excerpt": "`@files.xml` before packing (`.ee` 11,188,402 \u2192 11,225,534 B; `.toc` 702 \u2192 714 records).",
+   "file": "tmp/freebuff/reports/build-d13-release-candidate-4.md",
+   "line": 193,
+   "literal": "11,225,534",
+   "pin": "ee",
+   "state": "STALE",
+   "why": "build-d13's pin, paired there with sha256 a233c93d... (a different .ee); the RC4 rebuild at 12:59:52 shipped b72690d3... at 11,225,533 B, so this is +1 B of the artifact"
+  },
+  {
+   "excerpt": "| V-01 `tree` | `.ee` **11,225,532 B** (**\u22122** vs pinned 11,225,534); `receipt.json` **215,445 B** (**+3,734** vs pinned 211,711) | **FAIL** | `tmp/freebuff/reports/verify-v01-file-gates-rc4.md` |",
+   "file": "tmp/freebuff/reports/operator-digest-verify-chain-rc4.md",
+   "line": 8,
+   "literal": "11,225,534",
+   "pin": "ee",
+   "state": "STALE",
+   "why": "build-d13's pin, paired there with sha256 a233c93d... (a different .ee); the RC4 rebuild at 12:59:52 shipped b72690d3... at 11,225,533 B, so this is +1 B of the artifact"
+  },
+  {
+   "excerpt": "| V-01 `tree` | `.ee` **11,225,532 B** (**\u22122** vs pinned 11,225,534); `receipt.json` **215,445 B** (**+3,734** vs pinned 211,711) | **FAIL** | `tmp/freebuff/reports/verify-v01-file-gates-rc4.md` |",
+   "file": "tmp/freebuff/reports/operator-digest-verify-chain-rc4.md",
+   "line": 8,
+   "literal": "11,225,532",
+   "pin": "ee",
+   "state": "STALE",
+   "why": "V-01 read this during the concurrent rebuild (the file was 0 B, then absent, then 11,225,532); the final pack at 12:59:52 is 11,225,533 B"
+  },
+  {
+   "excerpt": "| V-01 `tree` | `.ee` **11,225,532 B** (**\u22122** vs pinned 11,225,534); `receipt.json` **215,445 B** (**+3,734** vs pinned 211,711) | **FAIL** | `tmp/freebuff/reports/verify-v01-file-gates-rc4.md` |",
+   "file": "tmp/freebuff/reports/operator-digest-verify-chain-rc4.md",
+   "line": 8,
+   "literal": "211,711",
+   "pin": "receipt_json",
+   "state": "STALE",
+   "why": "build-d13's receipt pin; the receipt was rewritten to 217,652 B at 13:00:07"
+  },
+  {
+   "excerpt": "| V-01 `tree` | `.ee` **11,225,532 B** (**\u22122** vs pinned 11,225,534); `receipt.json` **215,445 B** (**+3,734** vs pinned 211,711) | **FAIL** | `tmp/freebuff/reports/verify-v01-file-gates-rc4.md` |",
+   "file": "tmp/freebuff/reports/operator-digest-verify-chain-rc4.md",
+   "line": 8,
+   "literal": "215,445",
+   "pin": "receipt_json",
+   "state": "STALE",
+   "why": "V-01's snapshot of the pre-final receipt; 2,207 B short of the 217,652 B on disk"
+  },
+  {
+   "excerpt": "| V-06 artifact | `install.ps1` **6,535 B**, sha256 `b4589d40\u20265382`; `receipt.json` **schema 2**, **9 files**; `.ee` **11,225,533 B**; `.toc` **68,675 B** | PASS | same |",
+   "file": "tmp/freebuff/reports/operator-digest-verify-chain-rc4.md",
+   "line": 38,
+   "literal": "11,225,533",
+   "pin": "ee",
+   "state": "AUTHORITATIVE",
+   "why": "measured from the bytes"
+  },
+  {
+   "excerpt": "| V-06 artifact | `install.ps1` **6,535 B**, sha256 `b4589d40\u20265382`; `receipt.json` **schema 2**, **9 files**; `.ee` **11,225,533 B**; `.toc` **68,675 B** | PASS | same |",
+   "file": "tmp/freebuff/reports/operator-digest-verify-chain-rc4.md",
+   "line": 38,
+   "literal": "68,675",
+   "pin": "ee_toc",
+   "state": "AUTHORITATIVE",
+   "why": "measured from the bytes"
+  },
+  {
+   "excerpt": "| V-06 artifact | `install.ps1` **6,535 B**, sha256 `b4589d40\u20265382`; `receipt.json` **schema 2**, **9 files**; `.ee` **11,225,533 B**; `.toc` **68,675 B** | PASS | same |",
+   "file": "tmp/freebuff/reports/operator-digest-verify-chain-rc4.md",
+   "line": 38,
+   "literal": "6,535",
+   "pin": "install_ps1",
+   "state": "AUTHORITATIVE",
+   "why": "measured from the bytes"
+  },
+  {
+   "excerpt": "**What is unknown.** The `.ee` size is quoted three ways in these lines \u2014 **11,225,532 B** (V-01),",
+   "file": "tmp/freebuff/reports/operator-digest-verify-chain-rc4.md",
+   "line": 47,
+   "literal": "11,225,532",
+   "pin": "ee",
+   "state": "STALE",
+   "why": "V-01 read this during the concurrent rebuild (the file was 0 B, then absent, then 11,225,532); the final pack at 12:59:52 is 11,225,533 B"
+  },
+  {
+   "excerpt": "**11,225,533 B** (V-06 receipt and built file), **11,225,534 B** (the pinned and brief values) \u2014 and",
+   "file": "tmp/freebuff/reports/operator-digest-verify-chain-rc4.md",
+   "line": 48,
+   "literal": "11,225,533",
+   "pin": "ee",
+   "state": "AUTHORITATIVE",
+   "why": "measured from the bytes"
+  },
+  {
+   "excerpt": "**11,225,533 B** (V-06 receipt and built file), **11,225,534 B** (the pinned and brief values) \u2014 and",
+   "file": "tmp/freebuff/reports/operator-digest-verify-chain-rc4.md",
+   "line": 48,
+   "literal": "11,225,534",
+   "pin": "ee",
+   "state": "STALE",
+   "why": "build-d13's pin, paired there with sha256 a233c93d... (a different .ee); the RC4 rebuild at 12:59:52 shipped b72690d3... at 11,225,533 B, so this is +1 B of the artifact"
+  },
+  {
+   "excerpt": "| **8405** V-06 | install.ps1 6,535 B / `df2348\u2026`, 9 files, sim root `E:/Modding/_dropzone_sim_rc4`, 6 cases incl. decoy, REFUSED exit 2, SHA-256 via .NET, `IO.Path` split |",
+   "file": "tmp/freebuff/reports/review-build-wave.md",
+   "line": 151,
+   "literal": "6,535",
+   "pin": "install_ps1",
+   "state": "AUTHORITATIVE",
+   "why": "measured from the bytes"
+  },
+  {
+   "excerpt": "| N1 | `.ee` | **yes** | `drop/editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.ee` | 11,225,533 B, sha256 `b72690d3\u2026a557b` (`receipt.files",
+   "file": "tmp/freebuff/reports/standalone-entity-spawn-check-plan.md",
+   "line": 42,
+   "literal": "11,225,533",
+   "pin": "ee",
+   "state": "AUTHORITATIVE",
+   "why": "measured from the bytes"
+  },
+  {
+   "excerpt": "| V1 | `.ee` present and unchanged since the receipt | sha256 the drop `.ee` against `receipt.files[?].sha256` | equal bytes; `11,225,533` |",
+   "file": "tmp/freebuff/reports/standalone-entity-spawn-check-plan.md",
+   "line": 62,
+   "literal": "11,225,533",
+   "pin": "ee",
+   "state": "AUTHORITATIVE",
+   "why": "measured from the bytes"
+  },
+  {
+   "excerpt": "| 10 | built `.ee` size | **11,225,533 B** (`SEL:42`, `SEL:62`) | no \u2014 FSE:16's `5,539,360 B` is the *bundle* the original came from, not this file | **ABSENT** |",
+   "file": "tmp/freebuff/reports/standalone-spawn-census-check.md",
+   "line": 54,
+   "literal": "11,225,533",
+   "pin": "ee",
+   "state": "AUTHORITATIVE",
+   "why": "measured from the bytes"
+  },
+  {
+   "excerpt": "`Builds/bm-RC4/drop` is **11,225,532 B**, two bytes short of the 11,225,534 B build-d13 recorded,",
+   "file": "tmp/freebuff/reports/verify-v01-file-gates-rc4.md",
+   "line": 14,
+   "literal": "11,225,534",
+   "pin": "ee",
+   "state": "STALE",
+   "why": "build-d13's pin, paired there with sha256 a233c93d... (a different .ee); the RC4 rebuild at 12:59:52 shipped b72690d3... at 11,225,533 B, so this is +1 B of the artifact"
+  },
+  {
+   "excerpt": "`Builds/bm-RC4/drop` is **11,225,532 B**, two bytes short of the 11,225,534 B build-d13 recorded,",
+   "file": "tmp/freebuff/reports/verify-v01-file-gates-rc4.md",
+   "line": 14,
+   "literal": "11,225,532",
+   "pin": "ee",
+   "state": "STALE",
+   "why": "V-01 read this during the concurrent rebuild (the file was 0 B, then absent, then 11,225,532); the final pack at 12:59:52 is 11,225,533 B"
+  },
+  {
+   "excerpt": "and `receipt.json` is **215,445 B**, not 211,711 B. Everything else in the pinned set reproduces",
+   "file": "tmp/freebuff/reports/verify-v01-file-gates-rc4.md",
+   "line": 15,
+   "literal": "211,711",
+   "pin": "receipt_json",
+   "state": "STALE",
+   "why": "build-d13's receipt pin; the receipt was rewritten to 217,652 B at 13:00:07"
+  },
+  {
+   "excerpt": "and `receipt.json` is **215,445 B**, not 211,711 B. Everything else in the pinned set reproduces",
+   "file": "tmp/freebuff/reports/verify-v01-file-gates-rc4.md",
+   "line": 15,
+   "literal": "215,445",
+   "pin": "receipt_json",
+   "state": "STALE",
+   "why": "V-01's snapshot of the pre-final receipt; 2,207 B short of the 217,652 B on disk"
+  },
+  {
+   "excerpt": "| `tree` | **RED** | aaf **696** files (receipt 696), `.toc` **714** records, drop **9** files, `.ee` **11,225,532 B** (**\u22122** vs pinned 11,225,534), `.ee.toc` **68,675 B**, `install.ps1` **6,535 B**,",
+   "file": "tmp/freebuff/reports/verify-v01-file-gates-rc4.md",
+   "line": 22,
+   "literal": "68,675",
+   "pin": "ee_toc",
+   "state": "AUTHORITATIVE",
+   "why": "measured from the bytes"
+  },
+  {
+   "excerpt": "| `tree` | **RED** | aaf **696** files (receipt 696), `.toc` **714** records, drop **9** files, `.ee` **11,225,532 B** (**\u22122** vs pinned 11,225,534), `.ee.toc` **68,675 B**, `install.ps1` **6,535 B**,",
+   "file": "tmp/freebuff/reports/verify-v01-file-gates-rc4.md",
+   "line": 22,
+   "literal": "6,535",
+   "pin": "install_ps1",
+   "state": "AUTHORITATIVE",
+   "why": "measured from the bytes"
+  },
+  {
+   "excerpt": "| `tree` | **RED** | aaf **696** files (receipt 696), `.toc` **714** records, drop **9** files, `.ee` **11,225,532 B** (**\u22122** vs pinned 11,225,534), `.ee.toc` **68,675 B**, `install.ps1` **6,535 B**,",
+   "file": "tmp/freebuff/reports/verify-v01-file-gates-rc4.md",
+   "line": 22,
+   "literal": "11,225,534",
+   "pin": "ee",
+   "state": "STALE",
+   "why": "build-d13's pin, paired there with sha256 a233c93d... (a different .ee); the RC4 rebuild at 12:59:52 shipped b72690d3... at 11,225,533 B, so this is +1 B of the artifact"
+  },
+  {
+   "excerpt": "| `tree` | **RED** | aaf **696** files (receipt 696), `.toc` **714** records, drop **9** files, `.ee` **11,225,532 B** (**\u22122** vs pinned 11,225,534), `.ee.toc` **68,675 B**, `install.ps1` **6,535 B**,",
+   "file": "tmp/freebuff/reports/verify-v01-file-gates-rc4.md",
+   "line": 22,
+   "literal": "11,225,532",
+   "pin": "ee",
+   "state": "STALE",
+   "why": "V-01 read this during the concurrent rebuild (the file was 0 B, then absent, then 11,225,532); the final pack at 12:59:52 is 11,225,533 B"
+  },
+  {
+   "excerpt": "| `tree` | **RED** | aaf **696** files (receipt 696), `.toc` **714** records, drop **9** files, `.ee` **11,225,532 B** (**\u22122** vs pinned 11,225,534), `.ee.toc` **68,675 B**, `install.ps1` **6,535 B**,",
+   "file": "tmp/freebuff/reports/verify-v01-file-gates-rc4.md",
+   "line": 22,
+   "literal": "211,711",
+   "pin": "receipt_json",
+   "state": "STALE",
+   "why": "build-d13's receipt pin; the receipt was rewritten to 217,652 B at 13:00:07"
+  },
+  {
+   "excerpt": "| `tree` | **RED** | aaf **696** files (receipt 696), `.toc` **714** records, drop **9** files, `.ee` **11,225,532 B** (**\u22122** vs pinned 11,225,534), `.ee.toc` **68,675 B**, `install.ps1` **6,535 B**,",
+   "file": "tmp/freebuff/reports/verify-v01-file-gates-rc4.md",
+   "line": 22,
+   "literal": "215,445",
+   "pin": "receipt_json",
+   "state": "STALE",
+   "why": "V-01's snapshot of the pre-final receipt; 2,207 B short of the 217,652 B on disk"
+  },
+  {
+   "excerpt": "first read as 0 B, then vanished, then settled at 11,225,532 B \u2014 `os.path.getsize` and `open()`",
+   "file": "tmp/freebuff/reports/verify-v01-file-gates-rc4.md",
+   "line": 43,
+   "literal": "11,225,532",
+   "pin": "ee",
+   "state": "STALE",
+   "why": "V-01 read this during the concurrent rebuild (the file was 0 B, then absent, then 11,225,532); the final pack at 12:59:52 is 11,225,533 B"
+  },
+  {
+   "excerpt": "| `drop/\u2026_debug.ee` | 11,225,534 B | **11,225,532 B** | **\u22122 B** |",
+   "file": "tmp/freebuff/reports/verify-v01-file-gates-rc4.md",
+   "line": 53,
+   "literal": "11,225,534",
+   "pin": "ee",
+   "state": "STALE",
+   "why": "build-d13's pin, paired there with sha256 a233c93d... (a different .ee); the RC4 rebuild at 12:59:52 shipped b72690d3... at 11,225,533 B, so this is +1 B of the artifact"
+  },
+  {
+   "excerpt": "| `drop/\u2026_debug.ee` | 11,225,534 B | **11,225,532 B** | **\u22122 B** |",
+   "file": "tmp/freebuff/reports/verify-v01-file-gates-rc4.md",
+   "line": 53,
+   "literal": "11,225,532",
+   "pin": "ee",
+   "state": "STALE",
+   "why": "V-01 read this during the concurrent rebuild (the file was 0 B, then absent, then 11,225,532); the final pack at 12:59:52 is 11,225,533 B"
+  },
+  {
+   "excerpt": "| `receipt.json` | 211,711 B | **215,445 B** | **+3,734 B** |",
+   "file": "tmp/freebuff/reports/verify-v01-file-gates-rc4.md",
+   "line": 54,
+   "literal": "211,711",
+   "pin": "receipt_json",
+   "state": "STALE",
+   "why": "build-d13's receipt pin; the receipt was rewritten to 217,652 B at 13:00:07"
+  },
+  {
+   "excerpt": "| `receipt.json` | 211,711 B | **215,445 B** | **+3,734 B** |",
+   "file": "tmp/freebuff/reports/verify-v01-file-gates-rc4.md",
+   "line": 54,
+   "literal": "215,445",
+   "pin": "receipt_json",
+   "state": "STALE",
+   "why": "V-01's snapshot of the pre-final receipt; 2,207 B short of the 217,652 B on disk"
+  },
+  {
+   "excerpt": "| installer | `Builds/bm-RC4/install.ps1`, **6,535 B** |",
+   "file": "tmp/freebuff/reports/verify-v06-install-dry-run-rc4.md",
+   "line": 15,
+   "literal": "6,535",
+   "pin": "install_ps1",
+   "state": "AUTHORITATIVE",
+   "why": "measured from the bytes"
+  },
+  {
+   "excerpt": "| sha256 | `b4589d40f3bed7c1dd2300d2698790c4fc9fee7e5213398a00ebad3aded15382` |",
+   "file": "tmp/freebuff/reports/verify-v06-install-dry-run-rc4.md",
+   "line": 16,
+   "literal": "b4589d40f3bed7c1dd2300d2698790c4fc9fee7e5213398a00ebad3aded15382",
+   "pin": "install_sha256",
+   "state": "AUTHORITATIVE",
+   "why": "measured from the bytes"
+  },
+  {
+   "excerpt": "| `.ee` | `b72690d3...a557b`, **11,225,533 B** |",
+   "file": "tmp/freebuff/reports/verify-v06-install-dry-run-rc4.md",
+   "line": 19,
+   "literal": "11,225,533",
+   "pin": "ee",
+   "state": "AUTHORITATIVE",
+   "why": "measured from the bytes"
+  },
+  {
+   "excerpt": "| `.toc` | `cde0678e...5535`, **68,675 B** |",
+   "file": "tmp/freebuff/reports/verify-v06-install-dry-run-rc4.md",
+   "line": 20,
+   "literal": "68,675",
+   "pin": "ee_toc",
+   "state": "AUTHORITATIVE",
+   "why": "measured from the bytes"
+  },
+  {
+   "excerpt": "* the brief's installer hash `df23485d65f358e14ea8d0b5037d42f0` is **32 hex characters** (MD5",
+   "file": "tmp/freebuff/reports/verify-v06-install-dry-run-rc4.md",
+   "line": 24,
+   "literal": "df23485d65f358e14ea8d0b5037d42f0",
+   "pin": "install_sha256",
+   "state": "STALE",
+   "why": "32 hex characters where a sha256 has 64, and it matches neither install.ps1's SHA-256 nor its MD5; brief-only value"
+  },
+  {
+   "excerpt": "* the brief's `.ee` size **11,225,534 B** is **one byte above** the receipt's and the built file's",
+   "file": "tmp/freebuff/reports/verify-v06-install-dry-run-rc4.md",
+   "line": 27,
+   "literal": "11,225,534",
+   "pin": "ee",
+   "state": "STALE",
+   "why": "build-d13's pin, paired there with sha256 a233c93d... (a different .ee); the RC4 rebuild at 12:59:52 shipped b72690d3... at 11,225,533 B, so this is +1 B of the artifact"
+  },
+  {
+   "excerpt": "**11,225,533 B**. The receipt, `drop/` and the file agree with each other, so the artifact is",
+   "file": "tmp/freebuff/reports/verify-v06-install-dry-run-rc4.md",
+   "line": 28,
+   "literal": "11,225,533",
+   "pin": "ee",
+   "state": "AUTHORITATIVE",
+   "why": "measured from the bytes"
+  },
+  {
+   "excerpt": "sha256, and the installer identity (6,535 B, sha256 `b4589d40\u2026`); six are new files, three replace",
+   "file": "tmp/freebuff/reports/verify-v07-gate-vx.md",
+   "line": 50,
+   "literal": "6,535",
+   "pin": "install_ps1",
+   "state": "AUTHORITATIVE",
+   "why": "measured from the bytes"
+  }
+ ],
+ "schema": 1
+}

@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/smart-search-route-adopt.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-06
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/smart-search-recall-diagnosis.md
+The report smart-search-recall-diagnosis.md found a route change that recovers 22 of 28 cases. Adopt it: back up Tools/scripts/chase/smart_search.py, chase_candidates.py and chase_calibrate.py (.bak-20261106b), implement exactly that route change as a selectable option and make it the default only if the report's 0-false-positive-on-negatives condition holds, then re-run chase_calibrate.py --run --score --render so the report block matches, and finish with chase_calibrate.py --check passing. Report before/after recall and false positives from the scored files, nothing typed from memory. Keep Qwen as the judge unless jeb-vs-qwen-calibration.md and the short-window retest report say otherwise. No game launch. Work autonomously.

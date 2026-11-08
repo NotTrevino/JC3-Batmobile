@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/cam-per-mode-switch-plan.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-mode-swap-prototype.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-mode-pair-and-swap.md
+One CCameraRef per entity means a battle camera, a boost camera and a chase-2 preset need a switching route. Plan it. Read Working/Camera/CAM_REF.md, reports/cameras-per-mode-plan.md and the mode swap report of 7984. List the candidate routes: a second tune applied by the mode pair of brief 9130, a hook call that swaps the CCameraRef at runtime, or a variant entity; mark which are evidenced. Also write the closest-system plan for head impulse (0.5), drift orientation (0.15) and airborne smoothing, naming what the nearest GenericVehicleCamera members are and the gap. Output Working/Camera/CAM_SWITCH_PLAN.md with a recommended route and the single probe that would confirm it. Done when each of T-CAM8 and NEW-CAM-2 and NEW-CAM-3 has a recommended route or UNKNOWN with a probe. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

@@ -1,0 +1,1362 @@
+{
+ "card": "GRAB_BACKLOG.md G3-01b open item: StaticMesh Bounds as a second extents oracle",
+ "checks": [
+  {
+   "check": "the tagged properties of both exports carry no Bounds struct",
+   "detail": "175973: 4 tags, bytes 0..32, 175974: 4 tags, bytes 0..32",
+   "ok": true
+  },
+  {
+   "check": "the property list ends on a 2-byte type 0 terminator in both exports",
+   "detail": "175973: 0000, 175974: 0000",
+   "ok": true
+  },
+  {
+   "check": "the bounds block starts at tag_end+2 and is the only such block in the body",
+   "detail": "175973: 1 candidate(s) at deltas [0], 175974: 1 candidate(s) at deltas [0]",
+   "ok": true
+  },
+  {
+   "check": "Origin == (Min+Max)/2 and BoxExtent == (Max-Min)/2 for both blocks",
+   "detail": "175973: centre 7.63e-06 cm, extent 7.63e-06 cm, 175974: centre 1.53e-05 cm, extent 1.53e-05 cm",
+   "ok": true
+  },
+  {
+   "check": "the int32 at native+28 is each export's own ObjectNCR (RB_BodySetup) value",
+   "detail": "175973: 169748 = tag 169748, 175974: 169749 = tag 169749",
+   "ok": true
+  },
+  {
+   "check": "the same block sits at tag_end+2 on most StaticMesh exports of BmGame.upk",
+   "detail": "37/52 conform (15 recorded as non-conforming)",
+   "ok": true
+  },
+  {
+   "check": "the hull vertices are re-read from the export the bounds point at",
+   "detail": "175973: 43 elements, 252 vertices, 25907 B AggGeom, 9 B zero footer, 175974: 13 elements, 96 vertices, 8275 B AggGeom, 9 B zero footer",
+   "ok": true
+  },
+  {
+   "check": "the FBox agrees with the hull's vertex union within 5 %% of the largest span",
+   "detail": "175973: worst 12.06 cm = 1.69 % of span; 175974: worst 21.82 cm = 3.09 % of span",
+   "ok": true
+  },
+  {
+   "check": "SphereRadius is within 0.5 %% of the hull's max |v - Origin|",
+   "detail": "175973: radius 434.8802 vs 435.8772 cm (0.23 %); 175974: radius 382.2412 vs 382.0314 cm (0.05 %)",
+   "ok": true
+  },
+  {
+   "check": "SphereRadius is NOT the box corner distance (it is smaller on both)",
+   "detail": "175973: 434.8802 / 456.8762 = 0.9519; 175974: 382.2412 / 411.1642 = 0.9297",
+   "ok": true
+  },
+  {
+   "check": "every G3-01b chassis-box dimension is within the mesh's own full span",
+   "detail": "max ratio 1.0643",
+   "ok": true
+  },
+  {
+   "check": "under the half-length reading every chassis box would be longer than the mesh",
+   "detail": "long-axis ratio 1.9073 (the thin axis of the floor-pan box stays at 0.7067, which decides nothing)",
+   "ok": true
+  },
+  {
+   "check": "the extents verdict is FULL lengths by this second check too",
+   "detail": "FULL lengths",
+   "ok": true
+  }
+ ],
+ "comparison": [
+  {
+   "body": 169750,
+   "bone": "Batmobile_Chassis",
+   "box": 0,
+   "box_extents_sorted_cm": [
+    690.305,
+    374.5361,
+    207.5
+   ],
+   "label": "derived: box extent / mesh span, sorted per axis to stay frame-agnostic (spans read either way are only compared sorted)",
+   "max_ratio_full": 0.9687124495096334,
+   "max_ratio_half": 1.9374248990192668,
+   "mesh": 175973,
+   "mesh_full_spans_sorted_cm": [
+    712.6005249023438,
+    491.2593994140625,
+    292.9302673339844
+   ],
+   "mesh_mode": "battle",
+   "min_ratio_half": 1.4167194253328483,
+   "ratio_full_reading": [
+    0.9687124495096334,
+    0.7623998654208319,
+    0.7083597126664242
+   ],
+   "ratio_half_reading": [
+    1.9374248990192668,
+    1.5247997308416639,
+    1.4167194253328483
+   ]
+  },
+  {
+   "body": 169750,
+   "bone": "Batmobile_Chassis",
+   "box": 0,
+   "box_extents_sorted_cm": [
+    690.305,
+    374.5361,
+    207.5
+   ],
+   "label": "derived: box extent / mesh span, sorted per axis to stay frame-agnostic (spans read either way are only compared sorted)",
+   "max_ratio_full": 1.0643362865875385,
+   "max_ratio_half": 2.128672573175077,
+   "mesh": 175974,
+   "mesh_full_spans_sorted_cm": [
+    705.65771484375,
+    351.8963928222656,
+    233.32408142089844
+   ],
+   "mesh_mode": "pursuit",
+   "min_ratio_half": 1.778641953598319,
+   "ratio_full_reading": [
+    0.9782433968752832,
+    1.0643362865875385,
+    0.8893209767991594
+   ],
+   "ratio_half_reading": [
+    1.9564867937505663,
+    2.128672573175077,
+    1.778641953598319
+   ]
+  },
+  {
+   "body": 169750,
+   "bone": "Batmobile_Chassis",
+   "box": 1,
+   "box_extents_sorted_cm": [
+    679.5852,
+    345.6876,
+    103.5
+   ],
+   "label": "derived: box extent / mesh span, sorted per axis to stay frame-agnostic (spans read either way are only compared sorted)",
+   "max_ratio_full": 0.9536692385865584,
+   "max_ratio_half": 1.9073384771731168,
+   "mesh": 175973,
+   "mesh_full_spans_sorted_cm": [
+    712.6005249023438,
+    491.2593994140625,
+    292.9302673339844
+   ],
+   "mesh_mode": "battle",
+   "min_ratio_half": 0.7066528217925292,
+   "ratio_full_reading": [
+    0.9536692385865584,
+    0.7036763070840177,
+    0.3533264108962646
+   ],
+   "ratio_half_reading": [
+    1.9073384771731168,
+    1.4073526141680355,
+    0.7066528217925292
+   ]
+  },
+  {
+   "body": 169750,
+   "bone": "Batmobile_Chassis",
+   "box": 1,
+   "box_extents_sorted_cm": [
+    679.5852,
+    345.6876,
+    103.5
+   ],
+   "label": "derived: box extent / mesh span, sorted per axis to stay frame-agnostic (spans read either way are only compared sorted)",
+   "max_ratio_full": 0.9823561907740226,
+   "max_ratio_half": 1.9647123815480452,
+   "mesh": 175974,
+   "mesh_full_spans_sorted_cm": [
+    705.65771484375,
+    351.8963928222656,
+    233.32408142089844
+   ],
+   "mesh_mode": "pursuit",
+   "min_ratio_half": 0.8871780346863903,
+   "ratio_full_reading": [
+    0.9630521791297597,
+    0.9823561907740226,
+    0.44358901734319517
+   ],
+   "ratio_half_reading": [
+    1.9261043582595194,
+    1.9647123815480452,
+    0.8871780346863903
+   ]
+  },
+  {
+   "body": 169751,
+   "bone": "Batmobile_Rig_Weapons_Trans",
+   "box": 0,
+   "box_extents_sorted_cm": [
+    189.3649,
+    166.1769,
+    39.8001
+   ],
+   "label": "derived: box extent / mesh span, sorted per axis to stay frame-agnostic (spans read either way are only compared sorted)",
+   "max_ratio_full": 0.3382671154958121,
+   "max_ratio_half": 0.6765342309916242,
+   "mesh": 175973,
+   "mesh_full_spans_sorted_cm": [
+    712.6005249023438,
+    491.2593994140625,
+    292.9302673339844
+   ],
+   "mesh_mode": "battle",
+   "min_ratio_half": 0.2717377098804333,
+   "ratio_full_reading": [
+    0.2657378059410649,
+    0.3382671154958121,
+    0.13586885494021664
+   ],
+   "ratio_half_reading": [
+    0.5314756118821298,
+    0.6765342309916242,
+    0.2717377098804333
+   ]
+  },
+  {
+   "body": 169751,
+   "bone": "Batmobile_Rig_Weapons_Trans",
+   "box": 0,
+   "box_extents_sorted_cm": [
+    189.3649,
+    166.1769,
+    39.8001
+   ],
+   "label": "derived: box extent / mesh span, sorted per axis to stay frame-agnostic (spans read either way are only compared sorted)",
+   "max_ratio_full": 0.4722324621381724,
+   "max_ratio_half": 0.9444649242763448,
+   "mesh": 175974,
+   "mesh_full_spans_sorted_cm": [
+    705.65771484375,
+    351.8963928222656,
+    233.32408142089844
+   ],
+   "mesh_mode": "pursuit",
+   "min_ratio_half": 0.3411572415296793,
+   "ratio_full_reading": [
+    0.26835234139249803,
+    0.4722324621381724,
+    0.17057862076483965
+   ],
+   "ratio_half_reading": [
+    0.5367046827849961,
+    0.9444649242763448,
+    0.3411572415296793
+   ]
+  }
+ ],
+ "comparison_verdict": {
+  "chassis_rows": 4,
+  "label": "derived: with FULL lengths every chassis-box dimension is at most 1.064x the mesh span; with HALF lengths every chassis box's long axis would be 1.907x the span of the mesh that contains it",
+  "max_ratio_full_reading": 1.0643362865875385,
+  "max_ratio_half_reading": 1.9073384771731168,
+  "min_ratio_half_reading_any_axis": 0.7066528217925292,
+  "verdict": "FULL lengths"
+ },
+ "fleet": {
+  "conforming": 37,
+  "label": "decoded: BmGame.upk, every export whose class is StaticMesh",
+  "non_conforming": [
+   {
+    "conforms_at_tag_end_plus_2": false,
+    "export": 175975,
+    "head_hex": "008ee43c00000000ffffff3e701b9f404f8d9f40ffffff3e8bada14000000000",
+    "name": "MagnetShockWave_white",
+    "size": 2956,
+    "tag_count": 2,
+    "tag_end": 16
+   },
+   {
+    "conforms_at_tag_end_plus_2": false,
+    "export": 175978,
+    "head_hex": "000000000000000000000000000000440000004400000000f304354400000000",
+    "name": "RasAlGul_Sand_Plane",
+    "size": 1134,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "conforms_at_tag_end_plus_2": false,
+    "export": 175982,
+    "head_hex": "000000b635a5234182e0fc3f3e98b14148cb4741000000004ac3cb4100000000",
+    "name": "Resonator_DisplayHologramScreen",
+    "size": 5996,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "conforms_at_tag_end_plus_2": false,
+    "export": 175989,
+    "head_hex": "000000000000000000000000000000430000004300000000f304354300000000",
+    "name": "BasicPlane_Phys-NoCollide",
+    "size": 476,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "conforms_at_tag_end_plus_2": false,
+    "export": 175990,
+    "head_hex": "000000000000000000000000acc5273701002043000020433146624300000000",
+    "name": "TexPropPlane",
+    "size": 788,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "conforms_at_tag_end_plus_2": false,
+    "export": 175994,
+    "head_hex": "01606a45c0d6b24200005a3d06606a45a682a6453cb6a345e7ac014600000000",
+    "name": "ConePulse",
+    "size": 20317,
+    "tag_count": 0,
+    "tag_end": 0
+   },
+   {
+    "conforms_at_tag_end_plus_2": false,
+    "export": 175996,
+    "head_hex": "000040b300002e3bf1ecce421edeeb3d96bc5742e827cf42a159e94200000000",
+    "name": "HighlightObj_NPC_Frame",
+    "size": 840,
+    "tag_count": 5,
+    "tag_end": 40
+   },
+   {
+    "conforms_at_tag_end_plus_2": false,
+    "export": 176003,
+    "head_hex": "003eabc20030f8c0c0a39f43aec70346c7d25e4620d312467e32614600000000",
+    "name": "BM3_Batsymbol",
+    "size": 7556,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "conforms_at_tag_end_plus_2": false,
+    "export": 176004,
+    "head_hex": "bff5b74300a40dc2c8384ec50000383aa1b5c445ce91c24510570a4600000000",
+    "name": "BM3_Batsymbol_Cone",
+    "size": 484,
+    "tag_count": 2,
+    "tag_end": 16
+   },
+   {
+    "conforms_at_tag_end_plus_2": false,
+    "export": 176006,
+    "head_hex": "0000000000000000c48b37c31234c5426833c5424a1436430b164f4300000000",
+    "name": "HelicopterSearchLight",
+    "size": 33942,
+    "tag_count": 3,
+    "tag_end": 24
+   },
+   {
+    "conforms_at_tag_end_plus_2": false,
+    "export": 176009,
+    "head_hex": "006a62be0000000000808d3b140f8f414ea6f84118aff8413e75084200000000",
+    "name": "TANK_Heavy_Tank_WeakSpot",
+    "size": 93125,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "conforms_at_tag_end_plus_2": false,
+    "export": 176018,
+    "head_hex": "0000000016e90c4100000000a3431b434451f6400000c642504d384300000000",
+    "name": "SatNav",
+    "size": 5936,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "conforms_at_tag_end_plus_2": false,
+    "export": 176019,
+    "head_hex": "000000000000803600000000a3431b438843ec400000c642ff24384300000000",
+    "name": "SatNav_Vertical",
+    "size": 7176,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "conforms_at_tag_end_plus_2": false,
+    "export": 176021,
+    "head_hex": "00000000000000000000003630b8b14156acb64154acb6413adcfe4100000000",
+    "name": "MESH_Batmobile_Jet_V01",
+    "size": 114160,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "conforms_at_tag_end_plus_2": false,
+    "export": 176024,
+    "head_hex": "585b713e00000000000000004a0ca23e0000204000002040d42d634000000000",
+    "name": "Muzz_Front_Mesh_Paul",
+    "size": 1034,
+    "tag_count": 1,
+    "tag_end": 8
+   }
+  ],
+  "not_conforming": 15,
+  "rows": [
+   {
+    "center_abs_diff_cm": 7.62939453125e-06,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 175973,
+    "extent_abs_diff_cm": 7.62939453125e-06,
+    "name": "Batmobile_V2",
+    "size": 25324,
+    "tag_count": 4,
+    "tag_end": 32
+   },
+   {
+    "center_abs_diff_cm": 1.52587890625e-05,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 175974,
+    "extent_abs_diff_cm": 1.52587890625e-05,
+    "name": "Batmobile_V2_Collision_Pursuite",
+    "size": 20660,
+    "tag_count": 4,
+    "tag_end": 32
+   },
+   {
+    "conforms_at_tag_end_plus_2": false,
+    "export": 175975,
+    "head_hex": "008ee43c00000000ffffff3e701b9f404f8d9f40ffffff3e8bada14000000000",
+    "name": "MagnetShockWave_white",
+    "size": 2956,
+    "tag_count": 2,
+    "tag_end": 16
+   },
+   {
+    "center_abs_diff_cm": 6.037773800926516e-07,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 175976,
+    "extent_abs_diff_cm": 6.037773800926516e-07,
+    "name": "Firefly_JetMesh",
+    "size": 5270,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "center_abs_diff_cm": 0.0,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 175977,
+    "extent_abs_diff_cm": 0.0,
+    "name": "Electric",
+    "size": 2500,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "conforms_at_tag_end_plus_2": false,
+    "export": 175978,
+    "head_hex": "000000000000000000000000000000440000004400000000f304354400000000",
+    "name": "RasAlGul_Sand_Plane",
+    "size": 1134,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "center_abs_diff_cm": 0.0,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 175979,
+    "extent_abs_diff_cm": 0.0,
+    "name": "Sphere",
+    "size": 14374,
+    "tag_count": 2,
+    "tag_end": 16
+   },
+   {
+    "center_abs_diff_cm": 3.814697265625e-06,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 175980,
+    "extent_abs_diff_cm": 3.814697265625e-06,
+    "name": "Cone",
+    "size": 2690,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "center_abs_diff_cm": 9.5367431640625e-07,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 175981,
+    "extent_abs_diff_cm": 9.5367431640625e-07,
+    "name": "Resonator_DisplayHologram",
+    "size": 62600,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "conforms_at_tag_end_plus_2": false,
+    "export": 175982,
+    "head_hex": "000000b635a5234182e0fc3f3e98b14148cb4741000000004ac3cb4100000000",
+    "name": "Resonator_DisplayHologramScreen",
+    "size": 5996,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "center_abs_diff_cm": 1.1324882507324219e-06,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 175983,
+    "extent_abs_diff_cm": 7.748603820800781e-07,
+    "name": "Game_Pickups_QuestionMark",
+    "size": 246189,
+    "tag_count": 3,
+    "tag_end": 24
+   },
+   {
+    "center_abs_diff_cm": 0.0,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 175984,
+    "extent_abs_diff_cm": 0.0,
+    "name": "HarleyGun_Bullet",
+    "size": 2990,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "center_abs_diff_cm": 2.9802322387695312e-08,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 175985,
+    "extent_abs_diff_cm": 2.9802322387695312e-08,
+    "name": "Headset",
+    "size": 43748,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "center_abs_diff_cm": 2.384185791015625e-07,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 175986,
+    "extent_abs_diff_cm": 0.0,
+    "name": "Headset_Redhood",
+    "size": 10354,
+    "tag_count": 2,
+    "tag_end": 16
+   },
+   {
+    "center_abs_diff_cm": 4.76837158203125e-07,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 175987,
+    "extent_abs_diff_cm": 4.76837158203125e-07,
+    "name": "OBJ_Press_Camera_Flash",
+    "size": 26948,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "center_abs_diff_cm": 9.5367431640625e-07,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 175988,
+    "extent_abs_diff_cm": 9.5367431640625e-07,
+    "name": "OBJ_Medical_Surgery_Equipment_Bandage",
+    "size": 6842,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "conforms_at_tag_end_plus_2": false,
+    "export": 175989,
+    "head_hex": "000000000000000000000000000000430000004300000000f304354300000000",
+    "name": "BasicPlane_Phys-NoCollide",
+    "size": 476,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "conforms_at_tag_end_plus_2": false,
+    "export": 175990,
+    "head_hex": "000000000000000000000000acc5273701002043000020433146624300000000",
+    "name": "TexPropPlane",
+    "size": 788,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "center_abs_diff_cm": 0.0,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 175991,
+    "extent_abs_diff_cm": 0.0,
+    "name": "Batmobile_V3_Hull",
+    "size": 127088,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "center_abs_diff_cm": 1.9073486328125e-06,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 175992,
+    "extent_abs_diff_cm": 1.9073486328125e-06,
+    "name": "ElectricArc",
+    "size": 8764,
+    "tag_count": 3,
+    "tag_end": 24
+   },
+   {
+    "center_abs_diff_cm": 4.76837158203125e-07,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 175993,
+    "extent_abs_diff_cm": 4.76837158203125e-07,
+    "name": "debris1",
+    "size": 3452,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "conforms_at_tag_end_plus_2": false,
+    "export": 175994,
+    "head_hex": "01606a45c0d6b24200005a3d06606a45a682a6453cb6a345e7ac014600000000",
+    "name": "ConePulse",
+    "size": 20317,
+    "tag_count": 0,
+    "tag_end": 0
+   },
+   {
+    "center_abs_diff_cm": 0.0,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 175995,
+    "extent_abs_diff_cm": 0.0,
+    "name": "fx_secret_box",
+    "size": 822,
+    "tag_count": 2,
+    "tag_end": 16
+   },
+   {
+    "conforms_at_tag_end_plus_2": false,
+    "export": 175996,
+    "head_hex": "000040b300002e3bf1ecce421edeeb3d96bc5742e827cf42a159e94200000000",
+    "name": "HighlightObj_NPC_Frame",
+    "size": 840,
+    "tag_count": 5,
+    "tag_end": 40
+   },
+   {
+    "center_abs_diff_cm": 9.5367431640625e-07,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 175997,
+    "extent_abs_diff_cm": 9.5367431640625e-07,
+    "name": "CrystalCrack",
+    "size": 14984,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "center_abs_diff_cm": 9.5367431640625e-07,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 175998,
+    "extent_abs_diff_cm": 9.5367431640625e-07,
+    "name": "CrystalSingle",
+    "size": 3290,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "center_abs_diff_cm": 0.0,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 175999,
+    "extent_abs_diff_cm": 0.0,
+    "name": "IcePearlTrans",
+    "size": 1356,
+    "tag_count": 2,
+    "tag_end": 16
+   },
+   {
+    "center_abs_diff_cm": 2.86102294921875e-06,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 176000,
+    "extent_abs_diff_cm": 2.86102294921875e-06,
+    "name": "FX_electriccurrent2_01",
+    "size": 5456,
+    "tag_count": 2,
+    "tag_end": 16
+   },
+   {
+    "center_abs_diff_cm": 1.5079975128173828e-05,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 176001,
+    "extent_abs_diff_cm": 1.5079975128173828e-05,
+    "name": "FX_LightningBlue_Ase",
+    "size": 20282,
+    "tag_count": 2,
+    "tag_end": 16
+   },
+   {
+    "center_abs_diff_cm": 0.0,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 176002,
+    "extent_abs_diff_cm": 0.0,
+    "name": "fx_sun",
+    "size": 6806,
+    "tag_count": 3,
+    "tag_end": 24
+   },
+   {
+    "conforms_at_tag_end_plus_2": false,
+    "export": 176003,
+    "head_hex": "003eabc20030f8c0c0a39f43aec70346c7d25e4620d312467e32614600000000",
+    "name": "BM3_Batsymbol",
+    "size": 7556,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "conforms_at_tag_end_plus_2": false,
+    "export": 176004,
+    "head_hex": "bff5b74300a40dc2c8384ec50000383aa1b5c445ce91c24510570a4600000000",
+    "name": "BM3_Batsymbol_Cone",
+    "size": 484,
+    "tag_count": 2,
+    "tag_end": 16
+   },
+   {
+    "center_abs_diff_cm": 0.0,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 176005,
+    "extent_abs_diff_cm": 0.0,
+    "name": "fx_teslacoil_collision",
+    "size": 838,
+    "tag_count": 4,
+    "tag_end": 32
+   },
+   {
+    "conforms_at_tag_end_plus_2": false,
+    "export": 176006,
+    "head_hex": "0000000000000000c48b37c31234c5426833c5424a1436430b164f4300000000",
+    "name": "HelicopterSearchLight",
+    "size": 33942,
+    "tag_count": 3,
+    "tag_end": 24
+   },
+   {
+    "center_abs_diff_cm": 0.0,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 176007,
+    "extent_abs_diff_cm": 0.0,
+    "name": "TANK_Heavy_Tank_Shield_Idle",
+    "size": 23002,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "center_abs_diff_cm": 1.52587890625e-05,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 176008,
+    "extent_abs_diff_cm": 1.52587890625e-05,
+    "name": "TANK_Heavy_Tank_Shield_Impact",
+    "size": 6432,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "conforms_at_tag_end_plus_2": false,
+    "export": 176009,
+    "head_hex": "006a62be0000000000808d3b140f8f414ea6f84118aff8413e75084200000000",
+    "name": "TANK_Heavy_Tank_WeakSpot",
+    "size": 93125,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "center_abs_diff_cm": 9.5367431640625e-07,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 176010,
+    "extent_abs_diff_cm": 9.5367431640625e-07,
+    "name": "metalpiece",
+    "size": 1144,
+    "tag_count": 2,
+    "tag_end": 16
+   },
+   {
+    "center_abs_diff_cm": 4.76837158203125e-06,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 176011,
+    "extent_abs_diff_cm": 2.86102294921875e-06,
+    "name": "ACE_VFX_Particle_Debris",
+    "size": 43600,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "center_abs_diff_cm": 4.76837158203125e-07,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 176012,
+    "extent_abs_diff_cm": 4.76837158203125e-07,
+    "name": "ARChallenge_Star",
+    "size": 9716,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "center_abs_diff_cm": 9.5367431640625e-07,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 176013,
+    "extent_abs_diff_cm": 9.5367431640625e-07,
+    "name": "ARChallenge_TEST",
+    "size": 1035521,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "center_abs_diff_cm": 1.210719347000122e-07,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 176014,
+    "extent_abs_diff_cm": 1.1920928955078125e-07,
+    "name": "Bullet_9mm",
+    "size": 4832,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "center_abs_diff_cm": 0.0,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 176015,
+    "extent_abs_diff_cm": 0.0,
+    "name": "Electric",
+    "size": 2500,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "center_abs_diff_cm": 7.950529834488407e-07,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 176016,
+    "extent_abs_diff_cm": 7.950529834488407e-07,
+    "name": "FireMesh",
+    "size": 826,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "center_abs_diff_cm": 1.9073486328125e-06,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 176017,
+    "extent_abs_diff_cm": 1.9073486328125e-06,
+    "name": "MainCity_Lightning",
+    "size": 3152,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "conforms_at_tag_end_plus_2": false,
+    "export": 176018,
+    "head_hex": "0000000016e90c4100000000a3431b434451f6400000c642504d384300000000",
+    "name": "SatNav",
+    "size": 5936,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "conforms_at_tag_end_plus_2": false,
+    "export": 176019,
+    "head_hex": "000000000000803600000000a3431b438843ec400000c642ff24384300000000",
+    "name": "SatNav_Vertical",
+    "size": 7176,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "center_abs_diff_cm": 8.58306884765625e-06,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 176020,
+    "extent_abs_diff_cm": 6.67572021484375e-06,
+    "name": "Smoke_Streak_Mesh_4_Bigger",
+    "size": 1472,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "conforms_at_tag_end_plus_2": false,
+    "export": 176021,
+    "head_hex": "00000000000000000000003630b8b14156acb64154acb6413adcfe4100000000",
+    "name": "MESH_Batmobile_Jet_V01",
+    "size": 114160,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "center_abs_diff_cm": 8.940696716308594e-08,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 176022,
+    "extent_abs_diff_cm": 8.940696716308594e-08,
+    "name": "batmobile_exhaustCone",
+    "size": 4028,
+    "tag_count": 1,
+    "tag_end": 8
+   },
+   {
+    "center_abs_diff_cm": 3.814697265625e-06,
+    "conforms_at_tag_end_plus_2": true,
+    "export": 176023,
+    "extent_abs_diff_cm": 3.814697265625e-06,
+    "name": "ConcreteChunk",
+    "size": 5012,
+    "tag_count": 2,
+    "tag_end": 16
+   },
+   {
+    "conforms_at_tag_end_plus_2": false,
+    "export": 176024,
+    "head_hex": "585b713e00000000000000004a0ca23e0000204000002040d42d634000000000",
+    "name": "Muzz_Front_Mesh_Paul",
+    "size": 1034,
+    "tag_count": 1,
+    "tag_end": 8
+   }
+  ],
+  "staticmesh_exports": 52
+ },
+ "generator": "Tools/scripts/grab_sm_bounds.py (G3-01b U-4 follow-up)",
+ "inputs": {
+  "boxes_record": "E:\\Modding\\JC3-Batmobile\\Research\\BatmobileGrab\\COLLISION_BOXES.json",
+  "convex_reader": "Tools/scripts/grab_collision_convex.parse_element (read-only)",
+  "package": "E:\\Games\\Batman - Arkham Knight\\BmGame\\CookedPCConsole\\BmGame.upk",
+  "reader": "Tools/scripts/upk_read.py (read-only)"
+ },
+ "layout": {
+  "label": "decoded: byte offsets relative to the first byte after the property-list terminator",
+  "native_offset_0": "FBoxSphereBounds: Origin 3f, BoxExtent 3f, SphereRadius 1f (28 B)",
+  "native_offset_28": "int32 = the export's ObjectNCR tag value (its RB_BodySetup)",
+  "native_offset_32": "FBox: Min 3f, Max 3f (24 B)",
+  "native_offset_56": "2 x int32, `6, 128` in both exports - semantics UNKNOWN",
+  "native_offset_64": "cooked compressed mesh data (not decoded here)"
+ },
+ "scope": "BmGame.upk StaticMesh 175973 and 175974; every StaticMesh export for the package-wide position oracle",
+ "static_meshes": [
+  {
+   "body_expected": 169748,
+   "body_ref": {
+    "label": "decoded int32; field name UNKNOWN, value == this export's ObjectNCR tag",
+    "matches_tag": true,
+    "native_offset": 28,
+    "object_class": "RB_BodySetup",
+    "object_path": "Batmobile_V2.RB_BodySetup",
+    "tag_value": 169748,
+    "value": 169748
+   },
+   "bounds": {
+    "extent_cm": [
+     356.3002624511719,
+     245.62969970703125,
+     146.4651336669922
+    ],
+    "hex": "40acb94000008037557412436f26b24334a1754313771243aa70d943",
+    "label": "decoded: FBoxSphereBounds at native+0 (Origin 3f, BoxExtent 3f, SphereRadius 1f = 28 B)",
+    "native_offset": 0,
+    "origin_cm": [
+     5.802276611328125,
+     1.52587890625e-05,
+     146.4544219970703
+    ],
+    "radius_cm": 434.88018798828125
+   },
+   "box": {
+    "hex": "be3fafc333a175c300682fbc200db54334a17543b4759243",
+    "label": "decoded: FBox (Min 3f, Max 3f) at native+32",
+    "max_cm": [
+     362.1025390625,
+     245.62969970703125,
+     292.9195556640625
+    ],
+    "min_cm": [
+     -350.49798583984375,
+     -245.6296844482422,
+     -0.010705947875976562
+    ],
+    "native_offset": 32
+   },
+   "candidates": [
+    {
+     "absolute_offset": 34,
+     "center_abs_diff_cm": 7.62939453125e-06,
+     "delta": 0,
+     "extent_abs_diff_cm": 7.62939453125e-06
+    }
+   ],
+   "candidates_in_first_1024": [
+    {
+     "absolute_offset": 34,
+     "center_abs_diff_cm": 7.62939453125e-06,
+     "delta": 0,
+     "extent_abs_diff_cm": 7.62939453125e-06
+    }
+   ],
+   "class": "StaticMesh",
+   "consistency": {
+    "agrees": true,
+    "center_abs_diff_cm": 7.62939453125e-06,
+    "center_cm": [
+     5.802276611328125,
+     7.62939453125e-06,
+     146.45442485809326
+    ],
+    "corner_distance_cm": 456.87619962198755,
+    "extent_abs_diff_cm": 7.62939453125e-06,
+    "half_span_cm": [
+     356.3002624511719,
+     245.62969207763672,
+     146.46513080596924
+    ],
+    "label": "derived: Origin == (Min+Max)/2 and BoxExtent == (Max-Min)/2"
+   },
+   "export": 175973,
+   "head_hex": "40acb94000008037557412436f26b24334a1754313771243aa70d94314970200be3fafc333a175c300682fbc200db54334a17543b47592430600000080000000",
+   "hull": {
+    "aggeom_bytes": 25907,
+    "bytes_consumed": 25898,
+    "counts": [
+     0,
+     0,
+     0,
+     43
+    ],
+    "elements": 43,
+    "export": 169748,
+    "footer_all_zero": true,
+    "footer_bytes": 9,
+    "oracle": {
+     "agrees_box": true,
+     "agrees_radius": true,
+     "box_corner_distance_cm": 456.87619962198755,
+     "box_vs_union_cm": [
+      -12.05633544921875,
+      0.31085205078125,
+      0.7392940521240234,
+      5.1319580078125,
+      -1.3520355224609375,
+      -0.833038330078125
+     ],
+     "box_vs_union_worst_cm": 12.05633544921875,
+     "box_vs_union_worst_fraction_of_span": 0.01691878552976224,
+     "label": "derived: the FBox and the SphereRadius against the decoded hull vertices of the same mesh's RB_BodySetup",
+     "max_vertex_distance_from_origin_cm": 435.8771943433247,
+     "radius_below_corner": true,
+     "radius_fraction_of_that": 0.002292600082922819,
+     "radius_minus_max_vertex_distance_cm": -0.9970063550434247,
+     "radius_over_corner": 0.9518556413052256,
+     "vertex_union_max_cm": [
+      356.9705810546875,
+      246.9817352294922,
+      293.7525939941406
+     ],
+     "vertex_union_min_cm": [
+      -338.441650390625,
+      -245.94053649902344,
+      -0.75
+     ],
+     "vertex_union_span_cm": [
+      695.4122314453125,
+      492.9222717285156,
+      294.5025939941406
+     ],
+     "vertices": 252
+    },
+    "vertex_union_note": "the hull's vertices are the collision decomposition of this mesh, not the render mesh's own vertex buffer (which is compressed and not decoded here)",
+    "vertices": 252
+   },
+   "mode": "battle",
+   "name": "Batmobile_V2",
+   "native_bytes": 25290,
+   "native_start": 34,
+   "outer": "Batmobile.Batmobile_V2_Mesh",
+   "size": 25324,
+   "tag_count": 4,
+   "tag_end": 32,
+   "tag_stop": "end",
+   "tag_stream_hex": "03009c010100000010001c01149702000200ec00010000000200e800200000000000",
+   "tags": [
+    {
+     "at": 4,
+     "offset": 412,
+     "type": "BoolProperty",
+     "value": true
+    },
+    {
+     "at": 12,
+     "offset": 284,
+     "type": "ObjectNCRProperty",
+     "value": 169748
+    },
+    {
+     "at": 20,
+     "offset": 236,
+     "type": "IntProperty",
+     "value": 1
+    },
+    {
+     "at": 28,
+     "offset": 232,
+     "type": "IntProperty",
+     "value": 32
+    }
+   ],
+   "terminator_hex": "0000",
+   "trailer": {
+    "hex": "0600000080000000",
+    "ints": [
+     6,
+     128
+    ],
+    "label": "decoded bytes; semantics UNKNOWN",
+    "native_offset": 56
+   }
+  },
+  {
+   "body_expected": 169749,
+   "body_ref": {
+    "label": "decoded int32; field name UNKNOWN, value == this export's ObjectNCR tag",
+    "matches_tag": true,
+    "native_offset": 28,
+    "object_class": "RB_BodySetup",
+    "object_path": "Batmobile_V2_Collision_Pursuite.RB_BodySetup",
+    "tag_value": 169749,
+    "value": 169749
+   },
+   "bounds": {
+    "extent_cm": [
+     352.828857421875,
+     175.9481964111328,
+     116.66204071044922
+    ],
+    "hex": "a07909410000000046c0ea42186ab043bdf22f43f752e942e01ebf43",
+    "label": "decoded: FBoxSphereBounds at native+0 (Origin 3f, BoxExtent 3f, SphereRadius 1f = 28 B)",
+    "native_offset": 0,
+    "origin_cm": [
+     8.592193603515625,
+     0.0,
+     117.37553405761719
+    ],
+    "radius_cm": 382.2412109375
+   },
+   "box": {
+    "hex": "4b1eacc3bdf22fc34fa7363fe4b5b443bdf22f439e096a43",
+    "label": "decoded: FBox (Min 3f, Max 3f) at native+32",
+    "max_cm": [
+     361.4210205078125,
+     175.9481964111328,
+     234.03756713867188
+    ],
+    "min_cm": [
+     -344.2366638183594,
+     -175.9481964111328,
+     0.7134904265403748
+    ],
+    "native_offset": 32
+   },
+   "candidates": [
+    {
+     "absolute_offset": 34,
+     "center_abs_diff_cm": 1.52587890625e-05,
+     "delta": 0,
+     "extent_abs_diff_cm": 1.52587890625e-05
+    }
+   ],
+   "candidates_in_first_1024": [
+    {
+     "absolute_offset": 34,
+     "center_abs_diff_cm": 1.52587890625e-05,
+     "delta": 0,
+     "extent_abs_diff_cm": 1.52587890625e-05
+    }
+   ],
+   "class": "StaticMesh",
+   "consistency": {
+    "agrees": true,
+    "center_abs_diff_cm": 1.52587890625e-05,
+    "center_cm": [
+     8.592178344726562,
+     0.0,
+     117.37552878260612
+    ],
+    "corner_distance_cm": 411.1642034427157,
+    "extent_abs_diff_cm": 1.52587890625e-05,
+    "half_span_cm": [
+     352.82884216308594,
+     175.9481964111328,
+     116.66203835606575
+    ],
+    "label": "derived: Origin == (Min+Max)/2 and BoxExtent == (Max-Min)/2"
+   },
+   "export": 175974,
+   "head_hex": "a07909410000000046c0ea42186ab043bdf22f43f752e942e01ebf43159702004b1eacc3bdf22fc34fa7363fe4b5b443bdf22f439e096a430600000080000000",
+   "hull": {
+    "aggeom_bytes": 8275,
+    "bytes_consumed": 8266,
+    "counts": [
+     0,
+     0,
+     0,
+     13
+    ],
+    "elements": 13,
+    "export": 169749,
+    "footer_all_zero": true,
+    "footer_bytes": 9,
+    "oracle": {
+     "agrees_box": true,
+     "agrees_radius": true,
+     "box_corner_distance_cm": 411.1642034427157,
+     "box_vs_union_cm": [
+      -12.892791748046875,
+      -16.791946411132812,
+      0.713493869922786,
+      21.8192138671875,
+      16.791946411132812,
+      9.9520263671875
+     ],
+     "box_vs_union_worst_cm": 21.8192138671875,
+     "box_vs_union_worst_fraction_of_span": 0.030920394338258404,
+     "label": "derived: the FBox and the SphereRadius against the decoded hull vertices of the same mesh's RB_BodySetup",
+     "max_vertex_distance_from_origin_cm": 382.0313813936234,
+     "radius_below_corner": true,
+     "radius_fraction_of_that": 0.000548945372378761,
+     "radius_minus_max_vertex_distance_cm": 0.20982954387659447,
+     "radius_over_corner": 0.9296558594764797,
+     "vertex_union_max_cm": [
+      339.601806640625,
+      159.15625,
+      224.08554077148438
+     ],
+     "vertex_union_min_cm": [
+      -331.3438720703125,
+      -159.15625,
+      -3.4433824112056755e-06
+     ],
+     "vertex_union_span_cm": [
+      670.9456787109375,
+      318.3125,
+      224.0855442148668
+     ],
+     "vertices": 96
+    },
+    "vertex_union_note": "the hull's vertices are the collision decomposition of this mesh, not the render mesh's own vertex buffer (which is compressed and not decoded here)",
+    "vertices": 96
+   },
+   "mode": "pursuit",
+   "name": "Batmobile_V2_Collision_Pursuite",
+   "native_bytes": 20626,
+   "native_start": 34,
+   "outer": "Batmobile.Batmobile_V2_Mesh",
+   "size": 20660,
+   "tag_count": 4,
+   "tag_end": 32,
+   "tag_stop": "end",
+   "tag_stream_hex": "03009c010100000010001c01159702000200ec00010000000200e800200000000000",
+   "tags": [
+    {
+     "at": 4,
+     "offset": 412,
+     "type": "BoolProperty",
+     "value": true
+    },
+    {
+     "at": 12,
+     "offset": 284,
+     "type": "ObjectNCRProperty",
+     "value": 169749
+    },
+    {
+     "at": 20,
+     "offset": 236,
+     "type": "IntProperty",
+     "value": 1
+    },
+    {
+     "at": 28,
+     "offset": 232,
+     "type": "IntProperty",
+     "value": 32
+    }
+   ],
+   "terminator_hex": "0000",
+   "trailer": {
+    "hex": "0600000080000000",
+    "ints": [
+     6,
+     128
+    ],
+    "label": "decoded bytes; semantics UNKNOWN",
+    "native_offset": 56
+   }
+  }
+ ],
+ "summary": {
+  "bounds_position": {
+   "175973": 34,
+   "175974": 34
+  },
+  "checks_passed": "13/13",
+  "extent_cm": {
+   "175973": [
+    356.3002624511719,
+    245.62969970703125,
+    146.4651336669922
+   ],
+   "175974": [
+    352.828857421875,
+    175.9481964111328,
+    116.66204071044922
+   ]
+  },
+  "extents_verdict": "FULL lengths",
+  "fleet_conforming": "37/52",
+  "full_span_cm": {
+   "175973": [
+    712.6005249023438,
+    491.2593994140625,
+    292.9302673339844
+   ],
+   "175974": [
+    705.65771484375,
+    351.8963928222656,
+    233.32408142089844
+   ]
+  },
+  "origin_cm": {
+   "175973": [
+    5.802276611328125,
+    1.52587890625e-05,
+    146.4544219970703
+   ],
+   "175974": [
+    8.592193603515625,
+    0.0,
+    117.37553405761719
+   ]
+  },
+  "radius_cm": {
+   "175973": 434.88018798828125,
+   "175974": 382.2412109375
+  },
+  "static_meshes": 2
+ },
+ "unknowns": [
+  {
+   "item": "the member names of the u32 at native+28 and the two u32 at native+56",
+   "tried": "decoded every value; the +28 value equals the export's own ObjectNCR tag (169748/169749) and the +56 pair is `6, 128` in both exports",
+   "why": "BMSDK_OFFSETS.json has no StaticMesh layout, so a byte offset can be named only with the engine's own struct dump (the G3-06 native-layout question)"
+  },
+  {
+   "item": "the exact vertex set SphereRadius was measured on",
+   "tried": "compared it with the hull's max |v - Origin| (0.997 cm / 0.210 cm apart) and with the box corner distance (4.8 % / 7.0 % farther away)",
+   "why": "the render mesh's own vertex buffer is cooked/compressed (the native body from +64 on is not decoded here), so the equality can be tested only against the collision decomposition, which is a different vertex set"
+  },
+  {
+   "item": "why 13 of 52 BmGame StaticMesh exports do not carry the block at tag_end+2",
+   "tried": "scanned every 4-byte offset up to 16 bytes past the terminator on each of the 52; recorded those exports' heads in the record",
+   "why": "those exports' native heads start with zero bytes (e.g. 176006 HelicopterSearchLight), so a different or absent native prologue is in front of the mesh data; deciding it needs its own decode, and it does not affect 175973/175974"
+  },
+  {
+   "item": "whether the FBox is the render mesh's data or its collision proxy's",
+   "tried": "the FBox is 12.06 cm / 21.82 cm wider than the hull vertex union on one axis and 0.31 cm / 16.79 cm narrower on another",
+   "why": "both are coded here as numbers; which vertex set the engine took is not provable without the render mesh's vertex buffer"
+  }
+ ]
+}

@@ -257,6 +257,30 @@
    "MovieWidth": 1024,
    "MovieHeight": 768
   },
+  "health_contract": {
+   "setter": "UC_SetHealth(health, max)",
+   "health_is": "a proportion, not hit points: 1.0 is one full bar",
+   "max_is": "the bar's ceiling; above 1 it adds armour tiers",
+   "bar_fill": "Math.min(1,this.CurrentHealthProportion)",
+   "armour_fill": "Math.max(0,this.CurrentHealthProportion - 1)",
+   "armour_tier": "param2 > 1 ? int((param2 - 1) * 4) : 0",
+   "armour_tier_label": "\"Armour\" + _loc3_",
+   "armour_tier_labels": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "armour_tier_count": 5,
+   "pulse_below": 0.2,
+   "max_change_per_frame": 0.05,
+   "full_sweep_seconds": 0.6667,
+   "offscreen_seconds": 2.0,
+   "tick_hz": 30.0,
+   "visible_on_damage": "health < max shows the bar; full health + settled XP hides it after the timer",
+   "battle_mode_forces_visible": true
+  },
   "mode_strings": [
    "BATTLE",
    "DRIVE",

@@ -1,0 +1,17 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/correction-8390-collision-placement.md
+ONLY: freebuff
+EST: 70
+BRIEF: hand-written 2026-11-07 by review 8399
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/review-build-wave.md
+Correction 1/9 — the collision hull is a stand-in for BmAK's asset in three measurable ways.
+
+Evidence: Builds/bm-RC4/drop/.../sportsmuscle.physicsc, 340,368 B, internal in the .toc at offset 15,993,844 (sha256 0164936b...). build-d08 §4 and build-d13 §2:
+- hull shape vs BmAK chassis box 0 = 0.0000 m (exact), but placement = [0.0005, 0.061, 0.0025] m -> 6.1 cm high; the card's 5 cm gate is NOT MET (receipt.collision.gate.pass=false, not_carried "chassis-box placement").
+- 5 hulls written (body 0 + 4 wheels) over the donor's 54 slots; 62 donor bodies remain; 2 of BmAK's 3 boxes (chassis box 1 and the weapons pod) have no shape instance; 0 of 54 hull slots are free.
+- BmAK's 1 constraint has no JC3 writer and is a named omission.
+
+Task: decide the gate on evidence, not wording. Either (a) rebuild body 0 from the chassis box's own placement (drop DIM-1's ground line, floor 0.030 m instead of 0.091 m) and re-run bm_vehicle_hull.py --write/--check, or (b) show that the ground line is the intended contact plane and re-word the B-10 card with the measurement that supports it. Do not silently pass. For the 2 missing shapes, either add them if a free slot can be proven (S2's 5-minute discriminator) or record them as a named capability gap with the box TMs from BmAK export 169750. Re-run the RC merge and bm_rc4.py --check afterwards; the receipt's collision facts must match the rebuilt bytes.
+
+Revert: git checkout the card/plan files, restore Working/Collision2/batmobile.physicsc and rebuild the RC. Report every re-measured number.
+
+Updated by review 8399: the 6.1 cm is a measured gate failure (shape exact, placement high), not a pass; the 2 missing boxes and the constraint are part of the same correction.

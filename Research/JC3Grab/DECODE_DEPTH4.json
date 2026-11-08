@@ -1,0 +1,942 @@
+{
+ "task": "G3-19b",
+ "source": "vanilla .ee archive (bm_rc/eetoc), no game process",
+ "markers": {
+  "s16_one": 32767,
+  "u32": "0x487FFFFF",
+  "f32": 262143.984375
+ },
+ "files": [
+  {
+   "name": "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_missile_base_signature_lod1.rbm",
+   "size": 45912,
+   "block_bytes_sum": 45912,
+   "sum_equals_size": true,
+   "header": {
+    "header_len": 53,
+    "blocks": 3,
+    "bbox_min": [
+     -0.2966674566268921,
+     1.0061227083206177,
+     -1.5710318088531494
+    ],
+    "bbox_max": [
+     0.29746440052986145,
+     1.1840211153030396,
+     -1.1791528463363647
+    ]
+   },
+   "blocks": [
+    {
+     "index": 0,
+     "type_hash": "0x483304D6",
+     "type": "CarPaintMM",
+     "bytes": 13051,
+     "decoder": "rbm_geom.decode_carpaintmm",
+     "ends_on_block_checksum": true
+    },
+    {
+     "index": 1,
+     "type_hash": "0x2CEC5AD5",
+     "type": "GeneralMkIII",
+     "bytes": 7126,
+     "decoder": "decode_depth4.mkiii_layout",
+     "ends_on_block_checksum": true
+    },
+    {
+     "index": 2,
+     "type_hash": "0x483304D6",
+     "type": "CarPaintMM",
+     "bytes": 25658,
+     "decoder": "rbm_geom.decode_carpaintmm",
+     "ends_on_block_checksum": true
+    }
+   ],
+   "mkiii": {
+    "payload_bytes": 7126,
+    "version": 5,
+    "attributes_bytes": 104,
+    "material_consts_bytes": 280,
+    "texture_table_bytes": 457,
+    "texture_slots": 20,
+    "textures": [
+     "w503_missile_capstone_billfire_dif.ddsc",
+     "w503_missile_capstone_billfire_mpm.ddsc",
+     "dummy_black.ddsc",
+     "w503_missile_capstone_billfire_nrm.ddsc"
+    ],
+    "vertex_count": 176,
+    "position_stride": 8,
+    "attribute_count": 176,
+    "attribute_stride": 20,
+    "index_count": 672,
+    "offsets": {
+     "pool_at": 385,
+     "position_count_at": 842,
+     "positions_at": 846,
+     "attribute_count_at": 2254,
+     "attributes_at": 2258,
+     "indices_at": 5778
+    },
+    "attr_bbox_min": [
+     -0.20952381193637848,
+     1.087841510772705,
+     -1.5710318088531494
+    ],
+    "attr_bbox_max": [
+     0.20929282903671265,
+     1.1404316425323486,
+     -1.484980821609497
+    ]
+   },
+   "accounting": {
+    "head_bytes": 842,
+    "position_buffer": 1412,
+    "attribute_buffer": 3524,
+    "index_buffer": 1348,
+    "sum": 7126,
+    "payload_bytes": 7126,
+    "sum_equals_payload": true
+   },
+   "positions": {
+    "vertex_count": 176,
+    "inside_attr_bbox": 176,
+    "bbox_spans": [
+     0.4188166409730911,
+     0.052590131759643555,
+     0.08605098724365234
+    ],
+    "s16_spans": [
+     8735,
+     1096,
+     1795
+    ],
+    "live_axes": [
+     0,
+     1,
+     2
+    ]
+   },
+   "stream2": {
+    "stride": 20,
+    "count": 176,
+    "fields": [
+     {
+      "name": "uv_u (s16 unorm)",
+      "offset": 0,
+      "width": 2,
+      "kind": "s16",
+      "min": 1906,
+      "max": 32767,
+      "distinct": 44
+     },
+     {
+      "name": "uv_v (s16 unorm)",
+      "offset": 2,
+      "width": 2,
+      "kind": "s16",
+      "min": 24171,
+      "max": 32767,
+      "distinct": 21
+     },
+     {
+      "name": "sentinel 1.0 (s16)",
+      "offset": 4,
+      "width": 2,
+      "kind": "s16",
+      "min": 32767,
+      "max": 32767,
+      "distinct": 1
+     },
+     {
+      "name": "pad 0 (s16)",
+      "offset": 6,
+      "width": 2,
+      "kind": "s16",
+      "min": 0,
+      "max": 0,
+      "distinct": 1
+     },
+     {
+      "name": "float x",
+      "offset": 8,
+      "width": 4,
+      "kind": "f32",
+      "min": 123.49609375,
+      "max": 31488.4921875,
+      "distinct": 38
+     },
+     {
+      "name": "float y",
+      "offset": 12,
+      "width": 4,
+      "kind": "f32",
+      "min": 1679.62890625,
+      "max": 63383.62890625,
+      "distinct": 48
+     },
+     {
+      "name": "marker 0x487FFFFF (f32)",
+      "offset": 16,
+      "width": 4,
+      "kind": "f32",
+      "min": 1216348159,
+      "max": 1216348159,
+      "distinct": 1
+     }
+    ],
+    "markers": {
+     "s16_32767": 176,
+     "s16_zero": 176,
+     "u32_marker": 176,
+     "vertices": 176
+    },
+    "float_pair_over_marker": {
+     "u": {
+      "min": 0.00047110023922325607,
+      "max": 0.12011907220596506,
+      "distinct": 38
+     },
+     "v": {
+      "min": 0.006407276177840005,
+      "max": 0.2417893702858311,
+      "distinct": 48
+     }
+    }
+   },
+   "oracles": {
+    "uv_channel_a_unorm16": {
+     "positive": 0,
+     "negative": 224,
+     "degenerate": 0,
+     "consistent": 224,
+     "triangles": 224,
+     "density_median": 15.735170115450334,
+     "density_p10": 12.591696845982467,
+     "density_p90": 25.989306581607206,
+     "density_spread": 2.064003517516339
+    },
+    "uv_channel_b_float_over_marker": {
+     "positive": 136,
+     "negative": 88,
+     "degenerate": 0,
+     "consistent": 136,
+     "triangles": 224,
+     "density_median": 0.24695547170572443,
+     "density_p10": 0.018527711192261362,
+     "density_p90": 32.97698745800219,
+     "density_spread": 1779.8737855853449
+    },
+    "uv_channel_a_in_unit_range": {
+     "u_in": 172,
+     "v_in": 140,
+     "vertices": 176
+    },
+    "uv_channel_b_in_unit_range": {
+     "u_in": 176,
+     "v_in": 176,
+     "vertices": 176
+    },
+    "normal_octahedral_from_uv_pair": {
+     "mean": 0.12636105470481931,
+     "min": -0.8119294576190238,
+     "absmean": 0.5467319726824754,
+     "frac_above_0_9": 0.125
+    },
+    "normal_float_triple": {
+     "mean": -0.283599112633927,
+     "min": -0.9959849968965536,
+     "absmean": 0.29072722732276235,
+     "frac_above_0_9": 0.0
+    },
+    "float_triple_unit_length_over_marker": {
+     "min": 1.001752513804311,
+     "max": 1.0327742477296404,
+     "mean": 1.013359833969825,
+     "worst_rel_error": 0.03277424772964044
+    },
+    "position_smoothness": {
+     "coincident_groups": 40,
+     "identical_c": 40,
+     "identical_d": 0,
+     "identical_uv_pair": 0
+    },
+    "affine_fit": {
+     "float_a_vs_uv_v": {
+      "slope": 59922.99837976617,
+      "intercept": -28715.664226073026,
+      "worst_residual_fraction": 0.5954312053674395
+     },
+     "float_b_vs_uv_u": {
+      "slope": 20567.579341184857,
+      "intercept": 21507.806967088996,
+      "worst_residual_fraction": 0.45057655118115464
+     },
+     "float_a_vs_pos_z": {
+      "slope": 183845.92625100067,
+      "intercept": 306062.13072962477,
+      "worst_residual_fraction": 0.5466632380005652
+     }
+    },
+    "float_triple_direction": {
+     "z_min": 0.9682658162694427,
+     "z_max": 0.9982505521272359,
+     "max_angle_deg": 14.472932463072471
+    },
+    "tangent_perpendicularity_float_triple": {
+     "absmean": 0.29422941805959535,
+     "max": 1.0035752565516336
+    },
+    "tangent_perpendicularity_uv_pair_as_xyz": {
+     "absmean": 0.5928286428018235,
+     "max": 1.306675754182769
+    }
+   }
+  },
+  {
+   "name": "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_missile_base_signature_lod2.rbm",
+   "size": 21842,
+   "block_bytes_sum": 21842,
+   "sum_equals_size": true,
+   "header": {
+    "header_len": 53,
+    "blocks": 3,
+    "bbox_min": [
+     -0.2972894608974457,
+     1.0056259632110596,
+     -1.5710318088531494
+    ],
+    "bbox_max": [
+     0.29746440052986145,
+     1.1840211153030396,
+     -1.1791528463363647
+    ]
+   },
+   "blocks": [
+    {
+     "index": 0,
+     "type_hash": "0x483304D6",
+     "type": "CarPaintMM",
+     "bytes": 8587,
+     "decoder": "rbm_geom.decode_carpaintmm",
+     "ends_on_block_checksum": true
+    },
+    {
+     "index": 1,
+     "type_hash": "0x2CEC5AD5",
+     "type": "GeneralMkIII",
+     "bytes": 2592,
+     "decoder": "decode_depth4.mkiii_layout",
+     "ends_on_block_checksum": true
+    },
+    {
+     "index": 2,
+     "type_hash": "0x483304D6",
+     "type": "CarPaintMM",
+     "bytes": 10586,
+     "decoder": "rbm_geom.decode_carpaintmm",
+     "ends_on_block_checksum": true
+    }
+   ],
+   "mkiii": {
+    "payload_bytes": 2592,
+    "version": 5,
+    "attributes_bytes": 104,
+    "material_consts_bytes": 280,
+    "texture_table_bytes": 457,
+    "texture_slots": 20,
+    "textures": [
+     "w503_missile_capstone_billfire_dif.ddsc",
+     "w503_missile_capstone_billfire_mpm.ddsc",
+     "dummy_black.ddsc",
+     "w503_missile_capstone_billfire_nrm.ddsc"
+    ],
+    "vertex_count": 55,
+    "position_stride": 8,
+    "attribute_count": 55,
+    "attribute_stride": 20,
+    "index_count": 99,
+    "offsets": {
+     "pool_at": 385,
+     "position_count_at": 842,
+     "positions_at": 846,
+     "attribute_count_at": 1286,
+     "attributes_at": 1290,
+     "indices_at": 2390
+    },
+    "attr_bbox_min": [
+     -0.20952381193637848,
+     1.087841510772705,
+     -1.5526179075241089
+    ],
+    "attr_bbox_max": [
+     0.20233747363090515,
+     1.1367062330245972,
+     -1.484980821609497
+    ]
+   },
+   "accounting": {
+    "head_bytes": 842,
+    "position_buffer": 444,
+    "attribute_buffer": 1104,
+    "index_buffer": 202,
+    "sum": 2592,
+    "payload_bytes": 2592,
+    "sum_equals_payload": true
+   },
+   "positions": {
+    "vertex_count": 55,
+    "inside_attr_bbox": 55,
+    "bbox_spans": [
+     0.41186128556728363,
+     0.04886472225189209,
+     0.06763708591461182
+    ],
+    "s16_spans": [
+     8590,
+     1019,
+     1410
+    ],
+    "live_axes": [
+     0,
+     1,
+     2
+    ]
+   },
+   "stream2": {
+    "stride": 20,
+    "count": 55,
+    "fields": [
+     {
+      "name": "uv_u (s16 unorm)",
+      "offset": 0,
+      "width": 2,
+      "kind": "s16",
+      "min": 1906,
+      "max": 32767,
+      "distinct": 23
+     },
+     {
+      "name": "uv_v (s16 unorm)",
+      "offset": 2,
+      "width": 2,
+      "kind": "s16",
+      "min": 24262,
+      "max": 32767,
+      "distinct": 9
+     },
+     {
+      "name": "sentinel 1.0 (s16)",
+      "offset": 4,
+      "width": 2,
+      "kind": "s16",
+      "min": 32767,
+      "max": 32767,
+      "distinct": 1
+     },
+     {
+      "name": "pad 0 (s16)",
+      "offset": 6,
+      "width": 2,
+      "kind": "s16",
+      "min": 0,
+      "max": 0,
+      "distinct": 1
+     },
+     {
+      "name": "float x",
+      "offset": 8,
+      "width": 4,
+      "kind": "f32",
+      "min": 12484.7734375,
+      "max": 51934.34765625,
+      "distinct": 22
+     },
+     {
+      "name": "float y",
+      "offset": 12,
+      "width": 4,
+      "kind": "f32",
+      "min": 2683.69140625,
+      "max": 52851.8828125,
+      "distinct": 53
+     },
+     {
+      "name": "marker 0x487FFFFF (f32)",
+      "offset": 16,
+      "width": 4,
+      "kind": "f32",
+      "min": 1216348159,
+      "max": 1216348159,
+      "distinct": 1
+     }
+    ],
+    "markers": {
+     "s16_32767": 55,
+     "s16_zero": 55,
+     "u32_marker": 55,
+     "vertices": 55
+    },
+    "float_pair_over_marker": {
+     "u": {
+      "min": 0.04762563393268787,
+      "max": 0.1981138258048192,
+      "distinct": 22
+     },
+     "v": {
+      "min": 0.010237470879404001,
+      "max": 0.20161394486510426,
+      "distinct": 53
+     }
+    }
+   },
+   "oracles": {
+    "uv_channel_a_unorm16": {
+     "positive": 0,
+     "negative": 33,
+     "degenerate": 0,
+     "consistent": 33,
+     "triangles": 33,
+     "density_median": 15.949247951992199,
+     "density_p10": 11.525486114654276,
+     "density_p90": 47.5116229552728,
+     "density_spread": 4.122309678102282
+    },
+    "uv_channel_b_float_over_marker": {
+     "positive": 21,
+     "negative": 12,
+     "degenerate": 0,
+     "consistent": 21,
+     "triangles": 33,
+     "density_median": 0.6556707070973297,
+     "density_p10": 0.06618123831191886,
+     "density_p90": 2.6291219833145987,
+     "density_spread": 39.72609232428202
+    },
+    "uv_channel_a_in_unit_range": {
+     "u_in": 52,
+     "v_in": 37,
+     "vertices": 55
+    },
+    "uv_channel_b_in_unit_range": {
+     "u_in": 55,
+     "v_in": 55,
+     "vertices": 55
+    },
+    "normal_octahedral_from_uv_pair": {
+     "mean": 0.13615825573353904,
+     "min": -0.8076425861965381,
+     "absmean": 0.45237338004684696,
+     "frac_above_0_9": 0.05454545454545454
+    },
+    "normal_float_triple": {
+     "mean": -0.2613431639410652,
+     "min": -0.9963237341156074,
+     "absmean": 0.3580579003816422,
+     "frac_above_0_9": 0.0
+    },
+    "float_triple_unit_length_over_marker": {
+     "min": 1.0034732172000225,
+     "max": 1.026798669194892,
+     "mean": 1.0126076966670228,
+     "worst_rel_error": 0.026798669194892044
+    },
+    "position_smoothness": {
+     "coincident_groups": 20,
+     "identical_c": 12,
+     "identical_d": 0,
+     "identical_uv_pair": 3
+    },
+    "affine_fit": {
+     "float_a_vs_uv_v": {
+      "slope": 57290.32432000418,
+      "intercept": -25325.13462666887,
+      "worst_residual_fraction": 0.5061945118136039
+     },
+     "float_b_vs_uv_u": {
+      "slope": 16527.833797394327,
+      "intercept": 21615.056907330192,
+      "worst_residual_fraction": 0.5340940542902745
+     },
+     "float_a_vs_pos_z": {
+      "slope": 179447.8463257718,
+      "intercept": 300097.04016347585,
+      "worst_residual_fraction": 0.46860020247275824
+     }
+    },
+    "float_triple_direction": {
+     "z_min": 0.9739007558162256,
+     "z_max": 0.9965388042844694,
+     "max_angle_deg": 13.11899936685909
+    },
+    "tangent_perpendicularity_float_triple": {
+     "absmean": 0.3623648070446385,
+     "max": 1.0060201757184037
+    },
+    "tangent_perpendicularity_uv_pair_as_xyz": {
+     "absmean": 0.4945543917235965,
+     "max": 1.301006473225522
+    }
+   }
+  },
+  {
+   "name": "models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle_missile_base_signature_lod3.rbm",
+   "size": 14590,
+   "block_bytes_sum": 14590,
+   "sum_equals_size": true,
+   "header": {
+    "header_len": 53,
+    "blocks": 3,
+    "bbox_min": [
+     -0.30109903216362,
+     1.0049220323562622,
+     -1.5710318088531494
+    ],
+    "bbox_max": [
+     0.29746440052986145,
+     1.1840211153030396,
+     -1.1791528463363647
+    ]
+   },
+   "blocks": [
+    {
+     "index": 0,
+     "type_hash": "0x483304D6",
+     "type": "CarPaintMM",
+     "bytes": 5455,
+     "decoder": "rbm_geom.decode_carpaintmm",
+     "ends_on_block_checksum": true
+    },
+    {
+     "index": 1,
+     "type_hash": "0x2CEC5AD5",
+     "type": "GeneralMkIII",
+     "bytes": 1214,
+     "decoder": "decode_depth4.mkiii_layout",
+     "ends_on_block_checksum": true
+    },
+    {
+     "index": 2,
+     "type_hash": "0x483304D6",
+     "type": "CarPaintMM",
+     "bytes": 7844,
+     "decoder": "rbm_geom.decode_carpaintmm",
+     "ends_on_block_checksum": true
+    }
+   ],
+   "mkiii": {
+    "payload_bytes": 1214,
+    "version": 5,
+    "attributes_bytes": 104,
+    "material_consts_bytes": 280,
+    "texture_table_bytes": 457,
+    "texture_slots": 20,
+    "textures": [
+     "w503_missile_capstone_billfire_dif.ddsc",
+     "w503_missile_capstone_billfire_mpm.ddsc",
+     "dummy_black.ddsc",
+     "w503_missile_capstone_billfire_nrm.ddsc"
+    ],
+    "vertex_count": 12,
+    "position_stride": 8,
+    "attribute_count": 12,
+    "attribute_stride": 20,
+    "index_count": 12,
+    "offsets": {
+     "pool_at": 385,
+     "position_count_at": 842,
+     "positions_at": 846,
+     "attribute_count_at": 942,
+     "attributes_at": 946,
+     "indices_at": 1186
+    },
+    "attr_bbox_min": [
+     -0.08371978998184204,
+     1.0999222993850708,
+     -1.5585724115371704
+    ],
+    "attr_bbox_max": [
+     0.06946782767772675,
+     1.1371264457702637,
+     -1.4862327575683594
+    ]
+   },
+   "accounting": {
+    "head_bytes": 842,
+    "position_buffer": 100,
+    "attribute_buffer": 244,
+    "index_buffer": 28,
+    "sum": 1214,
+    "payload_bytes": 1214,
+    "sum_equals_payload": true
+   },
+   "positions": {
+    "vertex_count": 12,
+    "inside_attr_bbox": 12,
+    "bbox_spans": [
+     0.1531876176595688,
+     0.03720414638519287,
+     0.07233965396881104
+    ],
+    "s16_spans": [
+     3194,
+     776,
+     1509
+    ],
+    "live_axes": [
+     0,
+     1,
+     2
+    ]
+   },
+   "stream2": {
+    "stride": 20,
+    "count": 12,
+    "fields": [
+     {
+      "name": "uv_u (s16 unorm)",
+      "offset": 0,
+      "width": 2,
+      "kind": "s16",
+      "min": 1906,
+      "max": 32767,
+      "distinct": 8
+     },
+     {
+      "name": "uv_v (s16 unorm)",
+      "offset": 2,
+      "width": 2,
+      "kind": "s16",
+      "min": 28269,
+      "max": 32767,
+      "distinct": 3
+     },
+     {
+      "name": "sentinel 1.0 (s16)",
+      "offset": 4,
+      "width": 2,
+      "kind": "s16",
+      "min": 32767,
+      "max": 32767,
+      "distinct": 1
+     },
+     {
+      "name": "pad 0 (s16)",
+      "offset": 6,
+      "width": 2,
+      "kind": "s16",
+      "min": 0,
+      "max": 0,
+      "distinct": 1
+     },
+     {
+      "name": "float x",
+      "offset": 8,
+      "width": 4,
+      "kind": "f32",
+      "min": 21895.02734375,
+      "max": 44923.95703125,
+      "distinct": 10
+     },
+     {
+      "name": "float y",
+      "offset": 12,
+      "width": 4,
+      "kind": "f32",
+      "min": 25081.5703125,
+      "max": 48050.10546875,
+      "distinct": 11
+     },
+     {
+      "name": "marker 0x487FFFFF (f32)",
+      "offset": 16,
+      "width": 4,
+      "kind": "f32",
+      "min": 1216348159,
+      "max": 1216348159,
+      "distinct": 1
+     }
+    ],
+    "markers": {
+     "s16_32767": 12,
+     "s16_zero": 12,
+     "u32_marker": 12,
+     "vertices": 12
+    },
+    "float_pair_over_marker": {
+     "u": {
+      "min": 0.08352290591734086,
+      "max": 0.1713713062626902,
+      "distinct": 10
+     },
+     "v": {
+      "min": 0.09567860339156409,
+      "max": 0.1832966168699632,
+      "distinct": 11
+     }
+    }
+   },
+   "oracles": {
+    "uv_channel_a_unorm16": {
+     "positive": 0,
+     "negative": 4,
+     "degenerate": 0,
+     "consistent": 4,
+     "triangles": 4,
+     "density_median": 19.414416301574953,
+     "density_p10": 14.621277576718173,
+     "density_p90": 22.18915091475331,
+     "density_spread": 1.5175931650518455
+    },
+    "uv_channel_b_float_over_marker": {
+     "positive": 1,
+     "negative": 2,
+     "degenerate": 1,
+     "consistent": 2,
+     "triangles": 4,
+     "density_median": 0.1248809222397403,
+     "density_p10": 0.026026561808231714,
+     "density_p90": 0.19558968291252884,
+     "density_spread": 7.515002725049434
+    },
+    "uv_channel_a_in_unit_range": {
+     "u_in": 10,
+     "v_in": 6,
+     "vertices": 12
+    },
+    "uv_channel_b_in_unit_range": {
+     "u_in": 12,
+     "v_in": 12,
+     "vertices": 12
+    },
+    "normal_octahedral_from_uv_pair": {
+     "mean": 0.11349320204472434,
+     "min": -0.6576886052433046,
+     "absmean": 0.4223941144649415,
+     "frac_above_0_9": 0.0
+    },
+    "normal_float_triple": {
+     "mean": 0.006265402508810654,
+     "min": -0.43583429779693833,
+     "absmean": 0.2760464958089606,
+     "frac_above_0_9": 0.0
+    },
+    "float_triple_unit_length_over_marker": {
+     "min": 1.01030034689526,
+     "max": 1.0233616834869728,
+     "mean": 1.016911579329615,
+     "worst_rel_error": 0.023361683486972762
+    },
+    "position_smoothness": {
+     "coincident_groups": 6,
+     "identical_c": 0,
+     "identical_d": 0,
+     "identical_uv_pair": 2
+    },
+    "affine_fit": {
+     "float_a_vs_uv_v": {
+      "slope": 48229.5349372065,
+      "intercept": -11819.33420943428,
+      "worst_residual_fraction": 0.5903158048998279
+     },
+     "float_b_vs_uv_u": {
+      "slope": 10338.477478254346,
+      "intercept": 28354.59689114855,
+      "worst_residual_fraction": 0.483280756599751
+     },
+     "float_a_vs_pos_z": {
+      "slope": 95512.75814627882,
+      "intercept": 178492.6175187609,
+      "worst_residual_fraction": 0.5851592973893103
+     }
+    },
+    "float_triple_direction": {
+     "z_min": 0.9771716257663948,
+     "z_max": 0.9898046685553321,
+     "max_angle_deg": 12.266051621286985
+    },
+    "tangent_perpendicularity_float_triple": {
+     "absmean": 0.28087476926393,
+     "max": 0.4846675695838425
+    },
+    "tangent_perpendicularity_uv_pair_as_xyz": {
+     "absmean": 0.5264099461852831,
+     "max": 0.8764248953936847
+    }
+   }
+  }
+ ],
+ "fleet": {
+  "archive_entries": 566,
+  "entities": 12,
+  "blocks": 126,
+  "files": 3261,
+  "files_with_blocks": 117,
+  "marker16_ok": 106,
+  "s4_is_32767": 28,
+  "s4_is_zero": 73,
+  "s6_is_zero": 101,
+  "uv_chart_consistent": 28,
+  "float_pair_in_range": 126,
+  "positions_inside": 126,
+  "stride20": 126,
+  "vertices": 56319,
+  "not_uniform": 2,
+  "chart_ok_with_s4_one": 10,
+  "chart_ok_with_s4_zero": 18,
+  "vehicle_entities": 233,
+  "failures": [
+   "oldjeep_antenna_lod1.rbm: no uniform 20-byte record (interleaved stride)",
+   "oldjeep_antenna_lod2.rbm: no uniform 20-byte record (interleaved stride)",
+   "buggy_vdova_89_base_l_signature_lod1.rbm: UV chart flips (104+/348-)",
+   "buggy_vdova_89_base_l_signature_lod2.rbm: UV chart flips (51+/134-)",
+   "buggy_vdova_89_base_l_signature_lod3.rbm: UV chart flips (20+/49-)",
+   "buggy_vdova_89_base_l_signature_lod4.rbm: UV chart flips (10+/26-)",
+   "buggy_vdova_89_base_r_signature_lod1.rbm: UV chart flips (348+/104-)",
+   "buggy_vdova_89_base_r_signature_lod2.rbm: UV chart flips (129+/54-)",
+   "buggy_vdova_89_base_r_signature_lod3.rbm: UV chart flips (45+/22-)",
+   "buggy_vdova_89_base_r_signature_lod4.rbm: UV chart flips (25+/11-)"
+  ],
+  "all_ok": false
+ },
+ "witnesses": [
+  {
+   "name": "sportsmuscle_missile_base_signature_lod1.rbm",
+   "vertices": 176,
+   "indices": 672,
+   "stride": 8,
+   "uv_u_distinct": 44,
+   "uv_v_distinct": 21,
+   "s4": 32767,
+   "float_pair": "+0.000..+0.242 of marker",
+   "marker": "0x487FFFFF"
+  },
+  {
+   "name": "apc_weapon_mount_horizontal_lod1.rbm",
+   "vertices": 876,
+   "indices": 1968,
+   "stride": 8,
+   "uv_u_distinct": 144,
+   "uv_v_distinct": 149,
+   "s4": 0,
+   "float_pair": "-0.249..+0.249 of marker",
+   "marker": "0x487FFFFF"
+  },
+  {
+   "name": "oldjeep_antenna_lod1.rbm",
+   "vertices": 289,
+   "indices": 984,
+   "stride": 16,
+   "uv_u_distinct": "n/a",
+   "uv_v_distinct": "n/a",
+   "s4": "n/a",
+   "float_pair": "no uniform 20-byte record",
+   "marker": "n/a"
+  }
+ ],
+ "all_sums_ok": true,
+ "all_payloads_exact": true,
+ "all_positions_inside": true,
+ "all_markers_exact": true,
+ "uv_chart_all_consistent": true
+}

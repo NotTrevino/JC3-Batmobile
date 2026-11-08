@@ -1,0 +1,7 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/winch-and-tether.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-06
+BmAK's Batmobile has a winch (RBatmobileWinch, T-WP6) and the world rows T-WLD15 and T-WLD17 ask for sensible tether and airlift behaviour with a 6 t car. The ledger found no winch class in the 103-class census, but 4 entities carry rope or winch geometry. Open those four entities and every tow, tether, grapple or cargo-hook component in the grab (the grappling hook, the tow-truck style vehicles, helicopter hooks, CVehicleCargoBay) and list each member that controls attach point, length, force and release. State what a Batmobile winch clone would need and whether the helicopter airlift is blocked by data or by code. Evidence paths required; unknowns named.
+Where JC3 has no exact carrier, give the closest system and the gap for the build to fill (STAGES.md).
+Operator lead (2026-11-06): the model for the winch is Rico's grappling hook and tether; no vehicle-mounted cable is known to the operator. Start from the grapple-hook and tether members and say what a car-mounted copy needs (anchor on the vehicle, pull force toward a target, release), with the 6 t mass in mind.

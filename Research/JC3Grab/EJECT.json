@@ -1,0 +1,2480 @@
+{
+ "card": "G2-20",
+ "donor": {
+  "entity": "v0300_car_kensington_sportsmuscle__v0300_car_kensington_sportsmuscle_civilian_01",
+  "xml": "Research/Epe/serpente_civilian.xml",
+  "geometry_from": "Research/JC3Grab/INTERACTION.json (G2-18)",
+  "exits": [
+   {
+    "name": "exit.ai.driver.default",
+    "state": "S_EXIT_VEHICLE",
+    "modifier": null,
+    "enabled": "1",
+    "interaction": "00000000",
+    "parent": "point.driver",
+    "serpente": [
+     -0.44,
+     0.34,
+     0.2
+    ],
+    "batmobile": [
+     -0.5776,
+     0.5976,
+     0.3916
+    ],
+    "verdict": "inside",
+    "surface_m": 0.0428,
+    "gate": {
+     "min": 0.0,
+     "max": 5.0
+    },
+    "conditions": [
+     {
+      "class": "CInteractionGraphExitObstructedCondition",
+      "values": {
+       "check": "0"
+      }
+     },
+     {
+      "class": "CInteractionGraphParentIsUpRightCondition",
+      "values": {
+       "check": "1"
+      }
+     },
+     {
+      "class": "CInteractionGraphParentVelocityCondition",
+      "values": {
+       "max": "5",
+       "min": "0"
+      }
+     },
+     {
+      "class": "CInteractionGraphUserIsPlayerCondition",
+      "values": {
+       "check": "0"
+      }
+     }
+    ],
+    "condition_classes": [
+     "CInteractionGraphExitObstructedCondition",
+     "CInteractionGraphParentIsUpRightCondition",
+     "CInteractionGraphParentVelocityCondition",
+     "CInteractionGraphUserIsPlayerCondition"
+    ]
+   },
+   {
+    "name": "exit.ai.driver.default0",
+    "state": "S_EXIT_VEHICLE_0",
+    "modifier": null,
+    "enabled": "1",
+    "interaction": "00000000",
+    "parent": "point.driver",
+    "serpente": [
+     -0.44,
+     0.34,
+     0.2
+    ],
+    "batmobile": [
+     -0.5776,
+     0.5976,
+     0.3916
+    ],
+    "verdict": "inside",
+    "surface_m": 0.0428,
+    "gate": null,
+    "conditions": [
+     {
+      "class": "CInteractionGraphParentIsUpRightCondition",
+      "values": {
+       "check": "1"
+      }
+     }
+    ],
+    "condition_classes": [
+     "CInteractionGraphParentIsUpRightCondition"
+    ]
+   },
+   {
+    "name": "exit.ai.driver.default180",
+    "state": "S_EXIT_VEHICLE_180",
+    "modifier": null,
+    "enabled": "1",
+    "interaction": "00000000",
+    "parent": "point.driver",
+    "serpente": [
+     -0.44,
+     0.34,
+     0.2
+    ],
+    "batmobile": [
+     -0.5776,
+     0.5976,
+     0.3916
+    ],
+    "verdict": "inside",
+    "surface_m": 0.0428,
+    "gate": null,
+    "conditions": [
+     {
+      "class": "CInteractionGraphParentIsUpRightCondition",
+      "values": {
+       "check": "1"
+      }
+     }
+    ],
+    "condition_classes": [
+     "CInteractionGraphParentIsUpRightCondition"
+    ]
+   },
+   {
+    "name": "exit.ai.driver.default90L",
+    "state": "S_EXIT_VEHICLE_90L",
+    "modifier": null,
+    "enabled": "1",
+    "interaction": "00000000",
+    "parent": "point.driver",
+    "serpente": [
+     -0.44,
+     0.34,
+     0.2
+    ],
+    "batmobile": [
+     -0.5776,
+     0.5976,
+     0.3916
+    ],
+    "verdict": "inside",
+    "surface_m": 0.0428,
+    "gate": null,
+    "conditions": [
+     {
+      "class": "CInteractionGraphParentIsUpRightCondition",
+      "values": {
+       "check": "1"
+      }
+     }
+    ],
+    "condition_classes": [
+     "CInteractionGraphParentIsUpRightCondition"
+    ]
+   },
+   {
+    "name": "exit.ai.driver.default90R",
+    "state": "S_EXIT_VEHICLE_90R",
+    "modifier": null,
+    "enabled": "1",
+    "interaction": "00000000",
+    "parent": "point.driver",
+    "serpente": [
+     -0.44,
+     0.34,
+     0.2
+    ],
+    "batmobile": [
+     -0.5776,
+     0.5976,
+     0.3916
+    ],
+    "verdict": "inside",
+    "surface_m": 0.0428,
+    "gate": null,
+    "conditions": [
+     {
+      "class": "CInteractionGraphParentIsUpRightCondition",
+      "values": {
+       "check": "1"
+      }
+     }
+    ],
+    "condition_classes": [
+     "CInteractionGraphParentIsUpRightCondition"
+    ]
+   },
+   {
+    "name": "exit.ai.driver.to.hood",
+    "state": "S_EXIT_DRIVER_TO_HOOD_VEHICLE",
+    "modifier": null,
+    "enabled": "1",
+    "interaction": "00000000",
+    "parent": "point.driver",
+    "serpente": [
+     -0.44,
+     0.34,
+     0.2
+    ],
+    "batmobile": [
+     -0.5776,
+     0.5976,
+     0.3916
+    ],
+    "verdict": "inside",
+    "surface_m": 0.0428,
+    "gate": null,
+    "conditions": [
+     {
+      "class": "CInteractionGraphParentIsUpRightCondition",
+      "values": {
+       "check": "1"
+      }
+     }
+    ],
+    "condition_classes": [
+     "CInteractionGraphParentIsUpRightCondition"
+    ]
+   },
+   {
+    "name": "exit.ai.passenger1.default",
+    "state": "S_EXIT_VEHICLE",
+    "modifier": "MOD_RIGHT",
+    "enabled": "1",
+    "interaction": "00000000",
+    "parent": "point.passenger1",
+    "serpente": [
+     0.4421713,
+     0.34,
+     0.2
+    ],
+    "batmobile": [
+     0.5815,
+     0.5976,
+     0.3916
+    ],
+    "verdict": "inside",
+    "surface_m": 0.0483,
+    "gate": null,
+    "conditions": [
+     {
+      "class": "CInteractionGraphParentIsUpRightCondition",
+      "values": {
+       "check": "1"
+      }
+     },
+     {
+      "class": "CInteractionGraphUserIsPlayerCondition",
+      "values": {
+       "check": "0"
+      }
+     }
+    ],
+    "condition_classes": [
+     "CInteractionGraphParentIsUpRightCondition",
+     "CInteractionGraphUserIsPlayerCondition"
+    ]
+   },
+   {
+    "name": "exit.ai.passenger1.default0",
+    "state": "S_EXIT_VEHICLE_0",
+    "modifier": "MOD_RIGHT",
+    "enabled": "1",
+    "interaction": "00000000",
+    "parent": "point.passenger1",
+    "serpente": [
+     0.4421713,
+     0.34,
+     0.2
+    ],
+    "batmobile": [
+     0.5815,
+     0.5976,
+     0.3916
+    ],
+    "verdict": "inside",
+    "surface_m": 0.0483,
+    "gate": null,
+    "conditions": [
+     {
+      "class": "CInteractionGraphParentIsUpRightCondition",
+      "values": {
+       "check": "1"
+      }
+     }
+    ],
+    "condition_classes": [
+     "CInteractionGraphParentIsUpRightCondition"
+    ]
+   },
+   {
+    "name": "exit.ai.passenger1.default180",
+    "state": "S_EXIT_VEHICLE_180",
+    "modifier": "MOD_RIGHT",
+    "enabled": "1",
+    "interaction": "00000000",
+    "parent": "point.passenger1",
+    "serpente": [
+     0.4421713,
+     0.34,
+     0.2
+    ],
+    "batmobile": [
+     0.5815,
+     0.5976,
+     0.3916
+    ],
+    "verdict": "inside",
+    "surface_m": 0.0483,
+    "gate": null,
+    "conditions": [
+     {
+      "class": "CInteractionGraphParentIsUpRightCondition",
+      "values": {
+       "check": "1"
+      }
+     }
+    ],
+    "condition_classes": [
+     "CInteractionGraphParentIsUpRightCondition"
+    ]
+   },
+   {
+    "name": "exit.ai.passenger1.default90L",
+    "state": "S_EXIT_VEHICLE_90L",
+    "modifier": "MOD_RIGHT",
+    "enabled": "1",
+    "interaction": "00000000",
+    "parent": "point.passenger1",
+    "serpente": [
+     0.4421713,
+     0.34,
+     0.2
+    ],
+    "batmobile": [
+     0.5815,
+     0.5976,
+     0.3916
+    ],
+    "verdict": "inside",
+    "surface_m": 0.0483,
+    "gate": null,
+    "conditions": [
+     {
+      "class": "CInteractionGraphParentIsUpRightCondition",
+      "values": {
+       "check": "1"
+      }
+     }
+    ],
+    "condition_classes": [
+     "CInteractionGraphParentIsUpRightCondition"
+    ]
+   },
+   {
+    "name": "exit.ai.passenger1.default90R",
+    "state": "S_EXIT_VEHICLE_90R",
+    "modifier": "MOD_RIGHT",
+    "enabled": "1",
+    "interaction": "00000000",
+    "parent": "point.passenger1",
+    "serpente": [
+     0.4421713,
+     0.34,
+     0.2
+    ],
+    "batmobile": [
+     0.5815,
+     0.5976,
+     0.3916
+    ],
+    "verdict": "inside",
+    "surface_m": 0.0483,
+    "gate": null,
+    "conditions": [
+     {
+      "class": "CInteractionGraphParentIsUpRightCondition",
+      "values": {
+       "check": "1"
+      }
+     }
+    ],
+    "condition_classes": [
+     "CInteractionGraphParentIsUpRightCondition"
+    ]
+   },
+   {
+    "name": "exit.ai.passenger1.to.hood",
+    "state": "S_EXIT_DRIVER_TO_HOOD_VEHICLE",
+    "modifier": "MOD_RIGHT",
+    "enabled": "1",
+    "interaction": "00000000",
+    "parent": "point.passenger1",
+    "serpente": [
+     0.4421713,
+     0.34,
+     0.2
+    ],
+    "batmobile": [
+     0.5815,
+     0.5976,
+     0.3916
+    ],
+    "verdict": "inside",
+    "surface_m": 0.0483,
+    "gate": null,
+    "conditions": [
+     {
+      "class": "CInteractionGraphParentIsUpRightCondition",
+      "values": {
+       "check": "1"
+      }
+     }
+    ],
+    "condition_classes": [
+     "CInteractionGraphParentIsUpRightCondition"
+    ]
+   },
+   {
+    "name": "exit.driver.default",
+    "state": "S_EXIT_VEHICLE",
+    "modifier": null,
+    "enabled": "1",
+    "interaction": "00000000",
+    "parent": "point.driver",
+    "serpente": [
+     -0.44,
+     0.34,
+     0.2
+    ],
+    "batmobile": [
+     -0.5776,
+     0.5976,
+     0.3916
+    ],
+    "verdict": "inside",
+    "surface_m": 0.0428,
+    "gate": {
+     "min": 0.0,
+     "max": 5.0
+    },
+    "conditions": [
+     {
+      "class": "CInteractionGraphExitObstructedCondition",
+      "values": {
+       "check": "0"
+      }
+     },
+     {
+      "class": "CInteractionGraphParentVelocityCondition",
+      "values": {
+       "max": "5",
+       "min": "0"
+      }
+     },
+     {
+      "class": "CInteractionGraphUserIsPlayerCondition",
+      "values": {
+       "check": "1"
+      }
+     }
+    ],
+    "condition_classes": [
+     "CInteractionGraphExitObstructedCondition",
+     "CInteractionGraphParentVelocityCondition",
+     "CInteractionGraphUserIsPlayerCondition"
+    ]
+   },
+   {
+    "name": "exit.driver.moving.parachute",
+    "state": "S_EXIT_VEHICLE_PARA",
+    "modifier": null,
+    "enabled": "1",
+    "interaction": "00000000",
+    "parent": "point.driver",
+    "serpente": [
+     -0.44,
+     0.34,
+     0.2
+    ],
+    "batmobile": [
+     -0.5776,
+     0.5976,
+     0.3916
+    ],
+    "verdict": "inside",
+    "surface_m": 0.0428,
+    "gate": {
+     "min": 5.0,
+     "max": 999.0
+    },
+    "conditions": [
+     {
+      "class": "CInteractionGraphParentVelocityCondition",
+      "values": {
+       "max": "999",
+       "min": "5"
+      }
+     },
+     {
+      "class": "CInteractionGraphExitObstructedCondition",
+      "values": {
+       "check": "0"
+      }
+     }
+    ],
+    "condition_classes": [
+     "CInteractionGraphParentVelocityCondition",
+     "CInteractionGraphExitObstructedCondition"
+    ]
+   },
+   {
+    "name": "exit.driver.pulled.out",
+    "state": "S_PULLED_OUT_VEHICLE",
+    "modifier": null,
+    "enabled": "1",
+    "interaction": "00000000",
+    "parent": "point.driver",
+    "serpente": [
+     -0.44,
+     0.34,
+     0.2
+    ],
+    "batmobile": [
+     -0.5776,
+     0.5976,
+     0.3916
+    ],
+    "verdict": "inside",
+    "surface_m": 0.0428,
+    "gate": null,
+    "conditions": [],
+    "condition_classes": []
+   },
+   {
+    "name": "exit.driver.pushed.out",
+    "state": "S_PUSHED_OUT_VEHICLE",
+    "modifier": null,
+    "enabled": "1",
+    "interaction": "00000000",
+    "parent": "point.driver",
+    "serpente": [
+     -0.44,
+     0.34,
+     0.2
+    ],
+    "batmobile": [
+     -0.5776,
+     0.5976,
+     0.3916
+    ],
+    "verdict": "inside",
+    "surface_m": 0.0428,
+    "gate": null,
+    "conditions": [],
+    "condition_classes": []
+   },
+   {
+    "name": "exit.driver.roll.out",
+    "state": "S_ROLL_OUT_EXIT_VEHICLE",
+    "modifier": null,
+    "enabled": "1",
+    "interaction": "00000000",
+    "parent": "point.driver",
+    "serpente": [
+     -0.44,
+     0.34,
+     0.2
+    ],
+    "batmobile": [
+     -0.5776,
+     0.5976,
+     0.3916
+    ],
+    "verdict": "inside",
+    "surface_m": 0.0428,
+    "gate": {
+     "min": 5.0,
+     "max": 999.0
+    },
+    "conditions": [
+     {
+      "class": "CInteractionGraphParentVelocityCondition",
+      "values": {
+       "max": "999",
+       "min": "5"
+      }
+     }
+    ],
+    "condition_classes": [
+     "CInteractionGraphParentVelocityCondition"
+    ]
+   },
+   {
+    "name": "exit.driver.to.fall",
+    "state": "S_EXIT_VEHICLE_TO_FALL",
+    "modifier": null,
+    "enabled": "1",
+    "interaction": "00000000",
+    "parent": "point.driver",
+    "serpente": [
+     -0.44,
+     0.34,
+     0.2
+    ],
+    "batmobile": [
+     -0.5776,
+     0.5976,
+     0.3916
+    ],
+    "verdict": "inside",
+    "surface_m": 0.0428,
+    "gate": {
+     "min": 0.0,
+     "max": 5.0
+    },
+    "conditions": [
+     {
+      "class": "CInteractionGraphParentVelocityCondition",
+      "values": {
+       "max": "5",
+       "min": "0"
+      }
+     },
+     {
+      "class": "CInteractionGraphExitObstructedCondition",
+      "values": {
+       "check": "0"
+      }
+     }
+    ],
+    "condition_classes": [
+     "CInteractionGraphParentVelocityCondition",
+     "CInteractionGraphExitObstructedCondition"
+    ]
+   },
+   {
+    "name": "exit.driver.to.swim",
+    "state": "S_EXIT_DRIVER_VEHICLE_IN_WATER",
+    "modifier": null,
+    "enabled": "1",
+    "interaction": "00000000",
+    "parent": "point.driver",
+    "serpente": [
+     -0.44,
+     0.34,
+     0.2
+    ],
+    "batmobile": [
+     -0.5776,
+     0.5976,
+     0.3916
+    ],
+    "verdict": "inside",
+    "surface_m": 0.0428,
+    "gate": null,
+    "conditions": [],
+    "condition_classes": []
+   },
+   {
+    "name": "exit.driver.upside.down",
+    "state": "S_EXIT_DRIVER_VEHICLE_UPSIDE_DOWN",
+    "modifier": null,
+    "enabled": "1",
+    "interaction": "00000000",
+    "parent": "point.driver",
+    "serpente": [
+     -0.44,
+     0.34,
+     0.2
+    ],
+    "batmobile": [
+     -0.5776,
+     0.5976,
+     0.3916
+    ],
+    "verdict": "inside",
+    "surface_m": 0.0428,
+    "gate": null,
+    "conditions": [],
+    "condition_classes": []
+   },
+   {
+    "name": "exit.from.stunt",
+    "state": "S_STUNT_EXIT_VEHICLE",
+    "modifier": null,
+    "enabled": "1",
+    "interaction": "00000000",
+    "parent": "point.stunt",
+    "serpente": [
+     0.0,
+     1.487549,
+     0.421875
+    ],
+    "batmobile": [
+     0.0005,
+     2.3074,
+     0.698
+    ],
+    "verdict": "floating",
+    "surface_m": 0.3494,
+    "gate": null,
+    "conditions": [
+     {
+      "class": "CInteractionGraphStuntExitValidCondition",
+      "values": {}
+     }
+    ],
+    "condition_classes": [
+     "CInteractionGraphStuntExitValidCondition"
+    ]
+   },
+   {
+    "name": "exit.from.stunt.hood",
+    "state": "S_STUNT_EXIT_VEHICLE",
+    "modifier": null,
+    "enabled": "1",
+    "interaction": "00000000",
+    "parent": "point.stunt.hood",
+    "serpente": [
+     0.0,
+     1.050659,
+     -1.504883
+    ],
+    "batmobile": [
+     0.0005,
+     1.6564,
+     -1.9627
+    ],
+    "verdict": "floating",
+    "surface_m": 0.0405,
+    "gate": null,
+    "conditions": [
+     {
+      "class": "CInteractionGraphStuntExitValidCondition",
+      "values": {}
+     }
+    ],
+    "condition_classes": [
+     "CInteractionGraphStuntExitValidCondition"
+    ]
+   },
+   {
+    "name": "exit.passenger1.default",
+    "state": "S_EXIT_VEHICLE",
+    "modifier": "MOD_LOW_RIGHT",
+    "enabled": "1",
+    "interaction": "00000000",
+    "parent": "point.passenger1",
+    "serpente": [
+     0.4421713,
+     0.34,
+     0.2
+    ],
+    "batmobile": [
+     0.5815,
+     0.5976,
+     0.3916
+    ],
+    "verdict": "inside",
+    "surface_m": 0.0483,
+    "gate": null,
+    "conditions": [
+     {
+      "class": "CInteractionGraphUserIsPlayerCondition",
+      "values": {
+       "check": "1"
+      }
+     }
+    ],
+    "condition_classes": [
+     "CInteractionGraphUserIsPlayerCondition"
+    ]
+   },
+   {
+    "name": "exit.passenger1.pulled.out",
+    "state": "S_PULLED_OUT_VEHICLE",
+    "modifier": "MOD_LOW_RIGHT",
+    "enabled": "1",
+    "interaction": "00000000",
+    "parent": "point.passenger1",
+    "serpente": [
+     0.4421713,
+     0.34,
+     0.2
+    ],
+    "batmobile": [
+     0.5815,
+     0.5976,
+     0.3916
+    ],
+    "verdict": "inside",
+    "surface_m": 0.0483,
+    "gate": {
+     "min": 0.0,
+     "max": 3.0
+    },
+    "conditions": [
+     {
+      "class": "CInteractionGraphParentVelocityCondition",
+      "values": {
+       "max": "3",
+       "min": "0"
+      }
+     }
+    ],
+    "condition_classes": [
+     "CInteractionGraphParentVelocityCondition"
+    ]
+   },
+   {
+    "name": "exit.passenger1.roll.out",
+    "state": "S_ROLL_OUT_EXIT_VEHICLE",
+    "modifier": "MOD_RIGHT",
+    "enabled": "1",
+    "interaction": "00000000",
+    "parent": "point.passenger1",
+    "serpente": [
+     0.4421713,
+     0.34,
+     0.2
+    ],
+    "batmobile": [
+     0.5815,
+     0.5976,
+     0.3916
+    ],
+    "verdict": "inside",
+    "surface_m": 0.0483,
+    "gate": {
+     "min": 3.0,
+     "max": 999.0
+    },
+    "conditions": [
+     {
+      "class": "CInteractionGraphParentVelocityCondition",
+      "values": {
+       "max": "999",
+       "min": "3"
+      }
+     }
+    ],
+    "condition_classes": [
+     "CInteractionGraphParentVelocityCondition"
+    ]
+   },
+   {
+    "name": "exit.passenger1.upside.down",
+    "state": "S_EXIT_PASSENGER_VEHICLE_UPSIDE_DOWN",
+    "modifier": null,
+    "enabled": "1",
+    "interaction": "00000000",
+    "parent": "point.passenger1",
+    "serpente": [
+     0.4421713,
+     0.34,
+     0.2
+    ],
+    "batmobile": [
+     0.5815,
+     0.5976,
+     0.3916
+    ],
+    "verdict": "inside",
+    "surface_m": 0.0483,
+    "gate": null,
+    "conditions": [],
+    "condition_classes": []
+   }
+  ]
+ },
+ "fleet": {
+  "graphs": 232,
+  "exits": 4832,
+  "distinct_names": 61,
+  "names": {
+   "exit.driver.default": {
+    "count": 161,
+    "states": {
+     "S_EXIT_VEHICLE": 161
+    },
+    "roots": {
+     "CCar": 119,
+     "CHelicopter": 23,
+     "CAirPlane": 19
+    },
+    "modifiers": {
+     "None": 143,
+     "MOD_TRACTOR": 3,
+     "MOD_HIGH": 3,
+     "MOD_HELI_ASSAULT": 8,
+     "MOD_JET_BEHIND": 4
+    },
+    "enabled": {
+     "1": 161
+    }
+   },
+   "exit.ai.driver.default": {
+    "count": 133,
+    "states": {
+     "S_EXIT_VEHICLE": 133
+    },
+    "roots": {
+     "CCar": 133
+    },
+    "modifiers": {
+     "None": 133
+    },
+    "enabled": {
+     "1": 133
+    }
+   },
+   "exit.ai.driver.to.hood": {
+    "count": 175,
+    "states": {
+     "S_EXIT_DRIVER_TO_HOOD_VEHICLE": 175
+    },
+    "roots": {
+     "CCar": 104,
+     "CBoat": 30,
+     "CHelicopter": 23,
+     "CAirPlane": 18
+    },
+    "modifiers": {
+     "None": 175
+    },
+    "enabled": {
+     "1": 175
+    }
+   },
+   "exit.ai.driver.to.right.hood": {
+    "count": 16,
+    "states": {
+     "S_EXIT_DRIVER_TO_RIGHT_HOOD_VEHICLE": 16
+    },
+    "roots": {
+     "CCar": 16
+    },
+    "modifiers": {
+     "None": 9,
+     "MOD_TECHNICAL_JEEP": 4,
+     "MOD_ARMORED_JEEP": 3
+    },
+    "enabled": {
+     "1": 16
+    }
+   },
+   "exit.driver.roll.out": {
+    "count": 183,
+    "states": {
+     "S_ROLL_OUT_EXIT_VEHICLE": 183
+    },
+    "roots": {
+     "CCar": 112,
+     "CBoat": 30,
+     "CHelicopter": 23,
+     "CAirPlane": 18
+    },
+    "modifiers": {
+     "None": 173,
+     "MOD_TRACTOR": 3,
+     "MOD_BOAT_SPY": 3,
+     "MOD_JET_BEHIND": 4
+    },
+    "enabled": {
+     "1": 183
+    }
+   },
+   "exit.driver.moving.parachute": {
+    "count": 221,
+    "states": {
+     "S_EXIT_VEHICLE_PARA": 221
+    },
+    "roots": {
+     "CCar": 125,
+     "CBoat": 35,
+     "CHelicopter": 23,
+     "CMotorBike": 19,
+     "CAirPlane": 19
+    },
+    "modifiers": {
+     "None": 210,
+     "MOD_BOAT_SPY": 3,
+     "MOD_HELI_ASSAULT": 8
+    },
+    "enabled": {
+     "1": 221
+    }
+   },
+   "exit.ai.driver.default90R": {
+    "count": 206,
+    "states": {
+     "S_EXIT_VEHICLE_90R": 206
+    },
+    "roots": {
+     "CCar": 124,
+     "CBoat": 30,
+     "CHelicopter": 32,
+     "CAirPlane": 20
+    },
+    "modifiers": {
+     "None": 206
+    },
+    "enabled": {
+     "1": 206
+    }
+   },
+   "exit.driver.pushed.out": {
+    "count": 221,
+    "states": {
+     "S_PUSHED_OUT_VEHICLE": 221
+    },
+    "roots": {
+     "CCar": 125,
+     "CBoat": 35,
+     "CHelicopter": 23,
+     "CMotorBike": 19,
+     "CAirPlane": 19
+    },
+    "modifiers": {
+     "None": 221
+    },
+    "enabled": {
+     "1": 221
+    }
+   },
+   "exit.ai.driver.default90L": {
+    "count": 206,
+    "states": {
+     "S_EXIT_VEHICLE_90L": 206
+    },
+    "roots": {
+     "CCar": 124,
+     "CBoat": 30,
+     "CHelicopter": 32,
+     "CAirPlane": 20
+    },
+    "modifiers": {
+     "None": 206
+    },
+    "enabled": {
+     "1": 206
+    }
+   },
+   "exit.driver.to.fall": {
+    "count": 161,
+    "states": {
+     "S_EXIT_VEHICLE_TO_FALL": 161
+    },
+    "roots": {
+     "CCar": 117,
+     "CBoat": 5,
+     "CHelicopter": 18,
+     "CMotorBike": 19,
+     "CAirPlane": 2
+    },
+    "modifiers": {
+     "None": 161
+    },
+    "enabled": {
+     "1": 161
+    }
+   },
+   "exit.ai.driver.default180": {
+    "count": 124,
+    "states": {
+     "S_EXIT_VEHICLE_180": 124
+    },
+    "roots": {
+     "CCar": 124
+    },
+    "modifiers": {
+     "None": 124
+    },
+    "enabled": {
+     "1": 124
+    }
+   },
+   "exit.driver.to.swim": {
+    "count": 191,
+    "states": {
+     "S_EXIT_DRIVER_VEHICLE_IN_WATER": 163,
+     "S_EXIT_IN_WATER_MOTORBIKE": 28
+    },
+    "roots": {
+     "CCar": 125,
+     "CBoat": 5,
+     "CHelicopter": 23,
+     "CMotorBike": 19,
+     "CAirPlane": 19
+    },
+    "modifiers": {
+     "None": 191
+    },
+    "enabled": {
+     "1": 191
+    }
+   },
+   "exit.ai.driver.default0": {
+    "count": 206,
+    "states": {
+     "S_EXIT_VEHICLE_0": 206
+    },
+    "roots": {
+     "CCar": 124,
+     "CBoat": 30,
+     "CHelicopter": 32,
+     "CAirPlane": 20
+    },
+    "modifiers": {
+     "None": 206
+    },
+    "enabled": {
+     "1": 206
+    }
+   },
+   "exit.driver.pulled.out": {
+    "count": 193,
+    "states": {
+     "S_PULLED_OUT_VEHICLE": 193
+    },
+    "roots": {
+     "CCar": 121,
+     "CBoat": 30,
+     "CHelicopter": 23,
+     "CAirPlane": 19
+    },
+    "modifiers": {
+     "None": 193
+    },
+    "enabled": {
+     "1": 193
+    }
+   },
+   "exit.driver.upside.down": {
+    "count": 221,
+    "states": {
+     "S_EXIT_DRIVER_VEHICLE_UPSIDE_DOWN": 221
+    },
+    "roots": {
+     "CCar": 125,
+     "CBoat": 35,
+     "CHelicopter": 23,
+     "CMotorBike": 19,
+     "CAirPlane": 19
+    },
+    "modifiers": {
+     "None": 221
+    },
+    "enabled": {
+     "1": 221
+    }
+   },
+   "exit.ai.passenger1.default90L": {
+    "count": 165,
+    "states": {
+     "S_EXIT_VEHICLE_90L": 165
+    },
+    "roots": {
+     "CCar": 116,
+     "CBoat": 10,
+     "CHelicopter": 29,
+     "CAirPlane": 10
+    },
+    "modifiers": {
+     "MOD_RIGHT": 145,
+     "MOD_LOW_RIGHT": 20
+    },
+    "enabled": {
+     "1": 165
+    }
+   },
+   "exit.ai.passenger3.to.back": {
+    "count": 29,
+    "states": {
+     "S_EXIT_PASSENGER_LEFT_TO_BACK_VEHICLE": 29
+    },
+    "roots": {
+     "CCar": 21,
+     "CHelicopter": 6,
+     "CAirPlane": 2
+    },
+    "modifiers": {
+     "MOD_RIGHT": 19,
+     "MOD_LOW_RIGHT": 10
+    },
+    "enabled": {
+     "1": 29
+    }
+   },
+   "exit.passenger3.roll.out": {
+    "count": 30,
+    "states": {
+     "S_ROLL_OUT_EXIT_VEHICLE": 21,
+     "S_EXIT_VEHICLE": 9
+    },
+    "roots": {
+     "CCar": 21,
+     "CHelicopter": 9
+    },
+    "modifiers": {
+     "MOD_RIGHT": 21,
+     "MOD_CAR_EXIT_RIGHT_ROLL": 9
+    },
+    "enabled": {
+     "1": 30
+    }
+   },
+   "exit.ai.passenger1.default": {
+    "count": 116,
+    "states": {
+     "S_EXIT_VEHICLE": 116
+    },
+    "roots": {
+     "CCar": 116
+    },
+    "modifiers": {
+     "MOD_RIGHT": 112,
+     "MOD_LOW_RIGHT": 4
+    },
+    "enabled": {
+     "1": 116
+    }
+   },
+   "exit.ai.passenger1.default90R": {
+    "count": 165,
+    "states": {
+     "S_EXIT_VEHICLE_90R": 165
+    },
+    "roots": {
+     "CCar": 116,
+     "CBoat": 10,
+     "CHelicopter": 29,
+     "CAirPlane": 10
+    },
+    "modifiers": {
+     "MOD_RIGHT": 145,
+     "MOD_LOW_RIGHT": 20
+    },
+    "enabled": {
+     "1": 165
+    }
+   },
+   "exit.passenger3.default": {
+    "count": 30,
+    "states": {
+     "S_EXIT_VEHICLE": 30
+    },
+    "roots": {
+     "CCar": 21,
+     "CHelicopter": 9
+    },
+    "modifiers": {
+     "MOD_RIGHT": 20,
+     "MOD_LOW_RIGHT": 10
+    },
+    "enabled": {
+     "1": 30
+    }
+   },
+   "exit.ai.passenger1.default0": {
+    "count": 165,
+    "states": {
+     "S_EXIT_VEHICLE_0": 165
+    },
+    "roots": {
+     "CCar": 116,
+     "CBoat": 10,
+     "CHelicopter": 29,
+     "CAirPlane": 10
+    },
+    "modifiers": {
+     "MOD_RIGHT": 145,
+     "MOD_LOW_RIGHT": 20
+    },
+    "enabled": {
+     "1": 165
+    }
+   },
+   "exit.ai.passenger1.default180": {
+    "count": 116,
+    "states": {
+     "S_EXIT_VEHICLE_180": 116
+    },
+    "roots": {
+     "CCar": 116
+    },
+    "modifiers": {
+     "MOD_RIGHT": 116
+    },
+    "enabled": {
+     "1": 116
+    }
+   },
+   "exit.passenger2.default": {
+    "count": 30,
+    "states": {
+     "S_EXIT_VEHICLE": 30
+    },
+    "roots": {
+     "CCar": 21,
+     "CHelicopter": 9
+    },
+    "modifiers": {
+     "None": 27,
+     "MOD_LOW": 3
+    },
+    "enabled": {
+     "1": 30
+    }
+   },
+   "exit.ai.passenger2.to.back": {
+    "count": 29,
+    "states": {
+     "S_EXIT_PASSENGER_LEFT_TO_BACK_VEHICLE": 29
+    },
+    "roots": {
+     "CCar": 21,
+     "CHelicopter": 6,
+     "CAirPlane": 2
+    },
+    "modifiers": {
+     "None": 29
+    },
+    "enabled": {
+     "1": 29
+    }
+   },
+   "exit.passenger2.roll.out": {
+    "count": 30,
+    "states": {
+     "S_ROLL_OUT_EXIT_VEHICLE": 21,
+     "S_EXIT_VEHICLE": 9
+    },
+    "roots": {
+     "CCar": 21,
+     "CHelicopter": 9
+    },
+    "modifiers": {
+     "None": 21,
+     "MOD_CAR_EXIT_ROLL": 9
+    },
+    "enabled": {
+     "1": 30
+    }
+   },
+   "exit.from.stunt": {
+    "count": 135,
+    "states": {
+     "S_STUNT_EXIT_VEHICLE": 135
+    },
+    "roots": {
+     "CCar": 107,
+     "CBoat": 11,
+     "CAirPlane": 17
+    },
+    "modifiers": {
+     "None": 135
+    },
+    "enabled": {
+     "1": 135
+    }
+   },
+   "exit.passenger1.default": {
+    "count": 123,
+    "states": {
+     "S_EXIT_VEHICLE": 123
+    },
+    "roots": {
+     "CCar": 95,
+     "CHelicopter": 20,
+     "CAirPlane": 8
+    },
+    "modifiers": {
+     "MOD_RIGHT": 79,
+     "MOD_LOW_RIGHT": 44
+    },
+    "enabled": {
+     "1": 123
+    }
+   },
+   "exit.passenger1.roll.out": {
+    "count": 123,
+    "states": {
+     "S_ROLL_OUT_EXIT_VEHICLE": 123
+    },
+    "roots": {
+     "CCar": 95,
+     "CHelicopter": 20,
+     "CAirPlane": 8
+    },
+    "modifiers": {
+     "MOD_RIGHT": 123
+    },
+    "enabled": {
+     "1": 123
+    }
+   },
+   "exit.passenger1.upside.down": {
+    "count": 133,
+    "states": {
+     "S_EXIT_PASSENGER_VEHICLE_UPSIDE_DOWN": 133
+    },
+    "roots": {
+     "CCar": 95,
+     "CBoat": 10,
+     "CHelicopter": 20,
+     "CAirPlane": 8
+    },
+    "modifiers": {
+     "None": 133
+    },
+    "enabled": {
+     "1": 133
+    }
+   },
+   "exit.passenger1.pulled.out": {
+    "count": 123,
+    "states": {
+     "S_PULLED_OUT_VEHICLE": 123
+    },
+    "roots": {
+     "CCar": 95,
+     "CHelicopter": 20,
+     "CAirPlane": 8
+    },
+    "modifiers": {
+     "MOD_RIGHT": 79,
+     "MOD_LOW_RIGHT": 44
+    },
+    "enabled": {
+     "1": 123
+    }
+   },
+   "exit.ai.passenger1.to.hood": {
+    "count": 133,
+    "states": {
+     "S_EXIT_DRIVER_TO_HOOD_VEHICLE": 133
+    },
+    "roots": {
+     "CCar": 95,
+     "CBoat": 10,
+     "CHelicopter": 20,
+     "CAirPlane": 8
+    },
+    "modifiers": {
+     "MOD_RIGHT": 123,
+     "MOD_LOW_RIGHT": 10
+    },
+    "enabled": {
+     "1": 133
+    }
+   },
+   "exit.ai.passenger1.to.right.hood.": {
+    "count": 13,
+    "states": {
+     "S_EXIT_DRIVER_TO_RIGHT_HOOD_VEHICLE": 13
+    },
+    "roots": {
+     "CCar": 13
+    },
+    "modifiers": {
+     "MOD_RIGHT": 6,
+     "MOD_RIGHT_TECHNICAL_JEEP": 4,
+     "MOD_RIGHT_ARMORED_JEEP": 3
+    },
+    "enabled": {
+     "1": 13
+    }
+   },
+   "exit.from.stunt.hood": {
+    "count": 93,
+    "states": {
+     "S_STUNT_EXIT_VEHICLE": 93
+    },
+    "roots": {
+     "CCar": 84,
+     "CBoat": 5,
+     "CAirPlane": 4
+    },
+    "modifiers": {
+     "None": 93
+    },
+    "enabled": {
+     "1": 93
+    }
+   },
+   "exit.from.stunt.rear": {
+    "count": 27,
+    "states": {
+     "S_STUNT_EXIT_VEHICLE": 27
+    },
+    "roots": {
+     "CCar": 17,
+     "CAirPlane": 8,
+     "CTrain": 2
+    },
+    "modifiers": {
+     "None": 27
+    },
+    "enabled": {
+     "1": 27
+    }
+   },
+   "exit.reel.kicked.off.fwd.motorbike": {
+    "count": 33,
+    "states": {
+     "S_REEL_KICKED_OFF_MOTORBIKE_FWD": 33
+    },
+    "roots": {
+     "CCar": 9,
+     "CBoat": 5,
+     "CMotorBike": 19
+    },
+    "modifiers": {
+     "None": 33
+    },
+    "enabled": {
+     "1": 33
+    }
+   },
+   "exit.kicked.off.right.motorbike": {
+    "count": 28,
+    "states": {
+     "S_KICKED_OFF_RIGHT_MOTORBIKE": 28
+    },
+    "roots": {
+     "CCar": 4,
+     "CBoat": 5,
+     "CMotorBike": 19
+    },
+    "modifiers": {
+     "None": 28
+    },
+    "enabled": {
+     "1": 28
+    }
+   },
+   "exit.driver.motorbike.roll.out.right": {
+    "count": 28,
+    "states": {
+     "S_ROLL_OUT_EXIT_RIGHT_MOTORBIKE": 28
+    },
+    "roots": {
+     "CCar": 4,
+     "CBoat": 5,
+     "CMotorBike": 19
+    },
+    "modifiers": {
+     "None": 28
+    },
+    "enabled": {
+     "1": 28
+    }
+   },
+   "exit.driver.motorbike.right": {
+    "count": 28,
+    "states": {
+     "S_EXIT_RIGHT_MOTORBIKE": 28
+    },
+    "roots": {
+     "CCar": 4,
+     "CBoat": 5,
+     "CMotorBike": 19
+    },
+    "modifiers": {
+     "None": 28
+    },
+    "enabled": {
+     "1": 28
+    }
+   },
+   "exit.kicked.off.left.motorbike": {
+    "count": 28,
+    "states": {
+     "S_KICKED_OFF_LEFT_MOTORBIKE": 28
+    },
+    "roots": {
+     "CCar": 4,
+     "CBoat": 5,
+     "CMotorBike": 19
+    },
+    "modifiers": {
+     "None": 28
+    },
+    "enabled": {
+     "1": 28
+    }
+   },
+   "exit.reel.kicked.off.left.motorbike": {
+    "count": 33,
+    "states": {
+     "S_REEL_KICKED_OFF_MOTORBIKE_LFT": 33
+    },
+    "roots": {
+     "CCar": 9,
+     "CBoat": 5,
+     "CMotorBike": 19
+    },
+    "modifiers": {
+     "None": 33
+    },
+    "enabled": {
+     "1": 33
+    }
+   },
+   "exit.reel.kicked.off.right.motorbike": {
+    "count": 33,
+    "states": {
+     "S_REEL_KICKED_OFF_MOTORBIKE_RGT": 33
+    },
+    "roots": {
+     "CCar": 9,
+     "CBoat": 5,
+     "CMotorBike": 19
+    },
+    "modifiers": {
+     "None": 33
+    },
+    "enabled": {
+     "1": 33
+    }
+   },
+   "exit.driver.motorbike.left": {
+    "count": 28,
+    "states": {
+     "S_EXIT_LEFT_MOTORBIKE": 28
+    },
+    "roots": {
+     "CCar": 4,
+     "CBoat": 5,
+     "CMotorBike": 19
+    },
+    "modifiers": {
+     "None": 28
+    },
+    "enabled": {
+     "1": 28
+    }
+   },
+   "exit.reel.kicked.off.bwd.motorbike": {
+    "count": 33,
+    "states": {
+     "S_REEL_KICKED_OFF_MOTORBIKE_BWD": 33
+    },
+    "roots": {
+     "CCar": 9,
+     "CBoat": 5,
+     "CMotorBike": 19
+    },
+    "modifiers": {
+     "None": 33
+    },
+    "enabled": {
+     "1": 33
+    }
+   },
+   "exit.driver.motorbike.roll.out.left": {
+    "count": 28,
+    "states": {
+     "S_ROLL_OUT_EXIT_LEFT_MOTORBIKE": 28
+    },
+    "roots": {
+     "CCar": 4,
+     "CBoat": 5,
+     "CMotorBike": 19
+    },
+    "modifiers": {
+     "None": 28
+    },
+    "enabled": {
+     "1": 28
+    }
+   },
+   "exit.mounted_weapon": {
+    "count": 7,
+    "states": {
+     "S_EXIT_SPINNING_MOUNTED_TO_FALL": 7
+    },
+    "roots": {
+     "CCar": 7
+    },
+    "modifiers": {
+     "None": 7
+    },
+    "enabled": {
+     "1": 7
+    }
+   },
+   "exit.hijack": {
+    "count": 7,
+    "states": {
+     "S_EXIT_VEHICLE_HIJACK": 7
+    },
+    "roots": {
+     "CCar": 7
+    },
+    "modifiers": {
+     "None": 7
+    },
+    "enabled": {
+     "1": 7
+    }
+   },
+   "exit.mounted_weapon.moving.parachute": {
+    "count": 7,
+    "states": {
+     "S_EXIT_VEHICLE_PARA": 7
+    },
+    "roots": {
+     "CCar": 7
+    },
+    "modifiers": {
+     "MOD_CAR_MOUNTED_WEAPON_PARA": 7
+    },
+    "enabled": {
+     "1": 7
+    }
+   },
+   "exit.mounted_weapon.to.swim": {
+    "count": 10,
+    "states": {
+     "S_EXIT_SPINNING_MOUNTED_VEHICLE_IN_WATER": 10
+    },
+    "roots": {
+     "CCar": 7,
+     "CBoat": 3
+    },
+    "modifiers": {
+     "None": 10
+    },
+    "enabled": {
+     "1": 10
+    }
+   },
+   "exit.ai.passenger5.default0": {
+    "count": 3,
+    "states": {
+     "S_EXIT_VEHICLE_0": 3
+    },
+    "roots": {
+     "CCar": 3
+    },
+    "modifiers": {
+     "None": 3
+    },
+    "enabled": {
+     "1": 3
+    }
+   },
+   "exit.ai.passenger5.default90R": {
+    "count": 3,
+    "states": {
+     "S_EXIT_VEHICLE_90R": 3
+    },
+    "roots": {
+     "CCar": 3
+    },
+    "modifiers": {
+     "None": 3
+    },
+    "enabled": {
+     "1": 3
+    }
+   },
+   "exit.ai.passenger5.default90L": {
+    "count": 3,
+    "states": {
+     "S_EXIT_VEHICLE_90L": 3
+    },
+    "roots": {
+     "CCar": 3
+    },
+    "modifiers": {
+     "None": 3
+    },
+    "enabled": {
+     "1": 3
+    }
+   },
+   "exit.ai.passenger5.default180": {
+    "count": 3,
+    "states": {
+     "S_EXIT_VEHICLE_180": 3
+    },
+    "roots": {
+     "CCar": 3
+    },
+    "modifiers": {
+     "MOD_RIGHT": 3
+    },
+    "enabled": {
+     "1": 3
+    }
+   },
+   "exit.ai.passenger4.default0": {
+    "count": 3,
+    "states": {
+     "S_EXIT_VEHICLE_0": 3
+    },
+    "roots": {
+     "CCar": 3
+    },
+    "modifiers": {
+     "None": 3
+    },
+    "enabled": {
+     "1": 3
+    }
+   },
+   "exit.ai.passenger4.default180": {
+    "count": 3,
+    "states": {
+     "S_EXIT_VEHICLE_180": 3
+    },
+    "roots": {
+     "CCar": 3
+    },
+    "modifiers": {
+     "None": 3
+    },
+    "enabled": {
+     "1": 3
+    }
+   },
+   "exit.ai.passenger4.default90L": {
+    "count": 3,
+    "states": {
+     "S_EXIT_VEHICLE_90L": 3
+    },
+    "roots": {
+     "CCar": 3
+    },
+    "modifiers": {
+     "None": 3
+    },
+    "enabled": {
+     "1": 3
+    }
+   },
+   "exit.ai.passenger4.default90R": {
+    "count": 3,
+    "states": {
+     "S_EXIT_VEHICLE_90R": 3
+    },
+    "roots": {
+     "CCar": 3
+    },
+    "modifiers": {
+     "None": 3
+    },
+    "enabled": {
+     "1": 3
+    }
+   },
+   "exit.from.stunt.platform": {
+    "count": 11,
+    "states": {
+     "S_STUNT_EXIT_VEHICLE": 11
+    },
+    "roots": {
+     "CCar": 2,
+     "CBoat": 9
+    },
+    "modifiers": {
+     "None": 11
+    },
+    "enabled": {
+     "1": 11
+    }
+   },
+   "exit.mounted_weapon.fail.upright": {
+    "count": 13,
+    "states": {
+     "S_EXIT_MOUNTED_WEAPON_FAIL": 13
+    },
+    "roots": {
+     "CBoat": 13
+    },
+    "modifiers": {
+     "None": 13
+    },
+    "enabled": {
+     "1": 13
+    }
+   },
+   "exit.stunt_to_reel": {
+    "count": 23,
+    "states": {
+     "null": 23
+    },
+    "roots": {
+     "CHelicopter": 23
+    },
+    "modifiers": {
+     "None": 23
+    },
+    "enabled": {
+     "1": 23
+    }
+   },
+   "exit.from.stunt.left": {
+    "count": 4,
+    "states": {
+     "S_STUNT_EXIT_VEHICLE": 4
+    },
+    "roots": {
+     "CAirPlane": 4
+    },
+    "modifiers": {
+     "None": 4
+    },
+    "enabled": {
+     "1": 4
+    }
+   }
+  },
+  "classes": {
+   "": 232,
+   "CCar": 126,
+   "CCameraRef": 214,
+   "CForcePulse": 307,
+   "CParts": 233,
+   "CPartProp": 11041,
+   "CSpeaker": 350,
+   "SDynamicExpressions": 233,
+   "SEffects": 359,
+   "SAttachedEffectTable": 1678,
+   "SDynamicAttachedEffect": 4344,
+   "SDynamicAttachedEffectTable": 1212,
+   "SAttachedEffect": 5342,
+   "STargetPoint": 212,
+   "SValueDrivenEffectUsages": 233,
+   "SValueDrivenEffectUsage": 527,
+   "SVehicleLights": 233,
+   "SVehicleLightList": 412,
+   "SVehicleLight": 3972,
+   "CCameraObject": 1203,
+   "CCameraModifier": 5796,
+   "CCameraTransitionCollection": 1197,
+   "CCameraTransition": 4477,
+   "CCoverPoint": 36,
+   "SEventDrivenEffectUsages": 233,
+   "CInteractionContext": 233,
+   "CInteraction": 675,
+   "CInteractionComponentSetNode": 1284,
+   "CInteractionGraph": 233,
+   "CInteractionGraphEntry": 5535,
+   "CInteractionGraphParentPlayerLockedCondition": 2453,
+   "CInteractionGraphNodeAboveWaterCondition": 3914,
+   "CInteractionGraphParentVelocityCondition": 4057,
+   "CInteractionGraphParentIsUpRightCondition": 6761,
+   "CInteractionGraphVehicleSeatPlayerUsableCondition": 3202,
+   "CInteractionGraphNodeOccupiedCondition": 2306,
+   "CInteractionGraphPointNode": 1843,
+   "CInteractionGraphExit": 4832,
+   "CInteractionGraphExitObstructedCondition": 865,
+   "CInteractionGraphUserIsPlayerCondition": 464,
+   "CInteractionGraphTransition": 2904,
+   "CInteractionGraphEntryIsFacingParentCondition": 342,
+   "CInteractionGraphIsAttachedCondition": 171,
+   "CInteractionGraphStuntExitValidCondition": 232,
+   "CInteractionGraphStuntTransitionValidCondition": 310,
+   "CInteractionTrigger": 1374,
+   "SDynamicExpressionFile": 11,
+   "CEffectPointEmitter": 181,
+   "CInteractionGraphDeformableLineNode": 382,
+   "CCameraLookAtTargetModifier": 57,
+   "CInteractionGraphDeformableIKTarget": 112,
+   "CInteractionGraphNodeEntryAngleCondition": 165,
+   "CBulletWeaponBase": 57,
+   "SWeaponPoint": 300,
+   "CAIEntityProxy": 19,
+   "CDynamicNavMeshCutter": 46,
+   "CInteractionGraphTransitionTargetCondition": 19,
+   "CMaterialEffectTable": 72,
+   "CLightWeaponComponent": 30,
+   "CMissileWeaponBase": 25,
+   "CAimPOIWeaponComponent": 11,
+   "CMusicTrack": 2,
+   "CRigidObject": 280,
+   "SDCRef": 82,
+   "SPhysicsParams": 280,
+   "SPhysicsBuoy": 26,
+   "CGrapplingHookPropData": 33,
+   "CTimeTrigger": 49,
+   "CDamageController": 104,
+   "CEntityObject": 10,
+   "CEventTrigger": 18,
+   "SEventTriggerComponent": 36,
+   "SObjectMovementTrigger": 9,
+   "STimerComponent": 22,
+   "CShapeTrigger": 32,
+   "CShapeTriggerComponent": 38,
+   "CPOI": 29,
+   "CBoat": 35,
+   "CBarrelSpinWeaponComponent": 12,
+   "CVehicleCargoBay": 12,
+   "CHelicopter": 23,
+   "CMotorBike": 19,
+   "CRPGFireLeachWeapon": 6,
+   "CLaserBeamWeaponComponent": 3,
+   "CAirPlane": 18,
+   "SAttachedEffectParam": 90,
+   "CAOVolumeObject": 32,
+   "CSoundLayerEmitter": 6,
+   "CExternalBehaviorTree": 1,
+   "CCombatantRule": 1,
+   "SSpawnPoint": 5,
+   "CVehicleRule": 59,
+   "CGraphScriptGameObject": 13,
+   "CNamedPoint": 14,
+   "CEventRouter": 1,
+   "CTrain": 12,
+   "CPrimarySounds": 12,
+   "CPrimarySound": 12,
+   "SSpawnSeat": 1,
+   "CConstraint": 16,
+   "CConstraintFixedData": 8,
+   "CConstraintBreakableDecoratorData": 8,
+   "CConstraintLimitedHingeData": 8,
+   "CTurretWeaponComponent": 1
+  },
+  "exit_keys": {
+   "_object_id": 4832,
+   "disable_event": 4832,
+   "enable_event": 4832,
+   "enabled": 4832,
+   "interaction": 4832,
+   "name": 4832,
+   "name_hash": 4832,
+   "state": 4809,
+   "modifier": 1399
+  },
+  "unexpected_keys": [],
+  "by_root": {
+   "CCar": {
+    "exit.ai.driver.default": 133,
+    "exit.driver.moving.parachute": 125,
+    "exit.driver.pushed.out": 125,
+    "exit.driver.to.swim": 125,
+    "exit.driver.upside.down": 125,
+    "exit.ai.driver.default90R": 124,
+    "exit.ai.driver.default90L": 124,
+    "exit.ai.driver.default180": 124,
+    "exit.ai.driver.default0": 124,
+    "exit.driver.pulled.out": 121,
+    "exit.driver.default": 119,
+    "exit.driver.to.fall": 117,
+    "exit.ai.passenger1.default90L": 116,
+    "exit.ai.passenger1.default": 116,
+    "exit.ai.passenger1.default90R": 116,
+    "exit.ai.passenger1.default0": 116,
+    "exit.ai.passenger1.default180": 116,
+    "exit.driver.roll.out": 112,
+    "exit.from.stunt": 107,
+    "exit.ai.driver.to.hood": 104,
+    "exit.passenger1.default": 95,
+    "exit.passenger1.roll.out": 95,
+    "exit.passenger1.upside.down": 95,
+    "exit.passenger1.pulled.out": 95,
+    "exit.ai.passenger1.to.hood": 95,
+    "exit.from.stunt.hood": 84,
+    "exit.ai.passenger3.to.back": 21,
+    "exit.passenger3.roll.out": 21,
+    "exit.passenger3.default": 21,
+    "exit.passenger2.default": 21,
+    "exit.ai.passenger2.to.back": 21,
+    "exit.passenger2.roll.out": 21,
+    "exit.from.stunt.rear": 17,
+    "exit.ai.driver.to.right.hood": 16,
+    "exit.ai.passenger1.to.right.hood.": 13,
+    "exit.reel.kicked.off.fwd.motorbike": 9,
+    "exit.reel.kicked.off.left.motorbike": 9,
+    "exit.reel.kicked.off.right.motorbike": 9,
+    "exit.reel.kicked.off.bwd.motorbike": 9,
+    "exit.mounted_weapon": 7,
+    "exit.hijack": 7,
+    "exit.mounted_weapon.moving.parachute": 7,
+    "exit.mounted_weapon.to.swim": 7,
+    "exit.kicked.off.right.motorbike": 4,
+    "exit.driver.motorbike.roll.out.right": 4,
+    "exit.driver.motorbike.right": 4,
+    "exit.kicked.off.left.motorbike": 4,
+    "exit.driver.motorbike.left": 4,
+    "exit.driver.motorbike.roll.out.left": 4,
+    "exit.ai.passenger5.default0": 3,
+    "exit.ai.passenger5.default90R": 3,
+    "exit.ai.passenger5.default90L": 3,
+    "exit.ai.passenger5.default180": 3,
+    "exit.ai.passenger4.default0": 3,
+    "exit.ai.passenger4.default180": 3,
+    "exit.ai.passenger4.default90L": 3,
+    "exit.ai.passenger4.default90R": 3,
+    "exit.from.stunt.platform": 2
+   },
+   "CBoat": {
+    "exit.driver.moving.parachute": 35,
+    "exit.driver.pushed.out": 35,
+    "exit.driver.upside.down": 35,
+    "exit.ai.driver.to.hood": 30,
+    "exit.driver.roll.out": 30,
+    "exit.ai.driver.default90R": 30,
+    "exit.ai.driver.default90L": 30,
+    "exit.ai.driver.default0": 30,
+    "exit.driver.pulled.out": 30,
+    "exit.mounted_weapon.fail.upright": 13,
+    "exit.from.stunt": 11,
+    "exit.ai.passenger1.default90L": 10,
+    "exit.passenger1.upside.down": 10,
+    "exit.ai.passenger1.default0": 10,
+    "exit.ai.passenger1.to.hood": 10,
+    "exit.ai.passenger1.default90R": 10,
+    "exit.from.stunt.platform": 9,
+    "exit.from.stunt.hood": 5,
+    "exit.reel.kicked.off.fwd.motorbike": 5,
+    "exit.kicked.off.right.motorbike": 5,
+    "exit.driver.motorbike.roll.out.right": 5,
+    "exit.driver.motorbike.right": 5,
+    "exit.kicked.off.left.motorbike": 5,
+    "exit.reel.kicked.off.left.motorbike": 5,
+    "exit.driver.to.fall": 5,
+    "exit.driver.to.swim": 5,
+    "exit.reel.kicked.off.right.motorbike": 5,
+    "exit.driver.motorbike.left": 5,
+    "exit.reel.kicked.off.bwd.motorbike": 5,
+    "exit.driver.motorbike.roll.out.left": 5,
+    "exit.mounted_weapon.to.swim": 3
+   },
+   "CHelicopter": {
+    "exit.ai.driver.default90R": 32,
+    "exit.ai.driver.default90L": 32,
+    "exit.ai.driver.default0": 32,
+    "exit.ai.passenger1.default90L": 29,
+    "exit.ai.passenger1.default90R": 29,
+    "exit.ai.passenger1.default0": 29,
+    "exit.driver.default": 23,
+    "exit.ai.driver.to.hood": 23,
+    "exit.driver.roll.out": 23,
+    "exit.driver.moving.parachute": 23,
+    "exit.driver.pushed.out": 23,
+    "exit.driver.to.swim": 23,
+    "exit.driver.pulled.out": 23,
+    "exit.driver.upside.down": 23,
+    "exit.stunt_to_reel": 23,
+    "exit.passenger1.default": 20,
+    "exit.passenger1.roll.out": 20,
+    "exit.passenger1.upside.down": 20,
+    "exit.passenger1.pulled.out": 20,
+    "exit.ai.passenger1.to.hood": 20,
+    "exit.driver.to.fall": 18,
+    "exit.passenger3.roll.out": 9,
+    "exit.passenger3.default": 9,
+    "exit.passenger2.default": 9,
+    "exit.passenger2.roll.out": 9,
+    "exit.ai.passenger3.to.back": 6,
+    "exit.ai.passenger2.to.back": 6
+   },
+   "CMotorBike": {
+    "exit.reel.kicked.off.fwd.motorbike": 19,
+    "exit.kicked.off.right.motorbike": 19,
+    "exit.driver.motorbike.roll.out.right": 19,
+    "exit.driver.motorbike.right": 19,
+    "exit.kicked.off.left.motorbike": 19,
+    "exit.reel.kicked.off.left.motorbike": 19,
+    "exit.driver.moving.parachute": 19,
+    "exit.driver.pushed.out": 19,
+    "exit.driver.to.fall": 19,
+    "exit.driver.to.swim": 19,
+    "exit.reel.kicked.off.right.motorbike": 19,
+    "exit.driver.motorbike.left": 19,
+    "exit.reel.kicked.off.bwd.motorbike": 19,
+    "exit.driver.motorbike.roll.out.left": 19,
+    "exit.driver.upside.down": 19
+   },
+   "CAirPlane": {
+    "exit.ai.driver.default90R": 20,
+    "exit.ai.driver.default90L": 20,
+    "exit.ai.driver.default0": 20,
+    "exit.driver.default": 19,
+    "exit.driver.moving.parachute": 19,
+    "exit.driver.pushed.out": 19,
+    "exit.driver.to.swim": 19,
+    "exit.driver.pulled.out": 19,
+    "exit.driver.upside.down": 19,
+    "exit.ai.driver.to.hood": 18,
+    "exit.driver.roll.out": 18,
+    "exit.from.stunt": 17,
+    "exit.ai.passenger1.default90L": 10,
+    "exit.ai.passenger1.default90R": 10,
+    "exit.ai.passenger1.default0": 10,
+    "exit.passenger1.default": 8,
+    "exit.passenger1.roll.out": 8,
+    "exit.passenger1.upside.down": 8,
+    "exit.passenger1.pulled.out": 8,
+    "exit.ai.passenger1.to.hood": 8,
+    "exit.from.stunt.rear": 8,
+    "exit.from.stunt.left": 4,
+    "exit.from.stunt.hood": 4,
+    "exit.driver.to.fall": 2,
+    "exit.ai.passenger3.to.back": 2,
+    "exit.ai.passenger2.to.back": 2
+   },
+   "CTrain": {
+    "exit.from.stunt.rear": 2
+   }
+  }
+ },
+ "launch": {
+  "launch": {
+   "TrainGlobal.crashing_impulse": 12
+  },
+  "jump": {
+   "VehicleCommon.all_vehicles_common.high_up_in_air_height": 232,
+   "CustomLandGlobal.gravity_multiplier_in_air_up": 145,
+   "CustomLandGlobal.gravity_multiplier_in_air_down": 145,
+   "CustomLandGlobal.arcade.turbo_jump.f_multiplier": 145,
+   "CustomLandGlobal.arcade.turbo_jump.r_multiplier": 145,
+   "CustomLandGlobal.arcade.turbo_jump.punch_delay_time": 145,
+   "CustomLandGlobal.arcade.turbo_jump.punch_speed_kph": 145,
+   "CustomLandGlobal.arcade.turbo_jump.top_speed_kph": 145,
+   "CustomLandGlobal.arcade.turbo_jump.top_speed_jump_multiplier": 145,
+   "CustomLandGlobal.arcade.turbo_jump_upgraded.f_multiplier": 145,
+   "CustomLandGlobal.arcade.turbo_jump_upgraded.r_multiplier": 145,
+   "CustomLandGlobal.arcade.turbo_jump_upgraded.punch_delay_time": 145,
+   "CustomLandGlobal.arcade.turbo_jump_upgraded.punch_speed_kph": 145,
+   "CustomLandGlobal.arcade.turbo_jump_upgraded.top_speed_kph": 145,
+   "CustomLandGlobal.arcade.turbo_jump_upgraded.top_speed_jump_multiplier": 145,
+   "VehicleMisc.turbo_jump_cooldown": 233,
+   "VehicleMisc.turbo_jump_cooldown_upgraded": 233,
+   "BoatAI.Limit_Path_Jump_Scalar": 35,
+   "BoatGlobal.turbo_jump.up_multiplier": 35,
+   "BoatGlobal.turbo_jump.punch_delay_time": 35,
+   "BoatGlobal.turbo_jump.punch_speed_kph": 35,
+   "BoatGlobal.turbo_jump.top_speed_kph": 35,
+   "BoatGlobal.turbo_jump.top_speed_jump_multiplier": 35,
+   "BoatGlobal.turbo_jump_upgraded.up_multiplier": 35,
+   "BoatGlobal.turbo_jump_upgraded.punch_delay_time": 35,
+   "BoatGlobal.turbo_jump_upgraded.punch_speed_kph": 35,
+   "BoatGlobal.turbo_jump_upgraded.top_speed_kph": 35,
+   "BoatGlobal.turbo_jump_upgraded.top_speed_jump_multiplier": 35,
+   "HelicopterAI.Limit_Path_Jump_Scalar": 23,
+   "AirplaneAI.Limit_Path_Jump_Scalar_Flight": 18,
+   "AirplaneAI.Limit_Path_Jump_Scalar_Taxi": 18
+  },
+  "files": {
+   "VehicleCommon.all_vehicles_common.high_up_in_air_height": 232,
+   "CustomLandGlobal.gravity_multiplier_in_air_up": 145,
+   "CustomLandGlobal.gravity_multiplier_in_air_down": 145,
+   "CustomLandGlobal.arcade.turbo_jump.f_multiplier": 145,
+   "CustomLandGlobal.arcade.turbo_jump.r_multiplier": 145,
+   "CustomLandGlobal.arcade.turbo_jump.punch_delay_time": 145,
+   "CustomLandGlobal.arcade.turbo_jump.punch_speed_kph": 145,
+   "CustomLandGlobal.arcade.turbo_jump.top_speed_kph": 145,
+   "CustomLandGlobal.arcade.turbo_jump.top_speed_jump_multiplier": 145,
+   "CustomLandGlobal.arcade.turbo_jump_upgraded.f_multiplier": 145,
+   "CustomLandGlobal.arcade.turbo_jump_upgraded.r_multiplier": 145,
+   "CustomLandGlobal.arcade.turbo_jump_upgraded.punch_delay_time": 145,
+   "CustomLandGlobal.arcade.turbo_jump_upgraded.punch_speed_kph": 145,
+   "CustomLandGlobal.arcade.turbo_jump_upgraded.top_speed_kph": 145,
+   "CustomLandGlobal.arcade.turbo_jump_upgraded.top_speed_jump_multiplier": 145,
+   "VehicleMisc.turbo_jump_cooldown": 232,
+   "VehicleMisc.turbo_jump_cooldown_upgraded": 232,
+   "BoatAI.Limit_Path_Jump_Scalar": 35,
+   "BoatGlobal.turbo_jump.up_multiplier": 35,
+   "BoatGlobal.turbo_jump.punch_delay_time": 35,
+   "BoatGlobal.turbo_jump.punch_speed_kph": 35,
+   "BoatGlobal.turbo_jump.top_speed_kph": 35,
+   "BoatGlobal.turbo_jump.top_speed_jump_multiplier": 35,
+   "BoatGlobal.turbo_jump_upgraded.up_multiplier": 35,
+   "BoatGlobal.turbo_jump_upgraded.punch_delay_time": 35,
+   "BoatGlobal.turbo_jump_upgraded.punch_speed_kph": 35,
+   "BoatGlobal.turbo_jump_upgraded.top_speed_kph": 35,
+   "BoatGlobal.turbo_jump_upgraded.top_speed_jump_multiplier": 35,
+   "HelicopterAI.Limit_Path_Jump_Scalar": 23,
+   "AirplaneAI.Limit_Path_Jump_Scalar_Flight": 18,
+   "AirplaneAI.Limit_Path_Jump_Scalar_Taxi": 18,
+   "TrainGlobal.crashing_impulse": 12
+  }
+ },
+ "donor_jump": {
+  "VehicleCommon.all_vehicles_common.high_up_in_air_height": 10,
+  "CustomLandGlobal.gravity_multiplier_in_air_up": 1,
+  "CustomLandGlobal.gravity_multiplier_in_air_down": 1,
+  "CustomLandGlobal.arcade.turbo_jump.f_multiplier": 15,
+  "CustomLandGlobal.arcade.turbo_jump.r_multiplier": 12,
+  "CustomLandGlobal.arcade.turbo_jump.punch_delay_time": 0.100000001,
+  "CustomLandGlobal.arcade.turbo_jump.punch_speed_kph": 50,
+  "CustomLandGlobal.arcade.turbo_jump.top_speed_kph": 200,
+  "CustomLandGlobal.arcade.turbo_jump.top_speed_jump_multiplier": 2,
+  "CustomLandGlobal.arcade.turbo_jump_upgraded.f_multiplier": 30,
+  "CustomLandGlobal.arcade.turbo_jump_upgraded.r_multiplier": 25,
+  "CustomLandGlobal.arcade.turbo_jump_upgraded.punch_delay_time": 0.100000001,
+  "CustomLandGlobal.arcade.turbo_jump_upgraded.punch_speed_kph": 80,
+  "CustomLandGlobal.arcade.turbo_jump_upgraded.top_speed_kph": 200,
+  "CustomLandGlobal.arcade.turbo_jump_upgraded.top_speed_jump_multiplier": 2,
+  "VehicleMisc.turbo_jump_cooldown": 5,
+  "VehicleMisc.turbo_jump_cooldown_upgraded": 2
+ },
+ "bmak": {
+  "properties": [
+   {
+    "class": "RInventoryGadget",
+    "namespace": "BmSDK.BmGame",
+    "offset": 832,
+    "kind": "ObjectProperty",
+    "type": "AkEvent",
+    "member": "GetOutSound"
+   },
+   {
+    "class": "RInventoryGadget",
+    "namespace": "BmSDK.BmGame",
+    "offset": 1120,
+    "kind": "BoolProperty",
+    "type": "bool",
+    "member": "bUseAbsoluteTurnForGetOut"
+   },
+   {
+    "class": "RInventoryGadget",
+    "namespace": "BmSDK.BmGame",
+    "offset": 1124,
+    "kind": "BoolProperty",
+    "type": "bool",
+    "member": "bGetOutSoundIsLooping"
+   },
+   {
+    "class": "RInventoryGadget",
+    "namespace": "BmSDK.BmGame",
+    "offset": 1312,
+    "kind": "StructProperty",
+    "type": "FAkSoundHandle",
+    "member": "GetOutSoundSoundHandle"
+   },
+   {
+    "class": "RVehicleBatmobile",
+    "namespace": "BmSDK.BmScript",
+    "offset": 8384,
+    "kind": "ObjectProperty",
+    "type": "RSpecialMoveConfig",
+    "member": "GetOutMove"
+   },
+   {
+    "class": "RVehicleBatmobile",
+    "namespace": "BmSDK.BmScript",
+    "offset": 8392,
+    "kind": "ObjectProperty",
+    "type": "RSpecialMoveConfig",
+    "member": "GetOutToStandFastMove"
+   },
+   {
+    "class": "RVehicleBatmobile",
+    "namespace": "BmSDK.BmScript",
+    "offset": 8400,
+    "kind": "ObjectProperty",
+    "type": "RSpecialMoveConfig",
+    "member": "GetOutOnTopMove"
+   },
+   {
+    "class": "RVehicleBatmobile",
+    "namespace": "BmSDK.BmScript",
+    "offset": 8408,
+    "kind": "ObjectProperty",
+    "type": "RSpecialMoveConfig",
+    "member": "GetOutOnTopOnSteepInclineMove"
+   },
+   {
+    "class": "RVehicleBatmobile",
+    "namespace": "BmSDK.BmScript",
+    "offset": 8416,
+    "kind": "ObjectProperty",
+    "type": "RSpecialMoveConfig",
+    "member": "EjectUpMove"
+   },
+   {
+    "class": "RVehicleBatmobile",
+    "namespace": "BmSDK.BmScript",
+    "offset": 8424,
+    "kind": "ObjectProperty",
+    "type": "RSpecialMoveConfig",
+    "member": "EjectForwardMove"
+   },
+   {
+    "class": "RVehicleBatmobile",
+    "namespace": "BmSDK.BmScript",
+    "offset": 8464,
+    "kind": "ObjectProperty",
+    "type": "RSpecialMoveConfig",
+    "member": "EjectWhenBatmobileVerticalMove"
+   },
+   {
+    "class": "RVehicleBatmobile",
+    "namespace": "BmSDK.BmScript",
+    "offset": 8472,
+    "kind": "ObjectProperty",
+    "type": "RSpecialMoveConfig",
+    "member": "EjectUpWhenBatmobileVerticalMove"
+   },
+   {
+    "class": "RVehicleBatmobile",
+    "namespace": "BmSDK.BmScript",
+    "offset": 8496,
+    "kind": "ObjectProperty",
+    "type": "RSpecialMoveConfig",
+    "member": "EjectToSpotMove"
+   },
+   {
+    "class": "RVehicleBatmobile",
+    "namespace": "BmSDK.BmScript",
+    "offset": 8512,
+    "kind": "ObjectProperty",
+    "type": "RSpecialMoveConfig",
+    "member": "GetOutOnSideMove"
+   },
+   {
+    "class": "RVehicleBatmobile",
+    "namespace": "BmSDK.BmScript",
+    "offset": 8560,
+    "kind": "IntProperty",
+    "type": "int",
+    "member": "GetOutOnTopOnSteepInclinePitch"
+   },
+   {
+    "class": "RVehicleBatmobileBase",
+    "namespace": "BmSDK.BmGame",
+    "offset": 4576,
+    "kind": "BoolProperty",
+    "type": "bool",
+    "member": "bCanGetOutOnLeftSide"
+   },
+   {
+    "class": "RVehicleBatmobileBase",
+    "namespace": "BmSDK.BmGame",
+    "offset": 5604,
+    "kind": "ObjectProperty",
+    "type": "RSeqAct_OverrideBatmobileEject",
+    "member": "OverrideNextEject"
+   },
+   {
+    "class": "RVehicleBatmobileBase",
+    "namespace": "BmSDK.BmGame",
+    "offset": 5902,
+    "kind": "ByteProperty",
+    "type": "EBatmobileEjectType",
+    "member": "MaxEjectType"
+   },
+   {
+    "class": "RVehicleBatmobileBase",
+    "namespace": "BmSDK.BmGame",
+    "offset": 6032,
+    "kind": "FloatProperty",
+    "type": "float",
+    "member": "EjectUpDist"
+   }
+  ],
+  "classes": [
+   "RInventoryGadget",
+   "RVehicleBatmobile",
+   "RVehicleBatmobileBase"
+  ],
+  "native": "ModifyEjectUpLoc SetBatmobileExit"
+ },
+ "counts": {
+  "donor_exits": 26,
+  "donor_with_gate": 7,
+  "donor_without_condition": 5,
+  "fleet_graphs": 232,
+  "fleet_exits": 4832,
+  "fleet_names": 61,
+  "exit_launch_members": 0,
+  "graph_classes_with_launch_name": 2,
+  "module_launch_members": 1,
+  "bmak_eject_props": 19
+ },
+ "digest": "8dca980204969198"
+}

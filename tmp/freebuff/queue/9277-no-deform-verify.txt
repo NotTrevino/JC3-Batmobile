@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/no-deform-verify.md
+ONLY: freebuff
+EST: 25
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/no-deform-switches-build.md
+Verify Builds/bm-RC5-nodeform and its interaction with the explosion branch. Read every member that app-26 claims to switch off straight from the built containers and compare with Research/JC3Grab/DAMAGE_MODEL.md; then diff the tree against the 9171 branch to prove the health-to-explosion rows are byte-identical. Search the whole RC5 merge inputs for any remaining damage-related nonzero value (deformation strength, damage mesh swap, burst) and list hits with path. Output Working/Appearance/NODEFORM_VERIFY.md with PASS or FAIL per member and a final list of residual risks that only a crash test can settle, each with the one observation for the later in-game take. Failures get fix cards in Working/Appearance/fixcards/nodeform-<n>.md. Done check: the member table is complete, the explosion diff reports zero changed bytes, and the residual list is present. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

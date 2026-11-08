@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/damage-ledger-reconcile.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/ram-damage-direction-ruling.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/health-scale-ruling-1200-vs-36000.md
+Remove the contradictions the roadmap map found in the damage records, without editing the original files. Targets: Working/Translation/T10_DAMAGE.md says T-DM7 is out while T_ROWS.jsonl has it next; STATUS.md reads T-14 as 28 rows, 26 queued although those are the lamp rows T-L8 to T-L35; the health scale in T-DM1 against the d01 ruling; ArmourModeDamageReduction 0 against the operator fact that armour is identical in both modes. Using the reports of 7951 and d01 and d07, write Working/Damage/ledger_reconcile.md with one row per contradiction (record, line, current text, correct text, evidence) and Working/Damage/ledger_rows_v2.jsonl holding replacement rows in the T_ROWS.jsonl schema for T-DM1, T-DM7 and T-DM9. Add Tools/scripts/damage_ledger_check.py (--write, --check) which fails if a replacement row does not parse or disagrees with the ruling. The operator or the status lane merges the rows; you do not. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

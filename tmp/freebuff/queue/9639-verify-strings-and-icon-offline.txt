@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-strings-and-icon-offline.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-localised-name-blurb-rows.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-batmobile-icon-ddsc.md
+Verify Builds/bm-RC5-strings and Builds/bm-RC5-icon offline. Run both rc5_strings.py --check and rc5_icon.py --check. Decode profile/online.stringlookup back with Tools/scripts that read it, list the name and blurb for each of the 11 languages with the hash that points to them, and compare with the source table in Working/World/blurb_sources.json. For the icon, decode the .ddsc and compare its header fields with the donor file, check the image is not the Serpente image (pixel hash differs) and that the name matches the live leaf. Confirm that the two builds do not write the same file as each other or as Builds/bm-RC5-world (compare paths); note any overlap for the merge brief. Output Builds/bm-RC5-strings/verify/readback.md, Builds/bm-RC5-icon/verify/readback.md and one report with pass or fail per check and the line that proves it. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

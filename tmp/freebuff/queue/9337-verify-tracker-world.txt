@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-tracker-world.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/tracker-world-behaviour-build.md
+Verify the tracker build offline. Re-run --check of Tools/scripts/rc5_tracker_world.py, then compare its output with the plan in tmp/freebuff/reports/tracker-lock-hud-plan.md and the report of 7960 (tracker marker carrier). Test the distance-to-string rule by feeding 12 sample distances (0, 9, 10, 999, 1000, 1001, 5000, 20000 metres and four of your choice) through the function the script uses and tabulate the produced text. Check the marker types used are 19 (yellow) and 24 (grey) exactly as the plan states, and that the HUD movie symbol names exist in the extracted hud.gfx data used by 9160. Output tmp/freebuff/reports/verify-tracker-world.md with PASS or FAIL per check and the table. Done-check: 12 conversions listed and each state change is traced to a code line. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

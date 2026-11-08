@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/skin-budget-per-entity.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/skin-scope-decision.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-live-vehicle-readout.md
+Settle whether the 4,915 KB model and 7,065 KB texture ceilings apply to each spawned vehicle or to everything resident at once, since three skins on top of the base car depend on it. Read MODLOG.md lines 4100 to 4118, Research/JC3Grab/STANDALONE.md, the 8793 and 8824 reports, the 7954 report, and the 7982 hook readout report for any way to read the pool sizes. Collect every sentence in those files that states a pool, a resident limit or an allocator cap, with path and line. Decide EVIDENCE-PER-ENTITY, EVIDENCE-GLOBAL or UNKNOWN. If UNKNOWN, write the smallest in-game probe: spawn two modded vehicles in sequence, with the sizes, the card steps and the one observation (does either vanish), as Working/Skins/BUDGET_PROBE.md, and list a second route, a hook runtime spawn per skin. Done check: the verdict line is present, every claim cites a path and line, and the probe has its pass rule written. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

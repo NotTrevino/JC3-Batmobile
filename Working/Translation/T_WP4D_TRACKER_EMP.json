@@ -1,0 +1,1075 @@
+{
+ "carried": [
+  {
+   "chars": 1092,
+   "heading": "3. The booster mesh",
+   "sha256": "1fec595f47a9992e24fc671e92b15e447d4de51639aa4e7bd5f943d738c557f6",
+   "text": "## 3. The booster mesh\n\n`RBatmobileBooster` (size 2400, super `RVehicleWeapon`) declares **only** `bBoosting`@2396, `bWarming`@2396. It is a weapon-shaped gadget with no mesh member; the mesh is on the archetype.\n\n| what | value | label |\n|---|---|---|\n| `Actor.Tag` | \"RBatmobileBooster\" | decoded |\n| `RInventoryGadget.Mesh` | `Batmobile_Booster.GadgetMesh` | decoded |\n| attach point (JC3 side) | socket `Afterburner` on bone `JetSMove` at ['-0.010', '0.538', '3.393'] (role afterburner) and `Afterburner_Front` on `Batmobile_Chassis_Mesh` at ['-0.000', '0.690', '-2.930'] | decoded (SOCKETS_JC3.md) |\n| what carries it in the build | the `Afterburner` socket's bone `JetSMove` is a **chassis** bone, not a part, and the socket's `part_hint` is `jet` - i.e. the game expects a jet *part* under that bone | decoded |\n| what is missing | a part in the donor chassis named/behaving as a jet, and the gadget mesh object itself (`Weapons.Batmobile_Booster.GadgetMesh`); the boost *force* is live (`arcade.nitro_boost` on the donor) but nothing is drawn | decoded (absence) / derived (the gap) |"
+  },
+  {
+   "chars": 3024,
+   "heading": "4. The JC3 house for tracker + missile + mesh",
+   "sha256": "65493b6725e18931c31ddc011de70debf8f6ce607b0841e1d48cb74d125f1127",
+   "text": "## 4. The JC3 house for tracker + missile + mesh\n\n### 4.1 What JC3 has, decoded\n\n| JC3 asset | value | source |\n|---|---|---|\n| weapon-owned force pulses | 25 pulses are owned by a `CMissileWeaponBase` and 29 by a `CBulletWeaponBase`, each using **that weapon's own** blast tune | FORCEPULSE.md §4.2 |\n| the EMP pulse | `EMP` -> `truck_emp.ftune`: PlayerDamage 100 / 25 m, held at full radius (`*PercentageMax` 1, `*Min` 1) vs a plain car blast 500 / 5 m | EMP.md §2 |\n| `CEMPWeapon` | `w702_emp` (handheld) and `w503_turret_emp` (turret) exist; **0** of the fleet's 88 vehicle weapon components is one | EMP.md §6 |\n| a target tag / allegiance switch | `allegian` appears in **0** of 295 entity dumps; `hack` in only 2 files (a SAM turret context-act animation) | HACKABLES.md §1 |\n| the HUD lock marker | `POI_TYPE_LOCK_ON_TARGET` = 21, rotating reticle 1.5 s/turn, plus `MCI_missile_locked` flashing 0.5 s - one type, one icon, no creation call in the movie | JC3_HUD_WEAPONS.md §5 |\n\n### 4.2 The routes, each with its label and its 5-minute experiment\n\n| # | route | what the files already give | label | next 5-minute experiment |\n|---|---|---|---|---|\n| R1 | missile weapon that owns the EMP pulse | a `CMissileWeaponBase` pulse is a decoded, shipped pattern (25 instances); put `truck_emp.ftune` on the Batmobile's missile component's pulse | decoded (pattern + tune) / derived (the pairing) | clone w618, point its `id:B5AE7986`-owned pulse at a copy of `truck_emp.ftune`, fire at an APC: is the victim visibly disabled? One file edit, one shot |\n| R2 | `CEMPWeapon` in a driver slot | class exists (`w702`/`w503`), 0 vehicle users; its tune has **no** EMP field, so the class alone decides | decoded (absence) / UNKNOWN (engine acceptance) | bind `w503_turret_emp` to one free driver slot on a copy entity and fire at a car; if the engine accepts, the disable comes free |\n| R3 | track-then-fire, i.e. the tag system | **no tag member exists** in JC3; the nearest decoded instruments are the AutoAim envelope (sticky aim, no lock time/range) and the HUD POI lock reticle | decoded (absence) / UNKNOWN (engine POI source) | fire `w609` at a car and watch whether `POI_TYPE_LOCK_ON_TARGET` ever appears without script: if the engine paints it from AutoAim, the *marker* half of the tracker is free |\n| R4 | the use-item graph (burst path, T-WP5b route c) | `entry.use_item` -> `S_STUNT_USE_ITEM_VEHICLE`, prompt `ui_activate_emp`; no pointer from trigger to pulse | decoded objects / UNKNOWN link | graft the graph + pulse onto a test car, press use-item: does the prompt appear and the pulse fire? |\n| R5 | draw the booster mesh | `Afterburner` socket on bone `JetSMove`, role afterburner; the boost itself is live | decoded (socket) / derived (route) | attach a placeholder mesh to a part parented to `JetSMove` and check the socket tracks the chassis in a replay, no game change needed |\n\nNothing here is a speculative implementation: each row names the object to copy and the one\nobservation that would settle it."
+  },
+  {
+   "chars": 1740,
+   "heading": "6. COMPROMISES (unapproved - the operator approves through Claude)",
+   "sha256": "a72bbd03398a188873fbfa1c0e8a97eb0a5d3c51845da4a7c45185e9a3072484",
+   "text": "## 6. COMPROMISES (unapproved - the operator approves through Claude)\n\n### C1 - the tag half of the tracker\n**What:** ship the tracker missile and the HUD lock marker, but not a tag that gates the missile.\n**Why:** JC3 has no tag/allegiance member on any vehicle (HACKABLES: `allegian` 0/295), so the\nlock would have to be a script-side convention.\n**Accuracy lost:** BmAK's core loop - mark once, then the EMP missile follows *that* car - becomes\n\"aim again for every shot\"; a tagged car cannot be remembered, and the untag failure prompt has\nno state to fire from.\n**RECOMMENDED COMPROMISE:** R1 + R3 marker only. It keeps the missile, the blast and the HUD\nreticle; it drops the memory of the tag.\n\n### C2 - the disable\n**What:** ship the Immobilizer as a missile whose impact pulse is `truck_emp.ftune` (100 dmg / 25 m).\n**Why:** the disable itself has no decoded member on either side; the pulse is the only EMP object\nthe fleet actually carries.\n**Accuracy lost:** if the pulse does not disable, the missile is a weak blast - the gadget's whole\npoint (T-WP4's original block).\n**RECOMMENDED COMPROMISE:** R1 first (one file edit), and only fall back to C2's plain blast if the\n5-minute shot shows no disable.\n\n### C3 - the booster mesh\n**What:** keep the donor's nitro force and add a jet part at the `Afterburner` socket without the\nBmAK gadget mesh.\n**Why:** the mesh object lives in BmAK's weapon packages and the donor chassis has no jet part.\n**Accuracy lost:** the flame/booster silhouette is a JC3 part, not BmAK's, so the rear of the car\nwill not match frame-for-frame.\n**RECOMMENDED COMPROMISE:** R5 placeholder now, T-12's part pass later - the socket is decoded,\nso the geometry can be swapped without moving anything else."
+  },
+  {
+   "chars": 1136,
+   "heading": "7. Reopened closures",
+   "sha256": "e631f4de69fd826e36045b8fe85f1cea5f564d4b2d697dea5b8a7582c3f3149b",
+   "text": "## 7. Reopened closures\n\n| row | old disposition | what this note changes | new status |\n|---|---|---|---|\n| T-WP4 | blocked (\"the disable half cannot be built\") | the disable is not a member on **either** side, but a weapon-owned pulse is a shipped JC3 pattern (25 instances) and `CEMPWeapon` exists with 0 vehicle users: two live routes, one 5-minute shot each | **reopened** (routes R1/R2), disable still UNKNOWN |\n| T-WP5 | blocked (\"nothing fires it\") | unchanged by this note; T-WP5b already lists five routes and its own experiments | still open, owned by T-WP5b |\n| T-WP8 (sonar) | out (named omission) | untouched here - priority 5 in the operator's order | out, unchanged |\n| T-WP9 | out (\"no tracker class\") | the *class* absence is real, but the tracker is a launcher + a homing projectile + a tag field, and the launcher half has a JC3 carrier (w618 clone, R1); the tag half is what is missing (R3) | **reopened** as `partial`: carrier yes, gate no |\n| T-MD2 | blocked | same evidence as T-WP4: the launcher is mountable in both modes (`BattleModeFireButtonPressed`); the disable is the only gap | **reopened** with T-WP4 |"
+  },
+  {
+   "chars": 356,
+   "heading": "8. Checks",
+   "sha256": "7251279dbdb98f4ca8354f7e16a67b03932a6b09d6b8090dc936c1938808ba5b",
+   "text": "## 8. Checks\n\n`python Tools/scripts/t_wp4c.py --write` writes this file and the JSON; `--check` re-derives both\nand compares byte for byte; `--tamper-test` mutates (1) a field offset in the EMP class header,\n(2) a `LockOnTime` value in a runtime sample and (3) this file's own text, and asserts each is\nnoticed. Sources are listed at the top of the script."
+  }
+ ],
+ "changes": [
+  {
+   "because": "no decoded record carries it. 2464 is the offset of the inherited field only inside the `RPursuitModeMissileLauncher` chain (classes: `RBatmobileEMPMissile`, `RBatmobileVehicleTracker`, `RPursuitModeMissileLauncher`); among every export of that lineage in the four packages only the 1 `Batmobile_EMP_Missile_Launcher` tag(s) serialize it, and no `Vehicle_Tracker` does; the class default object has no tag at 2464 either. The 3 other tags at that offset in the base package belong to classes outside the chain and are a different field at the same number",
+   "field": "RPursuitModeMissileLauncher.bInstantFire",
+   "id": "C1",
+   "label_now": "UNKNOWN",
+   "now": null,
+   "object": "Vehicle_Tracker",
+   "offset": 2464,
+   "was": "true (class default), labelled decoded",
+   "was_quote": {
+    "line": 50,
+    "text": "| how it fires | `RPursuitModeMissileLauncher.FireWeapon()` override + `FireBatTracker()`; `bInstantFire` = true (class default, not serialized on this archetype) | decoded |"
+   }
+  },
+  {
+   "because": "both launcher payload pointers resolve to `Batmobile_EMPMissile_Projectile_ForCars` (export 5116); the sibling (export 16) is referenced by 0 export(s) in `Playable_Batmobile_SF.upk`. The fired archetype serializes no AkEvent at all",
+   "field": "RBatmobileMissile.ExlposionSound",
+   "id": "C2",
+   "label_now": "decoded on the sibling / UNKNOWN on the fired archetype",
+   "now": "Ww_VFX_Tank_Explosion.Play_Batmobile_Immobiliser_Impact",
+   "object": "Batmobile_EMPMissile_Projectile",
+   "offset": 968,
+   "was": "`Ww_VFX_Tank_Explosion.Play_Batmobile_Immobiliser_Impact` presented as the fired missile's impact sound (decoded)",
+   "was_quote": {
+    "line": 30,
+    "text": "2. The projectile's own impact sound field `RBatmobileMissile.ExlposionSound` on `Batmobile_EMPMissile_Projectile` resolves to `Ww_VFX_Tank_Explosion.Play_Batmobile_Immobiliser_Impact`"
+   }
+  },
+  {
+   "because": "`Batmobile_EMPMissile_Projectile_ForCars` serializes 10 tags, 0 of them scalar and 0 of them an AkEvent; the 60.0 sits on the sibling, which no launcher points at",
+   "field": "Projectile.Damage",
+   "id": "C3",
+   "label_now": "decoded on the sibling / UNKNOWN on the fired archetype",
+   "now": 60.0,
+   "object": "Batmobile_EMPMissile_Projectile",
+   "offset": 728,
+   "was": "60.0, labelled decoded, presented as the EMP missile's damage",
+   "was_quote": {
+    "line": 122,
+    "text": "| projectile damage | `Projectile.Damage` 60.0, `Projectile.MyDamageType` `Core.RDmgType_BatmobileCannon`, `Projectile.DamageRadius` 0.0 | decoded (`Batmobile_EMPMissile_Projectile`) |"
+   }
+  },
+  {
+   "because": "the two rows of that table resolve to two different exports",
+   "field": "one table row covering two archetypes",
+   "id": "C4",
+   "label_now": "decoded (per archetype)",
+   "now": "split into two tables, one per archetype, each read from its own bytes",
+   "object": "T-WP4c §2.3",
+   "offset": null,
+   "was": "one table that credits the fired weapon with the sibling's damage numbers while naming the fired archetype's explosion",
+   "was_quote": {
+    "line": 122,
+    "text": "| projectile damage | `Projectile.Damage` 60.0, `Projectile.MyDamageType` `Core.RDmgType_BatmobileCannon`, `Projectile.DamageRadius` 0.0 | decoded (`Batmobile_EMPMissile_Projectile`) |"
+   },
+   "was_quote2": {
+    "line": 123,
+    "text": "| anti-car payload | `Batmobile_EMPMissile_Projectile_ForCars` serializes **no scalar at all** - a reference-only archetype (10 tags, all object refs); its only numeric is the impulse component float 0.9299 at 0x016C | decoded |"
+   }
+  },
+  {
+   "because": "5461 * 360 / 65536 = 29.9981689..., not exactly 30; the sign convention (which way +pitch tilts the socket) is not in any decoded file",
+   "field": "RPursuitModeMissileLauncher.LaunchRotationOffset",
+   "id": "C5",
+   "label_now": "decoded / derived",
+   "now": "[5461, 0, 0] = 29.9982 deg, i.e. 30.0 deg to 1 dp",
+   "object": "Vehicle_Tracker",
+   "offset": 2452,
+   "was": "`[5461, 0, 0]` printed as `30.0 deg` with the rounding unstated",
+   "was_quote": {
+    "line": 51,
+    "text": "| launch point and pitch | `LaunchSocketName` = \"BattleModeSpotLight\", `LaunchRotationOffset` = [5461, 0, 0] (UE rotator; /65536*360 = 30.0 deg of pitch) | decoded / derived |"
+   }
+  }
+ ],
+ "defaults": {
+  "Default__RBatmobileMissile": {
+   "at": {
+    "2464": false,
+    "2560": false,
+    "2564": false,
+    "712": false,
+    "728": false,
+    "732": false,
+    "960": false,
+    "968": false
+   },
+   "class": "RBatmobileMissile",
+   "export": 47283,
+   "offsets": [
+    92,
+    124,
+    180,
+    668,
+    672,
+    704,
+    816,
+    840,
+    848,
+    1040,
+    1048,
+    1060,
+    1064,
+    1080,
+    1084
+   ],
+   "tags": 15
+  },
+  "Default__RBatmobileVehicleTracker": {
+   "at": {
+    "2464": false,
+    "2560": false,
+    "2564": false,
+    "712": false,
+    "728": false,
+    "732": false,
+    "960": false,
+    "968": false
+   },
+   "class": "RBatmobileVehicleTracker",
+   "export": 47800,
+   "offsets": [
+    785,
+    792,
+    1204,
+    2444,
+    2448
+   ],
+   "tags": 5
+  },
+  "Default__RPursuitModeMissileLauncher": {
+   "at": {
+    "2464": false,
+    "2560": false,
+    "2564": false,
+    "712": false,
+    "728": false,
+    "732": false,
+    "960": false,
+    "968": false
+   },
+   "class": "RPursuitModeMissileLauncher",
+   "export": 46742,
+   "offsets": [
+    792
+   ],
+   "tags": 1
+  }
+ },
+ "launcher": {
+  "class": "RBatmobileEMPMissile",
+  "export": 5114,
+  "pointers": {
+   "ProjectileArchetype": {
+    "offset": 2428,
+    "tag": {
+     "name": null,
+     "offset": 2428,
+     "ref": "Projectiles.Batmobile_EMPMissile_Projectile_ForCars",
+     "ref_class": "RBatmobileMissile",
+     "type": "ObjectNCRProperty",
+     "value": 5116
+    }
+   },
+   "ProjectileForCarsArchetype": {
+    "offset": 2492,
+    "tag": {
+     "name": null,
+     "offset": 2492,
+     "ref": "Projectiles.Batmobile_EMPMissile_Projectile_ForCars",
+     "ref_class": "RBatmobileMissile",
+     "type": "ObjectNCRProperty",
+     "value": 5116
+    }
+   }
+  },
+  "tag_count": 21
+ },
+ "lineage": {
+  "carriers_all_at_2464": 4,
+  "classes": [
+   "RBatmobileEMPMissile",
+   "RBatmobileVehicleTracker",
+   "RPursuitModeMissileLauncher"
+  ],
+  "collisions": [
+   {
+    "class": "RBatmobileAllegianceSwitcher",
+    "export": 5110,
+    "name": "Drone_Hacker",
+    "type": "ObjectNCRProperty",
+    "value": "Engine.Play_Batmobile_DroneHacker_Loop"
+   },
+   {
+    "class": "RBatmobileCannon",
+    "export": 5112,
+    "name": "Batmobile_Cannon_V2",
+    "type": "ObjectNCRProperty",
+    "value": "Particles.Batmobile_Muzzleflash_Tracer"
+   },
+   {
+    "class": "RBatmobileWinch",
+    "export": 5122,
+    "name": "Batmobile_Winch",
+    "type": "ObjectNCRProperty",
+    "value": "Engine.Play_BML_WinchFire"
+   }
+  ],
+  "field_owner": "RPursuitModeMissileLauncher"
+ },
+ "lock": {
+  "civilian": {
+   "offset": 2564,
+   "value": 1.0
+  },
+  "military": {
+   "offset": 2560,
+   "value": 2.0
+  }
+ },
+ "packages": [
+  {
+   "exports": 5490,
+   "name": "Playable_Batmobile_SF.upk"
+  },
+  {
+   "exports": 5534,
+   "name": "Playable_BatmobileMK2_SF.upk"
+  },
+  {
+   "exports": 5584,
+   "name": "Playable_BatmobileFunhouse_SF.upk"
+  },
+  {
+   "exports": 3388,
+   "name": "Playable_BatmobileJoker_SF.upk"
+  }
+ ],
+ "payload": {
+  "fired": {
+   "ak_events": [],
+   "at": {
+    "Actor.Tag": null,
+    "Projectile.Damage": null,
+    "Projectile.DamageRadius": null,
+    "Projectile.MyDamageType": null,
+    "RBatmobileEMPMissile.CivilianMissileLockOnDuration": null,
+    "RBatmobileEMPMissile.MissileLockOnDuration": null,
+    "RBatmobileEMPMissile.ProjectileForCarsArchetype": null,
+    "RBatmobileMissile.AccelRate": null,
+    "RBatmobileMissile.ExlposionSound": null,
+    "RBatmobileMissile.ExplosionTemplate": {
+     "doc_name": "RBatmobileMissile.ExplosionTemplate",
+     "offset": 960,
+     "ref_class": "ParticleSystem",
+     "type": "ObjectNCRProperty",
+     "value": "Rocket.Batmobil_Rocket_Explosion_Small"
+    },
+    "RInventoryGadget.Mesh": null,
+    "RPursuitModeMissileLauncher.LaunchRotationOffset": null,
+    "RPursuitModeMissileLauncher.LaunchSocketName": null,
+    "RPursuitModeMissileLauncher.ProjectileArchetype": null,
+    "RPursuitModeMissileLauncher.bInstantFire": null,
+    "RVehicleWeapon.FireStartEvent": null,
+    "RVehicleWeapon.IndividualFireEvent": null
+   },
+   "class": "RBatmobileMissile",
+   "export": 5116,
+   "scalars": [],
+   "size": 83,
+   "tag_count": 10,
+   "tags": [
+    {
+     "doc_name": null,
+     "offset": 124,
+     "ref_class": "RAkAudible",
+     "type": "ObjectNCRProperty",
+     "value": "Batmobile_EMPMissile_Projectile_ForCars.DefaultAkAudible_"
+    },
+    {
+     "doc_name": null,
+     "offset": 180,
+     "ref_class": "CylinderComponent",
+     "type": "ObjectNCRProperty",
+     "value": "Batmobile_EMPMissile_Projectile_ForCars.CollisionCylinder"
+    },
+    {
+     "doc_name": null,
+     "offset": 704,
+     "ref_class": "CylinderComponent",
+     "type": "ObjectNCRProperty",
+     "value": "Batmobile_EMPMissile_Projectile_ForCars.CollisionCylinder"
+    },
+    {
+     "doc_name": null,
+     "offset": 808,
+     "ref_class": "ParticleSystem",
+     "type": "ObjectNCRProperty",
+     "value": "Damage_States.FireTrail_Car"
+    },
+    {
+     "doc_name": null,
+     "offset": 816,
+     "ref_class": "RB_RadialImpulseComponent",
+     "type": "ObjectNCRProperty",
+     "value": "Batmobile_EMPMissile_Projectile_ForCars.RB_RadialImpulseComponent"
+    },
+    {
+     "doc_name": null,
+     "offset": 840,
+     "ref_class": "StaticMeshComponent",
+     "type": "ObjectNCRProperty",
+     "value": "Batmobile_EMPMissile_Projectile_ForCars.Mesh0"
+    },
+    {
+     "doc_name": null,
+     "offset": 848,
+     "ref_class": "ParticleSystemComponent",
+     "type": "ObjectNCRProperty",
+     "value": "Batmobile_EMPMissile_Projectile_ForCars.RocketTrail"
+    },
+    {
+     "doc_name": "RBatmobileMissile.ExplosionTemplate",
+     "offset": 960,
+     "ref_class": "ParticleSystem",
+     "type": "ObjectNCRProperty",
+     "value": "Rocket.Batmobil_Rocket_Explosion_Small"
+    },
+    {
+     "doc_name": null,
+     "offset": 1040,
+     "ref_class": "ParticleSystemComponent",
+     "type": "ObjectNCRProperty",
+     "value": "Batmobile_EMPMissile_Projectile_ForCars.RocketTrail"
+    },
+    {
+     "doc_name": null,
+     "offset": 1048,
+     "ref_class": "StaticMeshComponent",
+     "type": "ObjectNCRProperty",
+     "value": "Batmobile_EMPMissile_Projectile_ForCars.Mesh0"
+    }
+   ]
+  },
+  "sibling": {
+   "ak_events": [
+    {
+     "doc_name": "RBatmobileMissile.ExlposionSound",
+     "offset": 968,
+     "ref_class": "AkEvent",
+     "type": "ObjectNCRProperty",
+     "value": "Ww_VFX_Tank_Explosion.Play_Batmobile_Immobiliser_Impact"
+    },
+    {
+     "doc_name": null,
+     "offset": 992,
+     "ref_class": "AkEvent",
+     "type": "ObjectNCRProperty",
+     "value": "Engine.Play_Batmobile_ApRocket_Up"
+    },
+    {
+     "doc_name": null,
+     "offset": 1016,
+     "ref_class": "AkEvent",
+     "type": "ObjectNCRProperty",
+     "value": "Engine.Play_Batmobile_ApRocket_Flight"
+    }
+   ],
+   "at": {
+    "Actor.Tag": {
+     "doc_name": "Actor.Tag",
+     "offset": 360,
+     "ref_class": null,
+     "type": "NameProperty",
+     "value": "RBatmobileMissile"
+    },
+    "Projectile.Damage": {
+     "doc_name": "Projectile.Damage",
+     "offset": 728,
+     "ref_class": null,
+     "type": "FloatProperty",
+     "value": 60.0
+    },
+    "Projectile.DamageRadius": {
+     "doc_name": "Projectile.DamageRadius",
+     "offset": 732,
+     "ref_class": null,
+     "type": "FloatProperty",
+     "value": 0.0
+    },
+    "Projectile.MyDamageType": {
+     "doc_name": "Projectile.MyDamageType",
+     "offset": 712,
+     "ref_class": "Class",
+     "type": "ObjectNCRProperty",
+     "value": "Core.RDmgType_BatmobileCannon"
+    },
+    "RBatmobileEMPMissile.CivilianMissileLockOnDuration": null,
+    "RBatmobileEMPMissile.MissileLockOnDuration": null,
+    "RBatmobileEMPMissile.ProjectileForCarsArchetype": null,
+    "RBatmobileMissile.AccelRate": {
+     "doc_name": "RBatmobileMissile.AccelRate",
+     "offset": 1064,
+     "ref_class": null,
+     "type": "FloatProperty",
+     "value": 40000.0
+    },
+    "RBatmobileMissile.ExlposionSound": {
+     "doc_name": "RBatmobileMissile.ExlposionSound",
+     "offset": 968,
+     "ref_class": "AkEvent",
+     "type": "ObjectNCRProperty",
+     "value": "Ww_VFX_Tank_Explosion.Play_Batmobile_Immobiliser_Impact"
+    },
+    "RBatmobileMissile.ExplosionTemplate": {
+     "doc_name": "RBatmobileMissile.ExplosionTemplate",
+     "offset": 960,
+     "ref_class": "ParticleSystem",
+     "type": "ObjectNCRProperty",
+     "value": "Rocket.Batmobil_Rocket_Explosion"
+    },
+    "RInventoryGadget.Mesh": null,
+    "RPursuitModeMissileLauncher.LaunchRotationOffset": null,
+    "RPursuitModeMissileLauncher.LaunchSocketName": null,
+    "RPursuitModeMissileLauncher.ProjectileArchetype": null,
+    "RPursuitModeMissileLauncher.bInstantFire": null,
+    "RVehicleWeapon.FireStartEvent": null,
+    "RVehicleWeapon.IndividualFireEvent": null
+   },
+   "class": "RBatmobileMissile",
+   "export": 16,
+   "scalars": [
+    {
+     "doc_name": null,
+     "offset": 672,
+     "ref_class": null,
+     "type": "FloatProperty",
+     "value": 7500.0
+    },
+    {
+     "doc_name": "Projectile.Damage",
+     "offset": 728,
+     "ref_class": null,
+     "type": "FloatProperty",
+     "value": 60.0
+    },
+    {
+     "doc_name": "Projectile.DamageRadius",
+     "offset": 732,
+     "ref_class": null,
+     "type": "FloatProperty",
+     "value": 0.0
+    },
+    {
+     "doc_name": "RBatmobileMissile.AccelRate",
+     "offset": 1064,
+     "ref_class": null,
+     "type": "FloatProperty",
+     "value": 40000.0
+    }
+   ],
+   "size": 167,
+   "tag_count": 20,
+   "tags": [
+    {
+     "doc_name": null,
+     "offset": 124,
+     "ref_class": "RAkAudible",
+     "type": "ObjectNCRProperty",
+     "value": "Batmobile_EMPMissile_Projectile.DefaultAkAudible_"
+    },
+    {
+     "doc_name": null,
+     "offset": 180,
+     "ref_class": "CylinderComponent",
+     "type": "ObjectNCRProperty",
+     "value": "Batmobile_EMPMissile_Projectile.CollisionCylinder"
+    },
+    {
+     "doc_name": "Actor.Tag",
+     "offset": 360,
+     "ref_class": null,
+     "type": "NameProperty",
+     "value": "RBatmobileMissile"
+    },
+    {
+     "doc_name": null,
+     "offset": 672,
+     "ref_class": null,
+     "type": "FloatProperty",
+     "value": 7500.0
+    },
+    {
+     "doc_name": null,
+     "offset": 704,
+     "ref_class": "CylinderComponent",
+     "type": "ObjectNCRProperty",
+     "value": "Batmobile_EMPMissile_Projectile.CollisionCylinder"
+    },
+    {
+     "doc_name": "Projectile.MyDamageType",
+     "offset": 712,
+     "ref_class": "Class",
+     "type": "ObjectNCRProperty",
+     "value": "Core.RDmgType_BatmobileCannon"
+    },
+    {
+     "doc_name": "Projectile.Damage",
+     "offset": 728,
+     "ref_class": null,
+     "type": "FloatProperty",
+     "value": 60.0
+    },
+    {
+     "doc_name": "Projectile.DamageRadius",
+     "offset": 732,
+     "ref_class": null,
+     "type": "FloatProperty",
+     "value": 0.0
+    },
+    {
+     "doc_name": null,
+     "offset": 808,
+     "ref_class": "ParticleSystem",
+     "type": "ObjectNCRProperty",
+     "value": "Damage_States.FireTrail_APC"
+    },
+    {
+     "doc_name": null,
+     "offset": 816,
+     "ref_class": "RB_RadialImpulseComponent",
+     "type": "ObjectNCRProperty",
+     "value": "Batmobile_EMPMissile_Projectile.RB_RadialImpulseComponent"
+    },
+    {
+     "doc_name": null,
+     "offset": 824,
+     "ref_class": null,
+     "type": "BoolProperty",
+     "value": true
+    },
+    {
+     "doc_name": null,
+     "offset": 840,
+     "ref_class": "StaticMeshComponent",
+     "type": "ObjectNCRProperty",
+     "value": "Batmobile_EMPMissile_Projectile.Mesh0"
+    },
+    {
+     "doc_name": null,
+     "offset": 848,
+     "ref_class": "ParticleSystemComponent",
+     "type": "ObjectNCRProperty",
+     "value": "Batmobile_EMPMissile_Projectile.RocketTrail"
+    },
+    {
+     "doc_name": "RBatmobileMissile.ExplosionTemplate",
+     "offset": 960,
+     "ref_class": "ParticleSystem",
+     "type": "ObjectNCRProperty",
+     "value": "Rocket.Batmobil_Rocket_Explosion"
+    },
+    {
+     "doc_name": "RBatmobileMissile.ExlposionSound",
+     "offset": 968,
+     "ref_class": "AkEvent",
+     "type": "ObjectNCRProperty",
+     "value": "Ww_VFX_Tank_Explosion.Play_Batmobile_Immobiliser_Impact"
+    },
+    {
+     "doc_name": null,
+     "offset": 992,
+     "ref_class": "AkEvent",
+     "type": "ObjectNCRProperty",
+     "value": "Engine.Play_Batmobile_ApRocket_Up"
+    },
+    {
+     "doc_name": null,
+     "offset": 1016,
+     "ref_class": "AkEvent",
+     "type": "ObjectNCRProperty",
+     "value": "Engine.Play_Batmobile_ApRocket_Flight"
+    },
+    {
+     "doc_name": null,
+     "offset": 1040,
+     "ref_class": "ParticleSystemComponent",
+     "type": "ObjectNCRProperty",
+     "value": "Batmobile_EMPMissile_Projectile.RocketTrail"
+    },
+    {
+     "doc_name": null,
+     "offset": 1048,
+     "ref_class": "StaticMeshComponent",
+     "type": "ObjectNCRProperty",
+     "value": "Batmobile_EMPMissile_Projectile.Mesh0"
+    },
+    {
+     "doc_name": "RBatmobileMissile.AccelRate",
+     "offset": 1064,
+     "ref_class": null,
+     "type": "FloatProperty",
+     "value": 40000.0
+    }
+   ]
+  }
+ },
+ "reference_census": {
+  "by_target": {
+   "Batmobile_EMPMissile_Projectile": [],
+   "Batmobile_EMPMissile_Projectile_ForCars": [
+    {
+     "export": 5114,
+     "field": "",
+     "name": "Batmobile_EMP_Missile_Launcher",
+     "offset": 2492,
+     "ref": "Projectiles.Batmobile_EMPMissile_Projectile_ForCars",
+     "ref_class": "RBatmobileMissile"
+    },
+    {
+     "export": 5114,
+     "field": "",
+     "name": "Batmobile_EMP_Missile_Launcher",
+     "offset": 2428,
+     "ref": "Projectiles.Batmobile_EMPMissile_Projectile_ForCars",
+     "ref_class": "RBatmobileMissile"
+    }
+   ]
+  },
+  "counts": {
+   "Batmobile_EMPMissile_Projectile": 0,
+   "Batmobile_EMPMissile_Projectile_ForCars": 2
+  }
+ },
+ "root": "E:/Games/Batman - Arkham Knight/BmGame/CookedPCConsole",
+ "rotators": {
+  "launcher": {
+   "deg": [
+    -19.9951,
+    0.0,
+    0.0
+   ],
+   "deg_1dp": [
+    -20.0,
+    0.0,
+    0.0
+   ],
+   "raw": [
+    -3640,
+    0,
+    0
+   ]
+  },
+  "tracker": {
+   "deg": [
+    29.9982,
+    0.0,
+    0.0
+   ],
+   "deg_1dp": [
+    30.0,
+    0.0,
+    0.0
+   ],
+   "raw": [
+    5461,
+    0,
+    0
+   ]
+  }
+ },
+ "status": "done (corrective)",
+ "tracker": {
+  "carriers_2464": [
+   {
+    "class": "RBatmobileEMPMissile",
+    "export": 5114,
+    "name": "Batmobile_EMP_Missile_Launcher",
+    "type": "BoolProperty",
+    "value": true
+   }
+  ],
+  "class": "RBatmobileVehicleTracker",
+  "export": 5121,
+  "has_bInstantFire": false,
+  "size": 75,
+  "tag_count": 7,
+  "tags": [
+   {
+    "doc_name": "Actor.Tag",
+    "offset": 360,
+    "ref_class": null,
+    "type": "NameProperty",
+    "value": "RBatmobileVehicleTracker"
+   },
+   {
+    "doc_name": "RInventoryGadget.Mesh",
+    "offset": 792,
+    "ref_class": "SkeletalMeshComponent",
+    "type": "ObjectNCRProperty",
+    "value": "Vehicle_Tracker.GadgetMesh"
+   },
+   {
+    "doc_name": "RVehicleWeapon.FireStartEvent",
+    "offset": 2176,
+    "ref_class": "AkEvent",
+    "type": "ObjectNCRProperty",
+    "value": "ww_chr_batmandisruptor.Play_BatSniperRifle_Vehicle_Tracking_Fire"
+   },
+   {
+    "doc_name": "RVehicleWeapon.IndividualFireEvent",
+    "offset": 2200,
+    "ref_class": "AkEvent",
+    "type": "ObjectNCRProperty",
+    "value": "ww_chr_batmandisruptor.Play_BatSniperRifle_Vehicle_Tracking_Fire"
+   },
+   {
+    "doc_name": "RPursuitModeMissileLauncher.ProjectileArchetype",
+    "offset": 2428,
+    "ref_class": "RBatmobileMissile",
+    "type": "ObjectNCRProperty",
+    "value": "Projectiles.Batmobile_Tracker_Projectile"
+   },
+   {
+    "doc_name": "RPursuitModeMissileLauncher.LaunchSocketName",
+    "offset": 2436,
+    "ref_class": null,
+    "type": "NameProperty",
+    "value": "BattleModeSpotLight"
+   },
+   {
+    "doc_name": "RPursuitModeMissileLauncher.LaunchRotationOffset",
+    "offset": 2452,
+    "ref_class": null,
+    "type": "RotatorProperty",
+    "value": [
+     5461,
+     0,
+     0
+    ]
+   }
+  ]
+ },
+ "variants": [
+  {
+   "carriers_2464": [
+    {
+     "class": "RBatmobileEMPMissile",
+     "export": 5165,
+     "name": "Batmobile_EMP_Missile_Launcher",
+     "type": "BoolProperty",
+     "value": true
+    }
+   ],
+   "collisions_2464": [
+    {
+     "class": "RBatmobileAllegianceSwitcher",
+     "export": 5161,
+     "name": "Drone_Hacker",
+     "type": "ObjectNCRProperty",
+     "value": "Engine.Play_Batmobile_DroneHacker_Loop"
+    },
+    {
+     "class": "RBatmobileCannon",
+     "export": 5163,
+     "name": "Batmobile_Cannon_V2",
+     "type": "ObjectNCRProperty",
+     "value": "Particles.Batmobile_Muzzleflash_Tracer"
+    },
+    {
+     "class": "RBatmobileWinch",
+     "export": 5173,
+     "name": "Batmobile_Winch",
+     "type": "ObjectNCRProperty",
+     "value": "Engine.Play_BML_WinchFire"
+    }
+   ],
+   "exports": 5534,
+   "fired_export": 5167,
+   "launcher_bInstantFire": {
+    "name": null,
+    "offset": 2464,
+    "ref": null,
+    "ref_class": null,
+    "type": "BoolProperty",
+    "value": true
+   },
+   "launcher_export": 5165,
+   "launcher_pointer_base": {
+    "name": null,
+    "offset": 2428,
+    "ref": "Projectiles.Batmobile_EMPMissile_Projectile_ForCars",
+    "ref_class": "RBatmobileMissile",
+    "type": "ObjectNCRProperty",
+    "value": 5167
+   },
+   "launcher_pointer_cars": {
+    "name": null,
+    "offset": 2492,
+    "ref": "Projectiles.Batmobile_EMPMissile_Projectile_ForCars",
+    "ref_class": "RBatmobileMissile",
+    "type": "ObjectNCRProperty",
+    "value": 5167
+   },
+   "package": "Playable_BatmobileMK2_SF.upk",
+   "refs_fired": 2,
+   "refs_sibling": 0,
+   "sibling_export": 16,
+   "tracker_export": 5172,
+   "tracker_tags": 7
+  },
+  {
+   "carriers_2464": [
+    {
+     "class": "RBatmobileEMPMissile",
+     "export": 5204,
+     "name": "Batmobile_EMP_Missile_Launcher",
+     "type": "BoolProperty",
+     "value": true
+    }
+   ],
+   "collisions_2464": [
+    {
+     "class": "RBatmobileAllegianceSwitcher",
+     "export": 5200,
+     "name": "Drone_Hacker",
+     "type": "ObjectNCRProperty",
+     "value": "Engine.Play_Batmobile_DroneHacker_Loop"
+    },
+    {
+     "class": "RBatmobileCannon",
+     "export": 5202,
+     "name": "Batmobile_Cannon_V2",
+     "type": "ObjectNCRProperty",
+     "value": "Particles.Batmobile_Muzzleflash_Tracer"
+    },
+    {
+     "class": "RBatmobileWinch",
+     "export": 5212,
+     "name": "Batmobile_Winch",
+     "type": "ObjectNCRProperty",
+     "value": "Engine.Play_BML_WinchFire"
+    }
+   ],
+   "exports": 5584,
+   "fired_export": 5206,
+   "launcher_bInstantFire": {
+    "name": null,
+    "offset": 2464,
+    "ref": null,
+    "ref_class": null,
+    "type": "BoolProperty",
+    "value": true
+   },
+   "launcher_export": 5204,
+   "launcher_pointer_base": {
+    "name": null,
+    "offset": 2428,
+    "ref": "Projectiles.Batmobile_EMPMissile_Projectile_ForCars",
+    "ref_class": "RBatmobileMissile",
+    "type": "ObjectNCRProperty",
+    "value": 5206
+   },
+   "launcher_pointer_cars": {
+    "name": null,
+    "offset": 2492,
+    "ref": "Projectiles.Batmobile_EMPMissile_Projectile_ForCars",
+    "ref_class": "RBatmobileMissile",
+    "type": "ObjectNCRProperty",
+    "value": 5206
+   },
+   "package": "Playable_BatmobileFunhouse_SF.upk",
+   "refs_fired": 2,
+   "refs_sibling": 0,
+   "sibling_export": 16,
+   "tracker_export": 5211,
+   "tracker_tags": 7
+  },
+  {
+   "carriers_2464": [],
+   "collisions_2464": [
+    {
+     "class": "RBatmobileCannon",
+     "export": 118,
+     "name": "Batmobile_Cannon_V2",
+     "type": "ObjectNCRProperty",
+     "value": "Particles.Batmobile_Muzzleflash_Tracer"
+    }
+   ],
+   "exports": 3388,
+   "fired_export": null,
+   "launcher_bInstantFire": null,
+   "launcher_export": null,
+   "launcher_pointer_base": null,
+   "launcher_pointer_cars": null,
+   "package": "Playable_BatmobileJoker_SF.upk",
+   "refs_fired": 0,
+   "refs_sibling": 0,
+   "sibling_export": null,
+   "tracker_export": null,
+   "tracker_tags": null
+  }
+ ],
+ "witnesses": {
+  "Actor.Tag": {
+   "offset": 360,
+   "sdk": [
+    "Actor.Tag"
+   ]
+  },
+  "Projectile.Damage": {
+   "offset": 728,
+   "sdk": [
+    "Projectile.Damage"
+   ]
+  },
+  "Projectile.DamageRadius": {
+   "offset": 732,
+   "sdk": [
+    "Projectile.DamageRadius"
+   ]
+  },
+  "Projectile.MyDamageType": {
+   "offset": 712,
+   "sdk": [
+    "Projectile.MyDamageType"
+   ]
+  },
+  "RBatmobileEMPMissile.CivilianMissileLockOnDuration": {
+   "offset": 2564,
+   "sdk": [
+    "RBatmobileEMPMissile.CivilianMissileLockOnDuration"
+   ]
+  },
+  "RBatmobileEMPMissile.MissileLockOnDuration": {
+   "offset": 2560,
+   "sdk": [
+    "RBatmobileEMPMissile.MissileLockOnDuration"
+   ]
+  },
+  "RBatmobileEMPMissile.ProjectileForCarsArchetype": {
+   "offset": 2492,
+   "sdk": [
+    "RBatmobileEMPMissile.ProjectileForCarsArchetype"
+   ]
+  },
+  "RBatmobileMissile.AccelRate": {
+   "offset": 1064,
+   "sdk": [
+    "RBatmobileMissile.AccelRate"
+   ]
+  },
+  "RBatmobileMissile.ExlposionSound": {
+   "offset": 968,
+   "sdk": [
+    "RBatmobileMissile.ExlposionSound"
+   ]
+  },
+  "RBatmobileMissile.ExplosionTemplate": {
+   "offset": 960,
+   "sdk": [
+    "RBatmobileMissile.ExplosionTemplate"
+   ]
+  },
+  "RInventoryGadget.Mesh": {
+   "offset": 792,
+   "sdk": [
+    "RInventoryGadget.Mesh"
+   ]
+  },
+  "RPursuitModeMissileLauncher.LaunchRotationOffset": {
+   "offset": 2452,
+   "sdk": [
+    "RPursuitModeMissileLauncher.LaunchRotationOffset"
+   ]
+  },
+  "RPursuitModeMissileLauncher.LaunchSocketName": {
+   "offset": 2436,
+   "sdk": [
+    "RPursuitModeMissileLauncher.LaunchSocketName"
+   ]
+  },
+  "RPursuitModeMissileLauncher.ProjectileArchetype": {
+   "offset": 2428,
+   "sdk": [
+    "RPursuitModeMissileLauncher.ProjectileArchetype"
+   ]
+  },
+  "RPursuitModeMissileLauncher.bInstantFire": {
+   "offset": 2464,
+   "sdk": [
+    "RPursuitModeMissileLauncher.bInstantFire"
+   ]
+  },
+  "RVehicleWeapon.FireStartEvent": {
+   "offset": 2176,
+   "sdk": [
+    "RVehicleWeapon.FireStartEvent"
+   ]
+  },
+  "RVehicleWeapon.IndividualFireEvent": {
+   "offset": 2200,
+   "sdk": [
+    "RVehicleWeapon.IndividualFireEvent"
+   ]
+  }
+ },
+ "wp4c": {
+  "carried": [
+   {
+    "chars": 1092,
+    "heading": "3. The booster mesh",
+    "sha256": "1fec595f47a9992e24fc671e92b15e447d4de51639aa4e7bd5f943d738c557f6"
+   },
+   {
+    "chars": 3024,
+    "heading": "4. The JC3 house for tracker + missile + mesh",
+    "sha256": "65493b6725e18931c31ddc011de70debf8f6ce607b0841e1d48cb74d125f1127"
+   },
+   {
+    "chars": 1740,
+    "heading": "6. COMPROMISES (unapproved - the operator approves through Claude)",
+    "sha256": "a72bbd03398a188873fbfa1c0e8a97eb0a5d3c51845da4a7c45185e9a3072484"
+   },
+   {
+    "chars": 1136,
+    "heading": "7. Reopened closures",
+    "sha256": "e631f4de69fd826e36045b8fe85f1cea5f564d4b2d697dea5b8a7582c3f3149b"
+   },
+   {
+    "chars": 356,
+    "heading": "8. Checks",
+    "sha256": "7251279dbdb98f4ca8354f7e16a67b03932a6b09d6b8090dc936c1938808ba5b"
+   }
+  ],
+  "carried_sha256": "8c3539307b2aa8e1834c76fa3ddd34b62f853eecb636a7185ec0ff3a9058ff65",
+  "lines": 244,
+  "path": "Working/Translation/T_WP4C_TRACKER_EMP.md",
+  "sha256": "75b7f301a12f582415e2310d6110a3beb674043677e778d5956054f11a46cf55"
+ }
+}

@@ -1,0 +1,1144 @@
+{
+ "card": "T-L10/T-L21/T-L22/T-L23",
+ "inputs": {
+  "bmak_entries": 101,
+  "bmak_forensics": 12,
+  "bmak_muzzle": 4,
+  "entity_files": 232,
+  "entities": 223,
+  "entries": 3217,
+  "members": 25,
+  "presets": 410,
+  "tunes": 34,
+  "tune_members": 444,
+  "effc": 25025,
+  "muzzle_paths": 31,
+  "effc_light_members": 0,
+  "carlight": 11367
+ },
+ "bmak_packages": [
+  "Playable_BatmobileFunhouse_SF",
+  "Playable_BatmobileJoker_SF",
+  "Playable_BatmobileMK2_SF",
+  "Playable_Batmobile_SF"
+ ],
+ "runtime": {
+  "AbsoluteRotation": {
+   "class": "RHelicopterSpotLightComponent",
+   "offset": 820,
+   "kind": "BoolProperty",
+   "hex": "0x0334"
+  },
+  "bForensicsLightActive": {
+   "class": "RVehicle",
+   "offset": 2180,
+   "kind": "BoolProperty",
+   "hex": "0x0884"
+  },
+  "HeadlightsSwitchedOn": {
+   "class": "RVehicle",
+   "offset": 2184,
+   "kind": "BoolProperty",
+   "hex": "0x0888"
+  },
+  "bHasDamagedLightState": {
+   "class": "RVehicle",
+   "offset": 2184,
+   "kind": "BoolProperty",
+   "hex": "0x0888"
+  },
+  "LightsMaterial": {
+   "class": "RVehicle",
+   "offset": 2284,
+   "kind": "ObjectProperty",
+   "hex": "0x08EC"
+  },
+  "CachedLightMat1234": {
+   "class": "RVehicle",
+   "offset": 2764,
+   "kind": "StructProperty",
+   "hex": "0x0ACC"
+  },
+  "CachedLightMat5678": {
+   "class": "RVehicle",
+   "offset": 2780,
+   "kind": "StructProperty",
+   "hex": "0x0ADC"
+  },
+  "LightsMaterialInst": {
+   "class": "RVehicle",
+   "offset": 4140,
+   "kind": "ArrayProperty",
+   "hex": "0x102C"
+  },
+  "LightsBrightness": {
+   "class": "RVehicle",
+   "offset": 4160,
+   "kind": "FloatProperty",
+   "hex": "0x1040"
+  }
+ },
+ "rows": [
+  {
+   "id": "T-L10",
+   "socket": "ChainGunMuzzle",
+   "kind": "muzzle",
+   "bmak": {
+    "package": "Playable_Batmobile_SF",
+    "bone": "Batmobile_Rig_Weapons_Machine_Gun_01",
+    "type": null,
+    "material_type": null,
+    "behavior": null,
+    "behavior_disposition": "no-jc3-equivalent: type stripped and socket name carries no behavior",
+    "jc3_part": "sportsmuscle_body",
+    "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Rig_Weapons_Machine_Gun_01|Batmobile_Rig_Weapons_Machine_Gun_01_LIG",
+    "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+    "socket_location": [
+     97.662842,
+     0.0,
+     -6.74938
+    ]
+   },
+   "bmak_components": [
+    {
+     "class": "SpotLightComponent",
+     "brightness": 1.0,
+     "radius": 4096.0,
+     "inner": null,
+     "outer": 50.0,
+     "falloff": 1.0,
+     "cast_shadows": false,
+     "cast_dynamic": false,
+     "colour": [
+      255,
+      255,
+      255,
+      0
+     ],
+     "colour_field": "LightColor",
+     "colour_source": "class default: `Default__LightComponent` (Engine.upk)",
+     "brightness_source": "class default: `Default__LightComponent` (Engine.upk)",
+     "radius_source": "component"
+    }
+   ],
+   "bmak_packages": [
+    {
+     "package": "Playable_BatmobileFunhouse_SF",
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "brightness": 1.0,
+       "radius": 4096.0,
+       "inner": null,
+       "outer": 50.0,
+       "falloff": 1.0,
+       "cast_shadows": false,
+       "cast_dynamic": false,
+       "colour": [
+        255,
+        255,
+        255,
+        0
+       ],
+       "colour_field": "LightColor",
+       "colour_source": "class default: `Default__LightComponent` (Engine.upk)",
+       "brightness_source": "class default: `Default__LightComponent` (Engine.upk)",
+       "radius_source": "component"
+      }
+     ]
+    },
+    {
+     "package": "Playable_BatmobileJoker_SF",
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "brightness": 1.0,
+       "radius": 4096.0,
+       "inner": null,
+       "outer": 50.0,
+       "falloff": 1.0,
+       "cast_shadows": false,
+       "cast_dynamic": false,
+       "colour": [
+        255,
+        255,
+        255,
+        0
+       ],
+       "colour_field": "LightColor",
+       "colour_source": "class default: `Default__LightComponent` (Engine.upk)",
+       "brightness_source": "class default: `Default__LightComponent` (Engine.upk)",
+       "radius_source": "component"
+      }
+     ]
+    },
+    {
+     "package": "Playable_BatmobileMK2_SF",
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "brightness": 1.0,
+       "radius": 4096.0,
+       "inner": null,
+       "outer": 50.0,
+       "falloff": 1.0,
+       "cast_shadows": false,
+       "cast_dynamic": false,
+       "colour": [
+        255,
+        255,
+        255,
+        0
+       ],
+       "colour_field": "LightColor",
+       "colour_source": "class default: `Default__LightComponent` (Engine.upk)",
+       "brightness_source": "class default: `Default__LightComponent` (Engine.upk)",
+       "radius_source": "component"
+      }
+     ]
+    },
+    {
+     "package": "Playable_Batmobile_SF",
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "brightness": 1.0,
+       "radius": 4096.0,
+       "inner": null,
+       "outer": 50.0,
+       "falloff": 1.0,
+       "cast_shadows": false,
+       "cast_dynamic": false,
+       "colour": [
+        255,
+        255,
+        255,
+        0
+       ],
+       "colour_field": "LightColor",
+       "colour_source": "class default: `Default__LightComponent` (Engine.upk)",
+       "brightness_source": "class default: `Default__LightComponent` (Engine.upk)",
+       "radius_source": "component"
+      }
+     ]
+    }
+   ],
+   "closest": {
+    "module_row": "VehicleDynamicLights `lights[i]` = 25 members, hung on the gun part; nearest shipped instance v0202_car_capstone_bavariumtank_debug.ee[5] part=bavariumtank_turret, range=10, angle=10, multiplier=1",
+    "effect": "SAttachedEffect (Effect + Usage, no world matrix, parented to the weapon entity) - the same carrier T-FX13 found for casings",
+    "tune": "WeaponTuning: no light or effect member (measured 0)"
+   },
+   "rule": [
+    {
+     "member": "lights[i].behavior",
+     "value": "None",
+     "why": "1177 rows ship it; a lamp that is not driven by a state machine",
+     "src": "Research/JC3Grab/LIGHT_SYSTEM.json module.behaviors"
+    },
+    {
+     "member": "lights[i].light_type",
+     "value": "0",
+     "why": "every point lamp in the fleet (2494 rows); all 723 light_type 1 rows are cones",
+     "src": "Research/JC3Grab/LIGHT_SYSTEM.json module.value_census.light_type"
+    },
+    {
+     "member": "lights[i].angle",
+     "value": "10",
+     "why": "the value every light_type 0 row uses (2494 rows)",
+     "src": "measured: light_type 0 <-> angle 10, 100%"
+    },
+    {
+     "member": "lights[i].range",
+     "value": "10",
+     "why": "the mode of range (1667 rows)",
+     "src": "Research/JC3Grab/LIGHT_SYSTEM.json module.value_census.range"
+    },
+    {
+     "member": "lights[i].diffuse.R/G/B",
+     "value": "1 / 1 / 1",
+     "why": "BmAK LightColor [255,255,255,0] / 255",
+     "src": "Research/BatmobileGrab/LIGHTS.json ChainGunMuzzle"
+    },
+    {
+     "member": "lights[i].part / part_hash / part_index",
+     "value": "a gun part",
+     "why": "only 6 shipped lamps hang on a gun part (v0202_car_capstone_bavariumtank_debug.ee[5] part=bavariumtank_turret, range=10, angle=10, multiplier=1)",
+     "src": "measured entity sweep"
+    },
+    {
+     "member": "lights[i].deformable_transform",
+     "value": "the gun bone anchor",
+     "why": "BmAK socket ChainGunMuzzle -> bone Batmobile_Rig_Weapons_Machine_Gun_01",
+     "src": "Research/BatmobileGrab/LIGHTS.json jc3_anchor"
+    },
+    {
+     "member": "lights[i].preset_id",
+     "value": "0",
+     "why": "17 shipped rows carry 0 and state their own numbers",
+     "src": "Research/JC3Grab/LIGHT_SYSTEM.json module.presets.zero"
+    }
+   ],
+   "gap": [
+    "JC3 has **no light member on a weapon tune**: 34 tune blocks in 25 WEAPONS.jsonl records, 444 distinct member paths, 0 light-ish members (measured).",
+    "No `.effc` carries a light node: 25,025 decoded `.effc` rows, 0 member paths matching light/glow/lumin/flash (measured FX_VOCAB).",
+    "A lamp cannot be pulsed by the shot: the only time-varying members are `blinking` (664 rows carry 1) whose period no decoded file states (UNKNOWN), and the behaviour names, which have no forensics or weapon mode.",
+    "The BmAK cone (Radius 4096, OuterConeAngle 50) has no unit bridge to `range`/`angle` (G2-33 \u00a78): the build picks fleet values and records the choice.",
+    "The visible flash has to come from the effect side: `SAttachedEffect` with `Usage` = `Fire` (5,342 objects / hash 4131019937), pointing at e.g. effects/jc_weapons/muzzle_flash/rico_50cal_muzzleflash.effc (21 vehicle carriers)."
+   ]
+  },
+  {
+   "id": "T-L21",
+   "socket": "BattleModeSpotLight",
+   "kind": "forensics",
+   "bmak": {
+    "package": "Playable_Batmobile_SF",
+    "bone": "Batmobile_Rig_Weapons_Drone_Decoder",
+    "type": "VEHLT_ForensicsLight",
+    "material_type": null,
+    "behavior": null,
+    "behavior_disposition": "no-jc3-equivalent: crime-scene scan light",
+    "jc3_part": "sportsmuscle_body",
+    "jc3_anchor": "|sportsmuscle_LOD1|body|Batmobile_Rig_Weapons_Drone_Decoder|Batmobile_Rig_Weapons_Drone_Decoder_LIG",
+    "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+    "socket_location": [
+     14.650226,
+     0.0,
+     2.499828
+    ]
+   },
+   "bmak_components": [
+    {
+     "class": "RHelicopterSpotLightComponent",
+     "brightness": 0.0,
+     "radius": 0.0,
+     "inner": null,
+     "outer": 0.0,
+     "falloff": 1.0,
+     "cast_shadows": false,
+     "cast_dynamic": false,
+     "colour": [
+      195,
+      255,
+      244,
+      0
+     ],
+     "colour_field": "LightColor",
+     "colour_source": "component",
+     "brightness_source": "component",
+     "radius_source": "component"
+    }
+   ],
+   "bmak_packages": [
+    {
+     "package": "Playable_BatmobileFunhouse_SF",
+     "components": [
+      {
+       "class": "RHelicopterSpotLightComponent",
+       "brightness": 0.0,
+       "radius": 0.0,
+       "inner": null,
+       "outer": 0.0,
+       "falloff": 1.0,
+       "cast_shadows": false,
+       "cast_dynamic": false,
+       "colour": [
+        195,
+        255,
+        244,
+        0
+       ],
+       "colour_field": "LightColor",
+       "colour_source": "component",
+       "brightness_source": "component",
+       "radius_source": "component"
+      }
+     ]
+    },
+    {
+     "package": "Playable_BatmobileJoker_SF",
+     "components": [
+      {
+       "class": "RHelicopterSpotLightComponent",
+       "brightness": 0.0,
+       "radius": 0.0,
+       "inner": 5.0,
+       "outer": 15.0,
+       "falloff": 1.0,
+       "cast_shadows": false,
+       "cast_dynamic": true,
+       "colour": [
+        195,
+        255,
+        244,
+        0
+       ],
+       "colour_field": "LightColor",
+       "colour_source": "component",
+       "brightness_source": "component",
+       "radius_source": "component"
+      }
+     ]
+    },
+    {
+     "package": "Playable_BatmobileMK2_SF",
+     "components": [
+      {
+       "class": "RHelicopterSpotLightComponent",
+       "brightness": 0.0,
+       "radius": 0.0,
+       "inner": null,
+       "outer": 0.0,
+       "falloff": 1.0,
+       "cast_shadows": false,
+       "cast_dynamic": false,
+       "colour": [
+        195,
+        255,
+        244,
+        0
+       ],
+       "colour_field": "LightColor",
+       "colour_source": "component",
+       "brightness_source": "component",
+       "radius_source": "component"
+      }
+     ]
+    },
+    {
+     "package": "Playable_Batmobile_SF",
+     "components": [
+      {
+       "class": "RHelicopterSpotLightComponent",
+       "brightness": 0.0,
+       "radius": 0.0,
+       "inner": null,
+       "outer": 0.0,
+       "falloff": 1.0,
+       "cast_shadows": false,
+       "cast_dynamic": false,
+       "colour": [
+        195,
+        255,
+        244,
+        0
+       ],
+       "colour_field": "LightColor",
+       "colour_source": "component",
+       "brightness_source": "component",
+       "radius_source": "component"
+      }
+     ]
+    }
+   ],
+   "closest": {
+    "module_row": "VehicleDynamicLights `lights[i]` on `sportsmuscle_body`, anchor |sportsmuscle_LOD1|body|Batmobile_Rig_Weapons_Drone_Decoder|Batmobile_Rig_Weapons_Drone_Decoder_LIG",
+    "graph_preset": "SVehicleLight preset (spot_angle + spot_inner_angle + radius + is_shadow_caster) - the only cone pair in JC3",
+    "material": "CarLight block (per-mesh emissive; parameters UNKNOWN)"
+   },
+   "rule": [
+    {
+     "member": "lights[i].light_type",
+     "value": "1",
+     "why": "all 723 cone rows; light_type 0 never exceeds angle 10",
+     "src": "measured co-occurrence"
+    },
+    {
+     "member": "lights[i].angle",
+     "value": "50",
+     "why": "the largest angle shipped (74 rows, e.g. v0400_car_mugello_vintagesports_civilian_01.ee[4] part=vintagesports_headlight_t_l, range=30, angle=50, multiplier=2); graph presets go to 60.0 and 2 of them ship a non-zero inner cone",
+     "src": "Research/JC3Grab/LIGHT_SYSTEM.json module.value_census.angle"
+    },
+    {
+     "member": "SVehicleLight.spot_angle / spot_inner_angle",
+     "value": "50 / 0",
+     "why": "the graph side carries both cones: spot_angle [15.0, 20.0, 25.0, 30.0, 35.0, 40.0, 45.0, 50.0, 60.0], inner [0.0, 10.0, 30.0]",
+     "src": "../_gamedata/JC3grab detail/*.ee.json SVehicleLight"
+    },
+    {
+     "member": "SVehicleLight.radius",
+     "value": "0.2...90",
+     "why": "graph-side range unit, no module counterpart",
+     "src": "measured preset sweep"
+    },
+    {
+     "member": "lights[i].range",
+     "value": "50",
+     "why": "66 rows, e.g. v0200_car_capstone_apc_debug.ee[1] part=apc_headlight_r, range=50, angle=40, multiplier=2",
+     "src": "Research/JC3Grab/LIGHT_SYSTEM.json module.value_census.range"
+    },
+    {
+     "member": "lights[i].diffuse.R/G/B",
+     "value": "0.764706 / 1 / 0.956863",
+     "why": "BmAK LightColor [195, 255, 244, 0] / 255 (alpha dropped: no alpha member)",
+     "src": "Research/BatmobileGrab/LIGHTS.json BattleModeSpotLight LightColor"
+    },
+    {
+     "member": "lights[i].cast_shadows",
+     "value": "0",
+     "why": "BmAK CastShadows False",
+     "src": "Research/BatmobileGrab/LIGHTS.json BattleModeSpotLight"
+    },
+    {
+     "member": "lights[i].multiplier",
+     "value": "1",
+     "why": "BmAK Brightness 0.0 (the component is a placeholder)",
+     "src": "Research/BatmobileGrab/LIGHTS.json BattleModeSpotLight Brightness"
+    }
+   ],
+   "gap": [
+    "The rig is a **state, not a lamp**: `RVehicle.bForensicsLightActive` is a bool at 0x0884 (offset 2180); JC3 lights have no enable member and no forensics behaviour (vocabulary: HeadLight, LeftSignal, None, Reverse, RightSignal, SirenLightOffOnFast, SirenLightOn, SirenLightOnOffFast, TailLight).",
+    "`RHelicopterSpotLightComponent` has no JC3 class: it declares only `AbsoluteRotation` (0x0334) on top of SpotLightComponent, and none of the aim/helicopter behaviour survives as data - the build keeps the lamp fixed to the bone transform.",
+    "Inner cone exists only on the graph side (`SVehicleLight.spot_inner_angle`), never on the module row that binds the part: the build must author both sides with the same numbers.",
+    "Colour alpha is not representable (`diffuse` is R/G/B only), and the BmAK red [255,0,0,255] / cyan [195,255,244,0] carry an alpha JC3 drops.",
+    "The emissive mesh side is a `CarLight` block per mesh (11,367 blocks in 220 vehicles): 'UNKNOWN - the material/emissive parameter bytes are not decoded (MODLOG \u00a7102d), so a CarLight block can be copied byte-exact but not authored from numbers' - so the build copies a donor block instead of authoring one.",
+    "No time base: `blinking` is a flag only (664 rows set it, no period anywhere) and the forensics pulse/sweep in BmAK is C++ / Blueprint, not data in the packages."
+   ]
+  },
+  {
+   "id": "T-L22",
+   "socket": "HeadLight1",
+   "kind": "forensics",
+   "bmak": {
+    "package": "Playable_Batmobile_SF",
+    "bone": "Winch_DOOR_Mesh",
+    "type": "VEHLT_ForensicsLight",
+    "material_type": "VEHLTMAT_HeadLightRight",
+    "behavior": null,
+    "behavior_disposition": "no-jc3-equivalent: crime-scene scan light",
+    "jc3_part": "sportsmuscle_body",
+    "jc3_anchor": "|sportsmuscle_LOD1|body|Winch_DOOR_Mesh|Winch_DOOR_Mesh_LIG",
+    "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+    "socket_location": [
+     21.286633,
+     45.192657,
+     -44.25
+    ]
+   },
+   "bmak_components": [
+    {
+     "class": "SpotLightComponent",
+     "brightness": 5.0,
+     "radius": 1024.0,
+     "inner": 10.0,
+     "outer": 35.0,
+     "falloff": 2.0,
+     "cast_shadows": false,
+     "cast_dynamic": true,
+     "colour": [
+      255,
+      0,
+      0,
+      255
+     ],
+     "colour_field": "LightColor",
+     "colour_source": "component",
+     "brightness_source": "component",
+     "radius_source": "class default: `Default__PointLightComponent` (Engine.upk)"
+    }
+   ],
+   "bmak_packages": [
+    {
+     "package": "Playable_BatmobileFunhouse_SF",
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "brightness": 5.0,
+       "radius": 1024.0,
+       "inner": 10.0,
+       "outer": 35.0,
+       "falloff": 2.0,
+       "cast_shadows": false,
+       "cast_dynamic": true,
+       "colour": [
+        255,
+        0,
+        0,
+        255
+       ],
+       "colour_field": "LightColor",
+       "colour_source": "component",
+       "brightness_source": "component",
+       "radius_source": "class default: `Default__PointLightComponent` (Engine.upk)"
+      }
+     ]
+    },
+    {
+     "package": "Playable_BatmobileJoker_SF",
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "brightness": 5.0,
+       "radius": 1024.0,
+       "inner": 10.0,
+       "outer": 35.0,
+       "falloff": 2.0,
+       "cast_shadows": false,
+       "cast_dynamic": true,
+       "colour": [
+        255,
+        0,
+        0,
+        255
+       ],
+       "colour_field": "LightColor",
+       "colour_source": "component",
+       "brightness_source": "component",
+       "radius_source": "class default: `Default__PointLightComponent` (Engine.upk)"
+      }
+     ]
+    },
+    {
+     "package": "Playable_BatmobileMK2_SF",
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "brightness": 5.0,
+       "radius": 1024.0,
+       "inner": 10.0,
+       "outer": 35.0,
+       "falloff": 2.0,
+       "cast_shadows": false,
+       "cast_dynamic": true,
+       "colour": [
+        255,
+        0,
+        0,
+        255
+       ],
+       "colour_field": "LightColor",
+       "colour_source": "component",
+       "brightness_source": "component",
+       "radius_source": "class default: `Default__PointLightComponent` (Engine.upk)"
+      }
+     ]
+    },
+    {
+     "package": "Playable_Batmobile_SF",
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "brightness": 5.0,
+       "radius": 1024.0,
+       "inner": 10.0,
+       "outer": 35.0,
+       "falloff": 2.0,
+       "cast_shadows": false,
+       "cast_dynamic": true,
+       "colour": [
+        255,
+        0,
+        0,
+        255
+       ],
+       "colour_field": "LightColor",
+       "colour_source": "component",
+       "brightness_source": "component",
+       "radius_source": "class default: `Default__PointLightComponent` (Engine.upk)"
+      }
+     ]
+    }
+   ],
+   "closest": {
+    "module_row": "VehicleDynamicLights `lights[i]` on `sportsmuscle_body`, anchor |sportsmuscle_LOD1|body|Winch_DOOR_Mesh|Winch_DOOR_Mesh_LIG",
+    "graph_preset": "SVehicleLight preset (spot_angle + spot_inner_angle + radius + is_shadow_caster) - the only cone pair in JC3",
+    "material": "CarLight block (per-mesh emissive; parameters UNKNOWN)"
+   },
+   "rule": [
+    {
+     "member": "lights[i].light_type",
+     "value": "1",
+     "why": "all 723 cone rows",
+     "src": "measured"
+    },
+    {
+     "member": "lights[i].angle",
+     "value": "35",
+     "why": "the exact value exists (2 rows); 40 is the mode for big beams (628 rows)",
+     "src": "Research/JC3Grab/LIGHT_SYSTEM.json module.value_census.angle"
+    },
+    {
+     "member": "SVehicleLight.spot_inner_angle",
+     "value": "10",
+     "why": "BmAK InnerConeAngle 10; graph presets ship inner [0.0, 10.0, 30.0]",
+     "src": "measured preset sweep"
+    },
+    {
+     "member": "lights[i].range",
+     "value": "30",
+     "why": "351 rows, e.g. v0000_car_autostraad_oldjeep_civilian_01.ee[4] part=oldjeep_headlight_f_l, range=30, angle=40, multiplier=2",
+     "src": "Research/JC3Grab/LIGHT_SYSTEM.json module.value_census.range"
+    },
+    {
+     "member": "lights[i].multiplier",
+     "value": "5",
+     "why": "BmAK Brightness 5.0; 12 shipped rows carry 5 (v0602_car_urga_armoredtransport_debug.ee[12] part=armoredtransport_headlight_t_l, range=50, angle=40, multiplier=5)",
+     "src": "Research/JC3Grab/LIGHT_SYSTEM.json module.value_census.multiplier"
+    },
+    {
+     "member": "lights[i].diffuse.R/G/B",
+     "value": "1 / 0 / 0",
+     "why": "BmAK LightColor [255, 0, 0, 255] / 255 (alpha 255 has no JC3 member)",
+     "src": "Research/BatmobileGrab/LIGHTS.json HeadLight1 LightColor"
+    },
+    {
+     "member": "lights[i].cast_shadows",
+     "value": "1",
+     "why": "BmAK CastDynamicShadows True; only 2 shipped rows cast shadows (v1300_boat_kensington_motoryacht_civilian_01.ee[1] part=motoryacht_headlight, range=15, angle=35, multiplier=1), both with volumetric_mode 1 + volume_intensity 0.02",
+     "src": "Research/JC3Grab/LIGHT_SYSTEM.json module.value_census.cast_shadows"
+    },
+    {
+     "member": "lights[i].falloff_start",
+     "value": "0.8",
+     "why": "the mode (2210 rows)",
+     "src": "Research/JC3Grab/LIGHT_SYSTEM.json module.value_census.falloff_start"
+    }
+   ],
+   "gap": [
+    "The rig is a **state, not a lamp**: `RVehicle.bForensicsLightActive` is a bool at 0x0884 (offset 2180); JC3 lights have no enable member and no forensics behaviour (vocabulary: HeadLight, LeftSignal, None, Reverse, RightSignal, SirenLightOffOnFast, SirenLightOn, SirenLightOnOffFast, TailLight).",
+    "`RHelicopterSpotLightComponent` has no JC3 class: it declares only `AbsoluteRotation` (0x0334) on top of SpotLightComponent, and none of the aim/helicopter behaviour survives as data - the build keeps the lamp fixed to the bone transform.",
+    "Inner cone exists only on the graph side (`SVehicleLight.spot_inner_angle`), never on the module row that binds the part: the build must author both sides with the same numbers.",
+    "Colour alpha is not representable (`diffuse` is R/G/B only), and the BmAK red [255,0,0,255] / cyan [195,255,244,0] carry an alpha JC3 drops.",
+    "The emissive mesh side is a `CarLight` block per mesh (11,367 blocks in 220 vehicles): 'UNKNOWN - the material/emissive parameter bytes are not decoded (MODLOG \u00a7102d), so a CarLight block can be copied byte-exact but not authored from numbers' - so the build copies a donor block instead of authoring one.",
+    "No time base: `blinking` is a flag only (664 rows set it, no period anywhere) and the forensics pulse/sweep in BmAK is C++ / Blueprint, not data in the packages."
+   ]
+  },
+  {
+   "id": "T-L23",
+   "socket": "HeadLight2",
+   "kind": "forensics",
+   "bmak": {
+    "package": "Playable_Batmobile_SF",
+    "bone": "Winch_DOOR_Mesh",
+    "type": "VEHLT_ForensicsLight",
+    "material_type": "VEHLTMAT_HeadLightLeft",
+    "behavior": null,
+    "behavior_disposition": "no-jc3-equivalent: crime-scene scan light",
+    "jc3_part": "sportsmuscle_body",
+    "jc3_anchor": "|sportsmuscle_LOD1|body|Winch_DOOR_Mesh|Winch_DOOR_Mesh_LIG",
+    "anchor_state": "needs-lig-bone: the assembled part has no bone hierarchy yet",
+    "socket_location": [
+     28.216906,
+     -38.593201,
+     -61.0
+    ]
+   },
+   "bmak_components": [
+    {
+     "class": "SpotLightComponent",
+     "brightness": 5.0,
+     "radius": 1024.0,
+     "inner": 10.0,
+     "outer": 35.0,
+     "falloff": 2.0,
+     "cast_shadows": false,
+     "cast_dynamic": true,
+     "colour": [
+      255,
+      0,
+      0,
+      255
+     ],
+     "colour_field": "LightColor",
+     "colour_source": "component",
+     "brightness_source": "component",
+     "radius_source": "class default: `Default__PointLightComponent` (Engine.upk)"
+    }
+   ],
+   "bmak_packages": [
+    {
+     "package": "Playable_BatmobileFunhouse_SF",
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "brightness": 5.0,
+       "radius": 1024.0,
+       "inner": 10.0,
+       "outer": 35.0,
+       "falloff": 2.0,
+       "cast_shadows": false,
+       "cast_dynamic": true,
+       "colour": [
+        255,
+        0,
+        0,
+        255
+       ],
+       "colour_field": "LightColor",
+       "colour_source": "component",
+       "brightness_source": "component",
+       "radius_source": "class default: `Default__PointLightComponent` (Engine.upk)"
+      }
+     ]
+    },
+    {
+     "package": "Playable_BatmobileJoker_SF",
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "brightness": 5.0,
+       "radius": 1024.0,
+       "inner": 10.0,
+       "outer": 35.0,
+       "falloff": 2.0,
+       "cast_shadows": false,
+       "cast_dynamic": true,
+       "colour": [
+        255,
+        0,
+        0,
+        255
+       ],
+       "colour_field": "LightColor",
+       "colour_source": "component",
+       "brightness_source": "component",
+       "radius_source": "class default: `Default__PointLightComponent` (Engine.upk)"
+      }
+     ]
+    },
+    {
+     "package": "Playable_BatmobileMK2_SF",
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "brightness": 5.0,
+       "radius": 1024.0,
+       "inner": 10.0,
+       "outer": 35.0,
+       "falloff": 2.0,
+       "cast_shadows": false,
+       "cast_dynamic": true,
+       "colour": [
+        255,
+        0,
+        0,
+        255
+       ],
+       "colour_field": "LightColor",
+       "colour_source": "component",
+       "brightness_source": "component",
+       "radius_source": "class default: `Default__PointLightComponent` (Engine.upk)"
+      }
+     ]
+    },
+    {
+     "package": "Playable_Batmobile_SF",
+     "components": [
+      {
+       "class": "SpotLightComponent",
+       "brightness": 5.0,
+       "radius": 1024.0,
+       "inner": 10.0,
+       "outer": 35.0,
+       "falloff": 2.0,
+       "cast_shadows": false,
+       "cast_dynamic": true,
+       "colour": [
+        255,
+        0,
+        0,
+        255
+       ],
+       "colour_field": "LightColor",
+       "colour_source": "component",
+       "brightness_source": "component",
+       "radius_source": "class default: `Default__PointLightComponent` (Engine.upk)"
+      }
+     ]
+    }
+   ],
+   "closest": {
+    "module_row": "VehicleDynamicLights `lights[i]` on `sportsmuscle_body`, anchor |sportsmuscle_LOD1|body|Winch_DOOR_Mesh|Winch_DOOR_Mesh_LIG",
+    "graph_preset": "SVehicleLight preset (spot_angle + spot_inner_angle + radius + is_shadow_caster) - the only cone pair in JC3",
+    "material": "CarLight block (per-mesh emissive; parameters UNKNOWN)"
+   },
+   "rule": [
+    {
+     "member": "lights[i].light_type",
+     "value": "1",
+     "why": "all 723 cone rows",
+     "src": "measured"
+    },
+    {
+     "member": "lights[i].angle",
+     "value": "35",
+     "why": "the exact value exists (2 rows); 40 is the mode for big beams (628 rows)",
+     "src": "Research/JC3Grab/LIGHT_SYSTEM.json module.value_census.angle"
+    },
+    {
+     "member": "SVehicleLight.spot_inner_angle",
+     "value": "10",
+     "why": "BmAK InnerConeAngle 10; graph presets ship inner [0.0, 10.0, 30.0]",
+     "src": "measured preset sweep"
+    },
+    {
+     "member": "lights[i].range",
+     "value": "30",
+     "why": "351 rows, e.g. v0000_car_autostraad_oldjeep_civilian_01.ee[4] part=oldjeep_headlight_f_l, range=30, angle=40, multiplier=2",
+     "src": "Research/JC3Grab/LIGHT_SYSTEM.json module.value_census.range"
+    },
+    {
+     "member": "lights[i].multiplier",
+     "value": "5",
+     "why": "BmAK Brightness 5.0; 12 shipped rows carry 5 (v0602_car_urga_armoredtransport_debug.ee[12] part=armoredtransport_headlight_t_l, range=50, angle=40, multiplier=5)",
+     "src": "Research/JC3Grab/LIGHT_SYSTEM.json module.value_census.multiplier"
+    },
+    {
+     "member": "lights[i].diffuse.R/G/B",
+     "value": "1 / 0 / 0",
+     "why": "BmAK LightColor [255, 0, 0, 255] / 255 (alpha 255 has no JC3 member)",
+     "src": "Research/BatmobileGrab/LIGHTS.json HeadLight2 LightColor"
+    },
+    {
+     "member": "lights[i].cast_shadows",
+     "value": "1",
+     "why": "BmAK CastDynamicShadows True; only 2 shipped rows cast shadows (v1300_boat_kensington_motoryacht_civilian_01.ee[1] part=motoryacht_headlight, range=15, angle=35, multiplier=1), both with volumetric_mode 1 + volume_intensity 0.02",
+     "src": "Research/JC3Grab/LIGHT_SYSTEM.json module.value_census.cast_shadows"
+    },
+    {
+     "member": "lights[i].falloff_start",
+     "value": "0.8",
+     "why": "the mode (2210 rows)",
+     "src": "Research/JC3Grab/LIGHT_SYSTEM.json module.value_census.falloff_start"
+    }
+   ],
+   "gap": [
+    "The rig is a **state, not a lamp**: `RVehicle.bForensicsLightActive` is a bool at 0x0884 (offset 2180); JC3 lights have no enable member and no forensics behaviour (vocabulary: HeadLight, LeftSignal, None, Reverse, RightSignal, SirenLightOffOnFast, SirenLightOn, SirenLightOnOffFast, TailLight).",
+    "`RHelicopterSpotLightComponent` has no JC3 class: it declares only `AbsoluteRotation` (0x0334) on top of SpotLightComponent, and none of the aim/helicopter behaviour survives as data - the build keeps the lamp fixed to the bone transform.",
+    "Inner cone exists only on the graph side (`SVehicleLight.spot_inner_angle`), never on the module row that binds the part: the build must author both sides with the same numbers.",
+    "Colour alpha is not representable (`diffuse` is R/G/B only), and the BmAK red [255,0,0,255] / cyan [195,255,244,0] carry an alpha JC3 drops.",
+    "The emissive mesh side is a `CarLight` block per mesh (11,367 blocks in 220 vehicles): 'UNKNOWN - the material/emissive parameter bytes are not decoded (MODLOG \u00a7102d), so a CarLight block can be copied byte-exact but not authored from numbers' - so the build copies a donor block instead of authoring one.",
+    "No time base: `blinking` is a flag only (664 rows set it, no period anywhere) and the forensics pulse/sweep in BmAK is C++ / Blueprint, not data in the packages."
+   ]
+  }
+ ],
+ "stats": {
+  "a50": 74,
+  "a45": 12,
+  "r50": 66,
+  "a35": 2,
+  "mult5": 12,
+  "shadows": 2,
+  "guns": 6,
+  "sirens": 15,
+  "blink": 664,
+  "spot": 723,
+  "point": 2494,
+  "top_angle": 60.0,
+  "a10": 2494,
+  "preset_angles": [
+   15.0,
+   20.0,
+   25.0,
+   30.0,
+   35.0,
+   40.0,
+   45.0,
+   50.0,
+   60.0
+  ],
+  "preset_inner": [
+   0.0,
+   10.0,
+   30.0
+  ],
+  "preset_cone50": 0,
+  "preset_shadow": 25,
+  "muzzle_paths": 31,
+  "muzzle_best": 21,
+  "muzzle_best_path": "effects/jc_weapons/muzzle_flash/rico_50cal_muzzleflash.effc",
+  "r30": 351
+ },
+ "behaviors": {
+  "HeadLight": 1027,
+  "LeftSignal": 253,
+  "None": 1177,
+  "Reverse": 191,
+  "RightSignal": 253,
+  "SirenLightOffOnFast": 3,
+  "SirenLightOn": 9,
+  "SirenLightOnOffFast": 3,
+  "TailLight": 301
+ },
+ "census": {
+  "angle": {
+   "10": 2494,
+   "25": 3,
+   "30": 4,
+   "35": 2,
+   "40": 628,
+   "45": 12,
+   "50": 74
+  },
+  "blinking": {
+   "0": 2553,
+   "1": 664
+  },
+  "cast_shadows": {
+   "0": 3215,
+   "1": 2
+  },
+  "falloff_start": {
+   "0": 744,
+   "0.100000001": 63,
+   "0.300000012": 170,
+   "0.600000024": 30,
+   "0.800000012": 2210
+  },
+  "light_type": {
+   "0": 2494,
+   "1": 723
+  },
+  "min_luminosity": {
+   "0": 3217
+  },
+  "multiplier": {
+   "0.300000012": 6,
+   "0.400000006": 3,
+   "0.5": 174,
+   "0.699999988": 30,
+   "1": 2188,
+   "2": 792,
+   "3": 12,
+   "5": 12
+  },
+  "near_cap": {
+   "0": 1173,
+   "1": 2044
+  },
+  "projected_texture_index": {
+   "-1": 3215,
+   "0": 2
+  },
+  "range": {
+   "0.100000001": 4,
+   "0.200000003": 11,
+   "0.300000012": 6,
+   "0.5": 34,
+   "1": 332,
+   "1.5": 6,
+   "10": 1667,
+   "15": 2,
+   "2": 669,
+   "2.5": 12,
+   "20": 12,
+   "3": 39,
+   "30": 351,
+   "40": 6,
+   "50": 66
+  },
+  "uvscale.u": {
+   "1": 3217
+  },
+  "uvscale.v": {
+   "1": 3217
+  },
+  "volume_intensity": {
+   "0.00999999978": 1171,
+   "0.0199999996": 2,
+   "1": 2044
+  },
+  "volumetric_mode": {
+   "0": 3215,
+   "1": 2
+  }
+ },
+ "tune_light_members": {},
+ "muzzle_examples": {
+  "effects/jc_weapons/muzzle_flash/helicopter_minigun_muzzleflash.effc": {
+   "root": "EffectRTSystem",
+   "rows": 2381,
+   "size": 16079
+  },
+  "effects/jc_weapons/muzzle_flash/rico_minigun_muzzleflash.effc": {
+   "root": "EffectRTSystem",
+   "rows": 1772,
+   "size": 13599
+  }
+ },
+ "check": {
+  "items": [
+   [
+    "bmak_forensics_12",
+    true,
+    "got 12"
+   ],
+   [
+    "bmak_muzzle_4",
+    true,
+    "got 4"
+   ],
+   [
+    "rows_4",
+    true,
+    "got 4"
+   ],
+   [
+    "module_entries_3217",
+    true,
+    "got 3217"
+   ],
+   [
+    "module_members_25",
+    true,
+    "got 25"
+   ],
+   [
+    "no_tune_light_member",
+    true,
+    "got 0"
+   ],
+   [
+    "no_effc_light_member",
+    true,
+    "got 0"
+   ],
+   [
+    "spot_angle_max_50",
+    true,
+    "74 rows at angle 50"
+   ],
+   [
+    "preset_cones_wider",
+    true,
+    "graph max 60.0"
+   ],
+   [
+    "gun_lamps_6",
+    true,
+    "got 6"
+   ],
+   [
+    "shadow_rows_2",
+    true,
+    "got 2"
+   ],
+   [
+    "siren_rows_15",
+    true,
+    "got 15"
+   ],
+   [
+    "no_forensics_behavior",
+    true,
+    "9 behaviours"
+   ],
+   [
+    "every_row_has_gap",
+    true,
+    "min 5"
+   ],
+   [
+    "every_row_has_closest",
+    true,
+    "4 rows"
+   ],
+   [
+    "t14_ledger_has_omitted",
+    true,
+    "T-18 omission of these ids is the premise"
+   ]
+  ],
+  "passed": 16,
+  "total": 16
+ }
+}

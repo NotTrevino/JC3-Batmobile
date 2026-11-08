@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/review-G3-19.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-03
+G3-19 (Research/JC3Grab/DECODE_DEPTH3.md, Tools/scripts/decode_depth3.py) claims one of four vanilla Serpente files is now fully decoded and the other three fully accounted except one named block payload each, with --check proving byte sums equal file sizes. Check that the accounting is real and not circular: confirm the check reads sizes from the archive rather than from its own output, decode two of its 'FULL' blocks yourself and compare the values, and make sure the undecoded payloads are not counted as decoded anywhere. Rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md section 3. Report at the DONE path with STATUS (or VERDICT for a review) and every command with its output.

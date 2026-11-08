@@ -1,0 +1,8 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/apply-mode-switch-rows.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-06
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/apply-gadget-rows.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/mode-switch-carriers.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/battle-audio-switch-event.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/keep-audit-world-modes.md
+Using reports/mode-switch-carriers.md, battle-audio-switch-event and keep-audit-world-modes, reopen decision D-2 (one hybrid car) in GRAB_BACKLOG.md section 11 with the evidence: BmAK has two modes and a hybrid cannot carry rows T-MD5..T-MD8, T-MD13 and T-MD14. Write the two-mode plan (what flips, which member, which carrier) built on the closest system with the gap the build must fill, and re-open card B-12 with its new preconditions. Update the affected ledger rows and keep BLOCKED_PROPOSALS and t_blocked.py pins consistent. Write down every build step that changes if two variants are carried.
+
+Pin upkeep: if your edits change which rows are blocked or the in-scope row count, update WAITS and the in_scope == value in Tools/scripts/t_blocked.py (back it up first), run t_blocked.py --write then --check, and keep both passing before you finish.

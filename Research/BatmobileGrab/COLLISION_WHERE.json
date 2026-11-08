@@ -1,0 +1,1348 @@
+{
+  "archetype": {
+    "class": "RVehicleBatmobile",
+    "components": [
+      {
+        "class": "RAkAudible",
+        "field": "DefaultAkAudible",
+        "offset": 124,
+        "ref": "Batmobile.DefaultAkAudible_"
+      },
+      {
+        "class": "SkeletalMeshComponent",
+        "field": "CollisionComponent",
+        "offset": 180,
+        "ref": "Batmobile.SVehicleMesh"
+      },
+      {
+        "class": "CylinderComponent",
+        "field": "CylinderComponent",
+        "offset": 900,
+        "ref": "Batmobile.CollisionCylinder"
+      },
+      {
+        "class": "SkeletalMeshComponent",
+        "field": "Mesh",
+        "offset": 908,
+        "ref": "Batmobile.SVehicleMesh"
+      },
+      {
+        "class": "RVehicleSimBatmobile",
+        "field": "SimObj",
+        "offset": 1700,
+        "ref": "Batmobile.SimulationModel"
+      },
+      {
+        "class": "RB_StayUprightSetup",
+        "field": "StayUprightConstraintSetup",
+        "offset": 1764,
+        "ref": "Batmobile.RB_StayUprightSetup"
+      },
+      {
+        "class": "RB_ConstraintInstance",
+        "field": "StayUprightConstraintInstance",
+        "offset": 1772,
+        "ref": "Batmobile.RB_ConstraintInstance"
+      },
+      {
+        "class": "AkVehicleSound",
+        "field": "VehicleSound",
+        "offset": 2088,
+        "ref": "Batmobile.VehicleSound"
+      },
+      {
+        "class": "RVisualDamageComponent",
+        "field": "VisualDamageComp",
+        "offset": 2164,
+        "ref": "Batmobile.VisDmgComp"
+      },
+      {
+        "class": "MaterialInstanceConstant",
+        "field": "XRayMaterialMIC",
+        "offset": 2268,
+        "ref": "Batmobile.MIC1"
+      },
+      {
+        "class": "RInteractionComponent",
+        "field": "Interactions",
+        "offset": 2308,
+        "ref": "Batmobile.Interactions"
+      },
+      {
+        "class": "ParticleSystemComponent",
+        "field": "AfterburnerSystem",
+        "offset": 4636,
+        "ref": "Batmobile.ab"
+      },
+      {
+        "class": "ParticleSystemComponent",
+        "field": "AfterburnerWarmupSystem",
+        "offset": 4644,
+        "ref": "Batmobile.ABW"
+      },
+      {
+        "class": "ParticleSystemComponent",
+        "field": "RearFinTrail",
+        "offset": 4652,
+        "ref": "Batmobile.FinTrail0"
+      },
+      {
+        "class": "ParticleSystemComponent",
+        "field": "BrakeLightTrailSystemL",
+        "offset": 4660,
+        "ref": "Batmobile.BrakeTrail0"
+      },
+      {
+        "class": "ParticleSystemComponent",
+        "field": "BrakeLightTrailSystemR",
+        "offset": 4668,
+        "ref": "Batmobile.BrakeTrail1"
+      },
+      {
+        "class": "ParticleSystemComponent",
+        "field": "SpeedLinesSystem",
+        "offset": 4676,
+        "ref": "Batmobile.SpeedLines0"
+      },
+      {
+        "class": "ParticleSystem",
+        "field": "ExhaustBurstEffect",
+        "offset": 4684,
+        "ref": "Exhaust.batmobileExhaust_burst"
+      },
+      {
+        "class": "ParticleSystem",
+        "field": "SideExhaustBurstEffect",
+        "offset": 4692,
+        "ref": "Exhaust.SideExhaust_Burst"
+      },
+      {
+        "class": "ParticleSystem",
+        "field": "SideExhaustBoostEffect",
+        "offset": 4700,
+        "ref": "Exhaust.SideExhaust_Boost"
+      },
+      {
+        "class": "AkPlayerVehicleSoundInfo",
+        "field": "PlayerVehicleInfo",
+        "offset": 4796,
+        "ref": "VEH_Player.Batmobile"
+      },
+      {
+        "class": "AkEvent",
+        "field": "TransformationReverseDirectionIntoPursuitModeSound",
+        "offset": 4828,
+        "ref": "Ww_BML_Batmobile.Play_BattleMode_Out_Rev"
+      },
+      {
+        "class": "AkEvent",
+        "field": "TransformationReverseDirectionIntoBattleModeSound",
+        "offset": 4836,
+        "ref": "Ww_BML_Batmobile.Play_BattleMode_In_Rev"
+      },
+      {
+        "class": "RBatmobileCannon",
+        "field": "VehicleWeapons",
+        "offset": 4916,
+        "ref": "Weapons.Batmobile_Cannon_V2"
+      },
+      {
+        "class": "RBatmobileWinch",
+        "field": "VehicleWeapons",
+        "offset": 4932,
+        "ref": "Weapons.Batmobile_Winch"
+      },
+      {
+        "class": "RBatmobileEMP",
+        "field": "VehicleWeapons",
+        "offset": 4956,
+        "ref": "Weapons.Batmobile_EMP_Burst"
+      },
+      {
+        "class": "RBatmobileMissileLauncher",
+        "field": "VehicleWeapons",
+        "offset": 4964,
+        "ref": "Weapons.Batmobile_Missile_Launcher"
+      },
+      {
+        "class": "RBatmobileAllegianceSwitcher",
+        "field": "VehicleWeapons",
+        "offset": 4972,
+        "ref": "Weapons.Drone_Hacker"
+      },
+      {
+        "class": "RBatmobileSonar",
+        "field": "VehicleWeapons",
+        "offset": 4980,
+        "ref": "Weapons.Batmobile_Sonar"
+      },
+      {
+        "class": "RBatmobileEMPMissile",
+        "field": "PursuitModeWeapons",
+        "offset": 5036,
+        "ref": "Weapons.Batmobile_EMP_Missile_Launcher"
+      },
+      {
+        "class": "RBatmobileVehicleTracker",
+        "field": "PursuitModeWeapons",
+        "offset": 5068,
+        "ref": "Weapons.Vehicle_Tracker"
+      },
+      {
+        "class": "RBatmobileBooster",
+        "field": "PursuitModePrimaryWeapon",
+        "offset": 5236,
+        "ref": "Weapons.Batmobile_Booster"
+      },
+      {
+        "class": "RBatmobileHeavyCannon",
+        "field": "BattleModePrimaryWeapon",
+        "offset": 5244,
+        "ref": "Weapons.Batmobile_Heavy_Cannon_Primary"
+      },
+      {
+        "class": "ParticleSystem",
+        "field": "WarningParticleSystemTemplate",
+        "offset": 5388,
+        "ref": "AR.Tank_Line_Marker"
+      },
+      {
+        "class": "ParticleSystem",
+        "field": "WarningParticleSystemTemplate",
+        "offset": 5396,
+        "ref": "AR.Missile_LineMarker"
+      },
+      {
+        "class": "ParticleSystem",
+        "field": "WarningParticleSystemTemplate",
+        "offset": 5404,
+        "ref": "AR.Tank_SplashDamage_Marker"
+      },
+      {
+        "class": "ParticleSystem",
+        "field": "WarningParticleSystemTemplate",
+        "offset": 5412,
+        "ref": "AR.FlyingDrone_Line_Marker"
+      },
+      {
+        "class": "ParticleSystem",
+        "field": "WarningParticleSystemTemplate",
+        "offset": 5420,
+        "ref": "AR.Turret_Line_Marker"
+      },
+      {
+        "class": "AkEvent",
+        "field": "WarningOnAudioEvent",
+        "offset": 5436,
+        "ref": "Ww_UI_InGame.Play_HUD_Missile_Lock"
+      },
+      {
+        "class": "RDeadVehicle",
+        "field": "DeadBatmobileArchetype",
+        "offset": 5556,
+        "ref": "DeadVehicle.Dead_Batmobile"
+      },
+      {
+        "class": "ParticleSystem",
+        "field": "DeathExplosion",
+        "offset": 5564,
+        "ref": "Impacts.Batmobile_Explosion"
+      },
+      {
+        "class": "SkeletalMeshComponent",
+        "field": "BatmobileOnFireMeshComp",
+        "offset": 5684,
+        "ref": "Batmobile.BatmobileOnFireMeshComp0"
+      },
+      {
+        "class": "CylinderComponent",
+        "field": "RearCylinderComponent",
+        "offset": 5692,
+        "ref": "Batmobile.RearCollisionCylinder"
+      },
+      {
+        "class": "CylinderComponent",
+        "field": "FrontCylinderComponent",
+        "offset": 5700,
+        "ref": "Batmobile.FrontCollisionCylinder"
+      },
+      {
+        "class": "ParticleSystemComponent",
+        "field": "HeatSteam",
+        "offset": 5708,
+        "ref": "Batmobile.HeatSteam"
+      },
+      {
+        "class": "StaticMeshComponent",
+        "field": "BatmanCollisionMeshBattleMode",
+        "offset": 5724,
+        "ref": "Batmobile.BatmanCollisionMeshBattleMode0"
+      },
+      {
+        "class": "StaticMeshComponent",
+        "field": "BatmanCollisionMeshPursuitMode",
+        "offset": 5732,
+        "ref": "Batmobile.BatmanCollisionMeshPursuitMode0"
+      },
+      {
+        "class": "RInteractionComponent",
+        "field": "ThugZapperInteractions",
+        "offset": 5804,
+        "ref": "Batmobile.ZapperInt"
+      },
+      {
+        "class": "PointLightComponent",
+        "field": "XrayLight",
+        "offset": 5812,
+        "ref": "Batmobile.XrayLightComponent"
+      },
+      {
+        "class": "ParticleSystemComponent",
+        "field": "ZapperRR",
+        "offset": 5836,
+        "ref": "Batmobile.Zapper3"
+      },
+      {
+        "class": "ParticleSystemComponent",
+        "field": "ZapperRL",
+        "offset": 5844,
+        "ref": "Batmobile.Zapper2"
+      },
+      {
+        "class": "ParticleSystemComponent",
+        "field": "ZapperFR",
+        "offset": 5852,
+        "ref": "Batmobile.Zapper1"
+      },
+      {
+        "class": "ParticleSystemComponent",
+        "field": "ZapperFL",
+        "offset": 5860,
+        "ref": "Batmobile.Zapper0"
+      },
+      {
+        "class": "ParticleSystemComponent",
+        "field": "WallScrapeSparksSystemR",
+        "offset": 5868,
+        "ref": "Batmobile.WallScrape1"
+      },
+      {
+        "class": "ParticleSystemComponent",
+        "field": "WallScrapeSparksSystemL",
+        "offset": 5876,
+        "ref": "Batmobile.WallScrape0"
+      },
+      {
+        "class": "RSpecialMoveConfigConfigurable",
+        "field": "GetOutOnTopMove",
+        "offset": 8400,
+        "ref": "Batman_Batmobile_Moves.Get_Out_Batmobile_Stand_On_Top"
+      },
+      {
+        "class": "RSpecialMoveConfigConfigurable",
+        "field": "GetOutOnTopOnSteepInclineMove",
+        "offset": 8408,
+        "ref": "Batman_Batmobile_Moves.Get_Out_Batmobile_Stand_On_Top_Steep_Incline"
+      },
+      {
+        "class": "RSpecialMoveConfigConfigurable",
+        "field": "EjectToSpotMove",
+        "offset": 8496,
+        "ref": "Eject.Eject_To_Spot"
+      },
+      {
+        "class": "AkEvent",
+        "field": "TaserSound",
+        "offset": 8536,
+        "ref": "Engine.Play_Batmobile_Tazer_Fire"
+      }
+    ],
+    "export": 5281,
+    "path": "Vehicle.Batmobile",
+    "size": 3905,
+    "wheels_array": {
+      "count": 4,
+      "offset": 1708,
+      "refs": [
+        {
+          "export": 5394,
+          "path": "Batmobile.WheelFL"
+        },
+        {
+          "export": 5395,
+          "path": "Batmobile.WheelFR"
+        },
+        {
+          "export": 5396,
+          "path": "Batmobile.WheelRL"
+        },
+        {
+          "export": 5397,
+          "path": "Batmobile.WheelRR"
+        }
+      ]
+    }
+  },
+  "drivable_asset": {
+    "arrays": {
+      "BodySetup": {
+        "count": 2,
+        "refs": [
+          {
+            "class": "RB_BodySetup",
+            "export": 169750,
+            "path": "Batmobile_V3_Physics.RB_BodySetup"
+          },
+          {
+            "class": "RB_BodySetup",
+            "export": 169751,
+            "path": "Batmobile_V3_Physics.RB_BodySetup"
+          }
+        ]
+      },
+      "BoundsBodies": {
+        "count": 2,
+        "refs": [
+          {
+            "class": null,
+            "export": 0,
+            "path": null
+          },
+          {
+            "class": "ObjectProperty",
+            "export": 1,
+            "path": "ResetParameters.ResetParameters"
+          }
+        ]
+      },
+      "ConstraintSetup": {
+        "count": 1,
+        "refs": [
+          {
+            "class": "RB_ConstraintSetup",
+            "export": 171462,
+            "path": "Batmobile_V3_Physics.RB_ConstraintSetup"
+          }
+        ]
+      }
+    },
+    "bounds": [
+      {
+        "max": [
+          350.750031,
+          175.5,
+          227.749985
+        ],
+        "min": [
+          -339.792603,
+          -172.843796,
+          27.25
+        ]
+      },
+      {
+        "max": [
+          53.77422,
+          94.682442,
+          118.897507
+        ],
+        "min": [
+          -114.774216,
+          -94.682442,
+          67.602493
+        ]
+      }
+    ],
+    "class": "PhysicsAsset",
+    "constraint_setups": [
+      {
+        "export": 171462,
+        "names": [
+          "Batmobile_Rig_Weapons_Trans",
+          "Batmobile_Rig_Weapons_Trans",
+          "Batmobile_Chassis"
+        ],
+        "size": 86,
+        "vectors": [
+          [
+            -0.004818,
+            -1.3e-05,
+            1.677767
+          ],
+          [
+            1.0,
+            -0.0,
+            0.000108
+          ],
+          [
+            0.0,
+            1.0,
+            -0.000214
+          ]
+        ]
+      }
+    ],
+    "export": 158266,
+    "instance": {
+      "export": 158308,
+      "path": "Batmobile_V3_Physics.PhysicsAssetInstance"
+    },
+    "package": "BmGame.upk",
+    "path": "Physics.Batmobile_V3_Physics",
+    "size": 194,
+    "stop": "eof"
+  },
+  "drivable_bodies": [
+    {
+      "agggeom_size": 1759,
+      "bone": "Batmobile_Chassis",
+      "bools": [],
+      "box_count": 2,
+      "boxes": [
+        {
+          "centre_cm": [
+            9.0,
+            0.0,
+            106.75
+          ],
+          "extents_cm": [
+            690.305,
+            374.536,
+            207.5
+          ],
+          "payload_at": 92
+        },
+        {
+          "centre_cm": [
+            0.0,
+            0.0,
+            79.0
+          ],
+          "extents_cm": [
+            679.585,
+            345.688,
+            103.5
+          ],
+          "payload_at": 210
+        }
+      ],
+      "class": "RB_BodySetup",
+      "export": 169750,
+      "floats": [],
+      "package": "BmGame.upk",
+      "path": "Batmobile_V3_Physics.RB_BodySetup",
+      "size": 2698,
+      "sphere_count": 0
+    },
+    {
+      "agggeom_size": 143,
+      "bone": "Batmobile_Rig_Weapons_Trans",
+      "bools": [
+        {
+          "name": null,
+          "offset": 224,
+          "value": true
+        }
+      ],
+      "box_count": 1,
+      "boxes": [
+        {
+          "centre_cm": [
+            -30.5,
+            -0.0,
+            93.25
+          ],
+          "extents_cm": [
+            166.177,
+            189.365,
+            39.8
+          ],
+          "payload_at": 92
+        }
+      ],
+      "class": "RB_BodySetup",
+      "export": 169751,
+      "floats": [],
+      "package": "BmGame.upk",
+      "path": "Batmobile_V3_Physics.RB_BodySetup",
+      "size": 214,
+      "sphere_count": 0
+    }
+  ],
+  "drivable_instance": {
+    "arrays": {},
+    "bounds": [],
+    "class": "PhysicsAssetInstance",
+    "constraint_setups": [],
+    "export": 158308,
+    "instance": null,
+    "package": "BmGame.upk",
+    "path": "Batmobile_V3_Physics.PhysicsAssetInstance",
+    "size": 78,
+    "stop": "end"
+  },
+  "drivable_instance_arrays": {
+    "arrays": {
+      "Bodies": {
+        "count": 2,
+        "size": 12
+      },
+      "Constraints": {
+        "count": 1,
+        "size": 8
+      }
+    },
+    "export": 158308,
+    "path": "Batmobile_V3_Physics.PhysicsAssetInstance",
+    "size": 78
+  },
+  "fight_body_setups": [
+    {
+      "agggeom_size": 25907,
+      "class": "RB_BodySetup",
+      "decodable_box_elements": 0,
+      "export": 169748,
+      "path": "Batmobile_V2.RB_BodySetup",
+      "size": 43346
+    },
+    {
+      "agggeom_size": 8275,
+      "class": "RB_BodySetup",
+      "decodable_box_elements": 0,
+      "export": 169749,
+      "path": "Batmobile_V2_Collision_Pursuite.RB_BodySetup",
+      "size": 14062
+    }
+  ],
+  "game": "Batman: Arkham Knight",
+  "packages": {
+    "BmGame.upk": "E:\\Games\\Batman - Arkham Knight\\BmGame\\CookedPCConsole\\BmGame.upk",
+    "Playable_Batmobile_SF.upk": "E:\\Games\\Batman - Arkham Knight\\BmGame\\CookedPCConsole\\Playable_Batmobile_SF.upk"
+  },
+  "selector": {
+    "field": "BatmanVsBatmobileCollisionMode",
+    "offset": 5895,
+    "serialised": false
+  },
+  "sim": {
+    "class": "RVehicleSimBatmobile",
+    "export": 5282,
+    "path": "Batmobile.SimulationModel",
+    "size": 2328
+  },
+  "static_collision_meshes": [
+    {
+      "bits_476": 49152,
+      "class": "StaticMeshComponent",
+      "export": 5392,
+      "hidden_game": true,
+      "mesh_ref_offset": 644,
+      "path": "Batmobile.BatmanCollisionMeshBattleMode0",
+      "rotation": [
+        750,
+        0,
+        0
+      ],
+      "size": 59,
+      "static_mesh": "Batmobile_V2_Mesh.Batmobile_V2",
+      "template": 176111,
+      "translation": [
+        -40.0,
+        0.0,
+        -110.0
+      ]
+    },
+    {
+      "bits_476": 49152,
+      "class": "StaticMeshComponent",
+      "export": 5393,
+      "hidden_game": true,
+      "mesh_ref_offset": 644,
+      "path": "Batmobile.BatmanCollisionMeshPursuitMode0",
+      "rotation": null,
+      "size": 59,
+      "static_mesh": "Batmobile_V2_Mesh.Batmobile_V2_Collision_Pursuite",
+      "template": 176112,
+      "translation": [
+        -45.0,
+        0.0,
+        -95.0
+      ]
+    }
+  ],
+  "stay_upright": {
+    "class": "RB_StayUprightSetup",
+    "export": 5106,
+    "instance": {
+      "class": "RB_ConstraintInstance",
+      "export": 5098,
+      "path": "Batmobile.RB_ConstraintInstance",
+      "size": 2
+    },
+    "path": "Batmobile.RB_StayUprightSetup",
+    "size": 2,
+    "tags": 0
+  },
+  "svehicle_mesh": {
+    "class": "SkeletalMeshComponent",
+    "export": 5289,
+    "path": "Batmobile.SVehicleMesh",
+    "size": 258
+  },
+  "svehicle_mesh_template": {
+    "export": 175716,
+    "path": "Default__RVehicleBatmobileBase.SVehicleMesh",
+    "refs": [
+      {
+        "class": "AnimTree",
+        "field": null,
+        "offset": 656,
+        "ref": "Anims.Batmobile_Drivable_AnimTree"
+      },
+      {
+        "class": "PhysicsAsset",
+        "field": null,
+        "offset": 824,
+        "ref": "Physics.Batmobile_V3_Physics"
+      }
+    ],
+    "size": 157
+  },
+  "wheels": [
+    {
+      "export": 5394,
+      "floats": {
+        "HandbrakeLatSlipFactor": 1.5,
+        "SuspensionSpeedDown": 100.0,
+        "SuspensionSpeedUp": 500.0,
+        "SuspensionTravelDown": 40.0,
+        "SuspensionTravelUp": 30.0,
+        "WheelRadius": 64.0
+      },
+      "names": {
+        "WetnessSpinVelParamName": "Orbit"
+      },
+      "path": "Batmobile.WheelFL",
+      "refs": {},
+      "size": 191
+    },
+    {
+      "export": 5395,
+      "floats": {
+        "HandbrakeLatSlipFactor": 1.5,
+        "SuspensionSpeedDown": 100.0,
+        "SuspensionSpeedUp": 500.0,
+        "SuspensionTravelDown": 40.0,
+        "SuspensionTravelUp": 30.0,
+        "WheelRadius": 64.0
+      },
+      "names": {
+        "WetnessSpinVelParamName": "Orbit"
+      },
+      "path": "Batmobile.WheelFR",
+      "refs": {},
+      "size": 191
+    },
+    {
+      "export": 5396,
+      "floats": {
+        "HandbrakeLatSlipFactor": 1.100000023841858,
+        "LatSlipFactor": 1.600000023841858,
+        "SuspensionSpeedDown": 100.0,
+        "SuspensionSpeedUp": 500.0,
+        "SuspensionTravelDown": 40.0,
+        "WheelRadius": 64.0
+      },
+      "names": {
+        "WetnessSpinVelParamName": "Orbit"
+      },
+      "path": "Batmobile.WheelRL",
+      "refs": {},
+      "size": 178
+    },
+    {
+      "export": 5397,
+      "floats": {
+        "HandbrakeLatSlipFactor": 1.100000023841858,
+        "LatSlipFactor": 1.600000023841858,
+        "SuspensionSpeedDown": 100.0,
+        "SuspensionSpeedUp": 500.0,
+        "SuspensionTravelDown": 40.0,
+        "WheelRadius": 64.0
+      },
+      "names": {},
+      "path": "Batmobile.WheelRR",
+      "refs": {},
+      "size": 166
+    }
+  ],
+  "wreck_asset": {
+    "arrays": {
+      "BodySetup": {
+        "count": 32,
+        "refs": [
+          {
+            "class": "RB_BodySetup",
+            "export": 5066,
+            "path": "Batmobile_V3_Destroyed_Physics.RB_BodySetup"
+          },
+          {
+            "class": "RB_BodySetup",
+            "export": 5067,
+            "path": "Batmobile_V3_Destroyed_Physics.RB_BodySetup"
+          },
+          {
+            "class": "RB_BodySetup",
+            "export": 5068,
+            "path": "Batmobile_V3_Destroyed_Physics.RB_BodySetup"
+          },
+          {
+            "class": "RB_BodySetup",
+            "export": 5069,
+            "path": "Batmobile_V3_Destroyed_Physics.RB_BodySetup"
+          },
+          {
+            "class": "RB_BodySetup",
+            "export": 5070,
+            "path": "Batmobile_V3_Destroyed_Physics.RB_BodySetup"
+          },
+          {
+            "class": "RB_BodySetup",
+            "export": 5071,
+            "path": "Batmobile_V3_Destroyed_Physics.RB_BodySetup"
+          },
+          {
+            "class": "RB_BodySetup",
+            "export": 5072,
+            "path": "Batmobile_V3_Destroyed_Physics.RB_BodySetup"
+          },
+          {
+            "class": "RB_BodySetup",
+            "export": 5073,
+            "path": "Batmobile_V3_Destroyed_Physics.RB_BodySetup"
+          },
+          {
+            "class": "RB_BodySetup",
+            "export": 5074,
+            "path": "Batmobile_V3_Destroyed_Physics.RB_BodySetup"
+          },
+          {
+            "class": "RB_BodySetup",
+            "export": 5075,
+            "path": "Batmobile_V3_Destroyed_Physics.RB_BodySetup"
+          },
+          {
+            "class": "RB_BodySetup",
+            "export": 5076,
+            "path": "Batmobile_V3_Destroyed_Physics.RB_BodySetup"
+          },
+          {
+            "class": "RB_BodySetup",
+            "export": 5077,
+            "path": "Batmobile_V3_Destroyed_Physics.RB_BodySetup"
+          },
+          {
+            "class": "RB_BodySetup",
+            "export": 5078,
+            "path": "Batmobile_V3_Destroyed_Physics.RB_BodySetup"
+          },
+          {
+            "class": "RB_BodySetup",
+            "export": 5079,
+            "path": "Batmobile_V3_Destroyed_Physics.RB_BodySetup"
+          },
+          {
+            "class": "RB_BodySetup",
+            "export": 5080,
+            "path": "Batmobile_V3_Destroyed_Physics.RB_BodySetup"
+          },
+          {
+            "class": "RB_BodySetup",
+            "export": 5081,
+            "path": "Batmobile_V3_Destroyed_Physics.RB_BodySetup"
+          },
+          {
+            "class": "RB_BodySetup",
+            "export": 5082,
+            "path": "Batmobile_V3_Destroyed_Physics.RB_BodySetup"
+          },
+          {
+            "class": "RB_BodySetup",
+            "export": 5083,
+            "path": "Batmobile_V3_Destroyed_Physics.RB_BodySetup"
+          },
+          {
+            "class": "RB_BodySetup",
+            "export": 5084,
+            "path": "Batmobile_V3_Destroyed_Physics.RB_BodySetup"
+          },
+          {
+            "class": "RB_BodySetup",
+            "export": 5085,
+            "path": "Batmobile_V3_Destroyed_Physics.RB_BodySetup"
+          },
+          {
+            "class": "RB_BodySetup",
+            "export": 5086,
+            "path": "Batmobile_V3_Destroyed_Physics.RB_BodySetup"
+          },
+          {
+            "class": "RB_BodySetup",
+            "export": 5087,
+            "path": "Batmobile_V3_Destroyed_Physics.RB_BodySetup"
+          },
+          {
+            "class": "RB_BodySetup",
+            "export": 5088,
+            "path": "Batmobile_V3_Destroyed_Physics.RB_BodySetup"
+          },
+          {
+            "class": "RB_BodySetup",
+            "export": 5089,
+            "path": "Batmobile_V3_Destroyed_Physics.RB_BodySetup"
+          },
+          {
+            "class": "RB_BodySetup",
+            "export": 5090,
+            "path": "Batmobile_V3_Destroyed_Physics.RB_BodySetup"
+          },
+          {
+            "class": "RB_BodySetup",
+            "export": 5091,
+            "path": "Batmobile_V3_Destroyed_Physics.RB_BodySetup"
+          },
+          {
+            "class": "RB_BodySetup",
+            "export": 5092,
+            "path": "Batmobile_V3_Destroyed_Physics.RB_BodySetup"
+          },
+          {
+            "class": "RB_BodySetup",
+            "export": 5093,
+            "path": "Batmobile_V3_Destroyed_Physics.RB_BodySetup"
+          },
+          {
+            "class": "RB_BodySetup",
+            "export": 5094,
+            "path": "Batmobile_V3_Destroyed_Physics.RB_BodySetup"
+          },
+          {
+            "class": "RB_BodySetup",
+            "export": 5095,
+            "path": "Batmobile_V3_Destroyed_Physics.RB_BodySetup"
+          },
+          {
+            "class": "RB_BodySetup",
+            "export": 5096,
+            "path": "Batmobile_V3_Destroyed_Physics.RB_BodySetup"
+          },
+          {
+            "class": "RB_BodySetup",
+            "export": 5097,
+            "path": "Batmobile_V3_Destroyed_Physics.RB_BodySetup"
+          }
+        ]
+      },
+      "BoundsBodies": {
+        "count": 32,
+        "refs": []
+      }
+    },
+    "bounds": [
+      {
+        "max": [
+          15.15,
+          15.15,
+          15.15
+        ],
+        "min": [
+          -15.15,
+          -15.15,
+          -15.15
+        ]
+      },
+      {
+        "max": [
+          172.312012,
+          23.937937,
+          67.162582
+        ],
+        "min": [
+          -39.228111,
+          -27.154703,
+          -41.84016
+        ]
+      },
+      {
+        "max": [
+          143.321228,
+          58.120514,
+          70.734093
+        ],
+        "min": [
+          -14.483406,
+          -1.937555,
+          -39.520882
+        ]
+      },
+      {
+        "max": [
+          60.520657,
+          24.385822,
+          45.775009
+        ],
+        "min": [
+          -37.084255,
+          -30.95583,
+          -55.757919
+        ]
+      },
+      {
+        "max": [
+          52.249935,
+          32.067528,
+          44.541893
+        ],
+        "min": [
+          -46.739391,
+          -28.505308,
+          -64.359062
+        ]
+      },
+      {
+        "max": [
+          48.909142,
+          24.681786,
+          52.00724
+        ],
+        "min": [
+          -48.100639,
+          -27.862923,
+          -51.239723
+        ]
+      },
+      {
+        "max": [
+          37.055725,
+          57.983616,
+          31.618401
+        ],
+        "min": [
+          -280.886475,
+          -6.568226,
+          -66.347252
+        ]
+      },
+      {
+        "max": [
+          53.364491,
+          31.133171,
+          50.33913
+        ],
+        "min": [
+          -53.245594,
+          -33.679268,
+          -55.694195
+        ]
+      },
+      {
+        "max": [
+          40.663361,
+          14.140312,
+          42.785088
+        ],
+        "min": [
+          -275.492035,
+          -49.277618,
+          -67.095772
+        ]
+      },
+      {
+        "max": [
+          -225.588806,
+          38.750618,
+          53.348839
+        ],
+        "min": [
+          -265.85553,
+          -12.317331,
+          2.969477
+        ]
+      },
+      {
+        "max": [
+          19.50108,
+          33.683739,
+          22.211231
+        ],
+        "min": [
+          -94.541245,
+          -31.110098,
+          -57.318501
+        ]
+      },
+      {
+        "max": [
+          69.836327,
+          36.140747,
+          54.011299
+        ],
+        "min": [
+          -73.52018,
+          -44.522346,
+          -10.839354
+        ]
+      },
+      {
+        "max": [
+          26.998705,
+          77.871262,
+          75.907661
+        ],
+        "min": [
+          0.993147,
+          -74.888809,
+          4.168999
+        ]
+      },
+      {
+        "max": [
+          36.017326,
+          93.539787,
+          3.896761
+        ],
+        "min": [
+          -23.083961,
+          -103.550514,
+          -33.682907
+        ]
+      },
+      {
+        "max": [
+          46.997578,
+          23.150364,
+          30.26083
+        ],
+        "min": [
+          -42.650936,
+          -39.873966,
+          -35.504353
+        ]
+      },
+      {
+        "max": [
+          74.180565,
+          52.04686,
+          63.350723
+        ],
+        "min": [
+          -70.772697,
+          -59.40078,
+          -53.887276
+        ]
+      },
+      {
+        "max": [
+          44.246059,
+          38.510883,
+          31.443779
+        ],
+        "min": [
+          -45.571148,
+          -36.978664,
+          4.905098
+        ]
+      },
+      {
+        "max": [
+          62.833584,
+          45.167835,
+          50.495583
+        ],
+        "min": [
+          -65.722931,
+          -49.14465,
+          -51.323517
+        ]
+      },
+      {
+        "max": [
+          57.066586,
+          47.168648,
+          50.110649
+        ],
+        "min": [
+          -60.924984,
+          -45.523369,
+          -51.981903
+        ]
+      },
+      {
+        "max": [
+          53.220596,
+          43.25074,
+          52.144547
+        ],
+        "min": [
+          -51.44693,
+          -17.905729,
+          -38.233681
+        ]
+      },
+      {
+        "max": [
+          21.189754,
+          45.211689,
+          39.357555
+        ],
+        "min": [
+          -61.078365,
+          -38.485134,
+          -39.95705
+        ]
+      },
+      {
+        "max": [
+          31.665419,
+          27.400051,
+          28.702934
+        ],
+        "min": [
+          -29.464918,
+          -14.454212,
+          -35.366501
+        ]
+      },
+      {
+        "max": [
+          52.507259,
+          33.929306,
+          13.713184
+        ],
+        "min": [
+          -38.926388,
+          -39.916687,
+          -51.154896
+        ]
+      },
+      {
+        "max": [
+          50.71706,
+          41.071953,
+          17.054234
+        ],
+        "min": [
+          -29.996693,
+          -19.220964,
+          -46.466183
+        ]
+      },
+      {
+        "max": [
+          64.16713,
+          40.429771,
+          12.571791
+        ],
+        "min": [
+          -64.943268,
+          -20.765625,
+          -16.139311
+        ]
+      },
+      {
+        "max": [
+          65.25975,
+          40.520481,
+          4.706595
+        ],
+        "min": [
+          -73.273422,
+          -32.820339,
+          -24.254288
+        ]
+      },
+      {
+        "max": [
+          37.716137,
+          59.636063,
+          19.042324
+        ],
+        "min": [
+          -32.379452,
+          18.02186,
+          -8.369129
+        ]
+      },
+      {
+        "max": [
+          69.821777,
+          15.337967,
+          74.57534
+        ],
+        "min": [
+          -72.247253,
+          -82.290176,
+          30.262411
+        ]
+      },
+      {
+        "max": [
+          62.82093,
+          54.620468,
+          88.948181
+        ],
+        "min": [
+          -67.77314,
+          -63.978027,
+          34.82164
+        ]
+      },
+      {
+        "max": [
+          77.751984,
+          72.729813,
+          71.535706
+        ],
+        "min": [
+          -88.368073,
+          -69.093018,
+          8.599293
+        ]
+      },
+      {
+        "max": [
+          27.62289,
+          42.437725,
+          62.412613
+        ],
+        "min": [
+          -49.999584,
+          -30.737934,
+          38.506241
+        ]
+      },
+      {
+        "max": [
+          63.339558,
+          -7.687832,
+          66.99472
+        ],
+        "min": [
+          -14.991367,
+          -73.325562,
+          24.951778
+        ]
+      }
+    ],
+    "class": "PhysicsAsset",
+    "constraint_setups": [],
+    "export": 5017,
+    "instance": {
+      "export": 5018,
+      "path": "Batmobile_V3_Destroyed_Physics.PhysicsAssetInstance"
+    },
+    "package": "Playable_Batmobile_SF.upk",
+    "path": "Batmobile_V2_Mesh.Batmobile_V3_Destroyed_Physics",
+    "size": 1426,
+    "stop": "eof"
+  }
+}

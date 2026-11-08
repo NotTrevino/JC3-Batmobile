@@ -1,0 +1,120 @@
+{
+ "build": "bm-RC4",
+ "card": "V-03",
+ "counts": {
+  "dangling": 4,
+  "dangling_occurrences": 7,
+  "edited_modules": 7,
+  "gate_failures": 0,
+  "guid_donor": 21,
+  "guid_resolved": 24,
+  "guid_total": 45,
+  "objectid_refs": 78,
+  "parts": 59,
+  "paths": 32,
+  "points": 9
+ },
+ "dangling": [
+  {
+   "count": 4,
+   "file": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe",
+   "gate": "G2",
+   "kind": "objectid",
+   "message": "objectid F30CCB1C=4DAE31AE=FFFF05DA resolves to no object",
+   "method": "packed objectid",
+   "offset": 61308,
+   "offset_hex": "0xef7c",
+   "value": "4DAE31AE=FFFF05DA"
+  },
+  {
+   "count": 1,
+   "file": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe",
+   "gate": "G3",
+   "kind": "path",
+   "message": "path editor/entities/jc_environments/shared/rigid_object_effect_settings_default.etune not in the build or the index",
+   "method": "exact bytes",
+   "offset": 60660,
+   "offset_hex": "0xecf4",
+   "value": "editor/entities/jc_environments/shared/rigid_object_effect_settings_default.etune"
+  },
+  {
+   "count": 1,
+   "file": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe",
+   "gate": "G3",
+   "kind": "path",
+   "message": "path editor/entities/jc_explosions/gen_explosion_5m_nodamage.ftune not in the build or the index",
+   "method": "exact bytes",
+   "offset": 10612,
+   "offset_hex": "0x2974",
+   "value": "editor/entities/jc_explosions/gen_explosion_5m_nodamage.ftune"
+  },
+  {
+   "count": 1,
+   "file": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe",
+   "gate": "G3",
+   "kind": "path",
+   "message": "path editor/entities/jc_explosions/vehicles/truck_emp.ftune not in the build or the index",
+   "method": "exact bytes",
+   "offset": 5024,
+   "offset_hex": "0x13a0",
+   "value": "editor/entities/jc_explosions/vehicles/truck_emp.ftune"
+  }
+ ],
+ "ee": {
+  "inner_entries": 714,
+  "path": "Builds/bm-RC4/drop/editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.ee",
+  "sha256": "b72690d32c61a30c83eee69cf7e37f7197d5e2c6942443afdfda6b216e4a557b",
+  "toc": "Builds/bm-RC4/drop/editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.ee.toc",
+  "toc_entries": 714,
+  "toc_sha256": "cde0678e2fb710bad98b223854ea4ae3de26d1bd1816cbdecfb3097239745535"
+ },
+ "epe": {
+  "donor_precedent": "Builds/bm-RC4-base/aaf/editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_civilian_01.epe",
+  "file": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.epe",
+  "objects": 452,
+  "sha256": "a8d5d11f93217ff9fc3975dfc28a0ea0f46490b6fb08f0cf73b0b4ec318a9069",
+  "xml_lines": 9025
+ },
+ "gate_failures": [],
+ "gates": [
+  {
+   "gate": "G1",
+   "line": "9 SWeaponPoint, part refs dangling 0",
+   "ok": true
+  },
+  {
+   "gate": "G2",
+   "line": "78 objectid references -> 452 objects; 10 cross-file refs the donor .epe also makes (3 distinct); dangling 4",
+   "ok": false
+  },
+  {
+   "gate": "G3",
+   "line": "32 asset paths (ctune 17/17, etune 2/3, ftune 1/3, model_xml 1/1, pfx 1/1, wtune 7/7) from the .epe + 7 edited modules, dangling 3",
+   "ok": false
+  },
+  {
+   "gate": "G4",
+   "line": ".ee.fmod_guids == audio tree's: True; events 45/45 present, 24 resolved in a built bank, 21 declared donor (B-26), 0 missing",
+   "ok": true
+  },
+  {
+   "gate": "G5",
+   "line": "item 1621485476 -> v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_debug.ee + .toc + icon in the dropzone: True",
+   "ok": true
+  }
+ ],
+ "receipt": {
+  "card": "B-14",
+  "path": "Builds/bm-RC4/receipt.json",
+  "schema": 2,
+  "sha256": "1812e4367482fce49e71d9ad36e90bbc73b476aa73a784b563eb526dadae05de",
+  "tag": "bm-RC4"
+ },
+ "schema": 1,
+ "stand_ins": {
+  "ccar_roots": 4,
+  "cforcepulse_objects": 3,
+  "interaction_objects_skipped_without_world": 69
+ },
+ "verdict": "FAIL"
+}

@@ -28,7 +28,7 @@ DEFAULT_OUT = os.path.join(ROOT, "Working", "Translation", "current.json")
 
 
 def dump(build: str) -> dict:
-    work = os.path.join(os.environ.get("JC3_RAW", r"E:/Modding/_JC3grab"), "tmp_t1")
+    work = os.path.join(os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab"), "tmp_t1")
     os.makedirs(work, exist_ok=True)
     modules: dict[str, dict] = {}
     files = []

@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hud-vulcan-bloom-numbers.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/vulcan-capture-frame-timing.md
+Turn the Vulcan crosshair capture analysis into numbers a build can use. Input: reports/vulcan-capture-frame-timing.md, reports/vulcan-capture-fire-and-overheat-timing.md, and the movie facts in Research/BatmobileGrab/HUD_SPEC.json (accuracy frame labels). The operator saw the crosshair spread while firing, turn red, and never lock out. Write Working/HUD/VULCAN_RETICLE.md giving: spread radius in screen fractions at rest and at full bloom, seconds to full bloom, seconds to recover after release, the colour change point, and the formula for the JC3 UpdateWeaponReticle reticle_size argument as well as for an overlay. Mark every number that came from the capture versus the movie. Where the scale is unknown, say UNKNOWN and name the one measurement a game take must make. Done when each number carries its frame range or file line. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

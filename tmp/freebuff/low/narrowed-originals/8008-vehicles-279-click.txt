@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/vehicles-279-click.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-06
+In the new audio tree Builds/bm-004c, one loop (vehicles#279) still clicks at the wrap: -28.27 dBFS as stored, -39.68 dBFS on the payload alone, limit -40. Read Builds/bm-004c verify output (audio_diag.md and the 004c report) and compute what a loop-end fade of the last 1, 2 and 4 samples would give, and what trimming 1 to 3 samples from the loop end would give, using the WAV source. State the smallest edit that reaches below -40 dBFS and whether it changes the sample length by more than the one-frame tolerance. Output Builds/bm-004c/verify/loop279_options.md.

@@ -22,7 +22,7 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
-RAW = os.environ.get("JC3_RAW", r"E:/Modding/_JC3grab")
+RAW = os.environ.get("JC3_RAW", r"E:/Modding/_gamedata/JC3grab")
 OUT = os.path.join(ROOT, "Working", "Translation", "T3_FLEET.md")
 
 # label -> (module type, member path)

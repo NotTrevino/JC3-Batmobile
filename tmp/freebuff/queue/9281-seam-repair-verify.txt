@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/seam-repair-verify.md
+ONLY: freebuff
+EST: 25
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/seam-repair-build.md
+Independent seam check of Builds/bm-RC5-seams. Load all 59 parts, place them at pose zero, and compute the closest-edge distance between every adjacent part pair; repeat for the open pose of canopy, turret and the hatches using the angles in the 9172 tree. Compare with the seam table claimed by the build. Re-run the silhouette gate Tools/scripts/v02a_rc4.py against the BmAK reference and print the percentage beside the 99.9 limit, then run the census of 59 parts. Output Working/Appearance/SEAMS_VERIFY.md with a seam grid, the silhouette number, and PASS or FAIL. If the silhouette margin falls below 0.0004 points, write the smallest trim candidate as a fix card in Working/Appearance/fixcards/seams-<n>.md. Done check: grid covers every adjacent pair listed in the manifest and the silhouette figure is printed from the run, not from the build report. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

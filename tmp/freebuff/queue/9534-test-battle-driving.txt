@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/test-battle-driving.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/APPROVED_Q_FULL.txt, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/test-mode-hold-transform.md
+In-game test, operator supervising. With the Batmobile in battle mode (hold LT), run card Working/Q/PILOT/BATTLE_DRIVE.md. Three observations, one run each: (1) top speed reading against the curve and the 21.6 km/h turning cap prediction in Working/Modes/verify_drive_eject.md; (2) turn on the spot with the stick, yaw rate in degrees per second inside the predicted band; (3) with the camera swung 90 degrees and the stick centred, the nose follows the camera within the predicted lag. Pass when all three sit inside the numbers of predictions.json. On a fail name the single failing observation, write a fix card under Working/Q/PILOT/fix/ pointing to the parameter in Working/Modes/battle_handling_values.json, turn_on_spot_recipe.json or yaw_to_camera_params.json, and stop. Save videos and write the report to tmp/freebuff/reports/modes-test-battle-driving.md. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

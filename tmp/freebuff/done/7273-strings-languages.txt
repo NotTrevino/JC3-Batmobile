@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/strings-languages.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-06
+The Rebel Drop blurb for the new car is the same English sentence in all 11 languages (compromise noted in Builds/bm-RC2/verify/strings.md). Check how the vanilla blurbs of neighbouring vehicles are stored in profile/online.stringlookup: are non-English entries translated or also English for most vehicles? Count, over all vehicle blurb keys that exist in all 11 languages, how many have non-English text different from the English one. Report the count per language and whether English-in-every-language is normal for newly added items. Output Builds/bm-RC2/verify/strings_languages.md + Tools/scripts/v_strings_languages.py --check. Read-only.

@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/assemble-rc3.md
+ONLY: freebuff
+EST: 60
+BRIEF: hand-written 2026-11-06
+Three offline pieces now exist that bm-RC2 lacks: the jointed parts module (Builds/bm-RC3-parts, joints 11/12), the physicsc with those two hinges (Working/Collision/batmobile_hinged.physicsc), and the bank fixes of Builds/bm-004c. Look at how bm-RC2 was assembled (Tools/scripts/bm_rc2.py, its TAG/--physicsc options and the receipt.json it writes) and produce a NEW tree Builds/bm-RC3 from bm-RC2 + the jointed parts module + the hinged physicsc (leave out the audio bank if bm-004c still has a red gate). Write Tools/scripts/bm_rc3.py (a copy of bm_rc2.py with its own TAG, never editing bm_rc2.py), run it, and show receipt.json lists the changed files and that every other payload file is sha256-identical to bm-RC2. No install, no game.

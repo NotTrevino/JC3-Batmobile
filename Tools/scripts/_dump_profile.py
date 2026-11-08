@@ -35,7 +35,7 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--cloud", required=True)
-    ap.add_argument("--input", default=r"E:\Modding\JC3-Batmobile\SerpenteR-EE\models"
+    ap.add_argument("--input", default=r"E:\Modding\_gamedata\jc3_early\SerpenteR-EE\models"
                                      r"\jc_vehicles\01_land\v0300_car_kensington_sportsmuscle"
                                      r"\sportsmuscle_body_lod1.rbm")
     ap.add_argument("--parts", help="file list building the SHARED vehicle frame; the frame "

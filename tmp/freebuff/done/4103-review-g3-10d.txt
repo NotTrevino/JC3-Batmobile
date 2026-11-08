@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/review-G3-10d.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-03
+G3-10d (reports/G3-10d.md, Research/JC3Grab/PHYSICS_ROLES4.md, Tools/scripts/jc3_physics_roles4.py) named the chassis, body 0, as the partner of every JC3 vehicle constraint, from a geometric test: pivots lie within 5 cm of both hulls 35.1% of the time against 0.53% for a shuffled partner. Two agents edited that script at the same time, so treat it with suspicion. Run its --check; read the script top to bottom for leftovers of two versions (duplicate functions, dead branches, constants that disagree with the report); then attack the inference itself: does the cinfo word +0x04 being 0 in all 494 records really mean "body 0", or could it be a flag - find any constraint in the 50 fleet files whose pivot is far from body 0 but near another body. Also confirm the inertia UNKNOWN: no candidate reading should pass. Rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md section 3. Report at the DONE path with VERDICT.

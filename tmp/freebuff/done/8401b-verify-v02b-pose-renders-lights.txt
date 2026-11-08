@@ -1,0 +1,9 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-v02b-pose-renders-lights.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-08 (second half of the old 8401; the first half is finished in reports/verify-v02a-silhouette-census-collision.md)
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/review-build-wave.md
+Task: pose renders and the lights module for the build in Builds/bm-RC4, using the renderer script v02_render.py. Nothing about silhouette, part counts or collision belongs here; that was measured already.
+Render each moving part at its two limits: turret yaw, cannon pitch, canopy, the hatches and the air-brakes. Save the PNGs in Builds/bm-RC4/verify/. The battle pose is not written in this tree (build-d12: ConvertAdf throws NullReferenceException on the parts module), so render the delivered pose only and write "battle pose: not in this tree" for it, never PASS.
+Lights: the 24-row lights module (7,105 bytes at .toc offset 16,499,504) puts two entries of 70 degrees on each headlight. Angle 70 and range 60 exceed the shipped maximum of 50 and 50 (build-d03 U-1). Record that as an out-of-domain render risk and check that the 24 CarLight blocks sit over the 8 lamp parts.
+Give every figure with the command that made it. A render that runs longer than 10 minutes is killed; keep the PNGs saved so far and mark the poses left as UNKNOWN with the command to rerun.

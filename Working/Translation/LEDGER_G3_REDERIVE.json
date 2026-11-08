@@ -1,0 +1,490 @@
+{
+ "schema": 1,
+ "generated_by": "Tools/scripts/ledger_g3_rederive.py --write",
+ "card": "G3-20e - 15 OPEN ledger rows re-derived from the decoded G3 files",
+ "scope": {
+  "open_g3b": 96,
+  "open_g3c": 68,
+  "rederivable_per_LEDGER_SOURCES": 69,
+  "taken": 15
+ },
+ "sources": {
+  "FX_TABLE.jsonl": {
+   "lines": 57187,
+   "distinct_paths_asked": 8
+  },
+  "PARTS_TABLE.jsonl": {
+   "donor_line": 39,
+   "donor_parts": 42
+  },
+  "T3_FLEET.md": {
+   "members": 41,
+   "lines": 51
+  },
+  "FITS.md": {
+   "fits": 19,
+   "lines": 92
+  }
+ },
+ "counts": {
+  "holds": 10,
+  "wrong value": 4,
+  "not derivable": 1
+ },
+ "rows": [
+  {
+   "id": "T-FX5",
+   "doc": "T-2b",
+   "dispo": "keep",
+   "member": "74 `.effc` in the donor `.ee`",
+   "ledger_value": "74 `.effc` in the donor `.ee`",
+   "ledger_claim": "leave (they belong to the donor's own parts)",
+   "rule": "count FX_TABLE rows whose container is the donor .ee and ext is .effc",
+   "source": "Research/JC3Grab/FX_TABLE.jsonl",
+   "ledger_note": "23 unreferenced by the 51 rows",
+   "derived": 74,
+   "derived_distinct_paths": 74,
+   "ledger_n": 74.0,
+   "evidence": "FX_TABLE.jsonl:27222 (container == donor .ee, ext == .effc)",
+   "status": "holds",
+   "second_claim": {
+    "text": "23 unreferenced by the 51 rows",
+    "value": 23.0,
+    "status": "not derivable",
+    "why": "the 51 T-13 effect rows live outside the five sources read here"
+   },
+   "ledger_status": "OPEN"
+  },
+  {
+   "id": "T-FX10",
+   "doc": "T-13",
+   "dispo": "next",
+   "member": "`effects/jc_weapons/muzzle_flash/tank_canon_muzzleflash.effc` - 11 vehicles, 27,519 B, 604 arrays, 5331 rows",
+   "ledger_value": "`effects/jc_weapons/muzzle_flash/tank_canon_muzzleflash.effc` - 11 vehicles, 27,519 B, 604 arrays, 5331 rows",
+   "ledger_claim": "use at CannonMuzzle when the cannon is cloned; the effect rides the weapon bundle",
+   "rule": "distinct .ee containers referencing the path",
+   "source": "Research/JC3Grab/FX_TABLE.jsonl",
+   "path": "effects/jc_weapons/muzzle_flash/tank_canon_muzzleflash.effc",
+   "ledger_note": "absent: the Batmobile carries no weapon until the T-11 clone",
+   "derived": 12,
+   "derived_alt_total": 12,
+   "derived_leaves": 12,
+   "derived_rows": 12,
+   "sizes": [
+    27519
+   ],
+   "evidence": "FX_TABLE.jsonl:5199",
+   "ledger_n": 11.0,
+   "status": "wrong value",
+   "ledger_status": "OPEN"
+  },
+  {
+   "id": "T-FX14",
+   "doc": "T-13",
+   "dispo": "next",
+   "member": "`effects/jc_weapons/missile/missile_trail_car.effc` - 2 vehicles, 11,199 B, 179 arrays, 1412 rows",
+   "ledger_value": "`effects/jc_weapons/missile/missile_trail_car.effc` - 2 vehicles, 11,199 B, 179 arrays, 1412 rows",
+   "ledger_claim": "use on the missile weapon; the trail follows the round from MissileL/MissileR",
+   "rule": "distinct .ee containers referencing the path",
+   "source": "Research/JC3Grab/FX_TABLE.jsonl",
+   "path": "effects/jc_weapons/missile/missile_trail_car.effc",
+   "ledger_note": "absent: the missile slot is T-11/D-7",
+   "derived": 3,
+   "derived_alt_total": 3,
+   "derived_leaves": 3,
+   "derived_rows": 3,
+   "sizes": [
+    11199
+   ],
+   "evidence": "FX_TABLE.jsonl:2892",
+   "ledger_n": 2.0,
+   "status": "wrong value",
+   "ledger_status": "OPEN"
+  },
+  {
+   "id": "T-FX17",
+   "doc": "T-13",
+   "dispo": "epe",
+   "member": "`effects/jc_vehicles/wheels/trail/dust_trail_asphalt.effc` - 161 vehicles; 6 variants, 6,559 B, 19 arrays, 160 rows",
+   "ledger_value": "`effects/jc_vehicles/wheels/trail/dust_trail_asphalt.effc` - 161 vehicles; 6 variants, 6,559 B, 19 arrays, 160 rows",
+   "ledger_claim": "keep: the donor's wheel trail family, one per surface (6 variants)",
+   "rule": "distinct .ee containers referencing the path",
+   "source": "Research/JC3Grab/FX_TABLE.jsonl",
+   "path": "effects/jc_vehicles/wheels/trail/dust_trail_asphalt.effc",
+   "ledger_note": "carried: the donor .ee lists the effect (FX_TABLE container set)",
+   "derived": 161,
+   "derived_alt_total": 161,
+   "derived_leaves": 159,
+   "derived_rows": 161,
+   "sizes": [
+    6559
+   ],
+   "evidence": "FX_TABLE.jsonl:379",
+   "ledger_n": 161.0,
+   "status": "holds",
+   "rule_matched": ".ee containers",
+   "ledger_status": "OPEN"
+  },
+  {
+   "id": "T-FX18",
+   "doc": "T-13",
+   "dispo": "epe",
+   "member": "`effects/jc_vehicles/collision/chassis_slide_default.effc` - 289 vehicles; 5 variants, 11,807 B, 145 arrays, 1188 rows",
+   "ledger_value": "`effects/jc_vehicles/collision/chassis_slide_default.effc` - 289 vehicles; 5 variants, 11,807 B, 145 arrays, 1188 rows",
+   "ledger_claim": "keep: the chassis slide family (5 surfaces)",
+   "rule": "distinct .ee containers referencing the path",
+   "source": "Research/JC3Grab/FX_TABLE.jsonl",
+   "path": "effects/jc_vehicles/collision/chassis_slide_default.effc",
+   "ledger_note": "carried: the donor .ee lists the effect (FX_TABLE container set)",
+   "derived": 290,
+   "derived_alt_total": 290,
+   "derived_leaves": 265,
+   "derived_rows": 290,
+   "sizes": [
+    11807
+   ],
+   "evidence": "FX_TABLE.jsonl:340",
+   "ledger_n": 289.0,
+   "status": "wrong value",
+   "ledger_status": "OPEN"
+  },
+  {
+   "id": "T-FX19",
+   "doc": "T-13",
+   "dispo": "epe",
+   "member": "`effects/trails/spark_trail_02_med.effc` - 298 vehicles; 3 variants, 8,495 B, 67 arrays, 641 rows",
+   "ledger_value": "`effects/trails/spark_trail_02_med.effc` - 298 vehicles; 3 variants, 8,495 B, 67 arrays, 641 rows",
+   "ledger_claim": "use the nearest fleet effect (`spark_trail_02_med`) on the scrape sockets",
+   "rule": "distinct .ee containers referencing the path",
+   "source": "Research/JC3Grab/FX_TABLE.jsonl",
+   "path": "effects/trails/spark_trail_02_med.effc",
+   "ledger_note": "socket present, no BmAK system drives it",
+   "derived": 301,
+   "derived_alt_total": 301,
+   "derived_leaves": 274,
+   "derived_rows": 301,
+   "sizes": [
+    8495
+   ],
+   "evidence": "FX_TABLE.jsonl:461",
+   "ledger_n": 298.0,
+   "status": "wrong value",
+   "ledger_status": "OPEN"
+  },
+  {
+   "id": "T-FX21",
+   "doc": "T-13",
+   "dispo": "epe",
+   "member": "`effects/jc_vehicles/damage/exp_car_01.effc` - 126 vehicles, 34,895 B, 759 arrays, 6891 rows",
+   "ledger_value": "`effects/jc_vehicles/damage/exp_car_01.effc` - 126 vehicles, 34,895 B, 759 arrays, 6891 rows",
+   "ledger_claim": "keep: the car explosion effect the donor already spawns, plus the blast tune (`car_explosion_medium`, G2-10 §8)",
+   "rule": "distinct .ee containers referencing the path",
+   "source": "Research/JC3Grab/FX_TABLE.jsonl",
+   "path": "effects/jc_vehicles/damage/exp_car_01.effc",
+   "ledger_note": "carried: the donor .ee lists the effect (FX_TABLE container set)",
+   "derived": 126,
+   "derived_alt_total": 126,
+   "derived_leaves": 124,
+   "derived_rows": 126,
+   "sizes": [
+    34895
+   ],
+   "evidence": "FX_TABLE.jsonl:358",
+   "ledger_n": 126.0,
+   "status": "holds",
+   "rule_matched": ".ee containers",
+   "ledger_status": "OPEN"
+  },
+  {
+   "id": "T-FX22",
+   "doc": "T-13",
+   "dispo": "epe",
+   "member": "`effects/jc_vehicles/damage/dmg_fire_engine.effc` - 192 vehicles; 3 variants, 15,615 B, 280 arrays, 2277 rows",
+   "ledger_value": "`effects/jc_vehicles/damage/dmg_fire_engine.effc` - 192 vehicles; 3 variants, 15,615 B, 280 arrays, 2277 rows",
+   "ledger_claim": "keep: the 3-variant burn family (engine / spread base / spread roof)",
+   "rule": "distinct .ee containers referencing the path",
+   "source": "Research/JC3Grab/FX_TABLE.jsonl",
+   "path": "effects/jc_vehicles/damage/dmg_fire_engine.effc",
+   "ledger_note": "carried: the donor .ee lists the effect (FX_TABLE container set)",
+   "derived": 192,
+   "derived_alt_total": 192,
+   "derived_leaves": 174,
+   "derived_rows": 192,
+   "sizes": [
+    15615
+   ],
+   "evidence": "FX_TABLE.jsonl:349",
+   "ledger_n": 192.0,
+   "status": "holds",
+   "rule_matched": ".ee containers",
+   "ledger_status": "OPEN"
+  },
+  {
+   "id": "T-FX23",
+   "doc": "T-13",
+   "dispo": "epe",
+   "member": "`effects/jc_vehicles/damage/dmg_post_burn.effc` - 139 vehicles; 2 variants, 9,151 B, 75 arrays, 694 rows",
+   "ledger_value": "`effects/jc_vehicles/damage/dmg_post_burn.effc` - 139 vehicles; 2 variants, 9,151 B, 75 arrays, 694 rows",
+   "ledger_claim": "keep: engine smoke, then `dmg_post_burn` when the fire is out",
+   "rule": "distinct .ee containers referencing the path",
+   "source": "Research/JC3Grab/FX_TABLE.jsonl",
+   "path": "effects/jc_vehicles/damage/dmg_post_burn.effc",
+   "ledger_note": "carried: the donor .ee lists the effect (FX_TABLE container set)",
+   "derived": 139,
+   "derived_alt_total": 139,
+   "derived_leaves": 137,
+   "derived_rows": 139,
+   "sizes": [
+    9151
+   ],
+   "evidence": "FX_TABLE.jsonl:352",
+   "ledger_n": 139.0,
+   "status": "holds",
+   "rule_matched": ".ee containers",
+   "ledger_status": "OPEN"
+  },
+  {
+   "id": "T-P2",
+   "doc": "T-1",
+   "dispo": "keep",
+   "member": "`VehicleParts.parts[].damage_type` + `VehicleDamage.part_damage_types[]`",
+   "ledger_value": "**decoded** — 17 damage types across the donor's 42 parts; per-type health from `VehicleDamage` (`PARTS_TABLE.jsonl`)",
+   "ledger_claim": "per-part break order in a crash test",
+   "rule": "count the donor row's parts and distinct damage types",
+   "source": "Research/JC3Grab/PARTS_TABLE.jsonl",
+   "evidence": "PARTS_TABLE.jsonl:39 (sportsmuscle_vehicle_parts.vmodc)",
+   "derived": 17,
+   "derived_parts": 42,
+   "damage_types": [
+    "Boat_Antenna",
+    "Land_Body",
+    "Land_Bumper",
+    "Land_Door",
+    "Land_Engine",
+    "Land_Fender",
+    "Land_Generic",
+    "Land_Grill",
+    "Land_Hood",
+    "Land_Light",
+    "Land_Seat",
+    "Land_Steering_Wheel",
+    "Land_Stunt_Window",
+    "Land_Trunk",
+    "Land_Wheel",
+    "Land_Window",
+    "Land_Wing_Mirror"
+   ],
+   "status": "holds",
+   "ledger_status": "OPEN"
+  },
+  {
+   "id": "T-PA4",
+   "doc": "T-2b",
+   "dispo": "epe",
+   "member": "`VehicleParts.wheel_parts[]`",
+   "ledger_value": "parts 11, 12, 26, 27 → slots 3, 2, 0, 1; 1 spoke, spins 1",
+   "ledger_claim": "keep",
+   "rule": "read the donor row's wheel_parts[] (part, slot, spokes, spins)",
+   "source": "Research/JC3Grab/PARTS_TABLE.jsonl",
+   "evidence": "PARTS_TABLE.jsonl:39 (sportsmuscle_vehicle_parts.vmodc)",
+   "derived": {
+    "parts": [
+     11,
+     12,
+     26,
+     27
+    ],
+    "slots": [
+     3,
+     2,
+     0,
+     1
+    ],
+    "spokes": [
+     1
+    ],
+    "spins": [
+     1
+    ]
+   },
+   "status": "holds",
+   "ledger_status": "OPEN"
+  },
+  {
+   "id": "T-PA7",
+   "doc": "T-2b",
+   "dispo": "epe",
+   "member": "`DeformPoints.non_deformable_parts_indices`",
+   "ledger_value": "20 parts skipped by the deform solver",
+   "ledger_claim": "keep",
+   "rule": "count donor parts with deform == 0",
+   "source": "Research/JC3Grab/PARTS_TABLE.jsonl",
+   "evidence": "PARTS_TABLE.jsonl:39 (sportsmuscle_vehicle_parts.vmodc)",
+   "derived": 24,
+   "variants": {
+    "deform0": 24,
+    "deform0_with_body": 20,
+    "deform0_non_wheel": 20
+   },
+   "ledger_n": 20.0,
+   "status": "not derivable",
+   "status_detail": "not derivable",
+   "why": "PARTS_TABLE carries parts[].deform (24 parts at 0), not DeformPoints.non_deformable_parts_indices; the ledger's 20 is reached only by adding the unstated rule 'wheels excluded' (24 - 4 wheels)",
+   "mismatch": true,
+   "ledger_status": "OPEN"
+  },
+  {
+   "id": "T-S5",
+   "doc": "T-1",
+   "dispo": "keep",
+   "member": "`suspension.*.lateral_tire_force_offset`",
+   "ledger_value": "0.2",
+   "ledger_claim": "0.2 — the fleet median (`T3_FLEET.md` n=125, IQR 0.1 … 0.3; `VOCABULARY.md` n=167 median 0.2). The donor's 0.1 front / 0.05 rear sits inside the same band",
+   "rule": "read T3_FLEET's 'suspension front lateral tyre offset' median",
+   "source": "Working/Translation/T3_FLEET.md",
+   "label": "suspension front lateral tyre offset",
+   "derived": 0.2,
+   "derived_n": 125,
+   "derived_band": [
+    0.1,
+    0.3
+   ],
+   "evidence": "T3_FLEET.md:25 column all land",
+   "ledger_n": 0.2,
+   "status": "holds",
+   "ledger_status": "OPEN"
+  },
+  {
+   "id": "T-K3",
+   "doc": "T-1",
+   "dispo": "keep",
+   "member": "`brakes.handbrake_friction_factor`",
+   "ledger_value": "1",
+   "ledger_claim": "keep 1 (the 6 t median; band 1…2.25; armored transport 2)",
+   "rule": "read T3_FLEET's 'brakes handbrake friction factor' 6 t+ median",
+   "source": "Working/Translation/T3_FLEET.md",
+   "label": "brakes handbrake friction factor",
+   "derived": 1.0,
+   "derived_n": 26,
+   "derived_band": [
+    1.0,
+    2.25
+   ],
+   "evidence": "T3_FLEET.md:29 column 6 t+",
+   "ledger_n": 1.0,
+   "status": "holds",
+   "ledger_status": "OPEN"
+  },
+  {
+   "id": "T-E2",
+   "doc": "T-1",
+   "dispo": "keep",
+   "member": "`land_engine.torque_factor_at_optimal_rpm`",
+   "ledger_value": "1393.5",
+   "ledger_claim": "keep 1393.5 = **×1.24** over the fit's 1,121 at 6 t and ×1.27 over the 6–15 t median (1,100); inside the fleet's 95th percentile (2,500)",
+   "rule": "evaluate T3_FLEET/FITS's torque fit at 6,000 kg",
+   "source": "Working/Translation/FITS.md",
+   "label": "torque at optimal rpm",
+   "derived": 1120.8,
+   "derived_at_4000": 837.4,
+   "fit": {
+    "a": 2.153,
+    "b": 0.719,
+    "r2": 0.808,
+    "n": 142,
+    "at4000": 834.1
+   },
+   "evidence": "FITS.md:24",
+   "ledger_n": 1121.0,
+   "ratio": 1.243,
+   "status": "holds",
+   "ledger_status": "OPEN"
+  }
+ ],
+ "oracles": {
+  "fifteen_rows_selected": {
+   "ok": true,
+   "detail": {
+    "rows": 15
+   }
+  },
+  "every_row_is_open_in_the_ledgers": {
+   "ok": true,
+   "detail": {
+    "T-FX5": "OPEN",
+    "T-FX10": "OPEN",
+    "T-FX14": "OPEN",
+    "T-FX17": "OPEN",
+    "T-FX18": "OPEN",
+    "T-FX19": "OPEN",
+    "T-FX21": "OPEN",
+    "T-FX22": "OPEN",
+    "T-FX23": "OPEN",
+    "T-P2": "OPEN",
+    "T-PA4": "OPEN",
+    "T-PA7": "OPEN",
+    "T-S5": "OPEN",
+    "T-K3": "OPEN",
+    "T-E2": "OPEN"
+   }
+  },
+  "every_source_file_exists": {
+   "ok": true,
+   "detail": {
+    "FX_TABLE.jsonl": 28498853,
+    "PARTS_TABLE.jsonl": 2758546,
+    "T3_FLEET.md": 5405,
+    "FITS.md": 3762
+   }
+  },
+  "fx_scan_covers_the_whole_table": {
+   "ok": true,
+   "detail": {
+    "lines_read": 57187,
+    "expected_from_jc3fx_check": 57187
+   }
+  },
+  "every_row_has_a_verdict_and_a_source": {
+   "ok": true,
+   "detail": {
+    "statuses": {
+     "holds": 10,
+     "wrong value": 4,
+     "not derivable": 1
+    }
+   }
+  },
+  "no_row_reads_a_paint_or_collision_source": {
+   "ok": true,
+   "detail": {
+    "paint_rows": 0,
+    "collision_rows": 0
+   }
+  },
+  "ledgers_and_existing_cards_untouched": {
+   "ok": true,
+   "detail": {
+    "read_only": [
+     "Working/Translation/T_ROWS.jsonl",
+     "Working/Translation/LEDGER_G3B.json",
+     "Working/Translation/LEDGER_G3C.json",
+     "Research/JC3Grab/FX_TABLE.jsonl",
+     "Research/JC3Grab/PARTS_TABLE.jsonl",
+     "Working/Translation/T3_FLEET.md",
+     "Working/Translation/FITS.md"
+    ],
+    "written": [
+     "Working/Translation/LEDGER_G3_REDERIVE.md",
+     "Working/Translation/LEDGER_G3_REDERIVE.json",
+     "Tools/scripts/ledger_g3_rederive.py"
+    ]
+   }
+  }
+ },
+ "unknowns": [
+  "the carrier rule for the 'N vehicles' counts: this pass counts distinct `.ee` containers and also reports all containers, and states which one matched. The producer of the T-13 numbers (T13_FX.md) is not one of the five files read here, so the rule is inferred from agreement, not read from its code.",
+  "T-FX5's second half ('23 unreferenced by the 51 rows'): the 51 T-13 effect rows live outside these five sources and are not re-derived.",
+  "T-PA7: PARTS_TABLE's `deform` flag gives 24 parts at 0 (and 22 with a body, 20 non-wheel); the ledger says 20. Which of the three readings `DeformPoints.non_deformable_parts_indices` actually encodes is UNKNOWN here because that array lives in the built `.epe`, not in PARTS_TABLE.",
+  "the paint composite rows and the collision rows were not attempted: the combine rule is UNKNOWN in COLOUR_PARAMS.md and no decoded collision source is in this set."
+ ]
+}

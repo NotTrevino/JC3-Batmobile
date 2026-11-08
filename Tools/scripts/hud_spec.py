@@ -11,8 +11,8 @@ translation needs:
 It never writes game content.  Point it at the decompile directories:
 
     python Tools/scripts/hud_spec.py \
-        --bmak E:/Modding/_BmAK_grab/hud/dec \
-        --jc3  E:/Modding/_JC3grab/hud/dec \
+        --bmak E:/Modding/_gamedata/BmAKgrab_early/hud/dec \
+        --jc3  E:/Modding/_gamedata/JC3grab/hud/dec \
         --write
 
 Reproduce the decompile first:
@@ -42,6 +42,57 @@ def external_images(dec: Path) -> list[str]:
         return []
     text = read_text(xml)
     return sorted(set(re.findall(r'fileName="([^"]+)"', text)))
+
+
+def health_contract(main: str, labels: list[str]) -> dict:
+    """The Batmobile health bar, read from the decompiled setter instead of prose.
+
+    Every expression below is quoted from `ModuleStruct_Batmobile.as`; the derived
+    numbers are arithmetic on those expressions and the 30 Hz tick. A missing pattern
+    is a hard failure: the movie is the only source for this contract.
+    """
+    def grab(pattern: str, what: str) -> str:
+        m = re.search(pattern, main)
+        if not m:
+            raise SystemExit(f"health contract: {what} not found in ModuleStruct_Batmobile.as")
+        return " ".join(m.group(1).split())
+
+    health_fill = grab(r"SetMovieProportion\(this\.HealthLevelMovie,\s*([^;]+?)\);",
+                       "health fill")
+    armour_fill = grab(r"SetMovieProportion\(this\.ArmourLevelMovie,\s*([^;]+?)\);",
+                       "armour fill")
+    tier = grab(r"_loc3_?\s*=\s*(param2 > 1 \? int\(\(param2 - 1\) \* 4\) : 0)",
+                "armour tier formula")
+    tier_label = grab(r'ArmourBackground\.gotoAndStop\("Armour" \+ ([A-Za-z0-9_]+)\)',
+                      "armour tier label")
+    pulse = grab(r"if\(\((param1 < [0-9.]+) && this\.TargetHealthProportion < [0-9.]+\)",
+                 "pulse threshold")
+    pulse_threshold = float(re.search(r"param1 < ([0-9.]+)", pulse).group(1))
+    offtime = re.search(r"this\.GoOffscreenTimer = ([0-9.]+)", main)
+    if not offtime:
+        raise SystemExit("health contract: offscreen timer not found")
+    step = float(re.search(r"MaxHealthChangePerFrame:Number\s*=\s*([0-9.]+)", main).group(1))
+    tick = 30.0
+    armour_tiers = sorted({int(re.fullmatch(r"Armour([0-9]+)", lb).group(1))
+                           for lb in labels if re.fullmatch(r"Armour[0-9]+", lb)})
+    return {
+        "setter": "UC_SetHealth(health, max)",
+        "health_is": "a proportion, not hit points: 1.0 is one full bar",
+        "max_is": "the bar's ceiling; above 1 it adds armour tiers",
+        "bar_fill": health_fill,
+        "armour_fill": armour_fill,
+        "armour_tier": tier,
+        "armour_tier_label": f'"Armour" + {tier_label}',
+        "armour_tier_labels": armour_tiers,
+        "armour_tier_count": len(armour_tiers),
+        "pulse_below": pulse_threshold,
+        "max_change_per_frame": step,
+        "full_sweep_seconds": round(1.0 / step / tick, 4),
+        "offscreen_seconds": float(offtime.group(1)),
+        "tick_hz": tick,
+        "visible_on_damage": "health < max shows the bar; full health + settled XP hides it after the timer",
+        "battle_mode_forces_visible": True,
+    }
 
 
 def bmak(dec: Path) -> dict:
@@ -78,6 +129,7 @@ def bmak(dec: Path) -> dict:
         "frame_labels": labels,
         "uc_setters": [{"name": n, "args": a.strip()} for n, a in setters],
         "constants": constants,
+        "health_contract": health_contract(main, labels),
         "mode_strings": sorted(set(re.findall(r'"(DRIVE|BATTLE|ZOOMED)"', main))),
         "has_battle_mode": "BattleAndZoomInterface" in main,
         "has_boost_gauge": "BoostMovie" in main and "UC_SetBoostLevel" in main,
@@ -147,7 +199,7 @@ def main() -> None:
         for side in ("bmak", "jc3"):
             if side in old and side in spec:
                 for k, v in old[side].items():
-                    if k in ("scripts", "constants"):
+                    if k in ("scripts", "constants", "health_contract"):
                         ok = v == spec[side][k]
                         print(f"{'PASS' if ok else 'FAIL'} {side}.{k}")
                         bad += not ok

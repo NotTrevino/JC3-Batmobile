@@ -1,0 +1,7225 @@
+{
+ "meta": {
+  "task": "G3-10e",
+  "generated_by": "Tools/scripts/jc3_physics_limits.py",
+  "donor": "Builds/test-091/aaf/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle.physicsc",
+  "fleet_glob": "E:/Modding/_gamedata/JC3grab/**/*.physicsc",
+  "fleet_files": 51,
+  "fleet_files_skipped": [],
+  "hinges": 419,
+  "ragdolls": 71,
+  "hinge_extents": [
+   304
+  ],
+  "ragdoll_extents": [
+   416
+  ],
+  "read_only_imports": [
+   "Tools/scripts/jc3hkx.py",
+   "Tools/scripts/jc3_physics_roles2.py (DONOR)"
+  ],
+  "labels": {
+   "decoded": "read at the stated offset, with the oracle named",
+   "derived": "a rule over decoded inputs",
+   "UNKNOWN": "no header/decoder pins it; the blocker is named"
+  }
+ },
+ "atoms": {
+  "hinge": [
+   {
+    "offset": 32,
+    "type_code": 2,
+    "next_atom": 176,
+    "extent": 144,
+    "same_code_in_all": true,
+    "objects": 419,
+    "values_seen": [
+     2
+    ]
+   },
+   {
+    "offset": 176,
+    "type_code": 23,
+    "next_atom": 192,
+    "extent": 16,
+    "same_code_in_all": true,
+    "objects": 419,
+    "values_seen": [
+     23
+    ]
+   },
+   {
+    "offset": 192,
+    "type_code": 18,
+    "next_atom": 232,
+    "extent": 40,
+    "same_code_in_all": true,
+    "objects": 419,
+    "values_seen": [
+     18
+    ]
+   },
+   {
+    "offset": 232,
+    "type_code": 17,
+    "next_atom": 248,
+    "extent": 16,
+    "same_code_in_all": true,
+    "objects": 419,
+    "values_seen": [
+     17
+    ]
+   },
+   {
+    "offset": 248,
+    "type_code": 14,
+    "next_atom": 264,
+    "extent": 16,
+    "same_code_in_all": true,
+    "objects": 419,
+    "values_seen": [
+     14
+    ]
+   },
+   {
+    "offset": 264,
+    "type_code": 12,
+    "next_atom": 280,
+    "extent": 16,
+    "same_code_in_all": true,
+    "objects": 419,
+    "values_seen": [
+     12
+    ]
+   },
+   {
+    "offset": 280,
+    "type_code": 5,
+    "next_atom": null,
+    "extent": null,
+    "same_code_in_all": true,
+    "objects": 419,
+    "values_seen": [
+     5
+    ]
+   }
+  ],
+  "ragdoll": [
+   {
+    "offset": 32,
+    "type_code": 2,
+    "next_atom": 176,
+    "extent": 144,
+    "same_code_in_all": true,
+    "objects": 71,
+    "values_seen": [
+     2
+    ]
+   },
+   {
+    "offset": 176,
+    "type_code": 23,
+    "next_atom": 192,
+    "extent": 16,
+    "same_code_in_all": true,
+    "objects": 71,
+    "values_seen": [
+     23
+    ]
+   },
+   {
+    "offset": 192,
+    "type_code": 19,
+    "next_atom": 288,
+    "extent": 96,
+    "same_code_in_all": true,
+    "objects": 71,
+    "values_seen": [
+     19
+    ]
+   },
+   {
+    "offset": 288,
+    "type_code": 17,
+    "next_atom": 304,
+    "extent": 16,
+    "same_code_in_all": true,
+    "objects": 71,
+    "values_seen": [
+     17
+    ]
+   },
+   {
+    "offset": 304,
+    "type_code": 15,
+    "next_atom": 336,
+    "extent": 32,
+    "same_code_in_all": true,
+    "objects": 71,
+    "values_seen": [
+     15
+    ]
+   },
+   {
+    "offset": 336,
+    "type_code": 16,
+    "next_atom": 368,
+    "extent": 32,
+    "same_code_in_all": true,
+    "objects": 71,
+    "values_seen": [
+     16
+    ]
+   },
+   {
+    "offset": 368,
+    "type_code": 16,
+    "next_atom": 400,
+    "extent": 32,
+    "same_code_in_all": true,
+    "objects": 71,
+    "values_seen": [
+     16
+    ]
+   },
+   {
+    "offset": 400,
+    "type_code": 5,
+    "next_atom": null,
+    "extent": null,
+    "same_code_in_all": true,
+    "objects": 71,
+    "values_seen": [
+     5
+    ]
+   }
+  ],
+  "rule": "a hkpConstraintAtom starts with a 16-bit type code; the code at each listed offset is identical in every object of the class across the fleet, while the payload after it varies per car",
+  "extent_rule": "extent = next atom start - this atom start (the last atom runs to the object extent)",
+  "names": "UNKNOWN: the Havok 2014.1 atom-type enum is not in this project; types are reported by their decoded numeric code"
+ },
+ "hinge_limits": {
+  "spec": {
+   "atom": 248,
+   "type": 14,
+   "min": 252,
+   "max": 256,
+   "factor": 260
+  },
+  "rows": [
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 318080,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 318384,
+    "min_rad": -0.6108652353286743,
+    "max_rad": 0.0,
+    "min_deg": -35.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 318688,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 318992,
+    "min_rad": -0.6108652353286743,
+    "max_rad": 0.0,
+    "min_deg": -35.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 319712,
+    "min_rad": -0.2617993950843811,
+    "max_rad": 0.0,
+    "min_deg": -15.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 320432,
+    "min_rad": 0.0,
+    "max_rad": 0.5235987901687622,
+    "min_deg": 0.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 320736,
+    "min_rad": 0.0,
+    "max_rad": 1.2217304706573486,
+    "min_deg": 0.0,
+    "max_deg": 70.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 321040,
+    "min_rad": -0.2617993950843811,
+    "max_rad": 0.0,
+    "min_deg": -15.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 321344,
+    "min_rad": 0.0,
+    "max_rad": 1.5707963705062866,
+    "min_deg": 0.0,
+    "max_deg": 90.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "apc.physicsc",
+    "offset": 340160,
+    "min_rad": -0.0872664600610733,
+    "max_rad": 0.05235987901687622,
+    "min_deg": -5.0,
+    "max_deg": 3.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "apc.physicsc",
+    "offset": 340464,
+    "min_rad": -0.05235987901687622,
+    "max_rad": 0.0872664600610733,
+    "min_deg": -3.0,
+    "max_deg": 5.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "apc.physicsc",
+    "offset": 340768,
+    "min_rad": -0.0872664600610733,
+    "max_rad": 0.05235987901687622,
+    "min_deg": -5.0,
+    "max_deg": 3.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "apc.physicsc",
+    "offset": 341072,
+    "min_rad": -0.05235987901687622,
+    "max_rad": 0.0872664600610733,
+    "min_deg": -3.0,
+    "max_deg": 5.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "apc.physicsc",
+    "offset": 341376,
+    "min_rad": -0.05235987901687622,
+    "max_rad": 0.0872664600610733,
+    "min_deg": -3.0,
+    "max_deg": 5.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "apc.physicsc",
+    "offset": 341680,
+    "min_rad": -0.05235987901687622,
+    "max_rad": 0.0872664600610733,
+    "min_deg": -3.0,
+    "max_deg": 5.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "apc.physicsc",
+    "offset": 341984,
+    "min_rad": 0.0,
+    "max_rad": 1.7453292608261108,
+    "min_deg": 0.0,
+    "max_deg": 100.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "apc.physicsc",
+    "offset": 342288,
+    "min_rad": 0.0,
+    "max_rad": 1.7453292608261108,
+    "min_deg": 0.0,
+    "max_deg": 100.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "apc.physicsc",
+    "offset": 342592,
+    "min_rad": 0.0,
+    "max_rad": 1.6580628156661987,
+    "min_deg": 0.0,
+    "max_deg": 95.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "apc.physicsc",
+    "offset": 342896,
+    "min_rad": 0.0,
+    "max_rad": 2.268928050994873,
+    "min_deg": 0.0,
+    "max_deg": 130.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "apc.physicsc",
+    "offset": 343200,
+    "min_rad": 0.0,
+    "max_rad": 2.268928050994873,
+    "min_deg": 0.0,
+    "max_deg": 130.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "apc.physicsc",
+    "offset": 343504,
+    "min_rad": -0.1745329201221466,
+    "max_rad": 0.1745329201221466,
+    "min_deg": -10.0,
+    "max_deg": 10.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "apc.physicsc",
+    "offset": 343808,
+    "min_rad": -0.1745329201221466,
+    "max_rad": 0.1745329201221466,
+    "min_deg": -10.0,
+    "max_deg": 10.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "apc.physicsc",
+    "offset": 344112,
+    "min_rad": 0.0,
+    "max_rad": 2.268928050994873,
+    "min_deg": 0.0,
+    "max_deg": 130.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "apc.physicsc",
+    "offset": 344416,
+    "min_rad": -0.2617993950843811,
+    "max_rad": 0.8726646304130554,
+    "min_deg": -15.0,
+    "max_deg": 50.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "apc.physicsc",
+    "offset": 344720,
+    "min_rad": -3.1241393089294434,
+    "max_rad": 3.1241393089294434,
+    "min_deg": -179.0,
+    "max_deg": 179.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "armoredjeep.physicsc",
+    "offset": 460400,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "armoredjeep.physicsc",
+    "offset": 460704,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "armoredjeep.physicsc",
+    "offset": 461008,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "armoredjeep.physicsc",
+    "offset": 461312,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "armoredjeep.physicsc",
+    "offset": 462864,
+    "min_rad": 0.0,
+    "max_rad": 1.0471975803375244,
+    "min_deg": 0.0,
+    "max_deg": 60.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "armoredjeep.physicsc",
+    "offset": 463168,
+    "min_rad": 0.0,
+    "max_rad": 0.15707963705062866,
+    "min_deg": 0.0,
+    "max_deg": 9.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "armoredjeep.physicsc",
+    "offset": 463472,
+    "min_rad": 0.0,
+    "max_rad": 0.12217304855585098,
+    "min_deg": 0.0,
+    "max_deg": 7.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "armoredjeep.physicsc",
+    "offset": 463776,
+    "min_rad": -0.5235987901687622,
+    "max_rad": 1.4499658346176147,
+    "min_deg": -30.0,
+    "max_deg": 83.077,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "armoredjeep.physicsc",
+    "offset": 464080,
+    "min_rad": -0.5235987901687622,
+    "max_rad": 1.5009831190109253,
+    "min_deg": -30.0,
+    "max_deg": 86.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "armoredjeep.physicsc",
+    "offset": 464384,
+    "min_rad": 0.0,
+    "max_rad": 0.5235987901687622,
+    "min_deg": 0.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "armoredjeep.physicsc",
+    "offset": 464688,
+    "min_rad": 0.0,
+    "max_rad": 0.5235987901687622,
+    "min_deg": 0.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "armoredjeep.physicsc",
+    "offset": 464992,
+    "min_rad": 0.0,
+    "max_rad": 0.4487989544868469,
+    "min_deg": 0.0,
+    "max_deg": 25.714,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "armoredjeep.physicsc",
+    "offset": 465296,
+    "min_rad": 0.0,
+    "max_rad": 1.0471975803375244,
+    "min_deg": 0.0,
+    "max_deg": 60.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "armoredjeep.physicsc",
+    "offset": 465600,
+    "min_rad": 0.0,
+    "max_rad": 1.7453292608261108,
+    "min_deg": 0.0,
+    "max_deg": 100.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "armoredjeep.physicsc",
+    "offset": 465904,
+    "min_rad": -0.4363323152065277,
+    "max_rad": 0.8726646304130554,
+    "min_deg": -25.0,
+    "max_deg": 50.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "armoredjeep.physicsc",
+    "offset": 466208,
+    "min_rad": -3.1241393089294434,
+    "max_rad": 3.1241393089294434,
+    "min_deg": -179.0,
+    "max_deg": 179.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "armoredtransport.physicsc",
+    "offset": 453216,
+    "min_rad": -0.0872664600610733,
+    "max_rad": 0.0872664600610733,
+    "min_deg": -5.0,
+    "max_deg": 5.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "armoredtransport.physicsc",
+    "offset": 453520,
+    "min_rad": -0.0872664600610733,
+    "max_rad": 0.0872664600610733,
+    "min_deg": -5.0,
+    "max_deg": 5.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "armoredtransport.physicsc",
+    "offset": 453824,
+    "min_rad": 0.0,
+    "max_rad": 1.0471975803375244,
+    "min_deg": 0.0,
+    "max_deg": 60.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "armoredtransport.physicsc",
+    "offset": 454128,
+    "min_rad": 0.0,
+    "max_rad": 2.268928050994873,
+    "min_deg": 0.0,
+    "max_deg": 130.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "armoredtransport.physicsc",
+    "offset": 454432,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "armoredtransport.physicsc",
+    "offset": 454736,
+    "min_rad": 0.0,
+    "max_rad": 2.268928050994873,
+    "min_deg": 0.0,
+    "max_deg": 130.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "armoredtransport.physicsc",
+    "offset": 455040,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "armoredtransport.physicsc",
+    "offset": 455344,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "armoredtransport.physicsc",
+    "offset": 455648,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "armoredtransport.physicsc",
+    "offset": 455952,
+    "min_rad": 0.0,
+    "max_rad": 0.1745329201221466,
+    "min_deg": 0.0,
+    "max_deg": 10.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "armoredtransport.physicsc",
+    "offset": 456256,
+    "min_rad": 0.0,
+    "max_rad": 0.1745329201221466,
+    "min_deg": 0.0,
+    "max_deg": 10.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "armoredtransport.physicsc",
+    "offset": 456560,
+    "min_rad": -0.0872664600610733,
+    "max_rad": 0.0872664600610733,
+    "min_deg": -5.0,
+    "max_deg": 5.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "armoredtransport.physicsc",
+    "offset": 456864,
+    "min_rad": -0.0872664600610733,
+    "max_rad": 0.0872664600610733,
+    "min_deg": -5.0,
+    "max_deg": 5.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "armoredtransport.physicsc",
+    "offset": 457168,
+    "min_rad": -0.0872664600610733,
+    "max_rad": 0.0872664600610733,
+    "min_deg": -5.0,
+    "max_deg": 5.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "armoredtransport.physicsc",
+    "offset": 457472,
+    "min_rad": -0.0872664600610733,
+    "max_rad": 0.0872664600610733,
+    "min_deg": -5.0,
+    "max_deg": 5.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "armoredtransport.physicsc",
+    "offset": 457776,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "articulatedtruck.physicsc",
+    "offset": 297312,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "articulatedtruck.physicsc",
+    "offset": 297616,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "articulatedtruck.physicsc",
+    "offset": 297920,
+    "min_rad": -0.1745329201221466,
+    "max_rad": 0.0,
+    "min_deg": -10.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "articulatedtruck.physicsc",
+    "offset": 298224,
+    "min_rad": -0.1745329201221466,
+    "max_rad": 0.0,
+    "min_deg": -10.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "articulatedtruck.physicsc",
+    "offset": 298528,
+    "min_rad": -0.1745329201221466,
+    "max_rad": 0.0,
+    "min_deg": -10.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "articulatedtruck.physicsc",
+    "offset": 298832,
+    "min_rad": -0.1745329201221466,
+    "max_rad": 0.0,
+    "min_deg": -10.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "atv.physicsc",
+    "offset": 607536,
+    "min_rad": -0.1745329201221466,
+    "max_rad": 0.0,
+    "min_deg": -10.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "atv.physicsc",
+    "offset": 607840,
+    "min_rad": -0.2617993950843811,
+    "max_rad": 0.0,
+    "min_deg": -15.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "atv.physicsc",
+    "offset": 608144,
+    "min_rad": -0.5235987901687622,
+    "max_rad": 0.0,
+    "min_deg": -30.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "atv.physicsc",
+    "offset": 608448,
+    "min_rad": -0.3490658402442932,
+    "max_rad": 0.0,
+    "min_deg": -20.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "atv.physicsc",
+    "offset": 608752,
+    "min_rad": -0.6108652353286743,
+    "max_rad": 0.0,
+    "min_deg": -35.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "atv.physicsc",
+    "offset": 609056,
+    "min_rad": -3.1415927410125732,
+    "max_rad": 3.1415927410125732,
+    "min_deg": -180.0,
+    "max_deg": 180.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "bavariumtank.physicsc",
+    "offset": 167168,
+    "min_rad": -0.0872664600610733,
+    "max_rad": 0.3490658402442932,
+    "min_deg": -5.0,
+    "max_deg": 20.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "bavariumtank.physicsc",
+    "offset": 167472,
+    "min_rad": 0.0,
+    "max_rad": 2.268928050994873,
+    "min_deg": 0.0,
+    "max_deg": 130.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "bavariumtank.physicsc",
+    "offset": 167776,
+    "min_rad": -3.1241393089294434,
+    "max_rad": 3.1241393089294434,
+    "min_deg": -179.0,
+    "max_deg": 179.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "buggy.physicsc",
+    "offset": 647008,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "buggy.physicsc",
+    "offset": 647312,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "buggy.physicsc",
+    "offset": 647616,
+    "min_rad": 0.0,
+    "max_rad": 0.39037543535232544,
+    "min_deg": 0.0,
+    "max_deg": 22.367,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "buggy.physicsc",
+    "offset": 647920,
+    "min_rad": 0.0,
+    "max_rad": 0.2416609823703766,
+    "min_deg": 0.0,
+    "max_deg": 13.846,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "buggy.physicsc",
+    "offset": 649056,
+    "min_rad": -0.4363323152065277,
+    "max_rad": 0.0,
+    "min_deg": -25.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "buggy.physicsc",
+    "offset": 649360,
+    "min_rad": -0.8726646304130554,
+    "max_rad": 0.0,
+    "min_deg": -50.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "buggy.physicsc",
+    "offset": 649664,
+    "min_rad": 0.0,
+    "max_rad": 0.5235987901687622,
+    "min_deg": 0.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "buggy.physicsc",
+    "offset": 649968,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "buggy.physicsc",
+    "offset": 650272,
+    "min_rad": 0.0,
+    "max_rad": 2.094395160675049,
+    "min_deg": 0.0,
+    "max_deg": 120.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 874992,
+    "min_rad": 0.0,
+    "max_rad": 1.5707963705062866,
+    "min_deg": 0.0,
+    "max_deg": 90.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 875296,
+    "min_rad": 0.0,
+    "max_rad": 1.5707963705062866,
+    "min_deg": 0.0,
+    "max_deg": 90.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 875600,
+    "min_rad": 0.0,
+    "max_rad": 0.7504915595054626,
+    "min_deg": 0.0,
+    "max_deg": 43.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 875904,
+    "min_rad": 0.0,
+    "max_rad": 0.7504915595054626,
+    "min_deg": 0.0,
+    "max_deg": 43.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 876208,
+    "min_rad": 0.0,
+    "max_rad": 0.2617993950843811,
+    "min_deg": 0.0,
+    "max_deg": 15.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 876512,
+    "min_rad": 0.0,
+    "max_rad": 0.2617993950843811,
+    "min_deg": 0.0,
+    "max_deg": 15.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 876816,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 877120,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 877424,
+    "min_rad": 0.0,
+    "max_rad": 1.5707963705062866,
+    "min_deg": 0.0,
+    "max_deg": 90.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 877728,
+    "min_rad": 0.0,
+    "max_rad": 1.5707963705062866,
+    "min_deg": 0.0,
+    "max_deg": 90.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 878032,
+    "min_rad": 0.0,
+    "max_rad": 1.1519173383712769,
+    "min_deg": 0.0,
+    "max_deg": 66.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 878336,
+    "min_rad": 0.0,
+    "max_rad": 1.1519173383712769,
+    "min_deg": 0.0,
+    "max_deg": 66.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 878640,
+    "min_rad": 0.0,
+    "max_rad": 1.1519173383712769,
+    "min_deg": 0.0,
+    "max_deg": 66.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 878944,
+    "min_rad": 0.0,
+    "max_rad": 1.1519173383712769,
+    "min_deg": 0.0,
+    "max_deg": 66.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 879248,
+    "min_rad": 0.0,
+    "max_rad": 1.1519173383712769,
+    "min_deg": 0.0,
+    "max_deg": 66.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 879552,
+    "min_rad": 0.0,
+    "max_rad": 1.1519173383712769,
+    "min_deg": 0.0,
+    "max_deg": 66.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 879856,
+    "min_rad": 0.0,
+    "max_rad": 1.3089969158172607,
+    "min_deg": 0.0,
+    "max_deg": 75.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 880160,
+    "min_rad": 0.0,
+    "max_rad": 1.3089969158172607,
+    "min_deg": 0.0,
+    "max_deg": 75.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 880464,
+    "min_rad": 0.0,
+    "max_rad": 1.1519173383712769,
+    "min_deg": 0.0,
+    "max_deg": 66.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 880768,
+    "min_rad": 0.0,
+    "max_rad": 1.1519173383712769,
+    "min_deg": 0.0,
+    "max_deg": 66.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 881072,
+    "min_rad": 0.0,
+    "max_rad": 1.7453292608261108,
+    "min_deg": 0.0,
+    "max_deg": 100.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 881376,
+    "min_rad": 0.0,
+    "max_rad": 1.7453292608261108,
+    "min_deg": 0.0,
+    "max_deg": 100.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 881680,
+    "min_rad": 0.0,
+    "max_rad": 1.5707963705062866,
+    "min_deg": 0.0,
+    "max_deg": 90.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 881984,
+    "min_rad": 0.0,
+    "max_rad": 1.1344640254974365,
+    "min_deg": 0.0,
+    "max_deg": 65.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 882288,
+    "min_rad": 0.0,
+    "max_rad": 1.1344640254974365,
+    "min_deg": 0.0,
+    "max_deg": 65.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 882592,
+    "min_rad": -0.5235987901687622,
+    "max_rad": 0.5235987901687622,
+    "min_deg": -30.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 882896,
+    "min_rad": -0.5235987901687622,
+    "max_rad": 0.5235987901687622,
+    "min_deg": -30.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 883200,
+    "min_rad": -0.5235987901687622,
+    "max_rad": 0.5235987901687622,
+    "min_deg": -30.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 883504,
+    "min_rad": -0.5235987901687622,
+    "max_rad": 0.5235987901687622,
+    "min_deg": -30.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 883808,
+    "min_rad": -0.5235987901687622,
+    "max_rad": 0.5235987901687622,
+    "min_deg": -30.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 884112,
+    "min_rad": -0.5235987901687622,
+    "max_rad": 0.5235987901687622,
+    "min_deg": -30.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 884416,
+    "min_rad": -0.5235987901687622,
+    "max_rad": 0.5235987901687622,
+    "min_deg": -30.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 884720,
+    "min_rad": 0.0,
+    "max_rad": 0.2548180818557739,
+    "min_deg": 0.0,
+    "max_deg": 14.6,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 885024,
+    "min_rad": 0.0,
+    "max_rad": 0.0872664600610733,
+    "min_deg": 0.0,
+    "max_deg": 5.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 885328,
+    "min_rad": 0.0,
+    "max_rad": 0.1448623239994049,
+    "min_deg": 0.0,
+    "max_deg": 8.3,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 885632,
+    "min_rad": 0.0,
+    "max_rad": 0.0872664600610733,
+    "min_deg": 0.0,
+    "max_deg": 5.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 885936,
+    "min_rad": 0.0,
+    "max_rad": 0.0872664600610733,
+    "min_deg": 0.0,
+    "max_deg": 5.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 886240,
+    "min_rad": 0.0,
+    "max_rad": 0.3490658402442932,
+    "min_deg": 0.0,
+    "max_deg": 20.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 886544,
+    "min_rad": 0.0,
+    "max_rad": 0.3490658402442932,
+    "min_deg": 0.0,
+    "max_deg": 20.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 886848,
+    "min_rad": 0.0,
+    "max_rad": 0.3490658402442932,
+    "min_deg": 0.0,
+    "max_deg": 20.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 887152,
+    "min_rad": 0.0,
+    "max_rad": 0.3490658402442932,
+    "min_deg": 0.0,
+    "max_deg": 20.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 887456,
+    "min_rad": 0.0,
+    "max_rad": 0.3490658402442932,
+    "min_deg": 0.0,
+    "max_deg": 20.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 887760,
+    "min_rad": 0.0,
+    "max_rad": 0.3490658402442932,
+    "min_deg": 0.0,
+    "max_deg": 20.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 888064,
+    "min_rad": 0.0,
+    "max_rad": 0.1745329201221466,
+    "min_deg": 0.0,
+    "max_deg": 10.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 888368,
+    "min_rad": -0.5235987901687622,
+    "max_rad": 0.5235987901687622,
+    "min_deg": -30.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 888672,
+    "min_rad": 0.0,
+    "max_rad": 0.2548180818557739,
+    "min_deg": 0.0,
+    "max_deg": 14.6,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 888976,
+    "min_rad": 0.0,
+    "max_rad": 0.0872664600610733,
+    "min_deg": 0.0,
+    "max_deg": 5.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 889280,
+    "min_rad": 0.0,
+    "max_rad": 0.1448623239994049,
+    "min_deg": 0.0,
+    "max_deg": 8.3,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 889584,
+    "min_rad": 0.0,
+    "max_rad": 0.0872664600610733,
+    "min_deg": 0.0,
+    "max_deg": 5.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 889888,
+    "min_rad": 0.0,
+    "max_rad": 0.0872664600610733,
+    "min_deg": 0.0,
+    "max_deg": 5.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 890192,
+    "min_rad": 0.0,
+    "max_rad": 0.3490658402442932,
+    "min_deg": 0.0,
+    "max_deg": 20.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 890496,
+    "min_rad": 0.0,
+    "max_rad": 0.3490658402442932,
+    "min_deg": 0.0,
+    "max_deg": 20.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 890800,
+    "min_rad": 0.0,
+    "max_rad": 0.3490658402442932,
+    "min_deg": 0.0,
+    "max_deg": 20.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 891104,
+    "min_rad": 0.0,
+    "max_rad": 0.3490658402442932,
+    "min_deg": 0.0,
+    "max_deg": 20.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 891408,
+    "min_rad": 0.0,
+    "max_rad": 0.3490658402442932,
+    "min_deg": 0.0,
+    "max_deg": 20.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 891712,
+    "min_rad": 0.0,
+    "max_rad": 0.3490658402442932,
+    "min_deg": 0.0,
+    "max_deg": 20.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "cargotransport.physicsc",
+    "offset": 892016,
+    "min_rad": 0.0,
+    "max_rad": 0.1745329201221466,
+    "min_deg": 0.0,
+    "max_deg": 10.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "combatdirt.physicsc",
+    "offset": 276160,
+    "min_rad": -3.1415927410125732,
+    "max_rad": 3.1415927410125732,
+    "min_deg": -180.0,
+    "max_deg": 180.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "fighterjet.physicsc",
+    "offset": 327456,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "fighterjet.physicsc",
+    "offset": 327760,
+    "min_rad": 0.0,
+    "max_rad": 1.6580628156661987,
+    "min_deg": 0.0,
+    "max_deg": 95.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "fighterjet.physicsc",
+    "offset": 328064,
+    "min_rad": 0.0,
+    "max_rad": 1.5707963705062866,
+    "min_deg": 0.0,
+    "max_deg": 90.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "fighterjet.physicsc",
+    "offset": 328368,
+    "min_rad": 0.0,
+    "max_rad": 1.919862151145935,
+    "min_deg": 0.0,
+    "max_deg": 110.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "fighterjet.physicsc",
+    "offset": 328672,
+    "min_rad": 0.0,
+    "max_rad": 1.919862151145935,
+    "min_deg": 0.0,
+    "max_deg": 110.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "fighterjet.physicsc",
+    "offset": 328976,
+    "min_rad": 0.0,
+    "max_rad": 1.5707963705062866,
+    "min_deg": 0.0,
+    "max_deg": 90.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "fighterjet.physicsc",
+    "offset": 329280,
+    "min_rad": 0.0,
+    "max_rad": 1.5707963705062866,
+    "min_deg": 0.0,
+    "max_deg": 90.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "fighterjet.physicsc",
+    "offset": 329584,
+    "min_rad": -0.7853981852531433,
+    "max_rad": 0.7853981852531433,
+    "min_deg": -45.0,
+    "max_deg": 45.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "fighterjet.physicsc",
+    "offset": 329888,
+    "min_rad": -0.7853981852531433,
+    "max_rad": 0.7853981852531433,
+    "min_deg": -45.0,
+    "max_deg": 45.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "fighterjet.physicsc",
+    "offset": 330192,
+    "min_rad": -0.7853981852531433,
+    "max_rad": 0.7853981852531433,
+    "min_deg": -45.0,
+    "max_deg": 45.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "fighterjet.physicsc",
+    "offset": 330496,
+    "min_rad": 0.0,
+    "max_rad": 0.7853981852531433,
+    "min_deg": 0.0,
+    "max_deg": 45.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "fighterjet.physicsc",
+    "offset": 330800,
+    "min_rad": 0.0,
+    "max_rad": 1.5707963705062866,
+    "min_deg": 0.0,
+    "max_deg": 90.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "fighterjet.physicsc",
+    "offset": 331104,
+    "min_rad": -0.7853981852531433,
+    "max_rad": 0.7853981852531433,
+    "min_deg": -45.0,
+    "max_deg": 45.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "fighterjet.physicsc",
+    "offset": 331408,
+    "min_rad": -0.7853981852531433,
+    "max_rad": 0.7853981852531433,
+    "min_deg": -45.0,
+    "max_deg": 45.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "fighterjet.physicsc",
+    "offset": 331712,
+    "min_rad": 0.0,
+    "max_rad": 0.7853981852531433,
+    "min_deg": 0.0,
+    "max_deg": 45.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "fighterjet.physicsc",
+    "offset": 332016,
+    "min_rad": 0.0,
+    "max_rad": 1.5707963705062866,
+    "min_deg": 0.0,
+    "max_deg": 90.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "heavypatrol.physicsc",
+    "offset": 385488,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "heavypatrol.physicsc",
+    "offset": 385792,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "heavypatrol.physicsc",
+    "offset": 386096,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "heavypatrol.physicsc",
+    "offset": 386400,
+    "min_rad": -0.8726646304130554,
+    "max_rad": 0.8726646304130554,
+    "min_deg": -50.0,
+    "max_deg": 50.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "heavypatrol.physicsc",
+    "offset": 386704,
+    "min_rad": -1.3089969158172607,
+    "max_rad": 1.3089969158172607,
+    "min_deg": -75.0,
+    "max_deg": 75.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "heavypatrol.physicsc",
+    "offset": 387008,
+    "min_rad": -0.8726646304130554,
+    "max_rad": 0.8726646304130554,
+    "min_deg": -50.0,
+    "max_deg": 50.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "heavypatrol.physicsc",
+    "offset": 387312,
+    "min_rad": -1.3089969158172607,
+    "max_rad": 1.3089969158172607,
+    "min_deg": -75.0,
+    "max_deg": 75.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "heavytroop.physicsc",
+    "offset": 627520,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "heavytroop.physicsc",
+    "offset": 627824,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "heavytroop.physicsc",
+    "offset": 628128,
+    "min_rad": -0.01745329238474369,
+    "max_rad": 0.01745329238474369,
+    "min_deg": -1.0,
+    "max_deg": 1.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "heavytroop.physicsc",
+    "offset": 628432,
+    "min_rad": -0.01745329238474369,
+    "max_rad": 0.01745329238474369,
+    "min_deg": -1.0,
+    "max_deg": 1.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "heavytroop.physicsc",
+    "offset": 628736,
+    "min_rad": 0.0,
+    "max_rad": 0.46473264694213867,
+    "min_deg": 0.0,
+    "max_deg": 26.627,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "heavytroop.physicsc",
+    "offset": 629040,
+    "min_rad": 0.0,
+    "max_rad": 0.46473264694213867,
+    "min_deg": 0.0,
+    "max_deg": 26.627,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "heavytroop.physicsc",
+    "offset": 629344,
+    "min_rad": -0.0872664600610733,
+    "max_rad": 0.0872664600610733,
+    "min_deg": -5.0,
+    "max_deg": 5.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "heavytroop.physicsc",
+    "offset": 629648,
+    "min_rad": -0.0872664600610733,
+    "max_rad": 0.0872664600610733,
+    "min_deg": -5.0,
+    "max_deg": 5.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "lightpatrol.physicsc",
+    "offset": 267056,
+    "min_rad": -0.5235987901687622,
+    "max_rad": 0.5235987901687622,
+    "min_deg": -30.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "lightpatrol.physicsc",
+    "offset": 267360,
+    "min_rad": -0.5235987901687622,
+    "max_rad": 0.5235987901687622,
+    "min_deg": -30.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "lightpatrol.physicsc",
+    "offset": 267664,
+    "min_rad": -0.8726646304130554,
+    "max_rad": 0.4363323152065277,
+    "min_deg": -50.0,
+    "max_deg": 25.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "lightpatrol.physicsc",
+    "offset": 267968,
+    "min_rad": -1.3089969158172607,
+    "max_rad": 1.3089969158172607,
+    "min_deg": -75.0,
+    "max_deg": 75.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "mediumoldfishing.physicsc",
+    "offset": 517184,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "mediumoldfishing.physicsc",
+    "offset": 517488,
+    "min_rad": -0.02617993950843811,
+    "max_rad": 0.02617993950843811,
+    "min_deg": -1.5,
+    "max_deg": 1.5,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "mediumoldfishing.physicsc",
+    "offset": 517792,
+    "min_rad": -0.46473264694213867,
+    "max_rad": 1.357019305229187,
+    "min_deg": -26.627,
+    "max_deg": 77.751,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "mediumoldfishing.physicsc",
+    "offset": 518512,
+    "min_rad": -0.46473264694213867,
+    "max_rad": 1.357019305229187,
+    "min_deg": -26.627,
+    "max_deg": 77.751,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "mediumoldfishing.physicsc",
+    "offset": 520896,
+    "min_rad": -0.2617993950843811,
+    "max_rad": 1.9146984815597534,
+    "min_deg": -15.0,
+    "max_deg": 109.704,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "mediumoldfishing.physicsc",
+    "offset": 531024,
+    "min_rad": -0.5235987901687622,
+    "max_rad": 0.5235987901687622,
+    "min_deg": -30.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernbus.physicsc",
+    "offset": 432368,
+    "min_rad": 0.0,
+    "max_rad": 1.5707963705062866,
+    "min_deg": 0.0,
+    "max_deg": 90.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernbus.physicsc",
+    "offset": 432672,
+    "min_rad": -0.4363323152065277,
+    "max_rad": 0.0,
+    "min_deg": -25.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernbus.physicsc",
+    "offset": 432976,
+    "min_rad": -0.1745329201221466,
+    "max_rad": 0.0,
+    "min_deg": -10.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernbus.physicsc",
+    "offset": 433280,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernbus.physicsc",
+    "offset": 433584,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernbus.physicsc",
+    "offset": 433888,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernbus.physicsc",
+    "offset": 434192,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernbus.physicsc",
+    "offset": 434496,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernbus.physicsc",
+    "offset": 434800,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernbus.physicsc",
+    "offset": 435104,
+    "min_rad": 0.0,
+    "max_rad": 1.5707963705062866,
+    "min_deg": 0.0,
+    "max_deg": 90.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernbus.physicsc",
+    "offset": 435408,
+    "min_rad": -0.1745329201221466,
+    "max_rad": 0.0,
+    "min_deg": -10.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernbus.physicsc",
+    "offset": 435712,
+    "min_rad": -0.1745329201221466,
+    "max_rad": 0.0,
+    "min_deg": -10.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernbus.physicsc",
+    "offset": 436016,
+    "min_rad": 0.0,
+    "max_rad": 1.5707963705062866,
+    "min_deg": 0.0,
+    "max_deg": 90.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernbus.physicsc",
+    "offset": 436320,
+    "min_rad": 0.0,
+    "max_rad": 1.5707963705062866,
+    "min_deg": 0.0,
+    "max_deg": 90.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernbus.physicsc",
+    "offset": 436624,
+    "min_rad": 0.0,
+    "max_rad": 1.5707963705062866,
+    "min_deg": 0.0,
+    "max_deg": 90.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernbus.physicsc",
+    "offset": 436928,
+    "min_rad": -0.1745329201221466,
+    "max_rad": 0.1745329201221466,
+    "min_deg": -10.0,
+    "max_deg": 10.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernbus.physicsc",
+    "offset": 437232,
+    "min_rad": -0.1745329201221466,
+    "max_rad": 0.1745329201221466,
+    "min_deg": -10.0,
+    "max_deg": 10.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernbus.physicsc",
+    "offset": 437536,
+    "min_rad": -0.1745329201221466,
+    "max_rad": 0.1745329201221466,
+    "min_deg": -10.0,
+    "max_deg": 10.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernbus.physicsc",
+    "offset": 437840,
+    "min_rad": -0.1745329201221466,
+    "max_rad": 0.1745329201221466,
+    "min_deg": -10.0,
+    "max_deg": 10.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernbus.physicsc",
+    "offset": 438144,
+    "min_rad": -0.1745329201221466,
+    "max_rad": 0.1745329201221466,
+    "min_deg": -10.0,
+    "max_deg": 10.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernbus.physicsc",
+    "offset": 438448,
+    "min_rad": -0.1745329201221466,
+    "max_rad": 0.1745329201221466,
+    "min_deg": -10.0,
+    "max_deg": 10.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernbus.physicsc",
+    "offset": 438752,
+    "min_rad": -0.01745329238474369,
+    "max_rad": 0.1745329201221466,
+    "min_deg": -1.0,
+    "max_deg": 10.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernbus.physicsc",
+    "offset": 439056,
+    "min_rad": -0.1745329201221466,
+    "max_rad": 0.1745329201221466,
+    "min_deg": -10.0,
+    "max_deg": 10.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernbus.physicsc",
+    "offset": 439360,
+    "min_rad": -0.1745329201221466,
+    "max_rad": 0.1745329201221466,
+    "min_deg": -10.0,
+    "max_deg": 10.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernbus.physicsc",
+    "offset": 439664,
+    "min_rad": -0.1745329201221466,
+    "max_rad": 0.1745329201221466,
+    "min_deg": -10.0,
+    "max_deg": 10.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernbus.physicsc",
+    "offset": 439968,
+    "min_rad": -0.1745329201221466,
+    "max_rad": 0.1745329201221466,
+    "min_deg": -10.0,
+    "max_deg": 10.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernbus.physicsc",
+    "offset": 440272,
+    "min_rad": -0.1745329201221466,
+    "max_rad": 0.1745329201221466,
+    "min_deg": -10.0,
+    "max_deg": 10.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernbus.physicsc",
+    "offset": 440576,
+    "min_rad": -0.1745329201221466,
+    "max_rad": 0.1745329201221466,
+    "min_deg": -10.0,
+    "max_deg": 10.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernbus.physicsc",
+    "offset": 440880,
+    "min_rad": -0.1745329201221466,
+    "max_rad": 0.1745329201221466,
+    "min_deg": -10.0,
+    "max_deg": 10.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernbus.physicsc",
+    "offset": 441184,
+    "min_rad": -0.1745329201221466,
+    "max_rad": 0.1745329201221466,
+    "min_deg": -10.0,
+    "max_deg": 10.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernbus.physicsc",
+    "offset": 441488,
+    "min_rad": -0.1745329201221466,
+    "max_rad": 0.1745329201221466,
+    "min_deg": -10.0,
+    "max_deg": 10.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernmini.physicsc",
+    "offset": 441536,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernmini.physicsc",
+    "offset": 441840,
+    "min_rad": -0.1745329201221466,
+    "max_rad": 0.0,
+    "min_deg": -10.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernmini.physicsc",
+    "offset": 442144,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernmini.physicsc",
+    "offset": 442448,
+    "min_rad": -0.1745329201221466,
+    "max_rad": 0.0,
+    "min_deg": -10.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernmini.physicsc",
+    "offset": 442752,
+    "min_rad": 0.0,
+    "max_rad": 0.5235987901687622,
+    "min_deg": 0.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernmini.physicsc",
+    "offset": 443056,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernmoped.physicsc",
+    "offset": 206096,
+    "min_rad": -3.1415927410125732,
+    "max_rad": 3.1415927410125732,
+    "min_deg": -180.0,
+    "max_deg": 180.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernroad.physicsc",
+    "offset": 249760,
+    "min_rad": -3.1415927410125732,
+    "max_rad": 3.1415927410125732,
+    "min_deg": -180.0,
+    "max_deg": 180.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernroadster.physicsc",
+    "offset": 353616,
+    "min_rad": -0.1745329201221466,
+    "max_rad": 0.0,
+    "min_deg": -10.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernroadster.physicsc",
+    "offset": 353920,
+    "min_rad": -0.1745329201221466,
+    "max_rad": 0.0,
+    "min_deg": -10.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernroadster.physicsc",
+    "offset": 354224,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernroadster.physicsc",
+    "offset": 354528,
+    "min_rad": -0.6108652353286743,
+    "max_rad": 0.0,
+    "min_deg": -35.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernroadster.physicsc",
+    "offset": 354832,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernroadster.physicsc",
+    "offset": 355136,
+    "min_rad": -0.3490658402442932,
+    "max_rad": 0.0,
+    "min_deg": -20.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernroadster.physicsc",
+    "offset": 355440,
+    "min_rad": 0.0,
+    "max_rad": 0.5235987901687622,
+    "min_deg": 0.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernroadster.physicsc",
+    "offset": 355744,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernsaloon.physicsc",
+    "offset": 398896,
+    "min_rad": -0.2617993950843811,
+    "max_rad": 0.0,
+    "min_deg": -15.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernsaloon.physicsc",
+    "offset": 399200,
+    "min_rad": -0.2617993950843811,
+    "max_rad": 0.0,
+    "min_deg": -15.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernsaloon.physicsc",
+    "offset": 399504,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernsaloon.physicsc",
+    "offset": 399808,
+    "min_rad": -0.6108652353286743,
+    "max_rad": 0.0,
+    "min_deg": -35.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernsaloon.physicsc",
+    "offset": 400112,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernsaloon.physicsc",
+    "offset": 400416,
+    "min_rad": -0.6108652353286743,
+    "max_rad": 0.0,
+    "min_deg": -35.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernsaloon.physicsc",
+    "offset": 400720,
+    "min_rad": 0.0,
+    "max_rad": 1.5707963705062866,
+    "min_deg": 0.0,
+    "max_deg": 90.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernsaloon.physicsc",
+    "offset": 401024,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernsaloon.physicsc",
+    "offset": 401328,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernsaloon.physicsc",
+    "offset": 401632,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernsport.physicsc",
+    "offset": 206528,
+    "min_rad": -3.1415927410125732,
+    "max_rad": 3.1415927410125732,
+    "min_deg": -180.0,
+    "max_deg": 180.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernsportssaloon.physicsc",
+    "offset": 484992,
+    "min_rad": -0.0872664600610733,
+    "max_rad": 0.0,
+    "min_deg": -5.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernsportssaloon.physicsc",
+    "offset": 485296,
+    "min_rad": -0.0872664600610733,
+    "max_rad": 0.0,
+    "min_deg": -5.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernsportssaloon.physicsc",
+    "offset": 485600,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernsportssaloon.physicsc",
+    "offset": 485904,
+    "min_rad": -0.8726646304130554,
+    "max_rad": 0.0,
+    "min_deg": -50.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernsportssaloon.physicsc",
+    "offset": 486208,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernsportssaloon.physicsc",
+    "offset": 486512,
+    "min_rad": -0.8726646304130554,
+    "max_rad": 0.0,
+    "min_deg": -50.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernsportssaloon.physicsc",
+    "offset": 486816,
+    "min_rad": 0.0,
+    "max_rad": 0.5235987901687622,
+    "min_deg": 0.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernsportssaloon.physicsc",
+    "offset": 487120,
+    "min_rad": 0.0,
+    "max_rad": 1.0471975803375244,
+    "min_deg": 0.0,
+    "max_deg": 60.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernsuper.physicsc",
+    "offset": 201312,
+    "min_rad": -3.1241393089294434,
+    "max_rad": 3.1241393089294434,
+    "min_deg": -179.0,
+    "max_deg": 179.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernsuv.physicsc",
+    "offset": 661136,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernsuv.physicsc",
+    "offset": 661440,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernsuv.physicsc",
+    "offset": 661744,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "modernsuv.physicsc",
+    "offset": 662048,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "monstertruck.physicsc",
+    "offset": 607920,
+    "min_rad": -1.5707963705062866,
+    "max_rad": 0.0,
+    "min_deg": -90.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "monstertruck.physicsc",
+    "offset": 608224,
+    "min_rad": -0.2617993950843811,
+    "max_rad": 0.0,
+    "min_deg": -15.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "monstertruck.physicsc",
+    "offset": 608528,
+    "min_rad": -0.2617993950843811,
+    "max_rad": 0.0,
+    "min_deg": -15.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "monstertruck.physicsc",
+    "offset": 608832,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "monstertruck.physicsc",
+    "offset": 609136,
+    "min_rad": -0.1745329201221466,
+    "max_rad": 0.0,
+    "min_deg": -10.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "monstertruck.physicsc",
+    "offset": 609440,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "monstertruck.physicsc",
+    "offset": 609744,
+    "min_rad": -0.1745329201221466,
+    "max_rad": 0.0,
+    "min_deg": -10.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "monstertruck.physicsc",
+    "offset": 610048,
+    "min_rad": 0.0,
+    "max_rad": 0.5235987901687622,
+    "min_deg": 0.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "motoryacht.physicsc",
+    "offset": 374240,
+    "min_rad": -0.5235987901687622,
+    "max_rad": 0.5235987901687622,
+    "min_deg": -30.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "motoryacht.physicsc",
+    "offset": 374544,
+    "min_rad": -0.5235987901687622,
+    "max_rad": 0.5235987901687622,
+    "min_deg": -30.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "oldbus.physicsc",
+    "offset": 699664,
+    "min_rad": -0.4363323152065277,
+    "max_rad": 0.0,
+    "min_deg": -25.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "oldbus.physicsc",
+    "offset": 699968,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "oldbus.physicsc",
+    "offset": 700272,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "oldbus.physicsc",
+    "offset": 700576,
+    "min_rad": -1.5707963705062866,
+    "max_rad": 0.0,
+    "min_deg": -90.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "oldbus.physicsc",
+    "offset": 700880,
+    "min_rad": -1.5707963705062866,
+    "max_rad": 0.0,
+    "min_deg": -90.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "oldbus.physicsc",
+    "offset": 701184,
+    "min_rad": -1.5707963705062866,
+    "max_rad": 0.0,
+    "min_deg": -90.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "oldbus.physicsc",
+    "offset": 701488,
+    "min_rad": -1.5707963705062866,
+    "max_rad": 0.0,
+    "min_deg": -90.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "oldbus.physicsc",
+    "offset": 701792,
+    "min_rad": 0.0,
+    "max_rad": 1.5707963705062866,
+    "min_deg": 0.0,
+    "max_deg": 90.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "oldjeep.physicsc",
+    "offset": 639648,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "oldjeep.physicsc",
+    "offset": 640368,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "oldjeep.physicsc",
+    "offset": 641088,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "oldjeep.physicsc",
+    "offset": 641392,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "oldjeep.physicsc",
+    "offset": 643360,
+    "min_rad": 0.0,
+    "max_rad": 0.5235987901687622,
+    "min_deg": 0.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "oldjeep.physicsc",
+    "offset": 643664,
+    "min_rad": 0.0,
+    "max_rad": 0.6108652353286743,
+    "min_deg": 0.0,
+    "max_deg": 35.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "oldjeep.physicsc",
+    "offset": 643968,
+    "min_rad": 0.0,
+    "max_rad": 0.6108652353286743,
+    "min_deg": 0.0,
+    "max_deg": 35.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "oldjeep.physicsc",
+    "offset": 644688,
+    "min_rad": -1.3198407888412476,
+    "max_rad": 0.0,
+    "min_deg": -75.621,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "oldjeep.physicsc",
+    "offset": 644992,
+    "min_rad": 0.0,
+    "max_rad": 0.03490658476948738,
+    "min_deg": 0.0,
+    "max_deg": 2.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "oldjeep.physicsc",
+    "offset": 645296,
+    "min_rad": 0.0,
+    "max_rad": 1.3089969158172607,
+    "min_deg": 0.0,
+    "max_deg": 75.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "oldmini.physicsc",
+    "offset": 228928,
+    "min_rad": -0.2617993950843811,
+    "max_rad": 0.0,
+    "min_deg": -15.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "oldmini.physicsc",
+    "offset": 229232,
+    "min_rad": -0.6108652353286743,
+    "max_rad": 0.0,
+    "min_deg": -35.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "oldmini.physicsc",
+    "offset": 229536,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "oldmini.physicsc",
+    "offset": 229840,
+    "min_rad": -0.7853981852531433,
+    "max_rad": 0.0,
+    "min_deg": -45.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "oldmini.physicsc",
+    "offset": 230144,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "oldmini.physicsc",
+    "offset": 230448,
+    "min_rad": -0.6108652353286743,
+    "max_rad": 0.0,
+    "min_deg": -35.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "oldmini.physicsc",
+    "offset": 230752,
+    "min_rad": 0.0,
+    "max_rad": 0.5235987901687622,
+    "min_deg": 0.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "oldmini.physicsc",
+    "offset": 231056,
+    "min_rad": 0.0,
+    "max_rad": 1.0471975803375244,
+    "min_deg": 0.0,
+    "max_deg": 60.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "oldmoped.physicsc",
+    "offset": 150192,
+    "min_rad": -3.1415927410125732,
+    "max_rad": 3.1415927410125732,
+    "min_deg": -180.0,
+    "max_deg": 180.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "oldroad.physicsc",
+    "offset": 498320,
+    "min_rad": -3.1415927410125732,
+    "max_rad": 3.1415927410125732,
+    "min_deg": -180.0,
+    "max_deg": 180.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "oldtractor.physicsc",
+    "offset": 598544,
+    "min_rad": -0.4363323152065277,
+    "max_rad": 0.0,
+    "min_deg": -25.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "oldtractor.physicsc",
+    "offset": 598848,
+    "min_rad": -0.4363323152065277,
+    "max_rad": 0.0,
+    "min_deg": -25.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "oldtractor.physicsc",
+    "offset": 599152,
+    "min_rad": -0.6108652353286743,
+    "max_rad": 0.0,
+    "min_deg": -35.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "oldtractor.physicsc",
+    "offset": 599456,
+    "min_rad": -0.6108652353286743,
+    "max_rad": 0.0,
+    "min_deg": -35.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "racingboat.physicsc",
+    "offset": 157168,
+    "min_rad": -0.5235987901687622,
+    "max_rad": 0.5235987901687622,
+    "min_deg": -30.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "racingboat.physicsc",
+    "offset": 157472,
+    "min_rad": -0.5235987901687622,
+    "max_rad": 0.5235987901687622,
+    "min_deg": -30.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "racinghothatch.physicsc",
+    "offset": 680960,
+    "min_rad": -0.2617993950843811,
+    "max_rad": 0.0,
+    "min_deg": -15.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "racinghothatch.physicsc",
+    "offset": 681264,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "racinghothatch.physicsc",
+    "offset": 681568,
+    "min_rad": -1.0471975803375244,
+    "max_rad": 0.0,
+    "min_deg": -60.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "racinghothatch.physicsc",
+    "offset": 681872,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "racinghothatch.physicsc",
+    "offset": 682176,
+    "min_rad": -1.0471975803375244,
+    "max_rad": 0.0,
+    "min_deg": -60.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "racinghothatch.physicsc",
+    "offset": 682480,
+    "min_rad": 0.0,
+    "max_rad": 0.5235987901687622,
+    "min_deg": 0.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "racinghothatch.physicsc",
+    "offset": 682784,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "racingsupercar.physicsc",
+    "offset": 403360,
+    "min_rad": -0.6108652353286743,
+    "max_rad": 0.0,
+    "min_deg": -35.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "racingsupercar.physicsc",
+    "offset": 403664,
+    "min_rad": -0.6108652353286743,
+    "max_rad": 0.0,
+    "min_deg": -35.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "racingsupercar.physicsc",
+    "offset": 403968,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "racingsupercar.physicsc",
+    "offset": 404272,
+    "min_rad": -0.2617993950843811,
+    "max_rad": 0.0,
+    "min_deg": -15.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "racingsupercar.physicsc",
+    "offset": 404576,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "racingsupercar.physicsc",
+    "offset": 404880,
+    "min_rad": -0.2617993950843811,
+    "max_rad": 0.0,
+    "min_deg": -15.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "racingsupercar.physicsc",
+    "offset": 405184,
+    "min_rad": 0.0,
+    "max_rad": 0.5235987901687622,
+    "min_deg": 0.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "racingsupercar.physicsc",
+    "offset": 405488,
+    "min_rad": -0.0872664600610733,
+    "max_rad": 0.1745329201221466,
+    "min_deg": -5.0,
+    "max_deg": 10.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "racingsupercar.physicsc",
+    "offset": 405792,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "smalloldfishing.physicsc",
+    "offset": 214064,
+    "min_rad": -0.5235987901687622,
+    "max_rad": 0.5235987901687622,
+    "min_deg": -30.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "technicaljeep.physicsc",
+    "offset": 450176,
+    "min_rad": -1.5707963705062866,
+    "max_rad": 0.0,
+    "min_deg": -90.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "technicaljeep.physicsc",
+    "offset": 450480,
+    "min_rad": 0.0,
+    "max_rad": 0.7853981852531433,
+    "min_deg": 0.0,
+    "max_deg": 45.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "technicaljeep.physicsc",
+    "offset": 450784,
+    "min_rad": 0.0,
+    "max_rad": 0.7853981852531433,
+    "min_deg": 0.0,
+    "max_deg": 45.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "technicaljeep.physicsc",
+    "offset": 451088,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "technicaljeep.physicsc",
+    "offset": 451392,
+    "min_rad": -0.6108652353286743,
+    "max_rad": 0.0,
+    "min_deg": -35.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "technicaljeep.physicsc",
+    "offset": 451696,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "technicaljeep.physicsc",
+    "offset": 452000,
+    "min_rad": -0.6108652353286743,
+    "max_rad": 0.0,
+    "min_deg": -35.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "technicaljeep.physicsc",
+    "offset": 452304,
+    "min_rad": -0.1745329201221466,
+    "max_rad": 0.0,
+    "min_deg": -10.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "technicaljeep.physicsc",
+    "offset": 452608,
+    "min_rad": -0.1745329201221466,
+    "max_rad": 0.7853981852531433,
+    "min_deg": -10.0,
+    "max_deg": 45.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "technicaljeep.physicsc",
+    "offset": 452912,
+    "min_rad": -0.1745329201221466,
+    "max_rad": 0.7853981852531433,
+    "min_deg": -10.0,
+    "max_deg": 45.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "technicaljeep.physicsc",
+    "offset": 453216,
+    "min_rad": 0.0,
+    "max_rad": 0.5235987901687622,
+    "min_deg": 0.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "technicaljeep.physicsc",
+    "offset": 453520,
+    "min_rad": -3.1241393089294434,
+    "max_rad": 3.1241393089294434,
+    "min_deg": -179.0,
+    "max_deg": 179.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "technicaljeep.physicsc",
+    "offset": 453824,
+    "min_rad": -0.1745329201221466,
+    "max_rad": 0.7853981852531433,
+    "min_deg": -10.0,
+    "max_deg": 45.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "transport.physicsc",
+    "offset": 150768,
+    "min_rad": 0.0,
+    "max_rad": 1.5707963705062866,
+    "min_deg": 0.0,
+    "max_deg": 90.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "transport.physicsc",
+    "offset": 151072,
+    "min_rad": 0.0,
+    "max_rad": 1.5707963705062866,
+    "min_deg": 0.0,
+    "max_deg": 90.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "transport.physicsc",
+    "offset": 154096,
+    "min_rad": -0.5235987901687622,
+    "max_rad": 0.5235987901687622,
+    "min_deg": -30.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "transport.physicsc",
+    "offset": 154400,
+    "min_rad": -0.5235987901687622,
+    "max_rad": 0.5235987901687622,
+    "min_deg": -30.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "trials.physicsc",
+    "offset": 195152,
+    "min_rad": -3.1415927410125732,
+    "max_rad": 3.1415927410125732,
+    "min_deg": -180.0,
+    "max_deg": 180.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "vintagesports.physicsc",
+    "offset": 635520,
+    "min_rad": -0.2617993950843811,
+    "max_rad": 0.0,
+    "min_deg": -15.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "vintagesports.physicsc",
+    "offset": 635824,
+    "min_rad": -0.2617993950843811,
+    "max_rad": 0.0,
+    "min_deg": -15.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "vintagesports.physicsc",
+    "offset": 636128,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "vintagesports.physicsc",
+    "offset": 636432,
+    "min_rad": -0.6108652353286743,
+    "max_rad": 0.0,
+    "min_deg": -35.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "vintagesports.physicsc",
+    "offset": 636736,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "vintagesports.physicsc",
+    "offset": 637040,
+    "min_rad": -0.0872664600610733,
+    "max_rad": 0.0,
+    "min_deg": -5.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "vintagesports.physicsc",
+    "offset": 637344,
+    "min_rad": 0.0,
+    "max_rad": 0.5235987901687622,
+    "min_deg": 0.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "vintagesports.physicsc",
+    "offset": 637648,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 318080,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 318384,
+    "min_rad": -0.6108652353286743,
+    "max_rad": 0.0,
+    "min_deg": -35.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 318688,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 318992,
+    "min_rad": -0.6108652353286743,
+    "max_rad": 0.0,
+    "min_deg": -35.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 319712,
+    "min_rad": -0.2617993950843811,
+    "max_rad": 0.0,
+    "min_deg": -15.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 320432,
+    "min_rad": 0.0,
+    "max_rad": 0.5235987901687622,
+    "min_deg": 0.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 320736,
+    "min_rad": 0.0,
+    "max_rad": 1.2217304706573486,
+    "min_deg": 0.0,
+    "max_deg": 70.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 321040,
+    "min_rad": -0.2617993950843811,
+    "max_rad": 0.0,
+    "min_deg": -15.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 321344,
+    "min_rad": 0.0,
+    "max_rad": 1.5707963705062866,
+    "min_deg": 0.0,
+    "max_deg": 90.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "replace_hull.physicsc",
+    "offset": 319152,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "replace_hull.physicsc",
+    "offset": 319456,
+    "min_rad": -0.6108652353286743,
+    "max_rad": 0.0,
+    "min_deg": -35.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "replace_hull.physicsc",
+    "offset": 319760,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "replace_hull.physicsc",
+    "offset": 320064,
+    "min_rad": -0.6108652353286743,
+    "max_rad": 0.0,
+    "min_deg": -35.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "replace_hull.physicsc",
+    "offset": 320784,
+    "min_rad": -0.2617993950843811,
+    "max_rad": 0.0,
+    "min_deg": -15.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "replace_hull.physicsc",
+    "offset": 321504,
+    "min_rad": 0.0,
+    "max_rad": 0.5235987901687622,
+    "min_deg": 0.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "replace_hull.physicsc",
+    "offset": 321808,
+    "min_rad": 0.0,
+    "max_rad": 1.2217304706573486,
+    "min_deg": 0.0,
+    "max_deg": 70.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "replace_hull.physicsc",
+    "offset": 322112,
+    "min_rad": -0.2617993950843811,
+    "max_rad": 0.0,
+    "min_deg": -15.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "replace_hull.physicsc",
+    "offset": 322416,
+    "min_rad": 0.0,
+    "max_rad": 1.5707963705062866,
+    "min_deg": 0.0,
+    "max_deg": 90.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "roundtrip_assembled.physicsc",
+    "offset": 318080,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "roundtrip_assembled.physicsc",
+    "offset": 318384,
+    "min_rad": -0.6108652353286743,
+    "max_rad": 0.0,
+    "min_deg": -35.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "roundtrip_assembled.physicsc",
+    "offset": 318688,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "roundtrip_assembled.physicsc",
+    "offset": 318992,
+    "min_rad": -0.6108652353286743,
+    "max_rad": 0.0,
+    "min_deg": -35.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "roundtrip_assembled.physicsc",
+    "offset": 319712,
+    "min_rad": -0.2617993950843811,
+    "max_rad": 0.0,
+    "min_deg": -15.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "roundtrip_assembled.physicsc",
+    "offset": 320432,
+    "min_rad": 0.0,
+    "max_rad": 0.5235987901687622,
+    "min_deg": 0.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "roundtrip_assembled.physicsc",
+    "offset": 320736,
+    "min_rad": 0.0,
+    "max_rad": 1.2217304706573486,
+    "min_deg": 0.0,
+    "max_deg": 70.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "roundtrip_assembled.physicsc",
+    "offset": 321040,
+    "min_rad": -0.2617993950843811,
+    "max_rad": 0.0,
+    "min_deg": -15.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "roundtrip_assembled.physicsc",
+    "offset": 321344,
+    "min_rad": 0.0,
+    "max_rad": 1.5707963705062866,
+    "min_deg": 0.0,
+    "max_deg": 90.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "roundtrip_donor.physicsc",
+    "offset": 318080,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "roundtrip_donor.physicsc",
+    "offset": 318384,
+    "min_rad": -0.6108652353286743,
+    "max_rad": 0.0,
+    "min_deg": -35.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "roundtrip_donor.physicsc",
+    "offset": 318688,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "roundtrip_donor.physicsc",
+    "offset": 318992,
+    "min_rad": -0.6108652353286743,
+    "max_rad": 0.0,
+    "min_deg": -35.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "roundtrip_donor.physicsc",
+    "offset": 319712,
+    "min_rad": -0.2617993950843811,
+    "max_rad": 0.0,
+    "min_deg": -15.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "roundtrip_donor.physicsc",
+    "offset": 320432,
+    "min_rad": 0.0,
+    "max_rad": 0.5235987901687622,
+    "min_deg": 0.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "roundtrip_donor.physicsc",
+    "offset": 320736,
+    "min_rad": 0.0,
+    "max_rad": 1.2217304706573486,
+    "min_deg": 0.0,
+    "max_deg": 70.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "roundtrip_donor.physicsc",
+    "offset": 321040,
+    "min_rad": -0.2617993950843811,
+    "max_rad": 0.0,
+    "min_deg": -15.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "roundtrip_donor.physicsc",
+    "offset": 321344,
+    "min_rad": 0.0,
+    "max_rad": 1.5707963705062866,
+    "min_deg": 0.0,
+    "max_deg": 90.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "scale_wheel.physicsc",
+    "offset": 318080,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "scale_wheel.physicsc",
+    "offset": 318384,
+    "min_rad": -0.6108652353286743,
+    "max_rad": 0.0,
+    "min_deg": -35.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "scale_wheel.physicsc",
+    "offset": 318688,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "scale_wheel.physicsc",
+    "offset": 318992,
+    "min_rad": -0.6108652353286743,
+    "max_rad": 0.0,
+    "min_deg": -35.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "scale_wheel.physicsc",
+    "offset": 319712,
+    "min_rad": -0.2617993950843811,
+    "max_rad": 0.0,
+    "min_deg": -15.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "scale_wheel.physicsc",
+    "offset": 320432,
+    "min_rad": 0.0,
+    "max_rad": 0.5235987901687622,
+    "min_deg": 0.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "scale_wheel.physicsc",
+    "offset": 320736,
+    "min_rad": 0.0,
+    "max_rad": 1.2217304706573486,
+    "min_deg": 0.0,
+    "max_deg": 70.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "scale_wheel.physicsc",
+    "offset": 321040,
+    "min_rad": -0.2617993950843811,
+    "max_rad": 0.0,
+    "min_deg": -15.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "scale_wheel.physicsc",
+    "offset": 321344,
+    "min_rad": 0.0,
+    "max_rad": 1.5707963705062866,
+    "min_deg": 0.0,
+    "max_deg": 90.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "shift16.physicsc",
+    "offset": 318096,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "shift16.physicsc",
+    "offset": 318400,
+    "min_rad": -0.6108652353286743,
+    "max_rad": 0.0,
+    "min_deg": -35.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "shift16.physicsc",
+    "offset": 318704,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "shift16.physicsc",
+    "offset": 319008,
+    "min_rad": -0.6108652353286743,
+    "max_rad": 0.0,
+    "min_deg": -35.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "shift16.physicsc",
+    "offset": 319728,
+    "min_rad": -0.2617993950843811,
+    "max_rad": 0.0,
+    "min_deg": -15.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "shift16.physicsc",
+    "offset": 320448,
+    "min_rad": 0.0,
+    "max_rad": 0.5235987901687622,
+    "min_deg": 0.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "shift16.physicsc",
+    "offset": 320752,
+    "min_rad": 0.0,
+    "max_rad": 1.2217304706573486,
+    "min_deg": 0.0,
+    "max_deg": 70.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "shift16.physicsc",
+    "offset": 321056,
+    "min_rad": -0.2617993950843811,
+    "max_rad": 0.0,
+    "min_deg": -15.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "shift16.physicsc",
+    "offset": 321360,
+    "min_rad": 0.0,
+    "max_rad": 1.5707963705062866,
+    "min_deg": 0.0,
+    "max_deg": 90.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 318080,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 318384,
+    "min_rad": -0.6108652353286743,
+    "max_rad": 0.0,
+    "min_deg": -35.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 318688,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 318992,
+    "min_rad": -0.6108652353286743,
+    "max_rad": 0.0,
+    "min_deg": -35.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 319712,
+    "min_rad": -0.2617993950843811,
+    "max_rad": 0.0,
+    "min_deg": -15.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 320432,
+    "min_rad": 0.0,
+    "max_rad": 0.5235987901687622,
+    "min_deg": 0.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 320736,
+    "min_rad": 0.0,
+    "max_rad": 1.2217304706573486,
+    "min_deg": 0.0,
+    "max_deg": 70.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 321040,
+    "min_rad": -0.2617993950843811,
+    "max_rad": 0.0,
+    "min_deg": -15.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 321344,
+    "min_rad": 0.0,
+    "max_rad": 1.5707963705062866,
+    "min_deg": 0.0,
+    "max_deg": 90.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 880096,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 880400,
+    "min_rad": -0.6108652353286743,
+    "max_rad": 0.0,
+    "min_deg": -35.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 880704,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 881008,
+    "min_rad": -0.6108652353286743,
+    "max_rad": 0.0,
+    "min_deg": -35.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 881728,
+    "min_rad": -0.2617993950843811,
+    "max_rad": 0.0,
+    "min_deg": -15.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 882448,
+    "min_rad": 0.0,
+    "max_rad": 0.5235987901687622,
+    "min_deg": 0.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 882752,
+    "min_rad": 0.0,
+    "max_rad": 1.2217304706573486,
+    "min_deg": 0.0,
+    "max_deg": 70.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 883056,
+    "min_rad": -0.2617993950843811,
+    "max_rad": 0.0,
+    "min_deg": -15.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 883360,
+    "min_rad": 0.0,
+    "max_rad": 1.5707963705062866,
+    "min_deg": 0.0,
+    "max_deg": 90.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 880096,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 880400,
+    "min_rad": -0.6108652353286743,
+    "max_rad": 0.0,
+    "min_deg": -35.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 880704,
+    "min_rad": 0.0,
+    "max_rad": 1.3962633609771729,
+    "min_deg": 0.0,
+    "max_deg": 80.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 881008,
+    "min_rad": -0.6108652353286743,
+    "max_rad": 0.0,
+    "min_deg": -35.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 881728,
+    "min_rad": -0.2617993950843811,
+    "max_rad": 0.0,
+    "min_deg": -15.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 882448,
+    "min_rad": 0.0,
+    "max_rad": 0.5235987901687622,
+    "min_deg": 0.0,
+    "max_deg": 30.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 882752,
+    "min_rad": 0.0,
+    "max_rad": 1.2217304706573486,
+    "min_deg": 0.0,
+    "max_deg": 70.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 883056,
+    "min_rad": -0.2617993950843811,
+    "max_rad": 0.0,
+    "min_deg": -15.0,
+    "max_deg": 0.0,
+    "factor": 1.0,
+    "min_le_max": true
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "offset": 883360,
+    "min_rad": 0.0,
+    "max_rad": 1.5707963705062866,
+    "min_deg": 0.0,
+    "max_deg": 90.0,
+    "factor": 1.0,
+    "min_le_max": true
+   }
+  ],
+  "n": 419,
+  "min_le_max": 419,
+  "both_on_half_degree_grid": 405,
+  "within_pi": 419,
+  "min_is_zero": 227,
+  "distinct_pairs": 64,
+  "pair_examples": [
+   [
+    -180.0,
+    180.0
+   ],
+   [
+    -179.0,
+    179.0
+   ],
+   [
+    -90.0,
+    0.0
+   ],
+   [
+    -75.621,
+    0.0
+   ],
+   [
+    -75.0,
+    75.0
+   ],
+   [
+    -60.0,
+    0.0
+   ],
+   [
+    -50.0,
+    0.0
+   ],
+   [
+    -50.0,
+    25.0
+   ],
+   [
+    -50.0,
+    50.0
+   ],
+   [
+    -45.0,
+    0.0
+   ],
+   [
+    -45.0,
+    45.0
+   ],
+   [
+    -35.0,
+    0.0
+   ]
+  ],
+  "factor_values": [
+   1.0
+  ]
+ },
+ "ragdoll_limits": [
+  {
+   "spec": {
+    "atom": 304,
+    "type": 15,
+    "min": 312,
+    "max": 316,
+    "factor": 320
+   },
+   "rows": [
+    {
+     "file": "sportsmuscle.physicsc",
+     "offset": 319296,
+     "min_rad": -0.005235987715423107,
+     "max_rad": 0.005235987715423107,
+     "min_deg": -0.3,
+     "max_deg": 0.3,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "sportsmuscle.physicsc",
+     "offset": 320016,
+     "min_rad": -0.03490658476948738,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -2.0,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "armoredjeep.physicsc",
+     "offset": 461616,
+     "min_rad": -0.005235987715423107,
+     "max_rad": 0.005235987715423107,
+     "min_deg": -0.3,
+     "max_deg": 0.3,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "armoredjeep.physicsc",
+     "offset": 462032,
+     "min_rad": -0.005235987715423107,
+     "max_rad": 0.005235987715423107,
+     "min_deg": -0.3,
+     "max_deg": 0.3,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "armoredjeep.physicsc",
+     "offset": 462448,
+     "min_rad": 0.0,
+     "max_rad": 0.8726646304130554,
+     "min_deg": 0.0,
+     "max_deg": 50.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "buggy.physicsc",
+     "offset": 646592,
+     "min_rad": -0.5019112825393677,
+     "max_rad": 0.2416609823703766,
+     "min_deg": -28.757,
+     "max_deg": 13.846,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "buggy.physicsc",
+     "offset": 648224,
+     "min_rad": -0.5390898585319519,
+     "max_rad": 0.0,
+     "min_deg": -30.888,
+     "max_deg": 0.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "buggy.physicsc",
+     "offset": 648640,
+     "min_rad": 0.0,
+     "max_rad": 0.5390898585319519,
+     "min_deg": 0.0,
+     "max_deg": 30.888,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 516768,
+     "min_rad": -0.2617993950843811,
+     "max_rad": 0.2617993950843811,
+     "min_deg": -15.0,
+     "max_deg": 15.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 518096,
+     "min_rad": -0.05235987901687622,
+     "max_rad": 0.05235987901687622,
+     "min_deg": -3.0,
+     "max_deg": 3.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 518816,
+     "min_rad": -0.05235987901687622,
+     "max_rad": 0.05235987901687622,
+     "min_deg": -3.0,
+     "max_deg": 3.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 519232,
+     "min_rad": -0.09294652938842773,
+     "max_rad": 0.09294652938842773,
+     "min_deg": -5.325,
+     "max_deg": 5.325,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 519648,
+     "min_rad": -0.03490658476948738,
+     "max_rad": 0.03490658476948738,
+     "min_deg": -2.0,
+     "max_deg": 2.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 520064,
+     "min_rad": -0.03490658476948738,
+     "max_rad": 0.03490658476948738,
+     "min_deg": -2.0,
+     "max_deg": 2.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 520480,
+     "min_rad": -0.03490658476948738,
+     "max_rad": 0.03490658476948738,
+     "min_deg": -2.0,
+     "max_deg": 2.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 521200,
+     "min_rad": -0.1745329201221466,
+     "max_rad": 0.1745329201221466,
+     "min_deg": -10.0,
+     "max_deg": 10.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 521616,
+     "min_rad": -0.1745329201221466,
+     "max_rad": 0.1745329201221466,
+     "min_deg": -10.0,
+     "max_deg": 10.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 522032,
+     "min_rad": -0.1745329201221466,
+     "max_rad": 0.0,
+     "min_deg": -10.0,
+     "max_deg": 0.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 522448,
+     "min_rad": -0.1745329201221466,
+     "max_rad": 0.1745329201221466,
+     "min_deg": -10.0,
+     "max_deg": 10.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 522864,
+     "min_rad": -0.1745329201221466,
+     "max_rad": 0.1745329201221466,
+     "min_deg": -10.0,
+     "max_deg": 10.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 523280,
+     "min_rad": -0.1745329201221466,
+     "max_rad": 0.1745329201221466,
+     "min_deg": -10.0,
+     "max_deg": 10.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 523696,
+     "min_rad": -0.1745329201221466,
+     "max_rad": 0.1745329201221466,
+     "min_deg": -10.0,
+     "max_deg": 10.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 524112,
+     "min_rad": -0.1745329201221466,
+     "max_rad": 0.1745329201221466,
+     "min_deg": -10.0,
+     "max_deg": 10.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 524528,
+     "min_rad": -0.1745329201221466,
+     "max_rad": 0.1745329201221466,
+     "min_deg": -10.0,
+     "max_deg": 10.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 524944,
+     "min_rad": -0.1745329201221466,
+     "max_rad": 0.1745329201221466,
+     "min_deg": -10.0,
+     "max_deg": 10.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 525360,
+     "min_rad": -0.1745329201221466,
+     "max_rad": 0.1745329201221466,
+     "min_deg": -10.0,
+     "max_deg": 10.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 525776,
+     "min_rad": -0.1745329201221466,
+     "max_rad": 0.1745329201221466,
+     "min_deg": -10.0,
+     "max_deg": 10.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 526192,
+     "min_rad": -0.1745329201221466,
+     "max_rad": 0.1745329201221466,
+     "min_deg": -10.0,
+     "max_deg": 10.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 526608,
+     "min_rad": -0.1745329201221466,
+     "max_rad": 0.1745329201221466,
+     "min_deg": -10.0,
+     "max_deg": 10.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 527024,
+     "min_rad": -0.1745329201221466,
+     "max_rad": 0.1745329201221466,
+     "min_deg": -10.0,
+     "max_deg": 10.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 527440,
+     "min_rad": -0.1745329201221466,
+     "max_rad": 0.1745329201221466,
+     "min_deg": -10.0,
+     "max_deg": 10.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 527856,
+     "min_rad": -0.1745329201221466,
+     "max_rad": 0.1745329201221466,
+     "min_deg": -10.0,
+     "max_deg": 10.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 528272,
+     "min_rad": -0.1745329201221466,
+     "max_rad": 0.1745329201221466,
+     "min_deg": -10.0,
+     "max_deg": 10.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 528688,
+     "min_rad": -0.1745329201221466,
+     "max_rad": 0.1745329201221466,
+     "min_deg": -10.0,
+     "max_deg": 10.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 529104,
+     "min_rad": -0.1745329201221466,
+     "max_rad": 0.1745329201221466,
+     "min_deg": -10.0,
+     "max_deg": 10.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 529520,
+     "min_rad": -0.1745329201221466,
+     "max_rad": 0.1745329201221466,
+     "min_deg": -10.0,
+     "max_deg": 10.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 529936,
+     "min_rad": -0.1745329201221466,
+     "max_rad": 0.1745329201221466,
+     "min_deg": -10.0,
+     "max_deg": 10.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "motoryacht.physicsc",
+     "offset": 374848,
+     "min_rad": -0.01745329238474369,
+     "max_rad": 0.01745329238474369,
+     "min_deg": -1.0,
+     "max_deg": 1.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "motoryacht.physicsc",
+     "offset": 375264,
+     "min_rad": -0.01745329238474369,
+     "max_rad": 0.01745329238474369,
+     "min_deg": -1.0,
+     "max_deg": 1.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "oldjeep.physicsc",
+     "offset": 639952,
+     "min_rad": -0.7853981852531433,
+     "max_rad": 0.7853981852531433,
+     "min_deg": -45.0,
+     "max_deg": 45.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "oldjeep.physicsc",
+     "offset": 640672,
+     "min_rad": -0.7853981852531433,
+     "max_rad": 0.7853981852531433,
+     "min_deg": -45.0,
+     "max_deg": 45.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "oldjeep.physicsc",
+     "offset": 641696,
+     "min_rad": -0.005235987715423107,
+     "max_rad": 0.005235987715423107,
+     "min_deg": -0.3,
+     "max_deg": 0.3,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "oldjeep.physicsc",
+     "offset": 642112,
+     "min_rad": -0.005235987715423107,
+     "max_rad": 0.005235987715423107,
+     "min_deg": -0.3,
+     "max_deg": 0.3,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "oldjeep.physicsc",
+     "offset": 642528,
+     "min_rad": 0.0,
+     "max_rad": 0.8726646304130554,
+     "min_deg": 0.0,
+     "max_deg": 50.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "oldjeep.physicsc",
+     "offset": 642944,
+     "min_rad": -0.005235987715423107,
+     "max_rad": 0.005235987715423107,
+     "min_deg": -0.3,
+     "max_deg": 0.3,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "oldjeep.physicsc",
+     "offset": 644272,
+     "min_rad": -0.01745329238474369,
+     "max_rad": 0.01745329238474369,
+     "min_deg": -1.0,
+     "max_deg": 1.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "transport.physicsc",
+     "offset": 150352,
+     "min_rad": -0.01745329238474369,
+     "max_rad": 0.01745329238474369,
+     "min_deg": -1.0,
+     "max_deg": 1.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "transport.physicsc",
+     "offset": 151376,
+     "min_rad": -0.6981316804885864,
+     "max_rad": 0.6981316804885864,
+     "min_deg": -40.0,
+     "max_deg": 40.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "transport.physicsc",
+     "offset": 151792,
+     "min_rad": -0.6981316804885864,
+     "max_rad": 0.6981316804885864,
+     "min_deg": -40.0,
+     "max_deg": 40.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "transport.physicsc",
+     "offset": 152208,
+     "min_rad": -0.6981316804885864,
+     "max_rad": 0.6981316804885864,
+     "min_deg": -40.0,
+     "max_deg": 40.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "transport.physicsc",
+     "offset": 152624,
+     "min_rad": -0.6981316804885864,
+     "max_rad": 0.6981316804885864,
+     "min_deg": -40.0,
+     "max_deg": 40.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "transport.physicsc",
+     "offset": 153040,
+     "min_rad": -0.6981316804885864,
+     "max_rad": 0.6981316804885864,
+     "min_deg": -40.0,
+     "max_deg": 40.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "transport.physicsc",
+     "offset": 153456,
+     "min_rad": -0.6981316804885864,
+     "max_rad": 0.6981316804885864,
+     "min_deg": -40.0,
+     "max_deg": 40.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "sportsmuscle.physicsc",
+     "offset": 319296,
+     "min_rad": -0.005235987715423107,
+     "max_rad": 0.005235987715423107,
+     "min_deg": -0.3,
+     "max_deg": 0.3,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "sportsmuscle.physicsc",
+     "offset": 320016,
+     "min_rad": -0.03490658476948738,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -2.0,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "replace_hull.physicsc",
+     "offset": 320368,
+     "min_rad": -0.005235987715423107,
+     "max_rad": 0.005235987715423107,
+     "min_deg": -0.3,
+     "max_deg": 0.3,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "replace_hull.physicsc",
+     "offset": 321088,
+     "min_rad": -0.03490658476948738,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -2.0,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "roundtrip_assembled.physicsc",
+     "offset": 319296,
+     "min_rad": -0.005235987715423107,
+     "max_rad": 0.005235987715423107,
+     "min_deg": -0.3,
+     "max_deg": 0.3,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "roundtrip_assembled.physicsc",
+     "offset": 320016,
+     "min_rad": -0.03490658476948738,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -2.0,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "roundtrip_donor.physicsc",
+     "offset": 319296,
+     "min_rad": -0.005235987715423107,
+     "max_rad": 0.005235987715423107,
+     "min_deg": -0.3,
+     "max_deg": 0.3,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "roundtrip_donor.physicsc",
+     "offset": 320016,
+     "min_rad": -0.03490658476948738,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -2.0,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "scale_wheel.physicsc",
+     "offset": 319296,
+     "min_rad": -0.005235987715423107,
+     "max_rad": 0.005235987715423107,
+     "min_deg": -0.3,
+     "max_deg": 0.3,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "scale_wheel.physicsc",
+     "offset": 320016,
+     "min_rad": -0.03490658476948738,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -2.0,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "shift16.physicsc",
+     "offset": 319312,
+     "min_rad": -0.005235987715423107,
+     "max_rad": 0.005235987715423107,
+     "min_deg": -0.3,
+     "max_deg": 0.3,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "shift16.physicsc",
+     "offset": 320032,
+     "min_rad": -0.03490658476948738,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -2.0,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "sportsmuscle.physicsc",
+     "offset": 319296,
+     "min_rad": -0.005235987715423107,
+     "max_rad": 0.005235987715423107,
+     "min_deg": -0.3,
+     "max_deg": 0.3,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "sportsmuscle.physicsc",
+     "offset": 320016,
+     "min_rad": -0.03490658476948738,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -2.0,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "sportsmuscle.physicsc",
+     "offset": 881312,
+     "min_rad": -0.005235987715423107,
+     "max_rad": 0.005235987715423107,
+     "min_deg": -0.3,
+     "max_deg": 0.3,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "sportsmuscle.physicsc",
+     "offset": 882032,
+     "min_rad": -0.03490658476948738,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -2.0,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "sportsmuscle.physicsc",
+     "offset": 881312,
+     "min_rad": -0.005235987715423107,
+     "max_rad": 0.005235987715423107,
+     "min_deg": -0.3,
+     "max_deg": 0.3,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "sportsmuscle.physicsc",
+     "offset": 882032,
+     "min_rad": -0.03490658476948738,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -2.0,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    }
+   ],
+   "n": 71,
+   "min_le_max": 71,
+   "both_on_half_degree_grid": 52,
+   "within_pi": 71,
+   "min_is_zero": 3,
+   "distinct_pairs": 15,
+   "pair_examples": [
+    [
+     -45.0,
+     45.0
+    ],
+    [
+     -40.0,
+     40.0
+    ],
+    [
+     -30.888,
+     0.0
+    ],
+    [
+     -28.757,
+     13.846
+    ],
+    [
+     -15.0,
+     15.0
+    ],
+    [
+     -10.0,
+     0.0
+    ],
+    [
+     -10.0,
+     10.0
+    ],
+    [
+     -5.325,
+     5.325
+    ],
+    [
+     -3.0,
+     3.0
+    ],
+    [
+     -2.0,
+     2.0
+    ],
+    [
+     -2.0,
+     5.0
+    ],
+    [
+     -1.0,
+     1.0
+    ]
+   ],
+   "factor_values": [
+    0.8
+   ]
+  },
+  {
+   "spec": {
+    "atom": 336,
+    "type": 16,
+    "min": 344,
+    "max": 348,
+    "factor": 352
+   },
+   "rows": [
+    {
+     "file": "sportsmuscle.physicsc",
+     "offset": 319296,
+     "min_rad": -100.0,
+     "max_rad": 0.05576791986823082,
+     "min_deg": -5729.578,
+     "max_deg": 3.195,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "sportsmuscle.physicsc",
+     "offset": 320016,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "armoredjeep.physicsc",
+     "offset": 461616,
+     "min_rad": -100.0,
+     "max_rad": 0.01745329238474369,
+     "min_deg": -5729.578,
+     "max_deg": 1.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "armoredjeep.physicsc",
+     "offset": 462032,
+     "min_rad": -100.0,
+     "max_rad": 0.01745329238474369,
+     "min_deg": -5729.578,
+     "max_deg": 1.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "armoredjeep.physicsc",
+     "offset": 462448,
+     "min_rad": -100.0,
+     "max_rad": 0.03490658476948738,
+     "min_deg": -5729.578,
+     "max_deg": 2.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "buggy.physicsc",
+     "offset": 646592,
+     "min_rad": -100.0,
+     "max_rad": 0.06494248658418655,
+     "min_deg": -5729.578,
+     "max_deg": 3.721,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "buggy.physicsc",
+     "offset": 648224,
+     "min_rad": -100.0,
+     "max_rad": 0.04058905318379402,
+     "min_deg": -5729.578,
+     "max_deg": 2.326,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "buggy.physicsc",
+     "offset": 648640,
+     "min_rad": -100.0,
+     "max_rad": 0.03247124329209328,
+     "min_deg": -5729.578,
+     "max_deg": 1.86,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 516768,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 518096,
+     "min_rad": -100.0,
+     "max_rad": 1.022411823272705,
+     "min_deg": -5729.578,
+     "max_deg": 58.58,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 518816,
+     "min_rad": -100.0,
+     "max_rad": 1.0410012006759644,
+     "min_deg": -5729.578,
+     "max_deg": 59.645,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 519232,
+     "min_rad": -100.0,
+     "max_rad": 0.6506257057189941,
+     "min_deg": -5729.578,
+     "max_deg": 37.278,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 519648,
+     "min_rad": -100.0,
+     "max_rad": 0.7853981852531433,
+     "min_deg": -5729.578,
+     "max_deg": 45.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 520064,
+     "min_rad": -100.0,
+     "max_rad": 0.7853981852531433,
+     "min_deg": -5729.578,
+     "max_deg": 45.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 520480,
+     "min_rad": -100.0,
+     "max_rad": 0.7853981852531433,
+     "min_deg": -5729.578,
+     "max_deg": 45.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 521200,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 521616,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 522032,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 522448,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 522864,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 523280,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 523696,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 524112,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 524528,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 524944,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 525360,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 525776,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 526192,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 526608,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 527024,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 527440,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 527856,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 528272,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 528688,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 529104,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 529520,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 529936,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "motoryacht.physicsc",
+     "offset": 374848,
+     "min_rad": -100.0,
+     "max_rad": 0.05178449675440788,
+     "min_deg": -5729.578,
+     "max_deg": 2.967,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "motoryacht.physicsc",
+     "offset": 375264,
+     "min_rad": -100.0,
+     "max_rad": 0.06904599070549011,
+     "min_deg": -5729.578,
+     "max_deg": 3.956,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "oldjeep.physicsc",
+     "offset": 639952,
+     "min_rad": -100.0,
+     "max_rad": 0.7853981852531433,
+     "min_deg": -5729.578,
+     "max_deg": 45.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "oldjeep.physicsc",
+     "offset": 640672,
+     "min_rad": -100.0,
+     "max_rad": 0.7853981852531433,
+     "min_deg": -5729.578,
+     "max_deg": 45.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "oldjeep.physicsc",
+     "offset": 641696,
+     "min_rad": -100.0,
+     "max_rad": 0.01745329238474369,
+     "min_deg": -5729.578,
+     "max_deg": 1.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "oldjeep.physicsc",
+     "offset": 642112,
+     "min_rad": -100.0,
+     "max_rad": 0.01745329238474369,
+     "min_deg": -5729.578,
+     "max_deg": 1.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "oldjeep.physicsc",
+     "offset": 642528,
+     "min_rad": -100.0,
+     "max_rad": 0.03490658476948738,
+     "min_deg": -5729.578,
+     "max_deg": 2.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "oldjeep.physicsc",
+     "offset": 642944,
+     "min_rad": -100.0,
+     "max_rad": 0.03717861324548721,
+     "min_deg": -5729.578,
+     "max_deg": 2.13,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "oldjeep.physicsc",
+     "offset": 644272,
+     "min_rad": -100.0,
+     "max_rad": 0.46472883224487305,
+     "min_deg": -5729.578,
+     "max_deg": 26.627,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "transport.physicsc",
+     "offset": 150352,
+     "min_rad": -100.0,
+     "max_rad": 0.10471975803375244,
+     "min_deg": -5729.578,
+     "max_deg": 6.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "transport.physicsc",
+     "offset": 151376,
+     "min_rad": -100.0,
+     "max_rad": 0.1745329201221466,
+     "min_deg": -5729.578,
+     "max_deg": 10.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "transport.physicsc",
+     "offset": 151792,
+     "min_rad": -100.0,
+     "max_rad": 0.1745329201221466,
+     "min_deg": -5729.578,
+     "max_deg": 10.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "transport.physicsc",
+     "offset": 152208,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "transport.physicsc",
+     "offset": 152624,
+     "min_rad": -100.0,
+     "max_rad": 0.1745329201221466,
+     "min_deg": -5729.578,
+     "max_deg": 10.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "transport.physicsc",
+     "offset": 153040,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "transport.physicsc",
+     "offset": 153456,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "sportsmuscle.physicsc",
+     "offset": 319296,
+     "min_rad": -100.0,
+     "max_rad": 0.05576791986823082,
+     "min_deg": -5729.578,
+     "max_deg": 3.195,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "sportsmuscle.physicsc",
+     "offset": 320016,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "replace_hull.physicsc",
+     "offset": 320368,
+     "min_rad": -100.0,
+     "max_rad": 0.05576791986823082,
+     "min_deg": -5729.578,
+     "max_deg": 3.195,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "replace_hull.physicsc",
+     "offset": 321088,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "roundtrip_assembled.physicsc",
+     "offset": 319296,
+     "min_rad": -100.0,
+     "max_rad": 0.05576791986823082,
+     "min_deg": -5729.578,
+     "max_deg": 3.195,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "roundtrip_assembled.physicsc",
+     "offset": 320016,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "roundtrip_donor.physicsc",
+     "offset": 319296,
+     "min_rad": -100.0,
+     "max_rad": 0.05576791986823082,
+     "min_deg": -5729.578,
+     "max_deg": 3.195,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "roundtrip_donor.physicsc",
+     "offset": 320016,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "scale_wheel.physicsc",
+     "offset": 319296,
+     "min_rad": -100.0,
+     "max_rad": 0.05576791986823082,
+     "min_deg": -5729.578,
+     "max_deg": 3.195,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "scale_wheel.physicsc",
+     "offset": 320016,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "shift16.physicsc",
+     "offset": 319312,
+     "min_rad": -100.0,
+     "max_rad": 0.05576791986823082,
+     "min_deg": -5729.578,
+     "max_deg": 3.195,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "shift16.physicsc",
+     "offset": 320032,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "sportsmuscle.physicsc",
+     "offset": 319296,
+     "min_rad": -100.0,
+     "max_rad": 0.05576791986823082,
+     "min_deg": -5729.578,
+     "max_deg": 3.195,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "sportsmuscle.physicsc",
+     "offset": 320016,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "sportsmuscle.physicsc",
+     "offset": 881312,
+     "min_rad": -100.0,
+     "max_rad": 0.05576791986823082,
+     "min_deg": -5729.578,
+     "max_deg": 3.195,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "sportsmuscle.physicsc",
+     "offset": 882032,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "sportsmuscle.physicsc",
+     "offset": 881312,
+     "min_rad": -100.0,
+     "max_rad": 0.05576791986823082,
+     "min_deg": -5729.578,
+     "max_deg": 3.195,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "sportsmuscle.physicsc",
+     "offset": 882032,
+     "min_rad": -100.0,
+     "max_rad": 0.0872664600610733,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    }
+   ],
+   "n": 71,
+   "min_le_max": 71,
+   "both_on_half_degree_grid": 0,
+   "within_pi": 0,
+   "min_is_zero": 0,
+   "distinct_pairs": 17,
+   "pair_examples": [
+    [
+     -5729.578,
+     1.0
+    ],
+    [
+     -5729.578,
+     1.86
+    ],
+    [
+     -5729.578,
+     2.0
+    ],
+    [
+     -5729.578,
+     2.13
+    ],
+    [
+     -5729.578,
+     2.326
+    ],
+    [
+     -5729.578,
+     2.967
+    ],
+    [
+     -5729.578,
+     3.195
+    ],
+    [
+     -5729.578,
+     3.721
+    ],
+    [
+     -5729.578,
+     3.956
+    ],
+    [
+     -5729.578,
+     5.0
+    ],
+    [
+     -5729.578,
+     6.0
+    ],
+    [
+     -5729.578,
+     10.0
+    ]
+   ],
+   "factor_values": [
+    0.8
+   ]
+  },
+  {
+   "spec": {
+    "atom": 368,
+    "type": 16,
+    "min": 376,
+    "max": 380,
+    "factor": 384
+   },
+   "rows": [
+    {
+     "file": "sportsmuscle.physicsc",
+     "offset": 319296,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "sportsmuscle.physicsc",
+     "offset": 320016,
+     "min_rad": -0.03490658476948738,
+     "max_rad": 0.03490658476948738,
+     "min_deg": -2.0,
+     "max_deg": 2.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "armoredjeep.physicsc",
+     "offset": 461616,
+     "min_rad": 0.0,
+     "max_rad": 0.008726646192371845,
+     "min_deg": 0.0,
+     "max_deg": 0.5,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "armoredjeep.physicsc",
+     "offset": 462032,
+     "min_rad": 0.0,
+     "max_rad": 0.008726646192371845,
+     "min_deg": 0.0,
+     "max_deg": 0.5,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "armoredjeep.physicsc",
+     "offset": 462448,
+     "min_rad": -0.0872664600610733,
+     "max_rad": 0.0,
+     "min_deg": -5.0,
+     "max_deg": 0.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "buggy.physicsc",
+     "offset": 646592,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.04647326469421387,
+     "min_deg": -30.0,
+     "max_deg": 2.663,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "buggy.physicsc",
+     "offset": 648224,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "buggy.physicsc",
+     "offset": 648640,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 516768,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 518096,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 518816,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 519232,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 519648,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 520064,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 520480,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 521200,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 521616,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 522032,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 522448,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 522864,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 523280,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 523696,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 524112,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 524528,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 524944,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 525360,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 525776,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 526192,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 526608,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 527024,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 527440,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 527856,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 528272,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 528688,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 529104,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 529520,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "mediumoldfishing.physicsc",
+     "offset": 529936,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "motoryacht.physicsc",
+     "offset": 374848,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "motoryacht.physicsc",
+     "offset": 375264,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "oldjeep.physicsc",
+     "offset": 639952,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "oldjeep.physicsc",
+     "offset": 640672,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "oldjeep.physicsc",
+     "offset": 641696,
+     "min_rad": 0.0,
+     "max_rad": 0.008726646192371845,
+     "min_deg": 0.0,
+     "max_deg": 0.5,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "oldjeep.physicsc",
+     "offset": 642112,
+     "min_rad": 0.0,
+     "max_rad": 0.008726646192371845,
+     "min_deg": 0.0,
+     "max_deg": 0.5,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "oldjeep.physicsc",
+     "offset": 642528,
+     "min_rad": -0.0872664600610733,
+     "max_rad": 0.0,
+     "min_deg": -5.0,
+     "max_deg": 0.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "oldjeep.physicsc",
+     "offset": 642944,
+     "min_rad": -0.008726646192371845,
+     "max_rad": 0.008726646192371845,
+     "min_deg": -0.5,
+     "max_deg": 0.5,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "oldjeep.physicsc",
+     "offset": 644272,
+     "min_rad": -0.15800465643405914,
+     "max_rad": 0.14871950447559357,
+     "min_deg": -9.053,
+     "max_deg": 8.521,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "transport.physicsc",
+     "offset": 150352,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "transport.physicsc",
+     "offset": 151376,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "transport.physicsc",
+     "offset": 151792,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "transport.physicsc",
+     "offset": 152208,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "transport.physicsc",
+     "offset": 152624,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "transport.physicsc",
+     "offset": 153040,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "transport.physicsc",
+     "offset": 153456,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "sportsmuscle.physicsc",
+     "offset": 319296,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "sportsmuscle.physicsc",
+     "offset": 320016,
+     "min_rad": -0.03490658476948738,
+     "max_rad": 0.03490658476948738,
+     "min_deg": -2.0,
+     "max_deg": 2.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "replace_hull.physicsc",
+     "offset": 320368,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "replace_hull.physicsc",
+     "offset": 321088,
+     "min_rad": -0.03490658476948738,
+     "max_rad": 0.03490658476948738,
+     "min_deg": -2.0,
+     "max_deg": 2.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "roundtrip_assembled.physicsc",
+     "offset": 319296,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "roundtrip_assembled.physicsc",
+     "offset": 320016,
+     "min_rad": -0.03490658476948738,
+     "max_rad": 0.03490658476948738,
+     "min_deg": -2.0,
+     "max_deg": 2.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "roundtrip_donor.physicsc",
+     "offset": 319296,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "roundtrip_donor.physicsc",
+     "offset": 320016,
+     "min_rad": -0.03490658476948738,
+     "max_rad": 0.03490658476948738,
+     "min_deg": -2.0,
+     "max_deg": 2.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "scale_wheel.physicsc",
+     "offset": 319296,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "scale_wheel.physicsc",
+     "offset": 320016,
+     "min_rad": -0.03490658476948738,
+     "max_rad": 0.03490658476948738,
+     "min_deg": -2.0,
+     "max_deg": 2.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "shift16.physicsc",
+     "offset": 319312,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "shift16.physicsc",
+     "offset": 320032,
+     "min_rad": -0.03490658476948738,
+     "max_rad": 0.03490658476948738,
+     "min_deg": -2.0,
+     "max_deg": 2.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "sportsmuscle.physicsc",
+     "offset": 319296,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "sportsmuscle.physicsc",
+     "offset": 320016,
+     "min_rad": -0.03490658476948738,
+     "max_rad": 0.03490658476948738,
+     "min_deg": -2.0,
+     "max_deg": 2.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "sportsmuscle.physicsc",
+     "offset": 881312,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "sportsmuscle.physicsc",
+     "offset": 882032,
+     "min_rad": -0.03490658476948738,
+     "max_rad": 0.03490658476948738,
+     "min_deg": -2.0,
+     "max_deg": 2.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "sportsmuscle.physicsc",
+     "offset": 881312,
+     "min_rad": -0.5235987901687622,
+     "max_rad": 0.5235987901687622,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    },
+    {
+     "file": "sportsmuscle.physicsc",
+     "offset": 882032,
+     "min_rad": -0.03490658476948738,
+     "max_rad": 0.03490658476948738,
+     "min_deg": -2.0,
+     "max_deg": 2.0,
+     "factor": 0.800000011920929,
+     "min_le_max": true
+    }
+   ],
+   "n": 71,
+   "min_le_max": 71,
+   "both_on_half_degree_grid": 69,
+   "within_pi": 71,
+   "min_is_zero": 4,
+   "distinct_pairs": 7,
+   "pair_examples": [
+    [
+     -30.0,
+     2.663
+    ],
+    [
+     -30.0,
+     30.0
+    ],
+    [
+     -9.053,
+     8.521
+    ],
+    [
+     -5.0,
+     0.0
+    ],
+    [
+     -2.0,
+     2.0
+    ],
+    [
+     -0.5,
+     0.5
+    ],
+    [
+     0.0,
+     0.5
+    ]
+   ],
+   "factor_values": [
+    0.8
+   ]
+  }
+ ],
+ "transforms": {
+  "layout": "3 rows of 4 floats at +0/+0x10/+0x20, translation at +0x30 (64 B per frame)",
+  "hinge": {
+   "A": 48,
+   "B": 112,
+   "n": 419,
+   "A_ok": 419,
+   "B_ok": 419,
+   "A_w0": 410,
+   "B_w0": 419,
+   "nonzero_w": [
+    {
+     "file": "atv.physicsc",
+     "offset": 609056,
+     "w": [
+      0.0,
+      -0.918929,
+      0.0
+     ]
+    },
+    {
+     "file": "combatdirt.physicsc",
+     "offset": 276160,
+     "w": [
+      0.0,
+      0.937178,
+      0.0
+     ]
+    },
+    {
+     "file": "modernmoped.physicsc",
+     "offset": 206096,
+     "w": [
+      0.0,
+      0.866025,
+      0.0
+     ]
+    },
+    {
+     "file": "modernroad.physicsc",
+     "offset": 249760,
+     "w": [
+      0.0,
+      0.906307,
+      0.0
+     ]
+    },
+    {
+     "file": "modernsport.physicsc",
+     "offset": 206528,
+     "w": [
+      0.0,
+      0.896911,
+      0.0
+     ]
+    },
+    {
+     "file": "modernsuper.physicsc",
+     "offset": 201312,
+     "w": [
+      0.0,
+      0.882947,
+      0.0
+     ]
+    },
+    {
+     "file": "oldmoped.physicsc",
+     "offset": 150192,
+     "w": [
+      0.0,
+      0.910135,
+      0.0
+     ]
+    },
+    {
+     "file": "oldroad.physicsc",
+     "offset": 498320,
+     "w": [
+      0.0,
+      0.891006,
+      0.0
+     ]
+    },
+    {
+     "file": "trials.physicsc",
+     "offset": 195152,
+     "w": [
+      0.0,
+      0.866025,
+      0.0
+     ]
+    }
+   ],
+   "AB_span": [
+    48,
+    175
+   ]
+  },
+  "ragdoll": {
+   "A": 48,
+   "B": 112,
+   "C": 208,
+   "n": 71,
+   "A_ok": 71,
+   "B_ok": 71,
+   "C_ok": 71,
+   "A_w0": 71,
+   "B_w0": 71,
+   "C_w0": 71,
+   "C_frame": {
+    "rows": [
+     [
+      1.788139627478813e-07,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      0.9999999403953552,
+      0.0
+     ],
+     [
+      0.9999999403953552,
+      -0.0,
+      1.788139485370266e-07
+     ]
+    ],
+    "det": 1.0,
+    "w": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "w_zero": true,
+    "translation": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  }
+ },
+ "donor": [
+  {
+   "class": "hkpLimitedHingeConstraintData",
+   "offset": 318080,
+   "file": "sportsmuscle.physicsc",
+   "atom": 248,
+   "type_code": 14,
+   "min_deg": 0.0,
+   "max_deg": 80.0,
+   "min_offset": 252,
+   "max_offset": 256,
+   "factor": 1.0
+  },
+  {
+   "class": "hkpLimitedHingeConstraintData",
+   "offset": 318384,
+   "file": "sportsmuscle.physicsc",
+   "atom": 248,
+   "type_code": 14,
+   "min_deg": -35.0,
+   "max_deg": 0.0,
+   "min_offset": 252,
+   "max_offset": 256,
+   "factor": 1.0
+  },
+  {
+   "class": "hkpLimitedHingeConstraintData",
+   "offset": 318688,
+   "file": "sportsmuscle.physicsc",
+   "atom": 248,
+   "type_code": 14,
+   "min_deg": 0.0,
+   "max_deg": 80.0,
+   "min_offset": 252,
+   "max_offset": 256,
+   "factor": 1.0
+  },
+  {
+   "class": "hkpLimitedHingeConstraintData",
+   "offset": 318992,
+   "file": "sportsmuscle.physicsc",
+   "atom": 248,
+   "type_code": 14,
+   "min_deg": -35.0,
+   "max_deg": 0.0,
+   "min_offset": 252,
+   "max_offset": 256,
+   "factor": 1.0
+  },
+  {
+   "class": "hkpRagdollConstraintData",
+   "offset": 319296,
+   "file": "sportsmuscle.physicsc",
+   "limits": [
+    {
+     "atom": 304,
+     "type_code": 15,
+     "min_offset": 312,
+     "max_offset": 316,
+     "min_deg": -0.3,
+     "max_deg": 0.3,
+     "factor": 0.800000011920929
+    },
+    {
+     "atom": 336,
+     "type_code": 16,
+     "min_offset": 344,
+     "max_offset": 348,
+     "min_deg": -5729.578,
+     "max_deg": 3.195,
+     "factor": 0.800000011920929
+    },
+    {
+     "atom": 368,
+     "type_code": 16,
+     "min_offset": 376,
+     "max_offset": 380,
+     "min_deg": -30.0,
+     "max_deg": 30.0,
+     "factor": 0.800000011920929
+    }
+   ]
+  },
+  {
+   "class": "hkpLimitedHingeConstraintData",
+   "offset": 319712,
+   "file": "sportsmuscle.physicsc",
+   "atom": 248,
+   "type_code": 14,
+   "min_deg": -15.0,
+   "max_deg": 0.0,
+   "min_offset": 252,
+   "max_offset": 256,
+   "factor": 1.0
+  },
+  {
+   "class": "hkpRagdollConstraintData",
+   "offset": 320016,
+   "file": "sportsmuscle.physicsc",
+   "limits": [
+    {
+     "atom": 304,
+     "type_code": 15,
+     "min_offset": 312,
+     "max_offset": 316,
+     "min_deg": -2.0,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929
+    },
+    {
+     "atom": 336,
+     "type_code": 16,
+     "min_offset": 344,
+     "max_offset": 348,
+     "min_deg": -5729.578,
+     "max_deg": 5.0,
+     "factor": 0.800000011920929
+    },
+    {
+     "atom": 368,
+     "type_code": 16,
+     "min_offset": 376,
+     "max_offset": 380,
+     "min_deg": -2.0,
+     "max_deg": 2.0,
+     "factor": 0.800000011920929
+    }
+   ]
+  },
+  {
+   "class": "hkpLimitedHingeConstraintData",
+   "offset": 320432,
+   "file": "sportsmuscle.physicsc",
+   "atom": 248,
+   "type_code": 14,
+   "min_deg": 0.0,
+   "max_deg": 30.0,
+   "min_offset": 252,
+   "max_offset": 256,
+   "factor": 1.0
+  },
+  {
+   "class": "hkpLimitedHingeConstraintData",
+   "offset": 320736,
+   "file": "sportsmuscle.physicsc",
+   "atom": 248,
+   "type_code": 14,
+   "min_deg": 0.0,
+   "max_deg": 70.0,
+   "min_offset": 252,
+   "max_offset": 256,
+   "factor": 1.0
+  },
+  {
+   "class": "hkpLimitedHingeConstraintData",
+   "offset": 321040,
+   "file": "sportsmuscle.physicsc",
+   "atom": 248,
+   "type_code": 14,
+   "min_deg": -15.0,
+   "max_deg": 0.0,
+   "min_offset": 252,
+   "max_offset": 256,
+   "factor": 1.0
+  },
+  {
+   "class": "hkpLimitedHingeConstraintData",
+   "offset": 321344,
+   "file": "sportsmuscle.physicsc",
+   "atom": 248,
+   "type_code": 14,
+   "min_deg": 0.0,
+   "max_deg": 90.0,
+   "min_offset": 252,
+   "max_offset": 256,
+   "factor": 1.0
+  }
+ ],
+ "first_pass": {
+  "available": true,
+  "reported_values": 66,
+  "inside_transform": 10,
+  "pivot_duplicate": 24,
+  "per_constraint": [
+   {
+    "offset": 318080,
+    "class": "hkpLimitedHingeConstraintData",
+    "reported": 6,
+    "inside_transform": 1,
+    "pivot_duplicate": 3
+   },
+   {
+    "offset": 318384,
+    "class": "hkpLimitedHingeConstraintData",
+    "reported": 6,
+    "inside_transform": 1,
+    "pivot_duplicate": 3
+   },
+   {
+    "offset": 318688,
+    "class": "hkpLimitedHingeConstraintData",
+    "reported": 6,
+    "inside_transform": 1,
+    "pivot_duplicate": 3
+   },
+   {
+    "offset": 318992,
+    "class": "hkpLimitedHingeConstraintData",
+    "reported": 6,
+    "inside_transform": 1,
+    "pivot_duplicate": 3
+   },
+   {
+    "offset": 319296,
+    "class": "hkpRagdollConstraintData",
+    "reported": 6,
+    "inside_transform": 0,
+    "pivot_duplicate": 0
+   },
+   {
+    "offset": 319712,
+    "class": "hkpLimitedHingeConstraintData",
+    "reported": 6,
+    "inside_transform": 1,
+    "pivot_duplicate": 3
+   },
+   {
+    "offset": 320016,
+    "class": "hkpRagdollConstraintData",
+    "reported": 8,
+    "inside_transform": 0,
+    "pivot_duplicate": 0
+   },
+   {
+    "offset": 320432,
+    "class": "hkpLimitedHingeConstraintData",
+    "reported": 5,
+    "inside_transform": 1,
+    "pivot_duplicate": 2
+   },
+   {
+    "offset": 320736,
+    "class": "hkpLimitedHingeConstraintData",
+    "reported": 5,
+    "inside_transform": 1,
+    "pivot_duplicate": 2
+   },
+   {
+    "offset": 321040,
+    "class": "hkpLimitedHingeConstraintData",
+    "reported": 6,
+    "inside_transform": 1,
+    "pivot_duplicate": 3
+   },
+   {
+    "offset": 321344,
+    "class": "hkpLimitedHingeConstraintData",
+    "reported": 6,
+    "inside_transform": 2,
+    "pivot_duplicate": 2
+   }
+  ],
+  "note": "counts re-derived from PHYSICS_ROLES2.json's own angle_like_tail offsets and the donor's decoded frame translations (+0x60, +0xA0)"
+ },
+ "unknowns": [
+  "the atom type names (limits / motor / ball-socket / friction): the 2014.1 hkpConstraintAtom enum is not in this project, so only the numeric code is decoded",
+  "which ragdoll axis each of the three limit atoms is (cone / plane / twist): the three atoms carry the same shape (min, max, 0.8) and nothing in the bytes orders them",
+  "the non-limit atoms' fields: their bytes are constant per class but no oracle pins a name",
+  "for hinges the joint's free axis is not named by these bytes; only that the class has one angular limit pair"
+ ],
+ "oracles": {
+  "all_ok": true,
+  "checks": {
+   "hinge_atom_codes_constant": true,
+   "ragdoll_atom_codes_constant": true,
+   "hinge_extent_uniform": true,
+   "ragdoll_extent_uniform": true,
+   "hinge_min_le_max_all": true,
+   "hinge_limits_on_grid": true,
+   "hinge_limits_within_pi": true,
+   "hinge_limits_vary_per_car": true,
+   "hinge_factor_is_one": true,
+   "ragdoll_pairs_ordered": true,
+   "ragdoll_factor_constant": true,
+   "transforms_decode": true,
+   "transform_w_slots_zero": true,
+   "non_limit_not_claimed": true
+  },
+  "detail": {
+   "hinge_n": 419,
+   "hinge_grid": 405,
+   "hinge_within_pi": 419,
+   "hinge_distinct_pairs": 64,
+   "ragdoll_n": [
+    71,
+    71,
+    71
+   ]
+  }
+ }
+}

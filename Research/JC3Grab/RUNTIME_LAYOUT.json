@@ -1,0 +1,371 @@
+{
+ "call_sites": {
+  "node_update": {
+   "count": 3,
+   "sites": [
+    "0x1402409bf",
+    "0x14024b6d0",
+    "0x140f577da"
+   ]
+  },
+  "part_list": {
+   "count": 0,
+   "sites": []
+  },
+  "slot_query": {
+   "count": 4,
+   "sites": [
+    "0x14020208a",
+    "0x140202130",
+    "0x140222fdc",
+    "0x14022311c"
+   ]
+  },
+  "slot_use": {
+   "count": 4,
+   "sites": [
+    "0x141409152",
+    "0x1414387e5",
+    "0x141438a22",
+    "0x141439558"
+   ]
+  }
+ },
+ "counts": {
+  "pdata_bytes": 2264064,
+  "pdata_functions": 188670,
+  "sections": 7,
+  "text_bytes": 36310271
+ },
+ "exe": "D:/Games/Just Cause 3/JustCause3.exe",
+ "fields": {
+  "body_slot": [
+   {
+    "offset": "0x00",
+    "src": "0x141514123",
+    "what": "row 0 of a 3x4 (0x30) / 3x4+ (0x40) float4 pair - see UNKNOWN 2"
+   },
+   {
+    "offset": "0x0c",
+    "src": "0x141514128",
+    "what": "flags dword; bit 3 and bit 0 tested"
+   },
+   {
+    "offset": "0x30",
+    "src": "0x14151411f",
+    "what": "float4 copied out (transform row?)"
+   },
+   {
+    "offset": "0x40",
+    "src": "0x141514105",
+    "what": "float4 copied out (transform row?)"
+   },
+   {
+    "offset": "0x50",
+    "src": "0x1415140fe",
+    "what": "shape pointer"
+   },
+   {
+    "offset": "0x60",
+    "src": "0x140222f8c",
+    "what": "byte tested per slot in the enumeration (free/occupied)"
+   }
+  ],
+  "part_node": [
+   {
+    "offset": "0x00",
+    "src": "0x140201d4e",
+    "what": "next pointer of the part list"
+   },
+   {
+    "offset": "0x2d",
+    "src": "0x140201d60",
+    "what": "byte gate tested before the walk recurses"
+   },
+   {
+    "offset": "0x46",
+    "src": "0x140201d80",
+    "what": "byte gate that stops the walk"
+   },
+   {
+    "offset": "0x100",
+    "src": "0x140201e05",
+    "what": "byte flag (0 -> skip the node update)"
+   },
+   {
+    "offset": "0x101",
+    "src": "0x140201e18",
+    "what": "second byte flag"
+   },
+   {
+    "offset": "0x102",
+    "src": "0x140222fe1",
+    "what": "byte written to 0 when the raycast body is dropped"
+   },
+   {
+    "offset": "0x104",
+    "src": "0x140201d9d",
+    "what": "dword tested in the list walk"
+   },
+   {
+    "offset": "0x140",
+    "src": "0x140201e25",
+    "what": "runtime part record pointer"
+   },
+   {
+    "offset": "0x150",
+    "src": "0x140201f83",
+    "what": "world object pointer"
+   },
+   {
+    "offset": "0x158",
+    "src": "0x1402020d1",
+    "what": "raycast world object pointer"
+   },
+   {
+    "offset": "0x170",
+    "src": "0x140201fa5",
+    "what": "float multiplied into the 0x120/0x124/0x128 reads"
+   },
+   {
+    "offset": "0x178",
+    "src": "0x140202017",
+    "what": "float written back"
+   },
+   {
+    "offset": "0x17c",
+    "src": "0x14020202a",
+    "what": "float written back"
+   }
+  ],
+  "physics_world": [
+   {
+    "offset": "0x60",
+    "src": "0x14020210b / 0x140222f88",
+    "what": "body-slot array base"
+   },
+   {
+    "offset": "0x68",
+    "src": "0x140222f39",
+    "what": "body-slot count (int32, loop bound)"
+   }
+  ],
+  "runtime_part_record": [
+   {
+    "offset": "0x120",
+    "src": "0x140201ff8",
+    "what": "float read with [record+0x170]"
+   },
+   {
+    "offset": "0x124",
+    "src": "0x140201fe8",
+    "what": "float read with [record+0x170]"
+   },
+   {
+    "offset": "0x128",
+    "src": "0x140201ff0",
+    "what": "float read with [record+0x170]"
+   }
+  ],
+  "shape": [
+   {
+    "offset": "0x10",
+    "src": "0x14151413c",
+    "what": "byte flag (bit 0 tested)"
+   },
+   {
+    "offset": "0x13",
+    "src": "0x141514132",
+    "what": "byte compared to 1"
+   },
+   {
+    "offset": "0x14",
+    "src": "0x14151410f",
+    "what": "float read at the crash address (0.001-tolerance test follows)"
+   }
+  ]
+ },
+ "functions": [
+  {
+   "fn": [
+    "0x140201d4e",
+    "0x140201dc8"
+   ],
+   "name": "part_list_walk",
+   "role": "walks a part list: [obj] next pointer at +0x00, byte gates at +0x2d/+0x46, dword at +0x104",
+   "va": "0x140201d4e"
+  },
+  {
+   "fn": [
+    "0x140201de0",
+    "0x140201e2c"
+   ],
+   "name": "part_node_update",
+   "role": "one part node: flags at +0x100/+0x101, runtime record at +0x140",
+   "va": "0x140201de0"
+  },
+  {
+   "fn": [
+    "0x1402020d1",
+    "0x14020216e"
+   ],
+   "name": "raycast_body_read",
+   "role": "raycast world at node+0x158 -> slot = world+0x60 + handle*128",
+   "va": "0x1402020d1"
+  },
+  {
+   "fn": [
+    "0x141505490",
+    "0x1415054b6"
+   ],
+   "name": "body_slot_query",
+   "role": "takes the world pointer (rcx) and a handle list; the raycast path calls it",
+   "va": "0x141505490"
+  },
+  {
+   "fn": [
+    "0x1415140f0",
+    "0x141514140"
+   ],
+   "name": "body_slot_use",
+   "role": "reads a slot: shape +0x50, flags +0x0c, float4s +0x40/+0x30; 0x151410f is here",
+   "va": "0x1415140f0"
+  },
+  {
+   "fn": [
+    "0x140222ef0",
+    "0x14022302b"
+   ],
+   "name": "body_slot_enum",
+   "role": "enumerates a world's slots: count +0x68, base +0x60, free byte +0x60 per slot",
+   "va": "0x140222ef0"
+  }
+ ],
+ "generated_by": "Tools/scripts/jc3_runtime_layout.py --write",
+ "image_base": "0x140000000",
+ "oracles": [
+  {
+   "evidence": "base 0x140000000, 7 sections, 188670 .pdata functions, .text 0x140001000/0x22a0cff B, .pdata 0x142fa9000",
+   "key": "O1-image",
+   "ok": true
+  },
+  {
+   "evidence": "at 0x14151410f: movss xmm0, dword ptr [rax + 0x14]",
+   "key": "O2-crash-instruction",
+   "ok": true
+  },
+  {
+   "evidence": "0x1415140f0 (80 B): rcx+0x50 shape=True, rcx+0x0c flags=True, rcx+0x40=True, rcx+0x30=True, rax+0x14=True",
+   "key": "O3-slot-use",
+   "ok": true
+  },
+  {
+   "evidence": "0x140201de0 (76 B): rcx+0x100=True, rcx+0x101=True, rcx+0x140=True; stack cookie at 0x142e15310 = 0x2b992ddfa232 (.data)",
+   "key": "O4-node-update",
+   "ok": true
+  },
+  {
+   "evidence": "0x1402020d1 (157 B): [rbx+0x158]=True, shl ...,7=True, add [rdi+0x60]=True; 0x142343bb0 = 0.00100000005, 0.00100000005, 0.00100000005, 0.00100000005 (bit-exact 4x float32(0.001))",
+   "key": "O5-raycast-read",
+   "ok": true
+  },
+  {
+   "evidence": "0x140222ef0 (315 B): rcx+0x150=True, rdi+0x68 count=True, rdi+0x60 base=True, [rcx+rax+0x60] flag=True, lea 0x142dad020=True (holds (52.079925537109375, 1))",
+   "key": "O6-slot-enum",
+   "ok": true
+  },
+  {
+   "evidence": "0x142343bb0 == 4x float32(0.001) bit for bit (bytes 6f 12 83 3a 6f 12 83 3a 6f 12 83 3a 6f 12 83 3a)",
+   "key": "O7-tolerance-vector",
+   "ok": true
+  },
+  {
+   "evidence": "verified call sites: slot_use 4, slot_query 4, node_update 3, part_list 0 (byte scan accepted only at an instruction boundary)",
+   "key": "O8-call-verification",
+   "ok": true
+  }
+ ],
+ "recipe": [
+  "Find the module base (EnumProcessModules), then read the part node's world pointer at +0x150 (and the raycast world at +0x158).",
+  "Read the slot count at world+0x68 and the slot array base at world+0x60.",
+  "For a handle h (int16, < 0 means none): slot = world[+0x60] + h*128.",
+  "Per slot: flags at +0x0c, float4s at +0x30/+0x40, shape pointer at +0x50, free byte at +0x60.",
+  "Per shape: byte +0x10, byte +0x13, float +0x14.",
+  "Every read above is a fixed offset from a pointer already dereferenced by the game's own code path (0x1402020d1 -> 0x141505490 -> 0x1415140f0); a sampler does not need to interpret any of them to copy them."
+ ],
+ "sections": [
+  {
+   "name": ".text",
+   "raw": "0x400",
+   "raw_size": "0x22a0e00",
+   "va": "0x140001000",
+   "vsize": "0x22a0cff"
+  },
+  {
+   "name": ".rdata",
+   "raw": "0x22a1200",
+   "raw_size": "0xa96a00",
+   "va": "0x1422a2000",
+   "vsize": "0xa9693a"
+  },
+  {
+   "name": ".data",
+   "raw": "0x2d37c00",
+   "raw_size": "0xe9a00",
+   "va": "0x142d39000",
+   "vsize": "0x26f518"
+  },
+  {
+   "name": ".pdata",
+   "raw": "0x2e21600",
+   "raw_size": "0x228c00",
+   "va": "0x142fa9000",
+   "vsize": "0x228be8"
+  },
+  {
+   "name": ".tls",
+   "raw": "0x304a200",
+   "raw_size": "0x1a00",
+   "va": "0x1431d2000",
+   "vsize": "0x1851"
+  },
+  {
+   "name": ".rsrc",
+   "raw": "0x304bc00",
+   "raw_size": "0x4600",
+   "va": "0x1431d4000",
+   "vsize": "0x4480"
+  },
+  {
+   "name": ".reloc",
+   "raw": "0x3050200",
+   "raw_size": "0x67600",
+   "va": "0x1431d9000",
+   "vsize": "0x675de"
+  }
+ ],
+ "sha256": "a53c2d6b2837f45d97244fc096e68f27ba9036e0582a0d9aada2e2f222dac293",
+ "size": 51083264,
+ "unknowns": [
+  {
+   "what": "the entity/vehicle list root (a global that leads to a spawned vehicle)",
+   "why": "no anchor in MODLOG reaches it and no self-validating structure exists in the file image: the part node is reached from its parent, never from a global that the static image proves. Tried: verified callers of the four anchors (0x201de0 3, 0x1505490 4, 0x15140f0 4, 0x201d4e 0) and every `.data` operand they touch; the only `.data` object on the chain is 0x142dad020, passed by `lea` as an argument and holding (52.079925537109375, 1) - a value block, not a root pointer. Where it would be: a read-only probe that scans `.data` for a pointer whose target holds the part list's node layout (+0x150/+0x158 non-null)."
+  },
+  {
+   "what": "which slot field is the world transform and which is the AABB",
+   "why": "0x1415140f0 copies +0x40 and +0x30 as float4s and 0x140201ebd builds a 3x4 from node +0xc8..+0xf8, but no instruction in the anchors writes them back into an AABB or compares min/max, so 'transform' vs 'bounds' is a reading, not a decode."
+  },
+  {
+   "what": "the render-instance transform",
+   "why": "the anchors are physics-side only; no anchor dereferences a render instance. Tried: the call graph of the four anchors (all bodies' `.data` operands listed). Where it would be: the draw/instance path, which no MODLOG dump names."
+  },
+  {
+   "what": "the loaded-resource table (path hashes)",
+   "why": "not on any anchor's path; the only hash-keyed structure the project has decoded is the `.epe` palette reference (0x6187A56B at 0x266), which is asset-side. A static search for it would need a name list and an xref method this card does not have a self-validating oracle for."
+  },
+  {
+   "what": "whether a slot handle is global or per-world",
+   "why": "0x140222ef0 enumerates handles 0..count-1 of ONE world and writes them into a caller buffer; the transfer to the parts' +0x100/+0x102 fields is not in that function."
+  }
+ ]
+}

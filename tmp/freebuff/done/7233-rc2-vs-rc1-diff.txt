@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc2-vs-rc1-diff.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-05
+Diff the two release candidate trees Builds/bm-RC1 and Builds/bm-RC2 file by file (names, sizes, sha256) and, for the files that differ, say at module level what changed using Tools/scripts/jc3adf.py dump and aafdiff-style tools in Tools/scripts. Map each change to the MODLOG entry or build card (B-xx) that caused it; list changes that no MODLOG entry explains. Output Builds/bm-RC2/verify/rc_diff.md + Tools/scripts/rc_diff.py --check. Read-only on both trees. Rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md section 3 (test ban stays; never guess; label decoded/derived/UNKNOWN). Report at the DONE path: STATUS first, files, verbatim commands, UNKNOWNs.

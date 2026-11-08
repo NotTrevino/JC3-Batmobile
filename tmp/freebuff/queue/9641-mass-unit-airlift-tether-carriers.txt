@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/mass-unit-airlift-tether-carriers.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rebase-world-rows-on-debug-leaf.md
+Close the heavy-car rows. (a) Mass: the Batmobile mass 6000 has an unknown unit; compare it with the mass fields of every land vehicle in Research/JC3Grab, find the unit by cross-checking against the vehicles whose real weight is stated in game text, and say how it changes shove and crush. (b) Tether: the closest system is CVehicleCargoBay with a grapple (Research/JC3Grab/TETHER.md, tmp/freebuff/reports/winch-and-tether.md, apply-winch-tether-rows.md); list what a 6 t car does to it. (c) Airlift: none of 23 helicopters has a bay; name the nearest carrier (cargo plane or boat bay, winch hook module, hook attach of the entity) and the gap, as a design for the build. (d) Batwing or helicopter carry of the car is only to be recorded if BmAK shows it in a read file. Output Tools/scripts/heavy_car_rows.py (--write, --check), Working/World/heavy_car_rows.md/.json (path, old, new, evidence) and one in-game observation per carrier. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

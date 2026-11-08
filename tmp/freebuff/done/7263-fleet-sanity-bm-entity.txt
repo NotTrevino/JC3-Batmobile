@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/fleet-sanity-entity.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-06
+Builds/bm-RC2 ships an edited entity (.epe) under aaf/editor/entities/jc_vehicles/. Compare its structure with the unmodified original: object count, property list per object, any property present in one and not the other (Tools/scripts/jc3adf.py or the ConvertProperty round trip used by bm_entity.py). List every difference with object id and property name, and tag each difference with the entry in Working/Entity/bm_epe_edits.json that explains it, or UNEXPLAINED. Output Builds/bm-RC2/verify/entity_diff.md + Tools/scripts/v_entity_diff.py --check. Report at the DONE path.

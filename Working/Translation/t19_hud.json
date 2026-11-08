@@ -1,0 +1,237 @@
+{
+ "card": "T-19",
+ "schema": 1,
+ "sources": {
+  "bmak_hud": "Research/BatmobileGrab/HUD_INTERFACES.json",
+  "jc3_hud": "Research/JC3Grab/JC3_HUD_WEAPONS.json",
+  "weapons": "Working/Translation/t7_weapons_edits.json",
+  "doc": "Working/Translation/T6_HUD_CAMERA.md"
+ },
+ "counts": {
+  "rows": 10,
+  "elements": 5,
+  "mapped": 6,
+  "partial": 2,
+  "out": 2,
+  "proofs": 12,
+  "kept": 3
+ },
+ "slot_bindings": [
+  "root `main_weapon` -> the cannon clone",
+  "root `id:00568A74` -> the Vulcan clone + `SWeaponPoint` at `ChainGunMuzzle`"
+ ],
+ "rows": [
+  {
+   "id": "T-HUD11",
+   "element": "weapon slots",
+   "bmak": "`HudModuleBatmobile`: `UC_SetPrimaryWeapon(param1:String)`, `UC_SetSecondaryWeapon(param1:String, param2:Boolean, param3:Boolean)`, `UC_SetSpecialWeapons(param1:int, param2:int, param3:int)`",
+   "jc3": "`InitVehicleWeapons(slot_index 0..1)` -> `MCI_vehicle_weapons0` / `MCI_vehicle_weapons1` (`EVEHICLE_WEAPON_SLOT_MAIN` 0, `..._ALTERNATIVE` 1) in `VehicleConstructor`",
+   "value": "slot 0 = the cannon clone of `w602_mediumtank_canon` (`main_weapon`, T-11); slot 1 = the Vulcan clone of `w603_mediumtank_mgun` (root `id:00568A74`, T-11)",
+   "class": "decoded",
+   "disposition": "map",
+   "limit": "2 slots: the 3 special-weapon states (`UC_SetSpecialWeapons(int, int, int)`) have no member; the missile launcher is bound to no slot (T-WP13's blocked row)",
+   "verify": "Q-3 #3: two clips show the two bound weapon ids",
+   "proofs": [
+    {
+     "path": "slots.count",
+     "expected": 2,
+     "ok": true,
+     "note": "slots.count = 2 (want 2)"
+    }
+   ]
+  },
+  {
+   "id": "T-HUD12",
+   "element": "weapon slots",
+   "bmak": "`HudModuleBatmobile`: `UC_SetPrimaryWeapon(param1:String)`, `UC_SetSecondaryWeapon(param1:String, param2:Boolean, param3:Boolean)`",
+   "jc3": "`InitVehicleWeapons(weapon_name)` -> `TXT_name` (the label under the slot)",
+   "value": "BmAK's weapon name string passes through unchanged",
+   "class": "decoded",
+   "disposition": "map",
+   "limit": "`UpdateVehicleWeapons` cannot change the label: a slot that changes weapon needs `InitVehicleWeapons` again (G2-25 §2)",
+   "verify": "Q-3 #3: the label reads the bound weapon, not the donor's",
+   "proofs": [
+    {
+     "path": "init.params",
+     "expected": "weapon_name",
+     "ok": true,
+     "note": "init.params has weapon_name: True"
+    }
+   ]
+  },
+  {
+   "id": "T-HUD13",
+   "element": "weapon slots",
+   "bmak": "`HudModuleBatmobile`: no setter (the element is not an interface)",
+   "jc3": "`weapon_icons/<weapon_id>.ddsc` - `GetWeaponIconName(weapon_id)`, `_sm.ddsc` for low res, ids -1 and 0 rejected",
+   "value": "ids 602, 603, 618, 619: all four are in the shipped icon set, so both slots draw",
+   "class": "decoded",
+   "disposition": "map",
+   "limit": "the icon is a JC3 file named by the weapon id; BmAK has no icon id (0 of `HudModuleBatmobile`'s 37 setters name an icon). Id 614 must not be reused - its icon was never shipped (G2-25 §6)",
+   "verify": "Q-3 #3: each slot shows its own weapon icon",
+   "proofs": [
+    {
+     "path": "icons.ids",
+     "expected": [
+      602,
+      603,
+      618,
+      619
+     ],
+     "ok": true,
+     "note": "icons.ids holds [602, 603, 618, 619]"
+    }
+   ]
+  },
+  {
+   "id": "T-HUD14",
+   "element": "reticle",
+   "bmak": "`HudModuleBatmobile`: `UC_SetCannonCoolDown(param1:int)`",
+   "jc3": "`UpdateWeaponReticle(show, weapons_look, reticle_size, reticle_shape)`; shape `E_RETICLE_CANNON = 8`, 5 look states, marker y -111 for shapes 8/11/12",
+   "value": "the heavy vehicle reticle is shape 8 (`E_RETICLE_CANNON`)",
+   "class": "decoded",
+   "disposition": "map (shape id UNKNOWN)",
+   "limit": "no file maps `E_RETICLE_CANNON` to a vehicle cannon - the shape id is the closest named member, not a proven binding (G2-25 §4)",
+   "verify": "Q-3 #3: the reticle appears with the cannon and hides with it",
+   "proofs": [
+    {
+     "path": "reticle.shapes",
+     "expected": "E_RETICLE_CANNON",
+     "ok": true,
+     "note": "reticle.shapes[E_RETICLE_CANNON] = 8"
+    }
+   ]
+  },
+  {
+   "id": "T-HUD15",
+   "element": "reticle",
+   "bmak": "`HudModuleBatmobile`: `UC_SetMachineGunAccuracyFrame(param1:int)`",
+   "jc3": "`UpdateWeaponReticle(reticle_size)` 5..30 px + `weapons_look` 5 states",
+   "value": "accuracy frame -> `reticle_size`",
+   "class": "UNKNOWN",
+   "disposition": "partial",
+   "limit": "the BmAK frame is an index with no stated domain or pixel mapping, and `weapons_look` is a target relation, not an accuracy state: the member exists, the scale does not. Nothing is hand-substituted (G2-25 §4)",
+   "verify": "Q-3 #3: the reticle tightens when the Vulcan settles",
+   "proofs": [
+    {
+     "path": "reticle.params",
+     "expected": "reticle_size",
+     "ok": true,
+     "note": "reticle.params has reticle_size: True"
+    }
+   ]
+  },
+  {
+   "id": "T-HUD16",
+   "element": "cannon cooldown",
+   "bmak": "`HudModuleBatmobile`: `UC_SetCannonCoolDown(param1:int)`",
+   "jc3": "`weapon_cooldown` 0..1 in `InitVehicleWeapons` / `UpdateVehicleWeapons`; `SetCooldownRotation`: rot = cooldown x 360 over `MCI_mask_0_50` / `MCI_mask_50_100`; -1 hides `MCI_radial_loader_cooldown`",
+   "value": "cooldown = BmAK state / 4 (state 0…4 -> 0.00, 0.25, 0.50, 0.75, 1.00)",
+   "class": "derived",
+   "disposition": "map",
+   "limit": "BmAK sends 5 categorical states (Ready / Blank / PreReady*), JC3 takes a fraction: the division by 4 is the only monotone map between the two domains, and its direction is a Q check, not a file fact",
+   "verify": "Q-3 #3: the loader ring fills 0 -> full between shots and is hidden at rest (`weapon_cooldown = -1`)",
+   "proofs": [
+    {
+     "path": "cooldown.rot_degrees",
+     "expected": 360,
+     "ok": true,
+     "note": "cooldown.rot_degrees = 360 (want 360)"
+    }
+   ]
+  },
+  {
+   "id": "T-HUD17",
+   "element": "Vulcan heat",
+   "bmak": "`HudModuleBatmobile`: no setter (the element is not an interface)",
+   "jc3": "none: `params_with_heat` empty and `body_mentions` 0 - no vehicle-weapon argument or body mentions heat (the movie's own heat code is the 11-state police wanted level)",
+   "value": "named omission",
+   "class": "decoded",
+   "disposition": "out (stated absence both sides)",
+   "limit": "BmAK's heat is `HeatBarStart`/`HeatBarSize` on `Batmobile_Cannon_V2`, a weapon-entity script field with no `UC_*` setter (0 of 252 setters name heat); JC3 shows ammo, a cooldown loader and an overcharge tint, never a heat bar",
+   "verify": "n/a - nothing to observe",
+   "proofs": [
+    {
+     "path": "heat.params_with_heat",
+     "expected": [],
+     "ok": true,
+     "note": "heat.params_with_heat = []"
+    },
+    {
+     "path": "heat.body_mentions",
+     "expected": 0,
+     "ok": true,
+     "note": "heat.body_mentions = 0 (want 0)"
+    }
+   ]
+  },
+  {
+   "id": "T-HUD18",
+   "element": "missile lock",
+   "bmak": "`HudModuleTargets`: `UC_SetBatmobileWeapon(param1:String, param2:Boolean)`",
+   "jc3": "`POI_TYPE_LOCK_ON_TARGET = 21` -> `MCI_lock_on.MCI_reticle`, rotated 360 deg every 1.5 s (`LOCK_ON_TARGET_ROTATION_TIME`), no progress bar",
+   "value": "one rotating marker on the locked target",
+   "class": "decoded",
+   "disposition": "partial",
+   "limit": "the marker has no file link from an `AutoAim` tune to the POI (0 `CreatePoi` calls of type 21 in the movie), so who paints it stays UNKNOWN (G2-25 §5)",
+   "verify": "Q-3 #3: the marker appears on the locked vehicle and rotates",
+   "proofs": [
+    {
+     "path": "lockon.lock_on_type",
+     "expected": 21,
+     "ok": true,
+     "note": "lockon.lock_on_type = 21 (want 21)"
+    },
+    {
+     "path": "lockon.lock_on_rotation_time",
+     "expected": 1.5,
+     "ok": true,
+     "note": "lockon.lock_on_rotation_time = 1.5 (want 1.5)"
+    }
+   ]
+  },
+  {
+   "id": "T-HUD19",
+   "element": "missile lock",
+   "bmak": "`HudModuleTargets`: `UC_SetBatmobileWeaponHit(param1:Boolean)`, `UC_SetBatmobileWeaponFailure(param1:Boolean, param2:Boolean)`",
+   "jc3": "none for the target-kind family; `MCI_safe_area_bottom_middle.MCI_missile_locked` flashes every 0.5 s - that is the *incoming* warning, a different instrument",
+   "value": "named omission (6 kinds: Invalid, bomb, emp, friend, multi, plain)",
+   "class": "decoded",
+   "disposition": "out",
+   "limit": "JC3 ships one lock-on icon and one incoming warning; the missile-box family, the aim box, per-target health and the hit/failure events have no JC3 element (G2-25 §7)",
+   "verify": "n/a",
+   "proofs": [
+    {
+     "path": "bmak.missile_target_kinds",
+     "expected": 6,
+     "ok": true,
+     "note": "6 kinds"
+    }
+   ]
+  },
+  {
+   "id": "T-HUD20",
+   "element": "weapon slots",
+   "bmak": "`HudModuleBatmobile`: `UC_SetWeaponFeedback(param1:Boolean, param2:Boolean)`",
+   "jc3": "`InitVehicleWeapons(infiniteAmmo = true)` hides the ammo counters and shows `MCI_inventory_infinity`",
+   "value": "infiniteAmmo = true",
+   "class": "derived",
+   "disposition": "map",
+   "limit": "BmAK's Batmobile weapon HUD has no ammo setter (0 of the 37 setter names carry ammo/magazine), so there is no count to carry across",
+   "verify": "Q-3 #3: no ammo counter appears in either slot",
+   "proofs": [
+    {
+     "path": "init.params",
+     "expected": "infiniteAmmo",
+     "ok": true,
+     "note": "init.params has infiniteAmmo: True"
+    }
+   ]
+  }
+ ],
+ "kept": [
+  "T-HUD1",
+  "T-HUD2",
+  "T-HUD3"
+ ]
+}

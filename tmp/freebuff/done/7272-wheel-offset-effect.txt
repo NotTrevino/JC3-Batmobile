@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/wheel-offset-effect.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-06
+v_wheels.py warns that the four wheel parts in bm-RC2 still carry the shipped Serpente parent_space_offset translations, up to 1.013 m away from the true hubs. Work out whether that is a real defect: how does JC3 place a wheel part (offset against hardpoint, Research/JC3Grab/SEAT.md / jc3parts.py) and which one wins at run time for the wheel mesh, the wheel collision and the suspension raycast? Use the part table decoded by Tools/scripts/jc3parts.py on the built module. Conclude: harmless / visible / physics-affecting, with the byte evidence, and say which manifest field would need to change. Output Builds/bm-RC2/verify/wheel_offset_effect.md + Tools/scripts/v_wheel_offset.py --check; no edits.

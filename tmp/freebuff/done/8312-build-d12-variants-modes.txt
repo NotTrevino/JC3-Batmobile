@@ -1,0 +1,8 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-d12-variants-modes.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-06
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-d05-entity-graph.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-d10-handling-values.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/apply-mode-switch-rows.md
+Build step B-12 reopened: if apply-mode-switch-rows found a carrier for BmAK's two modes (pursuit and battle), build the variant pair or the mode-switch mechanism in Builds/bm-RC4-modes, with aafdiff showing exactly the planned files; run the pursuit/battle row comparison (13 of 15 T-15 rows record differing values). If no exact carrier was found, build on the closest system named in apply-mode-switch-rows and author the rest in the build; report which rows are carried exactly and which by closest-system plus build composition.
+
+Updated by review 8299: B-12's split is 4 rows flipping to the battle variant (T-MD5, T-MD6, T-MD7, T-MD13), 2 named omissions (T-MD8 pivot, T-MD14 battle audio) and 2 turning on the same switch (T-MD10, T-MD11) — not '13 of 15'. D-2 is REOPENED; preconditions 3 (runtime swap UNKNOWN) and 4 (bm_build.py has no --variant, 0 variant trees) are unmet, so aafdiff cannot run until both exist. t11_modes.py records 15 rows: carried 8, inside band 1, omitted 6.

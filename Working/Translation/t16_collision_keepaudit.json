@@ -1,0 +1,19 @@
+{
+ "schema": 1,
+ "card": "B-10",
+ "generated_by": "hand-written from tmp/freebuff/reports/keep-audit-damage-collision.md (2026-11-06)",
+ "sources": [
+  "tmp/freebuff/reports/keep-audit-damage-collision.md sections 1.2-1.3, 3, 4.2",
+  "Research/BatmobileGrab/COLLISION_GEOM.md (3 boxes, export 158266)",
+  "Research/BatmobileGrab/COLLISION_CONVEX.md (43 + 13 convex elements)",
+  "Research/BatmobileGrab/PHYSICS.md (32 wreck bodies, no chassis body)",
+  "Working/Translation/COLLISION_ROWS_CORRECTED.md (9/9 checks)"
+ ],
+ "note": "Collision items from the keep-audit: the row text quoted the destroyed wreck as the drivable car. The drivable asset is 3 boxes + 56 convex elements; the 32 bodies are wreck geometry.",
+ "edits": [
+  {"row": "T-CO1", "member": ".physicsc hull set", "from": "32 boxes (wreck)", "to": "3 drivable boxes + 56 convex elements", "class": "decoded", "derivation": "COLLISION_GEOM.md: chassis 690.305 x 374.536 x 207.5 at (9.0, 0, 106.75), chassis 679.585 x 345.688 x 103.5 at (0, 0, 79.0), weapons-trans 166.177 x 189.365 x 39.8 at (-30.5, 0, 93.25); COLLISION_CONVEX.md: battle 43 + pursuit 13"},
+  {"row": "T-CO1", "member": "active collision mesh per mode", "from": "assumed one", "to": "UNKNOWN", "class": "UNKNOWN", "derivation": "BatmanVsBatmobileCollisionMode is not serialised (COLLISION_GEOM.md verdicts); box rotations also not decoded"},
+  {"row": "T-CO1", "member": "built hull set", "from": "donor 54 hulls (bm-009)", "to": "donor topology re-cut to the body mesh (bm-RC2: 54 hulls, bounds 3.499 x 2.283 x 7.037 m)", "class": "decoded", "derivation": "bm-RC2 receipt eda17906...; 95 vertices, 186 faces, max_cut_m 0.0"},
+  {"row": "T-CO3", "member": "parts[].has_world_collision_shape", "from": "38/42 = 1, 4 wheels 0", "to": "same flags, 61-part population", "class": "decoded (donor carry)", "derivation": "BmAK exposes no per-part flag: the drivable car has two whole-car meshes + 3 boxes and the wreck has 8 wheel bodies; the chassis hull covers the wheels, so the donor flags are the closest carrier"}
+ ]
+}

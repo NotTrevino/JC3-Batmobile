@@ -1,0 +1,58 @@
+{
+ "_comment": "Batch B3: the staged values re-sourced from the grab itself. bmak_chain.py joins the BmSDK layout names onto every cooked value (Research/BatmobileGrab/CHAIN.json, cross-checked 336/0 against OFFSETS.json), which showed three of Batch B2's four 'no member in BmAK' claims were false. Supersedes t5c_edits.json for these members; T-ST5's two withdrawn fleet-median values are replaced by BmAK's own 1.0/1.0.",
+ "source": "T_PLAN.md section 4 Batch B3 + Working/Translation/T1_TRANSLATION.md sections 6/8/10",
+ "base_build": "Builds/test-088 (the build Batch B2 wrote)",
+ "status": "staged: values computed from CHAIN.json; rows stay `next` until their take passes (R4)",
+ "edits": [
+  {
+   "row": "T-ST5",
+   "kind": "number",
+   "module": "LandSteering",
+   "member": "countersteer_speed_factor",
+   "old": 2,
+   "new": 1.0,
+   "conf": "decoded",
+   "behaviour": "DriftCorrectionSteerSpeed 1.0 (RVehicleBatmobileBase) and DriftSteeringAssist/DriftSteeringBias absent -> false/0: BmAK's drift correction runs at the base steering rate with no assist gain (CHAIN.json)",
+   "take": "A7 handbrake drift 40/60 km/h then release: drift angle holds, no snap-back, countersteer catches",
+   "why": "identity from the chain; declared out-of-domain (R3): shipped countersteer 1.5..20 (n=252), land 2..5, donor 2. Bridge is name-semantic (drift-correction steer speed)"
+  },
+  {
+   "row": "T-ST5",
+   "kind": "number",
+   "module": "LandSteering",
+   "member": "steer_in_speed_factor",
+   "old": 1.5,
+   "new": 1.0,
+   "conf": "decoded",
+   "behaviour": "SteeringSpeedReCentreMod 1.0 (RVehicleSimCar) - the chain's only other steering-rate modifier; kind-match, documented not proven (CHAIN.json)",
+   "take": "A7 same drift release",
+   "why": "identity from the chain; declared out-of-domain (R3): shipped steer_in 1.2..10 (n=252), land 1.5..2, donor 1.5"
+  },
+  {
+   "row": "T-B2",
+   "kind": "number",
+   "module": "CustomLandGlobal",
+   "member": "arcade.nitro_boost.extra_top_speed",
+   "old": 40,
+   "new": 43.2,
+   "conf": "derived",
+   "behaviour": "min(FakeExtraSpeedMax 3500, FakeExtaSpeedAccel 600 x BoostDuration 2.0) = 1200 cu = 43.2 km/h on the project's cm/s convention (CAMERA.md: 3000 cu = 108 km/h); InfiniteBoost false (bit 29 clear in Default__RVehicleBatmobileBase); the 3500 ceiling is reachable only in BoostDurationDonut 6 s",
+   "take": "A2 airfield top-speed run, boost off then on: terminal speed rises while boosting, delta recorded",
+   "why": "computed from four BmAK members; in-domain 30..60 (n=145, med 40); above the +32.4 km/h torque-band bound; replaces Batch B2's donor 40"
+  },
+  {
+   "row": "T-B3",
+   "kind": "number",
+   "module": "CustomLandGlobal",
+   "member": "arcade.nitro_boost.grip_multiplier",
+   "old": 2,
+   "new": 1.0,
+   "conf": "derived",
+   "behaviour": "no grip or traction member anywhere: G1-1 named all 423 fields (OFFSETS.json) and bmak_chain.py --grep 'Grip|Traction' over the vehicle/sim chain returns none - BmAK boost is grip-neutral",
+   "take": "A9 0-100 with and without boost: boost improves 0-100 and there is no grip snap on engage",
+   "why": "identity from proven absence; declared out-of-domain (R3): shipped 1.2..2 (n=145), donor 2. Replaces Batch B2's donor 2.0"
+  }
+ ],
+ "withdrawn": [],
+ "not_numeric": []
+}

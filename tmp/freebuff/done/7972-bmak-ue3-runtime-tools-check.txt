@@ -1,0 +1,8 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/bmak-ue3-runtime-tools-check.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+BmSDK on the GOG copy of Arkham Knight starts its .NET runtime, but 22 of 25 native addresses (GObjObjects, FName, StaticFindObject, ProcessEvent and the rest) are UNKNOWN (reports/bmsdk-gog-copy-port.md, reports/bmsdk-gog-address-hunt.md). The DODI repack is a dead end (reports/bmsdk-port-to-repack-exe.md). The operator wants live Batmobile values: LT hold time, the eject charge window, the steering curve, HealthRecoverRate, summon numbers, and the physics asset the running game uses.
+
+Search the web for tools that already find UE3 globals or dump live objects, so the project stops hand-hunting addresses: Cheat Engine UE3 "Fetch UE3 Pointers" scripts (framedsc's Batman: Arkham Asylum guide uses one on ShippingPC-BmGame.exe), Unreal Finder Tool (CorrM / kovidomi, which finds GNames and GObjects and generates an SDK), UE3 SDK generators (TheFeckless, "UE3SDKGenerator"), Arkham Knight Cheat Engine tables on FearLess Revolution or Cheat Happens, the BmSDK-AK issues and Discord, the cberdejo Epic fork, PCGamingWiki. For each tool: URL, whether it is known to work on Arkham Knight (any build), whether it needs Steam, how it finds GObjects/GNames (AOB signature, etc.), and whether that signature could locate the 22 UNKNOWN addresses in the GOG exe at E:/Games/BmAK-GOG-sdk (do not run anything; compare patterns on paper only).
+Sections: Tools table, Arkham Knight-specific evidence, Signatures we could reuse, Recommended route to the 22 addresses, UNKNOWNs. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

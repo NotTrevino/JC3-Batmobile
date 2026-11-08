@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rebel-drop-strings.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-06
+The car name must show in game: Research/JC3Grab/NAMES.md says the name is a pair in profile/online.stringlookup keyed by the Jenkins hash of the leaf. Check the built bm-013 / bm-RC2 drop (profile/online.stringlookup, item.onlinec) contains the new name and blurb pairs for all 11 languages, that the hashes equal hash_jenkins of the leaf names, and that no vanilla pair was removed (compare with the vanilla file count). Output Builds/bm-RC2/verify/strings.md + Tools/scripts/v_strings.py --check. Read-only; report at the DONE path.

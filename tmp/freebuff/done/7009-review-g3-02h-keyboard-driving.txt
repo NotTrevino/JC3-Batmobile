@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/review-G3-02h.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-04
+Review G3-02h (E:/Modding/JC3-Batmobile/Research/BatmobileGrab/BINDINGS_KEYBOARD.md). It claims the only vehicle-specific keyboard binding is C -> ToggleDrivingCamera, and that driving keys reach the car only through generic axes. Search the same ini chain for every Batmobile-relevant action name from CONTROLS.md that carries a keyboard key, and check that no second vehicle-only binding was missed (for instance bindings under a differently named section or a bindings array on a Bm* class). Report any miss with file and line. Rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md section 3. Write the report at the DONE path with a VERDICT line (holds / minor issues / needs rework) first, then each claim you re-read, the bytes or command output you saw, and what you could not check.

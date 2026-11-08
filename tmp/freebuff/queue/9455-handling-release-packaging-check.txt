@@ -1,0 +1,7 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/handling-release-packaging-check.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/freeze-handling-compromises.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-merge-release-candidate.md
+Release check for the handling and collision part of the final package. Take the final Builds/bm-RC5 and its receipt: verify complete is true only if not_done is empty by derivation (Tools/scripts/bm_rc5.py --check), that every handling and collision branch record is present, the install package hashes equal the receipt, and install.ps1 plus the rollback route work on a scratch copy of a JC3 folder tree (never the real game folder): run both against the copy and show file lists before, after and after rollback with identical hashes for the first and last. Add a save-backup note to the package readme (the um backup command used in earlier sessions). Confirm that the live tune hook, if shipped, is either disabled by default or listed in the readme with its guard. Write tmp/freebuff/reports/hdl-release-check.md. Done check: the three file-list hashes are shown, the rollback hash equals the starting hash, and the receipt flag is quoted with the derivation output.
+Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

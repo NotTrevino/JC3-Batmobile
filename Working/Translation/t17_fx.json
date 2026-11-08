@@ -1,0 +1,1437 @@
+{
+ "card": "T-17 (GRAB_BACKLOG.md \u00a77)",
+ "donor_entity": "editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_signature_preorder.ee",
+ "generated_by": "t17_fx.py",
+ "inputs": {
+  "fx_table": "Research/JC3Grab/FX_TABLE.jsonl",
+  "particles": "Research/BatmobileGrab/PARTICLES_FEATURES.json",
+  "sockets": "Research/BatmobileGrab/SOCKETS_JC3.json",
+  "usages": "Research/JC3Grab/USAGES.json",
+  "weapons": "Research/JC3Grab/WEAPONS.jsonl"
+ },
+ "method": {
+  "absence": "a named omission fails if its needles match (all paths, or the vehicle-carried subset for `no_vehicle_paths`)",
+  "kind": "needle match on the .effc path",
+  "rank": [
+   "donor-carried",
+   "vehicles carrying it",
+   "containers",
+   "path"
+  ],
+  "size": "reported both sides (BmAK systems/emitters/lifetime vs effect rows/arrays/bytes); no unit bridge, so size does not rank"
+ },
+ "rows": [
+  {
+   "absence": null,
+   "attachment": {
+    "kind": "socket",
+    "name": "Afterburner",
+    "part_hint": "jet",
+    "role": "afterburner"
+   },
+   "authoring": null,
+   "bmak": [
+    {
+     "distinct": 5,
+     "emitters": 114,
+     "group": "afterburner-exhaust",
+     "lifetime": [
+      0.05,
+      5.0
+     ],
+     "names": [
+      "Batwing_Booster_CINE",
+      "Batwing_Exhaust_P",
+      "SideExhaust_Boost",
+      "SideExhaust_Burst",
+      "batmobileExhaust_burst"
+     ],
+     "names_filtered": false,
+     "spawn_rate": [
+      0.0,
+      150.0
+     ],
+     "systems": 12
+    }
+   ],
+   "cells": [
+    "T-FX7",
+    "G1-16 afterburner-exhaust: 12 systems / 5 names (Batwing_Booster_CINE, Batwing_Exhaust_P, SideExhaust_Boost...), 114 emitters, life 0.05..5.0 s",
+    "`effects/jc_vehicles/exhaust/car_cycle_base_dual_nitrous.effc` - 17 vehicles, 20,671 B, 337 arrays, 3161 rows",
+    "socket `Afterburner` (role afterburner, G1-13)",
+    "carried: the donor .ee lists the effect (FX_TABLE container set)",
+    "keep: the donor graph already drives the nitrous exhaust under `EngineNitro`",
+    "decoded",
+    "Q-1 #5 / Q-2 A9: flame at the tail on boost"
+   ],
+   "chosen": {
+    "arrays": 337,
+    "containers": 17,
+    "donor": true,
+    "family": [
+     {
+      "path": "effects/jc_vehicles/exhaust/car_cycle_base_dual_nitrous.effc",
+      "vehicles": 17
+     }
+    ],
+    "family_total": 1,
+    "path": "effects/jc_vehicles/exhaust/car_cycle_base_dual_nitrous.effc",
+    "rows": 3161,
+    "size": 20671,
+    "vehicles": 17
+   },
+   "code": "FX-1",
+   "confidence": "decoded",
+   "dispo": "epe",
+   "donor": true,
+   "feature": "afterburner flame",
+   "groups": [
+    "afterburner-exhaust"
+   ],
+   "id": "T-FX7",
+   "now": "carried: the donor .ee lists the effect (FX_TABLE container set)",
+   "propose": "keep: the donor graph already drives the nitrous exhaust under `EngineNitro`",
+   "trigger": "EngineNitro",
+   "trigger_evidence": {
+    "hash": 4197885156,
+    "usage": "EngineNitro",
+    "vehicles": 18
+   },
+   "verify": "Q-1 #5 / Q-2 A9: flame at the tail on boost",
+   "why": "afterburner flame = the exhaust nitrous effect the donor already carries under EngineNitro (G2-22/G2-23); attachment is the Afterburner socket",
+   "why_ledger": "afterburner flame = the exhaust nitrous effect the donor already carries under EngineNitro (G2-22/G2-23); attachment is "
+  },
+  {
+   "absence": null,
+   "attachment": {
+    "kind": "socket",
+    "name": "SideExhaustL",
+    "part_hint": "body",
+    "role": "exhaust"
+   },
+   "authoring": null,
+   "bmak": [
+    {
+     "distinct": 5,
+     "emitters": 114,
+     "group": "afterburner-exhaust",
+     "lifetime": [
+      0.05,
+      5.0
+     ],
+     "names": [
+      "Batwing_Booster_CINE",
+      "Batwing_Exhaust_P",
+      "SideExhaust_Boost",
+      "SideExhaust_Burst",
+      "batmobileExhaust_burst"
+     ],
+     "names_filtered": false,
+     "spawn_rate": [
+      0.0,
+      150.0
+     ],
+     "systems": 12
+    }
+   ],
+   "cells": [
+    "T-FX8",
+    "G1-16 afterburner-exhaust: 12 systems / 5 names (Batwing_Booster_CINE, Batwing_Exhaust_P, SideExhaust_Boost...), 114 emitters, life 0.05..5.0 s",
+    "`effects/jc_vehicles/exhaust/car_cycle_base_dual.effc` - 17 vehicles, 12,127 B, 150 arrays, 1350 rows",
+    "socket `SideExhaustL` (role exhaust, G1-13)",
+    "carried: the donor .ee lists the effect (FX_TABLE container set)",
+    "keep: `EngineRunning` already drives the dual exhaust on the donor",
+    "decoded",
+    "Q-1 #8: idle exhaust visible"
+   ],
+   "chosen": {
+    "arrays": 150,
+    "containers": 17,
+    "donor": true,
+    "family": [
+     {
+      "path": "effects/jc_vehicles/exhaust/car_cycle_base_dual.effc",
+      "vehicles": 17
+     }
+    ],
+    "family_total": 1,
+    "path": "effects/jc_vehicles/exhaust/car_cycle_base_dual.effc",
+    "rows": 1350,
+    "size": 12127,
+    "vehicles": 17
+   },
+   "code": "FX-1",
+   "confidence": "decoded",
+   "dispo": "epe",
+   "donor": true,
+   "feature": "base exhaust",
+   "groups": [
+    "afterburner-exhaust"
+   ],
+   "id": "T-FX8",
+   "now": "carried: the donor .ee lists the effect (FX_TABLE container set)",
+   "propose": "keep: `EngineRunning` already drives the dual exhaust on the donor",
+   "trigger": "EngineRunning",
+   "trigger_evidence": {
+    "hash": 2819629913,
+    "usage": "EngineRunning",
+    "vehicles": 69
+   },
+   "verify": "Q-1 #8: idle exhaust visible",
+   "why": "the always-on exhaust is the donor's `car_cycle_base_dual` effect under the `EngineRunning` usage (G2-22); the twin side-exhaust sockets carry it",
+   "why_ledger": "the always-on exhaust is the donor's `car_cycle_base_dual` effect under the `EngineRunning` usage (G2-22); the twin side"
+  },
+  {
+   "absence": null,
+   "attachment": {
+    "kind": "socket",
+    "name": "Afterburner",
+    "part_hint": "jet",
+    "role": "afterburner"
+   },
+   "authoring": {
+    "copy": "`effects/jc_vehicles/exhaust/car_speedrom_heater.effc` - 14,703 B, 5 emitters / 5 templates (4 sprite + 1 mesh), MaxParticles 10/60/3/7/100, blocks `3012430835`\u00d78 + `2199516487`\u00d72; attach first, copy only to tune",
+    "evidence": "`tmp/freebuff/reports/fx9-heat-haze-source.md` \u00a74/\u00a75/\u00a78; `Research/JC3Grab/FX9_HAZE.json`; `tmp/freebuff/reports/effc-format-writable.md` \u00a74",
+    "gap": "no `.effc` field names a blend mode or the texture an instantiator binds (0 string values in 955 files; 8 `RenderBlockTypeHash` values game-wide, the single-use `2813794826` the only unnamed lead), so 'does this sprite refract' is UNKNOWN",
+    "grows": "none - every patch keeps the array lengths, so `A[..]` pairs, data offsets and `total_size` stay valid (the writer's proven path)",
+    "members": [
+     "`Instantiators[i].RenderBlockData[0]` of the 4 sprite instantiators (3125323646, 436538540, 869501834, 124404425) - the per-emitter texture/material constant; which slot is which is UNKNOWN, so one slot per probe",
+     "`Instantiators[i].RenderBlockData[]` floats (0.5 / 5.0 / 8.0 / 10.0 / 20.0 ship here) - the strength/scale constants",
+     "`EmitterTemplates[i].MaxParticles` 10/60/3/7/100 - the live caps, patched at their decoded offsets (the writer's proven field, `EmitterTemplates[0].MaxParticles`)"
+    ]
+   },
+   "bmak": [
+    {
+     "distinct": 5,
+     "emitters": 114,
+     "group": "afterburner-exhaust",
+     "lifetime": [
+      0.05,
+      5.0
+     ],
+     "names": [
+      "batmobileExhaust_burst"
+     ],
+     "names_filtered": true,
+     "spawn_rate": [
+      0.0,
+      150.0
+     ],
+     "systems": 12
+    }
+   ],
+   "cells": [
+    "T-FX9",
+    "G1-16 afterburner-exhaust: 12 systems, 1 of 5 names (batmobileExhaust_burst), 114 emitters, life 0.05..5.0 s",
+    "`effects/jc_vehicles/exhaust/car_speedrom_heater.effc` - 12 vehicles, 14,703 B, 227 arrays, 1943 rows",
+    "socket `Afterburner` (role afterburner, G1-13)",
+    "carrier found: the fleet's only heat-named effect (12 vehicles; 24 `z80_exhaust_heat_l/r` attach objects; both JC3 distortion textures ship in its bundle)",
+    "attach the shipped effect at `Afterburner` (no byte change); a private copy only to tune the 4 sprite `RenderBlockData[0]` constants and `MaxParticles` toward BmAK's `Engine.Fire_Distortion` emitter - one slot at a time",
+    "decoded",
+    "Q-2 A9: shimmer above the exhaust on boost; one `RenderBlockData` slot changed per probe"
+   ],
+   "chosen": {
+    "arrays": 227,
+    "containers": 12,
+    "donor": false,
+    "family": [
+     {
+      "path": "effects/jc_vehicles/exhaust/car_speedrom_heater.effc",
+      "vehicles": 12
+     }
+    ],
+    "family_total": 1,
+    "path": "effects/jc_vehicles/exhaust/car_speedrom_heater.effc",
+    "rows": 1943,
+    "size": 14703,
+    "vehicles": 12
+   },
+   "code": "FX-1",
+   "confidence": "decoded",
+   "dispo": "next",
+   "donor": false,
+   "feature": "heat haze (distortion at the exhaust)",
+   "groups": [
+    "afterburner-exhaust"
+   ],
+   "id": "T-FX9",
+   "now": "carrier found: the fleet's only heat-named effect (12 vehicles; 24 `z80_exhaust_heat_l/r` attach objects; both JC3 distortion textures ship in its bundle)",
+   "propose": "attach the shipped effect at `Afterburner` (no byte change); a private copy only to tune the 4 sprite `RenderBlockData[0]` constants and `MaxParticles` toward BmAK's `Engine.Fire_Distortion` emitter - one slot at a time",
+   "trigger": "EngineNitro",
+   "trigger_evidence": {
+    "hash": 4197885156,
+    "usage": "EngineNitro",
+    "vehicles": 18
+   },
+   "verify": "Q-2 A9: shimmer above the exhaust on boost; one `RenderBlockData` slot changed per probe",
+   "why": "heat haze carrier = `car_speedrom_heater.effc` (12 vehicles, 24 `z80_exhaust_heat_l/r` attachments, distortion textures in the same bundle; `fx9-heat-haze-source.md` \u00a78); gap = no member names a blend mode or the per-emitter texture (`effc-format-writable.md` \u00a74)",
+   "why_ledger": "heat haze carrier = `car_speedrom_heater.effc` (12 vehicles, 24 `z80_exhaust_heat_l/r` attachments, distortion textures "
+  },
+  {
+   "absence": null,
+   "attachment": {
+    "kind": "socket",
+    "name": "CannonMuzzle",
+    "part_hint": "weapons",
+    "role": "muzzle"
+   },
+   "authoring": null,
+   "bmak": [
+    {
+     "distinct": 6,
+     "emitters": 117,
+     "group": "muzzle-flash",
+     "lifetime": [
+      0.05,
+      2.0
+     ],
+     "names": [
+      "Batmobile_canonMuzzleflash",
+      "Batmobile_canonMuzzleflash_NV"
+     ],
+     "names_filtered": true,
+     "spawn_rate": [
+      0.0,
+      25.0
+     ],
+     "systems": 21
+    }
+   ],
+   "cells": [
+    "T-FX10",
+    "G1-16 muzzle-flash: 21 systems, 2 of 6 names (Batmobile_canonMuzzleflash, Batmobile_canonMuzzleflash_NV), 117 emitters, life 0.05..2.0 s",
+    "`effects/jc_weapons/muzzle_flash/tank_canon_muzzleflash.effc` - 11 vehicles, 27,519 B, 604 arrays, 5331 rows",
+    "socket `CannonMuzzle` (role muzzle, G1-13)",
+    "absent: the Batmobile carries no weapon until the T-11 clone",
+    "use at CannonMuzzle when the cannon is cloned; the effect rides the weapon bundle",
+    "decoded",
+    "Q-1 #5: flash at the muzzle, not the car origin"
+   ],
+   "chosen": {
+    "arrays": 604,
+    "containers": 12,
+    "donor": false,
+    "family": [
+     {
+      "path": "effects/jc_weapons/muzzle_flash/tank_canon_muzzleflash.effc",
+      "vehicles": 11
+     }
+    ],
+    "family_total": 1,
+    "path": "effects/jc_weapons/muzzle_flash/tank_canon_muzzleflash.effc",
+    "rows": 5331,
+    "size": 27519,
+    "vehicles": 11
+   },
+   "code": "FX-2",
+   "confidence": "decoded",
+   "dispo": "next",
+   "donor": false,
+   "feature": "cannon muzzle flash",
+   "groups": [
+    "muzzle-flash"
+   ],
+   "id": "T-FX10",
+   "now": "absent: the Batmobile carries no weapon until the T-11 clone",
+   "propose": "use at CannonMuzzle when the cannon is cloned; the effect rides the weapon bundle",
+   "trigger": "weapon fire (weapon component)",
+   "trigger_evidence": null,
+   "verify": "Q-1 #5: flash at the muzzle, not the car origin",
+   "why": "cannon muzzle flash = the fleet's tank-canon flash (`tank_canon_muzzleflash`), fired from the CannonMuzzle socket; needs the T-11 weapon clone",
+   "why_ledger": "cannon muzzle flash = the fleet's tank-canon flash (`tank_canon_muzzleflash`), fired from the CannonMuzzle socket; needs"
+  },
+  {
+   "absence": null,
+   "attachment": {
+    "kind": "socket",
+    "name": "ChainGunMuzzle",
+    "part_hint": "weapons",
+    "role": "muzzle"
+   },
+   "authoring": null,
+   "bmak": [
+    {
+     "distinct": 6,
+     "emitters": 117,
+     "group": "muzzle-flash",
+     "lifetime": [
+      0.05,
+      2.0
+     ],
+     "names": [
+      "Batmobile_Rocket_Muzzle",
+      "Batmobile_canonMuzzleflash",
+      "Batmobile_canonMuzzleflash_NV",
+      "Muzzle_Body_UPGR",
+      "Muzzle_Full_UPGR",
+      "Muzzle_Head_UPGR"
+     ],
+     "names_filtered": false,
+     "spawn_rate": [
+      0.0,
+      25.0
+     ],
+     "systems": 21
+    }
+   ],
+   "cells": [
+    "T-FX11",
+    "G1-16 muzzle-flash: 21 systems / 6 names (Batmobile_Rocket_Muzzle, Batmobile_canonMuzzleflash, Batmobile_canonMuzzleflash_NV...), 117 emitters, life 0.05..2.0 s",
+    "`effects/jc_weapons/muzzle_flash/helicopter_minigun_muzzleflash.effc` - 15 vehicles, 16,079 B, 250 arrays, 2381 rows",
+    "socket `ChainGunMuzzle` (role muzzle, G1-13)",
+    "absent: the Batmobile carries no weapon until the T-11 clone",
+    "use at ChainGunMuzzle when the Vulcan is cloned",
+    "decoded",
+    "Q-1 #5: flash at the muzzle"
+   ],
+   "chosen": {
+    "arrays": 250,
+    "containers": 20,
+    "donor": false,
+    "family": [
+     {
+      "path": "effects/jc_weapons/muzzle_flash/helicopter_minigun_muzzleflash.effc",
+      "vehicles": 15
+     }
+    ],
+    "family_total": 1,
+    "path": "effects/jc_weapons/muzzle_flash/helicopter_minigun_muzzleflash.effc",
+    "rows": 2381,
+    "size": 16079,
+    "vehicles": 15
+   },
+   "code": "FX-2",
+   "confidence": "decoded",
+   "dispo": "next",
+   "donor": false,
+   "feature": "Vulcan muzzle flash",
+   "groups": [
+    "muzzle-flash"
+   ],
+   "id": "T-FX11",
+   "now": "absent: the Batmobile carries no weapon until the T-11 clone",
+   "propose": "use at ChainGunMuzzle when the Vulcan is cloned",
+   "trigger": "weapon fire (weapon component)",
+   "trigger_evidence": null,
+   "verify": "Q-1 #5: flash at the muzzle",
+   "why": "Vulcan/chain-gun muzzle flash = `helicopter_minigun_muzzleflash`, the only vehicle minigun flash in the fleet; fired from ChainGunMuzzle",
+   "why_ledger": "Vulcan/chain-gun muzzle flash = `helicopter_minigun_muzzleflash`, the only vehicle minigun flash in the fleet; fired fro"
+  },
+  {
+   "absence": null,
+   "attachment": {
+    "kind": "none",
+    "name": ""
+   },
+   "authoring": {
+    "copy": "`effects/jc_weapons/missile/missile_trail_car.effc` - 11,199 B, 1,412 rows, 179 arrays, 36 types; ships inside `w618_sportsmuscle_missile.ee` (one private copy serves T-FX12 and T-FX16)",
+    "evidence": "`tmp/freebuff/reports/fx12-16-tracer-and-trail.md` \u00a73/\u00a74/\u00a77/\u00a78/\u00a79/\u00a710; `tmp/freebuff/reports/effc-format-writable.md` \u00a74",
+    "gap": "JC3 binds no effect to a bullet in flight: 0 of the 97 `WeaponTuning` members is an effect/trail member, and `RBasicProjectile.ProjectileTrail` (BmAK's binding) has no JC3 counterpart",
+    "grows": "yes, for the art half: two emitters need the `A[..]` (offset, count) pairs and `total_size` re-laid out - the one step the format report did not build or re-read (its UNKNOWN 4), so it is card B-17's last step",
+    "members": [
+     "the tune, in place: `tracer_fire_width` 0.5 @0x188 (already the 50 uu ribbon), `tracer_time_to_live` 0.0 @0x190 -> 1.25 s, `tracer_fire_length` 30 @0x184, `tracer_fire_velocity` 900 @0x180, `smoke_trail_tile_size` 5.0 @0x198, `tracer_per_smoke_trail` 1 @0x19C, `tracer_texture_type` 1 @0x1A0 (enum only)",
+     "the effect, growth: `Emitters[]`/`EmitterTemplates[]`/`Instantiators[]` +1 ribbon (0.50 m width, 1.25 s life, 8 per s) and +1 sprite (0.035-0.05 s, 1 per s, -0.50 m offset) with their render blocks and `TrimIndex`"
+    ]
+   },
+   "bmak": [
+    {
+     "distinct": 4,
+     "emitters": 112,
+     "group": "tracer",
+     "lifetime": [
+      0.05,
+      1.1
+     ],
+     "names": [
+      "Batmobile_Muzzleflash_NoTracer",
+      "Batmobile_Muzzleflash_NoTracer_Nv",
+      "Batmobile_Muzzleflash_Tracer",
+      "Batmobile_RiotSuppressor_Tracer"
+     ],
+     "names_filtered": false,
+     "spawn_rate": [
+      0.0,
+      0.0
+     ],
+     "systems": 16
+    }
+   ],
+   "cells": [
+    "T-FX12",
+    "G1-16 tracer: 16 systems / 4 names (Batmobile_Muzzleflash_NoTracer, Batmobile_Muzzleflash_NoTracer_Nv, Batmobile_Muzzleflash_Tracer...), 112 emitters, life 0.05..1.1 s",
+    "`effects/jc_weapons/missile/missile_trail_car.effc` - 2 vehicles, 11,199 B, 179 arrays, 1412 rows",
+    "none",
+    "linear half is the cloned `.wtunec` (8 members); the art half has no shipped bullet-bound carrier",
+    "carry the linear half in the private `w602`/`w603` tunes (width 0.5 already, TTL 0.0 -> 1.25 s, smoke ribbon on) and author the art half as a private copy of `missile_trail_car.effc` with two emitters",
+    "decoded",
+    "Q-1 #5: 0.50 m streak at 1.25 s, plus the two-emitter trail behind the round"
+   ],
+   "chosen": {
+    "arrays": 179,
+    "containers": 3,
+    "donor": true,
+    "family": [
+     {
+      "path": "effects/jc_weapons/missile/missile_trail_car.effc",
+      "vehicles": 2
+     }
+    ],
+    "family_total": 1,
+    "path": "effects/jc_weapons/missile/missile_trail_car.effc",
+    "rows": 1412,
+    "size": 11199,
+    "vehicles": 2
+   },
+   "code": "FX-2",
+   "confidence": "decoded",
+   "dispo": "next",
+   "donor": true,
+   "feature": "tracers (tune + art half)",
+   "groups": [
+    "tracer"
+   ],
+   "id": "T-FX12",
+   "now": "linear half is the cloned `.wtunec` (8 members); the art half has no shipped bullet-bound carrier",
+   "propose": "carry the linear half in the private `w602`/`w603` tunes (width 0.5 already, TTL 0.0 -> 1.25 s, smoke ribbon on) and author the art half as a private copy of `missile_trail_car.effc` with two emitters",
+   "trigger": "WeaponTuning tracer members",
+   "trigger_evidence": null,
+   "verify": "Q-1 #5: 0.50 m streak at 1.25 s, plus the two-emitter trail behind the round",
+   "why": "tracer = 8 `bullet_base_tuning` members (`tracer_fire_width` 0.5 @0x188 is already the 50 uu ribbon; TTL 0.0 @0x190 -> 1.25); the art half (2 emitters, colours, offsets) has no tune member and no bullet-bound effect - authored on `missile_trail_car.effc` (`fx12-16-tracer-and-trail.md` \u00a78/\u00a79/\u00a710)",
+   "why_ledger": "tracer = 8 `bullet_base_tuning` members (`tracer_fire_width` 0.5 @0x188 is already the 50 uu ribbon; TTL 0.0 @0x190 -> 1"
+  },
+  {
+   "absence": null,
+   "attachment": {
+    "kind": "socket",
+    "name": "ChainGunShells",
+    "part_hint": "weapons",
+    "role": "shells"
+   },
+   "authoring": {
+    "copy": "`effects/jc_weapons/minigun/bullet_eject_minigun.effc` - 6,703 B, 177 rows, 21 arrays, MaxParticles 30, gravity `Params[12]` -9.82, cone `Params[9]/[10]` 0.1745329 / 0.0872665 rad; the attachment object is copied from `w206`/`w201` (`SAttachedEffect ShellEjection`)",
+    "evidence": "`tmp/freebuff/reports/fx13-shell-casings.md` \u00a73/\u00a74/\u00a77; `tmp/freebuff/reports/effc-format-writable.md` \u00a74",
+    "gap": "no spawn-rate member in the effect: BmAK's 4 per s for 1.0 s is code-side, so the build emits per `Fire` shot or gates the emitter, and the cone's local axis is not decoded (the attachment has no `world`)",
+    "grows": "no `.effc` growth (patch in place); the graph gains one attachment object",
+    "members": [
+     "`.effc`, in place: `EmitterTemplates[i].MaxParticles` 30 (the live cap; the capstone variant ships 15 + 30) and `Params[12]` -9.82 if the fall needs changing - `Params[]` floats are writable at their decoded offsets",
+     "`.epe`, one added object: `SAttachedEffect` name `ShellEjection`, `name_hash` 3811014039, `Effect` = `hash_jenkins(<private .effc path>)`, `Usage` 4131019937, no `world` (the weapon's own frame carries it), parent = the chain-gun weapon entity's `SEffects`"
+    ]
+   },
+   "bmak": [
+    {
+     "distinct": 2,
+     "emitters": 40,
+     "group": "casings",
+     "lifetime": [
+      0.05,
+      1.1
+     ],
+     "names": [
+      "ChainGun_BulletCasing",
+      "RiotSuppressor_BulletCasing"
+     ],
+     "names_filtered": false,
+     "spawn_rate": [
+      0.0,
+      30.0
+     ],
+     "systems": 8
+    }
+   ],
+   "cells": [
+    "T-FX13",
+    "G1-16 casings: 8 systems / 2 names (ChainGun_BulletCasing, RiotSuppressor_BulletCasing), 40 emitters, life 0.05..1.1 s",
+    "`effects/jc_weapons/minigun/bullet_eject_minigun.effc` - 2 vehicles, 6,703 B, 21 arrays, 177 rows",
+    "socket `ChainGunShells` (role shells, G1-13)",
+    "carrier found: `SAttachedEffect ShellEjection` under the mounted-MG entity, Effect 600259254, Usage 4131019937, `name_hash` 3811014039, no `world` (14 graphs / 5 dirs)",
+    "copy the shipped pair onto the chain-gun clone: the `ShellEjection` object under the weapon entity's `SEffects` plus `bullet_eject_minigun.effc` in its `.ee`; tune only `MaxParticles` / `Params[12]` gravity if the cap needs it",
+    "decoded",
+    "Q-3 #4: casings leave the right side of the gun at the first burst and fall at 9.82"
+   ],
+   "chosen": {
+    "arrays": 21,
+    "containers": 4,
+    "donor": false,
+    "family": [
+     {
+      "path": "effects/jc_weapons/minigun/bullet_eject_minigun.effc",
+      "vehicles": 2
+     }
+    ],
+    "family_total": 1,
+    "path": "effects/jc_weapons/minigun/bullet_eject_minigun.effc",
+    "rows": 177,
+    "size": 6703,
+    "vehicles": 2
+   },
+   "code": "FX-2",
+   "confidence": "decoded",
+   "dispo": "next",
+   "donor": false,
+   "feature": "shell casings",
+   "groups": [
+    "casings"
+   ],
+   "id": "T-FX13",
+   "now": "carrier found: `SAttachedEffect ShellEjection` under the mounted-MG entity, Effect 600259254, Usage 4131019937, `name_hash` 3811014039, no `world` (14 graphs / 5 dirs)",
+   "propose": "copy the shipped pair onto the chain-gun clone: the `ShellEjection` object under the weapon entity's `SEffects` plus `bullet_eject_minigun.effc` in its `.ee`; tune only `MaxParticles` / `Params[12]` gravity if the cap needs it",
+   "trigger": "`ShellEjection` usage 4131019937 (`Fire`)",
+   "trigger_evidence": null,
+   "verify": "Q-3 #4: casings leave the right side of the gun at the first burst and fall at 9.82",
+   "why": "casing carrier = `SAttachedEffect ShellEjection` (Effect 600259254 = `hash_jenkins(effects/jc_weapons/minigun/bullet_eject_minigun.effc)`, Usage 4131019937 = `Fire`, no `world`) in the mounted-MG entity + the `.effc` in the weapon `.ee`; 0 of the 226 weapon tunes has an effect member (`fx13-shell-casings.md` \u00a73/\u00a74/\u00a77)",
+   "why_ledger": "casing carrier = `SAttachedEffect ShellEjection` (Effect 600259254 = `hash_jenkins(effects/jc_weapons/minigun/bullet_eje"
+  },
+  {
+   "absence": null,
+   "attachment": {
+    "kind": "socket",
+    "name": "MissileL",
+    "part_hint": "body",
+    "role": "missile"
+   },
+   "authoring": null,
+   "bmak": [
+    {
+     "distinct": 1,
+     "emitters": 5,
+     "group": "missile",
+     "lifetime": [
+      0.15,
+      3.2
+     ],
+     "names": [
+      "HydraMissile_P"
+     ],
+     "names_filtered": false,
+     "spawn_rate": [
+      0.0,
+      100.0
+     ],
+     "systems": 1
+    }
+   ],
+   "cells": [
+    "T-FX14",
+    "G1-16 missile: 1 systems / 1 names (HydraMissile_P), 5 emitters, life 0.15..3.2 s",
+    "`effects/jc_weapons/missile/missile_trail_car.effc` - 2 vehicles, 11,199 B, 179 arrays, 1412 rows",
+    "socket `MissileL` (role missile, G1-13)",
+    "absent: the missile slot is T-11/D-7",
+    "use on the missile weapon; the trail follows the round from MissileL/MissileR",
+    "decoded",
+    "Q-1 #5: trail behind the missile"
+   ],
+   "chosen": {
+    "arrays": 179,
+    "containers": 3,
+    "donor": true,
+    "family": [
+     {
+      "path": "effects/jc_weapons/missile/missile_trail_car.effc",
+      "vehicles": 2
+     }
+    ],
+    "family_total": 1,
+    "path": "effects/jc_weapons/missile/missile_trail_car.effc",
+    "rows": 1412,
+    "size": 11199,
+    "vehicles": 2
+   },
+   "code": "FX-2",
+   "confidence": "decoded",
+   "dispo": "next",
+   "donor": true,
+   "feature": "missile launch trail",
+   "groups": [
+    "missile"
+   ],
+   "id": "T-FX14",
+   "now": "absent: the missile slot is T-11/D-7",
+   "propose": "use on the missile weapon; the trail follows the round from MissileL/MissileR",
+   "trigger": "missile weapon (w618 family)",
+   "trigger_evidence": null,
+   "verify": "Q-1 #5: trail behind the missile",
+   "why": "missile trail = `missile_trail_car`, the only car-body missile trail in the fleet and already on the donor; needs the T-11 missile clone (D-7 slot)",
+   "why_ledger": "missile trail = `missile_trail_car`, the only car-body missile trail in the fleet and already on the donor; needs the T-"
+  },
+  {
+   "absence": null,
+   "attachment": {
+    "kind": "impact",
+    "name": ""
+   },
+   "authoring": null,
+   "bmak": [
+    {
+     "distinct": 5,
+     "emitters": 204,
+     "group": "cannon-impact",
+     "lifetime": [
+      0.05,
+      3.0
+     ],
+     "names": [
+      "Batmobile_HeavyCannon_Impact",
+      "Batmobile_HeavyCannon_Impact_Px",
+      "Impact_Body_UPGR",
+      "Impact_Full_UPGR",
+      "Impact_Head_UPGR"
+     ],
+     "names_filtered": false,
+     "spawn_rate": [
+      0.0,
+      25.0
+     ],
+     "systems": 18
+    }
+   ],
+   "cells": [
+    "T-FX15",
+    "G1-16 cannon-impact: 18 systems / 5 names (Batmobile_HeavyCannon_Impact, Batmobile_HeavyCannon_Impact_Px, Impact_Body_UPGR...), 204 emitters, life 0.05..3.0 s",
+    "`effects/jc_weapons/tank_explosive/tank_explosive_default.effc` - 19 vehicles; 7 variants, 32,751 B, 594 arrays, 5906 rows",
+    "impact point (no socket: the bullet's hit position)",
+    "absent: the Batmobile carries no cannon until T-11",
+    "use the `tank_explosive_*` family: one effect per surface (7 variants)",
+    "decoded",
+    "Q-1 #5: impact effect on the hit surface"
+   ],
+   "chosen": {
+    "arrays": 594,
+    "containers": 22,
+    "donor": true,
+    "family": [
+     {
+      "path": "effects/jc_weapons/tank_explosive/tank_explosive_default.effc",
+      "vehicles": 19
+     },
+     {
+      "path": "effects/jc_weapons/tank_explosive/tank_explosive_concrete.effc",
+      "vehicles": 18
+     },
+     {
+      "path": "effects/jc_weapons/tank_explosive/tank_explosive_dirt.effc",
+      "vehicles": 18
+     },
+     {
+      "path": "effects/jc_weapons/tank_explosive/tank_explosive_grass.effc",
+      "vehicles": 18
+     },
+     {
+      "path": "effects/jc_weapons/tank_explosive/tank_explosive_metal.effc",
+      "vehicles": 18
+     },
+     {
+      "path": "effects/jc_weapons/tank_explosive/tank_explosive_sand.effc",
+      "vehicles": 18
+     },
+     {
+      "path": "effects/jc_weapons/tank_explosive/tank_explosive_snow.effc",
+      "vehicles": 18
+     }
+    ],
+    "family_total": 7,
+    "path": "effects/jc_weapons/tank_explosive/tank_explosive_default.effc",
+    "rows": 5906,
+    "size": 32751,
+    "vehicles": 19
+   },
+   "code": "FX-2",
+   "confidence": "decoded",
+   "dispo": "next",
+   "donor": true,
+   "feature": "cannon impacts",
+   "groups": [
+    "cannon-impact"
+   ],
+   "id": "T-FX15",
+   "now": "absent: the Batmobile carries no cannon until T-11",
+   "propose": "use the `tank_explosive_*` family: one effect per surface (7 variants)",
+   "trigger": "bullet impact / blast (`w602` ForcePulse)",
+   "trigger_evidence": null,
+   "verify": "Q-1 #5: impact effect on the hit surface",
+   "why": "cannon impact = the tank-canon `tank_explosive_*` family (7 surface variants) the donor and the medium tank both carry; needs the T-11 cannon",
+   "why_ledger": "cannon impact = the tank-canon `tank_explosive_*` family (7 surface variants) the donor and the medium tank both carry; "
+  },
+  {
+   "absence": null,
+   "attachment": {
+    "kind": "none",
+    "name": ""
+   },
+   "authoring": {
+    "copy": "`effects/jc_weapons/missile/missile_trail_car.effc` - the same private copy as T-FX12, so one authored effect serves both rows",
+    "evidence": "`tmp/freebuff/reports/fx12-16-tracer-and-trail.md` \u00a77/\u00a78/\u00a710; `Working/Translation/FX16_TERM.md`; `tmp/freebuff/reports/effc-format-writable.md` \u00a74",
+    "gap": "no decoded JC3 carrier attaches a particle system to a bullet in flight; the `ProjectileTrail` binding is BmAK-side only",
+    "grows": "yes: the emitters are added to the copy (same `A[..]` re-layout as T-FX12)",
+    "members": [
+     "sprite emitter (the round trail): lifetime 0.035-0.05 s, spawn 1 per s, `StartLocation` -0.50 m behind the round, `StartSize` from the 50 uu ribbon width",
+     "ribbon emitter (the streak, shared with T-FX12): 0.50 m, 1.25 s, 8 per s",
+     "the round's own tune, in place: `w602_batmobile_cannon.wtunec` `tracer_time_to_live` 0.0 -> 1.25 s so the streak outlives the shot"
+    ]
+   },
+   "bmak": [
+    {
+     "distinct": 6,
+     "emitters": 53,
+     "group": "projectile-trail",
+     "lifetime": [
+      0.035,
+      500.0
+     ],
+     "names": [
+      "Batmobile_CanonTrail",
+      "Batmobile_JokersRocket_Trail",
+      "Batmobile_Mud_Trail",
+      "Trail_Body_UPGR",
+      "Trail_Full_UPGR",
+      "Trail_Head_UPGR"
+     ],
+     "names_filtered": false,
+     "spawn_rate": [
+      1.0,
+      50.0
+     ],
+     "systems": 18
+    }
+   ],
+   "cells": [
+    "T-FX16",
+    "G1-16 projectile-trail: 18 systems / 6 names (Batmobile_CanonTrail, Batmobile_JokersRocket_Trail, Batmobile_Mud_Trail...), 53 emitters, life 0.035..500.0 s",
+    "`effects/jc_weapons/missile/missile_trail_car.effc` - 2 vehicles, 11,199 B, 179 arrays, 1412 rows",
+    "none",
+    "no bullet-bound carrier; the round trail is the same private copy as T-FX12, using its sprite emitter",
+    "author the round trail with T-FX12: one private copy, the sprite emitter (0.035-0.05 s, 1 per s, -0.50 m) gives the round its trail and the ribbon gives the streak; the earlier `0 of 955` claim named no search term",
+    "decoded",
+    "Q-1 #5: trail behind the cannon round; sprite lifetime distinguishable from the ribbon"
+   ],
+   "chosen": {
+    "arrays": 179,
+    "containers": 3,
+    "donor": true,
+    "family": [
+     {
+      "path": "effects/jc_weapons/missile/missile_trail_car.effc",
+      "vehicles": 2
+     }
+    ],
+    "family_total": 1,
+    "path": "effects/jc_weapons/missile/missile_trail_car.effc",
+    "rows": 1412,
+    "size": 11199,
+    "vehicles": 2
+   },
+   "code": "FX-2",
+   "confidence": "decoded",
+   "dispo": "next",
+   "donor": true,
+   "feature": "cannon round trail",
+   "groups": [
+    "projectile-trail"
+   ],
+   "id": "T-FX16",
+   "now": "no bullet-bound carrier; the round trail is the same private copy as T-FX12, using its sprite emitter",
+   "propose": "author the round trail with T-FX12: one private copy, the sprite emitter (0.035-0.05 s, 1 per s, -0.50 m) gives the round its trail and the ribbon gives the streak; the earlier `0 of 955` claim named no search term",
+   "trigger": "the cannon round (T-FX12's private copy)",
+   "trigger_evidence": null,
+   "verify": "Q-1 #5: trail behind the cannon round; sprite lifetime distinguishable from the ribbon",
+   "why": "`Batmobile_CanonTrail` is a 2-emitter `ParticleSystem` bound to `RBasicProjectile.ProjectileTrail` with no JC3 effect member; the closest carrier is the same `.effc` route as T-FX12 (`fx12-16-tracer-and-trail.md` \u00a77/\u00a78/\u00a710), and the old absence claim was UNKNOWN, not a proved negative (`FX16_TERM.md`)",
+   "why_ledger": "`Batmobile_CanonTrail` is a 2-emitter `ParticleSystem` bound to `RBasicProjectile.ProjectileTrail` with no JC3 effect me"
+  },
+  {
+   "absence": null,
+   "attachment": {
+    "kind": "part",
+    "name": "wheel_f_l"
+   },
+   "authoring": null,
+   "bmak": [
+    {
+     "distinct": 6,
+     "emitters": 90,
+     "group": "tyre-surface",
+     "lifetime": [
+      0.1,
+      2.0
+     ],
+     "names": [
+      "Batmobile_Burnout_MUD",
+      "Batmobile_Burnout_MUD_NV",
+      "Batmobile_Burnout_Water",
+      "Batmobile_Wheels_Wood_Collision"
+     ],
+     "names_filtered": true,
+     "spawn_rate": [
+      0.0,
+      500.0
+     ],
+     "systems": 16
+    }
+   ],
+   "cells": [
+    "T-FX17",
+    "G1-16 tyre-surface: 16 systems, 4 of 6 names (Batmobile_Burnout_MUD, Batmobile_Burnout_MUD_NV, Batmobile_Burnout_Water...), 90 emitters, life 0.1..2.0 s",
+    "`effects/jc_vehicles/wheels/trail/dust_trail_asphalt.effc` - 161 vehicles; 6 variants, 6,559 B, 19 arrays, 160 rows",
+    "part `wheel_f_l` (G1-13 part_hint)",
+    "carried: the donor .ee lists the effect (FX_TABLE container set)",
+    "keep: the donor's wheel trail family, one per surface (6 variants)",
+    "decoded",
+    "Q-2 A10: dust at the wheels when sliding"
+   ],
+   "chosen": {
+    "arrays": 19,
+    "containers": 161,
+    "donor": true,
+    "family": [
+     {
+      "path": "effects/jc_vehicles/wheels/trail/dust_trail_asphalt.effc",
+      "vehicles": 161
+     },
+     {
+      "path": "effects/jc_vehicles/wheels/trail/dust_trail_dirt.effc",
+      "vehicles": 161
+     },
+     {
+      "path": "effects/jc_vehicles/wheels/trail/dust_trail_grass.effc",
+      "vehicles": 161
+     },
+     {
+      "path": "effects/jc_vehicles/wheels/trail/dust_trail_sand.effc",
+      "vehicles": 161
+     },
+     {
+      "path": "effects/jc_vehicles/wheels/trail/dust_trail_snow.effc",
+      "vehicles": 161
+     },
+     {
+      "path": "effects/jc_vehicles/wheels/trail/dust_trail_water.effc",
+      "vehicles": 161
+     }
+    ],
+    "family_total": 6,
+    "path": "effects/jc_vehicles/wheels/trail/dust_trail_asphalt.effc",
+    "rows": 160,
+    "size": 6559,
+    "vehicles": 161
+   },
+   "code": "FX-3",
+   "confidence": "decoded",
+   "dispo": "epe",
+   "donor": true,
+   "feature": "tyre smoke / kick-up",
+   "groups": [
+    "tyre-surface"
+   ],
+   "id": "T-FX17",
+   "now": "carried: the donor .ee lists the effect (FX_TABLE container set)",
+   "propose": "keep: the donor's wheel trail family, one per surface (6 variants)",
+   "trigger": "tire_effects (T-EF1)",
+   "trigger_evidence": null,
+   "verify": "Q-2 A10: dust at the wheels when sliding",
+   "why": "tyre kick-up = the donor's `wheel*/dust_trail_*` family (6 surfaces, 161 vehicles each) driven by `tire_effects` (T-EF1); attachment is the four wheel parts",
+   "why_ledger": "tyre kick-up = the donor's `wheel*/dust_trail_*` family (6 surfaces, 161 vehicles each) driven by `tire_effects` (T-EF1)"
+  },
+  {
+   "absence": null,
+   "attachment": {
+    "kind": "part",
+    "name": "body"
+   },
+   "authoring": null,
+   "bmak": [
+    {
+     "distinct": 6,
+     "emitters": 90,
+     "group": "tyre-surface",
+     "lifetime": [
+      0.1,
+      2.0
+     ],
+     "names": [
+      "Batmobile_Burnout_MUD",
+      "Batmobile_Burnout_MUD_NV",
+      "Batmobile_Burnout_Water",
+      "Batmobile_Pollen_KickUP",
+      "Batmobile_Wheels_Wood_Collision",
+      "FloorDust_Batwing"
+     ],
+     "names_filtered": false,
+     "spawn_rate": [
+      0.0,
+      500.0
+     ],
+     "systems": 16
+    }
+   ],
+   "cells": [
+    "T-FX18",
+    "G1-16 tyre-surface: 16 systems / 6 names (Batmobile_Burnout_MUD, Batmobile_Burnout_MUD_NV, Batmobile_Burnout_Water...), 90 emitters, life 0.1..2.0 s",
+    "`effects/jc_vehicles/collision/chassis_slide_default.effc` - 289 vehicles; 5 variants, 11,807 B, 145 arrays, 1188 rows",
+    "part `body` (G1-13 part_hint)",
+    "carried: the donor .ee lists the effect (FX_TABLE container set)",
+    "keep: the chassis slide family (5 surfaces)",
+    "decoded",
+    "Q-2 A10: dust under the chassis in a slide"
+   ],
+   "chosen": {
+    "arrays": 145,
+    "containers": 290,
+    "donor": true,
+    "family": [
+     {
+      "path": "effects/jc_vehicles/collision/chassis_slide_default.effc",
+      "vehicles": 289
+     },
+     {
+      "path": "effects/jc_vehicles/collision/chassis_slide_dirt.effc",
+      "vehicles": 289
+     },
+     {
+      "path": "effects/jc_vehicles/collision/chassis_slide_sand.effc",
+      "vehicles": 289
+     },
+     {
+      "path": "effects/jc_vehicles/collision/chassis_slide_snow.effc",
+      "vehicles": 289
+     },
+     {
+      "path": "effects/jc_vehicles/collision/chassis_slide_vegetation.effc",
+      "vehicles": 212
+     }
+    ],
+    "family_total": 5,
+    "path": "effects/jc_vehicles/collision/chassis_slide_default.effc",
+    "rows": 1188,
+    "size": 11807,
+    "vehicles": 289
+   },
+   "code": "FX-3",
+   "confidence": "decoded",
+   "dispo": "epe",
+   "donor": true,
+   "feature": "slide dust",
+   "groups": [
+    "tyre-surface"
+   ],
+   "id": "T-FX18",
+   "now": "carried: the donor .ee lists the effect (FX_TABLE container set)",
+   "propose": "keep: the chassis slide family (5 surfaces)",
+   "trigger": "tire_effects (T-EF1)",
+   "trigger_evidence": null,
+   "verify": "Q-2 A10: dust under the chassis in a slide",
+   "why": "chassis slide dust = `chassis_slide_*` (5 surfaces, 290 vehicles) already on the donor; the body part carries it",
+   "why_ledger": "chassis slide dust = `chassis_slide_*` (5 surfaces, 290 vehicles) already on the donor; the body part carries it"
+  },
+  {
+   "absence": null,
+   "attachment": {
+    "kind": "socket",
+    "name": "ScrapeSparksL",
+    "part_hint": "body",
+    "role": "sparks"
+   },
+   "authoring": null,
+   "bmak": [
+    {
+     "distinct": 0,
+     "emitters": 0,
+     "group": "wall-scrape",
+     "lifetime": null,
+     "names": [],
+     "names_filtered": false,
+     "spawn_rate": null,
+     "systems": 0
+    }
+   ],
+   "cells": [
+    "T-FX19",
+    "G1-16 wall-scrape: 0 systems (proven absent), 0 emitters",
+    "`effects/trails/spark_trail_02_med.effc` - 298 vehicles; 3 variants, 8,495 B, 67 arrays, 641 rows",
+    "socket `ScrapeSparksL` (role sparks, G1-13)",
+    "socket present, no BmAK system drives it",
+    "use the nearest fleet effect (`spark_trail_02_med`) on the scrape sockets",
+    "derived",
+    "Q-3 #1: sparks on contact with a wall"
+   ],
+   "chosen": {
+    "arrays": 67,
+    "containers": 301,
+    "donor": true,
+    "family": [
+     {
+      "path": "effects/trails/spark_trail_02_med.effc",
+      "vehicles": 298
+     },
+     {
+      "path": "effects/trails/spark_trail_03.effc",
+      "vehicles": 19
+     },
+     {
+      "path": "effects/trails/spark_trail_02_med_fast.effc",
+      "vehicles": 0
+     }
+    ],
+    "family_total": 3,
+    "path": "effects/trails/spark_trail_02_med.effc",
+    "rows": 641,
+    "size": 8495,
+    "vehicles": 298
+   },
+   "code": "FX-3",
+   "confidence": "derived",
+   "dispo": "epe",
+   "donor": true,
+   "feature": "wall-scrape sparks",
+   "groups": [
+    "wall-scrape"
+   ],
+   "id": "T-FX19",
+   "now": "socket present, no BmAK system drives it",
+   "propose": "use the nearest fleet effect (`spark_trail_02_med`) on the scrape sockets",
+   "trigger": "none in BmAK (0 systems)",
+   "trigger_evidence": null,
+   "verify": "Q-3 #1: sparks on contact with a wall",
+   "why": "BmAK's wall-scrape group is 0 systems (G1-16) so there is nothing to copy; the donor already carries `spark_trail_02_med` and the ScrapeSparks sockets exist",
+   "why_ledger": "BmAK's wall-scrape group is 0 systems (G1-16) so there is nothing to copy; the donor already carries `spark_trail_02_med"
+  },
+  {
+   "absence": null,
+   "attachment": {
+    "kind": "socket",
+    "name": "BrakeTrailL",
+    "part_hint": "wheel_r_l",
+    "role": "tail_light"
+   },
+   "authoring": {
+    "copy": "`effects/jc_vehicles/exhaust/car_cycle_base_dual_nitrous.effc` - the donor's boost glow (3,161 rows, 337 arrays, 20,671 B in the donor `.ee`), restyled on `effects/textures/t_velocity_streak_alpha_dif.dds.1_1b.trim` (657 B, 28 rows, 3 arrays; 377 containers carry it)",
+    "evidence": "`tmp/freebuff/reports/fx20-brake-trail.md` \u00a73/\u00a74/\u00a76/\u00a78; `Research/JC3Grab/LIGHT_SYSTEM.md` \u00a71; `tmp/freebuff/reports/effc-format-writable.md` \u00a74",
+    "gap": "no light member names a trail/streak/ribbon (25 members), the behaviour vocabulary has no `Brake` (9 states), and BmAK `BrakeTrail0/1` serialise no `ParticleSystem` template, so its width/length/colour are UNKNOWN",
+    "grows": "in place for the restyle; the trigger is new build work (a brake-state carrier does not exist, so the build authors it)",
+    "members": [
+     "`Instantiators[i].RenderBlockData[]` floats - the streak's scroll/scale constants (slot semantics UNKNOWN: patch one slot per probe)",
+     "`EmitterTemplates[i].MaxParticles` and `StartTime` / `EmitterLifetimeIndex` - how much streak exists and when it starts",
+     "the trim binding is not a member: `Instantiators[i].TrimIndex` is the corpus-wide constant 14, so which `.trim` an instantiator draws is UNKNOWN"
+    ]
+   },
+   "bmak": [],
+   "cells": [
+    "T-FX20",
+    "no system in G1-16's 206",
+    "`effects/jc_vehicles/exhaust/car_cycle_base_dual_nitrous.effc` - 17 vehicles, 20,671 B, 337 arrays, 3161 rows",
+    "socket `BrakeTrailL` (role tail_light, G1-13)",
+    "no brake-named effect and no brake trigger; BmAK `BrakeTrail0/1` serialise no system",
+    "author a private copy of the donor's boost-glow effect restyled on the `t_velocity_streak_alpha_dif` strip at `BrakeTrailL/R`, and author the brake trigger",
+    "derived",
+    "Q-2 A5: a streak appears at the tail lamps under braking and nowhere else"
+   ],
+   "chosen": {
+    "arrays": 337,
+    "containers": 17,
+    "donor": true,
+    "family": [
+     {
+      "path": "effects/jc_vehicles/exhaust/car_cycle_base_dual_nitrous.effc",
+      "vehicles": 17
+     }
+    ],
+    "family_total": 1,
+    "path": "effects/jc_vehicles/exhaust/car_cycle_base_dual_nitrous.effc",
+    "rows": 3161,
+    "size": 20671,
+    "vehicles": 17
+   },
+   "code": "FX-3",
+   "confidence": "derived",
+   "dispo": "next",
+   "donor": true,
+   "feature": "brake-light trails",
+   "groups": [],
+   "id": "T-FX20",
+   "now": "no brake-named effect and no brake trigger; BmAK `BrakeTrail0/1` serialise no system",
+   "propose": "author a private copy of the donor's boost-glow effect restyled on the `t_velocity_streak_alpha_dif` strip at `BrakeTrailL/R`, and author the brake trigger",
+   "trigger": "authored: no JC3 brake state exists (9 behaviours, no `Brake`)",
+   "trigger_evidence": null,
+   "verify": "Q-2 A5: a streak appears at the tail lamps under braking and nowhere else",
+   "why": "streak carrier = an `.effc` built on `car_cycle_base_dual_nitrous.effc` (donor-carried, 20,671 B in its `.ee`) with `t_velocity_streak_alpha_dif.dds.1_1b.trim` (657 B, in the donor `.ee`); the gap is the trigger - no light member names a trail (25 members), no `Brake` behaviour (9 states), and BmAK's `BrakeTrail0/1` components carry no template (`fx20-brake-trail.md` \u00a73/\u00a74/\u00a76/\u00a78)",
+   "why_ledger": "streak carrier = an `.effc` built on `car_cycle_base_dual_nitrous.effc` (donor-carried, 20,671 B in its `.ee`) with `t_v"
+  },
+  {
+   "absence": null,
+   "attachment": {
+    "kind": "part",
+    "name": "body"
+   },
+   "authoring": null,
+   "bmak": [
+    {
+     "distinct": 3,
+     "emitters": 139,
+     "group": "explosion",
+     "lifetime": [
+      0.1,
+      5.0
+     ],
+     "names": [
+      "Batmobil_Rocket_Explosion",
+      "Batmobil_Rocket_Explosion_Small",
+      "Batmobile_Explosion"
+     ],
+     "names_filtered": false,
+     "spawn_rate": [
+      0.0,
+      2000.0
+     ],
+     "systems": 11
+    }
+   ],
+   "cells": [
+    "T-FX21",
+    "G1-16 explosion: 11 systems / 3 names (Batmobil_Rocket_Explosion, Batmobil_Rocket_Explosion_Small, Batmobile_Explosion), 139 emitters, life 0.1..5.0 s",
+    "`effects/jc_vehicles/damage/exp_car_01.effc` - 126 vehicles, 34,895 B, 759 arrays, 6891 rows",
+    "part `body` (G1-13 part_hint)",
+    "carried: the donor .ee lists the effect (FX_TABLE container set)",
+    "keep: the car explosion effect the donor already spawns, plus the blast tune (`car_explosion_medium`, G2-10 \u00a78)",
+    "decoded",
+    "Q-3 #7: explosion on death"
+   ],
+   "chosen": {
+    "arrays": 759,
+    "containers": 126,
+    "donor": true,
+    "family": [
+     {
+      "path": "effects/jc_vehicles/damage/exp_car_01.effc",
+      "vehicles": 126
+     }
+    ],
+    "family_total": 1,
+    "path": "effects/jc_vehicles/damage/exp_car_01.effc",
+    "rows": 6891,
+    "size": 34895,
+    "vehicles": 126
+   },
+   "code": "FX-4",
+   "confidence": "decoded",
+   "dispo": "epe",
+   "donor": true,
+   "feature": "death explosion",
+   "groups": [
+    "explosion"
+   ],
+   "id": "T-FX21",
+   "now": "carried: the donor .ee lists the effect (FX_TABLE container set)",
+   "propose": "keep: the car explosion effect the donor already spawns, plus the blast tune (`car_explosion_medium`, G2-10 \u00a78)",
+   "trigger": "OnExploded",
+   "trigger_evidence": {
+    "hash": 3587098424,
+    "usage": "OnExploded",
+    "vehicles": 2
+   },
+   "verify": "Q-3 #7: explosion on death",
+   "why": "death explosion = the donor's `exp_car_01` effect under the `OnExploded` usage (G2-22); the blast numbers stay in the WeaponTuning/ForcePulse tune (G2-10)",
+   "why_ledger": "death explosion = the donor's `exp_car_01` effect under the `OnExploded` usage (G2-22); the blast numbers stay in the We"
+  },
+  {
+   "absence": null,
+   "attachment": {
+    "kind": "part",
+    "name": "body"
+   },
+   "authoring": null,
+   "bmak": [
+    {
+     "distinct": 2,
+     "emitters": 57,
+     "group": "vehicle-fire",
+     "lifetime": [
+      0.5,
+      3.0
+     ],
+     "names": [
+      "FireTrail_APC",
+      "FireTrail_Car"
+     ],
+     "names_filtered": false,
+     "spawn_rate": [
+      0.0,
+      50.0
+     ],
+     "systems": 6
+    }
+   ],
+   "cells": [
+    "T-FX22",
+    "G1-16 vehicle-fire: 6 systems / 2 names (FireTrail_APC, FireTrail_Car), 57 emitters, life 0.5..3.0 s",
+    "`effects/jc_vehicles/damage/dmg_fire_engine.effc` - 192 vehicles; 3 variants, 15,615 B, 280 arrays, 2277 rows",
+    "part `body` (G1-13 part_hint)",
+    "carried: the donor .ee lists the effect (FX_TABLE container set)",
+    "keep: the 3-variant burn family (engine / spread base / spread roof)",
+    "decoded",
+    "Q-3 #7: fire on the engine, then the roof"
+   ],
+   "chosen": {
+    "arrays": 280,
+    "containers": 192,
+    "donor": true,
+    "family": [
+     {
+      "path": "effects/jc_vehicles/damage/dmg_fire_engine.effc",
+      "vehicles": 192
+     },
+     {
+      "path": "effects/jc_vehicles/damage/dmg_fire_spread_base.effc",
+      "vehicles": 147
+     },
+     {
+      "path": "effects/jc_vehicles/damage/dmg_fire_spread_roof.effc",
+      "vehicles": 117
+     }
+    ],
+    "family_total": 3,
+    "path": "effects/jc_vehicles/damage/dmg_fire_engine.effc",
+    "rows": 2277,
+    "size": 15615,
+    "vehicles": 192
+   },
+   "code": "FX-4",
+   "confidence": "decoded",
+   "dispo": "epe",
+   "donor": true,
+   "feature": "burn states (engine / base / roof)",
+   "groups": [
+    "vehicle-fire"
+   ],
+   "id": "T-FX22",
+   "now": "carried: the donor .ee lists the effect (FX_TABLE container set)",
+   "propose": "keep: the 3-variant burn family (engine / spread base / spread roof)",
+   "trigger": "OnPartReachedDamageState",
+   "trigger_evidence": {
+    "hash": 2287746320,
+    "usage": "OnPartReachedDamageState",
+    "vehicles": 3
+   },
+   "verify": "Q-3 #7: fire on the engine, then the roof",
+   "why": "burn states = the donor's `dmg_fire_engine` / `dmg_fire_spread_base` / `dmg_fire_spread_roof` family under the damage-state usage (G2-22)",
+   "why_ledger": "burn states = the donor's `dmg_fire_engine` / `dmg_fire_spread_base` / `dmg_fire_spread_roof` family under the damage-st"
+  },
+  {
+   "absence": null,
+   "attachment": {
+    "kind": "part",
+    "name": "body"
+   },
+   "authoring": null,
+   "bmak": [
+    {
+     "distinct": 2,
+     "emitters": 57,
+     "group": "vehicle-fire",
+     "lifetime": [
+      0.5,
+      3.0
+     ],
+     "names": [
+      "FireTrail_APC",
+      "FireTrail_Car"
+     ],
+     "names_filtered": false,
+     "spawn_rate": [
+      0.0,
+      50.0
+     ],
+     "systems": 6
+    }
+   ],
+   "cells": [
+    "T-FX23",
+    "G1-16 vehicle-fire: 6 systems / 2 names (FireTrail_APC, FireTrail_Car), 57 emitters, life 0.5..3.0 s",
+    "`effects/jc_vehicles/damage/dmg_post_burn.effc` - 139 vehicles; 2 variants, 9,151 B, 75 arrays, 694 rows",
+    "part `body` (G1-13 part_hint)",
+    "carried: the donor .ee lists the effect (FX_TABLE container set)",
+    "keep: engine smoke, then `dmg_post_burn` when the fire is out",
+    "decoded",
+    "Q-3 #7: smoke after the fire"
+   ],
+   "chosen": {
+    "arrays": 75,
+    "containers": 139,
+    "donor": true,
+    "family": [
+     {
+      "path": "effects/jc_vehicles/damage/dmg_post_burn.effc",
+      "vehicles": 139
+     },
+     {
+      "path": "effects/jc_vehicles/damage/dmg_smoke_engine.effc",
+      "vehicles": 120
+     }
+    ],
+    "family_total": 2,
+    "path": "effects/jc_vehicles/damage/dmg_post_burn.effc",
+    "rows": 694,
+    "size": 9151,
+    "vehicles": 139
+   },
+   "code": "FX-4",
+   "confidence": "decoded",
+   "dispo": "epe",
+   "donor": true,
+   "feature": "post-burn / engine smoke",
+   "groups": [
+    "vehicle-fire"
+   ],
+   "id": "T-FX23",
+   "now": "carried: the donor .ee lists the effect (FX_TABLE container set)",
+   "propose": "keep: engine smoke, then `dmg_post_burn` when the fire is out",
+   "trigger": "EngineSmoking",
+   "trigger_evidence": {
+    "hash": 102641159,
+    "usage": "EngineSmoking",
+    "vehicles": 23
+   },
+   "verify": "Q-3 #7: smoke after the fire",
+   "why": "engine smoke = the donor's `dmg_smoke_engine` under the `EngineSmoking` usage (23 vehicles, G2-22); `dmg_post_burn` is the after-fire state",
+   "why_ledger": "engine smoke = the donor's `dmg_smoke_engine` under the `EngineSmoking` usage (23 vehicles, G2-22); `dmg_post_burn` is t"
+  }
+ ],
+ "schema": 1,
+ "summary": {
+  "authoring_plans": 5,
+  "chosen": 17,
+  "donor_effects": 85,
+  "fleet_effc": 955,
+  "fleet_vehicle_effc": 589,
+  "fx_codes": [
+   "FX-1",
+   "FX-2",
+   "FX-3",
+   "FX-4"
+  ],
+  "fx_codes_covered": [
+   "FX-1",
+   "FX-2",
+   "FX-3",
+   "FX-4"
+  ],
+  "named_omission": 0,
+  "rows": 17,
+  "rules": 17,
+  "sockets": [
+   "Afterburner",
+   "BrakeTrailL",
+   "CannonMuzzle",
+   "ChainGunMuzzle",
+   "ChainGunShells",
+   "MissileL",
+   "ScrapeSparksL",
+   "SideExhaustL"
+  ],
+  "usages": [
+   "EngineNitro",
+   "EngineRunning",
+   "EngineSmoking",
+   "OnExploded",
+   "OnPartReachedDamageState"
+  ],
+  "weapon_ids": 25,
+  "weapon_tracer_ids": 11
+ }
+}

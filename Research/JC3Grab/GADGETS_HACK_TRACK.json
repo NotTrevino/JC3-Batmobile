@@ -1,0 +1,715 @@
+{
+ "card": "T-WP7/T-WP9",
+ "gadgets": {
+  "wp7": {
+   "class": "RBatmobileAllegianceSwitcher",
+   "object": "Drone_Hacker",
+   "packages": 3,
+   "field_rows": 39,
+   "fields": [
+    [
+     "BatmobileHackerEffect",
+     "0x0968",
+     "ObjectNCRProperty",
+     "Particles.DroneHacker_Beam"
+    ],
+    [
+     "SuccessfulHackEffect",
+     "0x0970",
+     "ObjectNCRProperty",
+     "Particles.DroneHacker_Success"
+    ],
+    [
+     "BatmobileHackerEffectHvyTank",
+     "0x0978",
+     "ObjectNCRProperty",
+     "Particles.CobraHacker_Beam"
+    ],
+    [
+     "SuccessfulHackEffectHvyTank",
+     "0x0980",
+     "ObjectNCRProperty",
+     "Particles.CobraHacker_Success"
+    ],
+    [
+     "DroneHackerMaterial",
+     "0x0988",
+     "ObjectNCRProperty",
+     "Materials.DroneHacker_Beam_INST"
+    ],
+    [
+     "SucessfullHackSound",
+     "0x0990",
+     "ObjectNCRProperty",
+     "Engine.Play_Batmobile_DroneHacker_Hacked"
+    ],
+    [
+     "HackingSound",
+     "0x0998",
+     "ObjectNCRProperty",
+     "Engine.Play_Batmobile_DroneHacker_Fire"
+    ],
+    [
+     "BeamPositionalSound",
+     "0x09A0",
+     "ObjectNCRProperty",
+     "Engine.Play_Batmobile_DroneHacker_Loop"
+    ],
+    [
+     "NotEnoughEnergyThought",
+     "0x09A8",
+     "ObjectNCRProperty",
+     "Lines.Char_Batman_Misc_Cobra_Barrage_Energy_B_01"
+    ],
+    [
+     "HackerEffect",
+     "0x09B0",
+     "ArrayProperty",
+     "6 items, 4 B each (payload not decoded)"
+    ],
+    [
+     "RVehicleWeapon.WeaponCoolDown",
+     "0x0830",
+     "FloatProperty",
+     "1.0"
+    ],
+    [
+     "RInventoryGadget.Mesh",
+     "0x0318",
+     "ObjectNCRProperty",
+     "Drone_Hacker.GadgetMesh"
+    ],
+    [
+     "Actor.Tag",
+     "0x0168",
+     "NameProperty",
+     "\"RBatmobileAllegianceSwitcher\""
+    ]
+   ]
+  },
+  "wp9": {
+   "class": "RPursuitModeMissileLauncher",
+   "object": "Vehicle_Tracker",
+   "packages": 3,
+   "field_rows": 21,
+   "fields": [
+    [
+     "RPursuitModeMissileLauncher.ProjectileArchetype",
+     "0x097C",
+     "ObjectNCRProperty",
+     "Projectiles.Batmobile_Tracker_Projectile"
+    ],
+    [
+     "RPursuitModeMissileLauncher.LaunchSocketName",
+     "0x0984",
+     "NameProperty",
+     "\"BattleModeSpotLight\""
+    ],
+    [
+     "RPursuitModeMissileLauncher.LaunchRotationOffset",
+     "0x0994",
+     "RotatorProperty",
+     "[5461, 0, 0]"
+    ],
+    [
+     "RVehicleWeapon.FireStartEvent",
+     "0x0880",
+     "ObjectNCRProperty",
+     "ww_chr_batmandisruptor.Play_BatSniperRifle_Vehicle_Tracking_Fire"
+    ],
+    [
+     "RVehicleWeapon.IndividualFireEvent",
+     "0x0898",
+     "ObjectNCRProperty",
+     "ww_chr_batmandisruptor.Play_BatSniperRifle_Vehicle_Tracking_Fire"
+    ],
+    [
+     "RInventoryGadget.Mesh",
+     "0x0318",
+     "ObjectNCRProperty",
+     "Vehicle_Tracker.GadgetMesh"
+    ],
+    [
+     "Actor.Tag",
+     "0x0168",
+     "NameProperty",
+     "\"RBatmobileVehicleTracker\""
+    ]
+   ]
+  }
+ },
+ "maps": {
+  "wp7": [
+   {
+    "field": "BatmobileHackerEffect",
+    "offset": "0x0968",
+    "type": "ObjectNCRProperty",
+    "value": "Particles.DroneHacker_Beam",
+    "jc3": "`SAttachedEffect.Effect` + `.Usage` (5,342 objects in 232 graphs)",
+    "measured": "a beam `.effc`; the only vehicle-agnostic beams are `dlc/bavarium_sea_heist/effects/jc_weapons/lightning_gun/lightning_gun_destruction_beam.effc`, `effects/jc_weapons/sungun/destructon_beam.effc` (0 vehicle carriers; no `hack`-named `.effc` exists, 0 paths)",
+    "gap": "the beam effect is authored from a beam `.effc` clone and attached at the drone's beam socket; no `DroneHacker_Beam` exists in JC3"
+   },
+   {
+    "field": "SuccessfulHackEffect",
+    "offset": "0x0970",
+    "type": "ObjectNCRProperty",
+    "value": "Particles.DroneHacker_Success",
+    "jc3": "`SAttachedEffect` on the same entity, second `Usage` (`Fire2`/value-driven usage)",
+    "measured": "18 drone entities carry effect tables; HACKABLES records 29 `SAttachedEffect`/`SDynamicAttachedEffect` rows per drone",
+    "gap": "a second attachment; JC3 has no 'hack succeeded' event, so the trigger has to come from the weapon that completes the hack"
+   },
+   {
+    "field": "BatmobileHackerEffectHvyTank",
+    "offset": "0x0978",
+    "type": "ObjectNCRProperty",
+    "value": "Particles.CobraHacker_Beam",
+    "jc3": "same `SAttachedEffect` slot, different effect path",
+    "measured": "the heavy-tank beam has no JC3 analogue; a second beam `.effc` must be authored or cloned",
+    "gap": "author a second beam variant; no data chooses it"
+   },
+   {
+    "field": "SuccessfulHackEffectHvyTank",
+    "offset": "0x0980",
+    "type": "ObjectNCRProperty",
+    "value": "Particles.CobraHacker_Success",
+    "jc3": "same success attachment",
+    "measured": "no second success effect in the fleet",
+    "gap": "author it, or reuse the first"
+   },
+   {
+    "field": "DroneHackerMaterial",
+    "offset": "0x0988",
+    "type": "ObjectNCRProperty",
+    "value": "Materials.DroneHacker_Beam_INST",
+    "jc3": "UNKNOWN - no material member in any decoded weapon tune or `.effc` member path",
+    "measured": "searched: WEAPONS.jsonl 444 member paths, FX_VOCAB `.effc` members, HACKABLES dumps; none names a material",
+    "gap": "material must be authored inside the effect (`.effc` texture) - the JC3 effect format has no material-instance member"
+   },
+   {
+    "field": "SucessfullHackSound",
+    "offset": "0x0990",
+    "type": "ObjectNCRProperty",
+    "value": "Engine.Play_Batmobile_DroneHacker_Hacked",
+    "jc3": "UNKNOWN - weapon tunes carry no audio member",
+    "measured": "searched: WEAPONS.jsonl 444 member paths (0 hits); audio lives in `.bnk` banks and entity audio objects",
+    "gap": "wire the event in the entity's audio module and add the bank entry"
+   },
+   {
+    "field": "HackingSound",
+    "offset": "0x0998",
+    "type": "ObjectNCRProperty",
+    "value": "Engine.Play_Batmobile_DroneHacker_Fire",
+    "jc3": "UNKNOWN - same search",
+    "measured": "same",
+    "gap": "second audio event on the same module"
+   },
+   {
+    "field": "BeamPositionalSound",
+    "offset": "0x09A0",
+    "type": "ObjectNCRProperty",
+    "value": "Engine.Play_Batmobile_DroneHacker_Loop",
+    "jc3": "UNKNOWN - same search",
+    "measured": "a looping positional event; JC3 audio objects are per-entity",
+    "gap": "loop handle on the beam attachment"
+   },
+   {
+    "field": "NotEnoughEnergyThought",
+    "offset": "0x09A8",
+    "type": "ObjectNCRProperty",
+    "value": "Lines.Char_Batman_Misc_Cobra_Barrage_Energy_B_01",
+    "jc3": "`CreatePoi(type, use_progress_bar, is_minor, label)` label on `ui/hud.gfx`",
+    "measured": "32 POI types; the label is the only text parameter",
+    "gap": "JC3 has no 'thought' element; the line becomes a POI label or a HUD string"
+   },
+   {
+    "field": "HackerEffect",
+    "offset": "0x09B0",
+    "type": "ArrayProperty",
+    "value": "6 items, 4 B each (payload not decoded)",
+    "jc3": "six `SAttachedEffect`/`SDynamicAttachedEffect` rows (the decoded array is six 4-byte component references)",
+    "measured": "6 items x 4 B, payload not decoded; the six objects are `DroneHackerEffect0..5` (G3-20c report)",
+    "gap": "six attachment rows at six beam sockets; the array itself has no JC3 carrier"
+   },
+   {
+    "field": "RVehicleWeapon.WeaponCoolDown",
+    "offset": "0x0830",
+    "type": "FloatProperty",
+    "value": "1.0",
+    "jc3": "`burst_cooldown` in the weapon tuning (22 rows)",
+    "measured": "22 tune rows carry `burst_cooldown`; no per-gadget cooldown member",
+    "gap": "use the tune's cooldown field; a 1.0 s value has no unit bridge"
+   },
+   {
+    "field": "RInventoryGadget.Mesh",
+    "offset": "0x0318",
+    "type": "ObjectNCRProperty",
+    "value": "Drone_Hacker.GadgetMesh",
+    "jc3": "the mounted weapon entity's mesh (a `w6xx_*.ee` weapon entity)",
+    "measured": "JC3 vehicle weapons are separate `.ee` entities referenced by the vehicle",
+    "gap": "ship the gadget mesh inside the weapon entity"
+   },
+   {
+    "field": "Actor.Tag",
+    "offset": "0x0168",
+    "type": "NameProperty",
+    "value": "\"RBatmobileAllegianceSwitcher\"",
+    "jc3": "entity/part `name` (`part` in `VehicleDynamicLights`, `name` in modules)",
+    "measured": "JC3 has no actor tag; names are the identity",
+    "gap": "none - naming only"
+   }
+  ],
+  "wp9": [
+   {
+    "field": "RPursuitModeMissileLauncher.ProjectileArchetype",
+    "offset": "0x097C",
+    "type": "ObjectNCRProperty",
+    "value": "Projectiles.Batmobile_Tracker_Projectile",
+    "jc3": "the mounted weapon entity `.ee` + `missile_weapon[0].tuning.missile_base_tuning.*`",
+    "measured": "0 tune records; `missile_loose_lock_distance` and `meters_times_speed_in_front_of_target` are the missile steering members",
+    "gap": "the tracker projectile becomes a weapon entity + tune; its homing numbers map to those two members, the rest to the projectile entity"
+   },
+   {
+    "field": "RPursuitModeMissileLauncher.LaunchSocketName",
+    "offset": "0x0984",
+    "type": "NameProperty",
+    "value": "\"BattleModeSpotLight\"",
+    "jc3": "`SWeaponPoint` fire position in the weapon entity (8 in the SAM dump)",
+    "measured": "no socket-name member in a JC3 tune (0 of 444 member paths match launch/socket/muzzle/bone)",
+    "gap": "author a fire position and name it; the BmAK socket is `BattleModeSpotLight`, which is also a light socket - the build must decide both uses"
+   },
+   {
+    "field": "RPursuitModeMissileLauncher.LaunchRotationOffset",
+    "offset": "0x0994",
+    "type": "RotatorProperty",
+    "value": "[5461, 0, 0]",
+    "jc3": "the `world` matrix of `SWeaponPoint`",
+    "measured": "0 rotator members in the tunes; the wiring stores a matrix",
+    "gap": "bake the rotator into the matrix: 5461/65536*360 = 30.0 deg (derived)"
+   },
+   {
+    "field": "RVehicleWeapon.FireStartEvent",
+    "offset": "0x0880",
+    "type": "ObjectNCRProperty",
+    "value": "ww_chr_batmandisruptor.Play_BatSniperRifle_Vehicle_Tracking_Fire",
+    "jc3": "UNKNOWN - 0 audio members in the weapon tunes",
+    "measured": "searched WEAPONS.jsonl, HACKABLES, the entity wiring; audio is `.bnk` + entity audio objects",
+    "gap": "wire the fire event in the weapon entity's audio module"
+   },
+   {
+    "field": "RVehicleWeapon.IndividualFireEvent",
+    "offset": "0x0898",
+    "type": "ObjectNCRProperty",
+    "value": "ww_chr_batmandisruptor.Play_BatSniperRifle_Vehicle_Tracking_Fire",
+    "jc3": "UNKNOWN - same",
+    "measured": "same",
+    "gap": "same event, per-shot"
+   },
+   {
+    "field": "RInventoryGadget.Mesh",
+    "offset": "0x0318",
+    "type": "ObjectNCRProperty",
+    "value": "Vehicle_Tracker.GadgetMesh",
+    "jc3": "the mounted weapon entity's mesh",
+    "measured": "same as T-WP7",
+    "gap": "ship the tracker mesh in the weapon entity"
+   },
+   {
+    "field": "Actor.Tag",
+    "offset": "0x0168",
+    "type": "NameProperty",
+    "value": "\"RBatmobileVehicleTracker\"",
+    "jc3": "entity/part `name`",
+    "measured": "no actor tags",
+    "gap": "none - naming only"
+   }
+  ],
+  "projectile": [
+   {
+    "field": "RBatmobileMissile.Trail",
+    "offset": "0x0410",
+    "value": "Batmobile_Tracker_Projectile.RocketTrail",
+    "jc3": "projectile entity mesh/trail components",
+    "gap": "author the mesh/trail in the weapon entity"
+   },
+   {
+    "field": "RBatmobileMissile.Mesh",
+    "offset": "0x0418",
+    "value": "Batmobile_Tracker_Projectile.Mesh0",
+    "jc3": "projectile entity mesh/trail components",
+    "gap": "author the mesh/trail in the weapon entity"
+   },
+   {
+    "field": "homing flag (unnamed bool)",
+    "offset": "0x0420",
+    "value": "true",
+    "jc3": "missile tuning: `missile_base_tuning.missile_loose_lock_distance`, `meters_times_speed_in_front_of_target`, plus the projectile entity",
+    "gap": "no homing-flag/delay/damage members in the tune vocabulary (measured)"
+   },
+   {
+    "field": "RBatmobileMissile.HomingDelay",
+    "offset": "0x0424",
+    "value": "0.2",
+    "jc3": "missile tuning: `missile_base_tuning.missile_loose_lock_distance`, `meters_times_speed_in_front_of_target`, plus the projectile entity",
+    "gap": "no homing-flag/delay/damage members in the tune vocabulary (measured)"
+   },
+   {
+    "field": "RBatmobileMissile.AccelRate",
+    "offset": "0x0428",
+    "value": "30000.0",
+    "jc3": "missile tuning: `missile_base_tuning.missile_loose_lock_distance`, `meters_times_speed_in_front_of_target`, plus the projectile entity",
+    "gap": "no homing-flag/delay/damage members in the tune vocabulary (measured)"
+   },
+   {
+    "field": "RBasicProjectile.ProjectileMesh",
+    "offset": "0x0348",
+    "value": "Batmobile_Tracker_Projectile.Mesh0",
+    "jc3": "projectile entity mesh/trail components",
+    "gap": "author the mesh/trail in the weapon entity"
+   },
+   {
+    "field": "RBasicProjectile.ProjectileTrail",
+    "offset": "0x0350",
+    "value": "Batmobile_Tracker_Projectile.RocketTrail",
+    "jc3": "projectile entity mesh/trail components",
+    "gap": "author the mesh/trail in the weapon entity"
+   },
+   {
+    "field": "RProjectile.ImpactRadialImpulseComponent",
+    "offset": "0x0330",
+    "value": "Batmobile_Tracker_Projectile.ImpulseComponent0",
+    "jc3": "projectile entity component",
+    "gap": "component identity only"
+   },
+   {
+    "field": "Projectile.MaxSpeed",
+    "offset": "0x02A0",
+    "value": "20000.0",
+    "jc3": "missile tuning: `missile_base_tuning.missile_loose_lock_distance`, `meters_times_speed_in_front_of_target`, plus the projectile entity",
+    "gap": "no homing-flag/delay/damage members in the tune vocabulary (measured)"
+   },
+   {
+    "field": "Projectile.CylinderComponent",
+    "offset": "0x02C0",
+    "value": "Batmobile_Tracker_Projectile.CollisionCylinder",
+    "jc3": "projectile entity component",
+    "gap": "component identity only"
+   },
+   {
+    "field": "Projectile.MyDamageType",
+    "offset": "0x02C8",
+    "value": "0 (null)",
+    "jc3": "weapon tune damage/momentum members (not the ones BmAK uses)",
+    "gap": "JC3 tune has no `MomentumTransfer` shape identical to BmAK"
+   },
+   {
+    "field": "Projectile.DamageRadius",
+    "offset": "0x02DC",
+    "value": "0.0",
+    "jc3": "weapon tune damage/momentum members (not the ones BmAK uses)",
+    "gap": "JC3 tune has no `MomentumTransfer` shape identical to BmAK"
+   },
+   {
+    "field": "Projectile.MomentumTransfer",
+    "offset": "0x02E0",
+    "value": "500.0",
+    "jc3": "weapon tune damage/momentum members (not the ones BmAK uses)",
+    "gap": "JC3 tune has no `MomentumTransfer` shape identical to BmAK"
+   },
+   {
+    "field": "Actor.DefaultAkAudible",
+    "offset": "0x007C",
+    "value": "Batmobile_Tracker_Projectile.DefaultAkAudible_",
+    "jc3": "UNKNOWN - audio",
+    "gap": "audio module"
+   },
+   {
+    "field": "Actor.CollisionComponent",
+    "offset": "0x00B4",
+    "value": "Batmobile_Tracker_Projectile.CollisionCylinder",
+    "jc3": "projectile entity component",
+    "gap": "component identity only"
+   },
+   {
+    "field": "Actor.Tag",
+    "offset": "0x0168",
+    "value": "\"RBatmobileMissile\"",
+    "jc3": "projectile entity component",
+    "gap": "component identity only"
+   }
+  ]
+ },
+ "jc3": {
+  "hack_files": 2,
+  "hack_hits": {
+   "v5601_train_urga_monorailcargoengine_military_mission_mm320_train.ee.xml": 1,
+   "w501_turret_sam_v2.ee.xml": 3
+  },
+  "allegiance_files": 0,
+  "faction_members": {
+   "faction": 60,
+   "side_area": 279,
+   "ignore_faction": 22,
+   "sides": 7
+  },
+  "drones": 18,
+  "drone_items": 0,
+  "drop_assets": [
+   "textures/ui/vehicle_icons/v2901_drone_eden_elitedrone_rebeldrop.ddsc",
+   "videos/vehicles/v2901_drone_eden_elitedrone_rebeldrop.bikc"
+  ],
+  "items": 196,
+  "tunes": 25,
+  "tune_members": 444,
+  "tune_audio_members": 0,
+  "hostility_members": {
+   "OnFoot.FactionNeedsToBeHostile": 3,
+   "Stunting.FactionNeedsToBeHostile": 3,
+   "MotorCycle.FactionNeedsToBeHostile": 3,
+   "ReelingIn.FactionNeedsToBeHostile": 3,
+   "ReeledIn.FactionNeedsToBeHostile": 3,
+   "Parachute.FactionNeedsToBeHostile": 3
+  },
+  "target_priority": {
+   "missile_weapon[0].ai_tuning.ai_base_tuning.land_vehicle_target_priority": 11,
+   "missile_weapon[0].ai_tuning.ai_base_tuning.sea_vehicle_target_priority": 11,
+   "missile_weapon[0].ai_tuning.ai_base_tuning.air_vehicle_target_priority": 11,
+   "bullet_weapon[0].ai_tuning.ai_base_tuning.land_vehicle_target_priority": 11,
+   "bullet_weapon[0].ai_tuning.ai_base_tuning.sea_vehicle_target_priority": 11,
+   "bullet_weapon[0].ai_tuning.ai_base_tuning.air_vehicle_target_priority": 11
+  },
+  "fx_hack": 0,
+  "fx_beam": 2,
+  "fx_marker": 3,
+  "sam": {
+   "objects": 333,
+   "classes": {
+    "CRigidObject": 46,
+    "SPhysicsParams": 44,
+    "CConstraint": 34,
+    "SEventTriggerComponent": 31,
+    "CEffectPointEmitter": 26,
+    "CEventTrigger": 15,
+    "CConstraintLimitedHingeData": 13,
+    "SDCRef": 12,
+    "CDamageController": 12,
+    "CConstraintFixedData": 11,
+    "CConstraintWheelData": 8,
+    "CDynamicLightObject": 8,
+    "SAttachedEffect": 8,
+    "SWeaponPoint": 8,
+    "CConstraintBreakableDecoratorData": 7,
+    "CForcePulse": 6,
+    "STimerComponent": 4,
+    "CConstraintPositionMotorData": 3,
+    "CGrapplingHookPropData": 3,
+    "CTimeTrigger": 3,
+    "CInteractionGraphExit": 3,
+    "CMaterialEffectTable": 2,
+    "CAnimRotation": 2,
+    "CAreaDamage": 2,
+    "CInteractionGraphParentVelocityCondition": 2,
+    "CInteractionGraphParentIsUpRightCondition": 2,
+    "CInteractionTrigger": 2,
+    "CConstraintRagDollData": 1,
+    "CConstraintDeformableFixedData": 1,
+    "CMissileWeaponBase": 1,
+    "CTurretWeaponComponent": 1,
+    "SEffects": 1,
+    "CInteractionContext": 1,
+    "CInteraction": 1,
+    "CInteractionComponentAnimationLayer": 1,
+    "CInteractionGraph": 1,
+    "CInteractionGraphEntry": 1,
+    "CInteractionGraphNodeAboveWaterCondition": 1,
+    "CInteractionGraphPointNode": 1,
+    "COutline": 1,
+    "CAIRoadObstacle": 1,
+    "STargetPoint": 1
+   },
+   "named": {
+    "CRigidObject": 46,
+    "SPhysicsParams": 44,
+    "CConstraint": 34,
+    "SEventTriggerComponent": 31,
+    "CEffectPointEmitter": 26,
+    "CEventTrigger": 15,
+    "CConstraintLimitedHingeData": 13,
+    "SDCRef": 12,
+    "CDamageController": 12,
+    "CConstraintFixedData": 11,
+    "CConstraintWheelData": 8,
+    "CDynamicLightObject": 8,
+    "SAttachedEffect": 8,
+    "SWeaponPoint": 8,
+    "CConstraintBreakableDecoratorData": 7,
+    "CForcePulse": 6,
+    "STimerComponent": 4,
+    "CConstraintPositionMotorData": 3,
+    "CGrapplingHookPropData": 3,
+    "CTimeTrigger": 3,
+    "CInteractionGraphExit": 3,
+    "CMaterialEffectTable": 2,
+    "CAnimRotation": 2,
+    "CAreaDamage": 2,
+    "CInteractionTrigger": 2,
+    "CConstraintRagDollData": 1,
+    "CConstraintDeformableFixedData": 1,
+    "CMissileWeaponBase": 1,
+    "CTurretWeaponComponent": 1,
+    "SEffects": 1,
+    "CInteractionContext": 1,
+    "CInteraction": 1,
+    "CInteractionComponentAnimationLayer": 1,
+    "CInteractionGraph": 1,
+    "CInteractionGraphEntry": 1,
+    "CInteractionGraphPointNode": 1,
+    "COutline": 1,
+    "CAIRoadObstacle": 1,
+    "STargetPoint": 1
+   },
+   "weapon_points": 7,
+   "factions": [
+    {
+     "class": "CAreaDamage",
+     "name": "AreaDamage",
+     "faction": "2",
+     "enabled": "0",
+     "min_aim_distance": null
+    },
+    {
+     "class": "CTurretWeaponComponent",
+     "name": "CTurretWeaponComponent",
+     "faction": "5",
+     "enabled": null,
+     "min_aim_distance": null
+    },
+    {
+     "class": "CAreaDamage",
+     "name": "AreaDamage1",
+     "faction": "2",
+     "enabled": "0",
+     "min_aim_distance": null
+    }
+   ],
+   "hack_anims": [
+    "animations/jc_characters/main_characters/rico/contextact/rico_contextact_hack_sam.anim",
+    "animations/jc_characters/main_characters/rico/contextact/rico_contextact_hack_sam_enter.anim",
+    "animations/jc_characters/main_characters/rico/contextact/rico_contextact_hack_sam_exit.anim"
+   ],
+   "air_hits": 0,
+   "ignore_faction": 0,
+   "radar": 0
+  },
+  "hud": {
+   "lock_on_type": 21,
+   "poi_types": 32,
+   "scripts": 260
+  }
+ },
+ "check": {
+  "items": [
+   [
+    "wp7_fields_13",
+    true,
+    "13"
+   ],
+   [
+    "wp7_packages_3",
+    true,
+    "3"
+   ],
+   [
+    "wp9_fields_7",
+    true,
+    "7"
+   ],
+   [
+    "tracker_projectile_16",
+    true,
+    "16"
+   ],
+   [
+    "launch_rotation_30deg",
+    true,
+    "30.0 deg"
+   ],
+   [
+    "hack_files_2",
+    true,
+    "2"
+   ],
+   [
+    "allegiance_files_0",
+    true,
+    "0"
+   ],
+   [
+    "drones_18",
+    true,
+    "18"
+   ],
+   [
+    "drone_drop_items_0",
+    true,
+    "0"
+   ],
+   [
+    "drone_drop_assets_2",
+    true,
+    "2"
+   ],
+   [
+    "vanilla_items_196",
+    true,
+    "196"
+   ],
+   [
+    "tune_audio_members_0",
+    true,
+    "0"
+   ],
+   [
+    "hostility_members_6",
+    true,
+    "6"
+   ],
+   [
+    "air_vehicle_target_priority",
+    true,
+    "6 priority members"
+   ],
+   [
+    "fx_hack_0",
+    true,
+    "0"
+   ],
+   [
+    "hud_lock_on_21",
+    true,
+    "21"
+   ],
+   [
+    "sam_seven_weapon_points",
+    true,
+    "7"
+   ],
+   [
+    "sam_no_air_filter",
+    true,
+    "0 'air' hits"
+   ],
+   [
+    "sam_two_factions",
+    true,
+    "['2', '5']"
+   ],
+   [
+    "every_field_mapped",
+    true,
+    "20 rows"
+   ]
+  ],
+  "passed": 20,
+  "total": 20
+ }
+}

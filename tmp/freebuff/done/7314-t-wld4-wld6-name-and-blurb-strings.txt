@@ -1,0 +1,7 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/T-WLD4b.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-05 (from Working/Translation/T_ROWS.jsonl blocked rows)
+Rows: T-WLD4 (name string 443190071 resolves in 0 of 11 langs) and T-WLD6 (description needs <leaf>_desc pair). Translation analysis is allowed (operator 2026-11-05); the TEST BAN stays: read-only on game installs, no game launch.
+Task, files only: Decode the profile/online.stringlookup format and the 11 language stores (Research/JC3Grab). Prove how a NEW string entry is keyed (hash function, oracle: recompute 20+ existing keys from their known text). Report whether adding a new pair for the Batmobile name and blurb needs a new store file, a patch of an existing one, or is impossible, with the exact files and the revert path. Read-only; do not write game files.
+Rules: follow tmp/freebuff/INSTRUCTIONS.md section 3. Never guess; label every value decoded/derived/UNKNOWN. New script under Tools/scripts/ with --write/--check, outputs under Working/Translation/, DONE report as above.

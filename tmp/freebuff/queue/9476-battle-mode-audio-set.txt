@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/battle-mode-audio-set.md
+ONLY: freebuff
+EST: 60
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/review-audio-spike-and-route.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-mode-swap-prototype.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/locate-unbanked-batmobile-events.md
+Build the battle-mode sound set into Builds/bm-RC5-audio3: the Play_BattleMode_In_A..F and Out_A..H transform stingers, Play_BattlemodeEngine, the cool ticks, persistent idles and the steering bed Play_Batmobile_Steering_Bed (0xD28CAFB1), per reports/battle-audio-switch-event.md. The mode swap exists as a two-entity pair or hook swap per the mode prototype (reports/hook-mode-swap-prototype.md); bind the stingers to the swap's start and end, in order gear by gear over the 2 s transform, and the engine set to the battle entity. The operator rule is lore fidelity, so do not use the interim EngineNitro-style compromise unless Claude relays an approval. Use the route in audio-route-decision.md. Include the TransformationReverseDirection events if aud-01 found a bank. Extend --check. Done check: 30 battle events each marked built or reasoned, loudness inside 1 LU, and a trigger table naming the state that fires each. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

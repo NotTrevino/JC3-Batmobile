@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/weapon-audio-event-inventory.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-audio-override-and-layers.md
+Enumerate every weapon and gadget sound that the weapon builds need and that 9150 does not list. Sources: Research/BatmobileGrab/AUDIO_BANKS.md and AUDIO_BANKS2.md (lines 154-170), ledger rows T-AU3 and T-AU5, the report of 9150, and GRAB_BACKLOG.md B-26. Rows required: cannon fire and impact, Vulcan loop (weapons#408 loop click RED earlier), missile flight and launch (Play_Batmobile_ApRocket_Flight and _Up are missing-object), Immobiliser impact, EMP burst fire, hacker beam, riot bolt and impacts, sonar (the six BML_Sonar events), winch (Play_BML_WinchFire, _Attatch), booster deploy. Each row: BmAK event, bank, resolved or missing, JC3 stand-in event if missing, which entity or effect binds it. Output Working/Roadmap/weapon_audio_inventory.json and a one-page md. Done-check: every row has a status; the number of missing events is stated in the md header. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

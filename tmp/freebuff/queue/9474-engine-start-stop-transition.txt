@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/engine-start-stop-transition.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/engine-turbine-layers-build.md
+Add the engine start and shutdown behaviour to Builds/bm-RC5-audio3. BmAK plays Play_Batmobile_Engine_Transition_In with a Startup RTPC (0 crank, 1 run) per reports/idle-and-startup-plan.md; the trigger in JC3 is entering the vehicle and leaving it, plus the burnout handoff. Use the chosen route from audio-route-decision.md to bind crank, run-up and shutdown to those two moments (hook state or donor start and shutdown slots). Convert the BmAK source media to the required format and keep loudness inside 1 LU. Update rc5_audio3.py and its --check, add an entry to the branch record. Do not touch banks in any game folder. Done check: --check passes, the report gives the event, media, frames and loudness of each transition, and a table shows which BmAK start or stop events remain unbuilt, if any. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

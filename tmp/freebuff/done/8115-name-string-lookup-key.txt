@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/name-string-lookup-key.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-06
+Rows T-WLD4 and T-WLD6 (the Batmobile's display name and description) are blocked because the stringlookup pair is keyed by the leaf hash and 443190071 resolves to the Serpente's own text. Read how profile/online.stringlookup pairs are generated for the vehicle names in Research/JC3Grab and bm-013's build (Builds/bm-013, Working/World/bm_rebel_text.json): what the key is made from, how the 443190071 value was obtained, and whether a new key for the Batmobile's leaf can be computed from the item path. Prove the derivation on 5 shipped vehicles (compute their key, check it against the stringlookup). Report the computed key for the Batmobile or what is missing.
+Where JC3 has no exact carrier, give the closest system and the gap for the build to fill (STAGES.md).

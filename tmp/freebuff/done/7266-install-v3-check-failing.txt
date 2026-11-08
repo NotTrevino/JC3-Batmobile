@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/install-v3-check-failing.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-06
+Tools/scripts/install_v3.py --check passed for whoever wrote it (see tmp/freebuff/reports/install-v3-guard-fix.md) but fails when I run it now: first run complained "simulation copies left behind: E:\Modding\_dropzone_sim_rc2_v3", and after I deleted that folder the next run failed with a PowerShell error about the path case_manifest\.install_v3_snapshot\manifest.json. Reproduce both failures from a clean state (delete E:\Modding\_dropzone_sim_rc2_v3* only), find which line of install_v3.py or Working/Installer/install_v3.ps1 is order-dependent or leaves state behind, and make --check idempotent: it must pass three runs in a row and leave no _dropzone_sim_rc2_v3 folder. Edit only install_v3.py / install_v3.ps1 (they are new files from today); never touch install.ps1, install_v2.* or any real game or dropzone path. Paste the three runs' tails in your report.

@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/app-anisotropic-highlights.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-06
+Appearance rows D4/D5 in Working/Appearance/progress.md drop BmAK's anisotropic highlights (Aniso_ramp_Lacquered, Fake_Aniso_1/2_Colour, Anisotropic_Channel_Choice). The Batmobile's lacquered panels get their stretched highlight from them. Find out whether any shipped JC3 material block shades anisotropically (brushed metal, hair, CD-like surfaces), by reading the shader names and constant-buffer layouts in Research/JC3Grab (CB0_SLOTS.md, the shader-cache notes) and the CarPaintMM members. Write the decoded BmAK anisotropy parameters with their numbers, name each JC3 candidate, and say what a texture bake could reproduce if no block carries it. Label every claim decoded, derived or UNKNOWN.
+Where JC3 has no exact carrier, give the closest system and the gap for the build to fill (STAGES.md).

@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/bmak-banks-media-regrab.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-08
+Sound gap NEW-AUD-1 (Working/Roadmap/sound.md): G1-15 marked about 90 Batmobile events across 10 BmAK banks as missing-bank. Later, G3-14 (Research/BatmobileGrab/AUDIO_BANKS.md and AUDIO_BANKS2.md) found all 10 banks present in the install, but nobody went back and decoded their media. These include the lock beeps, sonar, tracker, impacts, death and weapon tails that the weapon and HUD work needs.
+Using the repo's existing Wwise tooling (Tools/scripts/grab_audio.py and whatever G1-15 used to turn WEM into WAV), extract and decode those banks' media to E:/Modding/_BmAKgrab/audio_regrab/ (outside the repo), map each event id to its WAV through the HIRC chain, and update nothing in the ledger: write the event -> WAV table into the report plus a machine-readable Research/BatmobileGrab/AUDIO_REGRAB.json produced by a new script with a --check mode. Also confirm the earlier finding that event 0x6BB2C66E is the tracker AkEvent twin of Play_Disruptor_Vehicle_Tracking_Fire (0x8EA6FCA0). Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

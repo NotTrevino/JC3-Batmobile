@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-skin-entries-offline.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/build-skin-rebel-drop-entries.md
+Offline verification of Builds/bm-RC5-skins. Run Tools/scripts/rc5_skins.py --check. Then re-derive independently, without that script's helper functions, the Jenkins hash of each leaf name and compare it with the Item.Name in the built item.onlinec; confirm the string-pair hashes exist for all 11 languages in online.stringlookup; confirm no entry overlaps another by hash, UIDisplayOrder or leaf; confirm each .toc lists its .ee with the right size and hash. Use Tools/scripts/jc3rebeldrop.py for decode only. Write Builds/bm-RC5-skins/verify/readback.md and the report with one row per skin and check, pass or fail with the byte or line proving it. For every fail, name the row of rc5_skins.py to change. No tree is edited here. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

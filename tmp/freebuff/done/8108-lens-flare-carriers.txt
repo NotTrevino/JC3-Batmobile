@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/lens-flare-carriers.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-06
+Ten lamp rows (T-L25..T-L34: HeadLight1a/2a/1b/1c/2b/2c and the four wheel lights) are LensFlareComponents in BmAK and were marked out because JC3 has no flare member. A flare is only a sprite with a size, colour and fade; look for how JC3 draws headlight glare and halos: emissive-block halo geometry, light-preset members, additive billboard effects attached to lamps, bloom thresholds. Read how the shipped Serpente lamp parts and their RBMs make their glow, and how BmAK's LensFlare parameters (Research/BatmobileGrab/LIGHTS.json) could map. Produce a per-row table of BmAK flare values against the nearest JC3 carrier, and for each row name the closest system and the gap the build must close; no row may end without a closest system.

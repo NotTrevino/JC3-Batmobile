@@ -1,0 +1,723 @@
+{
+ "schema": 1,
+ "generated_by": "grab_cockpit.py",
+ "inputs": {
+  "pskx": "Working/Appearance/grab/Playable_Batmobile_SF/SkeletalMesh3/Batmobile_V2.pskx",
+  "slots": "Research/BatmobileGrab/SLOTS.json",
+  "sockets": "Research/BatmobileGrab/SOCKETS_JC3.json",
+  "stations": "Working/TrueScale/stations.json",
+  "materials": "Research/BatmobileGrab/MATERIALS.md",
+  "meshes": "Research/BatmobileGrab/MESHES.md"
+ },
+ "method": {
+  "transform": "bat_assemble.to_jc3_rot x stations.scale 0.01 + stations.offset (the ONE transform; R2)",
+  "rays": "Moeller-Trumbore against the PSKX triangles, both windings, no culling; distances in metres from the stated origin",
+  "materials": "FACE3200.m -> the SLOTS.json slot order (agreement checked in slots[])",
+  "bones": "pskx_parts.face_bones (dominant bone per face by summed vertex weights)",
+  "ground": "stations.ground; JC3 y = vertical, x = axle (left = -x), nose at -z"
+ },
+ "slots": [
+  {
+   "slot": 11,
+   "material": "BatmobileV3_Cockpit_Seat",
+   "faces": 13014,
+   "area_cm2": 18006.8,
+   "bones": [
+    {
+     "bone": "Batmobile_Chassis",
+     "faces": 12470
+    },
+    {
+     "bone": "CockPit_Mesh",
+     "faces": 544
+    }
+   ],
+   "bbox": {
+    "min": [
+     -0.3759,
+     0.8041,
+     -1.7041
+    ],
+    "max": [
+     0.376,
+     1.913,
+     -0.6319
+    ],
+    "size": [
+     0.7519,
+     1.1088,
+     1.0722
+    ]
+   },
+   "class": "measured",
+   "cushion_y": 0.8407,
+   "cushion_gap_m": -0.024
+  },
+  {
+   "slot": 10,
+   "material": "Batmobile_V3_Cockpit_MIC",
+   "faces": 27334,
+   "area_cm2": 81556.9,
+   "bones": [
+    {
+     "bone": "CockPit_Mesh",
+     "faces": 14136
+    },
+    {
+     "bone": "Batmobile_Chassis",
+     "faces": 13198
+    }
+   ],
+   "bbox": {
+    "min": [
+     -0.4042,
+     0.6761,
+     -2.2319
+    ],
+    "max": [
+     0.4044,
+     2.0286,
+     -0.5269
+    ],
+    "size": [
+     0.8086,
+     1.3525,
+     1.7049
+    ]
+   },
+   "class": "measured"
+  },
+  {
+   "slot": 12,
+   "material": "Cockpit_Master_Flip_Data",
+   "faces": 100,
+   "area_cm2": 404.1,
+   "bones": [
+    {
+     "bone": "Batmobile_Chassis",
+     "faces": 100
+    }
+   ],
+   "bbox": {
+    "min": [
+     -0.1594,
+     1.4101,
+     -1.8524
+    ],
+    "max": [
+     0.1594,
+     1.5613,
+     -1.6581
+    ]
+   },
+   "class": "measured",
+   "size": [
+    0.3188,
+    0.1512,
+    0.1942
+   ],
+   "centre": [
+    0.0,
+    1.4857,
+    -1.7552
+   ],
+   "normal": [
+    -0.001,
+    0.577,
+    0.739
+   ],
+   "tilt_from_vertical_deg": 35.2
+  },
+  {
+   "slot": 1,
+   "material": "Batmobile_V3_Glass_INST",
+   "faces": 3532,
+   "area_cm2": 28614.7,
+   "bones": [
+    {
+     "bone": "CockPit_Mesh",
+     "faces": 1716
+    },
+    {
+     "bone": "Batmobile_Rig_Weapons_Turret_Top",
+     "faces": 388
+    },
+    {
+     "bone": "Batmobile_Rig_Weapons_Riot_Sup_Main",
+     "faces": 188
+    },
+    {
+     "bone": "Wheel_Frnt_Right_Disc",
+     "faces": 188
+    },
+    {
+     "bone": "Wheel_Frnt_Left_Disc",
+     "faces": 188
+    },
+    {
+     "bone": "Wheel_Rear_Right_Disc",
+     "faces": 188
+    },
+    {
+     "bone": "Wheel_Rear_Left_Disc",
+     "faces": 188
+    },
+    {
+     "bone": "SUSP2_Wheel_Rear_Right",
+     "faces": 176
+    },
+    {
+     "bone": "SUSP2_Wheel_Rear_Left",
+     "faces": 176
+    },
+    {
+     "bone": "Batmobile_Nose_Mesh",
+     "faces": 136
+    }
+   ],
+   "bbox": {
+    "min": [
+     -1.4966,
+     0.4503,
+     -3.1893
+    ],
+    "max": [
+     1.4963,
+     1.9347,
+     3.3897
+    ],
+    "size": [
+     2.993,
+     1.4844,
+     6.5789
+    ]
+   },
+   "class": "measured",
+   "windscreen_m": 0.8489,
+   "windscreen_z": -1.9143,
+   "windscreen_material": "Batmobile_V3_Glass_INST",
+   "windscreen_m_188": 0.7503,
+   "windscreen_z_188": -1.8157,
+   "windscreen_material_188": "Batmobile_V3_Cockpit_MIC",
+   "side_ray": {
+    "z": -1.1,
+    "y": 1.71,
+    "x_right": 0.2943,
+    "x_left": -0.2942,
+    "material": "Batmobile_V3_Glass_INST"
+   },
+   "side_faces": 611,
+   "side_box": {
+    "x": 0.25,
+    "z": [
+     -1.6,
+     -0.4
+    ]
+   },
+   "side_bbox": {
+    "min": [
+     -0.3626,
+     1.5165,
+     -1.5925
+    ],
+    "max": [
+     0.3627,
+     1.8868,
+     -0.8349
+    ],
+    "size": [
+     0.7254,
+     0.3702,
+     0.7576
+    ]
+   }
+  },
+  {
+   "slot": 18,
+   "material": "Batmobile_Worn_NoRain",
+   "faces": 524,
+   "area_cm2": 7454.5,
+   "bones": [
+    {
+     "bone": "CockPit_Mesh",
+     "faces": 524
+    }
+   ],
+   "bbox": {
+    "min": [
+     -0.4125,
+     1.4036,
+     -2.1004
+    ],
+    "max": [
+     0.4126,
+     2.0097,
+     -0.637
+    ],
+    "size": [
+     0.8251,
+     0.6061,
+     1.4635
+    ]
+   },
+   "class": "measured"
+  }
+ ],
+ "panel": {
+  "faces": 1043,
+  "area_cm2": 720.3,
+  "bbox": {
+   "min": [
+    -0.3456,
+    1.3148,
+    -1.8981
+   ],
+   "max": [
+    0.3457,
+    1.6005,
+    -1.5097
+   ],
+   "size": [
+    0.6913,
+    0.2856,
+    0.3884
+   ]
+  },
+  "class": "measured",
+  "bones": [
+   {
+    "bone": "Batmobile_Chassis",
+    "faces": 1043
+   }
+  ],
+  "rule": "slot 10, face normal +z > 0.5, centroid |x| <= 0.36, y 1.30..1.60, z -1.90..-1.50"
+ },
+ "screen": {
+  "slot": 12,
+  "material": "Cockpit_Master_Flip_Data",
+  "faces": 100,
+  "area_cm2": 404.1,
+  "bones": [
+   {
+    "bone": "Batmobile_Chassis",
+    "faces": 100
+   }
+  ],
+  "bbox": {
+   "min": [
+    -0.1594,
+    1.4101,
+    -1.8524
+   ],
+   "max": [
+    0.1594,
+    1.5613,
+    -1.6581
+   ]
+  },
+  "class": "measured",
+  "size": [
+   0.3188,
+   0.1512,
+   0.1942
+  ],
+  "centre": [
+   0.0,
+   1.4857,
+   -1.7552
+  ],
+  "normal": [
+   -0.001,
+   0.577,
+   0.739
+  ],
+  "tilt_from_vertical_deg": 35.2
+ },
+ "glass": {
+  "slot": 1,
+  "material": "Batmobile_V3_Glass_INST",
+  "faces": 3532,
+  "area_cm2": 28614.7,
+  "bones": [
+   {
+    "bone": "CockPit_Mesh",
+    "faces": 1716
+   },
+   {
+    "bone": "Batmobile_Rig_Weapons_Turret_Top",
+    "faces": 388
+   },
+   {
+    "bone": "Batmobile_Rig_Weapons_Riot_Sup_Main",
+    "faces": 188
+   },
+   {
+    "bone": "Wheel_Frnt_Right_Disc",
+    "faces": 188
+   },
+   {
+    "bone": "Wheel_Frnt_Left_Disc",
+    "faces": 188
+   },
+   {
+    "bone": "Wheel_Rear_Right_Disc",
+    "faces": 188
+   },
+   {
+    "bone": "Wheel_Rear_Left_Disc",
+    "faces": 188
+   },
+   {
+    "bone": "SUSP2_Wheel_Rear_Right",
+    "faces": 176
+   },
+   {
+    "bone": "SUSP2_Wheel_Rear_Left",
+    "faces": 176
+   },
+   {
+    "bone": "Batmobile_Nose_Mesh",
+    "faces": 136
+   }
+  ],
+  "bbox": {
+   "min": [
+    -1.4966,
+    0.4503,
+    -3.1893
+   ],
+   "max": [
+    1.4963,
+    1.9347,
+    3.3897
+   ],
+   "size": [
+    2.993,
+    1.4844,
+    6.5789
+   ]
+  },
+  "class": "measured",
+  "windscreen_m": 0.8489,
+  "windscreen_z": -1.9143,
+  "windscreen_material": "Batmobile_V3_Glass_INST",
+  "windscreen_m_188": 0.7503,
+  "windscreen_z_188": -1.8157,
+  "windscreen_material_188": "Batmobile_V3_Cockpit_MIC",
+  "side_ray": {
+   "z": -1.1,
+   "y": 1.71,
+   "x_right": 0.2943,
+   "x_left": -0.2942,
+   "material": "Batmobile_V3_Glass_INST"
+  },
+  "side_faces": 611,
+  "side_box": {
+   "x": 0.25,
+   "z": [
+    -1.6,
+    -0.4
+   ]
+  },
+  "side_bbox": {
+   "min": [
+    -0.3626,
+    1.5165,
+    -1.5925
+   ],
+   "max": [
+    0.3627,
+    1.8868,
+    -0.8349
+   ],
+   "size": [
+    0.7254,
+    0.3702,
+    0.7576
+   ]
+  }
+ },
+ "roof": {
+  "profile": [
+   {
+    "z": -1.35,
+    "driver": false,
+    "y": 1.8838,
+    "material": "Batmobile_Worn_NoRain",
+    "slot": 18,
+    "y2": 1.9127,
+    "material2": "Batmobile_V3_Mainbody_NEW_MIC"
+   },
+   {
+    "z": -1.25,
+    "driver": false,
+    "y": 1.901,
+    "material": "Batmobile_V3_Cockpit_MIC",
+    "slot": 10,
+    "y2": 1.9094,
+    "material2": "Batmobile_V3_Cockpit_MIC"
+   },
+   {
+    "z": -1.2,
+    "driver": false,
+    "y": 1.9277,
+    "material": "Batmobile_Worn_NoRain",
+    "slot": 18,
+    "y2": 1.9552,
+    "material2": "Batmobile_V3_Mainbody_NEW_MIC"
+   },
+   {
+    "z": -1.0654,
+    "driver": true,
+    "y": 1.9661,
+    "material": "Batmobile_Worn_NoRain",
+    "slot": 18,
+    "y2": 1.9914,
+    "material2": "Batmobile_V3_Mainbody_NEW_MIC"
+   },
+   {
+    "z": -1.0,
+    "driver": false,
+    "y": 1.9857,
+    "material": "Batmobile_Worn_NoRain",
+    "slot": 18,
+    "y2": 2.0095,
+    "material2": "Batmobile_V3_Mainbody_NEW_MIC"
+   },
+   {
+    "z": -0.95,
+    "driver": false,
+    "y": 2.0007,
+    "material": "Batmobile_Worn_NoRain",
+    "slot": 18,
+    "y2": 2.0299,
+    "material2": "Batmobile_V3_Mainbody_NEW_MIC"
+   },
+   {
+    "z": -0.8,
+    "driver": false,
+    "y": 1.8078,
+    "material": "BatmobileV3_Cockpit_Seat",
+    "slot": 11,
+    "y2": 1.8758,
+    "material2": "BatmobileV3_Cockpit_Seat"
+   }
+  ],
+  "liner_y": 1.9661,
+  "skin_y": 1.9914,
+  "skin_material": "Batmobile_V3_Mainbody_NEW_MIC",
+  "skin_gap_m": 0.0253,
+  "sweep": {
+   "rays": 63,
+   "glass": 0,
+   "x": [
+    -0.15,
+    0.15
+   ],
+   "z": [
+    -1.35,
+    -0.95
+   ],
+   "step": 0.05,
+   "first": {
+    "Batmobile_V3_Cockpit_MIC": 15,
+    "Batmobile_Worn_NoRain": 48
+   }
+  },
+  "headrest": {
+   "z": -0.8,
+   "y": 1.8078,
+   "material": "BatmobileV3_Cockpit_Seat"
+  }
+ },
+ "socket_count": 65,
+ "driver_anchors": 2,
+ "transform_ground": 0.02,
+ "driver": {
+  "position_m": [
+   -0.0025,
+   0.8647,
+   -1.0654
+  ],
+  "above_ground_m": 0.8447,
+  "assembly_z": -1.0654,
+  "front_axle_z": -2.57,
+  "front_axle_dist_m": 1.5046,
+  "bone": "Batmobile_Chassis",
+  "relative_location_cm": [
+   121.9658,
+   0.25,
+   84.25
+  ],
+  "rotation_missing": true,
+  "forward_jc3": [
+   0.0,
+   0.0,
+   -1.0
+  ],
+  "up_jc3": [
+   -1.0,
+   0.0,
+   0.0
+  ],
+  "right_jc3": [
+   0.0,
+   1.0,
+   0.0
+  ],
+  "cushion_y": 0.8407,
+  "above_cushion_m": 0.024,
+  "class": "read"
+ },
+ "anim_origin": {
+  "position_m": [
+   0.0,
+   0.0222,
+   0.1543
+  ],
+  "location_missing": true,
+  "class": "read"
+ },
+ "anchors": {
+  "required": 13,
+  "present": 13,
+  "names": [
+   "Driver",
+   "CannonMuzzle",
+   "ChainGunMuzzle",
+   "RiotSuppressorMuzzle",
+   "MissileL",
+   "MissileR",
+   "Afterburner",
+   "Afterburner_Front",
+   "WinchOrigin",
+   "BattleModeSpotLight",
+   "BootLight",
+   "Dashboard_Light",
+   "Headlight_Centre"
+  ],
+  "driver_required": true,
+  "driver_anim_required": false,
+  "driver_anim_role": "driver",
+  "class": "read"
+ },
+ "eye": {
+  "liner_at_head_y": 1.9857,
+  "builds": [
+   {
+    "label": "adult mean, 1.76 m",
+    "seated_eye_m": 0.79,
+    "eye": [
+     -0.0025,
+     1.6547,
+     -1.0654
+    ],
+    "sitting_height_m": 0.91,
+    "crown_y": 1.7747,
+    "clear_liner_eyes_m": 0.331,
+    "clear_liner_crown_m": 0.211,
+    "screen_m": 0.7103,
+    "screen_deg": 13.8,
+    "sightline_y_at_z152": 1.5434,
+    "class": "derived (assumed input: seated eye height, no source)"
+   },
+   {
+    "label": "1.88 m (the project's scale reference, MODLOG \u00a770)",
+    "seated_eye_m": 0.84,
+    "eye": [
+     -0.0025,
+     1.7047,
+     -1.0654
+    ],
+    "sitting_height_m": 0.97,
+    "crown_y": 1.8347,
+    "clear_liner_eyes_m": 0.281,
+    "clear_liner_crown_m": 0.151,
+    "screen_m": 0.7238,
+    "screen_deg": 17.6,
+    "sightline_y_at_z152": 1.5604,
+    "class": "derived (assumed input: seated eye height, no source)"
+   }
+  ],
+  "hip_to_liner_m": 1.1014,
+  "hip_to_liner_from_hip_m": 1.1014,
+  "assumed": "seated eye height / sitting height: standard adult anthropometry, no file in the project ships it",
+  "class": "assumed"
+ },
+ "hand_box": {
+  "faces": 4,
+  "bands": {
+   "y 0.90..1.00": 24,
+   "y 1.00..1.10": 0,
+   "y 1.10..1.20": 0,
+   "y 1.20..1.30": 4
+  },
+  "class": "measured",
+  "rule": "all three vertices of the face inside |x| < 0.17, y 1.00..1.30, z -1.60..-1.10"
+ },
+ "materials": {
+  "Batmobile_V3_Cockpit_MIC": {
+   "parent": "Material_MASTERS.Batmobile_V3_Body_NoRain_MAT",
+   "params": {
+    "Metalicity": "0.9000"
+   },
+   "textures": {
+    "Colour_Ramp_Map": "Engine.Batman_BM3_V2_Lacquered_Underlayer_Ramp",
+    "Material_Separation_Mask": "Textures.Batmobile_V3_Int_Cockpit_M",
+    "Normal_Map": "Textures.Batmobile_V3_Int_Cockpit_N"
+   },
+   "class": "read (MATERIALS.md)"
+  },
+  "Batmobile_V3_Glass_INST": {
+   "parent": "Batmobile_V2_Textures_NEW.Batmobile_Glass",
+   "params": {
+    "Glass_Opacity": "1.2000",
+    "Glass_Reflectivity": "0.8000",
+    "Glass_Roughness": "1.1000",
+    "glass_smudges": "0.2000"
+   },
+   "textures": {
+    "Normal": "Textures.Batmobile_V3_Glass_N",
+    "OpacityMap": "Textures.Batmobile_V3_Glass_A"
+   },
+   "class": "read (MATERIALS.md)"
+  },
+  "BatmobileV3_Cockpit_Seat": {
+   "parent": "Engine.Batmobile_Hardleather_Master_MAT",
+   "params": {
+    "EmissiveMultiply": "15.0000"
+   },
+   "textures": {
+    "Colour_Map": "Textures.Batmobile_V3_Int_Cockpit_D",
+    "Colour_Ramp_Map": "Maps.Batman_BM3_V2_Leather_Ramp",
+    "Emissive": "Textures.Batmobile_V3_Int_Cockpit_E",
+    "Ref_n_Rough_Map": "Textures.Batmobile_V3_Int_Cockpit_S"
+   },
+   "class": "read (MATERIALS.md)"
+  }
+ },
+ "mesh_exports": {
+  "count": 12,
+  "names": [
+   "Batmobile_V3_Destroyed",
+   "Batmobile_Jokerfied_Skin",
+   "Batmobile_V2_Fire",
+   "Batmobile_V3_Destroyed",
+   "Batmobile_Jokerfied_Skin",
+   "Batwing_Carrier",
+   "Batmobile_V3_Destroyed",
+   "Batmobile_MK2_Skin",
+   "Batmobile_V2_Fire",
+   "Batmobile_V2",
+   "Batmobile_V3_Destroyed",
+   "Batmobile_V2_Fire"
+  ]
+ },
+ "checks": {
+  "driver_in_required": true,
+  "driver_anim_not_required": true,
+  "screen_faces": 100,
+  "hand_box_faces": 4,
+  "roof_above_cushion": 1.1254
+ }
+}

@@ -1,0 +1,434 @@
+{
+ "schema": 1,
+ "generated_by": "Tools/scripts/review_physics_roles2.py --write",
+ "review_of": "tools/scripts/jc3_physics_roles2.py",
+ "target_card": "G3-10b",
+ "R1_cinfo_body_ids": {
+  "byte_ids": [
+   1,
+   3,
+   4,
+   6,
+   7,
+   16,
+   18,
+   19,
+   20,
+   26,
+   35
+  ],
+  "stored_ids": [
+   1,
+   3,
+   4,
+   6,
+   7,
+   16,
+   18,
+   19,
+   20,
+   26,
+   35
+  ],
+  "match": true,
+  "word3_values": [
+   2147483647
+  ],
+  "words4_5": [
+   [
+    0,
+    0
+   ],
+   [
+    0,
+    0
+   ],
+   [
+    0,
+    0
+   ],
+   [
+    0,
+    0
+   ],
+   [
+    0,
+    0
+   ],
+   [
+    0,
+    0
+   ],
+   [
+    0,
+    0
+   ],
+   [
+    0,
+    0
+   ],
+   [
+    0,
+    0
+   ],
+   [
+    0,
+    0
+   ],
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "R2_masses": {
+  "count": 56,
+  "stored_count": 56,
+  "values_match": true,
+  "exact_sum": 1627.0971532561816,
+  "stored_sum": 1627.097155,
+  "sum_delta": -1.744e-06,
+  "full_census": {
+   "1.0": 17,
+   "25.0": 10,
+   "5.0": 6,
+   "40.0": 4,
+   "0.002": 2,
+   "0.004": 2,
+   "0.005": 2,
+   "0.006": 2,
+   "0.009": 2,
+   "0.012": 2,
+   "30.0": 2,
+   "0.003": 1,
+   "0.018": 1,
+   "35.0": 1,
+   "275.0": 1,
+   "800.0": 1
+  },
+  "stored_census": {
+   "1.0": 17,
+   "25.0": 10,
+   "5.0": 6,
+   "40.0": 4,
+   "30.0": 2,
+   "0.002": 2,
+   "0.006": 2,
+   "0.009": 2,
+   "0.005": 2,
+   "0.012": 2,
+   "0.004": 2,
+   "800.0": 1
+  },
+  "census_values_missing_from_stored": {
+   "0.003": 1,
+   "0.018": 1,
+   "35.0": 1,
+   "275.0": 1
+  },
+  "stored_census_count_sum": 52,
+  "positive": true
+ },
+ "R3_body_entries": {
+  "body22_position_bytes": [
+   -1.208,
+   0.7047,
+   -2.57,
+   1.0
+  ],
+  "body22_position_stored": [
+   -1.208,
+   0.7047,
+   -2.57,
+   1.0
+  ],
+  "body22_shape_class": "hknpConvexPolytopeShape",
+  "body16_shape": "0x8f20",
+  "body16_class": "hknpStaticCompoundShape",
+  "body26_shape": "0xc570",
+  "body26_class": "hknpStaticCompoundShape",
+  "compound_body_refs": [
+   [
+    16
+   ],
+   [
+    26
+   ]
+  ],
+  "compound_refs_stored": [
+   [
+    16
+   ],
+   [
+    26
+   ]
+  ]
+ },
+ "B1_limits": {
+  "total_limit_values": 66,
+  "inside_a_transform": 34,
+  "pivot_duplicates": 24,
+  "rows": [
+   {
+    "constraint": "0x4da80",
+    "class": "hkpLimitedHingeConstraintData",
+    "limits": 6,
+    "inside_transform": 4,
+    "pivot_duplicates": 3,
+    "transform_starts": [
+     "0x30",
+     "0x70"
+    ],
+    "limit_offsets": [
+     "0x90",
+     "0xa0",
+     "0xa4",
+     "0xa8",
+     "0x100",
+     "0x104"
+    ]
+   },
+   {
+    "constraint": "0x4dbb0",
+    "class": "hkpLimitedHingeConstraintData",
+    "limits": 6,
+    "inside_transform": 4,
+    "pivot_duplicates": 3,
+    "transform_starts": [
+     "0x30",
+     "0x70"
+    ],
+    "limit_offsets": [
+     "0x94",
+     "0xa0",
+     "0xa4",
+     "0xa8",
+     "0xfc",
+     "0x104"
+    ]
+   },
+   {
+    "constraint": "0x4dce0",
+    "class": "hkpLimitedHingeConstraintData",
+    "limits": 6,
+    "inside_transform": 4,
+    "pivot_duplicates": 3,
+    "transform_starts": [
+     "0x30",
+     "0x70"
+    ],
+    "limit_offsets": [
+     "0x90",
+     "0xa0",
+     "0xa4",
+     "0xa8",
+     "0x100",
+     "0x104"
+    ]
+   },
+   {
+    "constraint": "0x4de10",
+    "class": "hkpLimitedHingeConstraintData",
+    "limits": 6,
+    "inside_transform": 4,
+    "pivot_duplicates": 3,
+    "transform_starts": [
+     "0x30",
+     "0x70"
+    ],
+    "limit_offsets": [
+     "0x94",
+     "0xa0",
+     "0xa4",
+     "0xa8",
+     "0xfc",
+     "0x104"
+    ]
+   },
+   {
+    "constraint": "0x4df40",
+    "class": "hkpRagdollConstraintData",
+    "limits": 6,
+    "inside_transform": 0,
+    "pivot_duplicates": 0,
+    "transform_starts": [
+     "0x30",
+     "0x70",
+     "0xd0"
+    ],
+    "limit_offsets": [
+     "0x140",
+     "0x15c",
+     "0x160",
+     "0x178",
+     "0x17c",
+     "0x180"
+    ]
+   },
+   {
+    "constraint": "0x4e0e0",
+    "class": "hkpLimitedHingeConstraintData",
+    "limits": 6,
+    "inside_transform": 4,
+    "pivot_duplicates": 3,
+    "transform_starts": [
+     "0x30",
+     "0x70"
+    ],
+    "limit_offsets": [
+     "0x94",
+     "0xa0",
+     "0xa4",
+     "0xa8",
+     "0xfc",
+     "0x104"
+    ]
+   },
+   {
+    "constraint": "0x4e210",
+    "class": "hkpRagdollConstraintData",
+    "limits": 8,
+    "inside_transform": 0,
+    "pivot_duplicates": 0,
+    "transform_starts": [
+     "0x30",
+     "0x70",
+     "0xd0"
+    ],
+    "limit_offsets": [
+     "0x138",
+     "0x13c",
+     "0x140",
+     "0x15c",
+     "0x160",
+     "0x178",
+     "0x17c",
+     "0x180"
+    ]
+   },
+   {
+    "constraint": "0x4e3b0",
+    "class": "hkpLimitedHingeConstraintData",
+    "limits": 5,
+    "inside_transform": 3,
+    "pivot_duplicates": 2,
+    "transform_starts": [
+     "0x30",
+     "0x70"
+    ],
+    "limit_offsets": [
+     "0x94",
+     "0xa4",
+     "0xa8",
+     "0x100",
+     "0x104"
+    ]
+   },
+   {
+    "constraint": "0x4e4e0",
+    "class": "hkpLimitedHingeConstraintData",
+    "limits": 5,
+    "inside_transform": 3,
+    "pivot_duplicates": 2,
+    "transform_starts": [
+     "0x30",
+     "0x70"
+    ],
+    "limit_offsets": [
+     "0x94",
+     "0xa4",
+     "0xa8",
+     "0x100",
+     "0x104"
+    ]
+   },
+   {
+    "constraint": "0x4e610",
+    "class": "hkpLimitedHingeConstraintData",
+    "limits": 6,
+    "inside_transform": 4,
+    "pivot_duplicates": 3,
+    "transform_starts": [
+     "0x30",
+     "0x70"
+    ],
+    "limit_offsets": [
+     "0x94",
+     "0xa0",
+     "0xa4",
+     "0xa8",
+     "0xfc",
+     "0x104"
+    ]
+   },
+   {
+    "constraint": "0x4e740",
+    "class": "hkpLimitedHingeConstraintData",
+    "limits": 6,
+    "inside_transform": 4,
+    "pivot_duplicates": 2,
+    "transform_starts": [
+     "0x30",
+     "0x70"
+    ],
+    "limit_offsets": [
+     "0x94",
+     "0x98",
+     "0xa4",
+     "0xa8",
+     "0x100",
+     "0x104"
+    ]
+   }
+  ]
+ },
+ "B4_one_side": {
+  "donor_constraint_fixups": {
+   "0x4da80": 1,
+   "0x4dbb0": 1,
+   "0x4dce0": 1,
+   "0x4de10": 1,
+   "0x4df40": 1,
+   "0x4e0e0": 1,
+   "0x4e210": 1,
+   "0x4e3b0": 1,
+   "0x4e4e0": 1,
+   "0x4e610": 1,
+   "0x4e740": 1
+  },
+  "donor_constraints": 11,
+  "fleet_constraints": 384,
+  "fleet_with_exactly_one_fixup": 384,
+  "fleet_cinfo_words_3_4_5": [
+   [
+    2147483647,
+    0,
+    0
+   ]
+  ]
+ },
+ "B5_fleet_oracle": {
+  "files": 41,
+  "files_checked": 40,
+  "errors": [
+   {
+    "file": "town_01_ai_junction.physicsc",
+    "error": "0 system datas"
+   }
+  ],
+  "null_cinfo_pointers": 0,
+  "note": "the card's fleet `cinfo_bijection` skips a null pointer (`if p`) and compares counts, so it cannot detect a null or a duplicate; the donor oracle is the strict one"
+ },
+ "core_values_match": true,
+ "issues": [
+  "the 'limits' column is a value-band float dump, not a decoded limit: 34 of 66 reported values sit inside an already-decoded atom transform, and 24 are a pivot component re-listed; the column must be relabelled derived/UNKNOWN",
+  "the mass census is silently truncated: the stored/printed dict covers 52 of 56 blocks and drops 4 distinct values (['0.003', '0.018', '275.0', '35.0'])",
+  "the quoted mass total 1627.097155 is the sum of per-block values rounded to 6 dp, not the exact float sum 1627.097153256 (delta -1.744e-06)"
+ ],
+ "verdict": "needs rework (limits section)",
+ "unknowns": [
+  "which value in a hinge's tail really is the limit: not resolved by this review either; the tail overlaps the atom transforms, so the card's offsets cannot be separated from transform bytes without the constraint data layout",
+  "whether the half of the 'limit' values that are outside the transforms are angles at all: several are plausible (1.396263 = 80 deg, 0.523599 = 30 deg) but no oracle in either file proves the field",
+  "the partner body of each constraint: not stored in the cinfo (decoded negative, donor and fleet); where it lives is still unknown (G3-10c agrees)"
+ ]
+}

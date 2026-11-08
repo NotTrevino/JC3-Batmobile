@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc6-fix-triage-to-branch-plan.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/q4-fix-loop-triage.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/review-test-campaign.md
+After the RC5 sittings, fix work arrives as FIXES.md cards and the 87xx briefs written by 8699. Turn them into a build plan for the next candidate, called RC6. Read Working/Q/RESULTS.md, FIXES.md, reports/q4-fix-loop-triage.md, reports/review-test-campaign.md and the done reports of the 87xx fix briefs (list them with ls). For each fix write one branch record in Working/RC6/branches/ in the format documented by reports/rc5-scaffold-and-merge-script.md: tree path, files owned, card or ledger row served, check command. Mark which ledger rows change value, which change mechanism, and which only need a re-test with no build. Where two fixes own one module member, apply Working/RC5/MEMBER_OWNERSHIP.json rules. Respect the cap: at most one extra session per original session before the operator decides (GRAB_BACKLOG.md section 9b Q-4). Done when every fix card appears in exactly one branch record or in a named no-build list, and the counts are stated. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

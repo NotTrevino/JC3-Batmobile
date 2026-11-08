@@ -1,0 +1,87 @@
+{
+  "entry": {
+    "archive": "patch_win64/game4",
+    "hash": "016DE9D1",
+    "offset": 618637312,
+    "size": 84720
+  },
+  "path": "sound/dialogue/ara/mission_mm320_dial_gameplay_sams01.wavc",
+  "source": "derived-names",
+  "route": [
+    "archive write order: the record sits between two named Arabic takes, so the basename must sort inside that bracket",
+    "language-invariant FSB5 name-table token: proves which take it is when a sibling copy exists, and proves here that none does"
+  ],
+  "container": {
+    "prefix": "u32 size-16 = 84704, then 12 zero bytes",
+    "magic": "FSB5",
+    "version": 1,
+    "num_samples": 1,
+    "sample_header_size": 60,
+    "name_table_size": 40,
+    "sample": {
+      "frequency_hz": 11025,
+      "channels": 1,
+      "samples": 243648,
+      "duration_s": 22.1,
+      "mode": 84544
+    },
+    "token": "1606523576"
+  },
+  "bracket": {
+    "predecessor": {
+      "path": "sound/dialogue/ara/mission_mm320_dial_gameplay_090.wavc",
+      "offset": 618592256,
+      "size": 44368,
+      "hash": "5567C6E5",
+      "token": "1468515345"
+    },
+    "successor": {
+      "path": "sound/dialogue/ara/mission_mm320_dial_gameplay_start05.wavc",
+      "offset": 618723328,
+      "size": 141040,
+      "hash": "CB7DBEA9",
+      "token": "a3000117"
+    },
+    "ordering_holds": true
+  },
+  "why_not_the_token_alone": {
+    "named_wavc_scanned": 31001,
+    "distinct_tokens": 14849,
+    "token_1606523576_in_named_set": false,
+    "basenames_with_two_language_copies_checked": 6,
+    "token_agree": 6,
+    "token_disagree": 0,
+    "conclusion": "the token is language-invariant wherever a take has siblings; this take has none, so the token identifies it but cannot name it"
+  },
+  "why_sams01_exists_only_in_arabic": {
+    "arabic_mm320_takes": 5,
+    "english_mm320_takes": 86,
+    "english_sams_takes": [
+      "mission_mm320_dial_gameplay_sams02.wavc",
+      "mission_mm320_dial_gameplay_sams03.wavc"
+    ],
+    "note": "English has sams02 and sams03 and no sams01; the Arabic recording is the only copy, which is exactly the shape of a unique-orphan token"
+  },
+  "candidates": {
+    "this_pass": 697020,
+    "previous_pass": 243341,
+    "sweeps": {
+      "numeric_str_0_9999_widths_1_4_under_bracket": 37153,
+      "numeric_all_language_dirs": 142407,
+      "three_digit_plus_letter_and_start_variants_under_bracket": 783,
+      "english_mm320_basenames_x_all_language_dirs": 1683,
+      "take_suffix_and_word_vocabulary_under_bracket": 514994
+    },
+    "hits": 1
+  },
+  "verification": {
+    "hash_equals_record": "hash_jenkins(path) == 0x016DE9D1",
+    "neighbours_self_hash": [
+      "5567C6E5",
+      "CB7DBEA9"
+    ],
+    "index_row": "Research/JC3Grab/INDEX.jsonl -> patch_win64/game4 @618637312, source derived-names",
+    "check_command": "python Tools/scripts/g2_last_entry.py --check"
+  },
+  "revert": "delete this file, Tools/names/jc3_mm320_sams01.filelist and Tools/scripts/g2_last_entry.py, then rerun python Tools/scripts/jc3index.py build"
+}

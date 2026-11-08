@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/drive-mode-torque-arithmetic-substitute-plan.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-08
+reports/G3-02l.md decodes the per-mode drive mode of the BmAK vehicle sim (EBatmobileDriveMode, the torque and steer carrying fields, the camera-relative carriers) and states that the arithmetic inside RVehicleSimBatmobile.SetDriveMode is native and UNKNOWN. Do not leave it there. Write the closest-JC3 substitute: take each decoded field of each drive mode, name the JC3 vehicle-sim member that plays the same role, the value to write, and how the missing arithmetic is approximated (state the formula and which measurement in the game would fit it). Cite offsets and files. UNKNOWN names the file or probe that settles it; a pilot-card sentence with a pass band per mode.

@@ -1,0 +1,2926 @@
+{
+ "task": "name the 26 bit-packed bool words of WEAPONS.md from the BmSDK bindings",
+ "inputs": {
+  "weapons_json": "Research/BatmobileGrab/WEAPONS.json",
+  "sdk": "E:/Modding/_tools/BmSDK-AK/src/BmSDK/Generated"
+ },
+ "summary": {
+  "rows": 26,
+  "named": 26,
+  "unknown": 0,
+  "words": 12,
+  "members": 231,
+  "multi_member_words": 12,
+  "multi_with_pair": 2,
+  "multi_same_word": [
+   {
+    "class": "RBatmobileCannon",
+    "offset_hex": "offset 0x0824",
+    "bits": 661
+   },
+   {
+    "class": "RBatmobileMissile",
+    "offset_hex": "offset 0x0338",
+    "bits": 512
+   },
+   {
+    "class": "RBatmobileWinch",
+    "offset_hex": "offset 0x0970",
+    "bits": 8
+   }
+  ],
+  "single_object_words": [
+   {
+    "class": "RBasicProjectile",
+    "offset_hex": "offset 0x010C",
+    "members": [
+     "bRigidBodyWasAwake",
+     "bCallRigidBodyWakeEvents",
+     "bIgnoreHurtRadiusLosCheck",
+     "bBounce",
+     "bJustTeleported",
+     "bEnableMobileTouch",
+     "bNetInitial",
+     "bNetOwner",
+     "bOwnerAlwaysReplicated",
+     "bHiddenEd",
+     "bEditable",
+     "bHiddenEdGroup",
+     "bHiddenEdLayer",
+     "bHiddenEdCustom",
+     "bHiddenEdTemporary",
+     "bHiddenEdLevel",
+     "bHiddenEdScene",
+     "bEdShouldSnap",
+     "bTempEditor",
+     "bPathColliding",
+     "bIgnoreStaticForPathBuilding",
+     "bPathTemp",
+     "bScriptInitialized",
+     "bLockLocation",
+     "bForceAllowKismetModification",
+     "bStripThisActorWhenCooking",
+     "bEdCanScale",
+     "bEdCanNonUniformScale",
+     "bEdCanNegativeScale",
+     "bDonePostBeginPlay",
+     "bBatmanCanClimb",
+     "bAllowSlopedEdges"
+    ]
+   },
+   {
+    "class": "RBatmobileHeavyCannon",
+    "offset_hex": "offset 0x010C",
+    "members": [
+     "bRigidBodyWasAwake",
+     "bCallRigidBodyWakeEvents",
+     "bIgnoreHurtRadiusLosCheck",
+     "bBounce",
+     "bJustTeleported",
+     "bEnableMobileTouch",
+     "bNetInitial",
+     "bNetOwner",
+     "bOwnerAlwaysReplicated",
+     "bHiddenEd",
+     "bEditable",
+     "bHiddenEdGroup",
+     "bHiddenEdLayer",
+     "bHiddenEdCustom",
+     "bHiddenEdTemporary",
+     "bHiddenEdLevel",
+     "bHiddenEdScene",
+     "bEdShouldSnap",
+     "bTempEditor",
+     "bPathColliding",
+     "bIgnoreStaticForPathBuilding",
+     "bPathTemp",
+     "bScriptInitialized",
+     "bLockLocation",
+     "bForceAllowKismetModification",
+     "bStripThisActorWhenCooking",
+     "bEdCanScale",
+     "bEdCanNonUniformScale",
+     "bEdCanNegativeScale",
+     "bDonePostBeginPlay",
+     "bBatmanCanClimb",
+     "bAllowSlopedEdges"
+    ]
+   },
+   {
+    "class": "RBatmobileHeavyCannon",
+    "offset_hex": "offset 0x0824",
+    "members": [
+     "ContinuousFire",
+     "bFiring",
+     "bAimedWeapon",
+     "bOnlySteerOnAimExtremes",
+     "bRelativeAiming",
+     "DrawWorldAim",
+     "bFPSControls",
+     "bSecondaryWeapon",
+     "bFailedWeaponFlag",
+     "bBatmanProhibited"
+    ]
+   },
+   {
+    "class": "RBatmobileHeavyCannon",
+    "offset_hex": "offset 0x09B4",
+    "members": [
+     "AllowChargedShot",
+     "bCanHurtThugs",
+     "ChargingShot",
+     "bWeaponHit",
+     "bHeavyCannonLure"
+    ]
+   },
+   {
+    "class": "RBatmobileMissile",
+    "offset_hex": "offset 0x0108",
+    "members": [
+     "bCanBeAdheredTo",
+     "bCanBeFrictionedTo",
+     "bHurtEntry",
+     "bGameRelevant",
+     "bMovable",
+     "bDestroyInPainVolume",
+     "bCanBeDamaged",
+     "bShouldBaseAtStartup",
+     "bPendingDelete",
+     "bCanTeleport",
+     "bAlwaysTick",
+     "bBlocksNavigation",
+     "bInvalidateParentLODOnRemove",
+     "BlockRigidBody",
+     "bCollideWhenPlacing",
+     "bCollideActors",
+     "bCollideActorsInitial",
+     "bCollideWorld",
+     "bCollideComplex",
+     "bBlockActors",
+     "bProjTarget",
+     "bBlocksTeleport",
+     "bPlayerMovementCheck",
+     "bMoveCollidesWithDynamicApexChunks",
+     "bProjectileMoveSingleBlocking",
+     "bForceNoVolumeTrace",
+     "bNoEncroachCheck",
+     "bCollideAsEncroacher",
+     "bPhysRigidBodyOutOfWorldCheck",
+     "bComponentOutsideWorld",
+     "bForceOctreeSNFilter",
+     "bForceOctreeMNFilter"
+    ]
+   },
+   {
+    "class": "RBatmobileMissile",
+    "offset_hex": "offset 0x010C",
+    "members": [
+     "bRigidBodyWasAwake",
+     "bCallRigidBodyWakeEvents",
+     "bIgnoreHurtRadiusLosCheck",
+     "bBounce",
+     "bJustTeleported",
+     "bEnableMobileTouch",
+     "bNetInitial",
+     "bNetOwner",
+     "bOwnerAlwaysReplicated",
+     "bHiddenEd",
+     "bEditable",
+     "bHiddenEdGroup",
+     "bHiddenEdLayer",
+     "bHiddenEdCustom",
+     "bHiddenEdTemporary",
+     "bHiddenEdLevel",
+     "bHiddenEdScene",
+     "bEdShouldSnap",
+     "bTempEditor",
+     "bPathColliding",
+     "bIgnoreStaticForPathBuilding",
+     "bPathTemp",
+     "bScriptInitialized",
+     "bLockLocation",
+     "bForceAllowKismetModification",
+     "bStripThisActorWhenCooking",
+     "bEdCanScale",
+     "bEdCanNonUniformScale",
+     "bEdCanNegativeScale",
+     "bDonePostBeginPlay",
+     "bBatmanCanClimb",
+     "bAllowSlopedEdges"
+    ]
+   },
+   {
+    "class": "RBatmobileMissileLauncherJoker",
+    "offset_hex": "offset 0x010C",
+    "members": [
+     "bRigidBodyWasAwake",
+     "bCallRigidBodyWakeEvents",
+     "bIgnoreHurtRadiusLosCheck",
+     "bBounce",
+     "bJustTeleported",
+     "bEnableMobileTouch",
+     "bNetInitial",
+     "bNetOwner",
+     "bOwnerAlwaysReplicated",
+     "bHiddenEd",
+     "bEditable",
+     "bHiddenEdGroup",
+     "bHiddenEdLayer",
+     "bHiddenEdCustom",
+     "bHiddenEdTemporary",
+     "bHiddenEdLevel",
+     "bHiddenEdScene",
+     "bEdShouldSnap",
+     "bTempEditor",
+     "bPathColliding",
+     "bIgnoreStaticForPathBuilding",
+     "bPathTemp",
+     "bScriptInitialized",
+     "bLockLocation",
+     "bForceAllowKismetModification",
+     "bStripThisActorWhenCooking",
+     "bEdCanScale",
+     "bEdCanNonUniformScale",
+     "bEdCanNegativeScale",
+     "bDonePostBeginPlay",
+     "bBatmanCanClimb",
+     "bAllowSlopedEdges"
+    ]
+   }
+  ],
+  "classes": [
+   "RBasicProjectile",
+   "RBatmobileAllegianceSwitcher",
+   "RBatmobileBooster",
+   "RBatmobileCannon",
+   "RBatmobileEMP",
+   "RBatmobileEMPMissile",
+   "RBatmobileHeavyCannon",
+   "RBatmobileMissile",
+   "RBatmobileMissileLauncher",
+   "RBatmobileMissileLauncherJoker",
+   "RBatmobileSonar",
+   "RBatmobileVehicleTracker",
+   "RBatmobileWinch"
+  ]
+ },
+ "words": [
+  {
+   "class": "RBasicProjectile",
+   "offset": 268,
+   "offset_hex": "offset 0x010C",
+   "declared_in": "Actor",
+   "members": [
+    {
+     "member": "bRigidBodyWasAwake",
+     "mask": 1,
+     "mask_hex": "0x1",
+     "bit": 0,
+     "file": "Actor.g.cs",
+     "line": 7412,
+     "getter_line": 7414,
+     "value": false
+    },
+    {
+     "member": "bCallRigidBodyWakeEvents",
+     "mask": 2,
+     "mask_hex": "0x2",
+     "bit": 1,
+     "file": "Actor.g.cs",
+     "line": 7421,
+     "getter_line": 7423,
+     "value": false
+    },
+    {
+     "member": "bIgnoreHurtRadiusLosCheck",
+     "mask": 4,
+     "mask_hex": "0x4",
+     "bit": 2,
+     "file": "Actor.g.cs",
+     "line": 7430,
+     "getter_line": 7432,
+     "value": true
+    },
+    {
+     "member": "bBounce",
+     "mask": 8,
+     "mask_hex": "0x8",
+     "bit": 3,
+     "file": "Actor.g.cs",
+     "line": 7439,
+     "getter_line": 7441,
+     "value": false
+    },
+    {
+     "member": "bJustTeleported",
+     "mask": 16,
+     "mask_hex": "0x10",
+     "bit": 4,
+     "file": "Actor.g.cs",
+     "line": 7448,
+     "getter_line": 7450,
+     "value": true
+    },
+    {
+     "member": "bEnableMobileTouch",
+     "mask": 32,
+     "mask_hex": "0x20",
+     "bit": 5,
+     "file": "Actor.g.cs",
+     "line": 7457,
+     "getter_line": 7459,
+     "value": false
+    },
+    {
+     "member": "bNetInitial",
+     "mask": 64,
+     "mask_hex": "0x40",
+     "bit": 6,
+     "file": "Actor.g.cs",
+     "line": 7466,
+     "getter_line": 7468,
+     "value": false
+    },
+    {
+     "member": "bNetOwner",
+     "mask": 128,
+     "mask_hex": "0x80",
+     "bit": 7,
+     "file": "Actor.g.cs",
+     "line": 7475,
+     "getter_line": 7477,
+     "value": false
+    },
+    {
+     "member": "bOwnerAlwaysReplicated",
+     "mask": 256,
+     "mask_hex": "0x100",
+     "bit": 8,
+     "file": "Actor.g.cs",
+     "line": 7484,
+     "getter_line": 7486,
+     "value": false
+    },
+    {
+     "member": "bHiddenEd",
+     "mask": 512,
+     "mask_hex": "0x200",
+     "bit": 9,
+     "file": "Actor.g.cs",
+     "line": 7493,
+     "getter_line": 7495,
+     "value": false
+    },
+    {
+     "member": "bEditable",
+     "mask": 1024,
+     "mask_hex": "0x400",
+     "bit": 10,
+     "file": "Actor.g.cs",
+     "line": 7502,
+     "getter_line": 7504,
+     "value": true
+    },
+    {
+     "member": "bHiddenEdGroup",
+     "mask": 2048,
+     "mask_hex": "0x800",
+     "bit": 11,
+     "file": "Actor.g.cs",
+     "line": 7511,
+     "getter_line": 7513,
+     "value": false
+    },
+    {
+     "member": "bHiddenEdLayer",
+     "mask": 4096,
+     "mask_hex": "0x1000",
+     "bit": 12,
+     "file": "Actor.g.cs",
+     "line": 7520,
+     "getter_line": 7522,
+     "value": false
+    },
+    {
+     "member": "bHiddenEdCustom",
+     "mask": 8192,
+     "mask_hex": "0x2000",
+     "bit": 13,
+     "file": "Actor.g.cs",
+     "line": 7529,
+     "getter_line": 7531,
+     "value": false
+    },
+    {
+     "member": "bHiddenEdTemporary",
+     "mask": 16384,
+     "mask_hex": "0x4000",
+     "bit": 14,
+     "file": "Actor.g.cs",
+     "line": 7538,
+     "getter_line": 7540,
+     "value": false
+    },
+    {
+     "member": "bHiddenEdLevel",
+     "mask": 32768,
+     "mask_hex": "0x8000",
+     "bit": 15,
+     "file": "Actor.g.cs",
+     "line": 7547,
+     "getter_line": 7549,
+     "value": false
+    },
+    {
+     "member": "bHiddenEdScene",
+     "mask": 65536,
+     "mask_hex": "0x10000",
+     "bit": 16,
+     "file": "Actor.g.cs",
+     "line": 7556,
+     "getter_line": 7558,
+     "value": false
+    },
+    {
+     "member": "bEdShouldSnap",
+     "mask": 131072,
+     "mask_hex": "0x20000",
+     "bit": 17,
+     "file": "Actor.g.cs",
+     "line": 7565,
+     "getter_line": 7567,
+     "value": false
+    },
+    {
+     "member": "bTempEditor",
+     "mask": 262144,
+     "mask_hex": "0x40000",
+     "bit": 18,
+     "file": "Actor.g.cs",
+     "line": 7574,
+     "getter_line": 7576,
+     "value": false
+    },
+    {
+     "member": "bPathColliding",
+     "mask": 524288,
+     "mask_hex": "0x80000",
+     "bit": 19,
+     "file": "Actor.g.cs",
+     "line": 7583,
+     "getter_line": 7585,
+     "value": false
+    },
+    {
+     "member": "bIgnoreStaticForPathBuilding",
+     "mask": 1048576,
+     "mask_hex": "0x100000",
+     "bit": 20,
+     "file": "Actor.g.cs",
+     "line": 7592,
+     "getter_line": 7594,
+     "value": false
+    },
+    {
+     "member": "bPathTemp",
+     "mask": 2097152,
+     "mask_hex": "0x200000",
+     "bit": 21,
+     "file": "Actor.g.cs",
+     "line": 7601,
+     "getter_line": 7603,
+     "value": false
+    },
+    {
+     "member": "bScriptInitialized",
+     "mask": 4194304,
+     "mask_hex": "0x400000",
+     "bit": 22,
+     "file": "Actor.g.cs",
+     "line": 7610,
+     "getter_line": 7612,
+     "value": false
+    },
+    {
+     "member": "bLockLocation",
+     "mask": 8388608,
+     "mask_hex": "0x800000",
+     "bit": 23,
+     "file": "Actor.g.cs",
+     "line": 7619,
+     "getter_line": 7621,
+     "value": false
+    },
+    {
+     "member": "bForceAllowKismetModification",
+     "mask": 16777216,
+     "mask_hex": "0x1000000",
+     "bit": 24,
+     "file": "Actor.g.cs",
+     "line": 7628,
+     "getter_line": 7630,
+     "value": false
+    },
+    {
+     "member": "bStripThisActorWhenCooking",
+     "mask": 33554432,
+     "mask_hex": "0x2000000",
+     "bit": 25,
+     "file": "Actor.g.cs",
+     "line": 7637,
+     "getter_line": 7639,
+     "value": false
+    },
+    {
+     "member": "bEdCanScale",
+     "mask": 67108864,
+     "mask_hex": "0x4000000",
+     "bit": 26,
+     "file": "Actor.g.cs",
+     "line": 7646,
+     "getter_line": 7648,
+     "value": true
+    },
+    {
+     "member": "bEdCanNonUniformScale",
+     "mask": 134217728,
+     "mask_hex": "0x8000000",
+     "bit": 27,
+     "file": "Actor.g.cs",
+     "line": 7655,
+     "getter_line": 7657,
+     "value": true
+    },
+    {
+     "member": "bEdCanNegativeScale",
+     "mask": 268435456,
+     "mask_hex": "0x10000000",
+     "bit": 28,
+     "file": "Actor.g.cs",
+     "line": 7664,
+     "getter_line": 7666,
+     "value": true
+    },
+    {
+     "member": "bDonePostBeginPlay",
+     "mask": 536870912,
+     "mask_hex": "0x20000000",
+     "bit": 29,
+     "file": "Actor.g.cs",
+     "line": 7673,
+     "getter_line": 7675,
+     "value": false
+    },
+    {
+     "member": "bBatmanCanClimb",
+     "mask": 1073741824,
+     "mask_hex": "0x40000000",
+     "bit": 30,
+     "file": "Actor.g.cs",
+     "line": 7682,
+     "getter_line": 7684,
+     "value": false
+    },
+    {
+     "member": "bAllowSlopedEdges",
+     "mask": 2147483648,
+     "mask_hex": "0x80000000",
+     "bit": 31,
+     "file": "Actor.g.cs",
+     "line": 7691,
+     "getter_line": 7693,
+     "value": true
+    }
+   ],
+   "objects": [
+    {
+     "object": "Playable_BatmobileJoker_SF.Batmobile_JokerHeavy_Cannon_Projectile",
+     "bits": 2617246740
+    }
+   ],
+   "distinct_words": [
+    2617246740
+   ],
+   "pair": null
+  },
+  {
+   "class": "RBatmobileCannon",
+   "offset": 2084,
+   "offset_hex": "offset 0x0824",
+   "declared_in": "RVehicleWeapon",
+   "members": [
+    {
+     "member": "ContinuousFire",
+     "mask": 1,
+     "mask_hex": "0x1",
+     "bit": 0,
+     "file": "RVehicleWeapon.g.cs",
+     "line": 630,
+     "getter_line": 632,
+     "value": true
+    },
+    {
+     "member": "bFiring",
+     "mask": 2,
+     "mask_hex": "0x2",
+     "bit": 1,
+     "file": "RVehicleWeapon.g.cs",
+     "line": 639,
+     "getter_line": 641,
+     "value": false
+    },
+    {
+     "member": "bAimedWeapon",
+     "mask": 4,
+     "mask_hex": "0x4",
+     "bit": 2,
+     "file": "RVehicleWeapon.g.cs",
+     "line": 648,
+     "getter_line": 650,
+     "value": true
+    },
+    {
+     "member": "bOnlySteerOnAimExtremes",
+     "mask": 8,
+     "mask_hex": "0x8",
+     "bit": 3,
+     "file": "RVehicleWeapon.g.cs",
+     "line": 657,
+     "getter_line": 659,
+     "value": false
+    },
+    {
+     "member": "bRelativeAiming",
+     "mask": 16,
+     "mask_hex": "0x10",
+     "bit": 4,
+     "file": "RVehicleWeapon.g.cs",
+     "line": 666,
+     "getter_line": 668,
+     "value": true
+    },
+    {
+     "member": "DrawWorldAim",
+     "mask": 32,
+     "mask_hex": "0x20",
+     "bit": 5,
+     "file": "RVehicleWeapon.g.cs",
+     "line": 675,
+     "getter_line": 677,
+     "value": false
+    },
+    {
+     "member": "bFPSControls",
+     "mask": 64,
+     "mask_hex": "0x40",
+     "bit": 6,
+     "file": "RVehicleWeapon.g.cs",
+     "line": 684,
+     "getter_line": 686,
+     "value": false
+    },
+    {
+     "member": "bSecondaryWeapon",
+     "mask": 128,
+     "mask_hex": "0x80",
+     "bit": 7,
+     "file": "RVehicleWeapon.g.cs",
+     "line": 693,
+     "getter_line": 695,
+     "value": true
+    },
+    {
+     "member": "bFailedWeaponFlag",
+     "mask": 256,
+     "mask_hex": "0x100",
+     "bit": 8,
+     "file": "RVehicleWeapon.g.cs",
+     "line": 702,
+     "getter_line": 704,
+     "value": false
+    },
+    {
+     "member": "bBatmanProhibited",
+     "mask": 512,
+     "mask_hex": "0x200",
+     "bit": 9,
+     "file": "RVehicleWeapon.g.cs",
+     "line": 711,
+     "getter_line": 713,
+     "value": true
+    }
+   ],
+   "objects": [
+    {
+     "object": "Playable_BatmobileFunhouse_SF.Batmobile_Cannon_V2",
+     "bits": 661
+    },
+    {
+     "object": "Playable_BatmobileJoker_SF.Batmobile_Cannon_V2",
+     "bits": 661
+    },
+    {
+     "object": "Playable_BatmobileMK2_SF.Batmobile_Cannon_V2",
+     "bits": 661
+    },
+    {
+     "object": "Playable_Batmobile_SF.Batmobile_Cannon_V2",
+     "bits": 661
+    }
+   ],
+   "distinct_words": [
+    661
+   ],
+   "pair": null
+  },
+  {
+   "class": "RBatmobileCannon",
+   "offset": 2396,
+   "offset_hex": "offset 0x095C",
+   "declared_in": "RBatmobileCannon",
+   "members": [
+    {
+     "member": "bNonAimedCannonIsCameraRelative",
+     "mask": 1,
+     "mask_hex": "0x1",
+     "bit": 0,
+     "file": "RBatmobileCannon.g.cs",
+     "line": 609,
+     "getter_line": 611,
+     "value": false
+    },
+    {
+     "member": "bHasRiotSurpressor",
+     "mask": 2,
+     "mask_hex": "0x2",
+     "bit": 1,
+     "file": "RBatmobileCannon.g.cs",
+     "line": 618,
+     "getter_line": 620,
+     "value": true
+    },
+    {
+     "member": "bCanHurtThugs",
+     "mask": 4,
+     "mask_hex": "0x4",
+     "bit": 2,
+     "file": "RBatmobileCannon.g.cs",
+     "line": 627,
+     "getter_line": 629,
+     "value": false
+    },
+    {
+     "member": "bUseRiotTargettingForChainGun",
+     "mask": 8,
+     "mask_hex": "0x8",
+     "bit": 3,
+     "file": "RBatmobileCannon.g.cs",
+     "line": 636,
+     "getter_line": 638,
+     "value": false
+    },
+    {
+     "member": "bOverheating",
+     "mask": 16,
+     "mask_hex": "0x10",
+     "bit": 4,
+     "file": "RBatmobileCannon.g.cs",
+     "line": 645,
+     "getter_line": 647,
+     "value": false
+    },
+    {
+     "member": "bChainGunScreenShake",
+     "mask": 32,
+     "mask_hex": "0x20",
+     "bit": 5,
+     "file": "RBatmobileCannon.g.cs",
+     "line": 654,
+     "getter_line": 656,
+     "value": true
+    },
+    {
+     "member": "bChaingunLocksOntoTanks",
+     "mask": 64,
+     "mask_hex": "0x40",
+     "bit": 6,
+     "file": "RBatmobileCannon.g.cs",
+     "line": 663,
+     "getter_line": 665,
+     "value": true
+    },
+    {
+     "member": "bReloading",
+     "mask": 128,
+     "mask_hex": "0x80",
+     "bit": 7,
+     "file": "RBatmobileCannon.g.cs",
+     "line": 672,
+     "getter_line": 674,
+     "value": false
+    },
+    {
+     "member": "bPerfectShot",
+     "mask": 256,
+     "mask_hex": "0x100",
+     "bit": 8,
+     "file": "RBatmobileCannon.g.cs",
+     "line": 681,
+     "getter_line": 683,
+     "value": true
+    },
+    {
+     "member": "bLoseAccuracyOverTime",
+     "mask": 512,
+     "mask_hex": "0x200",
+     "bit": 9,
+     "file": "RBatmobileCannon.g.cs",
+     "line": 690,
+     "getter_line": 692,
+     "value": true
+    },
+    {
+     "member": "AudioTurrentMovingH",
+     "mask": 1024,
+     "mask_hex": "0x400",
+     "bit": 10,
+     "file": "RBatmobileCannon.g.cs",
+     "line": 699,
+     "getter_line": 701,
+     "value": false
+    },
+    {
+     "member": "AudioTurrentMovingV",
+     "mask": 2048,
+     "mask_hex": "0x800",
+     "bit": 11,
+     "file": "RBatmobileCannon.g.cs",
+     "line": 708,
+     "getter_line": 710,
+     "value": false
+    },
+    {
+     "member": "bDisableCannonAimAtTargets",
+     "mask": 4096,
+     "mask_hex": "0x1000",
+     "bit": 12,
+     "file": "RBatmobileCannon.g.cs",
+     "line": 717,
+     "getter_line": 719,
+     "value": false
+    },
+    {
+     "member": "bHalfFireRate",
+     "mask": 8192,
+     "mask_hex": "0x2000",
+     "bit": 13,
+     "file": "RBatmobileCannon.g.cs",
+     "line": 726,
+     "getter_line": 728,
+     "value": false
+    }
+   ],
+   "objects": [
+    {
+     "object": "Playable_BatmobileFunhouse_SF.Batmobile_Cannon_V2",
+     "bits": 866
+    },
+    {
+     "object": "Playable_BatmobileJoker_SF.Batmobile_Cannon_V2",
+     "bits": 866
+    },
+    {
+     "object": "Playable_BatmobileMK2_SF.Batmobile_Cannon_V2",
+     "bits": 866
+    },
+    {
+     "object": "Playable_Batmobile_SF.Batmobile_Cannon_V2",
+     "bits": 866
+    },
+    {
+     "object": "Playable_BatmobileJoker_SF.Batmobile_JokerCannon_V2",
+     "bits": 4972
+    }
+   ],
+   "distinct_words": [
+    866,
+    4972
+   ],
+   "pair": {
+    "a": {
+     "object": "Playable_BatmobileFunhouse_SF.Batmobile_Cannon_V2",
+     "bits": 866
+    },
+    "b": {
+     "object": "Playable_BatmobileJoker_SF.Batmobile_JokerCannon_V2",
+     "bits": 4972
+    },
+    "xor": 4110,
+    "xor_hex": "0x0000100E",
+    "flipped_members": [
+     "bHasRiotSurpressor",
+     "bCanHurtThugs",
+     "bUseRiotTargettingForChainGun",
+     "bDisableCannonAimAtTargets"
+    ],
+    "explained": true
+   }
+  },
+  {
+   "class": "RBatmobileHeavyCannon",
+   "offset": 268,
+   "offset_hex": "offset 0x010C",
+   "declared_in": "Actor",
+   "members": [
+    {
+     "member": "bRigidBodyWasAwake",
+     "mask": 1,
+     "mask_hex": "0x1",
+     "bit": 0,
+     "file": "Actor.g.cs",
+     "line": 7412,
+     "getter_line": 7414,
+     "value": false
+    },
+    {
+     "member": "bCallRigidBodyWakeEvents",
+     "mask": 2,
+     "mask_hex": "0x2",
+     "bit": 1,
+     "file": "Actor.g.cs",
+     "line": 7421,
+     "getter_line": 7423,
+     "value": false
+    },
+    {
+     "member": "bIgnoreHurtRadiusLosCheck",
+     "mask": 4,
+     "mask_hex": "0x4",
+     "bit": 2,
+     "file": "Actor.g.cs",
+     "line": 7430,
+     "getter_line": 7432,
+     "value": true
+    },
+    {
+     "member": "bBounce",
+     "mask": 8,
+     "mask_hex": "0x8",
+     "bit": 3,
+     "file": "Actor.g.cs",
+     "line": 7439,
+     "getter_line": 7441,
+     "value": false
+    },
+    {
+     "member": "bJustTeleported",
+     "mask": 16,
+     "mask_hex": "0x10",
+     "bit": 4,
+     "file": "Actor.g.cs",
+     "line": 7448,
+     "getter_line": 7450,
+     "value": true
+    },
+    {
+     "member": "bEnableMobileTouch",
+     "mask": 32,
+     "mask_hex": "0x20",
+     "bit": 5,
+     "file": "Actor.g.cs",
+     "line": 7457,
+     "getter_line": 7459,
+     "value": false
+    },
+    {
+     "member": "bNetInitial",
+     "mask": 64,
+     "mask_hex": "0x40",
+     "bit": 6,
+     "file": "Actor.g.cs",
+     "line": 7466,
+     "getter_line": 7468,
+     "value": false
+    },
+    {
+     "member": "bNetOwner",
+     "mask": 128,
+     "mask_hex": "0x80",
+     "bit": 7,
+     "file": "Actor.g.cs",
+     "line": 7475,
+     "getter_line": 7477,
+     "value": false
+    },
+    {
+     "member": "bOwnerAlwaysReplicated",
+     "mask": 256,
+     "mask_hex": "0x100",
+     "bit": 8,
+     "file": "Actor.g.cs",
+     "line": 7484,
+     "getter_line": 7486,
+     "value": true
+    },
+    {
+     "member": "bHiddenEd",
+     "mask": 512,
+     "mask_hex": "0x200",
+     "bit": 9,
+     "file": "Actor.g.cs",
+     "line": 7493,
+     "getter_line": 7495,
+     "value": false
+    },
+    {
+     "member": "bEditable",
+     "mask": 1024,
+     "mask_hex": "0x400",
+     "bit": 10,
+     "file": "Actor.g.cs",
+     "line": 7502,
+     "getter_line": 7504,
+     "value": true
+    },
+    {
+     "member": "bHiddenEdGroup",
+     "mask": 2048,
+     "mask_hex": "0x800",
+     "bit": 11,
+     "file": "Actor.g.cs",
+     "line": 7511,
+     "getter_line": 7513,
+     "value": false
+    },
+    {
+     "member": "bHiddenEdLayer",
+     "mask": 4096,
+     "mask_hex": "0x1000",
+     "bit": 12,
+     "file": "Actor.g.cs",
+     "line": 7520,
+     "getter_line": 7522,
+     "value": false
+    },
+    {
+     "member": "bHiddenEdCustom",
+     "mask": 8192,
+     "mask_hex": "0x2000",
+     "bit": 13,
+     "file": "Actor.g.cs",
+     "line": 7529,
+     "getter_line": 7531,
+     "value": false
+    },
+    {
+     "member": "bHiddenEdTemporary",
+     "mask": 16384,
+     "mask_hex": "0x4000",
+     "bit": 14,
+     "file": "Actor.g.cs",
+     "line": 7538,
+     "getter_line": 7540,
+     "value": false
+    },
+    {
+     "member": "bHiddenEdLevel",
+     "mask": 32768,
+     "mask_hex": "0x8000",
+     "bit": 15,
+     "file": "Actor.g.cs",
+     "line": 7547,
+     "getter_line": 7549,
+     "value": false
+    },
+    {
+     "member": "bHiddenEdScene",
+     "mask": 65536,
+     "mask_hex": "0x10000",
+     "bit": 16,
+     "file": "Actor.g.cs",
+     "line": 7556,
+     "getter_line": 7558,
+     "value": false
+    },
+    {
+     "member": "bEdShouldSnap",
+     "mask": 131072,
+     "mask_hex": "0x20000",
+     "bit": 17,
+     "file": "Actor.g.cs",
+     "line": 7565,
+     "getter_line": 7567,
+     "value": false
+    },
+    {
+     "member": "bTempEditor",
+     "mask": 262144,
+     "mask_hex": "0x40000",
+     "bit": 18,
+     "file": "Actor.g.cs",
+     "line": 7574,
+     "getter_line": 7576,
+     "value": false
+    },
+    {
+     "member": "bPathColliding",
+     "mask": 524288,
+     "mask_hex": "0x80000",
+     "bit": 19,
+     "file": "Actor.g.cs",
+     "line": 7583,
+     "getter_line": 7585,
+     "value": false
+    },
+    {
+     "member": "bIgnoreStaticForPathBuilding",
+     "mask": 1048576,
+     "mask_hex": "0x100000",
+     "bit": 20,
+     "file": "Actor.g.cs",
+     "line": 7592,
+     "getter_line": 7594,
+     "value": false
+    },
+    {
+     "member": "bPathTemp",
+     "mask": 2097152,
+     "mask_hex": "0x200000",
+     "bit": 21,
+     "file": "Actor.g.cs",
+     "line": 7601,
+     "getter_line": 7603,
+     "value": false
+    },
+    {
+     "member": "bScriptInitialized",
+     "mask": 4194304,
+     "mask_hex": "0x400000",
+     "bit": 22,
+     "file": "Actor.g.cs",
+     "line": 7610,
+     "getter_line": 7612,
+     "value": false
+    },
+    {
+     "member": "bLockLocation",
+     "mask": 8388608,
+     "mask_hex": "0x800000",
+     "bit": 23,
+     "file": "Actor.g.cs",
+     "line": 7619,
+     "getter_line": 7621,
+     "value": false
+    },
+    {
+     "member": "bForceAllowKismetModification",
+     "mask": 16777216,
+     "mask_hex": "0x1000000",
+     "bit": 24,
+     "file": "Actor.g.cs",
+     "line": 7628,
+     "getter_line": 7630,
+     "value": false
+    },
+    {
+     "member": "bStripThisActorWhenCooking",
+     "mask": 33554432,
+     "mask_hex": "0x2000000",
+     "bit": 25,
+     "file": "Actor.g.cs",
+     "line": 7637,
+     "getter_line": 7639,
+     "value": false
+    },
+    {
+     "member": "bEdCanScale",
+     "mask": 67108864,
+     "mask_hex": "0x4000000",
+     "bit": 26,
+     "file": "Actor.g.cs",
+     "line": 7646,
+     "getter_line": 7648,
+     "value": true
+    },
+    {
+     "member": "bEdCanNonUniformScale",
+     "mask": 134217728,
+     "mask_hex": "0x8000000",
+     "bit": 27,
+     "file": "Actor.g.cs",
+     "line": 7655,
+     "getter_line": 7657,
+     "value": true
+    },
+    {
+     "member": "bEdCanNegativeScale",
+     "mask": 268435456,
+     "mask_hex": "0x10000000",
+     "bit": 28,
+     "file": "Actor.g.cs",
+     "line": 7664,
+     "getter_line": 7666,
+     "value": true
+    },
+    {
+     "member": "bDonePostBeginPlay",
+     "mask": 536870912,
+     "mask_hex": "0x20000000",
+     "bit": 29,
+     "file": "Actor.g.cs",
+     "line": 7673,
+     "getter_line": 7675,
+     "value": false
+    },
+    {
+     "member": "bBatmanCanClimb",
+     "mask": 1073741824,
+     "mask_hex": "0x40000000",
+     "bit": 30,
+     "file": "Actor.g.cs",
+     "line": 7682,
+     "getter_line": 7684,
+     "value": false
+    },
+    {
+     "member": "bAllowSlopedEdges",
+     "mask": 2147483648,
+     "mask_hex": "0x80000000",
+     "bit": 31,
+     "file": "Actor.g.cs",
+     "line": 7691,
+     "getter_line": 7693,
+     "value": true
+    }
+   ],
+   "objects": [
+    {
+     "object": "Playable_BatmobileJoker_SF.Batmobile_JokerHeavy_Cannon",
+     "bits": 2617246996
+    }
+   ],
+   "distinct_words": [
+    2617246996
+   ],
+   "pair": null
+  },
+  {
+   "class": "RBatmobileHeavyCannon",
+   "offset": 2084,
+   "offset_hex": "offset 0x0824",
+   "declared_in": "RVehicleWeapon",
+   "members": [
+    {
+     "member": "ContinuousFire",
+     "mask": 1,
+     "mask_hex": "0x1",
+     "bit": 0,
+     "file": "RVehicleWeapon.g.cs",
+     "line": 630,
+     "getter_line": 632,
+     "value": true
+    },
+    {
+     "member": "bFiring",
+     "mask": 2,
+     "mask_hex": "0x2",
+     "bit": 1,
+     "file": "RVehicleWeapon.g.cs",
+     "line": 639,
+     "getter_line": 641,
+     "value": false
+    },
+    {
+     "member": "bAimedWeapon",
+     "mask": 4,
+     "mask_hex": "0x4",
+     "bit": 2,
+     "file": "RVehicleWeapon.g.cs",
+     "line": 648,
+     "getter_line": 650,
+     "value": false
+    },
+    {
+     "member": "bOnlySteerOnAimExtremes",
+     "mask": 8,
+     "mask_hex": "0x8",
+     "bit": 3,
+     "file": "RVehicleWeapon.g.cs",
+     "line": 657,
+     "getter_line": 659,
+     "value": false
+    },
+    {
+     "member": "bRelativeAiming",
+     "mask": 16,
+     "mask_hex": "0x10",
+     "bit": 4,
+     "file": "RVehicleWeapon.g.cs",
+     "line": 666,
+     "getter_line": 668,
+     "value": false
+    },
+    {
+     "member": "DrawWorldAim",
+     "mask": 32,
+     "mask_hex": "0x20",
+     "bit": 5,
+     "file": "RVehicleWeapon.g.cs",
+     "line": 675,
+     "getter_line": 677,
+     "value": false
+    },
+    {
+     "member": "bFPSControls",
+     "mask": 64,
+     "mask_hex": "0x40",
+     "bit": 6,
+     "file": "RVehicleWeapon.g.cs",
+     "line": 684,
+     "getter_line": 686,
+     "value": false
+    },
+    {
+     "member": "bSecondaryWeapon",
+     "mask": 128,
+     "mask_hex": "0x80",
+     "bit": 7,
+     "file": "RVehicleWeapon.g.cs",
+     "line": 693,
+     "getter_line": 695,
+     "value": true
+    },
+    {
+     "member": "bFailedWeaponFlag",
+     "mask": 256,
+     "mask_hex": "0x100",
+     "bit": 8,
+     "file": "RVehicleWeapon.g.cs",
+     "line": 702,
+     "getter_line": 704,
+     "value": false
+    },
+    {
+     "member": "bBatmanProhibited",
+     "mask": 512,
+     "mask_hex": "0x200",
+     "bit": 9,
+     "file": "RVehicleWeapon.g.cs",
+     "line": 711,
+     "getter_line": 713,
+     "value": false
+    }
+   ],
+   "objects": [
+    {
+     "object": "Playable_BatmobileJoker_SF.Batmobile_JokerHeavy_Cannon",
+     "bits": 129
+    }
+   ],
+   "distinct_words": [
+    129
+   ],
+   "pair": null
+  },
+  {
+   "class": "RBatmobileHeavyCannon",
+   "offset": 2484,
+   "offset_hex": "offset 0x09B4",
+   "declared_in": "RBatmobileHeavyCannon",
+   "members": [
+    {
+     "member": "AllowChargedShot",
+     "mask": 1,
+     "mask_hex": "0x1",
+     "bit": 0,
+     "file": "RBatmobileHeavyCannon.g.cs",
+     "line": 398,
+     "getter_line": 400,
+     "value": false
+    },
+    {
+     "member": "bCanHurtThugs",
+     "mask": 2,
+     "mask_hex": "0x2",
+     "bit": 1,
+     "file": "RBatmobileHeavyCannon.g.cs",
+     "line": 407,
+     "getter_line": 409,
+     "value": true
+    },
+    {
+     "member": "ChargingShot",
+     "mask": 4,
+     "mask_hex": "0x4",
+     "bit": 2,
+     "file": "RBatmobileHeavyCannon.g.cs",
+     "line": 416,
+     "getter_line": 418,
+     "value": false
+    },
+    {
+     "member": "bWeaponHit",
+     "mask": 8,
+     "mask_hex": "0x8",
+     "bit": 3,
+     "file": "RBatmobileHeavyCannon.g.cs",
+     "line": 425,
+     "getter_line": 427,
+     "value": false
+    },
+    {
+     "member": "bHeavyCannonLure",
+     "mask": 16,
+     "mask_hex": "0x10",
+     "bit": 4,
+     "file": "RBatmobileHeavyCannon.g.cs",
+     "line": 434,
+     "getter_line": 436,
+     "value": false
+    }
+   ],
+   "objects": [
+    {
+     "object": "Playable_BatmobileJoker_SF.Batmobile_JokerHeavy_Cannon",
+     "bits": 2
+    }
+   ],
+   "distinct_words": [
+    2
+   ],
+   "pair": null
+  },
+  {
+   "class": "RBatmobileMissile",
+   "offset": 264,
+   "offset_hex": "offset 0x0108",
+   "declared_in": "Actor",
+   "members": [
+    {
+     "member": "bCanBeAdheredTo",
+     "mask": 1,
+     "mask_hex": "0x1",
+     "bit": 0,
+     "file": "Actor.g.cs",
+     "line": 7124,
+     "getter_line": 7126,
+     "value": false
+    },
+    {
+     "member": "bCanBeFrictionedTo",
+     "mask": 2,
+     "mask_hex": "0x2",
+     "bit": 1,
+     "file": "Actor.g.cs",
+     "line": 7133,
+     "getter_line": 7135,
+     "value": false
+    },
+    {
+     "member": "bHurtEntry",
+     "mask": 4,
+     "mask_hex": "0x4",
+     "bit": 2,
+     "file": "Actor.g.cs",
+     "line": 7142,
+     "getter_line": 7144,
+     "value": false
+    },
+    {
+     "member": "bGameRelevant",
+     "mask": 8,
+     "mask_hex": "0x8",
+     "bit": 3,
+     "file": "Actor.g.cs",
+     "line": 7151,
+     "getter_line": 7153,
+     "value": true
+    },
+    {
+     "member": "bMovable",
+     "mask": 16,
+     "mask_hex": "0x10",
+     "bit": 4,
+     "file": "Actor.g.cs",
+     "line": 7160,
+     "getter_line": 7162,
+     "value": true
+    },
+    {
+     "member": "bDestroyInPainVolume",
+     "mask": 32,
+     "mask_hex": "0x20",
+     "bit": 5,
+     "file": "Actor.g.cs",
+     "line": 7169,
+     "getter_line": 7171,
+     "value": false
+    },
+    {
+     "member": "bCanBeDamaged",
+     "mask": 64,
+     "mask_hex": "0x40",
+     "bit": 6,
+     "file": "Actor.g.cs",
+     "line": 7178,
+     "getter_line": 7180,
+     "value": true
+    },
+    {
+     "member": "bShouldBaseAtStartup",
+     "mask": 128,
+     "mask_hex": "0x80",
+     "bit": 7,
+     "file": "Actor.g.cs",
+     "line": 7187,
+     "getter_line": 7189,
+     "value": false
+    },
+    {
+     "member": "bPendingDelete",
+     "mask": 256,
+     "mask_hex": "0x100",
+     "bit": 8,
+     "file": "Actor.g.cs",
+     "line": 7196,
+     "getter_line": 7198,
+     "value": false
+    },
+    {
+     "member": "bCanTeleport",
+     "mask": 512,
+     "mask_hex": "0x200",
+     "bit": 9,
+     "file": "Actor.g.cs",
+     "line": 7205,
+     "getter_line": 7207,
+     "value": false
+    },
+    {
+     "member": "bAlwaysTick",
+     "mask": 1024,
+     "mask_hex": "0x400",
+     "bit": 10,
+     "file": "Actor.g.cs",
+     "line": 7214,
+     "getter_line": 7216,
+     "value": false
+    },
+    {
+     "member": "bBlocksNavigation",
+     "mask": 2048,
+     "mask_hex": "0x800",
+     "bit": 11,
+     "file": "Actor.g.cs",
+     "line": 7223,
+     "getter_line": 7225,
+     "value": false
+    },
+    {
+     "member": "bInvalidateParentLODOnRemove",
+     "mask": 4096,
+     "mask_hex": "0x1000",
+     "bit": 12,
+     "file": "Actor.g.cs",
+     "line": 7232,
+     "getter_line": 7234,
+     "value": false
+    },
+    {
+     "member": "BlockRigidBody",
+     "mask": 8192,
+     "mask_hex": "0x2000",
+     "bit": 13,
+     "file": "Actor.g.cs",
+     "line": 7241,
+     "getter_line": 7243,
+     "value": false
+    },
+    {
+     "member": "bCollideWhenPlacing",
+     "mask": 16384,
+     "mask_hex": "0x4000",
+     "bit": 14,
+     "file": "Actor.g.cs",
+     "line": 7250,
+     "getter_line": 7252,
+     "value": false
+    },
+    {
+     "member": "bCollideActors",
+     "mask": 32768,
+     "mask_hex": "0x8000",
+     "bit": 15,
+     "file": "Actor.g.cs",
+     "line": 7259,
+     "getter_line": 7261,
+     "value": true
+    },
+    {
+     "member": "bCollideActorsInitial",
+     "mask": 65536,
+     "mask_hex": "0x10000",
+     "bit": 16,
+     "file": "Actor.g.cs",
+     "line": 7268,
+     "getter_line": 7270,
+     "value": false
+    },
+    {
+     "member": "bCollideWorld",
+     "mask": 131072,
+     "mask_hex": "0x20000",
+     "bit": 17,
+     "file": "Actor.g.cs",
+     "line": 7277,
+     "getter_line": 7279,
+     "value": false
+    },
+    {
+     "member": "bCollideComplex",
+     "mask": 262144,
+     "mask_hex": "0x40000",
+     "bit": 18,
+     "file": "Actor.g.cs",
+     "line": 7286,
+     "getter_line": 7288,
+     "value": false
+    },
+    {
+     "member": "bBlockActors",
+     "mask": 524288,
+     "mask_hex": "0x80000",
+     "bit": 19,
+     "file": "Actor.g.cs",
+     "line": 7295,
+     "getter_line": 7297,
+     "value": false
+    },
+    {
+     "member": "bProjTarget",
+     "mask": 1048576,
+     "mask_hex": "0x100000",
+     "bit": 20,
+     "file": "Actor.g.cs",
+     "line": 7304,
+     "getter_line": 7306,
+     "value": false
+    },
+    {
+     "member": "bBlocksTeleport",
+     "mask": 2097152,
+     "mask_hex": "0x200000",
+     "bit": 21,
+     "file": "Actor.g.cs",
+     "line": 7313,
+     "getter_line": 7315,
+     "value": false
+    },
+    {
+     "member": "bPlayerMovementCheck",
+     "mask": 4194304,
+     "mask_hex": "0x400000",
+     "bit": 22,
+     "file": "Actor.g.cs",
+     "line": 7322,
+     "getter_line": 7324,
+     "value": false
+    },
+    {
+     "member": "bMoveCollidesWithDynamicApexChunks",
+     "mask": 8388608,
+     "mask_hex": "0x800000",
+     "bit": 23,
+     "file": "Actor.g.cs",
+     "line": 7331,
+     "getter_line": 7333,
+     "value": true
+    },
+    {
+     "member": "bProjectileMoveSingleBlocking",
+     "mask": 16777216,
+     "mask_hex": "0x1000000",
+     "bit": 24,
+     "file": "Actor.g.cs",
+     "line": 7340,
+     "getter_line": 7342,
+     "value": false
+    },
+    {
+     "member": "bForceNoVolumeTrace",
+     "mask": 33554432,
+     "mask_hex": "0x2000000",
+     "bit": 25,
+     "file": "Actor.g.cs",
+     "line": 7349,
+     "getter_line": 7351,
+     "value": false
+    },
+    {
+     "member": "bNoEncroachCheck",
+     "mask": 67108864,
+     "mask_hex": "0x4000000",
+     "bit": 26,
+     "file": "Actor.g.cs",
+     "line": 7358,
+     "getter_line": 7360,
+     "value": false
+    },
+    {
+     "member": "bCollideAsEncroacher",
+     "mask": 134217728,
+     "mask_hex": "0x8000000",
+     "bit": 27,
+     "file": "Actor.g.cs",
+     "line": 7367,
+     "getter_line": 7369,
+     "value": false
+    },
+    {
+     "member": "bPhysRigidBodyOutOfWorldCheck",
+     "mask": 268435456,
+     "mask_hex": "0x10000000",
+     "bit": 28,
+     "file": "Actor.g.cs",
+     "line": 7376,
+     "getter_line": 7378,
+     "value": false
+    },
+    {
+     "member": "bComponentOutsideWorld",
+     "mask": 536870912,
+     "mask_hex": "0x20000000",
+     "bit": 29,
+     "file": "Actor.g.cs",
+     "line": 7385,
+     "getter_line": 7387,
+     "value": false
+    },
+    {
+     "member": "bForceOctreeSNFilter",
+     "mask": 1073741824,
+     "mask_hex": "0x40000000",
+     "bit": 30,
+     "file": "Actor.g.cs",
+     "line": 7394,
+     "getter_line": 7396,
+     "value": false
+    },
+    {
+     "member": "bForceOctreeMNFilter",
+     "mask": 2147483648,
+     "mask_hex": "0x80000000",
+     "bit": 31,
+     "file": "Actor.g.cs",
+     "line": 7403,
+     "getter_line": 7405,
+     "value": false
+    }
+   ],
+   "objects": [
+    {
+     "object": "Playable_BatmobileJoker_SF.Batmobile_JokerMissile_Projectile",
+     "bits": 8421464
+    }
+   ],
+   "distinct_words": [
+    8421464
+   ],
+   "pair": null
+  },
+  {
+   "class": "RBatmobileMissile",
+   "offset": 268,
+   "offset_hex": "offset 0x010C",
+   "declared_in": "Actor",
+   "members": [
+    {
+     "member": "bRigidBodyWasAwake",
+     "mask": 1,
+     "mask_hex": "0x1",
+     "bit": 0,
+     "file": "Actor.g.cs",
+     "line": 7412,
+     "getter_line": 7414,
+     "value": false
+    },
+    {
+     "member": "bCallRigidBodyWakeEvents",
+     "mask": 2,
+     "mask_hex": "0x2",
+     "bit": 1,
+     "file": "Actor.g.cs",
+     "line": 7421,
+     "getter_line": 7423,
+     "value": false
+    },
+    {
+     "member": "bIgnoreHurtRadiusLosCheck",
+     "mask": 4,
+     "mask_hex": "0x4",
+     "bit": 2,
+     "file": "Actor.g.cs",
+     "line": 7430,
+     "getter_line": 7432,
+     "value": true
+    },
+    {
+     "member": "bBounce",
+     "mask": 8,
+     "mask_hex": "0x8",
+     "bit": 3,
+     "file": "Actor.g.cs",
+     "line": 7439,
+     "getter_line": 7441,
+     "value": false
+    },
+    {
+     "member": "bJustTeleported",
+     "mask": 16,
+     "mask_hex": "0x10",
+     "bit": 4,
+     "file": "Actor.g.cs",
+     "line": 7448,
+     "getter_line": 7450,
+     "value": true
+    },
+    {
+     "member": "bEnableMobileTouch",
+     "mask": 32,
+     "mask_hex": "0x20",
+     "bit": 5,
+     "file": "Actor.g.cs",
+     "line": 7457,
+     "getter_line": 7459,
+     "value": false
+    },
+    {
+     "member": "bNetInitial",
+     "mask": 64,
+     "mask_hex": "0x40",
+     "bit": 6,
+     "file": "Actor.g.cs",
+     "line": 7466,
+     "getter_line": 7468,
+     "value": false
+    },
+    {
+     "member": "bNetOwner",
+     "mask": 128,
+     "mask_hex": "0x80",
+     "bit": 7,
+     "file": "Actor.g.cs",
+     "line": 7475,
+     "getter_line": 7477,
+     "value": false
+    },
+    {
+     "member": "bOwnerAlwaysReplicated",
+     "mask": 256,
+     "mask_hex": "0x100",
+     "bit": 8,
+     "file": "Actor.g.cs",
+     "line": 7484,
+     "getter_line": 7486,
+     "value": false
+    },
+    {
+     "member": "bHiddenEd",
+     "mask": 512,
+     "mask_hex": "0x200",
+     "bit": 9,
+     "file": "Actor.g.cs",
+     "line": 7493,
+     "getter_line": 7495,
+     "value": false
+    },
+    {
+     "member": "bEditable",
+     "mask": 1024,
+     "mask_hex": "0x400",
+     "bit": 10,
+     "file": "Actor.g.cs",
+     "line": 7502,
+     "getter_line": 7504,
+     "value": true
+    },
+    {
+     "member": "bHiddenEdGroup",
+     "mask": 2048,
+     "mask_hex": "0x800",
+     "bit": 11,
+     "file": "Actor.g.cs",
+     "line": 7511,
+     "getter_line": 7513,
+     "value": false
+    },
+    {
+     "member": "bHiddenEdLayer",
+     "mask": 4096,
+     "mask_hex": "0x1000",
+     "bit": 12,
+     "file": "Actor.g.cs",
+     "line": 7520,
+     "getter_line": 7522,
+     "value": false
+    },
+    {
+     "member": "bHiddenEdCustom",
+     "mask": 8192,
+     "mask_hex": "0x2000",
+     "bit": 13,
+     "file": "Actor.g.cs",
+     "line": 7529,
+     "getter_line": 7531,
+     "value": false
+    },
+    {
+     "member": "bHiddenEdTemporary",
+     "mask": 16384,
+     "mask_hex": "0x4000",
+     "bit": 14,
+     "file": "Actor.g.cs",
+     "line": 7538,
+     "getter_line": 7540,
+     "value": false
+    },
+    {
+     "member": "bHiddenEdLevel",
+     "mask": 32768,
+     "mask_hex": "0x8000",
+     "bit": 15,
+     "file": "Actor.g.cs",
+     "line": 7547,
+     "getter_line": 7549,
+     "value": false
+    },
+    {
+     "member": "bHiddenEdScene",
+     "mask": 65536,
+     "mask_hex": "0x10000",
+     "bit": 16,
+     "file": "Actor.g.cs",
+     "line": 7556,
+     "getter_line": 7558,
+     "value": false
+    },
+    {
+     "member": "bEdShouldSnap",
+     "mask": 131072,
+     "mask_hex": "0x20000",
+     "bit": 17,
+     "file": "Actor.g.cs",
+     "line": 7565,
+     "getter_line": 7567,
+     "value": false
+    },
+    {
+     "member": "bTempEditor",
+     "mask": 262144,
+     "mask_hex": "0x40000",
+     "bit": 18,
+     "file": "Actor.g.cs",
+     "line": 7574,
+     "getter_line": 7576,
+     "value": false
+    },
+    {
+     "member": "bPathColliding",
+     "mask": 524288,
+     "mask_hex": "0x80000",
+     "bit": 19,
+     "file": "Actor.g.cs",
+     "line": 7583,
+     "getter_line": 7585,
+     "value": false
+    },
+    {
+     "member": "bIgnoreStaticForPathBuilding",
+     "mask": 1048576,
+     "mask_hex": "0x100000",
+     "bit": 20,
+     "file": "Actor.g.cs",
+     "line": 7592,
+     "getter_line": 7594,
+     "value": false
+    },
+    {
+     "member": "bPathTemp",
+     "mask": 2097152,
+     "mask_hex": "0x200000",
+     "bit": 21,
+     "file": "Actor.g.cs",
+     "line": 7601,
+     "getter_line": 7603,
+     "value": false
+    },
+    {
+     "member": "bScriptInitialized",
+     "mask": 4194304,
+     "mask_hex": "0x400000",
+     "bit": 22,
+     "file": "Actor.g.cs",
+     "line": 7610,
+     "getter_line": 7612,
+     "value": false
+    },
+    {
+     "member": "bLockLocation",
+     "mask": 8388608,
+     "mask_hex": "0x800000",
+     "bit": 23,
+     "file": "Actor.g.cs",
+     "line": 7619,
+     "getter_line": 7621,
+     "value": false
+    },
+    {
+     "member": "bForceAllowKismetModification",
+     "mask": 16777216,
+     "mask_hex": "0x1000000",
+     "bit": 24,
+     "file": "Actor.g.cs",
+     "line": 7628,
+     "getter_line": 7630,
+     "value": false
+    },
+    {
+     "member": "bStripThisActorWhenCooking",
+     "mask": 33554432,
+     "mask_hex": "0x2000000",
+     "bit": 25,
+     "file": "Actor.g.cs",
+     "line": 7637,
+     "getter_line": 7639,
+     "value": false
+    },
+    {
+     "member": "bEdCanScale",
+     "mask": 67108864,
+     "mask_hex": "0x4000000",
+     "bit": 26,
+     "file": "Actor.g.cs",
+     "line": 7646,
+     "getter_line": 7648,
+     "value": true
+    },
+    {
+     "member": "bEdCanNonUniformScale",
+     "mask": 134217728,
+     "mask_hex": "0x8000000",
+     "bit": 27,
+     "file": "Actor.g.cs",
+     "line": 7655,
+     "getter_line": 7657,
+     "value": true
+    },
+    {
+     "member": "bEdCanNegativeScale",
+     "mask": 268435456,
+     "mask_hex": "0x10000000",
+     "bit": 28,
+     "file": "Actor.g.cs",
+     "line": 7664,
+     "getter_line": 7666,
+     "value": true
+    },
+    {
+     "member": "bDonePostBeginPlay",
+     "mask": 536870912,
+     "mask_hex": "0x20000000",
+     "bit": 29,
+     "file": "Actor.g.cs",
+     "line": 7673,
+     "getter_line": 7675,
+     "value": false
+    },
+    {
+     "member": "bBatmanCanClimb",
+     "mask": 1073741824,
+     "mask_hex": "0x40000000",
+     "bit": 30,
+     "file": "Actor.g.cs",
+     "line": 7682,
+     "getter_line": 7684,
+     "value": false
+    },
+    {
+     "member": "bAllowSlopedEdges",
+     "mask": 2147483648,
+     "mask_hex": "0x80000000",
+     "bit": 31,
+     "file": "Actor.g.cs",
+     "line": 7691,
+     "getter_line": 7693,
+     "value": true
+    }
+   ],
+   "objects": [
+    {
+     "object": "Playable_BatmobileJoker_SF.Batmobile_JokerMissile_Projectile",
+     "bits": 2617246740
+    }
+   ],
+   "distinct_words": [
+    2617246740
+   ],
+   "pair": null
+  },
+  {
+   "class": "RBatmobileMissile",
+   "offset": 824,
+   "offset_hex": "offset 0x0338",
+   "declared_in": "RProjectile",
+   "members": [
+    {
+     "member": "bUseSpecialRemoteBatarangProcessOceanCollision",
+     "mask": 1,
+     "mask_hex": "0x1",
+     "bit": 0,
+     "file": "RProjectile.g.cs",
+     "line": 568,
+     "getter_line": 570,
+     "value": false
+    },
+    {
+     "member": "bOceanExistsAtProjectileLocation",
+     "mask": 2,
+     "mask_hex": "0x2",
+     "bit": 1,
+     "file": "RProjectile.g.cs",
+     "line": 577,
+     "getter_line": 579,
+     "value": false
+    },
+    {
+     "member": "bInvalidateAllOceanChecksUntilOceanNoLongerExistsAtProjectileLocation",
+     "mask": 4,
+     "mask_hex": "0x4",
+     "bit": 2,
+     "file": "RProjectile.g.cs",
+     "line": 586,
+     "getter_line": 588,
+     "value": false
+    },
+    {
+     "member": "bProjectileAboveOceanLevel",
+     "mask": 8,
+     "mask_hex": "0x8",
+     "bit": 3,
+     "file": "RProjectile.g.cs",
+     "line": 595,
+     "getter_line": 597,
+     "value": false
+    },
+    {
+     "member": "bUnderWater",
+     "mask": 16,
+     "mask_hex": "0x10",
+     "bit": 4,
+     "file": "RProjectile.g.cs",
+     "line": 604,
+     "getter_line": 606,
+     "value": false
+    },
+    {
+     "member": "bDead",
+     "mask": 32,
+     "mask_hex": "0x20",
+     "bit": 5,
+     "file": "RProjectile.g.cs",
+     "line": 613,
+     "getter_line": 615,
+     "value": false
+    },
+    {
+     "member": "bSoundPlaying",
+     "mask": 64,
+     "mask_hex": "0x40",
+     "bit": 6,
+     "file": "RProjectile.g.cs",
+     "line": 622,
+     "getter_line": 624,
+     "value": false
+    },
+    {
+     "member": "bProjectileAboveFearGas",
+     "mask": 128,
+     "mask_hex": "0x80",
+     "bit": 7,
+     "file": "RProjectile.g.cs",
+     "line": 631,
+     "getter_line": 633,
+     "value": false
+    },
+    {
+     "member": "bUnderFearGas",
+     "mask": 256,
+     "mask_hex": "0x100",
+     "bit": 8,
+     "file": "RProjectile.g.cs",
+     "line": 640,
+     "getter_line": 642,
+     "value": false
+    },
+    {
+     "member": "ImpactFollowsNormal",
+     "mask": 512,
+     "mask_hex": "0x200",
+     "bit": 9,
+     "file": "RProjectile.g.cs",
+     "line": 649,
+     "getter_line": 651,
+     "value": true
+    },
+    {
+     "member": "bOverrideDestructibleDamage",
+     "mask": 1024,
+     "mask_hex": "0x400",
+     "bit": 10,
+     "file": "RProjectile.g.cs",
+     "line": 658,
+     "getter_line": 660,
+     "value": false
+    }
+   ],
+   "objects": [
+    {
+     "object": "Playable_BatmobileFunhouse_SF.Batmobile_EMPMissile_Projectile",
+     "bits": 512
+    },
+    {
+     "object": "Playable_BatmobileMK2_SF.Batmobile_EMPMissile_Projectile",
+     "bits": 512
+    },
+    {
+     "object": "Playable_Batmobile_SF.Batmobile_EMPMissile_Projectile",
+     "bits": 512
+    }
+   ],
+   "distinct_words": [
+    512
+   ],
+   "pair": null
+  },
+  {
+   "class": "RBatmobileMissile",
+   "offset": 1056,
+   "offset_hex": "offset 0x0420",
+   "declared_in": "RBatmobileMissile",
+   "members": [
+    {
+     "member": "bHoming",
+     "mask": 1,
+     "mask_hex": "0x1",
+     "bit": 0,
+     "file": "RBatmobileMissile.g.cs",
+     "line": 301,
+     "getter_line": 303,
+     "value": false
+    },
+    {
+     "member": "MustHitTarget",
+     "mask": 2,
+     "mask_hex": "0x2",
+     "bit": 1,
+     "file": "RBatmobileMissile.g.cs",
+     "line": 310,
+     "getter_line": 312,
+     "value": false
+    },
+    {
+     "member": "GroundHugging",
+     "mask": 4,
+     "mask_hex": "0x4",
+     "bit": 2,
+     "file": "RBatmobileMissile.g.cs",
+     "line": 319,
+     "getter_line": 321,
+     "value": false
+    },
+    {
+     "member": "bForceExplodeAtTarget",
+     "mask": 8,
+     "mask_hex": "0x8",
+     "bit": 3,
+     "file": "RBatmobileMissile.g.cs",
+     "line": 328,
+     "getter_line": 330,
+     "value": true
+    },
+    {
+     "member": "bDisableAllCollision",
+     "mask": 16,
+     "mask_hex": "0x10",
+     "bit": 4,
+     "file": "RBatmobileMissile.g.cs",
+     "line": 337,
+     "getter_line": 339,
+     "value": true
+    }
+   ],
+   "objects": [
+    {
+     "object": "Playable_BatmobileJoker_SF.Batmobile_JokerMissile_Projectile",
+     "bits": 24
+    },
+    {
+     "object": "Playable_BatmobileFunhouse_SF.Batmobile_Tracker_Projectile",
+     "bits": 2
+    },
+    {
+     "object": "Playable_BatmobileMK2_SF.Batmobile_Tracker_Projectile",
+     "bits": 2
+    },
+    {
+     "object": "Playable_Batmobile_SF.Batmobile_Tracker_Projectile",
+     "bits": 2
+    }
+   ],
+   "distinct_words": [
+    2,
+    24
+   ],
+   "pair": {
+    "a": {
+     "object": "Playable_BatmobileJoker_SF.Batmobile_JokerMissile_Projectile",
+     "bits": 24
+    },
+    "b": {
+     "object": "Playable_BatmobileFunhouse_SF.Batmobile_Tracker_Projectile",
+     "bits": 2
+    },
+    "xor": 26,
+    "xor_hex": "0x0000001A",
+    "flipped_members": [
+     "MustHitTarget",
+     "bForceExplodeAtTarget",
+     "bDisableAllCollision"
+    ],
+    "explained": true
+   }
+  },
+  {
+   "class": "RBatmobileMissileLauncherJoker",
+   "offset": 268,
+   "offset_hex": "offset 0x010C",
+   "declared_in": "Actor",
+   "members": [
+    {
+     "member": "bRigidBodyWasAwake",
+     "mask": 1,
+     "mask_hex": "0x1",
+     "bit": 0,
+     "file": "Actor.g.cs",
+     "line": 7412,
+     "getter_line": 7414,
+     "value": false
+    },
+    {
+     "member": "bCallRigidBodyWakeEvents",
+     "mask": 2,
+     "mask_hex": "0x2",
+     "bit": 1,
+     "file": "Actor.g.cs",
+     "line": 7421,
+     "getter_line": 7423,
+     "value": false
+    },
+    {
+     "member": "bIgnoreHurtRadiusLosCheck",
+     "mask": 4,
+     "mask_hex": "0x4",
+     "bit": 2,
+     "file": "Actor.g.cs",
+     "line": 7430,
+     "getter_line": 7432,
+     "value": true
+    },
+    {
+     "member": "bBounce",
+     "mask": 8,
+     "mask_hex": "0x8",
+     "bit": 3,
+     "file": "Actor.g.cs",
+     "line": 7439,
+     "getter_line": 7441,
+     "value": false
+    },
+    {
+     "member": "bJustTeleported",
+     "mask": 16,
+     "mask_hex": "0x10",
+     "bit": 4,
+     "file": "Actor.g.cs",
+     "line": 7448,
+     "getter_line": 7450,
+     "value": true
+    },
+    {
+     "member": "bEnableMobileTouch",
+     "mask": 32,
+     "mask_hex": "0x20",
+     "bit": 5,
+     "file": "Actor.g.cs",
+     "line": 7457,
+     "getter_line": 7459,
+     "value": false
+    },
+    {
+     "member": "bNetInitial",
+     "mask": 64,
+     "mask_hex": "0x40",
+     "bit": 6,
+     "file": "Actor.g.cs",
+     "line": 7466,
+     "getter_line": 7468,
+     "value": false
+    },
+    {
+     "member": "bNetOwner",
+     "mask": 128,
+     "mask_hex": "0x80",
+     "bit": 7,
+     "file": "Actor.g.cs",
+     "line": 7475,
+     "getter_line": 7477,
+     "value": false
+    },
+    {
+     "member": "bOwnerAlwaysReplicated",
+     "mask": 256,
+     "mask_hex": "0x100",
+     "bit": 8,
+     "file": "Actor.g.cs",
+     "line": 7484,
+     "getter_line": 7486,
+     "value": true
+    },
+    {
+     "member": "bHiddenEd",
+     "mask": 512,
+     "mask_hex": "0x200",
+     "bit": 9,
+     "file": "Actor.g.cs",
+     "line": 7493,
+     "getter_line": 7495,
+     "value": false
+    },
+    {
+     "member": "bEditable",
+     "mask": 1024,
+     "mask_hex": "0x400",
+     "bit": 10,
+     "file": "Actor.g.cs",
+     "line": 7502,
+     "getter_line": 7504,
+     "value": true
+    },
+    {
+     "member": "bHiddenEdGroup",
+     "mask": 2048,
+     "mask_hex": "0x800",
+     "bit": 11,
+     "file": "Actor.g.cs",
+     "line": 7511,
+     "getter_line": 7513,
+     "value": false
+    },
+    {
+     "member": "bHiddenEdLayer",
+     "mask": 4096,
+     "mask_hex": "0x1000",
+     "bit": 12,
+     "file": "Actor.g.cs",
+     "line": 7520,
+     "getter_line": 7522,
+     "value": false
+    },
+    {
+     "member": "bHiddenEdCustom",
+     "mask": 8192,
+     "mask_hex": "0x2000",
+     "bit": 13,
+     "file": "Actor.g.cs",
+     "line": 7529,
+     "getter_line": 7531,
+     "value": false
+    },
+    {
+     "member": "bHiddenEdTemporary",
+     "mask": 16384,
+     "mask_hex": "0x4000",
+     "bit": 14,
+     "file": "Actor.g.cs",
+     "line": 7538,
+     "getter_line": 7540,
+     "value": false
+    },
+    {
+     "member": "bHiddenEdLevel",
+     "mask": 32768,
+     "mask_hex": "0x8000",
+     "bit": 15,
+     "file": "Actor.g.cs",
+     "line": 7547,
+     "getter_line": 7549,
+     "value": false
+    },
+    {
+     "member": "bHiddenEdScene",
+     "mask": 65536,
+     "mask_hex": "0x10000",
+     "bit": 16,
+     "file": "Actor.g.cs",
+     "line": 7556,
+     "getter_line": 7558,
+     "value": false
+    },
+    {
+     "member": "bEdShouldSnap",
+     "mask": 131072,
+     "mask_hex": "0x20000",
+     "bit": 17,
+     "file": "Actor.g.cs",
+     "line": 7565,
+     "getter_line": 7567,
+     "value": false
+    },
+    {
+     "member": "bTempEditor",
+     "mask": 262144,
+     "mask_hex": "0x40000",
+     "bit": 18,
+     "file": "Actor.g.cs",
+     "line": 7574,
+     "getter_line": 7576,
+     "value": false
+    },
+    {
+     "member": "bPathColliding",
+     "mask": 524288,
+     "mask_hex": "0x80000",
+     "bit": 19,
+     "file": "Actor.g.cs",
+     "line": 7583,
+     "getter_line": 7585,
+     "value": false
+    },
+    {
+     "member": "bIgnoreStaticForPathBuilding",
+     "mask": 1048576,
+     "mask_hex": "0x100000",
+     "bit": 20,
+     "file": "Actor.g.cs",
+     "line": 7592,
+     "getter_line": 7594,
+     "value": false
+    },
+    {
+     "member": "bPathTemp",
+     "mask": 2097152,
+     "mask_hex": "0x200000",
+     "bit": 21,
+     "file": "Actor.g.cs",
+     "line": 7601,
+     "getter_line": 7603,
+     "value": false
+    },
+    {
+     "member": "bScriptInitialized",
+     "mask": 4194304,
+     "mask_hex": "0x400000",
+     "bit": 22,
+     "file": "Actor.g.cs",
+     "line": 7610,
+     "getter_line": 7612,
+     "value": false
+    },
+    {
+     "member": "bLockLocation",
+     "mask": 8388608,
+     "mask_hex": "0x800000",
+     "bit": 23,
+     "file": "Actor.g.cs",
+     "line": 7619,
+     "getter_line": 7621,
+     "value": false
+    },
+    {
+     "member": "bForceAllowKismetModification",
+     "mask": 16777216,
+     "mask_hex": "0x1000000",
+     "bit": 24,
+     "file": "Actor.g.cs",
+     "line": 7628,
+     "getter_line": 7630,
+     "value": false
+    },
+    {
+     "member": "bStripThisActorWhenCooking",
+     "mask": 33554432,
+     "mask_hex": "0x2000000",
+     "bit": 25,
+     "file": "Actor.g.cs",
+     "line": 7637,
+     "getter_line": 7639,
+     "value": false
+    },
+    {
+     "member": "bEdCanScale",
+     "mask": 67108864,
+     "mask_hex": "0x4000000",
+     "bit": 26,
+     "file": "Actor.g.cs",
+     "line": 7646,
+     "getter_line": 7648,
+     "value": true
+    },
+    {
+     "member": "bEdCanNonUniformScale",
+     "mask": 134217728,
+     "mask_hex": "0x8000000",
+     "bit": 27,
+     "file": "Actor.g.cs",
+     "line": 7655,
+     "getter_line": 7657,
+     "value": true
+    },
+    {
+     "member": "bEdCanNegativeScale",
+     "mask": 268435456,
+     "mask_hex": "0x10000000",
+     "bit": 28,
+     "file": "Actor.g.cs",
+     "line": 7664,
+     "getter_line": 7666,
+     "value": true
+    },
+    {
+     "member": "bDonePostBeginPlay",
+     "mask": 536870912,
+     "mask_hex": "0x20000000",
+     "bit": 29,
+     "file": "Actor.g.cs",
+     "line": 7673,
+     "getter_line": 7675,
+     "value": false
+    },
+    {
+     "member": "bBatmanCanClimb",
+     "mask": 1073741824,
+     "mask_hex": "0x40000000",
+     "bit": 30,
+     "file": "Actor.g.cs",
+     "line": 7682,
+     "getter_line": 7684,
+     "value": false
+    },
+    {
+     "member": "bAllowSlopedEdges",
+     "mask": 2147483648,
+     "mask_hex": "0x80000000",
+     "bit": 31,
+     "file": "Actor.g.cs",
+     "line": 7691,
+     "getter_line": 7693,
+     "value": true
+    }
+   ],
+   "objects": [
+    {
+     "object": "Playable_BatmobileJoker_SF.Batmobile_JokerMissile_Launcher",
+     "bits": 2617246996
+    }
+   ],
+   "distinct_words": [
+    2617246996
+   ],
+   "pair": null
+  },
+  {
+   "class": "RBatmobileWinch",
+   "offset": 2416,
+   "offset_hex": "offset 0x0970",
+   "declared_in": "RBatmobileWinch",
+   "members": [
+    {
+     "member": "ActuallyAbseiling",
+     "mask": 1,
+     "mask_hex": "0x1",
+     "bit": 0,
+     "file": "RBatmobileWinch.g.cs",
+     "line": 959,
+     "getter_line": 961,
+     "value": false
+    },
+    {
+     "member": "CameraHasLineOfSightToTarget",
+     "mask": 2,
+     "mask_hex": "0x2",
+     "bit": 1,
+     "file": "RBatmobileWinch.g.cs",
+     "line": 968,
+     "getter_line": 970,
+     "value": false
+    },
+    {
+     "member": "InAttachToSpecificThing",
+     "mask": 4,
+     "mask_hex": "0x4",
+     "bit": 2,
+     "file": "RBatmobileWinch.g.cs",
+     "line": 977,
+     "getter_line": 979,
+     "value": false
+    },
+    {
+     "member": "DoFireScreenShake",
+     "mask": 8,
+     "mask_hex": "0x8",
+     "bit": 3,
+     "file": "RBatmobileWinch.g.cs",
+     "line": 986,
+     "getter_line": 988,
+     "value": true
+    },
+    {
+     "member": "TensionStarted",
+     "mask": 16,
+     "mask_hex": "0x10",
+     "bit": 4,
+     "file": "RBatmobileWinch.g.cs",
+     "line": 995,
+     "getter_line": 997,
+     "value": false
+    },
+    {
+     "member": "RopeTooLong",
+     "mask": 32,
+     "mask_hex": "0x20",
+     "bit": 5,
+     "file": "RBatmobileWinch.g.cs",
+     "line": 1004,
+     "getter_line": 1006,
+     "value": false
+    },
+    {
+     "member": "bTriggeredAbseilSwingCam",
+     "mask": 64,
+     "mask_hex": "0x40",
+     "bit": 6,
+     "file": "RBatmobileWinch.g.cs",
+     "line": 1013,
+     "getter_line": 1015,
+     "value": false
+    },
+    {
+     "member": "DontAutoReattach",
+     "mask": 128,
+     "mask_hex": "0x80",
+     "bit": 7,
+     "file": "RBatmobileWinch.g.cs",
+     "line": 1022,
+     "getter_line": 1024,
+     "value": false
+    },
+    {
+     "member": "IsHelpSuppressed",
+     "mask": 256,
+     "mask_hex": "0x100",
+     "bit": 8,
+     "file": "RBatmobileWinch.g.cs",
+     "line": 1031,
+     "getter_line": 1033,
+     "value": false
+    },
+    {
+     "member": "DragStarted",
+     "mask": 512,
+     "mask_hex": "0x200",
+     "bit": 9,
+     "file": "RBatmobileWinch.g.cs",
+     "line": 1040,
+     "getter_line": 1042,
+     "value": false
+    },
+    {
+     "member": "ElectrifyHudShown",
+     "mask": 1024,
+     "mask_hex": "0x400",
+     "bit": 10,
+     "file": "RBatmobileWinch.g.cs",
+     "line": 1049,
+     "getter_line": 1051,
+     "value": false
+    },
+    {
+     "member": "InAbseilTutorialMode",
+     "mask": 2048,
+     "mask_hex": "0x800",
+     "bit": 11,
+     "file": "RBatmobileWinch.g.cs",
+     "line": 1058,
+     "getter_line": 1060,
+     "value": false
+    },
+    {
+     "member": "AbseilTutorialEventFired",
+     "mask": 4096,
+     "mask_hex": "0x1000",
+     "bit": 12,
+     "file": "RBatmobileWinch.g.cs",
+     "line": 1067,
+     "getter_line": 1069,
+     "value": false
+    },
+    {
+     "member": "AbseilFrontWheelsOnWall",
+     "mask": 8192,
+     "mask_hex": "0x2000",
+     "bit": 13,
+     "file": "RBatmobileWinch.g.cs",
+     "line": 1076,
+     "getter_line": 1078,
+     "value": false
+    },
+    {
+     "member": "AbseilRearWheelsOnWall",
+     "mask": 16384,
+     "mask_hex": "0x4000",
+     "bit": 14,
+     "file": "RBatmobileWinch.g.cs",
+     "line": 1085,
+     "getter_line": 1087,
+     "value": false
+    },
+    {
+     "member": "ForceInEncounter",
+     "mask": 32768,
+     "mask_hex": "0x8000",
+     "bit": 15,
+     "file": "RBatmobileWinch.g.cs",
+     "line": 1094,
+     "getter_line": 1096,
+     "value": false
+    }
+   ],
+   "objects": [
+    {
+     "object": "Playable_BatmobileFunhouse_SF.Batmobile_Winch",
+     "bits": 8
+    },
+    {
+     "object": "Playable_BatmobileMK2_SF.Batmobile_Winch",
+     "bits": 8
+    },
+    {
+     "object": "Playable_Batmobile_SF.Batmobile_Winch",
+     "bits": 8
+    }
+   ],
+   "distinct_words": [
+    8
+   ],
+   "pair": null
+  }
+ ],
+ "unresolved": [],
+ "checks": [
+  {
+   "check": "the 26 offset-only bool records parse and every class has a generated binding",
+   "pass": true,
+   "detail": "26 rows; classes 13, bound 22, missing []"
+  },
+  {
+   "check": "every row resolves to at least one named bool member",
+   "pass": true,
+   "detail": "26 named, 0 unnamed []"
+  },
+  {
+   "check": "every mask is a power of two and unique inside its word",
+   "pass": true,
+   "detail": "12 words, 231 members; non-power-of-two 0, duplicate masks 0"
+  },
+  {
+   "check": "every bit set in any observed word is covered by a member mask",
+   "pass": true,
+   "detail": "words with orphan bits: 0 []"
+  },
+  {
+   "check": "every shared word whose objects disagree flips only bits its members own",
+   "pass": true,
+   "detail": "12 multi-member words: 5 recorded on 2+ objects, 2 disagree and are explained, 0 disagree unexplained [], 3 identical on every object, 7 seen once"
+  },
+  {
+   "check": "every citation states the member and its getter reads Ptr + offset & mask",
+   "pass": true,
+   "detail": "231 members cited, 0 wrong []"
+  },
+  {
+   "check": "the words decode without residue (bits & ~or(masks) == 0 on all 26 rows)",
+   "pass": true,
+   "detail": "26 rows, residue []"
+  }
+ ]
+}

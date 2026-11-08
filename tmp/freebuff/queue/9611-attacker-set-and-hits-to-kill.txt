@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/attacker-set-and-hits-to-kill.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/health-scale-ruling-1200-vs-36000.md
+Define which JC3 attackers count as heavy against the Batmobile and what each does to it. Use Research/JC3Grab/DAMAGE_MODEL.md, the weapon tables from G2-11 in Research/JC3Grab, and the BmAK relationship that rifle and machine-gun fire leaves the health bar still while tank shells, missiles, mines and helicopter rockets reduce it (a player claim, to be confirmed in play). List each JC3 attacker class (infantry rifle, MG, shotgun, sniper, helicopter MG, helicopter rocket, tank cannon, RPG, mine, grenade, AA gun) with its damage type and channel, and search the weapon writers for any that writes the bullet_heavy channel. With the ruling of d01, compute hits-to-kill per attacker on the final tree with Tools/scripts/damage_predict.py --root, and list the attackers that should do zero. Output Tools/scripts/attacker_set.py (--write, --check), Working/Damage/attacker_table.md and .json, and the report. Mark every BmAK-side claim about which weapons hurt as UNKNOWN until the damage test confirms it. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/lamp-flare-domain-verify.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-lights-flares-beams.md
+Read back the lights branch Builds/bm-RC5-lights. For all 24 lamp rows list range, angle, falloff and the unit bridge used, and flag any value outside the shipped fleet domain (range 50, angle 50) that lacks a written reason; the RC4 values 60 and 70 are why the branch exists. For the 17 lens-flare entries print part and socket, and prove each socket exists on its part in the parts module. Compare headlight, tail and brake rows with the BmAK values in Research/BatmobileGrab/LIGHTS.json. Include the BmAK fact that underglow and arch lights are an emissive wheel material. Output Working/Appearance/LIGHTS_VERIFY.md as a table of rows with PASS or FAIL, plus a night prediction band for the later in-game take. Done check: 24 of 24 lamp rows and 17 of 17 flare entries appear in the table, each with a verdict. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

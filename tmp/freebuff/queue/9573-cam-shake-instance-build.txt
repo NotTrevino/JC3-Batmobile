@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/cam-shake-instance-build.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/cam-adf-append-writer-proto.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/cam-ledger-and-config-grab.md
+Author the camera shake. With the appended-type writer from the previous brief (Tools/scripts/adf_append.py) put a CameraShakeModifierParams instance into a copy of the Batmobile .ctunec in Builds/bm-RC5-camera/. Values: BmAK boost shake 35 and wheelspin shake 50 by 50 by 25 over 0.1 s (Research/BatmobileGrab/CAMERA.md); do not convert units by guess. Read reports/cameras-per-mode-plan.md section 6 steps 1 to 3 and the JC3 shipped shake instances (Working/Camera/CAM_REF.md) to find what the JC3 numbers mean, and list each value you could not map as UNKNOWN with a check for a game take. Done when jc3adf.py reads the new instance and the shake members hold the stated source numbers, a report lists mapped and UNKNOWN fields, and the RC4 camera files are unchanged by hash. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

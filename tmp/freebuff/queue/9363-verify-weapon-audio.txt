@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-weapon-audio.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/weapon-audio-bind-ranked.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/weapon-audio-bind-unranked.md
+Verify both weapon audio builds. Run --check of rc5_audio_ranked.py and rc5_audio_unranked.py, then run the audio resolver used by 9191 (V-04) against both trees. Count resolved versus stand-in versus unresolved events and compare to the header of Working/Roadmap/weapon_audio_inventory.md. Check the private bank is the only bank edited (the shipped effects bank must be byte-identical), that every binding target exists in the entity graph of 9101, and that the Vulcan loop start and end markers are intact. Output tmp/freebuff/reports/verify-weapon-audio.md with a table event x status x target and a total. Done-check: the total equals the inventory row count and the shipped-bank comparison is quoted. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

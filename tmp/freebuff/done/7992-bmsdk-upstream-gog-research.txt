@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/bmsdk-upstream-gog-research.md
+ONLY: freebuff
+EST: 35
+BRIEF: hand-written 2026-11-07
+Research task, web plus local source. Question: has anyone already ported BmSDK-AK (github.com/Team-BmSDK/BmSDK-AK) to the GOG or Epic build of Batman Arkham Knight, or documented how its offsets are found? Read the repo README, wiki (especially Building-BmSDK), open and closed issues and pull requests, releases, and the forks list; search for forks or issues mentioning GOG, Epic, EGS, offsets, signatures or a different exe. Also look at github.com/neatodev/BmLauncher. Local source is at E:/Modding/_tools/BmSDK-AK: read how the 22 hard-coded addresses are declared (a header or table) and whether any signature scanning exists. Report what you find with the URL for every claim; a claim with no URL or file path is UNKNOWN. End with a short list of what 7993-bmsdk-gog-address-hunt can reuse (signatures, methods, a known GOG offset table). The GOG exe is Binaries/Win64/BatmanAK.exe, PE timestamp 0x6508b1ce; do not write to the game folders.

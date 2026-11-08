@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-rc5-world-and-survival-readback.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-world-spawn-traffic-summon.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-flip-water-remote.md
+Offline read-back of Builds/bm-RC5-world and Builds/bm-RC5-survival after briefs 9173 and 9124. Run rc5_world.py --check and rc5_survival.py --check, then recompute independently: the census figures in the world report (each recounted from Research/JC3Grab), the Rebel Drop item hash of the _debug leaf, the traffic rows against Working/World/traffic_rows.json, the hijack rows against hijack_closure.json, and for survival the water teleport parameters, the flip idle timer and thruster numbers against their plan files. Where 9124 or 9173 built a remote or homing part, compare it with Working/World/HALTS.md and flag any built part that the halt records say should not exist, or any halted part the build silently omits. Write Tools/scripts/verify_rc5_world.py (--write, --check), a readback.md in each tree's verify folder, and the report. Every failure names its owner row. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

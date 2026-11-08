@@ -1,0 +1,35 @@
+{
+ "schema": 1,
+ "card": "B-12",
+ "build": "Builds/bm-RC4-base",
+ "generated_by": "hand-written 2026-11-07 from the decoded base tree (Gibbed.JustCause3.ConvertAdf --e)",
+ "note": "Only the modules the battle variant writes. Values are the decoded members of Builds/bm-RC4-base/aaf, read 2026-11-07; t5_apply asserts each `old` against the live element before writing.",
+ "files": [],
+ "modules": {
+  "CustomLandGlobal": {
+   "file": "v0300_car_kensington_sportsmuscle_custom_land_global.vmodc",
+   "instance": "v0300_car_kensington_sportsmusc",
+   "values": {
+    "arcade.nitro_boost.extra_top_speed": 43.2000008,
+    "arcade.nitro_boost.torque_multiplier": 2,
+    "arcade.nitro_boost.grip_multiplier": 1
+   }
+  },
+  "LandSteering": {
+   "file": "v0300_car_kensington_sportsmuscle_land_steering.vmodc",
+   "instance": "v0300_car_kensington_sportsmusc",
+   "values": {
+    "steer_angle_min_speed_deg": 55,
+    "steer_angle_max_speed_deg": 20,
+    "steer_curve_falloff": 1.5
+   }
+  },
+  "VehicleMisc": {
+   "file": "v0300_car_kensington_sportsmuscle_vehicle_misc.vmodc",
+   "instance": "v0300_car_kensington_sportsmusc",
+   "values": {
+    "official_top_speed": 336.399994
+   }
+  }
+ }
+}

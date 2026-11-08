@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-rpm-driven-engine-synth.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-live-vehicle-readout.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-audio-module-play-wav.md
+Use the hook to supply what a same-length bank swap cannot: pitch that bends with RPM and a crossfade between layers. Extend the audio module in Tools/hook/ so each frame it reads the live vehicle readout from the telemetry work (rpm, speed, throttle, gear, per the telemetry report) and drives a set of looping sounds: playback frequency from rpm_norm, volume from a table of crossfade windows. Input tables come from reports/engine-sound-turbine-priority.md (five turbine beds first, V8 double last) and BmAK RTPC curves in Research/BatmobileGrab/AUDIO_FEATURES.md. Put the curve table in a JSON file the hook reloads, not in code. Also mute the donor engine layers only if the safety plan allows it. Build to Builds/hook-audio-0002/ with a receipt. Done check: mock-harness replay of a recorded rpm sweep produces monotonic pitch and layer volumes that sum within 1 LU of the BmAK reference curve. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

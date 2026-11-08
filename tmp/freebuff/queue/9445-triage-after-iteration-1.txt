@@ -1,0 +1,7 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/triage-after-iteration-1.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/ingame-iter1-retake.md
+Triage after the iteration 1 retake. Read Working/Q/RESULTS.md and the caps/iter1 files and produce tmp/freebuff/reports/hdl-iter1-triage.md: for each take whether it now passes, still fails with a smaller error, or fails in a new direction. Detect oscillation (the same cell moved twice in opposite directions), and detect coupling by checking which passing takes degraded after a tyre grip or steering change. For the remaining failures classify as interaction faults: where two or more cells explain the error, propose a joint change using a small least-squares fit over the measurements gathered so far (use the telemetry-derived numbers, not the pilot's impressions), and give the fit residual. State which takes are now closed and may be dropped from later retakes. Do not edit any build file in this brief; only rewrite the text of briefs hdl-56 to hdl-59 in tmp/freebuff/queue/ if they have not started. Done check: every FIXES line has a status of closed, open smaller, open worse or new; the report lists the briefs it edited.
+Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

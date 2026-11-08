@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/one-command-pipeline-docs.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/pipeline-path-abstraction.md
+Write a one-command pipeline for the appearance outputs and document its gates. Create Tools/scripts/build_appearance.py that, given a config from Tools/scripts/paths_config.py, runs in order: grab from the user's own BmAK, convert, bake textures, build the RC5 appearance trees, then the V-01 file and budget gate, the V-02 geometry gate, the V-03 wiring gate and the install dry run. Each step prints PASS or FAIL and stops at the first FAIL. Document it in Working/Appearance/PIPELINE_README.md: prerequisites, the four gate scripts and what each checks, the expected output sizes, and the known UNKNOWN items. Test it as a dry run with every stage stubbed to read-only checks (add a --dry-run flag), because the full run takes hours. Done check: --dry-run exits 0 and lists all stages in order, and the README names each gate script that exists on disk (verify with ls). Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

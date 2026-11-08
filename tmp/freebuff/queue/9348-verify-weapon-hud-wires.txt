@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-weapon-hud-wires.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/cannon-reload-circle-hud-wire.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/vulcan-bloom-hud-wire.md
+Verify both weapon HUD wires offline. Run --check of Tools/scripts/rc5_hud_cannon.py and rc5_hud_bloom.py. For the cannon: fill direction, anchor and duration against the report of 7959. For the Vulcan: re-evaluate the bloom table at 0, 1, 2.5, 5 and 10 s and compare against Research/BatmobileGrab/VULCAN_BLOOM.json within the stated tolerance. Confirm that both clip names exist in the extracted hud.gfx used by 9160, that no clip is driven by two writers, and that the two tunes do not call the same HUD function on one slot. Output tmp/freebuff/reports/verify-weapon-hud-wires.md with PASS or FAIL per item and the five bloom values. Done-check: the report lists clip names and quotes both check commands' exit status. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/app-reflectance-f0.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-06
+Rule D2 drops BmAK's Reflectivity_Multiplier and Reflectivity_Material* scalars because JC3 "uses a fixed F0". Verify that claim: read how the shipped CarPaintMM, GeneralMkIII and General blocks use their metallic, gloss and fresnel members (Research/JC3Grab), list every value found across the 233 vehicle entities, and test whether metallic plus gloss can reproduce BmAK's reflectance range for the values decoded in Research/BatmobileGrab (MESHES.json material rows). Give the BmAK scalar values, the nearest JC3 combination for each, and the error. Name what remains inexpressible.
+Where JC3 has no exact carrier, give the closest system and the gap for the build to fill (STAGES.md).

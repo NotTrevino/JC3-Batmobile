@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/G3-02k.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-03
+The Batmobile eject turned out not to launch Batman with a velocity: G3-02j (Research/BatmobileGrab/EJECT_VELOCITY.md) showed the SetRBLinearVelocity call is (0,0,0) on the car's own mesh, a stop, and that the only call in EjectFromVehicle that can move Batman is TriggerSpecialMove. Decode that call: which special move it triggers (the class or name argument), find that special-move class in BmGame.upk, and read what produces the launch - an animation with root motion (name the AnimSequence and its root translation per frame), a scripted velocity in the move's own code, or class defaults (look in the move's Default__ object). Give the launch as numbers - height and distance, or a velocity - with their source. New script grab_eject_move.py (--write/--check) -> Research/BatmobileGrab/EJECT_MOVE.md + .json. Rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md section 3. Report at the DONE path with STATUS and every command with its output.

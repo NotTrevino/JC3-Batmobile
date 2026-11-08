@@ -1,0 +1,17 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/correction-8392-unfaithful-textures.md
+ONLY: freebuff
+EST: 80
+BRIEF: hand-written 2026-11-07 by review 8399
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/review-build-wave.md
+Correction 3/9 — 12 of 23 texture rows are unfaithful and the tree is correctly marked incomplete.
+
+Evidence: build-d04 §3 and build-d13 §5.2; receipt.complete=false. The 12 rows:
+- 4 `*_Damage_ChapterMask` (Body/Wheel/Glass/Undercarriage): one static pre-damaged state is writable (s5 + SupportDmgBlend 1) but JC3 has no chapter selector, so damage stays off (SupportDmgBlend = 0).
+- 8 rows whose pixel set the D-04 bake could not supply: 4 micropattern (P1, present=False in all 56 grab textures), Wheel_E (R2), the three ramps (D10: Underlayer_Ramp, Body_ColourRamp present=False; Leather_Ramp pixels present at 64x512 but 0 of 961 reflection headers carry a ramp sampler), Aniso_ramp_Lacquered (D5).
+Build-d04 also records the four `s2` masks as partial carriers (21-44 % of texels take their block's band; channel order R/G/B = rough/reflect/metal is UNKNOWN) and the emissive atlas as unbound.
+
+Task: for each of the 12 rows, record the measured refusal with its file and byte-level reason in texture_ledger.json (the report's reasons are the model). Then either close a row with a carrier that changes in-game state or keep it declared. Do not raise complete to true. If the chapter masks are attempted, the carrier must be a state the engine actually reads (no chapter selector exists today) — prove it before writing. Re-run the appearance gate and confirm the percentages do not move unless a row genuinely changes disposition (build-d04 explains why carriers alone did not move 54.6/49.3/91.1/53.9).
+
+Revert: the ledger's refusals array and the D-04 tree; no mesh or material is changed by the record alone.
+
+Updated by review 8399: names the exact 12 rows and their reasons, and keeps complete=false as the honest RC state.

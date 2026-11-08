@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/mk2-materials-build.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/mk2-mesh-build.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/paint-addendum-build.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-texture-rows.md
+Build the MK2 materials and textures. MK2 replaces the body and wheel materials (Research/BatmobileGrab/SKINS.md, tmp/freebuff/reports/app-skins-and-variants.md sections 1 and 2). Starting from Builds/bm-RC5-skin-mk2 and the base paint rules in Builds/bm-RC5-paint2, convert each MK2 material to a CarPaintMM block with the same colour decoding used for the base car (decoded linear colour times Diffuse_Adjust, no screenshot gain), carry the Carbon_Colour and EdgeMask_Colour_Carbon parameters the MK2 wheel arch master has (they are the carbon insets of the skin), and bake textures through Tools/scripts/appearance_bake.py. Reuse base-car textures when the BmAK textures are the same. Run via Tools/scripts/rc5_skin.py --skin mk2 --materials. Done check: every MK2 material slot has a block with values read back from the container, textures counted in KB against the ledger, and a list of rows still unfaithful with a card each. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

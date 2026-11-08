@@ -1,0 +1,749 @@
+{
+ "schema": 1,
+ "generated_by": "Tools/scripts/grab_collision_modes.py --write",
+ "card": "GRB-G3-01b open item - collision mesh per mode",
+ "labels": {
+  "derived": "a 4-byte operand in a function body resolves to the named object; control flow is NOT decoded, so the reference proves contact, not a branch",
+  "UNKNOWN": "the reference was not found in the searched bodies"
+ },
+ "targets": {
+  "names": [
+   "BatmanCollisionMeshBattleMode0",
+   "BatmanCollisionMeshPursuitMode0",
+   "BatmanVsBatmobileCollisionMode",
+   "CollisionComponent",
+   "SetHidden",
+   "SetActorCollision",
+   "SetBlockRigidBody"
+  ],
+  "components": {
+   "BmGame.upk": {
+    "BattleMode0 template": 176111,
+    "PursuitMode0 template": 176112
+   },
+   "Startup.upk": {
+    "BattleMode0 template": 171103,
+    "PursuitMode0 template": 171104
+   },
+   "Playable_Batmobile_SF.upk": {
+    "BattleMode0 instance": 5392,
+    "PursuitMode0 instance": 5393
+   }
+  }
+ },
+ "packages": {
+  "BmGame.upk": {
+   "path": "E:/Games/Batman - Arkham Knight\\BmGame\\CookedPCConsole\\BmGame.upk",
+   "bytes": 214757637,
+   "exports": 177031,
+   "names": 84813,
+   "name_indices": {
+    "BatmanCollisionMeshBattleMode0": [
+     4735
+    ],
+    "BatmanCollisionMeshPursuitMode0": [
+     4737
+    ],
+    "BatmanVsBatmobileCollisionMode": [
+     4844
+    ],
+    "CollisionComponent": [
+     18394
+    ],
+    "SetHidden": [
+     70289
+    ],
+    "SetActorCollision": [
+     69657
+    ],
+    "SetBlockRigidBody": [
+     69814
+    ]
+   },
+   "states": [
+    {
+     "mode": "PursuitMode",
+     "package": "BmGame.upk",
+     "export": 10525,
+     "class": "State",
+     "path": "RVehicleBatmobileBase.PursuitMode",
+     "bytes": 83
+    },
+    {
+     "mode": "BattleMode",
+     "package": "BmGame.upk",
+     "export": 10547,
+     "class": "State",
+     "path": "RVehicleBatmobileBase.BattleMode",
+     "bytes": 107
+    }
+   ],
+   "state_functions": [
+    {
+     "mode": "PursuitMode",
+     "function": "BeginState",
+     "package": "BmGame.upk",
+     "export": 10515,
+     "path": "PursuitMode.BeginState",
+     "script_bytes": 218,
+     "script_sha1": "3847dcc4b412fb19399ff6f6f458cd4c8aa56b84",
+     "hits": [],
+     "state_bound": true
+    },
+    {
+     "mode": "PursuitMode",
+     "function": "EndState",
+     "package": "BmGame.upk",
+     "export": 10517,
+     "path": "PursuitMode.EndState",
+     "script_bytes": 19,
+     "script_sha1": "ffcd226b4c5eef08f953bfe98d06fb3eee96c818",
+     "hits": [],
+     "state_bound": true
+    },
+    {
+     "mode": "PursuitMode",
+     "function": "Tick",
+     "package": "BmGame.upk",
+     "export": 10524,
+     "path": "PursuitMode.Tick",
+     "script_bytes": 680,
+     "script_sha1": "00a11a56778d757bd27b22139f089d322fa38824",
+     "hits": [],
+     "state_bound": true
+    },
+    {
+     "mode": "BattleMode",
+     "function": "BeginState",
+     "package": "BmGame.upk",
+     "export": 10529,
+     "path": "BattleMode.BeginState",
+     "script_bytes": 513,
+     "script_sha1": "621255c88373bbf554aece152513a95075d75952",
+     "hits": [],
+     "state_bound": true
+    },
+    {
+     "mode": "BattleMode",
+     "function": "EndState",
+     "package": "BmGame.upk",
+     "export": 10533,
+     "path": "BattleMode.EndState",
+     "script_bytes": 538,
+     "script_sha1": "ae7e82e1df52bbca2bf887b40353684c66e509fc",
+     "hits": [],
+     "state_bound": true
+    },
+    {
+     "mode": "BattleMode",
+     "function": "Tick",
+     "package": "BmGame.upk",
+     "export": 10546,
+     "path": "BattleMode.Tick",
+     "script_bytes": 514,
+     "script_sha1": "e311339268ab1f71b78bd1b3d73e7730ec99fcb0",
+     "hits": [],
+     "state_bound": true
+    }
+   ],
+   "other_mode_functions": [],
+   "corpus_functions": [
+    {
+     "mode": null,
+     "function": "HideTankAndDisableCollisionOnDeath",
+     "package": "BmGame.upk",
+     "export": 11691,
+     "path": "RVehicleNPC.HideTankAndDisableCollisionOnDeath",
+     "script_bytes": 55,
+     "script_sha1": "6d260b89bff8d8bf97cddbfb437102cf8a3e3f92",
+     "hits": [
+      {
+       "label": "name:SetHidden",
+       "at": 20
+      }
+     ],
+     "state_bound": false,
+     "corpus": true
+    },
+    {
+     "mode": null,
+     "function": "PostBeginPlay",
+     "package": "BmGame.upk",
+     "export": 46920,
+     "path": "RBatmobileForensicsBaseActor.PostBeginPlay",
+     "script_bytes": 8,
+     "script_sha1": "9ed77f8428fef33565139393cd7b59ad912b5c21",
+     "hits": [
+      {
+       "label": "name:SetHidden",
+       "at": 1
+      }
+     ],
+     "state_bound": false,
+     "corpus": true
+    },
+    {
+     "mode": null,
+     "function": "SetRevealed",
+     "package": "BmGame.upk",
+     "export": 46924,
+     "path": "RBatmobileForensicsBaseActor.SetRevealed",
+     "script_bytes": 132,
+     "script_sha1": "6c9a17a95f3f2bd9cb48b58828b42cd58ac7538e",
+     "hits": [
+      {
+       "label": "name:SetHidden",
+       "at": 118
+      }
+     ],
+     "state_bound": false,
+     "corpus": true
+    },
+    {
+     "mode": null,
+     "function": "FireWeaponInternal",
+     "package": "BmGame.upk",
+     "export": 48056,
+     "path": "RBatmobileWinch.FireWeaponInternal",
+     "script_bytes": 1719,
+     "script_sha1": "2dcf2f77001cdbe8a9af8d0a276f6db7507377b5",
+     "hits": [
+      {
+       "label": "name:SetHidden",
+       "at": 1625
+      },
+      {
+       "label": "name:SetHidden",
+       "at": 1645
+      }
+     ],
+     "state_bound": false,
+     "corpus": true
+    },
+    {
+     "mode": null,
+     "function": "HolsterWinch",
+     "package": "BmGame.upk",
+     "export": 48069,
+     "path": "RBatmobileWinch.HolsterWinch",
+     "script_bytes": 155,
+     "script_sha1": "f8f8644bec601c0037e4710f947c91ce72fd708e",
+     "hits": [
+      {
+       "label": "name:SetHidden",
+       "at": 85
+      },
+      {
+       "label": "name:SetHidden",
+       "at": 105
+      }
+     ],
+     "state_bound": false,
+     "corpus": true
+    },
+    {
+     "mode": null,
+     "function": "SetMyComponentsHidden",
+     "package": "BmGame.upk",
+     "export": 64954,
+     "path": "RCinematicVehicle.SetMyComponentsHidden",
+     "script_bytes": 26,
+     "script_sha1": "0d7f34eb6d9419536f4b1b81524c37d6130bf584",
+     "hits": [
+      {
+       "label": "name:SetHidden",
+       "at": 14
+      }
+     ],
+     "state_bound": false,
+     "corpus": true
+    },
+    {
+     "mode": null,
+     "function": "SetProxyingActor",
+     "package": "BmGame.upk",
+     "export": 64958,
+     "path": "RCinematicVehicle.SetProxyingActor",
+     "script_bytes": 90,
+     "script_sha1": "a9332e205bf78b22b9639feeafdf5fa897328d9f",
+     "hits": [
+      {
+       "label": "name:SetHidden",
+       "at": 60
+      }
+     ],
+     "state_bound": false,
+     "corpus": true
+    },
+    {
+     "mode": null,
+     "function": "SetNoProxyActor",
+     "package": "BmGame.upk",
+     "export": 64959,
+     "path": "RCinematicVehicle.SetNoProxyActor",
+     "script_bytes": 32,
+     "script_sha1": "10c8b56ed018e3a8de0d840b307ab3ac4ac1628e",
+     "hits": [
+      {
+       "label": "name:SetHidden",
+       "at": 25
+      }
+     ],
+     "state_bound": false,
+     "corpus": true
+    },
+    {
+     "mode": null,
+     "function": "Tick",
+     "package": "BmGame.upk",
+     "export": 127509,
+     "path": "RVehicleBehaviour_HeavyTankSearch.Tick",
+     "script_bytes": 1285,
+     "script_sha1": "7e5971e02c7115fd49bdfca3e74a5a9967e1ae94",
+     "hits": [
+      {
+       "label": "name:SetHidden",
+       "at": 754
+      },
+      {
+       "label": "name:SetHidden",
+       "at": 849
+      }
+     ],
+     "state_bound": false,
+     "corpus": true
+    },
+    {
+     "mode": null,
+     "function": "PostBeginPlay",
+     "package": "BmGame.upk",
+     "export": 129275,
+     "path": "RVehicleHeavyTank.PostBeginPlay",
+     "script_bytes": 932,
+     "script_sha1": "ee757a5b6a6b21122170143c5265fc4d4f2a5143",
+     "hits": [
+      {
+       "label": "name:SetHidden",
+       "at": 291
+      }
+     ],
+     "state_bound": false,
+     "corpus": true
+    },
+    {
+     "mode": null,
+     "function": "SetWeakPointRevealed",
+     "package": "BmGame.upk",
+     "export": 129277,
+     "path": "RVehicleHeavyTank.SetWeakPointRevealed",
+     "script_bytes": 58,
+     "script_sha1": "44563d74e1d2ba99f84f3c309ea93646550ac658",
+     "hits": [
+      {
+       "label": "name:SetHidden",
+       "at": 44
+      }
+     ],
+     "state_bound": false,
+     "corpus": true
+    },
+    {
+     "mode": null,
+     "function": "TickAimAndShootAtBatman",
+     "package": "BmGame.upk",
+     "export": 129429,
+     "path": "RVehicleHeavyTank.TickAimAndShootAtBatman",
+     "script_bytes": 1139,
+     "script_sha1": "f348a3278a3fed53df69fa7367cd44804b102deb",
+     "hits": [
+      {
+       "label": "name:SetHidden",
+       "at": 905
+      },
+      {
+       "label": "name:SetHidden",
+       "at": 974
+      }
+     ],
+     "state_bound": false,
+     "corpus": true
+    }
+   ],
+   "needles": [
+    "name:BatmanCollisionMeshBattleMode0",
+    "name:BatmanCollisionMeshPursuitMode0",
+    "name:BatmanVsBatmobileCollisionMode",
+    "name:CollisionComponent",
+    "name:SetActorCollision",
+    "name:SetBlockRigidBody",
+    "name:SetHidden",
+    "object:BattleMode0 template",
+    "object:PursuitMode0 template"
+   ]
+  },
+  "Startup.upk": {
+   "path": "E:/Games/Batman - Arkham Knight\\BmGame\\CookedPCConsole\\Startup.upk",
+   "bytes": 434869146,
+   "exports": 174890,
+   "names": 67407,
+   "name_indices": {
+    "BatmanCollisionMeshBattleMode0": [
+     5198
+    ],
+    "BatmanCollisionMeshPursuitMode0": [
+     5200
+    ],
+    "BatmanVsBatmobileCollisionMode": [],
+    "CollisionComponent": [
+     11994
+    ],
+    "SetHidden": [
+     58601
+    ],
+    "SetActorCollision": [
+     58496
+    ],
+    "SetBlockRigidBody": [
+     58520
+    ]
+   },
+   "states": [],
+   "state_functions": [],
+   "other_mode_functions": [
+    {
+     "mode": null,
+     "function": "Tick",
+     "package": "Startup.upk",
+     "export": 7415,
+     "path": "RVehicleBatmobile.Tick",
+     "script_bytes": 928,
+     "script_sha1": "cf14dd84f36d666394604e5a85a27268c3cb1f26",
+     "hits": [],
+     "state_bound": false
+    }
+   ],
+   "corpus_functions": [],
+   "needles": [
+    "name:BatmanCollisionMeshBattleMode0",
+    "name:BatmanCollisionMeshPursuitMode0",
+    "name:CollisionComponent",
+    "name:SetActorCollision",
+    "name:SetBlockRigidBody",
+    "name:SetHidden",
+    "object:BattleMode0 template",
+    "object:PursuitMode0 template"
+   ]
+  }
+ },
+ "state_functions": [
+  {
+   "mode": "PursuitMode",
+   "function": "BeginState",
+   "package": "BmGame.upk",
+   "export": 10515,
+   "path": "PursuitMode.BeginState",
+   "script_bytes": 218,
+   "script_sha1": "3847dcc4b412fb19399ff6f6f458cd4c8aa56b84",
+   "hits": [],
+   "state_bound": true
+  },
+  {
+   "mode": "PursuitMode",
+   "function": "EndState",
+   "package": "BmGame.upk",
+   "export": 10517,
+   "path": "PursuitMode.EndState",
+   "script_bytes": 19,
+   "script_sha1": "ffcd226b4c5eef08f953bfe98d06fb3eee96c818",
+   "hits": [],
+   "state_bound": true
+  },
+  {
+   "mode": "PursuitMode",
+   "function": "Tick",
+   "package": "BmGame.upk",
+   "export": 10524,
+   "path": "PursuitMode.Tick",
+   "script_bytes": 680,
+   "script_sha1": "00a11a56778d757bd27b22139f089d322fa38824",
+   "hits": [],
+   "state_bound": true
+  },
+  {
+   "mode": "BattleMode",
+   "function": "BeginState",
+   "package": "BmGame.upk",
+   "export": 10529,
+   "path": "BattleMode.BeginState",
+   "script_bytes": 513,
+   "script_sha1": "621255c88373bbf554aece152513a95075d75952",
+   "hits": [],
+   "state_bound": true
+  },
+  {
+   "mode": "BattleMode",
+   "function": "EndState",
+   "package": "BmGame.upk",
+   "export": 10533,
+   "path": "BattleMode.EndState",
+   "script_bytes": 538,
+   "script_sha1": "ae7e82e1df52bbca2bf887b40353684c66e509fc",
+   "hits": [],
+   "state_bound": true
+  },
+  {
+   "mode": "BattleMode",
+   "function": "Tick",
+   "package": "BmGame.upk",
+   "export": 10546,
+   "path": "BattleMode.Tick",
+   "script_bytes": 514,
+   "script_sha1": "e311339268ab1f71b78bd1b3d73e7730ec99fcb0",
+   "hits": [],
+   "state_bound": true
+  }
+ ],
+ "corpus_functions": [
+  {
+   "mode": null,
+   "function": "HideTankAndDisableCollisionOnDeath",
+   "package": "BmGame.upk",
+   "export": 11691,
+   "path": "RVehicleNPC.HideTankAndDisableCollisionOnDeath",
+   "script_bytes": 55,
+   "script_sha1": "6d260b89bff8d8bf97cddbfb437102cf8a3e3f92",
+   "hits": [
+    {
+     "label": "name:SetHidden",
+     "at": 20
+    }
+   ],
+   "state_bound": false,
+   "corpus": true
+  },
+  {
+   "mode": null,
+   "function": "PostBeginPlay",
+   "package": "BmGame.upk",
+   "export": 46920,
+   "path": "RBatmobileForensicsBaseActor.PostBeginPlay",
+   "script_bytes": 8,
+   "script_sha1": "9ed77f8428fef33565139393cd7b59ad912b5c21",
+   "hits": [
+    {
+     "label": "name:SetHidden",
+     "at": 1
+    }
+   ],
+   "state_bound": false,
+   "corpus": true
+  },
+  {
+   "mode": null,
+   "function": "SetRevealed",
+   "package": "BmGame.upk",
+   "export": 46924,
+   "path": "RBatmobileForensicsBaseActor.SetRevealed",
+   "script_bytes": 132,
+   "script_sha1": "6c9a17a95f3f2bd9cb48b58828b42cd58ac7538e",
+   "hits": [
+    {
+     "label": "name:SetHidden",
+     "at": 118
+    }
+   ],
+   "state_bound": false,
+   "corpus": true
+  },
+  {
+   "mode": null,
+   "function": "FireWeaponInternal",
+   "package": "BmGame.upk",
+   "export": 48056,
+   "path": "RBatmobileWinch.FireWeaponInternal",
+   "script_bytes": 1719,
+   "script_sha1": "2dcf2f77001cdbe8a9af8d0a276f6db7507377b5",
+   "hits": [
+    {
+     "label": "name:SetHidden",
+     "at": 1625
+    },
+    {
+     "label": "name:SetHidden",
+     "at": 1645
+    }
+   ],
+   "state_bound": false,
+   "corpus": true
+  },
+  {
+   "mode": null,
+   "function": "HolsterWinch",
+   "package": "BmGame.upk",
+   "export": 48069,
+   "path": "RBatmobileWinch.HolsterWinch",
+   "script_bytes": 155,
+   "script_sha1": "f8f8644bec601c0037e4710f947c91ce72fd708e",
+   "hits": [
+    {
+     "label": "name:SetHidden",
+     "at": 85
+    },
+    {
+     "label": "name:SetHidden",
+     "at": 105
+    }
+   ],
+   "state_bound": false,
+   "corpus": true
+  },
+  {
+   "mode": null,
+   "function": "SetMyComponentsHidden",
+   "package": "BmGame.upk",
+   "export": 64954,
+   "path": "RCinematicVehicle.SetMyComponentsHidden",
+   "script_bytes": 26,
+   "script_sha1": "0d7f34eb6d9419536f4b1b81524c37d6130bf584",
+   "hits": [
+    {
+     "label": "name:SetHidden",
+     "at": 14
+    }
+   ],
+   "state_bound": false,
+   "corpus": true
+  },
+  {
+   "mode": null,
+   "function": "SetProxyingActor",
+   "package": "BmGame.upk",
+   "export": 64958,
+   "path": "RCinematicVehicle.SetProxyingActor",
+   "script_bytes": 90,
+   "script_sha1": "a9332e205bf78b22b9639feeafdf5fa897328d9f",
+   "hits": [
+    {
+     "label": "name:SetHidden",
+     "at": 60
+    }
+   ],
+   "state_bound": false,
+   "corpus": true
+  },
+  {
+   "mode": null,
+   "function": "SetNoProxyActor",
+   "package": "BmGame.upk",
+   "export": 64959,
+   "path": "RCinematicVehicle.SetNoProxyActor",
+   "script_bytes": 32,
+   "script_sha1": "10c8b56ed018e3a8de0d840b307ab3ac4ac1628e",
+   "hits": [
+    {
+     "label": "name:SetHidden",
+     "at": 25
+    }
+   ],
+   "state_bound": false,
+   "corpus": true
+  },
+  {
+   "mode": null,
+   "function": "Tick",
+   "package": "BmGame.upk",
+   "export": 127509,
+   "path": "RVehicleBehaviour_HeavyTankSearch.Tick",
+   "script_bytes": 1285,
+   "script_sha1": "7e5971e02c7115fd49bdfca3e74a5a9967e1ae94",
+   "hits": [
+    {
+     "label": "name:SetHidden",
+     "at": 754
+    },
+    {
+     "label": "name:SetHidden",
+     "at": 849
+    }
+   ],
+   "state_bound": false,
+   "corpus": true
+  },
+  {
+   "mode": null,
+   "function": "PostBeginPlay",
+   "package": "BmGame.upk",
+   "export": 129275,
+   "path": "RVehicleHeavyTank.PostBeginPlay",
+   "script_bytes": 932,
+   "script_sha1": "ee757a5b6a6b21122170143c5265fc4d4f2a5143",
+   "hits": [
+    {
+     "label": "name:SetHidden",
+     "at": 291
+    }
+   ],
+   "state_bound": false,
+   "corpus": true
+  },
+  {
+   "mode": null,
+   "function": "SetWeakPointRevealed",
+   "package": "BmGame.upk",
+   "export": 129277,
+   "path": "RVehicleHeavyTank.SetWeakPointRevealed",
+   "script_bytes": 58,
+   "script_sha1": "44563d74e1d2ba99f84f3c309ea93646550ac658",
+   "hits": [
+    {
+     "label": "name:SetHidden",
+     "at": 44
+    }
+   ],
+   "state_bound": false,
+   "corpus": true
+  },
+  {
+   "mode": null,
+   "function": "TickAimAndShootAtBatman",
+   "package": "BmGame.upk",
+   "export": 129429,
+   "path": "RVehicleHeavyTank.TickAimAndShootAtBatman",
+   "script_bytes": 1139,
+   "script_sha1": "f348a3278a3fed53df69fa7367cd44804b102deb",
+   "hits": [
+    {
+     "label": "name:SetHidden",
+     "at": 905
+    },
+    {
+     "label": "name:SetHidden",
+     "at": 974
+    }
+   ],
+   "state_bound": false,
+   "corpus": true
+  }
+ ],
+ "verdicts": [
+  {
+   "id": "PursuitMode_mesh",
+   "statement": "PursuitMode selects its own collision mesh",
+   "verdict": "UNKNOWN",
+   "evidence": "no reference to either mesh name, to BatmanVsBatmobileCollisionMode, to CollisionComponent, or to SetHidden/SetActorCollision/SetBlockRigidBody in the state's functions (BeginState, EndState, Tick)"
+  },
+  {
+   "id": "BattleMode_mesh",
+   "statement": "BattleMode selects its own collision mesh",
+   "verdict": "UNKNOWN",
+   "evidence": "no reference to either mesh name, to BatmanVsBatmobileCollisionMode, to CollisionComponent, or to SetHidden/SetActorCollision/SetBlockRigidBody in the state's functions (BeginState, EndState, Tick)"
+  },
+  {
+   "id": "selector",
+   "statement": "BatmanVsBatmobileCollisionMode (layout 5895) picks the component",
+   "verdict": "UNKNOWN",
+   "evidence": "the property name is in the name table (index recorded per package) but appears in no state or Batmobile/vehicle function body, and the property is not serialised in the archetype/CDO walk (COLLISION.md); the selector's values are not decoded"
+  }
+ ],
+ "problems": []
+}

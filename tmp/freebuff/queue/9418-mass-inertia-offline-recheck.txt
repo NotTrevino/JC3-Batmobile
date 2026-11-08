@@ -1,0 +1,7 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/mass-inertia-offline-recheck.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-collision-boxes.md
+Offline check of mass properties after the collision brief 9141 added boxes. Inputs: the built physics file in Builds/bm-RC5-collision, Tools/scripts/jc3hkx.py, Research/BatmobileGrab/INERTIA.md (mass and tensor are not in BmAK; the 0 of 107 inertia oracle was refuted), and the declared values mass 6000 kg and inertia 4.0, 2.6, 1.2 (T-M1, T-M2). Read the hknpShapeMassProperties block of the built file and compute what volume-based box inertia the added boxes imply at 6000 kg; compare it with the declared inertia and with the body entries of Research/JC3Grab/PHYSICS_ROLES6.md. Report the ratio per axis. State plainly that no BmAK mass exists, so the declared values stay class declared, and list the live measurement (from hook telemetry: yaw acceleration under a known steering input, or free-fall pitch) that would test them later. Write tmp/freebuff/reports/hdl-mass-inertia-recheck.md. Done check: ratios per axis are tabulated, the script used is saved as Tools/scripts/mass_recheck.py, and a rerun prints identical numbers.
+Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

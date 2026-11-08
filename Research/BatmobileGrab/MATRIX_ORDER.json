@@ -1,0 +1,816 @@
+{
+ "schema": 1,
+ "generator": "grab_matrix_order.py",
+ "question": "G3-01b U-3: are the three planes of an AggGeom `TM` 3x3 the transform's rows (row-vector convention) or its columns, and therefore what is the sign of the 4.00 deg Y tilt of the weapons box?",
+ "verdict": {
+  "storage_order": "UNSETTLED",
+  "layout": "SETTLED: four planes, each (W,X,Y,Z), in the order X, Y, Z, W",
+  "tilt": "4.00 deg about the Y axis (magnitude and axis decoded; R and R^T share both). Sign: conditional - +4.00 deg about +Y if the planes are the rows (row-vector), -4.00 deg about +Y if they are the columns.",
+  "why": "no transform in this build is stored both as a 64-byte FMatrix and as a quaternion, so there is no known case to compare against; the one the card names (the mesh reference pose of Batmobile_Rig_Weapons_Trans) is the identity rotation"
+ },
+ "source": {
+  "game": "E:\\Games\\Batman - Arkham Knight\\BmGame\\CookedPCConsole",
+  "box_package": "BmGame.upk",
+  "mesh_package": "Playable_Batmobile_SF.upk",
+  "mesh_export": 5284,
+  "weapons_export": 169751
+ },
+ "boxes": [
+  {
+   "export": 169750,
+   "object": "Batmobile_V3_Physics.RB_BodySetup",
+   "tm_at": 89,
+   "floats": [
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    9.0,
+    0.0,
+    106.75
+   ],
+   "planes": [
+    {
+     "w": 0.0,
+     "xyz": [
+      1.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "w": 0.0,
+     "xyz": [
+      0.0,
+      1.0,
+      0.0
+     ]
+    },
+    {
+     "w": 0.0,
+     "xyz": [
+      0.0,
+      0.0,
+      1.0
+     ]
+    },
+    {
+     "w": 1.0,
+     "xyz": [
+      9.0,
+      0.0,
+      106.75
+     ]
+    }
+   ],
+   "w_column": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "reading_A": {
+    "rows": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "translation_cm": [
+     9.0,
+     0.0,
+     106.75
+    ],
+    "oracle": {
+     "row_norms": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "det": 1.0,
+     "max_norm_error": 0.0,
+     "max_abs_dot": 0.0,
+     "is_rotation": true
+    }
+   },
+   "reading_B": {
+    "rows": [
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      1.0
+     ],
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    "translation_cm": [
+     1.0,
+     9.0,
+     0.0
+    ],
+    "oracle": {
+     "row_norms": [
+      1.0,
+      1.0,
+      0.0
+     ],
+     "det": 0.0,
+     "max_norm_error": 1.0,
+     "max_abs_dot": 0.0,
+     "is_rotation": false
+    }
+   },
+   "axis_angle": {
+    "angle_deg": 0.0,
+    "axis": null,
+    "axis_label": "none"
+   },
+   "label": "decoded (StructProperty tag at byte 69, 16 floats from byte 89)"
+  },
+  {
+   "export": 169750,
+   "object": "Batmobile_V3_Physics.RB_BodySetup",
+   "tm_at": 207,
+   "floats": [
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    79.0
+   ],
+   "planes": [
+    {
+     "w": 0.0,
+     "xyz": [
+      1.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "w": 0.0,
+     "xyz": [
+      0.0,
+      1.0,
+      0.0
+     ]
+    },
+    {
+     "w": 0.0,
+     "xyz": [
+      0.0,
+      0.0,
+      1.0
+     ]
+    },
+    {
+     "w": 1.0,
+     "xyz": [
+      0.0,
+      0.0,
+      79.0
+     ]
+    }
+   ],
+   "w_column": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "reading_A": {
+    "rows": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "translation_cm": [
+     0.0,
+     0.0,
+     79.0
+    ],
+    "oracle": {
+     "row_norms": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "det": 1.0,
+     "max_norm_error": 0.0,
+     "max_abs_dot": 0.0,
+     "is_rotation": true
+    }
+   },
+   "reading_B": {
+    "rows": [
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      1.0
+     ],
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    "translation_cm": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "oracle": {
+     "row_norms": [
+      1.0,
+      1.0,
+      0.0
+     ],
+     "det": 0.0,
+     "max_norm_error": 1.0,
+     "max_abs_dot": 0.0,
+     "is_rotation": false
+    }
+   },
+   "axis_angle": {
+    "angle_deg": 0.0,
+    "axis": null,
+    "axis_label": "none"
+   },
+   "label": "decoded (StructProperty tag at byte 187, 16 floats from byte 207)"
+  },
+  {
+   "export": 169751,
+   "object": "Batmobile_V3_Physics.RB_BodySetup",
+   "tm_at": 89,
+   "floats": [
+    0.0,
+    0.9975641,
+    -0.0,
+    -0.0697565,
+    0.0,
+    -0.0,
+    1.0,
+    -0.0,
+    0.0,
+    0.0697565,
+    0.0,
+    0.9975641,
+    1.0,
+    -30.4999962,
+    -0.0,
+    93.25
+   ],
+   "planes": [
+    {
+     "w": 0.0,
+     "xyz": [
+      0.9975641,
+      -0.0,
+      -0.0697565
+     ]
+    },
+    {
+     "w": 0.0,
+     "xyz": [
+      -0.0,
+      1.0,
+      -0.0
+     ]
+    },
+    {
+     "w": 0.0,
+     "xyz": [
+      0.0697565,
+      0.0,
+      0.9975641
+     ]
+    },
+    {
+     "w": 1.0,
+     "xyz": [
+      -30.4999962,
+      -0.0,
+      93.25
+     ]
+    }
+   ],
+   "w_column": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "reading_A": {
+    "rows": [
+     [
+      0.9975641,
+      -0.0,
+      -0.0697565
+     ],
+     [
+      -0.0,
+      1.0,
+      -0.0
+     ],
+     [
+      0.0697565,
+      0.0,
+      0.9975641
+     ]
+    ],
+    "translation_cm": [
+     -30.5,
+     -0.0,
+     93.25
+    ],
+    "oracle": {
+     "row_norms": [
+      1.000000027,
+      1.0,
+      1.000000027
+     ],
+     "det": 1.000000054,
+     "max_norm_error": 2.683355426746914e-08,
+     "max_abs_dot": 3.4874619892926794e-21,
+     "is_rotation": true
+    }
+   },
+   "reading_B": {
+    "rows": [
+     [
+      0.0,
+      0.9975641,
+      -0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ],
+     [
+      0.0,
+      0.0697565,
+      0.0
+     ]
+    ],
+    "translation_cm": [
+     1.0,
+     -30.5,
+     -0.0
+    ],
+    "oracle": {
+     "row_norms": [
+      0.997564077,
+      1.0,
+      0.069756471
+     ],
+     "det": -0.0,
+     "max_norm_error": 0.9302435293793678,
+     "max_abs_dot": 0.06958654925576901,
+     "is_rotation": false
+    }
+   },
+   "axis_angle": {
+    "angle_deg": 3.999978,
+    "axis": [
+     0.0,
+     -1.000005515,
+     0.0
+    ],
+    "axis_label": "-Y"
+   },
+   "label": "decoded (StructProperty tag at byte 69, 16 floats from byte 89)"
+  }
+ ],
+ "weapons_box_candidates": {
+  "rows_are_axis_images": {
+   "rule": "P' = P . M + T  (row vector): row i of the 3x3 is where local axis i points",
+   "local_x_image": [
+    0.9975641,
+    -0.0,
+    -0.0697565
+   ],
+   "local_z_image": [
+    0.0697565,
+    0.0,
+    0.9975641
+   ],
+   "rotation_deg_about_plus_Y": 4.000001
+  },
+  "columns_are_axis_images": {
+   "rule": "P' = M . P + T  (column vector): column i of the 3x3 is where local axis i points",
+   "local_x_image": [
+    0.9975641,
+    -0.0,
+    0.0697565
+   ],
+   "local_z_image": [
+    -0.0697565,
+    -0.0,
+    0.9975641
+   ],
+   "rotation_deg_about_plus_Y": -4.000001
+  }
+ },
+ "mesh_ref_pose": {
+  "package": "Playable_Batmobile_SF.upk",
+  "export": 5284,
+  "object": "Batmobile_V2_Mesh.Batmobile_V2",
+  "export_bytes": 20151210,
+  "skeleton_origin": 8395,
+  "skeleton_stride": 44,
+  "skeleton_count": 180,
+  "weapons_bone": {
+   "index": 101,
+   "name": "Batmobile_Rig_Weapons_Trans",
+   "parent_index": 100,
+   "parent": "Batmobile_Rig_Weapons_Turret_Root",
+   "quat": [
+    -0.0,
+    0.0,
+    -0.0,
+    -1.0
+   ],
+   "position_cm": [
+    17.65315,
+    -0.00064,
+    -1.51528
+   ],
+   "quat_angle_deg": 0.0,
+   "quat_matrix": [
+    [
+     1.0,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     -0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ]
+  },
+  "chassis_bone": {
+   "index": 0,
+   "name": "Batmobile_Chassis",
+   "parent_index": 0,
+   "parent": "Batmobile_Chassis",
+   "quat": [
+    -2e-06,
+    -0.0,
+    -2e-05,
+    -1.0
+   ],
+   "position_cm": [
+    2e-05,
+    -0.0,
+    0.0
+   ],
+   "quat_angle_deg": 0.002303,
+   "quat_matrix": [
+    [
+     1.0,
+     -4e-05,
+     0.0
+    ],
+    [
+     4e-05,
+     1.0,
+     -4e-06
+    ],
+    [
+     0.0,
+     4e-06,
+     1.0
+    ]
+   ]
+  },
+  "label": "decoded: the 44-byte record array of the SkeletalMesh export (quat@+0, position@+16, FName@+28, parent@+36, 0xFFFFFFFF@+40 - the layout reverify_bones.py proves on all 180 bones)"
+ },
+ "matrix_scan": {
+  "candidates": 10,
+  "orthonormal": [],
+  "floats": 5037802
+ },
+ "tm_census": [
+  {
+   "package": "BmGame.upk",
+   "tm_name_index": 78655,
+   "exports": 177031,
+   "total": 880,
+   "by_class": {
+    "RAggGeomCollisionComponent": 8,
+    "RB_BodySetup": 872
+   }
+  },
+  {
+   "package": "Startup.upk",
+   "tm_name_index": 62018,
+   "exports": 174890,
+   "total": 2186,
+   "by_class": {
+    "ApexDestructibleAsset": 77,
+    "RAggGeomCollisionComponent": 4,
+    "RB_BodySetup": 2105
+   }
+  },
+  {
+   "package": "StartupPatch.upk",
+   "tm_name_index": 47845,
+   "exports": 142232,
+   "total": 237,
+   "by_class": {
+    "RAggGeomCollisionComponent": 1,
+    "RB_BodySetup": 236
+   }
+  },
+  {
+   "package": "Orphan.upk",
+   "tm_name_index": 19772,
+   "exports": 27883,
+   "total": 262,
+   "by_class": {
+    "ApexDestructibleAsset": 10,
+    "RAggGeomCollisionComponent": 10,
+    "RB_BodySetup": 242
+   }
+  },
+  {
+   "package": "Playable_Batmobile_SF.upk",
+   "tm_name_index": 2846,
+   "exports": 5490,
+   "total": 32,
+   "by_class": {
+    "RB_BodySetup": 32
+   }
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF.upk",
+   "tm_name_index": 2851,
+   "exports": 5534,
+   "total": 32,
+   "by_class": {
+    "RB_BodySetup": 32
+   }
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF.upk",
+   "tm_name_index": 3120,
+   "exports": 3388,
+   "total": 32,
+   "by_class": {
+    "RB_BodySetup": 32
+   }
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF.upk",
+   "tm_name_index": 2836,
+   "exports": 5584,
+   "total": 32,
+   "by_class": {
+    "RB_BodySetup": 32
+   }
+  }
+ ],
+ "capsule_evidence": {
+  "source": "E:\\Games\\Batman - Arkham Knight\\BmGame\\CookedPCConsole\\BmGame.upk",
+  "skeletal_meshes": 105,
+  "capsule_bodies": 143,
+  "assigned_bodies": 137,
+  "capsules": 149,
+  "capsules_identity_rotation": 27,
+  "capsules_non_identity": 122,
+  "element_tm_equals_its_own_bone_rotation": 0,
+  "capsule_length_over_bone_length_median": 0.8807,
+  "centre_vs_bone_direction": {
+   "median_deg": 8.138,
+   "within_5": 58,
+   "within_10": 91,
+   "n": 149
+  },
+  "axis_readings": {
+   "centre_within_5": {
+    "capsules": 55,
+    "angles": {
+     "rows_are_images": {
+      "X": {
+       "median_deg": 88.3,
+       "within_2": 0,
+       "within_5": 0,
+       "within_10": 0,
+       "n": 55
+      },
+      "Y": {
+       "median_deg": 87.369,
+       "within_2": 10,
+       "within_5": 14,
+       "within_10": 15,
+       "n": 55
+      },
+      "Z": {
+       "median_deg": 26.278,
+       "within_2": 7,
+       "within_5": 23,
+       "within_10": 26,
+       "n": 55
+      }
+     },
+     "columns_are_images": {
+      "X": {
+       "median_deg": 88.765,
+       "within_2": 0,
+       "within_5": 0,
+       "within_10": 0,
+       "n": 55
+      },
+      "Y": {
+       "median_deg": 88.0,
+       "within_2": 0,
+       "within_5": 0,
+       "within_10": 0,
+       "n": 55
+      },
+      "Z": {
+       "median_deg": 4.385,
+       "within_2": 10,
+       "within_5": 28,
+       "within_10": 39,
+       "n": 55
+      }
+     }
+    }
+   },
+   "centre_within_10": {
+    "capsules": 82,
+    "angles": {
+     "rows_are_images": {
+      "X": {
+       "median_deg": 88.533,
+       "within_2": 0,
+       "within_5": 0,
+       "within_10": 0,
+       "n": 82
+      },
+      "Y": {
+       "median_deg": 87.79,
+       "within_2": 11,
+       "within_5": 17,
+       "within_10": 18,
+       "n": 82
+      },
+      "Z": {
+       "median_deg": 10.36,
+       "within_2": 19,
+       "within_5": 37,
+       "within_10": 41,
+       "n": 82
+      }
+     },
+     "columns_are_images": {
+      "X": {
+       "median_deg": 88.977,
+       "within_2": 0,
+       "within_5": 0,
+       "within_10": 0,
+       "n": 82
+      },
+      "Y": {
+       "median_deg": 87.453,
+       "within_2": 0,
+       "within_5": 0,
+       "within_10": 0,
+       "n": 82
+      },
+      "Z": {
+       "median_deg": 4.625,
+       "within_2": 10,
+       "within_5": 43,
+       "within_10": 58,
+       "n": 82
+      }
+     }
+    }
+   }
+  },
+  "label": "derived evidence, not an oracle: premise = a ragdoll capsule spans its bone, so its rotation-free centre (TM floats 13..15) and its long axis both follow the bone's own reference-pose direction (nearest child's position_cm from the 44-byte skeleton record).  The rig is assigned per body by the smallest rotation-free centre residual."
+ },
+ "checks": [
+  {
+   "name": "the 16 floats are four (W,X,Y,Z) planes whose W column is (0,0,0,1)",
+   "pass": true,
+   "detail": "export 169750 W column [0.0, 0.0, 0.0, 1.0]; export 169750 W column [0.0, 0.0, 0.0, 1.0]; export 169751 W column [0.0, 0.0, 0.0, 1.0]"
+  },
+  {
+   "name": "reading A is a rotation (orthonormal, det +1) on all 3 BmGame boxes",
+   "pass": true,
+   "detail": "export 169750 det 1.0000000 max|row|-1 0.00e+00; export 169750 det 1.0000000 max|row|-1 0.00e+00; export 169751 det 1.0000001 max|row|-1 2.68e-08"
+  },
+  {
+   "name": "reading B is rejected (singular on the identity boxes)",
+   "pass": true,
+   "detail": "export 169750 detB 0.0000000; export 169750 detB 0.0000000; export 169751 detB -0.0000000"
+  },
+  {
+   "name": "the weapons 3x3 is a rotation of 4.00 deg about the Y axis",
+   "pass": true,
+   "detail": "angle 4.0000 deg, axis [0.0, -1.000005515, 0.0] (-Y)"
+  },
+  {
+   "name": "the mesh reference pose of that bone is the identity rotation",
+   "pass": true,
+   "detail": "record 101 quat [-0.0, 0.0, -0.0, -1.0] -> 0.0000 deg; parent Batmobile_Rig_Weapons_Turret_Root"
+  },
+  {
+   "name": "the SkeletalMesh export holds no stored 3x3 matrix at any float offset",
+   "pass": true,
+   "detail": "10 prefilter candidates out of 5037802 offsets, 0 orthonormal"
+  },
+  {
+   "name": "no 64-byte TM struct exists outside aggregate geometry / destructible chunks",
+   "pass": true,
+   "detail": "BmGame.upk {'RAggGeomCollisionComponent': 8, 'RB_BodySetup': 872}; Startup.upk {'ApexDestructibleAsset': 77, 'RAggGeomCollisionComponent': 4, 'RB_BodySetup': 2105}; StartupPatch.upk {'RAggGeomCollisionComponent': 1, 'RB_BodySetup': 236}; Orphan.upk {'ApexDestructibleAsset': 10, 'RAggGeomCollisionComponent': 10, 'RB_BodySetup': 242}; Playable_Batmobile_SF.upk {'RB_BodySetup': 32}; Playable_BatmobileMK2_SF.upk {'RB_BodySetup': 32}; Playable_BatmobileJoker_SF.upk {'RB_BodySetup': 32}; Playable_BatmobileFunhouse_SF.upk {'RB_BodySetup': 32}"
+  },
+  {
+   "name": "no capsule element TM reproduces its own bone's reference-pose rotation",
+   "pass": true,
+   "detail": "0 of 122 non-identity capsules match their bone's quat matrix under either reading"
+  }
+ ],
+ "unknowns": [
+  {
+   "id": "U-1",
+   "item": "whether the three planes are the transform's rows or its columns",
+   "tried": "decoded all three BmGame box TMs; both readings are proper rotations of the same angle about the same axis; enumerated every TM(64) in 8 packages by class; scanned the 20,151,210-byte SkeletalMesh export at every float offset for an orthonormal 3x3; decoded the mesh reference pose of the bone the box belongs to; measured 122 non-identity ragdoll capsules against their bones' own reference-pose directions",
+   "why": "the only matrices this build stores are aggregate-geometry element frames (shape-local, no quaternion counterpart); the only rotations it stores as quaternions are skeleton/anim records (no matrix counterpart); the mesh reference pose of the weapons bone is the identity, so it cannot carry the tilt. A native struct dump that fixes FMatrix's row/column semantics for this build (G3-06), or any body whose element TM duplicates a bone transform, would decide it"
+  },
+  {
+   "id": "U-2",
+   "item": "which local axis a ragdoll capsule's long axis is",
+   "tried": "tested all three local axes against the bone direction under both readings; the capsule is rotationally symmetric about its long axis, so its own bytes cannot name that axis - only the art setup can",
+   "why": "no local field names the capsule's axis (BMSDK_OFFSETS.json has no FKSphylElem layout)"
+  }
+ ],
+ "passed": 8,
+ "checks_total": 8
+}

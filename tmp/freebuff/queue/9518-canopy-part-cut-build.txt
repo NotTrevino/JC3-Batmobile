@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/canopy-part-cut-build.md
+ONLY: freebuff
+EST: 50
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-entity-roots-and-slots.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/enter-exit-canopy-sequence-spec.md
+Cut the canopy (CockPit_Mesh) out of the Batmobile body as its own part so the canopy can slide and turn, and so the interior stays visible when it is open. Start from Working/Appearance/build_parts/parts_manifest.json, Working/Parts/bm_vehicle_parts_v2.json and the cutting script used for B-02 (find it through the manifest provenance or grep Tools/scripts for parts_manifest; if not found write UNKNOWN and stop). The animation to carry: slide 72.48 cm plus turn 12.493 degrees over 0.433 s (Working/Translation/T8_PARTS.md row P-06, Research/BatmobileGrab/ANIMATIONS.md); JC3 hinges rotate only, so declare the slide error. Keep the 99.97 percent silhouette and the 4,915 KB model budget from the B-02 census. Build into the new tree Builds/bm-RC5-canopy with the part, its joint entry and a read-back script. Done-check: the part appears in the parts module copy, the triangle total equals the original body total, and the report lists the interior surfaces now visible. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

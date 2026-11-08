@@ -1,0 +1,137 @@
+# B-05 — Entity graph (`.epe`)
+
+**STATUS: deferred**
+
+`GRAB_BACKLOG.md` §12 records this as `blocked: …` (§0.3's status word for this state); this report's
+STATUS line says `deferred`, the word the report contract asks for. They are the same state: the card
+is **not** done, nothing was written into the build, and the blocker is named below with the evidence.
+
+Card (`GRAB_BACKLOG.md` §8):
+
+```
+#### B-05 · Entity graph (`.epe`)   L · deps: B-04, T-11, T-13, T-14, T-18 · serves: WPN, WLD-3/4, ARM-1, LGT-1, ANI-9
+Do: using `ConvertProperty` round-trip (proven, plan §7.1) and the signature-preorder diff
+(G2-12) as the template: 1. `CPartProp` for every new part. 2. Weapon components and
+`SWeaponPoint`s per T-11 (points at `SOCKETS_JC3.json` positions, parented to the turret/cannon
+parts). 3. `SVehicleLight` entries per T-18. 4. Interaction objects moved per
+`t9_interaction.json`. 5. Root `health`/`invulnerable` per T-14. 6. Keep the camera reference
+(`bat_base.ctune`, test-091).
+Out: `Working/Entity/bm_epe_edits.json` + the `.epe` in the build.
+Done: `ConvertProperty` round-trips the built `.epe` to identical XML; every weapon point,
+light and part name resolves (script check); `.epe` object count = base + planned additions.
+```
+
+## THE BLOCKER (exact)
+
+**Do step 2 — "weapon components and `SWeaponPoint`s per T-11" — has neither a schema to copy nor a
+row set that defines it, and Done criterion 2 ("every weapon point … resolves") cannot pass without
+it.**
+
+Evidence, all re-runnable:
+
+| fact | command / file | result |
+|---|---|---|
+| the entity graph the card must extend carries no weapon object at all | `grep -c SWeaponPoint` on the bm-002 `.epe` XML export | **0** |
+| no weapon class exists in it | class census of the exported XML (44 classes) | `CCar`, `CCamera*`, `CInteraction*`, `CPart(s)/CPartProp`, `CForcePulse`, `CSpeaker`, `S(Attached/Dynamic/ValueDriven)*Effect*`, `SEventDrivenEffectUsages`, `STargetPoint`, `SVehicleLight(s/List)`, `SDynamicExpressions`, `SEffects` — **none** Weapon / Projectile / Fire |
+| T-11's machine-readable output is tune *members*, not `.epe` objects | `Working/Translation/t7_weapons_edits.json` | keys `_comment, source, card, edits, structural, not_numeric, counts`; rows are `{row, kind, scope, member, old, new, conf, behaviour, take, why}` on members such as `fire_rate` of a weapon **tune** clone |
+| there is no armed `.epe` on disk to take the subtree from | `find Working Builds/test-091/aaf/editor -name "*.epe"` | exactly two: `Builds/test-091/aaf/editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_civilian_01.epe` and `Working/Lights/probe/entity_probe.epe` — neither is an armed vehicle |
+
+So an `SWeaponPoint` / weapon-component subtree would have to be invented member by member. That is
+exactly what R4 forbids ("a value with no semantic bridge is `blocked`, never `class`"), and G2-12's
+signature-preorder diff — the template the card names — was run against an *armed* donor; its output
+is prose about the Serpente, not a reusable object schema in this repo.
+
+**What would unblock it, precisely.** One armed vehicle's `.epe` (any `06_vehicle` weaponised entity:
+`w6xx` carrier hosts such as the medium tank, the corvette, the EMP truck) exported with
+`ConvertProperty --e`, plus one T-11 row per cloned weapon naming the component class, its
+`SWeaponPoint` members and the socket. That is a G-class study (the `.epe` object schema of a weapon
+component), not a B-card step; it is not on disk, so it is UNKNOWN here.
+
+## What was delivered instead (measurements, not code)
+
+Two experiments decide how much of the card is buildable, and both were run on the bm-002 `.epe` in
+`tmp/b05/` — **no file in `Working/`, `Builds/` or the game was written**.
+
+**1. The writer path holds: `ConvertProperty` round-trips this `.epe` byte for byte.**
+
+```
+$ Tools/Gibbed/Gibbed.JustCause3.ConvertProperty.exe --e Builds/bm-002/aaf/editor/entities/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/v0300_car_kensington_sportsmuscle_civilian_01.epe tmp/b05/base.xml
+EXPORT_EXIT=0                       # 426,534 B XML
+$ Tools/Gibbed/Gibbed.JustCause3.ConvertProperty.exe --i tmp/b05/base.xml tmp/b05/base_rt.epe
+IMPORT_EXIT=0
+$ Tools/Gibbed/Gibbed.JustCause3.ConvertProperty.exe --e tmp/b05/base_rt.epe tmp/b05/base_rt.xml
+EXPORT2_EXIT=0
+XML IDENTICAL
+EPE IDENTICAL
+1a9caf9cd8d3168a9604a18ce9738562fac35cd26d02e190c1b92a3a1b35ec43 *tmp/b05/base.xml
+1a9caf9cd8d3168a9604a18ce9738562fac35cd26d02e190c1b92a3a1b35ec43 *tmp/b05/base_rt.xml
+cf49315a1050f99db17d0c4c529c632374fab44826574af86e0e4d451fd6f484 *tmp/b05/base_rt.epe
+cf49315a1050f99db17d0c4c529c632374fab44826574af86e0e4d451fd6f484 *Builds/bm-002/…_civilian_01.epe
+```
+
+So Done criterion 1 ("`ConvertProperty` round-trips the built `.epe` to identical XML") is a property
+this file already has; B-05 does not have to build it.
+
+**2. Do step 1 (`CPartProp` per new part) is a node-insertion job, proven on one node.**
+
+The graph is `CParts` → a `CPartProp` tree: `CParts` + **6** nodes (body `0`, with `wheel_r_r 12`,
+`wheel_r_l 11`, `wheel_f_r 27`, `wheel_f_l 26` and `taillight_r_l 8` as children). A node cloned with
+a new `<object id="B10B10B1">`, `name` `sportsmuscle_headlight_f_l`, a new `name_hash` and
+`part_index` 42 imports cleanly and re-exports with the new part name present:
+
+```
+IMPORT_EXIT=0                       # tmp/b05/one_part.epe, 105,638 B (base 105,430 B)
+EXPORT_EXIT=0
+8                                   # CPartProp occurrences in the re-export (6 objects + 2)
+sportsmuscle_headlight_f_l          # the new part name survives the import
+1                                   # sportsmuscle_wheel_f_l still present
+```
+
+The `_object_id` value (`XXXXXXXX=FFFFnnnn`), the `<object id>` and the unnamed `id="D04059E6"` member
+are recomputed by the importer, so cloning is enough to *add* a node; their semantics are still
+unrecorded — the experiment is the evidence, not a guess.
+
+## What each remaining step has on disk
+
+| step | input | state |
+|---|---|---|
+| 1 `CPartProp` per new part | B-04's 19 added part indices 42…60 + the node-cloning result above | **buildable** (nobody has written it yet) |
+| 2 weapons | — | **blocked** (above) |
+| 3 `SVehicleLight` per T-18 | `Working/Translation/t14_lights.json` (`rows`, `custom`, `parts`, `light_parts`) and 22 `SVehicleLight` objects already in the graph, so the schema exists | buildable |
+| 4 interaction objects moved | `Working/Translation/t9_interaction.json` (`objects`: object id → new transform, 77 placed of 85, `band_m` [0.05, 0.30]) | buildable, needs the id → `.epe` object mapping |
+| 5 root `health`/`invulnerable` | `Working/Translation/t10_damage_edits.json` (`arm4_wheels`, `arm5_regen`, `arm6_death`, `rows`, `options`, decision) and root `health` 100 / `invulnerable` 0 already in the graph | buildable |
+| 6 camera reference kept | `bat_base.ctune` is referenced by the graph; nothing in this card would touch it | kept by construction |
+
+Because the card is all-or-nothing (one `.epe`, one object count), a partial graph was **not** staged:
+`Working/Entity/` does not exist, `Builds/bm-003/` does not exist, and no `.epe` was written anywhere.
+A half-built entity graph would be worse than none — the next B-05 run would have to guess which
+objects were planned.
+
+## Files changed by this session
+
+| file | change |
+|---|---|
+| `MODLOG.md` | `## B-05 start — intended change (2026-10-31)` — the intent, the two measurements and the blocker, appended before any other change |
+| `GRAB_BACKLOG.md` §12 | the `B-05` row: `blocked: …` with the evidence; the group row now starts at `B-06` |
+| `tmp/freebuff/reports/B-05.md` | this report |
+| `tmp/b05/base.xml`, `base_rt.epe`, `base_rt.xml`, `one_part.xml`, `one_part.epe`, `one_part_rt.xml` | scratch of the two experiments (outside the artefact tree) |
+
+Nothing else was created or modified: no `Tools/scripts/` generator (a generator that cannot finish
+its card would be a 500-line speculation — AGENTS.md prefers the experiment), no `Working/Entity/`,
+no `Builds/bm-003/`, no game file, no dropzone write, no launch, no git.
+
+## Done criteria, as run
+
+| # | criterion | result |
+|---|---|---|
+| 1 | `ConvertProperty` round-trips the built `.epe` to identical XML | **passes on the base file** (quoted above, both `cmp`-identical); there is no *built* file yet, so it is unproven for a B-05 output |
+| 2 | every weapon point, light and part name resolves | **cannot pass** — 0 weapon points exist and none can be written (blocker) |
+| 3 | `.epe` object count = base + planned additions | **not evaluated** — no planned-addition set exists without step 2's object list; base is 416 objects |
+
+## Next step (for whoever picks this up)
+
+1. Extract one armed vehicle's `.epe` and record its weapon-component + `SWeaponPoint` schema (a new
+   G2-class card; the fleet's 88 weapon components and 22 `MountAttach` rows are already enumerated in
+   `Research/JC3Grab/WEAPON_WIRING.md`, so the entity side is the missing half).
+2. Then `Tools/scripts/bm_entity.py` can do all five steps in one pass, stage `Builds/bm-003` from
+   `bm-002`, and the three Done criteria become checkable in a single run.

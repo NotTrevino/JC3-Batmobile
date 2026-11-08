@@ -1,0 +1,2725 @@
+{
+ "amendment": {
+  "compromise": "the row's absolute width becomes the plate's width rather than the donor's fraction of the whole band; O-3 measures the error",
+  "id": "R-2",
+  "text": "same row z as R-1, but both columns of a row are placed on ONE standing plate: the x-run of standing top surface with the largest overlap with R-1's span",
+  "why": "R-1's span crosses the Batmobile's troughs; R-2 keeps the donor's column fractions but references them to a single plate, so a row cannot straddle two plates and no vertex lands in a trough"
+ },
+ "areas": [
+  {
+   "deform_points": [
+    76,
+    87,
+    110,
+    28,
+    11,
+    65
+   ],
+   "n_deform_points": 6,
+   "name": "front_area",
+   "needs_new_deform_indices": false,
+   "number_of_triangles": 4,
+   "oracles": {
+    "O-1-vertex-band": {
+     "detail": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+     ],
+     "of": 6,
+     "pass": 6
+    },
+    "O-2-interior": {
+     "evaluated": true,
+     "fail_tris": [
+      {
+       "inside": 0,
+       "max_gap_m": 0.0932,
+       "tri": [
+        4,
+        2,
+        3
+       ]
+      },
+      {
+       "inside": 2,
+       "max_gap_m": 0.203,
+       "tri": [
+        5,
+        1,
+        2
+       ]
+      },
+      {
+       "inside": 2,
+       "max_gap_m": 0.0606,
+       "tri": [
+        5,
+        2,
+        4
+       ]
+      },
+      {
+       "inside": 2,
+       "max_gap_m": 0.1733,
+       "tri": [
+        0,
+        1,
+        5
+       ]
+      }
+     ],
+     "inside": 6,
+     "max_gap_m": 0.203,
+     "pass": false,
+     "sampled": 40
+    },
+    "O-3-shape": {
+     "indices_in_range": true,
+     "pass": true,
+     "shape_err": 0.0,
+     "tol": 0.1
+    }
+   },
+   "part_index": 24,
+   "part_name": "sportsmuscle_hood",
+   "relation": {
+    "centroid": [
+     -0.0,
+     1.0387,
+     -1.633
+    ],
+    "clearance_m": {
+     "max": 0.1578,
+     "median": 0.1219,
+     "min": 0.1056
+    },
+    "clearance_vertical_m": {
+     "max": 0.161,
+     "median": 0.1373,
+     "min": 0.1366
+    },
+    "footprint_frac_u": [
+     0.1022,
+     0.8978
+    ],
+    "footprint_frac_w": [
+     0.0389,
+     0.878
+    ],
+    "host_patch": {
+     "area_m2": 18.7207,
+     "bbox": [
+      [
+       -1.052,
+       0.16,
+       -2.314
+      ],
+      [
+       1.052,
+       1.184,
+       -0.73
+      ]
+     ],
+     "mean_normal": [
+      -0.0001,
+      0.9165,
+      -0.0903
+     ],
+     "mean_up_cos": 0.9165,
+     "min_up_cos": 0.7071,
+     "triangles_by_height": [
+      {
+       "tris": 366,
+       "y_from": 0.1632,
+       "y_to": 0.3632
+      },
+      {
+       "tris": 454,
+       "y_from": 0.3632,
+       "y_to": 0.5632
+      },
+      {
+       "tris": 377,
+       "y_from": 0.5632,
+       "y_to": 0.7632
+      },
+      {
+       "tris": 1532,
+       "y_from": 0.7632,
+       "y_to": 0.9632
+      },
+      {
+       "tris": 1629,
+       "y_from": 0.9632,
+       "y_to": 1.1632
+      },
+      {
+       "tris": 20,
+       "y_from": 1.1632,
+       "y_to": 1.3632
+      }
+     ],
+     "triangles_by_up_cos": {
+      "0.7071": 4378,
+      "0.8660": 3340,
+      "0.9000": 3091,
+      "0.9500": 2089,
+      "0.9900": 733
+     },
+     "tris": 4378,
+     "vertices": 4836,
+     "y_centroid_m": [
+      0.1632,
+      0.9134,
+      1.1831
+     ]
+    },
+    "host_x_m": [
+     -1.0515,
+     1.0515
+    ],
+    "host_z_m": [
+     -2.3143,
+     -0.7295
+    ],
+    "plan_size_m": [
+     1.6734,
+     1.3297
+    ],
+    "plane_normal": [
+     0.0,
+     0.9912,
+     -0.1327
+    ],
+    "plane_residual_max_m": 0.0442,
+    "plane_residual_rms_m": 0.0315,
+    "plane_tilt_deg": 7.6241,
+    "surface_area_m2": 2.1558,
+    "z_span_m": [
+     -2.2526,
+     -0.9229
+    ]
+   },
+   "slot": 0,
+   "strict_standing": 2,
+   "strict_targets": [
+    {
+     "clamped_m": 0.0,
+     "index": 28,
+     "j": 3,
+     "standing": false,
+     "x": 0.9428,
+     "x_in_plate": null,
+     "z": -2.9164
+    },
+    {
+     "clamped_m": 0.0,
+     "index": 11,
+     "j": 4,
+     "standing": false,
+     "x": -0.9428,
+     "x_in_plate": null,
+     "z": -2.9164
+    },
+    {
+     "clamped_m": 0.0,
+     "index": 110,
+     "j": 2,
+     "standing": false,
+     "x": 1.2966,
+     "x_in_plate": null,
+     "z": -2.3087
+    },
+    {
+     "clamped_m": 0.0,
+     "index": 65,
+     "j": 5,
+     "standing": false,
+     "x": -1.2967,
+     "x_in_plate": null,
+     "z": -2.3087
+    },
+    {
+     "clamped_m": 0.0,
+     "index": 76,
+     "j": 0,
+     "standing": true,
+     "x": -1.2032,
+     "x_in_plate": 0.3342,
+     "z": -1.3896
+    },
+    {
+     "clamped_m": 0.0,
+     "index": 87,
+     "j": 1,
+     "standing": true,
+     "x": 1.2027,
+     "x_in_plate": 2.7401,
+     "z": -1.3896
+    }
+   ],
+   "target_patch": {
+    "area_m2": 30.1341,
+    "bbox": [
+     [
+      -1.651,
+      0.087,
+      -3.2
+     ],
+     [
+      1.651,
+      2.026,
+      -0.756
+     ]
+    ],
+    "mean_normal": [
+     0.0014,
+     0.8965,
+     -0.0648
+    ],
+    "mean_up_cos": 0.8965,
+    "min_up_cos": 0.7072,
+    "triangles_by_height": [
+     {
+      "tris": 173,
+      "y_from": 0.0975,
+      "y_to": 0.2975
+     },
+     {
+      "tris": 269,
+      "y_from": 0.2975,
+      "y_to": 0.4975
+     },
+     {
+      "tris": 364,
+      "y_from": 0.4975,
+      "y_to": 0.6975
+     },
+     {
+      "tris": 453,
+      "y_from": 0.6975,
+      "y_to": 0.8975
+     },
+     {
+      "tris": 222,
+      "y_from": 0.8975,
+      "y_to": 1.0975
+     },
+     {
+      "tris": 487,
+      "y_from": 1.0975,
+      "y_to": 1.2975
+     },
+     {
+      "tris": 1340,
+      "y_from": 1.2975,
+      "y_to": 1.4975
+     },
+     {
+      "tris": 402,
+      "y_from": 1.4975,
+      "y_to": 1.6975
+     },
+     {
+      "tris": 581,
+      "y_from": 1.6975,
+      "y_to": 1.8975
+     },
+     {
+      "tris": 14,
+      "y_from": 1.8975,
+      "y_to": 2.0975
+     }
+    ],
+    "triangles_by_up_cos": {
+     "0.7071": 4305,
+     "0.8660": 2833,
+     "0.9000": 2351,
+     "0.9500": 1583,
+     "0.9900": 591
+    },
+    "tris": 4305,
+    "vertices": 6894,
+    "y_centroid_m": [
+     0.0975,
+     1.3506,
+     1.9555
+    ]
+   },
+   "target_patch_z_m": [
+    -2.9872,
+    -1.1675
+   ],
+   "target_rows": [
+    {
+     "clamped_m": 0.0,
+     "coverage": 0.4321,
+     "donor_frac": 0.6366,
+     "donor_z": -2.2526,
+     "overlap_m": 1.28,
+     "patch_row_width_m": 2.962,
+     "plate_width_m": 1.28,
+     "plate_x_m": [
+      -0.641,
+      0.639
+     ],
+     "runs": 3,
+     "z": -2.9164
+    },
+    {
+     "clamped_m": 0.0,
+     "coverage": 0.4848,
+     "donor_frac": 0.7957,
+     "donor_z": -1.7234,
+     "overlap_m": 1.58,
+     "patch_row_width_m": 3.2593,
+     "plate_width_m": 1.58,
+     "plate_x_m": [
+      -0.7896,
+      0.7904
+     ],
+     "runs": 3,
+     "z": -2.3087
+    },
+    {
+     "clamped_m": 0.0,
+     "coverage": 0.9953,
+     "donor_frac": 0.7826,
+     "donor_z": -0.9229,
+     "overlap_m": 2.4059,
+     "patch_row_width_m": 3.0743,
+     "plate_width_m": 3.06,
+     "plate_x_m": [
+      -1.5374,
+      1.5226
+     ],
+     "runs": 1,
+     "z": -1.3896
+    }
+   ],
+   "targets": [
+    {
+     "clamped_m": 0.0,
+     "donor_gap_m": 0.1056,
+     "gap_m": 0.1056,
+     "hit_up_cos": 0.9756,
+     "index": 76,
+     "inside": false,
+     "j": 0,
+     "settled_m": 0.0,
+     "snap_m": 0.0174,
+     "up_cos": 0.9756,
+     "x": -1.2047,
+     "y": 1.5501,
+     "z": -1.3896
+    },
+    {
+     "clamped_m": 0.0,
+     "donor_gap_m": 0.1056,
+     "gap_m": 0.1056,
+     "hit_up_cos": 0.9726,
+     "index": 87,
+     "inside": false,
+     "j": 1,
+     "settled_m": 0.0,
+     "snap_m": 0.0036,
+     "up_cos": 0.9726,
+     "x": 1.19,
+     "y": 1.5522,
+     "z": -1.3896
+    },
+    {
+     "clamped_m": 0.0,
+     "donor_gap_m": 0.1578,
+     "gap_m": 0.1571,
+     "hit_up_cos": 0.8729,
+     "index": 110,
+     "inside": false,
+     "j": 2,
+     "settled_m": 0.0,
+     "snap_m": 0.0487,
+     "up_cos": 0.7973,
+     "x": 0.6289,
+     "y": 1.301,
+     "z": -2.3087
+    },
+    {
+     "clamped_m": 0.0,
+     "donor_gap_m": 0.1219,
+     "gap_m": 0.1354,
+     "hit_up_cos": 0.8479,
+     "index": 28,
+     "inside": false,
+     "j": 3,
+     "settled_m": 0.0,
+     "snap_m": 0.0211,
+     "up_cos": 0.9002,
+     "x": 0.4064,
+     "y": 1.1989,
+     "z": -2.9164
+    },
+    {
+     "clamped_m": 0.0,
+     "donor_gap_m": 0.1219,
+     "gap_m": 0.1349,
+     "hit_up_cos": 0.8469,
+     "index": 11,
+     "inside": false,
+     "j": 4,
+     "settled_m": 0.0,
+     "snap_m": 0.0266,
+     "up_cos": 0.9001,
+     "x": -0.4084,
+     "y": 1.1978,
+     "z": -2.9164
+    },
+    {
+     "clamped_m": 0.0,
+     "donor_gap_m": 0.1578,
+     "gap_m": 0.154,
+     "hit_up_cos": 0.8723,
+     "index": 65,
+     "inside": false,
+     "j": 5,
+     "settled_m": 0.0,
+     "snap_m": 0.049,
+     "up_cos": 0.7991,
+     "x": -0.6282,
+     "y": 1.2965,
+     "z": -2.3087
+    }
+   ],
+   "triangle_indices": [
+    [
+     4,
+     2,
+     3
+    ],
+    [
+     5,
+     1,
+     2
+    ],
+    [
+     5,
+     2,
+     4
+    ],
+    [
+     0,
+     1,
+     5
+    ]
+   ],
+   "verdict": "candidate fails: O-2",
+   "vertices_donor": [
+    [
+     -0.8229,
+     1.1157,
+     -0.9229
+    ],
+    [
+     0.8229,
+     1.1157,
+     -0.9229
+    ],
+    [
+     0.8367,
+     1.0712,
+     -1.7234
+    ],
+    [
+     0.6694,
+     0.9292,
+     -2.2526
+    ],
+    [
+     -0.6694,
+     0.9292,
+     -2.2526
+    ],
+    [
+     -0.8367,
+     1.0712,
+     -1.7234
+    ]
+   ]
+  },
+  {
+   "deform_points": [
+    89,
+    70,
+    58,
+    42,
+    108,
+    25
+   ],
+   "n_deform_points": 6,
+   "name": "front_signature_area",
+   "needs_new_deform_indices": false,
+   "number_of_triangles": 4,
+   "oracles": {
+    "O-1-vertex-band": {
+     "detail": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+     ],
+     "of": 6,
+     "pass": 6
+    },
+    "O-2-interior": {
+     "evaluated": true,
+     "fail_tris": [
+      {
+       "inside": 0,
+       "max_gap_m": 0.0932,
+       "tri": [
+        4,
+        2,
+        3
+       ]
+      },
+      {
+       "inside": 2,
+       "max_gap_m": 0.203,
+       "tri": [
+        5,
+        1,
+        2
+       ]
+      },
+      {
+       "inside": 2,
+       "max_gap_m": 0.0606,
+       "tri": [
+        5,
+        2,
+        4
+       ]
+      },
+      {
+       "inside": 2,
+       "max_gap_m": 0.1733,
+       "tri": [
+        0,
+        1,
+        5
+       ]
+      }
+     ],
+     "inside": 6,
+     "max_gap_m": 0.203,
+     "pass": false,
+     "sampled": 40
+    },
+    "O-3-shape": {
+     "indices_in_range": true,
+     "pass": true,
+     "shape_err": 0.0,
+     "tol": 0.1
+    }
+   },
+   "part_index": 25,
+   "part_name": "sportsmuscle_hood_signature",
+   "relation": {
+    "centroid": [
+     -0.0,
+     1.0387,
+     -1.633
+    ],
+    "clearance_m": {
+     "max": 0.1578,
+     "median": 0.1219,
+     "min": 0.1056
+    },
+    "clearance_vertical_m": {
+     "max": 0.161,
+     "median": 0.1373,
+     "min": 0.1366
+    },
+    "footprint_frac_u": [
+     0.1022,
+     0.8978
+    ],
+    "footprint_frac_w": [
+     0.0389,
+     0.878
+    ],
+    "host_patch": {
+     "area_m2": 18.7207,
+     "bbox": [
+      [
+       -1.052,
+       0.16,
+       -2.314
+      ],
+      [
+       1.052,
+       1.184,
+       -0.73
+      ]
+     ],
+     "mean_normal": [
+      -0.0001,
+      0.9165,
+      -0.0903
+     ],
+     "mean_up_cos": 0.9165,
+     "min_up_cos": 0.7071,
+     "triangles_by_height": [
+      {
+       "tris": 366,
+       "y_from": 0.1632,
+       "y_to": 0.3632
+      },
+      {
+       "tris": 454,
+       "y_from": 0.3632,
+       "y_to": 0.5632
+      },
+      {
+       "tris": 377,
+       "y_from": 0.5632,
+       "y_to": 0.7632
+      },
+      {
+       "tris": 1532,
+       "y_from": 0.7632,
+       "y_to": 0.9632
+      },
+      {
+       "tris": 1629,
+       "y_from": 0.9632,
+       "y_to": 1.1632
+      },
+      {
+       "tris": 20,
+       "y_from": 1.1632,
+       "y_to": 1.3632
+      }
+     ],
+     "triangles_by_up_cos": {
+      "0.7071": 4378,
+      "0.8660": 3340,
+      "0.9000": 3091,
+      "0.9500": 2089,
+      "0.9900": 733
+     },
+     "tris": 4378,
+     "vertices": 4836,
+     "y_centroid_m": [
+      0.1632,
+      0.9134,
+      1.1831
+     ]
+    },
+    "host_x_m": [
+     -1.0515,
+     1.0515
+    ],
+    "host_z_m": [
+     -2.3143,
+     -0.7295
+    ],
+    "plan_size_m": [
+     1.6734,
+     1.3297
+    ],
+    "plane_normal": [
+     0.0,
+     0.9912,
+     -0.1327
+    ],
+    "plane_residual_max_m": 0.0442,
+    "plane_residual_rms_m": 0.0315,
+    "plane_tilt_deg": 7.6241,
+    "surface_area_m2": 2.1558,
+    "z_span_m": [
+     -2.2526,
+     -0.9229
+    ]
+   },
+   "slot": 1,
+   "strict_standing": 2,
+   "strict_targets": [
+    {
+     "clamped_m": 0.0,
+     "index": 42,
+     "j": 3,
+     "standing": false,
+     "x": 0.9428,
+     "x_in_plate": null,
+     "z": -2.9164
+    },
+    {
+     "clamped_m": 0.0,
+     "index": 108,
+     "j": 4,
+     "standing": false,
+     "x": -0.9428,
+     "x_in_plate": null,
+     "z": -2.9164
+    },
+    {
+     "clamped_m": 0.0,
+     "index": 58,
+     "j": 2,
+     "standing": false,
+     "x": 1.2966,
+     "x_in_plate": null,
+     "z": -2.3087
+    },
+    {
+     "clamped_m": 0.0,
+     "index": 25,
+     "j": 5,
+     "standing": false,
+     "x": -1.2967,
+     "x_in_plate": null,
+     "z": -2.3087
+    },
+    {
+     "clamped_m": 0.0,
+     "index": 89,
+     "j": 0,
+     "standing": true,
+     "x": -1.2032,
+     "x_in_plate": 0.3342,
+     "z": -1.3896
+    },
+    {
+     "clamped_m": 0.0,
+     "index": 70,
+     "j": 1,
+     "standing": true,
+     "x": 1.2027,
+     "x_in_plate": 2.7401,
+     "z": -1.3896
+    }
+   ],
+   "target_patch": {
+    "area_m2": 30.1341,
+    "bbox": [
+     [
+      -1.651,
+      0.087,
+      -3.2
+     ],
+     [
+      1.651,
+      2.026,
+      -0.756
+     ]
+    ],
+    "mean_normal": [
+     0.0014,
+     0.8965,
+     -0.0648
+    ],
+    "mean_up_cos": 0.8965,
+    "min_up_cos": 0.7072,
+    "triangles_by_height": [
+     {
+      "tris": 173,
+      "y_from": 0.0975,
+      "y_to": 0.2975
+     },
+     {
+      "tris": 269,
+      "y_from": 0.2975,
+      "y_to": 0.4975
+     },
+     {
+      "tris": 364,
+      "y_from": 0.4975,
+      "y_to": 0.6975
+     },
+     {
+      "tris": 453,
+      "y_from": 0.6975,
+      "y_to": 0.8975
+     },
+     {
+      "tris": 222,
+      "y_from": 0.8975,
+      "y_to": 1.0975
+     },
+     {
+      "tris": 487,
+      "y_from": 1.0975,
+      "y_to": 1.2975
+     },
+     {
+      "tris": 1340,
+      "y_from": 1.2975,
+      "y_to": 1.4975
+     },
+     {
+      "tris": 402,
+      "y_from": 1.4975,
+      "y_to": 1.6975
+     },
+     {
+      "tris": 581,
+      "y_from": 1.6975,
+      "y_to": 1.8975
+     },
+     {
+      "tris": 14,
+      "y_from": 1.8975,
+      "y_to": 2.0975
+     }
+    ],
+    "triangles_by_up_cos": {
+     "0.7071": 4305,
+     "0.8660": 2833,
+     "0.9000": 2351,
+     "0.9500": 1583,
+     "0.9900": 591
+    },
+    "tris": 4305,
+    "vertices": 6894,
+    "y_centroid_m": [
+     0.0975,
+     1.3506,
+     1.9555
+    ]
+   },
+   "target_patch_z_m": [
+    -2.9872,
+    -1.1675
+   ],
+   "target_rows": [
+    {
+     "clamped_m": 0.0,
+     "coverage": 0.4321,
+     "donor_frac": 0.6366,
+     "donor_z": -2.2526,
+     "overlap_m": 1.28,
+     "patch_row_width_m": 2.962,
+     "plate_width_m": 1.28,
+     "plate_x_m": [
+      -0.641,
+      0.639
+     ],
+     "runs": 3,
+     "z": -2.9164
+    },
+    {
+     "clamped_m": 0.0,
+     "coverage": 0.4848,
+     "donor_frac": 0.7957,
+     "donor_z": -1.7234,
+     "overlap_m": 1.58,
+     "patch_row_width_m": 3.2593,
+     "plate_width_m": 1.58,
+     "plate_x_m": [
+      -0.7896,
+      0.7904
+     ],
+     "runs": 3,
+     "z": -2.3087
+    },
+    {
+     "clamped_m": 0.0,
+     "coverage": 0.9953,
+     "donor_frac": 0.7826,
+     "donor_z": -0.9229,
+     "overlap_m": 2.4059,
+     "patch_row_width_m": 3.0743,
+     "plate_width_m": 3.06,
+     "plate_x_m": [
+      -1.5374,
+      1.5226
+     ],
+     "runs": 1,
+     "z": -1.3896
+    }
+   ],
+   "targets": [
+    {
+     "clamped_m": 0.0,
+     "donor_gap_m": 0.1056,
+     "gap_m": 0.1056,
+     "hit_up_cos": 0.9756,
+     "index": 89,
+     "inside": false,
+     "j": 0,
+     "settled_m": 0.0,
+     "snap_m": 0.0174,
+     "up_cos": 0.9756,
+     "x": -1.2047,
+     "y": 1.5501,
+     "z": -1.3896
+    },
+    {
+     "clamped_m": 0.0,
+     "donor_gap_m": 0.1056,
+     "gap_m": 0.1056,
+     "hit_up_cos": 0.9726,
+     "index": 70,
+     "inside": false,
+     "j": 1,
+     "settled_m": 0.0,
+     "snap_m": 0.0036,
+     "up_cos": 0.9726,
+     "x": 1.19,
+     "y": 1.5522,
+     "z": -1.3896
+    },
+    {
+     "clamped_m": 0.0,
+     "donor_gap_m": 0.1578,
+     "gap_m": 0.1571,
+     "hit_up_cos": 0.8729,
+     "index": 58,
+     "inside": false,
+     "j": 2,
+     "settled_m": 0.0,
+     "snap_m": 0.0487,
+     "up_cos": 0.7973,
+     "x": 0.6289,
+     "y": 1.301,
+     "z": -2.3087
+    },
+    {
+     "clamped_m": 0.0,
+     "donor_gap_m": 0.1219,
+     "gap_m": 0.1354,
+     "hit_up_cos": 0.8479,
+     "index": 42,
+     "inside": false,
+     "j": 3,
+     "settled_m": 0.0,
+     "snap_m": 0.0211,
+     "up_cos": 0.9002,
+     "x": 0.4064,
+     "y": 1.1989,
+     "z": -2.9164
+    },
+    {
+     "clamped_m": 0.0,
+     "donor_gap_m": 0.1219,
+     "gap_m": 0.1349,
+     "hit_up_cos": 0.8469,
+     "index": 108,
+     "inside": false,
+     "j": 4,
+     "settled_m": 0.0,
+     "snap_m": 0.0266,
+     "up_cos": 0.9001,
+     "x": -0.4084,
+     "y": 1.1978,
+     "z": -2.9164
+    },
+    {
+     "clamped_m": 0.0,
+     "donor_gap_m": 0.1578,
+     "gap_m": 0.154,
+     "hit_up_cos": 0.8723,
+     "index": 25,
+     "inside": false,
+     "j": 5,
+     "settled_m": 0.0,
+     "snap_m": 0.049,
+     "up_cos": 0.7991,
+     "x": -0.6282,
+     "y": 1.2965,
+     "z": -2.3087
+    }
+   ],
+   "triangle_indices": [
+    [
+     4,
+     2,
+     3
+    ],
+    [
+     5,
+     1,
+     2
+    ],
+    [
+     5,
+     2,
+     4
+    ],
+    [
+     0,
+     1,
+     5
+    ]
+   ],
+   "verdict": "candidate fails: O-2",
+   "vertices_donor": [
+    [
+     -0.8229,
+     1.1157,
+     -0.9229
+    ],
+    [
+     0.8229,
+     1.1157,
+     -0.9229
+    ],
+    [
+     0.8367,
+     1.0712,
+     -1.7234
+    ],
+    [
+     0.6694,
+     0.9292,
+     -2.2526
+    ],
+    [
+     -0.6694,
+     0.9292,
+     -2.2526
+    ],
+    [
+     -0.8367,
+     1.0712,
+     -1.7234
+    ]
+   ]
+  },
+  {
+   "deform_points": [
+    53,
+    99,
+    81,
+    132,
+    116,
+    35,
+    10,
+    63,
+    48,
+    32
+   ],
+   "n_deform_points": 10,
+   "name": "main_area",
+   "needs_new_deform_indices": false,
+   "number_of_triangles": 8,
+   "oracles": {
+    "O-1-vertex-band": {
+     "detail": [
+      true,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false
+     ],
+     "of": 10,
+     "pass": 4
+    },
+    "O-2-interior": {
+     "evaluated": true,
+     "fail_tris": [
+      {
+       "inside": 5,
+       "max_gap_m": 0.1553,
+       "tri": [
+        0,
+        8,
+        9
+       ]
+      },
+      {
+       "inside": 3,
+       "max_gap_m": 0.2641,
+       "tri": [
+        1,
+        7,
+        8
+       ]
+      },
+      {
+       "inside": 7,
+       "max_gap_m": 0.2594,
+       "tri": [
+        2,
+        6,
+        7
+       ]
+      },
+      {
+       "inside": 2,
+       "max_gap_m": 0.1306,
+       "tri": [
+        3,
+        5,
+        6
+       ]
+      },
+      {
+       "inside": 5,
+       "max_gap_m": 0.1644,
+       "tri": [
+        8,
+        0,
+        1
+       ]
+      },
+      {
+       "inside": 5,
+       "max_gap_m": 0.2569,
+       "tri": [
+        7,
+        1,
+        2
+       ]
+      },
+      {
+       "inside": 4,
+       "max_gap_m": 0.2864,
+       "tri": [
+        6,
+        2,
+        3
+       ]
+      },
+      {
+       "inside": 4,
+       "max_gap_m": 0.1191,
+       "tri": [
+        5,
+        3,
+        4
+       ]
+      }
+     ],
+     "inside": 35,
+     "max_gap_m": 0.2864,
+     "pass": false,
+     "sampled": 80
+    },
+    "O-3-shape": {
+     "indices_in_range": true,
+     "pass": true,
+     "shape_err": 0.0,
+     "tol": 0.1
+    }
+   },
+   "part_index": 0,
+   "part_name": "sportsmuscle_body",
+   "relation": {
+    "centroid": [
+     -0.0,
+     1.2691,
+     0.8858
+    ],
+    "clearance_m": {
+     "max": 0.1056,
+     "median": 0.0885,
+     "min": 0.0389
+    },
+    "clearance_vertical_m": {
+     "max": 0.1366,
+     "median": 0.0981,
+     "min": 0.0393
+    },
+    "footprint_frac_u": [
+     0.107,
+     0.893
+    ],
+    "footprint_frac_w": [
+     0.0279,
+     0.9751
+    ],
+    "host_patch": {
+     "area_m2": 31.8582,
+     "bbox": [
+      [
+       -1.047,
+       -0.4,
+       -1.021
+      ],
+      [
+       1.047,
+       1.509,
+       2.501
+      ]
+     ],
+     "mean_normal": [
+      0.0012,
+      0.8953,
+      -0.0166
+     ],
+     "mean_up_cos": 0.8953,
+     "min_up_cos": 0.7071,
+     "triangles_by_height": [
+      {
+       "tris": 824,
+       "y_from": -0.3993,
+       "y_to": -0.1993
+      },
+      {
+       "tris": 96,
+       "y_from": -0.1993,
+       "y_to": 0.0007
+      },
+      {
+       "tris": 288,
+       "y_from": 0.0007,
+       "y_to": 0.2007
+      },
+      {
+       "tris": 1258,
+       "y_from": 0.2007,
+       "y_to": 0.4007
+      },
+      {
+       "tris": 485,
+       "y_from": 0.4007,
+       "y_to": 0.6007
+      },
+      {
+       "tris": 516,
+       "y_from": 0.6007,
+       "y_to": 0.8007
+      },
+      {
+       "tris": 551,
+       "y_from": 0.8007,
+       "y_to": 1.0007
+      },
+      {
+       "tris": 1765,
+       "y_from": 1.0007,
+       "y_to": 1.2007
+      },
+      {
+       "tris": 647,
+       "y_from": 1.2007,
+       "y_to": 1.4007
+      },
+      {
+       "tris": 757,
+       "y_from": 1.4007,
+       "y_to": 1.6007
+      }
+     ],
+     "triangles_by_up_cos": {
+      "0.7071": 7187,
+      "0.8660": 4698,
+      "0.9000": 4086,
+      "0.9500": 2647,
+      "0.9900": 1113
+     },
+     "tris": 7187,
+     "vertices": 7172,
+     "y_centroid_m": [
+      -0.3993,
+      0.8658,
+      1.5068
+     ]
+    },
+    "host_x_m": [
+     -1.0469,
+     1.0469
+    ],
+    "host_z_m": [
+     -1.0212,
+     2.5015
+    ],
+    "plan_size_m": [
+     1.6458,
+     3.3368
+    ],
+    "plane_normal": [
+     -0.0,
+     0.9987,
+     0.0505
+    ],
+    "plane_residual_max_m": 0.2545,
+    "plane_residual_rms_m": 0.1868,
+    "plane_tilt_deg": 2.8932,
+    "surface_area_m2": 4.7329,
+    "z_span_m": [
+     -0.9229,
+     2.4139
+    ]
+   },
+   "slot": 2,
+   "strict_standing": 6,
+   "strict_targets": [
+    {
+     "clamped_m": 0.0,
+     "index": 53,
+     "j": 0,
+     "standing": false,
+     "x": -1.1729,
+     "x_in_plate": 0.3388,
+     "z": -1.0391
+    },
+    {
+     "clamped_m": 0.0,
+     "index": 32,
+     "j": 9,
+     "standing": true,
+     "x": 1.1697,
+     "x_in_plate": 2.6814,
+     "z": -1.0391
+    },
+    {
+     "clamped_m": 0.0,
+     "index": 99,
+     "j": 1,
+     "standing": true,
+     "x": -0.8921,
+     "x_in_plate": 0.605,
+     "z": 0.0566
+    },
+    {
+     "clamped_m": 0.0,
+     "index": 48,
+     "j": 8,
+     "standing": true,
+     "x": 0.8921,
+     "x_in_plate": 2.3892,
+     "z": 0.0566
+    },
+    {
+     "clamped_m": 0.0,
+     "index": 81,
+     "j": 2,
+     "standing": true,
+     "x": -0.9296,
+     "x_in_plate": 0.7283,
+     "z": 1.2936
+    },
+    {
+     "clamped_m": 0.0,
+     "index": 63,
+     "j": 7,
+     "standing": true,
+     "x": 0.9292,
+     "x_in_plate": 2.5871,
+     "z": 1.2936
+    },
+    {
+     "clamped_m": 0.0,
+     "index": 132,
+     "j": 3,
+     "standing": false,
+     "x": -1.241,
+     "x_in_plate": 0.4224,
+     "z": 2.9142
+    },
+    {
+     "clamped_m": 0.0,
+     "index": 10,
+     "j": 6,
+     "standing": true,
+     "x": 1.241,
+     "x_in_plate": 2.9044,
+     "z": 2.9142
+    },
+    {
+     "clamped_m": 0.18,
+     "index": 116,
+     "j": 4,
+     "standing": false,
+     "x": -0.9646,
+     "x_in_plate": null,
+     "z": 3.0971
+    },
+    {
+     "clamped_m": 0.18,
+     "index": 35,
+     "j": 5,
+     "standing": false,
+     "x": 0.9645,
+     "x_in_plate": null,
+     "z": 3.0971
+    }
+   ],
+   "target_patch": {
+    "area_m2": 87.1631,
+    "bbox": [
+     [
+      -1.751,
+      0.105,
+      -1.777
+     ],
+     [
+      1.744,
+      2.356,
+      3.605
+     ]
+    ],
+    "mean_normal": [
+     -0.003,
+     0.9037,
+     -0.0198
+    ],
+    "mean_up_cos": 0.9037,
+    "min_up_cos": 0.7071,
+    "triangles_by_height": [
+     {
+      "tris": 253,
+      "y_from": 0.1345,
+      "y_to": 0.3345
+     },
+     {
+      "tris": 634,
+      "y_from": 0.3345,
+      "y_to": 0.5345
+     },
+     {
+      "tris": 688,
+      "y_from": 0.5345,
+      "y_to": 0.7345
+     },
+     {
+      "tris": 651,
+      "y_from": 0.7345,
+      "y_to": 0.9345
+     },
+     {
+      "tris": 562,
+      "y_from": 0.9345,
+      "y_to": 1.1345
+     },
+     {
+      "tris": 668,
+      "y_from": 1.1345,
+      "y_to": 1.3345
+     },
+     {
+      "tris": 1028,
+      "y_from": 1.3345,
+      "y_to": 1.5345
+     },
+     {
+      "tris": 590,
+      "y_from": 1.5345,
+      "y_to": 1.7345
+     },
+     {
+      "tris": 695,
+      "y_from": 1.7345,
+      "y_to": 1.9345
+     },
+     {
+      "tris": 305,
+      "y_from": 1.9345,
+      "y_to": 2.1345
+     },
+     {
+      "tris": 36,
+      "y_from": 2.1345,
+      "y_to": 2.3345
+     }
+    ],
+    "triangles_by_up_cos": {
+     "0.7071": 6110,
+     "0.8660": 4217,
+     "0.9000": 3678,
+     "0.9500": 2659,
+     "0.9900": 1003
+    },
+    "tris": 6110,
+    "vertices": 9676,
+    "y_centroid_m": [
+     0.1345,
+     1.2278,
+     2.2773
+    ]
+   },
+   "target_patch_z_m": [
+    -1.1663,
+    3.3904
+   ],
+   "target_rows": [
+    {
+     "clamped_m": 0.0,
+     "coverage": 1.0134,
+     "donor_frac": 0.7861,
+     "donor_z": -0.9229,
+     "overlap_m": 2.3426,
+     "patch_row_width_m": 2.9801,
+     "plate_width_m": 3.02,
+     "plate_x_m": [
+      -1.5116,
+      1.5084
+     ],
+     "runs": 1,
+     "z": -1.0391
+    },
+    {
+     "clamped_m": 0.0,
+     "coverage": 1.0295,
+     "donor_frac": 0.6122,
+     "donor_z": -0.0758,
+     "overlap_m": 1.7842,
+     "patch_row_width_m": 2.9142,
+     "plate_width_m": 3.0,
+     "plate_x_m": [
+      -1.4971,
+      1.5029
+     ],
+     "runs": 1,
+     "z": 0.0566
+    },
+    {
+     "clamped_m": 0.0,
+     "coverage": 0.9895,
+     "donor_frac": 0.554,
+     "donor_z": 0.8805,
+     "overlap_m": 1.8588,
+     "patch_row_width_m": 3.3553,
+     "plate_width_m": 3.32,
+     "plate_x_m": [
+      -1.6578,
+      1.6622
+     ],
+     "runs": 1,
+     "z": 1.2936
+    },
+    {
+     "clamped_m": 0.0,
+     "coverage": 1.0101,
+     "donor_frac": 0.7551,
+     "donor_z": 2.1333,
+     "overlap_m": 2.482,
+     "patch_row_width_m": 3.2868,
+     "plate_width_m": 3.32,
+     "plate_x_m": [
+      -1.6634,
+      1.6566
+     ],
+     "runs": 1,
+     "z": 2.9142
+    },
+    {
+     "clamped_m": 0.18,
+     "coverage": 0.4929,
+     "donor_frac": 0.5869,
+     "donor_z": 2.4139,
+     "overlap_m": 1.62,
+     "patch_row_width_m": 3.2868,
+     "plate_width_m": 1.62,
+     "plate_x_m": [
+      -0.8034,
+      0.8166
+     ],
+     "runs": 3,
+     "z": 3.0971
+    }
+   ],
+   "targets": [
+    {
+     "clamped_m": 0.0,
+     "donor_gap_m": 0.1056,
+     "gap_m": 0.0965,
+     "hit_up_cos": 0.9756,
+     "index": 53,
+     "inside": false,
+     "j": 0,
+     "settled_m": 0.06,
+     "snap_m": 0.0063,
+     "up_cos": 0.9874,
+     "x": -1.1286,
+     "y": 1.4694,
+     "z": -1.0391
+    },
+    {
+     "clamped_m": 0.0,
+     "donor_gap_m": 0.0885,
+     "gap_m": 0.0822,
+     "hit_up_cos": 0.9796,
+     "index": 99,
+     "inside": false,
+     "j": 1,
+     "settled_m": 0.0,
+     "snap_m": 0.0326,
+     "up_cos": 0.7305,
+     "x": -0.9154,
+     "y": 1.6367,
+     "z": 0.0566
+    },
+    {
+     "clamped_m": 0.0,
+     "donor_gap_m": 0.0999,
+     "gap_m": 0.1007,
+     "hit_up_cos": 0.9706,
+     "index": 81,
+     "inside": false,
+     "j": 2,
+     "settled_m": 0.0,
+     "snap_m": 0.0058,
+     "up_cos": 0.9706,
+     "x": -0.9175,
+     "y": 1.9022,
+     "z": 1.2936
+    },
+    {
+     "clamped_m": 0.0,
+     "donor_gap_m": 0.0733,
+     "gap_m": 0.0291,
+     "hit_up_cos": 0.778,
+     "index": 132,
+     "inside": false,
+     "j": 3,
+     "settled_m": 0.02,
+     "snap_m": 0.1295,
+     "up_cos": 0.3389,
+     "x": -1.237,
+     "y": 1.6142,
+     "z": 2.9142
+    },
+    {
+     "clamped_m": 0.18,
+     "donor_gap_m": 0.0389,
+     "gap_m": 0.0129,
+     "hit_up_cos": 0.9239,
+     "index": 116,
+     "inside": false,
+     "j": 4,
+     "settled_m": 0.14,
+     "snap_m": 0.0231,
+     "up_cos": 0.2572,
+     "x": -0.6088,
+     "y": 0.769,
+     "z": 3.0971
+    },
+    {
+     "clamped_m": 0.18,
+     "donor_gap_m": 0.0389,
+     "gap_m": 0.006,
+     "hit_up_cos": 0.996,
+     "index": 35,
+     "inside": false,
+     "j": 5,
+     "settled_m": 0.04,
+     "snap_m": 0.0099,
+     "up_cos": 0.0953,
+     "x": 0.522,
+     "y": 1.0224,
+     "z": 3.0971
+    },
+    {
+     "clamped_m": 0.0,
+     "donor_gap_m": 0.0733,
+     "gap_m": 0.0365,
+     "hit_up_cos": 0.9225,
+     "index": 10,
+     "inside": false,
+     "j": 6,
+     "settled_m": 0.02,
+     "snap_m": 0.1121,
+     "up_cos": 0.3012,
+     "x": 1.2301,
+     "y": 1.5932,
+     "z": 2.9142
+    },
+    {
+     "clamped_m": 0.0,
+     "donor_gap_m": 0.0999,
+     "gap_m": 0.1022,
+     "hit_up_cos": 0.9705,
+     "index": 63,
+     "inside": false,
+     "j": 7,
+     "settled_m": 0.0,
+     "snap_m": 0.0096,
+     "up_cos": 0.3135,
+     "x": 0.9218,
+     "y": 1.9029,
+     "z": 1.2936
+    },
+    {
+     "clamped_m": 0.0,
+     "donor_gap_m": 0.0885,
+     "gap_m": 0.0865,
+     "hit_up_cos": 0.9799,
+     "index": 48,
+     "inside": false,
+     "j": 8,
+     "settled_m": 0.0,
+     "snap_m": 0.0338,
+     "up_cos": 0.7313,
+     "x": 0.9213,
+     "y": 1.6371,
+     "z": 0.0566
+    },
+    {
+     "clamped_m": 0.0,
+     "donor_gap_m": 0.1056,
+     "gap_m": 0.0285,
+     "hit_up_cos": 0.9917,
+     "index": 32,
+     "inside": false,
+     "j": 9,
+     "settled_m": 0.0,
+     "snap_m": 0.0096,
+     "up_cos": 0.9726,
+     "x": 1.1853,
+     "y": 1.4091,
+     "z": -1.0391
+    }
+   ],
+   "triangle_indices": [
+    [
+     0,
+     8,
+     9
+    ],
+    [
+     1,
+     7,
+     8
+    ],
+    [
+     2,
+     6,
+     7
+    ],
+    [
+     3,
+     5,
+     6
+    ],
+    [
+     8,
+     0,
+     1
+    ],
+    [
+     7,
+     1,
+     2
+    ],
+    [
+     6,
+     2,
+     3
+    ],
+    [
+     5,
+     3,
+     4
+    ]
+   ],
+   "verdict": "candidate fails: O-1, O-2",
+   "vertices_donor": [
+    [
+     -0.8229,
+     1.1157,
+     -0.9229
+    ],
+    [
+     -0.6409,
+     1.4967,
+     -0.0758
+    ],
+    [
+     -0.58,
+     1.5242,
+     0.8805
+    ],
+    [
+     -0.7905,
+     1.1041,
+     2.1333
+    ],
+    [
+     -0.6144,
+     1.1046,
+     2.4139
+    ],
+    [
+     0.6144,
+     1.1046,
+     2.4139
+    ],
+    [
+     0.7905,
+     1.1041,
+     2.1333
+    ],
+    [
+     0.58,
+     1.5242,
+     0.8805
+    ],
+    [
+     0.6409,
+     1.4967,
+     -0.0758
+    ],
+    [
+     0.8229,
+     1.1157,
+     -0.9229
+    ]
+   ]
+  }
+ ],
+ "card": "T-WLD11b",
+ "counts": {
+  "areas": 3,
+  "areas_pass_O1": 2,
+  "areas_pass_all": 0,
+  "index_range": [
+   0,
+   134
+  ],
+  "indices_exist": 22,
+  "vertex_total": 22,
+  "vertices": 22,
+  "vertices_missing_target": 0,
+  "vertices_pass_O1": 16
+ },
+ "digest": "4824154d4755f1df",
+ "donor_arrays": {
+  "deform_points": 16,
+  "edge_validity": 16,
+  "triangle_indices": 42,
+  "vertices3D_local": 48
+ },
+ "donor_band": {
+  "max_m": 0.1578,
+  "min_m": 0.0389,
+  "source": "the 22 bound area vertices to the donor lod1 skin",
+  "t_wld11_band": {
+   "max_m": 0.1578,
+   "median_m": 0.1056,
+   "min_m": 0.0388,
+   "source": "distance from the donor's own 22 bound points to the donor shell"
+  }
+ },
+ "donor_interior_max_m": 0.075,
+ "frames": {
+  "batmobile": {
+   "bbox": [
+    [
+     -1.751,
+     0.087,
+     -3.422
+    ],
+    [
+     1.746,
+     2.363,
+     3.605
+    ]
+   ],
+   "triangles": 32124,
+   "vertices": 38443
+  },
+  "cowl_source": "the donor's front/main area seam z, transferred through the normalized length",
+  "cowl_z_m": -1.1674,
+  "donor": {
+   "bbox": [
+    [
+     -1.061,
+     -0.4,
+     -2.57
+    ],
+    [
+     1.061,
+     1.509,
+     2.564
+    ]
+   ],
+   "part_names": [
+    "body",
+    "c_mirror",
+    "door_f_l",
+    "door_f_l_window",
+    "door_f_r",
+    "door_f_r_window",
+    "engine",
+    "f_l_seat",
+    "f_r_seat",
+    "fender_l",
+    "fender_r",
+    "front_bumper",
+    "grill",
+    "headlight_f_l_01",
+    "headlight_f_l_01mshswap",
+    "headlight_f_l_02",
+    "headlight_f_l_02mshswap",
+    "headlight_f_r_01",
+    "headlight_f_r_01mshswap",
+    "headlight_f_r_02",
+    "headlight_f_r_02mshswap",
+    "hood",
+    "hood_signature",
+    "l_mirror",
+    "missile_base_signature",
+    "plate_f",
+    "plate_r",
+    "r_mirror",
+    "rear_bumper",
+    "signal_f_l",
+    "signal_f_r",
+    "signal_r_l",
+    "signal_r_lmshswap",
+    "signal_r_r",
+    "signal_r_rmshswap",
+    "steeringwheel",
+    "taillight_r_c",
+    "taillight_r_l",
+    "taillight_r_lmshswap",
+    "taillight_r_r",
+    "taillight_r_rmshswap",
+    "trunk",
+    "trunk_window",
+    "wheel_f_l",
+    "wheel_f_lmshswap",
+    "wheel_f_r",
+    "wheel_f_rmshswap",
+    "wheel_r_l",
+    "wheel_r_lmshswap",
+    "wheel_r_r",
+    "wheel_r_rmshswap",
+    "window_f",
+    "window_r_l",
+    "window_r_r"
+   ],
+   "parts": 54,
+   "triangles": 40593,
+   "vertices": 33135
+  },
+  "normalized_length": "w = (z - z_donor_min) / (z_donor_max - z_donor_min); z_bat = z_bat_min + w * (z_bat_max - z_bat_min)",
+  "seam_z_donor_m": -0.9229,
+  "stations_body_bbox": [
+   [
+    -1.747,
+    0.091,
+    -3.42
+   ],
+   [
+    1.748,
+    2.362,
+    3.605
+   ]
+  ]
+ },
+ "generator": "Tools/scripts/t_wld11b.py",
+ "inputs": {
+  "bat_mesh": "Working/Appearance/build_parts/body_lod1.rbm",
+  "bat_mesh_sha256": "f61c46b07658459ae87a258749307df9c21d7e8f02dcde5565bd92142a071b6f",
+  "entity": "E:/Modding/_gamedata/JC3grab/entities/v0300_car_kensington_sportsmuscle__v0300_car_kensington_sportsmuscle_civilian_01.ee.json",
+  "entity_edits_untouched": "Working/Entity/bm_epe_edits.json has no DeformPoints or StuntAreas edit (read-only check)",
+  "entity_sha256": "45ec9ad2d28fc272b3b6b4d1ff3ee9713004ad0f69f6c320d678a1c27d6cec01",
+  "geom_bin_sha256": "088ef63042b6fdd0f69c9d1ac9f22319178abb266631d7c2ebad45823cf0e3e6",
+  "geom_json_sha256": "cf4ca1135a1ab76f41fb7ae973c0faeb97c3bc5a774bddaddabc1dea779d8ab8",
+  "parts": "Working/Parts/bm_vehicle_parts.json",
+  "shipped": {
+   "sportsmuscle_stunt_areas.vmodc": true,
+   "sportsmuscle_vehicle_deform.vmodc": true
+  },
+  "stations": "Working/TrueScale/stations.json"
+ },
+ "part_binding_resolves": {
+  "front_area": true,
+  "front_signature_area": true,
+  "main_area": true
+ },
+ "patch_counts": {
+  "order": [
+   "donor",
+   "batmobile"
+  ],
+  "standing_all": [
+   13623,
+   10990
+  ],
+  "standing_top": [
+   1052,
+   1785
+  ]
+ },
+ "patch_definition": {
+  "definitions": "all counts below are derived from the two meshes with these two stated thresholds; no naming is assumed",
+  "hood": "standing triangles whose centroid z is forward of the seam",
+  "roof": "standing triangles whose centroid z is at or aft of the seam",
+  "standing": "triangle up-cos (normal oriented +Y) >= 0.7071"
+ },
+ "patches": {
+  "bat_hood": {
+   "area_m2": 32.1684,
+   "bbox": [
+    [
+     -1.651,
+     0.087,
+     -3.421
+    ],
+    [
+     1.651,
+     2.026,
+     -0.756
+    ]
+   ],
+   "mean_normal": [
+    0.001,
+    0.8988,
+    -0.0645
+   ],
+   "mean_up_cos": 0.8988,
+   "min_up_cos": 0.7072,
+   "triangles_by_height": [
+    {
+     "tris": 226,
+     "y_from": 0.0975,
+     "y_to": 0.2975
+    },
+    {
+     "tris": 456,
+     "y_from": 0.2975,
+     "y_to": 0.4975
+    },
+    {
+     "tris": 426,
+     "y_from": 0.4975,
+     "y_to": 0.6975
+    },
+    {
+     "tris": 559,
+     "y_from": 0.6975,
+     "y_to": 0.8975
+    },
+    {
+     "tris": 252,
+     "y_from": 0.8975,
+     "y_to": 1.0975
+    },
+    {
+     "tris": 487,
+     "y_from": 1.0975,
+     "y_to": 1.2975
+    },
+    {
+     "tris": 1386,
+     "y_from": 1.2975,
+     "y_to": 1.4975
+    },
+    {
+     "tris": 402,
+     "y_from": 1.4975,
+     "y_to": 1.6975
+    },
+    {
+     "tris": 581,
+     "y_from": 1.6975,
+     "y_to": 1.8975
+    },
+    {
+     "tris": 14,
+     "y_from": 1.8975,
+     "y_to": 2.0975
+    }
+   ],
+   "triangles_by_up_cos": {
+    "0.7071": 4789,
+    "0.8660": 3192,
+    "0.9000": 2667,
+    "0.9500": 1834,
+    "0.9900": 760
+   },
+   "tris": 4789,
+   "vertices": 7630,
+   "y_centroid_m": [
+    0.0975,
+    1.2885,
+    1.9555
+   ]
+  },
+  "bat_hood_top": {
+   "area_m2": 7.3443,
+   "bbox": [
+    [
+     -1.651,
+     0.276,
+     -3.42
+    ],
+    [
+     1.64,
+     2.026,
+     -0.756
+    ]
+   ],
+   "mean_normal": [
+    -0.0055,
+    0.9026,
+    -0.0965
+   ],
+   "mean_up_cos": 0.9026,
+   "min_up_cos": 0.7074,
+   "triangles_by_height": [
+    {
+     "tris": 45,
+     "y_from": 0.2968,
+     "y_to": 0.4968
+    },
+    {
+     "tris": 19,
+     "y_from": 0.4968,
+     "y_to": 0.6968
+    },
+    {
+     "tris": 50,
+     "y_from": 0.6968,
+     "y_to": 0.8968
+    },
+    {
+     "tris": 60,
+     "y_from": 0.8968,
+     "y_to": 1.0968
+    },
+    {
+     "tris": 88,
+     "y_from": 1.0968,
+     "y_to": 1.2968
+    },
+    {
+     "tris": 183,
+     "y_from": 1.2968,
+     "y_to": 1.4968
+    },
+    {
+     "tris": 72,
+     "y_from": 1.4968,
+     "y_to": 1.6968
+    },
+    {
+     "tris": 22,
+     "y_from": 1.6968,
+     "y_to": 1.8968
+    },
+    {
+     "tris": 6,
+     "y_from": 1.8968,
+     "y_to": 2.0968
+    }
+   ],
+   "triangles_by_up_cos": {
+    "0.7071": 545,
+    "0.8660": 387,
+    "0.9000": 322,
+    "0.9500": 193,
+    "0.9900": 76
+   },
+   "tris": 545,
+   "vertices": 1234,
+   "y_centroid_m": [
+    0.2968,
+    1.3123,
+    1.9555
+   ]
+  },
+  "bat_roof": {
+   "area_m2": 87.2991,
+   "bbox": [
+    [
+     -1.751,
+     0.105,
+     -1.777
+    ],
+    [
+     1.744,
+     2.356,
+     3.605
+    ]
+   ],
+   "mean_normal": [
+    -0.0028,
+    0.9031,
+    -0.0203
+   ],
+   "mean_up_cos": 0.9031,
+   "min_up_cos": 0.7071,
+   "triangles_by_height": [
+    {
+     "tris": 253,
+     "y_from": 0.1345,
+     "y_to": 0.3345
+    },
+    {
+     "tris": 634,
+     "y_from": 0.3345,
+     "y_to": 0.5345
+    },
+    {
+     "tris": 688,
+     "y_from": 0.5345,
+     "y_to": 0.7345
+    },
+    {
+     "tris": 656,
+     "y_from": 0.7345,
+     "y_to": 0.9345
+    },
+    {
+     "tris": 573,
+     "y_from": 0.9345,
+     "y_to": 1.1345
+    },
+    {
+     "tris": 680,
+     "y_from": 1.1345,
+     "y_to": 1.3345
+    },
+    {
+     "tris": 1054,
+     "y_from": 1.3345,
+     "y_to": 1.5345
+    },
+    {
+     "tris": 627,
+     "y_from": 1.5345,
+     "y_to": 1.7345
+    },
+    {
+     "tris": 695,
+     "y_from": 1.7345,
+     "y_to": 1.9345
+    },
+    {
+     "tris": 305,
+     "y_from": 1.9345,
+     "y_to": 2.1345
+    },
+    {
+     "tris": 36,
+     "y_from": 2.1345,
+     "y_to": 2.3345
+    }
+   ],
+   "triangles_by_up_cos": {
+    "0.7071": 6201,
+    "0.8660": 4256,
+    "0.9000": 3714,
+    "0.9500": 2689,
+    "0.9900": 1026
+   },
+   "tris": 6201,
+   "vertices": 9854,
+   "y_centroid_m": [
+    0.1345,
+    1.2384,
+    2.2773
+   ]
+  },
+  "bat_roof_top": {
+   "area_m2": 25.8933,
+   "bbox": [
+    [
+     -1.751,
+     0.177,
+     -1.468
+    ],
+    [
+     1.744,
+     2.356,
+     3.605
+    ]
+   ],
+   "mean_normal": [
+    -0.0023,
+    0.9039,
+    -0.0254
+   ],
+   "mean_up_cos": 0.9039,
+   "min_up_cos": 0.7072,
+   "triangles_by_height": [
+    {
+     "tris": 46,
+     "y_from": 0.1966,
+     "y_to": 0.3966
+    },
+    {
+     "tris": 122,
+     "y_from": 0.3966,
+     "y_to": 0.5966
+    },
+    {
+     "tris": 46,
+     "y_from": 0.5966,
+     "y_to": 0.7966
+    },
+    {
+     "tris": 48,
+     "y_from": 0.7966,
+     "y_to": 0.9966
+    },
+    {
+     "tris": 63,
+     "y_from": 0.9966,
+     "y_to": 1.1966
+    },
+    {
+     "tris": 171,
+     "y_from": 1.1966,
+     "y_to": 1.3966
+    },
+    {
+     "tris": 265,
+     "y_from": 1.3966,
+     "y_to": 1.5966
+    },
+    {
+     "tris": 158,
+     "y_from": 1.5966,
+     "y_to": 1.7966
+    },
+    {
+     "tris": 179,
+     "y_from": 1.7966,
+     "y_to": 1.9966
+    },
+    {
+     "tris": 129,
+     "y_from": 1.9966,
+     "y_to": 2.1966
+    },
+    {
+     "tris": 13,
+     "y_from": 2.1966,
+     "y_to": 2.3966
+    }
+   ],
+   "triangles_by_up_cos": {
+    "0.7071": 1240,
+    "0.8660": 861,
+    "0.9000": 743,
+    "0.9500": 559,
+    "0.9900": 189
+   },
+   "tris": 1240,
+   "vertices": 2617,
+   "y_centroid_m": [
+    0.1966,
+    1.4868,
+    2.2773
+   ]
+  },
+  "donor_hood": {
+   "area_m2": 21.7336,
+   "bbox": [
+    [
+     -1.052,
+     0.16,
+     -2.57
+    ],
+    [
+     1.052,
+     1.184,
+     -0.73
+    ]
+   ],
+   "mean_normal": [
+    0.0001,
+    0.9053,
+    -0.0964
+   ],
+   "mean_up_cos": 0.9053,
+   "min_up_cos": 0.7071,
+   "triangles_by_height": [
+    {
+     "tris": 656,
+     "y_from": 0.163,
+     "y_to": 0.363
+    },
+    {
+     "tris": 764,
+     "y_from": 0.363,
+     "y_to": 0.563
+    },
+    {
+     "tris": 917,
+     "y_from": 0.563,
+     "y_to": 0.763
+    },
+    {
+     "tris": 1868,
+     "y_from": 0.763,
+     "y_to": 0.963
+    },
+    {
+     "tris": 1633,
+     "y_from": 0.963,
+     "y_to": 1.163
+    },
+    {
+     "tris": 20,
+     "y_from": 1.163,
+     "y_to": 1.363
+    }
+   ],
+   "triangles_by_up_cos": {
+    "0.7071": 5858,
+    "0.8660": 4130,
+    "0.9000": 3738,
+    "0.9500": 2430,
+    "0.9900": 912
+   },
+   "tris": 5858,
+   "vertices": 6261,
+   "y_centroid_m": [
+    0.163,
+    0.847,
+    1.1831
+   ]
+  },
+  "donor_hood_top": {
+   "area_m2": 1.466,
+   "bbox": [
+    [
+     -1.048,
+     0.268,
+     -2.53
+    ],
+    [
+     1.048,
+     1.184,
+     -0.731
+    ]
+   ],
+   "mean_normal": [
+    0.0002,
+    0.9228,
+    -0.1435
+   ],
+   "mean_up_cos": 0.9228,
+   "min_up_cos": 0.7123,
+   "triangles_by_height": [
+    {
+     "tris": 10,
+     "y_from": 0.2816,
+     "y_to": 0.4816
+    },
+    {
+     "tris": 14,
+     "y_from": 0.4816,
+     "y_to": 0.6816
+    },
+    {
+     "tris": 72,
+     "y_from": 0.6816,
+     "y_to": 0.8816
+    },
+    {
+     "tris": 205,
+     "y_from": 0.8816,
+     "y_to": 1.0816
+    },
+    {
+     "tris": 37,
+     "y_from": 1.0816,
+     "y_to": 1.2816
+    }
+   ],
+   "triangles_by_up_cos": {
+    "0.7071": 338,
+    "0.8660": 264,
+    "0.9000": 244,
+    "0.9500": 172,
+    "0.9900": 32
+   },
+   "tris": 338,
+   "vertices": 562,
+   "y_centroid_m": [
+    0.2816,
+    0.9611,
+    1.1831
+   ]
+  },
+  "donor_roof": {
+   "area_m2": 32.3642,
+   "bbox": [
+    [
+     -1.047,
+     -0.4,
+     -1.021
+    ],
+    [
+     1.047,
+     1.509,
+     2.564
+    ]
+   ],
+   "mean_normal": [
+    0.0012,
+    0.8939,
+    -0.0063
+   ],
+   "mean_up_cos": 0.8939,
+   "min_up_cos": 0.7071,
+   "triangles_by_height": [
+    {
+     "tris": 824,
+     "y_from": -0.3993,
+     "y_to": -0.1993
+    },
+    {
+     "tris": 96,
+     "y_from": -0.1993,
+     "y_to": 0.0007
+    },
+    {
+     "tris": 288,
+     "y_from": 0.0007,
+     "y_to": 0.2007
+    },
+    {
+     "tris": 1302,
+     "y_from": 0.2007,
+     "y_to": 0.4007
+    },
+    {
+     "tris": 613,
+     "y_from": 0.4007,
+     "y_to": 0.6007
+    },
+    {
+     "tris": 800,
+     "y_from": 0.6007,
+     "y_to": 0.8007
+    },
+    {
+     "tris": 623,
+     "y_from": 0.8007,
+     "y_to": 1.0007
+    },
+    {
+     "tris": 1815,
+     "y_from": 1.0007,
+     "y_to": 1.2007
+    },
+    {
+     "tris": 647,
+     "y_from": 1.2007,
+     "y_to": 1.4007
+    },
+    {
+     "tris": 757,
+     "y_from": 1.4007,
+     "y_to": 1.6007
+    }
+   ],
+   "triangles_by_up_cos": {
+    "0.7071": 7765,
+    "0.8660": 5002,
+    "0.9000": 4337,
+    "0.9500": 2827,
+    "0.9900": 1205
+   },
+   "tris": 7765,
+   "vertices": 7868,
+   "y_centroid_m": [
+    -0.3993,
+    0.7794,
+    1.5068
+   ]
+  },
+  "donor_roof_top": {
+   "area_m2": 3.5016,
+   "bbox": [
+    [
+     -1.047,
+     0.21,
+     -1.021
+    ],
+    [
+     1.047,
+     1.509,
+     2.535
+    ]
+   ],
+   "mean_normal": [
+    -0.0002,
+    0.9182,
+    0.0042
+   ],
+   "mean_up_cos": 0.9182,
+   "min_up_cos": 0.7073,
+   "triangles_by_height": [
+    {
+     "tris": 16,
+     "y_from": 0.21,
+     "y_to": 0.41
+    },
+    {
+     "tris": 16,
+     "y_from": 0.41,
+     "y_to": 0.61
+    },
+    {
+     "tris": 34,
+     "y_from": 0.61,
+     "y_to": 0.81
+    },
+    {
+     "tris": 42,
+     "y_from": 0.81,
+     "y_to": 1.01
+    },
+    {
+     "tris": 282,
+     "y_from": 1.01,
+     "y_to": 1.21
+    },
+    {
+     "tris": 146,
+     "y_from": 1.21,
+     "y_to": 1.41
+    },
+    {
+     "tris": 178,
+     "y_from": 1.41,
+     "y_to": 1.61
+    }
+   ],
+   "triangles_by_up_cos": {
+    "0.7071": 714,
+    "0.8660": 555,
+    "0.9000": 498,
+    "0.9500": 296,
+    "0.9900": 137
+   },
+   "tris": 714,
+   "vertices": 1165,
+   "y_centroid_m": [
+    0.21,
+    1.1766,
+    1.5068
+   ]
+  }
+ },
+ "question": "which triangles are the Batmobile's hood and roof, and what are the candidate targets for the donor's three stunt areas",
+ "rule": {
+  "id": "R-1",
+  "inputs": [
+   "the area's decoded vertices3D_local",
+   "the donor host band: standing donor tris in the area's z span",
+   "the Batmobile standing body tris in the same normalized length band",
+   "the decoded per-vertex clearance to the donor skin"
+  ],
+  "steps": [
+   "row z = the vertex's z fraction of the host band, applied to the target patch's own standing z extent",
+   "column x = the vertex's x fraction of the host band, applied to the target patch's standing x extent within +-0.35 m of that row",
+   "y = ray-cast top at (x, z) + decoded clearance along the hit face's up normal",
+   "clamp z toward the patch centre in 0.02 m steps when that (x, z) has no standing top"
+  ],
+  "text": "proportional blanket, clamped to the target patch"
+ },
+ "schema": 1
+}

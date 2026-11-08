@@ -1,0 +1,641 @@
+{
+ "landmark": "L8",
+ "briefs": [
+  {
+   "key": "mod-01",
+   "slug": "battle-mode-handling-value-set",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "T-MD5",
+    "T-MD6",
+    "T-MD7",
+    "NEW-MOD-8"
+   ],
+   "deps": [],
+   "body": "Assemble the complete battle-mode handling value set in one table; the handling landmark builds on it, so every row must be exact or marked UNKNOWN. Sources: Research/BatmobileGrab/MODES.md and MODES.json (all four package columns), DRIVE_MODES.md, DRIVINGMODE.md, and the T-MD5..T-MD8 rows in Working/Translation/T_ROWS.jsonl. Required rows: BattleModeVSpeedCurve (3 points 0->60, 600->40, 1200->30, unit raw), TurningModeMaxSpeed 600 cm/s (21.6 km/h), BattleModeThrottleSpeed 10, DriveForceFactor 500, LatSlipScale 0.75, LongSlipScale 1.25, SteerAngleFactor 1, TrailingSteerFactorMoving -0.25, DrivingForceZOffset 20, the TurnOnSpot torque factors, TransformationTurnDecelTorqueFactor 24000, plus every declared-but-unserialised member (for example BattleModeMaxSteering). Per row give the pursuit counterpart, offset, unit, serialised yes/no, and a column saying whether a native hook can write it live. Operator facts: the nose follows the camera in battle; the swap causes a near-instant slowdown. Output Working/Modes/battle_handling_values.md and .json; done-check: json row count equals the md row count and no cell is blank. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-02",
+   "slug": "turn-on-spot-composition-spec",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "T-MD8",
+    "NEW-MOD-12"
+   ],
+   "deps": [
+    "mod-01",
+    "7987"
+   ],
+   "body": "Settle how the battle-mode turn on the spot is produced now that native hooks are allowed; the closest-system rule bans answering that JC3 has no system. Read reports/tank-pivot-values-for-battle-mode-turn-plan.md, reports/tank-pivot-donor-trace.md, Research/JC3Grab/TANKTURN.md and the 7987 report on runtime handling writes. The BmAK inputs are the four TurnOnSpot factors in Working/Modes/battle_handling_values.json. Name the closest JC3 mechanism (per-axle grip asymmetry, drift yaw torque, or direct yaw torque on the rigid body), state its gap to BmAK, and write the exact per-tick recipe the hook runs when the stick is deflected with speed under the 600 cm/s turning cap: which struct fields it writes, from which input, scaled how. Three of six pivot members already have receivers; list the other three and how the hook replaces them. Output Working/Modes/turn_on_spot_recipe.md plus a recipe table in turn_on_spot_recipe.json. Done-check: every member row names an address, a field, or the text UNKNOWN plus the experiment that settles it. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-03",
+   "slug": "nose-follows-camera-hook-spec",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "T-MD7",
+    "NEW-MOD-8"
+   ],
+   "deps": [
+    "9122",
+    "mod-01"
+   ],
+   "body": "Operator fact: in battle mode the nose swings toward the camera direction even without steering input, while the stick moves the car in its own direction. Brief 9122 names the data-side closest members (AbsoluteMoveDirection at 0x378, BattleModeSteerAngleFactor, BattleModeMaxSteering) and reports/bm-moving-yaw-toward-aim.md has the pursuit-versus-battle yaw contract. Write the hook-side spec for what data cannot do: read camera yaw each tick, compute the heading error, and feed it to steering or yaw torque with a rate limit. Give the formula with parameters, which parameters are BmAK-decoded versus authored (label the authored ones), the speed range where it applies, and how it blends off at standstill. Also state the stick-to-world-direction mapping for battle. Output Working/Modes/yaw_to_camera_spec.md and a parameter file yaw_to_camera_params.json. Done-check: every parameter has a source tag of decoded, authored or UNKNOWN, and the pilot pass band is stated in degrees per second. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-04",
+   "slug": "mode-state-machine-slowdown-spec",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "T-MD13",
+    "T-MD10",
+    "NEW-MOD-4",
+    "NEW-MOD-11"
+   ],
+   "deps": [
+    "7983",
+    "7984",
+    "mod-01"
+   ],
+   "body": "Write the finite-state machine the hook runs for pursuit and battle, from the operator facts: holding LT starts a roughly 2 s transform (turret rises, wheels and body reconfigure), release returns to pursuit, the swap brings a near-instant slowdown, the tracker HUD persists, armour is identical in both modes. Inputs: the 7983 gamepad events report, the 7984 swap prototype report, Research/BatmobileGrab/POSES.md (the 2.000 s, 61 frame clip), and Working/Modes/battle_handling_values.json. Decide and document: states and transitions, behaviour on a mid-transform release, whether steering and fire are blocked during the 2 s, how the slowdown is applied (target speed fraction, time constant) and what is carried over (health, ammo, heading). Mark the LT hold threshold as UNKNOWN-authored with a proposed value and a note that the operator may tune it. Output Working/Modes/mode_state_machine.md plus a transition table mode_state_machine.json. Done-check: every transition has a trigger, guard and action, and no state lacks an exit. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-05",
+   "slug": "transform-choreography-timeline",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "T-MD13",
+    "NEW-MOD-21",
+    "G1-12"
+   ],
+   "deps": [
+    "7948",
+    "mod-04"
+   ],
+   "body": "Turn the per-bone transform table from the 7948 report into a hook-executable timeline for the 2 s pursuit-to-battle change. Use Research/BatmobileGrab/ANIMATIONS.md, POSES.md and BONES.md for frame times, Working/Translation/T8_PARTS.md for which parts are movable, and the 7984 swap prototype report for the entity model (one entity moved through poses, or two entities). For each motion choose the carrier: a hinge angle written by the hook per tick, a translation the hook writes to a part transform (the mast rise of 0.633 m), a wheel yaw change, or a static end pose at swap. Give per-tick interpolation (start, end, easing taken from the key times), the reverse timeline for release, and the declared error of any approximation. Output Working/Modes/transform_timeline.json and a readable transform_timeline.md. Done-check: the timeline spans 2.000 s plus or minus one frame and every bone in the 7948 table appears exactly once. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-06",
+   "slug": "mode-ledger-schema2-hook-route",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "NEW-MOD-11",
+    "D-2",
+    "T-MD15",
+    "T-MD14",
+    "T-15"
+   ],
+   "deps": [
+    "mod-04",
+    "mod-05",
+    "7984"
+   ],
+   "body": "Decision D-2 (two entities, hybrid, or runtime selector) is answered by the operator facts: one car that transforms while the player holds LT, so the runtime selector wins and the hook performs it. Rebuild the modes translation as schema 2 without touching the existing ledger. Read Working/Translation/T11_MODES.md, t11_variants.json, the T-MD1..T-MD15 rows in T_ROWS.jsonl and Tools/scripts/b12_variants.py. Write a proposed replacement set under Working/Modes/ledger_v2/: rows for pursuit and battle, each of T-MD5..T-MD14 with its new disposition (hook-driven, data, or exact), the closest system plus gap plus build action, and the verification observation, with the T-MD15 hybrid row marked retired and a reason. Include T-MD14 battle audio and its entry and exit transition stings, with the hook as the transition consumer. Done-check: no row says named omission, and Tools/scripts/b12_variants.py --check runs on the new file if it accepts a path. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-07",
+   "slug": "stale-text-correction-specs",
+   "est": 35,
+   "ingame": false,
+   "covers": [
+    "NEW-MOD-2",
+    "NEW-MOD-17",
+    "T-PA5",
+    "T-PA6"
+   ],
+   "deps": [],
+   "body": "Several project texts contradict the operator and mislead small models. Locate each and write an exact edit specification (file, old text, new text) without applying it. Targets: GRAB_BACKLOG.md MOD-3 saying hold-to-eject, versus the operator's eject (hold A charges, tap A goes higher, a double-tap is lowest); the older wording in the eject memory note; rows T-WLD13 and T-WLD14 in Working/Translation/T_ROWS.jsonl (they say the car sinks and the engine stalls, but the operator says it teleports to land and the engine is fine); T-PA5 and T-PA6 listing doors that B-04 removed; GB B-12 saying T-MD8 and T-MD14 stay named omissions; t11_variants.json still showing one hybrid variant. Search for further hits by grepping for hold-to-eject and named omission. Output Working/Modes/stale_text_edits.md with one numbered entry per fix and the grep line proving the old text exists. Done-check: every entry quotes a line number from the current file. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-08",
+   "slug": "yoke-turbine-lore-reconcile",
+   "est": 30,
+   "ingame": false,
+   "covers": [
+    "NEW-MOD-15"
+   ],
+   "deps": [],
+   "body": "Requirements ANI-4 (turbine fan) and ANI-7 (steering yoke) in GRAB_BACKLOG.md section 1.8 may describe parts the Arkham Knight Batmobile does not have. Working/Translation/P13_STEERING.md says no yoke asset or bone appears in 324 packages, and P-05 says a jet bone exists with no engine_rpm binding (reports/jet-part-bone-driver.md). Re-verify offline: search Research/BatmobileGrab/BONES.md, ANIMATIONS.md, MESHES.json and COCKPIT.md for the bone and animation names, and list what actually exists for each. The lore rule says never invent a part. Verdict per requirement: keep, rewrite to the real BmAK mechanism, or drop with the grep evidence. Output Working/Modes/ani4_ani7_verdict.md. Done-check: each verdict cites a bone or file hit count, and a final table says which parts the moving-parts brief 9172 must or must not build. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-09",
+   "slug": "turret-cannon-limits-from-code",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "NEW-MOD-7",
+    "V-RC2-turret"
+   ],
+   "deps": [],
+   "body": "Settle the turret yaw limit and cannon pitch range of the BmAK Batmobile. Currently P-01 plus or minus 60 is only the extent of the Turret_Spin animation (60.001 deg) and may not be a limit; cannon pitch is code-side (MinTurretPitch 0.0, MaxTurretPitch 18.0) while the JC3 tank row stores -5 to 20. Read Working/Translation/P02_CANNON.md, reports/turret-limits-check.md, Research/BatmobileGrab/MODES.md and BMSDK_OFFSETS.json, and use Tools/scripts/bmak_chain.py to search the native turret aim path. Answer: is yaw unlimited (a full rotation follows the camera) and what pitch range is real? Output Working/Modes/turret_limits.md with each value tagged decoded, inferred, or UNKNOWN, plus the single operator question that would settle any UNKNOWN. Done-check: the table has yaw limit, pitch up, pitch down, and slew rate rows. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-10",
+   "slug": "controls-ledger-rows-per-button",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "NEW-MOD-13",
+    "D-11"
+   ],
+   "deps": [
+    "7949",
+    "7983"
+   ],
+   "body": "Controls have no rows in the translation ledger (Working/Translation/T_ROWS.jsonl has no T-IN rows). Write the proposed rows, one per button of the 18 listed in reports/controls-entry-exit-eject-plans-v2.md section 1, using Research/BatmobileGrab/CONTROLS_MENU_SCREENS.md and BINDINGS_MERGED.md. Rule D-11: BmAK controls win inside the car except pause and commlink; enter is JC3 Y; exit is LB. Operator facts: LT hold is battle, B is the Immobiliser, RT the cannon and RB the Vulcan in battle, LStick plus A the side booster, and eject has the three A levels. Per row: BmAK action, button, mode scope, closest JC3 action (from Research/JC3Grab/INPUT.md), the gap, and the carrier now (data keymap, or the hook gamepad layer from 7983). Output Working/Modes/controls_rows.jsonl using the T_ROWS.jsonl fields, plus a short md summary. Done-check: 18 rows, none with an empty carrier cell. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-11",
+   "slug": "keymap-versus-hook-routing",
+   "est": 35,
+   "ingame": false,
+   "covers": [
+    "NEW-MOD-19",
+    "B2"
+   ],
+   "deps": [
+    "7983",
+    "mod-10"
+   ],
+   "body": "With the native hook, the global-keymap problem (a rebind would also hit Rico on foot) may disappear. Decide per row of Working/Modes/controls_rows.jsonl whether a keymap edit is still needed. Read reports/controls-entry-exit-eject-plans-v2.md section 4, Research/JC3Grab/INPUT.md lines 13-29 and the 7983 report on suppressing vanilla bindings only inside the car. Enter on Y is already vanilla; list whatever else is required in data. If any keymap edit remains, specify the writer: 12-byte binding records and 18-byte property records in the patch gamepad file (7,207 bytes at offset 610,914,304, 145 bindings) with a re-parse check; if none remains, record that the writer is retired and why. Output Working/Modes/keymap_vs_hook.md with a routing table. Done-check: every row is labelled hook, keymap or vanilla, and the number of keymap rows is stated. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-12",
+   "slug": "eject-levels-hook-spec",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "NEW-MOD-16",
+    "NEW-MOD-5",
+    "NEW-MOD-2"
+   ],
+   "deps": [
+    "7949",
+    "7983"
+   ],
+   "body": "Write the eject specification the hook implements. Operator: hold A to charge, tap A to go higher, a double-tap gives the lowest eject; in battle mode, eject while moving forces the boost. Inputs: the 7949 report on decoded levels, Research/BatmobileGrab/EJECT_VELOCITY.md and EJECT_MOVE.md, reports/eject-and-glider-landing-plan.md, reports/eject-sequence-build-steps-from-donor-exits.md, Research/JC3Grab/EJECT.md. Constants to carry: EjectUpDist 1300 cm, a kick of 7.649 m over 3.7333 s, forward speed 2.049 m/s; JC3 donor exits have no velocity members and the donor is hold A to parachute. For each level give the launch impulse, charge timing (mark the double-press window UNKNOWN-authored), car behaviour afterwards (breaks straight), glide start via the parachute or wingsuit state, and camera. Output Working/Modes/eject_spec.md and eject_params.json. Done-check: three levels are filled, each field tagged decoded, authored or UNKNOWN. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-13",
+   "slug": "enter-exit-canopy-sequence-spec",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "MOD-4",
+    "ANI-8",
+    "ANI-9",
+    "NEW-MOD-6"
+   ],
+   "deps": [
+    "9101",
+    "7983"
+   ],
+   "body": "Specify entry, exit and canopy behaviour for the hook and the entity graph. Operator facts: enter with JC3 Y, exit with LB, and the canopy interior is visible. Read Research/BatmobileGrab/COCKPIT.md, ANIMATIONS.md (canopy clip, 0.433 s), reports/doors-canopy-trunk-plan.md, Research/JC3Grab/INTERACTION.md, SEAT.md, Working/Translation/T9_INTERACTION.md and Working/Q/PILOT/ENTER_EXIT.md. Write: the canopy opening on entry and on exit and which JC3 door or hatch behaviour carries it versus the hook; the seat pose (Driver socket, head height under the canopy); LB exit at speed in pursuit (the car breaks right) versus battle (straight), with the velocity values marked UNKNOWN-authored; entry from both sides. Output Working/Modes/enter_exit_spec.md with a step-by-step event list. Done-check: each step has a trigger, an owner (graph, hook or animation) and a pilot observation. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-14",
+   "slug": "bmak-operator-measurement-sheet",
+   "est": 30,
+   "ingame": false,
+   "covers": [
+    "NEW-MOD-4",
+    "NEW-MOD-5",
+    "NEW-MOD-6",
+    "NEW-MOD-8",
+    "NEW-MOD-9",
+    "NEW-MOD-10"
+   ],
+   "deps": [],
+   "body": "Several BmAK numbers exist only at runtime and need the operator, who plays on an Xbox pad. Write a short measurement sheet the operator can fill in while playing Arkham Knight, no tools needed. Cover: how long LT must be held before the transform starts, whether releasing mid-transform cancels it, speed before versus after the swap, the longest gap between two A presses that still gives the lowest eject, charge time per eject height, LB exit at full speed in pursuit and battle (where the car goes), steering lock and response at low and high speed, summon call-to-arrival time and distance, and remote-drive range. Each item states the exact action, what to count or time (stopwatch, or video frames at 60 fps), where to record it, and the parameter name that consumes the answer (names from Working/Modes/*.json files when they exist). Output Working/Modes/operator_measurements.md. Done-check: at least 12 numbered items, each naming its consuming parameter. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-15",
+   "slug": "canopy-part-cut-build",
+   "est": 50,
+   "ingame": false,
+   "covers": [
+    "NEW-MOD-20",
+    "NEW-MOD-14",
+    "P-06"
+   ],
+   "deps": [
+    "9101",
+    "mod-13"
+   ],
+   "body": "Cut the canopy (CockPit_Mesh) out of the Batmobile body as its own part so the canopy can slide and turn, and so the interior stays visible when it is open. Start from Working/Appearance/build_parts/parts_manifest.json, Working/Parts/bm_vehicle_parts_v2.json and the cutting script used for B-02 (find it through the manifest provenance or grep Tools/scripts for parts_manifest; if not found write UNKNOWN and stop). The animation to carry: slide 72.48 cm plus turn 12.493 degrees over 0.433 s (Working/Translation/T8_PARTS.md row P-06, Research/BatmobileGrab/ANIMATIONS.md); JC3 hinges rotate only, so declare the slide error. Keep the 99.97 percent silhouette and the 4,915 KB model budget from the B-02 census. Build into the new tree Builds/bm-RC5-canopy with the part, its joint entry and a read-back script. Done-check: the part appears in the parts module copy, the triangle total equals the original body total, and the report lists the interior surfaces now visible. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-16",
+   "slug": "hatches-doors-barrel-cut-build",
+   "est": 55,
+   "ingame": false,
+   "covers": [
+    "NEW-MOD-20",
+    "NEW-MOD-14",
+    "P-02",
+    "P-07",
+    "P-08"
+   ],
+   "deps": [
+    "mod-15"
+   ],
+   "body": "Continue the B-02 extension after the canopy cut: separate parts for the two missile hatches (P-07, P-08), the rear door, the winch door, and the cannon barrel (P-02, which needs recoil). Use the cutting method that brief mod-15 documented, the T-8 rows in Working/Translation/T8_PARTS.md, PARTS_ANIM_COVERAGE.md, P02_CANNON.md, reports/weapon-bay-animation-plan.md, and the hatch pivots in Research/BatmobileGrab/BONES.md. For each part record bone owner, hinge axis, travel limits and the open time from the animation key times. Do not invent geometry that BmAK lacks; where no bone exists, say so. Work in Builds/bm-RC5-hatches as a new tree (copy, never edit, the canopy tree). Done-check: each part has a manifest entry with a vertex count, the sum of vertices over all parts equals the body before the cut, and the model budget remains at or under 4,915 KB. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-17",
+   "slug": "verify-new-part-cuts",
+   "est": 35,
+   "ingame": false,
+   "covers": [
+    "V-02"
+   ],
+   "deps": [
+    "mod-15",
+    "mod-16"
+   ],
+   "body": "Offline verification of the new part cuts in Builds/bm-RC5-canopy and Builds/bm-RC5-hatches. Rerun the V-02 census and pose-render logic described in reports/verify-v02-geometry-poses-rc4.md and verify-v02b-pose-renders-lights.md for P-02, P-05, P-06, P-07 and P-08, the six UNKNOWN rows from the last run. Check: silhouette overlap against the original (target 99.97 percent), no hole at the cut edges, each part rotated or slid to its end pose by the BmAK values without collision with neighbours, and the model size budget. Produce render comparisons under Working/Modes/verify_cuts/ and a table in Working/Modes/verify_cuts.md with PASS, FAIL or UNKNOWN per part. A FAIL must name the vertex or triangle range and the card that fixes it. Done-check: the table has all five parts and the UNKNOWN count dropped from six to the number you can justify. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-18",
+   "slug": "hook-mode-controller-build",
+   "est": 55,
+   "ingame": false,
+   "covers": [
+    "NEW-MOD-24",
+    "NEW-MOD-11"
+   ],
+   "deps": [
+    "mod-04",
+    "7984",
+    "7983",
+    "7981"
+   ],
+   "body": "Implement the mode controller in the native hook, on the 7981 scaffold and following the 7983 gamepad layer and the 7984 swap prototype. Spec: Working/Modes/mode_state_machine.md and mode_state_machine.json (states, guard, mid-transform release, slowdown, carried state). Write Tools/hook/src/mode_controller.* with a pure-logic core (no game calls) separated from the game-facing part, and a driver that consumes recorded gamepad traces. Operator facts: LT hold transforms in about 2 s, release returns, near-instant slowdown at swap, HUD persists. The game-facing part may only call functions already documented by the 7984 report; anything else becomes a stub that logs UNKNOWN. Compile if the 7981 toolchain exists and stage the DLL and receipt in Builds/hook-mod-controller/; never write to the game folder. Done-check: the build log shows zero errors, the logic core runs against three synthetic traces (tap, hold, hold-release-mid) and prints the expected state sequence. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-19",
+   "slug": "hook-transform-animator-build",
+   "est": 55,
+   "ingame": false,
+   "covers": [
+    "T-MD13",
+    "NEW-MOD-24",
+    "NEW-MOD-21"
+   ],
+   "deps": [
+    "mod-05",
+    "mod-18",
+    "9172"
+   ],
+   "body": "Implement the transform animator for the hook: during the roughly 2 s hold-to-battle window it drives the turret rise, the wheel and body reconfiguration and the hatch and flap poses, and runs backwards on release. Spec: Working/Modes/transform_timeline.json (per-bone keys and carriers) and the joint and part indices from the 9172 report on Builds/bm-RC5-parts. Add Tools/hook/src/transform_animator.* that takes the elapsed time from the mode controller built by mod-18 and writes hinge angles or part translations each tick, with ease curves from the key times, and a clamp so a release at any moment reverses smoothly. Anything with no known write function stays a logged stub. Stage Builds/hook-mod-animator/ with a receipt. Done-check: a offline test prints angle values at t=0, 0.5, 1.0, 1.5 and 2.0 s for every bone, matching the timeline file to within 0.01 degrees, and the reverse run returns to the start pose. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-20",
+   "slug": "hook-battle-drive-module-build",
+   "est": 55,
+   "ingame": false,
+   "covers": [
+    "T-MD5",
+    "T-MD6",
+    "T-MD7",
+    "T-MD8"
+   ],
+   "deps": [
+    "mod-02",
+    "mod-03",
+    "7987",
+    "mod-18"
+   ],
+   "body": "Implement the battle driving module for the hook. It applies three things only while the mode controller reports battle: the speed shaping (curve and the 600 cm/s turning cap from Working/Modes/battle_handling_values.json), the turn-on-the-spot recipe from Working/Modes/turn_on_spot_recipe.json, and the nose-follows-camera yaw from Working/Modes/yaw_to_camera_params.json. Base it on the handling-switch code from brief 7987. Write Tools/hook/src/battle_drive.* with the numeric core as pure functions, one unit test file with a table of inputs and expected outputs for each of the three behaviours, and parameters loaded from the three json files (no constants in code). Fields with no known write address become logged stubs reading UNKNOWN. Stage Builds/hook-mod-drive/ with receipt. Done-check: the build is clean, the unit tests pass, and every parameter in the code appears in one of the three json files. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-21",
+   "slug": "hook-eject-module-build",
+   "est": 50,
+   "ingame": false,
+   "covers": [
+    "NEW-MOD-16",
+    "NEW-MOD-5"
+   ],
+   "deps": [
+    "mod-12",
+    "7983",
+    "mod-18"
+   ],
+   "body": "Implement the eject module in the native hook from Working/Modes/eject_spec.md and eject_params.json. Inputs come from the 7983 gamepad layer: A held (charge), A tapped (higher), A double-tapped (lowest); in battle with the car moving, eject forces the boost instead. Behaviour: choose the level, take the player out of the car, apply the launch impulse and start the glide state named in the spec, set the car to break straight, and stay silent on foot (no effect when the player is not in our Batmobile). Write Tools/hook/src/eject.* with a pure-logic level selector tested by a table of timestamped A presses, and stubs that log UNKNOWN where the spec lacks a function address. Stage Builds/hook-mod-eject/ with receipt. Done-check: the table test returns the right level for at least ten press patterns including a hold released early and a double-tap just inside and just outside the window. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-22",
+   "slug": "hook-exit-enter-canopy-build",
+   "est": 50,
+   "ingame": false,
+   "covers": [
+    "MOD-4",
+    "ANI-8",
+    "NEW-MOD-6"
+   ],
+   "deps": [
+    "mod-13",
+    "mod-15",
+    "7983",
+    "mod-18"
+   ],
+   "body": "Implement entry, LB exit and canopy handling in the native hook from Working/Modes/enter_exit_spec.md. Enter stays on JC3 Y; the hook adds LB exit while in our Batmobile (pursuit: Batman jumps out and the car breaks right; battle: the car breaks straight), and drives the canopy part from mod-15 open on entry and exit and closed while driving, over 0.433 s. Write Tools/hook/src/enter_exit.*; gate everything behind the in-our-Batmobile check from the 7982 readout so other vehicles are untouched. Where the spec marks a velocity as UNKNOWN-authored, read it from a parameter file Tools/hook/params/exit.json rather than a constant. Stage Builds/hook-mod-exit/ with receipt. Done-check: the build is clean, an offline trace test shows Y-enter, LB-exit pursuit, LB-exit battle and LB inside another vehicle (ignored), and the parameter file has no empty values. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-23",
+   "slug": "review-hook-and-cut-builds",
+   "est": 30,
+   "ingame": false,
+   "covers": [
+    "REVIEW"
+   ],
+   "deps": [
+    "mod-17",
+    "mod-18",
+    "mod-19",
+    "mod-20",
+    "mod-21",
+    "mod-22"
+   ],
+   "body": "Review point after the first eight modes, controls and animation builds. Re-read the reports of the canopy and hatch cuts, their verification, and the five hook module builds (mode controller, transform animator, battle drive, eject, exit and enter). Compare what each actually delivered against what the later queue files assume: the file names Tools/hook/src/*, the parameter files in Working/Modes/, the UNKNOWN stubs left, and the device addresses used. Then open the not-yet-started queue files that mention these modules (the verify briefs, the pilot-card brief, and the test briefs for this landmark in E:/Modding/JC3-Batmobile/tmp/freebuff/queue) and rewrite any sentence whose fact changed, such as a renamed file, a moved threshold, or a feature that became a stub. Never edit a brief that already has a DONE report. Output tmp/freebuff/reports/modes-review-1.md listing each queue file touched and the old versus new text. Done-check: every changed brief still ends with the shared-rules line. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-24",
+   "slug": "verify-controller-and-animator",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "VERIFY"
+   ],
+   "deps": [
+    "mod-18",
+    "mod-19"
+   ],
+   "body": "Offline verification of the mode controller and transform animator. Re-run the builds in Builds/hook-mod-controller and Builds/hook-mod-animator from a clean copy, replay five recorded or synthetic gamepad traces (quick tap, full hold, release at 1.0 s, hold-release-hold, a hold while stopped) through the logic cores, and compare against Working/Modes/mode_state_machine.json and transform_timeline.json. Check that no code path writes outside the hook's own state when the in-our-Batmobile check is false, and that every stub is listed in a table with the experiment that would replace it. Output Working/Modes/verify_controller.md with a PASS or FAIL per trace and per bone. Done-check: all five traces are shown, any FAIL cites the transition or bone, and a fix-card text is attached to each FAIL. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-25",
+   "slug": "verify-drive-and-eject-modules",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "VERIFY"
+   ],
+   "deps": [
+    "mod-20",
+    "mod-21"
+   ],
+   "body": "Offline verification of the battle drive and eject modules. Rebuild Builds/hook-mod-drive and Builds/hook-mod-eject from clean copies and run their unit tests. Then cross-check the numbers: every constant used by battle_drive must trace to a row of Working/Modes/battle_handling_values.json, turn_on_spot_recipe.json or yaw_to_camera_params.json; eject levels must match eject_params.json (1300 cm up-distance, 7.649 m kick, 3.7333 s). Compute and store predicted observables the pilot will check: speed cap in km/h, turn rate on the spot, heading lag to the camera, and eject apex height per level. Output Working/Modes/verify_drive_eject.md and predictions.json. Done-check: each prediction cites the source row, and a mismatch between code and spec is listed under FAIL with its file and line. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-26",
+   "slug": "verify-exit-enter-and-gating",
+   "est": 35,
+   "ingame": false,
+   "covers": [
+    "VERIFY"
+   ],
+   "deps": [
+    "mod-22",
+    "mod-11"
+   ],
+   "body": "Offline verification of the entry, exit and canopy module and of the control routing. Rebuild Builds/hook-mod-exit, replay the four traces from the brief that built it, and confirm the vehicle gating: with the in-our-Batmobile flag false, no module in Tools/hook/src reacts to LB, A, B or LT (grep for each button constant and read the guard). Compare the routing table in Working/Modes/keymap_vs_hook.md with what the code does, row by row. Check the canopy timing equals 0.433 s within one frame. Output Working/Modes/verify_exit_gating.md with PASS or FAIL per button row and per trace. Done-check: every row of the routing table has a result, and any code path that touches a button outside the gate is listed with file and line. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-27",
+   "slug": "joint-index-and-limit-check",
+   "est": 40,
+   "ingame": false,
+   "covers": [
+    "B5",
+    "V-RC2-turret",
+    "JOINTS-v2"
+   ],
+   "deps": [
+    "9172"
+   ],
+   "body": "Check the turret and cannon joint chain offline once the 9172 parts build exists. In Builds/bm-RC5-parts compare each part constraint_index in the parts module with the constraint list in the matching physicsc (Working/Collision/batmobile_hinged.physicsc, hinges at 11 and 12): count, order, and hinge axes. The RC3 build suffered a forward-reference mismatch, so assert that every index resolves. Rerun the V-RC2-turret range test (Builds/bm-RC2/verify/turret_ranges.md) against the new build using the limits from Working/Modes/turret_limits.md. Report yaw range, pitch range and each hinge's min and max in degrees next to the BmAK values. Output Working/Modes/verify_joints.md. Done-check: PASS only if all 59 or more parts resolve and the ranges match; a FAIL must name the exact constraint index and the one-line fix. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-28",
+   "slug": "pilot-cards-modes-controls-anim",
+   "est": 50,
+   "ingame": false,
+   "covers": [
+    "NEW-MOD-26",
+    "Q-PILOT"
+   ],
+   "deps": [
+    "mod-24",
+    "mod-25",
+    "mod-26",
+    "mod-27",
+    "9194"
+   ],
+   "body": "Write the pilot cards for this landmark in the format of Working/Q/PILOT/CARD_FORMAT.md, one action per card, reusing the helper steps of LAUNCH.md, SPAWN_BATMOBILE.md, SCREENSHOT.md and KILL.md. Cards: MODE_HOLD (hold LT, time the transform with a video or log timestamps, pass band 2.0 s plus or minus 0.3), BATTLE_DRIVE (speed cap, turn on the spot, nose follows the camera), ENTER_EXIT (refresh the existing one: Y enter, LB exit pursuit and battle, canopy), EJECT_LEVELS (hold, tap, double-tap, apex heights from verify_drive_eject predictions), PARTS_MOTION (turret traverse, cannon pitch, hatches, Vulcan spin), SCOPE_OUTSIDE (the controls do nothing in other vehicles or on foot). Each pass rule is a number from the prediction files, never a judgement. Done-check: six card files exist, each has a PRE-CONDITIONS table, a STOP line per step and a fix-card pointer, and no step needs a key absent from CONTROLS.md. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-29",
+   "slug": "review-before-modes-testing",
+   "est": 30,
+   "ingame": false,
+   "covers": [
+    "REVIEW"
+   ],
+   "deps": [
+    "mod-28"
+   ],
+   "body": "Gate review before the in-game tests of the modes, controls and animation landmark. Read the reports of the verify briefs, the joint check and the pilot-card brief, plus the hook receipts under Builds/hook-mod-*. Confirm each card's pass number matches the latest verified prediction and the tolerances are not widened to fit a failure (lore accuracy forbids lowering bands). List stubs that would make a test meaningless (a module that only logs) so the test briefs skip them with an explicit note. Then edit any queued test brief of this landmark whose card name, band or prerequisite changed. Output tmp/freebuff/reports/modes-review-2.md with a go or no-go line per test: mode hold, battle driving, enter and exit, eject, parts motion, scoping outside the car. Done-check: each test has its latest card file and the build receipt it needs named. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-30",
+   "slug": "test-mode-hold-transform",
+   "est": 45,
+   "ingame": true,
+   "covers": [
+    "Q-3",
+    "NEW-MOD-26"
+   ],
+   "deps": [
+    "APPROVED_Q",
+    "mod-29",
+    "9193"
+   ],
+   "body": "In-game test, supervised by the operator, who plays on an Xbox pad. Install the hook build from Builds/hook-mod-controller and Builds/hook-mod-animator with the install steps in Working/Q/PILOT/LOAD_SAVE.md, spawn the Batmobile with SPAWN_BATMOBILE.md, then run card Working/Q/PILOT/MODE_HOLD.md. The one observation: holding LT starts the transform, the turret rises and the body reconfigures in 2.0 s plus or minus 0.3, speed drops almost immediately, and releasing returns to pursuit. Record video and the hook log. Pass: duration inside the band, speed at the end of the first second under the value in predictions.json, and the HUD stays. On a fail, write a fix card under Working/Q/PILOT/fix/ naming the stage that failed (input, swap, animation or slowdown) and the parameter file to change, then stop. Report path in tmp/freebuff/reports. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-31",
+   "slug": "test-battle-driving",
+   "est": 45,
+   "ingame": true,
+   "covers": [
+    "Q-2"
+   ],
+   "deps": [
+    "APPROVED_Q",
+    "mod-30"
+   ],
+   "body": "In-game test, operator supervising. With the Batmobile in battle mode (hold LT), run card Working/Q/PILOT/BATTLE_DRIVE.md. Three observations, one run each: (1) top speed reading against the curve and the 21.6 km/h turning cap prediction in Working/Modes/verify_drive_eject.md; (2) turn on the spot with the stick, yaw rate in degrees per second inside the predicted band; (3) with the camera swung 90 degrees and the stick centred, the nose follows the camera within the predicted lag. Pass when all three sit inside the numbers of predictions.json. On a fail name the single failing observation, write a fix card under Working/Q/PILOT/fix/ pointing to the parameter in Working/Modes/battle_handling_values.json, turn_on_spot_recipe.json or yaw_to_camera_params.json, and stop. Save videos and write the report to tmp/freebuff/reports/modes-test-battle-driving.md. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-32",
+   "slug": "test-enter-exit-canopy",
+   "est": 45,
+   "ingame": true,
+   "covers": [
+    "Q-1",
+    "MOD-4",
+    "ANI-8",
+    "ANI-9"
+   ],
+   "deps": [
+    "APPROVED_Q",
+    "mod-29"
+   ],
+   "body": "In-game test, operator supervising. Run card Working/Q/PILOT/ENTER_EXIT.md as refreshed for this landmark. Observations: enter from the left and the right door with Y; the canopy opens on entry and the interior is visible; Rico sits with his head under the canopy; LB exits while driving in pursuit (the car breaks right) and in battle (the car breaks straight); LB inside a different vehicle does nothing. The canopy stays open or closed per spec within 0.433 s plus or minus one frame at 60 fps. Capture screenshots of the open canopy and the seated pose. Pass: all five observations match. On a fail write a fix card in Working/Q/PILOT/fix/ naming the stage (entry point, seat, canopy, exit, car motion) and the parameter file Tools/hook/params/exit.json or the graph row to change, then stop. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-33",
+   "slug": "test-eject-levels",
+   "est": 45,
+   "ingame": true,
+   "covers": [
+    "NEW-MOD-16",
+    "NEW-MOD-5"
+   ],
+   "deps": [
+    "APPROVED_Q",
+    "mod-32"
+   ],
+   "body": "In-game test, operator supervising. Run card Working/Q/PILOT/EJECT_LEVELS.md while driving at about 80 km/h on open ground. Observation set: hold A and release (charged eject), hold then tap A (higher), and a plain double-tap (lowest). Measure the apex height of Rico above the launch point for each from a recording or hook log; the order must be lowest below charged below higher, and each must be within 15 percent of the apex in Working/Modes/verify_drive_eject predictions.json. Also check the car breaks straight and the parachute or glide starts. In battle mode while moving, eject must force the boost instead; repeat once to confirm. On a fail write a fix card in Working/Q/PILOT/fix/ naming the level and the field in Working/Modes/eject_params.json, then stop. Report to tmp/freebuff/reports/modes-test-eject.md. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-34",
+   "slug": "test-parts-motion-turret-hatches",
+   "est": 45,
+   "ingame": true,
+   "covers": [
+    "Q-1",
+    "ANI-2",
+    "P-01",
+    "P-02",
+    "P-06"
+   ],
+   "deps": [
+    "APPROVED_Q",
+    "mod-29",
+    "mod-30"
+   ],
+   "body": "In-game test, operator supervising. Run card Working/Q/PILOT/PARTS_MOTION.md in battle mode. Observations: the turret follows the camera through its full range and the traverse time for 180 degrees is inside the prediction; the cannon pitch reaches the limits in Working/Modes/turret_limits.md; the Vulcan spins while firing; the missile hatches open when the missile fires and close after; wheels spin and steer with the car. One screenshot per part. Pass: each part moves, within the angle and time of the verify_joints report. If a joint fails to load or a part is frozen, record the constraint index shown in the hook log and write a fix card under Working/Q/PILOT/fix/ naming the part, then stop. Report to tmp/freebuff/reports/modes-test-parts.md. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-35",
+   "slug": "test-controls-scoping-outside-car",
+   "est": 35,
+   "ingame": true,
+   "covers": [
+    "B2",
+    "D-11"
+   ],
+   "deps": [
+    "APPROVED_Q",
+    "mod-29"
+   ],
+   "body": "In-game test, operator supervising. Run card Working/Q/PILOT/SCOPE_OUTSIDE.md to prove the BmAK button scheme is active only inside our Batmobile. Steps: on foot press LB, A, B, LT and RT and confirm the normal JC3 on-foot actions occur and the hook log shows no event; in a stock car press the same buttons and confirm stock behaviour; then in the Batmobile confirm the BmAK actions fire. Pause and commlink must work in all three places. Pass: zero hook events outside the Batmobile and all stock actions intact. On a fail write a fix card in Working/Q/PILOT/fix/ naming the button and the guard in Tools/hook/src, then stop. Report to tmp/freebuff/reports/modes-test-scoping.md. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-36",
+   "slug": "fix-loop-triage-modes",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "Q-4",
+    "NEW-MOD-28"
+   ],
+   "deps": [
+    "mod-30",
+    "mod-31",
+    "mod-32",
+    "mod-33",
+    "mod-34",
+    "mod-35"
+   ],
+   "body": "Collect the outcome of the six modes, controls and animation tests and prepare the fix loop. Read the six test reports and every fix card under Working/Q/PILOT/fix/. Group failures by root cause (input, swap, animation, handling, canopy, joint, scoping), rank by how many tests each blocks, and for each root cause write one concrete fix brief draft: the file to change, the parameter, the expected effect, and a retest card. Expect these likely failures from the risk list: a hinge constraint failing to load, a button leaking outside the gate, the swap dropping the player, the canopy missing its slide. One extra fix session per test maximum. Output Working/Modes/fix_loop_plan.md. Done-check: every failed test appears once, with its fix draft; if all passed, the file says so and lists the three least certain passes. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-37",
+   "slug": "test-operator-comparison-drive",
+   "est": 45,
+   "ingame": true,
+   "covers": [
+    "NEW-MOD-30"
+   ],
+   "deps": [
+    "APPROVED_Q",
+    "mod-36"
+   ],
+   "body": "In-game comparison supervised by the operator: the same actions in the modded car and in Arkham Knight, side by side or from the operator's recorded clips. Actions: LT hold transform, battle turn on the spot, LB exit, the three ejects, canopy on entry. For each, the operator gives one of three words in the notes: same, close, or wrong. Run card Working/Q/PILOT/MODE_HOLD.md and ENTER_EXIT.md first to get fresh recordings, then fill the comparison table in Working/Modes/comparison.md with the operator's word and the measured number from each side. Lore accuracy decides: close and wrong items become fix cards in Working/Q/PILOT/fix/ with a parameter named. Do not accept any item on the operator's behalf; QX is theirs. Done-check: all six rows have a word and a number. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-38",
+   "slug": "qx-gate-evidence-modes",
+   "est": 30,
+   "ingame": false,
+   "covers": [
+    "QX"
+   ],
+   "deps": [
+    "mod-37",
+    "mod-36"
+   ],
+   "body": "Compile the release-gate evidence for this landmark. Read the six test reports, the comparison table in Working/Modes/comparison.md and the fix loop plan. Build one table of every check (mode hold, battle speed cap, turn on the spot, nose follows camera, enter, LB exit, canopy, eject levels, turret, hatches, scoping) with PASS, FAIL or NAMED-OMISSION, the measured number, the band and the report link. Only the operator may accept an omission, so list those as questions for them rather than closing them, and never loosen a band. Output Working/Modes/qx_modes_gate.md. Done-check: the table has no blank cell, the counts of PASS, FAIL and omission rows are stated at the top, and the next action for each non-PASS row is named. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-39",
+   "slug": "release-hook-and-pipeline-docs",
+   "est": 45,
+   "ingame": false,
+   "covers": [
+    "R-1"
+   ],
+   "deps": [
+    "mod-38"
+   ],
+   "body": "Prepare the release material for the modes, controls and animation parts. Release is a pipeline of scripts and edit specs, never BmAK meshes or audio. Read the Release rules in GRAB_BACKLOG.md section 10 and the hook design report. Write the README section covering: the hook source tree in Tools/hook (build steps, supported JC3 build and exe hash, the safety guard from 7967), the parameter files in Working/Modes, the part-cut scripts, what a user must supply from their own copy of Arkham Knight, credits, and the AI disclosure. Confirm that no BmAK-derived asset appears in anything to be published by listing the file types in Builds/hook-mod-* and Builds/bm-RC5-canopy and hatches. Output Working/Modes/release_readme_section.md and a checklist that um publish check can follow. Done-check: the checklist has every hook source file and flags any binary. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-40",
+   "slug": "knowledge-base-field-note-modes",
+   "est": 30,
+   "ingame": false,
+   "covers": [
+    "R-2"
+   ],
+   "deps": [
+    "mod-39"
+   ],
+   "body": "Write the knowledge-base field note for the Universal Modder knowledge base from this landmark. Contents: the route (hook swap for the pursuit and battle modes, scoped gamepad layer, eject levels, canopy and part cuts), the JC3 versions and addresses used, what the data-only route could not do and why (global keymap, no hold or double-press fields, hinges without rate, no mode selector), what was settled by experiment versus by decoding, and every gotcha found in the fix loop. Use the format of earlier field notes you find with grep for field note in Working/ and tmp/freebuff/reports/. Cite file paths, not memory. Output Working/Modes/field_note_modes_controls.md. Done-check: each claim has a path or report link, and a closing list of open UNKNOWN items is included. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  },
+  {
+   "key": "mod-41",
+   "slug": "showcase-recording-modes",
+   "est": 35,
+   "ingame": true,
+   "covers": [
+    "Q-5"
+   ],
+   "deps": [
+    "APPROVED_Q",
+    "mod-38"
+   ],
+   "body": "Optional recording after the gate evidence is in: a short showcase of the modes, controls and animation work, supervised by the operator. Follow Working/Q/PILOT/RECORD.md. Shots in order: spawn and enter with Y (canopy open, interior visible), a pursuit run, an LT hold transform in 2 s, battle driving with the cannon and Vulcan and a turn on the spot, LB exit, then a charged eject into a glide. Each shot is at most 15 seconds, with the hook log overlaid or saved beside it. Save to Working/Q/showcase/modes/ with a shot list file naming the clip, time, and the run mode. Pass: all seven shots exist and play. If a shot fails, skip it and write the reason; do not attempt fixes here. Report to tmp/freebuff/reports/modes-showcase.md. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md."
+  }
+ ]
+}

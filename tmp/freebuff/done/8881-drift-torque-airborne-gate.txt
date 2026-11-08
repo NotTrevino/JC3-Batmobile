@@ -1,0 +1,5 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/drift-torque-airborne-gate.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-08
+The air-control row T-AC1 is closed as a composed pair in Working/Translation/T_ROWS.jsonl, and its yaw part is the drift module CustomLandGlobal.drift. The open point, recorded in tmp/freebuff/reports/air-control-closest-system-plan.md, is whether that drift torque is gated on drift state with no ground-contact input, which would let it act in mid-air. Read that plan's candidate table and its section 6 UNKNOWN list, then leave the Q-AC-1 measurement alone since it needs the game running. Decode the members of the drift module (max_drift_torque, constant_drift_torque, min_speed and any state or contact input) from the class census in Research/JC3Grab/INDEX.jsonl. Report every input name the drift module reads, mark whether any of them is a ground or wheel-contact flag, and give a verdict of YES, NO or UNKNOWN for an airborne gate, with the count of matching paths for the search you ran.

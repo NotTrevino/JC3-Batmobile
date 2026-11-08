@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-weapon-fx-payloads.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/cannon-missile-muzzle-recoil-fx.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/vulcan-spin-casings-tracer-fx.md
+Verify both effect payload builds. Run Tools/scripts/effc_writer.py check on every .effc under Builds/bm-RC5-fxcannon and Builds/bm-RC5-fxvulcan, and the --check of rc5_fx_cannon.py and rc5_fx_vulcan.py. For each file, confirm the byte-identical carry outside the patched members, each patched value against its ledger row, and that every material, mesh and texture reference resolves (use the dangling-reference approach in rc5-dangling-fire-refs.md). Confirm that the missile trail and launch flash files from 9102 are untouched. Output tmp/freebuff/reports/verify-weapon-fx-payloads.md with a table file x checks, each PASS or FAIL, plus the count of files checked. Done-check: the count equals the file count in both trees. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

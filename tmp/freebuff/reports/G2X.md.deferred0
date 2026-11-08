@@ -1,0 +1,62 @@
+# G2X · G2 exit gate — report
+
+**STATUS: deferred (deps not done: G2-20, G2-27)**
+
+The gate's precondition is "every G2 card G2-10…G2-34 `done`". Checked against §12 of
+`GRAB_BACKLOG.md` at 2026-10-28 (rows re-read immediately before writing this):
+
+- `| G2-20 | todo | |` — Exit, bail-out and eject. MODLOG has only
+  `## G2-20 · Exit, bail-out and eject — intended change (2026-10-28)`; there is no
+  `G2-20 … — done` section.
+- `| G2-27 | todo | |` — Standalone entity. MODLOG has only
+  `## G2-27 · Standalone entity — intended change (2026-10-28)`; no done section.
+- The other 23 rows (G2-10…G2-19, G2-21…G2-26, G2-28…G2-34) all read `done` with evidence.
+
+Both cards' output files do already exist on disk, written minutes before this report by sessions
+that had not yet flipped their tracker rows — `Research/JC3Grab/EJECT.md` / `EJECT.json` /
+`Tools/scripts/jc3eject.py` and `Research/JC3Grab/STANDALONE.md` / `STANDALONE.json` /
+`Tools/scripts/jc3standalone.py`. That is **not** enough for this gate: section 0.5 and the card
+require the tracker row to read `done` (evidence path recorded) before the gate is started, so the
+gate was not started and nothing was run, written or flipped.
+
+G2X also has **no row** in §12 yet; when it runs it needs one added (`| G2X | done | … |`) next to
+the G1X row, since §12 has `| G1X | done | … |` but no G2X entry.
+
+## Outputs
+
+None produced by this session (the card was deferred before any step). Nothing was written to
+`Research/JC3Grab/`, `Tools/scripts/`, `MODLOG.md` or `GRAB_BACKLOG.md`.
+
+## Done-check command and output
+
+Not run — the Done check (`every new reader --check green`, P0-2 census re-run, §1 feature-code
+table) belongs to the gate itself and cannot be started while G2-20 and G2-27 are `todo`.
+
+## Tamper test
+
+Not run (no output exists to tamper with; the gate's tamper test would have to tamper with the
+gate table it generates).
+
+## What must happen first (for whoever resumes G2X)
+
+1. G2-20 and G2-27 sessions finish their Done checks and flip their §12 rows to `done` with the
+   evidence path.
+2. Only then: re-read §12, confirm all 25 rows `done`, and run the gate — a script (e.g.
+   `Tools/scripts/g2x_gate.py --check`, mirroring `Tools/scripts/g1x_gate.py`) that (a) runs every
+   G2 reader's `--check` and records PASS/FAIL, (b) re-runs the P0-2 census
+   (`FEATURE_CENSUS.json` / `FEATURE_CENSUS.md`) and diffs it against the recorded one, (c) maps
+   every feature code in §1 to a G2 doc + section or to a proven absence, with a tamper test.
+
+## UNKNOWNs and limits
+
+- **Whether G2-20 and G2-27 will pass their own Done checks.** Their outputs exist, but their
+  `--check` scripts have not been verified from here and their evidence rows are absent, so their
+  status is UNKNOWN at this moment, not merely "unflipped".
+- **The gate's own numbers** (how many readers, which §1 codes still lack a carrier) are UNKNOWN
+  here by design: computing them would be starting the gate.
+- No game was launched, no `D:/Games` write, no shared game module edited, no git operation.
+
+## MODLOG heading used
+
+None — deferred, so no entry was appended to `MODLOG.md` (intended change and done sections are
+for cards that run; this deferral is recorded only here).

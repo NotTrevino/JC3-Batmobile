@@ -1,0 +1,976 @@
+{
+ "card": "T-15 (GRAB_BACKLOG.md \u00a77)",
+ "counts": {
+  "MOD-1": 4,
+  "MOD-2": 11,
+  "by_compromise_delta": [
+   "carried",
+   "inside band",
+   "omitted"
+  ],
+  "compromise": {
+   "carried": 8,
+   "inside band": 1,
+   "omitted": 6
+  },
+  "dispo": {
+   "blocked": 6,
+   "epe": 0,
+   "keep": 4,
+   "next": 5,
+   "out": 0
+  },
+  "rows": 15
+ },
+ "decision": {
+  "D-2": "REOPENED 2026-11-06: two variants needed, awaiting the operator (was resolved 2026-10-28 to (b) one hybrid car)",
+  "D-7": "resolved 2026-10-28 (user): every BmAK weapon in both modes",
+  "source": "GRAB_BACKLOG.md \u00a711"
+ },
+ "facts": {
+  "battle_audio": {
+   "dispo": "blocked",
+   "events": 30,
+   "id": "W-08",
+   "wems": 75
+  },
+  "camera": {
+   "AntiPersonelBattleModeCamFOV": 40.0,
+   "BattleModeCamFOV": 60.0,
+   "BattleModeWinchCamFOV": 60.0,
+   "class": "R3rdPersonCamera",
+   "config_fields": 24,
+   "config_max_distance": 1000.0,
+   "config_min_distance": 1000.0
+  },
+  "card_items": [
+   "top speed curve",
+   "torque",
+   "steering/pivot",
+   "weapons enabled",
+   "camera tune",
+   "lights",
+   "armour reduction",
+   "audio"
+  ],
+  "emp": {
+   "fields": 63,
+   "gadget_classes": 11,
+   "instances": 3,
+   "objects": 3
+  },
+  "lights": {
+   "battle_behaviour": [],
+   "battle_rows": [
+    "T-L17",
+    "T-L18",
+    "T-L19",
+    "T-L20"
+   ],
+   "battle_targets": [
+    "Front_Secondary_Head",
+    "headlight_battle_left",
+    "headlight_battle_right",
+    "sportsmuscle_wheel_f_l_arch_battle"
+   ],
+   "behaviour_count": 9,
+   "behaviours": [
+    "HeadLight",
+    "LeftSignal",
+    "None",
+    "Reverse",
+    "RightSignal",
+    "SirenLightOffOnFast",
+    "SirenLightOn",
+    "SirenLightOnOffFast",
+    "TailLight"
+   ]
+  },
+  "modes": {
+   "armour": {
+    "absent": [
+     "Playable_BatmobileJoker_SF"
+    ],
+    "packages": [
+     "Playable_BatmobileFunhouse_SF",
+     "Playable_BatmobileMK2_SF",
+     "Playable_Batmobile_SF"
+    ],
+    "unit": "int, undocumented scale",
+    "value": "0"
+   },
+   "curve_count": 3,
+   "curve_packages_read": 4,
+   "curve_points": [
+    [
+     0.0,
+     60.0
+    ],
+    [
+     600.0,
+     40.0
+    ],
+    [
+     1200.0,
+     30.0
+    ]
+   ],
+   "curve_same": true,
+   "curve_unit": "curve (cm/s -> factor)",
+   "curve_unit_basis": "type",
+   "curves": {
+    "BattleModeVSpeedCurve": {
+     "count": 3,
+     "packages": [
+      "Playable_BatmobileFunhouse_SF",
+      "Playable_BatmobileJoker_SF",
+      "Playable_BatmobileMK2_SF",
+      "Playable_Batmobile_SF"
+     ],
+     "points": [
+      [
+       0.0,
+       60.0
+      ],
+      [
+       600.0,
+       40.0
+      ],
+      [
+       1200.0,
+       30.0
+      ]
+     ],
+     "same": true
+    },
+    "BoostTorqueVSpeedCurve": {
+     "count": 7,
+     "packages": [
+      "Playable_BatmobileFunhouse_SF",
+      "Playable_BatmobileJoker_SF",
+      "Playable_BatmobileMK2_SF",
+      "Playable_Batmobile_SF"
+     ],
+     "points": [
+      [
+       -1500.0,
+       0.0
+      ],
+      [
+       -300.0,
+       200.0
+      ],
+      [
+       0.0,
+       260.0
+      ],
+      [
+       1500.0,
+       260.0
+      ],
+      [
+       2100.0,
+       220.0
+      ],
+      [
+       2800.0,
+       200.0
+      ],
+      [
+       3000.0,
+       150.0
+      ]
+     ],
+     "same": true
+    },
+    "StandardTorqueVSpeedCurve": {
+     "count": 6,
+     "packages": [
+      "Playable_BatmobileFunhouse_SF",
+      "Playable_BatmobileJoker_SF",
+      "Playable_BatmobileMK2_SF",
+      "Playable_Batmobile_SF"
+     ],
+     "points": [
+      [
+       -1500.0,
+       0.0
+      ],
+      [
+       -300.0,
+       200.0
+      ],
+      [
+       0.0,
+       200.0
+      ],
+      [
+       750.0,
+       170.0
+      ],
+      [
+       1600.0,
+       150.0
+      ],
+      [
+       2100.0,
+       105.0
+      ]
+     ],
+     "same": true
+    }
+   },
+   "declared": 107,
+   "differing": [
+    "TransformationReverseDirectionIntoPursuitModeSound",
+    "TransformationReverseDirectionIntoBattleModeSound",
+    "BattleModePrimaryWeapon",
+    "ImpactRoadAssistSceneryDuration",
+    "ImpactRoadAssistEnemyDuration",
+    "BattleDodgeImpulse",
+    "ArmourModeDamageReduction",
+    "BattleModeImpactMaxDamagePow",
+    "KillFlipTorque",
+    "KillFlipTorqueDuration",
+    "PMDodgeTorque",
+    "PMDodgeForce",
+    "PMDodgeDuration",
+    "StayUprightConstraintSetup",
+    "StayUprightConstraintInstance"
+   ],
+   "drive": {
+    "BattleModeDriveForceFactor": "500",
+    "BattleModeDrivingForceZOffset": "20",
+    "BattleModeLatSlipScale": "0.75",
+    "BattleModeLongSlipScale": "1.25",
+    "BattleModeSteerAngleFactor": "1",
+    "BattleModeThrottleSpeed": "10",
+    "BattleModeTrailingSteerFactorMoving": "-0.25"
+   },
+   "not_serialised": 61,
+   "packages": [
+    "{'package': 'Playable_Batmobile_SF', 'short': 'V2'}",
+    "{'package': 'Playable_BatmobileMK2_SF', 'short': 'MK2'}",
+    "{'package': 'Playable_BatmobileJoker_SF', 'short': 'Joker'}",
+    "{'package': 'Playable_BatmobileFunhouse_SF', 'short': 'Funhouse'}"
+   ],
+   "pivot": {
+    "BattleModeTurnOnSpotTorqueFactor": "0.333333",
+    "TurnOnSpotFrontTorqueFactor": "0.8",
+    "TurnOnSpotModeEngineBrakingFactor": "2",
+    "TurnOnSpotRearTorqueFactor": "-0.8"
+   },
+   "same_in_all_four": 31,
+   "serialised": 46,
+   "sounds": {
+    "TransformationReverseDirectionIntoBattleModeSound": "V2 47, MK2 45, Joker 176, Funhouse 45",
+    "TransformationReverseDirectionIntoPursuitModeSound": "V2 62, MK2 60, Joker 191, Funhouse 60"
+   },
+   "torque": {
+    "BoostTorqueVSpeedCurve": {
+     "count": 7,
+     "packages": [
+      "Playable_BatmobileFunhouse_SF",
+      "Playable_BatmobileJoker_SF",
+      "Playable_BatmobileMK2_SF",
+      "Playable_Batmobile_SF"
+     ],
+     "points": [
+      [
+       -1500.0,
+       0.0
+      ],
+      [
+       -300.0,
+       200.0
+      ],
+      [
+       0.0,
+       260.0
+      ],
+      [
+       1500.0,
+       260.0
+      ],
+      [
+       2100.0,
+       220.0
+      ],
+      [
+       2800.0,
+       200.0
+      ],
+      [
+       3000.0,
+       150.0
+      ]
+     ],
+     "same": true
+    },
+    "StandardTorqueVSpeedCurve": {
+     "count": 6,
+     "packages": [
+      "Playable_BatmobileFunhouse_SF",
+      "Playable_BatmobileJoker_SF",
+      "Playable_BatmobileMK2_SF",
+      "Playable_Batmobile_SF"
+     ],
+     "points": [
+      [
+       -1500.0,
+       0.0
+      ],
+      [
+       -300.0,
+       200.0
+      ],
+      [
+       0.0,
+       200.0
+      ],
+      [
+       750.0,
+       170.0
+      ],
+      [
+       1600.0,
+       150.0
+      ],
+      [
+       2100.0,
+       105.0
+      ]
+     ],
+     "same": true
+    }
+   },
+   "transform": {
+    "TransformationAnimNode": "not serialised",
+    "TransformationTurnDecelTorqueFactor": "24000",
+    "TransformationTurnTorqueFactor": "3000"
+   },
+   "transform_anim_packages": 0,
+   "turning_cms": 600.0,
+   "turning_kmh": 21.6,
+   "units": {
+    "ArmourModeDamageReduction": {
+     "basis": "none",
+     "unit": "int, undocumented scale"
+    },
+    "BattleModeCamFOV": {
+     "basis": "conv",
+     "unit": "deg"
+    },
+    "BattleModeDriveForceFactor": {
+     "basis": "engine",
+     "unit": "engine gain"
+    },
+    "BattleModeLatSlipScale": {
+     "basis": "conv",
+     "unit": "factor"
+    },
+    "BattleModeLongSlipScale": {
+     "basis": "conv",
+     "unit": "factor"
+    },
+    "BattleModeVSpeedCurve": {
+     "basis": "type",
+     "unit": "curve (cm/s -> factor)"
+    },
+    "TransformationAnimNode": {
+     "basis": "type",
+     "unit": "object ref"
+    },
+    "TransformationTurnDecelTorqueFactor": {
+     "basis": "engine",
+     "unit": "engine gain"
+    },
+    "TransformationTurnTorqueFactor": {
+     "basis": "engine",
+     "unit": "engine gain"
+    },
+    "TurnOnSpotFrontTorqueFactor": {
+     "basis": "conv",
+     "unit": "factor"
+    },
+    "TurnOnSpotRearTorqueFactor": {
+     "basis": "conv",
+     "unit": "factor"
+    },
+    "TurningModeMaxSpeed": {
+     "basis": "conv",
+     "unit": "cm/s"
+    }
+   }
+  },
+  "nitro": {
+   "boost_blend_time": 0.200000003,
+   "extra_top_speed": 40,
+   "grip_multiplier": 2,
+   "push_force": 15000,
+   "torque_multiplier": 2
+  },
+  "nitro_carriers": 145,
+  "nitro_entities": 232,
+  "tankturn": {
+   "candidates": 5,
+   "driving_hits": 0,
+   "fleet_types": 52,
+   "pivot_named_omission": true,
+   "tank_only": 0,
+   "tank_types": 25,
+   "unique_values": 262
+  },
+  "tune": {
+   "back_m": 7.0,
+   "fov_hi": 63.0,
+   "fov_lo": 55.0,
+   "readback_expected": 8,
+   "readback_ok": 8,
+   "sha256": "c8a088e537a01c6d684842a9094663225878d0919e6486dab6c13350dcbe75cb",
+   "up_m": 1.2999999523162842
+  }
+ },
+ "generated_by": "t11_modes.py",
+ "rows": [
+  {
+   "battle": "the same boost (no BmAK battle-mode restriction is decoded)",
+   "behaviour": "afterburner",
+   "bmak": "`Batmobile_Booster` gadget: JC3's own nitro is the closest match - the donor's `arcade.nitro_boost` carries torque x2, grip x2, push 15,000, +40 km/h, 0.2 s blend (145 of 232 vehicles)",
+   "cells": [
+    "T-MD1",
+    "MOD-1",
+    "afterburner",
+    "`Batmobile_Booster` gadget: JC3's own nitro is the closest match - the donor's `arcade.nitro_boost` carries torque x2, grip x2, push 15,000, +40 km/h, 0.2 s blend (145 of 232 vehicles)",
+    "`custom_land_global.arcade.nitro_boost` (live since test-091); values T-B2/T-B3",
+    "one nitro, always on tap - the car has no pursuit gate to open it with",
+    "decoded",
+    "Q-2 A9: 0-100 with and without boost, A2 top speed"
+   ],
+   "code": "MOD-1",
+   "compromise": "carried",
+   "confidence": "decoded",
+   "dispo": "next",
+   "hybrid": "one nitro, always on tap - the car has no pursuit gate to open it with",
+   "id": "T-MD1",
+   "jc3": "`custom_land_global.arcade.nitro_boost` (live since test-091); values T-B2/T-B3",
+   "pursuit": "nitro boost, BmAK's afterburner",
+   "verify": "Q-2 A9: 0-100 with and without boost, A2 top speed",
+   "why": "the afterburner is JC3 nitro and already live; the hybrid needs no mode gate because nothing in MODES.json restricts the boost to one mode"
+  },
+  {
+   "battle": "the same (no mode gate: the EMP is not a mode behaviour)",
+   "behaviour": "Immobilizer (EMP missile)",
+   "bmak": "`RBatmobileEMPMissile` `Batmobile_EMP_Missile_Launcher` (3 instances, 63 fields) + `RBatmobileEMP` `Batmobile_EMP_Burst` (3 instances, 36 fields, 12 offsets tagged: `DisableEnemyDuration` @2400, `EMPImpulse` @2512 and `EMPVehicleImpulse` @2528 serialise **no value**, so the duration is UNKNOWN on BmAK's own side too)",
+   "cells": [
+    "T-MD2",
+    "MOD-1",
+    "Immobilizer (EMP missile)",
+    "`RBatmobileEMPMissile` `Batmobile_EMP_Missile_Launcher` (3 instances, 63 fields) + `RBatmobileEMP` `Batmobile_EMP_Burst` (3 instances, 36 fields, 12 offsets tagged: `DisableEnemyDuration` @2400, `EMPImpulse` @2512 and `EMPVehicleImpulse` @2528 serialise **no value**, so the duration is UNKNOWN on BmAK's own side too)",
+    "**closest chain, end to end**: `w618` missile clone for the launcher (T-WP4) -> the entity `CForcePulse` `EMP` on `truck_emp.ftune` (100 player/AI damage in 25 m held at full radius, flags `id:4912FC04` 0 / `id:AE6F7EFF` 1 / `id:CF4F7880` 1, `id:D3DDD766` -> `CMaterialEffectTable emp_flatbed_table`) -> the engine's own `CEMPWeapon` class (`.?AVCEMPWeapon@@`, ships as `w702_emp` id 702 / type 6 / 500 damage / 50 m and `w503_turret_emp` 503 / type 2 / 500 / 750 m) as the disable writer; `is_disabled_by_emp` (exe 0x24EA080) is engine vocabulary with 0 asset bindings",
+    "carried: one car, one EMP - the launcher, the pulse and the disable chain are mode-independent (D-7), so nothing in this row is mode-only. BmAK-exact: no - the disable's writer is B-18's probe build",
+    "decoded",
+    "Q-EMP-1\u20264 (B-18): does the engine's `w702_emp` stall a stock car, does the pulse alone, is a `CEMPWeapon` accepted in a car's slot, and how long the state lasts"
+   ],
+   "code": "MOD-1",
+   "compromise": "carried",
+   "confidence": "decoded",
+   "dispo": "next",
+   "hybrid": "carried: one car, one EMP - the launcher, the pulse and the disable chain are mode-independent (D-7), so nothing in this row is mode-only. BmAK-exact: no - the disable's writer is B-18's probe build",
+   "id": "T-MD2",
+   "jc3": "**closest chain, end to end**: `w618` missile clone for the launcher (T-WP4) -> the entity `CForcePulse` `EMP` on `truck_emp.ftune` (100 player/AI damage in 25 m held at full radius, flags `id:4912FC04` 0 / `id:AE6F7EFF` 1 / `id:CF4F7880` 1, `id:D3DDD766` -> `CMaterialEffectTable emp_flatbed_table`) -> the engine's own `CEMPWeapon` class (`.?AVCEMPWeapon@@`, ships as `w702_emp` id 702 / type 6 / 500 damage / 50 m and `w503_turret_emp` 503 / type 2 / 500 / 750 m) as the disable writer; `is_disabled_by_emp` (exe 0x24EA080) is engine vocabulary with 0 asset bindings",
+   "pursuit": "launcher + `CForcePulse` + the `CEMPWeapon` disable chain",
+   "verify": "Q-EMP-1\u20264 (B-18): does the engine's `w702_emp` stall a stock car, does the pulse alone, is a `CEMPWeapon` accepted in a car's slot, and how long the state lasts",
+   "why": "moved off `blocked`: the effect half is decoded (missile tune + pulse + flags + material table) and the one missing link - the writer of `is_disabled_by_emp` - is BUILD card B-18 with probes Q-EMP-1\u20264 (report `tmp/freebuff/reports/immobiliser-and-emp-trigger.md` \u00a77-\u00a78). The EMP is not mode-dependent, so the hybrid carries it; BmAK-exact: no"
+  },
+  {
+   "battle": "no ram damage",
+   "behaviour": "ram immunity",
+   "bmak": "BmAK ramming never damages the Batmobile (G1-14 damage rules)",
+   "cells": [
+    "T-MD3",
+    "MOD-1",
+    "ram immunity",
+    "BmAK ramming never damages the Batmobile (G1-14 damage rules)",
+    "entity `impact_damage_factor` 0 (T-DM8, `keep`); a declared switch, not a value",
+    "one switch, always on - ramming is mode-independent",
+    "decoded",
+    "Q-3 #1: ram a wall and cars at 40/80 km/h - no health loss"
+   ],
+   "code": "MOD-1",
+   "compromise": "carried",
+   "confidence": "decoded",
+   "dispo": "keep",
+   "hybrid": "one switch, always on - ramming is mode-independent",
+   "id": "T-MD3",
+   "jc3": "entity `impact_damage_factor` 0 (T-DM8, `keep`); a declared switch, not a value",
+   "pursuit": "no ram damage",
+   "verify": "Q-3 #1: ram a wall and cars at 40/80 km/h - no health loss",
+   "why": "the immunity is an entity switch with no mode member, so one car carries it as-is"
+  },
+  {
+   "battle": "`BattleModeVSpeedCurve` would cap it (row T-MD5)",
+   "behaviour": "high speed (standard/boost torque curve)",
+   "bmak": "`StandardTorqueVSpeedCurve` (G1 `objects.jsonl`, 6 points, identical in all 4 packages): -1500 -> 0, -300 -> 200, 0 -> 200, 750 -> 170, 1600 -> 150, 2100 -> 105; `BoostTorqueVSpeedCurve` (7 points, same in all 4): -1500 -> 0, -300 -> 200, 0 -> 260, 1500 -> 260, 2100 -> 220, 2800 -> 200, 3000 -> 150. Both live on `RVehicleSimBatmobile`, not in a `MODES.json` mode family, so G1-21's record does not declare them; x is cm/s by the UE3 convention, y has no documented scale and is carried raw",
+   "cells": [
+    "T-MD4",
+    "MOD-1",
+    "high speed (standard/boost torque curve)",
+    "`StandardTorqueVSpeedCurve` (G1 `objects.jsonl`, 6 points, identical in all 4 packages): -1500 -> 0, -300 -> 200, 0 -> 200, 750 -> 170, 1600 -> 150, 2100 -> 105; `BoostTorqueVSpeedCurve` (7 points, same in all 4): -1500 -> 0, -300 -> 200, 0 -> 260, 1500 -> 260, 2100 -> 220, 2800 -> 200, 3000 -> 150. Both live on `RVehicleSimBatmobile`, not in a `MODES.json` mode family, so G1-21's record does not declare them; x is cm/s by the UE3 convention, y has no documented scale and is carried raw",
+    "T-E1 (rpm band), T-E3 (torque factors), T-A1/T-B2 (top speed, boost)",
+    "one speed profile for both modes",
+    "decoded",
+    "Q-2 A1/A2: 0-100 and top speed with the boost on/off"
+   ],
+   "code": "MOD-1",
+   "compromise": "carried",
+   "confidence": "decoded",
+   "dispo": "keep",
+   "hybrid": "one speed profile for both modes",
+   "id": "T-MD4",
+   "jc3": "T-E1 (rpm band), T-E3 (torque factors), T-A1/T-B2 (top speed, boost)",
+   "pursuit": "the fast profile",
+   "verify": "Q-2 A1/A2: 0-100 and top speed with the boost on/off",
+   "why": "pursuit speed rests on BmAK's own standard/boost torque curve, read from the G1 object stream, and the hybrid has one engine profile for both modes; the battle speed cap is T-MD5's omission"
+  },
+  {
+   "battle": "capped by the curve - at 600 cm/s the curve's out value is 40 (unit undocumented, carried raw)",
+   "behaviour": "top speed curve",
+   "bmak": "`BattleModeVSpeedCurve` `FInterpCurveFloat`, 3 points (x cm/s by convention, y raw: the record's unit is `curve (cm/s -> factor)` on the `type` basis, so no percent/factor scale is established): 0 -> 60, 600 -> 40, 1200 -> 30; identical in all four packages = True",
+   "cells": [
+    "T-MD5",
+    "MOD-2",
+    "top speed curve",
+    "`BattleModeVSpeedCurve` `FInterpCurveFloat`, 3 points (x cm/s by convention, y raw: the record's unit is `curve (cm/s -> factor)` on the `type` basis, so no percent/factor scale is established): 0 -> 60, 600 -> 40, 1200 -> 30; identical in all four packages = True",
+    "no JC3 member scales top speed by a mode: the engine curve is torque-vs-rpm (T-E3), the boost is a separate arcade block (T-B2), and the only second value set is another entity (`arcade.nitro_boost` = multipliers + `extra_top_speed`; `mode-switch-carriers.md` \u00a72.4/\u00a72.5)",
+    "the battle variant's own `arcade`/`CustomLandGlobal` values (one set per entity); the 3 curve points stay raw because no member takes a curve",
+    "decoded",
+    "Q-2 A2: top speed in the delivered car - there is no battle cap to observe"
+   ],
+   "code": "MOD-2",
+   "compromise": "omitted",
+   "confidence": "decoded",
+   "dispo": "blocked",
+   "hybrid": "the battle variant's own `arcade`/`CustomLandGlobal` values (one set per entity); the 3 curve points stay raw because no member takes a curve",
+   "id": "T-MD5",
+   "jc3": "no JC3 member scales top speed by a mode: the engine curve is torque-vs-rpm (T-E3), the boost is a separate arcade block (T-B2), and the only second value set is another entity (`arcade.nitro_boost` = multipliers + `extra_top_speed`; `mode-switch-carriers.md` \u00a72.4/\u00a72.5)",
+   "pursuit": "uncapped (T-A1/T-B2)",
+   "verify": "Q-2 A2: top speed in the delivered car - there is no battle cap to observe",
+   "why": "re-opened by D-2 on 2026-11-06: a hybrid cannot hold a second speed curve, the battle entity can - the row waits on D-2's re-resolution to two variants (B-12) and on the runtime swap that is UNKNOWN (`mode-switch-carriers.md` \u00a77 U1)"
+  },
+  {
+   "battle": "21.6 km/h",
+   "behaviour": "low top speed (turning-mode cap)",
+   "bmak": "`TurningModeMaxSpeed` 600 cm/s = **21.6 km/h**, with `BattleModeThrottleSpeed` 10 (unit undocumented, carried raw)",
+   "cells": [
+    "T-MD6",
+    "MOD-2",
+    "low top speed (turning-mode cap)",
+    "`TurningModeMaxSpeed` 600 cm/s = **21.6 km/h**, with `BattleModeThrottleSpeed` 10 (unit undocumented, carried raw)",
+    "no turning-mode cap exists in the fleet vocabulary (no member, `VOCABULARY.md`); the nearest speed members are `vehicle_misc.official_top_speed` (T-E5), `arcade.nitro_boost.extra_top_speed` (T-B2) and `land_aerodynamics.top_speed_drag_coefficient` (T-A3), none of them a cap",
+    "the battle variant holds its own speed values, so 21.6 km/h is a per-entity constant - **which** member caps speed is UNKNOWN: `mode-switch-carriers.md` \u00a76 reads `LandGlobal`, \u00a72.7 finds no cap member",
+    "derived",
+    "Q-2 A2: the car is not speed-limited in the delivered build"
+   ],
+   "code": "MOD-2",
+   "compromise": "omitted",
+   "confidence": "derived",
+   "dispo": "blocked",
+   "hybrid": "the battle variant holds its own speed values, so 21.6 km/h is a per-entity constant - **which** member caps speed is UNKNOWN: `mode-switch-carriers.md` \u00a76 reads `LandGlobal`, \u00a72.7 finds no cap member",
+   "id": "T-MD6",
+   "jc3": "no turning-mode cap exists in the fleet vocabulary (no member, `VOCABULARY.md`); the nearest speed members are `vehicle_misc.official_top_speed` (T-E5), `arcade.nitro_boost.extra_top_speed` (T-B2) and `land_aerodynamics.top_speed_drag_coefficient` (T-A3), none of them a cap",
+   "pursuit": "no cap",
+   "verify": "Q-2 A2: the car is not speed-limited in the delivered build",
+   "why": "the cap needs a second value set and a variant supplies one, but no decoded member is a speed cap - the row waits on D-2 and on B-12's read of the battle copy's modules"
+  },
+  {
+   "battle": "the same values x the battle factors above",
+   "behaviour": "steering and drive factors",
+   "bmak": "`BattleModeDriveForceFactor` 500, `BattleModeLatSlipScale` 0.75, `BattleModeLongSlipScale` 1.25, `BattleModeSteerAngleFactor` 1, `BattleModeTrailingSteerFactorMoving` -0.25, `BattleModeDrivingForceZOffset` 20 cm",
+   "cells": [
+    "T-MD7",
+    "MOD-2",
+    "steering and drive factors",
+    "`BattleModeDriveForceFactor` 500, `BattleModeLatSlipScale` 0.75, `BattleModeLongSlipScale` 1.25, `BattleModeSteerAngleFactor` 1, `BattleModeTrailingSteerFactorMoving` -0.25, `BattleModeDrivingForceZOffset` 20 cm",
+    "none of these is a mode member in JC3: the single-car equivalents are T-M1 (`rigid_body.mass`), T-S1 (suspension), T-E3 (torque factors) and the steering rows (T-ST1 `land_steering.*`); none is mode-keyed",
+    "the battle variant's own `land_steering` + torque set: `BattleModeSteerAngleFactor` 1 leaves the steering angle unchanged and four factors land on existing members; the two slip scales (0.75 / 1.25) have no decoded member (partial)",
+    "decoded",
+    "Q-2 A3/A4: the car corners and steers as the single set predicts"
+   ],
+   "code": "MOD-2",
+   "compromise": "omitted",
+   "confidence": "decoded",
+   "dispo": "blocked",
+   "hybrid": "the battle variant's own `land_steering` + torque set: `BattleModeSteerAngleFactor` 1 leaves the steering angle unchanged and four factors land on existing members; the two slip scales (0.75 / 1.25) have no decoded member (partial)",
+   "id": "T-MD7",
+   "jc3": "none of these is a mode member in JC3: the single-car equivalents are T-M1 (`rigid_body.mass`), T-S1 (suspension), T-E3 (torque factors) and the steering rows (T-ST1 `land_steering.*`); none is mode-keyed",
+   "pursuit": "T-E3/T-ST1 values",
+   "verify": "Q-2 A3/A4: the car corners and steers as the single set predicts",
+   "why": "four of the six factors land on the battle entity's own handling modules; the two slip scales have no member on either side, so the variant carries a partial set - the row waits on D-2 and on the runtime swap"
+  },
+  {
+   "battle": "pivot on the spot",
+   "behaviour": "turn on the spot",
+   "bmak": "`TurnOnSpotFrontTorqueFactor` 0.8, `TurnOnSpotRearTorqueFactor` -0.8, `TurnOnSpotModeEngineBrakingFactor` 2, `BattleModeTurnOnSpotTorqueFactor` 0.333333",
+   "cells": [
+    "T-MD8",
+    "MOD-2",
+    "turn on the spot",
+    "`TurnOnSpotFrontTorqueFactor` 0.8, `TurnOnSpotRearTorqueFactor` -0.8, `TurnOnSpotModeEngineBrakingFactor` 2, `BattleModeTurnOnSpotTorqueFactor` 0.333333",
+    "none - G2-21: 5 candidates refuted, 52 module types (25 on the tanks, 0 tank-only), 262 tank-unique values with 0 in a driving module; the pivot is native code keyed to the vehicle",
+    "no pivot in either variant: G2-21 refuted the candidates and found 0 tank-only driving members, and a second entity does not create one",
+    "decoded",
+    "Q-1 #4: no pivot on a stationary car (expected absence)"
+   ],
+   "code": "MOD-2",
+   "compromise": "omitted",
+   "confidence": "decoded",
+   "dispo": "blocked",
+   "hybrid": "no pivot in either variant: G2-21 refuted the candidates and found 0 tank-only driving members, and a second entity does not create one",
+   "id": "T-MD8",
+   "jc3": "none - G2-21: 5 candidates refuted, 52 module types (25 on the tanks, 0 tank-only), 262 tank-unique values with 0 in a driving module; the pivot is native code keyed to the vehicle",
+   "pursuit": "none",
+   "verify": "Q-1 #4: no pivot on a stationary car (expected absence)",
+   "why": "G2-21 proved the requirement has no data carrier and a second variant does not change that, so the pivot stays a named omission in both variants and the row waits on a native mechanism"
+  },
+  {
+   "battle": "the same weapons",
+   "behaviour": "turret weapons",
+   "bmak": "turret and cannon parts with the 11 BmAK weapon classes (G1-08)",
+   "cells": [
+    "T-MD9",
+    "MOD-2",
+    "turret weapons",
+    "turret and cannon parts with the 11 BmAK weapon classes (G1-08)",
+    "T-12's turret/cannon part angles carry the aim; T-11's clones carry the weapons - D-7 resolved that every weapon is available in both modes",
+    "carried: all weapons on the one car, no mode gate",
+    "decoded",
+    "Q-1 #4/#5: turret follows the camera; each weapon fires from its muzzle"
+   ],
+   "code": "MOD-2",
+   "compromise": "carried",
+   "confidence": "decoded",
+   "dispo": "next",
+   "hybrid": "carried: all weapons on the one car, no mode gate",
+   "id": "T-MD9",
+   "jc3": "T-12's turret/cannon part angles carry the aim; T-11's clones carry the weapons - D-7 resolved that every weapon is available in both modes",
+   "pursuit": "weapons available (D-7)",
+   "verify": "Q-1 #4/#5: turret follows the camera; each weapon fires from its muzzle",
+   "why": "D-7 removed the per-mode weapon split, so the battle half needs no second row: the weapons are T-11's and the turret is T-12's"
+  },
+  {
+   "battle": "no reduction (0 in the files)",
+   "behaviour": "armour reduction",
+   "bmak": "`ArmourModeDamageReduction` = **0** (int, undocumented scale), identical on the three packages that serialise it (Funhouse, MK2, V2)",
+   "cells": [
+    "T-MD10",
+    "MOD-2",
+    "armour reduction",
+    "`ArmourModeDamageReduction` = **0** (int, undocumented scale), identical on the three packages that serialise it (Funhouse, MK2, V2)",
+    "`VehicleDamage` channels + the private health module (T-14); no mode member",
+    "carried: the shipped value is 0, so there is no reduction to carry",
+    "decoded",
+    "Q-3 #2: hits-to-kill matches T-14's single profile"
+   ],
+   "code": "MOD-2",
+   "compromise": "carried",
+   "confidence": "decoded",
+   "dispo": "keep",
+   "hybrid": "carried: the shipped value is 0, so there is no reduction to carry",
+   "id": "T-MD10",
+   "jc3": "`VehicleDamage` channels + the private health module (T-14); no mode member",
+   "pursuit": "no reduction",
+   "verify": "Q-3 #2: hits-to-kill matches T-14's single profile",
+   "why": "the requirement assumes armour drops in battle mode, but every shipped archetype stores 0, so the hybrid's one armour profile is already the BmAK value"
+  },
+  {
+   "battle": "FOV 60 + the battle config",
+   "behaviour": "battle camera",
+   "bmak": "`BattleModeCamFOV` 60, `BattleModeWinchCamFOV` 60, `AntiPersonelBattleModeCamFOV` 40; `BattleModeCamConfig` 24 fields (`MinFreeCameraDistance`/`MaxFreeCameraDistance` 1000/1000 cm, read by name)",
+   "cells": [
+    "T-MD11",
+    "MOD-2",
+    "battle camera",
+    "`BattleModeCamFOV` 60, `BattleModeWinchCamFOV` 60, `AntiPersonelBattleModeCamFOV` 40; `BattleModeCamConfig` 24 fields (`MinFreeCameraDistance`/`MaxFreeCameraDistance` 1000/1000 cm, read by name)",
+    "one per-entity `.ctune` (CAM-1, test-091: 7.00 m back, 1.30 m up, FOV 55-63 as re-read from the written file); the spring/distance fields have no unit bridge (T-CAM9 blocked), the FOV does",
+    "inside band: FOV 60 lies in the tune's 55-63, so no value changes and only the mode switch is missing",
+    "derived",
+    "Q-2 A15: the chase camera matches the decoded composition; no battle framing appears"
+   ],
+   "code": "MOD-2",
+   "compromise": "inside band",
+   "confidence": "derived",
+   "dispo": "keep",
+   "hybrid": "inside band: FOV 60 lies in the tune's 55-63, so no value changes and only the mode switch is missing",
+   "id": "T-MD11",
+   "jc3": "one per-entity `.ctune` (CAM-1, test-091: 7.00 m back, 1.30 m up, FOV 55-63 as re-read from the written file); the spring/distance fields have no unit bridge (T-CAM9 blocked), the FOV does",
+   "pursuit": "the drive tune",
+   "verify": "Q-2 A15: the chase camera matches the decoded composition; no battle framing appears",
+   "why": "T-CAM10 named a second `.ctune` per variant as the carrier and a hybrid has one tune; the battle FOV falls inside the band the tune already spans"
+  },
+  {
+   "battle": "the battle lamps lit",
+   "behaviour": "battle lights",
+   "bmak": "4 `VEHLT_BattleModeLight` entries (T-L17-T-L20): spotlight, two heads, one wheel arch",
+   "cells": [
+    "T-MD12",
+    "MOD-2",
+    "battle lights",
+    "4 `VEHLT_BattleModeLight` entries (T-L17-T-L20): spotlight, two heads, one wheel arch",
+    "the fleet's light vocabulary is 9 behaviours (HeadLight, LeftSignal, None, Reverse, RightSignal, SirenLightOffOnFast, SirenLightOn, SirenLightOnOffFast, TailLight) with 0 battle value, so T-18 maps the battle lamps onto `HeadLight`: T-L17, T-L18, T-L19, T-L20",
+    "carried as headlights: the battle lamps come on with the lights, not on a mode",
+    "decoded",
+    "Q-1 #7: the battle heads/arch glow with the lights on (and cannot be triggered alone)"
+   ],
+   "code": "MOD-2",
+   "compromise": "carried",
+   "confidence": "decoded",
+   "dispo": "next",
+   "hybrid": "carried as headlights: the battle lamps come on with the lights, not on a mode",
+   "id": "T-MD12",
+   "jc3": "the fleet's light vocabulary is 9 behaviours (HeadLight, LeftSignal, None, Reverse, RightSignal, SirenLightOffOnFast, SirenLightOn, SirenLightOnOffFast, TailLight) with 0 battle value, so T-18 maps the battle lamps onto `HeadLight`: T-L17, T-L18, T-L19, T-L20",
+   "pursuit": "the drive lights",
+   "verify": "Q-1 #7: the battle heads/arch glow with the lights on (and cannot be triggered alone)",
+   "why": "the battle light type maps onto JC3's `HeadLight` behaviour because no battle behaviour exists in the fleet's nine; that is the compromise recorded here"
+  },
+  {
+   "battle": "the battle pose (T-12 angles)",
+   "behaviour": "transformation stance",
+   "bmak": "`TransformationTurnTorqueFactor` 3000, `TransformationTurnDecelTorqueFactor` 24000, `TransformationAnimNode` not serialised",
+   "cells": [
+    "T-MD13",
+    "MOD-2",
+    "transformation stance",
+    "`TransformationTurnTorqueFactor` 3000, `TransformationTurnDecelTorqueFactor` 24000, `TransformationAnimNode` not serialised",
+    "the static pose is T-12's part angles (turret, cannon, fins, hatches), and a JC3 pose is set by the hinged-part table (`all_hinged_part_properties` -> a `*_T` driving variable, `mode-switch-carriers.md` \u00a72.1); no JC3 anim node drives a transformation (0 `TransformationAnimNode` values in the files)",
+    "the battle variant's parts hold the deployed pose as part angles; the animated transition stays UNKNOWN (`TransformationAnimNode` has no analogue)",
+    "decoded",
+    "Q-1 #4: no transformation animation when the weapons come out"
+   ],
+   "code": "MOD-2",
+   "compromise": "omitted",
+   "confidence": "decoded",
+   "dispo": "blocked",
+   "hybrid": "the battle variant's parts hold the deployed pose as part angles; the animated transition stays UNKNOWN (`TransformationAnimNode` has no analogue)",
+   "id": "T-MD13",
+   "jc3": "the static pose is T-12's part angles (turret, cannon, fins, hatches), and a JC3 pose is set by the hinged-part table (`all_hinged_part_properties` -> a `*_T` driving variable, `mode-switch-carriers.md` \u00a72.1); no JC3 anim node drives a transformation (0 `TransformationAnimNode` values in the files)",
+   "pursuit": "parts parked",
+   "verify": "Q-1 #4: no transformation animation when the weapons come out",
+   "why": "re-opened by D-2 on 2026-11-06: the pose is a per-entity constant the battle variant can hold, the animation is not - the row waits on D-2 and on B-12"
+  },
+  {
+   "battle": "`Play_BattleMode_In/Out*` 30 events / 75 WEMs",
+   "behaviour": "battle audio",
+   "bmak": "`TransformationReverseDirectionIntoPursuitModeSound` V2 62, MK2 60, Joker 191, Funhouse 60 and `TransformationReverseDirectionIntoBattleModeSound` V2 47, MK2 45, Joker 176, Funhouse 45 (`AkEvent` refs; they differ per package, so every value is printed)",
+   "cells": [
+    "T-MD14",
+    "MOD-2",
+    "battle audio",
+    "`TransformationReverseDirectionIntoPursuitModeSound` V2 62, MK2 60, Joker 191, Funhouse 60 and `TransformationReverseDirectionIntoBattleModeSound` V2 47, MK2 45, Joker 176, Funhouse 45 (`AkEvent` refs; they differ per package, so every value is printed)",
+    "T-16 row W-08 is `blocked`: the donor's usage names hold no mode/battle/transform usage, and its only performance-state usage is `EngineNitro` (4197885156, 18 vehicles, 307 objects) - `battle-audio-switch-event.md` \u00a72/\u00a74",
+    "the battle variant can carry its own graph + usage and the `BML_Battlemode` set (7 events / 24 media) with `BML_Batmobile`'s 32 battle events; the entry/exit sting still needs a transition, not a variant",
+    "decoded",
+    "Q-1 #8: no transformation sound when the car changes mode (there is no change)"
+   ],
+   "code": "MOD-2",
+   "compromise": "omitted",
+   "confidence": "decoded",
+   "dispo": "blocked",
+   "hybrid": "the battle variant can carry its own graph + usage and the `BML_Battlemode` set (7 events / 24 media) with `BML_Batmobile`'s 32 battle events; the entry/exit sting still needs a transition, not a variant",
+   "id": "T-MD14",
+   "jc3": "T-16 row W-08 is `blocked`: the donor's usage names hold no mode/battle/transform usage, and its only performance-state usage is `EngineNitro` (4197885156, 18 vehicles, 307 objects) - `battle-audio-switch-event.md` \u00a72/\u00a74",
+   "pursuit": "engine/drive audio (T-16's slots)",
+   "verify": "Q-1 #8: no transformation sound when the car changes mode (there is no change)",
+   "why": "D-2's reopening gives T-16's 30 battle events a second entity to live on, but a new `Usage` hash still needs a consumer (U1) and swapping entities is not an audio transition, so the row stays blocked"
+  },
+  {
+   "battle": "the same car",
+   "behaviour": "the hybrid itself (D-2)",
+   "bmak": "BmAK ships one car that transforms between pursuit and battle in place",
+   "cells": [
+    "T-MD15",
+    "MOD-2",
+    "the hybrid itself (D-2)",
+    "BmAK ships one car that transforms between pursuit and battle in place",
+    "one entity, one Rebel Drop entry today (`B-12` is `todo: D-2 reopened`, `B-13` ships a single item); the mode was the car's identity under D-2's 2026-10-28 answer, which is withdrawn",
+    "carried: the hybrid is the decision, and every row above is its consequence",
+    "decoded",
+    "Q-1 #1: one drop entry, one car"
+   ],
+   "code": "MOD-2",
+   "compromise": "carried",
+   "confidence": "decoded",
+   "dispo": "next",
+   "hybrid": "carried: the hybrid is the decision, and every row above is its consequence",
+   "id": "T-MD15",
+   "jc3": "one entity, one Rebel Drop entry today (`B-12` is `todo: D-2 reopened`, `B-13` ships a single item); the mode was the car's identity under D-2's 2026-10-28 answer, which is withdrawn",
+   "pursuit": "the same car",
+   "verify": "Q-1 #1: one drop entry, one car",
+   "why": "D-2's 2026-10-28 answer chose a single hybrid entry, so the variant table has one row and the split's values are recorded per row rather than built; D-2 was reopened on 2026-11-06, so whether this row survives is B-12's outcome"
+  }
+ ],
+ "schema": 1,
+ "split": [
+  {
+   "battle": "the same boost (no BmAK battle-mode restriction is decoded)",
+   "behaviour": "afterburner",
+   "code": "MOD-1",
+   "compromise": "carried",
+   "disposition": "next",
+   "hybrid": "one nitro, always on tap - the car has no pursuit gate to open it with",
+   "pursuit": "nitro boost, BmAK's afterburner",
+   "row": "T-MD1"
+  },
+  {
+   "battle": "the same (no mode gate: the EMP is not a mode behaviour)",
+   "behaviour": "Immobilizer (EMP missile)",
+   "code": "MOD-1",
+   "compromise": "carried",
+   "disposition": "next",
+   "hybrid": "carried: one car, one EMP - the launcher, the pulse and the disable chain are mode-independent (D-7), so nothing in this row is mode-only. BmAK-exact: no - the disable's writer is B-18's probe build",
+   "pursuit": "launcher + `CForcePulse` + the `CEMPWeapon` disable chain",
+   "row": "T-MD2"
+  },
+  {
+   "battle": "no ram damage",
+   "behaviour": "ram immunity",
+   "code": "MOD-1",
+   "compromise": "carried",
+   "disposition": "keep",
+   "hybrid": "one switch, always on - ramming is mode-independent",
+   "pursuit": "no ram damage",
+   "row": "T-MD3"
+  },
+  {
+   "battle": "`BattleModeVSpeedCurve` would cap it (row T-MD5)",
+   "behaviour": "high speed (standard/boost torque curve)",
+   "code": "MOD-1",
+   "compromise": "carried",
+   "disposition": "keep",
+   "hybrid": "one speed profile for both modes",
+   "pursuit": "the fast profile",
+   "row": "T-MD4"
+  },
+  {
+   "battle": "capped by the curve - at 600 cm/s the curve's out value is 40 (unit undocumented, carried raw)",
+   "behaviour": "top speed curve",
+   "code": "MOD-2",
+   "compromise": "omitted",
+   "disposition": "blocked",
+   "hybrid": "the battle variant's own `arcade`/`CustomLandGlobal` values (one set per entity); the 3 curve points stay raw because no member takes a curve",
+   "pursuit": "uncapped (T-A1/T-B2)",
+   "row": "T-MD5"
+  },
+  {
+   "battle": "21.6 km/h",
+   "behaviour": "low top speed (turning-mode cap)",
+   "code": "MOD-2",
+   "compromise": "omitted",
+   "disposition": "blocked",
+   "hybrid": "the battle variant holds its own speed values, so 21.6 km/h is a per-entity constant - **which** member caps speed is UNKNOWN: `mode-switch-carriers.md` \u00a76 reads `LandGlobal`, \u00a72.7 finds no cap member",
+   "pursuit": "no cap",
+   "row": "T-MD6"
+  },
+  {
+   "battle": "the same values x the battle factors above",
+   "behaviour": "steering and drive factors",
+   "code": "MOD-2",
+   "compromise": "omitted",
+   "disposition": "blocked",
+   "hybrid": "the battle variant's own `land_steering` + torque set: `BattleModeSteerAngleFactor` 1 leaves the steering angle unchanged and four factors land on existing members; the two slip scales (0.75 / 1.25) have no decoded member (partial)",
+   "pursuit": "T-E3/T-ST1 values",
+   "row": "T-MD7"
+  },
+  {
+   "battle": "pivot on the spot",
+   "behaviour": "turn on the spot",
+   "code": "MOD-2",
+   "compromise": "omitted",
+   "disposition": "blocked",
+   "hybrid": "no pivot in either variant: G2-21 refuted the candidates and found 0 tank-only driving members, and a second entity does not create one",
+   "pursuit": "none",
+   "row": "T-MD8"
+  },
+  {
+   "battle": "the same weapons",
+   "behaviour": "turret weapons",
+   "code": "MOD-2",
+   "compromise": "carried",
+   "disposition": "next",
+   "hybrid": "carried: all weapons on the one car, no mode gate",
+   "pursuit": "weapons available (D-7)",
+   "row": "T-MD9"
+  },
+  {
+   "battle": "no reduction (0 in the files)",
+   "behaviour": "armour reduction",
+   "code": "MOD-2",
+   "compromise": "carried",
+   "disposition": "keep",
+   "hybrid": "carried: the shipped value is 0, so there is no reduction to carry",
+   "pursuit": "no reduction",
+   "row": "T-MD10"
+  },
+  {
+   "battle": "FOV 60 + the battle config",
+   "behaviour": "battle camera",
+   "code": "MOD-2",
+   "compromise": "inside band",
+   "disposition": "keep",
+   "hybrid": "inside band: FOV 60 lies in the tune's 55-63, so no value changes and only the mode switch is missing",
+   "pursuit": "the drive tune",
+   "row": "T-MD11"
+  },
+  {
+   "battle": "the battle lamps lit",
+   "behaviour": "battle lights",
+   "code": "MOD-2",
+   "compromise": "carried",
+   "disposition": "next",
+   "hybrid": "carried as headlights: the battle lamps come on with the lights, not on a mode",
+   "pursuit": "the drive lights",
+   "row": "T-MD12"
+  },
+  {
+   "battle": "the battle pose (T-12 angles)",
+   "behaviour": "transformation stance",
+   "code": "MOD-2",
+   "compromise": "omitted",
+   "disposition": "blocked",
+   "hybrid": "the battle variant's parts hold the deployed pose as part angles; the animated transition stays UNKNOWN (`TransformationAnimNode` has no analogue)",
+   "pursuit": "parts parked",
+   "row": "T-MD13"
+  },
+  {
+   "battle": "`Play_BattleMode_In/Out*` 30 events / 75 WEMs",
+   "behaviour": "battle audio",
+   "code": "MOD-2",
+   "compromise": "omitted",
+   "disposition": "blocked",
+   "hybrid": "the battle variant can carry its own graph + usage and the `BML_Battlemode` set (7 events / 24 media) with `BML_Batmobile`'s 32 battle events; the entry/exit sting still needs a transition, not a variant",
+   "pursuit": "engine/drive audio (T-16's slots)",
+   "row": "T-MD14"
+  },
+  {
+   "battle": "the same car",
+   "behaviour": "the hybrid itself (D-2)",
+   "code": "MOD-2",
+   "compromise": "carried",
+   "disposition": "next",
+   "hybrid": "carried: the hybrid is the decision, and every row above is its consequence",
+   "pursuit": "the same car",
+   "row": "T-MD15"
+  }
+ ],
+ "variants": [
+  {
+   "B-12": "todo: D-2 reopened",
+   "B-13": "ships the single entry",
+   "drop_entries": 1,
+   "entities": 1,
+   "id": "hybrid",
+   "mode_switch": null,
+   "rows": 15
+  }
+ ]
+}

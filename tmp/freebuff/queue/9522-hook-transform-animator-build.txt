@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-transform-animator-build.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/transform-choreography-timeline.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-mode-controller-build.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-moving-parts-animation.md
+Implement the transform animator for the hook: during the roughly 2 s hold-to-battle window it drives the turret rise, the wheel and body reconfiguration and the hatch and flap poses, and runs backwards on release. Spec: Working/Modes/transform_timeline.json (per-bone keys and carriers) and the joint and part indices from the 9172 report on Builds/bm-RC5-parts. Add Tools/hook/src/transform_animator.* that takes the elapsed time from the mode controller built by mod-18 and writes hinge angles or part translations each tick, with ease curves from the key times, and a clamp so a release at any moment reverses smoothly. Anything with no known write function stays a logged stub. Stage Builds/hook-mod-animator/ with a receipt. Done-check: a offline test prints angle values at t=0, 0.5, 1.0, 1.5 and 2.0 s for every bone, matching the timeline file to within 0.01 degrees, and the reverse run returns to the start pose. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

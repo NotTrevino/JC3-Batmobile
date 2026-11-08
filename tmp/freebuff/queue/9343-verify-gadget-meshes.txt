@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-gadget-meshes.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/cockpit-gadget-meshes-parts.md
+Check the gadget mesh build offline, including the booster ring built by 9106. Run --check of Tools/scripts/rc5_gadget_meshes.py. Then, using the silhouette and geometry scripts under Tools/scripts (silhouette_check.py, jc3geom.py), confirm that each part sits within the car bounds, that the booster ring is 18 nozzles on a ring of about 34 cm at z 2.989 m, and that no part collides with the cockpit volume. Confirm each deploy trigger refers to a state that exists in the entity (nitro for the booster; the gadget state names from the 9101 slot map for the rest). Output tmp/freebuff/reports/verify-gadget-meshes.md with a PASS or FAIL for geometry, binding and stand-in flag per part. Done-check: four parts are listed and each stand-in is explicitly labelled. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

@@ -1,0 +1,2637 @@
+{
+ "checks": [
+  {
+   "detail": "42 fields, 15 serialized",
+   "name": "T-BM1: BattleMode*",
+   "pass": true
+  },
+  {
+   "detail": "4 fields, 3 serialized",
+   "name": "T-BM1: TurnOnSpot*",
+   "pass": true
+  },
+  {
+   "detail": "4 fields, 2 serialized",
+   "name": "T-BM1: TransformationTurn*",
+   "pass": true
+  },
+  {
+   "detail": "serialized=True",
+   "name": "T-BM1: TurningModeMaxSpeed",
+   "pass": true
+  },
+  {
+   "detail": "serialized=True",
+   "name": "T-BM1: ArmourModeDamageReduction",
+   "pass": true
+  },
+  {
+   "detail": "serialized=True",
+   "name": "T-AC1: AirControlYawTorqueFactorMax",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "T-AC1: value 8000",
+   "pass": true
+  },
+  {
+   "detail": "10 fields, 5 serialized",
+   "name": "T-RA1: ImpactRoadAssist*",
+   "pass": true
+  },
+  {
+   "detail": "3 fields, 3 serialized",
+   "name": "T-RA1: PMDodge*",
+   "pass": true
+  },
+  {
+   "detail": "serialized=True",
+   "name": "T-RA1: BattleDodgeImpulse",
+   "pass": true
+  },
+  {
+   "detail": "serialized=True",
+   "name": "T-RA1: VehicleShovingTorque",
+   "pass": true
+  },
+  {
+   "detail": "2 fields, 2 serialized",
+   "name": "T-RA1: KillFlip*",
+   "pass": true
+  },
+  {
+   "detail": "2 fields, 2 serialized",
+   "name": "T-RA1: KillKeepyUp*",
+   "pass": true
+  },
+  {
+   "detail": "6 fields, 3 serialized",
+   "name": "T-RA1: ImpactShake*",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "T-RA1: value 90000",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "T-RA1: value 30000",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "T-RA1: value 2000",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "T-RA1: value 10000",
+   "pass": true
+  },
+  {
+   "detail": "serialized=True",
+   "name": "T-SR1: JumpRampRightingTorque",
+   "pass": true
+  },
+  {
+   "detail": "serialized=True",
+   "name": "T-SR1: JumpNoRampRightingTorque",
+   "pass": true
+  },
+  {
+   "detail": "serialized=True",
+   "name": "T-SR1: StayUprightConstraintSetup",
+   "pass": true
+  },
+  {
+   "detail": "serialized=True",
+   "name": "T-SR1: StayUprightConstraintInstance",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "T-SR1: value 2000",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "T-SR1: value 2000",
+   "pass": true
+  },
+  {
+   "detail": "44/44 named fields agree",
+   "name": "GRB-11 cross-check",
+   "pass": true
+  },
+  {
+   "detail": "5 undocumented",
+   "name": "units assigned",
+   "pass": true
+  }
+ ],
+ "families": [
+  "BattleMode",
+  "TurnOnSpot",
+  "Strafe",
+  "Transformation",
+  "TurningModeMaxSpeed",
+  "ArmourModeDamageReduction",
+  "AirControl",
+  "JumpRamp",
+  "JumpNoRamp",
+  "KillFlip",
+  "KillKeepyUp",
+  "PMDodge",
+  "BattleDodgeImpulse",
+  "StayUpright",
+  "VehicleShovingTorque",
+  "ImpactRoadAssist",
+  "ImpactShake"
+ ],
+ "fields": [
+  {
+   "declared_type": "float",
+   "declaring_class": "Pawn",
+   "family": "AirControl",
+   "field": "AirControl",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 1096,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "engine base class",
+   "serialized": false,
+   "struct": null,
+   "unit": "engine value",
+   "unit_basis": "none",
+   "values": {}
+  },
+  {
+   "declared_type": "FFreeCameraConfig",
+   "declaring_class": "R3rdPersonCamera",
+   "family": "BattleMode",
+   "field": "BattleModeCamConfig",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 15860,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "camera",
+   "serialized": false,
+   "struct": null,
+   "unit": "struct",
+   "unit_basis": "type",
+   "values": {}
+  },
+  {
+   "declared_type": "FFreeCameraConfig",
+   "declaring_class": "R3rdPersonCamera",
+   "family": "BattleMode",
+   "field": "BattleModeWinchCamConfig",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 16028,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "camera",
+   "serialized": false,
+   "struct": null,
+   "unit": "struct",
+   "unit_basis": "type",
+   "values": {}
+  },
+  {
+   "declared_type": "FFreeCameraConfig",
+   "declaring_class": "R3rdPersonCamera",
+   "family": "BattleMode",
+   "field": "BattleModeAbseilingCamConfig",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 16196,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "camera",
+   "serialized": false,
+   "struct": null,
+   "unit": "struct",
+   "unit_basis": "type",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "R3rdPersonCamera",
+   "family": "BattleMode",
+   "field": "BattleModeCamFOV",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 20432,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "camera",
+   "serialized": false,
+   "struct": null,
+   "unit": "deg",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "R3rdPersonCamera",
+   "family": "BattleMode",
+   "field": "BattleModeWinchCamFOV",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 20436,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "camera",
+   "serialized": false,
+   "struct": null,
+   "unit": "deg",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "Vector3",
+   "declaring_class": "R3rdPersonCamera",
+   "family": "BattleMode",
+   "field": "BattleModeHeadOffset",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 20444,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "camera",
+   "serialized": false,
+   "struct": null,
+   "unit": "cm (vector)",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "Vector3",
+   "declaring_class": "R3rdPersonCamera",
+   "family": "BattleMode",
+   "field": "BattleModeWinchHeadOffset",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 20472,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "camera",
+   "serialized": false,
+   "struct": null,
+   "unit": "cm (vector)",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "Rotator",
+   "declaring_class": "R3rdPersonCamera",
+   "family": "BattleMode",
+   "field": "BattleModeAbseilingExtraCameraRot",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 20532,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "camera",
+   "serialized": false,
+   "struct": null,
+   "unit": "deg (rotator)",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "Strafe",
+   "field": "StrafeCooldown",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 4580,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": false,
+   "struct": null,
+   "unit": "s",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "Vector3",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "Strafe",
+   "field": "StrafeRight",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 4588,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": false,
+   "struct": null,
+   "unit": "cm (vector)",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "Strafe",
+   "field": "StrafeForce",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 4600,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": false,
+   "struct": null,
+   "unit": "engine force",
+   "unit_basis": "engine",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "Strafe",
+   "field": "StrafeTorque",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 4604,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": false,
+   "struct": null,
+   "unit": "engine torque",
+   "unit_basis": "engine",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "Strafe",
+   "field": "StrafeDuration",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 4608,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": false,
+   "struct": null,
+   "unit": "s",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "Strafe",
+   "field": "StrafeTime",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 4612,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": false,
+   "struct": null,
+   "unit": "s",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "Strafe",
+   "field": "StrafeFwdCorrectionForce",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 4616,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": false,
+   "struct": null,
+   "unit": "engine force",
+   "unit_basis": "engine",
+   "values": {}
+  },
+  {
+   "declared_type": "AkEvent",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "Transformation",
+   "field": "TransformationReverseDirectionIntoPursuitModeSound",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 4828,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": true,
+   "struct": null,
+   "unit": "AkEvent ref",
+   "unit_basis": "type",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 60,
+    "Playable_BatmobileJoker_SF": 191,
+    "Playable_BatmobileMK2_SF": 60,
+    "Playable_Batmobile_SF": 62
+   }
+  },
+  {
+   "declared_type": "AkEvent",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "Transformation",
+   "field": "TransformationReverseDirectionIntoBattleModeSound",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 4836,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": true,
+   "struct": null,
+   "unit": "AkEvent ref",
+   "unit_basis": "type",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 45,
+    "Playable_BatmobileJoker_SF": 176,
+    "Playable_BatmobileMK2_SF": 45,
+    "Playable_Batmobile_SF": 47
+   }
+  },
+  {
+   "declared_type": "RVehicleWeapon",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "BattleMode",
+   "field": "BattleModePrimaryWeapon",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 5244,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": true,
+   "struct": null,
+   "unit": "object ref",
+   "unit_basis": "type",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 5205,
+    "Playable_BatmobileJoker_SF": 3127,
+    "Playable_BatmobileMK2_SF": 5166,
+    "Playable_Batmobile_SF": 5115
+   }
+  },
+  {
+   "declared_type": "AnimNodeSequence",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "Transformation",
+   "field": "TransformationAnimNode",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 5268,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": false,
+   "struct": null,
+   "unit": "object ref",
+   "unit_basis": "type",
+   "values": {}
+  },
+  {
+   "declared_type": "RVehicle",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "Strafe",
+   "field": "StrafeTarget",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 5348,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": false,
+   "struct": null,
+   "unit": "object ref",
+   "unit_basis": "type",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "ImpactRoadAssist",
+   "field": "ImpactRoadAssistTimer",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 5976,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": false,
+   "struct": null,
+   "unit": "s",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "ImpactRoadAssist",
+   "field": "ImpactRoadAssistSceneryDuration",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 5980,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": true,
+   "struct": null,
+   "unit": "s",
+   "unit_basis": "conv",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 0.0,
+    "Playable_BatmobileJoker_SF": 0.33000001311302185,
+    "Playable_BatmobileMK2_SF": 0.0,
+    "Playable_Batmobile_SF": 0.0
+   }
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "ImpactRoadAssist",
+   "field": "ImpactRoadAssistEnemyDuration",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 5984,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": true,
+   "struct": null,
+   "unit": "s",
+   "unit_basis": "conv",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 0.3330000042915344,
+    "Playable_BatmobileJoker_SF": 0.75,
+    "Playable_BatmobileMK2_SF": 0.3330000042915344,
+    "Playable_Batmobile_SF": 0.3330000042915344
+   }
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "ImpactRoadAssist",
+   "field": "ImpactRoadAssistFactor",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 5988,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": true,
+   "scope": "vehicle",
+   "serialized": true,
+   "struct": null,
+   "unit": "engine gain",
+   "unit_basis": "engine",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 90000.0,
+    "Playable_BatmobileJoker_SF": 90000.0,
+    "Playable_BatmobileMK2_SF": 90000.0,
+    "Playable_Batmobile_SF": 90000.0
+   }
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "ImpactRoadAssist",
+   "field": "ImpactRoadAssistMaxTorque",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 5992,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": true,
+   "scope": "vehicle",
+   "serialized": true,
+   "struct": null,
+   "unit": "engine torque",
+   "unit_basis": "engine",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 30000.0,
+    "Playable_BatmobileJoker_SF": 30000.0,
+    "Playable_BatmobileMK2_SF": 30000.0,
+    "Playable_Batmobile_SF": 30000.0
+   }
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "ImpactRoadAssist",
+   "field": "ImpactRoadAssistMaxAngle",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 5996,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": false,
+   "struct": null,
+   "unit": "deg",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "ImpactRoadAssist",
+   "field": "ImpactRoadAssistAngVelocityTime",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 6000,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": false,
+   "struct": null,
+   "unit": "s",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "ImpactRoadAssist",
+   "field": "ImpactRoadAssistSteeringFactor",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 6004,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": false,
+   "struct": null,
+   "unit": "factor",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "ImpactRoadAssist",
+   "field": "ImpactRoadAssistLookAheadTime",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 6008,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": false,
+   "struct": null,
+   "unit": "s",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "ImpactRoadAssist",
+   "field": "ImpactRoadAssistAngleStrength",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 6012,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": true,
+   "scope": "vehicle",
+   "serialized": true,
+   "struct": null,
+   "unit": "engine gain",
+   "unit_basis": "engine",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 2000.0,
+    "Playable_BatmobileJoker_SF": 2000.0,
+    "Playable_BatmobileMK2_SF": 2000.0,
+    "Playable_Batmobile_SF": 2000.0
+   }
+  },
+  {
+   "declared_type": "int",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "BattleMode",
+   "field": "BattleModeYawOffset",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 6416,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": true,
+   "scope": "vehicle",
+   "serialized": true,
+   "struct": null,
+   "unit": "undocumented",
+   "unit_basis": "none",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 0,
+    "Playable_BatmobileJoker_SF": 0,
+    "Playable_BatmobileMK2_SF": 0,
+    "Playable_Batmobile_SF": 0
+   }
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "BattleDodgeImpulse",
+   "field": "BattleDodgeImpulse",
+   "named_by_sdk": true,
+   "occurrences": 3,
+   "offset": 6420,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": true,
+   "struct": null,
+   "unit": "engine impulse",
+   "unit_basis": "engine",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 150000.0,
+    "Playable_BatmobileMK2_SF": 150000.0,
+    "Playable_Batmobile_SF": 150000.0
+   }
+  },
+  {
+   "declared_type": "int",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "ArmourModeDamageReduction",
+   "field": "ArmourModeDamageReduction",
+   "named_by_sdk": true,
+   "occurrences": 3,
+   "offset": 6424,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": true,
+   "struct": null,
+   "unit": "int, undocumented scale",
+   "unit_basis": "none",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 0,
+    "Playable_BatmobileMK2_SF": 0,
+    "Playable_Batmobile_SF": 0
+   }
+  },
+  {
+   "declared_type": "FName",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "BattleMode",
+   "field": "BattleModeTransformationAnimName",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 6460,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": false,
+   "struct": null,
+   "unit": "name",
+   "unit_basis": "type",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "BattleMode",
+   "field": "BattleModeWidth",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 6548,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": false,
+   "struct": null,
+   "unit": "cm",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "BattleMode",
+   "field": "BattleModeLength",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 6552,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": false,
+   "struct": null,
+   "unit": "cm",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "BattleMode",
+   "field": "BattleModeHeight",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 6556,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": false,
+   "struct": null,
+   "unit": "cm",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "JumpRamp",
+   "field": "JumpRampUpwardForce",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 6752,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": false,
+   "struct": null,
+   "unit": "engine force",
+   "unit_basis": "engine",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "JumpRamp",
+   "field": "JumpRampRightingTorque",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 6756,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": true,
+   "scope": "vehicle",
+   "serialized": true,
+   "struct": null,
+   "unit": "engine torque",
+   "unit_basis": "engine",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 2000.0,
+    "Playable_BatmobileJoker_SF": 2000.0,
+    "Playable_BatmobileMK2_SF": 2000.0,
+    "Playable_Batmobile_SF": 2000.0
+   }
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "JumpNoRamp",
+   "field": "JumpNoRampRightingTorque",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 6760,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": true,
+   "scope": "vehicle",
+   "serialized": true,
+   "struct": null,
+   "unit": "engine torque",
+   "unit_basis": "engine",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 2000.0,
+    "Playable_BatmobileJoker_SF": 2000.0,
+    "Playable_BatmobileMK2_SF": 2000.0,
+    "Playable_Batmobile_SF": 2000.0
+   }
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "BattleMode",
+   "field": "BattleModeImpactMaxDamageSpeed",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 6884,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": true,
+   "scope": "vehicle",
+   "serialized": true,
+   "struct": null,
+   "unit": "cm/s",
+   "unit_basis": "conv",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 540.0,
+    "Playable_BatmobileJoker_SF": 540.0,
+    "Playable_BatmobileMK2_SF": 540.0,
+    "Playable_Batmobile_SF": 540.0
+   }
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "BattleMode",
+   "field": "BattleModeImpactMinDamageSpeed",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 6888,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": true,
+   "scope": "vehicle",
+   "serialized": true,
+   "struct": null,
+   "unit": "cm/s",
+   "unit_basis": "conv",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 120.0,
+    "Playable_BatmobileJoker_SF": 120.0,
+    "Playable_BatmobileMK2_SF": 120.0,
+    "Playable_Batmobile_SF": 120.0
+   }
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "BattleMode",
+   "field": "BattleModeImpactMaxDamagePow",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 6892,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": true,
+   "struct": null,
+   "unit": "factor",
+   "unit_basis": "conv",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 0.5,
+    "Playable_BatmobileJoker_SF": 0.6660000085830688,
+    "Playable_BatmobileMK2_SF": 0.5,
+    "Playable_Batmobile_SF": 0.5
+   }
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "KillFlip",
+   "field": "KillFlipTorque",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 7192,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": true,
+   "struct": null,
+   "unit": "engine torque",
+   "unit_basis": "engine",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": -200.0,
+    "Playable_BatmobileJoker_SF": -400.0,
+    "Playable_BatmobileMK2_SF": -200.0,
+    "Playable_Batmobile_SF": -200.0
+   }
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "KillFlip",
+   "field": "KillFlipTorqueDuration",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 7196,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": true,
+   "struct": null,
+   "unit": "s",
+   "unit_basis": "conv",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 0.5,
+    "Playable_BatmobileJoker_SF": 0.75,
+    "Playable_BatmobileMK2_SF": 0.5,
+    "Playable_Batmobile_SF": 0.5
+   }
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "KillKeepyUp",
+   "field": "KillKeepyUpFactor",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 7200,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": true,
+   "scope": "vehicle",
+   "serialized": true,
+   "struct": null,
+   "unit": "factor",
+   "unit_basis": "conv",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 10.0,
+    "Playable_BatmobileJoker_SF": 10.0,
+    "Playable_BatmobileMK2_SF": 10.0,
+    "Playable_Batmobile_SF": 10.0
+   }
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "KillKeepyUp",
+   "field": "KillKeepyUpFactorDuration",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 7204,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": true,
+   "scope": "vehicle",
+   "serialized": true,
+   "struct": null,
+   "unit": "s",
+   "unit_basis": "conv",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 0.75,
+    "Playable_BatmobileJoker_SF": 0.75,
+    "Playable_BatmobileMK2_SF": 0.75,
+    "Playable_Batmobile_SF": 0.75
+   }
+  },
+  {
+   "declared_type": "FBMScreenShakeStruct",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "ImpactShake",
+   "field": "ImpactShake",
+   "named_by_sdk": false,
+   "occurrences": 4,
+   "offset": 7208,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": true,
+   "scope": "vehicle",
+   "serialized": true,
+   "struct": {
+    "declared_type": "FBMScreenShakeStruct",
+    "points": [],
+    "props": [
+     {
+      "offset": 4,
+      "type": "FloatProperty",
+      "value": 0.33000001311302185
+     },
+     {
+      "offset": 8,
+      "type": "VectorProperty",
+      "value": [
+       150.0,
+       150.0,
+       30.0
+      ]
+     },
+     {
+      "offset": 20,
+      "type": "VectorProperty",
+      "value": [
+       4.0,
+       4.0,
+       4.0
+      ]
+     },
+     {
+      "offset": 56,
+      "type": "VectorProperty",
+      "value": [
+       1000.0,
+       1000.0,
+       200.0
+      ]
+     },
+     {
+      "offset": 68,
+      "type": "VectorProperty",
+      "value": [
+       4.0,
+       4.0,
+       4.0
+      ]
+     },
+     {
+      "offset": 120,
+      "type": "nested",
+      "value": "AdvancedOptions"
+     },
+     {
+      "offset": 144,
+      "type": "BoolProperty",
+      "value": true
+     }
+    ]
+   },
+   "unit": "struct",
+   "unit_basis": "type",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": null,
+    "Playable_BatmobileJoker_SF": null,
+    "Playable_BatmobileMK2_SF": null,
+    "Playable_Batmobile_SF": null
+   }
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "ImpactShake",
+   "field": "ImpactShakeForceFactor",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 7364,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": true,
+   "scope": "vehicle",
+   "serialized": true,
+   "struct": null,
+   "unit": "factor",
+   "unit_basis": "conv",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 0.013330000452697277,
+    "Playable_BatmobileJoker_SF": 0.013330000452697277,
+    "Playable_BatmobileMK2_SF": 0.013330000452697277,
+    "Playable_Batmobile_SF": 0.013330000452697277
+   }
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "ImpactShake",
+   "field": "ImpactShakeVehicleFactor",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 7368,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": true,
+   "scope": "vehicle",
+   "serialized": true,
+   "struct": null,
+   "unit": "factor",
+   "unit_basis": "conv",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 1.5,
+    "Playable_BatmobileJoker_SF": 1.5,
+    "Playable_BatmobileMK2_SF": 1.5,
+    "Playable_Batmobile_SF": 1.5
+   }
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "ImpactShake",
+   "field": "ImpactShakeAbandonedVehicleFactor",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 7372,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": false,
+   "struct": null,
+   "unit": "factor",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "ImpactShake",
+   "field": "ImpactShakeDestructiblesFactor",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 7376,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": false,
+   "struct": null,
+   "unit": "factor",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "ImpactShake",
+   "field": "ImpactShakeCoolDown",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 7380,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": false,
+   "struct": null,
+   "unit": "s",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "VehicleShovingTorque",
+   "field": "VehicleShovingTorque",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 7416,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": true,
+   "scope": "vehicle",
+   "serialized": true,
+   "struct": null,
+   "unit": "engine torque",
+   "unit_basis": "engine",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 10000.0,
+    "Playable_BatmobileJoker_SF": 10000.0,
+    "Playable_BatmobileMK2_SF": 10000.0,
+    "Playable_Batmobile_SF": 10000.0
+   }
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "BattleMode",
+   "field": "BattleModeSpeedDelta",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 7860,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": false,
+   "struct": null,
+   "unit": "cm/s",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "PMDodge",
+   "field": "PMDodgeTorque",
+   "named_by_sdk": true,
+   "occurrences": 3,
+   "offset": 8156,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": true,
+   "struct": null,
+   "unit": "engine torque",
+   "unit_basis": "engine",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 6000.0,
+    "Playable_BatmobileMK2_SF": 6000.0,
+    "Playable_Batmobile_SF": 6000.0
+   }
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "PMDodge",
+   "field": "PMDodgeForce",
+   "named_by_sdk": true,
+   "occurrences": 3,
+   "offset": 8160,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": true,
+   "struct": null,
+   "unit": "engine force",
+   "unit_basis": "engine",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 10000.0,
+    "Playable_BatmobileMK2_SF": 10000.0,
+    "Playable_Batmobile_SF": 10000.0
+   }
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleBatmobileBase",
+   "family": "PMDodge",
+   "field": "PMDodgeDuration",
+   "named_by_sdk": true,
+   "occurrences": 3,
+   "offset": 8164,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": false,
+   "scope": "vehicle",
+   "serialized": true,
+   "struct": null,
+   "unit": "s",
+   "unit_basis": "conv",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 0.15000000596046448,
+    "Playable_BatmobileMK2_SF": 0.15000000596046448,
+    "Playable_Batmobile_SF": 0.15000000596046448
+   }
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "TurnOnSpot",
+   "field": "TurnOnSpotFrontTorqueFactor",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 456,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": true,
+   "scope": "simulation",
+   "serialized": true,
+   "struct": null,
+   "unit": "factor",
+   "unit_basis": "conv",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 0.800000011920929,
+    "Playable_BatmobileJoker_SF": 0.800000011920929,
+    "Playable_BatmobileMK2_SF": 0.800000011920929,
+    "Playable_Batmobile_SF": 0.800000011920929
+   }
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "TurnOnSpot",
+   "field": "TurnOnSpotRearTorqueFactor",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 460,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": true,
+   "scope": "simulation",
+   "serialized": true,
+   "struct": null,
+   "unit": "factor",
+   "unit_basis": "conv",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": -0.800000011920929,
+    "Playable_BatmobileJoker_SF": -0.800000011920929,
+    "Playable_BatmobileMK2_SF": -0.800000011920929,
+    "Playable_Batmobile_SF": -0.800000011920929
+   }
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "TurnOnSpot",
+   "field": "TurnOnSpotModeEngineBrakingFactor",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 464,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": true,
+   "scope": "simulation",
+   "serialized": true,
+   "struct": null,
+   "unit": "factor",
+   "unit_basis": "conv",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 2.0,
+    "Playable_BatmobileJoker_SF": 2.0,
+    "Playable_BatmobileMK2_SF": 2.0,
+    "Playable_Batmobile_SF": 2.0
+   }
+  },
+  {
+   "declared_type": "FInterpCurveFloat",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "BattleMode",
+   "field": "BattleModeVSpeedCurve",
+   "named_by_sdk": false,
+   "occurrences": 4,
+   "offset": 536,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": true,
+   "scope": "simulation",
+   "serialized": true,
+   "struct": {
+    "declared_type": "FInterpCurveFloat",
+    "points": [
+     [
+      0.0,
+      60.0
+     ],
+     [
+      600.0,
+      40.0
+     ],
+     [
+      1200.0,
+      30.0
+     ]
+    ],
+    "props": [
+     {
+      "count": 3,
+      "offset": 0,
+      "type": "array",
+      "value": null
+     }
+    ]
+   },
+   "unit": "curve (cm/s -> factor)",
+   "unit_basis": "type",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": null,
+    "Playable_BatmobileJoker_SF": null,
+    "Playable_BatmobileMK2_SF": null,
+    "Playable_Batmobile_SF": null
+   }
+  },
+  {
+   "declared_type": "FInterpCurveFloat",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "TurnOnSpot",
+   "field": "TurnOnSpotSteeringSpeedCurve",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 616,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "simulation",
+   "serialized": false,
+   "struct": null,
+   "unit": "curve (cm/s -> factor)",
+   "unit_basis": "type",
+   "values": {}
+  },
+  {
+   "declared_type": "bool",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "BattleMode",
+   "field": "BattleModeMoving",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 660,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "simulation",
+   "serialized": false,
+   "struct": null,
+   "unit": "bool",
+   "unit_basis": "type",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "TurningModeMaxSpeed",
+   "field": "TurningModeMaxSpeed",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 708,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": true,
+   "scope": "simulation",
+   "serialized": true,
+   "struct": null,
+   "unit": "cm/s",
+   "unit_basis": "conv",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 600.0,
+    "Playable_BatmobileJoker_SF": 600.0,
+    "Playable_BatmobileMK2_SF": 600.0,
+    "Playable_Batmobile_SF": 600.0
+   }
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "BattleMode",
+   "field": "BattleModeMaxSteering",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 716,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "simulation",
+   "serialized": false,
+   "struct": null,
+   "unit": "deg",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "BattleMode",
+   "field": "BattleModeRearWheelTorquePower",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 720,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "simulation",
+   "serialized": false,
+   "struct": null,
+   "unit": "engine torque",
+   "unit_basis": "engine",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "BattleMode",
+   "field": "BattleModeLatSlipScale",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 724,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": true,
+   "scope": "simulation",
+   "serialized": true,
+   "struct": null,
+   "unit": "factor",
+   "unit_basis": "conv",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 0.75,
+    "Playable_BatmobileJoker_SF": 0.75,
+    "Playable_BatmobileMK2_SF": 0.75,
+    "Playable_Batmobile_SF": 0.75
+   }
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "BattleMode",
+   "field": "BattleModeLongSlipScale",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 728,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": true,
+   "scope": "simulation",
+   "serialized": true,
+   "struct": null,
+   "unit": "factor",
+   "unit_basis": "conv",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 1.25,
+    "Playable_BatmobileJoker_SF": 1.25,
+    "Playable_BatmobileMK2_SF": 1.25,
+    "Playable_Batmobile_SF": 1.25
+   }
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "BattleMode",
+   "field": "BattleModeEngineBrakingFactor",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 732,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "simulation",
+   "serialized": false,
+   "struct": null,
+   "unit": "factor",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "BattleMode",
+   "field": "BattleModeTurnOnSpotTorqueFactor",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 736,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": true,
+   "scope": "simulation",
+   "serialized": true,
+   "struct": null,
+   "unit": "factor",
+   "unit_basis": "conv",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 0.33333298563957214,
+    "Playable_BatmobileJoker_SF": 0.33333298563957214,
+    "Playable_BatmobileMK2_SF": 0.33333298563957214,
+    "Playable_Batmobile_SF": 0.33333298563957214
+   }
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "BattleMode",
+   "field": "BattleModeFrontThrottle",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 740,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "simulation",
+   "serialized": false,
+   "struct": null,
+   "unit": "factor",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "BattleMode",
+   "field": "BattleModeRearThrottle",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 744,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "simulation",
+   "serialized": false,
+   "struct": null,
+   "unit": "factor",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "BattleMode",
+   "field": "BattleModeThrottleSpeed",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 748,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": true,
+   "scope": "simulation",
+   "serialized": true,
+   "struct": null,
+   "unit": "undocumented (rate-sized)",
+   "unit_basis": "none",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 10.0,
+    "Playable_BatmobileJoker_SF": 10.0,
+    "Playable_BatmobileMK2_SF": 10.0,
+    "Playable_Batmobile_SF": 10.0
+   }
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "BattleMode",
+   "field": "BattleModeMaxSpeed",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 752,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "simulation",
+   "serialized": false,
+   "struct": null,
+   "unit": "cm/s",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "BattleMode",
+   "field": "BattleModeDriveForceFactor",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 756,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": true,
+   "scope": "simulation",
+   "serialized": true,
+   "struct": null,
+   "unit": "engine gain",
+   "unit_basis": "engine",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 500.0,
+    "Playable_BatmobileJoker_SF": 500.0,
+    "Playable_BatmobileMK2_SF": 500.0,
+    "Playable_Batmobile_SF": 500.0
+   }
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "BattleMode",
+   "field": "BattleModeStopAndTurnAngleStationary",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 760,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": true,
+   "scope": "simulation",
+   "serialized": true,
+   "struct": null,
+   "unit": "deg",
+   "unit_basis": "conv",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 30.0,
+    "Playable_BatmobileJoker_SF": 30.0,
+    "Playable_BatmobileMK2_SF": 30.0,
+    "Playable_Batmobile_SF": 30.0
+   }
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "BattleMode",
+   "field": "BattleModeStopAndTurnAngleMoving",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 764,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "simulation",
+   "serialized": false,
+   "struct": null,
+   "unit": "deg",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "BattleMode",
+   "field": "BattleModeSteerAngleFactor",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 768,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": true,
+   "scope": "simulation",
+   "serialized": true,
+   "struct": null,
+   "unit": "factor",
+   "unit_basis": "conv",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 1.0,
+    "Playable_BatmobileJoker_SF": 1.0,
+    "Playable_BatmobileMK2_SF": 1.0,
+    "Playable_Batmobile_SF": 1.0
+   }
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "BattleMode",
+   "field": "BattleModeTrailingSteerFactorTurnOnSpot",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 796,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "simulation",
+   "serialized": false,
+   "struct": null,
+   "unit": "factor",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "BattleMode",
+   "field": "BattleModeTrailingSteerFactorMoving",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 800,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": true,
+   "scope": "simulation",
+   "serialized": true,
+   "struct": null,
+   "unit": "factor",
+   "unit_basis": "conv",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": -0.25,
+    "Playable_BatmobileJoker_SF": -0.25,
+    "Playable_BatmobileMK2_SF": -0.25,
+    "Playable_Batmobile_SF": -0.25
+   }
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "BattleMode",
+   "field": "BattleModeDrivingForceZOffset",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 804,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": true,
+   "scope": "simulation",
+   "serialized": true,
+   "struct": null,
+   "unit": "cm",
+   "unit_basis": "conv",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 20.0,
+    "Playable_BatmobileJoker_SF": 20.0,
+    "Playable_BatmobileMK2_SF": 20.0,
+    "Playable_Batmobile_SF": 20.0
+   }
+  },
+  {
+   "declared_type": "AnimNodeSequence",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "Transformation",
+   "field": "TransformationAnimNode",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 852,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "simulation",
+   "serialized": false,
+   "struct": null,
+   "unit": "object ref",
+   "unit_basis": "type",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "BattleMode",
+   "field": "BattleModeUprightTorqueFactor",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 880,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "simulation",
+   "serialized": false,
+   "struct": null,
+   "unit": "factor",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "BattleMode",
+   "field": "BattleModeUprightMaxTorque",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 884,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "simulation",
+   "serialized": false,
+   "struct": null,
+   "unit": "engine torque",
+   "unit_basis": "engine",
+   "values": {}
+  },
+  {
+   "declared_type": "Rotator",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "Transformation",
+   "field": "TransformationRotation",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 900,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "simulation",
+   "serialized": false,
+   "struct": null,
+   "unit": "deg (rotator)",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "Transformation",
+   "field": "TransformationTurnTorqueFactor",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 912,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": true,
+   "scope": "simulation",
+   "serialized": true,
+   "struct": null,
+   "unit": "engine gain",
+   "unit_basis": "engine",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 3000.0,
+    "Playable_BatmobileJoker_SF": 3000.0,
+    "Playable_BatmobileMK2_SF": 3000.0,
+    "Playable_Batmobile_SF": 3000.0
+   }
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "Transformation",
+   "field": "TransformationTurnDecelTorqueFactor",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 916,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": true,
+   "scope": "simulation",
+   "serialized": true,
+   "struct": null,
+   "unit": "engine gain",
+   "unit_basis": "engine",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 24000.0,
+    "Playable_BatmobileJoker_SF": 24000.0,
+    "Playable_BatmobileMK2_SF": 24000.0,
+    "Playable_Batmobile_SF": 24000.0
+   }
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "Transformation",
+   "field": "TransformationTurnOnSpotSpeed",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 920,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "simulation",
+   "serialized": false,
+   "struct": null,
+   "unit": "cm/s",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "Transformation",
+   "field": "TransformationTurnFactor",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 924,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "simulation",
+   "serialized": false,
+   "struct": null,
+   "unit": "factor",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "BattleMode",
+   "field": "BattleModeSteerBiasRate",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 964,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "simulation",
+   "serialized": false,
+   "struct": null,
+   "unit": "undocumented",
+   "unit_basis": "none",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "AirControl",
+   "field": "AirControlYawTorqueFactorMax",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 1192,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": true,
+   "scope": "simulation",
+   "serialized": true,
+   "struct": null,
+   "unit": "engine torque gain",
+   "unit_basis": "engine",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 8000.0,
+    "Playable_BatmobileJoker_SF": 8000.0,
+    "Playable_BatmobileMK2_SF": 8000.0,
+    "Playable_Batmobile_SF": 8000.0
+   }
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "AirControl",
+   "field": "AirControlPitchTorqueFactorMax",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 1196,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "simulation",
+   "serialized": false,
+   "struct": null,
+   "unit": "engine torque gain",
+   "unit_basis": "engine",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "AirControl",
+   "field": "AirControlYawTorqueFactorMin",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 1200,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "simulation",
+   "serialized": false,
+   "struct": null,
+   "unit": "engine torque gain",
+   "unit_basis": "engine",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "AirControl",
+   "field": "AirControlPitchTorqueFactorMin",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 1204,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "simulation",
+   "serialized": false,
+   "struct": null,
+   "unit": "engine torque gain",
+   "unit_basis": "engine",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "AirControl",
+   "field": "AirControlInterpTime",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 1208,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "simulation",
+   "serialized": false,
+   "struct": null,
+   "unit": "s",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "AirControl",
+   "field": "AirControlTimeInAir",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 1212,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "simulation",
+   "serialized": false,
+   "struct": null,
+   "unit": "s",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimBatmobile",
+   "family": "BattleMode",
+   "field": "BattleModeSlopeFactor",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 1216,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "simulation",
+   "serialized": false,
+   "struct": null,
+   "unit": "factor",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "RVehicleSimCar",
+   "family": "AirControl",
+   "field": "AirControlTurnTorque",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 380,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "simulation (engine base class)",
+   "serialized": false,
+   "struct": null,
+   "unit": "engine torque",
+   "unit_basis": "engine",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "SVehicle",
+   "family": "StayUpright",
+   "field": "StayUprightRollResistAngle",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 1748,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "vehicle (engine base class)",
+   "serialized": false,
+   "struct": null,
+   "unit": "deg",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "SVehicle",
+   "family": "StayUpright",
+   "field": "StayUprightPitchResistAngle",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 1752,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "vehicle (engine base class)",
+   "serialized": false,
+   "struct": null,
+   "unit": "deg",
+   "unit_basis": "conv",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "SVehicle",
+   "family": "StayUpright",
+   "field": "StayUprightStiffness",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 1756,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "vehicle (engine base class)",
+   "serialized": false,
+   "struct": null,
+   "unit": "engine stiffness",
+   "unit_basis": "engine",
+   "values": {}
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "SVehicle",
+   "family": "StayUpright",
+   "field": "StayUprightDamping",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 1760,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "vehicle (engine base class)",
+   "serialized": false,
+   "struct": null,
+   "unit": "engine damping",
+   "unit_basis": "engine",
+   "values": {}
+  },
+  {
+   "declared_type": "RB_StayUprightSetup",
+   "declaring_class": "SVehicle",
+   "family": "StayUpright",
+   "field": "StayUprightConstraintSetup",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 1764,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": false,
+   "scope": "vehicle (engine base class)",
+   "serialized": true,
+   "struct": null,
+   "unit": "object ref",
+   "unit_basis": "type",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 5196,
+    "Playable_BatmobileJoker_SF": 3123,
+    "Playable_BatmobileMK2_SF": 5157,
+    "Playable_Batmobile_SF": 5106
+   }
+  },
+  {
+   "declared_type": "RB_ConstraintInstance",
+   "declaring_class": "SVehicle",
+   "family": "StayUpright",
+   "field": "StayUprightConstraintInstance",
+   "named_by_sdk": true,
+   "occurrences": 4,
+   "offset": 1772,
+   "packages": [
+    "Playable_Batmobile_SF",
+    "Playable_BatmobileMK2_SF",
+    "Playable_BatmobileJoker_SF",
+    "Playable_BatmobileFunhouse_SF"
+   ],
+   "same_in_all_four": false,
+   "scope": "vehicle (engine base class)",
+   "serialized": true,
+   "struct": null,
+   "unit": "object ref",
+   "unit_basis": "type",
+   "values": {
+    "Playable_BatmobileFunhouse_SF": 5188,
+    "Playable_BatmobileJoker_SF": 3120,
+    "Playable_BatmobileMK2_SF": 5149,
+    "Playable_Batmobile_SF": 5098
+   }
+  },
+  {
+   "declared_type": "float",
+   "declaring_class": "SVehicleWheel",
+   "family": "BattleMode",
+   "field": "BattleModeSteerBias",
+   "named_by_sdk": false,
+   "occurrences": 0,
+   "offset": 800,
+   "packages": [],
+   "same_in_all_four": false,
+   "scope": "wheel (engine base class)",
+   "serialized": false,
+   "struct": null,
+   "unit": "factor",
+   "unit_basis": "conv",
+   "values": {}
+  }
+ ],
+ "generated_by": "grab_modes.py",
+ "ledger_rows": [
+  {
+   "counts": {
+    "BattleMode*": 9,
+    "TransformationTurn*": 2,
+    "TurnOnSpot*": 3
+   },
+   "dispo": "out",
+   "id": "T-BM1",
+   "numbers": [],
+   "tokens": [
+    "BattleMode*",
+    "TurnOnSpot*",
+    "TransformationTurn*",
+    "TurningModeMaxSpeed",
+    "ArmourModeDamageReduction"
+   ],
+   "why": "no transformation, tank turn or battle-mode armour in JC3"
+  },
+  {
+   "counts": {},
+   "dispo": "out",
+   "id": "T-AC1",
+   "numbers": [
+    8000.0
+   ],
+   "tokens": [
+    "AirControlYawTorqueFactorMax"
+   ],
+   "why": "JC3 cars have no mid-air yaw authority"
+  },
+  {
+   "counts": {},
+   "dispo": "out",
+   "id": "T-RA1",
+   "numbers": [
+    90000.0,
+    30000.0,
+    2000.0,
+    10000.0
+   ],
+   "tokens": [
+    "ImpactRoadAssist*",
+    "PMDodge*",
+    "BattleDodgeImpulse",
+    "VehicleShovingTorque",
+    "KillFlip*",
+    "KillKeepyUp*",
+    "ImpactShake*"
+   ],
+   "why": "no ram/dodge/shove assist system for cars"
+  },
+  {
+   "counts": {},
+   "dispo": "out",
+   "id": "T-SR1",
+   "numbers": [
+    2000.0,
+    2000.0
+   ],
+   "tokens": [
+    "JumpRampRightingTorque",
+    "JumpNoRampRightingTorque",
+    "StayUprightConstraintSetup/Instance"
+   ],
+   "why": "JC3 has no upright constraint"
+  }
+ ],
+ "packages": [
+  {
+   "package": "Playable_Batmobile_SF",
+   "short": "V2"
+  },
+  {
+   "package": "Playable_BatmobileMK2_SF",
+   "short": "MK2"
+  },
+  {
+   "package": "Playable_BatmobileJoker_SF",
+   "short": "Joker"
+  },
+  {
+   "package": "Playable_BatmobileFunhouse_SF",
+   "short": "Funhouse"
+  }
+ ],
+ "schema": 1,
+ "summary": {
+  "by_family": {
+   "AirControl": 8,
+   "ArmourModeDamageReduction": 1,
+   "BattleDodgeImpulse": 1,
+   "BattleMode": 42,
+   "ImpactRoadAssist": 10,
+   "ImpactShake": 6,
+   "JumpNoRamp": 1,
+   "JumpRamp": 2,
+   "KillFlip": 2,
+   "KillKeepyUp": 2,
+   "PMDodge": 3,
+   "StayUpright": 6,
+   "Strafe": 8,
+   "Transformation": 9,
+   "TurnOnSpot": 4,
+   "TurningModeMaxSpeed": 1,
+   "VehicleShovingTorque": 1
+  },
+  "declared": 107,
+  "not_serialized": 61,
+  "same_in_all_four": 31,
+  "serialized": 46,
+  "serialized_by_family": {
+   "AirControl": 1,
+   "ArmourModeDamageReduction": 1,
+   "BattleDodgeImpulse": 1,
+   "BattleMode": 15,
+   "ImpactRoadAssist": 5,
+   "ImpactShake": 3,
+   "JumpNoRamp": 1,
+   "JumpRamp": 1,
+   "KillFlip": 2,
+   "KillKeepyUp": 2,
+   "PMDodge": 3,
+   "StayUpright": 2,
+   "Strafe": 0,
+   "Transformation": 4,
+   "TurnOnSpot": 3,
+   "TurningModeMaxSpeed": 1,
+   "VehicleShovingTorque": 1
+  },
+  "undocumented_unit": 5
+ }
+}

@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/colour-ramp-leather-bake.md
+ONLY: freebuff
+EST: 45
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-texture-rows.md
+Bake the colour ramps into the surfaces they colour. Inputs: tmp/freebuff/reports/colour-ramp-in-material-members.md, app-colour-ramp-locate.md, app-colour-ramp-textures.md, and Builds/bm-RC4-appearance/texture_ledger.md (three ramp rows plus the Leather ramp, 64 by 512 pixels, whose sampler is absent from all 961 shader headers). The lookup rule lives in stripped material functions, so first write the rule you can evidence (which input drives the ramp V coordinate) and the parts you cannot as UNKNOWN. For the seat and body ramps choose the most defensible fixed ramp position with its evidence, sample that colour from the ramp, and bake it into the seat and body diffuse in Builds/bm-RC5-ramps (script Tools/scripts/rc5_ramps.py, --write and --check). Cockpit leather must read as dark leather, not plastic. Done check: 4 of 4 ramp rows have a baked result or a card, with the sampled RGB values printed beside the ramp coordinates used. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

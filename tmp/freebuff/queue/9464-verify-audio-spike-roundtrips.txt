@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/verify-audio-spike-roundtrips.md
+ONLY: freebuff
+EST: 25
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/fsb5-roundtrip-writer.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/fsb5-add-sample-prototype.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/fev-event-clone-prototype.md
+Offline verification of everything produced by the bank authoring spike, with no game launch. Run Tools/scripts/fsb5_rw.py --check, bank_spec_check.py and fev_edit.py --check against Builds/aud-spike/. For each artifact confirm: unchanged banks are byte identical to the originals, the appended-sample bank has only the fields named in its report changed, the cloned-event bank parses and lists the new event, and total size changes are accounted for. Then try one independent reader (the Universal Modder bank tools or Fmod Bank Tools CLI if present under E:/Modding/_tools or Tools/) on the edited banks and report whether it accepts them. Write tmp/freebuff/reports/verify-audio-spike-roundtrips.md with a pass or fail line per check and a final verdict phrased as one of: authoring works, partial, impossible with evidence. Done check: every check line carries a command and its output. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

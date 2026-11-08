@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/vulcan-bloom-hud-wire.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-hud-build.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/vulcan-bloom-curve-extract.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-cannon-vulcan-riot-pods.md
+Wire the Vulcan crosshair bloom. Operator facts: the Vulcan is on RB, the crosshair spreads while firing, turns red at the top, and nothing ever locks it out. Use Research/BatmobileGrab/VULCAN_BLOOM.json (curve and red threshold), tmp/freebuff/reports/vulcan-spinup-and-heat-plan.md and the HUD call UC_SetMachineGunAccuracyFrame from Research/JC3Grab/JC3_HUD_WEAPONS.md. In the 9160 HUD tree, drive the accuracy frame from fire time with the measured curve and shrink it on release; if the frame scale is UNKNOWN, build the table for a normalised 0..1 input and mark the scale as the open item. Add an assertion that fire never stops at red. Script Tools/scripts/rc5_hud_bloom.py (--write, --check), tree Builds/bm-RC5-hudbloom. Done-check: --check prints the sample table, the red frame, and the no-lockout assertion. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

@@ -1,0 +1,391 @@
+{
+ "schema": 1,
+ "card": "D-10",
+ "tag": "bm-RC4-handling",
+ "base": "Builds/bm-RC4-base",
+ "source": [
+  "Working/Translation/t1_edits.json",
+  "Working/Translation/t1_handling.json"
+ ],
+ "generated_by": "Tools/scripts/b10_handling.py --write",
+ "note": "The 35 t1_edits values are already in bm-RC4-base and are read back by this step, not re-written; these 18 are the B-24 writes this build makes. `old` is measured from the base tree, not copied from the ledger.",
+ "not_numeric": [],
+ "payload_audit": [
+  {
+   "row": "T-G4",
+   "module": "LandGlobal",
+   "member": "ground_clearance",
+   "file": "v0300_car_kensington_sportsmuscle_land_global.vmodc",
+   "ledger_from": 0.7037,
+   "base": 0.703700006,
+   "new": 0.071,
+   "conf": "derived",
+   "ledger_from_matches_base": true,
+   "bmak_source": "ride height: **no `ground_clearance` member exists** in `SVehicle`/`RVehicleBatmobile`; the measurable lore numbers are hub y 0.7047 front / 0.7027 rear (decoded mesh) and **underbody clearance 0.071 m** = body bbox m...",
+   "derivation": "body bbox min y 0.091 - ground 0.02 (stations.json body_bbox); coherent with the tyre contact 0.7047 - 0.68275 = 0.0220 m; inside the shipped 0.05..1 domain (med 0.4, n=271)"
+  },
+  {
+   "row": "T-ST2",
+   "module": "LandSteering",
+   "member": "t_to_full_steer_s",
+   "file": "v0300_car_kensington_sportsmuscle_land_steering.vmodc",
+   "ledger_from": 0.8,
+   "base": 0.800000012,
+   "new": 0.25,
+   "conf": "derived",
+   "ledger_from_matches_base": true,
+   "bmak_source": "720 \u00b0/s (`SteerSpeedVsSpeedCurve`), base `SteerSpeed` 220 \u00b0/s",
+   "derivation": "operator ruling 2026-11-06 item 1: 55 deg / 220 deg/s = 0.25 s at BmAK's base SteerSpeed; 0.25 s ships on 4 LandSteering AI twins"
+  },
+  {
+   "row": "T-ST3",
+   "module": "LandSteering",
+   "member": "max_speed_t_to_full_steer_s",
+   "file": "v0300_car_kensington_sportsmuscle_land_steering.vmodc",
+   "ledger_from": 0.6,
+   "base": 0.600000024,
+   "new": 0.091,
+   "conf": "derived (R3)",
+   "ledger_from_matches_base": true,
+   "bmak_source": "`SteerSpeedVsSpeedCurve` **flat 720 \u00b0/s**; the high-speed lock is T-ST1's 20\u00b0",
+   "derivation": "20 deg / 220 deg/s = 0.0909 s; flat rate curve; below the 0.2 s fleet minimum, declared out-of-domain"
+  },
+  {
+   "row": "T-ST4",
+   "module": "LandSteering",
+   "member": "steer_input_power_pc",
+   "file": "v0300_car_kensington_sportsmuscle_land_steering.vmodc",
+   "ledger_from": 3,
+   "base": 3,
+   "new": 1,
+   "conf": "derived (absence)",
+   "ledger_from_matches_base": true,
+   "bmak_source": "**no input-exponent member**: `DriftCorrectionSteerSpeed`, `SteeringSpeedReCentreMod`, `SteeringReductionFactor`, `CurrentSteeringReduction` all **1.0**, `DriftSteeringAssist` absent (`CHAIN.json`)",
+   "derivation": "BmAK chain has no input exponent; every steering modifier 1.0 and DriftSteeringAssist absent -> identity (T-B3 precedent); fleet floor 1 (1..3, n=145)"
+  },
+  {
+   "row": "T-ST4",
+   "module": "LandSteering",
+   "member": "steer_input_power_durango",
+   "file": "v0300_car_kensington_sportsmuscle_land_steering.vmodc",
+   "ledger_from": 3,
+   "base": 3,
+   "new": 1,
+   "conf": "derived (absence)",
+   "ledger_from_matches_base": true,
+   "bmak_source": "**no input-exponent member**: `DriftCorrectionSteerSpeed`, `SteeringSpeedReCentreMod`, `SteeringReductionFactor`, `CurrentSteeringReduction` all **1.0**, `DriftSteeringAssist` absent (`CHAIN.json`)",
+   "derivation": "BmAK chain has no input exponent; every steering modifier 1.0 and DriftSteeringAssist absent -> identity (T-B3 precedent); fleet floor 1 (1..3, n=145)"
+  },
+  {
+   "row": "T-ST4",
+   "module": "LandSteering",
+   "member": "steer_input_power_orbis",
+   "file": "v0300_car_kensington_sportsmuscle_land_steering.vmodc",
+   "ledger_from": 3,
+   "base": 3,
+   "new": 1,
+   "conf": "derived (absence)",
+   "ledger_from_matches_base": true,
+   "bmak_source": "**no input-exponent member**: `DriftCorrectionSteerSpeed`, `SteeringSpeedReCentreMod`, `SteeringReductionFactor`, `CurrentSteeringReduction` all **1.0**, `DriftSteeringAssist` absent (`CHAIN.json`)",
+   "derivation": "BmAK chain has no input exponent; every steering modifier 1.0 and DriftSteeringAssist absent -> identity (T-B3 precedent); fleet floor 1 (1..3, n=145)"
+  },
+  {
+   "row": "T-ST6",
+   "module": "LandSteering",
+   "member": "wheel_drift_aligning_strength",
+   "file": "v0300_car_kensington_sportsmuscle_land_steering.vmodc",
+   "ledger_from": 0.3,
+   "base": 0.300000012,
+   "new": 0.625,
+   "conf": "derived (INFERRED reciprocal)",
+   "ledger_from_matches_base": true,
+   "bmak_source": "rear `LatSlipFactor` **1.6** (front inherited; no `*Align*` member anywhere \u2014 the quantity, not the name, is what translates, `CHAIN.json` 12366/12424)",
+   "derivation": "1 / rear LatSlipFactor 1.6 = 0.625; inside the shipped 0.3..0.8 band (n=19, median 0.5); falsifier 0.48 = 0.3 x 1.6"
+  },
+  {
+   "row": "T-K3",
+   "module": "Brakes",
+   "member": "handbrake_friction_factor",
+   "file": "v0300_car_kensington_sportsmuscle_brakes.vmodc",
+   "ledger_from": 1,
+   "base": 1,
+   "new": 4.0,
+   "conf": "derived (R3)",
+   "ledger_from_matches_base": true,
+   "bmak_source": "none of `HandbrakeOnSpeed` 10000, `HandbrakeOffSpeed` 1.0, `HandbrakeLatSlipFactor` 1.5/1.1, `HandBrakeOffTime` 0.3 is a friction factor \u2014 but `EBrakeBrakeForce` **640,000** is a force whose **class default 160,000** ...",
+   "derivation": "EBrakeBrakeForce 640,000 / class default 160,000 = 4.0; inside the shipped 1..10 domain but above the 6 t band 1..2.25"
+  },
+  {
+   "row": "T-K4",
+   "module": "Brakes",
+   "member": "front.min_time_to_block",
+   "file": "v0300_car_kensington_sportsmuscle_brakes.vmodc",
+   "ledger_from": 5,
+   "base": 1,
+   "new": 0.3,
+   "conf": "INFERRED (kind-match)",
+   "ledger_from_matches_base": false,
+   "bmak_source": "`EbrakeTime` 0.75, `EBrakeBrakeForce` 640000, `HandbrakeOnSpeed` 10000, `HandbrakeOffSpeed` 1, `HandbrakeLatSlipFactor` 1.5 front / 1.1 rear (all four wheels), `HandBrakeOffTime` 0.3",
+   "derivation": "front axle handbrake slip 1.5 has no member (front.handbrake 0 on 145/145); the yaw torque carries it, share 1.1/1.5 = 0.733 of the rotation"
+  },
+  {
+   "row": "T-K4",
+   "module": "Brakes",
+   "member": "rear.min_time_to_block",
+   "file": "v0300_car_kensington_sportsmuscle_brakes.vmodc",
+   "ledger_from": 5,
+   "base": 1,
+   "new": 0.3,
+   "conf": "INFERRED (kind-match)",
+   "ledger_from_matches_base": false,
+   "bmak_source": "`EbrakeTime` 0.75, `EBrakeBrakeForce` 640000, `HandbrakeOnSpeed` 10000, `HandbrakeOffSpeed` 1, `HandbrakeLatSlipFactor` 1.5 front / 1.1 rear (all four wheels), `HandBrakeOffTime` 0.3",
+   "derivation": "front axle handbrake slip 1.5 has no member (front.handbrake 0 on 145/145); the yaw torque carries it, share 1.1/1.5 = 0.733 of the rotation"
+  },
+  {
+   "row": "T-DR1",
+   "module": "CustomLandGlobal",
+   "member": "drift.min_speed_to_drift_kmph",
+   "file": "v0300_car_kensington_sportsmuscle_custom_land_global.vmodc",
+   "ledger_from": 10,
+   "base": 10,
+   "new": 0,
+   "conf": "derived",
+   "ledger_from_matches_base": true,
+   "bmak_source": "`LatSlipFactor` 1.6, `HandbrakeLatSlipFactor` 1.5/1.1, `HandbrakeOnSpeed` 10000 cm/s, `DriftCorrectionSteerSpeed` 1.0, `DriftSteeringAssist` absent, `DriftingBoostCooldown` 1.5 s",
+   "derivation": "DriftCorrectionSteerSpeed 1.0 with DriftSteeringAssist absent -> no drift steering gain; fleet median 2"
+  },
+  {
+   "row": "T-DR1",
+   "module": "CustomLandGlobal",
+   "member": "drift.steering_sensitivity",
+   "file": "v0300_car_kensington_sportsmuscle_custom_land_global.vmodc",
+   "ledger_from": 4,
+   "base": 4,
+   "new": 2,
+   "conf": "derived",
+   "ledger_from_matches_base": true,
+   "bmak_source": "`LatSlipFactor` 1.6, `HandbrakeLatSlipFactor` 1.5/1.1, `HandbrakeOnSpeed` 10000 cm/s, `DriftCorrectionSteerSpeed` 1.0, `DriftSteeringAssist` absent, `DriftingBoostCooldown` 1.5 s",
+   "derivation": "DriftCorrectionSteerSpeed 1.0 with DriftSteeringAssist absent -> no drift steering gain; fleet median 2"
+  },
+  {
+   "row": "T-E2",
+   "module": "LandEngine",
+   "member": "torque_factor_at_optimal_rpm",
+   "file": "v0300_car_kensington_sportsmuscle_land_engine.vmodc",
+   "ledger_from": 1393.5,
+   "base": 1393.52454,
+   "new": 2921,
+   "conf": "derived (R3)",
+   "ledger_from_matches_base": true,
+   "bmak_source": "lore power **1200 bhp**; BmAK has **no absolute torque** (curve only, `CHAIN.json`)",
+   "derivation": "lore 1200 bhp = 894.8 kW at max_rpm 4500 with f 0.65: 894800 / (471.239 x 0.65) = 2921 N.m; 1393.5 delivers 572 hp at that band; 0-60 in 2.7 s route gives 2513 N.m; above fleet p95 2,500"
+  },
+  {
+   "row": "T-A3",
+   "module": "LandAerodynamics",
+   "member": "top_speed_drag_coefficient",
+   "file": "v0300_car_kensington_sportsmuscle_land_aerodynamics.vmodc",
+   "ledger_from": 2.0,
+   "base": 2,
+   "new": 1.0,
+   "conf": "derived (absence)",
+   "ledger_from_matches_base": true,
+   "bmak_source": "**no drag member in the BmAK chain** (grep for drag / lift / aero / downforce / area tags returns only `SelfDriveUseTightArea` and `UprightLiftStrength`)",
+   "derivation": "BmAK has no drag member; consumer undecoded, so identity changes nothing; 2.0 would drop the ceiling to 161 km/h; inside the shipped 1..30 domain at its floor"
+  },
+  {
+   "row": "T-B1",
+   "module": "CustomLandGlobal",
+   "member": "arcade.nitro_boost.torque_multiplier",
+   "file": "v0300_car_kensington_sportsmuscle_custom_land_global.vmodc",
+   "ledger_from": 2.0,
+   "base": 2,
+   "new": 6.3,
+   "conf": "derived",
+   "ledger_from_matches_base": true,
+   "bmak_source": "boost thrust: `FakeExtaSpeedAccel` 600 cu/s\u00b2 = **6.00 m/s\u00b2**, capped by `BoostDuration` 2.0 s \u2192 43.2 km/h; ratio band 1.30 \u2026 2.10",
+   "derivation": "FakeExtaSpeedAccel 600 cu/s^2 = 6.00 m/s^2 over the measured 1.13 m/s^2 low-speed acceleration: 1 + 6.00/1.13 = 6.3; extra_top_speed 43.2 and blend 0.2 unchanged; inside the shipped 1.5..40 domain"
+  },
+  {
+   "row": "T-B4",
+   "module": "CustomLandGlobal",
+   "member": "arcade.heat_boost.grip_multiplier",
+   "file": "v0300_car_kensington_sportsmuscle_custom_land_global.vmodc",
+   "ledger_from": 4.26,
+   "base": 4.26000023,
+   "new": 1.5,
+   "conf": "derived (removes two non-BmAK scales)",
+   "ledger_from_matches_base": true,
+   "bmak_source": "**no BmAK source exists** (chain-proven: no arcade heat-boost or turbo-jump member; `HeatSteam*` is exhaust steam and `Jump*` is landing physics)",
+   "derivation": "4.26 = 1.5 x 2.844 (torque ratio) and 100.92 = 80 x 1.2615 (336.4/250 tier scale); BmAK states no boost grip change (T-B3 identity), so the donor's 1.5/80 are restored"
+  },
+  {
+   "row": "T-B4",
+   "module": "CustomLandGlobal",
+   "member": "arcade.nitro_boost_upgraded.extra_top_speed",
+   "file": "v0300_car_kensington_sportsmuscle_custom_land_global.vmodc",
+   "ledger_from": 100.92,
+   "base": 100.919998,
+   "new": 80,
+   "conf": "derived (removes two non-BmAK scales)",
+   "ledger_from_matches_base": true,
+   "bmak_source": "**no BmAK source exists** (chain-proven: no arcade heat-boost or turbo-jump member; `HeatSteam*` is exhaust steam and `Jump*` is landing physics)",
+   "derivation": "4.26 = 1.5 x 2.844 (torque ratio) and 100.92 = 80 x 1.2615 (336.4/250 tier scale); BmAK states no boost grip change (T-B3 identity), so the donor's 1.5/80 are restored"
+  }
+ ],
+ "edits": [
+  {
+   "row": "T-G4",
+   "module": "LandGlobal",
+   "member": "ground_clearance",
+   "old": 0.703700006,
+   "new": 0.071,
+   "conf": "derived",
+   "kind": "number"
+  },
+  {
+   "row": "T-ST2",
+   "module": "LandSteering",
+   "member": "t_to_full_steer_s",
+   "old": 0.800000012,
+   "new": 0.25,
+   "conf": "derived",
+   "kind": "number"
+  },
+  {
+   "row": "T-ST3",
+   "module": "LandSteering",
+   "member": "max_speed_t_to_full_steer_s",
+   "old": 0.600000024,
+   "new": 0.091,
+   "conf": "derived (R3)",
+   "kind": "number"
+  },
+  {
+   "row": "T-ST4",
+   "module": "LandSteering",
+   "member": "steer_input_power_pc",
+   "old": 3,
+   "new": 1,
+   "conf": "derived (absence)",
+   "kind": "number"
+  },
+  {
+   "row": "T-ST4",
+   "module": "LandSteering",
+   "member": "steer_input_power_durango",
+   "old": 3,
+   "new": 1,
+   "conf": "derived (absence)",
+   "kind": "number"
+  },
+  {
+   "row": "T-ST4",
+   "module": "LandSteering",
+   "member": "steer_input_power_orbis",
+   "old": 3,
+   "new": 1,
+   "conf": "derived (absence)",
+   "kind": "number"
+  },
+  {
+   "row": "T-ST6",
+   "module": "LandSteering",
+   "member": "wheel_drift_aligning_strength",
+   "old": 0.300000012,
+   "new": 0.625,
+   "conf": "derived (INFERRED reciprocal)",
+   "kind": "number"
+  },
+  {
+   "row": "T-K3",
+   "module": "Brakes",
+   "member": "handbrake_friction_factor",
+   "old": 1,
+   "new": 4.0,
+   "conf": "derived (R3)",
+   "kind": "number"
+  },
+  {
+   "row": "T-K4",
+   "module": "Brakes",
+   "member": "front.min_time_to_block",
+   "old": 1,
+   "new": 0.3,
+   "conf": "INFERRED (kind-match)",
+   "kind": "number"
+  },
+  {
+   "row": "T-K4",
+   "module": "Brakes",
+   "member": "rear.min_time_to_block",
+   "old": 1,
+   "new": 0.3,
+   "conf": "INFERRED (kind-match)",
+   "kind": "number"
+  },
+  {
+   "row": "T-DR1",
+   "module": "CustomLandGlobal",
+   "member": "drift.min_speed_to_drift_kmph",
+   "old": 10,
+   "new": 0,
+   "conf": "derived",
+   "kind": "number"
+  },
+  {
+   "row": "T-DR1",
+   "module": "CustomLandGlobal",
+   "member": "drift.steering_sensitivity",
+   "old": 4,
+   "new": 2,
+   "conf": "derived",
+   "kind": "number"
+  },
+  {
+   "row": "T-E2",
+   "module": "LandEngine",
+   "member": "torque_factor_at_optimal_rpm",
+   "old": 1393.52454,
+   "new": 2921,
+   "conf": "derived (R3)",
+   "kind": "number"
+  },
+  {
+   "row": "T-A3",
+   "module": "LandAerodynamics",
+   "member": "top_speed_drag_coefficient",
+   "old": 2,
+   "new": 1.0,
+   "conf": "derived (absence)",
+   "kind": "number"
+  },
+  {
+   "row": "T-B1",
+   "module": "CustomLandGlobal",
+   "member": "arcade.nitro_boost.torque_multiplier",
+   "old": 2,
+   "new": 6.3,
+   "conf": "derived",
+   "kind": "number"
+  },
+  {
+   "row": "T-B4",
+   "module": "CustomLandGlobal",
+   "member": "arcade.heat_boost.grip_multiplier",
+   "old": 4.26000023,
+   "new": 1.5,
+   "conf": "derived (removes two non-BmAK scales)",
+   "kind": "number"
+  },
+  {
+   "row": "T-B4",
+   "module": "CustomLandGlobal",
+   "member": "arcade.nitro_boost_upgraded.extra_top_speed",
+   "old": 100.919998,
+   "new": 80,
+   "conf": "derived (removes two non-BmAK scales)",
+   "kind": "number"
+  }
+ ]
+}

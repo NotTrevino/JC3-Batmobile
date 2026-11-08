@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/lights-battle-mode-switch.md
+ONLY: freebuff
+EST: 40
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/lights-t-l17-ledger-apply.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-mode-pair-and-swap.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/rc5-lights-flares-beams.md
+Battle-mode lamps. Per the ledger the battle spotlight (Front_Secondary_Head) and the battle head lamps ride the HeadLight mechanism, and the fleet has no battle-light behaviour. Read Working/Lights/TL17_APPLIED.md, reports/rc5-mode-pair-and-swap.md (brief 9130) and Working/Lights/bm_lightrig.json. Define how those lamps are on in battle and off in pursuit, using the closest evidenced mechanism: the mode pair swapping entity variants with different lamp lists, or a lamp-state flag. Build the lamp-list difference for both modes in Builds/bm-RC5-lights2/ with the existing script, then print per mode the lamp count, which are enabled, and the colour. Done when the mode A and mode B tables are generated and the two lists differ only by the battle lamps. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

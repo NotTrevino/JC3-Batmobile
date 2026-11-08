@@ -1,0 +1,6 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/release-publish-check-and-fixes.md
+ONLY: freebuff
+EST: 30
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/release-readme-credits-and-disclosure.md
+Run the publish lint on the finished export folder Builds/release-0001/export. Read um's help first, then run um publish check on that folder and quote the command and the full output. Fix findings only inside the export copy (never in the project originals): remove a flagged file, replace a path literal, correct a licence line. Re-run after each fix and keep a log of runs. Also run the three scans from Working/Release/LINT.md again and the drive-letter grep, since the documents were added. Zip nothing and upload nothing. Record the final file list with sizes and sha256 in Working/Release/FINAL_LIST.md. Done when the last run of the publish check shows no findings, or each remaining finding is named with the reason it cannot be removed and is left for the operator. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.

@@ -1,0 +1,989 @@
+{
+ "meta": {
+  "task": "G3-10d",
+  "generated_by": "Tools/scripts/jc3_physics_roles4.py",
+  "donor": "Builds/test-091/aaf/models/jc_vehicles/01_land/v0300_car_kensington_sportsmuscle/sportsmuscle.physicsc",
+  "fleet_glob": "E:/Modding/_gamedata/JC3grab/**/*.physicsc",
+  "fleet_files_scanned": 51,
+  "fleet_files_decoded": 50,
+  "fleet_files_skipped": [
+   {
+    "file": "../_gamedata/JC3grab/hkx/all/town_01_ai_junction.physicsc",
+    "error": "no hknpPhysicsSystemData"
+   }
+  ],
+  "read_only_imports": [
+   "Tools/scripts/jc3hkx.py",
+   "Tools/scripts/jc3_physics_roles2.py (rot3x4, DONOR)"
+  ],
+  "labels": {
+   "decoded": "read from these bytes, with the field's evidence",
+   "derived": "a rule applied to decoded inputs; the rule is stated",
+   "UNKNOWN": "not decodable from the bytes read; the blocker is named"
+  }
+ },
+ "cinfo_layout": {
+  "stride_bytes": 24,
+  "words": [
+   "constraintData* (8 B packfile fixup)",
+   "body id A (0 everywhere)",
+   "body id B (valid everywhere)",
+   "0x7FFFFFFF (constant)",
+   "0 (constant)",
+   "0 (constant)"
+  ],
+  "note": "G3-10c decoded {cd*, bodyId, 0x7FFFFFFF, 0, 0} from the donor. The fleet sweep here shows the same shape in every shipped system: one word always 0, one word always 0x7FFFFFFF, two words zero, and the varying word always a valid body index. Two readings survive: the constant 0 is *not* a body id, or it is body 0 (the chassis). The geometric test in section 2 decides.",
+  "verdict": "decoded (the record's shape); the pair reading is tested, not assumed"
+ },
+ "pair_hypothesis": {
+  "claim": "cinfo +0x04 = bodyIdA, +0x08 = bodyIdB; bodyIdA = 0 (chassis) in every shipped record, so the constraint partner is body 0",
+  "label": "derived",
+  "oracle": "both bodies of a constraint touch its pivot, so |signed distance pivot -> body hull| must be small for the pair",
+  "controls": [
+   "partner replaced by a deterministic pseudo-random other body in the file",
+   "each of body 0..3 measured the same way (is body 0 special?)"
+  ],
+  "cinfos_seen": 494,
+  "cinfos_with_both_hulls": 188,
+  "files_with_constraints": 46,
+  "body_id_a_values": [
+   0
+  ],
+  "body_id_a_in_range": true,
+  "body_id_b_all_in_range": true,
+  "tolerance_table": [
+   {
+    "tol_m": 0.02,
+    "pair_hits": 14,
+    "pair_n": 188,
+    "pair_rate": 0.0745,
+    "control_hits": 0,
+    "control_n": 188,
+    "control_rate": 0.0
+   },
+   {
+    "tol_m": 0.05,
+    "pair_hits": 66,
+    "pair_n": 188,
+    "pair_rate": 0.3511,
+    "control_hits": 1,
+    "control_n": 188,
+    "control_rate": 0.0053
+   },
+   {
+    "tol_m": 0.1,
+    "pair_hits": 102,
+    "pair_n": 188,
+    "pair_rate": 0.5426,
+    "control_hits": 3,
+    "control_n": 188,
+    "control_rate": 0.016
+   },
+   {
+    "tol_m": 0.2,
+    "pair_hits": 110,
+    "pair_n": 188,
+    "pair_rate": 0.5851,
+    "control_hits": 3,
+    "control_n": 188,
+    "control_rate": 0.016
+   }
+  ],
+  "per_body": [
+   {
+    "body": 0,
+    "within_5cm": 91,
+    "measured": 188,
+    "rate": 0.484
+   },
+   {
+    "body": 1,
+    "within_5cm": 13,
+    "measured": 181,
+    "rate": 0.0718
+   },
+   {
+    "body": 2,
+    "within_5cm": 12,
+    "measured": 188,
+    "rate": 0.0638
+   },
+   {
+    "body": 3,
+    "within_5cm": 15,
+    "measured": 154,
+    "rate": 0.0974
+   }
+  ],
+  "median_d_a": 0.0597,
+  "median_d_b": 0.0139,
+  "donor_frames_on_one_pivot": 11,
+  "donor_with_frames": 11,
+  "donor_frame_counts": [
+   2,
+   3
+  ],
+  "donor_constraints": 11,
+  "donor": [
+   {
+    "index": 0,
+    "name": "LimitedHinge",
+    "class": "hkpLimitedHingeConstraintData",
+    "body_id_b": 1,
+    "pivot": [
+     -1.018478,
+     0.622335,
+     -0.771416
+    ],
+    "n_frames": 2,
+    "transforms": [
+     48,
+     112
+    ],
+    "pivots_ab_equal": true,
+    "pivots_equal": true,
+    "rot_delta_deg": 0.0,
+    "rot_delta_det": 1.0,
+    "abs_dist_a": 0.0313,
+    "abs_dist_b": 0.0105,
+    "nearest": [
+     {
+      "body": 8,
+      "abs_dist": 0.0055
+     },
+     {
+      "body": 1,
+      "abs_dist": 0.0105
+     },
+     {
+      "body": 0,
+      "abs_dist": 0.0313
+     },
+     {
+      "body": 7,
+      "abs_dist": 0.1665
+     }
+    ]
+   },
+   {
+    "index": 1,
+    "name": "LimitedHinge",
+    "class": "hkpLimitedHingeConstraintData",
+    "body_id_b": 3,
+    "pivot": [
+     -0.833006,
+     1.00157,
+     -0.503191
+    ],
+    "n_frames": 2,
+    "transforms": [
+     48,
+     112
+    ],
+    "pivots_ab_equal": true,
+    "pivots_equal": true,
+    "rot_delta_deg": 0.0,
+    "rot_delta_det": 1.0,
+    "abs_dist_a": 0.0481,
+    "abs_dist_b": 0.0139,
+    "nearest": [
+     {
+      "body": 3,
+      "abs_dist": 0.0139
+     },
+     {
+      "body": 2,
+      "abs_dist": 0.0475
+     },
+     {
+      "body": 0,
+      "abs_dist": 0.0481
+     },
+     {
+      "body": 1,
+      "abs_dist": 0.0628
+     }
+    ]
+   },
+   {
+    "index": 2,
+    "name": "LimitedHinge",
+    "class": "hkpLimitedHingeConstraintData",
+    "body_id_b": 4,
+    "pivot": [
+     1.018478,
+     0.622335,
+     -0.771416
+    ],
+    "n_frames": 2,
+    "transforms": [
+     48,
+     112
+    ],
+    "pivots_ab_equal": true,
+    "pivots_equal": true,
+    "rot_delta_deg": 0.0,
+    "rot_delta_det": 1.0,
+    "abs_dist_a": 0.0313,
+    "abs_dist_b": 0.0105,
+    "nearest": [
+     {
+      "body": 12,
+      "abs_dist": 0.0085
+     },
+     {
+      "body": 4,
+      "abs_dist": 0.0105
+     },
+     {
+      "body": 0,
+      "abs_dist": 0.0313
+     },
+     {
+      "body": 7,
+      "abs_dist": 0.1665
+     }
+    ]
+   },
+   {
+    "index": 3,
+    "name": "LimitedHinge",
+    "class": "hkpLimitedHingeConstraintData",
+    "body_id_b": 6,
+    "pivot": [
+     0.833006,
+     1.00157,
+     -0.503191
+    ],
+    "n_frames": 2,
+    "transforms": [
+     48,
+     112
+    ],
+    "pivots_ab_equal": true,
+    "pivots_equal": true,
+    "rot_delta_deg": 0.0,
+    "rot_delta_det": 1.0,
+    "abs_dist_a": 0.0481,
+    "abs_dist_b": 0.0135,
+    "nearest": [
+     {
+      "body": 6,
+      "abs_dist": 0.0135
+     },
+     {
+      "body": 5,
+      "abs_dist": 0.0475
+     },
+     {
+      "body": 0,
+      "abs_dist": 0.0481
+     },
+     {
+      "body": 4,
+      "abs_dist": 0.0628
+     }
+    ]
+   },
+   {
+    "index": 4,
+    "name": "Ragdoll",
+    "class": "hkpRagdollConstraintData",
+    "body_id_b": 7,
+    "pivot": [
+     0.0,
+     0.264607,
+     -1.201864
+    ],
+    "n_frames": 3,
+    "transforms": [
+     48,
+     112,
+     208
+    ],
+    "pivots_ab_equal": true,
+    "pivots_equal": false,
+    "rot_delta_deg": 0.0,
+    "rot_delta_det": 1.0,
+    "abs_dist_a": 0.0007,
+    "abs_dist_b": 0.0736,
+    "nearest": [
+     {
+      "body": 0,
+      "abs_dist": 0.0007
+     },
+     {
+      "body": 7,
+      "abs_dist": 0.0736
+     },
+     {
+      "body": 19,
+      "abs_dist": 0.6611
+     },
+     {
+      "body": 20,
+      "abs_dist": 0.6611
+     }
+    ]
+   },
+   {
+    "index": 5,
+    "name": "LimitedHinge",
+    "class": "hkpLimitedHingeConstraintData",
+    "body_id_b": 16,
+    "pivot": [
+     0.65079,
+     0.208933,
+     -0.22964
+    ],
+    "n_frames": 2,
+    "transforms": [
+     48,
+     112
+    ],
+    "pivots_ab_equal": true,
+    "pivots_equal": true,
+    "rot_delta_deg": 0.0548,
+    "rot_delta_det": 0.999999,
+    "abs_dist_a": 0.0352,
+    "abs_dist_b": null,
+    "nearest": [
+     {
+      "body": 0,
+      "abs_dist": 0.0352
+     },
+     {
+      "body": 25,
+      "abs_dist": 0.1609
+     },
+     {
+      "body": 4,
+      "abs_dist": 0.2521
+     },
+     {
+      "body": 15,
+      "abs_dist": 0.3651
+     }
+    ]
+   },
+   {
+    "index": 6,
+    "name": "Ragdoll",
+    "class": "hkpRagdollConstraintData",
+    "body_id_b": 18,
+    "pivot": [
+     0.030687,
+     0.659793,
+     -2.388556
+    ],
+    "n_frames": 3,
+    "transforms": [
+     48,
+     112,
+     208
+    ],
+    "pivots_ab_equal": true,
+    "pivots_equal": false,
+    "rot_delta_deg": 0.0,
+    "rot_delta_det": 1.0,
+    "abs_dist_a": 1.1874,
+    "abs_dist_b": 0.0286,
+    "nearest": [
+     {
+      "body": 18,
+      "abs_dist": 0.0286
+     },
+     {
+      "body": 7,
+      "abs_dist": 0.0315
+     },
+     {
+      "body": 19,
+      "abs_dist": 0.0934
+     },
+     {
+      "body": 20,
+      "abs_dist": 0.0934
+     }
+    ]
+   },
+   {
+    "index": 7,
+    "name": "LimitedHinge",
+    "class": "hkpLimitedHingeConstraintData",
+    "body_id_b": 19,
+    "pivot": [
+     0.0,
+     1.057181,
+     -0.847838
+    ],
+    "n_frames": 2,
+    "transforms": [
+     48,
+     112
+    ],
+    "pivots_ab_equal": true,
+    "pivots_equal": true,
+    "rot_delta_deg": 0.0,
+    "rot_delta_det": 1.0,
+    "abs_dist_a": 0.0437,
+    "abs_dist_b": 0.0554,
+    "nearest": [
+     {
+      "body": 0,
+      "abs_dist": 0.0437
+     },
+     {
+      "body": 19,
+      "abs_dist": 0.0554
+     },
+     {
+      "body": 20,
+      "abs_dist": 0.0554
+     },
+     {
+      "body": 39,
+      "abs_dist": 0.0603
+     }
+    ]
+   },
+   {
+    "index": 8,
+    "name": "LimitedHinge",
+    "class": "hkpLimitedHingeConstraintData",
+    "body_id_b": 20,
+    "pivot": [
+     0.0,
+     1.057181,
+     -0.847838
+    ],
+    "n_frames": 2,
+    "transforms": [
+     48,
+     112
+    ],
+    "pivots_ab_equal": true,
+    "pivots_equal": true,
+    "rot_delta_deg": 0.0,
+    "rot_delta_det": 1.0,
+    "abs_dist_a": 0.0437,
+    "abs_dist_b": 0.0554,
+    "nearest": [
+     {
+      "body": 0,
+      "abs_dist": 0.0437
+     },
+     {
+      "body": 19,
+      "abs_dist": 0.0554
+     },
+     {
+      "body": 20,
+      "abs_dist": 0.0554
+     },
+     {
+      "body": 39,
+      "abs_dist": 0.0603
+     }
+    ]
+   },
+   {
+    "index": 9,
+    "name": "LimitedHinge",
+    "class": "hkpLimitedHingeConstraintData",
+    "body_id_b": 26,
+    "pivot": [
+     -0.50784,
+     0.737354,
+     2.430416
+    ],
+    "n_frames": 2,
+    "transforms": [
+     48,
+     112
+    ],
+    "pivots_ab_equal": true,
+    "pivots_equal": true,
+    "rot_delta_deg": 0.0,
+    "rot_delta_det": 1.000001,
+    "abs_dist_a": 0.0107,
+    "abs_dist_b": null,
+    "nearest": [
+     {
+      "body": 28,
+      "abs_dist": 0.0069
+     },
+     {
+      "body": 0,
+      "abs_dist": 0.0107
+     },
+     {
+      "body": 31,
+      "abs_dist": 0.0415
+     },
+     {
+      "body": 35,
+      "abs_dist": 0.0734
+     }
+    ]
+   },
+   {
+    "index": 10,
+    "name": "LimitedHinge",
+    "class": "hkpLimitedHingeConstraintData",
+    "body_id_b": 35,
+    "pivot": [
+     0.003491,
+     1.439962,
+     1.020885
+    ],
+    "n_frames": 2,
+    "transforms": [
+     48,
+     112
+    ],
+    "pivots_ab_equal": true,
+    "pivots_equal": true,
+    "rot_delta_deg": 0.0,
+    "rot_delta_det": 1.000001,
+    "abs_dist_a": 0.0023,
+    "abs_dist_b": 0.0497,
+    "nearest": [
+     {
+      "body": 0,
+      "abs_dist": 0.0023
+     },
+     {
+      "body": 34,
+      "abs_dist": 0.01
+     },
+     {
+      "body": 35,
+      "abs_dist": 0.0497
+     },
+     {
+      "body": 41,
+      "abs_dist": 0.5065
+     }
+    ]
+   }
+  ]
+ },
+ "inertia": {
+  "block": "hknpShapeMassProperties +0x10..+0x27, 24 bytes; the mass is the IEEE float at +0x28. Not per-component floats (G3-10c); not decoded here.",
+  "oracle": "Ixx = m(ey^2+ez^2)/12 etc. from the hull AABB the block is bound to; a packed reading must give a constant per-body scale on all three axes",
+  "label": "UNKNOWN",
+  "linked_hulls": 2011,
+  "files": 46,
+  "sample": [
+   {
+    "file": "sportsmuscle.physicsc",
+    "body": 0,
+    "mass": 800.0,
+    "extents": [
+     2.085,
+     1.212,
+     3.6788
+    ],
+    "box_inertia": [
+     1000.1916,
+     1192.0772,
+     387.7455
+    ],
+    "raw_hex": "8fff9759d8560030d93c8546cd188035d77d0580e87f2af5",
+    "mass_hex": "00004844"
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "body": 1,
+    "mass": 40.0,
+    "extents": [
+     0.3871,
+     1.0451,
+     1.415
+    ],
+    "box_inertia": [
+     10.3144,
+     7.1733,
+     4.1399
+    ],
+    "raw_hex": "558dac5bf9f80030994b6a3a2c150032617a2e81b37480f4",
+    "mass_hex": "00002042"
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "body": 2,
+    "mass": 5.0,
+    "extents": [
+     0.1535,
+     0.3491,
+     1.2675
+    ],
+    "box_inertia": [
+     0.7202,
+     0.6792,
+     0.0606
+    ],
+    "raw_hex": "bcd08c4d80068030154c8446e00500305676d281ab6acff2",
+    "mass_hex": "0000a040"
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "body": 3,
+    "mass": 1.0,
+    "extents": [
+     0.2074,
+     0.1532,
+     0.1338
+    ],
+    "box_inertia": [
+     0.0034,
+     0.0051,
+     0.0055
+    ],
+    "raw_hex": "b9c4d9458be38030b02d6f739a7f802c7c65019ed26637eb",
+    "mass_hex": "0000803f"
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "body": 4,
+    "mass": 40.0,
+    "extents": [
+     0.3878,
+     1.0477,
+     1.415
+    ],
+    "box_inertia": [
+     10.3327,
+     7.1753,
+     4.1598
+    ],
+    "raw_hex": "ab72ac5bf9f80030994b6a3a2c150032617ad17e4c8b80f4",
+    "mass_hex": "00002042"
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "body": 5,
+    "mass": 5.0,
+    "extents": [
+     0.1468,
+     0.3491,
+     1.2675
+    ],
+    "box_inertia": [
+     0.7202,
+     0.6784,
+     0.0598
+    ],
+    "raw_hex": "442f8c4d80068030154c8546df0500305576277e4995d1f2",
+    "mass_hex": "0000a040"
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "body": 6,
+    "mass": 1.0,
+    "extents": [
+     0.1882,
+     0.1531,
+     0.1192
+    ],
+    "box_inertia": [
+     0.0031,
+     0.0041,
+     0.0049
+    ],
+    "raw_hex": "cb3ae44579e38030df23e957de64802c90880e65a89f3bed",
+    "mass_hex": "0000803f"
+   },
+   {
+    "file": "sportsmuscle.physicsc",
+    "body": 7,
+    "mass": 275.0,
+    "extents": [
+     1.9443,
+     0.8531,
+     1.5455
+    ],
+    "box_inertia": [
+     71.4169,
+     141.3689,
+     103.3081
+    ],
+    "raw_hex": "f6ffc323df8d80307c226a40d52c00347b6e0280f77fdef3",
+    "mass_hex": "00808943"
+   }
+  ],
+  "interpretations": [
+   {
+    "reading": "6 x IEEE f32",
+    "how": "f32",
+    "best_triple": {
+     "triple": [
+      0,
+      1,
+      2
+     ],
+     "median_spread": 1.2541147323961291e+22,
+     "n": 194
+    },
+    "decodes": false
+   },
+   {
+    "reading": "12 x int16 raw",
+    "how": "i16",
+    "best_triple": {
+     "triple": [
+      4,
+      5,
+      6
+     ],
+     "median_spread": 1.3271,
+     "n": 1955
+    },
+    "decodes": false
+   },
+   {
+    "reading": "12 x int16 / 16384",
+    "how": "i16_16384",
+    "best_triple": {
+     "triple": [
+      4,
+      5,
+      6
+     ],
+     "median_spread": 1.3271,
+     "n": 1955
+    },
+    "decodes": false
+   },
+   {
+    "reading": "12 x int16 / 32767",
+    "how": "i16_32767",
+    "best_triple": {
+     "triple": [
+      4,
+      5,
+      6
+     ],
+     "median_spread": 1.3271,
+     "n": 1955
+    },
+    "decodes": false
+   },
+   {
+    "reading": "12 x u16 raw",
+    "how": "u16",
+    "best_triple": {
+     "triple": [
+      4,
+      5,
+      6
+     ],
+     "median_spread": 1.3271,
+     "n": 1955
+    },
+    "decodes": false
+   },
+   {
+    "reading": "12 x IEEE half",
+    "how": "half",
+    "best_triple": {
+     "triple": [
+      3,
+      4,
+      5
+     ],
+     "median_spread": 6116.1343,
+     "n": 1890
+    },
+    "decodes": false
+   }
+  ],
+  "direction_test": [
+   {
+    "triple": [
+     0,
+     1,
+     2
+    ],
+    "mean_cos": 0.8006,
+    "min_cos": 0.0072,
+    "n": 2005
+   },
+   {
+    "triple": [
+     3,
+     4,
+     5
+    ],
+    "mean_cos": 0.8325,
+    "min_cos": 0.2666,
+    "n": 2005
+   },
+   {
+    "triple": [
+     6,
+     7,
+     8
+    ],
+    "mean_cos": 0.7786,
+    "min_cos": 0.251,
+    "n": 2005
+   },
+   {
+    "triple": [
+     9,
+     10,
+     11
+    ],
+    "mean_cos": 0.8245,
+    "min_cos": 0.511,
+    "n": 2005
+   },
+   {
+    "triple": [
+     1,
+     2,
+     3
+    ],
+    "mean_cos": 0.8303,
+    "min_cos": 0.184,
+    "n": 2005
+   },
+   {
+    "triple": [
+     4,
+     5,
+     6
+    ],
+    "mean_cos": 0.9662,
+    "min_cos": 0.5018,
+    "n": 2005
+   },
+   {
+    "triple": [
+     7,
+     8,
+     9
+    ],
+    "mean_cos": 0.8614,
+    "min_cos": 0.6363,
+    "n": 2005
+   }
+  ],
+  "slots": [
+   {
+    "slot": 0,
+    "rho_mass": 0.056,
+    "rho_Ixx": 0.1454,
+    "rho_Iyy": 0.0174,
+    "rho_Izz": -0.0124
+   },
+   {
+    "slot": 1,
+    "rho_mass": -0.0594,
+    "rho_Ixx": 0.0074,
+    "rho_Iyy": 0.0065,
+    "rho_Izz": -0.0156
+   },
+   {
+    "slot": 2,
+    "rho_mass": -0.0189,
+    "rho_Ixx": -0.0559,
+    "rho_Iyy": -0.0414,
+    "rho_Izz": -0.0042
+   },
+   {
+    "slot": 3,
+    "rho_mass": -0.1394,
+    "rho_Ixx": -0.0496,
+    "rho_Iyy": -0.022,
+    "rho_Izz": 0.0204
+   },
+   {
+    "slot": 4,
+    "rho_mass": 0.0543,
+    "rho_Ixx": 0.1941,
+    "rho_Iyy": 0.0311,
+    "rho_Izz": -0.0002
+   },
+   {
+    "slot": 5,
+    "rho_mass": -0.074,
+    "rho_Ixx": -0.1286,
+    "rho_Iyy": 0.0449,
+    "rho_Izz": -0.1184
+   },
+   {
+    "slot": 6,
+    "rho_mass": -0.0847,
+    "rho_Ixx": -0.183,
+    "rho_Iyy": -0.175,
+    "rho_Izz": 0.0492
+   },
+   {
+    "slot": 7,
+    "rho_mass": 0.866,
+    "rho_Ixx": 0.92,
+    "rho_Iyy": 0.9362,
+    "rho_Izz": 0.8928
+   },
+   {
+    "slot": 8,
+    "rho_mass": 0.1268,
+    "rho_Ixx": 0.2133,
+    "rho_Iyy": 0.1566,
+    "rho_Izz": 0.1123
+   },
+   {
+    "slot": 9,
+    "rho_mass": 0.2699,
+    "rho_Ixx": 0.2817,
+    "rho_Iyy": 0.3216,
+    "rho_Izz": 0.3231
+   },
+   {
+    "slot": 10,
+    "rho_mass": 0.2844,
+    "rho_Ixx": 0.2304,
+    "rho_Iyy": 0.2837,
+    "rho_Izz": 0.3572
+   },
+   {
+    "slot": 11,
+    "rho_mass": -0.2431,
+    "rho_Ixx": -0.2825,
+    "rho_Iyy": -0.2715,
+    "rho_Izz": -0.2801
+   }
+  ],
+  "any_reading_decodes": false
+ },
+ "unknowns": [
+  "The 24 packed inertia bytes: no tested reading gives a constant per-body scale, so the tensor is not decodable from these bytes alone. No public Havok 2014 header or community reader for hknpShapeMassProperties could be obtained in this session to fix the bit layout; the tested readings and their numbers are recorded instead.",
+  "Whether the constant 0 at cinfo +0x04 is the chassis body id or a flag. It is 0 in every shipped record, so the bytes cannot separate the two readings; the geometry makes 'body 0' the one the data supports.",
+  "The +0x01 flag at bodies 11/15/27 (G3-10c U-3): still no decoded meaning.",
+  "The remaining body-entry words: unchanged from G3-10b's measured domains."
+ ],
+ "oracles": {
+  "all_ok": true,
+  "checks": {
+   "cinfo_body_id_a_in_range": true,
+   "cinfo_body_id_b_in_range": true,
+   "pair_beats_control_5cm": true,
+   "pair_control_is_low_5cm": true,
+   "body0_is_special": true,
+   "donor_frames_ab_share_pivot": true,
+   "donor_deltas_are_rotations": true,
+   "inertia_readings_measured": true,
+   "inertia_best_spread_above_bar": true,
+   "inertia_linked_hulls": true
+  },
+  "detail": {
+   "pair_rate_5cm": 0.3511,
+   "control_rate_5cm": 0.0053,
+   "body0_rate": 0.484,
+   "best_reading_spread": 1.3271
+  }
+ }
+}

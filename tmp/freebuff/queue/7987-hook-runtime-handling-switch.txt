@@ -1,0 +1,13 @@
+DONE: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/hook-runtime-handling-switch.md
+ONLY: freebuff
+EST: 55
+BRIEF: hand-written 2026-11-08
+AFTER: E:/Modding/JC3-Batmobile/tmp/freebuff/reports/jc3-vehicle-rtti-static-map.md, E:/Modding/JC3-Batmobile/tmp/freebuff/reports/native-hook-design-jc3mp-contract.md
+Per-mode handling without two entities, if that is possible. reports/jc3-vehicle-rtti-static-map.md found no handling class with RTTI: the tune block is a plain data struct. E:/Modding/_tools/jc3-handling-editor (2017 build) edited that struct live.
+
+Re-find its access path in the 2025-12-17 exe:
+1. Take the editor's old addresses and the code patterns around them.
+2. Search the new exe for the same instruction sequences (byte patterns with wildcards).
+3. Map the struct fields to the project's decoded land_engine, land_steering, suspension and custom_land_global members (Working/Translation/T1_TRANSLATION.md).
+
+The goal is a hook call, set_handling(vehicle, mode), that swaps the torque curve, the steering and the top-speed cap between pursuit and battle. The battle values are the battle speed curve and TurningModeMaxSpeed 600 cm/s (Research/BatmobileGrab/MODES.md). Deliver read-only analysis plus a code sketch, and mark every field mapping decoded, derived or UNKNOWN. Shared rules: E:/Modding/JC3-Batmobile/tmp/freebuff/INSTRUCTIONS.md.
